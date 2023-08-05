@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: neuralnet-pytorch
+Version: 0.0.2a0
+Summary: A high-level library on top of Pytorch.
+Home-page: https://github.com/justanhduc/neuralnet-pytorch
+Author: Duc Nguyen
+Author-email: adnguyen@yonsei.ac.kr
+License: UNKNOWN
+Project-URL: Source, https://github.com/justanhduc/neuralnet-pytorch/
+Project-URL: Bug Reports, https://github.com/justanhduc/neuralnet-pytorch/issues
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.5
+Description-Content-Type: text/markdown
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+Requires-Dist: numpy
+
+# neuralnet-pytorch
+A high level framework for general purpose neural networks in Pytorch.
+
+## Requirements
+
+[Pytorch](http://deeplearning.net/software/theano/)
+
+[Scipy](https://www.scipy.org/install.html), [Numpy+mkl](http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy), [Matplotlib](https://matplotlib.org/)
+
+## Installation
+
+```
+pip install --upgrade neuralnet-pytorch
+```
+
+
+## Usages
+To create a new model, simply make a new model class and inherit from Model in model.py
+
+
