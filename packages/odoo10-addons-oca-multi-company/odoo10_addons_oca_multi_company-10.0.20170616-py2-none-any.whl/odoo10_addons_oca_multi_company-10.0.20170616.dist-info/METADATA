@@ -1,0 +1,17 @@
+Metadata-Version: 2.0
+Name: odoo10-addons-oca-multi-company
+Version: 10.0.20170616
+Summary: Meta package for OCA multi-company Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo10-addon-base-multi-company
+Requires-Dist: odoo10-addon-product-multi-company
+
+UNKNOWN
+
+
