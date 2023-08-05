@@ -1,0 +1,9 @@
+Django
+PyYAML
+raven
+
+[dev]
+check-manifest
+
+[test]
+coverage
