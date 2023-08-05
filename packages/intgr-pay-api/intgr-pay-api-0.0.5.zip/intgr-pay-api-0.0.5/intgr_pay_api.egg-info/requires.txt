@@ -1,0 +1,5 @@
+django-appconf
+requests
+babel
+money
+paypalrestsdk==1.13.1
