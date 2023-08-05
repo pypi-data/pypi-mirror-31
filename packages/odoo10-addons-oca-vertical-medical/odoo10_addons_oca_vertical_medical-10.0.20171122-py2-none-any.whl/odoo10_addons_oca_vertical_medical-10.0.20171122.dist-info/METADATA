@@ -1,0 +1,21 @@
+Metadata-Version: 2.0
+Name: odoo10-addons-oca-vertical-medical
+Version: 10.0.20171122
+Summary: Meta package for OCA vertical-medical Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo10-addon-medical
+Requires-Dist: odoo10-addon-medical-agpl
+Requires-Dist: odoo10-addon-medical-center
+Requires-Dist: odoo10-addon-medical-pathology
+Requires-Dist: odoo10-addon-medical-pathology-import
+Requires-Dist: odoo10-addon-medical-practitioner
+
+UNKNOWN
+
+
