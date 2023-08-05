@@ -1,0 +1,5 @@
+guillotina>=2.1.5
+aiostatsd
+
+[test]
+pytest
