@@ -1,0 +1,19 @@
+Metadata-Version: 2.0
+Name: odoo9-addons-oca-account-invoicing
+Version: 9.0.20161018
+Summary: Meta package for OCA account-invoicing Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo9-addon-account-invoice-blocking
+Requires-Dist: odoo9-addon-account-invoice-check-total
+Requires-Dist: odoo9-addon-account-invoice-refund-link
+Requires-Dist: odoo9-addon-account-invoice-supplier-ref-unique
+Requires-Dist: odoo9-addon-account-payment-term-extension
+Requires-Dist: odoo9-addon-sale-timesheet-invoice-description
+
+UNKNOWN
+
+
