@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.rst
+requirements.txt
+setup.cfg
+setup.py
+versioneer.py
+arrayish/__init__.py
+arrayish/_version.py
+arrayish/defaults.py
+arrayish.egg-info/PKG-INFO
+arrayish.egg-info/SOURCES.txt
+arrayish.egg-info/dependency_links.txt
+arrayish.egg-info/not-zip-safe
+arrayish.egg-info/requires.txt
+arrayish.egg-info/top_level.txt
