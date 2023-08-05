@@ -1,0 +1,35 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-vertical-ngo
+Version: 8.0.20180419.0
+Summary: Meta package for oca-vertical-ngo Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo8-addon-framework-agreement-requisition
+Requires-Dist: odoo8-addon-framework-agreement-sourcing
+Requires-Dist: odoo8-addon-framework-agreement-sourcing-stock-route-transit
+Requires-Dist: odoo8-addon-logistic-budget
+Requires-Dist: odoo8-addon-logistic-consignee
+Requires-Dist: odoo8-addon-logistic-order
+Requires-Dist: odoo8-addon-logistic-order-donation
+Requires-Dist: odoo8-addon-logistic-order-donation-budget
+Requires-Dist: odoo8-addon-logistic-order-donation-shipment-test
+Requires-Dist: odoo8-addon-logistic-order-donation-transit
+Requires-Dist: odoo8-addon-logistic-order-multicurrency
+Requires-Dist: odoo8-addon-logistic-order-requisition-donation
+Requires-Dist: odoo8-addon-logistic-requisition
+Requires-Dist: odoo8-addon-logistic-requisition-department
+Requires-Dist: odoo8-addon-logistic-requisition-donation
+Requires-Dist: odoo8-addon-logistic-requisition-multicurrency
+Requires-Dist: odoo8-addon-ngo-purchase
+Requires-Dist: odoo8-addon-ngo-purchase-requisition
+Requires-Dist: odoo8-addon-ngo-shipment-plan
+Requires-Dist: odoo8-addon-vertical-ngo
+
+UNKNOWN
+
+
