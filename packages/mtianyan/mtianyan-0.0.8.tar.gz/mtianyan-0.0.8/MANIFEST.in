@@ -1,0 +1,3 @@
+include *.exe
+include *.session
+include *.conf
