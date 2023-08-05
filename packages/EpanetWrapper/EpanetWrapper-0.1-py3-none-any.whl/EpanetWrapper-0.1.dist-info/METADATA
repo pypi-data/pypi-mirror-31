@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: EpanetWrapper
+Version: 0.1
+Summary: A python wrapper used to ease simulations and analytics
+Home-page: https://github.com/cccristi07/EpanetWrapper
+Author: Cristian Cazan
+Author-email: cccristi07@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: epanettools
+Requires-Dist: pandas
+Requires-Dist: plotly
+
+UNKNOWN
+
+
