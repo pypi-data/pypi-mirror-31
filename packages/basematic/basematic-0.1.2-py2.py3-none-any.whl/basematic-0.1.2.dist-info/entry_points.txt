@@ -1,0 +1,9 @@
+[console_scripts]
+basematic = basematic.cmd:cli
+basematic-BAM = basematic.bio.bam:cli
+basematic-CNV = basematic.bio.cnv:cli
+basematic-RNA = basematic.bio.rnaseq:cli
+basematic-SNV = basematic.bio.snv._cmd:cli
+basematic-fastq = basematic.bio.fastq:cli
+basematic-manage = basematic.mgt:cli
+
