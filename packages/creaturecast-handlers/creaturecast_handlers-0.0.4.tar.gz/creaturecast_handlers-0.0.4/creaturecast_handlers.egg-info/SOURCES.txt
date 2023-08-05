@@ -1,0 +1,10 @@
+MANIFEST.in
+setup.cfg
+setup.py
+creaturecast_handlers/__init__.py
+creaturecast_handlers.egg-info/PKG-INFO
+creaturecast_handlers.egg-info/SOURCES.txt
+creaturecast_handlers.egg-info/dependency_links.txt
+creaturecast_handlers.egg-info/top_level.txt
+creaturecast_handlers/data/__init__.py
+creaturecast_handlers/data/rig_settings.json
