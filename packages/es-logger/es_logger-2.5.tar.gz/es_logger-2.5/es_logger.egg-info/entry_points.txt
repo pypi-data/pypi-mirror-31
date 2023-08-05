@@ -1,0 +1,12 @@
+[console_scripts]
+es-logger = es_logger.cli:main
+
+[es_logger.plugins.console_log_processor]
+
+
+[es_logger.plugins.event_generator]
+commit = es_logger.event_generator:CommitEvent
+
+[es_logger.plugins.gather_build_data]
+
+
