@@ -1,0 +1,2 @@
+# Wiki System creator module
+This module simply pulls the current user logged in via flask and the current time and places that info into a local JSON file. Meant for creation/deletion of creator's info as well as page searching by name.
