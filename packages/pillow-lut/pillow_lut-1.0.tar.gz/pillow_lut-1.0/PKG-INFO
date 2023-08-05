@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: pillow_lut
+Version: 1.0
+Summary: Lookup tables loading, manipulation and generation for Pillow library
+Home-page: https://github.com/homm/pillow-lut-tools
+Author: Alex Karpinsky
+Author-email: homm86@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 6 - Mature
+Classifier: Topic :: Multimedia :: Graphics
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
