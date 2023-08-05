@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: pyros
+Version: 0.4.2
+Summary: ROS Node to provide ROS introspection for non-ROS users.
+Home-page: http://github.com/asmodehn/pyros
+Author: AlexV
+Author-email: asmodehn@gmail.com
+License: BSD
+Description: UNKNOWN
+Platform: UNKNOWN
+Provides-Extra: ros
