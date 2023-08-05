@@ -1,0 +1,14 @@
+MANIFEST.in
+license.txt
+readme.md
+setup.py
+mapi/__init__.py
+mapi/endpoints.py
+mapi/exceptions.py
+mapi/metadata.py
+mapi/providers.py
+mapi.egg-info/PKG-INFO
+mapi.egg-info/SOURCES.txt
+mapi.egg-info/dependency_links.txt
+mapi.egg-info/requires.txt
+mapi.egg-info/top_level.txt
