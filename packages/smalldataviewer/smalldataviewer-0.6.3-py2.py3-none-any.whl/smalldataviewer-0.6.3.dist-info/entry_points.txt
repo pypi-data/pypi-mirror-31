@@ -1,0 +1,4 @@
+[console_scripts]
+sdv = smalldataviewer.__main__:_main
+smalldataviewer = smalldataviewer.__main__:_main
+
