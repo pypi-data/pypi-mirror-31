@@ -1,0 +1,16 @@
+Metadata-Version: 2.0
+Name: odoo9-addons-oca-event
+Version: 9.0.20161204
+Summary: Meta package for OCA event Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo9-addon-event-email-reminder
+Requires-Dist: odoo9-addon-partner-event
+Requires-Dist: odoo9-addon-website-event-share
+
+UNKNOWN
+
+
