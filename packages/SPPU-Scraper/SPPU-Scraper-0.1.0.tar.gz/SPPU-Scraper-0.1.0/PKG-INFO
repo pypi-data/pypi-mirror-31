@@ -1,0 +1,56 @@
+Metadata-Version: 1.1
+Name: SPPU-Scraper
+Version: 0.1.0
+Summary: A Scraper to fetch SPPU Engineering results.
+Home-page: https://github.com/mohi7solanki/SPPU-Scraper
+Author: Mohit Solanki
+Author-email: mohitsolanki619@gmail.com
+License: BSD license
+Description: # SPPU Scraper
+        
+        A Scraper to fetch SPPU Engineering results.
+        
+        ## Installing
+        Fire up your terminal and type
+        
+        ```
+        $ pip install --user SPPU-Scraper
+        ```
+        
+        or
+        ```
+        $ pip install --user -e git+https://github.com/mohi7solanki/SPPU-Scraper
+        ```
+        
+        ## Usage:
+        In your terminal type
+        
+        ```
+        $ sppu-scraper
+        ```
+        
+        and it will ask for the path to the PDF file which contains the student's seat number and mother name, (which you department provides, ofcourse the official one). It will ask you that this PDF you provided is from current or previous year because
+        It works even if you have an old PDF ;)
+        
+        Fetched results are stored into xlsx file.
+        
+        
+        =======
+        History
+        =======
+        
+        0.1.0 (2018-04-20)
+        ------------------
+        
+        * First release on PyPI.
+        
+Keywords: sppu_scraper,SPPU,Pune University
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6

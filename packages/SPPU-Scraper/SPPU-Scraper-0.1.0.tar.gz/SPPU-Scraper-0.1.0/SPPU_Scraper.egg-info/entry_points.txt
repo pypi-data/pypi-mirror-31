@@ -1,0 +1,3 @@
+[console_scripts]
+sppu-scraper = sppu_scraper.main:main
+

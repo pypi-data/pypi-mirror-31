@@ -1,0 +1,14 @@
+README.md
+setup.cfg
+setup.py
+SPPU_Scraper.egg-info/PKG-INFO
+SPPU_Scraper.egg-info/SOURCES.txt
+SPPU_Scraper.egg-info/dependency_links.txt
+SPPU_Scraper.egg-info/entry_points.txt
+SPPU_Scraper.egg-info/not-zip-safe
+SPPU_Scraper.egg-info/requires.txt
+SPPU_Scraper.egg-info/top_level.txt
+sppu_scraper/__init__.py
+sppu_scraper/main.py
+sppu_scraper/students.py
+sppu_scraper/utils.py
