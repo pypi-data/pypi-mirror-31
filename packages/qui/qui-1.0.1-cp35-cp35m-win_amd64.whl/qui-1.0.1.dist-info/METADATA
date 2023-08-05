@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: qui
+Version: 1.0.1
+Summary: Qt QML bindings
+Home-page: https://github.com/mgb4/qui
+Author: Michael Burisch
+Author-email: michael.burisch@gmx.com
+License: UNKNOWN
+Keywords: qt qml python bindings
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3
+
+Bindings for QML part of Qt
+
+
