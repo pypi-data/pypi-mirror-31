@@ -1,0 +1,71 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-sale-workflow
+Version: 8.0.20170725
+Summary: Meta package for OCA sale-workflow Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo8-addon-account-invoice-reorder-lines
+Requires-Dist: odoo8-addon-partner-prepayment
+Requires-Dist: odoo8-addon-partner-prospect
+Requires-Dist: odoo8-addon-product-margin-classification
+Requires-Dist: odoo8-addon-sale-allotment
+Requires-Dist: odoo8-addon-sale-automatic-workflow
+Requires-Dist: odoo8-addon-sale-automatic-workflow-exception
+Requires-Dist: odoo8-addon-sale-cancel-reason
+Requires-Dist: odoo8-addon-sale-change-price
+Requires-Dist: odoo8-addon-sale-comment-propagation
+Requires-Dist: odoo8-addon-sale-exception-nostock
+Requires-Dist: odoo8-addon-sale-exceptions
+Requires-Dist: odoo8-addon-sale-last-price-info
+Requires-Dist: odoo8-addon-sale-line-price-properties-based
+Requires-Dist: odoo8-addon-sale-line-quantity-properties-based
+Requires-Dist: odoo8-addon-sale-order-add-variants
+Requires-Dist: odoo8-addon-sale-order-back2draft
+Requires-Dist: odoo8-addon-sale-order-calendar-event
+Requires-Dist: odoo8-addon-sale-order-line-description
+Requires-Dist: odoo8-addon-sale-order-line-variant-description
+Requires-Dist: odoo8-addon-sale-order-lot-selection
+Requires-Dist: odoo8-addon-sale-order-merge
+Requires-Dist: odoo8-addon-sale-order-price-recalculation
+Requires-Dist: odoo8-addon-sale-order-revision
+Requires-Dist: odoo8-addon-sale-order-type
+Requires-Dist: odoo8-addon-sale-order-type-sale-journal
+Requires-Dist: odoo8-addon-sale-order-unified-menu
+Requires-Dist: odoo8-addon-sale-order-weight
+Requires-Dist: odoo8-addon-sale-owner-stock-sourcing
+Requires-Dist: odoo8-addon-sale-packaging-price
+Requires-Dist: odoo8-addon-sale-partner-incoterm
+Requires-Dist: odoo8-addon-sale-partner-order-policy
+Requires-Dist: odoo8-addon-sale-payment-method
+Requires-Dist: odoo8-addon-sale-payment-method-automatic-workflow
+Requires-Dist: odoo8-addon-sale-payment-method-transaction-id
+Requires-Dist: odoo8-addon-sale-payment-term-interest
+Requires-Dist: odoo8-addon-sale-pricelist-discount
+Requires-Dist: odoo8-addon-sale-procurement-group-by-line
+Requires-Dist: odoo8-addon-sale-product-multi-add
+Requires-Dist: odoo8-addon-sale-product-set
+Requires-Dist: odoo8-addon-sale-product-set-layout
+Requires-Dist: odoo8-addon-sale-properties-dynamic-fields
+Requires-Dist: odoo8-addon-sale-properties-easy-creation
+Requires-Dist: odoo8-addon-sale-quick-payment
+Requires-Dist: odoo8-addon-sale-quotation-number
+Requires-Dist: odoo8-addon-sale-quotation-sourcing
+Requires-Dist: odoo8-addon-sale-quotation-sourcing-stock-route-transit
+Requires-Dist: odoo8-addon-sale-reason-to-export
+Requires-Dist: odoo8-addon-sale-rental
+Requires-Dist: odoo8-addon-sale-service-fleet
+Requires-Dist: odoo8-addon-sale-service-project
+Requires-Dist: odoo8-addon-sale-sourced-by-line
+Requires-Dist: odoo8-addon-sale-sourced-by-line-sale-transport-multi-address
+Requires-Dist: odoo8-addon-sale-start-end-dates
+Requires-Dist: odoo8-addon-sale-validity
+Requires-Dist: odoo8-addon-sales-team-security
+
+UNKNOWN
+
+
