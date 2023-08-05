@@ -1,0 +1,18 @@
+Metadata-Version: 2.0
+Name: odoo9-addons-oca-stock-logistics-warehouse
+Version: 9.0.20160930
+Summary: Meta package for OCA stock-logistics-warehouse Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo9-addon-stock-available
+Requires-Dist: odoo9-addon-stock-available-immediately
+Requires-Dist: odoo9-addon-stock-available-mrp
+Requires-Dist: odoo9-addon-stock-partner-lot
+Requires-Dist: odoo9-addon-stock-quant-merge
+
+UNKNOWN
+
+
