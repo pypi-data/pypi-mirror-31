@@ -1,0 +1,17 @@
+Metadata-Version: 2.0
+Name: odoo10-addons-oca-commission
+Version: 10.0.20180403
+Summary: Meta package for OCA commission Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo10-addon-sale-commission
+Requires-Dist: odoo10-addon-sale-commission-formula
+
+UNKNOWN
+
+
