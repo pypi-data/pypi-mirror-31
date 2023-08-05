@@ -1,0 +1,13 @@
+CONTRIBUTING.rst
+HISTORY.rst
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+usb_iss.egg-info/PKG-INFO
+usb_iss.egg-info/SOURCES.txt
+usb_iss.egg-info/dependency_links.txt
+usb_iss.egg-info/not-zip-safe
+usb_iss.egg-info/requires.txt
+usb_iss.egg-info/top_level.txt
