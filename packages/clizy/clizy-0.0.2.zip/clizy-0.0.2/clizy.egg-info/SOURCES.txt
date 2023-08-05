@@ -1,0 +1,10 @@
+README.rst
+setup.py
+clizy/__init__.py
+clizy/cli_structures.py
+clizy/core.py
+clizy/docstring_processors.py
+clizy.egg-info/PKG-INFO
+clizy.egg-info/SOURCES.txt
+clizy.egg-info/dependency_links.txt
+clizy.egg-info/top_level.txt
