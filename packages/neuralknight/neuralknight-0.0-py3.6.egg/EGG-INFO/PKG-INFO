@@ -1,0 +1,51 @@
+Metadata-Version: 1.1
+Name: neuralknight
+Version: 0.0
+Summary: neuralknight
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: # neuralknight
+        
+        **Authors**: David Snowberger, Shannon Tully, Adam Grandquist
+        
+        **Version**: 0.1.0
+        
+        ## Overview
+        This is a chess-playing AI
+        
+        ## Getting Started
+        - `python3 -m venv env`
+        - `pip install -e ".[testing]"`
+        - `initialize_neuralknight_db development.ini`
+        - `pytest`
+        - `pserve development.ini`
+        
+        ## Architecture
+        This app is written using Python 3.6, following all best practices and industry standards.
+        
+        ### Stack
+        - Python 3.6
+        - Pyramid
+        - Postgress
+        - Heroku
+        
+        ## API
+        There is no API at this time.
+        
+        ## Change Log
+        05 April 2018 - Repo Created
+        
+        
+        0.1.0
+        ---
+        
+        - Initial version.
+        
+Keywords: web pyramid pylons
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Pyramid
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Application
