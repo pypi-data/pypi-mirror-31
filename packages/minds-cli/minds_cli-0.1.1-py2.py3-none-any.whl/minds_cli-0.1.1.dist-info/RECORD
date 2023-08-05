@@ -1,0 +1,17 @@
+minds_cli-0.1.1.dist-info/METADATA,sha256=V1lI18pIXdTO99b9usgrE4pBljxZ-PADuf2qJdIehYY,4641
+minds_cli-0.1.1.dist-info/RECORD,,
+minds_cli-0.1.1.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+minds_cli-0.1.1.dist-info/entry_points.txt,sha256=RChohTGgdyIV-BVYYR3QglI3T-mdfNI1AhmQ5cVyerk,49
+minds_cli-0.1.1.dist-info/top_level.txt,sha256=3cWpWnsw-JbvK_h_DoWPlSuAQUSmnLNoUeZExNbXrLs,9
+mindscli/__init__.py,sha256=MVOtRlYBWL1_rzgTl2SsqEkm2MgJs68MPsJxa9IusN0,898
+mindscli/output.py,sha256=uYRzF2YP5vAX5vq0VdBmSXD9-1tlfcnGB3O_w8-VGUs,4712
+mindscli/utils.py,sha256=XxAOFVsKQQSgi6B3JBcrqL1m6ots8Ngbd3Sxvnm0AEY,791
+mindscli/cli/__init__.py,sha256=X_AlJCISLaq5pQFVxh-JKzOsV5NY7KibUrbDMhXCjyg,1843
+mindscli/cli/interact.py,sha256=jwxfQIbQnQARXNnb3Z_Ei-82DbANhbhJI5yPfa4jkOA,951
+mindscli/cli/main.py,sha256=BnHmYv76vWs8g4ez__fdcLbyyjG2F_OJeMb512nDDc0,1745
+mindscli/cli/newsfeed.py,sha256=Ar89gFqA0e_uCRSEG5SmKFiCGJzR3P4vk0oni5Mixl4,1870
+mindscli/cli/notifications.py,sha256=ZmgDMMRb_UCazg0fcnqwnJ5OOKxn_w4RYfMfxfs8n94,2448
+mindscli/cli/post.py,sha256=9uf8XhGKfFG-1CFDROYBV3g1jYQqFZPCtRintMzN8bo,4186
+mindscli/cli/profile.py,sha256=V5ODYxeH3D1rGzh9epH5wfwHJIEMjxP2UkM_IQlRc70,502
+mindscli/cli/show.py,sha256=l_cksNwuHprhLxY8x00IAVssKfuWmxfxg9QT7xEdeVM,1140
+mindscli/cli/user.py,sha256=Msc7pG7tiecUpI53c0iuu2trQmmB13npjtm8ALro5Pg,392
