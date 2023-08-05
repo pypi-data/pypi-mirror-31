@@ -1,0 +1,23 @@
+Metadata-Version: 2.0
+Name: odoo9-addons-oca-contract
+Version: 9.0.20180419.0
+Summary: Meta package for oca-contract Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo9-addon-contract
+Requires-Dist: odoo9-addon-contract-digitized-signature
+Requires-Dist: odoo9-addon-contract-invoice-merge-by-partner
+Requires-Dist: odoo9-addon-contract-mandate
+Requires-Dist: odoo9-addon-contract-payment-mode
+Requires-Dist: odoo9-addon-contract-recurring-analytic-distribution
+Requires-Dist: odoo9-addon-contract-show-invoice
+Requires-Dist: odoo9-addon-contract-variable-quantity
+
+UNKNOWN
+
+
