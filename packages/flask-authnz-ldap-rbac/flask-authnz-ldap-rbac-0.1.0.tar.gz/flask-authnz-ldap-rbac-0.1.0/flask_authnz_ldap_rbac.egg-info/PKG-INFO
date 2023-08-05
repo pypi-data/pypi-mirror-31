@@ -1,0 +1,19 @@
+Metadata-Version: 1.2
+Name: flask-authnz-ldap-rbac
+Version: 0.1.0
+Summary: Uses AuthN/AuthZ environment variables from Apache mod_authnz_ldap to enforce access controls on Flask apps
+Home-page: https://github.com/brandond/flask-authnz-ldap-rbac
+Author: Brandon Davidson
+Author-email: brad@oatmail.org
+License: Apache
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: System :: Systems Administration :: Authentication/Directory :: LDAP
+Classifier: Framework :: Flask
+Requires-Python: >=2.7
