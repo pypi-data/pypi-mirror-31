@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: TracGoogleWebmasterVerifyPlugin
+Version: 0.3
+Summary: GoogleWebmasterVerify Plugin for Trac
+Home-page: https://www.trac-hacks.org/wiki/GoogleWebmasterVerifyPlugin
+Author: Martin Scharrer
+Author-email: martin@scharrer-online.de
+License: GPLv3
+Keywords: trac google webmaster verify wiki plugin
+Platform: UNKNOWN
+Classifier: Framework :: Trac
+Requires-Dist: Trac
+
+UNKNOWN
+
+
