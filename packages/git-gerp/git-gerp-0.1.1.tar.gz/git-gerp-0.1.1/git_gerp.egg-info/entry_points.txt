@@ -1,0 +1,3 @@
+[console_scripts]
+git-gerp = git_gerp:main
+
