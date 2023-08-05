@@ -1,0 +1,24 @@
+# Settings for the Pantheon SN Ia sample, based on Pan-STARRS1 MDS.
+
+likelihood:
+  sn_pantheon:
+    # Path to the data: where the sn_data has been cloned
+    path: null
+    # .dataset file with settings
+    dataset_file: Pantheon/full_long.dataset
+    # dictionary of any parameter to override in the .dataset file    
+    dataset_params:
+      data_file: Pantheon/lcparam_full_long.txt
+      pecz: 0
+      intrinsicdisp: 0
+      twoscriptmfit: False
+      scriptmcut: 10.0
+      has_mag_covmat: True
+      mag_covmat_file: Pantheon/sys_full_long.txt
+      has_stretch_covmat: False
+      has_colour_covmat: False
+      has_mag_stretch_covmat: False
+      has_mag_colour_covmat: False
+      has_stretch_colour_covmat: False
+    # Speed in evaluations/second
+    speed: 500

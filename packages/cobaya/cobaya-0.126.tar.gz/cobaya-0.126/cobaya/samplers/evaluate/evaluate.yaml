@@ -1,0 +1,4 @@
+# dummy defaults file for the evaluate sampler
+
+sampler:
+  evaluate:

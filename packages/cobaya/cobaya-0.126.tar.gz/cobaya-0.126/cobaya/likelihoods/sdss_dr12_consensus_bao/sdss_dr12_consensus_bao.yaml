@@ -1,0 +1,12 @@
+# BAO-only consensus results, Alam et al. 2016
+# https://arxiv.org/abs/1607.03155
+
+likelihood:
+  sdss_dr12_consensus_bao:
+    path: null
+    measurements_file: sdss_DR12Consensus_bao.dat
+    cov_file: BAO_consensus_covtot_dM_Hz.txt
+    # Fiducial sound horizon with which data have been stored
+    rs_fid: 147.78  # Mpc
+    # Speed in evaluations/second
+    speed: 2500
