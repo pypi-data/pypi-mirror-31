@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: altendpyqt5
+Version: 0.0.3
+Summary: Extras for working with PyQt5.
+Home-page: https://github.com/altendky/altendpyqt5
+Author: Kyle Altendorf
+Author-email: sda@fstab.net
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/x-rst
+Provides-Extra: test
+Provides-Extra: dev
+Requires-Dist: altendpy
+Requires-Dist: attrs
+Requires-Dist: pyqt5
+Provides-Extra: dev
+Requires-Dist: gitignoreio; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: codecov; extra == 'test'
+Requires-Dist: pytest; extra == 'test'
+Requires-Dist: pytest-cov; extra == 'test'
+Requires-Dist: pytest-qt; extra == 'test'
+Requires-Dist: pytest-xvfb; extra == 'test'
+Requires-Dist: tox; extra == 'test'
+
+altendpyqt5
+===========
+
+|PyPI| |Pythons| |Travis| |AppVeyor| |codecov| |GitHub|
+
+Miscellanious extras that I like to use when working with PyQt5.
+
+.. |PyPI| image:: https://img.shields.io/pypi/v/altendpyqt5.svg
+   :alt: PyPI version
+   :target: https://pypi.python.org/pypi/altendpyqt5
+
+.. |Pythons| image:: https://img.shields.io/pypi/pyversions/altendpyqt5.svg
+   :alt: Supported Python versions
+   :target: https://pypi.python.org/pypi/altendpyqt5
+
+.. |Travis| image:: https://travis-ci.org/altendky/altendpyqt5.svg?branch=develop
+   :alt: Travis build status
+   :target: https://travis-ci.org/altendky/altendpyqt5
+
+.. |AppVeyor| image:: https://ci.appveyor.com/api/projects/status/565xmcrd3rl7ark7/branch/develop?svg=true
+   :alt: AppVeyor build status
+   :target: https://ci.appveyor.com/project/KyleAltendorf/altendpyqt5
+
+.. |codecov| image:: https://codecov.io/gh/altendky/altendpyqt5/branch/develop/graph/badge.svg
+   :alt: codecov coverage status
+   :target: https://codecov.io/gh/altendky/altendpyqt5
+
+.. |GitHub| image:: https://img.shields.io/github/last-commit/altendky/altendpyqt5/develop.svg
+   :alt: Source on GitHub
+   :target: https://github.com/altendky/altendpyqt5
+
+
