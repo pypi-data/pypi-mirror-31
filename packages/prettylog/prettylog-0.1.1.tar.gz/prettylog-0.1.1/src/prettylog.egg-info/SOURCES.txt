@@ -1,0 +1,9 @@
+MANIFEST.in
+README.rst
+setup.py
+src/prettylog.py
+src/prettylog.egg-info/PKG-INFO
+src/prettylog.egg-info/SOURCES.txt
+src/prettylog.egg-info/dependency_links.txt
+src/prettylog.egg-info/requires.txt
+src/prettylog.egg-info/top_level.txt
