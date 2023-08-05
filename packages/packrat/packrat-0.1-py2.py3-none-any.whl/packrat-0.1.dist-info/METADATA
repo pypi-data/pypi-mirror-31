@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: packrat
+Version: 0.1
+Summary: A server and Django storage backend for files you already have.
+Home-page: https://github.com/morganwahl/packrat
+Author: Morgan Wahl
+Author-email: morgan.wahl@gmail.com
+License: GPLv3
+Platform: UNKNOWN
+Requires-Dist: django
+Requires-Dist: gunicorn
+
+UNKNOWN
+
+
