@@ -1,0 +1,19 @@
+Metadata-Version: 1.2
+Name: flask-pynamodb-resource
+Version: 0.1.0
+Summary: Presents PynamoDB models (DynamoDB tables) as Flask-RESTful resources
+Home-page: https://github.com/brandond/flask-pynamodb-resource
+Author: Brandon Davidson
+Author-email: brad@oatmail.org
+License: Apache
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Database :: Front-Ends
+Classifier: Framework :: Flask
+Requires-Python: >=2.7

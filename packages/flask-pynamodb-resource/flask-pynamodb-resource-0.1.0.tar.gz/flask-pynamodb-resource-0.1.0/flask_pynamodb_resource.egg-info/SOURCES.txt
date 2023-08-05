@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+flask_pynamodb_resource/__init__.py
+flask_pynamodb_resource/flask_resource.py
+flask_pynamodb_resource.egg-info/PKG-INFO
+flask_pynamodb_resource.egg-info/SOURCES.txt
+flask_pynamodb_resource.egg-info/dependency_links.txt
+flask_pynamodb_resource.egg-info/requires.txt
+flask_pynamodb_resource.egg-info/top_level.txt
+flask_pynamodb_resource.egg-info/version.txt
+flask_pynamodb_resource.egg-info/version_full.txt

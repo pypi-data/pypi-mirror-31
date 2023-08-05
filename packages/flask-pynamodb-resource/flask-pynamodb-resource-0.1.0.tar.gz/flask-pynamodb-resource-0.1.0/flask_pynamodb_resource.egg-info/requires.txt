@@ -1,0 +1,7 @@
+flask-restful
+pynamodb
+ujson
+six
+
+[dev]
+setuptools-version-command
