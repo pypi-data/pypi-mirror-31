@@ -1,0 +1,14 @@
+spotdl.py,sha256=XZtqapr-bwgVHfBg1ahbswcE-jumQNoefXoJVtzebwI,8112
+core/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+core/const.py,sha256=oPTp0cX1gIBzNUGcZp2C4_O9kPOTMXBsGCorlP05fu4,1209
+core/convert.py,sha256=L-iQHM9-JCmacgHo16ZSGRQrFql-FUcCIj3ICyaSMxY,2620
+core/handle.py,sha256=b4YbfXDn4cd6vdEEw3_fbxuhZDYkwzm7N7ELlPP2s5c,7724
+core/internals.py,sha256=VaEBSwxZowUT-aSGo-75RROEFqbGQjMI1nGvT1heAlQ,4069
+core/metadata.py,sha256=zJQnV78T1TxvXxlMBriJBzy2uc_RZSrWqVzs-ng4k8Y,6249
+core/spotify_tools.py,sha256=E3LBSd4vTjkvBwaUu85ldlHcqXCE6saWdihT8UI7cgE,6021
+core/youtube_tools.py,sha256=pT3WX4nrx5vvcH-Z0AB3C8ZKx8M35PEAEvkLQJ_OfL4,8436
+spotdl-0.9.3.dist-info/METADATA,sha256=0hy8NPqU0cMbi5RDgV9EQ4C43wrOIMG6i2RkpX4L0GE,15562
+spotdl-0.9.3.dist-info/RECORD,,
+spotdl-0.9.3.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+spotdl-0.9.3.dist-info/entry_points.txt,sha256=jdl4EjeFnGLgeM4-KUuKq5fPx8sUCYJ3tLSwQqwIk3w,40
+spotdl-0.9.3.dist-info/top_level.txt,sha256=aatPMHyFA31M_qQxCe-eQ73XSX3okJiZB1dxDc4WaAs,12
