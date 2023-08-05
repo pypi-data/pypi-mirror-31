@@ -1,0 +1,16 @@
+pubcontrol_scopus/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pubcontrol_scopus/config.py,sha256=a8LLNPlA9CrGqILZMeIWQZMVZuAD0J5N_vvRkUQPnN8,358
+pubcontrol_scopus/install.py,sha256=wodcvBSyzRVIQa19AqOBBrfqtekiwMvLjUpwwnJk9BU,1117
+pubcontrol_scopus/main.py,sha256=vfesIKW3e0y0UkcuO-SnXJZ2nFF9_5nmgE8-ja7BDhI,9025
+pubcontrol_scopus/observe.py,sha256=i4TevIl7j9Nf8vX0BZnlNH7p0LK8p5qAyk4bZfvvSjg,8703
+pubcontrol_scopus/request.py,sha256=rZMpU7Djy7BAtB1MsdY3RPLG2ndGk_hc0ZoomQlJWB0,24285
+pubcontrol_scopus/templates/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pubcontrol_scopus/templates/ini/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pubcontrol_scopus/templates/ini/authors.j2,sha256=4BVtkYTV0laXh2DKGsdIZeoj-_f3NZyYeTX04C3b4lg,1111
+pubcontrol_scopus/templates/ini/config.j2,sha256=Lc-Crc7VlTREXpIP4zMev8FB-jB03E568TWI1dB5kfs,90
+pubcontrol_scopus-0.0.0.18.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+pubcontrol_scopus-0.0.0.18.dist-info/METADATA,sha256=0609aHKw2X5i44R3fUuLeXdjFMipaaBsrXE444xGDPk,716
+pubcontrol_scopus-0.0.0.18.dist-info/RECORD,,
+pubcontrol_scopus-0.0.0.18.dist-info/WHEEL,sha256=o2k-Qa-RMNIJmUdIc7KU6VWR_ErNRbWNlxDIpl7lm34,110
+pubcontrol_scopus-0.0.0.18.dist-info/metadata.json,sha256=dGYjzaQKsI1fPt2gumZoEoKrf-oWKpROYtvM0vvYktc,830
+pubcontrol_scopus-0.0.0.18.dist-info/top_level.txt,sha256=LKFaJkCrNt69m7Qf1dkIctepgQIuGyoOxljnZYnnEKs,18
