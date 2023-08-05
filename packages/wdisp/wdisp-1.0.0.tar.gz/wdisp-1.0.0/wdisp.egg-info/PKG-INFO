@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: wdisp
+Version: 1.0.0
+Summary: imshow for a browser
+Home-page: https://github.com/mgb4/wdisp
+Author: Michael Burisch
+Author-email: michael.burisch@gmx.com
+License: UNKNOWN
+Description: An imshow showing the images in a browser.
+Keywords: imshow browser
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.4
+Provides-Extra: Server

@@ -1,0 +1,5 @@
+numpy
+PIL
+
+[Server]
+aiohttp
