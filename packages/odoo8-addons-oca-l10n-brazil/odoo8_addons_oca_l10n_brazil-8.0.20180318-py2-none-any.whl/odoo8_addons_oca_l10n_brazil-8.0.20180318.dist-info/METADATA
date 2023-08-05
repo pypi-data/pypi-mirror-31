@@ -1,0 +1,40 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-l10n-brazil
+Version: 8.0.20180318
+Summary: Meta package for OCA l10n-brazil Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo8-addon-l10n-br-account
+Requires-Dist: odoo8-addon-l10n-br-account-banking-payment
+Requires-Dist: odoo8-addon-l10n-br-account-product
+Requires-Dist: odoo8-addon-l10n-br-account-product-service
+Requires-Dist: odoo8-addon-l10n-br-account-service
+Requires-Dist: odoo8-addon-l10n-br-base
+Requires-Dist: odoo8-addon-l10n-br-crm
+Requires-Dist: odoo8-addon-l10n-br-crm-zip
+Requires-Dist: odoo8-addon-l10n-br-data-account
+Requires-Dist: odoo8-addon-l10n-br-data-account-product
+Requires-Dist: odoo8-addon-l10n-br-data-account-service
+Requires-Dist: odoo8-addon-l10n-br-data-base
+Requires-Dist: odoo8-addon-l10n-br-delivery
+Requires-Dist: odoo8-addon-l10n-br-hr
+Requires-Dist: odoo8-addon-l10n-br-hr-contract
+Requires-Dist: odoo8-addon-l10n-br-purchase
+Requires-Dist: odoo8-addon-l10n-br-sale
+Requires-Dist: odoo8-addon-l10n-br-sale-product
+Requires-Dist: odoo8-addon-l10n-br-sale-service
+Requires-Dist: odoo8-addon-l10n-br-sale-stock
+Requires-Dist: odoo8-addon-l10n-br-stock
+Requires-Dist: odoo8-addon-l10n-br-stock-account
+Requires-Dist: odoo8-addon-l10n-br-stock-account-report
+Requires-Dist: odoo8-addon-l10n-br-zip
+Requires-Dist: odoo8-addon-l10n-br-zip-correios
+
+UNKNOWN
+
+
