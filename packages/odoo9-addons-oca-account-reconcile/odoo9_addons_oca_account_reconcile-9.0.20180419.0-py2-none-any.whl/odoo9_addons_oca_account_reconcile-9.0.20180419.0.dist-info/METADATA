@@ -1,0 +1,25 @@
+Metadata-Version: 2.0
+Name: odoo9-addons-oca-account-reconcile
+Version: 9.0.20180419.0
+Summary: Meta package for oca-account-reconcile Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo9-addon-account-mass-reconcile
+Requires-Dist: odoo9-addon-account-mass-reconcile-by-purchase-line
+Requires-Dist: odoo9-addon-account-mass-reconcile-ref-deep-search
+Requires-Dist: odoo9-addon-account-mass-reconcile-transaction-ref
+Requires-Dist: odoo9-addon-account-move-bankaccount-import
+Requires-Dist: odoo9-addon-account-move-base-import
+Requires-Dist: odoo9-addon-account-move-so-import
+Requires-Dist: odoo9-addon-account-move-transactionid-import
+Requires-Dist: odoo9-addon-account-operation-rule
+Requires-Dist: odoo9-addon-base-transaction-id
+
+UNKNOWN
+
+
