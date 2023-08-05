@@ -1,0 +1,10 @@
+pylint_json2html/__init__.py,sha256=TtX9qCMStDoYwAsRhlLj68hNNibus2xIJRICAc1yJIs,7406
+pylint_json2html/templates/report.jinja2,sha256=t-rqtSDIMlX3pgGT-faJFKGkVKpVxOmbRCBSrcAhkAI,2587
+pylint_json2html-0.1.0.dist-info/METADATA,sha256=KHKMG1bDno3x6UUfEVA5iR2BvcgirW6vNwEXOz061mA,4155
+pylint_json2html-0.1.0.dist-info/RECORD,,
+pylint_json2html-0.1.0.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+pylint_json2html-0.1.0.dist-info/entry_points.txt,sha256=78e2pPYYWSVwt-Ph_zuRrB4BLU__YMCPPLB5Q5eS4ZE,60
+pylint_json2html-0.1.0.dist-info/top_level.txt,sha256=xE-HQ5DtnkpRWmvum9_-U5hJ4ZlbFx_4L-i9erAbTrg,23
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/craps.py,sha256=RyM2KHpA29f8MslNJX4gCDhQDUqddyuw11_IjkF6BQc,445
+tests/other.py,sha256=QFv7tq1wci6-YjnkHiMi6WKN_JTLNWYELpv9It1r0Wc,108
