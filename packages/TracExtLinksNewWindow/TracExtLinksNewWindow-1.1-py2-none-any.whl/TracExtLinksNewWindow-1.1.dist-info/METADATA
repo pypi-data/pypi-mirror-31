@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: TracExtLinksNewWindow
+Version: 1.1
+Summary: Trac plugin to open external links in a new window.
+Home-page: https://trac-hacks.org/wiki/ExternalLinksNewWindow
+Author: Martin Scharrer
+Author-email: martin@scharrer-online.de
+License: GPLv3
+Download-URL: https://pypi.python.org/pypi/ExternalLinksNewWindowPlugin
+Platform: UNKNOWN
+Requires-Dist: Trac
+
+UNKNOWN
+
+
