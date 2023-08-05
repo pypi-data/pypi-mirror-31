@@ -1,0 +1,18 @@
+Metadata-Version: 2.0
+Name: odoo9-addons-oca-l10n-china
+Version: 9.0.20170418
+Summary: Meta package for OCA l10n-china Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo9-addon-l10n-cn-hr-payroll
+Requires-Dist: odoo9-addon-l10n-cn-partner
+Requires-Dist: odoo9-addon-website-certificate
+
+UNKNOWN
+
+
