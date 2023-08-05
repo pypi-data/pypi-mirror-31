@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: pysqlcli
+Version: 1.0.0
+Summary: Python oracle client
+Home-page: https://github.com/hejack0207/pysqlcli
+Author: hejack0207
+Author-email: hejack0207@sina.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=2.6, <=2.7

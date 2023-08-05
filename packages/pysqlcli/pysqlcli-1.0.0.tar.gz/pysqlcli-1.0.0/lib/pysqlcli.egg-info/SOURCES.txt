@@ -1,0 +1,12 @@
+README.md
+setup.py
+bin/pysqlcli
+lib/pysqlcli/__init__.py
+lib/pysqlcli/auto_complete.py
+lib/pysqlcli/db_op.py
+lib/pysqlcli/process_line.py
+lib/pysqlcli.egg-info/PKG-INFO
+lib/pysqlcli.egg-info/SOURCES.txt
+lib/pysqlcli.egg-info/dependency_links.txt
+lib/pysqlcli.egg-info/requires.txt
+lib/pysqlcli.egg-info/top_level.txt
