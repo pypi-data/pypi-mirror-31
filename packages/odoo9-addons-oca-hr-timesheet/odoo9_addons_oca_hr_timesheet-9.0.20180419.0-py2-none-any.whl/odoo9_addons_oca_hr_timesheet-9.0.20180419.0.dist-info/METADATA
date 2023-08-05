@@ -1,0 +1,17 @@
+Metadata-Version: 2.0
+Name: odoo9-addons-oca-hr-timesheet
+Version: 9.0.20180419.0
+Summary: Meta package for oca-hr-timesheet Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo9-addon-hr-timesheet-sheet-restrict-analytic
+Requires-Dist: odoo9-addon-hr-timesheet-sheet-week-start-day
+
+UNKNOWN
+
+
