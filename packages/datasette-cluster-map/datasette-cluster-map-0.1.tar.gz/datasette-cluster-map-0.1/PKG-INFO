@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: datasette-cluster-map
+Version: 0.1
+Summary: Datasette plugin that shows a cluster map for any data with latitude/longitude columns
+Home-page: https://github.com/simonw/datasette-cluster-map
+Author: Simon Willison
+Author-email: UNKNOWN
+License: Apache License, Version 2.0
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
