@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: textgears
+Version: 1.0.0
+Summary: A Python API client of textgears.com for checks English grammar.
+Home-page: UNKNOWN
+Author: Hayato Tominaga
+Author-email: takemehighermore@gmaill.com
+License: MIT License
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2 :: Only
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Utilities
