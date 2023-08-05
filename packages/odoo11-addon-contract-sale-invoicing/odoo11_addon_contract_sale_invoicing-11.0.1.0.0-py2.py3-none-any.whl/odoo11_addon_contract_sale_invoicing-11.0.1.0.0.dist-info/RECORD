@@ -1,0 +1,16 @@
+odoo/addons/contract_sale_invoicing/README.rst,sha256=v5kkFzE-epg-JV887lzc9-bSLTEkMfFUpjJuGlHBg60,2002
+odoo/addons/contract_sale_invoicing/__init__.py,sha256=eShEGRadAlxopoLqIQ4-N42FM7MWPSuBe0h_l1cXTPM,87
+odoo/addons/contract_sale_invoicing/__manifest__.py,sha256=ayhV98MZdA1wSOFZOSR4pfgm7R_SU2gLjgG2Rvka3gE,615
+odoo/addons/contract_sale_invoicing/i18n/es.po,sha256=7IVuaeOwOtK06vkVEwBk1ZUIYkGP56EUv0e9lS651fs,1550
+odoo/addons/contract_sale_invoicing/models/__init__.py,sha256=3byqxJkp9yruHpFZDQBAQjtSm-7rj8jaUcqyILkbCTk,89
+odoo/addons/contract_sale_invoicing/models/contract.py,sha256=6-uzTDLgdRPBLEJqISCeiBbKPeWCOqQS1lqBi8hTjaQ,1228
+odoo/addons/contract_sale_invoicing/static/description/icon.png,sha256=6xBPJauaFOF0KDHfHgQopSc28kKvxMaeoQFQWZtfZDo,9455
+odoo/addons/contract_sale_invoicing/tests/__init__.py,sha256=2WxGtEeIxOqlIRdApMCU7jc3p29FUh4nD_arCbe2xKk,109
+odoo/addons/contract_sale_invoicing/tests/test_contract_sale_invoicing.py,sha256=DLeLlohZHPGFFnWikyqq_p9xRwF3R3pThosPmXowizE,1943
+odoo/addons/contract_sale_invoicing/views/contract_view.xml,sha256=Al9ZmT941F_a70vILUAwtiEFDMZBOOARuhlQORLS36A,580
+odoo11_addon_contract_sale_invoicing-11.0.1.0.0.dist-info/DESCRIPTION.rst,sha256=JuHs8J562QXyrXvVJodEojDLbpTiqip_fyJ8N23hB2I,2004
+odoo11_addon_contract_sale_invoicing-11.0.1.0.0.dist-info/METADATA,sha256=ddKTDy7hTmSe1UddS_EZYu7yUkOaVBTccAcCouSWEQw,2616
+odoo11_addon_contract_sale_invoicing-11.0.1.0.0.dist-info/RECORD,,
+odoo11_addon_contract_sale_invoicing-11.0.1.0.0.dist-info/WHEEL,sha256=o2k-Qa-RMNIJmUdIc7KU6VWR_ErNRbWNlxDIpl7lm34,110
+odoo11_addon_contract_sale_invoicing-11.0.1.0.0.dist-info/metadata.json,sha256=Ku5NRZ20mlqNRO4NJNaKpA9R7XFZtfDLKQbu9Dj6SEA,817
+odoo11_addon_contract_sale_invoicing-11.0.1.0.0.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
