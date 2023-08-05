@@ -1,0 +1,9 @@
+README.rst
+setup.cfg
+setup.py
+pysc1/__init__.py
+pysc1.egg-info/PKG-INFO
+pysc1.egg-info/SOURCES.txt
+pysc1.egg-info/dependency_links.txt
+pysc1.egg-info/not-zip-safe
+pysc1.egg-info/top_level.txt
