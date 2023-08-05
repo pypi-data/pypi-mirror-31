@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pynucamino
+Version: 0.1.0
+Summary: Python bindings to nucamino, A nucleotide to amino acid alignment program optimized for virus gene sequences.
+Home-page: https://github.com/hcv-shared/pynucamino
+Author: Nathaniel Knight
+Author-email: nknight@cfenet.ubc.ca
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.6,<4.0
+Requires-Dist: setuptools
+
+UNKNOWN
+
+
