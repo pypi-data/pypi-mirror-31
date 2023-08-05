@@ -1,0 +1,12 @@
+README.rst
+setup.cfg
+setup.py
+viltolyckor/__init__.py
+viltolyckor/scraper.py
+viltolyckor/utils.py
+viltolyckor_scraper.egg-info/PKG-INFO
+viltolyckor_scraper.egg-info/SOURCES.txt
+viltolyckor_scraper.egg-info/dependency_links.txt
+viltolyckor_scraper.egg-info/not-zip-safe
+viltolyckor_scraper.egg-info/requires.txt
+viltolyckor_scraper.egg-info/top_level.txt
