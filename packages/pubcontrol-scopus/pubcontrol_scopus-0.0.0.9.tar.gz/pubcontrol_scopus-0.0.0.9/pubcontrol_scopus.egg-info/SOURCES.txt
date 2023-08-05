@@ -1,0 +1,17 @@
+MANIFEST.in
+setup.py
+pubcontrol_scopus/__init__.py
+pubcontrol_scopus/config.py
+pubcontrol_scopus/install.py
+pubcontrol_scopus/main.py
+pubcontrol_scopus/observe.py
+pubcontrol_scopus/request.py
+pubcontrol_scopus.egg-info/PKG-INFO
+pubcontrol_scopus.egg-info/SOURCES.txt
+pubcontrol_scopus.egg-info/dependency_links.txt
+pubcontrol_scopus.egg-info/requires.txt
+pubcontrol_scopus.egg-info/top_level.txt
+pubcontrol_scopus/templates/__init__.py
+pubcontrol_scopus/templates/ini/__init__.py
+pubcontrol_scopus/templates/ini/authors.j2
+pubcontrol_scopus/templates/ini/config.j2
