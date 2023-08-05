@@ -1,0 +1,71 @@
+Metadata-Version: 2.0
+Name: aggiestack
+Version: 1.0.5
+Summary: A aggiestack command line program in Python.
+Home-page: https://github.tamu.edu/jibinrajanvarghese/689-18-a/tree/master/P1
+Author: Jibin Varghese
+Author-email: jibin@tamu.edu
+License: UNLICENSE
+Description-Content-Type: UNKNOWN
+Keywords: cli
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Utilities
+Classifier: License :: Public Domain
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Requires-Dist: docopt
+Requires-Dist: pymongo
+Provides-Extra: test
+Requires-Dist: coverage; extra == 'test'
+Requires-Dist: pytest; extra == 'test'
+Requires-Dist: pytest-cov; extra == 'test'
+
+Purpose
+      -------
+
+      This is a demo program towards satisfying the course requirements for CSE - 689-607 SPTP: Cloud Computing Individual Project.
+
+      Description of the project can be found at: 
+
+      https://tamu.blackboard.com/bbcswebdav/pid-4279770-dt-content-rid-31058440_1/courses/CSCE.689.1811.M1/P1.pdf
+
+
+      Usage
+      -----
+
+      pip install aggiestack cli
+
+      First time you use the command you will be asked the mongodb host URL and database_name in order to connect
+
+      Usage:
+
+		aggiestack server create [--image=<IMAGE> --flavor=<FLAVOR_NAME>] <INSTANCE_NAME>
+		aggiestack server delete <INSTANCE_NAME>
+		aggiestack server list
+		aggiestack admin show hardware 
+		aggiestack admin show instances
+		aggiestack admin can_host <MACHINE_NAME> <FLAVOR>
+		aggiestack admin show imagecaches <RACK_NAME>
+		aggiestack admin evacuate <RACK_NAME>
+		aggiestack admin remove <MACHINE>
+		aggiestack admin clear_all
+		aggiestack admin add -mem MEM -disk NUM_DISKS -vcpus VCPU -ip IP -rack RACK_NAME MACHINE
+		aggiestack show hardware
+		aggiestack show images
+		aggiestack show flavors 
+		aggiestack show all 
+		aggiestack show logs 
+		aggiestack config [--images=<IMAGES_PATH> | --flavors=<FLAVORS_PATH> | --hardware=<HARDWARE_PATH> ] 
+		aggiestack config load <CONGFIG_PATH>  
+		aggiestack -h | --help
+		aggiestack --version
+
+
