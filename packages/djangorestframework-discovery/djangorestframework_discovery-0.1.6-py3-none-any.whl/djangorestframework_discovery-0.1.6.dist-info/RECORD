@@ -1,0 +1,9 @@
+djangorestframework_discovery-0.1.6.dist-info/METADATA,sha256=RlQuRsgBC8U_PewtCZWCQgAV3pL409xu-DXo5QfdkgM,2933
+djangorestframework_discovery-0.1.6.dist-info/RECORD,,
+djangorestframework_discovery-0.1.6.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+djangorestframework_discovery-0.1.6.dist-info/top_level.txt,sha256=9yEqc8hJ_3dxQRjpAkjEX7fBGXAPV7Lz9J35mqPvJts,25
+rest_framework_discovery/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rest_framework_discovery/apps.py,sha256=4wPcT9e3aLKkoN5AYj0Nxct7Ghqu9Dqm2FJC8Xb3zc0,108
+rest_framework_discovery/introspect.py,sha256=UFSIbDMfvr7dHD2vsTsLiphHRVh3bWbILmmqmI_9p7k,4735
+rest_framework_discovery/urls.py,sha256=sfa3UKWeXE-APDZcCtyOHc_AQ9v31gtYBQd6dyfHzs4,349
+rest_framework_discovery/views.py,sha256=08H_LIrgkQa2lSOwqSMvT5K1qJ7px1F_qnE1yZwi2vE,2456
