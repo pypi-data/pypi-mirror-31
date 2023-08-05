@@ -1,0 +1,191 @@
+#!/usr/bin/env python
+
+
+import os
+import sys
+import json
+import argparse
+from yadns import YaDNS
+
+try:
+    PDD_TOKEN = os.environ['PDD_TOKEN']
+except KeyError:
+    print "No token found, export it as 'PDD_TOKEN' environment variable"
+    sys.exit(1)
+
+
+def add_rec(args):
+    if args.content is None:
+        print "ERROR: Cowardly refusing to add a record with empty content"
+        sys.exit(1)
+    api = YaDNS(args.domain, PDD_TOKEN)
+    result = api.add(
+        args.type,
+        args.content,
+        args.subdomain,
+        args.ttl,
+        args.admin_mail,
+        args.priority,
+        args.weight,
+        args.port,
+        args.target,
+    )
+    print json.dumps(result, indent=2)
+
+
+def list_rec(args):
+    api = YaDNS(args.domain, PDD_TOKEN)
+    result = api.list()
+
+    soa = {}
+    for n, r in enumerate(result['records']):
+        if r['type'] == 'SOA':
+            soa = result['records'].pop(n)
+            break
+
+    print '# ' + 'record id: ' + str(soa['record_id'])
+    print '\t'.join([
+        soa['fqdn']+'.',
+        'IN', 'SOA',
+        soa['content'],
+        soa['admin_mail']+'.',
+        '(', str(soa['record_id']),
+        str(soa['refresh']),
+        str(soa['retry']),
+        str(soa['expire']),
+        str(soa['ttl']), ')',
+    ])
+
+    for r in result['records']:
+        if r['type'] in ('A', 'AAAA', 'CNAME', 'NS', 'TXT'):
+            print '# ' + 'record id: ' + str(r['record_id'])
+            print '\t'.join([
+                r['subdomain'],
+                str(r['ttl']),
+                'IN', r['type'],
+                r['content'],
+            ])
+        elif r['type'] == 'MX':
+            print '# ' + 'record id: ' + str(r['record_id'])
+            print '\t'.join([
+                r['subdomain'],
+                str(r['ttl']),
+                'IN', r['type'],
+                str(r['priority']),
+                r['content'],
+            ])
+        elif r['type'] == 'SRV':
+            print '# ' + 'record id: ' + str(r['record_id'])
+            print '\t'.join([
+                r['subdomain'],
+                str(r['ttl']),
+                'IN', r['type'],
+                str(r['priority']),
+                str(r['weight']),
+                str(r['port']),
+                r['content'],
+            ])
+
+
+def edit_rec(args):
+    api = YaDNS(args.domain, PDD_TOKEN)
+    result = api.edit(
+        args.record_id,
+        args.admin_mail,
+        args.content,
+        args.priority,
+        args.weight,
+        args.port,
+        args.target,
+        args.subdomain,
+        args.ttl,
+        args.refresh,
+        args.retry,
+        args.expire,
+        args.neg_cache,
+    )
+    print json.dumps(result, indent=2)
+
+
+def del_rec(args):
+    api = YaDNS(args.domain, PDD_TOKEN)
+    result = api.delete(args.record_id)
+    print json.dumps(result, indent=2)
+
+
+def main():
+    master_parser = argparse.ArgumentParser(description="Yandex.DNS client")
+    subparsers = master_parser.add_subparsers()
+
+    p_domain = argparse.ArgumentParser(add_help=False)
+    p_domain.add_argument(
+        '--domain', '-d', type=str, help="Domain name to work on",
+        required=True,
+    )
+
+    p_id = argparse.ArgumentParser(add_help=False)
+    p_id.add_argument(
+        '--record-id',
+        '-i', type=str, help="Record ID (from 'list' output)", required=True,
+    )
+
+    p_common = argparse.ArgumentParser(add_help=False)
+    p_common.add_argument(
+        '--admin-mail',
+        '-m', type=str, help="Admin email (only for SOA)",
+    )
+    p_common.add_argument('--content', '-c', type=str, help="Record content")
+    p_common.add_argument(
+        '--priority',
+        '-P', type=str, help="Record priority (for SRV and MX)",
+    )
+    p_common.add_argument(
+        '--weight', '-w', type=str, help="Record priority (only for SRV)",
+    )
+    p_common.add_argument(
+        '--port', '-p', type=str, help="Service port (only for SRV)",
+    )
+    p_common.add_argument(
+        '--target', '-T', type=str, help="Service host (only for SRV)",
+    )
+    p_common.add_argument(
+        '--subdomain', '-s', type=str, help="Subdomain (default='@')",
+    )
+    p_common.add_argument('--ttl', type=str, help="TTL")
+
+    p_add = subparsers.add_parser(
+        'add', parents=[p_domain, p_common], help='Add a domain record',
+    )
+    p_add.add_argument(
+        '--type', '-t', type=str,
+        choices=['SRV', 'TXT', 'NS', 'MX', 'SOA', 'A', 'AAAA', 'CNAME'],
+        help="Record type", required=True,
+    )
+
+    p_list = subparsers.add_parser(
+        'list', parents=[p_domain], help="List all records for a domain",
+    )
+
+    p_edit = subparsers.add_parser(
+        'edit', parents=[p_domain, p_id, p_common],
+        help="Edit a domain record",
+    )
+    p_edit.add_argument('--refresh', '-R', type=str, help="Refresh time")
+    p_edit.add_argument('--retry', '-r', type=str, help="Retry time")
+    p_edit.add_argument('--expire', '-e', type=str, help="Expire time")
+    p_edit.add_argument('--neg-cache', '-n', type=str, help="Cache time")
+
+    p_del = subparsers.add_parser(
+        'delete', parents=[p_domain, p_id], help="Delete a domain record",
+    )
+
+    p_add.set_defaults(func=add_rec)
+    p_list.set_defaults(func=list_rec)
+    p_edit.set_defaults(func=edit_rec)
+    p_del.set_defaults(func=del_rec)
+
+    args = master_parser.parse_args()
+    args.func(args)
+
+if __name__ == '__main__':
+    main()
