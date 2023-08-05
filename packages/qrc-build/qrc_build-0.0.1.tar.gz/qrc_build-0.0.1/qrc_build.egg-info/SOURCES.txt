@@ -1,0 +1,7 @@
+setup_qrc_build.py
+qrc_build/__init__.py
+qrc_build/build_qrc.py
+qrc_build.egg-info/PKG-INFO
+qrc_build.egg-info/SOURCES.txt
+qrc_build.egg-info/dependency_links.txt
+qrc_build.egg-info/top_level.txt
