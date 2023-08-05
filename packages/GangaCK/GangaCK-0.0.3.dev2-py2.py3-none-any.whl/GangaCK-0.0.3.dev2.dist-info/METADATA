@@ -1,0 +1,121 @@
+Metadata-Version: 2.1
+Name: GangaCK
+Version: 0.0.3.dev2
+Summary: Improving Ganga for better productivity.
+Home-page: https://gitlab.com/ckhurewa/GangaCK
+Author: Chitsanu Khurewathanakul
+Author-email: chitsanu.khurewathanakul@epfl.ch
+License: GNU GPLv3
+Platform: unix
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Utilities
+Requires-Python: ~=2.7
+Description-Content-Type: text/markdown
+Requires-Dist: PythonCK (>=1.0.0)
+
+GangaCK
+=======
+
+Improving `Ganga` for better productivity.
+
+Features:
+
+- `Jobtree`: improved visualization of `jobtree` for better jobs organization.
+  This can be called both inside/outside `ganga` interactive session.
+
+    ![](../figs/jobtree.png)
+
+- `IOUtils`: Misc operations to convert to/from (collection of) 
+  PFN, LFN, Bookkeeping uri (`evt+std://`, `sim+std://`), PPL, xml, lfns, eos, ...
+  There is a caching algorithm to help where it's usefully applicable.
+  One particular application is `LHCbDataset.new` where it can accept arbitary 
+  argument from the list of support inputs above. For example:
+
+    ```python
+    LHCbDataset.new(
+
+        'some/local/file.dst', # LOCAL
+
+        'root://some-remote-file.dst',  # REMOTE
+
+        'file:///another-remote-file.dst',  # REMOTE
+
+        '/lhcb/MC/Dev/LDST/00041927/0000/00041927_00000002_1.ldst', # LFN
+
+        'evt+std://MC/2012/42100000/Beam4000GeV-2012-MagDown-Nu2.5-Pythia8/...', # BKQ
+
+        'sim+std://LHCb/Collision12/Beam4000GeV-VeloClosed-MagDown/...',  # BKQ
+
+        '$EOS_HOME/ganga/4083/000.dst', # EOS
+
+        '/cvmfs/lhcb.cern.ch/.../pool_xml_catalog_Reco14_Run125113.xml', # XML
+
+        open('text_file_with_url_per_line.txt'), # local list
+
+        jobs(123),  # output from another Ganga job.
+
+        LHCbDataset(['foo', 'bar']),  # another ds.
+
+    ) # accept heterogenous input appropriately,
+    ```
+
+- `Magics`: because `ganga` is embedded inside `IPython`, why not more magics?
+    - `jv`  : show status of subjobs from all running jobs. Extremely useful for monitoring.
+    - `jt`  : for improved `jobtree` operation.
+    - `peek`: based on `Job.peek`, but look deeper when possible.
+    - `jsh` : provide shell-like syntax to operate `Job` with less (no-shift) typing,
+       for example, `jsh 197.12 remove True` instead of `jobs("197.12").remove(True)`.
+       Less typing saves your life's time...
+    - `grun`: similar to the built-in magic `ganga`, but it'll pick the local 
+      `ganga*.py` immediately or ask in case of ambiguity.
+    - `resubmit`: Smartly handle resubmission/backend.reset of failed Dirac jobs 
+      based on its failing status (e.g., 
+      "Pending Requests", 
+      "Job has reached the CPU limit of the queue",
+      "Stalling for more than ...", etc.)
+
+
+- Additional instance methods:
+  - `Job`: `lfn_list`, `lfn_size`, `lfn_purge`, `pfn_size`, `ppl_list`, `eos_list`,
+    `humansize`, `is_final`.
+  - `Gauss`: `nickname`, to retrieve nickname from `$DECFILESROOT`.
+
+
+Scripts:
+
+- `ganga_cache_viewer`: display the list of cache made by this package.
+
+- `ganga_cleaner`: Complete all-in-one script for tidying your ganga environment.
+
+- `offline_ganga_reader`: Quick script to read the content in Ganga's JobTree offline.
+
+- `xmlgensum`: Report summary of `GeneratorLog.xml` from all subjobs of Ganga-Gauss-Job
+
+- `xmlmerge`: Merge ``summary.xml`` files from Ganga's subjobs and neatly archive the dir.
+
+
+Installation
+------------
+
+It's available on pip: `pip install gangack`
+
+
+Disclaimer
+----------
+
+This package was written and used during my PhD in 2013-2017 at EPFL (Lausanne) 
+and LHCb collaboration (CERN), for the work in *Z->tau tau* cross-section measurement 
+and *H->mu tau* searches at LHCb (8TeV).
+
+As such, it's developped during the period of Ganga 5.34 -- 6.0.44. 
+Because of the fast-pace development and non-backward compat nature of Ganga,
+this package can be obsoleted against newer version of Ganga.
+
+
+
