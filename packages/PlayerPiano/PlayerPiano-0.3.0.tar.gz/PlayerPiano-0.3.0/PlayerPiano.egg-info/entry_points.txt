@@ -1,0 +1,4 @@
+[console_scripts]
+playerpiano = playerpiano.piano:main
+recorderpiano = playerpiano.recorder:main
+
