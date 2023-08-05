@@ -1,0 +1,13 @@
+Metadata-Version: 1.2
+Name: pyrope
+Version: 0.1.1
+Summary: Pyrope, a modern HDL with a live flow
+Home-page: https://github.com/masc-ucsc/pyrope
+Author: MASC Group
+Author-email: pyrope-group@ucsc.edu
+License: BSD-3-Clause
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3
