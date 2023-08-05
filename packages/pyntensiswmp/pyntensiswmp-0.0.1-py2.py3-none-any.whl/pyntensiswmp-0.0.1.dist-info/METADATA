@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: pyntensiswmp
+Version: 0.0.1
+Summary: Intensis WMP Connector
+Home-page: https://github.com/pascalhahn/pyntensiswmp
+Author: Pascal Hahn
+Author-email: ph@lxd.bz
+License: MIT License
+Download-URL: https://github.com/pascalhahn/pyntensiswmp/archive/0.0.1.tar.tar.gz
+Keywords: wmp,intensis,smarthome
+Platform: any
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Topic :: Home Automation
+
+UNKNOWN
+
+
