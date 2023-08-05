@@ -1,0 +1,15 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+django_zendesk/__init__.py
+django_zendesk/models.py
+django_zendesk/test_urls.py
+django_zendesk/tests.py
+django_zendesk/views.py
+pivotal_django_zendesk.egg-info/PKG-INFO
+pivotal_django_zendesk.egg-info/SOURCES.txt
+pivotal_django_zendesk.egg-info/dependency_links.txt
+pivotal_django_zendesk.egg-info/requires.txt
+pivotal_django_zendesk.egg-info/top_level.txt
