@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: TracWatchlistPlugin
+Version: 3.0.0
+Summary: Watchlist Plugin for Trac 0.12/1.0
+Home-page: https://www.trac-hacks.org/wiki/WatchlistPlugin
+Author: Martin Scharrer
+Author-email: martin@scharrer-online.de
+License: GPLv3
+Keywords: trac watchlist wiki plugin
+Platform: UNKNOWN
+Classifier: Framework :: Trac
+Requires-Dist: Trac
+
+UNKNOWN
+
+
