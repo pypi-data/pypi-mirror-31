@@ -1,0 +1,100 @@
+
+<html>
+<head> <link rel="canonical" href="http://slepc.upv.es/documentation/current/src/nep/examples/nlevp/makefile.html" />
+<title></title>
+<meta name="generator" content="c2html 0.9.4">
+<meta name="date" content="2018-04-12T16:57:55+00:00">
+</head>
+
+<body bgcolor="#FFFFFF">
+   <div id="version" align=right><b>slepc-3.9.0 2018-04-12</b></div>
+   <div id="bugreport" align=right><a href="mailto:slepc-maint@upv.es?subject=Typo or Error in Documentation &body=Please describe the typo or error in the documentation: slepc-3.9.0 v3.9 src/nep/examples/nlevp/makefile.html "><small>Report Typos and Errors</small></a></div>
+<pre width="80"><font color="#A020F0">#</font>
+<font color="#A020F0">#  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</font>
+<font color="#A020F0">#  SLEPc - Scalable Library for Eigenvalue Problem Computations</font>
+<font color="#A020F0">#  Copyright (c) 2002-2018, Universitat Politecnica de Valencia, Spain</font>
+<font color="#A020F0">#</font>
+<font color="#A020F0">#  This file is part of SLEPc.</font>
+<font color="#A020F0">#  SLEPc is distributed under a 2-clause BSD license (see LICENSE).</font>
+<font color="#A020F0">#  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</font>
+<font color="#A020F0">#</font>
+
+CFLAGS     =
+FFLAGS     =
+CPPFLAGS   =
+FPPFLAGS   =
+LOCDIR     = src/nep/examples/nlevp/
+EXAMPLESC  = loaded_string.c gun.c
+EXAMPLESF  =
+MANSEC     = <a href="ROOT/docs/manualpages/NEP/NEP.html#NEP">NEP</a>
+TESTS      = loaded_string gun
+
+TESTEXAMPLES_C                     = loaded_string.PETSc runloaded_string_1 loaded_string.rm
+TESTEXAMPLES_C_NOTSINGLE           = loaded_string.PETSc runloaded_string_2 runloaded_string_3 \
+                                                         runloaded_string_4 runloaded_string_5 \
+                                                         runloaded_string_6 loaded_string.rm
+TESTEXAMPLES_C_DOUBLE              = loaded_string.PETSc runloaded_string_7 loaded_string.rm
+TESTEXAMPLES_DATAFILESPATH_COMPLEX = gun.PETSc rungun_1 gun.rm
+
+include ${SLEPC_DIR}/lib/slepc/conf/slepc_common
+
+<strong><font color="#FF0000">loaded_string:</font></strong> loaded_string.o chkopts
+	-${CLINKER} -o loaded_string loaded_string.o ${SLEPC_NEP_LIB}
+	${RM} loaded_string.o
+
+<strong><font color="#FF0000">gun:</font></strong> gun.o chkopts
+	-${CLINKER} -o gun gun.o ${SLEPC_NEP_LIB}
+	${RM} gun.o
+
+<font color="#A020F0">#------------------------------------------------------------------------------------</font>
+<strong><font color="#FF0000">runloaded_string_1:</font></strong>
+	-@${SETTEST}; \
+	<font color="#4169E1">if</font> [ <font color="#666666">"${PETSC_PRECISION}"</font> = <font color="#666666">"single"</font> ]; then EXTRA=<font color="#666666">"-nep_tol 1e-5"</font>; fi; \
+	${MPIEXEC} -n 1 ./loaded_string -nep_type rii -terse $$EXTRA &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runloaded_string_2:</font></strong> runloaded_string_2_schur runloaded_string_2_explicit runloaded_string_2_mbe
+runloaded_string_2_%:
+	-@${SETTEST}; check=loaded_string_2; scheme=$*; \
+	<font color="#4169E1">if</font> [ <font color="#666666">"$$scheme"</font> = mbe ]; then scheme=<font color="#666666">"mbe -nep_refine_ksp_type preonly -nep_refine_pc_type lu"</font>; fi; \
+	${MPIEXEC} -n 1 ./loaded_string -nep_type interpol -rg_type interval -rg_interval_endpoints 5,700,-.1,.1 -nep_nev 7 -nep_target 5 -nep_interpol_interpolation_degree 12 -nep_refine simple -nep_refine_scheme $$scheme -terse &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runloaded_string_3:</font></strong> runloaded_string_3_explicit runloaded_string_3_mbe
+runloaded_string_3_%:
+	-@${SETTEST}; check=loaded_string_2; scheme=$*; \
+	<font color="#4169E1">if</font> [ <font color="#666666">"$$scheme"</font> = mbe ]; then scheme=<font color="#666666">"mbe -nep_refine_ksp_type preonly -nep_refine_pc_type cholesky"</font>; fi; \
+	${MPIEXEC} -n 2 ./loaded_string -nep_type interpol -rg_type interval -rg_interval_endpoints 5,700,-.1,.1 -nep_nev 7 -nep_target 5 -nep_interpol_interpolation_degree 12 -nep_refine simple -nep_refine_partitions 2 -nep_refine_scheme $$scheme -nep_interpol_st_ksp_type bcgs -nep_interpol_st_pc_type bjacobi -terse &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runloaded_string_4:</font></strong>
+	-@${SETTEST}; check=loaded_string_2; \
+	${MPIEXEC} -n 4 ./loaded_string -nep_type interpol -rg_type interval -rg_interval_endpoints 5,700,-.1,.1 -nep_nev 7 -nep_target 5 -nep_interpol_interpolation_degree 10 -nep_refine simple -nep_refine_partitions 2 -nep_refine_scheme explicit -nep_interpol_st_ksp_type bcgs -nep_interpol_st_pc_type bjacobi -terse -info_exclude nep,pep,fn -log_exclude nep,pep,fn &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runloaded_string_5:</font></strong>
+	-@${SETTEST}; \
+	${MPIEXEC} -n 1 ./loaded_string -nep_type nleigs -rg_type interval -rg_interval_endpoints 4,700,-.1,.1 -nep_nev 8 -nep_target 5 -terse &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runloaded_string_6:</font></strong>
+	-@${SETTEST}; \
+        <font color="#4169E1">if</font> [ <font color="#666666">"${PETSC_SCALAR}"</font> = <font color="#666666">"complex"</font> ]; then region=<font color="#666666">",-.1,.1"</font>; fi; \
+	${MPIEXEC} -n 1 ./loaded_string -nep_type nleigs -rg_type interval -rg_interval_endpoints 100,700$$region -nep_nev 5 -nep_tol 1e-9 -nep_target 140 -nep_nleigs_interpolation_degree 15 -nep_general -terse &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runloaded_string_7:</font></strong>
+	-@${SETTEST}; \
+        <font color="#4169E1">if</font> [ <font color="#666666">"${PETSC_SCALAR}"</font> = <font color="#666666">"complex"</font> ]; then region=<font color="#666666">",-.1,.1"</font>; fi; \
+	${MPIEXEC} -n 1 ./loaded_string -nep_type interpol -rg_type interval -rg_interval_endpoints 5,700$$region -nep_nev 5 -nep_target 100 -nep_interpol_interpolation_degree 20 -nep_ncv 20 -n 20 -nep_refine simple -nep_refine_its 1 -terse &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">rungun_1:</font></strong>
+	-@${SETTEST}; \
+	${MPIEXEC} -n 1 ./gun -K $(DATAFILESPATH)/matrices/complex/gun_K.petsc -M $(DATAFILESPATH)/matrices/complex/gun_M.petsc -W1 $(DATAFILESPATH)/matrices/complex/gun_W1.petsc -W2 $(DATAFILESPATH)/matrices/complex/gun_W2.petsc -nep_type nleigs -rg_type polygon -rg_polygon_vertices 12500-1i,120500-1i,120500+30000i,70000+30000i -nep_target 65000 -nep_nev 24 -terse &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+</pre>
+</body>
+
+</html>

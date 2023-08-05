@@ -1,0 +1,216 @@
+
+<html>
+<head> <link rel="canonical" href="http://slepc.upv.es/documentation/current/src/pep/examples/tests/makefile.html" />
+<title></title>
+<meta name="generator" content="c2html 0.9.4">
+<meta name="date" content="2018-04-12T16:57:28+00:00">
+</head>
+
+<body bgcolor="#FFFFFF">
+   <div id="version" align=right><b>slepc-3.9.0 2018-04-12</b></div>
+   <div id="bugreport" align=right><a href="mailto:slepc-maint@upv.es?subject=Typo or Error in Documentation &body=Please describe the typo or error in the documentation: slepc-3.9.0 v3.9 src/pep/examples/tests/makefile.html "><small>Report Typos and Errors</small></a></div>
+<pre width="80"><font color="#A020F0">#</font>
+<font color="#A020F0">#  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</font>
+<font color="#A020F0">#  SLEPc - Scalable Library for Eigenvalue Problem Computations</font>
+<font color="#A020F0">#  Copyright (c) 2002-2018, Universitat Politecnica de Valencia, Spain</font>
+<font color="#A020F0">#</font>
+<font color="#A020F0">#  This file is part of SLEPc.</font>
+<font color="#A020F0">#  SLEPc is distributed under a 2-clause BSD license (see LICENSE).</font>
+<font color="#A020F0">#  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</font>
+<font color="#A020F0">#</font>
+
+CFLAGS     =
+FFLAGS     =
+CPPFLAGS   =
+FPPFLAGS   =
+LOCDIR     = src/pep/examples/tests/
+EXAMPLESC  = test1.c test2.c test3.c test4.c test5.c test6.c
+EXAMPLESF  = test3f.F
+MANSEC     = <a href="ROOT/docs/manualpages/PEP/PEP.html#PEP">PEP</a>
+TESTS      = test1 test2 test3 test3f test4 test5 test6
+
+TESTEXAMPLES_C                     = test2.PETSc runtest2_2 runtest2_4 runtest2_5 \
+                                                 runtest2_8 test2.rm \
+                                     test3.PETSc runtest3_1 test3.rm \
+                                     test4.PETSc runtest4_1 test4.rm
+TESTEXAMPLES_C_NOCOMPLEX_NOTSINGLE = test1.PETSc runtest1_1 test1.rm \
+                                     test5.PETSc runtest5_1 test5.rm
+TESTEXAMPLES_C_COMPLEX             = test2.PETSc runtest2_2_jd runtest2_12 test2.rm
+TESTEXAMPLES_C_NOTSINGLE           = test2.PETSc runtest2_1 runtest2_3 runtest2_2_stoar \
+                                                 runtest2_6 runtest2_7 runtest2_9 test2.rm \
+                                     test6.PETSc runtest6_1 runtest6_2 test6.rm
+TESTEXAMPLES_C_DOUBLE              = test2.PETSc runtest2_10 test2.rm
+TESTEXAMPLES_FORTRAN               = test3f.PETSc runtest3f_1 test3f.rm
+TESTEXAMPLES_VECCUDA               = test2.PETSc runtest2_11_cuda test2.rm
+
+include ${SLEPC_DIR}/lib/slepc/conf/slepc_common
+
+<strong><font color="#FF0000">test1:</font></strong> test1.o chkopts
+	-${CLINKER} -o test1 test1.o ${SLEPC_PEP_LIB}
+	${RM} test1.o
+
+<strong><font color="#FF0000">test2:</font></strong> test2.o chkopts
+	-${CLINKER} -o test2 test2.o ${SLEPC_PEP_LIB}
+	${RM} test2.o
+
+<strong><font color="#FF0000">test3:</font></strong> test3.o chkopts
+	-${CLINKER} -o test3 test3.o ${SLEPC_PEP_LIB}
+	${RM} test3.o
+
+<strong><font color="#FF0000">test3f:</font></strong> test3f.o chkopts
+	-${FLINKER} -o test3f test3f.o ${SLEPC_PEP_LIB}
+	${RM} test3f.o
+
+<strong><font color="#FF0000">test4:</font></strong> test4.o chkopts
+	-${CLINKER} -o test4 test4.o ${SLEPC_PEP_LIB}
+	${RM} test4.o
+
+<strong><font color="#FF0000">test5:</font></strong> test5.o chkopts
+	-${CLINKER} -o test5 test5.o ${SLEPC_PEP_LIB}
+	${RM} test5.o
+
+<strong><font color="#FF0000">test6:</font></strong> test6.o chkopts
+	-${CLINKER} -o test6 test6.o ${SLEPC_PEP_LIB}
+	${RM} test6.o
+
+<font color="#A020F0">#------------------------------------------------------------------------------------</font>
+
+<strong><font color="#FF0000">runtest1_1:</font></strong> runtest1_1_toar runtest1_1_qarnoldi runtest1_1_linear runtest1_1_linear_gd
+runtest1_1_%:
+	-@${SETTEST}; check=test1_1; pep=$*; \
+	<font color="#4169E1">if</font> [ <font color="#666666">"$$pep"</font> = linear_gd ]; then pep=<font color="#666666">"linear -epstype gd"</font>; fi; \
+	${MPIEXEC} -n 1 ./test1 -type $${pep} -m 11 &gt;&gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runtest2_1:</font></strong> runtest2_1_toar runtest2_1_qarnoldi runtest2_1_linear runtest2_1_linear_gd
+runtest2_1_%:
+	-@${SETTEST}; check=test2_1; pep=$*; \
+	<font color="#4169E1">if</font> [ <font color="#666666">"$$pep"</font> = linear_gd ]; then pep=<font color="#666666">"linear -pep_linear_eps_type gd -pep_linear_explicitmatrix"</font>; \
+	elif [ <font color="#666666">"$$pep"</font> = qarnoldi ]; then pep=<font color="#666666">"qarnoldi -bv_orthog_refine never"</font>; fi; \
+	${MPIEXEC} -n 1 ./test2 -pep_type $${pep} -pep_nev 4 -initv &gt;&gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runtest2_2:</font></strong> runtest2_2_toar runtest2_2_toar_scaleboth runtest2_2_toar_transform runtest2_2_qarnoldi runtest2_2_linear runtest2_2_linear_explicit runtest2_2_linear_explicit_her
+runtest2_2_%:
+	-@${SETTEST}; check=test2_2; pep=$*; \
+	<font color="#4169E1">if</font> [ <font color="#666666">"$$pep"</font> != jd ]; then sinv=<font color="#666666">"-st_type sinvert"</font>; fi; \
+	<font color="#4169E1">if</font> [ <font color="#666666">"$$pep"</font> = toar_scaleboth ]; then pep=<font color="#666666">"toar -pep_scale both"</font>; \
+	elif [ <font color="#666666">"$$pep"</font> = toar_transform ]; then pep=<font color="#666666">"toar -st_transform"</font>; \
+	elif [ <font color="#666666">"$$pep"</font> = stoar ]; then pep=<font color="#666666">"stoar -pep_hermitian"</font>; \
+	elif [ <font color="#666666">"$$pep"</font> = qarnoldi ]; then pep=<font color="#666666">"qarnoldi -bv_orthog_refine always"</font>; \
+	elif [ <font color="#666666">"$$pep"</font> = linear_explicit ]; then pep=<font color="#666666">"linear -pep_linear_explicitmatrix -pep_linear_cform 2"</font>; \
+	elif [ <font color="#666666">"$$pep"</font> = linear_explicit_her ]; then pep=<font color="#666666">"linear -pep_linear_explicitmatrix -pep_hermitian -pep_linear_cform 2"</font>; fi; \
+	${MPIEXEC} -n 1 ./test2 -pep_type $${pep} -pep_target -0.43 -pep_nev 4 -pep_ncv 20 $$sinv &gt;&gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runtest2_3:</font></strong> runtest2_3_none runtest2_3_norm runtest2_3_residual runtest2_3_structured
+runtest2_3_%:
+	-@${SETTEST}; check=test2_3; extract=$*; \
+	${MPIEXEC} -n 1 ./test2 -pep_nev 12 -pep_extract $${extract} -pep_monitor_cancel &gt;&gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runtest2_4:</font></strong> runtest2_4_schur runtest2_4_mbe runtest2_4_explicit runtest2_4_multiple_schur runtest2_4_multiple_mbe runtest2_4_multiple_explicit
+runtest2_4_%:
+	-@${SETTEST}; check=test2_2; refine=$*; \
+	<font color="#4169E1">if</font> [ <font color="#666666">"$$refine"</font> = schur ]; then refine=<font color="#666666">"simple -pep_refine_scheme schur"</font>; \
+	elif [ <font color="#666666">"$$refine"</font> = mbe ]; then refine=<font color="#666666">"simple -pep_refine_scheme mbe -pep_refine_ksp_type preonly -pep_refine_pc_type lu"</font>; \
+	elif [ <font color="#666666">"$$refine"</font> = explicit ]; then refine=<font color="#666666">"simple -pep_refine_scheme explicit"</font>; \
+	elif [ <font color="#666666">"$$refine"</font> = multiple_schur ]; then refine=<font color="#666666">"multiple -pep_refine_scheme schur"</font>; \
+	elif [ <font color="#666666">"$$refine"</font> = multiple_mbe ]; then refine=<font color="#666666">"multiple -pep_refine_scheme mbe -pep_refine_ksp_type preonly -pep_refine_pc_type lu -pep_refine_pc_factor_shift_type nonzero"</font>; \
+	elif [ <font color="#666666">"$$refine"</font> = multiple_explicit ]; then refine=<font color="#666666">"multiple -pep_refine_scheme explicit"</font>; fi; \
+	${MPIEXEC} -n 1 ./test2 -st_type sinvert -pep_target -0.43 -pep_nev 4 -pep_refine $${refine} &gt;&gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runtest2_5:</font></strong>
+	-@${SETTEST}; check=test2_2; \
+	${MPIEXEC} -n 2 ./test2 -pep_type linear -pep_linear_explicitmatrix -pep_general -pep_target -0.43 -pep_nev 4 -pep_ncv 20 -st_type sinvert -pep_linear_st_ksp_type bcgs -pep_linear_st_pc_type bjacobi &gt;&gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runtest2_6:</font></strong> runtest2_6_none runtest2_6_norm runtest2_6_residual
+runtest2_6_%:
+	-@${SETTEST}; check=test2_3; extract=$*; \
+	${MPIEXEC} -n 1 ./test2 -pep_type linear -pep_nev 12 -pep_extract $${extract} &gt;&gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runtest2_7:</font></strong> runtest2_7_none runtest2_7_norm runtest2_7_residual runtest2_7_structured
+runtest2_7_%:
+	-@${SETTEST}; check=test2_3; extract=$*; \
+	${MPIEXEC} -n 1 ./test2 -pep_nev 12 -pep_extract $${extract} -pep_refine multiple &gt;&gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runtest2_8:</font></strong> runtest2_8_schur runtest2_8_mbe runtest2_8_explicit runtest2_8_multiple_schur runtest2_8_multiple_mbe runtest2_8_multiple_explicit
+runtest2_8_%:
+	-@${SETTEST}; check=test2_2; refine=$*; \
+	<font color="#4169E1">if</font> [ <font color="#666666">"$$refine"</font> = schur ]; then refine=<font color="#666666">"simple -pep_refine_scheme schur"</font>; \
+	elif [ <font color="#666666">"$$refine"</font> = mbe ]; then refine=<font color="#666666">"simple -pep_refine_scheme mbe -pep_refine_ksp_type preonly -pep_refine_pc_type lu"</font>; \
+	elif [ <font color="#666666">"$$refine"</font> = explicit ]; then refine=<font color="#666666">"simple -pep_refine_scheme explicit"</font>; \
+	elif [ <font color="#666666">"$$refine"</font> = multiple_schur ]; then refine=<font color="#666666">"multiple -pep_refine_scheme schur"</font>; \
+	elif [ <font color="#666666">"$$refine"</font> = multiple_mbe ]; then refine=<font color="#666666">"multiple -pep_refine_scheme mbe -pep_refine_ksp_type preonly -pep_refine_pc_type lu"</font>; \
+	elif [ <font color="#666666">"$$refine"</font> = multiple_explicit ]; then refine=<font color="#666666">"multiple -pep_refine_scheme explicit"</font>; fi; \
+	${MPIEXEC} -n 1 ./test2 -st_type sinvert -pep_target -0.43 -pep_nev 4 -pep_refine $${refine} -st_transform &gt;&gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runtest2_9:</font></strong> runtest2_9_mbe runtest2_9_explicit runtest2_9_multiple_mbe runtest2_9_multiple_explicit
+runtest2_9_%:
+	-@${SETTEST}; check=test2_2; refine=$*; \
+	<font color="#4169E1">if</font> [ <font color="#666666">"$$refine"</font> = mbe ]; then refine=<font color="#666666">"simple -pep_refine_scheme mbe -pep_refine_ksp_type preonly -pep_refine_pc_type lu"</font>; \
+	elif [ <font color="#666666">"$$refine"</font> = explicit ]; then refine=<font color="#666666">"simple -pep_refine_scheme explicit"</font>; \
+	elif [ <font color="#666666">"$$refine"</font> = multiple_mbe ]; then refine=<font color="#666666">"multiple -pep_refine_scheme mbe -pep_refine_ksp_type preonly -pep_refine_pc_type lu"</font>; \
+	elif [ <font color="#666666">"$$refine"</font> = multiple_explicit ]; then refine=<font color="#666666">"multiple -pep_refine_scheme explicit"</font>; fi; \
+	${MPIEXEC} -n 2 ./test2 -st_type sinvert -pep_target -0.43 -pep_nev 4 -pep_refine $${refine} -pep_refine_partitions 2 -st_ksp_type bcgs -st_pc_type bjacobi -pep_scale diagonal -pep_scale_its 4 &gt;&gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runtest2_10:</font></strong>
+	-@${SETTEST}; check=test2_2; \
+	${MPIEXEC} -n 4 ./test2 -st_type sinvert -pep_target -0.43 -pep_nev 4 -pep_refine simple -pep_refine_scheme explicit -pep_refine_partitions 2 -st_ksp_type bcgs -st_pc_type bjacobi -pep_scale diagonal -pep_scale_its 4 &gt;&gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runtest2_11_cuda:</font></strong> runtest2_11_cuda_toar runtest2_11_cuda_qarnoldi runtest2_11_cuda_linear runtest2_11_cuda_linear_gd
+runtest2_11_cuda_%:
+	-@${SETTEST}; check=test2_1; pep=$*; \
+	<font color="#4169E1">if</font> [ <font color="#666666">"$$pep"</font> = linear_gd ]; then pep=<font color="#666666">"linear -pep_linear_eps_type gd -pep_linear_explicitmatrix"</font>; \
+	elif [ <font color="#666666">"$$pep"</font> = qarnoldi ]; then pep=<font color="#666666">"qarnoldi -bv_orthog_refine never"</font>; fi; \
+	${MPIEXEC} -n 1 ./test2 -pep_type $${pep} -pep_nev 4 -initv -mat_type aijcusparse &gt;&gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runtest2_12:</font></strong>
+	-@${SETTEST}; \
+	${MPIEXEC} -n 2 ./test2 -pep_type jd -ds_parallel synchronized -pep_target -0.43 -pep_nev 4 -pep_ncv 20 &gt;&gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runtest3_1:</font></strong>
+	-@${SETTEST}; \
+	${MPIEXEC} -n 1 ./test3 -pep_tol 1e-6 -pep_ncv 22 &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runtest3f_1:</font></strong>
+	-@${SETTEST}; \
+	${MPIEXEC} -n 1 ./test3f -pep_tol 1e-6 -pep_ncv 22 &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runtest4_1:</font></strong>
+	-@${SETTEST}; \
+	${MPIEXEC} -n 1 ./test4 -pep_linear_explicitmatrix &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runtest5_1:</font></strong>
+	-@${SETTEST}; \
+	${MPIEXEC} -n 1 ./test5 -pep_error_backward ::ascii_info_detail -pep_largest_real -pep_view_values -pep_monitor_conv -pep_error_absolute ::ascii_matlab -pep_monitor_all -pep_converged_reason -pep_view | ${GREP} -v <font color="#666666">"tolerance"</font> | ${GREP} -v <font color="#666666">"problem type"</font> | ${SED} -e <font color="#666666">"s/[0-9]\.[0-9]*e-[0-9]*/removed/g"</font> &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runtest6_1:</font></strong> runtest6_1_toar runtest6_1_qarnoldi runtest6_1_linear
+runtest6_1_%:
+	-@${SETTEST}; check=test6_1; pep=$*; \
+	${MPIEXEC} -n 1 ./test6 -pep_type $$pep -pep_nev 4 -terse &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runtest6_2:</font></strong> 
+	-@${SETTEST}; \
+	${MPIEXEC} -n 1 ./test6 -pep_type stoar -pep_hermitian -pep_nev 4 -terse &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+
+</pre>
+</body>
+
+</html>

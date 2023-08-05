@@ -1,0 +1,96 @@
+
+<html>
+<head> <link rel="canonical" href="http://slepc.upv.es/documentation/current/src/pep/examples/tutorials/makefile.html" />
+<title></title>
+<meta name="generator" content="c2html 0.9.4">
+<meta name="date" content="2018-04-12T16:57:29+00:00">
+</head>
+
+<body bgcolor="#FFFFFF">
+   <div id="version" align=right><b>slepc-3.9.0 2018-04-12</b></div>
+   <div id="bugreport" align=right><a href="mailto:slepc-maint@upv.es?subject=Typo or Error in Documentation &body=Please describe the typo or error in the documentation: slepc-3.9.0 v3.9 src/pep/examples/tutorials/makefile.html "><small>Report Typos and Errors</small></a></div>
+<pre width="80"><font color="#A020F0">#</font>
+<font color="#A020F0">#  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</font>
+<font color="#A020F0">#  SLEPc - Scalable Library for Eigenvalue Problem Computations</font>
+<font color="#A020F0">#  Copyright (c) 2002-2018, Universitat Politecnica de Valencia, Spain</font>
+<font color="#A020F0">#</font>
+<font color="#A020F0">#  This file is part of SLEPc.</font>
+<font color="#A020F0">#  SLEPc is distributed under a 2-clause BSD license (see LICENSE).</font>
+<font color="#A020F0">#  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</font>
+<font color="#A020F0">#</font>
+
+CFLAGS     =
+FFLAGS     =
+CPPFLAGS   =
+FPPFLAGS   =
+LOCDIR     = src/pep/examples/tutorials/
+EXAMPLESC  = ex16.c ex17.c ex28.c ex38.c
+EXAMPLESF  = ex16f90.F90
+MANSEC     = <a href="ROOT/docs/manualpages/PEP/PEP.html#PEP">PEP</a>
+
+TESTEXAMPLES_C_NOTSINGLE           = ex38.PETSc runex38_1 ex38.rm
+TESTEXAMPLES_C_NOCOMPLEX_NOTSINGLE = ex28.PETSc runex28_1 ex28.rm \
+                                     ex16.PETSc runex16_1_stoar runex16_1_linear_symm ex16.rm
+TESTEXAMPLES_C_NOCOMPLEX           = ex16.PETSc runex16_1 ex16.rm
+TESTEXAMPLES_C_DATAFILE            = ex17.PETSc runex17_1 ex17.rm
+TESTEXAMPLES_F90_NOCOMPLEX         = ex16f90.PETSc runex16f90_1 ex16f90.rm
+
+include ${SLEPC_DIR}/lib/slepc/conf/slepc_common
+
+<strong><font color="#FF0000">ex16:</font></strong> ex16.o chkopts
+	-${CLINKER} -o ex16 ex16.o ${SLEPC_PEP_LIB}
+	${RM} ex16.o
+
+<strong><font color="#FF0000">ex16f90:</font></strong> ex16f90.o chkopts
+	-${FLINKER} -o ex16f90 ex16f90.o ${SLEPC_PEP_LIB}
+	${RM} ex16f90.o
+
+<strong><font color="#FF0000">ex17:</font></strong> ex17.o chkopts
+	-${CLINKER} -o ex17 ex17.o ${SLEPC_PEP_LIB}
+	${RM} ex17.o
+
+<strong><font color="#FF0000">ex28:</font></strong> ex28.o chkopts
+	-${CLINKER} -o ex28 ex28.o ${SLEPC_PEP_LIB}
+	${RM} ex28.o
+
+<strong><font color="#FF0000">ex38:</font></strong> ex38.o chkopts
+	-${CLINKER} -o ex38 ex38.o ${SLEPC_PEP_LIB}
+	${RM} ex38.o
+
+<font color="#A020F0">#------------------------------------------------------------------------------------</font>
+DATAPATH = ${SLEPC_DIR}/share/slepc/datafiles/matrices
+
+<strong><font color="#FF0000">runex16_1:</font></strong> runex16_1_toar runex16_1_qarnoldi runex16_1_linear
+runex16_1_%:
+	-@${SETTEST}; check=ex16_1; pep=$*; \
+	<font color="#4169E1">if</font> [ <font color="#666666">"$$pep"</font> = linear ]; then pep=<font color="#666666">"linear -pep_linear_explicitmatrix"</font>; \
+	elif [ <font color="#666666">"$$pep"</font> = linear_symm ]; then pep=<font color="#666666">"linear -pep_linear_explicitmatrix -pep_linear_eps_gen_indefinite"</font>; fi; \
+	${MPIEXEC} -n 1 ./ex16 -pep_type $$pep -pep_nev 4 -pep_ncv 21 -n 12 -terse &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runex16f90_1:</font></strong>
+	-@${SETTEST}; \
+	${MPIEXEC} -n 1 ./ex16f90 -pep_nev 4 -pep_ncv 20 -terse &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runex17_1:</font></strong> runex17_1_toar runex17_1_qarnoldi runex17_1_linear
+runex17_1_%:
+	-@${SETTEST}; check=ex17_1; pep=$*; \
+	${MPIEXEC} -n 1 ./ex17 -A ${DATAPATH}/speaker107k.petsc,${DATAPATH}/speaker107c.petsc,${DATAPATH}/speaker107m.petsc -pep_type $$pep -pep_nev 4 -pep_ncv 20 -pep_scale scalar -terse &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runex28_1:</font></strong> runex28_1_toar runex28_1_qarnoldi runex28_1_linear
+runex28_1_%:
+	-@${SETTEST}; check=ex28_1; pep=$*; \
+	${MPIEXEC} -n 1 ./ex28 -pep_nev 4 -terse &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runex38_1:</font></strong>
+	-@${SETTEST}; \
+	${MPIEXEC} -n 1 ./ex38 -terse &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+</pre>
+</body>
+
+</html>

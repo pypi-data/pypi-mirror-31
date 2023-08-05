@@ -1,0 +1,221 @@
+
+<html>
+<head> <link rel="canonical" href="http://slepc.upv.es/documentation/current/src/svd/examples/tests/makefile.html" />
+<title></title>
+<meta name="generator" content="c2html 0.9.4">
+<meta name="date" content="2018-04-12T16:57:04+00:00">
+</head>
+
+<body bgcolor="#FFFFFF">
+   <div id="version" align=right><b>slepc-3.9.0 2018-04-12</b></div>
+   <div id="bugreport" align=right><a href="mailto:slepc-maint@upv.es?subject=Typo or Error in Documentation &body=Please describe the typo or error in the documentation: slepc-3.9.0 v3.9 src/svd/examples/tests/makefile.html "><small>Report Typos and Errors</small></a></div>
+<pre width="80"><font color="#A020F0">#</font>
+<font color="#A020F0">#  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</font>
+<font color="#A020F0">#  SLEPc - Scalable Library for Eigenvalue Problem Computations</font>
+<font color="#A020F0">#  Copyright (c) 2002-2018, Universitat Politecnica de Valencia, Spain</font>
+<font color="#A020F0">#</font>
+<font color="#A020F0">#  This file is part of SLEPc.</font>
+<font color="#A020F0">#  SLEPc is distributed under a 2-clause BSD license (see LICENSE).</font>
+<font color="#A020F0">#  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</font>
+<font color="#A020F0">#</font>
+
+CFLAGS     =
+FFLAGS     =
+CPPFLAGS   =
+FPPFLAGS   =
+LOCDIR     = src/svd/examples/tests/
+EXAMPLESC  = test1.c test2.c test3.c test4.c test5.c test6.c test7.c test8.c test9.c
+EXAMPLESF  = test4f.F
+MANSEC     = <a href="ROOT/docs/manualpages/SVD/SVD.html#SVD">SVD</a>
+TESTS      = test1 test2 test3 test4 test4f test5 test6 test7 test8 test9
+
+TESTEXAMPLES_C           = test1.PETSc runtest1_1 test1.rm \
+                           test4.PETSc runtest4_1 runtest4_3 test4.rm \
+                           test5.PETSc runtest5_1 test5.rm \
+                           test6.PETSc runtest6_1 test6.rm \
+                           test8.PETSc runtest8_1 test8.rm
+TESTEXAMPLES_C_DOUBLE    = test2.PETSc runtest2_1 test2.rm
+TESTEXAMPLES_C_NOTSINGLE = test3.PETSc runtest3_1 runtest3_2 runtest3_4 test3.rm \
+                           test4.PETSc runtest4_1_lapack test4.rm \
+                           test7.PETSc runtest7_1 test7.rm \
+                           test9.PETSc runtest9_1 test9.rm
+TESTEXAMPLES_C_NOCOMPLEX = test3.PETSc runtest3_2_cross_exp test3.rm \
+                           test4.PETSc runtest4_1_cross_exp_imp test4.rm
+TESTEXAMPLES_FORTRAN     = test4f.PETSc runtest4f_1 test4f.rm
+TESTEXAMPLES_VECCUDA     = test3.PETSc runtest3_3_cuda test3.rm \
+                           test4.PETSc runtest4_2_cuda test4.rm \
+                           test6.PETSc runtest6_2_cuda test6.rm \
+                           test7.PETSc runtest7_2_cuda test7.rm
+TESTEXAMPLES_PRIMME      = test1.PETSc runtest1_1_primme test1.rm \
+                           test2.PETSc runtest2_1_primme test2.rm \
+                           test3.PETSc runtest3_1_primme test3.rm
+
+include ${SLEPC_DIR}/lib/slepc/conf/slepc_common
+
+<strong><font color="#FF0000">test1:</font></strong> test1.o chkopts
+	-${CLINKER} -o test1 test1.o ${SLEPC_SVD_LIB}
+	${RM} test1.o
+
+<strong><font color="#FF0000">test2:</font></strong> test2.o chkopts
+	-${CLINKER} -o test2 test2.o ${SLEPC_SVD_LIB}
+	${RM} test2.o
+
+<strong><font color="#FF0000">test3:</font></strong> test3.o chkopts
+	-${CLINKER} -o test3 test3.o ${SLEPC_SVD_LIB}
+	${RM} test3.o
+
+<strong><font color="#FF0000">test4:</font></strong> test4.o chkopts
+	-${CLINKER} -o test4 test4.o ${SLEPC_SVD_LIB}
+	${RM} test4.o
+
+<strong><font color="#FF0000">test4f:</font></strong> test4f.o chkopts
+	-${FLINKER} -o test4f test4f.o ${SLEPC_SVD_LIB}
+	${RM} test4f.o
+
+<strong><font color="#FF0000">test5:</font></strong> test5.o chkopts
+	-${CLINKER} -o test5 test5.o ${SLEPC_SVD_LIB}
+	${RM} test5.o
+
+<strong><font color="#FF0000">test6:</font></strong> test6.o chkopts
+	-${CLINKER} -o test6 test6.o ${SLEPC_SVD_LIB}
+	${RM} test6.o
+
+<strong><font color="#FF0000">test7:</font></strong> test7.o chkopts
+	-${CLINKER} -o test7 test7.o ${SLEPC_SVD_LIB}
+	${RM} test7.o
+
+<strong><font color="#FF0000">test8:</font></strong> test8.o chkopts
+	-${CLINKER} -o test8 test8.o ${SLEPC_SVD_LIB}
+	${RM} test8.o
+
+<strong><font color="#FF0000">test9:</font></strong> test9.o chkopts
+	-${CLINKER} -o test9 test9.o ${SLEPC_SVD_LIB}
+	${RM} test9.o
+
+<font color="#A020F0">#------------------------------------------------------------------------------------</font>
+
+<strong><font color="#FF0000">runtest1_1:</font></strong> runtest1_1_lanczos runtest1_1_trlanczos runtest1_1_cross runtest1_1_cross_gd runtest1_1_cyclic runtest1_1_cyclic_gd runtest1_1_lapack
+runtest1_1_%:
+	-@${SETTEST}; check=test1_1; svd=$*; \
+	<font color="#4169E1">if</font> [ <font color="#666666">"$$svd"</font> = cross_gd ]; then svd=<font color="#666666">"cross -epstype gd"</font>; \
+	elif [ <font color="#666666">"$$svd"</font> = cyclic_gd ]; then svd=<font color="#666666">"cyclic -epstype gd"</font>; fi; \
+	${MPIEXEC} -n 1 ./test1 -type $$svd &gt;&gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runtest2_1:</font></strong> runtest2_1_lanczos runtest2_1_trlanczos runtest2_1_cross runtest2_1_cyclic runtest2_1_lapack
+runtest2_1_%:
+	-@${SETTEST}; check=test2_1; svd=$*; \
+	<font color="#4169E1">if</font> [ <font color="#666666">"${PETSC_SCALAR}"</font> = <font color="#666666">"complex"</font> ]; then check=$${check}_complex; fi; \
+	${MPIEXEC} -n 1 ./test2 -svd_type $$svd -svd_nsv 7 &gt; $${test}.tmp 2&gt;&amp;1;    \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runtest3_1:</font></strong> runtest3_1_lanczos runtest3_1_lanczos_one runtest3_1_trlanczos runtest3_1_trlanczos_one runtest3_1_trlanczos_one_mgs runtest3_1_trlanczos_one_alway runtest3_1_cross runtest3_1_cross_exp runtest3_1_cyclic runtest3_1_cyclic_exp runtest3_1_lapack
+runtest3_1_%:
+	-@${SETTEST}; check=test3_1; svd=$*; \
+	<font color="#4169E1">if</font> [ <font color="#666666">"$$svd"</font> = lanczos_one ]; then svd=<font color="#666666">"lanczos -svd_lanczos_oneside"</font>; \
+	elif [ <font color="#666666">"$$svd"</font> = trlanczos_one ]; then svd=<font color="#666666">"trlanczos -svd_trlanczos_oneside"</font>; \
+	elif [ <font color="#666666">"$$svd"</font> = trlanczos_one_mgs ]; then svd=<font color="#666666">"trlanczos -svd_trlanczos_oneside -bv_orthog_type mgs"</font>; \
+	elif [ <font color="#666666">"$$svd"</font> = trlanczos_one_alway ]; then svd=<font color="#666666">"trlanczos -svd_trlanczos_oneside -bv_orthog_refine always"</font>; \
+	elif [ <font color="#666666">"$$svd"</font> = cross_exp ]; then svd=<font color="#666666">"cross -svd_cross_explicitmatrix"</font>; \
+	elif [ <font color="#666666">"$$svd"</font> = cyclic_exp ]; then svd=<font color="#666666">"cyclic -svd_cyclic_explicitmatrix"</font>; fi; \
+	${MPIEXEC} -n 1 ./test3 -svd_type $$svd -svd_nsv 4 &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runtest3_2:</font></strong> runtest3_2_lanczos runtest3_2_lanczos_one runtest3_2_trlanczos runtest3_2_trlanczos_one runtest3_2_trlanczos_one_mgs runtest3_2_trlanczos_one_alway runtest3_2_trlanczos_one_mgs runtest3_2_cross runtest3_2_cyclic runtest3_2_lapack
+runtest3_2_%:
+	-@${SETTEST}; check=test3_1; svd=$*; \
+	<font color="#4169E1">if</font> [ <font color="#666666">"$$svd"</font> = lanczos_one ]; then svd=<font color="#666666">"lanczos -svd_lanczos_oneside"</font>; \
+	elif [ <font color="#666666">"$$svd"</font> = trlanczos_one ]; then svd=<font color="#666666">"trlanczos -svd_trlanczos_oneside"</font>; \
+	elif [ <font color="#666666">"$$svd"</font> = trlanczos_one_mgs ]; then svd=<font color="#666666">"trlanczos -svd_trlanczos_oneside -bv_orthog_type mgs"</font>; \
+	elif [ <font color="#666666">"$$svd"</font> = trlanczos_one_alway ]; then svd=<font color="#666666">"trlanczos -svd_trlanczos_oneside -bv_orthog_refine always"</font>; \
+	elif [ <font color="#666666">"$$svd"</font> = cross_exp ]; then svd=<font color="#666666">"cross -svd_cross_explicitmatrix"</font>; fi; \
+	${MPIEXEC} -n 1 ./test3 -svd_implicittranspose -svd_type $$svd -svd_nsv 4 -svd_tol 1e-5 &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runtest3_3_cuda:</font></strong> runtest3_3_cuda_lanczos runtest3_3_cuda_lanczos_one runtest3_3_cuda_trlanczos runtest3_3_cuda_trl_one runtest3_3_cuda_trl_one_mgs runtest3_3_cuda_trl_one_alway runtest3_3_cuda_cross runtest3_3_cuda_cyclic runtest3_3_cuda_cyclic_exp
+runtest3_3_cuda_%:
+	-@${SETTEST}; check=test3_1; svd=$*; \
+	<font color="#4169E1">if</font> [ <font color="#666666">"$$svd"</font> = lanczos_one ]; then svd=<font color="#666666">"lanczos -svd_lanczos_oneside"</font>; \
+	elif [ <font color="#666666">"$$svd"</font> = cyclic_exp ]; then svd=<font color="#666666">"cyclic -svd_cyclic_explicitmatrix"</font>; \
+	elif [ <font color="#666666">"$$svd"</font> = trl_one ]; then svd=<font color="#666666">"trlanczos -svd_trlanczos_oneside"</font>; \
+	elif [ <font color="#666666">"$$svd"</font> = trl_one_mgs ]; then svd=<font color="#666666">"trlanczos -svd_trlanczos_oneside -bv_orthog_type mgs"</font>; \
+	elif [ <font color="#666666">"$$svd"</font> = trl_one_alway ]; then svd=<font color="#666666">"trlanczos -svd_trlanczos_oneside -bv_orthog_refine always"</font>; fi; \
+	${MPIEXEC} -n 1 ./test3 -svd_type $$svd -svd_nsv 4 -mat_type aijcusparse &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runtest3_4:</font></strong>
+	-@${SETTEST}; check=test3_1; \
+	${MPIEXEC} -n 2 ./test3 -svd_type lapack -svd_nsv 4 &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runtest4_1:</font></strong> runtest4_1_lanczos runtest4_1_trlanczos runtest4_1_cross runtest4_1_cross_exp runtest4_1_cyclic runtest4_1_cyclic_imp runtest4_1_cyclic_exp
+runtest4_1_%:
+	-@${SETTEST}; check=test4_1; svd=$*; \
+	<font color="#4169E1">if</font> [ <font color="#666666">"$$svd"</font> = trlanczos ]; then svd=<font color="#666666">"trlanczos -svd_ncv 12"</font>; \
+	elif [ <font color="#666666">"$$svd"</font> = cross_exp ]; then svd=<font color="#666666">"cross -svd_cross_explicitmatrix"</font>; \
+	elif [ <font color="#666666">"$$svd"</font> = cross_exp_imp ]; then svd=<font color="#666666">"cross -svd_cross_explicitmatrix -svd_implicittranspose"</font>; \
+	elif [ <font color="#666666">"$$svd"</font> = cyclic_imp ]; then svd=<font color="#666666">"cyclic -svd_implicittranspose"</font>; \
+	elif [ <font color="#666666">"$$svd"</font> = cyclic_exp ]; then svd=<font color="#666666">"cyclic -svd_cyclic_explicitmatrix"</font>; fi; \
+	${MPIEXEC} -n 1 ./test4 -svd_type $$svd -svd_monitor_cancel | ${GREP} -v <font color="#666666">"Transpose mode"</font> &gt;&gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runtest4_2_cuda:</font></strong> runtest4_2_cuda_lanczos runtest4_2_cuda_trlanczos runtest4_2_cuda_cross
+runtest4_2_cuda_%:
+	-@${SETTEST}; check=test4_1; svd=$*; \
+	<font color="#4169E1">if</font> [ <font color="#666666">"$$svd"</font> = trlanczos ]; then svd=<font color="#666666">"trlanczos -svd_ncv 12"</font>; fi; \
+	${MPIEXEC} -n 1 ./test4 -svd_type $$svd -svd_monitor_cancel -mat_type aijcusparse  | ${GREP} -v <font color="#666666">"Transpose mode"</font> &gt;&gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE_CUDA}
+
+<strong><font color="#FF0000">runtest4_3:</font></strong>
+	-@${SETTEST}; \
+	${MPIEXEC} -n 2 ./test4 -svd_type trlanczos -svd_ncv 12 -svd_monitor_cancel -ds_parallel synchronized &gt;&gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runtest4f_1:</font></strong>
+	-@${SETTEST}; \
+	${MPIEXEC} -n 1 ./test4f &gt;&gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runtest5_1:</font></strong>
+	-@${SETTEST}; \
+	${MPIEXEC} -n 1 ./test5 -svd_error_relative ::ascii_info_detail -svd_view_values -svd_monitor_conv -svd_error_absolute ::ascii_matlab -svd_monitor_all -svd_converged_reason -svd_view | ${GREP} -v <font color="#666666">"tolerance"</font> | ${GREP} -v <font color="#666666">"problem type"</font> | ${SED} -e <font color="#666666">"s/[0-9]\.[0-9]*e-[0-9]*/removed/g"</font> &gt;&gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runtest6_1:</font></strong> runtest6_1_subspace runtest6_1_lobpcg
+runtest6_1_%:
+	-@${SETTEST}; check=test6_1; eps=$*; \
+	<font color="#4169E1">if</font> [ <font color="#666666">"$$eps"</font> = lobpcg ]; then eps=<font color="#666666">"lobpcg -st_type precond"</font>; fi; \
+	${MPIEXEC} -n 1 ./test6 -eps_type $$eps &gt;&gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runtest6_2_cuda:</font></strong>
+	-@${SETTEST}; check=test6_1; \
+	${MPIEXEC} -n 1 ./test6 -eps_type subspace -mat_type aijcusparse &gt;&gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runtest7_1:</font></strong>
+	-@${SETTEST}; \
+	${MPIEXEC} -n 1 ./test7 -info_exclude svd -log_exclude svd &gt;&gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runtest7_2_cuda:</font></strong>
+	-@${SETTEST}; check=test7_1; \
+	${MPIEXEC} -n 1 ./test7 -info_exclude svd -log_exclude svd -mat_type aijcusparse &gt;&gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runtest8_1:</font></strong> runtest8_1_lanczos runtest8_1_trlanczos runtest8_1_cross runtest8_1_cyclic runtest8_1_lapack
+runtest8_1_%:
+	-@${SETTEST}; check=test8_1; svd=$*; \
+	${MPIEXEC} -n 1 ./test8 -svd_type $$svd -svd_nsv 3 &gt;&gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runtest9_1:</font></strong> runtest9_1_lanczos runtest9_1_trlanczos runtest9_1_cross runtest9_1_cyclic runtest9_1_lapack
+runtest9_1_%:
+	-@${SETTEST}; check=test9_1; svd=$*; \
+	${MPIEXEC} -n 1 ./test9 -svd_type $$svd -svd_nsv 3 &gt;&gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+</pre>
+</body>
+
+</html>

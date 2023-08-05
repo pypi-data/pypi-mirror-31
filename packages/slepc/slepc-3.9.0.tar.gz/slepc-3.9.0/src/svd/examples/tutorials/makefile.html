@@ -1,0 +1,83 @@
+
+<html>
+<head> <link rel="canonical" href="http://slepc.upv.es/documentation/current/src/svd/examples/tutorials/makefile.html" />
+<title></title>
+<meta name="generator" content="c2html 0.9.4">
+<meta name="date" content="2018-04-12T16:57:04+00:00">
+</head>
+
+<body bgcolor="#FFFFFF">
+   <div id="version" align=right><b>slepc-3.9.0 2018-04-12</b></div>
+   <div id="bugreport" align=right><a href="mailto:slepc-maint@upv.es?subject=Typo or Error in Documentation &body=Please describe the typo or error in the documentation: slepc-3.9.0 v3.9 src/svd/examples/tutorials/makefile.html "><small>Report Typos and Errors</small></a></div>
+<pre width="80"><font color="#A020F0">#</font>
+<font color="#A020F0">#  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</font>
+<font color="#A020F0">#  SLEPc - Scalable Library for Eigenvalue Problem Computations</font>
+<font color="#A020F0">#  Copyright (c) 2002-2018, Universitat Politecnica de Valencia, Spain</font>
+<font color="#A020F0">#</font>
+<font color="#A020F0">#  This file is part of SLEPc.</font>
+<font color="#A020F0">#  SLEPc is distributed under a 2-clause BSD license (see LICENSE).</font>
+<font color="#A020F0">#  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</font>
+<font color="#A020F0">#</font>
+
+CFLAGS     =
+FFLAGS     =
+CPPFLAGS   =
+FPPFLAGS   =
+LOCDIR     = src/svd/examples/tutorials/
+EXAMPLESC  = ex8.c ex14.c ex15.c
+EXAMPLESF  = ex15f.F
+MANSEC     = <a href="ROOT/docs/manualpages/SVD/SVD.html#SVD">SVD</a>
+
+TESTEXAMPLES_C           = ex8.PETSc runex8_1 ex8.rm
+TESTEXAMPLES_C_DATAFILE  = ex14.PETSc runex14_1 runex14_2 ex14.rm
+
+include ${SLEPC_DIR}/lib/slepc/conf/slepc_common
+
+<strong><font color="#FF0000">ex8:</font></strong> ex8.o chkopts
+	-${CLINKER} -o ex8 ex8.o ${SLEPC_SVD_LIB}
+	${RM} ex8.o
+
+<strong><font color="#FF0000">ex14:</font></strong> ex14.o chkopts
+	-${CLINKER} -o ex14 ex14.o ${SLEPC_SVD_LIB}
+	${RM} ex14.o
+
+<strong><font color="#FF0000">ex15:</font></strong> ex15.o chkopts
+	-${CLINKER} -o ex15 ex15.o ${SLEPC_SVD_LIB}
+	${RM} ex15.o
+
+<strong><font color="#FF0000">ex15f:</font></strong> ex15f.o chkopts
+	-${FLINKER} -o ex15f ex15f.o ${SLEPC_SVD_LIB}
+	${RM} ex15f.o
+
+<font color="#A020F0">#------------------------------------------------------------------------------------</font>
+DATAPATH = ${SLEPC_DIR}/share/slepc/datafiles/matrices
+
+<strong><font color="#FF0000">runex8_1:</font></strong>
+	-@${SETTEST}; \
+	${MPIEXEC} -n 1 ./ex8 &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runex14_1:</font></strong>
+	-@${SETTEST}; \
+	${MPIEXEC} -n 1 ./ex14 -file ${DATAPATH}/rdb200.petsc -svd_nsv 4 -terse &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runex14_2:</font></strong>
+	-@${SETTEST}; \
+	${MPIEXEC} -n 1 ./ex14 -file ${DATAPATH}/rdb200.petsc -svd_nsv 2 -svd_type cyclic -svd_cyclic_explicitmatrix -svd_cyclic_st_type sinvert -svd_cyclic_eps_target 12.0 -svd_cyclic_st_ksp_type preonly -svd_cyclic_st_pc_type lu -terse &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runex15_1:</font></strong>
+	-@${SETTEST}; \
+	${MPIEXEC} -n 1 ./ex15 &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runex15f_1:</font></strong>
+	-@${SETTEST}; \
+	${MPIEXEC} -n 1 ./ex15f &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+</pre>
+</body>
+
+</html>

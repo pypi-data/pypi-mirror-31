@@ -1,0 +1,209 @@
+
+<html>
+<head> <link rel="canonical" href="http://slepc.upv.es/documentation/current/src/pep/examples/nlevp/makefile.html" />
+<title></title>
+<meta name="generator" content="c2html 0.9.4">
+<meta name="date" content="2018-04-12T16:57:31+00:00">
+</head>
+
+<body bgcolor="#FFFFFF">
+   <div id="version" align=right><b>slepc-3.9.0 2018-04-12</b></div>
+   <div id="bugreport" align=right><a href="mailto:slepc-maint@upv.es?subject=Typo or Error in Documentation &body=Please describe the typo or error in the documentation: slepc-3.9.0 v3.9 src/pep/examples/nlevp/makefile.html "><small>Report Typos and Errors</small></a></div>
+<pre width="80"><font color="#A020F0">#</font>
+<font color="#A020F0">#  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</font>
+<font color="#A020F0">#  SLEPc - Scalable Library for Eigenvalue Problem Computations</font>
+<font color="#A020F0">#  Copyright (c) 2002-2018, Universitat Politecnica de Valencia, Spain</font>
+<font color="#A020F0">#</font>
+<font color="#A020F0">#  This file is part of SLEPc.</font>
+<font color="#A020F0">#  SLEPc is distributed under a 2-clause BSD license (see LICENSE).</font>
+<font color="#A020F0">#  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</font>
+<font color="#A020F0">#</font>
+
+CFLAGS     =
+FFLAGS     =
+CPPFLAGS   =
+FPPFLAGS   =
+LOCDIR     = src/pep/examples/nlevp/
+EXAMPLESC  = acoustic_wave_1d.c acoustic_wave_2d.c butterfly.c damped_beam.c \
+             pdde_stability.c planar_waveguide.c sleeper.c spring.c wiresaw.c
+EXAMPLESF  =
+MANSEC     = <a href="ROOT/docs/manualpages/PEP/PEP.html#PEP">PEP</a>
+TESTS      = acoustic_wave_1d acoustic_wave_2d butterfly damped_beam \
+             pdde_stability planar_waveguide sleeper spring wiresaw
+
+TESTEXAMPLES_C                     = sleeper.PETSc runsleeper_1 sleeper.rm
+TESTEXAMPLES_C_NOTSINGLE           = damped_beam.PETSc rundamped_beam_1 damped_beam.rm \
+                                     sleeper.PETSc runsleeper_2_toar runsleeper_3 sleeper.rm \
+                                     spring.PETSc runspring_1 runspring_3 runspring_4 spring.rm
+TESTEXAMPLES_C_NOCOMPLEX           = butterfly.PETSc runbutterfly_1 butterfly.rm
+TESTEXAMPLES_C_DATAFILE            = butterfly.PETSc runbutterfly_2 butterfly.rm
+TESTEXAMPLES_C_NOCOMPLEX_NOTSINGLE = acoustic_wave_1d.PETSc runacoustic_wave_1d_1 runacoustic_wave_1d_2 \
+                                                            runacoustic_wave_1d_3 acoustic_wave_1d.rm \
+                                     acoustic_wave_2d.PETSc runacoustic_wave_2d_1 acoustic_wave_2d.rm \
+                                     planar_waveguide.PETSc runplanar_waveguide_1 planar_waveguide.rm \
+                                     wiresaw.PETSc runwiresaw_1 wiresaw.rm
+TESTEXAMPLES_C_COMPLEX             = damped_beam.PETSc rundamped_beam_1_jd damped_beam.rm \
+                                     pdde_stability.PETSc runpdde_stability_1 pdde_stability.rm \
+                                     sleeper.PETSc runsleeper_2_jd sleeper.rm \
+                                     spring.PETSc runspring_2_jd spring.rm
+
+include ${SLEPC_DIR}/lib/slepc/conf/slepc_common
+
+<strong><font color="#FF0000">acoustic_wave_1d:</font></strong> acoustic_wave_1d.o chkopts
+	-${CLINKER} -o acoustic_wave_1d acoustic_wave_1d.o ${SLEPC_PEP_LIB}
+	${RM} acoustic_wave_1d.o
+
+<strong><font color="#FF0000">acoustic_wave_2d:</font></strong> acoustic_wave_2d.o chkopts
+	-${CLINKER} -o acoustic_wave_2d acoustic_wave_2d.o ${SLEPC_PEP_LIB}
+	${RM} acoustic_wave_2d.o
+
+<strong><font color="#FF0000">butterfly:</font></strong> butterfly.o chkopts
+	-${CLINKER} -o butterfly butterfly.o ${SLEPC_PEP_LIB}
+	${RM} butterfly.o
+
+<strong><font color="#FF0000">damped_beam:</font></strong> damped_beam.o chkopts
+	-${CLINKER} -o damped_beam damped_beam.o ${SLEPC_PEP_LIB}
+	${RM} damped_beam.o
+
+<strong><font color="#FF0000">pdde_stability:</font></strong> pdde_stability.o chkopts
+	-${CLINKER} -o pdde_stability pdde_stability.o ${SLEPC_PEP_LIB}
+	${RM} pdde_stability.o
+
+<strong><font color="#FF0000">planar_waveguide:</font></strong> planar_waveguide.o chkopts
+	-${CLINKER} -o planar_waveguide planar_waveguide.o ${SLEPC_PEP_LIB}
+	${RM} planar_waveguide.o
+
+<strong><font color="#FF0000">sleeper:</font></strong> sleeper.o chkopts
+	-${CLINKER} -o sleeper sleeper.o ${SLEPC_PEP_LIB}
+	${RM} sleeper.o
+
+<strong><font color="#FF0000">spring:</font></strong> spring.o chkopts
+	-${CLINKER} -o spring spring.o ${SLEPC_PEP_LIB}
+	${RM} spring.o
+
+<strong><font color="#FF0000">wiresaw:</font></strong> wiresaw.o chkopts
+	-${CLINKER} -o wiresaw wiresaw.o ${SLEPC_PEP_LIB}
+	${RM} wiresaw.o
+
+<font color="#A020F0">#------------------------------------------------------------------------------------</font>
+<strong><font color="#FF0000">runacoustic_wave_1d_1:</font></strong> runacoustic_wave_1d_1_toar runacoustic_wave_1d_1_stoar runacoustic_wave_1d_1_qarnoldi runacoustic_wave_1d_1_linear
+runacoustic_wave_1d_1_%:
+	-@${SETTEST}; check=acoustic_wave_1d_1; pep=$*; \
+	<font color="#4169E1">if</font> [ <font color="#666666">"$$pep"</font> = stoar ]; then pep=<font color="#666666">"stoar -pep_hermitian -pep_stoar_locking 0"</font>; fi; \
+	${MPIEXEC} -n 1 ./acoustic_wave_1d -pep_type $${pep} -st_transform -pep_nev 4 -pep_tol 1e-7 -n 24 -st_type sinvert -terse &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runacoustic_wave_1d_2:</font></strong> runacoustic_wave_1d_2_none runacoustic_wave_1d_2_norm runacoustic_wave_1d_2_residual
+runacoustic_wave_1d_2_%:
+	-@${SETTEST}; check=acoustic_wave_1d_1; extract=$*; \
+	<font color="#4169E1">if</font> [ <font color="#666666">"$$pep"</font> = stoar ]; then pep=<font color="#666666">"stoar -pep_hermitian"</font>; fi; \
+	${MPIEXEC} -n 1 ./acoustic_wave_1d -pep_extract $${extract} -st_transform -pep_nev 4 -pep_tol 1e-7 -n 24 -st_type sinvert -terse &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runacoustic_wave_1d_3:</font></strong> runacoustic_wave_1d_3_none runacoustic_wave_1d_3_norm runacoustic_wave_1d_3_residual
+runacoustic_wave_1d_3_%:
+	-@${SETTEST}; check=acoustic_wave_1d_1; extract=$*; \
+	<font color="#4169E1">if</font> [ <font color="#666666">"$$pep"</font> = stoar ]; then pep=<font color="#666666">"stoar -pep_hermitian"</font>; fi; \
+	${MPIEXEC} -n 1 ./acoustic_wave_1d -pep_type linear -pep_extract $${extract} -st_transform -pep_nev 4 -pep_tol 1e-7 -n 24 -st_type sinvert -terse &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runacoustic_wave_2d_1:</font></strong> runacoustic_wave_2d_1_toar runacoustic_wave_2d_1_stoar runacoustic_wave_2d_1_qarnoldi runacoustic_wave_2d_1_linear
+runacoustic_wave_2d_1_%:
+	-@${SETTEST}; check=acoustic_wave_2d_1; pep=$*; \
+	<font color="#4169E1">if</font> [ <font color="#666666">"$$pep"</font> = stoar ]; then pep=<font color="#666666">"stoar -pep_hermitian"</font>; \
+	elif [ <font color="#666666">"$$pep"</font> = toar ]; then pep=<font color="#666666">"toar -pep_toar_locking 0"</font>; fi; \
+	${MPIEXEC} -n 1 ./acoustic_wave_2d -pep_type $${pep} -pep_nev 2 -pep_ncv 18 -terse &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runbutterfly_1:</font></strong> runbutterfly_1_toar runbutterfly_1_linear
+runbutterfly_1_%:
+	-@${SETTEST}; check=butterfly_1; pep=$*; \
+	<font color="#4169E1">if</font> [ <font color="#666666">"$$pep"</font> = toar ]; then pep=<font color="#666666">"toar -pep_toar_restart 0.3"</font>; fi; \
+	${MPIEXEC} -n 1 ./butterfly -pep_type $${pep} -pep_nev 4 -st_type sinvert -pep_target 0.01 -terse &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runbutterfly_2:</font></strong> runbutterfly_2_toar runbutterfly_2_linear
+runbutterfly_2_%:
+	-@${SETTEST}; check=butterfly_2; pep=$*; \
+	${MPIEXEC} -n 1 ./butterfly -pep_type $${pep} -pep_nev 4 -terse &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">rundamped_beam_1:</font></strong> rundamped_beam_1_toar rundamped_beam_1_qarnoldi rundamped_beam_1_linear
+rundamped_beam_1_%:
+	-@${SETTEST}; check=damped_beam_1; pep=$*; \
+	<font color="#4169E1">if</font> [ <font color="#666666">"${PETSC_SCALAR}"</font> = <font color="#666666">"complex"</font> ]; then target=<font color="#666666">"1i"</font>; <font color="#4169E1">else</font> target=<font color="#666666">"0"</font>; fi; \
+	<font color="#4169E1">if</font> [ <font color="#666666">"$$pep"</font> != jd ]; then sinv=<font color="#666666">"-st_type sinvert"</font>; fi; \
+	<font color="#4169E1">if</font> [ <font color="#666666">"$$pep"</font> = qarnoldi ]; then pep=<font color="#666666">"qarnoldi -pep_qarnoldi_locking 0"</font>; fi; \
+	${MPIEXEC} -n 1 ./damped_beam -pep_type $${pep} -pep_nev 2 -pep_ncv 12 -pep_target $$target $$sinv -terse &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runpdde_stability_1:</font></strong> runpdde_stability_1_toar runpdde_stability_1_qarnoldi runpdde_stability_1_linear
+runpdde_stability_1_%:
+	-@${SETTEST}; check=pdde_stability_1; pep=$*; \
+	${MPIEXEC} -n 1 ./pdde_stability -pep_type $${pep} -pep_ncv 25 -terse &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runplanar_waveguide_1:</font></strong> runplanar_waveguide_1_toar runplanar_waveguide_1_linear
+runplanar_waveguide_1_%:
+	-@${SETTEST}; check=planar_waveguide_1; pep=$*; \
+	<font color="#4169E1">if</font> [ <font color="#666666">"$$pep"</font> = jd ]; then sinv=<font color="#666666">"-pep_target -.1"</font>; <font color="#4169E1">else</font> sinv=<font color="#666666">"-st_type sinvert"</font>; fi; \
+	${MPIEXEC} -n 1 ./planar_waveguide -pep_type $${pep} -pep_nev 4 $$sinv -terse &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runsleeper_1:</font></strong> runsleeper_1_toar runsleeper_1_qarnoldi runsleeper_1_linear
+runsleeper_1_%:
+	-@${SETTEST}; check=sleeper_1; pep=$*; \
+	<font color="#4169E1">if</font> [ <font color="#666666">"$$pep"</font> = qarnoldi ]; then pep=<font color="#666666">"qarnoldi -pep_qarnoldi_restart 0.4"</font>; fi; \
+	${MPIEXEC} -n 1 ./sleeper -n 100 -pep_type $${pep} -pep_nev 4 -pep_ncv 24 -st_type sinvert -terse &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runsleeper_2:</font></strong> runsleeper_2_toar runsleeper_2_jd
+runsleeper_2_%:
+	-@${SETTEST}; check=sleeper_2; pep=$*; \
+	<font color="#4169E1">if</font> [ <font color="#666666">"$$pep"</font> = toar ]; then pep=<font color="#666666">"toar -pep_toar_restart .35 -pep_ncv 10 -pep_max_it 2000 -st_type sinvert"</font>; \
+	elif [ <font color="#666666">"$$pep"</font> = jd ]; then pep=<font color="#666666">"jd -pep_target -.61"</font>; fi; \
+	${MPIEXEC} -n 1 ./sleeper -n 100 -pep_type $${pep} -pep_nev 4 -terse &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runsleeper_3:</font></strong>
+	-@${SETTEST}; \
+	${MPIEXEC} -n 1 ./sleeper -n 270 -pep_type stoar -pep_hermitian -st_type sinvert -pep_nev 2 -pep_target -.89 -terse &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runspring_1:</font></strong> runspring_1_toar runspring_1_stoar runspring_1_qarnoldi runspring_1_linear
+runspring_1_%:
+	-@${SETTEST}; check=spring_1; pep=$*; \
+	<font color="#4169E1">if</font> [ <font color="#666666">"$$pep"</font> != jd ]; then sinv=<font color="#666666">"-st_type sinvert"</font>; fi; \
+	<font color="#4169E1">if</font> [ <font color="#666666">"$$pep"</font> = stoar ]; then pep=<font color="#666666">"stoar -pep_hermitian -pep_conv_rel"</font>; \
+	elif [ <font color="#666666">"$$pep"</font> = qarnoldi ]; then pep=<font color="#666666">"qarnoldi -pep_conv_rel"</font>; \
+	<font color="#4169E1">else</font> pep=<font color="#666666">"$$pep -pep_conv_norm "</font>; fi; \
+	${MPIEXEC} -n 1 ./spring -pep_type $${pep} -pep_nev 4 -n 24 -pep_ncv 18 -pep_target -.5 $$sinv -pep_scale diagonal -terse &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runspring_2_jd:</font></strong>
+	-@${SETTEST}; check=spring_2; \
+	${MPIEXEC} -n 1 ./spring -pep_type jd -pep_nev 4 -n 24 -pep_ncv 18 -pep_target -50 -terse &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runspring_3:</font></strong>
+	-@${SETTEST}; \
+	${MPIEXEC} -n 1 ./spring -n 300 -pep_hermitian -pep_interval -10.1,-9.5 -pep_type stoar -st_type sinvert -st_pc_type cholesky -terse &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runspring_4:</font></strong>
+	-@${SETTEST}; \
+	${MPIEXEC} -n 1 ./spring -n 300 -pep_hyperbolic -pep_interval -9.6,-.527 -pep_type stoar -st_type sinvert -st_pc_type cholesky -terse &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runwiresaw_1:</font></strong> runwiresaw_1_toar runwiresaw_1_qarnoldi runwiresaw_1_linear_h1 runwiresaw_1_linear_h2
+runwiresaw_1_%:
+	-@${SETTEST}; check=wiresaw_1; pep=$*; \
+	<font color="#4169E1">if</font> [ <font color="#666666">"$$pep"</font> = linear_h1 ]; then pep=<font color="#666666">"linear -pep_linear_explicitmatrix -pep_linear_cform 1 -pep_linear_st_ksp_type bcgs -pep_linear_st_pc_type kaczmarz"</font>; \
+	elif [ <font color="#666666">"$$pep"</font> = linear_h2 ]; then pep=<font color="#666666">"linear -pep_linear_explicitmatrix -pep_linear_cform 2"</font>; fi; \
+	${MPIEXEC} -n 1 ./wiresaw -pep_type $${pep} -pep_nev 4 -terse &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+</pre>
+</body>
+
+</html>

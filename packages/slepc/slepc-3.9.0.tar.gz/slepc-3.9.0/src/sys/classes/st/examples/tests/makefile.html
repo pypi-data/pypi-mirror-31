@@ -1,0 +1,102 @@
+
+<html>
+<head> <link rel="canonical" href="http://slepc.upv.es/documentation/current/src/sys/classes/st/examples/tests/makefile.html" />
+<title></title>
+<meta name="generator" content="c2html 0.9.4">
+<meta name="date" content="2018-04-12T16:55:56+00:00">
+</head>
+
+<body bgcolor="#FFFFFF">
+   <div id="version" align=right><b>slepc-3.9.0 2018-04-12</b></div>
+   <div id="bugreport" align=right><a href="mailto:slepc-maint@upv.es?subject=Typo or Error in Documentation &body=Please describe the typo or error in the documentation: slepc-3.9.0 v3.9 src/sys/classes/st/examples/tests/makefile.html "><small>Report Typos and Errors</small></a></div>
+<pre width="80"><font color="#A020F0">#</font>
+<font color="#A020F0">#  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</font>
+<font color="#A020F0">#  SLEPc - Scalable Library for Eigenvalue Problem Computations</font>
+<font color="#A020F0">#  Copyright (c) 2002-2018, Universitat Politecnica de Valencia, Spain</font>
+<font color="#A020F0">#</font>
+<font color="#A020F0">#  This file is part of SLEPc.</font>
+<font color="#A020F0">#  SLEPc is distributed under a 2-clause BSD license (see LICENSE).</font>
+<font color="#A020F0">#  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</font>
+<font color="#A020F0">#</font>
+
+CFLAGS     =
+FFLAGS     =
+CPPFLAGS   =
+FPPFLAGS   =
+LOCDIR     = src/sys/classes/st/examples/tests/
+EXAMPLESC  = test1.c test2.c test3.c test4.c test5.c
+EXAMPLESF  =
+MANSEC     = <a href="ROOT/docs/manualpages/ST/ST.html#ST">ST</a>
+TESTS      = test1 test2 test3 test4 test5
+
+TESTEXAMPLES_C_NOTSINGLE = test1.PETSc runtest1_1 test1.rm \
+                           test2.PETSc runtest2_1 test2.rm \
+                           test3.PETSc runtest3_1 test3.rm \
+                           test4.PETSc runtest4_1 runtest4_2 test4.rm \
+                           test5.PETSc runtest5_1 test5.rm
+
+include ${SLEPC_DIR}/lib/slepc/conf/slepc_common
+
+<strong><font color="#FF0000">test1:</font></strong> test1.o chkopts
+	-${CLINKER} -o test1 test1.o ${SLEPC_SYS_LIB}
+	${RM} test1.o
+
+<strong><font color="#FF0000">test2:</font></strong> test2.o chkopts
+	-${CLINKER} -o test2 test2.o ${SLEPC_SYS_LIB}
+	${RM} test2.o
+
+<strong><font color="#FF0000">test3:</font></strong> test3.o chkopts
+	-${CLINKER} -o test3 test3.o ${SLEPC_SYS_LIB}
+	${RM} test3.o
+
+<strong><font color="#FF0000">test4:</font></strong> test4.o chkopts
+	-${CLINKER} -o test4 test4.o ${SLEPC_SYS_LIB}
+	${RM} test4.o
+
+<strong><font color="#FF0000">test5:</font></strong> test5.o chkopts
+	-${CLINKER} -o test5 test5.o ${SLEPC_SYS_LIB}
+	${RM} test5.o
+
+<font color="#A020F0">#------------------------------------------------------------------------------------</font>
+
+<strong><font color="#FF0000">runtest1_1:</font></strong> runtest1_1_inplace runtest1_1_shell
+runtest1_1_%:
+	-@${SETTEST}; check=test1_1; matmode=$*; \
+	${MPIEXEC} -n 1 ./test1 -st_matmode $$matmode &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runtest2_1:</font></strong> runtest2_1_copy runtest2_1_inplace runtest2_1_shell
+runtest2_1_%:
+	-@${SETTEST}; check=test2_1; matmode=$*; \
+	${MPIEXEC} -n 1 ./test2 -st_matmode $$matmode &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runtest3_1:</font></strong> runtest3_1_copy runtest3_1_inplace runtest3_1_shell
+runtest3_1_%:
+	-@${SETTEST}; check=test3_1; matmode=$*; \
+	${MPIEXEC} -n 1 ./test3 -st_matmode $$matmode &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runtest4_1:</font></strong> runtest4_1_copy runtest4_1_shell
+runtest4_1_%:
+	-@${SETTEST}; check=test4_1; matmode=$*; \
+	${MPIEXEC} -n 1 ./test4 -st_transform -st_matmode $$matmode &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runtest4_2:</font></strong> runtest4_2_copy runtest4_2_shell
+runtest4_2_%:
+	-@${SETTEST}; check=test4_2; matmode=$*; \
+	${MPIEXEC} -n 1 ./test4 -st_matmode $$matmode &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+<strong><font color="#FF0000">runtest5_1:</font></strong> runtest5_1_copy runtest5_1_inplace runtest5_1_shell
+runtest5_1_%:
+	-@${SETTEST}; check=test5_1; matmode=$*; \
+	<font color="#4169E1">if</font> [ <font color="#666666">"$$matmode"</font> = shell ]; then matmode=<font color="#666666">"shell -ksp_type bcgs -pc_type jacobi"</font>; fi; \
+	${MPIEXEC} -n 1 ./test5 -st_matmode $$matmode &gt; $${test}.tmp 2&gt;&amp;1; \
+	${TESTCODE}
+
+</pre>
+</body>
+
+</html>
