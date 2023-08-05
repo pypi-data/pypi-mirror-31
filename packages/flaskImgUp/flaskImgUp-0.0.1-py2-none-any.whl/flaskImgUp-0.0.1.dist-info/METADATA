@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: flaskImgUp
+Version: 0.0.1
+Summary: function that uploads files using flask
+Home-page: UNKNOWN
+Author: Maxwell Amneus
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 2.7
+Provides-Extra: test
+Requires-Dist: flask
+Requires-Dist: werkzeug
+Provides-Extra: test
+Requires-Dist: unittest; extra == 'test'
+
+UNKNOWN
+
+
