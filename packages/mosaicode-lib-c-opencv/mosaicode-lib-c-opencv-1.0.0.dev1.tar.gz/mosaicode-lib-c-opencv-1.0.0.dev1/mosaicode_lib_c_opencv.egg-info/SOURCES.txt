@@ -1,0 +1,74 @@
+COPYING
+MANIFEST.in
+README.md
+setup.py
+mosaicode_lib_c_opencv/__init__.py
+mosaicode_lib_c_opencv.egg-info/PKG-INFO
+mosaicode_lib_c_opencv.egg-info/SOURCES.txt
+mosaicode_lib_c_opencv.egg-info/dependency_links.txt
+mosaicode_lib_c_opencv.egg-info/requires.txt
+mosaicode_lib_c_opencv.egg-info/top_level.txt
+mosaicode_lib_c_opencv/extensions/__init__.py
+mosaicode_lib_c_opencv/extensions/cfile.py
+mosaicode_lib_c_opencv/extensions/opencv/__init__.py
+mosaicode_lib_c_opencv/extensions/opencv/Arithmetic and Logical Operations/__init__.py
+mosaicode_lib_c_opencv/extensions/opencv/Arithmetic and Logical Operations/and.py
+mosaicode_lib_c_opencv/extensions/opencv/Arithmetic and Logical Operations/division.py
+mosaicode_lib_c_opencv/extensions/opencv/Arithmetic and Logical Operations/multiplication.py
+mosaicode_lib_c_opencv/extensions/opencv/Arithmetic and Logical Operations/not.py
+mosaicode_lib_c_opencv/extensions/opencv/Arithmetic and Logical Operations/or.py
+mosaicode_lib_c_opencv/extensions/opencv/Arithmetic and Logical Operations/sidebyside.py
+mosaicode_lib_c_opencv/extensions/opencv/Arithmetic and Logical Operations/subtraction.py
+mosaicode_lib_c_opencv/extensions/opencv/Arithmetic and Logical Operations/sum.py
+mosaicode_lib_c_opencv/extensions/opencv/Arithmetic and Logical Operations/uptobottom.py
+mosaicode_lib_c_opencv/extensions/opencv/Arithmetic and Logical Operations/xor.py
+mosaicode_lib_c_opencv/extensions/opencv/Basic Data Type/__init__.py
+mosaicode_lib_c_opencv/extensions/opencv/Basic Data Type/newDouble.py
+mosaicode_lib_c_opencv/extensions/opencv/Basic Data Type/newInt.py
+mosaicode_lib_c_opencv/extensions/opencv/Basic Data Type/newPoint.py
+mosaicode_lib_c_opencv/extensions/opencv/Basic Data Type/newRect.py
+mosaicode_lib_c_opencv/extensions/opencv/Basic Data Type/slider.py
+mosaicode_lib_c_opencv/extensions/opencv/Basic Shapes/__init__.py
+mosaicode_lib_c_opencv/extensions/opencv/Basic Shapes/circle.py
+mosaicode_lib_c_opencv/extensions/opencv/Basic Shapes/fillRect.py
+mosaicode_lib_c_opencv/extensions/opencv/Experimental/__init__.py
+mosaicode_lib_c_opencv/extensions/opencv/Experimental/addborder.py
+mosaicode_lib_c_opencv/extensions/opencv/Experimental/cropImage.py
+mosaicode_lib_c_opencv/extensions/opencv/Experimental/getSize.py
+mosaicode_lib_c_opencv/extensions/opencv/Experimental/resize.py
+mosaicode_lib_c_opencv/extensions/opencv/Experimental/rotate.py
+mosaicode_lib_c_opencv/extensions/opencv/Filters and Color Conversion/__init__.py
+mosaicode_lib_c_opencv/extensions/opencv/Filters and Color Conversion/colorConversion.py
+mosaicode_lib_c_opencv/extensions/opencv/Filters and Color Conversion/composeRGB.py
+mosaicode_lib_c_opencv/extensions/opencv/Filters and Color Conversion/decomposeRGB.py
+mosaicode_lib_c_opencv/extensions/opencv/Filters and Color Conversion/smooth.py
+mosaicode_lib_c_opencv/extensions/opencv/Filters and Color Conversion/threshold.py
+mosaicode_lib_c_opencv/extensions/opencv/General/__init__.py
+mosaicode_lib_c_opencv/extensions/opencv/General/fill.py
+mosaicode_lib_c_opencv/extensions/opencv/General/save.py
+mosaicode_lib_c_opencv/extensions/opencv/General/select.py
+mosaicode_lib_c_opencv/extensions/opencv/General/show.py
+mosaicode_lib_c_opencv/extensions/opencv/Gradients, Edges and Corners/__init__.py
+mosaicode_lib_c_opencv/extensions/opencv/Gradients, Edges and Corners/canny.py
+mosaicode_lib_c_opencv/extensions/opencv/Gradients, Edges and Corners/laplace.py
+mosaicode_lib_c_opencv/extensions/opencv/Gradients, Edges and Corners/sobel.py
+mosaicode_lib_c_opencv/extensions/opencv/Image Source/__init__.py
+mosaicode_lib_c_opencv/extensions/opencv/Image Source/capture.py
+mosaicode_lib_c_opencv/extensions/opencv/Image Source/imageFile.py
+mosaicode_lib_c_opencv/extensions/opencv/Image Source/newImage.py
+mosaicode_lib_c_opencv/extensions/opencv/Image Source/videoFile.py
+mosaicode_lib_c_opencv/extensions/opencv/Math Functions/__init__.py
+mosaicode_lib_c_opencv/extensions/opencv/Math Functions/exp.py
+mosaicode_lib_c_opencv/extensions/opencv/Math Functions/log.py
+mosaicode_lib_c_opencv/extensions/opencv/Math Functions/pow.py
+mosaicode_lib_c_opencv/extensions/opencv/Morphological Operations/__init__.py
+mosaicode_lib_c_opencv/extensions/opencv/Morphological Operations/closing.py
+mosaicode_lib_c_opencv/extensions/opencv/Morphological Operations/dilate.py
+mosaicode_lib_c_opencv/extensions/opencv/Morphological Operations/erode.py
+mosaicode_lib_c_opencv/extensions/opencv/Morphological Operations/opening.py
+mosaicode_lib_c_opencv/extensions/ports/__init__.py
+mosaicode_lib_c_opencv/extensions/ports/double.py
+mosaicode_lib_c_opencv/extensions/ports/image.py
+mosaicode_lib_c_opencv/extensions/ports/int.py
+mosaicode_lib_c_opencv/extensions/ports/point.py
+mosaicode_lib_c_opencv/extensions/ports/rect.py
