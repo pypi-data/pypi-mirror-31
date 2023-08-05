@@ -1,0 +1,24 @@
+Metadata-Version: 1.1
+Name: keras_svm
+Version: 1.0.0b6
+Summary: A model to use keras models with Support Vector Machines
+Home-page: https://github.com/Luttik/keras_svm/tree/master
+Author: Daan Luttik
+Author-email: d.t.luttik@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: keras sklearn svm ml
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
