@@ -1,0 +1,10 @@
+Metadata-Version: 1.2
+Name: void_reconstructor
+Version: 1.1.1a2
+Summary: Tools for reconstructing the velocities in a LCDM universe using the Jonker-Volgenant algorithm
+Home-page: UNKNOWN
+Author-email: tobias.meier@epfl.ch
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3
