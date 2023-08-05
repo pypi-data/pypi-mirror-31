@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+zwsp_steg/__init__.py
+zwsp_steg/steganography.py
+zwsp_steg_py.egg-info/PKG-INFO
+zwsp_steg_py.egg-info/SOURCES.txt
+zwsp_steg_py.egg-info/dependency_links.txt
+zwsp_steg_py.egg-info/not-zip-safe
+zwsp_steg_py.egg-info/top_level.txt
