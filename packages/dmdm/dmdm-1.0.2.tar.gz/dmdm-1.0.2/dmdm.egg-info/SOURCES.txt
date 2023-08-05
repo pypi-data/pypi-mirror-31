@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+dmdm/__init__.py
+dmdm/mail.py
+dmdm.egg-info/PKG-INFO
+dmdm.egg-info/SOURCES.txt
+dmdm.egg-info/dependency_links.txt
+dmdm.egg-info/requires.txt
+dmdm.egg-info/top_level.txt
+dmdm/__pycache__/__init__.cpython-36.pyc
+dmdm/__pycache__/__init__.pypy3-59.pyc
+dmdm/__pycache__/mail.cpython-36.pyc
+dmdm/__pycache__/mail.pypy3-59.pyc
