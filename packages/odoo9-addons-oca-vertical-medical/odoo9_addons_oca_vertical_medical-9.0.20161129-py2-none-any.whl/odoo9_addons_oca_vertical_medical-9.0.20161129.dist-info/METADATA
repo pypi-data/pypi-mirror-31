@@ -1,0 +1,21 @@
+Metadata-Version: 2.0
+Name: odoo9-addons-oca-vertical-medical
+Version: 9.0.20161129
+Summary: Meta package for OCA vertical-medical Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo9-addon-medical
+Requires-Dist: odoo9-addon-medical-medicament
+Requires-Dist: odoo9-addon-medical-medication
+Requires-Dist: odoo9-addon-medical-pathology
+Requires-Dist: odoo9-addon-medical-patient-disease
+Requires-Dist: odoo9-addon-medical-patient-dob
+Requires-Dist: odoo9-addon-medical-pharmacy
+Requires-Dist: odoo9-addon-medical-physician
+
+UNKNOWN
+
+
