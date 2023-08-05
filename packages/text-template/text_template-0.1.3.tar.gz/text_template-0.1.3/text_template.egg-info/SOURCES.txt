@@ -1,0 +1,12 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+text_template/__init__.py
+text_template/text_template.py
+text_template.egg-info/PKG-INFO
+text_template.egg-info/SOURCES.txt
+text_template.egg-info/dependency_links.txt
+text_template.egg-info/requires.txt
+text_template.egg-info/top_level.txt
