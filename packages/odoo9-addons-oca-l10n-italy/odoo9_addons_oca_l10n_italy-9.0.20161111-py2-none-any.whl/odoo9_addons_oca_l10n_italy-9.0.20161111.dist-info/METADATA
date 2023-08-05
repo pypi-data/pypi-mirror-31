@@ -1,0 +1,17 @@
+Metadata-Version: 2.0
+Name: odoo9-addons-oca-l10n-italy
+Version: 9.0.20161111
+Summary: Meta package for OCA l10n-italy Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo9-addon-l10n-it-abicab
+Requires-Dist: odoo9-addon-l10n-it-base-location-geonames-import
+Requires-Dist: odoo9-addon-l10n-it-ddt
+Requires-Dist: odoo9-addon-l10n-it-rea
+
+UNKNOWN
+
+
