@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        trefoil=trefoil.cli.main:cli
+    

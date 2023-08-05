@@ -1,0 +1,12 @@
+affine>=1.0
+click
+jinja2
+palettable
+pytz
+six
+fiona>=1.6.0
+netCDF4>=1.1.1
+Numpy
+Pillow>=2.9.0
+pyproj
+rasterio>=1.0a12
