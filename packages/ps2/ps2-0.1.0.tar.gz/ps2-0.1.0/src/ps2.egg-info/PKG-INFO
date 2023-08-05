@@ -1,0 +1,95 @@
+Metadata-Version: 1.1
+Name: ps2
+Version: 0.1.0
+Summary: ps tools that can be used in Linux/MacOS/Windows.
+Home-page: https://github.com/appstore-zencore/ps2
+Author: zencore
+Author-email: dobetter@zencore.cn
+License: MIT
+Description: ps2
+        ===
+        
+        .. image:: https://travis-ci.org/appstore-zencore/ps2.svg?branch=master
+            :target: https://travis-ci.org/appstore-zencore/ps2
+        
+        About
+        -----
+        
+        ps tools that can be used in Linux/MacOS/Windows.
+        
+        Install
+        -------
+        
+        ::
+        
+            pip install ps2
+        
+        
+        Usage
+        -----
+        
+        ::
+        
+            zencore:scripts zencore$ python3 ps2.py --help
+            Usage: ps2.py [OPTIONS] [OUTPUT]
+        
+            The keywords can be used in output template:
+        
+            cmdline commands connections cpu_percent cpu_times create_time cwd
+            elapsed_time environ exe gids memory_full_info memory_info memory_maps
+            memory_percent name nice num_ctx_switches num_fds num_threads open_files
+            pid ppid status terminal threads uids username
+        
+            The default output template is:
+        
+            "{pid}\t{name}"
+        
+            Options:
+            --help  Show this message and exit.
+        
+        Example 1
+        ---------
+        
+            zencore:scripts zencore$ python3 ps2.py
+            0	kernel_task
+            89	loginwindow
+            282	cfprefsd
+            283	distnoted
+            287	lsd
+            306	UserEventAgent
+            311	CommCenter
+            312	trustd
+            313	sharedfilelistd
+            315	Terminal
+            ...
+        
+        By default, ps2 show pid and name.
+        
+        
+        Example 2
+        ---------
+        
+            zencore:scripts zencore$ python3 ps2.py '{pid}\t{elapsed_time}\t{cmdline}'
+            0	682055.9033548832	
+            89	682043.2770848274	/System/Library/CoreServices/loginwindow.app/Contents/MacOS/loginwindow console
+            282	681934.4019351006	/usr/sbin/cfprefsd agent
+            283	681934.2526762486	/usr/sbin/distnoted agent
+            287	681933.4957187176	/usr/libexec/lsd
+            306	681855.2815728188	/usr/libexec/UserEventAgent '(Aqua)'
+            311	681855.1821689606	/System/Library/Frameworks/CoreTelephony.framework/Support/CommCenter -L
+            312	681855.1382620335	/usr/libexec/trustd --agent
+            313	681855.0924699306	/System/Library/CoreServices/sharedfilelistd
+            315	681854.9572939873	/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal -psn_0_69649
+        
+        You can customize the output template, the PROGRAM provides many KEYWORDS for you to use.
+        
+Keywords: ps2
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires: click
+Requires: psutil
