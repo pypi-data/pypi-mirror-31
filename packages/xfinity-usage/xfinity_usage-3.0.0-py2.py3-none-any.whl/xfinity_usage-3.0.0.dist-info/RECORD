@@ -1,0 +1,13 @@
+xfinity_usage/__init__.py,sha256=iUqGYk5mL3cv5kdEofq5xUffgnILzot2JijfWYCAii8,1830
+xfinity_usage/version.py,sha256=oEbyH7yXarISNaIIum8k1qoqtYqXR8LlfItjiT8it-o,1906
+xfinity_usage/xfinity_usage.py,sha256=jlzhQNDfs4fd6ddwciSVseOYS8mReP3UXe6kBoiwjeE,25932
+xfinity_usage/tests/__init__.py,sha256=iUqGYk5mL3cv5kdEofq5xUffgnILzot2JijfWYCAii8,1830
+xfinity_usage/tests/test_version.py,sha256=RgvQvy5e5NN6hgn64oddC876H0i1jNLhLL4SFWd0t0k,2782
+xfinity_usage/tests/test_xfinity_usage.py,sha256=SqoPvlels4lZRlJLA3kaMbQfReAtSgGIFyED2qXCQOs,2195
+xfinity_usage-3.0.0.dist-info/DESCRIPTION.rst,sha256=K8olqu9gFU5YFRMlmFRE41KpNRd6mjwxsUoHmYQclMw,8961
+xfinity_usage-3.0.0.dist-info/METADATA,sha256=UIjyMJbusqeKXuU2T_We7izGa9Hu2aMTQ4JpRMS14Ac,9999
+xfinity_usage-3.0.0.dist-info/RECORD,,
+xfinity_usage-3.0.0.dist-info/WHEEL,sha256=kdsN-5OJAZIiHN-iO4Rhl82KyS0bDWf4uBwMbkNafr8,110
+xfinity_usage-3.0.0.dist-info/entry_points.txt,sha256=w0OSCchiIXzy1P39o3Z8fNyp1_q6fIMRkBYTXF1U4CY,80
+xfinity_usage-3.0.0.dist-info/metadata.json,sha256=iH4p4WBvluu2v0EAQ4oYslvUetYjcpvydOsvBNmjzJc,1351
+xfinity_usage-3.0.0.dist-info/top_level.txt,sha256=HU9E5D-UoZt0H1TyDYuGH-hT_xYoIhj27HrTnfv1Izs,14
