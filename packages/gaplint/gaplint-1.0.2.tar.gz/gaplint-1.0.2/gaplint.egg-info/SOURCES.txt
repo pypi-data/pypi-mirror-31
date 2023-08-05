@@ -1,0 +1,11 @@
+README.rst
+gaplint.py
+setup.cfg
+setup.py
+gaplint.egg-info/PKG-INFO
+gaplint.egg-info/SOURCES.txt
+gaplint.egg-info/dependency_links.txt
+gaplint.egg-info/entry_points.txt
+gaplint.egg-info/not-zip-safe
+gaplint.egg-info/requires.txt
+gaplint.egg-info/top_level.txt
