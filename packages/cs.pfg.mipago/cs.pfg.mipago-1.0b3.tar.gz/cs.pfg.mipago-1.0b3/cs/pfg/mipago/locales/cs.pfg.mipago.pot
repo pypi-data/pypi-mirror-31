@@ -1,0 +1,217 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2018-04-20 11:35+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+
+#: ./content/mipagoadapter.py:172
+msgid "
+                A TALES expression that will be evaluated to override any value
+                otherwise entered for amount value.
+                Leave empty if unneeded. Your expression should evaluate as a string.
+                PLEASE NOTE: errors in the evaluation of this expression will cause
+                an error on form display.
+            "
+msgstr ""
+
+#: ./content/mipagoadapter.py:55
+msgid "502: Notebook 60, modality 1, short format"
+msgstr ""
+
+#: ./content/mipagoadapter.py:58
+msgid "507: Notebook 57, short format"
+msgstr ""
+
+#: ./content/mipagoadapter.py:56
+msgid "521: Notebook 60, modality 2, short format"
+msgstr ""
+
+#: ./content/mipagoadapter.py:57
+msgid "522: Notebook 60, modality 2, long format"
+msgstr ""
+
+#: ./content/mipagoadapter.py:40
+msgid "9050299: Notebook 60, modality 1"
+msgstr ""
+
+#: ./content/mipagoadapter.py:42
+msgid "9050794: Notebook 57"
+msgstr ""
+
+#: ./content/mipagoadapter.py:41
+msgid "9052180: Notebook 60, modality 2"
+msgstr ""
+
+#: ./profiles/default/types/MiPagoAdapter.xml
+msgid "Adapter for payments with MiPago"
+msgstr ""
+
+#: ./content/mipagoadapter.py:148
+msgid "All payments will have consecutive numbers, enter here the value of the first."
+msgstr ""
+
+#: ./browser/manage.pt:38
+msgid "Amount"
+msgstr ""
+
+#: ./content/mipagoadapter.py:171
+msgid "Amount Expression"
+msgstr ""
+
+#: ./content/mipagoadapter.py:157
+msgid "Check if the payments should be made on the TEST platform"
+msgstr ""
+
+#: ./browser/manage.pt:41
+msgid "Date"
+msgstr ""
+
+#: ./browser/payment.pt:42
+msgid "Date and time"
+msgstr ""
+
+#: ./browser/manage.pt:29
+msgid "Delete"
+msgstr ""
+
+#: ./browser/manage.pt:80
+msgid "Delete selected payments"
+msgstr ""
+
+#: ./browser/manage.pt:20
+msgid "Download data"
+msgstr ""
+
+#: ./content/mipagoadapter.py:49
+msgid "Enter the CPR code of this payment"
+msgstr ""
+
+#: ./content/mipagoadapter.py:137
+msgid "Enter the amount to be paid"
+msgstr ""
+
+#: ./content/mipagoadapter.py:65
+msgid "Enter the format code of this payment"
+msgstr ""
+
+#: ./content/mipagoadapter.py:96
+msgid "Enter the number of the days that the user has to pay counting from the day he fills the form"
+msgstr ""
+
+#: ./content/mipagoadapter.py:147
+msgid "Enter the number of the first reference number"
+msgstr ""
+
+#: ./content/mipagoadapter.py:75
+msgid "Enter the sender code"
+msgstr ""
+
+#: ./content/mipagoadapter.py:86
+msgid "Enter the suffix of this payment"
+msgstr ""
+
+#: ./browser/manage.pt:47
+msgid "Form data"
+msgstr ""
+
+#: ./browser/manage.pt:15
+msgid "Manage payments"
+msgstr ""
+
+#: ./profiles/default/types/MiPagoAdapter.xml
+msgid "MiPagoAdapter"
+msgstr ""
+
+#: ./browser/manage.py:81
+msgid "Nothing was deleted"
+msgstr ""
+
+#: ./content/mipagoadapter.py:121
+msgid "Offline payment"
+msgstr ""
+
+#: ./content/mipagoadapter.py:122
+msgid "Online payment"
+msgstr ""
+
+#: ./browser/manage.py:45
+msgid "Payment NOT completed"
+msgstr ""
+
+#: ./browser/manage.pt:35
+msgid "Payment code"
+msgstr ""
+
+#: ./browser/payment.pt:36
+msgid "Payment code number"
+msgstr ""
+
+#: ./browser/manage.py:43
+msgid "Payment completed successfuly"
+msgstr ""
+
+#: ./browser/manage.py:79
+msgid "Payments were deleted"
+msgstr ""
+
+#: ./configure.zcml:23
+msgid "PloneFormGen adapter to pay with Basque Government's payment service"
+msgstr ""
+
+#: ./browser/manage.pt:32
+msgid "Reference number"
+msgstr ""
+
+#: ./content/mipagoadapter.py:280
+msgid "Reference number is bigger than 10 digits. Please delete old reference numbers"
+msgstr ""
+
+#: ./content/mipagoadapter.py:126
+msgid "Select the available payment modes"
+msgstr ""
+
+#: ./content/mipagoadapter.py:111
+msgid "Select the language of the screens"
+msgstr ""
+
+#: ./browser/manage.pt:44
+msgid "Status"
+msgstr ""
+
+#: ./browser/manage.pt:85
+msgid "There are no payments yet."
+msgstr ""
+
+#: ./content/mipagoadapter.py:261
+msgid "There was an error processing the payment. Please try again"
+msgstr ""
+
+#: ./configure.zcml:31
+msgid "Uninstalls the cs.pfg.mipago add-on."
+msgstr ""
+
+#: ./browser/manage.py:47
+msgid "Unkown status"
+msgstr ""
+
+#: ./browser/manage.py:41
+msgid "User redirected to MiPago"
+msgstr ""
+
+#: ./configure.zcml:23
+msgid "cs.pfg.mipago"
+msgstr ""
+
+#: ./configure.zcml:31
+msgid "cs.pfg.mipago (uninstall)"
+msgstr ""
