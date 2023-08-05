@@ -1,0 +1,31 @@
+Metadata-Version: 1.0
+Name: markdown_to_mongodb
+Version: 0.1.3
+Summary: ===================
+Markdown to MongoDB
+===================
+
+This package converts a directory of markdown files and inserts their contents into a provided MongoDB instance.
+
+Usage
+=====
+::
+    #!/usr/bin/env python
+
+    from markdown_to_mongodb import Db
+
+    my_db = Db(ip, port, collection_name)
+    my_db.convert(markdown_directory)
+
+Command Line Usage
+==================
+
+    python Db.py "localhost" 27017 "collection_name" "markdown_directory"
+
+
+Home-page: https://github.com/ryanniebling/markdown_to_mongodb
+Author: Ryan Niebling
+Author-email: nieblingr1@nku.edu
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
