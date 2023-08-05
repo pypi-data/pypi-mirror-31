@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: docstring_parser
+Version: 0.1
+Summary: UNKNOWN
+Home-page: https://github.com/rr-/docstring_parser
+Author: Marcin Kurczewski
+Author-email: rr-@sakuya.pl
+License: UNKNOWN
+Description-Content-Type: UNKNOWN
+Description: Parse Python docstrings in reST format
+Platform: UNKNOWN
+Classifier: Environment :: Other Environment
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Documentation :: Sphinx
+Classifier: Topic :: Text Processing :: Markup
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
