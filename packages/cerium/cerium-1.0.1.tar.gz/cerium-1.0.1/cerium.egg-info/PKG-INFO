@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: cerium
+Version: 1.0.1
+Summary: This project is mainly targeted to users that need to communicate with Android devices in an automated fashion, such as in automated testing.
+Home-page: https://github.com/fjwCode/cerium
+Author: White Turing
+Author-email: fujiawei@stu.hznu.edu.cn
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: android,adb,automation
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Testing
