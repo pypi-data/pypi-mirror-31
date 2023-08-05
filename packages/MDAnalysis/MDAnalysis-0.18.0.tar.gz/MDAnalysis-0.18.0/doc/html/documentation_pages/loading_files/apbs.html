@@ -1,0 +1,234 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>2.2.2. Loading Poisson Boltzmann files in MDAnalysis &#8212; MDAnalysis 0.17.1-dev documentation</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within MDAnalysis 0.17.1-dev documentation"
+          href="../../_static/opensearch.xml"/>
+    <link rel="shortcut icon" href="../../_static/mdanalysis-logo.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="2.2.3. Loading Autodock files with MDAnalysis" href="autodock.html" />
+    <link rel="prev" title="2.2.1. Loading Amber files with MDAnalysis" href="amber.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="loading-poisson-boltzmann-files-in-mdanalysis">
+<span id="load-apbs"></span><h1>2.2.2. Loading Poisson Boltzmann files in MDAnalysis<a class="headerlink" href="#loading-poisson-boltzmann-files-in-mdanalysis" title="Permalink to this headline">¶</a></h1>
+<p>MDAnalysis is able to read and write PQR files produced by
+Poisson Boltzmann.</p>
+<div class="section" id="loading-pqr-files">
+<span id="load-pqr"></span><h2>2.2.2.1. Loading PQR files<a class="headerlink" href="#loading-pqr-files" title="Permalink to this headline">¶</a></h2>
+<p>Read atoms with charges from a <a class="reference external" href="http://www.poissonboltzmann.org/file-formats/biomolecular-structurw/pqr">PQR</a> file (as written by <a class="reference external" href="http://www.poissonboltzmann.org/pdb2pqr">PDB2PQR</a>). The
+following is adopted from the description of the <a class="reference external" href="http://www.poissonboltzmann.org/file-formats/biomolecular-structurw/pqr">PQR</a> format as used by <a class="reference external" href="http://www.poissonboltzmann.org/apbs">APBS</a>:</p>
+<p><em>MDAnalysis</em> reads very loosely-formatted PQR files: all fields are
+<strong>whitespace-delimited</strong> rather than the strict column formatting mandated
+by the <a class="reference external" href="http://www.rcsb.org/pdb/info.html#File_Formats_and_Standards">PDB</a> format. This more liberal formatting allows coordinates
+which are larger/smaller than ±999 Å.</p>
+<p>MDAnalysis reads data on a per-line basis from PQR files using the following format:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">recordName</span> <span class="n">serial</span> <span class="n">atomName</span> <span class="n">residueName</span> <span class="n">chainID</span> <span class="n">residueNumber</span> <span class="n">X</span> <span class="n">Y</span> <span class="n">Z</span> <span class="n">charge</span> <span class="n">radius</span>
+</pre></div>
+</div>
+<p>If this fails it is assumed that the <em>chainID</em> was omitted and the shorter
+format is read:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">recordName</span> <span class="n">serial</span> <span class="n">atomName</span> <span class="n">residueName</span> <span class="n">residueNumber</span> <span class="n">X</span> <span class="n">Y</span> <span class="n">Z</span> <span class="n">charge</span> <span class="n">radius</span>
+</pre></div>
+</div>
+<p>Anything else will raise a <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a>.</p>
+<p>The whitespace is the most important feature of this format: fields
+<em>must</em> be separated by at least one space or tab character. The fields
+are:</p>
+<dl class="docutils">
+<dt><em>recordName</em></dt>
+<dd>A string which specifies the type of PQR entry and should either be ATOM or
+HETATM.</dd>
+<dt><em>serial</em></dt>
+<dd>An integer which provides the atom index (but note that MDAnalysis renumbers
+atoms so one cannot rely on the <em>serial</em>)</dd>
+<dt><em>atomName</em></dt>
+<dd>A string which provides the atom name.</dd>
+<dt><em>residueName</em></dt>
+<dd>A string which provides the residue name.</dd>
+<dt><em>chainID</em></dt>
+<dd>An optional string which provides the chain ID of the atom.</dd>
+<dt><em>residueNumber</em></dt>
+<dd>An integer which provides the residue index.</dd>
+<dt><em>X Y Z</em></dt>
+<dd>Three floats which provide the atomic coordiantes.</dd>
+<dt><em>charge</em></dt>
+<dd>A float which provides the atomic charge (in electrons).</dd>
+<dt><em>radius</em></dt>
+<dd>A float which provides the atomic radius (in Å).</dd>
+</dl>
+<p>Clearly, this format can deviate wildly from <a class="reference external" href="http://www.rcsb.org/pdb/info.html#File_Formats_and_Standards">PDB</a> due to the use of whitespaces
+rather than specific column widths and alignments. This deviation can be
+particularly significant when large coordinate values are used.</p>
+<p>Output should look like this (although the only real requirement is
+<em>whitespace</em> separation between <em>all</em> entries). The chainID is optional
+and can be omitted:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ATOM</span>      <span class="mi">1</span>  <span class="n">N</span>    <span class="n">MET</span>     <span class="mi">1</span>     <span class="o">-</span><span class="mf">11.921</span>   <span class="mf">26.307</span>   <span class="mf">10.410</span> <span class="o">-</span><span class="mf">0.3000</span> <span class="mf">1.8500</span>
+<span class="n">ATOM</span>     <span class="mi">36</span>  <span class="n">NH1</span>  <span class="n">ARG</span>     <span class="mi">2</span>      <span class="o">-</span><span class="mf">6.545</span>   <span class="mf">25.499</span>    <span class="mf">3.854</span> <span class="o">-</span><span class="mf">0.8000</span> <span class="mf">1.8500</span>
+<span class="n">ATOM</span>     <span class="mi">37</span> <span class="n">HH11</span>  <span class="n">ARG</span>     <span class="mi">2</span>      <span class="o">-</span><span class="mf">6.042</span>   <span class="mf">25.480</span>    <span class="mf">4.723</span>  <span class="mf">0.4600</span> <span class="mf">0.2245</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Fields <em>must be white-space separated</em> or data are read
+incorrectly. PDB formatted files are <em>not</em> guaranteed to be
+white-space separated so extra care should be taken when quickly
+converting PDB files into PQR files using simple scripts.</p>
+</div>
+<p>For example, PQR files created with <a class="reference external" href="http://www.poissonboltzmann.org/pdb2pqr">PDB2PQR</a> and the <cite>–whitespace</cite>
+option are guaranteed to conform to the above format:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pdb2pqr</span> <span class="o">--</span><span class="n">ff</span><span class="o">=</span><span class="n">charmm</span> <span class="o">--</span><span class="n">whitespace</span> <span class="mi">4</span><span class="n">ake</span><span class="o">.</span><span class="n">pdb</span> <span class="mi">4</span><span class="n">ake</span><span class="o">.</span><span class="n">pqr</span>
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">For implementation details, see <a class="reference internal" href="../coordinates/PQR.html#module-MDAnalysis.coordinates.PQR" title="MDAnalysis.coordinates.PQR"><code class="xref py py-mod docutils literal notranslate"><span class="pre">MDAnalysis.coordinates.PQR</span></code></a></p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../index.html">
+    <img class="logo" src="../../_static/logos/mdanalysis-logo-200x150.png" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=MDAnalysis&repo=mdanalysis&type=star&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">1. Overview over MDAnalysis</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../loading_files.html">2. Loading your data</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../loading_files.html#basic-usage">2.1. Basic Usage</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../loading_files.html#supported-formats-and-further-details">2.2. Supported formats and further details</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="amber.html">2.2.1. Loading Amber files with MDAnalysis</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.2.2. Loading Poisson Boltzmann files in MDAnalysis</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#loading-pqr-files">2.2.2.1. Loading PQR files</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autodock.html">2.2.3. Loading Autodock files with MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="charmm.html">2.2.4. Loading CHARMM files with MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="desmond.html">2.2.5. Loading Desmond MD files with MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dlpoly.html">2.2.6. Loading DL Poly files with MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gamess.html">2.2.7. Loading GAMESS files with MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gromacs.html">2.2.8. Loading Gromacs files in MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hoomd.html">2.2.9. Loading Hoomd files with MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ibisco.html">2.2.10. Loading IBIsCO and YASP files with MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lammps.html">2.2.11. Loading LAMMPS files with MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="protein.html">2.2.12. Loading Protein Databank files with MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tinker.html">2.2.13. Loading Tinker files in MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tripos.html">2.2.14. Loading Tripos files with MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="xyz.html">2.2.15. Loading XYZ files with MDAnalysis</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../topology.html">3. The topology system</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../selections.html">4. Selection commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../analysis_modules.html">5. Analysis modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology_modules.html">6. Topology modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../coordinates_modules.html">7. Coordinates modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../selections_modules.html">8. Selection exporters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auxiliary_modules.html">9. Auxiliary modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../core_modules.html">10. Core modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../visualization_modules.html">11. Visualization modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lib_modules.html">12. Library functions — <code class="docutils literal notranslate"><span class="pre">MDAnalysis.lib</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version.html">13. Version information for MDAnalysis - <code class="docutils literal notranslate"><span class="pre">MDAnalysis.version</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../units.html">14. Constants and unit conversion — <code class="docutils literal notranslate"><span class="pre">MDAnalysis.units</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exceptions.html">15. Custom exceptions and warnings — <code class="docutils literal notranslate"><span class="pre">MDAnalysis.exceptions</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">16. References</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../loading_files.html">2. Loading your data</a><ul>
+      <li>Previous: <a href="amber.html" title="previous chapter">2.2.1. Loading Amber files with MDAnalysis</a></li>
+      <li>Next: <a href="autodock.html" title="next chapter">2.2.3. Loading Autodock files with MDAnalysis</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2005-2017, Naveen Michaud-Agrawal, Elizabeth J. Denning, Christian Beckstein (logo), Joshua L. Adelman, Shobhit Agarwal, Balasubramanian, Utkarsh Bansal, Jonathan Barnoud, Tone Bengtsen, Alejandro Bernardin, Mateusz Bieniek, Wouter Boomsma, Jose Borreguero, Bart Bruininks, Sébastien Buchoux, Sören von Bülow, David Caplan, Matthieu Chavent, Kathleen Clark, Robert Delgado, John Detlefs, Xavier Deupi, Jan Domanski, David L. Dotson, Lennard van der Feltz, Philip Fowler, Joseph Goose, Richard J. Gowers, Lukas Grossar, Abhinav Gupta, Akshay Gupta, Benjamin Hall, Eugen Hruska, Kyle J. Huston, Joe Jordan, Jon Kapla, Andrew William King, Max Linke, Jinju Lu, Micaela Matta, Robert McGibbon, Manuel Nuno Melo, Dominik 'Rathann' Mierzejewski, Fiona Naughton, Alex Nesterenko, Hai Nguyen, Sang Young Noh, Nabarun Pal, Mattia F. Palermo, Danny Parton, Joshua L. Phillips, Vedant Rathore, Tyler Reddy, Paul Rigor, Carlos Yanez S., Utkarsh Saxena, Sean L. Seyler, Andy Somogyi, Caio S. Souza, Shantanu Srivastava, Lukas Stelzl, Gorman Stock, Matteo Tiberti, Isaac Virshup, Nestor Wendt, Zhiyi Wu, Zhuyi Xue, Juan Eiros Zamora, and Oliver Beckstein.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="../../_sources/documentation_pages/loading_files/apbs.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+    <a href="https://github.com/MDAnalysis/mdanalysis" class="github">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
+    </a>
+    
+
+    
+  </body>
+</html>

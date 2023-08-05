@@ -1,0 +1,440 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>2. Loading your data &#8212; MDAnalysis 0.17.1-dev documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within MDAnalysis 0.17.1-dev documentation"
+          href="../_static/opensearch.xml"/>
+    <link rel="shortcut icon" href="../_static/mdanalysis-logo.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2.2.1. Loading Amber files with MDAnalysis" href="loading_files/amber.html" />
+    <link rel="prev" title="1. Overview over MDAnalysis" href="overview.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="loading-your-data">
+<h1>2. Loading your data<a class="headerlink" href="#loading-your-data" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="basic-usage">
+<h2>2.1. Basic Usage<a class="headerlink" href="#basic-usage" title="Permalink to this headline">¶</a></h2>
+<p>MDAnalysis aims to read any and all molecular simulation data,
+from whatever files you provide to it.
+This is done via the <cite>Universe</cite> object,
+which accepts paths to files as its arguments.
+Usually two files are required to create a <cite>Universe</cite> object:
+A topology file, which provides information about the names and types of atoms,
+and a trajectory file, which gives the positions of atoms over time.</p>
+<p>This generally corresponds to the file required to set up the simulation acting as the topology,
+while the results file of the simulation provides the trajectory.
+For example to load results from a CHARMM simulation,
+we provide a path to the PSF file to act as a topology,
+and a path to the DCD results to act as the trajectory</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">MDAnalysis</span> <span class="k">as</span> <span class="nn">mda</span>
+
+<span class="n">u</span> <span class="o">=</span> <span class="n">mda</span><span class="o">.</span><span class="n">Universe</span><span class="p">(</span><span class="s1">&#39;adk.psf&#39;</span><span class="p">,</span> <span class="s1">&#39;adk_dims.dcd&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If a file which also provides coordinates is used as a topology, no trajectory
+information is read from this file.  Ie the first frame will come from the trajectory
+unless the <cite>all_coordinates</cite> keyword is set to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+</div>
+<div class="section" id="single-file-universes">
+<h3>2.1.1. Single file Universes<a class="headerlink" href="#single-file-universes" title="Permalink to this headline">¶</a></h3>
+<p>Occasionally a file may contain both topology and trajectory information,
+in such cases it is sufficient to provide only a single filename to Universe</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">MDAnalysis</span> <span class="k">as</span> <span class="nn">mda</span>
+
+<span class="n">u</span> <span class="o">=</span> <span class="n">mda</span><span class="o">.</span><span class="n">Universe</span><span class="p">(</span><span class="s1">&#39;myfile.pdb&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="concatenating-trajectories">
+<h3>2.1.2. Concatenating trajectories<a class="headerlink" href="#concatenating-trajectories" title="Permalink to this headline">¶</a></h3>
+<p>It is also possible to read multiple consecutive trajectories,
+(for example if a simulation was restarted),
+by passing a list of trajectory filenames.
+In this example, frames from <cite>traj1.trr</cite> and <cite>traj2.trr</cite> will be concatenated when iterating through the trajectory.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">MDAnalysis</span> <span class="k">as</span> <span class="nn">mda</span>
+
+<span class="n">u</span> <span class="o">=</span> <span class="n">mda</span><span class="o">.</span><span class="n">Universe</span><span class="p">(</span><span class="s1">&#39;topol.tpr&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;traj1.trr&#39;</span><span class="p">,</span> <span class="s1">&#39;traj2.trr&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="supported-formats-and-further-details">
+<h2>2.2. Supported formats and further details<a class="headerlink" href="#supported-formats-and-further-details" title="Permalink to this headline">¶</a></h2>
+<p>This table lists all currently supported file formats in MDAnalysis,
+whether they can act as either Topology or Trajectory files,
+as well as links to the relevant documentation pages.
+In general MDAnalysis will try and extract all available data from a
+given file, for full details of what is extracted from each file format
+consult the relevant documentation page.</p>
+<p>Generally the format of a file is automatically detected from the extension,
+for example a file called <cite>system.xyz</cite> is recognised as an XYZ file.
+This can be overriden by supplying the <cite>topology_format</cite> and <cite>format</cite> keyword
+arguments to Universe.
+A full list of valid values for these keywords are given in the below table.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">It is possible to pass tarballed/zipped versions of files.  The
+format detection will work around this.</p>
+</div>
+<span id="supported-formats"></span><table border="1" class="docutils" id="id1">
+<caption><span class="caption-text">Table of supported formats</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Source</th>
+<th class="head">Name</th>
+<th class="head">Format</th>
+<th class="head">Topology</th>
+<th class="head">Trajectory</th>
+<th class="head">I/O</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="loading_files/amber.html#loading-amber"><span class="std std-ref">Amber</span></a></td>
+<td><a class="reference internal" href="loading_files/amber.html#load-amber-top"><span class="std std-ref">PARM parameter/topology</span></a></td>
+<td>TOP, PRMTOP, PARM7</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>r</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="loading_files/amber.html#load-amber-trj"><span class="std std-ref">Ascii trajectory</span></a></td>
+<td>TRJ, MDCRD</td>
+<td>No</td>
+<td>Yes</td>
+<td>r</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="loading_files/amber.html#load-amber-restart"><span class="std std-ref">Ascii restart</span></a></td>
+<td>INPCRD, RESTRT</td>
+<td>No</td>
+<td>Yes</td>
+<td>r</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="loading_files/amber.html#load-amber-ncdf"><span class="std std-ref">NetCFD trajectory</span></a></td>
+<td>NCDF, NC</td>
+<td>Minimal</td>
+<td>Yes</td>
+<td>r/w</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="loading_files/apbs.html#load-apbs"><span class="std std-ref">Poisson Boltzmann</span></a></td>
+<td><a class="reference internal" href="loading_files/apbs.html#load-pqr"><span class="std std-ref">PQR files</span></a></td>
+<td>PQR</td>
+<td>Yes</td>
+<td>Yes”</td>
+<td>r</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="loading_files/autodock.html#load-pdbqt"><span class="std std-ref">Autodock</span></a></td>
+<td><a class="reference internal" href="loading_files/autodock.html#load-pdbqt"><span class="std std-ref">Autodock PDBQT files</span></a></td>
+<td>PDBQT</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>r</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="loading_files/charmm.html#load-charmm"><span class="std std-ref">Charmm</span></a></td>
+<td><a class="reference internal" href="loading_files/charmm.html#load-psf"><span class="std std-ref">PSF files</span></a></td>
+<td>PSF</td>
+<td>Yes</td>
+<td>No</td>
+<td>r</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="loading_files/charmm.html#load-dcd"><span class="std std-ref">Binary DCD files</span></a></td>
+<td>DCD</td>
+<td>Minimal</td>
+<td>Yes</td>
+<td>r/w</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="loading_files/charmm.html#load-crd"><span class="std std-ref">Ascii trajectory</span></a></td>
+<td>CRD</td>
+<td>Minimal</td>
+<td>Yes</td>
+<td>r</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="loading_files/desmond.html#load-desmond"><span class="std std-ref">Desmond MD</span></a></td>
+<td><a class="reference internal" href="loading_files/desmond.html#load-dms"><span class="std std-ref">DMS trajectory</span></a></td>
+<td>DMS</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>r</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="loading_files/dlpoly.html#load-dlpoly"><span class="std std-ref">DL Poly</span></a></td>
+<td><a class="reference internal" href="loading_files/dlpoly.html#load-history"><span class="std std-ref">Ascii History</span></a></td>
+<td>HISTORY</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>r</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="loading_files/dlpoly.html#load-config"><span class="std std-ref">Ascii config</span></a></td>
+<td>CONFIG</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>r</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="loading_files/gamess.html#load-gamess"><span class="std std-ref">GAMESS</span></a></td>
+<td><a class="reference internal" href="loading_files/gamess.html#load-gms"><span class="std std-ref">GAMESS</span></a></td>
+<td>GMS, LOG, OUT</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>r</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="loading_files/gromacs.html#loading-gromacs"><span class="std std-ref">Gromacs</span></a></td>
+<td><a class="reference internal" href="loading_files/gromacs.html#load-gro"><span class="std std-ref">Gromos</span></a></td>
+<td>GRO</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>r/w</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="loading_files/gromacs.html#load-tpr"><span class="std std-ref">TPR file</span></a></td>
+<td>TPR</td>
+<td>Yes</td>
+<td>No</td>
+<td>r</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="loading_files/gromacs.html#load-trr"><span class="std std-ref">TRR trajectory</span></a></td>
+<td>TRR</td>
+<td>Minimal</td>
+<td>Yes</td>
+<td>r/w</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="loading_files/gromacs.html#load-trr"><span class="std std-ref">XTC trajectory</span></a></td>
+<td>XTC</td>
+<td>Minimal</td>
+<td>Yes</td>
+<td>r/w</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="loading_files/hoomd.html#load-hoomd"><span class="std std-ref">Hoomd</span></a></td>
+<td><a class="reference internal" href="loading_files/hoomd.html#load-xml"><span class="std std-ref">XML Topology</span></a></td>
+<td>XML</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>r</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="loading_files/hoomd.html#load-gsd"><span class="std std-ref">Global simulation data?</span></a></td>
+<td>GSD</td>
+<td>No</td>
+<td>Yes”</td>
+<td>r</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="loading_files/ibisco.html#load-ibisco"><span class="std std-ref">IBIsCO and YASP trajectories</span></a></td>
+<td><a class="reference internal" href="loading_files/ibisco.html#load-ibisco"><span class="std std-ref">Binary trajectory</span></a></td>
+<td>TRZ</td>
+<td>Minimal</td>
+<td>Yes</td>
+<td>r/w</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="loading_files/lammps.html#load-lammps"><span class="std std-ref">Lammps</span></a></td>
+<td><a class="reference internal" href="loading_files/lammps.html#load-data"><span class="std std-ref">Data file</span></a></td>
+<td>DATA</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>r</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="loading_files/lammps.html#load-lammps-dcd"><span class="std std-ref">Binary DCD</span></a></td>
+<td>DCD</td>
+<td>Minimal</td>
+<td>Yes</td>
+<td>r/w</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="loading_files/protein.html#load-databank"><span class="std std-ref">Protein Databank</span></a></td>
+<td><a class="reference internal" href="loading_files/protein.html#load-pdb"><span class="std std-ref">PDB</span></a></td>
+<td>PDB, ENT, XPDB</td>
+<td>Yes</td>
+<td>Yes”</td>
+<td>r/w</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="loading_files/protein.html#load-mmtf"><span class="std std-ref">Macromolecular transmission format</span></a></td>
+<td>MMTF</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>r</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="loading_files/tinker.html#load-tinker"><span class="std std-ref">Tinker</span></a></td>
+<td><a class="reference internal" href="loading_files/tinker.html#load-txyz"><span class="std std-ref">Extended XYZ</span></a></td>
+<td>TXYZ</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>r</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="loading_files/tripos.html#load-tripos"><span class="std std-ref">Tripos</span></a></td>
+<td><a class="reference internal" href="loading_files/tripos.html#load-mol2"><span class="std std-ref">MOL2</span></a></td>
+<td>MOL2</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>r/w</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="loading_files/xyz.html#load-xyz"><span class="std std-ref">XYZ files</span></a></td>
+<td><a class="reference internal" href="loading_files/xyz.html#load-xyz"><span class="std std-ref">Ascii XYZ files</span></a></td>
+<td>XYZ</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>r/w</td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/logos/mdanalysis-logo-200x150.png" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=MDAnalysis&repo=mdanalysis&type=star&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">1. Overview over MDAnalysis</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Loading your data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#basic-usage">2.1. Basic Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#single-file-universes">2.1.1. Single file Universes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#concatenating-trajectories">2.1.2. Concatenating trajectories</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#supported-formats-and-further-details">2.2. Supported formats and further details</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="loading_files/amber.html">2.2.1. Loading Amber files with MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="loading_files/apbs.html">2.2.2. Loading Poisson Boltzmann files in MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="loading_files/autodock.html">2.2.3. Loading Autodock files with MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="loading_files/charmm.html">2.2.4. Loading CHARMM files with MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="loading_files/desmond.html">2.2.5. Loading Desmond MD files with MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="loading_files/dlpoly.html">2.2.6. Loading DL Poly files with MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="loading_files/gamess.html">2.2.7. Loading GAMESS files with MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="loading_files/gromacs.html">2.2.8. Loading Gromacs files in MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="loading_files/hoomd.html">2.2.9. Loading Hoomd files with MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="loading_files/ibisco.html">2.2.10. Loading IBIsCO and YASP files with MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="loading_files/lammps.html">2.2.11. Loading LAMMPS files with MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="loading_files/protein.html">2.2.12. Loading Protein Databank files with MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="loading_files/tinker.html">2.2.13. Loading Tinker files in MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="loading_files/tripos.html">2.2.14. Loading Tripos files with MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="loading_files/xyz.html">2.2.15. Loading XYZ files with MDAnalysis</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="topology.html">3. The topology system</a></li>
+<li class="toctree-l1"><a class="reference internal" href="selections.html">4. Selection commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_modules.html">5. Analysis modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topology_modules.html">6. Topology modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coordinates_modules.html">7. Coordinates modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="selections_modules.html">8. Selection exporters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auxiliary_modules.html">9. Auxiliary modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="core_modules.html">10. Core modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualization_modules.html">11. Visualization modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lib_modules.html">12. Library functions — <code class="docutils literal notranslate"><span class="pre">MDAnalysis.lib</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="version.html">13. Version information for MDAnalysis - <code class="docutils literal notranslate"><span class="pre">MDAnalysis.version</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="units.html">14. Constants and unit conversion — <code class="docutils literal notranslate"><span class="pre">MDAnalysis.units</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="exceptions.html">15. Custom exceptions and warnings — <code class="docutils literal notranslate"><span class="pre">MDAnalysis.exceptions</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">16. References</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="overview.html" title="previous chapter">1. Overview over MDAnalysis</a></li>
+      <li>Next: <a href="loading_files/amber.html" title="next chapter">2.2.1. Loading Amber files with MDAnalysis</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2005-2017, Naveen Michaud-Agrawal, Elizabeth J. Denning, Christian Beckstein (logo), Joshua L. Adelman, Shobhit Agarwal, Balasubramanian, Utkarsh Bansal, Jonathan Barnoud, Tone Bengtsen, Alejandro Bernardin, Mateusz Bieniek, Wouter Boomsma, Jose Borreguero, Bart Bruininks, Sébastien Buchoux, Sören von Bülow, David Caplan, Matthieu Chavent, Kathleen Clark, Robert Delgado, John Detlefs, Xavier Deupi, Jan Domanski, David L. Dotson, Lennard van der Feltz, Philip Fowler, Joseph Goose, Richard J. Gowers, Lukas Grossar, Abhinav Gupta, Akshay Gupta, Benjamin Hall, Eugen Hruska, Kyle J. Huston, Joe Jordan, Jon Kapla, Andrew William King, Max Linke, Jinju Lu, Micaela Matta, Robert McGibbon, Manuel Nuno Melo, Dominik 'Rathann' Mierzejewski, Fiona Naughton, Alex Nesterenko, Hai Nguyen, Sang Young Noh, Nabarun Pal, Mattia F. Palermo, Danny Parton, Joshua L. Phillips, Vedant Rathore, Tyler Reddy, Paul Rigor, Carlos Yanez S., Utkarsh Saxena, Sean L. Seyler, Andy Somogyi, Caio S. Souza, Shantanu Srivastava, Lukas Stelzl, Gorman Stock, Matteo Tiberti, Isaac Virshup, Nestor Wendt, Zhiyi Wu, Zhuyi Xue, Juan Eiros Zamora, and Oliver Beckstein.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="../_sources/documentation_pages/loading_files.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+    <a href="https://github.com/MDAnalysis/mdanalysis" class="github">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
+    </a>
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,306 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>2.2.8. Loading Gromacs files in MDAnalysis &#8212; MDAnalysis 0.17.1-dev documentation</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within MDAnalysis 0.17.1-dev documentation"
+          href="../../_static/opensearch.xml"/>
+    <link rel="shortcut icon" href="../../_static/mdanalysis-logo.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="2.2.9. Loading Hoomd files with MDAnalysis" href="hoomd.html" />
+    <link rel="prev" title="2.2.7. Loading GAMESS files with MDAnalysis" href="gamess.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="loading-gromacs-files-in-mdanalysis">
+<span id="loading-gromacs"></span><h1>2.2.8. Loading Gromacs files in MDAnalysis<a class="headerlink" href="#loading-gromacs-files-in-mdanalysis" title="Permalink to this headline">¶</a></h1>
+<p>MDAnalysis is able to read most files used by Gromacs with the exception
+of the TNG format which is currently in development.
+The TPR file provides a wide variety of topology attributes
+and should be used where possible,
+however it is also possible to use either a GRO or similar ASCII file.
+For the trajectory either an XTC or TRR file can be used,
+with the latter also providing velocities and forces if these were saved.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><cite>Loading PDB files &lt;load_databank&gt;</cite>
+<cite>Loading XYZ flies &lt;load_xyz&gt;</cite></p>
+</div>
+<div class="section" id="tpr-files">
+<span id="load-tpr"></span><h2>2.2.8.1. TPR files<a class="headerlink" href="#tpr-files" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference internal" href="../topology/TPRParser.html#module-MDAnalysis.topology.TPRParser" title="MDAnalysis.topology.TPRParser"><code class="xref py py-mod docutils literal notranslate"><span class="pre">TPRParser</span></code></a> module allows reading of a
+<a class="reference external" href="http://www.gromacs.org">Gromacs</a> portable run input file (a <a class="reference external" href="http://manual.gromacs.org/current/online/tpr.html">TPR file</a>). Because
+the file format of the TPR file is changing rapidly, not all versions
+are currently supported. The known working versions and the
+approximate Gromacs release numbers are listed in the table
+<a class="reference internal" href="#tpr-format-table"><span class="std std-ref">TPR format versions</span></a>.</p>
+<span id="tpr-format-table"></span><table border="1" class="docutils" id="id1">
+<caption><span class="caption-text">TPR format versions and generations read by <code class="xref py py-func docutils literal notranslate"><span class="pre">MDAnalysis.topology.TPRParser.parse()</span></code>.</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="20%" />
+<col width="29%" />
+<col width="41%" />
+<col width="10%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">TPX format</th>
+<th class="head">TPX generation</th>
+<th class="head">Gromacs release</th>
+<th class="head">read</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>??</td>
+<td>??</td>
+<td>3.3, 3.3.1</td>
+<td>no</td>
+</tr>
+<tr class="row-odd"><td>58</td>
+<td>17</td>
+<td>4.0, 4.0.2, 4.0.3,
+4.0.4, 4.0.5, 4.0.6,
+4.0.7</td>
+<td>yes</td>
+</tr>
+<tr class="row-even"><td>73</td>
+<td>23</td>
+<td>4.5.0, 4.5.1, 4.5.2,
+4.5.3, 4.5.4, 4.5.5</td>
+<td>yes</td>
+</tr>
+<tr class="row-odd"><td>83</td>
+<td>24</td>
+<td>4.6, 4.6.1</td>
+<td>yes</td>
+</tr>
+<tr class="row-even"><td>100</td>
+<td>26</td>
+<td>5.0, 5.0.1, 5.0.2,
+5.0.3,5.0.4, 5.0.5</td>
+<td>yes</td>
+</tr>
+<tr class="row-odd"><td>103</td>
+<td>26</td>
+<td>5.1</td>
+<td>yes</td>
+</tr>
+<tr class="row-even"><td>110</td>
+<td>26</td>
+<td>2016</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<p>For further discussion and notes see <a class="reference external" href="https://github.com/MDAnalysis/mdanalysis/issues/2">Issue 2</a>. Please <em>open a new issue</em> in
+the <a class="reference external" href="https://github.com/MDAnalysis/mdanalysis/issues">Issue Tracker</a> when a new or different TPR file format version should be
+supported.</p>
+<p>Bonded interactions available in Gromacs are described in table 5.5 of the
+<a class="reference external" href="http://manual.gromacs.org/documentation/5.1/manual-5.1.pdf">Gromacs manual</a>. The following ones are used to build the topology (see
+<a class="reference external" href="https://github.com/MDAnalysis/mdanalysis/pull/463">Issue 463</a>):</p>
+<ul class="simple">
+<li>bonds: regular bonds (type 1), G96 bonds (type 2), Morse (type 3),
+cubic bonds (type 4), connections (type 5), harmonic potentials (type 6),
+FENE bonds (type 7), restraint potentials (type 10),
+tabulated potential with exclusion/connection (type 8),
+tabulated potential without exclusion/connection (type 9), constraints with
+exclusion/connection (type 1), constraints without exclusion/connection (type
+2)</li>
+<li>angles: regular angles (type 1), G96 angles (type 2), cross bond-bond
+(type3), cross-bond-angle (type 4), Urey-Bradley (type 5), quartic angles
+(type 6), restricted bending potential (type 10), tabulated angles (type 8)</li>
+<li>dihedrals: proper dihedrals (type 1 and type 9), Ryckaert-Bellemans dihedrals
+(type 3), Fourier dihedrals (type 5), restricted dihedrals (type 10),
+combined bending-torsion potentials (type 11), tabulated dihedral (type 8)</li>
+<li>impropers: improper dihedrals (type 2), periodic improper dihedrals (type 4)</li>
+</ul>
+</div>
+<div class="section" id="reading-gro-files">
+<span id="load-gro"></span><h2>2.2.8.2. Reading GRO files<a class="headerlink" href="#reading-gro-files" title="Permalink to this headline">¶</a></h2>
+<p>Stuff about the GRO format specifically</p>
+<p>When used as a topology file in a Universe, MDAnalysis will read
+<code class="docutils literal notranslate"><span class="pre">names</span></code>, <code class="docutils literal notranslate"><span class="pre">ids</span></code>, <code class="docutils literal notranslate"><span class="pre">resids</span></code> and <code class="docutils literal notranslate"><span class="pre">resnames</span></code>,
+and guess <code class="docutils literal notranslate"><span class="pre">masses</span></code> and <code class="docutils literal notranslate"><span class="pre">types</span></code> based on the names of atoms.
+The <code class="docutils literal notranslate"><span class="pre">segid</span></code> for of all atoms is set to “<code class="docutils literal notranslate"><span class="pre">SYSTEM</span></code>”.</p>
+<p>For implementation details see
+<a class="reference internal" href="../topology/GROParser.html#module-MDAnalysis.topology.GROParser" title="MDAnalysis.topology.GROParser"><code class="xref py py-mod docutils literal notranslate"><span class="pre">MDAnalysis.topology.GROParser</span></code></a>.</p>
+<div class="section" id="writing-gro-files">
+<h3>2.2.8.2.1. Writing GRO files<a class="headerlink" href="#writing-gro-files" title="Permalink to this headline">¶</a></h3>
+<p>MDAnalysis can also write GRO files, for example using the
+<a class="reference internal" href="../core/groups.html#MDAnalysis.core.groups.AtomGroup.write" title="MDAnalysis.core.groups.AtomGroup.write"><code class="xref py py-meth docutils literal notranslate"><span class="pre">write()</span></code></a> method.
+It will attempt to use the <code class="docutils literal notranslate"><span class="pre">name</span></code>, <code class="docutils literal notranslate"><span class="pre">resname</span></code> and <code class="docutils literal notranslate"><span class="pre">resid</span></code> attribute
+from atoms if available, otherwise default values of “<code class="docutils literal notranslate"><span class="pre">X</span></code>”, “<code class="docutils literal notranslate"><span class="pre">UNK</span></code>”
+and “<code class="docutils literal notranslate"><span class="pre">1</span></code>” respectively will be used.
+If the provided atoms have velocities these will also be written,
+otherwise only the positions will be written.
+The precision is limited to three decimal places.</p>
+<p>By default any written GRO files will renumber the atom ids to move sequentially
+from 1.  This can be disabled, and instead the original atom ids kept, by
+using the <code class="docutils literal notranslate"><span class="pre">reindex=False</span></code> keyword argument.  This is useful when writing a
+subsection of a larger Universe while wanting to preserve the original
+identities of atoms.</p>
+<p>For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; u = mda.Universe()`
+
+&gt;&gt;&gt; u.atoms.write(&#39;out.gro&#39;, reindex=False)
+
+# OR
+&gt;&gt;&gt; with mda.Writer(&#39;out.gro&#39;, reindex=False) as w:
+...     w.write(u.atoms)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="trr-and-xtc-files">
+<span id="load-trr"></span><h2>2.2.8.3. TRR and XTC files<a class="headerlink" href="#trr-and-xtc-files" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="writing-trr-and-xtc-files">
+<h3>2.2.8.3.1. Writing TRR and XTC files<a class="headerlink" href="#writing-trr-and-xtc-files" title="Permalink to this headline">¶</a></h3>
+<p>Anything interesting about writing these files</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../index.html">
+    <img class="logo" src="../../_static/logos/mdanalysis-logo-200x150.png" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=MDAnalysis&repo=mdanalysis&type=star&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">1. Overview over MDAnalysis</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../loading_files.html">2. Loading your data</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../loading_files.html#basic-usage">2.1. Basic Usage</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../loading_files.html#supported-formats-and-further-details">2.2. Supported formats and further details</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="amber.html">2.2.1. Loading Amber files with MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="apbs.html">2.2.2. Loading Poisson Boltzmann files in MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="autodock.html">2.2.3. Loading Autodock files with MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="charmm.html">2.2.4. Loading CHARMM files with MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="desmond.html">2.2.5. Loading Desmond MD files with MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dlpoly.html">2.2.6. Loading DL Poly files with MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gamess.html">2.2.7. Loading GAMESS files with MDAnalysis</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.2.8. Loading Gromacs files in MDAnalysis</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#tpr-files">2.2.8.1. TPR files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#reading-gro-files">2.2.8.2. Reading GRO files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#trr-and-xtc-files">2.2.8.3. TRR and XTC files</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="hoomd.html">2.2.9. Loading Hoomd files with MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ibisco.html">2.2.10. Loading IBIsCO and YASP files with MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lammps.html">2.2.11. Loading LAMMPS files with MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="protein.html">2.2.12. Loading Protein Databank files with MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tinker.html">2.2.13. Loading Tinker files in MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tripos.html">2.2.14. Loading Tripos files with MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="xyz.html">2.2.15. Loading XYZ files with MDAnalysis</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../topology.html">3. The topology system</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../selections.html">4. Selection commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../analysis_modules.html">5. Analysis modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology_modules.html">6. Topology modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../coordinates_modules.html">7. Coordinates modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../selections_modules.html">8. Selection exporters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auxiliary_modules.html">9. Auxiliary modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../core_modules.html">10. Core modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../visualization_modules.html">11. Visualization modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lib_modules.html">12. Library functions — <code class="docutils literal notranslate"><span class="pre">MDAnalysis.lib</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version.html">13. Version information for MDAnalysis - <code class="docutils literal notranslate"><span class="pre">MDAnalysis.version</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../units.html">14. Constants and unit conversion — <code class="docutils literal notranslate"><span class="pre">MDAnalysis.units</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exceptions.html">15. Custom exceptions and warnings — <code class="docutils literal notranslate"><span class="pre">MDAnalysis.exceptions</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">16. References</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../loading_files.html">2. Loading your data</a><ul>
+      <li>Previous: <a href="gamess.html" title="previous chapter">2.2.7. Loading GAMESS files with MDAnalysis</a></li>
+      <li>Next: <a href="hoomd.html" title="next chapter">2.2.9. Loading Hoomd files with MDAnalysis</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2005-2017, Naveen Michaud-Agrawal, Elizabeth J. Denning, Christian Beckstein (logo), Joshua L. Adelman, Shobhit Agarwal, Balasubramanian, Utkarsh Bansal, Jonathan Barnoud, Tone Bengtsen, Alejandro Bernardin, Mateusz Bieniek, Wouter Boomsma, Jose Borreguero, Bart Bruininks, Sébastien Buchoux, Sören von Bülow, David Caplan, Matthieu Chavent, Kathleen Clark, Robert Delgado, John Detlefs, Xavier Deupi, Jan Domanski, David L. Dotson, Lennard van der Feltz, Philip Fowler, Joseph Goose, Richard J. Gowers, Lukas Grossar, Abhinav Gupta, Akshay Gupta, Benjamin Hall, Eugen Hruska, Kyle J. Huston, Joe Jordan, Jon Kapla, Andrew William King, Max Linke, Jinju Lu, Micaela Matta, Robert McGibbon, Manuel Nuno Melo, Dominik 'Rathann' Mierzejewski, Fiona Naughton, Alex Nesterenko, Hai Nguyen, Sang Young Noh, Nabarun Pal, Mattia F. Palermo, Danny Parton, Joshua L. Phillips, Vedant Rathore, Tyler Reddy, Paul Rigor, Carlos Yanez S., Utkarsh Saxena, Sean L. Seyler, Andy Somogyi, Caio S. Souza, Shantanu Srivastava, Lukas Stelzl, Gorman Stock, Matteo Tiberti, Isaac Virshup, Nestor Wendt, Zhiyi Wu, Zhuyi Xue, Juan Eiros Zamora, and Oliver Beckstein.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="../../_sources/documentation_pages/loading_files/gromacs.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+    <a href="https://github.com/MDAnalysis/mdanalysis" class="github">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
+    </a>
+    
+
+    
+  </body>
+</html>

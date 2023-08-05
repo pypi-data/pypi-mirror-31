@@ -1,0 +1,277 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>2.2.1. Loading Amber files with MDAnalysis &#8212; MDAnalysis 0.17.1-dev documentation</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within MDAnalysis 0.17.1-dev documentation"
+          href="../../_static/opensearch.xml"/>
+    <link rel="shortcut icon" href="../../_static/mdanalysis-logo.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="2.2.2. Loading Poisson Boltzmann files in MDAnalysis" href="apbs.html" />
+    <link rel="prev" title="2. Loading your data" href="../loading_files.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="loading-amber-files-with-mdanalysis">
+<span id="loading-amber"></span><h1>2.2.1. Loading Amber files with MDAnalysis<a class="headerlink" href="#loading-amber-files-with-mdanalysis" title="Permalink to this headline">¶</a></h1>
+<p>MDAnalysis can read PRMTOP files as topologies and
+NCDF and ascii coordinate and restart files as trajectories from
+<a class="reference external" href="http://ambermd.org">Amber MD</a> simulations.
+Typically using NCDF as the trajectory format will give the best performance
+as all other trajectory formats are ascii based.</p>
+<div class="section" id="loading-amber-prmtop-files">
+<span id="load-amber-top"></span><h2>2.2.1.1. Loading Amber PRMTOP files<a class="headerlink" href="#loading-amber-prmtop-files" title="Permalink to this headline">¶</a></h2>
+<p>MDAnalysis reads <a class="reference external" href="http://ambermd.org/formats.html#topo.cntrl">TOP format</a> files with an extension of <code class="docutils literal notranslate"><span class="pre">TOP</span></code>,
+<code class="docutils literal notranslate"><span class="pre">PRMTOP</span></code> or <code class="docutils literal notranslate"><span class="pre">PARM7</span></code>.
+The below table shows the relationship between Amber flags and the attribute
+created in MDAnalysis:
+The <code class="docutils literal notranslate"><span class="pre">type_indices</span></code> attribute is unique to Amber formats and is
+an <em>integer</em> representation of the atom type, rather than the
+typical string representation found throughout MDAnalysis.</p>
+<table border="1" class="docutils" id="id1">
+<caption><span class="caption-text">Mapping of Amber flags to MDAnalysis attributes</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="44%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">AMBER flag</th>
+<th class="head">MDAnalysis attribute</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>ATOM_NAME</td>
+<td>names</td>
+</tr>
+<tr class="row-odd"><td>CHARGE</td>
+<td>charges</td>
+</tr>
+<tr class="row-even"><td>ATOMIC_NUMBER</td>
+<td>elements</td>
+</tr>
+<tr class="row-odd"><td>MASS</td>
+<td>masses</td>
+</tr>
+<tr class="row-even"><td>ATOM_TYPE_INDEX</td>
+<td>type_indices</td>
+</tr>
+<tr class="row-odd"><td>AMBER_ATOM_TYPE</td>
+<td>types</td>
+</tr>
+<tr class="row-even"><td>RESIDUE_LABEL</td>
+<td>resnames</td>
+</tr>
+<tr class="row-odd"><td>RESIDUE_POINTER</td>
+<td>residues</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The Amber charge is converted to electron charges as used in
+MDAnalysis and other packages. To get back Amber charges, multiply
+by 18.2223.</p>
+</div>
+<p>For implementation details, see
+<a class="reference internal" href="../topology/TOPParser.html#module-MDAnalysis.topology.TOPParser" title="MDAnalysis.topology.TOPParser"><code class="xref py py-mod docutils literal notranslate"><span class="pre">MDAnalysis.topology.TOPParser</span></code></a>.</p>
+</div>
+<div class="section" id="loading-amber-ncdf-files">
+<span id="load-amber-ncdf"></span><h2>2.2.1.2. Loading Amber NCDF files<a class="headerlink" href="#loading-amber-ncdf-files" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference external" href="http://ambermd.org/netcdf/nctraj.xhtml">AMBER netcdf</a> format make use of <a class="reference external" href="http://www.unidata.ucar.edu/software/netcdf">NetCDF</a> (Network Common Data
+Form) format. Such binary trajectories are recognized in MDAnalysis by
+the ‘.ncdf’ or ‘.nc’ suffix.</p>
+<p>Binary trajectories can also contain velocities and forces, and can record the
+exact time
+step. In principle, the trajectories can be in different units than the AMBER
+defaults of ångström and picoseconds but at the moment MDAnalysis only supports
+those and will raise a <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#NotImplementedError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">NotImplementedError</span></code></a> if anything else is detected.</p>
+<p>For implementation details see <a class="reference internal" href="../coordinates/TRJ.html#MDAnalysis.coordinates.TRJ.NCDFReader" title="MDAnalysis.coordinates.TRJ.NCDFReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">MDAnalysis.coordinates.TRJ.NCDFReader</span></code></a>.</p>
+</div>
+<div class="section" id="loading-trj-files">
+<span id="load-amber-trj"></span><h2>2.2.1.3. Loading TRJ files<a class="headerlink" href="#loading-trj-files" title="Permalink to this headline">¶</a></h2>
+<p>ASCII <a class="reference external" href="http://ambermd.org/formats.html#trajectory">AMBER TRJ coordinate files</a>
+are handled by the <code class="xref py py-class docutils literal notranslate"><span class="pre">TRJReader</span></code>. It is also possible to directly
+read <em>bzip2</em> or <em>gzip</em> compressed files.</p>
+<p>AMBER ASCII trajectories are recognised by the suffix ‘.trj’,
+‘.mdcrd’ or ‘.crdbox (possibly with an additional ‘.gz’ or ‘.bz2’).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>In the AMBER community, these trajectories are often saved with the
+suffix ‘.crd’ but this extension conflicts with the CHARMM CRD
+format and MDAnalysis <em>will not correctly autodetect AMBER “.crd”
+trajectories</em>. Instead, explicitly provide the <code class="docutils literal notranslate"><span class="pre">format=&quot;TRJ&quot;</span></code>
+argument to <a class="reference internal" href="../core/universe.html#MDAnalysis.core.universe.Universe" title="MDAnalysis.core.universe.Universe"><code class="xref py py-class docutils literal notranslate"><span class="pre">Universe</span></code></a>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">u</span> <span class="o">=</span> <span class="n">MDAnalysis</span><span class="o">.</span><span class="n">Universe</span><span class="p">(</span><span class="s2">&quot;top.prmtop&quot;</span><span class="p">,</span> <span class="s2">&quot;traj.crd&quot;</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;TRJ&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="last">In this way, the format is correct set.</p>
+</div>
+<p class="rubric">Limitations</p>
+<ul class="simple">
+<li>Periodic boxes are only stored as box lengths A, B, C in an AMBER
+trajectory; the reader always assumes that these are orthorhombic
+boxes.</li>
+<li>The trajectory does not contain time information so we simply set
+the time step to 1 ps (or the user could provide it as kwarg <em>dt</em>)</li>
+<li>Trajectories with fewer than 4 atoms probably fail to be read (BUG).</li>
+<li>If the trajectory contains exactly <em>one</em> atom then it is always
+assumed to be non-periodic (for technical reasons).</li>
+<li>Velocities are currently <em>not supported</em> as ASCII trajectories.</li>
+</ul>
+<p>For implementation details see
+<a class="reference internal" href="../coordinates/TRJ.html#MDAnalysis.coordinates.TRJ.TRJReader" title="MDAnalysis.coordinates.TRJ.TRJReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">MDAnalysis.coordinates.TRJ.TRJReader</span></code></a>.</p>
+</div>
+<div class="section" id="loading-amber-restart-files">
+<span id="load-amber-restart"></span><h2>2.2.1.4. Loading Amber restart files<a class="headerlink" href="#loading-amber-restart-files" title="Permalink to this headline">¶</a></h2>
+<p>A single frame of positions can be read from <a class="reference external" href="http://ambermd.org/formats.html#restart">Amber restart files</a>,
+which require a file suffix of <code class="docutils literal notranslate"><span class="pre">.inpcrd</span></code> or <code class="docutils literal notranslate"><span class="pre">.restrt</span></code>.
+See <a class="reference internal" href="../coordinates/INPCRD.html#module-MDAnalysis.coordinates.INPCRD" title="MDAnalysis.coordinates.INPCRD"><code class="xref py py-mod docutils literal notranslate"><span class="pre">MDAnalysis.coordinates.INPCRD</span></code></a> for implementation details.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../index.html">
+    <img class="logo" src="../../_static/logos/mdanalysis-logo-200x150.png" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=MDAnalysis&repo=mdanalysis&type=star&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">1. Overview over MDAnalysis</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../loading_files.html">2. Loading your data</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../loading_files.html#basic-usage">2.1. Basic Usage</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../loading_files.html#supported-formats-and-further-details">2.2. Supported formats and further details</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.2.1. Loading Amber files with MDAnalysis</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#loading-amber-prmtop-files">2.2.1.1. Loading Amber PRMTOP files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#loading-amber-ncdf-files">2.2.1.2. Loading Amber NCDF files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#loading-trj-files">2.2.1.3. Loading TRJ files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#loading-amber-restart-files">2.2.1.4. Loading Amber restart files</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="apbs.html">2.2.2. Loading Poisson Boltzmann files in MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="autodock.html">2.2.3. Loading Autodock files with MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="charmm.html">2.2.4. Loading CHARMM files with MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="desmond.html">2.2.5. Loading Desmond MD files with MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dlpoly.html">2.2.6. Loading DL Poly files with MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gamess.html">2.2.7. Loading GAMESS files with MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gromacs.html">2.2.8. Loading Gromacs files in MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hoomd.html">2.2.9. Loading Hoomd files with MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ibisco.html">2.2.10. Loading IBIsCO and YASP files with MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lammps.html">2.2.11. Loading LAMMPS files with MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="protein.html">2.2.12. Loading Protein Databank files with MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tinker.html">2.2.13. Loading Tinker files in MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tripos.html">2.2.14. Loading Tripos files with MDAnalysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="xyz.html">2.2.15. Loading XYZ files with MDAnalysis</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../topology.html">3. The topology system</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../selections.html">4. Selection commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../analysis_modules.html">5. Analysis modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology_modules.html">6. Topology modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../coordinates_modules.html">7. Coordinates modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../selections_modules.html">8. Selection exporters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auxiliary_modules.html">9. Auxiliary modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../core_modules.html">10. Core modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../visualization_modules.html">11. Visualization modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lib_modules.html">12. Library functions — <code class="docutils literal notranslate"><span class="pre">MDAnalysis.lib</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version.html">13. Version information for MDAnalysis - <code class="docutils literal notranslate"><span class="pre">MDAnalysis.version</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../units.html">14. Constants and unit conversion — <code class="docutils literal notranslate"><span class="pre">MDAnalysis.units</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exceptions.html">15. Custom exceptions and warnings — <code class="docutils literal notranslate"><span class="pre">MDAnalysis.exceptions</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">16. References</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../loading_files.html">2. Loading your data</a><ul>
+      <li>Previous: <a href="../loading_files.html" title="previous chapter">2. Loading your data</a></li>
+      <li>Next: <a href="apbs.html" title="next chapter">2.2.2. Loading Poisson Boltzmann files in MDAnalysis</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2005-2017, Naveen Michaud-Agrawal, Elizabeth J. Denning, Christian Beckstein (logo), Joshua L. Adelman, Shobhit Agarwal, Balasubramanian, Utkarsh Bansal, Jonathan Barnoud, Tone Bengtsen, Alejandro Bernardin, Mateusz Bieniek, Wouter Boomsma, Jose Borreguero, Bart Bruininks, Sébastien Buchoux, Sören von Bülow, David Caplan, Matthieu Chavent, Kathleen Clark, Robert Delgado, John Detlefs, Xavier Deupi, Jan Domanski, David L. Dotson, Lennard van der Feltz, Philip Fowler, Joseph Goose, Richard J. Gowers, Lukas Grossar, Abhinav Gupta, Akshay Gupta, Benjamin Hall, Eugen Hruska, Kyle J. Huston, Joe Jordan, Jon Kapla, Andrew William King, Max Linke, Jinju Lu, Micaela Matta, Robert McGibbon, Manuel Nuno Melo, Dominik 'Rathann' Mierzejewski, Fiona Naughton, Alex Nesterenko, Hai Nguyen, Sang Young Noh, Nabarun Pal, Mattia F. Palermo, Danny Parton, Joshua L. Phillips, Vedant Rathore, Tyler Reddy, Paul Rigor, Carlos Yanez S., Utkarsh Saxena, Sean L. Seyler, Andy Somogyi, Caio S. Souza, Shantanu Srivastava, Lukas Stelzl, Gorman Stock, Matteo Tiberti, Isaac Virshup, Nestor Wendt, Zhiyi Wu, Zhuyi Xue, Juan Eiros Zamora, and Oliver Beckstein.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="../../_sources/documentation_pages/loading_files/amber.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+    <a href="https://github.com/MDAnalysis/mdanalysis" class="github">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
+    </a>
+    
+
+    
+  </body>
+</html>
