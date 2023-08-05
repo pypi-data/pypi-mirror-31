@@ -1,0 +1,43 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-crm
+Version: 8.0.20170409
+Summary: Meta package for OCA crm Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo8-addon-crm-action
+Requires-Dist: odoo8-addon-crm-autoalias
+Requires-Dist: odoo8-addon-crm-claim-code
+Requires-Dist: odoo8-addon-crm-claim-type
+Requires-Dist: odoo8-addon-crm-deduplicate-acl
+Requires-Dist: odoo8-addon-crm-deduplicate-by-website
+Requires-Dist: odoo8-addon-crm-deduplicate-filter
+Requires-Dist: odoo8-addon-crm-lead-address-street3
+Requires-Dist: odoo8-addon-crm-lead-code
+Requires-Dist: odoo8-addon-crm-lead-firstname
+Requires-Dist: odoo8-addon-crm-lead-invoice-address
+Requires-Dist: odoo8-addon-crm-lead-lost-reason
+Requires-Dist: odoo8-addon-crm-lead-sale-link
+Requires-Dist: odoo8-addon-crm-lead-second-lastname
+Requires-Dist: odoo8-addon-crm-lead-supplier
+Requires-Dist: odoo8-addon-crm-lead-vat
+Requires-Dist: odoo8-addon-crm-lead-website
+Requires-Dist: odoo8-addon-crm-location
+Requires-Dist: odoo8-addon-crm-phonecall-category
+Requires-Dist: odoo8-addon-crm-phonecall-summary-predefined
+Requires-Dist: odoo8-addon-crm-sale-marketing
+Requires-Dist: odoo8-addon-crm-sector
+Requires-Dist: odoo8-addon-crm-track-next-action
+Requires-Dist: odoo8-addon-lettermgmt
+Requires-Dist: odoo8-addon-marketing-crm-partner
+Requires-Dist: odoo8-addon-mass-mailing-partner
+Requires-Dist: odoo8-addon-newsletter
+Requires-Dist: odoo8-addon-partner-withdrawal
+
+UNKNOWN
+
+
