@@ -1,0 +1,3 @@
+[console_scripts]
+lp-migrate = lazr.postgresql.migrate:main
+
