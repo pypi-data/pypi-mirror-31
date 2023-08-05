@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: Flask-DatastoreLogger
+Version: 0.0.1
+Summary: A logging interface for Google Cloud Datastore
+Home-page: https://github.com/MobiusWorksLLC/Flask-DatastoreLogger
+Author: Tyson Holub
+Author-email: tholub@mobiusworks.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
