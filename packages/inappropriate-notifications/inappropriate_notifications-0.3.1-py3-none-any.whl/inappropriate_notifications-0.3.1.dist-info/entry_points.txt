@@ -1,0 +1,3 @@
+[console_scripts]
+inappropriate-notifications = inappropriate_notifications.command_line:main
+
