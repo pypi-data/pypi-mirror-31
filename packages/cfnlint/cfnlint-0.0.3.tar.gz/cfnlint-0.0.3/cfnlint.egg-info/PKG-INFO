@@ -1,0 +1,15 @@
+Metadata-Version: 1.2
+Name: cfnlint
+Version: 0.0.3
+Summary: AWS Cloudformation linter
+Home-page: http://github.com/fatbasstard/cfnlint
+Author: Frank van Boven
+Author-email: frank@cenotaph.nl
+License: GNU GPL 2.0
+Description: UNKNOWN
+Keywords: AWS CloudFormation Linter yaml json
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3
