@@ -1,0 +1,20 @@
+Metadata-Version: 2.0
+Name: odoo10-addons-oca-connector-lengow
+Version: 10.0.20180419.0
+Summary: Meta package for oca-connector-lengow Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo10-addon-connector-lengow
+Requires-Dist: odoo10-addon-connector-lengow-amazon
+Requires-Dist: odoo10-addon-connector-lengow-fnac
+Requires-Dist: odoo10-addon-connector-lengow-naturedecouvertes
+Requires-Dist: odoo10-addon-connector-lengow-teeps
+
+UNKNOWN
+
+
