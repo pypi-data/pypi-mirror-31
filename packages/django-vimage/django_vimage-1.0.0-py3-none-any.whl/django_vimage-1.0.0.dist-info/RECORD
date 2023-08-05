@@ -1,0 +1,14 @@
+django_vimage-1.0.0.dist-info/METADATA,sha256=IdRDzI8GMoy2YSal3XpsLKPW3CmvlO8pTCyvnqRxbSs,9529
+django_vimage-1.0.0.dist-info/RECORD,,
+django_vimage-1.0.0.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+django_vimage-1.0.0.dist-info/top_level.txt,sha256=mkfUfwrqTzpp_5i_BRQeN6g87533USRIRjEHwip1h8I,7
+vimage/__init__.py,sha256=RsZjRjMprNcDm97wqRRSk6rTLgTX8N0GyicZyZ8OsBQ,22
+vimage/apps.py,sha256=ALXBroyiR7-5s5xy6eOQX25THq8VFK3T1MvfFfFLcXE,483
+vimage/core/__init__.py,sha256=22IpODItipL9EfNOzOly-XkbRRxBkePFxyeBGDcWINc,425
+vimage/core/base.py,sha256=zETqAU97-joy3o512XuDSyLZhobnpS8iuaWuUeFVTOQ,21709
+vimage/core/checker.py,sha256=JozGs5tWFyEmjH4Tk6xa5S8Copm7hHShCydZiKUpSwo,1308
+vimage/core/const.py,sha256=6k54M1Y_Q4ORId1HnnHaN5IGCVEzXUhRJmFpflKRyFQ,3097
+vimage/core/exceptions.py,sha256=XgJ9ZALK3lzbIB2jlBYGwaszSCgxY0BmDcR5mMoHhvM,632
+vimage/core/validator_types.py,sha256=Y5N4_rrGKE49VesZwq0pXAoSKVCXBxKL7NEIddBc-oU,35031
+vimage/locale/el/LC_MESSAGES/django.mo,sha256=EZCaGKWErlqfq0EpTMydQSynz8WYg_rqOd5oRFZUiHU,1912
+vimage/locale/el/LC_MESSAGES/django.po,sha256=8UUuOn6yvyqvya2S28LoiUJ6mpENuKQWbwFX8nku2ZI,2544
