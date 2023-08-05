@@ -1,0 +1,13 @@
+README.md
+setup.py
+gsem/__init__.py
+gsem/cli.py
+gsem/config.py
+gsem/extension.py
+gsem/utils.py
+gsem.egg-info/PKG-INFO
+gsem.egg-info/SOURCES.txt
+gsem.egg-info/dependency_links.txt
+gsem.egg-info/entry_points.txt
+gsem.egg-info/top_level.txt
+gsem.egg-info/zip-safe
