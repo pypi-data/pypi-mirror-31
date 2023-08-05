@@ -1,0 +1,8 @@
+{% load i18n %}{% block content %}{{ text_content }}{% endblock %}
+
+{% block signature %}
+{% blocktrans %}Z poważaniem,
+Zespół Tango{% endblocktrans %}
+{% endblock %}
+
+{% block footer %}{% endblock %}
