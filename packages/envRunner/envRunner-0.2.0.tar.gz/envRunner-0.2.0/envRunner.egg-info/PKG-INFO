@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: envRunner
+Version: 0.2.0
+Summary: Run a command with environment variables set from a url or file
+Home-page: https://github.com/HeqetLabs/envRunner
+Author: Sean Reed
+Author-email: sean@reed.pub
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: environment,runner
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
