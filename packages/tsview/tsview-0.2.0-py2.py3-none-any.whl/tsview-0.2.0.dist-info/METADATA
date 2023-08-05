@@ -1,0 +1,32 @@
+Metadata-Version: 2.0
+Name: tsview
+Version: 0.2.0
+Summary: Plugin to `tshistory` which provides a `view` subcommand to visualize time series from a repository
+Home-page: https://bitbucket.org/pythonian/tsview
+Author: Pythonian
+Author-email: aurelien.campeas@pythonian.fr
+License: UNKNOWN
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Database
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development :: Version Control
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Requires-Dist: dash
+Requires-Dist: dash-core-components (==0.22.1)
+Requires-Dist: dash-html-components (==0.10.0)
+Requires-Dist: dash-renderer (==0.12.1)
+Requires-Dist: flask
+Requires-Dist: plotly
+Requires-Dist: pytest-sa-pg
+Requires-Dist: tshistory
+
+UNKNOWN
+
+
