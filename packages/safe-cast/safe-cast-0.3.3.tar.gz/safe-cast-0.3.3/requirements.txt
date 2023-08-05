@@ -1,0 +1,5 @@
+numpy>=1.14.2
+pprintpp>=0.3.0
+pytest>=3.5.0
+pytest-cov>=2.5.1
+wheel>=0.30.0
