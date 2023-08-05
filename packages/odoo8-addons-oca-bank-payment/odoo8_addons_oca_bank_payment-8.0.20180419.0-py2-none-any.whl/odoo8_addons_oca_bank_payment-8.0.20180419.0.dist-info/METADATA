@@ -1,0 +1,34 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-bank-payment
+Version: 8.0.20180419.0
+Summary: Meta package for oca-bank-payment Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo8-addon-account-banking-mandate
+Requires-Dist: odoo8-addon-account-banking-pain-base
+Requires-Dist: odoo8-addon-account-banking-payment-export
+Requires-Dist: odoo8-addon-account-banking-payment-transfer
+Requires-Dist: odoo8-addon-account-banking-sepa-credit-transfer
+Requires-Dist: odoo8-addon-account-banking-sepa-direct-debit
+Requires-Dist: odoo8-addon-account-banking-tests
+Requires-Dist: odoo8-addon-account-direct-debit
+Requires-Dist: odoo8-addon-account-import-line-multicurrency-extension
+Requires-Dist: odoo8-addon-account-payment-blocking
+Requires-Dist: odoo8-addon-account-payment-include-draft-move
+Requires-Dist: odoo8-addon-account-payment-mode-term
+Requires-Dist: odoo8-addon-account-payment-partner
+Requires-Dist: odoo8-addon-account-payment-purchase
+Requires-Dist: odoo8-addon-account-payment-sale
+Requires-Dist: odoo8-addon-account-payment-sale-stock
+Requires-Dist: odoo8-addon-account-payment-transfer-reconcile-batch
+Requires-Dist: odoo8-addon-account-voucher-killer
+Requires-Dist: odoo8-addon-portal-payment-mode
+
+UNKNOWN
+
+
