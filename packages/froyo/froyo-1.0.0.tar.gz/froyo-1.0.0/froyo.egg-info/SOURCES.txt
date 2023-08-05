@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+froyo/__init__.py
+froyo.egg-info/PKG-INFO
+froyo.egg-info/SOURCES.txt
+froyo.egg-info/dependency_links.txt
+froyo.egg-info/entry_points.txt
+froyo.egg-info/not-zip-safe
+froyo.egg-info/requires.txt
+froyo.egg-info/top_level.txt
