@@ -1,0 +1,15 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-connector-salesforce
+Version: 8.0.20170210
+Summary: Meta package for OCA connector-salesforce Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo8-addon-connector-salesforce
+Requires-Dist: odoo8-addon-connector-salesforce-server-environment
+
+UNKNOWN
+
+
