@@ -1,0 +1,16 @@
+ceci/__init__.py,sha256=AhEjdGqP_zog13RlpzUcOjfewfGOmPRGRhUuarISV_o,64
+ceci/launchers.py,sha256=1GTagx8kFr79L-kBk0S2tduMvIE3SkVRpjmjfcSq__s,2261
+ceci/main.py,sha256=cQheXOifEdB1vQv5hzNZpwReaj99Tib7XzAs6FL4SmI,2770
+ceci/pipeline.py,sha256=fA6y4VGhw-tTz7PLeSkVyaO7ETMjYl8kFnq5y_K35pM,7980
+ceci/stage.py,sha256=lmaUbaNyPoYfGtF8v5pz1aIjza7jjL6Z4hosSpSF2_s,22468
+ceci-0.0.1.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+ceci-0.0.1.dist-info/METADATA,sha256=MuUxWAES4DZLC7MD14Uy1jShS8K_sTI6Pp7gMkRQOf4,494
+ceci-0.0.1.dist-info/RECORD,,
+ceci-0.0.1.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+ceci-0.0.1.dist-info/entry_points.txt,sha256=9_KSLI8dITOfB9N63CGDVaaVVlaOQYTu6oa1e5IZ4ko,41
+ceci-0.0.1.dist-info/metadata.json,sha256=nVOJnilB6FVr_a4-DRE9vz-Wz6-DobMld4fY_YwkRbw,785
+ceci-0.0.1.dist-info/top_level.txt,sha256=-ib6IdBFzR2C4Ln9Dllfc8KmIWSAW7lXk2KckxVYjtM,18
+ceci_example/__init__.py,sha256=7wJV3j4Qp6l_QzxZAS7kj2swj6kz08er0k4ia6noXHM,30
+ceci_example/__main__.py,sha256=E0hths6HBAIV5HkCEO7DgCx2I36pnd4vb08Ki21-9Cw,112
+ceci_example/example_stages.py,sha256=cDf1w8h2AE88l-D0bIl3ZXd1mbzd8DfzlpvOAeuAd2Q,6792
+ceci_example/types.py,sha256=6a463__xw-lxCokJYLTN5XCGQiQqEHwhrn5qVQ_P6C0,2176

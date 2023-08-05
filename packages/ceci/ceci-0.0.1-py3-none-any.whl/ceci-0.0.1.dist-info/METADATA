@@ -1,0 +1,20 @@
+Metadata-Version: 2.0
+Name: ceci
+Version: 0.0.1
+Summary: Lightweight pipeline engine for LSST DESC
+Home-page: https://github.com/LSSTDESC/ceci
+Maintainer: Joe Zuntz
+License: MIT
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: cwlgen
+Requires-Dist: pyyaml
+Requires-Dist: parsl
+Requires-Dist: descformats
+
+UNKNOWN
+
+
