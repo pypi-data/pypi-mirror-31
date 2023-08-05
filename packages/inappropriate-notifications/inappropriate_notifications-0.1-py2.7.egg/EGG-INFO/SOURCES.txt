@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+inappropriate_notifications/__init__.py
+inappropriate_notifications/command_line.py
+inappropriate_notifications/notifications.json
+inappropriate_notifications/notify.py
+inappropriate_notifications.egg-info/PKG-INFO
+inappropriate_notifications.egg-info/SOURCES.txt
+inappropriate_notifications.egg-info/dependency_links.txt
+inappropriate_notifications.egg-info/not-zip-safe
+inappropriate_notifications.egg-info/top_level.txt
