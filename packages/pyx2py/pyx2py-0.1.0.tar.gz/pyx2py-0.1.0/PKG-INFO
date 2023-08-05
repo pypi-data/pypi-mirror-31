@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: pyx2py
+Version: 0.1.0
+Summary: pyx to py converter
+Home-page: UNKNOWN
+Author: fx-kirin
+Author-email: ono.kirin@gmail.com
+License: UNKNOWN
+Description: # Convert pyx to py
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5

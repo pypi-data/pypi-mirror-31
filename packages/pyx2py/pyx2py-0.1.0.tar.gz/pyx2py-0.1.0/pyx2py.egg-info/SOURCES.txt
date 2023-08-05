@@ -1,0 +1,9 @@
+README.md
+pyx2py
+setup.py
+pyx2py.egg-info/PKG-INFO
+pyx2py.egg-info/SOURCES.txt
+pyx2py.egg-info/dependency_links.txt
+pyx2py.egg-info/top_level.txt
+tests/__init__.py
+tests/test_sample.py
