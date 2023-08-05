@@ -1,0 +1,16 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-manufacture-reporting
+Version: 8.0.20170127
+Summary: Meta package for OCA manufacture-reporting Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo8-addon-mrp-bom-structure-xls
+Requires-Dist: odoo8-addon-mrp-repair-layout
+Requires-Dist: odoo8-addon-mrp-repair-report-customer-lang
+
+UNKNOWN
+
+
