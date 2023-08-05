@@ -1,0 +1,57 @@
+Metadata-Version: 2.0
+Name: repokid
+Version: 0.7.14
+Summary: AWS Least Privilege for Distributed, High-Velocity Deployment
+Home-page: https://github.com/Netflix/repokid
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Description-Content-Type: UNKNOWN
+Keywords: aws,iam,access_advisor
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Security
+Classifier: Topic :: System
+Classifier: Topic :: System :: Systems Administration
+Requires-Dist: boto3 (==1.5.25)
+Requires-Dist: boto (==2.48.0)
+Requires-Dist: botocore (==1.8.39)
+Requires-Dist: certifi (==2018.1.18)
+Requires-Dist: chardet (==3.0.4)
+Requires-Dist: click (==6.7)
+Requires-Dist: cloudaux (==1.4.6)
+Requires-Dist: defusedxml (==0.5.0)
+Requires-Dist: docopt (==0.6.2)
+Requires-Dist: docutils (==0.14)
+Requires-Dist: first (==2.0.1)
+Requires-Dist: flagpole (==1.0.1)
+Requires-Dist: futures (==3.1.1)
+Requires-Dist: idna (==2.6)
+Requires-Dist: import-string (==0.1.0)
+Requires-Dist: inflection (==0.3.1)
+Requires-Dist: jmespath (==0.9.3)
+Requires-Dist: joblib (==0.11)
+Requires-Dist: marshmallow (==2.15.0)
+Requires-Dist: pip-tools (==1.11.0)
+Requires-Dist: pkginfo (==1.4.2)
+Requires-Dist: policyuniverse (==1.1.0.1)
+Requires-Dist: python-dateutil (==2.6.1)
+Requires-Dist: requests-toolbelt (==0.8.0)
+Requires-Dist: requests (==2.18.4)
+Requires-Dist: s3transfer (==0.1.12)
+Requires-Dist: six (==1.11.0)
+Requires-Dist: tabulate (==0.8.2)
+Requires-Dist: tabview (==1.4.3)
+Requires-Dist: tqdm (==4.19.5)
+Requires-Dist: twine (==1.11.0)
+Requires-Dist: urllib3 (==1.22)
+
+UNKNOWN
+
+
