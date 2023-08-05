@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: apistar-cors-hooks
+Version: 0.1.0
+Summary: CORS support for API Star via event hooks.
+Home-page: https://github.com/lucianoratamero/apistar_cors_hooks
+Author: Luciano Ratamero
+Author-email: luciano@ratamero.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: apistar (>=0.4)
+Requires-Dist: wsgicors (<0.8,>=0.7)
+
+https://github.com/lucianoratamero/apistar_cors_hooks
+
+
