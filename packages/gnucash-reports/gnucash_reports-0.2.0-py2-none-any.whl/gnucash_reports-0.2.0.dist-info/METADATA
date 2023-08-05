@@ -1,0 +1,51 @@
+Metadata-Version: 2.0
+Name: gnucash-reports
+Version: 0.2.0
+Summary: Generate JSON reports for rendering in a viewer.
+Home-page: https://github.com/MeerkatLabs/gnucash-reports
+Author: Robert Robinson
+Author-email: rerobins@meerkatlabs.org
+License: MIT
+Description-Content-Type: text/markdown
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Office/Business :: Financial
+Requires-Dist: dateutils (==0.6.6)
+Requires-Dist: enum34 (==1.1.6)
+Requires-Dist: piecash (==0.13.0)
+Requires-Dist: pyaml (==15.8.2)
+Requires-Dist: requests (==2.18.4)
+Requires-Dist: simplejson (==3.8.0)
+
+# GNUCash Reporting 
+
+A simple python library for generating reports from a GNUCash database.  This repository provides a framework and 
+application.  The output is a collection of JSON files that can be displayed using a viewer application (similar to: 
+[GNUCash Reporting Viewer](https://github.com/MeerkatLabs/gnucash-reporting-view)).
+
+## Requirements
+
+* Piecash
+* PyYaml
+* SimpleJSON
+* NumPy
+
+## Usage
+
+```
+gnucash_reports -c configuration.yaml
+```
+
+## Documentation
+
+`TODO`
+
+## License
+
+MIT License
+
+
