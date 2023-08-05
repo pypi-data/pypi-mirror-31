@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+physplotlib/__init__.py
+physplotlib/dyplot.py
+physplotlib/statplot.py
+physplotlib/treatfile.py
+physplotlib.egg-info/PKG-INFO
+physplotlib.egg-info/SOURCES.txt
+physplotlib.egg-info/dependency_links.txt
+physplotlib.egg-info/not-zip-safe
+physplotlib.egg-info/requires.txt
+physplotlib.egg-info/top_level.txt
