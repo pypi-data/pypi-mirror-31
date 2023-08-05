@@ -1,0 +1,14 @@
+pubcontrol/config.py,sha256=rclYoAeWorYGy3k6qd0siFKd5DD7VkfL1mz3-nAOdbQ,2973
+pubcontrol/database.py,sha256=Qn4QLcuQAAijFgULNS4n9btMjjryaQeIrqzEGrAbZik,4973
+pubcontrol/hook.py,sha256=9pegbG25IckZv-62DkH_3cDhnzR-R3SIAJLbfn_6xoE,488
+pubcontrol/install.py,sha256=cKYFjwvbivrp4kGkTIpNx7xI-52BMBgaZry5quwAaLc,3576
+pubcontrol/main.py,sha256=FHSbeOYWUhrY2Uavtc6BldY5qtluneyc1ZxN8sr3mkA,3427
+pubcontrol/plugin.py,sha256=1DsUNoBJGnzLuZL419ciXZc4XTNij3Khr4kXC-jAgC0,3390
+pubcontrol/register.py,sha256=xcoW5qrwxpxHEaOEi7KTk4SyOm8jA2h9dJ53-4oydic,9789
+pubcontrol/templates/ini/config.j2,sha256=TnP0vfm-G2xNbyDarIzI2APmnF9BWFV5-EIyYfS5Rps,524
+pubcontrol_core-0.0.0.16.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+pubcontrol_core-0.0.0.16.dist-info/METADATA,sha256=gVAGFacHWmcbmTh8uKs5j5UA4g2aSRLGTp1jaCfTxOY,705
+pubcontrol_core-0.0.0.16.dist-info/RECORD,,
+pubcontrol_core-0.0.0.16.dist-info/WHEEL,sha256=o2k-Qa-RMNIJmUdIc7KU6VWR_ErNRbWNlxDIpl7lm34,110
+pubcontrol_core-0.0.0.16.dist-info/metadata.json,sha256=Kz9vEGonB6qM0-iiUzy-oJwfWed-2NyT6Y1xLw9vkl0,819
+pubcontrol_core-0.0.0.16.dist-info/top_level.txt,sha256=x_ZimrFG972zuoLnuSGrY6WTVxBGO0ochvD-v64jD58,11
