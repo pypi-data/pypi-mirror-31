@@ -1,0 +1,17 @@
+Metadata-Version: 2.0
+Name: odoo11-addons-oca-community-data-files
+Version: 11.0.20180124
+Summary: Meta package for OCA community-data-files Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo11-addon-base-iso3166
+Requires-Dist: odoo11-addon-base-unece
+
+UNKNOWN
+
+
