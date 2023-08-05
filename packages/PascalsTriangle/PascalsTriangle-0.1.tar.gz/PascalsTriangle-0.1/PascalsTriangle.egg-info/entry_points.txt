@@ -1,0 +1,3 @@
+[console_scripts]
+pascals-triangle = PascalsTriangle.pascals_triangle:main
+
