@@ -1,0 +1,21 @@
+Metadata-Version: 2.0
+Name: odoo9-addons-oca-donation
+Version: 9.0.20180419.0
+Summary: Meta package for oca-donation Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo9-addon-donation
+Requires-Dist: odoo9-addon-donation-bank-statement
+Requires-Dist: odoo9-addon-donation-base
+Requires-Dist: odoo9-addon-donation-direct-debit
+Requires-Dist: odoo9-addon-donation-recurring
+Requires-Dist: odoo9-addon-donation-sale
+
+UNKNOWN
+
+
