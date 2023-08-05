@@ -1,0 +1,11 @@
+MANIFEST.in
+README.rst
+_errator.c
+_errator.pyx
+errator.py
+setup.cfg
+setup.py
+errator.egg-info/PKG-INFO
+errator.egg-info/SOURCES.txt
+errator.egg-info/dependency_links.txt
+errator.egg-info/top_level.txt
