@@ -1,0 +1,12 @@
+click
+requests
+urllib3>=1.15
+six>=1.10
+certifi
+flask
+python-dateutil
+docopt
+tabulate
+pyyaml
+jinja2
+lxml
