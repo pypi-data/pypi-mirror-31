@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: pyquery-cli
+Version: 0.0.1
+Summary: A command line interface for JQuery like search and extract data from HTML. see the README.md file.
+Home-page: https://github.com/elboza/PyQuery
+Author: Fernando Iazeolla
+Author-email: UNKNOWN
+License: L-Beerware
+Download-URL: https://github.com/elboza/PyQuery/archive/0.0.1.tar.gz
+Description: UNKNOWN
+Keywords: jquery,pyquery,html
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
