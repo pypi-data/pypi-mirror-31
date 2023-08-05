@@ -1,0 +1,13 @@
+Metadata-Version: 2.0
+Name: fancypipe
+Version: 0.5.3
+Summary: A library for managing compute pipelines in terms of logging, parallel execution, parameter settings, command line options, garbage collection and error handling.
+Home-page: http://rbakker.github.io/FancyPipe/
+Author: Rembrandt Bakker
+Author-email: r.bakker@donders.ru.nl
+License: MIT
+Platform: UNKNOWN
+
+UNKNOWN
+
+
