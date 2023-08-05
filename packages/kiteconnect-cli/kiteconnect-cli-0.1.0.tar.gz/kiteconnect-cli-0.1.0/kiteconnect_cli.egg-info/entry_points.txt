@@ -1,0 +1,3 @@
+[console_scripts]
+kiteconnect-cli = kiteconnect_cli.cli:cli_execute
+

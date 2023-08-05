@@ -1,0 +1,10 @@
+README.md
+setup.py
+kiteconnect_cli/__init__.py
+kiteconnect_cli/cli.py
+kiteconnect_cli.egg-info/PKG-INFO
+kiteconnect_cli.egg-info/SOURCES.txt
+kiteconnect_cli.egg-info/dependency_links.txt
+kiteconnect_cli.egg-info/entry_points.txt
+kiteconnect_cli.egg-info/requires.txt
+kiteconnect_cli.egg-info/top_level.txt
