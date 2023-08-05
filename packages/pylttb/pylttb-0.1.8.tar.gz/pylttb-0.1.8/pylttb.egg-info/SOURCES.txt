@@ -1,0 +1,10 @@
+.travis.yml
+README.rst
+setup.py
+pylttb/__init__.py
+pylttb/lttb.py
+pylttb.egg-info/PKG-INFO
+pylttb.egg-info/SOURCES.txt
+pylttb.egg-info/dependency_links.txt
+pylttb.egg-info/requires.txt
+pylttb.egg-info/top_level.txt
