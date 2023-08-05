@@ -1,0 +1,25 @@
+Metadata-Version: 2.0
+Name: odoo10-addons-oca-crm
+Version: 10.0.20170927
+Summary: Meta package for OCA crm Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo10-addon-calendar-resource
+Requires-Dist: odoo10-addon-crm-deduplicate-acl
+Requires-Dist: odoo10-addon-crm-deduplicate-filter
+Requires-Dist: odoo10-addon-crm-lead-code
+Requires-Dist: odoo10-addon-crm-lead-website
+Requires-Dist: odoo10-addon-crm-location
+Requires-Dist: odoo10-addon-crm-phonecall
+Requires-Dist: odoo10-addon-crm-phonecall-summary-predefined
+Requires-Dist: odoo10-addon-crm-sale-marketing
+Requires-Dist: odoo10-addon-crm-sector
+
+UNKNOWN
+
+
