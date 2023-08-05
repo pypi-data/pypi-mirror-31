@@ -1,0 +1,25 @@
+Metadata-Version: 2.0
+Name: odoo11-addons-oca-website
+Version: 11.0.20180311
+Summary: Meta package for OCA website Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo11-addon-website-analytics-piwik
+Requires-Dist: odoo11-addon-website-anchor-smooth-scroll
+Requires-Dist: odoo11-addon-website-cookie-notice
+Requires-Dist: odoo11-addon-website-legal-page
+Requires-Dist: odoo11-addon-website-media-size
+Requires-Dist: odoo11-addon-website-menu-by-user-status
+Requires-Dist: odoo11-addon-website-multi-theme
+Requires-Dist: odoo11-addon-website-odoo-debranding
+Requires-Dist: odoo11-addon-website-snippet-anchor
+Requires-Dist: odoo11-addon-website-snippet-preset
+
+UNKNOWN
+
+
