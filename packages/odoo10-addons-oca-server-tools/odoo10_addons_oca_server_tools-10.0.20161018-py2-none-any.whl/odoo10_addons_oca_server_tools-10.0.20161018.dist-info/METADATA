@@ -1,0 +1,16 @@
+Metadata-Version: 2.0
+Name: odoo10-addons-oca-server-tools
+Version: 10.0.20161018
+Summary: Meta package for OCA server-tools Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo10-addon-base-technical-features
+Requires-Dist: odoo10-addon-date-range
+Requires-Dist: odoo10-addon-dbfilter-from-header
+
+UNKNOWN
+
+
