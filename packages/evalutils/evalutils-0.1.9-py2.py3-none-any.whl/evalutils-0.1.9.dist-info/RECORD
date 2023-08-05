@@ -1,0 +1,27 @@
+evalutils/__init__.py,sha256=BEdpAWtbozdGNilgnC8QNxhGuWEC02RmsuoM3Ivvyh8,193
+evalutils/__main__.py,sha256=Hu9uakkmbRaD5BGrqiiD4jvO6vg6rKc8mCBd7XOUwqw,107
+evalutils/__version__.py,sha256=Rx0RnWr0IJL8WrgEWCfTM95BqG_sCowlFhTlI67X2dE,88
+evalutils/annotations.py,sha256=3jyNrizK2sH7N9LiDuBL0mDtpze_0VOflXfgciwEiuU,3803
+evalutils/cli.py,sha256=6RNHwcWZE64NvITNwvX7iRA5k-aA_LB8HISLsV-2BgQ,940
+evalutils/evalutils.py,sha256=Szg5BP3qFT6ShUY4EnIZYffvI57Eh9SkSfanuZoZVeM,7292
+evalutils/exceptions.py,sha256=apYRCcBFcJqnb2qbPYalJohJ1fGsYqz9mz-n2LJ5mKw,237
+evalutils/io.py,sha256=WWAEvBh7wG6e8q7SfxxhFZn81-9Zy3iNWXajePb7ybk,2761
+evalutils/validators.py,sha256=K-RUXETkEIGgv8QzHQAk1qR2NBQnlA9Hbupd-rM4EhQ,4200
+evalutils/template/cookiecutter.json,sha256=EjzjY_Ij0Q1BHydRktbCuaDsf62ELXIU9KWZe0YoaF4,206
+evalutils/template/hooks/__init__.py,sha256=iwhKnzeBJLKxpRVjvzwiRE63_zNpIBfaKLITauVph-0,24
+evalutils/template/hooks/post_gen_project.py,sha256=NvzIJUWYpVDEW-jzoNACTblE4GGzAxM8cRENy5070FA,198
+evalutils/template/hooks/pre_gen_project.py,sha256=5erbXhYhkXtpgXQNC9UBChjkwqaGo0ke9PI1x3EKWmg,354
+evalutils/template/{{ cookiecutter.package_name }}/Dockerfile,sha256=s0eyDqg8FiLn-wt0D_xcfxS0LJHiP4g_n72FlaTAQPI,410
+evalutils/template/{{ cookiecutter.package_name }}/README.md,sha256=SVN5R3ny--o-DZqcDh45bWLri4f9tNE1YtNJorJDubg,228
+evalutils/template/{{ cookiecutter.package_name }}/build.sh,sha256=ynWyYNaisZRLoQ3i4THT5usPahkoo9_tUa-nyYR1Xvw,71
+evalutils/template/{{ cookiecutter.package_name }}/evaluation.py.j2,sha256=rV45oh-wZ_xXtizUVZ3aB0ROMROXJnm-LS24hqm2E8s,1195
+evalutils/template/{{ cookiecutter.package_name }}/export.sh,sha256=VsC76G8POkqRwRra3-WzoxI4y8RLGlDQ6Gn0DdTbAq8,115
+evalutils/template/{{ cookiecutter.package_name }}/requirements.txt,sha256=H9PbKmOwKbhl0YiJ1UpucUJmlS-3G-q7kHz_zHptuV4,72
+evalutils/template/{{ cookiecutter.package_name }}/test.sh,sha256=z_WRAxDDBSu6K5oP1Vn90vY4jHl7YhmSVlYw4rN1ThE,212
+evalutils/template/{{ cookiecutter.package_name }}/ground-truth/reference.csv,sha256=l-SIOYwwyegijS42IuBoz5B2HVgzn_knBJNoyMVzUhE,52
+evalutils/template/{{ cookiecutter.package_name }}/test/submission.csv,sha256=56AfL6LQsGvAkTYq938ZKUtgfrCpj-sNSJA0-_EAClQ,52
+evalutils-0.1.9.dist-info/METADATA,sha256=3i9lFW_2gRyut5kke1UMSEg6buY6A2bv4Y2JnZ4UNJo,3946
+evalutils-0.1.9.dist-info/RECORD,,
+evalutils-0.1.9.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+evalutils-0.1.9.dist-info/entry_points.txt,sha256=l9FT6b6a-1rhifJ6DozWrIIUh6Em1xvMr-gtdefc5AU,55
+evalutils-0.1.9.dist-info/top_level.txt,sha256=ojsUVOh9mi4MD4-x5sW9dq-W2mTv9wPBpcn0sz6swbE,10
