@@ -1,0 +1,4 @@
+[console_scripts]
+fpins = friendlypins.scripts.fpins:main
+webp2jpeg = friendlypins.scripts.webp2jpeg:main
+
