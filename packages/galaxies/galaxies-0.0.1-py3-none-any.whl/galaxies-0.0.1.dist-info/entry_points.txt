@@ -1,0 +1,6 @@
+[console_scripts]
+galaxies = galaxies.main:cli_entry_point
+
+[gui_scripts]
+galaxies_gui = galaxies.main:gui_entry_point
+
