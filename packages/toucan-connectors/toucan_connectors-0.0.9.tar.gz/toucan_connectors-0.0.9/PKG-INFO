@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: toucan_connectors
+Version: 0.0.9
+Summary: Toucan Toco Connectors
+Home-page: https://github.com/ToucanToco/toucan-connectors
+Author: Toucan Toco
+Author-email: dev@toucantoco.com
+License: BSD
+Description: UNKNOWN
+Platform: UNKNOWN
+Provides-Extra: postgres
+Provides-Extra: mysql
+Provides-Extra: mssql
+Provides-Extra: all
+Provides-Extra: snowflake
+Provides-Extra: microstrategy
+Provides-Extra: oracle
+Provides-Extra: mongo
