@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+DB_Transfer.egg-info/PKG-INFO
+DB_Transfer.egg-info/SOURCES.txt
+DB_Transfer.egg-info/dependency_links.txt
+DB_Transfer.egg-info/entry_points.txt
+DB_Transfer.egg-info/requires.txt
+DB_Transfer.egg-info/top_level.txt
+transfer/__init__.py
+transfer/adapter.py
+transfer/adapter_redis.py
+transfer/cli.py
+transfer/transfer.py
