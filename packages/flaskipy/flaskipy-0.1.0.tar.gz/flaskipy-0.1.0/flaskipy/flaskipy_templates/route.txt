@@ -1,0 +1,37 @@
+# coding=utf-8
+from flask import Blueprint
+from config import API_VERSION
+from ..controllers import *
+
+# Routers blueprint
+singular_name_routes = Blueprint("singular_name_routes", __name__, url_prefix="/{0}".format(API_VERSION))
+
+singular_name_routes.add_url_rule(
+    "/plural_name",
+    endpoint="get_all_singular_name",
+    view_func=get_all_singular_name,
+    methods=['GET'])
+
+singular_name_routes.add_url_rule(
+    "/plural_name",
+     endpoint="add_singular_name",
+     view_func=add_singular_name,
+     methods=['POST'])
+
+singular_name_routes.add_url_rule(
+    "/plural_name/<int:id>",
+    endpoint="get_singular_name",
+    view_func=get_singular_name,
+    methods=['GET'])
+
+singular_name_routes.add_url_rule(
+    "/plural_name/<int:id>",
+    endpoint="update_singular_name",
+    view_func=update_singular_name,
+    methods=['PUT'])
+
+singular_name_routes.add_url_rule(
+    "/plural_name/<int:id>",
+    endpoint="delete_singular_name",
+    view_func=delete_singular_name,
+    methods=['DELETE'])
