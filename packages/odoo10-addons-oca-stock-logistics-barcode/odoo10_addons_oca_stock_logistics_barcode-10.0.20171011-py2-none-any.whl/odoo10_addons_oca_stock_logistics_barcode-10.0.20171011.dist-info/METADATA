@@ -1,0 +1,24 @@
+Metadata-Version: 2.0
+Name: odoo10-addons-oca-stock-logistics-barcode
+Version: 10.0.20171011
+Summary: Meta package for OCA stock-logistics-barcode Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo10-addon-barcodes-ean14
+Requires-Dist: odoo10-addon-barcodes-generator-abstract
+Requires-Dist: odoo10-addon-barcodes-generator-location
+Requires-Dist: odoo10-addon-barcodes-generator-lot
+Requires-Dist: odoo10-addon-barcodes-generator-package
+Requires-Dist: odoo10-addon-barcodes-generator-partner
+Requires-Dist: odoo10-addon-barcodes-generator-picking
+Requires-Dist: odoo10-addon-barcodes-generator-product
+Requires-Dist: odoo10-addon-stock-scanner
+
+UNKNOWN
+
+
