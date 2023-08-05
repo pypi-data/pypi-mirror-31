@@ -1,0 +1,14 @@
+README.rst
+convert_h5file
+setup.cfg
+setup.py
+h5py_wrapper/__init__.py
+h5py_wrapper/lib.py
+h5py_wrapper/wrapper.py
+h5py_wrapper.egg-info/PKG-INFO
+h5py_wrapper.egg-info/SOURCES.txt
+h5py_wrapper.egg-info/dependency_links.txt
+h5py_wrapper.egg-info/requires.txt
+h5py_wrapper.egg-info/top_level.txt
+tests/__init__.py
+tests/test_wrapper.py
