@@ -1,0 +1,29 @@
+Metadata-Version: 1.2
+Name: plumpton
+Version: 0.1.0a1
+Summary: A Python text-based game library.
+Home-page: https://thomaswoodcock.net/plumpton
+Author: Thomas Woodcock
+Author-email: thomas@thomaswoodcock.net
+License: UNKNOWN
+Project-URL: Source, https://github.com/thomaswoodcock/plumpton
+Description-Content-Type: text/markdown
+Description: plumpton
+        ========
+        A Python text-based game library.
+        
+        This repository is under development.
+        For more information visit https://thomaswoodcock.net/plumpton
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Education
+Classifier: Topic :: Games/Entertainment
+Classifier: Topic :: Multimedia :: Graphics
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Libraries :: Tcl Extensions
