@@ -1,0 +1,32 @@
+{
+  "name": "galaxies",
+  "description": "[fr] GUI & CLI for reuse aggregates' visualization ",
+  "keywords": ["gui", "cli", "vizualisation", "reuses"],
+  "main_homepage": "https://github.com/NicolasBizzozzero/galaxies",
+  "download_url": "https://github.com/NicolasBizzozzero/galaxies/tarball/master",
+  "version": "0.0.1",
+  "author": "Bizzozzéro Nicolas, Adoum Robert",
+  "maintainer": "Bizzozzéro Nicolas, Adoum Robert",
+  "email": "nicolasbizzozzero@gmail.com",
+  "status": "Production/Stable",
+  "copyright": "Copyright 2018 - Bizzozzéro Nicolas, Adoum Robert",
+  "credits": [
+    "Bizzozzéro Nicolas",
+    "Adoum Robert"
+  ],
+  "license": "GPL-3.0",
+  "classifiers": [
+        "Development Status :: 5 - Production/Stable",
+        "Natural Language :: French",
+        "Intended Audience :: Science/Research",
+        "Topic :: Scientific/Engineering :: Visualization",
+        "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+        "Programming Language :: Python :: 3.5"
+  ],
+  "dependencies": [
+    "click >= 6.7",
+    "progressbar33 >= 2.4"
+  ],
+  "cli_entry_point": "galaxies",
+  "gui_entry_point": "galaxies_gui"
+}
