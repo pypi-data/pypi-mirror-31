@@ -1,0 +1,6 @@
+Flask
+Werkzeug
+Sphinx
+pytest
+pytest-cov
+redis
