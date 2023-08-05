@@ -1,0 +1,44 @@
+Metadata-Version: 2.0
+Name: perfectns
+Version: 2.0.0
+Summary: Dynamic and standard nested sampling for spherically symmetric likelihoods and priors.
+Home-page: https://github.com/ejhigson/perfectns
+Author: Edward Higson
+Author-email: ejhigson@gmail.com
+License: MIT
+Keywords: nested-sampling dynamic-nested-sampling
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Description-Content-Type: text/x-rst
+Requires-Dist: matplotlib (>=2.1.0)
+Requires-Dist: mpmath
+Requires-Dist: nestcheck
+Requires-Dist: numpy (>=1.13)
+Requires-Dist: pandas
+Requires-Dist: scipy (>=1.0.0)
+
+perfectns
+=========
+
+.. image:: https://travis-ci.org/ejhigson/perfectns.svg?branch=master
+    :target: https://travis-ci.org/ejhigson/perfectns
+.. image:: https://coveralls.io/repos/github/ejhigson/perfectns/badge.svg?branch=master
+	:target: https://coveralls.io/github/ejhigson/perfectns?branch=master
+.. image:: https://img.shields.io/badge/license-MIT-blue.svg
+    :target: https://github.com/ejhigson/perfectns/LICENSE
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+For more information see the `github repo README <https://github.com/ejhigson/perfectns/blob/master/README.md>`_.
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
