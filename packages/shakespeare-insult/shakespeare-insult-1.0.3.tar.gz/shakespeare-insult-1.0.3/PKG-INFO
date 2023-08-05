@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: shakespeare-insult
+Version: 1.0.3
+Summary: Generate insults in the style of Bill Shakespeare
+Home-page: https://github.com/Oisota/shakespeare-insult
+Author: Derek Morey
+Author-email: derek.o.morey@gmail.com
+License: GPL-3.0
+Description: Shakespearean Insult Generator
+        ==============================
+        [![Build Status](https://travis-ci.org/Oisota/shakespeare-insult.svg?branch=master)](https://travis-ci.org/Oisota/shakespeare-insult)
+        
+        Generate insults in the style of Bill Shakespeare.
+        
+        ```python
+        >>> from bill import insult
+        >>> insult()
+        'unmuzzled knotty-pated malt-worm'
+        >>> insult()
+        'roguish clay-brained flax-wench'
+        >>> insult()
+        'roguish tickle-brained mammet'
+        ```
+        
+        Install
+        -------
+        ```
+        $ pip install shakespeare-insult
+        ```
+        
+Keywords: William Shakespeare,Shakespeare,insult
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
