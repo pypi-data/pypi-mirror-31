@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: pseud
+Version: 1.0.0
+Summary: Bidirectionnal RPC Api on top of pyzmq
+Home-page: https://github.com/ticosax/pseud
+Author: Nicolas Delaby
+Author-email: ticosax@free.fr
+License: Apache Software License
+Keywords: rpc zeromq pyzmq curve bidirectional asyncio
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
+
+UNKNOWN
+
+
