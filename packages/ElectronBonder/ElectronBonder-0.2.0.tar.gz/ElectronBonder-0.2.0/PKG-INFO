@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: ElectronBonder
+Version: 0.2.0
+Summary: Project Electron Client Library
+Home-page: https://github.com/RockefellerArchiveCenter/ElectronBonder
+Author: Rockefeller Archive Center
+Author-email: archive@rockarch.org
+License: MIT
+Description-Content-Type: UNKNOWN
+Description: A client library for interacting Project Electron applications via their REST APIs.
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Other Audience
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=2.7
