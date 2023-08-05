@@ -1,0 +1,36 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-edi
+Version: 8.0.20170409
+Summary: Meta package for OCA edi Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo8-addon-account-invoice-import
+Requires-Dist: odoo8-addon-account-invoice-import-invoice2data
+Requires-Dist: odoo8-addon-account-invoice-import-ubl
+Requires-Dist: odoo8-addon-account-invoice-import-zugferd
+Requires-Dist: odoo8-addon-account-invoice-ubl
+Requires-Dist: odoo8-addon-account-invoice-zugferd
+Requires-Dist: odoo8-addon-base-business-document-import
+Requires-Dist: odoo8-addon-base-business-document-import-phone
+Requires-Dist: odoo8-addon-base-business-document-import-stock
+Requires-Dist: odoo8-addon-base-ubl
+Requires-Dist: odoo8-addon-base-ubl-payment
+Requires-Dist: odoo8-addon-base-zugferd
+Requires-Dist: odoo8-addon-purchase-order-import
+Requires-Dist: odoo8-addon-purchase-order-import-ubl
+Requires-Dist: odoo8-addon-purchase-order-ubl
+Requires-Dist: odoo8-addon-sale-commercial-partner
+Requires-Dist: odoo8-addon-sale-order-import
+Requires-Dist: odoo8-addon-sale-order-import-csv
+Requires-Dist: odoo8-addon-sale-order-import-ubl
+Requires-Dist: odoo8-addon-sale-order-ubl
+Requires-Dist: odoo8-addon-sale-stock-order-import
+
+UNKNOWN
+
+
