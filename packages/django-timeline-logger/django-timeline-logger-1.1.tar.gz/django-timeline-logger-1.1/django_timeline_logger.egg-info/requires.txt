@@ -1,0 +1,6 @@
+Django>=1.11
+django-appconf
+
+[docs]
+sphinx
+sphinx_rtd_theme
