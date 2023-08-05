@@ -1,0 +1,25 @@
+Metadata-Version: 2.0
+Name: apistar-crud
+Version: 0.2.1
+Summary: API Star tools to create CRUD resources.
+Home-page: https://github.com/PeRDy/apistar-crud
+Author: José Antonio Perdiguero López
+Author-email: perdy.hh@gmail.com
+License: GPLv3
+Download-URL: https://github.com/PeRDy/apistar-crud
+Description-Content-Type: UNKNOWN
+Keywords: python apistar api resource crud async django sqlalchemy
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: apistar
+
+UNKNOWN
+
+
