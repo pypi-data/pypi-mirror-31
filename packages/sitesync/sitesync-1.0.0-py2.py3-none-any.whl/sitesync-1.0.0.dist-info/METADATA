@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: sitesync
+Version: 1.0.0
+Summary: Script to sync db and/or data from remote host
+Home-page: https://github.com/morlandi/sitesync
+Author: Mario Orlandi
+Author-email: morlandi@brainstorm.it
+License: MIT
+Keywords: django test
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Database :: Database Engines/Servers
+Classifier: Topic :: Internet
+
+sitesync
+========
+
+Script to sync db and/or data from remote host
+
+Installation
+------------
+
+::
+
+    pip install git+https://github.com/morlandi/sitesync
+
+
+Usage
+-----
+
+Provides an easy way to build a working local copy from a remote site, either by:
+
+1) DUMP: saving a copy of remote database and data into ./dump/HOST folder
+2) SYNC: replacing local database and data downloading a fresh copy from remote host
+
+Supported platforms:
+
+1) Django (postgresql db + ./public/media/)
+2) Workpress (mysql + ./www/wordpress/)
+
+
+Usage: sitesync [-h] [-v {0,1,2,3}] [--dry-run] [--quiet] [--localhost]
+                action target
+
+Dump remote db and/or data, or Sync local db and/or data from remote instance
+
+positional arguments:
+  action                choices: sync, dump
+  target                choices: db, data, all
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -v {0,1,2,3}, --verbosity {0,1,2,3}
+                        Verbosity level. (default: 2)
+  --dry-run, -d         simulate actions
+  --quiet, -q           do not require user confirmation before executing commands
+  --localhost, -l       dump db and data from localhost into ./dumps/localhost
+
+
+
