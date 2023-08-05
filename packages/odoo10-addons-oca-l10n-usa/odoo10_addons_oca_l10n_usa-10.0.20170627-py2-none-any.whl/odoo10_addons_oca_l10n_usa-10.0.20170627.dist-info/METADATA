@@ -1,0 +1,17 @@
+Metadata-Version: 2.0
+Name: odoo10-addons-oca-l10n-usa
+Version: 10.0.20170627
+Summary: Meta package for OCA l10n-usa Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo10-addon-l10n-us-account-profile
+Requires-Dist: odoo10-addon-l10n-us-form-1099
+
+UNKNOWN
+
+
