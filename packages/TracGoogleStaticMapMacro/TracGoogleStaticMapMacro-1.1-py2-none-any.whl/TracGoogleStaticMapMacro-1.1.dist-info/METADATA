@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: TracGoogleStaticMapMacro
+Version: 1.1
+Summary: GoogleStaticMap Trac Macro.
+Home-page: https://www.trac-hacks.org/wiki/GoogleStaticMapMacro
+Author: Martin Scharrer
+Author-email: martin@scharrer-online.de
+License: GPLv3
+Keywords: trac google static map macro
+Platform: UNKNOWN
+Classifier: Framework :: Trac
+Requires-Dist: Trac
+Requires-Dist: TracAdvParseArgsPlugin
+
+UNKNOWN
+
+
