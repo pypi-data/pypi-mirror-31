@@ -1,0 +1,11 @@
+perception_model-1.0.dist-info/METADATA,sha256=jqHn-vMKuIClAzWdfjYWwQBxdFJr23Mwx_BUy-bmHLg,2952
+perception_model-1.0.dist-info/RECORD,,
+perception_model-1.0.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+perception_model-1.0.dist-info/entry_points.txt,sha256=Ut-e7EaLbPiaoKymRywT6dxhkgPENbiDJTTRCjhB6lU,144
+perception_model-1.0.dist-info/top_level.txt,sha256=mrTdvhERJd5y8QjdzVhXbC0j_FKExcc81N92lZAV5-Q,25
+perceptual_model/__init__.py,sha256=DWMBMijvyfHfxFqsHxecIp74Iezswy6kRGKy-h0ha5o,49
+perceptual_model/perceptual_model.py,sha256=EVldbpC3cy9_xyZKRWvnArQhpoP41xaKDI9fflpW8GQ,15817
+scripts/__init__.py,sha256=DWMBMijvyfHfxFqsHxecIp74Iezswy6kRGKy-h0ha5o,49
+scripts/filter_screenshot.py,sha256=AwBZ7riIS5of-w0leitCS3YSIsUJo1b9qur_rDYCgns,3865
+scripts/filter_screenshot_gui.py,sha256=sYGIaW4MjQDUkwtQGJpWlzAIo-CIkS6m6eAgKanwGpQ,8360
+scripts/util.py,sha256=TIaidrCmlScnsjj4H5z-G9XAPCCDZHMcmvTYKbFHQzc,1728
