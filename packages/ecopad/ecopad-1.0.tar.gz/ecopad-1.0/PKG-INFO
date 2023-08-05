@@ -1,0 +1,42 @@
+Metadata-Version: 1.1
+Name: ecopad
+Version: 1.0
+Summary: Text padding for Eco the game
+Home-page: https://github.com/morngrar/ecopad
+Author: Svein-Kåre Bjørnsen
+Author-email: sveinkare@gmail.com
+License: GPL
+Description-Content-Type: UNKNOWN
+Description: ecopad
+        ======
+        
+        A tool for padding text to be pasted into text boxes in the game Eco,
+        working around a client bug on linux, that doubles key presses.
+        
+        Packages needed before installing
+        ---------------------------------
+        
+        -  python3-tkinter
+        
+        Installation
+        ------------
+        
+        ``pip3 install --user ecopad``
+        
+        Usage
+        -----
+        
+        Launch the app with the command ``ecopad``. Alternately, one may add the
+        option ``-L`` for 4K monitors.
+        
+        Once the app is open, entering text into the entry field and pressing
+        return, or clicking the button, will copy the text to clipboard, and pad
+        it with whitespace if the length is odd numbered. Once pasted inside the
+        game, one simply deletes the doubled phrase, and submit the text.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Utilities

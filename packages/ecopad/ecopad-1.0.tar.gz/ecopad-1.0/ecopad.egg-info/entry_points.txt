@@ -1,0 +1,3 @@
+[console_scripts]
+ecopad = ecopad.launch:main
+
