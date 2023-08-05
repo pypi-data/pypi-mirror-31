@@ -1,0 +1,51 @@
+Metadata-Version: 1.1
+Name: imgui_datascience
+Version: 0.2.7
+Summary: A set of utilities for data science using python, imgui, numpy and opencv
+Home-page: https://github.com/pthom/imgui_datascience
+Author: Pascal Thomet
+Author-email: pthomet@gmail.com
+License: Apache Software License 2.0
+Description: 
+        
+        A set of utilities for data science using python, imgui, numpy and opencv
+        
+        Features
+        ========
+        
+        View the full demo (1'50") on youtube: 
+        
+        https://www.youtube.com/watch?v=qstEZyLGsTQ&feature=youtu.be    
+        
+        Run it after install:
+        
+        python -m imgui_datascience --example
+        
+        
+        Display numpy.ndarray (aka opencv image)
+        ----------------------------------------
+        
+        The following types are supported : RGB, RGBA, GRAY, float32, float64
+        
+        Display matplotlib figures
+        --------------------------
+        
+        Inspect images
+        --------------
+        - show pixels color (or float values)
+        - adjust visibility for float images
+        - save images
+        - zoom & pan (with possible sync between 2 images)
+            
+Keywords: imgui_datascience
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
