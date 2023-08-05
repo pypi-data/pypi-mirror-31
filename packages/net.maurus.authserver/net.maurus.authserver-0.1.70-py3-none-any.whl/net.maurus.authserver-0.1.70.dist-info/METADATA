@@ -1,0 +1,44 @@
+Metadata-Version: 2.0
+Name: net.maurus.authserver
+Version: 0.1.70
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: 12factor-vault (==0.1.20)
+Requires-Dist: cryptography (==2.2.2)
+Requires-Dist: Django (==1.11.12)
+Requires-Dist: django-cors-headers (==2.2.0)
+Requires-Dist: django-dbconn-retry (==0.1.5)
+Requires-Dist: django-mama-cas (==2.3.0)
+Requires-Dist: django-oauth-toolkit (==1.1.0)
+Requires-Dist: django-postgresql-setrole (==1.0.10)
+Requires-Dist: django-ratelimit (==1.1.0)
+Requires-Dist: django-select2 (==5.11.1)
+Requires-Dist: envdir (==1.0.1)
+Requires-Dist: gunicorn (==19.7.1)
+Requires-Dist: hvac (==0.5.0)
+Requires-Dist: passlib (==1.7.1)
+Requires-Dist: psycopg2-binary (==2.7.4)
+Requires-Dist: pycryptodome (==3.6.1)
+Requires-Dist: pyjwt (==1.6.1)
+Requires-Dist: python-consul (==0.7.2)
+Requires-Dist: python-json-logger (==0.1.8)
+Requires-Dist: requests (==2.18.4)
+Requires-Dist: sqlparse (==0.2.4)
+Requires-Dist: typing (==3.6.4)
+Requires-Dist: whitenoise (==3.3.1)
+Requires-Dist: valimail-dkimpy (==0.7.1)
+Requires-Dist: authres (==1.1.0)
+Requires-Dist: python-daemon (==2.1.2)
+Requires-Dist: dj-database-url (==0.5.0)
+Requires-Dist: dj-email-url (==0.1.0)
+Requires-Dist: django-cache-url (==2.0.0)
+Requires-Dist: six (==1.11.0)
+Requires-Dist: pytz
+
+UNKNOWN
+
+
