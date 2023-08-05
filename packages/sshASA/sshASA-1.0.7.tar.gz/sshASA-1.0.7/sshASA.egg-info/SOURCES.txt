@@ -1,0 +1,10 @@
+MANIFEST.in
+README.rst
+setup.py
+sshASA/__init__.py
+sshASA.egg-info/PKG-INFO
+sshASA.egg-info/SOURCES.txt
+sshASA.egg-info/dependency_links.txt
+sshASA.egg-info/not-zip-safe
+sshASA.egg-info/requires.txt
+sshASA.egg-info/top_level.txt
