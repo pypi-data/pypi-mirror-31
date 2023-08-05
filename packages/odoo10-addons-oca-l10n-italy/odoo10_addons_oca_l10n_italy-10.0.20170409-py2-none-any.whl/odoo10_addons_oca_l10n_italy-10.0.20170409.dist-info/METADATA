@@ -1,0 +1,23 @@
+Metadata-Version: 2.0
+Name: odoo10-addons-oca-l10n-italy
+Version: 10.0.20170409
+Summary: Meta package for OCA l10n-italy Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo10-addon-l10n-it-abicab
+Requires-Dist: odoo10-addon-l10n-it-ateco
+Requires-Dist: odoo10-addon-l10n-it-base-location-geonames-import
+Requires-Dist: odoo10-addon-l10n-it-fiscalcode
+Requires-Dist: odoo10-addon-l10n-it-ipa
+Requires-Dist: odoo10-addon-l10n-it-pec
+Requires-Dist: odoo10-addon-l10n-it-rea
+Requires-Dist: odoo10-addon-l10n-it-split-payment
+
+UNKNOWN
+
+
