@@ -1,0 +1,12 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+random_poem/__init__.py
+random_poem.egg-info/PKG-INFO
+random_poem.egg-info/SOURCES.txt
+random_poem.egg-info/dependency_links.txt
+random_poem.egg-info/not-zip-safe
+random_poem.egg-info/requires.txt
+random_poem.egg-info/top_level.txt

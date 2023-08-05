@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: random_poem
+Version: 1.0.1
+Summary: Returns a random poem from poetry foundation
+Home-page: https://github.com/kartikye/random_poem/
+Author: Kartikye Mittal
+Author-email: kartikye.mittal+random_poem@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3
