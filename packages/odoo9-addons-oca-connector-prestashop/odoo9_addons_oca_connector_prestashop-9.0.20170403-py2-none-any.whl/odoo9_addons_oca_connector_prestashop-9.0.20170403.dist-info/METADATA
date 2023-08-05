@@ -1,0 +1,16 @@
+Metadata-Version: 2.0
+Name: odoo9-addons-oca-connector-prestashop
+Version: 9.0.20170403
+Summary: Meta package for OCA connector-prestashop Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo9-addon-connector-prestashop
+Requires-Dist: odoo9-addon-connector-prestashop-catalog-manager
+Requires-Dist: odoo9-addon-connector-prestashop-manufacturer
+
+UNKNOWN
+
+
