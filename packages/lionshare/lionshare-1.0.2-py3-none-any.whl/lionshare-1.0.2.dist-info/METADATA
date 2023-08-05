@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: lionshare
+Version: 1.0.2
+Summary: Python wrapper for the Lionshare API
+Home-page: https://github.com/abhinavk99/lionshare
+Author: Abhinav Kasamsetty
+Author-email: abhinavkasamsetty@gmail.com
+License: MIT
+Requires-Dist: requests
+Provides-Extra: test
+Requires-Dist: pytest; extra == 'test'
+
+# lionshare
+
+
