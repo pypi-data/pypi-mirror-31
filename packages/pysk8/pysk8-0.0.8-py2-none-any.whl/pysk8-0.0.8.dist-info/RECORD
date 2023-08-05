@@ -1,0 +1,14 @@
+pysk8/__init__.py,sha256=HOL1pxXGeZFeolrVKD38Sbh0cUgFehFbtlH6DJ1asn8,87
+pysk8/__version__.py,sha256=CUFSe51cOx-MkpbHv7vHwQi5A6WKEPHxGyrHVcTP1pM,63
+pysk8/constants.py,sha256=htkCOikQJwwnRQLro6M4LyMllVEa3HDDPNI4tU6L8nA,2798
+pysk8/core.py,sha256=mEogPqRC_i3CXs3sk4mZPAf5EUheJZtmCpBmhGyfLn4,64875
+pysk8/discovery.py,sha256=uOvnox0h_KlGXvo4WFDG6QRmsKCTDiDvF6hrBNOuReg,2373
+pysk8/extana.py,sha256=0w96O0mPTkZRHkCtT4zxvhImzxgFIOoq4fvgcx507Oo,865
+pysk8/imu.py,sha256=9QumjFnnlBcM1AgvyTUmzU0p63xA_7fQkyP2VRzj1z8,3857
+pysk8/util.py,sha256=bV-szIwlUoOOGqLImHTrApjTNXV6oV-Bc8YdWExNqm8,1297
+pysk8-0.0.8.dist-info/DESCRIPTION.rst,sha256=rQtx7nQi_ARl6woGlO7Q1CgLYxmMasWqkp3jwWW98Ck,1226
+pysk8-0.0.8.dist-info/METADATA,sha256=u-jUSBdH6oKQDKoMG7G0hlSkkWQeBoj8h4G-mxFpl6c,2107
+pysk8-0.0.8.dist-info/RECORD,,
+pysk8-0.0.8.dist-info/WHEEL,sha256=90z-L1FjHEv_g8pMPaPbaXuhBIvSlvYObRaa122x8ag,97
+pysk8-0.0.8.dist-info/metadata.json,sha256=7BzXrMRY_iLAr3Hgg04QHdWUwVLz-ZoivvIPBRyEYJk,972
+pysk8-0.0.8.dist-info/top_level.txt,sha256=GY2B_m-uDJMr1xdR1_KI8KEWt6A3pE62EzWsF8qBk5M,6
