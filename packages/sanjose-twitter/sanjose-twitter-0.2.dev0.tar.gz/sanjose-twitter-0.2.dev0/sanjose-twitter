@@ -1,0 +1,54 @@
+#!/usr/bin/python
+# Prerequisites :
+import twitter
+import os.path
+import sys, getopt
+
+def get_argv(argv):
+  search_term = "Python"
+  search_number = "1"
+  try:
+    opts, args = getopt.getopt(argv,"ht:n:",["term=","number="])
+  except getopt.GetoptError:
+    print 'test.py -t <search term> -n <number of tweets>'
+    sys.exit(2)
+  for opt, arg in opts:
+    if opt == "-h":
+      print "sanjose-twitter.py -t <search term> -n <number of tweets>"
+      sys.exit()
+    elif opt in ("-t", "--term"):
+      search_term = arg
+    elif opt in ("-n", "--number"):
+      search_number = arg
+  return search_term, search_number
+
+def read_config():
+  config = {}
+  # Check twitter config is in current directory
+  if os.path.isfile("config.py"):
+    execfile("config.py",config)
+  else:
+    print "Please check config.py exists in the current directory"
+  return config
+
+def initiate_config(config):
+  api = twitter.Api(consumer_key=config["consumer_key"],
+  		consumer_secret=config["consumer_secret"],
+  		access_token_key=config["access_key"],
+  		access_token_secret=config["access_secret"])
+  return api
+
+def get_trends(api, search_number):
+  trends = api.GetTrendsCurrent()
+  for i in range( int(search_number) ):
+    print trends[i].name.encode('utf-8')
+
+def main(argv):
+  config = read_config()
+  api = initiate_config(config)
+  search_term, search_number = get_argv(argv)
+  
+  get_trends(api, search_number)
+
+if __name__ == "__main__":
+  main(sys.argv[1:])
