@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: flask-fast-cache
+Version: 0.0.1.dev1
+Summary: Extends
+Home-page: https://github.com/TransparentTechnologies/pyJSONA
+Author: Ryan Bonham
+Author-email: ryan@transparent-tech.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Provides-Extra: Redis
+Requires-Dist: Flask (>=0.12.0)
+Provides-Extra: Redis
+Requires-Dist: redis (>=2.10.0); extra == 'Redis'
+
+UNKNOWN
+
+
