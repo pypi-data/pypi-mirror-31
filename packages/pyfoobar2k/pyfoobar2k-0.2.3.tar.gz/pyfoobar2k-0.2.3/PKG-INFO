@@ -1,0 +1,39 @@
+Metadata-Version: 1.1
+Name: pyfoobar2k
+Version: 0.2.3
+Summary: foobar2000, foo_httpcontrol
+Home-page: https://bitbucket.org/ed0zer/pyfoobar2k
+Author: Edo Ozer
+Author-email: ed0zer@gmail.com
+License: MIT
+Description: Python library to control foobar2000 via foo_httpcontrol component
+        
+        foo_httpcontrol by oblikoamorale' https://bitbucket.org/oblikoamorale/foo_httpcontrol
+        
+        currently only some of foo_httpcontrol functions are implemented,
+        
+        some basic playback commands
+        
+        fetching track info and album art from player
+        
+        fetching playlists
+        
+        foobar2000 Requirements:
+        
+        1. foobar2000 version >= 1.1
+        
+        2. foo_httpcontrol component, version 0.97.17
+        
+        3. foo_httpcontrol template import, copy template/ directory contents into foo_httpcontrol_data/ directory of foobar2000
+        
+        standard installation: usually goes into '%APPDATA%\\foobar2000\\foo_httpcontrol_data\\pyfoobar2k'
+        
+        portable installation: usually goes into '<foobar2000_root_dir>\\foo_httpcontrol_data\\pyfoobar2k'
+        
+        template is accessible via http://<player_ip_address>:8888/pyfoobar2k
+        
+        
+Keywords: pyfoobar2k,foo_httpcontrol,foobar2000
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
