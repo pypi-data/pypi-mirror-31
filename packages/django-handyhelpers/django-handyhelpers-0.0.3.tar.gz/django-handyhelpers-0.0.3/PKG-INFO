@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: django-handyhelpers
+Version: 0.0.3
+Summary: A collection of handy utilities to support django operations
+Home-page: https://github.com/davidslusser/django-handyhelpers
+Author: David Slusser
+Author-email: dbslusser@gmail.com
+License: GPL-3.0
+Download-URL: https://github.com/davidslusser/django-handyhelpers/archive/0.2.tar.gz
+Description: A collection of handy utilities to support django operations
+Keywords: django,helpers
+Platform: UNKNOWN
