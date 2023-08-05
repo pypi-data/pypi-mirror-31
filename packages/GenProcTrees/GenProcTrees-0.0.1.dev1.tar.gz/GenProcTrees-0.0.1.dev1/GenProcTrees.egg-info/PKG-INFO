@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: GenProcTrees
+Version: 0.0.1.dev1
+Summary: Procedurally generate semi-realistic trees
+Home-page: https://github.com/KolijnWolfaardt/GenProcTrees
+Author: Kolijn Wolfaardt
+License: UNKNOWN
+Description: # Procedural Tree Generation
+        
+        This script generates semi-realistic trees. It is based on the algorithm described in [this blog](http://www.jgallant.com/procedurally-generating-trees-with-space-colonization-algorithm-in-xna/). To see it in action, run the runner.py script in the src folder.
+        
+        At the moment the script can generate the branches, but no leaves are generated as yet. The tree can be saved as an image or as a 3d object
+        
+        
+        # Examples
+        
+        <img src="https://github.com/KolijnWolfaardt/TreeGen/raw/master/images/tree1.png" width="480" alt="Demo Tree 1">
+        <img src="https://github.com/KolijnWolfaardt/TreeGen/raw/master/images/tree2.png" width="480" alt="Demo Tree 2">
+        <img src="https://github.com/KolijnWolfaardt/TreeGen/raw/master/images/tree_gif_1.gif" width="480" alt="Rotating Tree">
+        
+Keywords: procedural generation tree
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Artistic Software
+Classifier: Topic :: Multimedia :: Graphics :: 3D Modeling
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
