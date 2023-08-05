@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+data/data_file
+sample/__init__.py
+sample/package_data.dat
+structured_data_seo.egg-info/PKG-INFO
+structured_data_seo.egg-info/SOURCES.txt
+structured_data_seo.egg-info/dependency_links.txt
+structured_data_seo.egg-info/entry_points.txt
+structured_data_seo.egg-info/requires.txt
+structured_data_seo.egg-info/top_level.txt

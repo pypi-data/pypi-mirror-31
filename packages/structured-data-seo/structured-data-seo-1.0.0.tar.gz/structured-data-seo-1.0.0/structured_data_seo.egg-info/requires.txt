@@ -1,0 +1,7 @@
+django-meta
+
+[dev]
+check-manifest
+
+[test]
+coverage
