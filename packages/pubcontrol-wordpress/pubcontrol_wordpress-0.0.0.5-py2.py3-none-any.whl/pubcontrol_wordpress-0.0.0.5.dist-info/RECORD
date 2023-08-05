@@ -1,0 +1,15 @@
+pubcontrol_wordpress/config.py,sha256=QghL_n25kDtMZ9FzSB8Eb_Oh26aPZu4SdKkKSEd05wY,498
+pubcontrol_wordpress/install.py,sha256=SP1P7RYJ8l5QDffG3szIjdZLh5mcdFUKhXb0qp8hyOI,795
+pubcontrol_wordpress/main.py,sha256=X_GGu0c9EIbTyosPR8FD2LHG9kljVpi9scSaI_gaQeI,4181
+pubcontrol_wordpress/reference.py,sha256=Wfr5Hz2iNfKjIIQ64ICrEcx1s2iPoNiUU7sCJTHXEhI,4478
+pubcontrol_wordpress/views.py,sha256=0ncNGZPKkZu-bIlLLBrmdf1jSRyo-cqGADGjpx9yk38,4964
+pubcontrol_wordpress/wordpress.py,sha256=qPKK54-KeibVtbgQSDfMoq_34AQiA_eeeqVUbOOmtIM,2673
+pubcontrol_wordpress/templates/button.j2,sha256=4GMt18Af-6jToMExtBe7jMaPA6fquCzBZ1wZWfiSLJk,151
+pubcontrol_wordpress/templates/comment.j2,sha256=2LEDi_ibpuFXouHOfQVUcdMzIR8VYOUMwU5lhOs-oKA,236
+pubcontrol_wordpress/templates/post.j2,sha256=mSRrC3m8SDLchf_NkWwQWeCxvK3AAFRTntIyiKIIj4Q,260
+pubcontrol_wordpress-0.0.0.5.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+pubcontrol_wordpress-0.0.0.5.dist-info/METADATA,sha256=u-6mY4R9ix8VgKgNuV7fkxQi-uiX7TBfwjz4pUhwg0w,718
+pubcontrol_wordpress-0.0.0.5.dist-info/RECORD,,
+pubcontrol_wordpress-0.0.0.5.dist-info/WHEEL,sha256=o2k-Qa-RMNIJmUdIc7KU6VWR_ErNRbWNlxDIpl7lm34,110
+pubcontrol_wordpress-0.0.0.5.dist-info/metadata.json,sha256=tWETpN4pYCV9W5bji4CiwPlzL2pSWrLIkxziu-aD02U,832
+pubcontrol_wordpress-0.0.0.5.dist-info/top_level.txt,sha256=-gRRf-kCxmBUmvD9cOZVcJJSoOD5y8mLYj9WpLfT1mI,21
