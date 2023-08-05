@@ -1,0 +1,13 @@
+tokenROI-0.6.6.dist-info/LICENSE.txt,sha256=RnfjVFnajNHYDS0Tn3ELDPyA52KbhMOWzP0qLOWcgBY,1134
+tokenROI-0.6.6.dist-info/METADATA,sha256=vecaOtgrYZbOI9xuvf-f3vmWOy9RmIIaefaunFLzhzY,1370
+tokenROI-0.6.6.dist-info/RECORD,,
+tokenROI-0.6.6.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+tokenROI-0.6.6.dist-info/entry_points.txt,sha256=VtnsWtU9oCzHb-XQTs2TaZDCKuV1H9GfA4xT0K3STVw,46
+tokenROI-0.6.6.dist-info/top_level.txt,sha256=59RDZ_w5E9B5R6pydiA1yjSo_fvFyeDkjSDinknfsHE,10
+token_roi/__init__.py,sha256=XozeFyqDKTZrHXMkOZ_TwpAnA7W1Ni1mWkbzjShlfnw,4654
+token_roi/__main__.py,sha256=gw8GG0Rd_EhsqWapr9uY9LtNe8WK3WYg-sG1NBm2Zmo,31
+token_roi/arg_parser.py,sha256=SXjP4oGNu4BF-jnxoyQrXk_LUfBXlBahR-luoyruKl0,1373
+token_roi/cloud_storage.py,sha256=CiL_hrIwivIGqxHiXaapaK1JN2NDph8BZ5k1n6TbHkw,2463
+token_roi/config.py,sha256=uwM1wQOD6aACo8GGxw0eEhNm0qRk-x0a79ertzZjVKQ,901
+token_roi/token_mailer.py,sha256=wy6bKMUszO0chLd2qdbSXX2OVmhCCJresJNDtJZuHS4,913
+token_roi/tokens.py,sha256=fth82Krxl9R97xR-5UaRiwULbD1gU_lfSHnN6D9JOFU,1139

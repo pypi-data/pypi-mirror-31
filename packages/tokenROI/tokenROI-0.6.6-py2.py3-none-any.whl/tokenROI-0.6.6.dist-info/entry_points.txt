@@ -1,0 +1,3 @@
+[console_scripts]
+token_roi = token_roi:main
+

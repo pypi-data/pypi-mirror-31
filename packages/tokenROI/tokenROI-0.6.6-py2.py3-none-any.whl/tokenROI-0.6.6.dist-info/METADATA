@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: tokenROI
+Version: 0.6.6
+Summary: Quick ROI calculator for your token balances base on idex.market prices
+Home-page: https://github.com/mrowacz/tokenROI
+Author: Lukasz Czerwinski
+Author-email: mrowacz@gmail.com
+License: MIT
+Keywords: tokens cryptocurrencies idex roi
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Requires-Dist: python-editor
+Requires-Dist: dropbox
+Requires-Dist: requests (>=2.16.2)
+
+tokenROI
+========
+:Info: Console ethereum erc20 token portfolio.<br>
+:Author: Lukasz Czerwinski <mrowacz@gmail.com>
+
+About
+=====
+
+tokenROI is an tool which eaisly presents your erc20 token collection
+using data from idex stock.
+It converts your token balances into ethereum and also shows current roi
+of your investments. There is possibility to store your's configuration on
+google drive.
+
+Installation
+============
+download the project source and do::
+```
+  $ python setup.py install
+```
+Examples
+========
+Here's a basic usage examples
+```
+$ token_roi
+```
+console output for example should gives<br>
+![tokenroi_basic_example](https://user-images.githubusercontent.com/11421787/38460421-a2b09c78-3ab9-11e8-88f3-d132d834b48d.png)
+
