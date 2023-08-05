@@ -1,0 +1,8 @@
+setup.py
+csc440userdatabase/__init__.py
+csc440userdatabase/csc440user.py
+csc440userdatabase/test_user.py
+csc440userdatabase.egg-info/PKG-INFO
+csc440userdatabase.egg-info/SOURCES.txt
+csc440userdatabase.egg-info/dependency_links.txt
+csc440userdatabase.egg-info/top_level.txt
