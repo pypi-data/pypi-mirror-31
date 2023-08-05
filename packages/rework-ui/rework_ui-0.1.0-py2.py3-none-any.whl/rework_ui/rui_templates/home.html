@@ -1,0 +1,38 @@
+{% extends "rui_base.html" %}
+
+{% block body %}
+
+<div id="filter" style="float: right">
+  {{ domain_filter | safe }}
+</div>
+
+<h1>Rework Monitoring UI</h1>
+
+<h2>Tasks</h2>
+<div id="tasks">
+</div>
+
+<h2>Workers</h2>
+<div id="workers">
+</div>
+
+<h2>Services</h2>
+<div id="services">
+</div>
+
+
+<script>
+ let hash = ''
+ let domain = '{{initialdomain}}'
+ document.onreadystatechange = function () {
+     if (document.readyState == 'complete') {
+         refresh_section('services')
+         refresh_section('workers')
+         refresh_section('tasks')
+         setInterval(() => refresh_section('workers'), 10000)
+         setInterval(() => refresh_section('tasks'), 3000)
+     }
+ }
+</script>
+
+{% endblock %}
