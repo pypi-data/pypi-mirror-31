@@ -1,0 +1,13 @@
+jarplace-1.1.dist-info/DESCRIPTION.rst,sha256=c6xPIFut-T2hykcMEHB-dXAL2PTzW200b_DyFftcXHI,49
+jarplace-1.1.dist-info/METADATA,sha256=RV2Vexjf1Gq1_r-fSx6V1K_im8TMrqMK53YrRQOUSWw,293
+jarplace-1.1.dist-info/RECORD,,
+jarplace-1.1.dist-info/WHEEL,sha256=bee59qcPjkyXfMaxNWjl2CGotqfumWx9pC1hlVLr2mM,92
+jarplace-1.1.dist-info/entry_points.txt,sha256=zpvM6MxKonLWU60zTNISS6iru91PmVQgOUjOuKsellw,45
+jarplace-1.1.dist-info/metadata.json,sha256=nBKJ1ET9b7j13u6hMzdYAzNBbb1j_oIr2uREbMYh_Kw,467
+jarplace-1.1.dist-info/top_level.txt,sha256=ZAMgPdWghn6xTRBO6Kc3ML1y3ZrZLnjZlqbboKXc_AE,5
+main/__init__.py,sha256=iCO9KAVU6sx-vidag2J4KgJ81VznwqYRqxIme6jJItA,129
+main/auth.py,sha256=LHepEKj0yGkevIhMRjd1Hzrq_R-EebyK-ogbdrwA8fo,2066
+main/billing.py,sha256=AeK43VpOUvetdAE5lqw3xh_hM6M5kQr1Jn5_KNS6iuA,647
+main/main.py,sha256=w3GjzSjTEd35ANfVVfA_ToSeZvV6dNlMlbzNljS_Fac,4623
+main/repo.py,sha256=s_tGBybo6Z35Gx4g-hOSFA7TL6jjCpCDsGJ9XKA3d_U,2241
+main/user.py,sha256=EkjYiP7I0AJDRvzq3aSwxiQNpsrxzdRGHb9FO9HS04w,2328
