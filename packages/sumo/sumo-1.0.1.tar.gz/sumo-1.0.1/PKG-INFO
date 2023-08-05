@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: sumo
+Version: 1.0.1
+Summary: Heavy weight plotting tools
+Home-page: https://github.com/smtg-ucl/sumo
+Author: Alex Ganose, Adam J. Jackson
+Author-email: d.scanlon@ucl.ac.uk
+License: MIT
+Description: UNKNOWN
+Keywords: chemistry pymatgen dft vasp dos band
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+Classifier: Topic :: Scientific/Engineering :: Physics
+Provides-Extra: docs
