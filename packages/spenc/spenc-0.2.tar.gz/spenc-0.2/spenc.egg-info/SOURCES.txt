@@ -1,0 +1,11 @@
+README.md
+setup.py
+spenc/__init__.py
+spenc/abstracts.py
+spenc/scores.py
+spenc/utils.py
+spenc.egg-info/PKG-INFO
+spenc.egg-info/SOURCES.txt
+spenc.egg-info/dependency_links.txt
+spenc.egg-info/requires.txt
+spenc.egg-info/top_level.txt

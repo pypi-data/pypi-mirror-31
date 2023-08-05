@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: spenc
+Version: 0.2
+Summary: Spatially-Encouraged Spectral Clustering, a method of discovering clusters/deriving labels for spatially-referenced data with attribute/labels attached
+Home-page: https://github.com/ljwolf/spenc
+Author: Levi John Wolf
+Author-email: levi.john.wolf@gmail.com
+License: 3-Clause BSD
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.5
