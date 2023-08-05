@@ -1,0 +1,15 @@
+Metadata-Version: 2.0
+Name: odoo10-addons-oca-bank-statement-reconcile
+Version: 10.0.20170307
+Summary: Meta package for OCA bank-statement-reconcile Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo10-addon-account-move-base-import
+Requires-Dist: odoo10-addon-base-transaction-id
+
+UNKNOWN
+
+
