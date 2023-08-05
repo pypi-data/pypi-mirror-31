@@ -1,0 +1,14 @@
+itt/__init__.py,sha256=FWFHmbsgoTSHdCFN0oDgb2Tmyq_Zq7dXfLIXTAu1Ilk,273
+itt/_metadata.py,sha256=usFs50fX_RTHrGXHAU3p5NZP9VEp83FD1BFmwdW4LDM,891
+itt/utilities/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+itt/utilities/mac_elevate.py,sha256=0l5ADRC7hwrDdYeEWjsqtm27TyVeBAYT4uvoUaBb14c,677
+itt/utilities/monkey_patch.py,sha256=T97KricAVHxsbKfVUxeOUOOlo9t6KQatsDN22j7qFiM,1493
+itt/utilities/remove_old_config_db.py,sha256=VK4w3HXw2XxfCmpmA39DpY9plx60VErn59zr053TCW8,321
+itt-2.11.10.dist-info/DESCRIPTION.rst,sha256=Oo3ixqVBSA_sh1Qz2r3mHe5fhuBF8IYYrFbwGUvIOmo,188
+itt-2.11.10.dist-info/LICENSE.txt,sha256=IJPriEcXUaAzB9-zLhOr8EOM1CnKgaGrUF2_38lUlqw,1081
+itt-2.11.10.dist-info/METADATA,sha256=szObY_08ELyw56ni-C0VoL_n75Ef2jLZQQkbJRhxIfg,2126
+itt-2.11.10.dist-info/RECORD,,
+itt-2.11.10.dist-info/WHEEL,sha256=kdsN-5OJAZIiHN-iO4Rhl82KyS0bDWf4uBwMbkNafr8,110
+itt-2.11.10.dist-info/entry_points.txt,sha256=eqGnTHtEVMYwfXVk1Z9MhC8O2N8wuqAbr0lisLmrkxs,20
+itt-2.11.10.dist-info/metadata.json,sha256=I9_l-VmhDrWA27G9KXKR_NNK70BnJVEk5RNRHkUSGs8,1861
+itt-2.11.10.dist-info/top_level.txt,sha256=AqThDw4IIFLh1jWIb9euGsCQf0vyvG4EBRLlM_-i81c,4
