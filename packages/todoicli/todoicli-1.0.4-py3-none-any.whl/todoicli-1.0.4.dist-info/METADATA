@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: todoicli
+Version: 1.0.4
+Summary: todoicli is a tool for using todoist from the command line.
+Home-page: https://github.com/Masami-Nakaoka/todoicli
+Author: Masami_Nakaoka
+Author-email: neti0326@gmail.com
+License: MIT
+Requires-Dist: todoist-python
+
+# todoicli
+
+
