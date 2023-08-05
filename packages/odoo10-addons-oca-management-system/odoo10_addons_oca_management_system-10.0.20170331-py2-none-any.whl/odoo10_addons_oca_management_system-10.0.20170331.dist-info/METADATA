@@ -1,0 +1,17 @@
+Metadata-Version: 2.0
+Name: odoo10-addons-oca-management-system
+Version: 10.0.20170331
+Summary: Meta package for OCA management-system Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo10-addon-document-page-work-instruction
+Requires-Dist: odoo10-addon-mgmtsystem
+Requires-Dist: odoo10-addon-mgmtsystem-manual
+Requires-Dist: odoo10-addon-mgmtsystem-survey
+
+UNKNOWN
+
+
