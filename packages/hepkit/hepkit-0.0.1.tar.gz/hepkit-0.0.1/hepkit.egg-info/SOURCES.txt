@@ -1,0 +1,10 @@
+setup.py
+hepkit/__init__.py
+hepkit/hepData.py
+hepkit/hepFormat.py
+hepkit/hepIO.py
+hepkit/hepPlot.py
+hepkit.egg-info/PKG-INFO
+hepkit.egg-info/SOURCES.txt
+hepkit.egg-info/dependency_links.txt
+hepkit.egg-info/top_level.txt
