@@ -1,0 +1,27 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-rma
+Version: 8.0.20170409
+Summary: Meta package for OCA rma Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo8-addon-crm-claim-product-supplier
+Requires-Dist: odoo8-addon-crm-claim-rma
+Requires-Dist: odoo8-addon-crm-claim-rma-code
+Requires-Dist: odoo8-addon-crm-rma-advance-warranty
+Requires-Dist: odoo8-addon-crm-rma-claim-make-claim
+Requires-Dist: odoo8-addon-crm-rma-location
+Requires-Dist: odoo8-addon-crm-rma-lot-mass-return
+Requires-Dist: odoo8-addon-crm-rma-prodlot-invoice
+Requires-Dist: odoo8-addon-crm-rma-prodlot-supplier
+Requires-Dist: odoo8-addon-crm-rma-stock-location
+Requires-Dist: odoo8-addon-product-warranty
+Requires-Dist: odoo8-addon-rma
+
+UNKNOWN
+
+
