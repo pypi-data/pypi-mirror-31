@@ -1,0 +1,3 @@
+[console_scripts]
+easytag = easytag.tagSearch:main
+
