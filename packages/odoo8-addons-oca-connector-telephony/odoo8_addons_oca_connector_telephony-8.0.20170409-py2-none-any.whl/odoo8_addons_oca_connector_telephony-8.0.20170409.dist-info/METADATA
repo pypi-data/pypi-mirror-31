@@ -1,0 +1,25 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-connector-telephony
+Version: 8.0.20170409
+Summary: Meta package for OCA connector-telephony Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo8-addon-asterisk-click2dial
+Requires-Dist: odoo8-addon-asterisk-click2dial-crm
+Requires-Dist: odoo8-addon-base-phone
+Requires-Dist: odoo8-addon-base-phone-popup
+Requires-Dist: odoo8-addon-crm-claim-phone
+Requires-Dist: odoo8-addon-crm-phone
+Requires-Dist: odoo8-addon-event-phone
+Requires-Dist: odoo8-addon-hr-phone
+Requires-Dist: odoo8-addon-hr-recruitment-phone
+Requires-Dist: odoo8-addon-ovh-telephony-connector
+
+UNKNOWN
+
+
