@@ -1,0 +1,16 @@
+Metadata-Version: 2.0
+Name: odoo11-addons-oca-vertical-association
+Version: 11.0.20180105
+Summary: Meta package for OCA vertical-association Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo11-addon-membership-extension
+
+UNKNOWN
+
+
