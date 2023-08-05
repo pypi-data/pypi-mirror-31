@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+javasaur/__init__.py
+javasaur/node.py
+javasaur.egg-info/PKG-INFO
+javasaur.egg-info/SOURCES.txt
+javasaur.egg-info/dependency_links.txt
+javasaur.egg-info/requires.txt
+javasaur.egg-info/top_level.txt
