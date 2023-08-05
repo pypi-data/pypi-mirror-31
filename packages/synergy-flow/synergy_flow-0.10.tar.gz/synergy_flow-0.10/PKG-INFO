@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: synergy_flow
+Version: 0.10
+Summary: Synergy Flow
+Home-page: https://github.com/mushkevych/synergy_flow
+Author: Bohdan Mushkevych
+Author-email: mushkevych@gmail.com
+License: BSD 3-Clause License
+Description: Synergy Flow is a workflow engine with separate concepts for Action, Step, Workflow and Execution Cluster. Framework supports local desktop environment (for testing at least), multiple concurrent AWS EMR, GCP Dataproc, Qubole clusters.
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
