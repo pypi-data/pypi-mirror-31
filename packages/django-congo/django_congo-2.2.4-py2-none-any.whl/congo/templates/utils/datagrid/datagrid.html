@@ -1,0 +1,91 @@
+{% load datagrid i18n %}
+
+<div class="datagrid-wrapper" id="{{datagrid.id}}">
+  
+  <div class="controls">
+    {% if filter_fields %}
+      {% get_filter_form %}
+    {% endif %}
+  
+    {% if search_fields %}
+      {% get_search_form %}
+    {% endif %}
+  
+    {% if pagination_control_widget %}
+      {% render_pagination_size_widget %}
+    {% endif %}
+  </div>
+  
+  <style>
+    
+    .datagrid-headers th {
+      text-align: left;
+    }
+    
+  </style>
+  
+  <div class="datagrid-main">
+    <table class="datagrid" style="width: 100%">
+      <colgroup>
+        {% for column in datagrid.columns %}
+          {% with css_class=column.get_column_css_class css_style=column.get_column_css_style %}
+            <col class="{{ css_class }}" {% if css_style %}style="{{ css_style }}"{% endif %} />
+          {% endwith %}
+        {% endfor %}
+      </colgroup>
+      
+      <thead>
+        <tr class="datagrid-headers">
+          {% for column in datagrid.columns %}
+            <th class="{{ column.get_header_css_class }}">{{ column.render_header }}</th>
+          {% endfor %}
+        </tr>
+      </thead>
+      
+      <tbody>
+        {% for row in datagrid.rows %}
+          <tr class="{% cycle 'datagrid-row-odd' 'datagrid-row-even' %}">
+            {% for cell in row %}
+              <td class="{{ cell.column.get_cell_css_class }}">{{ cell }}</td>
+            {% endfor %}
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  {% if datagrid.page.has_other_pages %}
+
+    
+    <div class="paginator">
+      {% if datagrid.get_first_page_num %}
+        <a href="{{ datagrid.get_first_page_url }}">&laquo;</a></span>
+      {% endif %}
+      
+      {% if datagrid.get_prev_page_num %}
+        <a href="{{ datagrid.get_prev_page_url }}">&lt;</a></span>
+      {% endif %}
+      
+      {% comment %}
+        {% for pagenum in page_numbers %}
+          {% ifequal pagenum page %}<span class="current-page">{{pagenum}}</span>{%  else %}
+        <a href="?{{getvars}}&{%if extra_query%}{{extra_query}}&{%endif%}page={{pagenum}}" title="Page {{pagenum}}">{{pagenum}}</a>
+        {%  endifequal %}
+      {% endcomment %}
+
+      {% blocktrans with page_num=datagrid.page.number pages=datagrid.paginator.num_pages %}Strona {{ page_num }} z {{ pages }}{% endblocktrans %}
+      
+      {% if datagrid.get_next_page_num %}
+        <a href="{{ datagrid.get_next_page_url }}">&gt;</a></span>
+      {% endif %}
+      
+      {% if datagrid.get_last_page_num %}
+        <a href="{{ datagrid.get_last_page_url }}">&raquo;</a></span>
+      {% endif %}
+      
+    </div>
+
+
+  {% endif %}
+
+</div>

@@ -1,0 +1,205 @@
+#header {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#226663+0,339691+100 */
+  background: #226663; /* Old browsers */
+  background: -moz-linear-gradient(top,  #226663 0%, #339691 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#226663), color-stop(100%,#339691)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #226663 0%,#339691 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #226663 0%,#339691 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #226663 0%,#339691 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #226663 0%,#339691 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#226663', endColorstr='#339691',GradientType=0 ); /* IE6-9 */
+}
+
+#header #branding h1 {
+  padding: 7px 0 0 1em;
+}
+
+#header #branding h1 a {
+  color: rgba(255, 255, 255, .8);
+}
+
+#header #branding h1 a:hover, #header #branding h1 a:active {
+  color: #fff;
+}
+
+#header #user-tools {
+  padding-right: 1em;
+  color: rgba(255, 255, 255, .8);
+}
+
+#header #user-tools a {
+  color: rgba(255, 255, 255, .8);
+}
+
+#header #user-tools a:hover, #header #user-tools a:active {
+  color: #fff;
+  text-decoration: none;
+}
+
+#bookmark-form {
+  clear: both;
+}
+
+div.breadcrumbs {
+  display: block;
+  padding: 10px 15px;
+  border: 0;
+  background-position: 0 -8px;
+  border-bottom: 1px solid #ededed;
+}
+
+div.breadcrumbs a {
+  display: inline;
+}
+
+/* changelist */
+
+tr.row1 {
+  background-color: rgba(0, 0, 0, .025);
+}
+
+#changelist table tbody tr.row1 {
+  background-color: rgba(0, 0, 0, .025);
+}
+
+#changelist table tbody tr:hover {
+  background-color: #ffffcc;
+}
+
+.module h2, .module caption, .inline-group h2 {
+  background: white url("/static/admin/img/nav-bg.gif") repeat-x scroll left bottom;
+  color: #666;
+}
+
+/* forms */
+
+.inline-group .aligned label {
+  width: 200px;
+}
+
+.aligned label {
+  padding: 3px 0 0 0;
+  width: 200px;
+}
+
+form .aligned p, form .aligned ul {
+  margin-left: 200px;
+  padding-left: 0;
+}
+
+form .aligned p.help {
+  padding-left: 0;
+}
+
+.vTextField {
+  width: 600px;
+}
+
+.tabular.inline-related .vTextField {
+  width: 400px;
+}
+
+.inline-group .tabular tr.has_original td {
+  padding: 5px;
+}
+
+.inline-group .tabular td.original p {
+  display: none;
+}
+
+.inline-group .tabular tr td.original {
+  padding: 2px 0 0;
+  width: 0;
+}
+
+.mce-tinymce.mce-container.mce-panel {
+  margin-left: 200px;
+}
+
+.mce-tinymce.mce-container.mce-panel.mce-fullscreen {
+  margin: 0;
+}
+
+/* widgets */
+
+.selector {
+  width: 800px;
+}
+
+.selector select {
+  width: 380px;
+}
+
+.selector-available, .selector-chosen {
+  width: 380px;
+}
+
+.selector .selector-available input {
+  width: 340px;
+}
+
+/* utils */
+
+.text-left {
+  text-align: left !important
+}
+
+.text-right {
+  text-align: right !important
+}
+
+.text-center {
+  text-align: center !important
+}
+
+.text-justify {
+  text-align: justify !important
+}
+
+.text-nowrap {
+  white-space: nowrap !important
+}
+
+.pull-left {
+  float: left
+}
+
+.pull-right {
+  float: right
+}
+
+.text-lowercase {
+  text-transform: lowercase !important
+}
+
+.text-uppercase {
+  text-transform: uppercase !important
+}
+
+.text-capitalize {
+  text-transform: capitalize !important
+}
+
+.text-muted {
+  color: #777 !important
+}
+
+.text-primary {
+  color: #337ab7 !important
+}
+
+.text-success {
+  color: #3c763d !important
+}
+
+.text-info {
+  color: #31708f !important
+}
+
+.text-warning {
+  color: #8a6d3b !important
+}
+
+.text-danger {
+  color: #a94442 !important
+}

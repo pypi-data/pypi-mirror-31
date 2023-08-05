@@ -1,0 +1,47 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block content %}
+
+	{{ block.super }}
+	
+	<div class="module">
+	  <form action="" method="post">
+	    {% csrf_token %}
+	    <p>
+	      {% for cache_name in cache_name_list %}
+	      <input type="checkbox" name="cache_name" value="{{ cache_name }}" id="id_{{ cache_name }}" /> <label for="id_{{ cache_name }}">{{ cache_name }}</label><br />
+	      {% endfor %}
+	    </p>
+	    <p>
+	      <a href="#" class="select-all">{% trans "Zaznacz wszystko" %}</a> / <a href="#" class="clear-all">{% trans "Odznacz wszystko" %}</a>
+	    </p>
+	    <p>
+	      <input type="submit" value="{% trans "Wyczyść zaznaczone" %}">
+	    </p>
+	    <p>
+	      ... {% trans "lub" %} <a href="#" class="clear-browser-cache">{% trans "wyczyść cache przeglądarki" %}</a>
+	    </p>
+	  </form>
+	</div>
+	
+	<script>
+	  $(document).ready(function() {
+	    $('.select-all').click(function() {
+	      $(':checkbox').prop('checked', true);
+	      return false;
+	    });
+	    $('.clear-all').click(function() {
+	      $(':checkbox').prop('checked', false);
+	      return false;
+	    });
+	    $('.clear-browser-cache').click(function() {
+	      localStorage.clear();
+	      // console.log(localStorage);
+	      alert('{% trans "Cache przeglądarki wyczysczony" %}');
+	      return false;
+	    });
+	  });
+	</script>
+
+{% endblock %}
