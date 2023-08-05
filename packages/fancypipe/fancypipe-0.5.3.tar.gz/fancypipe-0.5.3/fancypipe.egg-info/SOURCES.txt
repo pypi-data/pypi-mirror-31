@@ -1,0 +1,11 @@
+LICENSE.txt
+MANIFEST.in
+setup.cfg
+setup.py
+fancypipe/__init__.py
+fancypipe/fancylog.html
+fancypipe/fancypipe.py
+fancypipe.egg-info/PKG-INFO
+fancypipe.egg-info/SOURCES.txt
+fancypipe.egg-info/dependency_links.txt
+fancypipe.egg-info/top_level.txt

@@ -1,0 +1,9 @@
+# Include the README
+include README.rst
+
+# Include the license file
+include LICENSE.txt
+
+# Include the html logging file
+include fancypipe/fancylog.html
+
