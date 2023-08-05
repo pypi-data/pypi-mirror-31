@@ -1,0 +1,22 @@
+Metadata-Version: 2.0
+Name: odoo9-addons-oca-account-financial-reporting
+Version: 9.0.20170610
+Summary: Meta package for OCA account-financial-reporting Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo9-addon-account-financial-report-horizontal
+Requires-Dist: odoo9-addon-account-financial-report-qweb
+Requires-Dist: odoo9-addon-account-journal-report
+Requires-Dist: odoo9-addon-account-tax-balance
+Requires-Dist: odoo9-addon-customer-activity-statement
+Requires-Dist: odoo9-addon-customer-outstanding-statement
+Requires-Dist: odoo9-addon-mis-builder
+
+UNKNOWN
+
+
