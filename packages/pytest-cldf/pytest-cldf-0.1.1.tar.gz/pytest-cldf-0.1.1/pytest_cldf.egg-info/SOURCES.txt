@@ -1,0 +1,10 @@
+README.md
+setup.py
+pytest_cldf/__init__.py
+pytest_cldf/plugin.py
+pytest_cldf.egg-info/PKG-INFO
+pytest_cldf.egg-info/SOURCES.txt
+pytest_cldf.egg-info/dependency_links.txt
+pytest_cldf.egg-info/entry_points.txt
+pytest_cldf.egg-info/requires.txt
+pytest_cldf.egg-info/top_level.txt
