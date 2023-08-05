@@ -1,0 +1,15 @@
+setuptools>=38.3.0
+
+[:python_version < "3.4"]
+enum34
+
+[build]
+wheel
+
+[docs]
+readmemaker>=0.5.2
+sphinx_rtd_theme
+Sphinx
+
+[release]
+releasecmd>=0.0.8
