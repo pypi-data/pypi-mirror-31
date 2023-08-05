@@ -1,0 +1,36 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-event
+Version: 8.0.20180419.0
+Summary: Meta package for oca-event Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo8-addon-crm-lead-to-event-registration
+Requires-Dist: odoo8-addon-event-contact
+Requires-Dist: odoo8-addon-event-email-reminder
+Requires-Dist: odoo8-addon-event-kanban-view-optimized
+Requires-Dist: odoo8-addon-event-multi-image
+Requires-Dist: odoo8-addon-event-product
+Requires-Dist: odoo8-addon-event-project
+Requires-Dist: odoo8-addon-event-registration-cancel-reason
+Requires-Dist: odoo8-addon-event-registration-mass-mailing
+Requires-Dist: odoo8-addon-event-registration-partner-unique
+Requires-Dist: odoo8-addon-event-registration-seat-limit
+Requires-Dist: odoo8-addon-event-sale-extra-info
+Requires-Dist: odoo8-addon-event-sale-registration-partner-unique
+Requires-Dist: odoo8-addon-event-track-generate
+Requires-Dist: odoo8-addon-partner-event
+Requires-Dist: odoo8-addon-website-event-contact
+Requires-Dist: odoo8-addon-website-event-excerpt-img
+Requires-Dist: odoo8-addon-website-event-filter-selector
+Requires-Dist: odoo8-addon-website-event-sale-legal
+Requires-Dist: odoo8-addon-website-event-share
+Requires-Dist: odoo8-addon-website-event-type-description
+
+UNKNOWN
+
+
