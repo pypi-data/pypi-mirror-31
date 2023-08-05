@@ -1,0 +1,82 @@
+Thai Language Toolkit Project  version 0.42
+==========================================
+
+TLTK is a Python package for Thai language processing.  TLTK requires Python 3.4 or higher.
+The project is a part of open source software developed at Chulalongkorn University.
+
+----
+
+tltk.nlp  :  basic tools for Thai language processing.
+
+Input : must be utf8 Thai texts.
+
+List of basic tools:
+>> tltk.nlp.chunk(Text) : chunk parsing. The output includes markups for word segments (|), elementary discourse units (<edu/>), pos tags , and named entities, e.g. chunk("สำนักเขตจตุจักรชี้แจงว่า ได้นำป้ายประกาศเตือนปลิงไปปักตามแหล่งน้ำ ในเขตอำเภอเมือง จังหวัดอ่างทอง หลังจากนายสุกิจ อายุ 65 ปี ถูกปลิงกัดแล้วไม่ได้ไปพบแพทย์")
+=>  <NEo>สำนัก/NOUN|เขต/NOUN|จตุจักร/PROPN|</NEo>ชี้แจง/VERB|ว่า/SCONJ|<s/>/SYM|ได้/AUX|นำ/VERB|ป้าย/NOUN|ประกาศ/VERB|เตือน/VERB|ปลิง/NOUN|ไป/VERB|ปัก/VERB|ตาม/ADP|แหล่ง/NOUN|น้ำ/NOUN|<u/>ใน/ADP|<NEl>เขต/NOUN|อำเภอ/NOUN|เมือง/NOUN|<s/>/SYM|จังหวัด/NOUN|อ่างทอง/PROPN|</NEl><u/>หลังจาก/SCONJ|<NEp>นาย/NOUN|สุ/PROPN|กิจ/NOUN|</NEp><s/>/SYM|อายุ/NOUN|<u/>65/X|<s/>/SYM|ปี/NOUN|<u/>ถูก/AUX|ปลิง/VERB|กัด/VERB|แล้ว/ADV|ไม่/PART|ได้/ADV|ไป/VERB|พบ/VERB|แพทย์/NOUN|<u/>
+
+>> tltk.nlp.ner([(w,pos),....]) : module for named entity recognition (person, organization, location), e.g. ner([('สำนัก', 'NOUN'), ('เขต', 'NOUN'), ('จตุจักร', 'PROPN'), ('ชี้แจง', 'VERB'), ('ว่า', 'SCONJ'), ('<s/>', 'PUNCT')]
+=> [('สำนัก', 'NOUN', 'B-O'), ('เขต', 'NOUN', 'I-O'), ('จตุจักร', 'PROPN', 'I-O'), ('ชี้แจง', 'VERB', 'O'), ('ว่า', 'SCONJ', 'O')]
+
+>> tltk.nlp.pos_tag(Text,WordSegmentOption) : word segmentation and POS tagging (using nltk.tag.perceptron), e.g. pos_tag('โปรแกรมสำหรับประมวลผลภาษาไทย วันนี้ใช้งานได้แล้ว') or pos_tag('โปรแกรมสำหรับประมวลผลภาษาไทย',"mm") => [[('โปรแกรม', 'NOUN'), ('สำหรับ', 'ADP'), ('ประมวล', 'VERB'), ('ผล', 'NOUN'), ('ภาษา', 'NOUN'), ('ไทย', 'PROPN')], [('วันนี้', 'NOUN'), ('ใช้งาน', 'VERB'), ('ได้', 'ADV'), ('แล้ว', 'ADV')]]
+By default word_segment() will be used, but if option = "mm", word_segment_mm() will be used; POS tag set is based on Universal POS tags.. http://universaldependencies.org/u/pos/index.html
+
+>> tltk.nlp.pos_tag_wordlist(WordLst) : Same as "pos_tag", but the input is a word list, [w1,w2,...]
+
+>> tltk.nlp.segment(Text) : segment a paragraph into elementary discourse units (edu) marked with <u/> and segment words in each edu e.g.
+segment("แต่อาจเพราะนกกินปลีอกเหลืองเป็นพ่อแม่มือใหม่ รังที่ทำจึงไม่ค่อยแข็งแรง วันหนึ่งรังก็ฉีกเกือบขาดเป็นสองท่อนห้อยต่องแต่ง ผมพยายามหาอุปกรณ์มายึดรังกลับคืนรูปทรงเดิม ขณะที่แม่นกกินปลีอกเหลืองส่งเสียงโวยวายอยู่ใกล้ ๆ แต่สุดท้ายไม่สำเร็จ สองสามวันต่อมารังที่ช่วยซ่อมก็พังไป ไม่เห็นแม่นกบินกลับมาอีกเลย") =>
+แต่|อาจ|เพราะ|นกกินปลีอกเหลือง|เป็น|พ่อแม่|มือใหม่|<s/>|รัง|ที่|ทำ|จึง|ไม่ค่อย|แข็งแรง<u/>วัน|หนึ่ง|รัง|ก็|ฉีก|เกือบ|ขาด|เป็น|สอง|ท่อน|ห้อย|ต่องแต่ง<u/>ผม|พยายาม|หา|อุปกรณ์|มา|ยึด|รัง|กลับคืน|รูปทรง|เดิม<u/>ขณะที่|แม่|นกกินปลีอกเหลือง|ส่งเสียง|โวยวาย|อยู่|ใกล้|ๆ<u/>แต่|สุดท้าย|ไม่|สำเร็จ<u/>สอง|สาม|วัน|ต่อมา|รัง|ที่|ช่วย|ซ่อม|ก็|พัง|ไป<u/>ไม่|เห็น|แม่|นก|บิน|กลับ|มา|อีก|เลย<u/>
+
+>> tltk.nlp.word_sement(Text) : word segmentation using maximum collocation approach, e.g. word_segment('โปรแกรมสำหรับประมวลผลภาษาไทย') => 'โปรแกรม|สำหรับ|ประมวล|ผล|ภาษา|ไทย<s/>'
+
+>> tltk.nlp.syl_segment(Text) : syllable segmentation using 3gram statistics e.g. syl_segment('โปรแกรมสำหรับประมวลผลภาษาไทย') => 'โปร~แกรม~สำ~หรับ~ประ~มวล~ผล~ภา~ษา~ไทย<s/>'
+
+>> tltk.nlp.word_segment_mm(Text) : another word segmentation using maximal matching approach (minimum word approach)
+
+>> tltk.nlp.word_segment_nbest(Text, N) : return the best N segmentations based on the assumption of minimum word approach. e.g. tltk.nlp.word_segment_nbest('คนขับรถประจำทางหลวง',10) => [['คนขับรถ|ประจำ|ทางหลวง', 'คนขับ|รถประจำทาง|หลวง', 'คนขับรถ|ประจำทาง|หลวง', 'คน|ขับรถ|ประจำ|ทางหลวง', 'คนขับ|รถ|ประจำ|ทางหลวง', 'คนขับรถ|ประ|จำ|ทางหลวง', 'คน|ขับ|รถประจำทาง|หลวง', 'คน|ขับรถ|ประจำทาง|หลวง', 'คนขับ|รถ|ประจำทาง|หลวง', 'คนขับรถ|ประจำ|ทาง|หลวง']]
+
+>> tltk.nlp.spell_candidates(Word) : list of possible correct words using minimum edit distance, e.g. spell_candidates('รักษ') => ['รัก', 'ทักษ', 'อักษ', 'รุกษ', 'รักข', 'รักษา', 'รักษ์']
+
+
+Other defined functions in the package:
+>> tltk.nlp.reset_thaidict() : clear dictionary content                                                                                                    setup.cfg
+>> tltk.nlp.read_thaidict(DictFile) : add a new dictionary  e.g. tltk.nlp.read_thaidict('BEST.dict')
+>> tltk.nlp.check_thaidict(Word) : check whether Word exists in the dictionary
+
+-----------
+tltk.corpus  :   basic tools for corpus enquiry
+
+>> tltk.corpus.load3gram(TRIGRAM)  ###  load Trigram data from other sourse saved in tab delimited format "W1\tW2\tW3\tFreq"  e.g.  tltk.corpus.load3gram('TNC.3g') 'TNC.3g' can be downloaded separately from Thai National Corpus Project.
+>> tltk.corpus.unigram(w1)   ### return normalized frequecy (frequency/million) of w1 from the corpus
+>> tltk.corpus.bigram(w1,w2)   ### return frequency/million of Bigram w1-w2 from the corpus
+>> tltk.corpus.trigram(w1,w2,w3)   ### return frequency/million of Trigram w1-w2-w3 from the corpus
+>> tltk.corpus.collocates(w,STAT,DIR,SPAN,LIMIT,MINFQ)   ### return all collocates of w, STAT = {freq,mi,chi2} DIR={left,right,both}  SPAN={1,2}  LIMIT is the number of top collocates  MINFQ is the minimum raw frequency of bigram w-x or x-w. The output is a list of tuples  ((w1,w2), stat)
+
+------
+Word segmentation is based on a maximum collocation approach described in this publication:
+"Aroonmanakun, W. 2002. Collocation and Thai Word Segmentation. In Thanaruk Theeramunkong and Virach Sornlertlamvanich, eds. Proceedings of the Fifth Symposium on Natural Language Processing & The Fifth Oriental COCOSDA Workshop. Pathumthani: Sirindhorn International Institute of Technology. 68-75." (http://pioneer.chula.ac.th/~awirote/ling/SNLP2002-0051c.pdf)
+
+Use tltk.nlp.word_segment(Text) or tltk.nlp.syl_segment(Text) for segmenting Thai texts. Syllable segmentation now is based on a trigram model trainned on 3.1 million syllable corpus. Input text is a paragraph of Thai texts which can be mixed with English texts. Spaces in the paragraph will be marked as "<s/>". Word boundary is marked by "|". Syllable boundary is marked by "~". Syllables here are written syllables. One written syllable may be pronounced as two syllables, i.e. "สกัด" is segemnted here as one written syllable, but it is pronounced as two syllables "sa1-kat1".
+
+Determining words in a sentence is based on the dictionary and maximum collocation strength between syllables. Since many compounds and idioms, e.g. 'เตาไมโครเวฟ', 'ไฟฟ้ากระแสสลับ', 'ปีงบประมาณ', 'อุโมงค์ใต้ดิน', 'อาหารจานด่วน', 'ปูนขาวผสมพิเศษ', 'เต้นแร้งเต้นกา' etc., are included in the standard dictionary, these will likely be segmented as one word. For applications that prefer smallest meaningful words (i.e. 'รถ','โดยสาร' as segmented in BEST corpus), users should reset the default dictionary used in this package and reload a new dictionary containing only simple words or smallest meaningful words. Use "reset_thaidict()" to clear default dictionary content, and "read_thaidict('DICT_FIILE')" to load a new dictionary. A list of words compiled from BEST corpus is included in this package as a file 'BEST.dict' 
+
+The standard dictionary used in this package has more then 40,000 entries including abbreviations and transliterations compiled from various sources. A dictionary of 8,700 proper names e.g. country names, organization names, location names, animal names, plant names, food names, ..., such as 'อุซเบกิสถาน', 'สำนักเลขาธิการนายกรัฐมนตรี', 'วัดใหญ่สุวรรณาราม', 'หนอนเจาะลำต้นข้าวโพด', 'ปลาหมึกกระเทียมพริกไทย', are also added as a list of words in the system.
+
+For segmenting a specific domain text, a specialized dicionary can be used by adding more dictionary before segmenting texts. This can be done by calling read_thaidict("SPECIALIZED_DICT"). Please note that the dictionary is a text file in "iso-8859-11" encoding. The format is one word per one line.
+
+'setence segment' or actually 'edu segment' is a process to break a paragraph into a chunk of discourse units, which usually are a clause. It is based on RandomForestClassifier model, which is trained on an edu-segmented corpus (approx. 7,000 edus) created and used in Nalinee's thesis (http://www.arts.chula.ac.th/~ling/thesis/2556MA-LING-Nalinee.pdf). Accuracy of the model is 97.8%.
+The reason behind using edu can be found in
+- Aroonmanakun, W. 2007. Thoughts on Word and Sentence Segmentation in Thai. In Proceedings of the Seventh Symposium on Natural Language Processing, Dec 13-15, 2007, Pattaya, Thailand. 85-90.
+- Intasaw, N. and Aroonmanakun, W. 2013. Basic Principles for Segmenting Thai EDUs. in Proceedings of 27th Pacific Asia Conference on Language, Information, and Computation, pages 491-498, Nov 22-24, 2013, Taipei.
+
+*** Module "spell_candidates" is modified from Peter Norvig's Python codes at http://norvig.com/spell-correct.html ***
+*** BEST corpus is the corpus released by NECTEC  (https://www.nectec.or.th/corpus/) ***
+*** Universal POS tags are used in this project. For more information, please see http://universaldependencies.org/u/pos/index.html ***
+*** pos_tag is based on PerceptronTagger in nltk.tag.perceptron. It is trained with TNC data manually pos-taged (approx. 148,000 words). Accuracy on pos tagging is 91.68%.  NLTK PerceptronTagger is a port of the Textblob Averaged Perceptron Tagger, which can be found at https://explosion.ai/blog/part-of-speech-pos-tagger-in-python ***
+*** named entiy recognition module is a CRF model adapted from this tutorial (http://sklearn-crfsuite.readthedocs.io/en/latest/tutorial.html). The model is trained with ner data used in Sasimimon's and Nutcha's theses (all together 7,354 names in a corpus of 183,300 words). (http://pioneer.chula.ac.th/~awirote/Data-Nutcha.zip, http://pioneer.chula.ac.th/~awirote/Data-Sasiwimon.zip )  Accuracy of the model is 92% ***
+
+
+------
+More basic tools will be added in the future, e.g. 
+#### tltk.nlp.transcribe(ThaiText)  =>  IPA
+#### tltk.nlp.pronounce(ThaiWord) สหกิจ => สะหะกิด
+
