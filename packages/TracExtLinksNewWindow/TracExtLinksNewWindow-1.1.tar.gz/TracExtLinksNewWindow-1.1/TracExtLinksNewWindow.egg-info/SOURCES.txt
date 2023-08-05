@@ -1,0 +1,11 @@
+setup.py
+TracExtLinksNewWindow.egg-info/PKG-INFO
+TracExtLinksNewWindow.egg-info/SOURCES.txt
+TracExtLinksNewWindow.egg-info/dependency_links.txt
+TracExtLinksNewWindow.egg-info/entry_points.txt
+TracExtLinksNewWindow.egg-info/not-zip-safe
+TracExtLinksNewWindow.egg-info/requires.txt
+TracExtLinksNewWindow.egg-info/top_level.txt
+tracextlinksnewwindow/__init__.py
+tracextlinksnewwindow/plugin.py
+tracextlinksnewwindow/htdocs/extlinks.js
