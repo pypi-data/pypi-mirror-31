@@ -1,0 +1,27 @@
+Metadata-Version: 2.0
+Name: odoo9-addons-oca-website
+Version: 9.0.20161005
+Summary: Meta package for OCA website Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo9-addon-website-anchor-smooth-scroll
+Requires-Dist: odoo9-addon-website-blog-mgmt
+Requires-Dist: odoo9-addon-website-crm-recaptcha
+Requires-Dist: odoo9-addon-website-field-autocomplete
+Requires-Dist: odoo9-addon-website-form-recaptcha
+Requires-Dist: odoo9-addon-website-forum-censored
+Requires-Dist: odoo9-addon-website-legal-page
+Requires-Dist: odoo9-addon-website-no-crawler
+Requires-Dist: odoo9-addon-website-payment-v10
+Requires-Dist: odoo9-addon-website-portal-contact
+Requires-Dist: odoo9-addon-website-portal-purchase
+Requires-Dist: odoo9-addon-website-portal-v10
+Requires-Dist: odoo9-addon-website-seo-redirection
+Requires-Dist: odoo9-addon-website-snippet-country-dropdown
+
+UNKNOWN
+
+
