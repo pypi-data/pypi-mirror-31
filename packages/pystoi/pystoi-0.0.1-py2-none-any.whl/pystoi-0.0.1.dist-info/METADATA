@@ -1,0 +1,22 @@
+Metadata-Version: 2.0
+Name: pystoi
+Version: 0.0.1
+Summary: Computes Short Term Objective Intelligibility measure
+Home-page: https://github.com/mpariente/pystoi
+Author: Manuel Pariente
+Author-email: pariente.mnl@gmail.com
+License: MIT
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: resampy
+
+UNKNOWN
+
+
