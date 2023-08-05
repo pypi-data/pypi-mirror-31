@@ -1,0 +1,10 @@
+README.md
+setup.py
+companies_house/__init__.py
+companies_house/api.py
+companies_house/update.py
+companies_house.egg-info/PKG-INFO
+companies_house.egg-info/SOURCES.txt
+companies_house.egg-info/dependency_links.txt
+companies_house.egg-info/requires.txt
+companies_house.egg-info/top_level.txt
