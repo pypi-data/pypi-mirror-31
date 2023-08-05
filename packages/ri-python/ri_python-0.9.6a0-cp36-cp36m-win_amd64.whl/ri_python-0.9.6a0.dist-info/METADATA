@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: ri-python
+Version: 0.9.6a0
+Summary: Resolved Instruments Python library
+Home-page: https://resolvedinstruments.com
+Author: Callum Doolin
+Author-email: callum@resolvedinstruments.com
+License: Other/Proprietary License
+Project-URL: Documentation, https://resolvedinstruments.com/docs/ripy-toc.html
+Platform: UNKNOWN
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.5
+Description-Content-Type: text/x-rst
+
+===============================
+Project Description
+===============================
+
+ripy is `Resolved Instruments'<https://resolvedinstruments.com>`_ python library for interfacing with our USB photodetectors.
+
+Please visit ripy's `documentation page <https://resolvedinstruments.com/docs/ripy-toc.html>`_.
+
+
