@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: mpl2nc
+Version: 1.1.1
+Summary: Convert Sigma Space Micro Pulse Lidar (MPL) data files to NetCDF
+Home-page: https://github.com/peterkuma/mpl2nc
+Author: Peter Kuma
+Author-email: peter.kuma@fastmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: sigmaspace,mpl,lidar,netcdf
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Scientific/Engineering :: Atmospheric Science
