@@ -1,0 +1,12 @@
+README.md
+setup.py
+gprim/__init__.py
+gprim/annotation.py
+gprim/dataset.py
+gprim/genome.py
+gprim.egg-info/PKG-INFO
+gprim.egg-info/SOURCES.txt
+gprim.egg-info/dependency_links.txt
+gprim.egg-info/not-zip-safe
+gprim.egg-info/requires.txt
+gprim.egg-info/top_level.txt
