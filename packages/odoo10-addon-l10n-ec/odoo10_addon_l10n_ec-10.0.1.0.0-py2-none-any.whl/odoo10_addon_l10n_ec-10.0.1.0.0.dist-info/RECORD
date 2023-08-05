@@ -1,0 +1,15 @@
+odoo10_addon_l10n_ec-10.0.1.0.0-py2.7-nspkg.pth,sha256=BRP8mvEvEhIFmA57wbSTfAVbaAesjZh6WbtWMKUVv1c,1118
+odoo/addons/l10n_ec/README.rst,sha256=074C3bbJggDzSA2EWWKSswDopVmGcwUpANjC3buuWPY,5864
+odoo/addons/l10n_ec/__init__.py,sha256=iwhKnzeBJLKxpRVjvzwiRE63_zNpIBfaKLITauVph-0,24
+odoo/addons/l10n_ec/__manifest__.py,sha256=v7lMq6IxmY2XY8xKsDWEI0mKM1dUXD9JARzRalRNW3U,630
+odoo/addons/l10n_ec/data/account.account.template.csv,sha256=mwo-rtEXtKCoeLNqKsn1ZCq38FW7R8QU4LgLE4848NU,28515
+odoo/addons/l10n_ec/data/account_chart_template.xml,sha256=bHCKdfT8FMd7Nr1pVDJHPRRCwI5BBkZN_GwVvQRZC9I,887
+odoo/addons/l10n_ec/data/account_chart_template.yml,sha256=MiliRQy-XFeCZB9cdXmZ6P8Kj2bUewI9esBbEOMSff8,106
+odoo/addons/l10n_ec/static/description/icon.png,sha256=SXC9Mc9h2BFWyHH6nX4q1IBG7TZiF1anLpIvFgBkm-4,29093
+odoo10_addon_l10n_ec-10.0.1.0.0.dist-info/DESCRIPTION.rst,sha256=IAVMK_IZ8PEKwCpiynmcT12k3OV6q1F5PKzbkr9czfA,5866
+odoo10_addon_l10n_ec-10.0.1.0.0.dist-info/METADATA,sha256=2-0Np1_410hbDjZcGQn6mNqZTfQqQ2wUDrfzUWpnD4k,6353
+odoo10_addon_l10n_ec-10.0.1.0.0.dist-info/RECORD,,
+odoo10_addon_l10n_ec-10.0.1.0.0.dist-info/WHEEL,sha256=bee59qcPjkyXfMaxNWjl2CGotqfumWx9pC1hlVLr2mM,92
+odoo10_addon_l10n_ec-10.0.1.0.0.dist-info/metadata.json,sha256=ZgVzaHV_jWaQL4epgmDrekJ8tDOKER8igbMivFJ2HZg,704
+odoo10_addon_l10n_ec-10.0.1.0.0.dist-info/namespace_packages.txt,sha256=igDP6S4ywc6jzcMqzrKZpRtAUXrS-iYaA_Hu1EtlI48,17
+odoo10_addon_l10n_ec-10.0.1.0.0.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
