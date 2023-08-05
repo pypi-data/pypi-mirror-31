@@ -1,0 +1,17 @@
+Metadata-Version: 2.0
+Name: odoo9-addons-oca-product-attribute
+Version: 9.0.20160911
+Summary: Meta package for OCA product-attribute Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo9-addon-product-brand
+Requires-Dist: odoo9-addon-product-dimension
+Requires-Dist: odoo9-addon-product-manufacturer
+Requires-Dist: odoo9-addon-product-multi-category
+
+UNKNOWN
+
+
