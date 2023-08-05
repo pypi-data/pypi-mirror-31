@@ -1,0 +1,8 @@
+setup.py
+release_bot_test/__init__.py
+release_bot_test/release_bot_test.py
+release_bot_test.egg-info/PKG-INFO
+release_bot_test.egg-info/SOURCES.txt
+release_bot_test.egg-info/dependency_links.txt
+release_bot_test.egg-info/entry_points.txt
+release_bot_test.egg-info/top_level.txt

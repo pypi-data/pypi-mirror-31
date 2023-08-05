@@ -1,0 +1,3 @@
+[console_scripts]
+release-bot-test = release_bot_test.release_bot_test:main
+
