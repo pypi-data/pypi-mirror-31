@@ -1,0 +1,17 @@
+[Unit]
+Description=MCM PNG Image Server
+
+[Service]
+Environment=PYTHONPATH=.
+ExecStart=/usr/local/bin/twistd \
+    --nodaemon --pidfile= --logfile=access.log --python=mcm.tac
+
+WorkingDirectory=/home/mcm/
+
+User=mcm
+Group=mcm
+
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
