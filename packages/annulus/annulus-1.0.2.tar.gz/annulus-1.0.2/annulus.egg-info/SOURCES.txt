@@ -1,0 +1,9 @@
+README.md
+setup.py
+annulus/__init__.py
+annulus/detector.py
+annulus/image.py
+annulus.egg-info/PKG-INFO
+annulus.egg-info/SOURCES.txt
+annulus.egg-info/dependency_links.txt
+annulus.egg-info/top_level.txt
