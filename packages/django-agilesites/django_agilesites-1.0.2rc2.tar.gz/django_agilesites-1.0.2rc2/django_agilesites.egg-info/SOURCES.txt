@@ -1,0 +1,16 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+django_agilesites/__init__.py
+django_agilesites/loaders.py
+django_agilesites/middleware.py
+django_agilesites/models.py
+django_agilesites/utils.py
+django_agilesites/views.py
+django_agilesites.egg-info/PKG-INFO
+django_agilesites.egg-info/SOURCES.txt
+django_agilesites.egg-info/dependency_links.txt
+django_agilesites.egg-info/requires.txt
+django_agilesites.egg-info/top_level.txt
