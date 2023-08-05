@@ -1,0 +1,23 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-account-financial-reporting
+Version: 8.0.20160911
+Summary: Meta package for OCA account-financial-reporting Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo8-addon-account-chart-report
+Requires-Dist: odoo8-addon-account-export-csv
+Requires-Dist: odoo8-addon-account-financial-report-horizontal
+Requires-Dist: odoo8-addon-account-financial-report-webkit
+Requires-Dist: odoo8-addon-account-financial-report-webkit-xls
+Requires-Dist: odoo8-addon-account-journal-report-xls
+Requires-Dist: odoo8-addon-account-move-line-report-xls
+Requires-Dist: odoo8-addon-account-tax-report-no-zeroes
+Requires-Dist: odoo8-addon-mis-builder
+Requires-Dist: odoo8-addon-mis-builder-demo
+
+UNKNOWN
+
+
