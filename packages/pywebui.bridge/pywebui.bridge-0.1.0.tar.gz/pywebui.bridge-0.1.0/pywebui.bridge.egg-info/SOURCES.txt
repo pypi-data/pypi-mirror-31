@@ -1,0 +1,10 @@
+setup.py
+pywebui/__init__.py
+pywebui.bridge.egg-info/PKG-INFO
+pywebui.bridge.egg-info/SOURCES.txt
+pywebui.bridge.egg-info/dependency_links.txt
+pywebui.bridge.egg-info/not-zip-safe
+pywebui.bridge.egg-info/requires.txt
+pywebui.bridge.egg-info/top_level.txt
+pywebui/bridge/__init__.py
+pywebui/bridge/__main__.py
