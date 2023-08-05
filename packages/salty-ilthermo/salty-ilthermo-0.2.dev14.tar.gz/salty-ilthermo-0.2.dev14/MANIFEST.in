@@ -1,0 +1,1 @@
+recursive-include salty/data *.csv *.pkl *.sav *.h5
