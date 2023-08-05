@@ -1,0 +1,13 @@
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+src/pystraksexplorer/__init__.py
+src/pystraksexplorer/pystraksexplorer.py
+src/pystraksexplorer.egg-info/PKG-INFO
+src/pystraksexplorer.egg-info/SOURCES.txt
+src/pystraksexplorer.egg-info/dependency_links.txt
+src/pystraksexplorer.egg-info/entry_points.txt
+src/pystraksexplorer.egg-info/not-zip-safe
+src/pystraksexplorer.egg-info/requires.txt
+src/pystraksexplorer.egg-info/top_level.txt
