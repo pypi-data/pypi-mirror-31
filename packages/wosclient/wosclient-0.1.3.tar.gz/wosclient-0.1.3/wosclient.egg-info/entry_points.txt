@@ -1,0 +1,4 @@
+[console_scripts]
+lookup_ids = wosclient.cli:lookup_ids
+wosclient = wosclient.cli:main
+
