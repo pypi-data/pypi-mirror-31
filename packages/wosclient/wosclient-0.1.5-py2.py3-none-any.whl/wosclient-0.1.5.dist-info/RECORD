@@ -1,0 +1,11 @@
+wosclient/__init__.py,sha256=sRdJ_OVjvQPNil9RUyfw47MbGJKP6Cxx9TkmVjvYeXM,175
+wosclient/cli.py,sha256=OlOf0DHakLnYHY-HknXW-iiNpHgdlKwcnKVRBxK3wVs,2486
+wosclient/const.py,sha256=FkvLEdaWSopJx7A9qj68eFXpej9TuDAcAIjb2-g7hik,795
+wosclient/exceptions.py,sha256=UaoynZoRLWDtEo6swFDazV4uPsnoxKCTtsqOdL7gxq0,99
+wosclient/util.py,sha256=i6rWQUemzG25B5q1I1OhonVncE1CCaUZ8GcXakxPifQ,374
+wosclient/wosclient.py,sha256=uJ0msH_CW_3OBiLswNo1OpaCsBBcVoBxNzi0FFdlHac,3079
+wosclient-0.1.5.dist-info/METADATA,sha256=9Pj1log7-q41KgXBHvPuwxBZSKZphgoUfKXXTs93XS0,4108
+wosclient-0.1.5.dist-info/RECORD,,
+wosclient-0.1.5.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+wosclient-0.1.5.dist-info/entry_points.txt,sha256=scCT3DbwRYOToBrILQBLXqNiOQRbT0YjhPf_7rEDXKQ,88
+wosclient-0.1.5.dist-info/top_level.txt,sha256=sSOAsDizE6z4F0eqlk956iCkaSo3RwyRoiUTSKB_Tts,10
