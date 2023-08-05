@@ -1,0 +1,42 @@
+Metadata-Version: 1.1
+Name: elliptic_meshql
+Version: 0.2.4
+Summary: ELLIPTIc DSL Contracts for MeshQL.
+Home-page: https://github.com/padmec-reservoir/elliptic_meshql
+Author: Guilherme Caminha
+Author-email: gpkc@cin.ufpe.br
+License: MIT license
+Description: ===============
+        ELLIPTIc MeshQL
+        ===============
+        
+        
+        .. image:: https://img.shields.io/pypi/v/elliptic_meshql.svg
+                :target: https://pypi.python.org/pypi/elliptic_meshql
+        
+        .. image:: https://img.shields.io/travis/padmec-reservoir/elliptic_meshql.svg
+                :target: https://travis-ci.org/padmec-reservoir/elliptic_meshql
+        
+        
+        
+        
+        ELLIPTIc DSL Contracts for MeshQL.
+        
+        
+        * Free software: MIT license
+        
+        
+        Features
+        --------
+        
+        * TODO
+        
+        
+Keywords: elliptic_meshql
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
