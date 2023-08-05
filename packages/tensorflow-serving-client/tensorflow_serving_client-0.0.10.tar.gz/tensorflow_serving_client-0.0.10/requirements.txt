@@ -1,0 +1,16 @@
+.
+
+pytest
+pytest-cov
+flake8
+autoflake
+pep8
+autopep8
+eradicate
+
+requests
+numpy
+tensorflow
+grpcio
+grpcio-tools
+keras-model-specs
