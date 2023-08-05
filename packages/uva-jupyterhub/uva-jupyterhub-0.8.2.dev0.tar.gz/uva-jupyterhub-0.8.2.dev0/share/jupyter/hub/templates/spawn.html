@@ -1,0 +1,24 @@
+{% extends "page.html" %}
+
+{% block main %}
+
+<div class="container">
+  <div class="row text-center">
+    <h1>Spawner options</h1>
+  </div>
+  <div class="row col-sm-offset-2 col-sm-8">
+      {% if error_message %}
+        <p class="spawn-error-msg text-danger">
+          Error: {{error_message}}
+        </p>
+      {% endif %}
+    <form enctype="multipart/form-data" id="spawn_form" action="{{url}}" method="post" role="form">
+      {{spawner_options_form | safe}}
+      <br>
+      <input type="submit" value="Spawn" class="btn btn-jupyter form-control">
+    </form>
+  </div>
+</div>
+
+{% endblock %}
+
