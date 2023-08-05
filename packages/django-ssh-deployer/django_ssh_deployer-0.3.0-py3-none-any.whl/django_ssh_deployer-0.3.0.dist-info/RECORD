@@ -1,0 +1,8 @@
+django_ssh_deployer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_ssh_deployer/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_ssh_deployer/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_ssh_deployer/management/commands/deploy.py,sha256=XSQ0NjPUpAE4hWbyLCL0XxoErAKbAbRQvnMiZXACHbE,8573
+django_ssh_deployer-0.3.0.dist-info/METADATA,sha256=NFme1u_ssq_TKiPSMjVU1jBwwGMk4me3B9oq__zqr3w,6283
+django_ssh_deployer-0.3.0.dist-info/RECORD,,
+django_ssh_deployer-0.3.0.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+django_ssh_deployer-0.3.0.dist-info/top_level.txt,sha256=ObG80iYKyagAKm4RyFqODyvLcnt1GTrxdDtnsVg9opg,20
