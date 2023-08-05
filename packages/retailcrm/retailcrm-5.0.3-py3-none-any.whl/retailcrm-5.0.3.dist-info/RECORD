@@ -1,0 +1,13 @@
+retailcrm/__init__.py,sha256=J6xdVeSft_UcXHUUnlfMrIp1hTyOXfaeA8yNYmRVJ6g,171
+retailcrm/response.py,sha256=-4qyy1Why4WtSPDXehmx2fYzOT3ESa0Jpz3D-fYRjYc,894
+retailcrm/versions/base.py,sha256=z1ZpAaV1ujRdF6Wl0z-sxb0maGhBnIlsD3LX6N7iL0U,1745
+retailcrm/versions/v3.py,sha256=zLhg3oCbJyGF67fxxcTB-0evR1oD81uSQir98wgn7FY,13405
+retailcrm/versions/v4.py,sha256=xwK-4Rr3oo1fUwd76co2Wn7FAfx9wGh8k2Kf498o2hM,16515
+retailcrm/versions/v5.py,sha256=PiI-wE1Q94pGSpWlPyys0oYVJX9-In188EblbxnfPhc,27543
+retailcrm-5.0.3.dist-info/METADATA,sha256=BUKdzkjAWjVcJH_blbY6u2d9bkbwTW7pbtikYiz50MQ,2428
+retailcrm-5.0.3.dist-info/RECORD,,
+retailcrm-5.0.3.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+retailcrm-5.0.3.dist-info/top_level.txt,sha256=epDZ55l7p9d0V1wa-SzGjTiphtXVr1syI-2IyhJ8ctU,29
+tests/v3_tests.py,sha256=_5_hGMRUn_SZUCB6Zwl7C6J-8v9U4nCZX60nSmcJoLY,1739
+tests/v4_tests.py,sha256=1XgvbwqbaksOYptVjBgpGlRZj9FuL2Rtm3rN_sBoSR4,1739
+tests/v5_tests.py,sha256=6I4BQcxxItgtOX4NGT5UQN_CyDeJL16iMdzhTVSg5Rc,1739
