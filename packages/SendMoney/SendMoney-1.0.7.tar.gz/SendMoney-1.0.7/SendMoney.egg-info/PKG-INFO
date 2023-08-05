@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: SendMoney
+Version: 1.0.7
+Summary: test pypi
+Home-page: https://github.com/snowysunny/Auto_signup_pond
+Author: SnowySunny
+Author-email: 2549090041@qq.com
+License: MIT
+Description-Content-Type: UNKNOWN
+Description: 学一学怎么打包，微笑！
+Platform: all
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: Implementation
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Software Development :: Libraries
