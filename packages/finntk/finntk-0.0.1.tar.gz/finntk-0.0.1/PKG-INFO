@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: finntk
+Version: 0.0.1
+Summary: Finnish NLP toolkit
+Home-page: https://github.com/frankier/finntk
+Author: Frankie Robertson
+Author-email: UNKNOWN
+License: UNKNOWN
+Description-Content-Type: UNKNOWN
+Description: # FinnTK
+        
+        A small amount of wrapper code I end up rewriting every time I write some code
+        to work with Finnish language. This project is according to my personal
+        preferences but might be helpful to others for exploratory coding.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
