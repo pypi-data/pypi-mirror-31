@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: altendpy
+Version: 0.0.8
+Summary: Extras for working with Python.
+Home-page: https://github.com/altendky/altendpy
+Author: Kyle Altendorf
+Author-email: sda@fstab.net
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/x-rst
+Provides-Extra: dev
+Provides-Extra: test
+Requires-Dist: attrs
+Provides-Extra: dev
+Requires-Dist: gitignoreio; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: codecov; extra == 'test'
+Requires-Dist: pytest; extra == 'test'
+Requires-Dist: pytest-cov; extra == 'test'
+Requires-Dist: tox; extra == 'test'
+
+altendpy
+========
+
+|Travis build| |AppVeyor build|
+
+Miscellanious extras that I like to use when working with Python.
+
+.. |Travis build| image:: https://travis-ci.org/altendky/altendpy.svg
+   :alt: Travis build status
+   :target: https://travis-ci.org/altendky/altendpy
+
+.. |AppVeyor build| image:: https://ci.appveyor.com/api/projects/status/i7bgg319r4did48i?svg=true
+   :alt: AppVeyor build status
+   :target: https://ci.appveyor.com/project/KyleAltendorf/altendpy
+
+
+
