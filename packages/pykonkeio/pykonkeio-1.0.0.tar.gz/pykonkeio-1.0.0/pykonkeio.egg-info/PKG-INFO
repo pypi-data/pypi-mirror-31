@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: pykonkeio
+Version: 1.0.0
+Summary: Python library for interfacing with konke smart appliances
+Home-page: https://github.com/jedmeng/python-konekeio
+Author: jedmeng
+Author-email: jedm@jedm.cn
+License: MIT
+Description: UNKNOWN
+Keywords: konke,iot
+Platform: any
+Requires-Python: >=3.5
