@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: restrictedboosting
+Version: 5.2.3
+Summary: A Boosting Frame for Classifier
+Home-page: https://github.com/LiangjunFeng/RestrictedBoosting
+Author: LiangjunFeng
+Author-email: zhumavip@163.com
+License: MIT Licence
+Description: A Boosting Frame for Classifier，Currently only CART tree and SVC are provided as base classifiers
+Keywords: pip,Classifier,EnsembleLearning,RestrctedBoosting,Tree
+Platform: any
