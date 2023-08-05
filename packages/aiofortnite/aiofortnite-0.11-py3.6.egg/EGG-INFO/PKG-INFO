@@ -1,0 +1,17 @@
+Metadata-Version: 1.2
+Name: aiofortnite
+Version: 0.11
+Summary: A asyncio wrapper for Fortnite.
+Home-page: https://github.com/JakeMakesStuff/aiofortnite
+Author: Jake Gealer
+Author-email: jake@gealer.email
+License: GPLv3
+Description: Check https://github.com/JakeMakesStuff/aiofortnite for the latest README.
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.5.3
