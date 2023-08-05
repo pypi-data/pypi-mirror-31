@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+mutations_distribution.ipynb
+recurrence-distribution.ipynb
+setup.py
+vcf_map_assembly.py
+vcf_sample.py
+vcf_split.py
+ICGC_data_parser.egg-info/PKG-INFO
+ICGC_data_parser.egg-info/SOURCES.txt
+ICGC_data_parser.egg-info/dependency_links.txt
+ICGC_data_parser.egg-info/requires.txt
+ICGC_data_parser.egg-info/top_level.txt
+src/Python/ICGC_data_parser/__init__.py
+src/Python/ICGC_data_parser/assemblymapper.py
+src/Python/ICGC_data_parser/ensembl.py
+src/Python/ICGC_data_parser/ssm_reader.py
