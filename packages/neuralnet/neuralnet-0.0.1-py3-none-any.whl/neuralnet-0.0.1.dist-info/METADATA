@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: neuralnet
+Version: 0.0.1
+Summary: A high-level library on top of Theano.
+Home-page: https://github.com/justanhduc/neuralnet
+Author: Duc Nguyen
+Author-email: adnguyen@yonsei.ac.kr
+License: UNKNOWN
+Project-URL: Source, https://github.com/justanhduc/neuralnet/
+Project-URL: Bug Reports, https://github.com/justanhduc/neuralnet/issues
+Requires-Dist: theano (==0.9.0)
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+Requires-Dist: numpy
+
+# Neuralnet
+
+
