@@ -1,0 +1,15 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.py
+man/pandoc-quotes.1
+man/pandoc-quotes.rst
+pandoc_quotes/__init__.py
+pandoc_quotes/quot-marks.yaml
+pandoc_quotes.egg-info/PKG-INFO
+pandoc_quotes.egg-info/SOURCES.txt
+pandoc_quotes.egg-info/dependency_links.txt
+pandoc_quotes.egg-info/not-zip-safe
+pandoc_quotes.egg-info/requires.txt
+pandoc_quotes.egg-info/top_level.txt
+scripts/pandoc-quotes
