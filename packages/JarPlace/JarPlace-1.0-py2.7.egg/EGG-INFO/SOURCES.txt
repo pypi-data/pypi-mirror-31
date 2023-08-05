@@ -1,0 +1,9 @@
+setup.py
+JarPlace.egg-info/PKG-INFO
+JarPlace.egg-info/SOURCES.txt
+JarPlace.egg-info/dependency_links.txt
+JarPlace.egg-info/entry_points.txt
+JarPlace.egg-info/requires.txt
+JarPlace.egg-info/top_level.txt
+main/__init__.py
+main/main.py
