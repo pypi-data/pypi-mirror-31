@@ -1,0 +1,30 @@
+Metadata-Version: 2.0
+Name: odoo9-addons-oca-management-system
+Version: 9.0.20170311
+Summary: Meta package for OCA management-system Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo9-addon-document-page-environment-manual
+Requires-Dist: odoo9-addon-document-page-environmental-aspect
+Requires-Dist: odoo9-addon-document-page-health-safety-manual
+Requires-Dist: odoo9-addon-document-page-procedure
+Requires-Dist: odoo9-addon-document-page-quality-manual
+Requires-Dist: odoo9-addon-document-page-work-instruction
+Requires-Dist: odoo9-addon-mgmtsystem
+Requires-Dist: odoo9-addon-mgmtsystem-action
+Requires-Dist: odoo9-addon-mgmtsystem-audit
+Requires-Dist: odoo9-addon-mgmtsystem-claim
+Requires-Dist: odoo9-addon-mgmtsystem-hazard
+Requires-Dist: odoo9-addon-mgmtsystem-info-security-manual
+Requires-Dist: odoo9-addon-mgmtsystem-manual
+Requires-Dist: odoo9-addon-mgmtsystem-nonconformity
+Requires-Dist: odoo9-addon-mgmtsystem-quality
+Requires-Dist: odoo9-addon-mgmtsystem-review
+Requires-Dist: odoo9-addon-mgmtsystem-survey
+
+UNKNOWN
+
+
