@@ -1,0 +1,11 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+ansi_colours/__init__.py
+ansi_colours/ansi_colours.py
+ansi_colours.egg-info/PKG-INFO
+ansi_colours.egg-info/SOURCES.txt
+ansi_colours.egg-info/dependency_links.txt
+ansi_colours.egg-info/top_level.txt
