@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: sanic-restful
+Version: 0.0.6
+Summary: Simple framework for creating REST APIs
+Home-page: https://github.com/moonlitlaputa/sanic-restful
+Author: Twilio API Team
+Author-email: help@twilio.com
+License: BSD
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Platform: any
+Classifier: Environment :: Web Environment
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: BSD License
