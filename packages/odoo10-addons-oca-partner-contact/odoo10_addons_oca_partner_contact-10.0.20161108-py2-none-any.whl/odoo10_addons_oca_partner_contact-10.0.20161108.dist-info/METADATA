@@ -1,0 +1,16 @@
+Metadata-Version: 2.0
+Name: odoo10-addons-oca-partner-contact
+Version: 10.0.20161108
+Summary: Meta package for OCA partner-contact Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo10-addon-partner-address-street3
+Requires-Dist: odoo10-addon-partner-firstname
+Requires-Dist: odoo10-addon-partner-street-number
+
+UNKNOWN
+
+
