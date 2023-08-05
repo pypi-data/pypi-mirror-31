@@ -1,0 +1,3 @@
+[console_scripts]
+pywebui = pywebui.builder.cli:main
+

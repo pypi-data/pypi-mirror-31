@@ -1,0 +1,92 @@
+README.md
+setup.py
+pywebui/__init__.py
+pywebui.egg-info/PKG-INFO
+pywebui.egg-info/SOURCES.txt
+pywebui.egg-info/dependency_links.txt
+pywebui.egg-info/entry_points.txt
+pywebui.egg-info/not-zip-safe
+pywebui.egg-info/requires.txt
+pywebui.egg-info/top_level.txt
+pywebui/builder/__init__.py
+pywebui/builder/cli.py
+pywebui/builder/templates/.gitignore
+pywebui/builder/templates/app/cookiecutter.json
+pywebui/builder/templates/app/{{ cookiecutter._app_dir }}/.babelrc
+pywebui/builder/templates/app/{{ cookiecutter._app_dir }}/package-lock.json
+pywebui/builder/templates/app/{{ cookiecutter._app_dir }}/package.json
+pywebui/builder/templates/app/{{ cookiecutter._app_dir }}/webpack.config.js
+pywebui/builder/templates/app/{{ cookiecutter._app_dir }}/src/bridge.js
+pywebui/builder/templates/app/{{ cookiecutter._app_dir }}/src/index.html
+pywebui/builder/templates/app/{{ cookiecutter._app_dir }}/src/index.js
+pywebui/builder/templates/cordova/cookiecutter.json
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/.gitignore
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/.npmignore
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/config.xml
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/package-lock.json
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/package.json
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/cordova-plugin-pywebui/package.json
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/cordova-plugin-pywebui/plugin.xml
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/cordova-plugin-pywebui/p4a/.p4a
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/cordova-plugin-pywebui/p4a/main.py
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/cordova-plugin-pywebui/p4a/pywebui_service.py
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/cordova-plugin-pywebui/scripts/p4a_setup.js
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/cordova-plugin-pywebui/src/android/PyWebUI.java
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/cordova-plugin-pywebui/www/pywebui.js
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/hooks/README.md
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/README.md
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/icon/android/icon-36-ldpi.png
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/icon/android/icon-48-mdpi.png
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/icon/android/icon-72-hdpi.png
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/icon/android/icon-96-xhdpi.png
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/icon/bada/icon-128.png
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/icon/bada-wac/icon-48-type5.png
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/icon/bada-wac/icon-50-type3.png
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/icon/bada-wac/icon-80-type4.png
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/icon/blackberry/icon-80.png
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/icon/blackberry10/icon-80.png
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/icon/ios/icon-57-2x.png
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/icon/ios/icon-57.png
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/icon/ios/icon-72-2x.png
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/icon/ios/icon-72.png
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/icon/tizen/icon-128.png
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/icon/webos/icon-64.png
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/icon/windows-phone/icon-173-tile.png
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/icon/windows-phone/icon-48.png
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/icon/windows-phone/icon-62-tile.png
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/screen/android/screen-hdpi-landscape.png
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/screen/android/screen-hdpi-portrait.png
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/screen/android/screen-ldpi-landscape.png
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/screen/android/screen-ldpi-portrait.png
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/screen/android/screen-mdpi-landscape.png
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/screen/android/screen-mdpi-portrait.png
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/screen/android/screen-xhdpi-landscape.png
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/screen/android/screen-xhdpi-portrait.png
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/screen/bada/screen-portrait.png
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/screen/bada-wac/screen-type3.png
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/screen/bada-wac/screen-type4.png
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/screen/bada-wac/screen-type5.png
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/screen/blackberry/screen-225.png
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/screen/blackberry10/splash-1280x768.png
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/screen/blackberry10/splash-720x720.png
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/screen/blackberry10/splash-768x1280.png
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/screen/ios/screen-ipad-landscape-2x.png
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/screen/ios/screen-ipad-landscape.png
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/screen/ios/screen-ipad-portrait-2x.png
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/screen/ios/screen-ipad-portrait.png
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/screen/ios/screen-iphone-landscape-2x.png
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/screen/ios/screen-iphone-landscape.png
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/screen/ios/screen-iphone-portrait-2x.png
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/screen/ios/screen-iphone-portrait-568h-2x.png
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/screen/ios/screen-iphone-portrait.png
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/screen/tizen/README.md
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/screen/webos/screen-64.png
+pywebui/builder/templates/cordova/{{ cookiecutter._cordova_dir }}/res/screen/windows-phone/screen-portrait.jpg
+pywebui/builder/templates/electron/cookiecutter.json
+pywebui/builder/templates/electron/{{ cookiecutter._electron_dir }}/.gitignore
+pywebui/builder/templates/electron/{{ cookiecutter._electron_dir }}/bridge.js
+pywebui/builder/templates/electron/{{ cookiecutter._electron_dir }}/index.js
+pywebui/builder/templates/electron/{{ cookiecutter._electron_dir }}/package-lock.json
+pywebui/builder/templates/electron/{{ cookiecutter._electron_dir }}/package.json
+pywebui/builder/templates/flask/cookiecutter.json
+pywebui/builder/templates/flask/{{ cookiecutter._flask_dir }}/main.py
