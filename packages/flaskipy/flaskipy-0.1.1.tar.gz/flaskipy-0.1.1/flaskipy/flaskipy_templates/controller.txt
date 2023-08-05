@@ -1,0 +1,127 @@
+# coding=utf-8
+from flask import jsonify, request, g
+from ..models import db, capital_name
+from pprint import pprint
+
+
+def get_all_singular_name():
+    try:
+        results = capital_name.query.all()
+        data = [result.as_dict() for result in results]
+
+        return jsonify({"success": True, "message": "Fetch all plural_name successfully", "data": data}), 200
+
+    except Exception as ex:
+        # error pretty print
+        pprint(ex)
+        response = {
+            'success': False,
+            'message': 'Something went wrong on fetching plural_name',
+            'error': str(ex)
+        }
+
+        return jsonify(response), 500
+
+
+def add_singular_name():
+    try:
+        body = request.json
+        print("Request body")
+        pprint(body)
+
+        if 'title' not in body or 'description' not in body or body.get('title') == '' or body.get('description') == '':
+            return jsonify({"success": False, "message": "Required fields missing", "error": body}), 206
+
+        else:
+            singular_name_obj = capital_name(
+                title=body.get('title'),
+                description=body.get('description')
+            )
+            db.session.add(singular_name_obj)
+            db.session.commit()
+            pprint(singular_name_obj)
+
+            return jsonify({'success': True, 'message': 'capital_name added successfully', 'data': singular_name_obj.as_dict()}), 201
+
+    except Exception as ex:
+        # error pretty print
+        pprint(ex)
+        response = {
+            'success': False,
+            'message': 'Something went wrong on creating singular_name',
+            'error': str(ex)
+        }
+
+        return jsonify(response), 500
+
+
+def get_singular_name(id):
+    try:
+        result = capital_name.query.get(id)
+        if result:
+            return jsonify({"success": True, "message": "Fetch singular_name successfully", "data": result.as_dict()}), 200
+        else:
+            return jsonify({"success": False, "message": "No singular_name found with this {0}".format(id)}), 404
+
+    except Exception as ex:
+        # error pretty print
+        pprint(ex)
+        response = {
+            'success': False,
+            'message': 'Something went wrong on fetching single singular_name',
+            'error': str(ex)
+        }
+
+        return jsonify(response), 500
+
+
+def update_singular_name(id):
+    try:
+        body = request.json
+        result = capital_name.query.get(id)
+
+        if result:
+            result.title = body.get('title')
+            result.description = body.get('description')
+            db.session.commit()
+
+            return jsonify({"success": True, "message": "capital_name successfully updated", "data": result.as_dict()}), 201
+
+        else:
+            return jsonify({"success": False, "message": "No singular_name found with this {0}".format(id)}), 404
+
+    except Exception as ex:
+        # error pretty print
+        pprint(ex)
+        response = {
+            'success': False,
+            'message': 'Something went wrong on updating singular_name',
+            'error': str(ex)
+        }
+
+        return jsonify(response), 500
+
+
+def delete_singular_name(id):
+    try:
+        result = capital_name.query.get(id)
+
+        if result:
+            db.session.delete(result)
+            db.session.commit()
+
+            return jsonify({"success": True, "message": "capital_name successfully deleted", "data": result.as_dict()}), 201
+
+        else:
+            return jsonify({"success": False, "message": "No singular_name found with this {0}".format(id)}), 404
+
+    except Exception as ex:
+        # error pretty print
+        pprint(ex)
+        response = {
+            'success': False,
+            'message': 'Something went wrong on updating singular_name',
+            'error': str(ex)
+        }
+
+        return jsonify(response), 500

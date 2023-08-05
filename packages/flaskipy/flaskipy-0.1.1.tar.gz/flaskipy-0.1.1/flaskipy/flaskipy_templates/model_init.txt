@@ -1,0 +1,2 @@
+# coding=utf-8
+from .singular_name import db, capital_name
