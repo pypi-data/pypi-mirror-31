@@ -1,0 +1,3 @@
+[console_scripts]
+csvless = drawtable.csvless.__main__:main
+
