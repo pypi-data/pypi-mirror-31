@@ -1,0 +1,4 @@
+dnspython
+impacket
+ldap3>=2.4.1
+pyasn1>=0.4
