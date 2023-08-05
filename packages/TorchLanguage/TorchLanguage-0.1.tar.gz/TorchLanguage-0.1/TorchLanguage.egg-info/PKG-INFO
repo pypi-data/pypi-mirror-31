@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: TorchLanguage
+Version: 0.1
+Summary: A pyTorch toolkit for Natural Language Processing.
+Home-page: UNKNOWN
+Author: Nils Schaetti
+Author-email: nils.schaetti@unine.ch
+License: GPLv3
+Description: TorchLanguage is the equivalent of TorchVision for Natural Language Processing. It gives you access to text transformers (tokens, index, n-grams, etc), datasets, pre-trained models and embedding.
+Platform: UNKNOWN
