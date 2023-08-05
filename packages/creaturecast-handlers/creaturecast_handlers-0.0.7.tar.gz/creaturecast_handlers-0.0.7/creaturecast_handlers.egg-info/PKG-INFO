@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: creaturecast-handlers
+Version: 0.0.7
+Summary: Creaturecast Handlers
+Home-page: https://github.com/Paxtongerrish/creaturecast_handlers.git
+Author: Paxton Gerrish
+Author-email: creaturecastlabs@gmail.com
+License: UNKNOWN
+Description: Creaturecast Handlers
+Keywords: sample setuptools development
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
