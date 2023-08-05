@@ -1,0 +1,3 @@
+[console_scripts]
+ncdu-dropbox = ncdu_dropbox.main:main
+
