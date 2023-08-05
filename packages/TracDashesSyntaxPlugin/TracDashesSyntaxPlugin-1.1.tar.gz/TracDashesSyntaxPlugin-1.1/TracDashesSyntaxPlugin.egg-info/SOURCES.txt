@@ -1,0 +1,10 @@
+setup.py
+TracDashesSyntaxPlugin.egg-info/PKG-INFO
+TracDashesSyntaxPlugin.egg-info/SOURCES.txt
+TracDashesSyntaxPlugin.egg-info/dependency_links.txt
+TracDashesSyntaxPlugin.egg-info/entry_points.txt
+TracDashesSyntaxPlugin.egg-info/not-zip-safe
+TracDashesSyntaxPlugin.egg-info/requires.txt
+TracDashesSyntaxPlugin.egg-info/top_level.txt
+tracdashessyntax/__init__.py
+tracdashessyntax/plugin.py
