@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: jm-networking
+Version: 1.0.13
+Summary: A basic networking layer with async callbacks
+Home-page: https://github.com/miller46/jm-networking
+Author: Jack Miller
+Author-email: jackmiller46@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: requests
+
+See the README.md file on GitHub for more information.
+
+
