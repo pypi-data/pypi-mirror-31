@@ -1,0 +1,30 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-vertical-medical
+Version: 8.0.20160911
+Summary: Meta package for OCA vertical-medical Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo8-addon-medical
+Requires-Dist: odoo8-addon-medical-disease
+Requires-Dist: odoo8-addon-medical-family
+Requires-Dist: odoo8-addon-medical-his
+Requires-Dist: odoo8-addon-medical-insurance
+Requires-Dist: odoo8-addon-medical-insurance-us
+Requires-Dist: odoo8-addon-medical-medicament
+Requires-Dist: odoo8-addon-medical-medicament-attributes
+Requires-Dist: odoo8-addon-medical-medication
+Requires-Dist: odoo8-addon-medical-medication-us
+Requires-Dist: odoo8-addon-medical-patient-ethnicity
+Requires-Dist: odoo8-addon-medical-patient-occupation
+Requires-Dist: odoo8-addon-medical-pharmacy
+Requires-Dist: odoo8-addon-medical-pharmacy-us
+Requires-Dist: odoo8-addon-medical-prescription
+Requires-Dist: odoo8-addon-medical-prescription-state
+Requires-Dist: odoo8-addon-medical-prescription-thread
+
+UNKNOWN
+
+
