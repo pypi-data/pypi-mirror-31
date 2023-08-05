@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: creaturecast_environment
+Version: 0.0.2
+Summary: Creaturecast Environment
+Home-page: https://github.com/Paxtongerrish/creaturecast_environment.git
+Author: Paxton Gerrish
+Author-email: creaturecastlabs@gmail.com
+License: UNKNOWN
+Description: Creaturecast Environment
+Keywords: sample setuptools development
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
