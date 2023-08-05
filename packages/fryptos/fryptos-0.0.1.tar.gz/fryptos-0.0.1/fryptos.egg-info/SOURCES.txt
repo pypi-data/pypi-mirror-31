@@ -1,0 +1,10 @@
+README.rst
+setup.py
+fryptos/encrypt.py
+fryptos/filename.py
+fryptos/main.py
+fryptos.egg-info/PKG-INFO
+fryptos.egg-info/SOURCES.txt
+fryptos.egg-info/dependency_links.txt
+fryptos.egg-info/entry_points.txt
+fryptos.egg-info/top_level.txt
