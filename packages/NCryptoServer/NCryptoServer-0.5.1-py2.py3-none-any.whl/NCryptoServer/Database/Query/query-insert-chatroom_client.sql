@@ -1,0 +1,10 @@
+INSERT INTO ServerDB.chatroom_client (id, id_client, id_chatroom) VALUES (1, 4, 1);
+INSERT INTO ServerDB.chatroom_client (id, id_client, id_chatroom) VALUES (2, 4, 2);
+INSERT INTO ServerDB.chatroom_client (id, id_client, id_chatroom) VALUES (3, 4, 3);
+INSERT INTO ServerDB.chatroom_client (id, id_client, id_chatroom) VALUES (4, 4, 4);
+INSERT INTO ServerDB.chatroom_client (id, id_client, id_chatroom) VALUES (5, 5, 1);
+INSERT INTO ServerDB.chatroom_client (id, id_client, id_chatroom) VALUES (6, 6, 1);
+INSERT INTO ServerDB.chatroom_client (id, id_client, id_chatroom) VALUES (7, 7, 1);
+INSERT INTO ServerDB.chatroom_client (id, id_client, id_chatroom) VALUES (8, 8, 1);
+INSERT INTO ServerDB.chatroom_client (id, id_client, id_chatroom) VALUES (9, 9, 1);
+INSERT INTO ServerDB.chatroom_client (id, id_client, id_chatroom) VALUES (10, 10, 1);
