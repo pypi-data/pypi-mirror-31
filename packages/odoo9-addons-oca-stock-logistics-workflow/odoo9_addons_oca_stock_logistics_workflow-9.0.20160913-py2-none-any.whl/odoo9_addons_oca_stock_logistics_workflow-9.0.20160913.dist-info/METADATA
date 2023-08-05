@@ -1,0 +1,15 @@
+Metadata-Version: 2.0
+Name: odoo9-addons-oca-stock-logistics-workflow
+Version: 9.0.20160913
+Summary: Meta package for OCA stock-logistics-workflow Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo9-addon-stock-batch-picking
+Requires-Dist: odoo9-addon-stock-picking-mass-assign
+
+UNKNOWN
+
+
