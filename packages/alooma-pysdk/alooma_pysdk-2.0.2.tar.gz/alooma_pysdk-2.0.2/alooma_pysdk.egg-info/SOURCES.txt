@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+alooma_pysdk/__init__.py
+alooma_pysdk/alooma_ca
+alooma_pysdk/alooma_pysdk.py
+alooma_pysdk/consts.py
+alooma_pysdk/py2to3.py
+alooma_pysdk/pysdk_exceptions.py
+alooma_pysdk/test_alooma_pysdk.py
+alooma_pysdk.egg-info/PKG-INFO
+alooma_pysdk.egg-info/SOURCES.txt
+alooma_pysdk.egg-info/dependency_links.txt
+alooma_pysdk.egg-info/top_level.txt
