@@ -1,0 +1,11 @@
+setup.cfg
+setup.py
+dictiorm/__init__.py
+dictiorm/__main__.py
+dictiorm/dictiorm.py
+dictiorm.egg-info/PKG-INFO
+dictiorm.egg-info/SOURCES.txt
+dictiorm.egg-info/dependency_links.txt
+dictiorm.egg-info/not-zip-safe
+dictiorm.egg-info/requires.txt
+dictiorm.egg-info/top_level.txt
