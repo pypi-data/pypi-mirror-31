@@ -1,0 +1,3 @@
+[console_scripts]
+clermontpcr.py = clermontpcr.clermontpcr:main
+
