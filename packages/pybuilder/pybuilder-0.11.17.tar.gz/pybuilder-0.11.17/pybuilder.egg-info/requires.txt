@@ -1,0 +1,5 @@
+pip<11dev,>=7.1
+setuptools~=39.0.0
+tailer
+tblib
+wheel~=0.31
