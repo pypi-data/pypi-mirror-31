@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: windflow
+Version: 0.2.0
+Summary: Windflow helps to write web apps (asyncio, tornado, sqlalchemy). Experimental, use at own risks.
+Home-page: https://github.com/hartym/windflow
+Author: Romain Dorgueil
+Author-email: romain@dorgueil.net
+License: Apache 2.0
+Download-URL: https://github.com/hartym/windflow/archive/0.2.0.tar.gz
+Platform: UNKNOWN
+Provides-Extra: dev
+Provides-Extra: alembic
+Provides-Extra: uvloop
+Requires-Dist: Jinja2 (~=2.9)
+Requires-Dist: SQLAlchemy (<1.3,>=1.2)
+Requires-Dist: Werkzeug (~=0.14.1)
+Requires-Dist: honcho (~=1.0.1)
+Requires-Dist: python-dotenv (~=0.8.2)
+Requires-Dist: simplejson (~=3.13.2)
+Requires-Dist: tornado (~=5.0)
+Provides-Extra: alembic
+Requires-Dist: alembic (~=0.9.9); extra == 'alembic'
+Provides-Extra: dev
+Requires-Dist: coverage (~=4.4); extra == 'dev'
+Requires-Dist: pytest (~=3.4); extra == 'dev'
+Requires-Dist: pytest-cov (~=2.5); extra == 'dev'
+Requires-Dist: sphinx (~=1.7); extra == 'dev'
+Requires-Dist: yapf; extra == 'dev'
+Provides-Extra: uvloop
+Requires-Dist: uvloop (~=0.9.1); extra == 'uvloop'
+
+windflow
+========
+
+Windflow is a python 3.5+ toolkit helping to develop modern and modular web applications using asyncio and sqlalchemy.
+
+This is an experimental project, things will change, probably in huge ways. Use it at your own risks.
+
+.. image:: https://travis-ci.org/hartym/windflow.svg?branch=master
+    :target: https://travis-ci.org/hartym/windflow
+    :alt: Continuous Integration Status
+
+.. image:: https://coveralls.io/repos/github/hartym/windflow/badge.svg?branch=master
+    :target: https://coveralls.io/github/hartym/windflow?branch=master
+    :alt: Coverage Status
+
+.. image:: https://readthedocs.org/projects/windflow/badge/?version=latest
+    :target: http://windflow.readthedocs.org/en/latest/?badge=latest
+    :alt: Documentation Status
+
+----
+
+Made with ♥ by `Romain Dorgueil <https://twitter.com/rdorgueil>`_ and `contributors <https://github.com/hartym/windflow/graphs/contributors>`_.
+
+
