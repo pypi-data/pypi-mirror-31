@@ -1,0 +1,20 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-runbot-addons
+Version: 8.0.20161010
+Summary: Meta package for OCA runbot-addons Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo8-addon-runbot-build-instructions
+Requires-Dist: odoo8-addon-runbot-gitlab
+Requires-Dist: odoo8-addon-runbot-language
+Requires-Dist: odoo8-addon-runbot-pylint
+Requires-Dist: odoo8-addon-runbot-secure
+Requires-Dist: odoo8-addon-runbot-skip-tests
+Requires-Dist: odoo8-addon-runbot-website-display
+
+UNKNOWN
+
+
