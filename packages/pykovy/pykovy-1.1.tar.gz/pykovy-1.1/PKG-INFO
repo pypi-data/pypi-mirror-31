@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: pykovy
+Version: 1.1
+Summary: Real simple markov chains
+Home-page: https://github.com/justanr/pykovy
+Author: Alec Nikolas Reiter
+Author-email: alecreiter@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: markov
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
