@@ -1,0 +1,17 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-l10n-ethiopia
+Version: 8.0.20161010
+Summary: Meta package for OCA l10n-ethiopia Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo8-addon-l10n-et-base
+Requires-Dist: odoo8-addon-l10n-et-base-vat
+Requires-Dist: odoo8-addon-l10n-et-title
+Requires-Dist: odoo8-addon-l10n-et-toponym
+
+UNKNOWN
+
+
