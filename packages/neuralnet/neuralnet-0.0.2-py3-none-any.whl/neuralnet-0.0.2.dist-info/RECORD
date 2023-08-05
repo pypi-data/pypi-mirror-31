@@ -1,0 +1,15 @@
+neuralnet/__init__.py,sha256=jKrudE3rLXKXnp3izrt3c0ktdILIFBXRRzYJngbeMQQ,301
+neuralnet/build_optimization.py,sha256=LLJfk5ByMfsq00JB6cDKEzoNqZO_NGapCLcak5_qFgE,5831
+neuralnet/build_training.py,sha256=tkYroczBfbBlVCJorR5CuCqhsYUem1KgB96aVYT52xA,1654
+neuralnet/layers.py,sha256=qtuww2nC0IdSLMAk_l5awp-QvxmPUaxHVPQAvND35e8,103433
+neuralnet/metrics.py,sha256=zWhtPe4HVp_zSH3e1qdF4tIXMHfUx2XkoulHjWD0Vjk,12415
+neuralnet/model.py,sha256=5YxSUg7GS_qzHcgmxuJN0UnSM7WzvUhgy1htV_We46g,2139
+neuralnet/monitor.py,sha256=m3ltIozS1x1pXShMNKz6PoBP68vU4Ry3eHhOHPxpbVE,3877
+neuralnet/optimization.py,sha256=iAXN6kM2aDxO6aKcmPcc_3jG4PP2Vk2-Ig20nX4CPcY,11132
+neuralnet/read_data.py,sha256=vVc44edM9XWaR8iJfWIMvV_TKmBLONwU4wp79VXWDlI,5750
+neuralnet/utils.py,sha256=vBnHfqfQt49aIhCl1BlZsfRzA3fxynQtyVa3HZpOPuY,13536
+neuralnet-0.0.2.dist-info/LICENSE.txt,sha256=JoTeFzAOCkNGhvHsf4r2BFIHpLRXo_4EsrnOZV58XVA,17098
+neuralnet-0.0.2.dist-info/METADATA,sha256=QpgNCwotfNxqD-LuIyJJBCJI2CdtYHWgu99yN2kRSYc,474
+neuralnet-0.0.2.dist-info/RECORD,,
+neuralnet-0.0.2.dist-info/WHEEL,sha256=pZyAqgNAylOf0KG_hPHMtuuY08rV3WzWwZu2OTsNnnw,97
+neuralnet-0.0.2.dist-info/top_level.txt,sha256=7F591o1jZNHK9Tcjxdjwu1Bc9EhO7EgdHlBri-4hrtU,10
