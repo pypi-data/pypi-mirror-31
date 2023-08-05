@@ -1,0 +1,16 @@
+MANIFEST.in
+README
+README.md
+setup.cfg
+setup.py
+versioneer.py
+pyrevolve/__init__.py
+pyrevolve/_version.py
+pyrevolve/crevolve.cpp
+pyrevolve/pyrevolve.py
+pyrevolve.egg-info/PKG-INFO
+pyrevolve.egg-info/SOURCES.txt
+pyrevolve.egg-info/dependency_links.txt
+pyrevolve.egg-info/top_level.txt
+src/revolve.cpp
+src/revolve_c.cpp
