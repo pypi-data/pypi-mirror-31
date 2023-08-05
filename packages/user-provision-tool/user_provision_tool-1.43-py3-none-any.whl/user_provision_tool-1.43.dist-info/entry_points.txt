@@ -1,0 +1,3 @@
+[console_scripts]
+userp = project.user_provision:main
+
