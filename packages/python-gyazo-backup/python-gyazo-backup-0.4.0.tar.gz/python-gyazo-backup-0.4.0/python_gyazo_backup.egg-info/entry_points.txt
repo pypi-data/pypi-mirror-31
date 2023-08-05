@@ -1,0 +1,3 @@
+[console_scripts]
+gyazo-backup = gyazo_backup:main
+

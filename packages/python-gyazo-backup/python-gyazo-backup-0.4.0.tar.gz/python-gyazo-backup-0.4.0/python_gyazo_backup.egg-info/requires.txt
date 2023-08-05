@@ -1,0 +1,9 @@
+Jinja2>=2.8
+progress>=1.2
+python-gyazo<2.0.0,>=1.0.0
+
+[:python_version < "3.0"]
+futures>=3.0.5
+
+[test]
+flake8<4.0.0,>=3.3.0

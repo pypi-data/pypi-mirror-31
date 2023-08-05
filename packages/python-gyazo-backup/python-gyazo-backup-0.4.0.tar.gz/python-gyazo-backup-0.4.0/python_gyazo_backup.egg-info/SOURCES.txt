@@ -1,0 +1,13 @@
+README.rst
+setup.cfg
+setup.py
+gyazo_backup/__init__.py
+gyazo_backup/backup.py
+gyazo_backup/themes/default/index.css
+gyazo_backup/themes/default/index.html
+python_gyazo_backup.egg-info/PKG-INFO
+python_gyazo_backup.egg-info/SOURCES.txt
+python_gyazo_backup.egg-info/dependency_links.txt
+python_gyazo_backup.egg-info/entry_points.txt
+python_gyazo_backup.egg-info/requires.txt
+python_gyazo_backup.egg-info/top_level.txt
