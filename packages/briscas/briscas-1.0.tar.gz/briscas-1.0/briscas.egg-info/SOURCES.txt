@@ -1,0 +1,11 @@
+README.rst
+setup.py
+briscas/__init__.py
+briscas/game.py
+briscas/main.py
+briscas/util.py
+briscas.egg-info/PKG-INFO
+briscas.egg-info/SOURCES.txt
+briscas.egg-info/dependency_links.txt
+briscas.egg-info/entry_points.txt
+briscas.egg-info/top_level.txt
