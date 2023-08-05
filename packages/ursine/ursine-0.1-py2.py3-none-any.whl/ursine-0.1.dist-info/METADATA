@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: ursine
+Version: 0.1
+Summary: libarary for SIP url handling/maninupation
+Home-page: https://github.com/sangoma/ursine
+Author: Terry Kerr
+Author-email: t@xnr.ca
+License: Apache 2
+Keywords: sip,voip,url
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Communications :: Telephony
+Classifier: Topic :: Communications :: Internet Phone
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Python: >=3.6
+Requires-Dist: multidict
+
+UNKNOWN
+
+
