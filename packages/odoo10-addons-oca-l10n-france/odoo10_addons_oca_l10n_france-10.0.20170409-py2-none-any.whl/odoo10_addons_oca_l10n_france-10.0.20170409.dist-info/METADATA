@@ -1,0 +1,24 @@
+Metadata-Version: 2.0
+Name: odoo10-addons-oca-l10n-france
+Version: 10.0.20170409
+Summary: Meta package for OCA l10n-france Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo10-addon-account-bank-statement-import-fr-cfonb
+Requires-Dist: odoo10-addon-account-banking-fr-lcr
+Requires-Dist: odoo10-addon-l10n-fr-account-tax-unece
+Requires-Dist: odoo10-addon-l10n-fr-base-location-geonames-import
+Requires-Dist: odoo10-addon-l10n-fr-department
+Requires-Dist: odoo10-addon-l10n-fr-department-oversea
+Requires-Dist: odoo10-addon-l10n-fr-naf-ape
+Requires-Dist: odoo10-addon-l10n-fr-siret
+Requires-Dist: odoo10-addon-l10n-fr-state
+
+UNKNOWN
+
+
