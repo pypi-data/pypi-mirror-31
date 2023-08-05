@@ -1,0 +1,10 @@
+.idea/
+dist/
+build/
+__pycache__/
+RELIC-INFO
+relic/version.py
+testing.py
+*.egg-info
+*_orig.*
+*.pyc
