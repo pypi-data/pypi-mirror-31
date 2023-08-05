@@ -1,0 +1,5 @@
+[ironic_inspector.hooks.processing]
+ib_physnet = stackhpc_inspector_plugins.plugins.ib_physnet:IBPhysnetHook
+system_name_llc = stackhpc_inspector_plugins.plugins.system_name_llc:SystemNameLocalLinkConnectionHook
+system_name_physnet = stackhpc_inspector_plugins.plugins.system_name_physnet:SystemNamePhysnetHook
+
