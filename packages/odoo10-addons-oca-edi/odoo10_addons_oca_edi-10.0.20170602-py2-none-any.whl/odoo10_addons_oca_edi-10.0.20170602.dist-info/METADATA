@@ -1,0 +1,39 @@
+Metadata-Version: 2.0
+Name: odoo10-addons-oca-edi
+Version: 10.0.20170602
+Summary: Meta package for OCA edi Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo10-addon-account-invoice-factur-x
+Requires-Dist: odoo10-addon-account-invoice-factur-x-py3o
+Requires-Dist: odoo10-addon-account-invoice-import
+Requires-Dist: odoo10-addon-account-invoice-import-factur-x
+Requires-Dist: odoo10-addon-account-invoice-import-invoice2data
+Requires-Dist: odoo10-addon-account-invoice-import-ubl
+Requires-Dist: odoo10-addon-account-invoice-ubl
+Requires-Dist: odoo10-addon-account-invoice-ubl-py3o
+Requires-Dist: odoo10-addon-base-business-document-import
+Requires-Dist: odoo10-addon-base-business-document-import-phone
+Requires-Dist: odoo10-addon-base-business-document-import-stock
+Requires-Dist: odoo10-addon-base-ubl
+Requires-Dist: odoo10-addon-base-ubl-payment
+Requires-Dist: odoo10-addon-base-zugferd
+Requires-Dist: odoo10-addon-purchase-order-import
+Requires-Dist: odoo10-addon-purchase-order-import-ubl
+Requires-Dist: odoo10-addon-purchase-order-ubl
+Requires-Dist: odoo10-addon-purchase-order-ubl-py3o
+Requires-Dist: odoo10-addon-sale-order-import
+Requires-Dist: odoo10-addon-sale-order-import-csv
+Requires-Dist: odoo10-addon-sale-order-import-ubl
+Requires-Dist: odoo10-addon-sale-order-ubl
+Requires-Dist: odoo10-addon-sale-order-ubl-py3o
+Requires-Dist: odoo10-addon-sale-stock-order-import
+
+UNKNOWN
+
+
