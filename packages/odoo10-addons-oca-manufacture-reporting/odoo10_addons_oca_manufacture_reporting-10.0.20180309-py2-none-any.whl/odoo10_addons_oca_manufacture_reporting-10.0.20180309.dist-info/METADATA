@@ -1,0 +1,20 @@
+Metadata-Version: 2.0
+Name: odoo10-addons-oca-manufacture-reporting
+Version: 10.0.20180309
+Summary: Meta package for OCA manufacture-reporting Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo10-addon-mrp-bom-matrix-report
+Requires-Dist: odoo10-addon-mrp-bom-structure-report-level-1
+Requires-Dist: odoo10-addon-mrp-bom-structure-xlsx
+Requires-Dist: odoo10-addon-mrp-bom-structure-xlsx-level-1
+Requires-Dist: odoo10-addon-mrp-flattened-bom-xlsx
+
+UNKNOWN
+
+
