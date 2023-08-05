@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: yamlsettings-s3
+Version: 1.0.0
+Summary: YamlSettings S3 Extension
+Home-page: UNKNOWN
+Author: Kyle Walker
+Author-email: KyleJamesWalker@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Provides-Extra: package
+Provides-Extra: setup
+Provides-Extra: test
+Provides-Extra: all
+Requires-Dist: six
+Requires-Dist: boto3
+Requires-Dist: yamlsettings (>=1.0.1)
+Provides-Extra: all
+Requires-Dist: boto3; extra == 'all'
+Requires-Dist: pytest; extra == 'all'
+Requires-Dist: pytest-mock; extra == 'all'
+Requires-Dist: pytest-pudb; extra == 'all'
+Requires-Dist: pytest-runner; extra == 'all'
+Requires-Dist: six; extra == 'all'
+Requires-Dist: yamlsettings (>=1.0.1); extra == 'all'
+Provides-Extra: package
+Requires-Dist: six; extra == 'package'
+Requires-Dist: boto3; extra == 'package'
+Requires-Dist: yamlsettings (>=1.0.1); extra == 'package'
+Provides-Extra: setup
+Requires-Dist: pytest-runner; extra == 'setup'
+Provides-Extra: test
+Requires-Dist: pytest; extra == 'test'
+Requires-Dist: pytest-mock; extra == 'test'
+Requires-Dist: pytest-pudb; extra == 'test'
+
+yamlsettings-s3
+---------------------
+
+YamlSettings Extension for http files
+
+.. image:: https://travis-ci.org/KyleJamesWalker/yamlsettings-s3.svg?branch=master
+    :target: https://travis-ci.org/KyleJamesWalker/yamlsettings-s3
+
+.. image:: https://codecov.io/gh/KyleJamesWalker/yamlsettings-s3/branch/master/graph/badge.svg
+  :target: https://codecov.io/gh/KyleJamesWalker/yamlsettings-s3
+
+Usage
+=====
+
+.. code-block:: python
+
+ import yamlsetttings
+
+ config = yamlsettings.load('s3://bucket/path/to/key/config.yaml')
+
+
