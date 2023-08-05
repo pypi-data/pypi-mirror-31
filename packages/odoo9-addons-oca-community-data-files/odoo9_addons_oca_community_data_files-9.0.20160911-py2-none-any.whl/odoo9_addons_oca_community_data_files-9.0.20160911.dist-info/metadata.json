@@ -1,0 +1,1 @@
+{"extensions": {"python.details": {"document_names": {"description": "DESCRIPTION.rst"}}}, "extras": [], "generator": "bdist_wheel (0.29.0)", "metadata_version": "2.0", "name": "odoo9-addons-oca-community-data-files", "run_requires": [{"requires": ["odoo9-addon-l10n-eu-nace"]}], "summary": "Meta package for OCA community-data-files Odoo addons", "version": "9.0.20160911"}
