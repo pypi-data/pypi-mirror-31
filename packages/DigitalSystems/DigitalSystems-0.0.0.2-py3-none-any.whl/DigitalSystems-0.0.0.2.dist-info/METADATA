@@ -1,0 +1,17 @@
+Metadata-Version: 2.0
+Name: DigitalSystems
+Version: 0.0.0.2
+Summary: An attempt to create a python library for digital systems which could be used for further advanced studies.
+Home-page: http://pypi.python.org/pypi/DigitalSystems/
+Author: Shivam Patel
+Author-email: 16bce081@nirmauni.ac.in
+License: UNKNOWN
+Description-Content-Type: UNKNOWN
+Keywords: digital,systems,binary,research,shivam,patel
+Platform: UNKNOWN
+Requires-Dist: networkx (>=1.8.1)
+Requires-Dist: bitstring (>=3.1.3)
+
+UNKNOWN
+
+
