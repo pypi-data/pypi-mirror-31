@@ -1,0 +1,17 @@
+CnpChargebackSDK-2.1.1.dist-info/DESCRIPTION.rst,sha256=VPk-AJ2rs_TbXOdSQAnVVCRj4CqMOA4m955BFeb29Zo,3482
+CnpChargebackSDK-2.1.1.dist-info/METADATA,sha256=NWr6vYlHCRgh7mm62XuDVws6Z3Y1SQM8PDZQCnm1W0I,4817
+CnpChargebackSDK-2.1.1.dist-info/RECORD,,
+CnpChargebackSDK-2.1.1.dist-info/WHEEL,sha256=kdsN-5OJAZIiHN-iO4Rhl82KyS0bDWf4uBwMbkNafr8,110
+CnpChargebackSDK-2.1.1.dist-info/entry_points.txt,sha256=YVzsnSW5OIEDpsP9z8YXzQwkLI2aaoI3C9nuR23k7Vo,84
+CnpChargebackSDK-2.1.1.dist-info/metadata.json,sha256=Qae1jumTv9pJUdwaIbm8bQdxJ6UbIrkiwVjXfCC6-zM,1581
+CnpChargebackSDK-2.1.1.dist-info/top_level.txt,sha256=CJ43rU0N-5h0YgL2Een03Uy4c4lMKQUiCef9qiTXCAU,15
+cnpsdk/__init__.py,sha256=cMX1RV3mat4Gu2TqNw-CraWpPi_Ar54PN2SwDXRgF3Q,1250
+cnpsdk/chargeback_document.py,sha256=PZ7zTh-pzNPUjnYUxUKT3NM7k3I-wb2dtoLvNLQHClU,2609
+cnpsdk/chargeback_retrieval.py,sha256=lf5TG7CfuLlxaRaJzfSlaSAy_b2bfxq5_wpmxBFjVhI,2807
+cnpsdk/chargeback_update.py,sha256=V8jPLGoEpmiDoRLwpylin7pPI1v3vvn-FFbWWbECZDk,3427
+cnpsdk/communication.py,sha256=iLs_jVRZNzAbbJUi7Dt6OtcpeMqqSciBdGCXnVDXAT4,8016
+cnpsdk/fields_chargeback.py,sha256=oiSoDk6Jzf30YHYxpEGNGW-tBBiLfJmLVQw2rEvpFjA,169825
+cnpsdk/utils.py,sha256=M9KLEEVsRTjy2yXxFwCYlspRxsLre3dUZ4ciITE3RMI,6019
+cnpsdk/version.py,sha256=1xNpjdgLsCyZbJ9VImUgIAppxnti7QPzU-jHiLHDP00,1192
+scripts/__init__.py,sha256=oYb9wibN6kiVF6z6y7YGtnVS0mFCvnU9QMu03Mq-bU4,1141
+scripts/cnp_chargeback_sdk_setup.py,sha256=6XAfCaY0llsRXuauIsy3Rq1XU_oxpN1vVGHGAWWK1W4,7646
