@@ -1,0 +1,10 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+ipspan/__init__.py
+ipspan.egg-info/PKG-INFO
+ipspan.egg-info/SOURCES.txt
+ipspan.egg-info/dependency_links.txt
+ipspan.egg-info/top_level.txt

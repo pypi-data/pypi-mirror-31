@@ -1,0 +1,31 @@
+ipspan
+=======================
+
+ipspan is a basic library that supports converting between a list
+of IP addresses and several different forms of range notation.
+
+The primary audience is developers looking to concisely communicate lists
+of IP addresses.
+
+`The source for this project is available here
+<https://github.com/tifoster/ipspan>`_.
+
+Copyright (c) 2018 Akamai Technologies, Inc.
+
+----
+
+This project was based on the Python Sample Project distributed from
+`<https://packaging.python.org/>`_.
+
+This is the README file for the project.
+
+The file should use UTF-8 encoding and be written using `reStructuredText
+<http://docutils.sourceforge.net/rst.html>`_. It
+will be used to generate the project webpage on PyPI and will be displayed as
+the project homepage on common code-hosting services, and should be written for
+that purpose.
+
+Typical contents for this file would include an overview of the project, basic
+usage examples, etc. Generally, including the project changelog in here is not
+a good idea, although a simple "What's New" section for the most recent version
+may be appropriate.
