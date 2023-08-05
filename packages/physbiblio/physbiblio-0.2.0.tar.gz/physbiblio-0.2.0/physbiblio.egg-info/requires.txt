@@ -1,0 +1,13 @@
+appdirs
+bibtexparser>=1.0.1
+dictdiffer
+feedparser
+matplotlib
+pymarc
+pyoai
+requests
+six
+
+[:python_version < "3"]
+mock
+unittest2
