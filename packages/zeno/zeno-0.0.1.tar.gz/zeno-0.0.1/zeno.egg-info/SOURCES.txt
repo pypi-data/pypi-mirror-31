@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+bin/hello-zeno
+zeno/__init__.py
+zeno/zeno.py
+zeno.egg-info/PKG-INFO
+zeno.egg-info/SOURCES.txt
+zeno.egg-info/dependency_links.txt
+zeno.egg-info/entry_points.txt
+zeno.egg-info/requires.txt
+zeno.egg-info/top_level.txt
