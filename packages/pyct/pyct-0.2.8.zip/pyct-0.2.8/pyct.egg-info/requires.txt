@@ -1,0 +1,16 @@
+doit
+pluggy
+py
+
+[ecosystem_conda]
+conda>=4.4
+conda-build>=3.8
+
+[ecosystem_pip]
+tox
+twine
+wheel
+pip
+
+[tests]
+flake8
