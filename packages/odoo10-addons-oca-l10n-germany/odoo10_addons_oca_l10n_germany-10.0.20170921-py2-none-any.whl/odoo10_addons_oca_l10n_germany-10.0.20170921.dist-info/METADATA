@@ -1,0 +1,18 @@
+Metadata-Version: 2.0
+Name: odoo10-addons-oca-l10n-germany
+Version: 10.0.20170921
+Summary: Meta package for OCA l10n-germany Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo10-addon-l10n-de-country-states
+Requires-Dist: odoo10-addon-l10n-de-location-nuts
+Requires-Dist: odoo10-addon-l10n-de-steuernummer
+
+UNKNOWN
+
+
