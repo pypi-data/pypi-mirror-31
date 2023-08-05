@@ -1,0 +1,3 @@
+[console_scripts]
+stream_monitor=stream_monitor.__init__:main
+
