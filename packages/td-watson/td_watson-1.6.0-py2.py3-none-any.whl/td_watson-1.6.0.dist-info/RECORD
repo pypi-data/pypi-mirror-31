@@ -1,0 +1,15 @@
+td_watson-1.6.0.dist-info/DESCRIPTION.rst,sha256=54JrqwAXo4P7EI44MbAx4aQky7p_dpRrS1PIg_97nnk,2684
+td_watson-1.6.0.dist-info/METADATA,sha256=ygJ7FPyAj5yBJCip83VoD7L6g0RCLa7aDfNJIifIhrc,4005
+td_watson-1.6.0.dist-info/RECORD,,
+td_watson-1.6.0.dist-info/WHEEL,sha256=kdsN-5OJAZIiHN-iO4Rhl82KyS0bDWf4uBwMbkNafr8,110
+td_watson-1.6.0.dist-info/entry_points.txt,sha256=WpzzIjq7ui6flju_uxNkqZzRYRgPhKfjvRj_r87AsvE,48
+td_watson-1.6.0.dist-info/metadata.json,sha256=-GVxBJd-4ieTObdiHziIfH5yofqkA5HvirfmvAZbXoc,1492
+td_watson-1.6.0.dist-info/top_level.txt,sha256=QQZdZ6AxPCQ1a1p0y2MpAF1x2wkCHy_btt5UXoEjT34,7
+watson/__init__.py,sha256=OVvXxoW5VuLbnYiV2saDEG3F4jEvrDcAwzZripNF8PU,117
+watson/__main__.py,sha256=DzfQvpzt3AeHN2884y3dZpHJOFD4pmWzFw2_tPAHr5U,85
+watson/cli.py,sha256=kTxw-4J0nyGw-Y_IE8S1iXAyTendKt-VMCruuFrOS8g,40487
+watson/config.py,sha256=RL9kuwGGgnnWVxywWb7zE5oQjrE6hAHSfrK3uqqbZr0,3666
+watson/frames.py,sha256=VSuW0m-6mdQja64afxYKVbAIQtuQ72TvAe0oVuIwDlk,4355
+watson/utils.py,sha256=8XWthRGXd-P02U7JZCqoSB9v9Fzy4j0rNfeNFExQXBU,5875
+watson/version.py,sha256=oU4P4t7Jffw0pxjIHyYIzinpBaAPAD_GXn2lFTRkT-k,43
+watson/watson.py,sha256=JkxdV59dDczzOeU3x8tS-0_GhUie2W-F2fgFHY9O4gs,15955
