@@ -1,0 +1,10 @@
+setup.py
+TracAttachmentNumMacro.egg-info/PKG-INFO
+TracAttachmentNumMacro.egg-info/SOURCES.txt
+TracAttachmentNumMacro.egg-info/dependency_links.txt
+TracAttachmentNumMacro.egg-info/entry_points.txt
+TracAttachmentNumMacro.egg-info/not-zip-safe
+TracAttachmentNumMacro.egg-info/requires.txt
+TracAttachmentNumMacro.egg-info/top_level.txt
+tracattachmentnum/__init__.py
+tracattachmentnum/attachmentnum.py

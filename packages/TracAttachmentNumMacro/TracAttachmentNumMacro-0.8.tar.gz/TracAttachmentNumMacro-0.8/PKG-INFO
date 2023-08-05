@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: TracAttachmentNumMacro
+Version: 0.8
+Summary: Trac Macro to link to local attachments by number.
+Home-page: https://www.trac-hacks.org/wiki/AttachmentNumMacro
+Author: Martin Scharrer
+Author-email: martin@scharrer-online.de
+License: GPLv3
+Description: UNKNOWN
+Keywords: trac attachment number macro
+Platform: UNKNOWN
+Classifier: Framework :: Trac
