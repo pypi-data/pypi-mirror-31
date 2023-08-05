@@ -1,0 +1,25 @@
+numpy>=1.7.1
+
+[:python_version < "3.2"]
+futures>=3.2
+
+[:python_version < "3.4"]
+matplotlib>=2.0enum34>=1.1
+
+[fits]
+imageio[fits]>=2.3
+
+[full]
+h5py>=2.0
+imageio>=2.3
+imageio[fits]>=2.3
+imageio[simpleitk]>=2.3
+
+[hdf5]
+h5py>=2.0
+
+[img]
+imageio>=2.3
+
+[itk]
+imageio[simpleitk]>=2.3
