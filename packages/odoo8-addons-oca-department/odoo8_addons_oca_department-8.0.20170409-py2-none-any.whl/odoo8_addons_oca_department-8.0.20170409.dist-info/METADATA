@@ -1,0 +1,26 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-department
+Version: 8.0.20170409
+Summary: Meta package for OCA department Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo8-addon-analytic-base-department
+Requires-Dist: odoo8-addon-analytic-department
+Requires-Dist: odoo8-addon-crm-department
+Requires-Dist: odoo8-addon-framework-agreement-department
+Requires-Dist: odoo8-addon-invoice-department
+Requires-Dist: odoo8-addon-project-department
+Requires-Dist: odoo8-addon-project-issue-department
+Requires-Dist: odoo8-addon-project-task-department
+Requires-Dist: odoo8-addon-purchase-department
+Requires-Dist: odoo8-addon-purchase-requisition-department
+Requires-Dist: odoo8-addon-sale-department
+
+UNKNOWN
+
+
