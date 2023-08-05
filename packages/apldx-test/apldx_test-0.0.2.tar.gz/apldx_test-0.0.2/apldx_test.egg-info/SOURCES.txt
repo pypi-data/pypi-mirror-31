@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+apldx_test/__init__.py
+apldx_test/apldx_test.py
+apldx_test.egg-info/PKG-INFO
+apldx_test.egg-info/SOURCES.txt
+apldx_test.egg-info/dependency_links.txt
+apldx_test.egg-info/entry_points.txt
+apldx_test.egg-info/requires.txt
+apldx_test.egg-info/top_level.txt
+bin/hello-apldx_test
