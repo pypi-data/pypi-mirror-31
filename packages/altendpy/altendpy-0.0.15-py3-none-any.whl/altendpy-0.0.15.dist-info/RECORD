@@ -1,0 +1,12 @@
+altendpy/__init__.py,sha256=cGPpHVi945MlF15ZM--Fjt2LWFv-4HSyK9XianNoBVE,176
+altendpy/_version.py,sha256=E0HRfM9l75WBmOmbhZUIUrdkYN48R3YO1PklZCDNU8c,499
+altendpy/misc.py,sha256=U1MQUKWkzyYQeia4VYx10YO0S4n94_gOgnjfeAjPrPQ,617
+altendpy/timeit.py,sha256=YLxSwP74O1nhQRzBGax__tsDMu_ZZTNvJYvVM5iUSB4,1718
+altendpy/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+altendpy/tests/common.py,sha256=uTpnVhHNNBSHg0o9ENAwNuC-yTG3lDEj79ZoSf4hN6I,765
+altendpy/tests/test_misc.py,sha256=HkDeF_hjMk4J-vOc1TtgsR4U9gA76B9DXNQ-Md1DnH8,235
+altendpy/tests/test_timeit.py,sha256=nqGzzyKqzIH8WrJqLpaDT_n1Wi8OcBORUPAwSLKDRHE,398
+altendpy-0.0.15.dist-info/METADATA,sha256=c5GcxkBo-YvOkkZ29eiECvR1BN4z_MoUfMSjbdtfb74,2007
+altendpy-0.0.15.dist-info/RECORD,,
+altendpy-0.0.15.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+altendpy-0.0.15.dist-info/top_level.txt,sha256=c-W-425h1s1dXBg6sC-cFGiH-SYdlJpNfn7YRnaCEqc,9
