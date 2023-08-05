@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: robotframework-couchbasemanager
+Version: 1.0.0
+Summary: Robot Framework Library For Managing Couchbase Server.
+Home-page: https://github.com/peterservice-rnd/robotframework-couchbasemanager
+Author: JSC PETER-SERVICE
+Author-email: mf_aist_all@billing.ru
+License: Apache License 2.0
+Requires-Dist: requests
+Requires-Dist: robotframework
+
+RobotFramework Couchbase Manager Library
+
+
