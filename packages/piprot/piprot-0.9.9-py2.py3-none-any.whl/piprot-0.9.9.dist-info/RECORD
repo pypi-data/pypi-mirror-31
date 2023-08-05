@@ -1,0 +1,9 @@
+piprot/__init__.py,sha256=EirRT45W9vs7UJz8JhJSsRY7qXaS9xJOkT7_gj5dBVo,23
+piprot/piprot.py,sha256=eq73FZPjnSKRvzL2G5zFgcvBpc4WXD2Fk-X8iVPFlPw,15664
+piprot/providers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+piprot/providers/github.py,sha256=PMe3LaOsGTaRNMl7BkgeiUUHCmjSNkbb4JmsHgoiz3I,1320
+piprot-0.9.9.dist-info/METADATA,sha256=bC_7OcmNBJoxi9i6L020uBUwda9N8EtJyJJkXtWXqtk,674
+piprot-0.9.9.dist-info/RECORD,,
+piprot-0.9.9.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+piprot-0.9.9.dist-info/entry_points.txt,sha256=3c5bedQWkZHPgWoHg3eHNGKUmK3FDuDbe96s2G_seL4,49
+piprot-0.9.9.dist-info/top_level.txt,sha256=RqaYDpnQeEFAwojZ9MWdkis65u33hZOo2x3IvM4iCUU,7
