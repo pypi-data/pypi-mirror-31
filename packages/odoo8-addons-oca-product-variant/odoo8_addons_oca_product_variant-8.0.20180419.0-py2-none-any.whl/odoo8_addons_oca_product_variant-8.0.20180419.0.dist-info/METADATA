@@ -1,0 +1,26 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-product-variant
+Version: 8.0.20180419.0
+Summary: Meta package for oca-product-variant Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo8-addon-product-variant-available-in-pos
+Requires-Dist: odoo8-addon-product-variant-cost-price
+Requires-Dist: odoo8-addon-product-variant-csv-import
+Requires-Dist: odoo8-addon-product-variant-sale-delay
+Requires-Dist: odoo8-addon-product-variant-sale-price
+Requires-Dist: odoo8-addon-product-variant-search-by-attribute
+Requires-Dist: odoo8-addon-product-variant-storage-location
+Requires-Dist: odoo8-addon-product-variant-supplierinfo
+Requires-Dist: odoo8-addon-product-variant-uos
+Requires-Dist: odoo8-addon-product-variant-update-price
+Requires-Dist: odoo8-addon-product-variant-weight
+
+UNKNOWN
+
+
