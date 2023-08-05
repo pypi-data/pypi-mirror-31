@@ -1,0 +1,13 @@
+trytond/modules/account_de_skr03/__init__.py,sha256=8QSkSzDLQqsuF333cUO-A_uH8IItRdhBXl4OqFBCpok,143
+trytond/modules/account_de_skr03/account_de.xml,sha256=6gw8z-D-6s92RK0CBnGfqAT2p0A2xpZ8OGKQtLCSVTU,492519
+trytond/modules/account_de_skr03/tax_de.xml,sha256=Nv7C1hwrqTQitjf03H6SB03cz_TJFqJVBFcplAswyA4,52130
+trytond/modules/account_de_skr03/tryton.cfg,sha256=qgbuZEiIz8v_eoN0tg-KQhvLBjitA-mTRacZG28r3d0,83
+trytond/modules/account_de_skr03/tests/__init__.py,sha256=1kolThser5z2Mq-OKgs0VcOYRXoG_XI0TiRD9HD3nU8,319
+trytond/modules/account_de_skr03/tests/test_account_de_skr03.py,sha256=WOYu_DfqLc1ZP1u0H84tI9xAjqVaWhuZ74eLvITq6BE,536
+trytond_account_de_skr03-4.8.0.dist-info/DESCRIPTION.rst,sha256=n3BE-b4cdr2tyOlC-ML30nDk3HYae56aEfo0Oy3KQPU,593
+trytond_account_de_skr03-4.8.0.dist-info/METADATA,sha256=HMKEQSInlQvX-Bm-O0D-0RECE48DJShV53lErLTznHE,1953
+trytond_account_de_skr03-4.8.0.dist-info/RECORD,,
+trytond_account_de_skr03-4.8.0.dist-info/WHEEL,sha256=bee59qcPjkyXfMaxNWjl2CGotqfumWx9pC1hlVLr2mM,92
+trytond_account_de_skr03-4.8.0.dist-info/entry_points.txt,sha256=MNmDBYrL-yfziHPvpJioB09WpvLdyDW2GkIoMj7fggo,83
+trytond_account_de_skr03-4.8.0.dist-info/metadata.json,sha256=-oN-0c0oeMofA_GW6riW1x0gWYD6161qDdS3iGHE4nQ,1560
+trytond_account_de_skr03-4.8.0.dist-info/top_level.txt,sha256=1UNriCfRfjRjutJbJ_B8i13huVUoV_Otp9RlW3mCfw4,8
