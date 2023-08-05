@@ -1,0 +1,31 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-stock-logistics-warehouse
+Version: 8.0.20160930
+Summary: Meta package for OCA stock-logistics-warehouse Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo8-addon-stock-available
+Requires-Dist: odoo8-addon-stock-available-immediately
+Requires-Dist: odoo8-addon-stock-available-mrp
+Requires-Dist: odoo8-addon-stock-change-qty-reason
+Requires-Dist: odoo8-addon-stock-inventory-hierarchical
+Requires-Dist: odoo8-addon-stock-inventory-line-price
+Requires-Dist: odoo8-addon-stock-inventory-lockdown
+Requires-Dist: odoo8-addon-stock-inventory-preparation-filter
+Requires-Dist: odoo8-addon-stock-location-area-data
+Requires-Dist: odoo8-addon-stock-location-area-management
+Requires-Dist: odoo8-addon-stock-location-ownership
+Requires-Dist: odoo8-addon-stock-mts-mto-rule
+Requires-Dist: odoo8-addon-stock-putaway-product
+Requires-Dist: odoo8-addon-stock-quant-manual-assign
+Requires-Dist: odoo8-addon-stock-quant-merge
+Requires-Dist: odoo8-addon-stock-reserve
+Requires-Dist: odoo8-addon-stock-reserve-sale
+Requires-Dist: odoo8-addon-stock-traceability-operation
+
+UNKNOWN
+
+
