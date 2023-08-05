@@ -1,0 +1,17 @@
+setup.py
+./module/event_handler.cpp
+./module/init.cpp
+./module/py_init.cpp
+./module/py_module.cpp
+./module/py_template.cpp
+./module/py_utils.cpp
+./module/utils.cpp
+./module/wintoastlib.cpp
+zroya/dismiss_reason.py
+zroya/template_enums.py
+zroya/zroya.py
+zroya/zroya.pyi
+zroya.egg-info/PKG-INFO
+zroya.egg-info/SOURCES.txt
+zroya.egg-info/dependency_links.txt
+zroya.egg-info/top_level.txt
