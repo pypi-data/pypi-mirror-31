@@ -1,0 +1,12 @@
+CHANGES.txt
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+tinymenu/__init__.py
+tinymenu/tinymenu.py
+tinymenu.egg-info/PKG-INFO
+tinymenu.egg-info/SOURCES.txt
+tinymenu.egg-info/dependency_links.txt
+tinymenu.egg-info/top_level.txt
