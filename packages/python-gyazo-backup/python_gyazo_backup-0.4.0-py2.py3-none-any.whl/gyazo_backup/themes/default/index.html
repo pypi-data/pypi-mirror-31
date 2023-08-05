@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Python-Gyazo Backup</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <h1 class="text-center mt-4 mb-4">Python-Gyazo Backup</h1>
+    <div class="card-group images">
+      {% for image in images %}
+      <a href="{% if image.permalink_url %}{{ image.permalink_url }}{% else %}thumbnails/{{ image.thumb_filename }}{% endif %}" class="card">
+        <img class="card-img-top" src="thumbnails/{{ image.thumb_filename }}">
+        <div class="card-body">
+          <p class="card-text">
+            <small class="text-muted">{{ image.local_created_at.strftime("%Y-%m-%d %H:%M") }}</small>
+          </p>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+    <hr>
+    <footer class="text-center">
+      Built with python-gyazo-backup on {{ now.strftime("%Y-%m-%d %H:%M:%S") }}.
+    </footer>
+  </body>
+</html>
