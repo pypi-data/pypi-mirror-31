@@ -1,0 +1,11 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+Tool.py
+setup.py
+bqLie.egg-info/PKG-INFO
+bqLie.egg-info/SOURCES.txt
+bqLie.egg-info/dependency_links.txt
+bqLie.egg-info/top_level.txt
+sub/Tool2.py
+sub/__init__.py
