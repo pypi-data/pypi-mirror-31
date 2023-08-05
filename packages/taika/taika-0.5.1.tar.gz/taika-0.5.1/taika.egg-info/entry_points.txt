@@ -1,0 +1,4 @@
+[console_scripts]
+taika = taika.cli:main
+taika.server = taika.api:main
+
