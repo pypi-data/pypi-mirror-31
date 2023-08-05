@@ -1,0 +1,362 @@
+# Translations template for csb43.
+# Copyright (C) 2018 ORGANIZATION
+# This file is distributed under the same license as the csb43 project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: csb43 0.6.1\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2018-03-26 18:33+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.3\n"
+
+#: csb43/formats.py:113
+msgid "Package 'tablib' not found. Formats provided by 'tablib' will not be available."
+msgstr ""
+
+#: csb43/formats.py:122
+msgid "Package 'yaml' not found. Hierarchical YAML format will not be available."
+msgstr ""
+
+#: csb43/formats.py:208
+#, python-format
+msgid "unexpected format %s"
+msgstr ""
+
+#: csb43/formats.py:226
+msgid "Accounts"
+msgstr ""
+
+#: csb43/formats.py:259
+msgid "Transactions"
+msgstr ""
+
+#: csb43/csb43/account.py:545
+msgid "trying to close an already closed account"
+msgstr ""
+
+#: csb43/csb43/account.py:588
+#, python-format
+msgid "balance (%1.2f) mismatch in closing account record (%1.2f)"
+msgstr ""
+
+#: csb43/csb43/account.py:594
+#, python-format
+msgid "income amount (%1.2f) mismatch in closing account record (%1.2f)"
+msgstr ""
+
+#: csb43/csb43/account.py:601
+#, python-format
+msgid "expense amount (%1.2f) mismatch in closing account record (%1.2f)"
+msgstr ""
+
+#: csb43/csb43/account.py:608
+#, python-format
+msgid "income entries (%d) mismatch in closing account record (%d)"
+msgstr ""
+
+#: csb43/csb43/account.py:615
+#, python-format
+msgid "expense entries (%d) mismatch in closing account record (%d)"
+msgstr ""
+
+#: csb43/csb43/account.py:694
+msgid "transactions"
+msgstr ""
+
+#: csb43/csb43/csb_file.py:238
+msgid "trying to close an already closed file"
+msgstr ""
+
+#: csb43/csb43/csb_file.py:252
+#, python-format
+msgid "incongruent closing record of file: total records %d != %d"
+msgstr ""
+
+#: csb43/csb43/csb_file.py:311
+msgid "accounts"
+msgstr ""
+
+#: csb43/csb43/csb_file.py:357
+msgid "{naccounts:d}\taccount(s) read"
+msgstr ""
+
+#: csb43/csb43/csb_file.py:358
+msgid "File properly closed:\t{file_is_closed}"
+msgstr ""
+
+#: csb43/csb43/csb_file.py:359
+msgid "{total_records:d}\trecord(s) read"
+msgstr ""
+
+#: csb43/csb43/csb_file.py:369
+msgid "+ Account:\t{account_number}\t{short_name}"
+msgstr ""
+
+#: csb43/csb43/csb_file.py:370
+msgid "   From:\t{date_from}"
+msgstr ""
+
+#: csb43/csb43/csb_file.py:371
+msgid "   To:  \t{date_to}"
+msgstr ""
+
+#: csb43/csb43/csb_file.py:373
+msgid "{ntransactions:d} transaction(s) read"
+msgstr ""
+
+#: csb43/csb43/csb_file.py:374
+msgid "Account properly closed:\t{ac_is_closed}"
+msgstr ""
+
+#: csb43/csb43/csb_file.py:375
+msgid "Information mode:\t{information_mode}"
+msgstr ""
+
+#: csb43/csb43/csb_file.py:376
+msgid "Previous amount:\t{ib_amount:14.2f}\t{ib_currency}"
+msgstr ""
+
+#: csb43/csb43/csb_file.py:377
+msgid " Income:        \t{inc_amount:14.2f}\t{inc_currency}"
+msgstr ""
+
+#: csb43/csb43/csb_file.py:378
+msgid " Expense:       \t{exp_amount:14.2f}\t{exp_currency}"
+msgstr ""
+
+#: csb43/csb43/csb_file.py:379
+msgid "Balance:        \t{bal_amount:14.2f}\t{bal_currency}"
+msgstr ""
+
+#: csb43/csb43/transaction.py:195
+#, python-format
+msgid "maximum number of exchange record reached (%s)"
+msgstr ""
+
+#: csb43/csb43/transaction.py:350
+#, python-format
+msgid "Validation failed for reference '%s'"
+msgstr ""
+
+#: csb43/csb43/transaction.py:413
+#, python-format
+msgid "the maximum number of complementary items for transaction has been reached: %d"
+msgstr ""
+
+#: csb43/homebank/__init__.py:81
+#, python-format
+msgid "bad format, 6 fields expected, but%d found"
+msgstr ""
+
+#: csb43/homebank/__init__.py:104
+msgid "datetime.date expected"
+msgstr ""
+
+#: csb43/utils/__init__.py:71
+#, python-format
+msgid "Bad format: content '%s' mismatches the expected format r'%s' for this field"
+msgstr ""
+
+#: csb43/utils/__init__.py:198
+#, python-format
+msgid "instance of datetime or date expected, but '%s' found"
+msgstr ""
+
+#: csb43/utils/cmd.py:134
+#, python-format
+msgid "argument \"-\" with mode %r"
+msgstr ""
+
+#: csb43/utils/cmd.py:152
+#, python-format
+msgid "can't open '%s': %s"
+msgstr ""
+
+#: csb43/utils/cmd.py:162
+msgid "Convert a CSB43 file to another format"
+msgstr ""
+
+#: csb43/utils/cmd.py:170
+msgid "a csb43 file ('-' for stdin)"
+msgstr ""
+
+#: csb43/utils/cmd.py:175
+#, python-format
+msgid "strict mode (default: %(default)s)"
+msgstr ""
+
+#: csb43/utils/cmd.py:180
+#, python-format
+msgid "use DDMMYY as date format while parsing the csb43 file instead of YYMMDD (default: %(default)s)"
+msgstr ""
+
+#: csb43/utils/cmd.py:189
+#, python-format
+msgid "set the number of decimal places for the currency type (default: %(default)d)"
+msgstr ""
+
+#: csb43/utils/cmd.py:196
+#, python-format
+msgid "export monetary amounts using binary floating point numbers as a fallback (default: %(default)s)"
+msgstr ""
+
+#: csb43/utils/cmd.py:202
+msgid "show csb43 warnings"
+msgstr ""
+
+#: csb43/utils/cmd.py:209
+msgid "destination file ('-' for stdout)"
+msgstr ""
+
+#: csb43/utils/cmd.py:215
+#, python-format
+msgid "Format of the output file (default: %(default)s)"
+msgstr ""
+
+#: csb43/utils/cmd.py:239
+msgid "File:"
+msgstr ""
+
+#: csb43/utils/messages.py:11
+#, python-format
+msgid "bad code of record or unexpected length: >>>%s<<<"
+msgstr ""
+
+#: csb43/utils/messages.py:15
+#, python-format
+msgid "pycountry.Currencies object or a valid ISO 4217 code expected, but %s found"
+msgstr ""
+
+#: csb43/utils/messages.py:22
+#, python-format
+msgid "incompatible object '%s', type(s) %s expected"
+msgstr ""
+
+#: csb43/utils/messages.py:28
+msgid "bank_code"
+msgstr ""
+
+#: csb43/utils/messages.py:29
+msgid "branch_code"
+msgstr ""
+
+#: csb43/utils/messages.py:30
+msgid "account_key"
+msgstr ""
+
+#: csb43/utils/messages.py:31
+msgid "account_number"
+msgstr ""
+
+#: csb43/utils/messages.py:34
+msgid "information_mode"
+msgstr ""
+
+#: csb43/utils/messages.py:35
+msgid "short_name"
+msgstr ""
+
+#: csb43/utils/messages.py:36
+msgid "currency"
+msgstr ""
+
+#: csb43/utils/messages.py:37
+msgid "initial_date"
+msgstr ""
+
+#: csb43/utils/messages.py:38
+msgid "final_date"
+msgstr ""
+
+#: csb43/utils/messages.py:39
+msgid "initial_balance"
+msgstr ""
+
+#: csb43/utils/messages.py:40
+msgid "final_balance"
+msgstr ""
+
+#: csb43/utils/messages.py:41
+msgid "income"
+msgstr ""
+
+#: csb43/utils/messages.py:42
+msgid "expenses"
+msgstr ""
+
+#: csb43/utils/messages.py:43
+msgid "income_entries"
+msgstr ""
+
+#: csb43/utils/messages.py:44
+msgid "expenses_entries"
+msgstr ""
+
+#: csb43/utils/messages.py:47
+msgid "document_number"
+msgstr ""
+
+#: csb43/utils/messages.py:48
+msgid "shared_item"
+msgstr ""
+
+#: csb43/utils/messages.py:49
+msgid "own_item"
+msgstr ""
+
+#: csb43/utils/messages.py:50
+msgid "item1"
+msgstr ""
+
+#: csb43/utils/messages.py:51
+msgid "item2"
+msgstr ""
+
+#: csb43/utils/messages.py:52
+msgid "reference1"
+msgstr ""
+
+#: csb43/utils/messages.py:53
+msgid "reference2"
+msgstr ""
+
+#: csb43/utils/messages.py:54
+msgid "transaction_date"
+msgstr ""
+
+#: csb43/utils/messages.py:55
+msgid "value_date"
+msgstr ""
+
+#: csb43/utils/messages.py:56
+msgid "amount"
+msgstr ""
+
+#: csb43/utils/messages.py:57
+msgid "original_currency"
+msgstr ""
+
+#: csb43/utils/messages.py:58
+msgid "original_amount"
+msgstr ""
+
+#: csb43/utils/messages.py:59
+msgid "optional_items"
+msgstr ""
+
+#: csb43/utils/messages.py:60
+msgid "exchange"
+msgstr ""
+
+#: csb43/utils/messages.py:63
+msgid "record_code"
+msgstr ""
+
