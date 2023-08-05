@@ -1,0 +1,29 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-knowledge
+Version: 8.0.20180419.0
+Summary: Meta package for oca-knowledge Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo8-addon-attachment-edit
+Requires-Dist: odoo8-addon-attachment-preview
+Requires-Dist: odoo8-addon-attachments-to-filesystem
+Requires-Dist: odoo8-addon-document-choose-directory
+Requires-Dist: odoo8-addon-document-no-unique-filenames
+Requires-Dist: odoo8-addon-document-ocr
+Requires-Dist: odoo8-addon-document-page
+Requires-Dist: odoo8-addon-document-page-approval
+Requires-Dist: odoo8-addon-document-page-partner-id
+Requires-Dist: odoo8-addon-document-page-tags
+Requires-Dist: odoo8-addon-document-reindex
+Requires-Dist: odoo8-addon-document-rtf-index
+Requires-Dist: odoo8-addon-document-sftp
+Requires-Dist: odoo8-addon-document-url
+
+UNKNOWN
+
+
