@@ -1,0 +1,21 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-account-closing
+Version: 8.0.20170607
+Summary: Meta package for OCA account-closing Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo8-addon-account-cutoff-accrual-base
+Requires-Dist: odoo8-addon-account-cutoff-accrual-picking
+Requires-Dist: odoo8-addon-account-cutoff-base
+Requires-Dist: odoo8-addon-account-cutoff-prepaid
+Requires-Dist: odoo8-addon-account-invoice-accrual
+Requires-Dist: odoo8-addon-account-multicurrency-revaluation
+
+UNKNOWN
+
+
