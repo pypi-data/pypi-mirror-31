@@ -1,0 +1,13 @@
+nanowire_plugin/__init__.py,sha256=sTqOBPXpJXrFBRfji9hU5YKN0HwlQybgXMsb25rwFus,16935
+nanowire_plugin/group_tools.py,sha256=v8zjiykyy3sTvpcJ80XyWmugbaB5ATtoWgtWKifuEnk,25539
+nanowire_plugin/single_file_tools.py,sha256=2rBMKYtcXTvaK1WqUVAAkolEmIF-BxLc6LHkjsFrFUQ,15592
+nanowire_plugin/group_tools/__init__.py,sha256=2YtBOzwMaNFYJkORvqeAYDYPIUGTeOGSkZrODt7X9Wk,25975
+nanowire_plugin/single_file_tools/__init__.py,sha256=2FLWszZVWCrJQcNuO0xeeAR0rvat4YdUJVZ7lYdAMvw,19360
+nanowire_plugin-0.11.8.data/data/VERSION,sha256=-LTBc0txAW6nTb21lilgo5YWFfM3fd9YXJVs_Tl7HW0,7
+nanowire_plugin-0.11.8.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+nanowire_plugin-0.11.8.dist-info/METADATA,sha256=G9Pa7Ah8E8MqpCTRW6Sw5g3x-PUaVdJzjFrArC0JvO0,479
+nanowire_plugin-0.11.8.dist-info/RECORD,,
+nanowire_plugin-0.11.8.dist-info/WHEEL,sha256=rNo05PbNqwnXiIHFsYm0m22u4Zm6YJtugFG2THx4w3g,92
+nanowire_plugin-0.11.8.dist-info/metadata.json,sha256=5nL8vN2QwzQCgP7Q3fL5J_WMe3le9YsdfojywN6m530,700
+nanowire_plugin-0.11.8.dist-info/top_level.txt,sha256=eraF0r-Qm5C2-rzATxiRysEnCRU8B92BNH19Q2NIZwk,23
+tester/__init__.py,sha256=JIcLdhjPiJKAFamX3kZaOpb1aeXFpYfiLtcPJJPncuU,148466
