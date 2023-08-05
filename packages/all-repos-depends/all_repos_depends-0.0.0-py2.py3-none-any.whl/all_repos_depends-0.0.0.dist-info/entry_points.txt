@@ -1,0 +1,4 @@
+[console_scripts]
+all-repos-depends-generate = all_repos_depends.generate:main
+all-repos-depends-server = all_repos_depends.server:main
+
