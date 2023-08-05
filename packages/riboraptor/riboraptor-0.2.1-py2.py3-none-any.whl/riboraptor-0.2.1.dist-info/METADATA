@@ -1,0 +1,102 @@
+Metadata-Version: 2.0
+Name: riboraptor
+Version: 0.2.1
+Summary: Python package to analyse ribosome profiling data
+Home-page: https://github.com/saketkc/riboraptor
+Author: Saket Choudhary
+Author-email: saketkc@gmail.com
+License: BSD license
+Keywords: riboraptor
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Requires-Dist: gffutils (>=0.9)
+Requires-Dist: matplotlib (>=2.1.0)
+Requires-Dist: mne (>=0.15.2)
+Requires-Dist: mtspec (>=0.3.2)
+Requires-Dist: numpy (>=1.11.0)
+Requires-Dist: pandas (>=0.20.3)
+Requires-Dist: pybedtools (>=0.7.10)
+Requires-Dist: pyBigWig (>=0.2.8)
+Requires-Dist: pyfaidx (>=0.5.0)
+Requires-Dist: pysam (>=0.11.2.2)
+Requires-Dist: scipy (>=0.19.1)
+Requires-Dist: seaborn (>=0.8.1)
+Requires-Dist: statsmodels (>=0.8.0)
+Requires-Dist: pycwt (>=0.3.0a22)
+Requires-Dist: six (>=1.11.0)
+Requires-Dist: Click (>=6.0)
+Requires-Dist: click-help-colors (>=0.3)
+Requires-Dist: HTSeq (>=0.9.1)
+Requires-Dist: Biopython (>=1.70)
+
+=======================================================
+riboraptor : Tool for analysing ribosome profiling data
+=======================================================
+
+
+.. image:: https://img.shields.io/pypi/v/riboraptor.svg
+        :target: https://pypi.python.org/pypi/riboraptor
+
+.. image:: https://travis-ci.org/saketkc/riboraptor.svg?branch=master
+        :target: https://travis-ci.org/saketkc/riboraptor
+
+.. image:: https://pyup.io/repos/github/saketkc/riboraptor/shield.svg
+     :target: https://pyup.io/repos/github/saketkc/riboraptor/
+     :alt: Updates
+
+
+Python package to analyse ribosome profiling data
+
+
+* Free software: BSD license
+* Documentation: http://saketkc.github.io/riboraptor/
+
+Installation
+------------
+
+Using conda:
+
+.. code-block:: bash
+
+   $ git clone git@github.com:saketkc/riboraptor.git
+   $ conda create --name raptor gffutils matplotlib mne mtspec numpy pandas pybedtools \
+   pyBigWig pyfaidx pysam scipy seaborn pycwt six click click-help-colors htseq biopython
+   $ cd riboraptor
+   $ python setup.py install --single-version-externally-managed --record=/tmp/record.txt
+
+
+Using pip only:
+
+.. code-block:: bash
+
+   $ git clone git@github.com:saketkc/riboraptor.git
+   $ cd riboraptor
+   $ pip install -r requirements.txt
+   $ python setup.py install
+
+
+Features
+--------
+
+See: http://saketkc.github.io/riboraptor/cmd-manual.html
+
+
+
+
+=======
+History
+=======
+
+0.2.0 (04-23-2018)
+------------------
+
+* First release on PyPI.
+
+
