@@ -1,0 +1,32 @@
+Metadata-Version: 2.0
+Name: odoo10-addons-oca-l10n-spain
+Version: 10.0.20170912
+Summary: Meta package for OCA l10n-spain Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo10-addon-account-balance-reporting
+Requires-Dist: odoo10-addon-l10n-es
+Requires-Dist: odoo10-addon-l10n-es-account-asset
+Requires-Dist: odoo10-addon-l10n-es-account-balance-report
+Requires-Dist: odoo10-addon-l10n-es-account-bank-statement-import-n43
+Requires-Dist: odoo10-addon-l10n-es-account-banking-sepa-fsdd
+Requires-Dist: odoo10-addon-l10n-es-account-invoice-sequence
+Requires-Dist: odoo10-addon-l10n-es-aeat
+Requires-Dist: odoo10-addon-l10n-es-aeat-mod111
+Requires-Dist: odoo10-addon-l10n-es-aeat-mod115
+Requires-Dist: odoo10-addon-l10n-es-aeat-mod303
+Requires-Dist: odoo10-addon-l10n-es-dua
+Requires-Dist: odoo10-addon-l10n-es-irnr
+Requires-Dist: odoo10-addon-l10n-es-location-nuts
+Requires-Dist: odoo10-addon-l10n-es-partner
+Requires-Dist: odoo10-addon-l10n-es-partner-mercantil
+Requires-Dist: odoo10-addon-l10n-es-toponyms
+
+UNKNOWN
+
+
