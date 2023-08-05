@@ -1,0 +1,53 @@
+=======
+History
+=======
+
+0.1.10 (2018-04-19)
+-------------------
+
+* Simplifies the example template
+
+0.1.9 (2018-04-19)
+------------------
+
+* **Breaking change:** Renamed ``bb2`` to ``other`` in ``BoundingBox()``
+* ``ground_truth_path`` is no longer a required argument
+
+0.1.8 (2018-04-18)
+------------------
+
+* Fixes template folder in distribution
+
+0.1.7 (2018-04-18)
+------------------
+
+* Adds cookiecutter templating for generating new projects
+* Adds equality check for ``BoundingBox``
+
+0.1.6 (2018-03-30)
+------------------
+
+* Improves pandas csv handling
+
+0.1.5 (2018-03-30)
+------------------
+
+* Corrects loading of some CSV files
+* Adds logging and more tests
+* Adds referencing to ``_ground_truth`` and ``_prediction`` in joined pandas tables
+
+
+0.1.3 (2018-03-29)
+------------------
+
+* Adds basic implementation with
+    * Full Evaluation workflow
+    * CSV, SimpleITK, and ImageIO loaders
+    * BoundingBox annotations with intersection, union and intersection over union metrics
+    * Unique File Indices, Unique Image, Expected Column Names and Number of cases validators
+
+
+0.1.0 (2018-03-22)
+------------------
+
+* First release on PyPI.
