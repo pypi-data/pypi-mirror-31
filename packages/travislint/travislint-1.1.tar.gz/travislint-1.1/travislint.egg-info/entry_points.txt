@@ -1,0 +1,3 @@
+[console_scripts]
+travislint = travislint.travislint:main
+

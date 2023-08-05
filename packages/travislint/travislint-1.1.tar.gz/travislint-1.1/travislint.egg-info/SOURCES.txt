@@ -1,0 +1,11 @@
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+travislint/travislint.py
+travislint.egg-info/PKG-INFO
+travislint.egg-info/SOURCES.txt
+travislint.egg-info/dependency_links.txt
+travislint.egg-info/entry_points.txt
+travislint.egg-info/requires.txt
+travislint.egg-info/top_level.txt
