@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+juptercv/__init__.py
+juptercv/images.py
+jupytercv.egg-info/PKG-INFO
+jupytercv.egg-info/SOURCES.txt
+jupytercv.egg-info/dependency_links.txt
+jupytercv.egg-info/requires.txt
+jupytercv.egg-info/top_level.txt
