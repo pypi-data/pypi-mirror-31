@@ -1,0 +1,28 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-hr-timesheet
+Version: 8.0.20180419.0
+Summary: Meta package for oca-hr-timesheet Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo8-addon-crm-timesheet
+Requires-Dist: odoo8-addon-crm-timesheet-analytic-partner
+Requires-Dist: odoo8-addon-hr-employee-product
+Requires-Dist: odoo8-addon-hr-timesheet-activity-begin-end
+Requires-Dist: odoo8-addon-hr-timesheet-holiday
+Requires-Dist: odoo8-addon-hr-timesheet-improvement
+Requires-Dist: odoo8-addon-hr-timesheet-invoice-hide-to-invoice
+Requires-Dist: odoo8-addon-hr-timesheet-invoice-hide-to-invoice-task
+Requires-Dist: odoo8-addon-hr-timesheet-no-closed-project-task
+Requires-Dist: odoo8-addon-hr-timesheet-sheet-change-period
+Requires-Dist: odoo8-addon-hr-timesheet-task
+Requires-Dist: odoo8-addon-hr-timesheet-task-required
+Requires-Dist: odoo8-addon-timesheet-task
+
+UNKNOWN
+
+
