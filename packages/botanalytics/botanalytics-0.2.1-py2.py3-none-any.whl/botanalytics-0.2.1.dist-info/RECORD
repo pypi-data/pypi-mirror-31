@@ -1,0 +1,11 @@
+botanalytics/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+botanalytics/amazon.py,sha256=Ane-ebAcbk4pwSus2yMHZiCVfg6ClC6N-jTHOGluiKw,4683
+botanalytics/facebook.py,sha256=XeaEpODmR3eeh5xaeW6gNU9bCY0aSsA-J-WIkoAQ4dE,3890
+botanalytics/generic.py,sha256=N8cZlXahCaP77-nVt7oK4MFjBRGaCXfnMS0YLBelafI,2323
+botanalytics/google.py,sha256=EbLe_1ZBhkENsmW9idIxqQCzzraFRw_ExJmT8twQbbI,5467
+botanalytics/slack.py,sha256=ArtPHPSRx69FohR_OAChkhZ18VfisFQznNZzgJ8_SQ4,9577
+botanalytics/util.py,sha256=7gKOLn5INXEVcaAjbcMDM6qy0vVwSen2jYQTcdyxcfo,5318
+botanalytics-0.2.1.dist-info/METADATA,sha256=RvguOM5lx1Of3lgyiggZwJY2T9Kt4ewpCBH7WrAgrIU,10793
+botanalytics-0.2.1.dist-info/RECORD,,
+botanalytics-0.2.1.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+botanalytics-0.2.1.dist-info/top_level.txt,sha256=94kzyFjEmeus_qWLloPuOBDKd_mno4CjIajwtcecS-c,13
