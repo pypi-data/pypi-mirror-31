@@ -1,0 +1,98 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+Proxy models for augmenting our source data tables with methods useful for processing.
+"""
+from .base import OCDProxyModelMixin
+from .campaign_finance import (
+    OCDCommitteeProxy,
+    OCDCommitteeIdentifierProxy,
+    OCDCommitteeNameProxy,
+    OCDCommitteeSourceProxy,
+    OCDCommitteeTypeProxy,
+    OCDFilingProxy,
+    OCDFilingIdentifierProxy,
+    OCDFilingSourceProxy,
+    OCDFilingActionProxy,
+    OCDFilingActionSummaryAmountProxy,
+    OCDTransactionProxy,
+    OCDTransactionIdentifierProxy
+)
+from .core import (
+    OCDDivisionProxy,
+    OCDMembershipProxy,
+    OCDOrganizationProxy,
+    OCDOrganizationIdentifierProxy,
+    OCDOrganizationNameProxy,
+    OCDJurisdictionProxy,
+    OCDPersonProxy,
+    OCDPersonIdentifierProxy,
+    OCDPersonNameProxy,
+    OCDPostProxy
+)
+from .elections import (
+    OCDBallotMeasureContestProxy,
+    OCDBallotMeasureContestIdentifierProxy,
+    OCDBallotMeasureContestOptionProxy,
+    OCDBallotMeasureContestSourceProxy,
+    OCDCandidateContestProxy,
+    OCDCandidateContestPostProxy,
+    OCDCandidateContestSourceProxy,
+    OCDCandidacyProxy,
+    OCDCandidacySourceProxy,
+    OCDElectionProxy,
+    OCDElectionIdentifierProxy,
+    OCDElectionSourceProxy,
+    OCDPartyProxy,
+    OCDRetentionContestProxy,
+    OCDRetentionContestIdentifierProxy,
+    OCDRetentionContestOptionProxy,
+    OCDRetentionContestSourceProxy,
+)
+
+
+__all__ = (
+    'OCDBallotMeasureContestProxy',
+    'OCDBallotMeasureContestIdentifierProxy',
+    'OCDBallotMeasureContestOptionProxy',
+    'OCDBallotMeasureContestSourceProxy',
+    'OCDCandidateContestProxy',
+    'OCDCandidateContestPostProxy',
+    'OCDCandidateContestSourceProxy',
+    'OCDCandidacyProxy',
+    'OCDCandidacySourceProxy',
+    'OCDCommitteeProxy',
+    'OCDCommitteeIdentifierProxy',
+    'OCDCommitteeNameProxy',
+    'OCDCommitteeSourceProxy',
+    'OCDCommitteeTypeProxy',
+    'OCDFilingProxy',
+    'OCDFilingIdentifierProxy',
+    'OCDFilingSourceProxy',
+    'OCDFilingActionProxy',
+    'OCDFilingActionSummaryAmountProxy',
+    'OCDTransactionProxy',
+    'OCDTransactionIdentifierProxy',
+    'OCDDivisionProxy',
+    'OCDElectionProxy',
+    'OCDElectionIdentifierProxy',
+    'OCDElectionSourceProxy',
+    'OCDFlatBallotMeasureContestProxy',
+    'OCDFlatCandidacyProxy',
+    'OCDFlatRetentionContestProxy',
+    'OCDJurisdictionProxy',
+    'OCDMembershipProxy',
+    'OCDOrganizationProxy',
+    'OCDOrganizationIdentifierProxy',
+    'OCDOrganizationNameProxy',
+    'OCDPartyProxy',
+    'OCDPersonProxy',
+    'OCDPersonIdentifierProxy',
+    'OCDPersonNameProxy',
+    'OCDPostProxy',
+    'OCDProxyModelMixin',
+    'OCDRetentionContestProxy',
+    'OCDRetentionContestIdentifierProxy',
+    'OCDRetentionContestOptionProxy',
+    'OCDRetentionContestSourceProxy',
+)
