@@ -1,0 +1,3 @@
+[console_scripts]
+oshino-admin = oshino_admin.run:main
+

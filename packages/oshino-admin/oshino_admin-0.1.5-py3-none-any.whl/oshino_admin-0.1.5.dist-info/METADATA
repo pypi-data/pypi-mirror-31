@@ -1,0 +1,17 @@
+Metadata-Version: 2.0
+Name: oshino-admin
+Version: 0.1.5
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: zaibacu
+Author-email: zaibacu@gmail.com
+License: UNKNOWN
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: click (==6.7)
+Requires-Dist: daemonize
+Requires-Dist: requests
+
+UNKNOWN
+
+
