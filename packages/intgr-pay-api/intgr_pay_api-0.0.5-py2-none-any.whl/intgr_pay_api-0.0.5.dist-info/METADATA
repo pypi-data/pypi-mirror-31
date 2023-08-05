@@ -1,0 +1,36 @@
+Metadata-Version: 2.0
+Name: intgr-pay-api
+Version: 0.0.5
+Summary: An API for PayU allowing to integrate online payments using PayU.
+Home-page: https://github.com/integree/intgr-payu-api
+Author: Integree Business Solutions
+Author-email: dev@integree.eu
+License: MIT License
+Download-URL: https://pypi.python.org/packages/source/i/intgr-payu-api/intgr-payu-api-0.0.5.zip
+Keywords: api pay payments online utils integree
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Framework :: Django :: 1.8
+Classifier: Framework :: Django :: 1.9
+Classifier: Framework :: Django :: 1.10
+Classifier: Framework :: Django :: 1.10
+Classifier: Framework :: Django :: 1.11
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: django-appconf
+Requires-Dist: requests
+Requires-Dist: babel
+Requires-Dist: money
+Requires-Dist: paypalrestsdk (==1.13.1)
+
+UNKNOWN
+
+
