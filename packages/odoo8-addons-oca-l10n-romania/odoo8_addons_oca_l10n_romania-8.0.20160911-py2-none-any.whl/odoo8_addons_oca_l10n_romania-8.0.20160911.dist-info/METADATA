@@ -1,0 +1,18 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-l10n-romania
+Version: 8.0.20160911
+Summary: Meta package for OCA l10n-romania Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo8-addon-l10n-ro-config
+Requires-Dist: odoo8-addon-l10n-ro-partner-create-by-vat
+Requires-Dist: odoo8-addon-l10n-ro-partner-unique
+Requires-Dist: odoo8-addon-l10n-ro-siruta
+Requires-Dist: odoo8-addon-l10n-ro-vat-on-payment
+
+UNKNOWN
+
+
