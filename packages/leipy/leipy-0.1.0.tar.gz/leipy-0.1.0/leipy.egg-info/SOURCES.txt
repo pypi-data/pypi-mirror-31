@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+leipy/__init__.py
+leipy/gleif.py
+leipy.egg-info/PKG-INFO
+leipy.egg-info/SOURCES.txt
+leipy.egg-info/dependency_links.txt
+leipy.egg-info/requires.txt
+leipy.egg-info/top_level.txt
