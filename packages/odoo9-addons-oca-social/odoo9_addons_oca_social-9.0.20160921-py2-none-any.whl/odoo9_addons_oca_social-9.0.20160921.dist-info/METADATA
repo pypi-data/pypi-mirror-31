@@ -1,0 +1,19 @@
+Metadata-Version: 2.0
+Name: odoo9-addons-oca-social
+Version: 9.0.20160921
+Summary: Meta package for OCA social Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo9-addon-email-template-qweb
+Requires-Dist: odoo9-addon-mail-as-letter
+Requires-Dist: odoo9-addon-mail-attach-existing-attachment
+Requires-Dist: odoo9-addon-mail-optional-autofollow
+Requires-Dist: odoo9-addon-mail-tracking
+Requires-Dist: odoo9-addon-mail-tracking-mailgun
+
+UNKNOWN
+
+
