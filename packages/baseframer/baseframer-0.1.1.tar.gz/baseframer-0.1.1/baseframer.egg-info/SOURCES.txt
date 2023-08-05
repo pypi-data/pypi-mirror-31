@@ -1,0 +1,12 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+index.md
+setup.cfg
+setup.py
+baseframer.egg-info/PKG-INFO
+baseframer.egg-info/SOURCES.txt
+baseframer.egg-info/dependency_links.txt
+baseframer.egg-info/entry_points.txt
+baseframer.egg-info/requires.txt
+baseframer.egg-info/top_level.txt
