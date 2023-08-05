@@ -1,0 +1,35 @@
+Metadata-Version: 2.0
+Name: glucid
+Version: 0.1.1
+Summary: Configure the Lucid 8824 AD/DA Audio Interface via              a Serial Connection
+Home-page: http://github.com/danmechanic/glucid
+Author: Daniel R Mechanic
+Author-email: dan.mechanic@gmail.com
+License: GPL V3
+Description-Content-Type: text/x-rst
+Keywords: lucid 8824 audio converter
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Topic :: Multimedia :: Sound/Audio :: Conversion
+Classifier: Topic :: Multimedia :: Sound/Audio :: Capture/Recording
+Requires-Python: >=3
+
+=======
+ glucid
+=======
+
+**glucid**  is a python project to provide an api and
+convenient command-line interface to configure RS232-model
+Lucid 8824 Analog/Digital Audio Converters over a Serial
+Connection.
+
+Copyright (C) 2017,2018  Daniel R Mechanic (dan.mechanic@gmail.com)
+
+Visit http://www.glucid.org for more information
+
+
