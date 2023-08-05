@@ -1,0 +1,21 @@
+Metadata-Version: 2.0
+Name: odoo9-addons-oca-account-invoice-reporting
+Version: 9.0.20180419.0
+Summary: Meta package for oca-account-invoice-reporting Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo9-addon-account-draft-invoice-print
+Requires-Dist: odoo9-addon-account-invoice-line-report
+Requires-Dist: odoo9-addon-account-reporting-weight
+Requires-Dist: odoo9-addon-base-comment-template
+Requires-Dist: odoo9-addon-invoice-comment-template
+Requires-Dist: odoo9-addon-product-brand-invoice-report
+
+UNKNOWN
+
+
