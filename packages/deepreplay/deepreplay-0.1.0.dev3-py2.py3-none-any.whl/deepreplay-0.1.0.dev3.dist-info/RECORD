@@ -1,0 +1,15 @@
+deepreplay/__init__.py,sha256=9V3Hg552YgwOurFBqvaTSiD6torvf8GKr-sL8SdkUyQ,23
+deepreplay/callbacks.py,sha256=AWSooZCADHuLhvIsSAJu60VHdhJLIbb3-Vamc4FESsk,2802
+deepreplay/plot.py,sha256=TCeazHzeeUiR2whdlMsAmyynTK1In9mDCY_RSSC-UKo,11879
+deepreplay/replay.py,sha256=6_hCmmx-BQFuw3RjycS1KeXLk8xxGTyPPb4-LDdL7ms,8801
+deepreplay/datasets/__init__.py,sha256=9V3Hg552YgwOurFBqvaTSiD6torvf8GKr-sL8SdkUyQ,23
+deepreplay/datasets/parabola.py,sha256=2g7tQ1m53XPl6HHlBIhTiBniExSsnF0K29oXlVpVs2E,969
+deepreplay-0.1.0.dev3.dist-info/DESCRIPTION.rst,sha256=gMjTZHxBAuptZYhrx9-6qwXZ9mw3LM6Y1RkHx8Jk-jU,4868
+deepreplay-0.1.0.dev3.dist-info/METADATA,sha256=OM2A8bdJE7PuQEydFKGGfbwRayoTJSdPJnYcb1eBrTg,5810
+deepreplay-0.1.0.dev3.dist-info/RECORD,,
+deepreplay-0.1.0.dev3.dist-info/WHEEL,sha256=o2k-Qa-RMNIJmUdIc7KU6VWR_ErNRbWNlxDIpl7lm34,110
+deepreplay-0.1.0.dev3.dist-info/metadata.json,sha256=TOFTvC2qUbZyA4sa4An7VYHy2XEfAx_J2YNAZSzYhG4,1064
+deepreplay-0.1.0.dev3.dist-info/top_level.txt,sha256=DI3UcbzlTchtOiyNcNEncGZEzbRMPaqK_Fy0DZ2RqWc,20
+examples/__init__.py,sha256=9V3Hg552YgwOurFBqvaTSiD6torvf8GKr-sL8SdkUyQ,23
+examples/part1_activation_functions.py,sha256=UsYcg6DTuzFTNUYCajbXp-dIwAgA_23hb4_HP5zom-E,1934
+examples/part2_initializers.py,sha256=Wgb8ZGUO-YnUOnx4X3EXfMcTDhHsQb7Vum0re0jfVzI,1787
