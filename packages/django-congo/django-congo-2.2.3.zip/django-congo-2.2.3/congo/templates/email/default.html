@@ -1,0 +1,15 @@
+{% extends "email/base.html" %}
+{% load i18n common %}
+
+<!-- Footer -->
+{% block footer_wrapper %}
+  <tr>
+    <td class="footer">
+      {% block footer %}
+        {% blockvar "domain" %}{% domain ssl=True append_slash=False %}{% endblockvar %}
+        <p>{% blocktrans with domain as domain %}Ta wiadomość została wysłana zgodnie z postanowieniami art. 10 Par. 2 ustawy z dnia 18.07.2002 (Dz.U. Nr 144, poz. 1204 z 2002 roku ), ponieważ jesteś subskrybentem {{ domain }} biuletynu serwisowego. Jeśli nie chcesz być informowany o naszej ofercie więcej, proszę kliknąć na link : <a href="{{ domain }}{! unsubscribe !}">{{ domain }}{! unsubscribe !}</a>.{% endblocktrans %}
+      {% endblock %}
+    </td>
+  </tr>
+{% endblock %}
+<!-- /Footer -->

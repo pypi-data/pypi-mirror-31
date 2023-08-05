@@ -1,0 +1,2145 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-22 21:12+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .\congo\accounts\admin.py:49
+msgid "Dane osobiste"
+msgstr ""
+
+#: .\congo\accounts\admin.py:50
+msgid "Uprawnienia"
+msgstr ""
+
+#: .\congo\accounts\admin.py:51
+msgid "Inne informacje"
+msgstr ""
+
+#: .\congo\accounts\admin.py:121
+msgid "% (name)s obiekt o kluczu %(key)r nie istnieje."
+msgstr ""
+
+#: .\congo\accounts\admin.py:131
+msgid "Hasło zostało zmienione pomyślnie."
+msgstr ""
+
+#: .\congo\accounts\admin.py:142
+#, python-format
+msgid "Zmień hasło :%s"
+msgstr ""
+
+#: .\congo\accounts\forms.py:19
+msgid "First name"
+msgstr ""
+
+#: .\congo\accounts\forms.py:20
+msgid "Last name"
+msgstr ""
+
+#: .\congo\accounts\forms.py:21 .\congo\accounts\models.py:61
+#: .\congo\communication\models.py:38 .\congo\communication\models.py:121
+msgid "Adres e-mail"
+msgstr ""
+
+#: .\congo\accounts\forms.py:22 .\congo\accounts\forms.py:158
+#: .\congo\accounts\forms.py:190
+msgid "Hasło"
+msgstr ""
+
+#: .\congo\accounts\forms.py:22 .\congo\accounts\forms.py:84
+msgid "Przynajmniej 8 znaków, użyj liczb i liter."
+msgstr ""
+
+#: .\congo\accounts\forms.py:23 .\congo\accounts\forms.py:159
+msgid "Potwierdź hasło"
+msgstr ""
+
+#: .\congo\accounts\forms.py:33 .\congo\accounts\forms.py:170
+msgid "Użytkownik z podanym adresem e-mail już istnieje"
+msgstr ""
+
+#: .\congo\accounts\forms.py:41 .\congo\accounts\forms.py:94
+msgid "Hasło jest zbyt krótkie. Minimalna długość hasła to 8 znaków."
+msgstr ""
+
+#: .\congo\accounts\forms.py:43 .\congo\accounts\forms.py:96
+msgid "Hasło musi zawierać co najmniej jedną literę i jedną cyfrę."
+msgstr ""
+
+#: .\congo\accounts\forms.py:58 .\congo\accounts\forms.py:104
+#: .\congo\accounts\forms.py:179
+msgid "Wprowadzone hasła nie pasują do siebie."
+msgstr ""
+
+#: .\congo\accounts\forms.py:61
+msgid "Aby zostać naszym subskrybentem, wpisz swoje imię."
+msgstr ""
+
+#: .\congo\accounts\forms.py:79 .\congo\accounts\forms.py:120
+msgid "Twój e-mail"
+msgstr ""
+
+#: .\congo\accounts\forms.py:80
+msgid "Wprowadź poprawny adres e-mail oraz hasło. Wielkość liter ma znaczenie."
+msgstr ""
+
+#: .\congo\accounts\forms.py:81
+msgid "Konto nie jest aktywne."
+msgstr ""
+
+#: .\congo\accounts\forms.py:84
+msgid "Nowe hasło"
+msgstr ""
+
+#: .\congo\accounts\forms.py:85
+msgid "Potwierdź nowe hasło"
+msgstr ""
+
+#: .\congo\accounts\forms.py:108
+msgid "Aktualne hasło"
+msgstr ""
+
+#: .\congo\accounts\forms.py:113
+msgid "Aktualne hasło zostało wprowadzone błędnie. Wprowadź je ponownie."
+msgstr ""
+
+#: .\congo\accounts\forms.py:129
+msgid "Ten adres e-mail nie ma skojarzonego konta użytkownika. Czy jesteś pewien, że jesteś zarejestrowany?"
+msgstr ""
+
+#: .\congo\accounts\forms.py:131
+msgid "Użytkownik związany z tym adresem e-mail nie może zresetować hasła."
+msgstr ""
+
+#: .\congo\accounts\forms.py:141
+msgid "Resetowania hasła"
+msgstr ""
+
+#: .\congo\accounts\forms.py:159
+msgid "Wpisz to samo hasło jak wyżej, w celu weryfikacji."
+msgstr ""
+
+#: .\congo\accounts\forms.py:190
+msgid "Czyste hasła nie są zapisywane, więc nie ma możliwości aby zobaczyć hasło użytkownika, ale możesz zmienić hasło używając <a href=\"../password/\">tego formularza</a>."
+msgstr ""
+
+#: .\congo\accounts\models.py:62
+msgid "Imię"
+msgstr ""
+
+#: .\congo\accounts\models.py:63
+msgid "Nazwisko"
+msgstr ""
+
+#: .\congo\accounts\models.py:64
+msgid "Telefon"
+msgstr ""
+
+#: .\congo\accounts\models.py:64
+msgid "np. +48601123123"
+msgstr ""
+
+#: .\congo\accounts\models.py:65
+msgid "Staff status"
+msgstr ""
+
+#: .\congo\accounts\models.py:65
+msgid "Wyznacza czy użytkownik może zalogować się na tej stronie administratora."
+msgstr ""
+
+#: .\congo\accounts\models.py:66 .\congo\communication\models.py:99
+#: .\congo\maintenance\models.py:95 .\congo\maintenance\models.py:242
+#: .\congo\maintenance\models.py:329
+msgid "Aktywny"
+msgstr ""
+
+#: .\congo\accounts\models.py:66
+msgid "Wyznacza czy dany użytkownik powinien być traktowany jako aktywny. Odznacz to zamiast usuwania kont."
+msgstr ""
+
+#: .\congo\accounts\models.py:67
+msgid "Data dołączenia"
+msgstr ""
+
+#: .\congo\accounts\models.py:96 .\congo\accounts\models.py:116
+#: .\congo\admin\admin.py:84 .\congo\maintenance\models.py:147
+msgid "Użytkownik"
+msgstr ""
+
+#: .\congo\accounts\models.py:117 .\congo\communication\models.py:37
+#: .\congo\communication\models.py:118 .\congo\maintenance\admin.py:70
+#: .\congo\maintenance\admin.py:112 .\congo\maintenance\models.py:25
+msgid "Nazwa"
+msgstr ""
+
+#: .\congo\accounts\models.py:118 .\congo\maintenance\models.py:26
+msgid "Wartość"
+msgstr ""
+
+#: .\congo\admin\actions.py:11 .\congo\admin\actions.py:27
+msgid "Change site membership"
+msgstr ""
+
+#: .\congo\admin\actions.py:53
+#, python-format
+msgid "Site membership was changed: %s"
+msgstr ""
+
+#: .\congo\admin\actions.py:61
+#, python-format
+msgid "Zakres dat zmieniony: %s"
+msgstr ""
+
+#: .\congo\admin\actions.py:62
+msgid "Zmień zakres dat na 100 lat"
+msgstr ""
+
+#: .\congo\admin\actions.py:66
+#, python-format
+msgid "Zmieniono na widoczne: %s"
+msgstr ""
+
+#: .\congo\admin\actions.py:67
+msgid "Zmień wybrane na widoczne"
+msgstr ""
+
+#: .\congo\admin\actions.py:71
+#, python-format
+msgid "Zmieniono na niewidoczne: %s"
+msgstr ""
+
+#: .\congo\admin\actions.py:72
+msgid "Zmień wybrane na niewidoczne"
+msgstr ""
+
+#: .\congo\admin\actions.py:76
+#, python-format
+msgid "Zmioniono na aktywne: %s"
+msgstr ""
+
+#: .\congo\admin\actions.py:77
+msgid "Zmień wybrane na aktywne"
+msgstr ""
+
+#: .\congo\admin\actions.py:81
+#, python-format
+msgid "Zmieniono na nieaktywne: %s"
+msgstr ""
+
+#: .\congo\admin\actions.py:82
+msgid "Zmień wybrane na nieakywne"
+msgstr ""
+
+#: .\congo\admin\admin.py:34 .\congo\gallery\admin.py:68
+#: .\congo\templatetags\common.py:115
+msgid "(Brak)"
+msgstr ""
+
+#: .\congo\admin\admin.py:46
+msgid "Nie masz uprawnień do edytowania! Zmiany nie były zastosowane."
+msgstr ""
+
+#: .\congo\admin\admin.py:64
+msgid "Historia"
+msgstr ""
+
+#: .\congo\admin\admin.py:93
+msgid "E-mail użytkownika"
+msgstr ""
+
+#: .\congo\admin\admin.py:99 .\congo\maintenance\filters.py:9
+#: .\congo\maintenance\models.py:94
+msgid "Język"
+msgstr ""
+
+#: .\congo\admin\dashboard.py:14 .\congo\admin\menu.py:85
+msgid "Aplikacje"
+msgstr ""
+
+#: .\congo\admin\dashboard.py:21 .\congo\admin\menu.py:89
+msgid "Administracja"
+msgstr ""
+
+#: .\congo\admin\dashboard.py:33 .\congo\maintenance\models.py:102
+msgid "Strony"
+msgstr ""
+
+#: .\congo\admin\dashboard.py:52
+msgid "Najnowsze Akcje"
+msgstr ""
+
+#: .\congo\admin\filters.py:9
+msgid "(None)"
+msgstr ""
+
+#: .\congo\admin\filters.py:44 .\congo\admin\filters.py:94
+msgid "Wszystko"
+msgstr ""
+
+#: .\congo\admin\menu.py:83
+msgid "Panel"
+msgstr ""
+
+#: .\congo\admin\menu.py:97
+msgid "Wymiana danych"
+msgstr ""
+
+#: .\congo\admin\menu.py:99
+msgid "Import danych"
+msgstr ""
+
+#: .\congo\admin\menu.py:100
+msgid "Eksport danych"
+msgstr ""
+
+#: .\congo\admin\menu.py:104
+msgid "Zaawansowane"
+msgstr ""
+
+#: .\congo\admin\menu.py:106 .\congo\maintenance\admin_views.py:18
+msgid "Wyczyść cache"
+msgstr ""
+
+#: .\congo\admin\menu.py:107
+msgid "Odbudowa agregatów"
+msgstr ""
+
+#: .\congo\admin\menu.py:108
+msgid "Mail testowy"
+msgstr ""
+
+#: .\congo\admin\menu.py:109
+msgid "Test bramki SMS"
+msgstr ""
+
+#: .\congo\admin\menu.py:110
+msgid "Widok testowy"
+msgstr ""
+
+#: .\congo\admin\menu.py:111
+msgid "Widok debugowania"
+msgstr ""
+
+#: .\congo\admin\menu.py:112 .\congo\maintenance\views.py:21
+msgid "Reset serwera"
+msgstr ""
+
+#: .\congo\communication\admin.py:92 .\congo\communication\admin.py:219
+#, python-format
+msgid "\"%(message)s\" wiadomości wysłano do testerów: %(x)s / %(y)s"
+msgstr ""
+
+#: .\congo\communication\admin.py:93 .\congo\communication\admin.py:220
+msgid "Wyślij wiadomość do testerów"
+msgstr ""
+
+#: .\congo\communication\admin.py:96 .\congo\communication\admin.py:112
+#: .\congo\communication\admin.py:223 .\congo\communication\admin.py:238
+msgid "Dodaj wiadomość do kolejki dla grupy"
+msgstr ""
+
+#: .\congo\communication\admin.py:148 .\congo\communication\admin.py:170
+#: .\congo\communication\admin.py:261 .\congo\communication\admin.py:281
+#, python-format
+msgid "\"%(message)s\" wiadomości zostały dodane do kolejki: %(x)s / %(y)s"
+msgstr ""
+
+#: .\congo\communication\admin.py:150 .\congo\communication\admin.py:172
+#: .\congo\communication\admin.py:263 .\congo\communication\admin.py:283
+#, python-format
+msgid "\"%s\" wiadomość nie została dodana do kolejki, ponieważ nie jest przetestowana"
+msgstr ""
+
+#: .\congo\communication\admin.py:173 .\congo\communication\admin.py:284
+msgid "Dodaj wiadomość do kolejki"
+msgstr ""
+
+#: .\congo\communication\admin.py:207 .\congo\communication\models.py:520
+msgid "Treść"
+msgstr ""
+
+#: .\congo\communication\admin_forms.py:6 .\congo\communication\models.py:283
+msgid "Temat"
+msgstr ""
+
+#: .\congo\communication\admin_forms.py:7
+msgid "E-mail nadawcy"
+msgstr ""
+
+#: .\congo\communication\admin_forms.py:8
+msgid "Nazwa nadawcy"
+msgstr ""
+
+#: .\congo\communication\admin_forms.py:9
+msgid "E-mail odbiorcy"
+msgstr ""
+
+#: .\congo\communication\admin_forms.py:10
+msgid "Nazwa odbiorcy"
+msgstr ""
+
+#: .\congo\communication\admin_forms.py:11
+msgid "Wiadomość"
+msgstr ""
+
+#: .\congo\communication\admin_forms.py:12
+msgid "HTML MIME type"
+msgstr ""
+
+#: .\congo\communication\admin_views.py:15
+msgid "E-mail testowy"
+msgstr ""
+
+#: .\congo\communication\admin_views.py:64
+msgid "E-mail testowy został wysłany!"
+msgstr ""
+
+#: .\congo\communication\admin_views.py:69
+msgid "Wysyłanie wiadomości testowej nie powiodło się."
+msgstr ""
+
+#: .\congo\communication\classes.py:180
+#, python-format
+msgid "SMS od %(sender_name)s do %(recipient_mobile_phone)s"
+msgstr ""
+
+#: .\congo\communication\filters.py:7 .\congo\communication\models.py:120
+msgid "Płeć"
+msgstr ""
+
+#: .\congo\communication\filters.py:12
+msgid "Mężczyzna"
+msgstr ""
+
+#: .\congo\communication\filters.py:13
+msgid "Kobieta"
+msgstr ""
+
+#: .\congo\communication\filters.py:14
+msgid "Nieznana"
+msgstr ""
+
+#: .\congo\communication\filters.py:26 .\congo\communication\models.py:119
+msgid "Wołacz"
+msgstr ""
+
+#: .\congo\communication\filters.py:31
+msgid "Tak"
+msgstr ""
+
+#: .\congo\communication\filters.py:32
+msgid "Nie"
+msgstr ""
+
+#: .\congo\communication\models.py:41
+msgid "Nadawca e-mail"
+msgstr ""
+
+#: .\congo\communication\models.py:42
+msgid "Nadawcy e-mail"
+msgstr ""
+
+#: .\congo\communication\models.py:68
+msgid "Grupa odbiorców e-mail"
+msgstr ""
+
+#: .\congo\communication\models.py:69
+msgid "Grupy odbiorców e-mail"
+msgstr ""
+
+#: .\congo\communication\models.py:75
+msgid "Grupa odbiorców SMS"
+msgstr ""
+
+#: .\congo\communication\models.py:76
+msgid "Grupy odbiorców SMS"
+msgstr ""
+
+#: .\congo\communication\models.py:88
+msgid "Off-line form"
+msgstr ""
+
+#: .\congo\communication\models.py:89
+msgid "On-line form"
+msgstr ""
+
+#: .\congo\communication\models.py:90
+msgid "On-line order"
+msgstr ""
+
+#: .\congo\communication\models.py:91
+msgid "Phone order"
+msgstr ""
+
+#: .\congo\communication\models.py:92
+msgid "Email order"
+msgstr ""
+
+#: .\congo\communication\models.py:95 .\congo\maintenance\models.py:144
+msgid "Źródło"
+msgstr ""
+
+#: .\congo\communication\models.py:96 .\congo\communication\models.py:604
+msgid "Data dodania"
+msgstr ""
+
+#: .\congo\communication\models.py:97
+msgid "Data zmiany"
+msgstr ""
+
+#: .\congo\communication\models.py:98
+msgid "Jest testerem"
+msgstr ""
+
+#: .\congo\communication\models.py:98
+msgid "Czy otrzymuje wiadomości testowe?"
+msgstr ""
+
+#: .\congo\communication\models.py:99
+msgid "Czy otrzymuje wiadomości?"
+msgstr ""
+
+#: .\congo\communication\models.py:100
+msgid "Zatwierdzony"
+msgstr ""
+
+#: .\congo\communication\models.py:100
+msgid "Czy zatwierdzony?"
+msgstr ""
+
+#: .\congo\communication\models.py:114
+msgid "Male"
+msgstr ""
+
+#: .\congo\communication\models.py:115
+msgid "Female"
+msgstr ""
+
+#: .\congo\communication\models.py:118
+msgid "np. Jan Nowak"
+msgstr ""
+
+#: .\congo\communication\models.py:126
+msgid "Odbiorca e-mail"
+msgstr ""
+
+#: .\congo\communication\models.py:127
+msgid "Odbiorcy e-mail"
+msgstr ""
+
+#: .\congo\communication\models.py:142
+#, python-format
+msgctxt "pan"
+msgid "Szanowny Panie %s!"
+msgstr ""
+
+#: .\congo\communication\models.py:142
+msgid "Szanowny Panie!"
+msgstr ""
+
+#: .\congo\communication\models.py:144
+#, python-format
+msgctxt "pani"
+msgid "Szanowna Pani %s!"
+msgstr ""
+
+#: .\congo\communication\models.py:144
+msgid "Szanowna Pani!"
+msgstr ""
+
+#: .\congo\communication\models.py:146
+msgid "Szanowni Państwo!"
+msgstr ""
+
+#: .\congo\communication\models.py:213 .\congo\communication\models.py:660
+msgid "Odbiorca SMS"
+msgstr ""
+
+#: .\congo\communication\models.py:214
+msgid "Odbiorcy SMS"
+msgstr ""
+
+#: .\congo\communication\models.py:252
+msgid "Add date"
+msgstr ""
+
+#: .\congo\communication\models.py:253
+msgid "Change date"
+msgstr ""
+
+#: .\congo\communication\models.py:254
+msgid "Przetestowany"
+msgstr ""
+
+#: .\congo\communication\models.py:254
+msgid "Czy wysłano do testerów?"
+msgstr ""
+
+#: .\congo\communication\models.py:278
+msgid "Szablon domyślny"
+msgstr ""
+
+#: .\congo\communication\models.py:281
+msgid "Nadawca"
+msgstr ""
+
+#: .\congo\communication\models.py:282
+msgid "Odpowiedz do"
+msgstr ""
+
+#: .\congo\communication\models.py:284
+msgid "Szablon"
+msgstr ""
+
+#: .\congo\communication\models.py:285
+msgid "Treść HTML"
+msgstr ""
+
+#: .\congo\communication\models.py:286
+msgid "Treść tekstowa"
+msgstr ""
+
+#: .\congo\communication\models.py:289 .\congo\communication\models.py:521
+#: .\congo\communication\models.py:605
+msgid "Data wysłania"
+msgstr ""
+
+#: .\congo\communication\models.py:292
+msgid "Wiadomość e-mail"
+msgstr ""
+
+#: .\congo\communication\models.py:293
+msgid "Wiadomości e-mail"
+msgstr ""
+
+#: .\congo\communication\models.py:500 .\congo\communication\models.py:584
+#, python-format
+msgid "Wysłano \"%s\" wiadomości"
+msgstr ""
+
+#: .\congo\communication\models.py:503 .\congo\communication\models.py:587
+#: .\congo\communication\models.py:591
+#, python-format
+msgid "Wysłanie \"%s\" nie powidło się"
+msgstr ""
+
+#: .\congo\communication\models.py:519
+msgid "Sender"
+msgstr ""
+
+#: .\congo\communication\models.py:524
+msgid "Wiadomość SMS"
+msgstr ""
+
+#: .\congo\communication\models.py:525
+msgid "Wiadomości SMS"
+msgstr ""
+
+#: .\congo\communication\models.py:592
+#, python-format
+msgid "Brak numeru telefonu dla odbiorcy %(name)s (ID: %(id)s)"
+msgstr ""
+
+#: .\congo\communication\models.py:606
+msgid "Wysłane"
+msgstr ""
+
+#: .\congo\communication\models.py:606
+msgid "Wysłane do odbiorców?"
+msgstr ""
+
+#: .\congo\communication\models.py:618
+msgid "E-mail recipient"
+msgstr ""
+
+#: .\congo\communication\models.py:619
+msgid "E-mail message"
+msgstr ""
+
+#: .\congo\communication\models.py:622
+msgid "Kolejka wiadmości e-mail"
+msgstr ""
+
+#: .\congo\communication\models.py:623
+msgid "Kolejki wiadomości e-mail"
+msgstr ""
+
+#: .\congo\communication\models.py:629 .\congo\communication\models.py:671
+#, python-format
+msgid "%(message)s do %(recipient)s"
+msgstr ""
+
+#: .\congo\communication\models.py:649 .\congo\communication\models.py:690
+#, python-format
+msgid "Wysyłanie \"%(message)s\" wiadomości (%(x)s / %(y)s)"
+msgstr ""
+
+#: .\congo\communication\models.py:653 .\congo\communication\models.py:695
+#, python-format
+msgid "Wysyłanie wiadomości e-mail (%(x)s / %(y)s)"
+msgstr ""
+
+#: .\congo\communication\models.py:661
+msgid "SMS message"
+msgstr ""
+
+#: .\congo\communication\models.py:664
+msgid "Kolejka wiadomości SMS"
+msgstr ""
+
+#: .\congo\communication\models.py:665
+msgid "Kolejki wiadomości SMS"
+msgstr ""
+
+#: .\congo\communication\views.py:51
+msgid "Przełącz do formatu tekstowego"
+msgstr ""
+
+#: .\congo\conf.py:111
+msgid "Losowy numer"
+msgstr ""
+
+#: base.py:11
+msgid "Brunei"
+msgstr "Brunei"
+
+#: base.py:12
+msgid "Boliwia"
+msgstr "Bolivia"
+
+#: base.py:13
+msgid "Wielka Brytania"
+msgstr "United Kingdom"
+
+#: base.py:14
+msgid "Iran"
+msgstr "Iran"
+
+#: base.py:15
+msgid "Korea Północna"
+msgstr "North Korea"
+
+#: base.py:16
+msgid "Korea Południowa"
+msgstr "South Korea"
+
+#: base.py:17
+msgid "Laos"
+msgstr "Laos"
+
+#: base.py:18
+msgid "Mołdawia"
+msgstr "Moldova"
+
+#: base.py:19
+msgid "Macedonia"
+msgstr "Macedonia"
+
+#: base.py:20
+msgid "Rosja"
+msgstr "Russia"
+
+#: base.py:21
+msgid "Syria"
+msgstr "Syria"
+
+#: base.py:22
+msgid "Tajwan"
+msgstr "Taiwan"
+
+#: base.py:23
+msgid "Tanzania"
+msgstr "Tanzania"
+
+#: base.py:24
+msgid "Wenezuela"
+msgstr "Venezuela"
+
+#: base.py:25
+msgid "Wietnam"
+msgstr "Vietnam"
+
+#: base.py:29
+msgid "Czechy"
+msgstr "Czech Republic"
+
+#: data.py:33
+msgid "Afganistan"
+msgstr "Afghanistan"
+
+#: data.py:34
+msgid "Wyspy Alandzkie"
+msgstr "Aland Islands"
+
+#: data.py:35
+msgid "Albania"
+msgstr "Albania"
+
+#: data.py:36
+msgid "Algeria"
+msgstr "Algeria"
+
+#: data.py:37
+msgid "Samoa Amerykańskie"
+msgstr "American Samoa"
+
+#: data.py:38
+msgid "Andora"
+msgstr "Andorra"
+
+#: data.py:39
+msgid "Angola"
+msgstr "Angola"
+
+#: data.py:40
+msgid "Anguilla"
+msgstr "Anguilla"
+
+#: data.py:41
+msgid "Antarktyda"
+msgstr "Antarctica"
+
+#: data.py:42
+msgid "Antigua i Barbuda"
+msgstr "Antigua and Barbuda"
+
+#: data.py:43
+msgid "Argentyna"
+msgstr "Argentina"
+
+#: data.py:44
+msgid "Armenia"
+msgstr "Armenia"
+
+#: data.py:45
+msgid "Aruba"
+msgstr "Aruba"
+
+#: data.py:46
+msgid "Australia"
+msgstr "Australia"
+
+#: data.py:47
+msgid "Austria"
+msgstr "Austria"
+
+#: data.py:48
+msgid "Azerbejdżan"
+msgstr "Azerbaijan"
+
+#: data.py:49
+msgid "Bahamy"
+msgstr "Bahamas"
+
+#: data.py:50
+msgid "Bahrajn"
+msgstr "Bahrain"
+
+#: data.py:51
+msgid "Bangladesz"
+msgstr "Bangladesh"
+
+#: data.py:52
+msgid "Barbados"
+msgstr "Barbados"
+
+#: data.py:53
+msgid "Białoruś"
+msgstr "Belarus"
+
+#: data.py:54
+msgid "Belgia"
+msgstr "Belgium"
+
+#: data.py:55
+msgid "Belize"
+msgstr "Belize"
+
+#: data.py:56
+msgid "Benin"
+msgstr "Benin"
+
+#: data.py:57
+msgid "Bermudy"
+msgstr "Bermuda"
+
+#: data.py:58
+msgid "Bhutan"
+msgstr "Bhutan"
+
+#: data.py:60
+msgid "Bonaire, Sint Eustatius i Saba"
+msgstr "Bonaire, Sint Eustatius and Saba"
+
+#: data.py:61
+msgid "Bośnia i Hercegowina"
+msgstr "Bosnia and Herzegovina"
+
+#: data.py:62
+msgid "Botswana"
+msgstr "Botswana"
+
+#: data.py:63
+msgid "Wyspa Bouveta"
+msgstr "Bouvet Island"
+
+#: data.py:64
+msgid "Brazylia"
+msgstr "Brazil"
+
+#: data.py:65
+msgid "Brytyjskie Terytorium Oceanu Indyjskiego"
+msgstr "British Indian Ocean Territory"
+
+#: data.py:67
+msgid "Bułgaria"
+msgstr "Bulgaria"
+
+#: data.py:68
+msgid "Burkina Faso"
+msgstr "Burkina Faso"
+
+#: data.py:69
+msgid "Burundi"
+msgstr "Burundi"
+
+#: data.py:70
+msgid "Republika Zielonego Przylądka"
+msgstr "Cabo Verde"
+
+#: data.py:71
+msgid "Kambodża"
+msgstr "Cambodia"
+
+#: data.py:72
+msgid "Kamerun"
+msgstr "Cameroon"
+
+#: data.py:73
+msgid "Kanada"
+msgstr "Canada"
+
+#: data.py:74
+msgid "Kajmany"
+msgstr "Cayman Islands"
+
+#: data.py:75
+msgid "Republika Środkowoafrykańska"
+msgstr "Central African Republic"
+
+#: data.py:76
+msgid "Czad"
+msgstr "Chad"
+
+#: data.py:77
+msgid "Chile"
+msgstr "Chile"
+
+#: data.py:78
+msgid "Chiny"
+msgstr "China"
+
+#: data.py:79
+msgid "Wyspa Bożego Narodzenia"
+msgstr "Christmas Island"
+
+#: data.py:80
+msgid "Wyspy Kokosowe"
+msgstr "Cocos (Keeling) Islands"
+
+#: data.py:81
+msgid "Kolumbia"
+msgstr "Colombia"
+
+#: data.py:82
+msgid "Komory"
+msgstr "Comoros"
+
+#: data.py:84
+msgid "Kongo"
+msgstr "Congo"
+
+#: data.py:85
+msgid "Wyspy Cooka"
+msgstr "Cook Islands"
+
+#: data.py:86
+msgid "Kostaryka"
+msgstr "Costa Rica"
+
+#: data.py:87
+msgid "Wybrzeże Kości Słoniowej"
+msgstr "Côte d'Ivoire"
+
+#: data.py:88
+msgid "Chorwacja"
+msgstr "Croatia"
+
+#: data.py:89
+msgid "Kuba"
+msgstr "Cuba"
+
+#: data.py:90
+msgid "Curaçao"
+msgstr "Curaçao"
+
+#: data.py:91
+msgid "Cypr"
+msgstr "Cyprus"
+
+#: data.py:93
+msgid "Dania"
+msgstr "Denmark"
+
+#: data.py:94
+msgid "Dżibuti"
+msgstr "Djibouti"
+
+#: data.py:95
+msgid "Dominika"
+msgstr "Dominica"
+
+#: data.py:96
+msgid "Dominikana"
+msgstr "Dominican Republic"
+
+#: data.py:97
+msgid "Ekwador"
+msgstr "Ecuador"
+
+#: data.py:98
+msgid "Egipt"
+msgstr "Egypt"
+
+#: data.py:99
+msgid "Salwador"
+msgstr "El Salvador"
+
+#: data.py:100
+msgid "Gwinea Równikowa"
+msgstr "Equatorial Guinea"
+
+#: data.py:101
+msgid "Erytrea"
+msgstr "Eritrea"
+
+#: data.py:102
+msgid "Estonia"
+msgstr "Estonia"
+
+#: data.py:103
+msgid "Etiopia"
+msgstr "Ethiopia"
+
+#: data.py:104
+msgid "Falklandy"
+msgstr "Falkland Islands  [Malvinas]"
+
+#: data.py:105
+msgid "Wyspy Owcze"
+msgstr "Faroe Islands"
+
+#: data.py:106
+msgid "Fidżi"
+msgstr "Fiji"
+
+#: data.py:107
+msgid "Finlandia"
+msgstr "Finland"
+
+#: data.py:108
+msgid "Francja"
+msgstr "France"
+
+#: data.py:109
+msgid "Gujana Francuska"
+msgstr "French Guiana"
+
+#: data.py:110
+msgid "Polinezja Francuska"
+msgstr "French Polynesia"
+
+#: data.py:111
+msgid "Francuskie Terytoria Południowe i Antarktyczne"
+msgstr "French Southern Territories"
+
+#: data.py:112
+msgid "Gabon"
+msgstr "Gabon"
+
+#: data.py:113
+msgid "Gambia"
+msgstr "Gambia"
+
+#: data.py:114
+msgid "Gruzja"
+msgstr "Georgia"
+
+#: data.py:115
+msgid "Niemcy"
+msgstr "Germany"
+
+#: data.py:116
+msgid "Ghana"
+msgstr "Ghana"
+
+#: data.py:117
+msgid "Gibraltar"
+msgstr "Gibraltar"
+
+#: data.py:118
+msgid "Grecja"
+msgstr "Greece"
+
+#: data.py:119
+msgid "Grenlandia"
+msgstr "Greenland"
+
+#: data.py:120
+msgid "Grenada"
+msgstr "Grenada"
+
+#: data.py:121
+msgid "Gwadelupa"
+msgstr "Guadeloupe"
+
+#: data.py:122
+msgid "Guam"
+msgstr "Guam"
+
+#: data.py:123
+msgid "Gwatemala"
+msgstr "Guatemala"
+
+#: data.py:124
+msgid "Guernsey"
+msgstr "Guernsey"
+
+#: data.py:125
+msgid "Gwinea"
+msgstr "Guinea"
+
+#: data.py:126
+msgid "Gwinea Bissau"
+msgstr "Guinea-Bissau"
+
+#: data.py:127
+msgid "Gujana"
+msgstr "Guyana"
+
+#: data.py:128
+msgid "Haiti"
+msgstr "Haiti"
+
+#: data.py:129
+msgid "Wyspy Heard i McDonalda"
+msgstr "Heard Island and McDonald Islands"
+
+#: data.py:130
+msgid "Watykan"
+msgstr "Holy See"
+
+#: data.py:131
+msgid "Honduras"
+msgstr "Honduras"
+
+#: data.py:132
+msgid "Hongkong"
+msgstr "Hong Kong"
+
+#: data.py:133
+msgid "Węgry"
+msgstr "Hungary"
+
+#: data.py:134
+msgid "Islandia"
+msgstr "Iceland"
+
+#: data.py:135
+msgid "Indie"
+msgstr "India"
+
+#: data.py:136
+msgid "Indonezja"
+msgstr "Indonesia"
+
+#: data.py:138
+msgid "Irak"
+msgstr "Iraq"
+
+#: data.py:139
+msgid "Irlandia"
+msgstr "Ireland"
+
+#: data.py:140
+msgid "Wyspa Man"
+msgstr "Isle of Man"
+
+#: data.py:141
+msgid "Izrael"
+msgstr "Israel"
+
+#: data.py:142
+msgid "Włochy"
+msgstr "Italy"
+
+#: data.py:143
+msgid "Jamajka"
+msgstr "Jamaica"
+
+#: data.py:144
+msgid "Japonia"
+msgstr "Japan"
+
+#: data.py:145
+msgid "Jersey"
+msgstr "Jersey"
+
+#: data.py:146
+msgid "Jordania"
+msgstr "Jordan"
+
+#: data.py:147
+msgid "Kazachstan"
+msgstr "Kazakhstan"
+
+#: data.py:148
+msgid "Kenia"
+msgstr "Kenya"
+
+#: data.py:149
+msgid "Kiribati"
+msgstr "Kiribati"
+
+#: data.py:152
+msgid "Kuwejt"
+msgstr "Kuwait"
+
+#: data.py:153
+msgid "Kirgistan"
+msgstr "Kyrgyzstan"
+
+#: data.py:155
+msgid "Łotwa"
+msgstr "Latvia"
+
+#: data.py:156
+msgid "Liban"
+msgstr "Lebanon"
+
+#: data.py:157
+msgid "Lesotho"
+msgstr "Lesotho"
+
+#: data.py:158
+msgid "Liberia"
+msgstr "Liberia"
+
+#: data.py:159
+msgid "Libia"
+msgstr "Libya"
+
+#: data.py:160
+msgid "Liechtenstein"
+msgstr "Liechtenstein"
+
+#: data.py:161
+msgid "Litwa"
+msgstr "Lithuania"
+
+#: data.py:162
+msgid "Luksemburg"
+msgstr "Luxembourg"
+
+#: data.py:163
+msgid "Makau"
+msgstr "Macao"
+
+#: data.py:165
+msgid "Madagaskar"
+msgstr "Madagascar"
+
+#: data.py:166
+msgid "Malawi"
+msgstr "Malawi"
+
+#: data.py:167
+msgid "Malezja"
+msgstr "Malaysia"
+
+#: data.py:168
+msgid "Malediwy"
+msgstr "Maldives"
+
+#: data.py:169
+msgid "Mali"
+msgstr "Mali"
+
+#: data.py:170
+msgid "Malta"
+msgstr "Malta"
+
+#: data.py:171
+msgid "Wyspy Marshalla"
+msgstr "Marshall Islands"
+
+#: data.py:172
+msgid "Martynika"
+msgstr "Martinique"
+
+#: data.py:173
+msgid "Mauretania"
+msgstr "Mauritania"
+
+#: data.py:174
+msgid "Mauritius"
+msgstr "Mauritius"
+
+#: data.py:175
+msgid "Majotta"
+msgstr "Mayotte"
+
+#: data.py:176
+msgid "Meksyk"
+msgstr "Mexico"
+
+#: data.py:177
+msgid "Mikronezja"
+msgstr "Micronesia (Federated States of)"
+
+#: data.py:179
+msgid "Monako"
+msgstr "Monaco"
+
+#: data.py:180
+msgid "Mongolia"
+msgstr "Mongolia"
+
+#: data.py:181
+msgid "Czarnogóra"
+msgstr "Montenegro"
+
+#: data.py:182
+msgid "Montserrat"
+msgstr "Montserrat"
+
+#: data.py:183
+msgid "Maroko"
+msgstr "Morocco"
+
+#: data.py:184
+msgid "Mozambik"
+msgstr "Mozambique"
+
+#: data.py:185
+msgid "Mjanma"
+msgstr "Myanmar"
+
+#: data.py:186
+msgid "Namibia"
+msgstr "Namibia"
+
+#: data.py:187
+msgid "Nauru"
+msgstr "Nauru"
+
+#: data.py:188
+msgid "Nepal"
+msgstr "Nepal"
+
+#: data.py:189
+msgid "Holandia"
+msgstr "Netherlands"
+
+#: data.py:190
+msgid "Nowa Kaledonia"
+msgstr "New Caledonia"
+
+#: data.py:191
+msgid "Nowa Zelandia"
+msgstr "New Zealand"
+
+#: data.py:192
+msgid "Nikaragua"
+msgstr "Nicaragua"
+
+#: data.py:193
+msgid "Niger"
+msgstr "Niger"
+
+#: data.py:194
+msgid "Nigeria"
+msgstr "Nigeria"
+
+#: data.py:195
+msgid "Niue"
+msgstr "Niue"
+
+#: data.py:196
+msgid "Norfolk"
+msgstr "Norfolk Island"
+
+#: data.py:197
+msgid "Mariany Północne"
+msgstr "Northern Mariana Islands"
+
+#: data.py:198
+msgid "Norwegia"
+msgstr "Norway"
+
+#: data.py:199
+msgid "Oman"
+msgstr "Oman"
+
+#: data.py:200
+msgid "Pakistan"
+msgstr "Pakistan"
+
+#: data.py:201
+msgid "Palau"
+msgstr "Palau"
+
+#: data.py:202
+msgid "Palestyna"
+msgstr "Palestine, State of"
+
+#: data.py:203
+msgid "Panama"
+msgstr "Panama"
+
+#: data.py:204
+msgid "Papua-Nowa Gwinea"
+msgstr "Papua New Guinea"
+
+#: data.py:205
+msgid "Paragwaj"
+msgstr "Paraguay"
+
+#: data.py:206
+msgid "Peru"
+msgstr "Peru"
+
+#: data.py:207
+msgid "Filipiny"
+msgstr "Philippines"
+
+#: data.py:208
+msgid "Pitcairn"
+msgstr "Pitcairn"
+
+#: data.py:209
+msgid "Polska"
+msgstr "Poland"
+
+#: data.py:210
+msgid "Portugalia"
+msgstr "Portugal"
+
+#: data.py:211
+msgid "Portoryko"
+msgstr "Puerto Rico"
+
+#: data.py:212
+msgid "Katar"
+msgstr "Qatar"
+
+#: data.py:213
+msgid "Reunion"
+msgstr "Réunion"
+
+#: data.py:214
+msgid "Rumunia"
+msgstr "Romania"
+
+#: data.py:216
+msgid "Rwanda"
+msgstr "Rwanda"
+
+#: data.py:217
+msgid "Saint-Barthélemy"
+msgstr "Saint Barthélemy"
+
+#: data.py:218
+msgid "Wyspa Świętej Heleny, Wyspa Wniebowstąpienia i Tristan da Cunha"
+msgstr "Saint Helena, Ascension and Tristan da Cunha"
+
+#: data.py:219
+msgid "Saint Kitts i Nevis"
+msgstr "Saint Kitts and Nevis"
+
+#: data.py:220
+msgid "Saint Lucia"
+msgstr "Saint Lucia"
+
+#: data.py:221
+msgid "Saint-Martin"
+msgstr "Saint Martin (French part)"
+
+#: data.py:222
+msgid "Saint-Pierre i Miquelon"
+msgstr "Saint Pierre and Miquelon"
+
+#: data.py:223
+msgid "Saint Vincent i Grenadyny"
+msgstr "Saint Vincent and the Grenadines"
+
+#: data.py:224
+msgid "Samoa"
+msgstr "Samoa"
+
+#: data.py:225
+msgid "San Marino"
+msgstr "San Marino"
+
+#: data.py:226
+msgid "Wyspy Świętego Tomasza i Książęca"
+msgstr "Sao Tome and Principe"
+
+#: data.py:227
+msgid "Arabia Saudyjska"
+msgstr "Saudi Arabia"
+
+#: data.py:228
+msgid "Senegal"
+msgstr "Senegal"
+
+#: data.py:229
+msgid "Serbia"
+msgstr "Serbia"
+
+#: data.py:230
+msgid "Seszele"
+msgstr "Seychelles"
+
+#: data.py:231
+msgid "Sierra Leone"
+msgstr "Sierra Leone"
+
+#: data.py:232
+msgid "Singapur"
+msgstr "Singapore"
+
+#: data.py:233
+msgid "Sint Maarten"
+msgstr "Sint Maarten (Dutch part)"
+
+#: data.py:234
+msgid "Słowacja"
+msgstr "Slovakia"
+
+#: data.py:235
+msgid "Słowenia"
+msgstr "Slovenia"
+
+#: data.py:236
+msgid "Wyspy Salomona"
+msgstr "Solomon Islands"
+
+#: data.py:237
+msgid "Somalia"
+msgstr "Somalia"
+
+#: data.py:238
+msgid "Republika Południowej Afryki"
+msgstr "South Africa"
+
+#: data.py:239
+msgid "Georgia Południowa i Sandwich Południowy"
+msgstr "South Georgia and the South Sandwich Islands"
+
+#: data.py:240
+msgid "Sudan Południowy"
+msgstr "South Sudan"
+
+#: data.py:241
+msgid "Hiszpania"
+msgstr "Spain"
+
+#: data.py:242
+msgid "Sri Lanka"
+msgstr "Sri Lanka"
+
+#: data.py:243
+msgid "Sudan"
+msgstr "Sudan"
+
+#: data.py:244
+msgid "Surinam"
+msgstr "Suriname"
+
+#: data.py:245
+msgid "Svalbard i Jan Mayen"
+msgstr "Svalbard and Jan Mayen"
+
+#: data.py:246
+msgid "Suazi"
+msgstr "Swaziland"
+
+#: data.py:247
+msgid "Szwecja"
+msgstr "Sweden"
+
+#: data.py:248
+msgid "Szwajcaria"
+msgstr "Switzerland"
+
+#: data.py:251
+msgid "Tadżykistan"
+msgstr "Tajikistan"
+
+#: data.py:253
+msgid "Tajlandia"
+msgstr "Thailand"
+
+#: data.py:254
+msgid "Timor Wschodni"
+msgstr "Timor-Leste"
+
+#: data.py:255
+msgid "Togo"
+msgstr "Togo"
+
+#: data.py:256
+msgid "Tokelau"
+msgstr "Tokelau"
+
+#: data.py:257
+msgid "Tonga"
+msgstr "Tonga"
+
+#: data.py:258
+msgid "Trynidad i Tobago"
+msgstr "Trinidad and Tobago"
+
+#: data.py:259
+msgid "Tunezja"
+msgstr "Tunisia"
+
+#: data.py:260
+msgid "Turcja"
+msgstr "Turkey"
+
+#: data.py:261
+msgid "Turkmenistan"
+msgstr "Turkmenistan"
+
+#: data.py:262
+msgid "Turks i Caicos"
+msgstr "Turks and Caicos Islands"
+
+#: data.py:263
+msgid "Tuvalu"
+msgstr "Tuvalu"
+
+#: data.py:264
+msgid "Uganda"
+msgstr "Uganda"
+
+#: data.py:265
+msgid "Ukraina"
+msgstr "Ukraine"
+
+#: data.py:266
+msgid "Zjednoczone Emiraty Arabskie"
+msgstr "United Arab Emirates"
+
+#: data.py:267
+msgid "Zjednoczone Królestwo Wielkiej Brytanii i Irlandii Północnej"
+msgstr "United Kingdom of Great Britain and Northern Ireland"
+
+#: data.py:268
+msgid "Dalekie Wyspy Mniejsze Stanów Zjednoczonych"
+msgstr "United States Minor Outlying Islands"
+
+#: data.py:269
+msgid "Stany Zjednoczone Ameryki"
+msgstr "United States of America"
+
+#: data.py:270
+msgid "Urugwaj"
+msgstr "Uruguay"
+
+#: data.py:271
+msgid "Uzbekistan"
+msgstr "Uzbekistan"
+
+#: data.py:272
+msgid "Vanuatu"
+msgstr "Vanuatu"
+
+#: data.py:275
+msgid "Brytyjskie Wyspy Dziewicze"
+msgstr "Virgin Islands (British)"
+
+#: data.py:276
+msgid "Wyspy Dziewicze Stanów Zjednoczonych"
+msgstr "Virgin Islands (U.S.)"
+
+#: data.py:277
+msgid "Wallis i Futuna"
+msgstr "Wallis and Futuna"
+
+#: data.py:278
+msgid "Sahara Zachodnia"
+msgstr "Western Sahara"
+
+#: data.py:279
+msgid "Jemen"
+msgstr "Yemen"
+
+#: data.py:280
+msgid "Zambia"
+msgstr "Zambia"
+
+#: data.py:281
+msgid "Zimbabwe"
+msgstr "Zimbabwe"
+
+
+#: .\congo\gallery\admin.py:57
+msgid "Zdjęcie"
+msgstr ""
+
+#: .\congo\gallery\admin.py:64
+msgid "Podgląd"
+msgstr ""
+
+#: .\congo\gallery\admin.py:69
+msgid "Rozmiar"
+msgstr ""
+
+#: .\congo\gallery\admin.py:73 .\congo\gallery\admin.py:84
+msgid "Zmień znak wodny"
+msgstr ""
+
+#: .\congo\gallery\admin.py:94
+msgid "Znak wodny został zmieniony pomyślnie"
+msgstr ""
+
+#: .\congo\gallery\models.py:27
+msgid "Tytuł"
+msgstr ""
+
+#: .\congo\gallery\models.py:28
+msgid "Plik graficzny"
+msgstr ""
+
+#: .\congo\gallery\models.py:29
+msgid "Szerokość"
+msgstr ""
+
+#: .\congo\gallery\models.py:30
+msgid "Wysokość"
+msgstr ""
+
+#: .\congo\gallery\models.py:31
+msgid "Znak wodny"
+msgstr ""
+
+#: .\congo\gallery\models.py:32
+msgid "Widoczny"
+msgstr ""
+
+#: .\congo\maintenance\admin.py:42 .\congo\maintenance\filters.py:29
+#: .\congo\maintenance\filters.py:51 .\congo\maintenance\models.py:145
+#: .\congo\maintenance\models.py:240
+msgid "Poziom"
+msgstr ""
+
+#: .\congo\maintenance\admin.py:48 .\congo\maintenance\admin.py:85
+#: .\congo\maintenance\models.py:149 .\congo\maintenance\models.py:245
+msgid "Szczegóły"
+msgstr ""
+
+#: .\congo\maintenance\admin.py:63
+msgid "Wyniki"
+msgstr ""
+
+#: .\congo\maintenance\admin.py:81 .\congo\maintenance\admin.py:123
+#: .\congo\maintenance\models.py:27 .\congo\maintenance\models.py:146
+#: .\congo\maintenance\models.py:431
+msgid "Opis"
+msgstr ""
+
+#: .\congo\maintenance\admin.py:96
+msgid "Testy audytów wywołane"
+msgstr ""
+
+#: .\congo\maintenance\admin.py:132
+msgid "Zadania CRON wywołane"
+msgstr ""
+
+#: .\congo\maintenance\jobs\__init__.py:42
+msgid "Zadanie wykonane"
+msgstr ""
+
+#: .\congo\maintenance\models.py:28
+msgid "Cachuj"
+msgstr ""
+
+#: .\congo\maintenance\models.py:29
+msgid "Uruchamiaj przy starcie"
+msgstr ""
+
+#: .\congo\maintenance\models.py:32
+msgid "Parametr systemu"
+msgstr ""
+
+#: .\congo\maintenance\models.py:33
+msgid "Parametry systemu"
+msgstr ""
+
+#: .\congo\maintenance\models.py:93
+msgid "Domena"
+msgstr ""
+
+#: .\congo\maintenance\models.py:101
+msgid "Strona"
+msgstr ""
+
+#: .\congo\maintenance\models.py:148 .\congo\maintenance\models.py:430
+msgid "Data"
+msgstr ""
+
+#: .\congo\maintenance\models.py:152
+msgid "Log systemowy"
+msgstr ""
+
+#: .\congo\maintenance\models.py:153
+msgid "Logi systemowe"
+msgstr ""
+
+#: .\congo\maintenance\models.py:232 .\congo\maintenance\models.py:314
+msgid "Co minutę"
+msgstr ""
+
+#: .\congo\maintenance\models.py:233 .\congo\maintenance\models.py:317
+msgid "Co godzinę"
+msgstr ""
+
+#: .\congo\maintenance\models.py:234 .\congo\maintenance\models.py:318
+msgid "Co dzień"
+msgstr ""
+
+#: .\congo\maintenance\models.py:235 .\congo\maintenance\models.py:319
+msgid "Co tydzień"
+msgstr ""
+
+#: .\congo\maintenance\models.py:236
+msgid "Every month"
+msgstr ""
+
+#: .\congo\maintenance\models.py:239
+msgid "Test"
+msgstr ""
+
+#: .\congo\maintenance\models.py:241 .\congo\maintenance\models.py:328
+msgid "Częstotliwość"
+msgstr ""
+
+#: .\congo\maintenance\models.py:243 .\congo\maintenance\models.py:330
+msgid "Ostatnie uruchomienie"
+msgstr ""
+
+#: .\congo\maintenance\models.py:244
+msgid "Wynik"
+msgstr ""
+
+#: .\congo\maintenance\models.py:246
+msgid "Audytorzy"
+msgstr ""
+
+#: .\congo\maintenance\models.py:249
+msgid "Audyt systemu"
+msgstr ""
+
+#: .\congo\maintenance\models.py:250
+msgid "Audyty systemu"
+msgstr ""
+
+#: .\congo\maintenance\models.py:315
+msgid "Every three minute"
+msgstr ""
+
+#: .\congo\maintenance\models.py:316
+msgid "Co 10 minut"
+msgstr ""
+
+#: .\congo\maintenance\models.py:320
+msgid "Co miesiąc"
+msgstr ""
+
+#: .\congo\maintenance\models.py:321
+msgid "W godzinach pracy"
+msgstr ""
+
+#: .\congo\maintenance\models.py:322
+msgid "Po godzinach"
+msgstr ""
+
+#: .\congo\maintenance\models.py:323
+msgid "Rano i wieczorem"
+msgstr ""
+
+#: .\congo\maintenance\models.py:324
+msgid "Co dzień w południe"
+msgstr ""
+
+#: .\congo\maintenance\models.py:327
+msgid "Zadanie"
+msgstr ""
+
+#: .\congo\maintenance\models.py:333
+msgid "Zadanie CRON"
+msgstr ""
+
+#: .\congo\maintenance\models.py:334
+msgid "Zadania CRON"
+msgstr ""
+
+#: .\congo\maintenance\models.py:373
+msgid "Stary URL"
+msgstr ""
+
+#: .\congo\maintenance\models.py:373
+msgid "Format: ^/old-url/$"
+msgstr ""
+
+#: .\congo\maintenance\models.py:374
+msgid "Nowy URL"
+msgstr ""
+
+#: .\congo\maintenance\models.py:374
+msgid "Format: /new-url/"
+msgstr ""
+
+#: .\congo\maintenance\models.py:375
+msgid "Przepisać ogon"
+msgstr ""
+
+#: .\congo\maintenance\models.py:375
+msgid "Czy zamienić /old-url/abc/ na /new-url/abc/ czy jedynie /new-url/?"
+msgstr ""
+
+#: .\congo\maintenance\models.py:376
+msgid "Permanentne przekierowanie?"
+msgstr ""
+
+#: .\congo\maintenance\models.py:376
+msgid "Czy przekierowanie jest permanentne (301) czy tymczasowe (302)?"
+msgstr ""
+
+#: .\congo\maintenance\models.py:379
+msgid "Przekierowanie URL"
+msgstr ""
+
+#: .\congo\maintenance\models.py:380
+msgid "Przekierowania URL"
+msgstr ""
+
+#: .\congo\maintenance\models.py:432
+msgid "Czy dzień pracujący"
+msgstr ""
+
+#: .\congo\maintenance\models.py:435
+msgid "Dzień świąteczny"
+msgstr ""
+
+#: .\congo\maintenance\models.py:461
+msgctxt "weekday"
+msgid "Pn. - Pt."
+msgstr ""
+
+#: .\congo\maintenance\models.py:461
+msgctxt "weekday"
+msgid "Sb."
+msgstr ""
+
+#: .\congo\maintenance\models.py:461
+msgctxt "weekday"
+msgid "Nd."
+msgstr ""
+
+#: .\congo\maintenance\tests\__init__.py:46
+msgid "Test zakończony"
+msgstr ""
+
+#: .\congo\maintenance\tests\unused_user_accounts.py:14
+msgid "Konta użytkowników , które nie były logowane przez co najmniej 90 dni"
+msgstr ""
+
+#: .\congo\maintenance\views.py:55
+msgid "Niepoprawne zapytanie"
+msgstr ""
+
+#: .\congo\maintenance\views.py:56
+msgid "Niestety Twoje zapytanie wydaje się być niepoprawne i nie może być przetworzone."
+msgstr ""
+
+#: .\congo\maintenance\views.py:60
+msgid "Odmowa dostępu"
+msgstr ""
+
+#: .\congo\maintenance\views.py:61
+msgid "Niestety dostęp do miejsca, którego szukasz jest zablokowany."
+msgstr ""
+
+#: .\congo\maintenance\views.py:65
+msgid "Strona nie została znaleziona"
+msgstr ""
+
+#: .\congo\maintenance\views.py:66
+msgid "Niestety strona, której szukasz nie została odnaleziona. Prawdopodobnie została usunięta z powodu wygaśnięcia"
+msgstr ""
+
+#: .\congo\maintenance\views.py:70
+msgid "Wewnętrzny błąd serwera"
+msgstr ""
+
+#: .\congo\maintenance\views.py:71
+msgid "Wystąpił wewnętrzny błąd serwera. Robimy co w naszej mocy, aby rozwiązać problem. Przepraszamy za wszelkie niedogodności."
+msgstr ""
+
+#: .\congo\maintenance\views.py:75
+msgid "Serwis jest tymczasowo niedostępny"
+msgstr ""
+
+#: .\congo\maintenance\views.py:76
+msgid "Planowana przebudowa strony jest w toku. Przepraszamy za wszelkie niedogodności. Prosimy przyjść później."
+msgstr ""
+
+#: .\congo\templates\admin\action_form.html:22
+msgid "Etykieta 1"
+msgstr ""
+
+#: .\congo\templates\admin\action_form.html:34
+msgid "Etykieta 2"
+msgstr ""
+
+#: .\congo\templates\admin\action_form.html:42
+msgid "Etykieta 3"
+msgstr ""
+
+#: .\congo\templates\admin\actions\add_to_queue_for_group.html:11
+msgid "Grupa odbioców"
+msgstr ""
+
+#: .\congo\templates\congo\admin\communication\test_mail.html:24
+msgid "E-mail test form"
+msgstr ""
+
+#: .\congo\templates\congo\admin\maintenance\clear_cache.html:17
+msgid "Zaznacz wszystko"
+msgstr ""
+
+#: .\congo\templates\congo\admin\maintenance\clear_cache.html:17
+msgid "Odznacz wszystko"
+msgstr ""
+
+#: .\congo\templates\congo\admin\maintenance\clear_cache.html:20
+msgid "Wyczyść zaznaczone"
+msgstr ""
+
+#: .\congo\templates\congo\admin\maintenance\clear_cache.html:23
+#: .\congo\templates\congo\maintenance\http_error.html:12
+#: .\congo\templates\congo\maintenance\reset_server.html:12
+msgid "lub"
+msgstr ""
+
+#: .\congo\templates\congo\admin\maintenance\clear_cache.html:23
+msgid "wyczyść cache przeglądarki"
+msgstr ""
+
+#: .\congo\templates\congo\admin\maintenance\clear_cache.html:41
+msgid "Cache przeglądarki wyczysczony"
+msgstr ""
+
+#: .\congo\templates\congo\communication\email.html:10
+msgid "Przełącz do formatu HTML"
+msgstr ""
+
+#: .\congo\templates\congo\maintenance\http_error.html:11
+msgid "Powrót"
+msgstr ""
+
+#: .\congo\templates\congo\maintenance\http_error.html:13
+#: .\congo\templates\congo\maintenance\reset_server.html:11
+msgid "Strona głowna"
+msgstr ""
+
+#: .\congo\templates\congo\maintenance\reset_server.html:8
+msgid "Wywołano reset serwera HTTP"
+msgstr ""
+
+#: .\congo\templates\congo\maintenance\reset_server.html:13
+msgid "Admin"
+msgstr ""
+
+#: .\congo\templates\email\base.txt:4
+msgid ""
+"Z poważaniem,\n"
+"Zespół Tango"
+msgstr ""
+
+#: .\congo\templates\email\default.html:10
+#, python-format
+msgid "Ta wiadomość została wysłana zgodnie z postanowieniami art. 10 Par. 2 ustawy z dnia 18.07.2002 (Dz.U. Nr 144, poz. 1204 z 2002 roku ), ponieważ jesteś subskrybentem %(domain)s biuletynu serwisowego. Jeśli nie chcesz być informowany o naszej ofercie więcej, proszę kliknąć na link : <a href=\"%(domain)s{! unsubscribe !}\">%(domain)s{! unsubscribe !}</a>."
+msgstr ""
+
+#: .\congo\templates\email\default.txt:2
+#, python-format
+msgid "Ta wiadomość została wysłana zgodnie z postanowieniami art. 10 Par. 2 ustawy z dnia 18.07.2002 (Dz.U. Nr 144, poz. 1204 z 2002 roku ), ponieważ jesteś subskrybentem %(domain)s biuletynu serwisowego. Jeśli nie chcesz być informowany o naszej ofercie więcej, proszę kliknąć na link : %(domain)s{! unsubscribe !}."
+msgstr ""
+
+#: .\congo\utils\decorators.py:71
+msgid "Twoje konto jest nieaktywne. Aby korzystać ze wszystkich funkcji serwisu, kliknij link w wiadomości otrzymanej podczas rejestracji lub skontaktuj się z obsługą klienta."
+msgstr ""
+
+#: .\congo\utils\validators.py:7
+msgid "Obowiązujący format numeru telefonu to \"999999999\". Dozwolone jest 9 cyfr"
+msgstr ""
+
+#: .\congo\utils\validators.py:8
+msgid "Obowiązujący format numeru telefonu to \"+99999999999. Dozwolone od 9 do 15 cyfr."
+msgstr ""
+
+#: .\congo\utils\validators.py:12
+msgid "Poprawny format to \"+48 999999999\" (9 cyfr)."
+msgstr ""
+
+#: .\congo\utils\validators.py:16
+msgid "Poprawny format to \"+99 999999999 (od 9 do 15 cyfr)."
+msgstr ""
+
+#: .\congo\utils\vies\__init__.py:170
+#, python-format
+msgid "%s is not a valid ISO_3166-1 country code."
+msgstr ""
+
+#: .\congo\utils\vies\__init__.py:173
+#, python-format
+msgid "%s is not a european member state."
+msgstr ""
+
+#: .\congo\utils\vies\__init__.py:182
+#, python-format
+msgid "%s does not match the countries VAT ID specifications."
+msgstr ""
+
+#: .\congo\utils\vies\__init__.py:185 .\congo\utils\vies\__init__.py:194
+#, python-format
+msgid "%s is not a valid VATIN."
+msgstr ""

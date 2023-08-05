@@ -1,0 +1,11 @@
+django_user_agents
+django-appconf
+django-mptt==0.9
+django-parler==1.9
+pillow
+urllib3==1.22
+premailer
+pycrypto
+py-moneyed
+suds
+unidecode

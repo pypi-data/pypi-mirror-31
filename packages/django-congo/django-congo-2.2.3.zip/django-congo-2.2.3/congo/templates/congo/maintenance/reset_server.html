@@ -1,0 +1,16 @@
+{% extends "congo/base.html" %}
+{% load i18n common %}
+
+{% block content %}
+
+  <h1>{{ meta.get_full_title }}</h1>
+
+  <p>{% trans "Wywołano reset serwera HTTP" %}</p>
+  
+  <p>
+    <a href="/">{% trans "Strona głowna" %}</a>
+    <span class="">{% trans "lub" %}</span>
+    <a href="{% url "admin:index" %}">{% trans "Admin" %}</a>
+  </p>
+
+{% endblock %}
