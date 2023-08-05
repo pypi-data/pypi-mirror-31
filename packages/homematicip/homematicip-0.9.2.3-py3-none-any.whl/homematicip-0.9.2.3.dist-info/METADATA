@@ -1,0 +1,23 @@
+Metadata-Version: 2.0
+Name: homematicip
+Version: 0.9.2.3
+Summary: An API for the homematicip cloud
+Home-page: https://github.com/coreGreenberet/homematicip-rest-api
+Author: Heimo Stieg
+Author-email: stieg@corona-bytes.net
+License: UNKNOWN
+Download-URL: https://github.com/coreGreenberet/homematicip-rest-api/tarball/0.9.2.3
+Keywords: homematicip
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3
+Requires-Dist: requests (>=2.4.3)
+Requires-Dist: websocket-client
+Requires-Dist: websockets
+Requires-Dist: aiohttp
+Requires-Dist: async-timeout
+
+UNKNOWN
+
+
