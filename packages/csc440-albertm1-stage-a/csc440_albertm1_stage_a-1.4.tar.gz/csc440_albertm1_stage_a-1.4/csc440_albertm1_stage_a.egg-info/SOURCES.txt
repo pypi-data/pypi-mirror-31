@@ -1,0 +1,10 @@
+setup.py
+csc440_albertm1_stage_a/__init__.py
+csc440_albertm1_stage_a/user_createdelete.py
+csc440_albertm1_stage_a/user_deleteByRoles.py
+csc440_albertm1_stage_a/user_forms.py
+csc440_albertm1_stage_a.egg-info/PKG-INFO
+csc440_albertm1_stage_a.egg-info/SOURCES.txt
+csc440_albertm1_stage_a.egg-info/dependency_links.txt
+csc440_albertm1_stage_a.egg-info/requires.txt
+csc440_albertm1_stage_a.egg-info/top_level.txt
