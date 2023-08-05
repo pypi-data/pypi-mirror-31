@@ -1,0 +1,21 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-vertical-construction
+Version: 8.0.20170409
+Summary: Meta package for OCA vertical-construction Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo8-addon-base-construction-architect
+Requires-Dist: odoo8-addon-crm-construction-architect
+Requires-Dist: odoo8-addon-crm-construction-calculator
+Requires-Dist: odoo8-addon-crm-construction-site
+Requires-Dist: odoo8-addon-project-construction-architect
+Requires-Dist: odoo8-addon-project-construction-site
+
+UNKNOWN
+
+
