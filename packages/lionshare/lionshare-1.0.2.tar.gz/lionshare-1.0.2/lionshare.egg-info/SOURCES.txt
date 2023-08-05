@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+lionshare/__init__.py
+lionshare/lionshareapi.py
+lionshare.egg-info/PKG-INFO
+lionshare.egg-info/SOURCES.txt
+lionshare.egg-info/dependency_links.txt
+lionshare.egg-info/requires.txt
+lionshare.egg-info/top_level.txt
