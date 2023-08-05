@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+emoji2text/__init__.py
+emoji2text/emoji-test.txt
+emoji2text/parse.py
+emoji2text.egg-info/PKG-INFO
+emoji2text.egg-info/SOURCES.txt
+emoji2text.egg-info/dependency_links.txt
+emoji2text.egg-info/not-zip-safe
+emoji2text.egg-info/requires.txt
+emoji2text.egg-info/top_level.txt

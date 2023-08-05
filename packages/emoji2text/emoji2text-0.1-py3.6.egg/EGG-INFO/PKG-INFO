@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: emoji2text
+Version: 0.1
+Summary: Can't handle emoji? Use this to treat them as plain strings, according to the description provided by unicode.
+Home-page: https://github.com/SamCB/Emoji2Text
+Author: Sam CB
+Author-email: s.cbird01@gmail.com
+License: MIT
+Description: # W.I.P
+        
+Keywords: emoji convert text unicode plain
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Topic :: Text Processing :: General
