@@ -1,0 +1,34 @@
+- project:
+    check:
+      jobs:
+        - python-saharaclient-scenario
+        - python-saharaclient-tempest
+        - openstack-tox-lower-constraints
+    gate:
+      jobs:
+        - python-saharaclient-scenario
+        - python-saharaclient-tempest
+
+        - openstack-tox-lower-constraints
+- job:
+    name: python-saharaclient-scenario
+    description: |
+      Run scenario tests for Sahara against python-saharaclient changes.
+    parent: sahara-tests-scenario
+    required-projects:
+      - openstack/python-saharaclient
+    vars:
+      devstack_localrc:
+        LIBS_FROM_GIT: 'python-saharaclient'
+
+- job:
+    name: python-saharaclient-tempest
+    description: |
+      Run Tempest tests from the Sahara plugin against python-saharaclient
+      changes.
+    parent: sahara-tests-tempest
+    required-projects:
+      - openstack/python-saharaclient
+    vars:
+      devstack_localrc:
+        LIBS_FROM_GIT: 'python-saharaclient'
