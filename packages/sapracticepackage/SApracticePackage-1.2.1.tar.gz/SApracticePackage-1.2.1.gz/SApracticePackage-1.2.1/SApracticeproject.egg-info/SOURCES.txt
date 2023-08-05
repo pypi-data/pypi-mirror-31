@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+data/data_file
+sample/__init__.py
+sample/package_data.dat
+SApracticePackage.egg-info/PKG-INFO
+SApracticePackage.egg-info/SOURCES.txt
+SApracticePackage.egg-info/dependency_links.txt
+SApracticePackage.egg-info/entry_points.txt
+SApracticePackage.egg-info/requires.txt
+SApracticePackage.egg-info/top_level.txt
