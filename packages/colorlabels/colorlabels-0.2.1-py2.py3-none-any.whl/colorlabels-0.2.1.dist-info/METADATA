@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: colorlabels
+Version: 0.2.1
+Summary: Provides semantic and colorful labels in console. Designed for message display and interaction in automated scripts.
+Home-page: https://github.com/gousaiyang/colorlabels
+Author: Saiyang Gou
+Author-email: gousaiyang223@gmail.com
+License: MIT
+Keywords: console color display animation
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: colorama
+
+For more information, goto https://github.com/gousaiyang/colorlabels.
+
+
