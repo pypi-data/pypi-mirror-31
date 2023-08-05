@@ -1,0 +1,20 @@
+Metadata-Version: 2.0
+Name: odoo9-addons-oca-geospatial
+Version: 9.0.20170429
+Summary: Meta package for OCA geospatial Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo9-addon-base-geoengine
+Requires-Dist: odoo9-addon-base-geoengine-demo
+Requires-Dist: odoo9-addon-geoengine-maplausanne
+Requires-Dist: odoo9-addon-geoengine-partner
+Requires-Dist: odoo9-addon-geoengine-swisstopo
+
+UNKNOWN
+
+
