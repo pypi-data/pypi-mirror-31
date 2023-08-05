@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: opensecrets_api
+Version: 1.0.1
+Summary: API to access the opensecrets.org information
+Home-page: https://github.com/kartikye/opensecrets_api/
+Author: Kartikye Mittal
+Author-email: kartikye.mittal+opensecrets_api@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3
