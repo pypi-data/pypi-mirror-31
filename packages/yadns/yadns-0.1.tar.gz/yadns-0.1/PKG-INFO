@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: yadns
+Version: 0.1
+Summary: Wrapper for Yandex Mail for Domain DNS REST API
+Home-page: https://github.com/Feliksas/yadns
+Author: Andrey Ignatov
+Author-email: feliksas@feliksaslion.ru
+License: GPLv3
+Description: UNKNOWN
+Keywords: yandex dns client mail pdd rest api
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7

@@ -1,0 +1,9 @@
+setup.py
+bin/yadns-client
+yadns/__init__.py
+yadns.egg-info/PKG-INFO
+yadns.egg-info/SOURCES.txt
+yadns.egg-info/dependency_links.txt
+yadns.egg-info/not-zip-safe
+yadns.egg-info/requires.txt
+yadns.egg-info/top_level.txt
