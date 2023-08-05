@@ -1,0 +1,23 @@
+Metadata-Version: 2.0
+Name: odoo11-addons-oca-l10n-spain
+Version: 11.0.20171122
+Summary: Meta package for OCA l10n-spain Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo11-addon-l10n-es-account-asset
+Requires-Dist: odoo11-addon-l10n-es-account-bank-statement-import-n43
+Requires-Dist: odoo11-addon-l10n-es-account-invoice-sequence
+Requires-Dist: odoo11-addon-l10n-es-aeat
+Requires-Dist: odoo11-addon-l10n-es-dua
+Requires-Dist: odoo11-addon-l10n-es-partner
+Requires-Dist: odoo11-addon-l10n-es-partner-mercantil
+Requires-Dist: odoo11-addon-l10n-es-toponyms
+
+UNKNOWN
+
+
