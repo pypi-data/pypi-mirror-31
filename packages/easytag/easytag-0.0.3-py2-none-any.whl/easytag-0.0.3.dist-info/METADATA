@@ -1,0 +1,14 @@
+Metadata-Version: 2.0
+Name: easytag
+Version: 0.0.3
+Summary: A command-line tool to use Google's Cloud Vision API to label images.
+Home-page: UNKNOWN
+Author: Eric Steele
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: google.cloud
+
+UNKNOWN
+
+
