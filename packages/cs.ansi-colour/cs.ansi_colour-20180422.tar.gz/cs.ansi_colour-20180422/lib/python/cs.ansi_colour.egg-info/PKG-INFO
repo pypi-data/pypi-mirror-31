@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: cs.ansi-colour
+Version: 20180422
+Summary: Convenience functions for ANSI terminal colour sequences
+Home-page: https://bitbucket.org/cameron_simpson/css/commits/all
+Author: Cameron Simpson
+Author-email: cs@cskk.id.au
+License: UNKNOWN
+Description: Mapping and function for adding ANSI terminal colour escape sequences
+        to strings for colour highlighting of output.
+Keywords: python2,python3
+Platform: UNKNOWN
+Classifier: Development Status :: 6 - Mature
+Classifier: Environment :: Console
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Terminals
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
