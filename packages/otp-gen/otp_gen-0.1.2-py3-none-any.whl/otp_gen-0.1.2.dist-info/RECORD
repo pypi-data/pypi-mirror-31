@@ -1,0 +1,15 @@
+otp/__init__.py,sha256=nivUZ2EK8lwoMYjDWgTXPZ2JvlmmiI-SzV8ucgCytUY,1223
+otp/cli.py,sha256=n6xW_3_g_BBhWf_vDpfH80EUtJydKc4CHPb84BzmCmI,1629
+otp/configure.py,sha256=QwhxgQ1vpYvdcay30bCj1QTG9XT2hX98net9IvjcvNA,2509
+otp/core.py,sha256=AXWAEDGa-ku5rvy1ZMclQh2_EXku5y4qwcNd9yChotM,4180
+otp/otp.py,sha256=soqlppX_43x7DUFlX_6NiP7Tj0vdRJq0qB0J5jTUu8U,2535
+otp/progress.py,sha256=lhwM2LTcPxlH_ag2Y8RvCKuwJ-qjD0mCSF-Xh6dwmIs,2937
+otp/qr_code.py,sha256=xaNW5U7gIMCkIsd3tVxLU_24DmIyUbdnQkdVo44Gtts,1793
+otp/token.py,sha256=-vb4bfSCmRpNO-I5Qc_tTC5sngwqZfd__UgHqKWZVjU,6146
+otp_gen-0.1.2.data/scripts/otp,sha256=8JUSBZqFgltjsn8bhROtGCrKGH840EKvTHat34buZBw,41
+otp_gen-0.1.2.dist-info/DESCRIPTION.rst,sha256=miJjjDG-MqigXKoRLqMrpklzbLjkscWB4CJpZXmF5XY,1525
+otp_gen-0.1.2.dist-info/METADATA,sha256=tLbaHSpRWoUyHGJub1tHH3_NPGmR6Gx8AXKl6SXalvM,1896
+otp_gen-0.1.2.dist-info/RECORD,,
+otp_gen-0.1.2.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+otp_gen-0.1.2.dist-info/metadata.json,sha256=4AWBrOOmzZ-0P1tq4ixcFFTqmNgyKEed-oEMMUjeziI,627
+otp_gen-0.1.2.dist-info/top_level.txt,sha256=zfD2UkacTO-3Oua6WmWNNuBhWI6Txj1G1xsoLdq1aUs,4
