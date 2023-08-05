@@ -1,0 +1,17 @@
+libtlda/__init__.py,sha256=q_yPlPrB_inIjASx2jIUlr9vno6AlS1OL_mCQVJK7Ks,97
+libtlda/_version.py,sha256=GB50iur_GJ8sowd-PXJToaj4lf7PGy_nEWRPwOyDnDQ,23
+libtlda/example.py,sha256=ZaU09FCeJ2Edtv5iYhWxTs1sMw2ZBgtv0nl55J86FMQ,3735
+libtlda/flda.py,sha256=m9BF1ycbiulwhBgM7JNn6wBxvZQjWY4qcjd8N1N9WgI,11589
+libtlda/iw.py,sha256=2-Mtrhesm1MkY-gdrpjXHuhC9HOqkdg6pEdPS2UwXC0,11696
+libtlda/rba.py,sha256=su-issosiDNs9883NurXFJgMQNhA7yX0YfHfGdXdIYQ,8974
+libtlda/scl.py,sha256=-v47yH6nIV_2jR2ppSx5o7-FNVQ0yTvRwVOfl8hgqJk,8477
+libtlda/suba.py,sha256=3nye65Mq9LqqdVv4-zZWR6EE_vmllbsDmKWC77MwUZk,5924
+libtlda/tca.py,sha256=CLYxU_KdKybGoExUxjNHSkNDPxP5EoGqIsIB9rIxGEw,8882
+libtlda/tcpr.py,sha256=tNhLXdE1ts1NXGZKXzr6uh8AlqSceAn-Qa4J2x3My-E,15358
+libtlda/util.py,sha256=KWsJzyyeDdLZ-VtdRceBXHtsRvYr_7O2g_e5CKzw-PA,6310
+libtlda-0.1.4.dist-info/DESCRIPTION.rst,sha256=Gqp2e-eJKjoXznr57uzF1fUPA2HqjsAaQyqvt1IEbMQ,4120
+libtlda-0.1.4.dist-info/METADATA,sha256=qHTQ-rJxvMKZwdO0gOXXuqbZar7qRYdmGnYB3lTL1ss,5339
+libtlda-0.1.4.dist-info/RECORD,,
+libtlda-0.1.4.dist-info/WHEEL,sha256=kdsN-5OJAZIiHN-iO4Rhl82KyS0bDWf4uBwMbkNafr8,110
+libtlda-0.1.4.dist-info/metadata.json,sha256=RiaxDRYgubEySgafFkrZmooJ0DTvVkRfU5juMGanx-Y,1316
+libtlda-0.1.4.dist-info/top_level.txt,sha256=MSgnkyS36U8doii0-YzzjXsNAekpCcoOlU1rwptR1bs,8
