@@ -1,0 +1,10 @@
+django_rest_multiple_models-2.1.0.dist-info/METADATA,sha256=FEkU9kRGDS-EXJTjJk0g8CGocqdRBd9gQMveWZNIwfg,1870
+django_rest_multiple_models-2.1.0.dist-info/RECORD,,
+django_rest_multiple_models-2.1.0.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+django_rest_multiple_models-2.1.0.dist-info/top_level.txt,sha256=SbmY7tAu45UBIush2zRtioEdFeTRhJSNGIVotZkJsms,19
+drf_multiple_model/__init__.py,sha256=Xm5bmjRXId8kP2iYxXmGyTYcar9vl7uz-H9f-rW2q1w,172
+drf_multiple_model/mixins.py,sha256=TTLq1DhOuA8tsIFolJwlJu-7A6wsXKYditGJ-H7MlFM,11289
+drf_multiple_model/models.py,sha256=LczZWT1fERP1mhB2XkElDq4aqQGtHQXjMTwZQVZfCQI,28
+drf_multiple_model/pagination.py,sha256=wEVzlcW_5y7KEhvqrXuGU1j3qlPlIn9ajOreshXNbns,1544
+drf_multiple_model/views.py,sha256=WRm_jaowuYp1Mfd27bqNZqfN19I3vV_RUsWWD6_1CEk,581
+drf_multiple_model/viewsets.py,sha256=qGcyVzOWjruMBkH0dUKg2BkAaDuZ6GqUxKVZkgH-8OU,393
