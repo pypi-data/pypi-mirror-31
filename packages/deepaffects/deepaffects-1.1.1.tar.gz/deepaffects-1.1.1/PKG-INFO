@@ -1,0 +1,206 @@
+Metadata-Version: 1.0
+Name: deepaffects
+Version: 1.1.1
+Summary: Python bindings for DeepAffects APIs
+Home-page: https://github.com/SEERNET/deepaffects-python
+Author: Sushant Hiray, Venkatesh Duppada
+Author-email: support@seernet.io
+License: UNKNOWN
+Description-Content-Type: UNKNOWN
+Description: deepaffects-python
+        ==================
+        
+        |Build Status| |PyPI version|
+        
+        Python client library for DeepAffects APIs
+        
+        Requirements.
+        -------------
+        
+        Python 2.7 and 3.3+
+        
+        pymediainfo >= 2.1.9, this is a wrapper library around
+        `mediainfo <https://mediaarea.net/en/MediaInfo>`__, which we use to
+        extract the sampling rate and codec information from audio files.
+        
+        Installation
+        ------------
+        
+        pip install
+        ~~~~~~~~~~~
+        
+        The python package can be installed directly from pip using:
+        
+        .. code:: bash
+        
+            pip install deepaffects
+        
+        pip install from github
+        ~~~~~~~~~~~~~~~~~~~~~~~
+        
+        The python package is hosted on Github, you can install directly from
+        Github
+        
+        .. code:: sh
+        
+            pip install git+https://github.com/SEERNET/deepaffects-python.git
+        
+        (you may need to run ``pip`` with root permission:
+        ``sudo pip install git+https://github.com/SEERNET/deepaffects-python.git``)
+        
+        Then import the package:
+        
+        .. code:: python
+        
+            import deepaffects 
+        
+        Setuptools
+        ~~~~~~~~~~
+        
+        Install via `Setuptools <http://pypi.python.org/pypi/setuptools>`__.
+        
+        .. code:: sh
+        
+            python setup.py install --user
+        
+        (or ``sudo python setup.py install`` to install the package for all
+        users)
+        
+        Then import the package:
+        
+        .. code:: python
+        
+            import deepaffects
+        
+        Documentation for Authorization
+        -------------------------------
+        
+        DeepAffects API authenticates all the api requests via API Key.
+        
+        For API key registration and setup, checkout our `quickstart
+        guide <https://developers.deepaffects.com/docs/#quickstart-guide>`__
+        
+        UserSecurity
+        ~~~~~~~~~~~~
+        
+        -  **Type**: API key
+        -  **API key parameter name**: apikey
+        -  **Location**: URL query string
+        
+        Getting Started
+        ---------------
+        
+        Please follow the `installation <#installation>`__ instruction and
+        execute the following python code:
+        
+        .. code:: python
+        
+            from __future__ import print_function
+            import time
+            import deepaffects
+            from deepaffects.rest import ApiException
+            from pprint import pprint
+        
+            # Configure API key authorization: UserSecurity
+            deepaffects.configuration.api_key['apikey'] = 'YOUR_API_KEY'
+            # create an instance of the API class
+            api_instance = deepaffects.DenoiseApi()
+            body = deepaffects.Audio.from_file('/path/to/file') # Audio | Audio object that needs to be denoised.
+            webhook = 'webhook_example' # str | The webhook url where result from async resource is posted
+            request_id = 'request_id_example' # str | Unique identifier for the request (optional)
+        
+            try:
+                # Denoise an audio file
+                api_response = api_instance.async_denoise_audio(body, webhook, request_id=request_id)
+                pprint(api_response)
+            except ApiException as e:
+                print("Exception when calling DenoiseApi->async_denoise_audio: %s\n" % e)
+        
+        Documentation for API Endpoints
+        -------------------------------
+        
+        All URIs are relative to *https://localhost*
+        
+        +-----------------+-----------------------------------+-------------+-------------+
+        | Class           | Method                            | HTTP        | Description |
+        |                 |                                   | request     |             |
+        +=================+===================================+=============+=============+
+        | *DenoiseApi*    | `async\_denoise\_audio <https://g | **POST**    | Denoise an  |
+        |                 | ithub.com/SEERNET/deepaffects-pyt | /api/v1/asy | audio file  |
+        |                 | hon/blob/master/docs/DenoiseApi.m | nc/denoise  |             |
+        |                 | d#async_denoise_audio>`__         |             |             |
+        +-----------------+-----------------------------------+-------------+-------------+
+        | *DenoiseApi*    | `sync\_denoise\_audio <https://gi | **POST**    | Denoise an  |
+        |                 | thub.com/SEERNET/deepaffects-pyth | /api/v1/syn | audio file  |
+        |                 | on/blob/master/docs/DenoiseApi.md | c/denoise   |             |
+        |                 | #sync_denoise_audio>`__           |             |             |
+        +-----------------+-----------------------------------+-------------+-------------+
+        | *DiarizeApiV2*  | `async\_diarize\_audio <https://g | **POST**    | Diarize an  |
+        |                 | ithub.com/SEERNET/deepaffects-pyt | /api/v2/asy | audio file  |
+        |                 | hon/blob/master/docs/DiarizeApiV2 | nc/diarize  |             |
+        |                 | .md#async_diarize_audio>`__       |             |             |
+        +-----------------+-----------------------------------+-------------+-------------+
+        | *DiarizeApi*    | `async\_diarize\_audio <https://g | **POST**    | Diarize an  |
+        |                 | ithub.com/SEERNET/deepaffects-pyt | /api/v1/asy | audio file  |
+        |                 | hon/blob/master/docs/DiarizeApi.m | nc/diarize  | (Legacy)    |
+        |                 | d#async_diarize_audio>`__         |             |             |
+        +-----------------+-----------------------------------+-------------+-------------+
+        | *DiarizeApi*    | `sync\_diarize\_audio <https://gi | **POST**    | Diarize an  |
+        |                 | thub.com/SEERNET/deepaffects-pyth | /api/v1/syn | audio file  |
+        |                 | on/blob/master/docs/DiarizeApi.md | c/diarize   | (Legacy)    |
+        |                 | #sync_diarize_audio>`__           |             |             |
+        +-----------------+-----------------------------------+-------------+-------------+
+        | *EmotionApi*    | `async\_recognise\_emotion <https | **POST**    | Find        |
+        |                 | ://github.com/SEERNET/deepaffects | /api/v1/asy | emotion in  |
+        |                 | -python/blob/master/docs/EmotionA | nc/recognis | an audio    |
+        |                 | pi.md#async_recognise_emotion>`__ | e\_emotion  | file        |
+        +-----------------+-----------------------------------+-------------+-------------+
+        | *EmotionApi*    | `sync\_recognise\_emotion <https: | **POST**    | Find        |
+        |                 | //github.com/SEERNET/deepaffects- | /api/v1/syn | emotion in  |
+        |                 | python/blob/master/docs/EmotionAp | c/recognise | an audio    |
+        |                 | i.md#sync_recognise_emotion>`__   | \_emotion   | file        |
+        +-----------------+-----------------------------------+-------------+-------------+
+        | *FeaturizeApi*  | `async\_featurize\_audio <https:/ | **POST**    | featurize   |
+        |                 | /github.com/SEERNET/deepaffects-p | /api/v1/asy | an audio    |
+        |                 | ython/blob/master/docs/FeaturizeA | nc/featuriz | file        |
+        |                 | pi.md#async_featurize_audio>`__   | e           |             |
+        +-----------------+-----------------------------------+-------------+-------------+
+        | *FeaturizeApi*  | `sync\_featurize\_audio <https:// | **POST**    | featurize   |
+        |                 | github.com/SEERNET/deepaffects-py | /api/v1/syn | an audio    |
+        |                 | thon/blob/master/docs/FeaturizeAp | c/featurize | file        |
+        |                 | i.md#sync_featurize_audio>`__     |             |             |
+        +-----------------+-----------------------------------+-------------+-------------+
+        
+        Documentation For Models
+        ------------------------
+        
+        -  `AsyncResponse <https://github.com/SEERNET/deepaffects-python/blob/master/docs/AsyncResponse.md>`__
+        -  `Audio <https://github.com/SEERNET/deepaffects-python/blob/master/docs/Audio.md>`__
+        -  `DiarizeAudio <https://github.com/SEERNET/deepaffects-python/blob/master/docs/DiarizeAudio.md>`__
+        -  `EmotionScore <https://github.com/SEERNET/deepaffects-python/blob/master/docs/EmotionScore.md>`__
+        
+        UserSecurity
+        ------------
+        
+        -  **Type**: API key
+        -  **API key parameter name**: apikey
+        -  **Location**: URL query string
+        
+        About
+        -----
+        
+        `DeepAffects <https://www.deepaffects.com/dashboard>`__ is an emotional
+        intelligence analysis engine that measures the effect emotional
+        intelligence has on team dynamics, and provides emotional analytics that
+        serve as the basis of insights to improve project management,
+        performance and satisfaction across organizations, projects, and teams.
+        To watch DeepAffects in action: check out DeepAffects `Atlassian JIRA
+        addon <https://marketplace.atlassian.com/plugins/com.deepaffects.teams.jira/cloud/overview>`__
+        and our `Github addon <https://teams.deepaffects.com/>`__.
+        
+        .. |Build Status| image:: https://travis-ci.org/SEERNET/deepaffects-python.svg
+           :target: https://travis-ci.org/SEERNET/deepaffects-python
+        .. |PyPI version| image:: https://badge.fury.io/py/deepaffects.svg
+           :target: https://badge.fury.io/py/deepaffects
+        
+Platform: UNKNOWN
