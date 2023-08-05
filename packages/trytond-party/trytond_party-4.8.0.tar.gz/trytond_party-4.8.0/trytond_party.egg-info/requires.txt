@@ -1,0 +1,13 @@
+python-sql>=0.4
+python-stdnum
+trytond_country<4.9,>=4.8
+trytond<4.9,>=4.8
+
+[VIES]
+python-stdnum[vies]
+
+[VIES-ALT]
+python-stdnum[vies-alt]
+
+[phonenumbers]
+phonenumbers
