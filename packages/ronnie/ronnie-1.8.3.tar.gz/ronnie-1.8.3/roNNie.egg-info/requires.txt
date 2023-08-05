@@ -1,0 +1,4 @@
+tensorflow==1.6
+numpy>=1.14
+pandas>=0.22
+matplotlib
