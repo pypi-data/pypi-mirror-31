@@ -1,0 +1,47 @@
+Metadata-Version: 2.0
+Name: feature-reduction
+Version: 3.0
+Summary: feature selection Python Library
+Home-page: UNKNOWN
+Author: Wujunming
+Author-email: wujunming@shu.edu.cn
+License: MIT
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: scikit-learn (>=0.19.0)
+Requires-Dist: pymongo (>=3.5.1)
+Requires-Dist: pandas (>=0.20.3)
+
+Feature_reduction
+-----------
+-----------
+A Python library for feature_selection
+
+Description
+-----------
+
+select optimal feature subset from original feature set
+
+
+Installation
+------------
+Download using pip via Pypi
+       pip install feature_reduction
+
+Instruction for use
+------------------
+
