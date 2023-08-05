@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+./django_indisposable/locale/de/LC_MESSAGES/django.mo
+./django_indisposable/locale/de/LC_MESSAGES/django.po
+django_indisposable/__init__.py
+django_indisposable.egg-info/PKG-INFO
+django_indisposable.egg-info/SOURCES.txt
+django_indisposable.egg-info/dependency_links.txt
+django_indisposable.egg-info/not-zip-safe
+django_indisposable.egg-info/requires.txt
+django_indisposable.egg-info/top_level.txt
