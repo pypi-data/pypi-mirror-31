@@ -1,0 +1,14 @@
+Metadata-Version: 1.0
+Name: image2pipe
+Version: 0.0.1
+Summary: Simple ffmpeg wrapper for image2pipe
+Home-page: https://github.com/chexov/image2pipe
+Author: Anton P. Linevich
+Author-email: anton@linevich.com
+License: LICENSE.txt
+Description: import image2pipe
+        
+        
+        
+Keywords: ffmpeg yuv image2pipe
+Platform: UNKNOWN
