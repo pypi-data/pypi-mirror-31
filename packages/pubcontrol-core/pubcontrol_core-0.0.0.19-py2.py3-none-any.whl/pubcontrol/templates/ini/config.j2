@@ -1,0 +1,15 @@
+[MYSQL]
+host = {{ mysql_host }}
+database = {{ mysql_database }}
+username = {{ mysql_username }}
+password = {{ mysql_password }}
+
+[LOGGING]
+; OPTIONS for the path type are the following
+; project: Which means the path given will be interpreted as a patn relative to the project folder
+; relative: A path relative to the installation folder of the pubcontrol python package
+; absolute: A absolute path of the file system to a custom log location
+path_type = project
+path = logs
+format = {name}_{date}_{session}
+extension = log
