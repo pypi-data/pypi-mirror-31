@@ -1,0 +1,14 @@
+include README.rst
+include LICENSE.md
+
+include RELIC-INFO
+
+recursive-include doc *
+recursive-include relic *
+prune relic/.git
+prune relic/tests
+
+prune build
+prune doc/build
+
+global-exclude *.pyc *.o
