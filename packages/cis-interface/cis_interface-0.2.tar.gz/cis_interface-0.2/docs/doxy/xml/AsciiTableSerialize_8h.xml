@@ -1,0 +1,465 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="AsciiTableSerialize_8h" kind="file" language="C++">
+    <compoundname>AsciiTableSerialize.h</compoundname>
+    <includes refid="tools_8h" local="no">../tools.h</includes>
+    <includes refid="SerializeBase_8h" local="no">SerializeBase.h</includes>
+    <includes refid="AsciiTable_8h" local="no">../dataio/AsciiTable.h</includes>
+    <includedby refid="serialize_8h" local="no">/Users/langmm/cis_interface/cis_interface/serialize/serialize.h</includedby>
+    <incdepgraph>
+      <node id="2331">
+        <label>stdarg.h</label>
+      </node>
+      <node id="2330">
+        <label>stdlib.h</label>
+      </node>
+      <node id="2342">
+        <label>AsciiFile.h</label>
+        <link refid="AsciiFile_8h_source"/>
+        <childnode refid="2327" relation="include">
+        </childnode>
+      </node>
+      <node id="2332">
+        <label>errno.h</label>
+      </node>
+      <node id="2336">
+        <label>stdint.h</label>
+        <link refid="stdint_8h_source"/>
+        <childnode refid="2337" relation="include">
+        </childnode>
+        <childnode refid="2338" relation="include">
+        </childnode>
+      </node>
+      <node id="2338">
+        <label>stddef.h</label>
+      </node>
+      <node id="2334">
+        <label>regex_posix.h</label>
+        <link refid="regex__posix_8h_source"/>
+        <childnode refid="2335" relation="include">
+        </childnode>
+        <childnode refid="2336" relation="include">
+        </childnode>
+      </node>
+      <node id="2326">
+        <label>/Users/langmm/cis_interface/cis_interface/serialize/AsciiTableSerialize.h</label>
+        <link refid="AsciiTableSerialize_8h"/>
+        <childnode refid="2327" relation="include">
+        </childnode>
+        <childnode refid="2340" relation="include">
+        </childnode>
+        <childnode refid="2341" relation="include">
+        </childnode>
+      </node>
+      <node id="2341">
+        <label>../dataio/AsciiTable.h</label>
+        <link refid="AsciiTable_8h_source"/>
+        <childnode refid="2327" relation="include">
+        </childnode>
+        <childnode refid="2342" relation="include">
+        </childnode>
+      </node>
+      <node id="2337">
+        <label>wchar.h</label>
+      </node>
+      <node id="2328">
+        <label>string.h</label>
+      </node>
+      <node id="2327">
+        <label>../tools.h</label>
+        <link refid="tools_8h_source"/>
+        <childnode refid="2328" relation="include">
+        </childnode>
+        <childnode refid="2329" relation="include">
+        </childnode>
+        <childnode refid="2330" relation="include">
+        </childnode>
+        <childnode refid="2331" relation="include">
+        </childnode>
+        <childnode refid="2332" relation="include">
+        </childnode>
+        <childnode refid="2333" relation="include">
+        </childnode>
+        <childnode refid="2334" relation="include">
+        </childnode>
+        <childnode refid="2336" relation="include">
+        </childnode>
+        <childnode refid="2339" relation="include">
+        </childnode>
+      </node>
+      <node id="2339">
+        <label>unistd.h</label>
+      </node>
+      <node id="2333">
+        <label>time.h</label>
+      </node>
+      <node id="2340">
+        <label>SerializeBase.h</label>
+        <link refid="SerializeBase_8h_source"/>
+        <childnode refid="2327" relation="include">
+        </childnode>
+      </node>
+      <node id="2335">
+        <label>regex.h</label>
+      </node>
+      <node id="2329">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2348">
+        <label>/Users/langmm/cis_interface/cis_interface/interface/PsiInterface.hpp</label>
+        <link refid="PsiInterface_8hpp_source"/>
+      </node>
+      <node id="2345">
+        <label>/Users/langmm/cis_interface/cis_interface/communication/communication.h</label>
+        <link refid="communication_8h_source"/>
+        <childnode refid="2346" relation="include">
+        </childnode>
+        <childnode refid="2349" relation="include">
+        </childnode>
+      </node>
+      <node id="2349">
+        <label>/Users/langmm/cis_interface/cis_interface/interface/PsiInterface.h</label>
+        <link refid="PsiInterface_8h_source"/>
+      </node>
+      <node id="2343">
+        <label>/Users/langmm/cis_interface/cis_interface/serialize/AsciiTableSerialize.h</label>
+        <link refid="AsciiTableSerialize_8h"/>
+        <childnode refid="2344" relation="include">
+        </childnode>
+      </node>
+      <node id="2344">
+        <label>/Users/langmm/cis_interface/cis_interface/serialize/serialize.h</label>
+        <link refid="serialize_8h_source"/>
+        <childnode refid="2345" relation="include">
+        </childnode>
+      </node>
+      <node id="2346">
+        <label>/Users/langmm/cis_interface/cis_interface/interface/CisInterface.h</label>
+        <link refid="CisInterface_8h_source"/>
+        <childnode refid="2347" relation="include">
+        </childnode>
+        <childnode refid="2349" relation="include">
+        </childnode>
+      </node>
+      <node id="2347">
+        <label>/Users/langmm/cis_interface/cis_interface/interface/CisInterface.hpp</label>
+        <link refid="CisInterface_8hpp_source"/>
+        <childnode refid="2348" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="AsciiTableSerialize_8h_1aa7aee33cb6af1e1f38491a4dc899ee91" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int serialize_ascii_table</definition>
+        <argsstring>(const seri_t s, char *buf, const size_t buf_siz, int *args_used, va_list ap)</argsstring>
+        <name>serialize_ascii_table</name>
+        <param>
+          <type>const <ref refid="structseri__t" kindref="compound">seri_t</ref></type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>buf_siz</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>args_used</declname>
+        </param>
+        <param>
+          <type>va_list</type>
+          <declname>ap</declname>
+        </param>
+        <briefdescription>
+<para>Serialize arguments to create a table row. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structseri__t" kindref="compound">seri_t</ref> Structure sepcifying how to serialize arguments. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>character pointer to pointer to memory where serialized message should be stored. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">buf_siz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size_t Size of memory allocated to buf. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">args_used</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int Number of arguments formatted. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>va_list Arguments to be formatted. returns: int The length of the serialized message or -1 if there is an error. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/langmm/cis_interface/cis_interface/serialize/AsciiTableSerialize.h" line="20" column="1" bodyfile="/Users/langmm/cis_interface/cis_interface/serialize/AsciiTableSerialize.h" bodystart="20" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="AsciiTableSerialize_8h_1a0a8f4d2393a8ac96930d7cb29bc87ccf" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int deserialize_ascii_table</definition>
+        <argsstring>(const seri_t s, const char *buf, const size_t buf_siz, va_list ap)</argsstring>
+        <name>deserialize_ascii_table</name>
+        <param>
+          <type>const <ref refid="structseri__t" kindref="compound">seri_t</ref></type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>buf_siz</declname>
+        </param>
+        <param>
+          <type>va_list</type>
+          <declname>ap</declname>
+        </param>
+        <briefdescription>
+<para>Deserialize table row to populate arguments. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structseri__t" kindref="compound">seri_t</ref> Structure sepcifying how to deserialize message. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>character pointer to serialized message. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">buf_siz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size_t Size of buf. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>va_list Arguments to be parsed from message. returns: int The number of populated arguments. -1 indicates an error. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/langmm/cis_interface/cis_interface/serialize/AsciiTableSerialize.h" line="37" column="1" bodyfile="/Users/langmm/cis_interface/cis_interface/serialize/AsciiTableSerialize.h" bodystart="37" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="AsciiTableSerialize_8h_1a4e4eabd98c07f6163161597d56a165e6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int serialize_ascii_table_array</definition>
+        <argsstring>(const seri_t s, char *buf, const size_t buf_siz, int *args_used, va_list ap)</argsstring>
+        <name>serialize_ascii_table_array</name>
+        <param>
+          <type>const <ref refid="structseri__t" kindref="compound">seri_t</ref></type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>buf_siz</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>args_used</declname>
+        </param>
+        <param>
+          <type>va_list</type>
+          <declname>ap</declname>
+        </param>
+        <briefdescription>
+<para>Serialize column arrays to create table. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structseri__t" kindref="compound">seri_t</ref> Structure sepcifying how to serialize arguments. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>character pointer to pointer to memory where serialized message should be stored. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">buf_siz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size_t Size of memory allocated to buf. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">args_used</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int Number of arguments formatted. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>va_list Arguments to be formatted. These should be pointers to arrays, one for each column in the table. The first argument should be the number of rows in each column. returns: int The length of the serialized message or -1 if there is an error. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/langmm/cis_interface/cis_interface/serialize/AsciiTableSerialize.h" line="61" column="1" bodyfile="/Users/langmm/cis_interface/cis_interface/serialize/AsciiTableSerialize.h" bodystart="61" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="AsciiTableSerialize_8h_1abf327d217e92ec1b07372ea41e105d87" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int deserialize_ascii_table_array</definition>
+        <argsstring>(const seri_t s, const char *buf, const size_t buf_siz, va_list ap)</argsstring>
+        <name>deserialize_ascii_table_array</name>
+        <param>
+          <type>const <ref refid="structseri__t" kindref="compound">seri_t</ref></type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>buf_siz</declname>
+        </param>
+        <param>
+          <type>va_list</type>
+          <declname>ap</declname>
+        </param>
+        <briefdescription>
+<para>Deserialize table to populate column arrays. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structseri__t" kindref="compound">seri_t</ref> Structure sepcifying how to deserialize message. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>character pointer to serialized message. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">buf_siz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size_t Size of buf. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>va_list Pointers to pointers where column arrays should be stored. These should not be allocated prior to passing them as they will be allocated. returns: int The number of populated arguments. -1 indicates an error. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/langmm/cis_interface/cis_interface/serialize/AsciiTableSerialize.h" line="79" column="1" bodyfile="/Users/langmm/cis_interface/cis_interface/serialize/AsciiTableSerialize.h" bodystart="79" bodyend="84"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;../tools.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SerializeBase.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;../dataio/AsciiTable.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CISASCIITABLESERIALIZE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CISASCIITABLESERIALIZE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>serialize_ascii_table(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structseri__t" kindref="compound">seri_t</ref><sp/>s,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>buf_siz,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*args_used,<sp/>va_list<sp/>ap)<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><ref refid="structasciiTable__t" kindref="compound">asciiTable_t</ref><sp/>*table<sp/>=<sp/>(<ref refid="structasciiTable__t" kindref="compound">asciiTable_t</ref>*)s.info;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>args_used[0]<sp/>=<sp/>table-&gt;<ref refid="structasciiTable__t_1a837095bd2a245987e98f2bdd1fccaa94" kindref="member">ncols</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ret<sp/>=<sp/>at_vrow_to_bytes(*table,<sp/>buf,<sp/>buf_siz,<sp/>ap);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>deserialize_ascii_table(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structseri__t" kindref="compound">seri_t</ref><sp/>s,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>buf_siz,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>va_list<sp/>ap)<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Prevent<sp/>C4100<sp/>warning<sp/>on<sp/>windows<sp/>by<sp/>referencing<sp/>param</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_WIN32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>buf_siz;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><ref refid="structasciiTable__t" kindref="compound">asciiTable_t</ref><sp/>*table<sp/>=<sp/>(<ref refid="structasciiTable__t" kindref="compound">asciiTable_t</ref>*)s.info;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ret<sp/>=<sp/>at_vbytes_to_row(*table,<sp/>buf,<sp/>ap);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>serialize_ascii_table_array(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structseri__t" kindref="compound">seri_t</ref><sp/>s,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>buf_siz,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*args_used,<sp/>va_list<sp/>ap)<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><ref refid="structasciiTable__t" kindref="compound">asciiTable_t</ref><sp/>*table<sp/>=<sp/>(<ref refid="structasciiTable__t" kindref="compound">asciiTable_t</ref>*)s.info;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>args_used[0]<sp/>=<sp/>table-&gt;<ref refid="structasciiTable__t_1a837095bd2a245987e98f2bdd1fccaa94" kindref="member">ncols</ref><sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ret<sp/>=<sp/>at_varray_to_bytes(*table,<sp/>buf,<sp/>buf_siz,<sp/>ap);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>deserialize_ascii_table_array(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structseri__t" kindref="compound">seri_t</ref><sp/>s,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>buf_siz,<sp/>va_list<sp/>ap)<sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><ref refid="structasciiTable__t" kindref="compound">asciiTable_t</ref><sp/>*table<sp/>=<sp/>(<ref refid="structasciiTable__t" kindref="compound">asciiTable_t</ref>*)s.info;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ret<sp/>=<sp/>at_vbytes_to_array(*table,<sp/>buf,<sp/>buf_siz,<sp/>ap);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*CISASCIITABLESERIALIZE_H_*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/langmm/cis_interface/cis_interface/serialize/AsciiTableSerialize.h"/>
+  </compounddef>
+</doxygen>

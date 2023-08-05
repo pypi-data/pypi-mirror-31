@@ -1,0 +1,304 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="gcc__model_8c" kind="file" language="C++">
+    <compoundname>gcc_model.c</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes refid="hellofunc_8h" local="no">hellofunc.h</includes>
+    <includes refid="CisInterface_8h" local="no">CisInterface.h</includes>
+    <incdepgraph>
+      <node id="2474">
+        <label>IPCComm.h</label>
+        <link refid="IPCComm_8h_source"/>
+        <childnode refid="2473" relation="include">
+        </childnode>
+      </node>
+      <node id="2456">
+        <label>stdarg.h</label>
+      </node>
+      <node id="2465">
+        <label>../communication/communication.h</label>
+        <link refid="communication_8h_source"/>
+        <childnode refid="2453" relation="include">
+        </childnode>
+        <childnode refid="2466" relation="include">
+        </childnode>
+        <childnode refid="2472" relation="include">
+        </childnode>
+        <childnode refid="2473" relation="include">
+        </childnode>
+        <childnode refid="2474" relation="include">
+        </childnode>
+        <childnode refid="2475" relation="include">
+        </childnode>
+        <childnode refid="2476" relation="include">
+        </childnode>
+        <childnode refid="2478" relation="include">
+        </childnode>
+        <childnode refid="2479" relation="include">
+        </childnode>
+        <childnode refid="2480" relation="include">
+        </childnode>
+        <childnode refid="2481" relation="include">
+        </childnode>
+        <childnode refid="2477" relation="include">
+        </childnode>
+      </node>
+      <node id="2455">
+        <label>stdlib.h</label>
+      </node>
+      <node id="2470">
+        <label>AsciiFile.h</label>
+        <link refid="AsciiFile_8h_source"/>
+        <childnode refid="2453" relation="include">
+        </childnode>
+      </node>
+      <node id="2457">
+        <label>errno.h</label>
+      </node>
+      <node id="2461">
+        <label>stdint.h</label>
+        <link refid="stdint_8h_source"/>
+        <childnode refid="2462" relation="include">
+        </childnode>
+        <childnode refid="2463" relation="include">
+        </childnode>
+      </node>
+      <node id="2481">
+        <label>AsciiTableComm.h</label>
+        <link refid="AsciiTableComm_8h_source"/>
+        <childnode refid="2453" relation="include">
+        </childnode>
+        <childnode refid="2473" relation="include">
+        </childnode>
+        <childnode refid="2469" relation="include">
+        </childnode>
+      </node>
+      <node id="2468">
+        <label>FormatSerialize.h</label>
+        <link refid="FormatSerialize_8h_source"/>
+        <childnode refid="2453" relation="include">
+        </childnode>
+        <childnode refid="2467" relation="include">
+        </childnode>
+        <childnode refid="2469" relation="include">
+        </childnode>
+      </node>
+      <node id="2463">
+        <label>stddef.h</label>
+      </node>
+      <node id="2459">
+        <label>regex_posix.h</label>
+        <link refid="regex__posix_8h_source"/>
+        <childnode refid="2460" relation="include">
+        </childnode>
+        <childnode refid="2461" relation="include">
+        </childnode>
+      </node>
+      <node id="2471">
+        <label>AsciiTableSerialize.h</label>
+        <link refid="AsciiTableSerialize_8h_source"/>
+        <childnode refid="2453" relation="include">
+        </childnode>
+        <childnode refid="2467" relation="include">
+        </childnode>
+        <childnode refid="2469" relation="include">
+        </childnode>
+      </node>
+      <node id="2469">
+        <label>../dataio/AsciiTable.h</label>
+        <link refid="AsciiTable_8h_source"/>
+        <childnode refid="2453" relation="include">
+        </childnode>
+        <childnode refid="2470" relation="include">
+        </childnode>
+      </node>
+      <node id="2462">
+        <label>wchar.h</label>
+      </node>
+      <node id="2454">
+        <label>string.h</label>
+      </node>
+      <node id="2453">
+        <label>../tools.h</label>
+        <link refid="tools_8h_source"/>
+        <childnode refid="2454" relation="include">
+        </childnode>
+        <childnode refid="2450" relation="include">
+        </childnode>
+        <childnode refid="2455" relation="include">
+        </childnode>
+        <childnode refid="2456" relation="include">
+        </childnode>
+        <childnode refid="2457" relation="include">
+        </childnode>
+        <childnode refid="2458" relation="include">
+        </childnode>
+        <childnode refid="2459" relation="include">
+        </childnode>
+        <childnode refid="2461" relation="include">
+        </childnode>
+        <childnode refid="2464" relation="include">
+        </childnode>
+      </node>
+      <node id="2476">
+        <label>RPCComm.h</label>
+        <link refid="RPCComm_8h_source"/>
+        <childnode refid="2473" relation="include">
+        </childnode>
+        <childnode refid="2477" relation="include">
+        </childnode>
+        <childnode refid="2472" relation="include">
+        </childnode>
+      </node>
+      <node id="2479">
+        <label>ClientComm.h</label>
+        <link refid="ClientComm_8h_source"/>
+        <childnode refid="2453" relation="include">
+        </childnode>
+        <childnode refid="2473" relation="include">
+        </childnode>
+        <childnode refid="2477" relation="include">
+        </childnode>
+        <childnode refid="2472" relation="include">
+        </childnode>
+      </node>
+      <node id="2473">
+        <label>CommBase.h</label>
+        <link refid="CommBase_8h_source"/>
+        <childnode refid="2453" relation="include">
+        </childnode>
+      </node>
+      <node id="2464">
+        <label>unistd.h</label>
+      </node>
+      <node id="2478">
+        <label>ServerComm.h</label>
+        <link refid="ServerComm_8h_source"/>
+        <childnode refid="2473" relation="include">
+        </childnode>
+        <childnode refid="2477" relation="include">
+        </childnode>
+        <childnode refid="2472" relation="include">
+        </childnode>
+      </node>
+      <node id="2466">
+        <label>../serialize/serialize.h</label>
+        <link refid="serialize_8h_source"/>
+        <childnode refid="2453" relation="include">
+        </childnode>
+        <childnode refid="2467" relation="include">
+        </childnode>
+        <childnode refid="2468" relation="include">
+        </childnode>
+        <childnode refid="2471" relation="include">
+        </childnode>
+      </node>
+      <node id="2458">
+        <label>time.h</label>
+      </node>
+      <node id="2449">
+        <label>/Users/langmm/cis_interface/cis_interface/tests/scripts/gcc_model.c</label>
+        <link refid="gcc__model_8c"/>
+        <childnode refid="2450" relation="include">
+        </childnode>
+        <childnode refid="2451" relation="include">
+        </childnode>
+        <childnode refid="2452" relation="include">
+        </childnode>
+      </node>
+      <node id="2475">
+        <label>ZMQComm.h</label>
+        <link refid="ZMQComm_8h_source"/>
+        <childnode refid="2473" relation="include">
+        </childnode>
+      </node>
+      <node id="2480">
+        <label>AsciiFileComm.h</label>
+        <link refid="AsciiFileComm_8h_source"/>
+        <childnode refid="2453" relation="include">
+        </childnode>
+        <childnode refid="2473" relation="include">
+        </childnode>
+        <childnode refid="2470" relation="include">
+        </childnode>
+        <childnode refid="2469" relation="include">
+        </childnode>
+      </node>
+      <node id="2452">
+        <label>CisInterface.h</label>
+        <link refid="CisInterface_8h_source"/>
+        <childnode refid="2453" relation="include">
+        </childnode>
+        <childnode refid="2465" relation="include">
+        </childnode>
+        <childnode refid="2470" relation="include">
+        </childnode>
+        <childnode refid="2469" relation="include">
+        </childnode>
+      </node>
+      <node id="2477">
+        <label>DefaultComm.h</label>
+        <link refid="DefaultComm_8h_source"/>
+        <childnode refid="2473" relation="include">
+        </childnode>
+        <childnode refid="2475" relation="include">
+        </childnode>
+      </node>
+      <node id="2467">
+        <label>SerializeBase.h</label>
+        <link refid="SerializeBase_8h_source"/>
+        <childnode refid="2453" relation="include">
+        </childnode>
+      </node>
+      <node id="2460">
+        <label>regex.h</label>
+      </node>
+      <node id="2450">
+        <label>stdio.h</label>
+      </node>
+      <node id="2472">
+        <label>comm_header.h</label>
+        <link refid="comm__header_8h_source"/>
+        <childnode refid="2453" relation="include">
+        </childnode>
+        <childnode refid="2469" relation="include">
+        </childnode>
+      </node>
+      <node id="2451">
+        <label>hellofunc.h</label>
+        <link refid="hellofunc_8h_source"/>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="gcc__model_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>()</argsstring>
+        <name>main</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/langmm/cis_interface/cis_interface/tests/scripts/gcc_model.c" line="5" column="1" bodyfile="/Users/langmm/cis_interface/cis_interface/tests/scripts/gcc_model.c" bodystart="5" bodyend="9"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hellofunc.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;CisInterface.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main()<sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/>sleep(1);</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/>myPrint(</highlight><highlight class="stringliteral">&quot;GCC<sp/>Model&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/langmm/cis_interface/cis_interface/tests/scripts/gcc_model.c"/>
+  </compounddef>
+</doxygen>

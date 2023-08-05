@@ -1,0 +1,8 @@
+models:
+  - name: cpp_model1
+    driver: GCCModelDriver  # Compiles the source code with the necessary cis_interface libraries
+    args: ./src/gs_lesson2.cpp
+
+  - name: cpp_model2
+    driver: GCCModelDriver
+    args: ./src/gs_lesson2.cpp

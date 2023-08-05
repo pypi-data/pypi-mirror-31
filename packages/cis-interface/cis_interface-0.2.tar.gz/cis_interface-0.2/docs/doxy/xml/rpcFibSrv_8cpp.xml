@@ -1,0 +1,354 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="rpcFibSrv_8cpp" kind="file" language="C++">
+    <compoundname>rpcFibSrv.cpp</compoundname>
+    <includes refid="CisInterface_8hpp" local="yes">CisInterface.hpp</includes>
+    <includes local="no">stdio.h</includes>
+    <incdepgraph>
+      <node id="1991">
+        <label>IPCComm.h</label>
+        <link refid="IPCComm_8h_source"/>
+        <childnode refid="1990" relation="include">
+        </childnode>
+      </node>
+      <node id="1973">
+        <label>stdarg.h</label>
+      </node>
+      <node id="1982">
+        <label>../communication/communication.h</label>
+        <link refid="communication_8h_source"/>
+        <childnode refid="1969" relation="include">
+        </childnode>
+        <childnode refid="1983" relation="include">
+        </childnode>
+        <childnode refid="1989" relation="include">
+        </childnode>
+        <childnode refid="1990" relation="include">
+        </childnode>
+        <childnode refid="1991" relation="include">
+        </childnode>
+        <childnode refid="1992" relation="include">
+        </childnode>
+        <childnode refid="1993" relation="include">
+        </childnode>
+        <childnode refid="1995" relation="include">
+        </childnode>
+        <childnode refid="1996" relation="include">
+        </childnode>
+        <childnode refid="1997" relation="include">
+        </childnode>
+        <childnode refid="1998" relation="include">
+        </childnode>
+        <childnode refid="1994" relation="include">
+        </childnode>
+      </node>
+      <node id="1972">
+        <label>stdlib.h</label>
+      </node>
+      <node id="1987">
+        <label>AsciiFile.h</label>
+        <link refid="AsciiFile_8h_source"/>
+        <childnode refid="1969" relation="include">
+        </childnode>
+      </node>
+      <node id="1974">
+        <label>errno.h</label>
+      </node>
+      <node id="1978">
+        <label>stdint.h</label>
+        <link refid="stdint_8h_source"/>
+        <childnode refid="1979" relation="include">
+        </childnode>
+        <childnode refid="1980" relation="include">
+        </childnode>
+      </node>
+      <node id="1998">
+        <label>AsciiTableComm.h</label>
+        <link refid="AsciiTableComm_8h_source"/>
+        <childnode refid="1969" relation="include">
+        </childnode>
+        <childnode refid="1990" relation="include">
+        </childnode>
+        <childnode refid="1986" relation="include">
+        </childnode>
+      </node>
+      <node id="1985">
+        <label>FormatSerialize.h</label>
+        <link refid="FormatSerialize_8h_source"/>
+        <childnode refid="1969" relation="include">
+        </childnode>
+        <childnode refid="1984" relation="include">
+        </childnode>
+        <childnode refid="1986" relation="include">
+        </childnode>
+      </node>
+      <node id="1980">
+        <label>stddef.h</label>
+      </node>
+      <node id="1976">
+        <label>regex_posix.h</label>
+        <link refid="regex__posix_8h_source"/>
+        <childnode refid="1977" relation="include">
+        </childnode>
+        <childnode refid="1978" relation="include">
+        </childnode>
+      </node>
+      <node id="1988">
+        <label>AsciiTableSerialize.h</label>
+        <link refid="AsciiTableSerialize_8h_source"/>
+        <childnode refid="1969" relation="include">
+        </childnode>
+        <childnode refid="1984" relation="include">
+        </childnode>
+        <childnode refid="1986" relation="include">
+        </childnode>
+      </node>
+      <node id="1986">
+        <label>../dataio/AsciiTable.h</label>
+        <link refid="AsciiTable_8h_source"/>
+        <childnode refid="1969" relation="include">
+        </childnode>
+        <childnode refid="1987" relation="include">
+        </childnode>
+      </node>
+      <node id="1979">
+        <label>wchar.h</label>
+      </node>
+      <node id="1970">
+        <label>string.h</label>
+      </node>
+      <node id="1969">
+        <label>../tools.h</label>
+        <link refid="tools_8h_source"/>
+        <childnode refid="1970" relation="include">
+        </childnode>
+        <childnode refid="1971" relation="include">
+        </childnode>
+        <childnode refid="1972" relation="include">
+        </childnode>
+        <childnode refid="1973" relation="include">
+        </childnode>
+        <childnode refid="1974" relation="include">
+        </childnode>
+        <childnode refid="1975" relation="include">
+        </childnode>
+        <childnode refid="1976" relation="include">
+        </childnode>
+        <childnode refid="1978" relation="include">
+        </childnode>
+        <childnode refid="1981" relation="include">
+        </childnode>
+      </node>
+      <node id="1993">
+        <label>RPCComm.h</label>
+        <link refid="RPCComm_8h_source"/>
+        <childnode refid="1990" relation="include">
+        </childnode>
+        <childnode refid="1994" relation="include">
+        </childnode>
+        <childnode refid="1989" relation="include">
+        </childnode>
+      </node>
+      <node id="1996">
+        <label>ClientComm.h</label>
+        <link refid="ClientComm_8h_source"/>
+        <childnode refid="1969" relation="include">
+        </childnode>
+        <childnode refid="1990" relation="include">
+        </childnode>
+        <childnode refid="1994" relation="include">
+        </childnode>
+        <childnode refid="1989" relation="include">
+        </childnode>
+      </node>
+      <node id="1990">
+        <label>CommBase.h</label>
+        <link refid="CommBase_8h_source"/>
+        <childnode refid="1969" relation="include">
+        </childnode>
+      </node>
+      <node id="1981">
+        <label>unistd.h</label>
+      </node>
+      <node id="1995">
+        <label>ServerComm.h</label>
+        <link refid="ServerComm_8h_source"/>
+        <childnode refid="1990" relation="include">
+        </childnode>
+        <childnode refid="1994" relation="include">
+        </childnode>
+        <childnode refid="1989" relation="include">
+        </childnode>
+      </node>
+      <node id="1983">
+        <label>../serialize/serialize.h</label>
+        <link refid="serialize_8h_source"/>
+        <childnode refid="1969" relation="include">
+        </childnode>
+        <childnode refid="1984" relation="include">
+        </childnode>
+        <childnode refid="1985" relation="include">
+        </childnode>
+        <childnode refid="1988" relation="include">
+        </childnode>
+      </node>
+      <node id="1975">
+        <label>time.h</label>
+      </node>
+      <node id="1966">
+        <label>/Users/langmm/cis_interface/cis_interface/examples/rpcFib/src/rpcFibSrv.cpp</label>
+        <link refid="rpcFibSrv_8cpp"/>
+        <childnode refid="1967" relation="include">
+        </childnode>
+        <childnode refid="1971" relation="include">
+        </childnode>
+      </node>
+      <node id="1992">
+        <label>ZMQComm.h</label>
+        <link refid="ZMQComm_8h_source"/>
+        <childnode refid="1990" relation="include">
+        </childnode>
+      </node>
+      <node id="1997">
+        <label>AsciiFileComm.h</label>
+        <link refid="AsciiFileComm_8h_source"/>
+        <childnode refid="1969" relation="include">
+        </childnode>
+        <childnode refid="1990" relation="include">
+        </childnode>
+        <childnode refid="1987" relation="include">
+        </childnode>
+        <childnode refid="1986" relation="include">
+        </childnode>
+      </node>
+      <node id="1968">
+        <label>CisInterface.h</label>
+        <link refid="CisInterface_8h_source"/>
+        <childnode refid="1969" relation="include">
+        </childnode>
+        <childnode refid="1982" relation="include">
+        </childnode>
+        <childnode refid="1987" relation="include">
+        </childnode>
+        <childnode refid="1986" relation="include">
+        </childnode>
+      </node>
+      <node id="1994">
+        <label>DefaultComm.h</label>
+        <link refid="DefaultComm_8h_source"/>
+        <childnode refid="1990" relation="include">
+        </childnode>
+        <childnode refid="1992" relation="include">
+        </childnode>
+      </node>
+      <node id="1967">
+        <label>CisInterface.hpp</label>
+        <link refid="CisInterface_8hpp_source"/>
+        <childnode refid="1968" relation="include">
+        </childnode>
+      </node>
+      <node id="1984">
+        <label>SerializeBase.h</label>
+        <link refid="SerializeBase_8h_source"/>
+        <childnode refid="1969" relation="include">
+        </childnode>
+      </node>
+      <node id="1977">
+        <label>regex.h</label>
+      </node>
+      <node id="1971">
+        <label>stdio.h</label>
+      </node>
+      <node id="1989">
+        <label>comm_header.h</label>
+        <link refid="comm__header_8h_source"/>
+        <childnode refid="1969" relation="include">
+        </childnode>
+        <childnode refid="1986" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="rpcFibSrv_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char *argv[])</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/langmm/cis_interface/cis_interface/examples/rpcFib/src/rpcFibSrv.cpp" line="6" column="1" bodyfile="/Users/langmm/cis_interface/cis_interface/examples/rpcFib/src/rpcFibSrv.cpp" bodystart="6" bodyend="50"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;CisInterface.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[])<sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>timeSleep<sp/>=<sp/>atof(argv[1]);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Hello<sp/>from<sp/>C++<sp/>rpcFibSrv:<sp/>sleeptime<sp/>=<sp/>%f\n&quot;</highlight><highlight class="normal">,<sp/>timeSleep);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>server-side<sp/>rpc<sp/>conneciton<sp/>using<sp/>model<sp/>name</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><ref refid="classCisRpcServer" kindref="compound">CisRpcServer</ref><sp/>rpc(</highlight><highlight class="stringliteral">&quot;rpcFibSrv&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;%d&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;%d<sp/>%d&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Continue<sp/>receiving<sp/>requests<sp/>until<sp/>error<sp/>occurs<sp/>(the<sp/>connection<sp/>is<sp/>closed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>by<sp/>all<sp/>clients<sp/>that<sp/>have<sp/>connected).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>input;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(1)<sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;rpcFibSrv(CPP):<sp/>receiving...\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ret<sp/>=<sp/>rpc.recv(1,<sp/>&amp;input);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ret<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;rpcFibSrv(CPP):<sp/>end<sp/>of<sp/>input\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Compute<sp/>fibonacci<sp/>number</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;rpcFibSrv(CPP):<sp/>&lt;-<sp/>input<sp/>%d&quot;</highlight><highlight class="normal">,<sp/>input);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>result<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>prevResult<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>prevPrev<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>idx<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(idx++<sp/>&lt;<sp/>input){</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/>prevResult<sp/>+<sp/>prevPrev;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>prevPrev<sp/>=<sp/>prevResult;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>prevResult<sp/>=<sp/>result;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;<sp/>:::<sp/>-&gt;(%2d<sp/>%2d)\n&quot;</highlight><highlight class="normal">,<sp/>input,<sp/>result);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Sleep<sp/>and<sp/>then<sp/>send<sp/>response<sp/>back</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(timeSleep)<sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sleep(timeSleep);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flag<sp/>=<sp/>rpc.send(2,<sp/>input,<sp/>result);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(flag<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;rpcFibSrv(CPP):<sp/>ERROR<sp/>sending\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Goodbye<sp/>from<sp/>C++<sp/>rpcFibSrv\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/langmm/cis_interface/cis_interface/examples/rpcFib/src/rpcFibSrv.cpp"/>
+  </compounddef>
+</doxygen>

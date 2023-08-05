@@ -1,0 +1,330 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="maxMsgSrv_8cpp" kind="file" language="C++">
+    <compoundname>maxMsgSrv.cpp</compoundname>
+    <includes refid="CisInterface_8hpp" local="yes">CisInterface.hpp</includes>
+    <includes local="no">stdio.h</includes>
+    <incdepgraph>
+      <node id="1608">
+        <label>IPCComm.h</label>
+        <link refid="IPCComm_8h_source"/>
+        <childnode refid="1607" relation="include">
+        </childnode>
+      </node>
+      <node id="1583">
+        <label>/Users/langmm/cis_interface/cis_interface/examples/maxMsg/src/maxMsgSrv.cpp</label>
+        <link refid="maxMsgSrv_8cpp"/>
+        <childnode refid="1584" relation="include">
+        </childnode>
+        <childnode refid="1588" relation="include">
+        </childnode>
+      </node>
+      <node id="1590">
+        <label>stdarg.h</label>
+      </node>
+      <node id="1599">
+        <label>../communication/communication.h</label>
+        <link refid="communication_8h_source"/>
+        <childnode refid="1586" relation="include">
+        </childnode>
+        <childnode refid="1600" relation="include">
+        </childnode>
+        <childnode refid="1606" relation="include">
+        </childnode>
+        <childnode refid="1607" relation="include">
+        </childnode>
+        <childnode refid="1608" relation="include">
+        </childnode>
+        <childnode refid="1609" relation="include">
+        </childnode>
+        <childnode refid="1610" relation="include">
+        </childnode>
+        <childnode refid="1612" relation="include">
+        </childnode>
+        <childnode refid="1613" relation="include">
+        </childnode>
+        <childnode refid="1614" relation="include">
+        </childnode>
+        <childnode refid="1615" relation="include">
+        </childnode>
+        <childnode refid="1611" relation="include">
+        </childnode>
+      </node>
+      <node id="1589">
+        <label>stdlib.h</label>
+      </node>
+      <node id="1604">
+        <label>AsciiFile.h</label>
+        <link refid="AsciiFile_8h_source"/>
+        <childnode refid="1586" relation="include">
+        </childnode>
+      </node>
+      <node id="1591">
+        <label>errno.h</label>
+      </node>
+      <node id="1595">
+        <label>stdint.h</label>
+        <link refid="stdint_8h_source"/>
+        <childnode refid="1596" relation="include">
+        </childnode>
+        <childnode refid="1597" relation="include">
+        </childnode>
+      </node>
+      <node id="1615">
+        <label>AsciiTableComm.h</label>
+        <link refid="AsciiTableComm_8h_source"/>
+        <childnode refid="1586" relation="include">
+        </childnode>
+        <childnode refid="1607" relation="include">
+        </childnode>
+        <childnode refid="1603" relation="include">
+        </childnode>
+      </node>
+      <node id="1602">
+        <label>FormatSerialize.h</label>
+        <link refid="FormatSerialize_8h_source"/>
+        <childnode refid="1586" relation="include">
+        </childnode>
+        <childnode refid="1601" relation="include">
+        </childnode>
+        <childnode refid="1603" relation="include">
+        </childnode>
+      </node>
+      <node id="1597">
+        <label>stddef.h</label>
+      </node>
+      <node id="1593">
+        <label>regex_posix.h</label>
+        <link refid="regex__posix_8h_source"/>
+        <childnode refid="1594" relation="include">
+        </childnode>
+        <childnode refid="1595" relation="include">
+        </childnode>
+      </node>
+      <node id="1605">
+        <label>AsciiTableSerialize.h</label>
+        <link refid="AsciiTableSerialize_8h_source"/>
+        <childnode refid="1586" relation="include">
+        </childnode>
+        <childnode refid="1601" relation="include">
+        </childnode>
+        <childnode refid="1603" relation="include">
+        </childnode>
+      </node>
+      <node id="1603">
+        <label>../dataio/AsciiTable.h</label>
+        <link refid="AsciiTable_8h_source"/>
+        <childnode refid="1586" relation="include">
+        </childnode>
+        <childnode refid="1604" relation="include">
+        </childnode>
+      </node>
+      <node id="1596">
+        <label>wchar.h</label>
+      </node>
+      <node id="1587">
+        <label>string.h</label>
+      </node>
+      <node id="1586">
+        <label>../tools.h</label>
+        <link refid="tools_8h_source"/>
+        <childnode refid="1587" relation="include">
+        </childnode>
+        <childnode refid="1588" relation="include">
+        </childnode>
+        <childnode refid="1589" relation="include">
+        </childnode>
+        <childnode refid="1590" relation="include">
+        </childnode>
+        <childnode refid="1591" relation="include">
+        </childnode>
+        <childnode refid="1592" relation="include">
+        </childnode>
+        <childnode refid="1593" relation="include">
+        </childnode>
+        <childnode refid="1595" relation="include">
+        </childnode>
+        <childnode refid="1598" relation="include">
+        </childnode>
+      </node>
+      <node id="1610">
+        <label>RPCComm.h</label>
+        <link refid="RPCComm_8h_source"/>
+        <childnode refid="1607" relation="include">
+        </childnode>
+        <childnode refid="1611" relation="include">
+        </childnode>
+        <childnode refid="1606" relation="include">
+        </childnode>
+      </node>
+      <node id="1613">
+        <label>ClientComm.h</label>
+        <link refid="ClientComm_8h_source"/>
+        <childnode refid="1586" relation="include">
+        </childnode>
+        <childnode refid="1607" relation="include">
+        </childnode>
+        <childnode refid="1611" relation="include">
+        </childnode>
+        <childnode refid="1606" relation="include">
+        </childnode>
+      </node>
+      <node id="1607">
+        <label>CommBase.h</label>
+        <link refid="CommBase_8h_source"/>
+        <childnode refid="1586" relation="include">
+        </childnode>
+      </node>
+      <node id="1598">
+        <label>unistd.h</label>
+      </node>
+      <node id="1612">
+        <label>ServerComm.h</label>
+        <link refid="ServerComm_8h_source"/>
+        <childnode refid="1607" relation="include">
+        </childnode>
+        <childnode refid="1611" relation="include">
+        </childnode>
+        <childnode refid="1606" relation="include">
+        </childnode>
+      </node>
+      <node id="1600">
+        <label>../serialize/serialize.h</label>
+        <link refid="serialize_8h_source"/>
+        <childnode refid="1586" relation="include">
+        </childnode>
+        <childnode refid="1601" relation="include">
+        </childnode>
+        <childnode refid="1602" relation="include">
+        </childnode>
+        <childnode refid="1605" relation="include">
+        </childnode>
+      </node>
+      <node id="1592">
+        <label>time.h</label>
+      </node>
+      <node id="1609">
+        <label>ZMQComm.h</label>
+        <link refid="ZMQComm_8h_source"/>
+        <childnode refid="1607" relation="include">
+        </childnode>
+      </node>
+      <node id="1614">
+        <label>AsciiFileComm.h</label>
+        <link refid="AsciiFileComm_8h_source"/>
+        <childnode refid="1586" relation="include">
+        </childnode>
+        <childnode refid="1607" relation="include">
+        </childnode>
+        <childnode refid="1604" relation="include">
+        </childnode>
+        <childnode refid="1603" relation="include">
+        </childnode>
+      </node>
+      <node id="1585">
+        <label>CisInterface.h</label>
+        <link refid="CisInterface_8h_source"/>
+        <childnode refid="1586" relation="include">
+        </childnode>
+        <childnode refid="1599" relation="include">
+        </childnode>
+        <childnode refid="1604" relation="include">
+        </childnode>
+        <childnode refid="1603" relation="include">
+        </childnode>
+      </node>
+      <node id="1611">
+        <label>DefaultComm.h</label>
+        <link refid="DefaultComm_8h_source"/>
+        <childnode refid="1607" relation="include">
+        </childnode>
+        <childnode refid="1609" relation="include">
+        </childnode>
+      </node>
+      <node id="1584">
+        <label>CisInterface.hpp</label>
+        <link refid="CisInterface_8hpp_source"/>
+        <childnode refid="1585" relation="include">
+        </childnode>
+      </node>
+      <node id="1601">
+        <label>SerializeBase.h</label>
+        <link refid="SerializeBase_8h_source"/>
+        <childnode refid="1586" relation="include">
+        </childnode>
+      </node>
+      <node id="1594">
+        <label>regex.h</label>
+      </node>
+      <node id="1588">
+        <label>stdio.h</label>
+      </node>
+      <node id="1606">
+        <label>comm_header.h</label>
+        <link refid="comm__header_8h_source"/>
+        <childnode refid="1586" relation="include">
+        </childnode>
+        <childnode refid="1603" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="maxMsgSrv_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char *argv[])</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/langmm/cis_interface/cis_interface/examples/maxMsg/src/maxMsgSrv.cpp" line="5" column="1" bodyfile="/Users/langmm/cis_interface/cis_interface/examples/maxMsg/src/maxMsgSrv.cpp" bodystart="5" bodyend="26"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;CisInterface.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[])<sp/>{<sp/><sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;maxMsgSrv(CPP):<sp/>Hello!\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classCisRpcServer" kindref="compound">CisRpcServer</ref><sp/>rpc(</highlight><highlight class="stringliteral">&quot;maxMsgSrv&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*input<sp/>=<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)malloc(CIS_MSG_BUF);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//char<sp/>input[CIS_MSG_MAX];</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(1)<sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ret<sp/>=<sp/>rpc.recv(1,<sp/>input);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ret<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;maxMsgSrv(CPP):<sp/>rpcRecv<sp/>returned<sp/>%d,<sp/>input<sp/>%.10s...\n&quot;</highlight><highlight class="normal">,<sp/>ret,<sp/>input);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/>rpc.send(1,<sp/>input);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ret<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;maxMsgSrv(CPP):<sp/>SEND<sp/>ERROR&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;maxMsgSrv(CPP):<sp/>Goodbye!\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/langmm/cis_interface/cis_interface/examples/maxMsg/src/maxMsgSrv.cpp"/>
+  </compounddef>
+</doxygen>

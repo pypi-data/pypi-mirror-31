@@ -1,0 +1,359 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="SaM_8cpp" kind="file" language="C++">
+    <compoundname>SaM.cpp</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes refid="CisInterface_8hpp" local="yes">CisInterface.hpp</includes>
+    <incdepgraph>
+      <node id="2060">
+        <label>IPCComm.h</label>
+        <link refid="IPCComm_8h_source"/>
+        <childnode refid="2059" relation="include">
+        </childnode>
+      </node>
+      <node id="2042">
+        <label>stdarg.h</label>
+      </node>
+      <node id="2051">
+        <label>../communication/communication.h</label>
+        <link refid="communication_8h_source"/>
+        <childnode refid="2040" relation="include">
+        </childnode>
+        <childnode refid="2052" relation="include">
+        </childnode>
+        <childnode refid="2058" relation="include">
+        </childnode>
+        <childnode refid="2059" relation="include">
+        </childnode>
+        <childnode refid="2060" relation="include">
+        </childnode>
+        <childnode refid="2061" relation="include">
+        </childnode>
+        <childnode refid="2062" relation="include">
+        </childnode>
+        <childnode refid="2064" relation="include">
+        </childnode>
+        <childnode refid="2065" relation="include">
+        </childnode>
+        <childnode refid="2066" relation="include">
+        </childnode>
+        <childnode refid="2067" relation="include">
+        </childnode>
+        <childnode refid="2063" relation="include">
+        </childnode>
+      </node>
+      <node id="2037">
+        <label>stdlib.h</label>
+      </node>
+      <node id="2056">
+        <label>AsciiFile.h</label>
+        <link refid="AsciiFile_8h_source"/>
+        <childnode refid="2040" relation="include">
+        </childnode>
+      </node>
+      <node id="2043">
+        <label>errno.h</label>
+      </node>
+      <node id="2047">
+        <label>stdint.h</label>
+        <link refid="stdint_8h_source"/>
+        <childnode refid="2048" relation="include">
+        </childnode>
+        <childnode refid="2049" relation="include">
+        </childnode>
+      </node>
+      <node id="2067">
+        <label>AsciiTableComm.h</label>
+        <link refid="AsciiTableComm_8h_source"/>
+        <childnode refid="2040" relation="include">
+        </childnode>
+        <childnode refid="2059" relation="include">
+        </childnode>
+        <childnode refid="2055" relation="include">
+        </childnode>
+      </node>
+      <node id="2054">
+        <label>FormatSerialize.h</label>
+        <link refid="FormatSerialize_8h_source"/>
+        <childnode refid="2040" relation="include">
+        </childnode>
+        <childnode refid="2053" relation="include">
+        </childnode>
+        <childnode refid="2055" relation="include">
+        </childnode>
+      </node>
+      <node id="2049">
+        <label>stddef.h</label>
+      </node>
+      <node id="2045">
+        <label>regex_posix.h</label>
+        <link refid="regex__posix_8h_source"/>
+        <childnode refid="2046" relation="include">
+        </childnode>
+        <childnode refid="2047" relation="include">
+        </childnode>
+      </node>
+      <node id="2057">
+        <label>AsciiTableSerialize.h</label>
+        <link refid="AsciiTableSerialize_8h_source"/>
+        <childnode refid="2040" relation="include">
+        </childnode>
+        <childnode refid="2053" relation="include">
+        </childnode>
+        <childnode refid="2055" relation="include">
+        </childnode>
+      </node>
+      <node id="2055">
+        <label>../dataio/AsciiTable.h</label>
+        <link refid="AsciiTable_8h_source"/>
+        <childnode refid="2040" relation="include">
+        </childnode>
+        <childnode refid="2056" relation="include">
+        </childnode>
+      </node>
+      <node id="2048">
+        <label>wchar.h</label>
+      </node>
+      <node id="2041">
+        <label>string.h</label>
+      </node>
+      <node id="2040">
+        <label>../tools.h</label>
+        <link refid="tools_8h_source"/>
+        <childnode refid="2041" relation="include">
+        </childnode>
+        <childnode refid="2036" relation="include">
+        </childnode>
+        <childnode refid="2037" relation="include">
+        </childnode>
+        <childnode refid="2042" relation="include">
+        </childnode>
+        <childnode refid="2043" relation="include">
+        </childnode>
+        <childnode refid="2044" relation="include">
+        </childnode>
+        <childnode refid="2045" relation="include">
+        </childnode>
+        <childnode refid="2047" relation="include">
+        </childnode>
+        <childnode refid="2050" relation="include">
+        </childnode>
+      </node>
+      <node id="2062">
+        <label>RPCComm.h</label>
+        <link refid="RPCComm_8h_source"/>
+        <childnode refid="2059" relation="include">
+        </childnode>
+        <childnode refid="2063" relation="include">
+        </childnode>
+        <childnode refid="2058" relation="include">
+        </childnode>
+      </node>
+      <node id="2065">
+        <label>ClientComm.h</label>
+        <link refid="ClientComm_8h_source"/>
+        <childnode refid="2040" relation="include">
+        </childnode>
+        <childnode refid="2059" relation="include">
+        </childnode>
+        <childnode refid="2063" relation="include">
+        </childnode>
+        <childnode refid="2058" relation="include">
+        </childnode>
+      </node>
+      <node id="2059">
+        <label>CommBase.h</label>
+        <link refid="CommBase_8h_source"/>
+        <childnode refid="2040" relation="include">
+        </childnode>
+      </node>
+      <node id="2050">
+        <label>unistd.h</label>
+      </node>
+      <node id="2064">
+        <label>ServerComm.h</label>
+        <link refid="ServerComm_8h_source"/>
+        <childnode refid="2059" relation="include">
+        </childnode>
+        <childnode refid="2063" relation="include">
+        </childnode>
+        <childnode refid="2058" relation="include">
+        </childnode>
+      </node>
+      <node id="2052">
+        <label>../serialize/serialize.h</label>
+        <link refid="serialize_8h_source"/>
+        <childnode refid="2040" relation="include">
+        </childnode>
+        <childnode refid="2053" relation="include">
+        </childnode>
+        <childnode refid="2054" relation="include">
+        </childnode>
+        <childnode refid="2057" relation="include">
+        </childnode>
+      </node>
+      <node id="2044">
+        <label>time.h</label>
+      </node>
+      <node id="2061">
+        <label>ZMQComm.h</label>
+        <link refid="ZMQComm_8h_source"/>
+        <childnode refid="2059" relation="include">
+        </childnode>
+      </node>
+      <node id="2066">
+        <label>AsciiFileComm.h</label>
+        <link refid="AsciiFileComm_8h_source"/>
+        <childnode refid="2040" relation="include">
+        </childnode>
+        <childnode refid="2059" relation="include">
+        </childnode>
+        <childnode refid="2056" relation="include">
+        </childnode>
+        <childnode refid="2055" relation="include">
+        </childnode>
+      </node>
+      <node id="2039">
+        <label>CisInterface.h</label>
+        <link refid="CisInterface_8h_source"/>
+        <childnode refid="2040" relation="include">
+        </childnode>
+        <childnode refid="2051" relation="include">
+        </childnode>
+        <childnode refid="2056" relation="include">
+        </childnode>
+        <childnode refid="2055" relation="include">
+        </childnode>
+      </node>
+      <node id="2063">
+        <label>DefaultComm.h</label>
+        <link refid="DefaultComm_8h_source"/>
+        <childnode refid="2059" relation="include">
+        </childnode>
+        <childnode refid="2061" relation="include">
+        </childnode>
+      </node>
+      <node id="2038">
+        <label>CisInterface.hpp</label>
+        <link refid="CisInterface_8hpp_source"/>
+        <childnode refid="2039" relation="include">
+        </childnode>
+      </node>
+      <node id="2053">
+        <label>SerializeBase.h</label>
+        <link refid="SerializeBase_8h_source"/>
+        <childnode refid="2040" relation="include">
+        </childnode>
+      </node>
+      <node id="2046">
+        <label>regex.h</label>
+      </node>
+      <node id="2036">
+        <label>stdio.h</label>
+      </node>
+      <node id="2058">
+        <label>comm_header.h</label>
+        <link refid="comm__header_8h_source"/>
+        <childnode refid="2040" relation="include">
+        </childnode>
+        <childnode refid="2055" relation="include">
+        </childnode>
+      </node>
+      <node id="2035">
+        <label>/Users/langmm/cis_interface/cis_interface/examples/SaM/src/SaM.cpp</label>
+        <link refid="SaM_8cpp"/>
+        <childnode refid="2036" relation="include">
+        </childnode>
+        <childnode refid="2037" relation="include">
+        </childnode>
+        <childnode refid="2038" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="SaM_8cpp_1a403cf3149c084cea115b85c90721039a" prot="public" static="no">
+        <name>BSIZE</name>
+        <initializer>1000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/langmm/cis_interface/cis_interface/examples/SaM/src/SaM.cpp" line="5" column="9" bodyfile="/Users/langmm/cis_interface/cis_interface/examples/SaM/src/SaM.cpp" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="SaM_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>()</argsstring>
+        <name>main</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/langmm/cis_interface/cis_interface/examples/SaM/src/SaM.cpp" line="8" column="1" bodyfile="/Users/langmm/cis_interface/cis_interface/examples/SaM/src/SaM.cpp" bodystart="8" bodyend="49"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;CisInterface.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BSIZE<sp/>1000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main()<sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>adata[BSIZE];</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>bdata[BSIZE];</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>outbuf[BSIZE];</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>input<sp/>and<sp/>output<sp/>channels<sp/>matching<sp/>yaml</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classCisInput" kindref="compound">CisInput</ref><sp/>in1(</highlight><highlight class="stringliteral">&quot;input1_cpp&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classCisInput" kindref="compound">CisInput</ref><sp/>in2(</highlight><highlight class="stringliteral">&quot;static_cpp&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classCisOutput" kindref="compound">CisOutput</ref><sp/>out1(</highlight><highlight class="stringliteral">&quot;output_cpp&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;SaM(CPP):<sp/>Set<sp/>up<sp/>I/O<sp/>channels\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>input<sp/>from<sp/>input1<sp/>channel</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>ret<sp/>=<sp/>in1.recv(adata,<sp/>BSIZE);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ret<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;SaM(CPP):<sp/>ERROR<sp/>RECV<sp/>from<sp/>input1\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>a<sp/>=<sp/>atoi(adata);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;SaM(CPP):<sp/>Received<sp/>%d<sp/>from<sp/>input1\n&quot;</highlight><highlight class="normal">,<sp/>a);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>input<sp/>from<sp/>static<sp/>channel</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>ret<sp/>=<sp/>in2.recv(bdata,<sp/>BSIZE);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ret<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;SaM(CPP):<sp/>ERROR<sp/>RECV<sp/>from<sp/>static\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>b<sp/>=<sp/>atoi(bdata);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;SaM(CPP):<sp/>Received<sp/>%d<sp/>from<sp/>static\n&quot;</highlight><highlight class="normal">,<sp/>b);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Compute<sp/>sum<sp/>and<sp/>send<sp/>message<sp/>to<sp/>output<sp/>channel</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sum<sp/>=<sp/>a<sp/>+<sp/>b;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>sprintf(outbuf,<sp/></highlight><highlight class="stringliteral">&quot;%d&quot;</highlight><highlight class="normal">,<sp/>sum);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>ret<sp/>=<sp/>out1.send(outbuf,<sp/>strlen(outbuf));</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ret<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;SaM(CPP):<sp/>ERROR<sp/>SEND<sp/>to<sp/>output\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;SaM(CPP):<sp/>Sent<sp/>to<sp/>output\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/langmm/cis_interface/cis_interface/examples/SaM/src/SaM.cpp"/>
+  </compounddef>
+</doxygen>
