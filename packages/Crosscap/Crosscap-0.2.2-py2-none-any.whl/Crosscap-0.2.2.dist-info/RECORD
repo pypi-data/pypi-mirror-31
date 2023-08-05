@@ -1,0 +1,14 @@
+Crosscap-0.2.2.data/scripts/urltool,sha256=6uZcoswtSMQIahZifhNPPPohSCa9YtcnIM4lCXwKtjk,96
+Crosscap-0.2.2.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+Crosscap-0.2.2.dist-info/METADATA,sha256=pH9NWjS1KS223lcNO364o_kXdlsVWpor8rJLoAqQK6E,527
+Crosscap-0.2.2.dist-info/RECORD,,
+Crosscap-0.2.2.dist-info/WHEEL,sha256=hZvi-8L6mc2COqhOUWREM_h2lvnJbaHycZt8eohtmso,92
+Crosscap-0.2.2.dist-info/metadata.json,sha256=QLgbquGz65zTO9470JhB-KE8TAEcs5alIkMIyRbXEwg,621
+Crosscap-0.2.2.dist-info/top_level.txt,sha256=6ZELzeL-jjqM-LdIArH9-etwETaJN11Lx91K3yns3U4,9
+crosscap/__init__.py,sha256=qia8x6npdldVvZulhSkBRbcgYmNGWu4RfCz_J7tvs8s,1210
+crosscap/_version.py,sha256=81tvd9uh7qN2wGbUponIN7K43kIoRlfxSffYJUiTV-M,23
+crosscap/doc.py,sha256=9qlPRGFEyMxLwNQ5G9pHKUlDxFusw0X7QIQJ_HyF7Q8,1457
+crosscap/openapi.py,sha256=hvW-mVrVoa0ULwoIjs6lr_zPpa_TxO9uPWs7KadTf40,6291
+crosscap/testing.py,sha256=Z6_mwbg1DDf01qpVNAg1ossHpisN9lRla_J_2feKris,2105
+crosscap/tree.py,sha256=fNWhre7FPa-pVMyWn1rUAz2a-Fn32NwEPk_Zp9q1jOE,2095
+crosscap/urltool.py,sha256=EHDRb9GWW8oT3pAWhywLCvbBjdJ4vbO_xYtkOR26kvQ,6232

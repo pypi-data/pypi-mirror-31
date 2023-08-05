@@ -1,0 +1,5 @@
+#!/Users/cory/.virtualenvs/crosscap/bin/python
+
+from crosscap.urltool import urltool
+
+urltool()
