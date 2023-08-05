@@ -1,0 +1,429 @@
+# Build step
+COMPONENT: git_submodules
+COMPILER: git
+BUILD_DATE: Mon Apr 23 10:40:43 EDT 2018
+BUILD_USER: jjennings
+BUILD_OSTYPE: darwin17
+BUILD_HOSTNAME: Jamies-MacBook-Pro-2.local
+BUILD_PLATFORM: Darwin
+BUILD_PLATFORM_VER: 17.5.0
+BUILD_PLATFORM_HW: x86_64
+BUILD_ROOT: /Users/jjennings/Work/Dev/public/rosie-community/PyPI/rosie/rosie-pattern-language
+GIT_REF: v1.0.0-beta-8
+GIT_COMMIT: 289083a52a202156df1f182157c481cafdadf47b
+# Build step
+COMPONENT: lua
+COMPILER: cc
+BUILD_DATE: Mon Apr 23 10:40:50 EDT 2018
+BUILD_USER: jjennings
+BUILD_OSTYPE: darwin17
+BUILD_HOSTNAME: Jamies-MacBook-Pro-2.local
+BUILD_PLATFORM: Darwin
+BUILD_PLATFORM_VER: 17.5.0
+BUILD_PLATFORM_HW: x86_64
+BUILD_ROOT: /Users/jjennings/Work/Dev/public/rosie-community/PyPI/rosie/rosie-pattern-language
+GIT_REF: v1.0.0-beta-8
+GIT_COMMIT: 289083a52a202156df1f182157c481cafdadf47b
+# Build step
+COMPONENT: lib/ast.luac
+COMPILER: bin/luac
+BUILD_DATE: Mon Apr 23 10:40:50 EDT 2018
+BUILD_USER: jjennings
+BUILD_OSTYPE: darwin17
+BUILD_HOSTNAME: Jamies-MacBook-Pro-2.local
+BUILD_PLATFORM: Darwin
+BUILD_PLATFORM_VER: 17.5.0
+BUILD_PLATFORM_HW: x86_64
+BUILD_ROOT: /Users/jjennings/Work/Dev/public/rosie-community/PyPI/rosie/rosie-pattern-language
+GIT_REF: v1.0.0-beta-8
+GIT_COMMIT: 289083a52a202156df1f182157c481cafdadf47b
+# Build step
+COMPONENT: lib/boot.luac
+COMPILER: bin/luac
+BUILD_DATE: Mon Apr 23 10:40:50 EDT 2018
+BUILD_USER: jjennings
+BUILD_OSTYPE: darwin17
+BUILD_HOSTNAME: Jamies-MacBook-Pro-2.local
+BUILD_PLATFORM: Darwin
+BUILD_PLATFORM_VER: 17.5.0
+BUILD_PLATFORM_HW: x86_64
+BUILD_ROOT: /Users/jjennings/Work/Dev/public/rosie-community/PyPI/rosie/rosie-pattern-language
+GIT_REF: v1.0.0-beta-8
+GIT_COMMIT: 289083a52a202156df1f182157c481cafdadf47b
+# Build step
+COMPONENT: lib/builtins.luac
+COMPILER: bin/luac
+BUILD_DATE: Mon Apr 23 10:40:50 EDT 2018
+BUILD_USER: jjennings
+BUILD_OSTYPE: darwin17
+BUILD_HOSTNAME: Jamies-MacBook-Pro-2.local
+BUILD_PLATFORM: Darwin
+BUILD_PLATFORM_VER: 17.5.0
+BUILD_PLATFORM_HW: x86_64
+BUILD_ROOT: /Users/jjennings/Work/Dev/public/rosie-community/PyPI/rosie/rosie-pattern-language
+GIT_REF: v1.0.0-beta-8
+GIT_COMMIT: 289083a52a202156df1f182157c481cafdadf47b
+# Build step
+COMPONENT: lib/cli-common.luac
+COMPILER: bin/luac
+BUILD_DATE: Mon Apr 23 10:40:50 EDT 2018
+BUILD_USER: jjennings
+BUILD_OSTYPE: darwin17
+BUILD_HOSTNAME: Jamies-MacBook-Pro-2.local
+BUILD_PLATFORM: Darwin
+BUILD_PLATFORM_VER: 17.5.0
+BUILD_PLATFORM_HW: x86_64
+BUILD_ROOT: /Users/jjennings/Work/Dev/public/rosie-community/PyPI/rosie/rosie-pattern-language
+GIT_REF: v1.0.0-beta-8
+GIT_COMMIT: 289083a52a202156df1f182157c481cafdadf47b
+# Build step
+COMPONENT: lib/cli-match.luac
+COMPILER: bin/luac
+BUILD_DATE: Mon Apr 23 10:40:51 EDT 2018
+BUILD_USER: jjennings
+BUILD_OSTYPE: darwin17
+BUILD_HOSTNAME: Jamies-MacBook-Pro-2.local
+BUILD_PLATFORM: Darwin
+BUILD_PLATFORM_VER: 17.5.0
+BUILD_PLATFORM_HW: x86_64
+BUILD_ROOT: /Users/jjennings/Work/Dev/public/rosie-community/PyPI/rosie/rosie-pattern-language
+GIT_REF: v1.0.0-beta-8
+GIT_COMMIT: 289083a52a202156df1f182157c481cafdadf47b
+# Build step
+COMPONENT: lib/cli-parser.luac
+COMPILER: bin/luac
+BUILD_DATE: Mon Apr 23 10:40:51 EDT 2018
+BUILD_USER: jjennings
+BUILD_OSTYPE: darwin17
+BUILD_HOSTNAME: Jamies-MacBook-Pro-2.local
+BUILD_PLATFORM: Darwin
+BUILD_PLATFORM_VER: 17.5.0
+BUILD_PLATFORM_HW: x86_64
+BUILD_ROOT: /Users/jjennings/Work/Dev/public/rosie-community/PyPI/rosie/rosie-pattern-language
+GIT_REF: v1.0.0-beta-8
+GIT_COMMIT: 289083a52a202156df1f182157c481cafdadf47b
+# Build step
+COMPONENT: lib/cli-test-command.luac
+COMPILER: bin/luac
+BUILD_DATE: Mon Apr 23 10:40:51 EDT 2018
+BUILD_USER: jjennings
+BUILD_OSTYPE: darwin17
+BUILD_HOSTNAME: Jamies-MacBook-Pro-2.local
+BUILD_PLATFORM: Darwin
+BUILD_PLATFORM_VER: 17.5.0
+BUILD_PLATFORM_HW: x86_64
+BUILD_ROOT: /Users/jjennings/Work/Dev/public/rosie-community/PyPI/rosie/rosie-pattern-language
+GIT_REF: v1.0.0-beta-8
+GIT_COMMIT: 289083a52a202156df1f182157c481cafdadf47b
+# Build step
+COMPONENT: lib/cli.luac
+COMPILER: bin/luac
+BUILD_DATE: Mon Apr 23 10:40:51 EDT 2018
+BUILD_USER: jjennings
+BUILD_OSTYPE: darwin17
+BUILD_HOSTNAME: Jamies-MacBook-Pro-2.local
+BUILD_PLATFORM: Darwin
+BUILD_PLATFORM_VER: 17.5.0
+BUILD_PLATFORM_HW: x86_64
+BUILD_ROOT: /Users/jjennings/Work/Dev/public/rosie-community/PyPI/rosie/rosie-pattern-language
+GIT_REF: v1.0.0-beta-8
+GIT_COMMIT: 289083a52a202156df1f182157c481cafdadf47b
+# Build step
+COMPONENT: lib/color.luac
+COMPILER: bin/luac
+BUILD_DATE: Mon Apr 23 10:40:51 EDT 2018
+BUILD_USER: jjennings
+BUILD_OSTYPE: darwin17
+BUILD_HOSTNAME: Jamies-MacBook-Pro-2.local
+BUILD_PLATFORM: Darwin
+BUILD_PLATFORM_VER: 17.5.0
+BUILD_PLATFORM_HW: x86_64
+BUILD_ROOT: /Users/jjennings/Work/Dev/public/rosie-community/PyPI/rosie/rosie-pattern-language
+GIT_REF: v1.0.0-beta-8
+GIT_COMMIT: 289083a52a202156df1f182157c481cafdadf47b
+# Build step
+COMPONENT: lib/common.luac
+COMPILER: bin/luac
+BUILD_DATE: Mon Apr 23 10:40:51 EDT 2018
+BUILD_USER: jjennings
+BUILD_OSTYPE: darwin17
+BUILD_HOSTNAME: Jamies-MacBook-Pro-2.local
+BUILD_PLATFORM: Darwin
+BUILD_PLATFORM_VER: 17.5.0
+BUILD_PLATFORM_HW: x86_64
+BUILD_ROOT: /Users/jjennings/Work/Dev/public/rosie-community/PyPI/rosie/rosie-pattern-language
+GIT_REF: v1.0.0-beta-8
+GIT_COMMIT: 289083a52a202156df1f182157c481cafdadf47b
+# Build step
+COMPONENT: lib/compile.luac
+COMPILER: bin/luac
+BUILD_DATE: Mon Apr 23 10:40:51 EDT 2018
+BUILD_USER: jjennings
+BUILD_OSTYPE: darwin17
+BUILD_HOSTNAME: Jamies-MacBook-Pro-2.local
+BUILD_PLATFORM: Darwin
+BUILD_PLATFORM_VER: 17.5.0
+BUILD_PLATFORM_HW: x86_64
+BUILD_ROOT: /Users/jjennings/Work/Dev/public/rosie-community/PyPI/rosie/rosie-pattern-language
+GIT_REF: v1.0.0-beta-8
+GIT_COMMIT: 289083a52a202156df1f182157c481cafdadf47b
+# Build step
+COMPONENT: lib/engine_module.luac
+COMPILER: bin/luac
+BUILD_DATE: Mon Apr 23 10:40:51 EDT 2018
+BUILD_USER: jjennings
+BUILD_OSTYPE: darwin17
+BUILD_HOSTNAME: Jamies-MacBook-Pro-2.local
+BUILD_PLATFORM: Darwin
+BUILD_PLATFORM_VER: 17.5.0
+BUILD_PLATFORM_HW: x86_64
+BUILD_ROOT: /Users/jjennings/Work/Dev/public/rosie-community/PyPI/rosie/rosie-pattern-language
+GIT_REF: v1.0.0-beta-8
+GIT_COMMIT: 289083a52a202156df1f182157c481cafdadf47b
+# Build step
+COMPONENT: lib/environment.luac
+COMPILER: bin/luac
+BUILD_DATE: Mon Apr 23 10:40:51 EDT 2018
+BUILD_USER: jjennings
+BUILD_OSTYPE: darwin17
+BUILD_HOSTNAME: Jamies-MacBook-Pro-2.local
+BUILD_PLATFORM: Darwin
+BUILD_PLATFORM_VER: 17.5.0
+BUILD_PLATFORM_HW: x86_64
+BUILD_ROOT: /Users/jjennings/Work/Dev/public/rosie-community/PyPI/rosie/rosie-pattern-language
+GIT_REF: v1.0.0-beta-8
+GIT_COMMIT: 289083a52a202156df1f182157c481cafdadf47b
+# Build step
+COMPONENT: lib/expand.luac
+COMPILER: bin/luac
+BUILD_DATE: Mon Apr 23 10:40:51 EDT 2018
+BUILD_USER: jjennings
+BUILD_OSTYPE: darwin17
+BUILD_HOSTNAME: Jamies-MacBook-Pro-2.local
+BUILD_PLATFORM: Darwin
+BUILD_PLATFORM_VER: 17.5.0
+BUILD_PLATFORM_HW: x86_64
+BUILD_ROOT: /Users/jjennings/Work/Dev/public/rosie-community/PyPI/rosie/rosie-pattern-language
+GIT_REF: v1.0.0-beta-8
+GIT_COMMIT: 289083a52a202156df1f182157c481cafdadf47b
+# Build step
+COMPONENT: lib/init.luac
+COMPILER: bin/luac
+BUILD_DATE: Mon Apr 23 10:40:51 EDT 2018
+BUILD_USER: jjennings
+BUILD_OSTYPE: darwin17
+BUILD_HOSTNAME: Jamies-MacBook-Pro-2.local
+BUILD_PLATFORM: Darwin
+BUILD_PLATFORM_VER: 17.5.0
+BUILD_PLATFORM_HW: x86_64
+BUILD_ROOT: /Users/jjennings/Work/Dev/public/rosie-community/PyPI/rosie/rosie-pattern-language
+GIT_REF: v1.0.0-beta-8
+GIT_COMMIT: 289083a52a202156df1f182157c481cafdadf47b
+# Build step
+COMPONENT: lib/loadpkg.luac
+COMPILER: bin/luac
+BUILD_DATE: Mon Apr 23 10:40:51 EDT 2018
+BUILD_USER: jjennings
+BUILD_OSTYPE: darwin17
+BUILD_HOSTNAME: Jamies-MacBook-Pro-2.local
+BUILD_PLATFORM: Darwin
+BUILD_PLATFORM_VER: 17.5.0
+BUILD_PLATFORM_HW: x86_64
+BUILD_ROOT: /Users/jjennings/Work/Dev/public/rosie-community/PyPI/rosie/rosie-pattern-language
+GIT_REF: v1.0.0-beta-8
+GIT_COMMIT: 289083a52a202156df1f182157c481cafdadf47b
+# Build step
+COMPONENT: lib/parse.luac
+COMPILER: bin/luac
+BUILD_DATE: Mon Apr 23 10:40:52 EDT 2018
+BUILD_USER: jjennings
+BUILD_OSTYPE: darwin17
+BUILD_HOSTNAME: Jamies-MacBook-Pro-2.local
+BUILD_PLATFORM: Darwin
+BUILD_PLATFORM_VER: 17.5.0
+BUILD_PLATFORM_HW: x86_64
+BUILD_ROOT: /Users/jjennings/Work/Dev/public/rosie-community/PyPI/rosie/rosie-pattern-language
+GIT_REF: v1.0.0-beta-8
+GIT_COMMIT: 289083a52a202156df1f182157c481cafdadf47b
+# Build step
+COMPONENT: lib/parse_core.luac
+COMPILER: bin/luac
+BUILD_DATE: Mon Apr 23 10:40:52 EDT 2018
+BUILD_USER: jjennings
+BUILD_OSTYPE: darwin17
+BUILD_HOSTNAME: Jamies-MacBook-Pro-2.local
+BUILD_PLATFORM: Darwin
+BUILD_PLATFORM_VER: 17.5.0
+BUILD_PLATFORM_HW: x86_64
+BUILD_ROOT: /Users/jjennings/Work/Dev/public/rosie-community/PyPI/rosie/rosie-pattern-language
+GIT_REF: v1.0.0-beta-8
+GIT_COMMIT: 289083a52a202156df1f182157c481cafdadf47b
+# Build step
+COMPONENT: lib/rcfile.luac
+COMPILER: bin/luac
+BUILD_DATE: Mon Apr 23 10:40:52 EDT 2018
+BUILD_USER: jjennings
+BUILD_OSTYPE: darwin17
+BUILD_HOSTNAME: Jamies-MacBook-Pro-2.local
+BUILD_PLATFORM: Darwin
+BUILD_PLATFORM_VER: 17.5.0
+BUILD_PLATFORM_HW: x86_64
+BUILD_ROOT: /Users/jjennings/Work/Dev/public/rosie-community/PyPI/rosie/rosie-pattern-language
+GIT_REF: v1.0.0-beta-8
+GIT_COMMIT: 289083a52a202156df1f182157c481cafdadf47b
+# Build step
+COMPONENT: lib/repl.luac
+COMPILER: bin/luac
+BUILD_DATE: Mon Apr 23 10:40:52 EDT 2018
+BUILD_USER: jjennings
+BUILD_OSTYPE: darwin17
+BUILD_HOSTNAME: Jamies-MacBook-Pro-2.local
+BUILD_PLATFORM: Darwin
+BUILD_PLATFORM_VER: 17.5.0
+BUILD_PLATFORM_HW: x86_64
+BUILD_ROOT: /Users/jjennings/Work/Dev/public/rosie-community/PyPI/rosie/rosie-pattern-language
+GIT_REF: v1.0.0-beta-8
+GIT_COMMIT: 289083a52a202156df1f182157c481cafdadf47b
+# Build step
+COMPONENT: lib/trace.luac
+COMPILER: bin/luac
+BUILD_DATE: Mon Apr 23 10:40:52 EDT 2018
+BUILD_USER: jjennings
+BUILD_OSTYPE: darwin17
+BUILD_HOSTNAME: Jamies-MacBook-Pro-2.local
+BUILD_PLATFORM: Darwin
+BUILD_PLATFORM_VER: 17.5.0
+BUILD_PLATFORM_HW: x86_64
+BUILD_ROOT: /Users/jjennings/Work/Dev/public/rosie-community/PyPI/rosie/rosie-pattern-language
+GIT_REF: v1.0.0-beta-8
+GIT_COMMIT: 289083a52a202156df1f182157c481cafdadf47b
+# Build step
+COMPONENT: lib/ui.luac
+COMPILER: bin/luac
+BUILD_DATE: Mon Apr 23 10:40:52 EDT 2018
+BUILD_USER: jjennings
+BUILD_OSTYPE: darwin17
+BUILD_HOSTNAME: Jamies-MacBook-Pro-2.local
+BUILD_PLATFORM: Darwin
+BUILD_PLATFORM_VER: 17.5.0
+BUILD_PLATFORM_HW: x86_64
+BUILD_ROOT: /Users/jjennings/Work/Dev/public/rosie-community/PyPI/rosie/rosie-pattern-language
+GIT_REF: v1.0.0-beta-8
+GIT_COMMIT: 289083a52a202156df1f182157c481cafdadf47b
+# Build step
+COMPONENT: lib/ustring.luac
+COMPILER: bin/luac
+BUILD_DATE: Mon Apr 23 10:40:52 EDT 2018
+BUILD_USER: jjennings
+BUILD_OSTYPE: darwin17
+BUILD_HOSTNAME: Jamies-MacBook-Pro-2.local
+BUILD_PLATFORM: Darwin
+BUILD_PLATFORM_VER: 17.5.0
+BUILD_PLATFORM_HW: x86_64
+BUILD_ROOT: /Users/jjennings/Work/Dev/public/rosie-community/PyPI/rosie/rosie-pattern-language
+GIT_REF: v1.0.0-beta-8
+GIT_COMMIT: 289083a52a202156df1f182157c481cafdadf47b
+# Build step
+COMPONENT: lib/util.luac
+COMPILER: bin/luac
+BUILD_DATE: Mon Apr 23 10:40:52 EDT 2018
+BUILD_USER: jjennings
+BUILD_OSTYPE: darwin17
+BUILD_HOSTNAME: Jamies-MacBook-Pro-2.local
+BUILD_PLATFORM: Darwin
+BUILD_PLATFORM_VER: 17.5.0
+BUILD_PLATFORM_HW: x86_64
+BUILD_ROOT: /Users/jjennings/Work/Dev/public/rosie-community/PyPI/rosie/rosie-pattern-language
+GIT_REF: v1.0.0-beta-8
+GIT_COMMIT: 289083a52a202156df1f182157c481cafdadf47b
+# Build step
+COMPONENT: lib/violation.luac
+COMPILER: bin/luac
+BUILD_DATE: Mon Apr 23 10:40:52 EDT 2018
+BUILD_USER: jjennings
+BUILD_OSTYPE: darwin17
+BUILD_HOSTNAME: Jamies-MacBook-Pro-2.local
+BUILD_PLATFORM: Darwin
+BUILD_PLATFORM_VER: 17.5.0
+BUILD_PLATFORM_HW: x86_64
+BUILD_ROOT: /Users/jjennings/Work/Dev/public/rosie-community/PyPI/rosie/rosie-pattern-language
+GIT_REF: v1.0.0-beta-8
+GIT_COMMIT: 289083a52a202156df1f182157c481cafdadf47b
+# Build step
+COMPONENT: lib/writer.luac
+COMPILER: bin/luac
+BUILD_DATE: Mon Apr 23 10:40:52 EDT 2018
+BUILD_USER: jjennings
+BUILD_OSTYPE: darwin17
+BUILD_HOSTNAME: Jamies-MacBook-Pro-2.local
+BUILD_PLATFORM: Darwin
+BUILD_PLATFORM_VER: 17.5.0
+BUILD_PLATFORM_HW: x86_64
+BUILD_ROOT: /Users/jjennings/Work/Dev/public/rosie-community/PyPI/rosie/rosie-pattern-language
+GIT_REF: v1.0.0-beta-8
+GIT_COMMIT: 289083a52a202156df1f182157c481cafdadf47b
+# Build step
+COMPONENT: argparse
+COMPILER: bin/luac
+BUILD_DATE: Mon Apr 23 10:40:52 EDT 2018
+BUILD_USER: jjennings
+BUILD_OSTYPE: darwin17
+BUILD_HOSTNAME: Jamies-MacBook-Pro-2.local
+BUILD_PLATFORM: Darwin
+BUILD_PLATFORM_VER: 17.5.0
+BUILD_PLATFORM_HW: x86_64
+BUILD_ROOT: /Users/jjennings/Work/Dev/public/rosie-community/PyPI/rosie/rosie-pattern-language
+GIT_REF: v1.0.0-beta-8
+GIT_COMMIT: 289083a52a202156df1f182157c481cafdadf47b
+# Build step
+COMPONENT: lpeg
+COMPILER: cc
+BUILD_DATE: Mon Apr 23 10:40:54 EDT 2018
+BUILD_USER: jjennings
+BUILD_OSTYPE: darwin17
+BUILD_HOSTNAME: Jamies-MacBook-Pro-2.local
+BUILD_PLATFORM: Darwin
+BUILD_PLATFORM_VER: 17.5.0
+BUILD_PLATFORM_HW: x86_64
+BUILD_ROOT: /Users/jjennings/Work/Dev/public/rosie-community/PyPI/rosie/rosie-pattern-language
+GIT_REF: v1.0.0-beta-8
+GIT_COMMIT: 289083a52a202156df1f182157c481cafdadf47b
+# Build step
+COMPONENT: json
+COMPILER: cc
+BUILD_DATE: Mon Apr 23 10:40:55 EDT 2018
+BUILD_USER: jjennings
+BUILD_OSTYPE: darwin17
+BUILD_HOSTNAME: Jamies-MacBook-Pro-2.local
+BUILD_PLATFORM: Darwin
+BUILD_PLATFORM_VER: 17.5.0
+BUILD_PLATFORM_HW: x86_64
+BUILD_ROOT: /Users/jjennings/Work/Dev/public/rosie-community/PyPI/rosie/rosie-pattern-language
+GIT_REF: v1.0.0-beta-8
+GIT_COMMIT: 289083a52a202156df1f182157c481cafdadf47b
+# Build step
+COMPONENT: readline_stub
+COMPILER: cc
+BUILD_DATE: Mon Apr 23 10:40:55 EDT 2018
+BUILD_USER: jjennings
+BUILD_OSTYPE: darwin17
+BUILD_HOSTNAME: Jamies-MacBook-Pro-2.local
+BUILD_PLATFORM: Darwin
+BUILD_PLATFORM_VER: 17.5.0
+BUILD_PLATFORM_HW: x86_64
+BUILD_ROOT: /Users/jjennings/Work/Dev/public/rosie-community/PyPI/rosie/rosie-pattern-language
+GIT_REF: v1.0.0-beta-8
+GIT_COMMIT: 289083a52a202156df1f182157c481cafdadf47b
+# Build step
+COMPONENT: binaries
+COMPILER: cc
+BUILD_DATE: Mon Apr 23 10:40:57 EDT 2018
+BUILD_USER: jjennings
+BUILD_OSTYPE: darwin17
+BUILD_HOSTNAME: Jamies-MacBook-Pro-2.local
+BUILD_PLATFORM: Darwin
+BUILD_PLATFORM_VER: 17.5.0
+BUILD_PLATFORM_HW: x86_64
+BUILD_ROOT: /Users/jjennings/Work/Dev/public/rosie-community/PyPI/rosie/rosie-pattern-language
+GIT_REF: v1.0.0-beta-8
+GIT_COMMIT: 289083a52a202156df1f182157c481cafdadf47b
