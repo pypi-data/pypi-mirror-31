@@ -1,0 +1,47 @@
+Metadata-Version: 2.0
+Name: KegStorage
+Version: 0.2.0
+Summary: A simple storage interface with multiple backends for use in a Keg_ app.
+Home-page: https://github.com/level12/keg-storage
+Author: Level 12 Developers
+Author-email: devteam@level12.io
+License: BSD
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Requires-Dist: boto3
+Requires-Dist: botocore
+Requires-Dist: kegelements
+
+Keg-Storage
+###########
+
+.. image:: https://circleci.com/gh/level12/keg-storage.svg?style=svg
+  :target: https://circleci.com/gh/level12/keg-storage
+
+.. image:: https://codecov.io/github/level12/keg-storage/coverage.svg?branch=master
+  :target: https://codecov.io/github/level12/keg-storage?branch=master
+
+.. _Keg: https://pypi.python.org/pypi/Keg
+
+
+A simple storage interface with multiple back ends for use in a Keg_ app.
+
+
+Usage
+=====
+
+
+CHANGELOG
+#########
+
+0.2.0
+=====
+
+* [FEAT] Added Support for AWS Credentials using a Profile
+
+
