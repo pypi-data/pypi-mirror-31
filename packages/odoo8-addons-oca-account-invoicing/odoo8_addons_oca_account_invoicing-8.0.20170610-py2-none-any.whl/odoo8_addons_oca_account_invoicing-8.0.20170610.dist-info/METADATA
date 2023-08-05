@@ -1,0 +1,47 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-account-invoicing
+Version: 8.0.20170610
+Summary: Meta package for OCA account-invoicing Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo8-addon-account-group-invoice-lines
+Requires-Dist: odoo8-addon-account-invoice-force-number
+Requires-Dist: odoo8-addon-account-invoice-kanban
+Requires-Dist: odoo8-addon-account-invoice-line-description
+Requires-Dist: odoo8-addon-account-invoice-line-price-subtotal-gross
+Requires-Dist: odoo8-addon-account-invoice-line-sort
+Requires-Dist: odoo8-addon-account-invoice-merge
+Requires-Dist: odoo8-addon-account-invoice-merge-payment
+Requires-Dist: odoo8-addon-account-invoice-merge-purchase
+Requires-Dist: odoo8-addon-account-invoice-partner
+Requires-Dist: odoo8-addon-account-invoice-period-usability
+Requires-Dist: odoo8-addon-account-invoice-pricelist
+Requires-Dist: odoo8-addon-account-invoice-pricelist-sale
+Requires-Dist: odoo8-addon-account-invoice-pricelist-sale-stock
+Requires-Dist: odoo8-addon-account-invoice-rounding
+Requires-Dist: odoo8-addon-account-invoice-shipping-address
+Requires-Dist: odoo8-addon-account-invoice-supplier-number-info
+Requires-Dist: odoo8-addon-account-invoice-supplier-ref-unique
+Requires-Dist: odoo8-addon-account-invoice-supplierinfo-update
+Requires-Dist: odoo8-addon-account-invoice-supplierinfo-update-discount
+Requires-Dist: odoo8-addon-account-invoice-supplierinfo-update-on-validate
+Requires-Dist: odoo8-addon-account-invoice-supplierinfo-update-variant
+Requires-Dist: odoo8-addon-account-invoice-uom
+Requires-Dist: odoo8-addon-account-invoice-validation-workflow
+Requires-Dist: odoo8-addon-account-invoice-zero-autopay
+Requires-Dist: odoo8-addon-account-payment-term-extension
+Requires-Dist: odoo8-addon-invoice-fiscal-position-update
+Requires-Dist: odoo8-addon-sale-order-line-price-subtotal-gross
+Requires-Dist: odoo8-addon-stock-picking-invoice-product-group
+Requires-Dist: odoo8-addon-stock-picking-invoicing-incoterm
+Requires-Dist: odoo8-addon-stock-picking-invoicing-incoterm-sale
+Requires-Dist: odoo8-addon-stock-picking-invoicing-unified
+
+UNKNOWN
+
+
