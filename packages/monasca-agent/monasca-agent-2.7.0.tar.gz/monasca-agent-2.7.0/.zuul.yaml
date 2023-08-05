@@ -1,0 +1,7 @@
+- project:
+    check:
+      jobs:
+        - monasca-tempest-python-influxdb:
+            voting: false
+        - monasca-tempest-java-influxdb:
+            voting: false
