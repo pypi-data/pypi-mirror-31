@@ -1,0 +1,4 @@
+#!/bin/sh
+
+DJANGO_SETTINGS_MODULE=packrat.settings django-admin migrate -v 0
+gunicorn -w 4 packrat.wsgi:application

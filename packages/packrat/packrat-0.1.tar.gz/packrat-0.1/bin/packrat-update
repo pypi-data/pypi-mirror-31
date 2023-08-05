@@ -1,0 +1,4 @@
+#!/bin/sh
+
+DJANGO_SETTINGS_MODULE=packrat.settings django-admin migrate -v 0
+DJANGO_SETTINGS_MODULE=packrat.settings django-admin update_hoard "$@"
