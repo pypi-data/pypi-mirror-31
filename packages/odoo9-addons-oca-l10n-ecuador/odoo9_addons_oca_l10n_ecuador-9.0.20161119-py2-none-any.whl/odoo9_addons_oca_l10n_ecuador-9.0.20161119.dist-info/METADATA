@@ -1,0 +1,15 @@
+Metadata-Version: 2.0
+Name: odoo9-addons-oca-l10n-ecuador
+Version: 9.0.20161119
+Summary: Meta package for OCA l10n-ecuador Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo9-addon-l10n-ec
+Requires-Dist: odoo9-addon-l10n-ec-ote
+
+UNKNOWN
+
+
