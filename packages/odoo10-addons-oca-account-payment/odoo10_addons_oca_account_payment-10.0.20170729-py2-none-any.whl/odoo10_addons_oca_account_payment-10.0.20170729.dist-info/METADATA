@@ -1,0 +1,23 @@
+Metadata-Version: 2.0
+Name: odoo10-addons-oca-account-payment
+Version: 10.0.20170729
+Summary: Meta package for OCA account-payment Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo10-addon-account-due-list
+Requires-Dist: odoo10-addon-account-due-list-aging-comments
+Requires-Dist: odoo10-addon-account-due-list-payment-mode
+Requires-Dist: odoo10-addon-account-payment-batch-process
+Requires-Dist: odoo10-addon-account-payment-credit-card
+Requires-Dist: odoo10-addon-account-payment-return
+Requires-Dist: odoo10-addon-account-payment-return-import
+Requires-Dist: odoo10-addon-account-payment-return-import-sepa-pain
+
+UNKNOWN
+
+
