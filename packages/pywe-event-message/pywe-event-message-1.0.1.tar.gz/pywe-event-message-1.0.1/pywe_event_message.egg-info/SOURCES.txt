@@ -1,0 +1,10 @@
+README.rst
+setup.cfg
+setup.py
+pywe_event_message/__init__.py
+pywe_event_message/eventmsg.py
+pywe_event_message.egg-info/PKG-INFO
+pywe_event_message.egg-info/SOURCES.txt
+pywe_event_message.egg-info/dependency_links.txt
+pywe_event_message.egg-info/requires.txt
+pywe_event_message.egg-info/top_level.txt

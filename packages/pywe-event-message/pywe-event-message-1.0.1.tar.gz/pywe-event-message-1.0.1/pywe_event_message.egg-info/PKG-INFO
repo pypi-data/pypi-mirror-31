@@ -1,0 +1,52 @@
+Metadata-Version: 1.1
+Name: pywe-event-message
+Version: 1.0.1
+Summary: Wechat Event Message Module for Python.
+Home-page: https://github.com/sdkwe/pywe-event-message
+Author: Hackathon
+Author-email: kimi.huang@brightcells.com
+License: UNKNOWN
+Description: ==================
+        pywe-event-message
+        ==================
+        
+        Wechat Event Message Module for Python.
+        
+        Installation
+        ============
+        
+        ::
+        
+            pip install pywe-event-message
+        
+        
+        Usage
+        =====
+        
+        ::
+        
+            from pywe_event_message import parse_eventkey
+        
+        
+        Method
+        ======
+        
+        ::
+        
+            def parse_eventkey(eventkey, event='subscribe', key_cast_func=None):
+        
+        
+Keywords: Wechat Weixin Event Message
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
