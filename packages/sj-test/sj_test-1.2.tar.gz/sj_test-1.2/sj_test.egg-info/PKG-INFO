@@ -1,0 +1,19 @@
+Metadata-Version: 1.2
+Name: sj-test
+Version: 1.2
+Summary: SJ Python Source Code
+Home-page: https://github.com/rampart81/pyquibase
+Author: mokuzin21
+Author-email: songew@gmail.com
+License: UNKNOWN
+Download-URL: https://githur.com/rampart81/pyquibase/archive/1.0.tar.gz
+Description: UNKNOWN
+Keywords: smartlamp
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3
