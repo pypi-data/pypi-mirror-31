@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: pyadb3
+Version: 1.0.1
+Summary: Simple python module to interact with Android Debug Bridge tool
+Home-page: https://github.com/mikusjelly/pyadb3
+Author: mikusjelly
+Author-email: mikusjelly@gmail.com
+License: BSD
+Keywords: python android adb
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Topic :: Utilities
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: License :: OSI Approved :: BSD License
+
+# pyadb3
+
+自用，仅支持python3。
+
+## 安装
+```
+pip install pyadb3
+```
+
+## 使用
+```python
+import pyadb3
+
+adb = pyadb3.ADB()
+adb.shell_command('ls -l /')
+print(adb.get_output().decode())
+```
+
+
