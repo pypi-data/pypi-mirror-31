@@ -1,0 +1,66 @@
+Metadata-Version: 2.0
+Name: saigon
+Version: 1.0.0
+Summary: Some useful tool for faster and more efficient AngularJs & SCSS application development.
+Home-page: https://github.com/integree/saigon
+Author: Integree Bussines Solutions
+Author-email: dev@integree.eu
+License: MIT License
+Download-URL: https://pypi.python.org/packages/source/i/saigon/saigon-1.0.0.zip
+Keywords: saigon angularjs scss integree
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: django-appconf
+
+Saigon
+============
+
+Saigon is an **experimental** package for use with Angular and SCSS. It contains many useful tools for faster and more efficient developing. The code is hosted on `Github <https://github.com/integree/saigon>`_. 
+
+Requirements
+------------
+
+Saigon requires AngularJS 1.5.11 or newer and SCSS.
+
+Installation
+------------
+
+To install saigon, run the following command inside this directory::
+
+    python setup.py install
+
+You can also install the package with a symlink, so that changes to the source files will be immediately available to other users of the package on your system::
+
+    python setup.py develop
+
+If you have the Python **easy_install** utility available, you can also type 
+the following to download and install in one step::
+
+    easy_install saigon
+
+Or if you're using **pip**::
+
+    pip install bir-api
+
+To install saigon from SVN directly::
+
+    pip install -e svn+http://example.com/svn/saigon/trunk#egg=saigon
+
+or, if you need install from branch::
+
+    pip install -e svn+http://example.com/svn/saigon/branches/dev_0_2#egg=saigon
+
+Or if you'd prefer you can simply place the included "saigon" directory 
+somewhere on your python path, or symlink to it from somewhere on your Python 
+path.
+
+Credits
+-------
+
+The project implemented by `Integree Bussines Solutions <http://www.integree.eu>`_ from Warsaw, Poland
+
+
