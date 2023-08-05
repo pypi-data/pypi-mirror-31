@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: django-wechat
+Version: 0.1a1
+Summary: apis for you can use wechat in django
+Home-page: https://github.com/youngershen/django-wechat
+Author: younger shen
+Author-email: younger.x.shen@gmail.com
+License: MIT
+Keywords: django-wechat,django,wechat
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: Django (>=1.6)
+
+apis for you can use wechat in django
+
+
+
