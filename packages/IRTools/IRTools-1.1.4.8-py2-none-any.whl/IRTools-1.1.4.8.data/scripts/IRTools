@@ -1,0 +1,234 @@
+#!python
+import os
+import sys
+import time
+import logging
+import argparse as ap
+
+from IRTools.Constants import *
+
+
+def main():
+        """The Main function/pipeline for IRTools.
+
+        """
+        # Parse options...
+        argparser = prepare_argparser()
+        args = argparser.parse_args()
+
+        logging.basicConfig(level=logging.DEBUG,
+                            format='[%(asctime)s]: %(message)s ',
+                            datefmt='%Y-%m-%d %H:%M:%S',
+                            stream=sys.stdout,
+                            filemode="w"
+                            )    
+
+        if args.outdir:
+                # use a output directory to store IRTools output
+                if not os.path.exists( args.outdir ):
+                        try:
+                                os.makedirs( args.outdir )
+                        except:
+                                sys.exit( "Output directory (%s) could not be created. Terminating program." % args.outdir )
+
+        subcommand  = args.subcommand_name
+
+        if subcommand == "annotation":
+                from IRTools.annotation_cmd import run
+                logging.info("Beginning IRTools annotation run")
+                print('-' * 50)
+                start_time = time.time()
+                run( args )
+                end_time = time.time()
+                print('-' * 50)
+                logging.info("Run complete: %s elapsed" % elapsed_time(start_time, end_time))
+        elif subcommand == "quant":
+                logging.info("Beginning IRTools quant run")
+                print('-' * 50)
+                start_time = time.time()
+                from IRTools.quant_cmd import run
+                run( args )
+                end_time = time.time()
+                print('-' * 50)
+                logging.info("Run complete: %s elapsed" % elapsed_time(start_time, end_time))
+        elif subcommand == "diff":
+                logging.info("Beginning IRTools diff run")
+                print('-' * 50)
+                start_time = time.time()
+                from IRTools.diff_cmd import run
+                run( args )
+                end_time = time.time()
+                print('-' * 50)
+                logging.info("Run complete: %s elapsed" % elapsed_time(start_time, end_time))
+
+        return argparser
+
+
+def prepare_argparser():
+        """
+        Prepare optparser object. New options will be added in this function first.
+        """
+        description = "%(prog)s -- a computational toolset for detection and analysis of intron retention (IR) from RNA-Seq libraries"
+        epilog = "For command line options of each command, type: %(prog)s COMMAND -h"
+        # top-level parser
+        argparser = ap.ArgumentParser( description = description, epilog = epilog )
+        argparser.add_argument("-v", "--version", action="version", version="%(prog)s "+IRTools_VERSION)
+        subparsers = argparser.add_subparsers( dest = 'subcommand_name' )
+
+        # command for 'annotation'
+        add_annotation_parser( subparsers )
+
+        # command for 'quant'
+        add_quant_parser( subparsers )
+        
+        # command for 'diff'
+        add_diff_parser( subparsers )
+
+        return argparser
+
+
+def add_outdir_option( parser ):
+        parser.add_argument("--outdir", dest = "outdir", type = str, default = '',
+                            help = "If specified all output files will be written to that directory. Default: the current working directory")
+
+
+def add_annotation_parser( subparsers ):
+        """
+        Add main function 'annotation' argument parsers.
+        """
+        argparser_annotation = subparsers.add_parser("annotation", help="Generate annotation GTF file for intron retention analysis.")
+
+        # group for input files
+        group_general = argparser_annotation.add_argument_group( "general arguments" )
+        group_general.add_argument( "-g", "--GTF-file", dest = "inputfile", metavar = "GTFFILE", type = str, required = True,
+                                  help = "Input annotation GTF filename. REQUIRED." )
+        
+        group_general.add_argument( "-o", "--annotation-file", dest = "annofile", type = str, required = True,
+                                    help = "Output annotation GTF file. REQUIRED.")
+        group_general.add_argument("--outdir", dest = "outdir", type = str, default = '',
+                                   help = "If specified, all output files will be written to that directory. Default: the current working directory") 
+
+        return
+
+
+def add_quant_parser( subparsers ):
+        """
+        Add main function 'quant' argument parsers.
+        """
+        argparser_quant = subparsers.add_parser("quant", help="Quantify intron retention with two complementary metrics: intron retention index (IRI), and intron retention coefficient (IRC).")
+
+        # group for general arguments
+        group_general = argparser_quant.add_argument_group( "general arguments" )
+        group_general.add_argument( "-q", "--quant-type", dest = "quanttype", type = str, choices=("IRI", "IRC"),
+                                  help = "Intron retention (IR) quantifiation types: intron retention index (IRI), intron retention coefficient (IRC). DEFAULT: \"IRI\".",
+                                  default = "IRI")        
+        group_general.add_argument( "-i", "--alt-file", dest = "altfile", type = str, required = True,
+                                  help = "Input RNA-Seq alignment file (i.e. alignment file generated by Tophat). If IR quantifiation type is \"IRI\", the input file can be BAM or BED file. " +
+                                         "If IR quantifiation type is \"IRC\", the input file can only be BAM file. REQUIRED." )
+        group_general.add_argument( "-p", "--read-type", dest = "readtype", type = str, choices = ("paired", "single"),
+                                  help = "\"paired\" is for paired-end RNA-Seq libraries and \"single\" is for single-end RNA-Seq libraries. DEFAULT: \"single\".",
+                                  default = "single" )   
+        group_general.add_argument( "-s", "--library-type", dest = "libtype", type = str, choices = ("fr-unstranded", "fr-firststrand", "fr-secondstrand"),
+                                  help = "Library type. DEFAULT: \"fr-unstranded\" (unstranded). Use \"fr-firststrand\" or \"fr-secondstrand\" for strand-specific RNA-Seq libraries.",
+                                  default = "fr-unstranded" )
+        group_general.add_argument( "-u", "--map-file", dest = "mapfile", type = str,
+                                  help = "Mappability score bigWig file (depends on species, sequence length of RNA-Seq library, etc). Or specify a species (i.e. hg19 or mm9) for which a default annotation file (default for 50 bps of single-end RNA-Seq library) can be downloaded and used." +
+                                         "If specified, mappability will take into account.")            
+
+        e_or_g_group = group_general.add_mutually_exclusive_group(required=True)
+        e_or_g_group.add_argument( "-e", "--species", dest = "species", type = str, choices = ("hg19", "mm9"),
+                                   help = "Specify a species for which built-in IR annotation GTF file can be used. -e and -g are mutually exclusive and one is required." )
+        e_or_g_group.add_argument( "-g", "--annotation-file", dest = "annofile", type = str,
+                                   help = "IR annotation GTF file built by \"IRTools annotation\" command. -e and -g are mutually exclusive and one is required." )
+        
+        group_general.add_argument( "-n", "--name", dest = "name", type = str, required = True,
+                                    help = "Sample name, which will be used to generate output file names. REQUIRED.")  
+        group_general.add_argument("--outdir", dest = "outdir", type = str, default = '',
+                                   help = "If specified, all output files will be written to that directory. Default: the current working directory") 
+
+        # group for IRI specific arguments
+        group_IRI = argparser_quant.add_argument_group( "IRI specific arguments" )        
+        group_IRI.add_argument( "-f", "--format", dest = "format", type = str, choices = ("BAM", "BED"),
+                                help = "Set when IR quantifiation type is \"IRI\". Specify input RNA-Seq alignment file format: \"BAM\", \"BED\". DEFAULT: \"BAM\".",
+                                default = "BAM" )          
+
+        # group for IRC specific arguments
+        group_IRC = argparser_quant.add_argument_group( "IRC specific arguments" )
+        group_IRC.add_argument( "-m", "--min_overlap", dest = "minoverlap", type = int,
+                                help = "Set when IR quantifiation type is \"IRC\". Minimum length of overlap between the reads and each of the exons or introns involved in splicing. DEFAULT: 8.",
+                                default = 8 )         
+
+        return  
+
+
+def add_diff_parser( subparsers ):
+        """
+        Add main function 'diff' argument parsers.
+        """
+        argparser_diff = subparsers.add_parser("diff", help="Detection of intron retention change between two samples with replicates.")
+
+        # group for general arguments
+        group_general = argparser_diff.add_argument_group( "general arguments" )
+        group_general.add_argument( "-q", "--quant-type", dest = "quanttype", type = str, choices=("IRI", "IRC"),
+                                  help = "Intron retention (IR) quantifiation types: intron retention index (IRI), intron retention coefficient (IRC). DEFAULT: \"IRI\".",
+                                  default = "IRI")   
+        group_general.add_argument( "-s1", "--s1-files", dest = "s1files", type = str,
+                                    help = "A comma-separated list of RNA-Seq alignment BAM files for sample 1." )  
+        group_general.add_argument( "-s2", "--s2-files", dest = "s2files", type = str,
+                                    help = "A comma-separated list of RNA-Seq alignment BAM files for sample 2." )        
+        group_general.add_argument( "-c", "--cutoff", dest = "cutoff", type = float,
+                                  help = "The cutoff of IR difference between sample 1 and sample 2. The cutoff is used in the null hypothesis test for detecting IR change. DEFAULT: 0.1 difference.",
+                                  default = 0.1)
+        group_general.add_argument( "-t", "--analysis-type", dest = "analysistype", type = str, choices = ("P", "U"),
+                                  help = "Type of analysis performed. \"P\" is for paired replicates analysis and \"U\" is for unpaired replicates analysis. DEFAULT: \"U\".",
+                                  default = "U" )          
+        group_general.add_argument( "-p", "--read-type", dest = "readtype", type = str, choices = ("paired", "single"),
+                                  help = "\"paired\" is for paired-end RNA-Seq libraries and \"single\" is for single-end RNA-Seq libraries. DEFAULT: \"single\".",
+                                  default = "single" )   
+        group_general.add_argument( "-s", "--library-type", dest = "libtype", type = str, choices = ("fr-unstranded", "fr-firststrand", "fr-secondstrand"),
+                                  help = "Library type. DEFAULT: \"fr-unstranded\" (unstranded). Use \"fr-firststrand\" or \"fr-secondstrand\" for strand-specific RNA-Seq libraries.",
+                                  default = "fr-unstranded" ) 
+        group_general.add_argument( "-u", "--map-file", dest = "mapfile", type = str,
+                                  help = "Mappability score bigWig file (depends on species, sequence length of RNA-Seq library, etc). Or specify a species (i.e. hg19 or mm9) for which a default annotation file (default for 50 bps of single-end RNA-Seq library) can be downloaded and used" +
+                                         "If specified, mappability will take into account.")
+
+        e_or_g_group = group_general.add_mutually_exclusive_group()
+        e_or_g_group.add_argument( "-e", "--species", dest = "species", type = str, choices = ("hg19", "mm9"),
+                                   help = "Specify a species for which built-in IR annotation GTF file can be used. -e and -g are mutually exclusive." )
+        e_or_g_group.add_argument( "-g", "--annotation_file", dest = "annofile", type = str,
+                                   help = "IR annotation GTF file built by \"IRTools annotation\" command. -e and -g are mutually exclusive." )
+        
+        group_general.add_argument( "-n", "--name", dest = "name", type = str, required = True,
+                                    help = "Sample name, which will be used to generate output file names. REQUIRED.")  
+        group_general.add_argument("--outdir", dest = "outdir", type = str, default = '',
+                                   help = "If specified, all output files will be written to that directory. Default: the current working directory")          
+        
+        # group for IRI specific arguments
+        group_IRI = argparser_diff.add_argument_group( "IRI specific arguments" )        
+        group_IRI.add_argument( "-f", "--format", dest = "format", type = str, choices = ("BAM", "BED"),
+                                help = "Set when IR quantification type is \"IRI\". Specify input RNA-Seq alignment file format: \"BAM\", \"BED\". DEFAULT: \"BAM\".",
+                                default = "BAM" )            
+  
+        # group for IRC specific arguments
+        group_IRC = argparser_diff.add_argument_group( "IRC specific arguments" )
+        group_IRC.add_argument( "-m", "--min_overlap", dest = "minoverlap", type = int,
+                                help = "Set when IR quantification type is \"IRC\". Minimum lengh of overlap between the reads and each of the exons or introns involved in splicing. DEFAULT: 8.",
+                                default = 8 ) 
+        
+        return
+
+
+def elapsed_time(start_time, end_time):
+        elapsed_sec = end_time - start_time
+        h = int(elapsed_sec / (60 * 60))
+        m = int((elapsed_sec % (60 * 60)) / 60)
+        s = int(elapsed_sec % 60)
+        return "{}:{:>02}:{:>02}".format(h, m, s)
+
+
+if __name__ == '__main__':
+        try:
+                main()
+        except KeyboardInterrupt:
+                sys.stderr.write("User interrupted me!\n")
+                sys.exit(0)
