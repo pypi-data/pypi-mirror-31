@@ -1,0 +1,12 @@
+setup.py
+odr/__init__.py
+odr/container.py
+odr/exceptions.py
+odr/injector.py
+odr.egg-info/PKG-INFO
+odr.egg-info/SOURCES.txt
+odr.egg-info/dependency_links.txt
+odr.egg-info/top_level.txt
+tests/__init__.py
+tests/main_test.py
+tests/mocks.py

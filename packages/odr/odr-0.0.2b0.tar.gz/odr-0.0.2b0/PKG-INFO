@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: odr
+Version: 0.0.2b0
+Summary: Odr is a very simple realisation of Dependency Injection pattern with global IoC-Container and simple decorator to inject object.
+Home-page: UNKNOWN
+Author: Alexandr Semenov
+Author-email: a.semenov.job@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: di ioc decorator inject
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
