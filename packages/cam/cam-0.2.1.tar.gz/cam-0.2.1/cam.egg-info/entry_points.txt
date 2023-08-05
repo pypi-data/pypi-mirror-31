@@ -1,0 +1,6 @@
+[cam.registered_commands]
+build = cam.commands.build:main
+
+[console_scripts]
+cam = cam.__main__:main
+
