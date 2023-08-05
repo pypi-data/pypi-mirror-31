@@ -1,0 +1,10 @@
+dockerfile_parse/__init__.py,sha256=p2Ca0rP7_8iH24YdllHYJJM2X2WIuI0rqEQoCCDMW1w,240
+dockerfile_parse/constants.py,sha256=AXL_WhV6SFtulJwp-DxhGzflQGCC4rsp1u8NmiiHwEM,354
+dockerfile_parse/parser.py,sha256=rKAFYmEfH4rfRhjrI9kLKBfwO9gLKggKI-TjpMNdfT0,19796
+dockerfile_parse/util.py,sha256=GJpTFhlr8wq8vlxS86mE-S_yWLIjjq9FowMphzx423I,9367
+dockerfile_parse-0.0.10.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+dockerfile_parse-0.0.10.dist-info/METADATA,sha256=0GiwBqv8GLxrrFtHKrGU9d5tjF2HesGlHMnsPeVO7Qc,305
+dockerfile_parse-0.0.10.dist-info/RECORD,,
+dockerfile_parse-0.0.10.dist-info/WHEEL,sha256=5wvfB7GvgZAbKBSE9uX9Zbi6LCL-_KgezgHblXhCRnM,113
+dockerfile_parse-0.0.10.dist-info/metadata.json,sha256=YDQdAQJFPAjINFGc_urusG4_bO_gZmJLCfttxxKwH2Q,575
+dockerfile_parse-0.0.10.dist-info/top_level.txt,sha256=el_rkUCYYSK2Hj8ETdLtb3fN5G_zmpPTR9vChhcD6Y8,17
