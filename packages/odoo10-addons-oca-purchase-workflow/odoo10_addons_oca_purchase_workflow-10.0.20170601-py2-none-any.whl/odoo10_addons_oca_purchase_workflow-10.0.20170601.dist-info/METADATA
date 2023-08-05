@@ -1,0 +1,24 @@
+Metadata-Version: 2.0
+Name: odoo10-addons-oca-purchase-workflow
+Version: 10.0.20170601
+Summary: Meta package for OCA purchase-workflow Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo10-addon-product-by-supplier
+Requires-Dist: odoo10-addon-purchase-allowed-product
+Requires-Dist: odoo10-addon-purchase-commercial-partner
+Requires-Dist: odoo10-addon-purchase-fiscal-position-update
+Requires-Dist: odoo10-addon-purchase-fop-shipping
+Requires-Dist: odoo10-addon-purchase-picking-state
+Requires-Dist: odoo10-addon-purchase-request
+Requires-Dist: odoo10-addon-purchase-request-to-procurement
+Requires-Dist: odoo10-addon-purchase-request-to-rfq
+
+UNKNOWN
+
+
