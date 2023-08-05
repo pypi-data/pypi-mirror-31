@@ -1,0 +1,18 @@
+Metadata-Version: 2.0
+Name: backblazeb2
+Version: 0.1.1
+Summary: Wrapper around the Backblaze B2 API
+Home-page: https://github.com/picklelo/b2py
+Author: Nikhil Rao
+Author-email: nikhil@nikhilrao.me
+License: UNKNOWN
+Keywords: backblaze b2
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: requests
+
+Interface to the Backblaze B2 object store.
+
+
