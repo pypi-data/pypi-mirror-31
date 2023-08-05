@@ -1,0 +1,16 @@
+Metadata-Version: 2.0
+Name: odoo11-addons-oca-bank-statement-import
+Version: 11.0.20171217
+Summary: Meta package for OCA bank-statement-import Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo11-addon-account-bank-statement-import-qif
+
+UNKNOWN
+
+
