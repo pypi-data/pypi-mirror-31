@@ -1,0 +1,34 @@
+Metadata-Version: 2.0
+Name: atm
+Version: 0.0.9
+Summary: a multi-user, multi-data model exploration system
+Home-page: https://github.com/HDI-project/ATM
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: MIT
+Description-Content-Type: UNKNOWN
+Keywords: machine learning hyperparameters tuning classification
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Requires-Python: >=2.7
+Requires-Dist: sqlalchemy (>=1.1)
+Requires-Dist: numpy (>=1.13)
+Requires-Dist: boto (>=2.48)
+Requires-Dist: pandas (>=0.22)
+Requires-Dist: scikit-learn (>=0.18)
+Requires-Dist: scipy (>=0.19)
+Requires-Dist: sklearn-pandas (>=1.5)
+Requires-Dist: mysqlclient (>=1.2)
+Requires-Dist: pyyaml (>=3.12)
+Requires-Dist: joblib (>=0.11)
+Requires-Dist: future (>=0.16)
+Requires-Dist: btb (>=0.0.1)
+
+UNKNOWN
+
+
