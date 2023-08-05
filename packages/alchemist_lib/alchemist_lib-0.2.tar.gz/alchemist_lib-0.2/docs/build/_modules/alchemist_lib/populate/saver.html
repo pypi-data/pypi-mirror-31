@@ -1,0 +1,483 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>alchemist_lib.populate.saver &mdash; alchemist_lib 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="alchemist_lib 0.1 documentation" href="../../../index.html"/>
+        <link rel="up" title="Module code" href="../../index.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> alchemist_lib
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../install.html">Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorial.html">Beginner Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../database/index.html">Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../license.html">License</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">alchemist_lib</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>alchemist_lib.populate.saver</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for alchemist_lib.populate.saver</h1><div class="highlight"><pre>
+<span class="kn">from</span> <span class="nn">sqlalchemy.exc</span> <span class="kn">import</span> <span class="n">IntegrityError</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy.orm.exc</span> <span class="kn">import</span> <span class="n">FlushError</span>
+
+<span class="kn">from</span> <span class="nn">..</span> <span class="kn">import</span> <span class="n">utils</span>
+
+<span class="kn">from</span> <span class="nn">..database.instrument</span> <span class="kn">import</span> <span class="n">Instrument</span>
+<span class="kn">from</span> <span class="nn">..database.timeframe</span> <span class="kn">import</span> <span class="n">Timeframe</span>
+<span class="kn">from</span> <span class="nn">..database.broker</span> <span class="kn">import</span> <span class="n">Broker</span>
+<span class="kn">from</span> <span class="nn">..database.price_data_source</span> <span class="kn">import</span> <span class="n">PriceDataSource</span>
+<span class="kn">from</span> <span class="nn">..database.exchange</span> <span class="kn">import</span> <span class="n">Exchange</span>
+<span class="kn">from</span> <span class="nn">..database.asset</span> <span class="kn">import</span> <span class="n">Asset</span>
+<span class="kn">from</span> <span class="nn">..database.timetable</span> <span class="kn">import</span> <span class="n">Timetable</span>
+
+
+
+<div class="viewcode-block" id="Saver"><a class="viewcode-back" href="../../../api.html#alchemist_lib.populate.saver.Saver">[docs]</a><span class="k">class</span> <span class="nc">Saver</span><span class="p">():</span>
+
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Class that saves data on the database.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        session (sqlalchemy.orm.session.Session): Database connection.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+<div class="viewcode-block" id="Saver.__init__"><a class="viewcode-back" href="../../../api.html#alchemist_lib.populate.saver.Saver.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">):</span>
+
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Costructor method.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            session (sqlalchemy.orm.session.Session): Database connection.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">session</span> <span class="o">=</span> <span class="n">session</span></div>
+
+
+<div class="viewcode-block" id="Saver._save"><a class="viewcode-back" href="../../../api.html#alchemist_lib.populate.saver.Saver._save">[docs]</a>    <span class="k">def</span> <span class="nf">_save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">):</span>
+
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Save an instance of a map class.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            obj (obj): Instance to save.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="k">except</span> <span class="p">(</span><span class="n">IntegrityError</span><span class="p">,</span> <span class="n">FlushError</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="Saver.instrument"><a class="viewcode-back" href="../../../api.html#alchemist_lib.populate.saver.Saver.instrument">[docs]</a>    <span class="k">def</span> <span class="nf">instrument</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">kind</span><span class="p">):</span>
+
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Save an instrument on the db.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            kind (str): Kind of instrument to save. (instrument_type)</span>
+
+<span class="sd">        Return:</span>
+<span class="sd">            instrument (alchemist_lib.database.instrument.Instrument): Map class instance.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="n">already_saved</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Instrument</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">Instrument</span><span class="o">.</span><span class="n">instrument_type</span> <span class="o">==</span> <span class="n">kind</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">already_saved</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">already_saved</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+        <span class="n">instrument</span> <span class="o">=</span> <span class="n">Instrument</span><span class="p">(</span><span class="n">instrument_type</span> <span class="o">=</span> <span class="n">kind</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_save</span><span class="p">(</span><span class="n">instrument</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">instrument</span></div>
+
+
+<div class="viewcode-block" id="Saver.timeframe"><a class="viewcode-back" href="../../../api.html#alchemist_lib.populate.saver.Saver.timeframe">[docs]</a>    <span class="k">def</span> <span class="nf">timeframe</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">description</span><span class="p">):</span>
+
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Save a timeframe on the db.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            if (str): Timeframe identifier. (15M as example).</span>
+<span class="sd">            description (str): The definition of the timeframe in english words. (fifteen minutes as example).</span>
+
+<span class="sd">        Return:</span>
+<span class="sd">            tf (alchemist_lib.database.timeframe.Timeframe): Map class instance.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="n">tf</span> <span class="o">=</span> <span class="n">Timeframe</span><span class="p">(</span><span class="n">timeframe_id</span> <span class="o">=</span> <span class="nb">id</span><span class="p">,</span> <span class="n">description</span> <span class="o">=</span> <span class="n">description</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_save</span><span class="p">(</span><span class="n">tf</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">tf</span></div>
+    
+
+<div class="viewcode-block" id="Saver.broker"><a class="viewcode-back" href="../../../api.html#alchemist_lib.populate.saver.Saver.broker">[docs]</a>    <span class="k">def</span> <span class="nf">broker</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">site</span><span class="p">):</span>
+
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Save a broker on the db.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            name (str): Name of the broker.</span>
+<span class="sd">            site (str): Website of the broker.</span>
+
+<span class="sd">        Return:</span>
+<span class="sd">            broker (alchemist_lib.database.broker.Broker): Map class instance.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="n">broker</span> <span class="o">=</span> <span class="n">Broker</span><span class="p">(</span><span class="n">broker_name</span> <span class="o">=</span> <span class="n">name</span><span class="p">,</span> <span class="n">website</span> <span class="o">=</span> <span class="n">site</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_save</span><span class="p">(</span><span class="n">broker</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">broker</span></div>
+
+
+<div class="viewcode-block" id="Saver.data_source"><a class="viewcode-back" href="../../../api.html#alchemist_lib.populate.saver.Saver.data_source">[docs]</a>    <span class="k">def</span> <span class="nf">data_source</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">site</span><span class="p">,</span> <span class="n">timeframes</span><span class="p">):</span>
+
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Save a data_source on the db.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            name (str): Name of the data source.</span>
+<span class="sd">            site (str): Website of the data source.</span>
+<span class="sd">            timeframes (list[alchemist_lib.database.timeframe.Timeframe]): List of supported timeframes.</span>
+
+<span class="sd">        Return:</span>
+<span class="sd">            ds (alchemist_lib.database.price_data_source.PriceDataSource): Map class instance.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="n">timeframes</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">to_list</span><span class="p">(</span><span class="n">timeframes</span><span class="p">)</span>
+
+        <span class="n">tfs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Timeframe</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">Timeframe</span><span class="o">.</span><span class="n">timeframe_id</span><span class="o">.</span><span class="n">in_</span><span class="p">([</span><span class="n">t</span><span class="o">.</span><span class="n">timeframe_id</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">timeframes</span><span class="p">]))</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+        
+        <span class="n">ds</span> <span class="o">=</span> <span class="n">PriceDataSource</span><span class="p">(</span><span class="n">price_data_source_name</span> <span class="o">=</span> <span class="n">name</span><span class="p">,</span> <span class="n">website</span> <span class="o">=</span> <span class="n">site</span><span class="p">)</span>
+        <span class="n">ds</span><span class="o">.</span><span class="n">available_timeframes</span> <span class="o">=</span> <span class="n">tfs</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_save</span><span class="p">(</span><span class="n">ds</span><span class="p">)</span>            
+        <span class="k">return</span> <span class="n">ds</span></div>
+
+
+<div class="viewcode-block" id="Saver.timetable"><a class="viewcode-back" href="../../../api.html#alchemist_lib.populate.saver.Saver.timetable">[docs]</a>    <span class="k">def</span> <span class="nf">timetable</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">open_hour</span><span class="p">,</span> <span class="n">open_minute</span><span class="p">,</span> <span class="n">close_hour</span><span class="p">,</span> <span class="n">close_minute</span><span class="p">,</span> <span class="n">timezone</span><span class="p">):</span>
+
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Save a timetable on the db.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            open_hour (int): Hour the market opens.</span>
+<span class="sd">            open_minute (int): Minute the market opens.</span>
+<span class="sd">            close_hour (int): Hour the market closes.</span>
+<span class="sd">            close_minute (int): Minute the market closes.</span>
+<span class="sd">            timezone (str): Timezone name.</span>
+
+<span class="sd">        Return:</span>
+<span class="sd">            tt (alchemist_lib.database.timetable.Timetable): Map class instance.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="n">tt</span> <span class="o">=</span> <span class="n">Timetable</span><span class="p">(</span><span class="n">open_hour</span> <span class="o">=</span> <span class="n">open_hour</span><span class="p">,</span>
+                       <span class="n">open_minute</span> <span class="o">=</span> <span class="n">open_minute</span><span class="p">,</span>
+                       <span class="n">close_hour</span> <span class="o">=</span> <span class="n">close_hour</span><span class="p">,</span>
+                       <span class="n">close_minute</span> <span class="o">=</span> <span class="n">close_minute</span><span class="p">,</span>
+                       <span class="n">timezone</span> <span class="o">=</span> <span class="n">timezone</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_save</span><span class="p">(</span><span class="n">tt</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">tt</span></div>
+    
+
+<div class="viewcode-block" id="Saver.exchange"><a class="viewcode-back" href="../../../api.html#alchemist_lib.populate.saver.Saver.exchange">[docs]</a>    <span class="k">def</span> <span class="nf">exchange</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">website</span><span class="p">,</span> <span class="n">data_source</span><span class="p">,</span> <span class="n">timetable</span><span class="p">,</span> <span class="n">brokers</span><span class="p">):</span>
+        
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Save an exchange on the db.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            name (str): Name of the exchange.</span>
+<span class="sd">            website (str): Website of the exchange.</span>
+<span class="sd">            data_source (alchemist_lib.database.price_data_source.PriceDataSource): PriceDataSource instance associated with this exchange. Specify how to get price informations.</span>
+<span class="sd">            timetable (alchemist_lib.database.timetable.Timetable): Timetable of this exchange.</span>
+<span class="sd">            brokers (list[alchemist_lib.database.broker.Broker]): Brokers that allow trading on this exchange.</span>
+
+<span class="sd">        Return:</span>
+<span class="sd">            exchange (alchemist_lib.database.exchange.Exchange): Map class instance.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="n">brokers</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">to_list</span><span class="p">(</span><span class="n">brokers</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">data_source</span> <span class="o">!=</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">ds</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">PriceDataSource</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">PriceDataSource</span><span class="o">.</span><span class="n">price_data_source_name</span> <span class="o">==</span> <span class="n">data_source</span><span class="o">.</span><span class="n">price_data_source_name</span><span class="p">)</span><span class="o">.</span><span class="n">one</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">ds</span> <span class="o">=</span> <span class="n">data_source</span>
+            
+        <span class="k">if</span> <span class="n">timetable</span> <span class="o">!=</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">tt</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Timetable</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">Timetable</span><span class="o">.</span><span class="n">open_hour</span> <span class="o">==</span> <span class="n">timetable</span><span class="o">.</span><span class="n">open_hour</span><span class="p">,</span>
+                                                      <span class="n">Timetable</span><span class="o">.</span><span class="n">open_minute</span> <span class="o">==</span> <span class="n">timetable</span><span class="o">.</span><span class="n">open_minute</span><span class="p">,</span>
+                                                      <span class="n">Timetable</span><span class="o">.</span><span class="n">close_hour</span> <span class="o">==</span> <span class="n">timetable</span><span class="o">.</span><span class="n">close_hour</span><span class="p">,</span>
+                                                      <span class="n">Timetable</span><span class="o">.</span><span class="n">close_minute</span> <span class="o">==</span> <span class="n">timetable</span><span class="o">.</span><span class="n">close_minute</span><span class="p">,</span>
+                                                      <span class="n">Timetable</span><span class="o">.</span><span class="n">timezone</span> <span class="o">==</span> <span class="n">timetable</span><span class="o">.</span><span class="n">timezone</span><span class="p">)</span><span class="o">.</span><span class="n">one</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">tt</span> <span class="o">=</span> <span class="n">timetable</span>
+        
+        <span class="n">brks</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Broker</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">Broker</span><span class="o">.</span><span class="n">broker_name</span><span class="o">.</span><span class="n">in_</span><span class="p">([</span><span class="n">b</span><span class="o">.</span><span class="n">broker_name</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">brokers</span><span class="p">]))</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+        
+        <span class="n">exchange</span> <span class="o">=</span> <span class="n">Exchange</span><span class="p">(</span><span class="n">exchange_name</span> <span class="o">=</span> <span class="n">name</span><span class="p">,</span> <span class="n">website</span> <span class="o">=</span> <span class="n">website</span><span class="p">)</span>
+        <span class="n">exchange</span><span class="o">.</span><span class="n">price_data_source</span> <span class="o">=</span> <span class="n">ds</span>
+        <span class="n">exchange</span><span class="o">.</span><span class="n">timetable</span> <span class="o">=</span> <span class="n">tt</span>
+        <span class="n">exchange</span><span class="o">.</span><span class="n">brokers</span> <span class="o">=</span> <span class="n">brks</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_save</span><span class="p">(</span><span class="n">exchange</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">exchange</span></div>
+
+
+<div class="viewcode-block" id="Saver.asset"><a class="viewcode-back" href="../../../api.html#alchemist_lib.populate.saver.Saver.asset">[docs]</a>    <span class="k">def</span> <span class="nf">asset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ticker</span><span class="p">,</span> <span class="n">instrument_id</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">exchanges</span><span class="p">):</span>
+
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Save an asset on the db.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            ticker (str): Ticker code of the asset.</span>
+<span class="sd">            instrument_id (int): Financial instrument identifier.</span>
+<span class="sd">            name (str): Long name of the asset.</span>
+<span class="sd">            exchanges (list[alchemist_lib.database.asset.Asset]): Exchanges where this asset is tradable.</span>
+
+<span class="sd">        Return:</span>
+<span class="sd">            tt (alchemist_lib.database.asset.Asset): Map class instance.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="n">exchanges</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">to_list</span><span class="p">(</span><span class="n">exchanges</span><span class="p">)</span>
+
+        <span class="n">exchanges_already_saved</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Exchange</span><span class="p">)</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">Exchange</span><span class="p">,</span> <span class="n">Asset</span><span class="o">.</span><span class="n">exchanges</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">Asset</span><span class="o">.</span><span class="n">ticker</span> <span class="o">==</span> <span class="n">ticker</span><span class="p">,</span> <span class="n">Asset</span><span class="o">.</span><span class="n">instrument_id</span> <span class="o">==</span> <span class="n">instrument_id</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+        <span class="n">exchs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Exchange</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">Exchange</span><span class="o">.</span><span class="n">exchange_name</span><span class="o">.</span><span class="n">in_</span><span class="p">([</span><span class="n">e</span><span class="o">.</span><span class="n">exchange_name</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">exchanges</span><span class="p">]))</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+
+        <span class="n">asset</span> <span class="o">=</span> <span class="n">Asset</span><span class="p">(</span><span class="n">ticker</span> <span class="o">=</span> <span class="n">ticker</span><span class="p">,</span> <span class="n">instrument_id</span> <span class="o">=</span> <span class="n">instrument_id</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">)</span>
+        <span class="n">asset</span><span class="o">.</span><span class="n">exchanges</span> <span class="o">=</span> <span class="n">exchanges_already_saved</span> <span class="o">+</span> <span class="n">exchs</span>
+
+        <span class="n">obj</span> <span class="o">=</span> <span class="n">asset</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="k">except</span> <span class="p">(</span><span class="n">IntegrityError</span><span class="p">,</span> <span class="n">FlushError</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span>
+            
+            <span class="n">asset</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Asset</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">Asset</span><span class="o">.</span><span class="n">ticker</span> <span class="o">==</span> <span class="n">obj</span><span class="o">.</span><span class="n">ticker</span><span class="p">)</span><span class="o">.</span><span class="n">one</span><span class="p">()</span>
+            <span class="n">asset</span><span class="o">.</span><span class="n">exchanges</span> <span class="o">=</span> <span class="n">exchanges_already_saved</span> <span class="o">+</span> <span class="n">exchs</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">asset</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+            <span class="k">except</span> <span class="p">(</span><span class="n">IntegrityError</span><span class="p">,</span> <span class="n">FlushError</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span>
+            
+        <span class="k">return</span> <span class="n">asset</span></div></div>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+
+        
+</pre></div>
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Carniel Giorgio.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: ''
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

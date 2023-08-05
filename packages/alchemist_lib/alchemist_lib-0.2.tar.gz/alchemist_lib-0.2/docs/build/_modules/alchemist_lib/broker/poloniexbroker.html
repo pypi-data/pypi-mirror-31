@@ -1,0 +1,370 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>alchemist_lib.broker.poloniexbroker &mdash; alchemist_lib 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="alchemist_lib 0.1 documentation" href="../../../index.html"/>
+        <link rel="up" title="Module code" href="../../index.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> alchemist_lib
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../install.html">Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorial.html">Beginner Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../database/index.html">Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../license.html">License</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">alchemist_lib</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>alchemist_lib.broker.poloniexbroker</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for alchemist_lib.broker.poloniexbroker</h1><div class="highlight"><pre>
+<span class="kn">from</span> <span class="nn">poloniex</span> <span class="kn">import</span> <span class="n">Poloniex</span><span class="p">,</span> <span class="n">PoloniexError</span>
+
+<span class="kn">import</span> <span class="nn">datetime</span> <span class="kn">as</span> <span class="nn">dt</span>
+
+<span class="kn">from</span> <span class="nn">.broker</span> <span class="kn">import</span> <span class="n">BrokerBaseClass</span>
+
+<span class="kn">from</span> <span class="nn">..database.executed_order</span> <span class="kn">import</span> <span class="n">ExecutedOrder</span>
+
+<span class="kn">from</span> <span class="nn">decimal</span> <span class="kn">import</span> <span class="n">Decimal</span>
+
+<span class="kn">import</span> <span class="nn">logging</span>
+
+
+
+<div class="viewcode-block" id="PoloniexBroker"><a class="viewcode-back" href="../../../api.html#alchemist_lib.broker.poloniexbroker.PoloniexBroker">[docs]</a><span class="k">class</span> <span class="nc">PoloniexBroker</span><span class="p">(</span><span class="n">BrokerBaseClass</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Inherits from alchemist_lib.broker.broker.BrokerBaseClass.</span>
+
+<span class="sd">    Website: https://poloniex.com/</span>
+
+<span class="sd">    Api documentation: https://poloniex.com/support/api/</span>
+
+<span class="sd">    Api wrapper: https://github.com/s4w3d0ff/python-poloniex</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        session (sqlalchemy.orm.session.Session): Database connection.</span>
+<span class="sd">        polo (poloniex.Poloniex): Communication object.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+<div class="viewcode-block" id="PoloniexBroker.__init__"><a class="viewcode-back" href="../../../api.html#alchemist_lib.broker.poloniexbroker.PoloniexBroker.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">api_key</span> <span class="o">=</span> <span class="bp">None</span><span class="p">,</span> <span class="n">secret_key</span> <span class="o">=</span> <span class="bp">None</span><span class="p">):</span>
+
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Costructor method.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            api_key (str): The api key provided by Poloniex.</span>
+<span class="sd">            secret_key (str): The secret key provided by Poloniex.</span>
+
+<span class="sd">        Note:</span>
+<span class="sd">            https://poloniex.com/apiKeys</span>
+<span class="sd">            https://cryptocatbot.com/api-key-activation-exchanges/</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="n">BrokerBaseClass</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">polo</span> <span class="o">=</span> <span class="n">Poloniex</span><span class="p">(</span><span class="n">key</span> <span class="o">=</span> <span class="n">api_key</span><span class="p">,</span> <span class="n">secret</span> <span class="o">=</span> <span class="n">secret_key</span><span class="p">)</span></div>
+	
+		
+    <span class="k">def</span> <span class="nf">get_best_rate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">asset</span><span class="p">,</span> <span class="n">amount</span><span class="p">,</span> <span class="n">field</span><span class="p">):</span>
+
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Poloniex doesnt allow to place market orders so we need to get the best bid/ask price for every order.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            asset (alchemist_lib.database.asset.Asset): The asset we want exchange for BTC.</span>
+<span class="sd">            amount (decimal.Decimal): The amount we want to exchange.</span>
+<span class="sd">            field (str): Must be &quot;ask&quot; or &quot;bid&quot;.</span>
+
+<span class="sd">        Return:</span>
+<span class="sd">            price (decimal.Decimal): The best bid/ask, execute an order at this price is like execute a market order. If the book is too thin the return value is 0.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">amount</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">amount</span><span class="p">)</span>
+        <span class="n">pair</span> <span class="o">=</span> <span class="s2">&quot;BTC_{}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">asset</span><span class="o">.</span><span class="n">ticker</span><span class="p">)</span>
+        <span class="n">book</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">polo</span><span class="o">.</span><span class="n">returnOrderBook</span><span class="p">(</span><span class="n">currencyPair</span> <span class="o">=</span> <span class="n">pair</span><span class="p">,</span> <span class="n">depth</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+        <span class="n">values</span> <span class="o">=</span> <span class="n">book</span><span class="p">[</span><span class="s2">&quot;{}s&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">field</span><span class="p">)]</span>
+        
+        <span class="n">orders_sum</span> <span class="o">=</span> <span class="n">Decimal</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">book_item</span> <span class="ow">in</span> <span class="n">values</span><span class="p">:</span>
+            <span class="n">orders_sum</span> <span class="o">+=</span> <span class="n">Decimal</span><span class="p">(</span><span class="n">book_item</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+            <span class="k">if</span> <span class="n">orders_sum</span> <span class="o">&gt;</span> <span class="n">amount</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">Decimal</span><span class="p">(</span><span class="n">book_item</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        
+        <span class="k">return</span> <span class="n">Decimal</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+				
+	
+<div class="viewcode-block" id="PoloniexBroker.place_order"><a class="viewcode-back" href="../../../api.html#alchemist_lib.broker.poloniexbroker.PoloniexBroker.place_order">[docs]</a>    <span class="k">def</span> <span class="nf">place_order</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">asset</span><span class="p">,</span> <span class="n">amount</span><span class="p">,</span> <span class="n">order_type</span><span class="p">):</span>
+
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Method to place an order.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            asset (alchemist_lib.database.asset.Asset): The asset we want exchange for BTC.</span>
+<span class="sd">            amount (decimal.Decimal): The amount we want to exchange.</span>
+<span class="sd">            order_type (str): Type of order.</span>
+
+<span class="sd">        Return:</span>
+<span class="sd">            order_id (int): The order identifier, if some error occurs returns -1.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="n">pair</span> <span class="o">=</span> <span class="s2">&quot;BTC_{}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">asset</span><span class="o">.</span><span class="n">ticker</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">amount</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">field</span> <span class="o">=</span> <span class="s2">&quot;ask&quot;</span>
+            <span class="n">operation</span> <span class="o">=</span> <span class="s2">&quot;buy&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">field</span> <span class="o">=</span> <span class="s2">&quot;bid&quot;</span>
+            <span class="n">operation</span> <span class="o">=</span> <span class="s2">&quot;sell&quot;</span>
+            
+        <span class="k">if</span> <span class="n">order_type</span> <span class="o">==</span> <span class="s2">&quot;MKT&quot;</span><span class="p">:</span>
+            <span class="n">rate</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_best_rate</span><span class="p">(</span><span class="n">asset</span> <span class="o">=</span> <span class="n">asset</span><span class="p">,</span> <span class="n">amount</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">amount</span><span class="p">),</span> <span class="n">field</span> <span class="o">=</span> <span class="n">field</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">critical</span><span class="p">(</span><span class="s2">&quot;Unknown order type. NotImplemented raised.&quot;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="bp">NotImplemented</span>
+
+        <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Order: Pair: {}. Amount: {}. Operation: {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pair</span><span class="p">,</span> <span class="n">amount</span><span class="p">,</span> <span class="n">operation</span><span class="p">))</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">operation</span> <span class="o">==</span> <span class="s2">&quot;buy&quot;</span><span class="p">:</span>
+                <span class="n">order_dict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">polo</span><span class="o">.</span><span class="n">buy</span><span class="p">(</span><span class="n">currencyPair</span> <span class="o">=</span> <span class="n">pair</span><span class="p">,</span> <span class="n">rate</span> <span class="o">=</span> <span class="n">rate</span><span class="p">,</span> <span class="n">amount</span> <span class="o">=</span> <span class="n">amount</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">order_dict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">polo</span><span class="o">.</span><span class="n">sell</span><span class="p">(</span><span class="n">currencyPair</span> <span class="o">=</span> <span class="n">pair</span><span class="p">,</span> <span class="n">rate</span> <span class="o">=</span> <span class="n">rate</span><span class="p">,</span> <span class="n">amount</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">amount</span><span class="p">))</span>
+            <span class="n">order_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">order_dict</span><span class="p">[</span><span class="s2">&quot;orderNumber&quot;</span><span class="p">])</span>
+
+            <span class="n">order</span> <span class="o">=</span> <span class="n">ExecutedOrder</span><span class="p">(</span><span class="n">order_id</span> <span class="o">=</span> <span class="n">order_id</span><span class="p">,</span>
+                                  <span class="n">order_datetime</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">(),</span>
+                                  <span class="n">ticker</span> <span class="o">=</span> <span class="n">asset</span><span class="o">.</span><span class="n">ticker</span><span class="p">,</span>
+                                  <span class="n">instrument_id</span> <span class="o">=</span> <span class="n">asset</span><span class="o">.</span><span class="n">instrument_id</span><span class="p">,</span>
+                                  <span class="n">amount</span> <span class="o">=</span> <span class="n">amount</span><span class="p">,</span>
+                                  <span class="n">operation</span> <span class="o">=</span> <span class="n">operation</span><span class="p">,</span>
+                                  <span class="n">order_type</span> <span class="o">=</span> <span class="n">order_type</span><span class="p">,</span>
+                                  <span class="n">broker_name</span> <span class="o">=</span> <span class="s2">&quot;poloniex&quot;</span><span class="p">,</span>
+                                  <span class="n">exchange_name</span> <span class="o">=</span> <span class="s2">&quot;poloniex&quot;</span>
+                                  <span class="p">)</span>
+
+            <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;{} order placed for {}. Amount: {}. Order id: {}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">operation</span><span class="o">.</span><span class="n">upper</span><span class="p">(),</span> <span class="n">asset</span><span class="o">.</span><span class="n">ticker</span><span class="p">,</span> <span class="n">amount</span><span class="p">,</span> <span class="n">order_id</span><span class="p">))</span>
+            
+            <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">order</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        
+        <span class="k">except</span> <span class="n">PoloniexError</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Order failed for {}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">asset</span><span class="o">.</span><span class="n">ticker</span><span class="p">))</span>
+            <span class="n">order_id</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+
+        <span class="k">return</span> <span class="n">order_id</span></div></div>
+
+    
+			
+			
+			
+			
+			
+			
+			
+			
+		
+            
+</pre></div>
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Carniel Giorgio.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: ''
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
