@@ -1,0 +1,17 @@
+aliyunoss2_autoupload/__init__.py,sha256=R37d2l_9jHofqElloOQCQL60epdQzrHLiNBhyNh87bI,98
+aliyunoss2_autoupload/__main__.py,sha256=WXrVGfnobJHuvSO_hLgqv5iVsFMJy9_sHFnHeilvDUI,3217
+aliyunoss2_autoupload/conf.py,sha256=QO_UrwYNKUdMk9Y3q_6fRNrC-SOygn9cnBas1O9ZXxk,1826
+aliyunoss2_autoupload/glb.py,sha256=JcyH-d5ZzZF6U8qNeWKq5Cgp8H1Lxj7AvUHZ8t9AHqk,103
+aliyunoss2_autoupload/performer.py,sha256=Xps-kU4tMFZywDe0vpsFPzO_lGPiv3DYB3g9NcSEC_8,4243
+aliyunoss2_autoupload/version.py,sha256=btMAWhpqx7Wj-YWZB8WI66MdDVtHCJckYKkPkUW6bZE,388
+aliyunoss2_autoupload/data/config-samples/log.yaml,sha256=9_lbR36m1fSZbwUqySt2hRJmuvUpHQOISi0UD0GN5EQ,975
+aliyunoss2_autoupload/data/config-samples/prog.yaml,sha256=wicVUzGzOL3MgXq3YWwkysze7tWsshm38RFqE6A_xss,1362
+aliyunoss2_autoupload/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aliyunoss2_autoupload/utils/loggermixin.py,sha256=Pc-ZI2WnoBsDF8dBOIdAkaZ-22Cb2jACO2Aq7E55RHw,1064
+aliyunoss2_autoupload/utils/strhelper.py,sha256=wi9QN7gw1AjZ7F6AOugJNY_o7vx-EIrx5eNl5kgnitw,2393
+aliyunoss2_autoupload-0.1a1.dist-info/METADATA,sha256=Sm1O7EYURvRzV5FoQSS40C_yDsIIK7yityQHABDnpXY,1058
+aliyunoss2_autoupload-0.1a1.dist-info/RECORD,,
+aliyunoss2_autoupload-0.1a1.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+aliyunoss2_autoupload-0.1a1.dist-info/entry_points.txt,sha256=AheRLYFSWX4stIj9C8IlQwl_4_x1HfjzzgDUDTIVN3w,79
+aliyunoss2_autoupload-0.1a1.dist-info/namespace_packages.txt,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+aliyunoss2_autoupload-0.1a1.dist-info/top_level.txt,sha256=rshOMjA10L1Df7SHN9Vmza1ednxoZ6MZnkJN5ozZ-6M,22
