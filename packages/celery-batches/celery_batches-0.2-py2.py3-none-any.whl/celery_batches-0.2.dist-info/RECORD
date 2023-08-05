@@ -1,0 +1,11 @@
+celery_batches/__init__.py,sha256=BPtcPvBau0Nrc36xnPs0c7VbRgLV0AS8KeNnpjPXvH4,8659
+celery_batches-0.2.dist-info/LICENSE.txt,sha256=OPfyaTUqhatgAqmGqGPC73aDk2xXbtiejt3gvKB6yMc,2631
+celery_batches-0.2.dist-info/METADATA,sha256=Pd7rMXm4I_umkfaC20r9kGNrE4PGC1q5WAeVtWuvsg4,1628
+celery_batches-0.2.dist-info/RECORD,,
+celery_batches-0.2.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+celery_batches-0.2.dist-info/top_level.txt,sha256=LtoRNT4kSbsZ0Ty9BWX53soiG6qzCeh71yX8TVcx2zc,17
+t/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+t/integration/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+t/integration/conftest.py,sha256=fUnpS8ynuSF9VQyUYG8DRBsJPwDbgHcDzoKJKEWhG9E,298
+t/integration/tasks.py,sha256=yViM85vp8lBw9x_UnODNbScpmpuS_vcQhlUWL6QQU8k,1355
+t/integration/test_batches.py,sha256=MM5THfrxD90FSkrJHw25CbHR2BWt3IcgLd4XJhu9gdE,2893
