@@ -1,0 +1,12 @@
+README.md
+setup.py
+nbne/__init__.py
+nbne/get_embeddings.py
+nbne/nbne.py
+nbne.egg-info/PKG-INFO
+nbne.egg-info/SOURCES.txt
+nbne.egg-info/dependency_links.txt
+nbne.egg-info/entry_points.txt
+nbne.egg-info/not-zip-safe
+nbne.egg-info/requires.txt
+nbne.egg-info/top_level.txt
