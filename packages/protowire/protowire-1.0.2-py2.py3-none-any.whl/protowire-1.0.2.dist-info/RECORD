@@ -1,0 +1,12 @@
+protowire/__init__.py,sha256=RRW_Nqqdy0AOqBPOlDBsz0l1-lYSfyhxHgdG8IDDFF0,118
+protowire/commandline.py,sha256=qgJkbAQhu6ly2_S9-Bf8oTDNIjbgZsOfWCu6QM8clSk,3548
+protowire/grpc_frame.py,sha256=sfnf08OTniAugRzr7hYYV7pRsKmgm1x7SuH0vU7_X2U,1306
+protowire/proto_decoding.py,sha256=-buLfS7AaeFEOu_OP0EiqnUVMbC4m_0NU2Ycr3Px44M,1191
+protowire/protobuf.py,sha256=lHrmErx6Q9LY_5i_RB7KbOnsER3d5Pk9x06RYU0Zkpk,3525
+protowire-1.0.2.dist-info/DESCRIPTION.rst,sha256=-3_kCY6t32ET5alJgZejtdL01gdv511WIA4AIW5RHJA,692
+protowire-1.0.2.dist-info/METADATA,sha256=_WAPtAedolJdkuvSFALusFPYpf3qMolYkpVdDhwjD50,1456
+protowire-1.0.2.dist-info/RECORD,,
+protowire-1.0.2.dist-info/WHEEL,sha256=o2k-Qa-RMNIJmUdIc7KU6VWR_ErNRbWNlxDIpl7lm34,110
+protowire-1.0.2.dist-info/entry_points.txt,sha256=O-f5SKzBXRfq_0mOSTVE3ljB4lhP64uznjQibewcsrs,149
+protowire-1.0.2.dist-info/metadata.json,sha256=eme1AgZ_W9vzWcciudZbecByjLkcVfAt8_IMFy8A8-U,1290
+protowire-1.0.2.dist-info/top_level.txt,sha256=gPogqU6LzY-rk4NCCb3S_Q5LR3_HE_U0Q6IuJGX6LQk,10
