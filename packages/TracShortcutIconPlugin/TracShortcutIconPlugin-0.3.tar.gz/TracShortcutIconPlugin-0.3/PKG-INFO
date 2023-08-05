@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: TracShortcutIconPlugin
+Version: 0.3
+Summary: Configurables shortcut icons for Trac.
+Home-page: https://www.trac-hacks.org/wiki/ShortcutIconPlugin
+Author: Martin Scharrer
+Author-email: martin@scharrer-online.de
+License: GPLv3
+Description: UNKNOWN
+Keywords: trac plugin favicon shortcuticon
+Platform: UNKNOWN
+Classifier: Framework :: Trac

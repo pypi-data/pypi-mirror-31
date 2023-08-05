@@ -1,0 +1,10 @@
+setup.py
+TracShortcutIconPlugin.egg-info/PKG-INFO
+TracShortcutIconPlugin.egg-info/SOURCES.txt
+TracShortcutIconPlugin.egg-info/dependency_links.txt
+TracShortcutIconPlugin.egg-info/entry_points.txt
+TracShortcutIconPlugin.egg-info/not-zip-safe
+TracShortcutIconPlugin.egg-info/requires.txt
+TracShortcutIconPlugin.egg-info/top_level.txt
+tracshortcuticon/__init__.py
+tracshortcuticon/plugin.py
