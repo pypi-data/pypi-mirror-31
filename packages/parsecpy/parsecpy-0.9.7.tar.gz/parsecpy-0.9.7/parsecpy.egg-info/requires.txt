@@ -1,0 +1,8 @@
+pbr>=1.8
+psutil
+numpy
+pandas
+matplotlib
+scikit-learn
+bitstring
+scipy
