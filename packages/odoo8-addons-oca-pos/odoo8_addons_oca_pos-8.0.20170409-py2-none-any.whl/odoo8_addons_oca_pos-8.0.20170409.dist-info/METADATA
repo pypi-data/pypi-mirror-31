@@ -1,0 +1,30 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-pos
+Version: 8.0.20170409
+Summary: Meta package for OCA pos Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo8-addon-hw-customer-display
+Requires-Dist: odoo8-addon-hw-telium-payment-terminal
+Requires-Dist: odoo8-addon-pos-autoreconcile
+Requires-Dist: odoo8-addon-pos-customer-display
+Requires-Dist: odoo8-addon-pos-customer-required
+Requires-Dist: odoo8-addon-pos-default-empty-image
+Requires-Dist: odoo8-addon-pos-gift-ticket
+Requires-Dist: odoo8-addon-pos-invoice-journal
+Requires-Dist: odoo8-addon-pos-order-load
+Requires-Dist: odoo8-addon-pos-order-picking-link
+Requires-Dist: odoo8-addon-pos-order-pricelist-change
+Requires-Dist: odoo8-addon-pos-payment-terminal
+Requires-Dist: odoo8-addon-pos-pricelist
+Requires-Dist: odoo8-addon-pos-product-template
+Requires-Dist: odoo8-addon-pos-remove-pos-category
+
+UNKNOWN
+
+
