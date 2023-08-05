@@ -1,0 +1,14 @@
+csvw/__init__.py,sha256=cAyLEuLqkr0bY1-fODJkTJjP0nxKQ78QENb12Z1TN08,706
+csvw/_compat.py,sha256=Fg7PFwQ2UP8SMgUIMnD5i-PKjO_OsETF8JT8uuMA87g,1960
+csvw/datatypes.py,sha256=SUumwk-da7OvyApO5jj1D11m9ytIR8Elv--0OxAczHk,14251
+csvw/dsv.py,sha256=mGU4qMk4mX49hFimebVCeqFsq5E08_6-iqh-yT-qw88,14610
+csvw/dsv_dialects.py,sha256=Hygup40suXNG7ydFaRvGvkw_1rbaE4Hcqw_8VDTCh9M,3260
+csvw/metadata.py,sha256=x5m9lk41DzD-PElg1-DtVQFDJKgGnPf437oxMve4KwU,24320
+csvw/utils.py,sha256=LFPUaoyEq9Jm9xCp-g5gSAlOiP-KadBPyyI2b34C7Uw,3817
+csvw-1.1.0.dist-info/DESCRIPTION.rst,sha256=-GSC4TPJY2SEn0BfHMGpPFESWqrcNAnBYXE6feCxYRs,2605
+csvw-1.1.0.dist-info/LICENSE.txt,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+csvw-1.1.0.dist-info/METADATA,sha256=FVVQSQ3A7ZFZIPct7tj9lHsb09nfEyx96FaftBv125o,3974
+csvw-1.1.0.dist-info/RECORD,,
+csvw-1.1.0.dist-info/WHEEL,sha256=kdsN-5OJAZIiHN-iO4Rhl82KyS0bDWf4uBwMbkNafr8,110
+csvw-1.1.0.dist-info/metadata.json,sha256=KXxi8tjsikhpUGIEJAYTE4RgspcxFdHGMkKV_G2MOjI,1344
+csvw-1.1.0.dist-info/top_level.txt,sha256=mkl3l5vQaigdnccNcB3IT5J_Puu2Rp5PVYHqoUOh0Vo,5
