@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: mdtcollections
+Version: 0.8.0rc4
+Summary: Useful collection classes and utilities
+Home-page: http://github.com/avirshup/mdtcollections
+Author: Aaron Virshup
+Author-email: avirshup+pypi@gmail.com
+License: Apache 2.0
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
