@@ -1,0 +1,152 @@
+#!/usr/bin/env python
+
+import os
+import sys
+import time
+import threading
+import signal
+import cursor
+import curses
+from ascii_graph import Pyasciigraph
+
+def rxtxcount(rxpath, txpath):
+  rx1 = int(open(rxpath).read().replace('\n',''))
+  tx1 = int(open(txpath).read().replace('\n',''))
+  time.sleep(1)
+  rx2 = int(open(rxpath).read().replace('\n',''))
+  tx2 = int(open(txpath).read().replace('\n',''))
+  return abs(rx1-rx2)*0.001, abs(tx1-tx2)*0.001, rx2*0.000001, tx2*0.000001
+
+# check if the network device exists and is operating
+def checkdevice(sysdir, device):
+
+  if device not in os.listdir(sysdir):
+    return False
+
+  if open(sysdir + device + '/operstate').read().replace('\n','') != 'up':
+    return False
+  return True
+
+# find all network devices that are up
+def finddevices(sysdir):
+  devices = []
+  for i in os.listdir(sysdir):
+    if open(sysdir + i + '/operstate').read().replace('\n','') == 'up':
+      devices.append(i)
+  return devices
+
+def checkos():
+  if 'linux' not in sys.platform:
+    print('Not a linux machine.')
+    sys.exit()
+
+# clean up when sigterm or siginit is sent
+def sigterm_handler(signal, frame):
+  cursor.show()
+  curses.echo()
+  curses.nocbreak()
+  curses.endwin()
+  sys.exit()
+
+def keypress(stdscr):
+  while stdscr.getch() != ord('q'):
+    time.sleep(0.2)
+
+signal.signal(signal.SIGTERM, sigterm_handler)
+signal.signal(signal.SIGINT, sigterm_handler)
+
+def getdevices(sysdir):
+  if (len(sys.argv) > 1) and 'help' in sys.argv[1]:
+    print('usage: netmon [network device]'.format(sys.argv[0]))
+    sys.exit()
+
+  checkos()
+  devices = []
+
+  if len(sys.argv) > 1:
+    for i in sys.argv:
+      if checkdevice(sysdir, i):
+        devices.append(i)
+
+  if not devices:
+    devices = finddevices(sysdir)
+
+  if not devices:
+    print('no appropriate device found')
+    sys.exit()
+
+  return devices
+
+# init cursors env
+def initscreen():
+  cursor.hide()
+  stdscr = curses.initscr()
+  stdscr.clear()
+  cursor.hide()
+  curses.noecho()
+  curses.cbreak()
+  stdscr.nodelay(True)
+  return stdscr
+
+def destroyscreen():
+  cursor.show()
+  curses.echo()
+  curses.nocbreak()
+  curses.endwin()
+
+# init graph params
+def initgraph():
+  graph = Pyasciigraph(
+    line_length=120,
+    min_graph_length=50,
+    separator_length=2,
+    multivalue=True,
+    human_readable='si',
+    graphsymbol='*',
+    float_format='{0:,.2f}',
+    force_max_value=100,
+  )
+  return graph
+
+def drawdata(idx, val, sysdir, stdscr, graph):
+  base = idx*7
+  rxbytepath = sysdir + val + '/statistics/rx_bytes'
+  txbytepath = sysdir + val + '/statistics/tx_bytes'
+  sample = rxtxcount(rxbytepath, txbytepath)
+  graphdata = graph.graph('device: {0}'.format(str(val)), [('received (KB/s)', sample[0]), ('sent (KB/s)', sample[1])])
+  stdscr.addstr(base+0, 0, graphdata[0])
+  stdscr.addstr(base+1, 0, graphdata[1])
+  stdscr.addstr(base+2, 0, graphdata[2])
+  stdscr.addstr(base+3, 0, graphdata[3])
+  stdscr.addstr(base+4, 0, "Total received: {0:.2f} MBs".format(sample[2]))
+  stdscr.addstr(base+5, 0, "Total sent: {0:.2f} MBs".format(sample[3]))
+
+def run(sysdir, stdscr, devices, graph):
+  # first clean draw
+  try:
+    for idx, val in enumerate(devices):
+      drawdata(idx, val, sysdir, stdscr, graph)
+    stdscr.refresh()
+  except Exception as e:
+    print(e)
+    sigterm_handler(None, None)
+  thread = threading.Thread(target=keypress, args=(stdscr,))
+  thread.daemon = True
+  thread.start()
+  try:
+    while thread.is_alive():
+      for idx, val in enumerate(devices):
+        drawdata(idx, val, sysdir, stdscr, graph)
+      stdscr.refresh()
+  except Exception as e:
+    print(e)
+    sigterm_handler(None, None)
+
+if __name__ == "__main__":
+  sysdir = '/sys/class/net/'
+  devices = getdevices(sysdir)
+  stdscr = initscreen()
+  graph = initgraph()
+  run(sysdir, stdscr, devices, graph)
+  destroyscreen()
+  sys.exit()

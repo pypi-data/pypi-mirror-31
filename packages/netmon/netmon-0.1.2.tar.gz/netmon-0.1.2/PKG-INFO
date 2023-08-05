@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: netmon
+Version: 0.1.2
+Summary: network monitor cli tool
+Home-page: https://github.com/theden/netmon
+Author: Denis Khshaba
+Author-email: deniskhoshaba@gmail.com
+License: LICENSE.txt
+Description: UNKNOWN
+Keywords: network,monitor,linux
+Platform: UNKNOWN
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: System :: Networking :: Monitoring
