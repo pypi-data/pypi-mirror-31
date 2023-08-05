@@ -1,0 +1,19 @@
+Metadata-Version: 2.0
+Name: odoo11-addons-oca-server-env
+Version: 11.0.20180125
+Summary: Meta package for OCA server-env Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo11-addon-mail-environment
+Requires-Dist: odoo11-addon-server-environment
+Requires-Dist: odoo11-addon-server-environment-files-sample
+Requires-Dist: odoo11-addon-server-environment-ir-config-parameter
+
+UNKNOWN
+
+
