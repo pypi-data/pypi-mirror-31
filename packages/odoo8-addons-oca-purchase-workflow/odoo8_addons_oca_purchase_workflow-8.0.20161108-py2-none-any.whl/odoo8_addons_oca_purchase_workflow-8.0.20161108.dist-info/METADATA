@@ -1,0 +1,48 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-purchase-workflow
+Version: 8.0.20161108
+Summary: Meta package for OCA purchase-workflow Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo8-addon-framework-agreement
+Requires-Dist: odoo8-addon-procurement-batch-generator
+Requires-Dist: odoo8-addon-product-by-supplier
+Requires-Dist: odoo8-addon-product-supplierinfo-discount
+Requires-Dist: odoo8-addon-purchase-add-product-supplierinfo
+Requires-Dist: odoo8-addon-purchase-all-shipments
+Requires-Dist: odoo8-addon-purchase-commercial-partner
+Requires-Dist: odoo8-addon-purchase-delivery-address
+Requires-Dist: odoo8-addon-purchase-delivery-split-date
+Requires-Dist: odoo8-addon-purchase-discount
+Requires-Dist: odoo8-addon-purchase-fiscal-position-update
+Requires-Dist: odoo8-addon-purchase-last-price-info
+Requires-Dist: odoo8-addon-purchase-order-line-description
+Requires-Dist: odoo8-addon-purchase-order-reorder-lines
+Requires-Dist: odoo8-addon-purchase-order-revision
+Requires-Dist: odoo8-addon-purchase-order-type
+Requires-Dist: odoo8-addon-purchase-origin-address
+Requires-Dist: odoo8-addon-purchase-partial-invoicing
+Requires-Dist: odoo8-addon-purchase-partner-invoice-method
+Requires-Dist: odoo8-addon-purchase-picking-state
+Requires-Dist: odoo8-addon-purchase-request
+Requires-Dist: odoo8-addon-purchase-request-procurement
+Requires-Dist: odoo8-addon-purchase-request-to-requisition
+Requires-Dist: odoo8-addon-purchase-request-to-rfq
+Requires-Dist: odoo8-addon-purchase-requisition-auto-rfq
+Requires-Dist: odoo8-addon-purchase-requisition-auto-rfq-bid-selection
+Requires-Dist: odoo8-addon-purchase-requisition-bid-selection
+Requires-Dist: odoo8-addon-purchase-requisition-delivery-address
+Requires-Dist: odoo8-addon-purchase-requisition-multicurrency
+Requires-Dist: odoo8-addon-purchase-requisition-transport-document
+Requires-Dist: odoo8-addon-purchase-requisition-type
+Requires-Dist: odoo8-addon-purchase-rfq-bid-workflow
+Requires-Dist: odoo8-addon-purchase-rfq-number
+Requires-Dist: odoo8-addon-purchase-transport-document
+Requires-Dist: odoo8-addon-vendor-consignment-stock
+
+UNKNOWN
+
+
