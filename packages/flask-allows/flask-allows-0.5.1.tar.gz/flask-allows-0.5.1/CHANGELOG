@@ -1,0 +1,40 @@
+Change Log
+==========
+
+
+Version 0.5 (2018-04-17)
+------------------------
+
+* Real documentation
+* Accepting request in requirements is now deprecated, pending removal in
+  1.0
+* Promoted internal ``_allows`` context local to part of the public interface
+* Bug Fix: ConditionalRequirement returned False when no requirements were provided
+    it now returns True and mimics the behavior of ``all`` better
+
+
+Version 0.4 (2017-08-29)
+------------------------
+
+* Clarify deprecation message for PermissionedView, will be removed in 0.6
+* Deprecate Permission.throw_type for 0.6 removak
+* Add optional on_fail for `allows.requires` and `requires` decoration
+* Fix coverage path problem with local testing
+
+Version 0.3.2 (2017-08-29)
+--------------------------
+
+* Fix package data not being included
+
+
+Version 0.3.1 (2017-08-20)
+--------------------------
+
+* Fix error that prevent sdist builds on 2.7
+
+
+Version 0.3 (2017-08-20)
+------------------------
+
+* Drop official support for Python 3.3
+* Deprecate implicit decoration on class based views via the requirements attribute
