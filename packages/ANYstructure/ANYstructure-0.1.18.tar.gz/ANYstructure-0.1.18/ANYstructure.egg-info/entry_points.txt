@@ -1,0 +1,3 @@
+[gui_scripts]
+run_me = ANYstructure.__main__:main
+
