@@ -1,0 +1,28 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-business-requirement
+Version: 8.0.20170517
+Summary: Meta package for OCA business-requirement Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo8-addon-business-requirement
+Requires-Dist: odoo8-addon-business-requirement-deliverable
+Requires-Dist: odoo8-addon-business-requirement-deliverable-categ
+Requires-Dist: odoo8-addon-business-requirement-deliverable-cost
+Requires-Dist: odoo8-addon-business-requirement-deliverable-crm
+Requires-Dist: odoo8-addon-business-requirement-deliverable-default
+Requires-Dist: odoo8-addon-business-requirement-deliverable-project
+Requires-Dist: odoo8-addon-business-requirement-deliverable-project-categ
+Requires-Dist: odoo8-addon-business-requirement-deliverable-project-task-categ
+Requires-Dist: odoo8-addon-business-requirement-deliverable-report
+Requires-Dist: odoo8-addon-business-requirement-deliverable-resource-template
+Requires-Dist: odoo8-addon-business-requirement-deliverable-resource-template-categ
+Requires-Dist: odoo8-addon-business-requirement-earned-value
+
+UNKNOWN
+
+
