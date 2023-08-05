@@ -1,0 +1,3 @@
+[console_scripts]
+dbtransfer = transfer.cli:cli
+
