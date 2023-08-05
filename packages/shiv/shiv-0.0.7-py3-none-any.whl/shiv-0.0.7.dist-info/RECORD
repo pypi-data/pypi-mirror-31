@@ -1,0 +1,16 @@
+shiv/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+shiv/builder.py,sha256=EYG-7gjZSXdBXeC10issApHeHuSABuQeHNGQVETzEWk,2640
+shiv/cli.py,sha256=KEutWAsF0UxocDNEootZLsqGptpn9EixQ0-oLMehYZQ,6510
+shiv/constants.py,sha256=ANlSdk1SubThnDJ6VKFaBeitq4OnErJtE7WGL62MRK4,1082
+shiv/pip.py,sha256=CYpDBqEotfo8AIDP01fUssRsQ_zyMXsHx_97lG8uj7w,1505
+shiv/bootstrap/__init__.py,sha256=rm4mTIpuuCQFaVvBQYiJ0c2ulPMHf-A5S4Eedu5MaNc,3638
+shiv/bootstrap/environment.py,sha256=t7xRvZWNznXeU2QSCIGZ0SRHDCDwaMeMFN0sQB542gI,1304
+shiv/bootstrap/interpreter.py,sha256=88NghydPy3KYL-IYB17Qhjz7JLFJn_JuDJ1-p_F9ObA,1402
+shiv/bootstrap/utils.py,sha256=P5KM_BJ42Ra6HcfyKPK409QfFeuQ-A7akxieazxHawQ,309
+shiv-0.0.7.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+shiv-0.0.7.dist-info/METADATA,sha256=sh91mPi3PnsRHD5Hn8ckG34Iaeyrtje9877eFcadpGQ,544
+shiv-0.0.7.dist-info/RECORD,,
+shiv-0.0.7.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+shiv-0.0.7.dist-info/entry_points.txt,sha256=wo_Y5vAUksXGvEROnPen5WFoRnX-OanDASzQ5s8Kmo8,40
+shiv-0.0.7.dist-info/metadata.json,sha256=6GF6yXxt4h5J4EPqylWN_52njIXRWOf51VGKSLHyIqs,733
+shiv-0.0.7.dist-info/top_level.txt,sha256=qsLSPSXqxW2zpe6arVEmAhxgbNClbNfuVZ7FcJW92U4,5
