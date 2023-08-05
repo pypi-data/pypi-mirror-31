@@ -1,0 +1,69 @@
+SQLAlchemy>=1.0
+SQLAlchemy-Utils>=0.31
+pytz
+tzlocal
+click
+
+[:python_version < "3.4"]
+enum34
+
+[all]
+psycopg2
+PyMySQL
+requests
+
+[all:python_version != "3.4"]
+pandas
+
+[all:python_version == "3.4"]
+pandas==0.21.0
+
+[doc]
+sphinx
+sphinxcontrib-napoleon
+sphinxcontrib-programoutput
+sphinx-rtd-theme
+ipython
+psycopg2
+PyMySQL
+requests
+
+[doc:python_version != "3.4"]
+pandas
+
+[doc:python_version == "3.4"]
+pandas==0.21.0
+
+[finance-quote]
+requests
+
+[mysql]
+PyMySQL
+
+[pandas]
+
+[pandas:python_version != "3.4"]
+pandas
+
+[pandas:python_version == "3.4"]
+pandas==0.21.0
+
+[postgres]
+psycopg2
+
+[qif]
+qifparse
+
+[test]
+pytest
+pytest-cov
+tox
+psycopg2
+PyMySQL
+requests
+
+[test:python_version != "3.4"]
+pandas
+
+[test:python_version == "3.4"]
+pandas==0.21.0
