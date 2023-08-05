@@ -1,0 +1,24 @@
+Metadata-Version: 2.0
+Name: aceso
+Version: 0.0.1
+Summary: Lightweight package to calculate 2SFCA and other measures of spatial accessibility
+Home-page: http://github.com/tetraptych/aceso
+Author: Brian Lewis
+Author-email: brianburkelewis@gmail.com
+License: MIT
+Keywords: geospatial,geo,gis,2SFCA,gravity,access
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering :: GIS
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown
+Requires-Dist: numpy (>=1.11.0)
+
+# aceso [![Build Status](https://travis-ci.org/tetraptych/aceso.svg?branch=master)](https://travis-ci.org/tetraptych/unrasterize) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+Aceso is a lightweight package to calculate 2SFCA and other measures of spatial accessibility.
+
+
