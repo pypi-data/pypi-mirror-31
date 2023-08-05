@@ -1,0 +1,24 @@
+Metadata-Version: 1.1
+Name: sphinxcontrib-svg2pdfconverter
+Version: 0.1.0
+Summary: Sphinx SVG to PDF converter extension
+Home-page: https://github.org/missinglinkelectronics/sphinxcontrib-svg2pdfconverter
+Author: Stefan Wiehler
+Author-email: stefan.wiehler@missinglinkelectronics.com
+License: BSD
+Download-URL: https://pypi.org/project/sphinxcontrib-svg2pdfconverter
+Description: 
+        Converts SVG images to PDF in case the builder does not support
+        SVG images natively (e.g. LaTeX).
+        
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Framework :: Sphinx :: Extension
+Classifier: Topic :: Documentation
+Classifier: Topic :: Utilities
