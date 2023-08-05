@@ -1,0 +1,10 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+LayoutEditor/__init__.py
+LayoutEditor.egg-info/PKG-INFO
+LayoutEditor.egg-info/SOURCES.txt
+LayoutEditor.egg-info/dependency_links.txt
+LayoutEditor.egg-info/top_level.txt
