@@ -1,0 +1,11 @@
+six
+ipywidgets>=7
+widgetsnbextension>=3
+pandas
+numpy
+pyshp
+matplotlib
+keyring
+
+[:platform_system == "Windows"]
+winkerberos
