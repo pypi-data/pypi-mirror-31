@@ -1,0 +1,20 @@
+Metadata-Version: 2.0
+Name: odoo10-addons-oca-l10n-belgium
+Version: 10.0.20171220
+Summary: Meta package for OCA l10n-belgium Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo10-addon-l10n-be-antibiotic-tax
+Requires-Dist: odoo10-addon-l10n-be-apb-tax
+Requires-Dist: odoo10-addon-l10n-be-eco-tax
+Requires-Dist: odoo10-addon-l10n-be-iso20022-pain
+Requires-Dist: odoo10-addon-l10n-be-mis-reports
+
+UNKNOWN
+
+
