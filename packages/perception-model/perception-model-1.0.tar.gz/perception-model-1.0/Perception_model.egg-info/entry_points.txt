@@ -1,0 +1,6 @@
+[console_scripts]
+filter_screenshot = scripts.filter_screenshot:main
+
+[gui_scripts]
+filter_screenshot_gui = scripts.filter_screenshot_gui:main
+
