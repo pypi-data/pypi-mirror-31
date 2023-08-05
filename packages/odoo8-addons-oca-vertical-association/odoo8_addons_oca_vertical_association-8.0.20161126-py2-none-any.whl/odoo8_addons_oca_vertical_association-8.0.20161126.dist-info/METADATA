@@ -1,0 +1,20 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-vertical-association
+Version: 8.0.20161126
+Summary: Meta package for OCA vertical-association Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo8-addon-membership-autoextend
+Requires-Dist: odoo8-addon-membership-extension
+Requires-Dist: odoo8-addon-membership-initial-fee
+Requires-Dist: odoo8-addon-membership-prorrate
+Requires-Dist: odoo8-addon-membership-prorrate-variable-period
+Requires-Dist: odoo8-addon-membership-variable-period
+Requires-Dist: odoo8-addon-website-membership-contact-visibility
+
+UNKNOWN
+
+
