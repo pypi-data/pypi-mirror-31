@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+ericsbandnames/__init__.py
+ericsbandnames/ericsbandnames.py
+ericsbandnames.egg-info/PKG-INFO
+ericsbandnames.egg-info/SOURCES.txt
+ericsbandnames.egg-info/dependency_links.txt
+ericsbandnames.egg-info/entry_points.txt
+ericsbandnames.egg-info/requires.txt
+ericsbandnames.egg-info/top_level.txt
