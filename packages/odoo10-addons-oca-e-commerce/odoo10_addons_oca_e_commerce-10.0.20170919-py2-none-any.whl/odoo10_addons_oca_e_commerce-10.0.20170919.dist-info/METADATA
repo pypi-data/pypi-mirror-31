@@ -1,0 +1,25 @@
+Metadata-Version: 2.0
+Name: odoo10-addons-oca-e-commerce
+Version: 10.0.20170919
+Summary: Meta package for OCA e-commerce Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo10-addon-product-multi-link
+Requires-Dist: odoo10-addon-website-sale-affiliate
+Requires-Dist: odoo10-addon-website-sale-cart-selectable
+Requires-Dist: odoo10-addon-website-sale-category-alphabetic
+Requires-Dist: odoo10-addon-website-sale-checkout-country-vat
+Requires-Dist: odoo10-addon-website-sale-default-country
+Requires-Dist: odoo10-addon-website-sale-hide-price
+Requires-Dist: odoo10-addon-website-sale-search-fuzzy
+Requires-Dist: odoo10-addon-website-sale-suggest-create-account
+Requires-Dist: odoo10-addon-website-sale-wishlist
+
+UNKNOWN
+
+
