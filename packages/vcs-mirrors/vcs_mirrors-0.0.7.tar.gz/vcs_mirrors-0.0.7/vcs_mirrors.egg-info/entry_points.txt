@@ -1,0 +1,3 @@
+[console_scripts]
+vcs-mirrors = vcs_mirrors.scripts.main:main
+
