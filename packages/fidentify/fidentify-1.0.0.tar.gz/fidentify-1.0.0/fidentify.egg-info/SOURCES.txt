@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.rst
+requirements.txt
+setup.cfg
+setup.py
+fidentify/__init__.py
+fidentify/__main__.py
+fidentify/fidentify.py
+fidentify.egg-info/PKG-INFO
+fidentify.egg-info/SOURCES.txt
+fidentify.egg-info/dependency_links.txt
+fidentify.egg-info/entry_points.txt
+fidentify.egg-info/requires.txt
+fidentify.egg-info/top_level.txt
