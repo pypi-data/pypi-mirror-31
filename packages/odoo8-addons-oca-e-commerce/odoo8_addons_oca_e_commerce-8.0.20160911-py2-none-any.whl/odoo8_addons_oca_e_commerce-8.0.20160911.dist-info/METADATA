@@ -1,0 +1,26 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-e-commerce
+Version: 8.0.20160911
+Summary: Meta package for OCA e-commerce Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo8-addon-product-links
+Requires-Dist: odoo8-addon-website-product-share
+Requires-Dist: odoo8-addon-website-product-show-uom
+Requires-Dist: odoo8-addon-website-sale-cart-preview
+Requires-Dist: odoo8-addon-website-sale-category-megamenu
+Requires-Dist: odoo8-addon-website-sale-checkout-country-vat
+Requires-Dist: odoo8-addon-website-sale-default-country
+Requires-Dist: odoo8-addon-website-sale-product-brand
+Requires-Dist: odoo8-addon-website-sale-product-legal
+Requires-Dist: odoo8-addon-website-sale-recently-viewed-products
+Requires-Dist: odoo8-addon-website-sale-require-legal
+Requires-Dist: odoo8-addon-website-sale-require-login
+Requires-Dist: odoo8-addon-website-sale-suggest-create-account
+
+UNKNOWN
+
+
