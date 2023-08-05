@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: TracDashesSyntaxPlugin
+Version: 1.1
+Summary: Trac Plug-in to add Wiki syntax for em and en dashes.
+Home-page: https://www.trac-hacks.org/wiki/DashesSyntaxPlugin
+Author: Martin Scharrer
+Author-email: martin@scharrer-online.de
+License: GPLv3
+Keywords: trac plugin wiki syntex dash em en
+Platform: UNKNOWN
+Classifier: Framework :: Trac
+Requires-Dist: Trac
+
+UNKNOWN
+
+
