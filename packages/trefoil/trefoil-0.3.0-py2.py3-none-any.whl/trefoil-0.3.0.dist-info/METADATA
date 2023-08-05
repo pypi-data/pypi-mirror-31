@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: trefoil
+Version: 0.3.0
+Summary: Useful tools for spatial analysis using numpy and NetCDF
+Home-page: https://github.com/databasin/trefoil
+Author: databasin
+Author-email: databasinadmin@consbio.org
+License: see LICENSE
+Platform: UNKNOWN
+Requires-Dist: affine (>=1.0)
+Requires-Dist: click
+Requires-Dist: jinja2
+Requires-Dist: palettable
+Requires-Dist: pytz
+Requires-Dist: six
+Requires-Dist: fiona (>=1.6.0)
+Requires-Dist: netCDF4 (>=1.1.1)
+Requires-Dist: Numpy
+Requires-Dist: Pillow (>=2.9.0)
+Requires-Dist: pyproj
+Requires-Dist: rasterio (>=1.0a12)
+
+UNKNOWN
+
+
