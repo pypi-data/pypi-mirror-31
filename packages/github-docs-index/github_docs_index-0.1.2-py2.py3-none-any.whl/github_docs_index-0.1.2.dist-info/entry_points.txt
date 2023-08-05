@@ -1,0 +1,4 @@
+
+    [console_scripts]
+    github-docs-index = github_docs_index.runner:main
+    
