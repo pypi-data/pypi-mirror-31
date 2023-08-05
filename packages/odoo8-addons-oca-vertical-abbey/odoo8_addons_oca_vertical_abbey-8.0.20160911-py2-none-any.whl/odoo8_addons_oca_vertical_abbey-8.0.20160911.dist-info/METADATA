@@ -1,0 +1,17 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-vertical-abbey
+Version: 8.0.20160911
+Summary: Meta package for OCA vertical-abbey Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo8-addon-donation-mass
+Requires-Dist: odoo8-addon-donation-stay
+Requires-Dist: odoo8-addon-mass
+Requires-Dist: odoo8-addon-stay
+
+UNKNOWN
+
+
