@@ -1,0 +1,3 @@
+[console_scripts]
+apldx_test = apldx_test.apldx_test:hello
+
