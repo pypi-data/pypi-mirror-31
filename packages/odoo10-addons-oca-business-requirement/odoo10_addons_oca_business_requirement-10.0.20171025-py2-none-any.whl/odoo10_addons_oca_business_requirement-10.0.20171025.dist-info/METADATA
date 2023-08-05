@@ -1,0 +1,22 @@
+Metadata-Version: 2.0
+Name: odoo10-addons-oca-business-requirement
+Version: 10.0.20171025
+Summary: Meta package for OCA business-requirement Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo10-addon-business-requirement
+Requires-Dist: odoo10-addon-business-requirement-deliverable
+Requires-Dist: odoo10-addon-business-requirement-deliverable-cost
+Requires-Dist: odoo10-addon-business-requirement-deliverable-crm
+Requires-Dist: odoo10-addon-business-requirement-deliverable-project
+Requires-Dist: odoo10-addon-business-requirement-deliverable-resource-template
+Requires-Dist: odoo10-addon-business-requirement-etherpad
+
+UNKNOWN
+
+
