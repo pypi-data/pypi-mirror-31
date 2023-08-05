@@ -1,0 +1,15 @@
+ruamel.yaml
+zope.interface
+
+[development]
+pylint
+autopep8
+flake8
+ipython
+zest.releaser
+
+[github]
+pygithub
+
+[gitlab]
+python-gitlab
