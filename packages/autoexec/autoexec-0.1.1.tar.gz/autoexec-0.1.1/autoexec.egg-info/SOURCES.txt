@@ -1,0 +1,9 @@
+README.rst
+setup.py
+autoexec/__init__.py
+autoexec/autoexec.py
+autoexec.egg-info/PKG-INFO
+autoexec.egg-info/SOURCES.txt
+autoexec.egg-info/dependency_links.txt
+autoexec.egg-info/requires.txt
+autoexec.egg-info/top_level.txt
