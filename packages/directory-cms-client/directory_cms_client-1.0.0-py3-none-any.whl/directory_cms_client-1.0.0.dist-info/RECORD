@@ -1,0 +1,16 @@
+directory_cms_client/__init__.py,sha256=lEFdFdZaBicbbTXlMXC8RICbGOHf2xzqzfusEsoBsDs,94
+directory_cms_client/base.py,sha256=BwxDND3jHXUmwkH0FFxIC4VvA-N1x4NPyXdD30Y4sHA,1234
+directory_cms_client/client.py,sha256=gX0130aI8G41MxiffIC18DGcByrJnrBbmIL01SPTbtA,478
+directory_cms_client/export_readiness.py,sha256=3LuDWItoYiZwwbaPCn7byMzejeatcdgxPLkhLBS-iZg,416
+directory_cms_client/find_a_supplier.py,sha256=dpLIIVwiaFNdXigdp_6H0qxlLA_FrFovkvRnFY4Syog,951
+directory_cms_client/version.py,sha256=RsZjRjMprNcDm97wqRRSk6rTLgTX8N0GyicZyZ8OsBQ,22
+directory_cms_client-1.0.0.dist-info/DESCRIPTION.rst,sha256=xc1pBn5Cxu1SvFGZLDSzUg-9oaWK33__GHiRNKsYPXk,1713
+directory_cms_client-1.0.0.dist-info/METADATA,sha256=69dg2jLSA4dTkyNFlhewV_6BthynLiqmYLH7DqKjh-c,2033
+directory_cms_client-1.0.0.dist-info/RECORD,,
+directory_cms_client-1.0.0.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+directory_cms_client-1.0.0.dist-info/metadata.json,sha256=r7Y0VjJ8Vk7mJtGvdnMn3jcjpeVGtmeu9ku4VucDquM,522
+directory_cms_client-1.0.0.dist-info/top_level.txt,sha256=iI6-GzmY2NkNhvhJ4u26300Vs3PsXpXuuwudFX9vm_U,27
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_client.py,sha256=Ybn8FLaIckOQL1dMxUNXG7Pjm7NLaeb_mcqaeyjPLZI,2058
+tests/test_export_readiness.py,sha256=jEH0l2htaBfbP6KV4xJxsH-C0WJ5BY6hfD_PVcGLlIM,1272
+tests/test_find_a_supplier.py,sha256=jcMxigu23_RTBgA-H__26S6_BSrEpw9OeCRziBI4eWU,3533
