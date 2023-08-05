@@ -1,0 +1,10 @@
+setup.py
+TracGoogleStaticMapMacro.egg-info/PKG-INFO
+TracGoogleStaticMapMacro.egg-info/SOURCES.txt
+TracGoogleStaticMapMacro.egg-info/dependency_links.txt
+TracGoogleStaticMapMacro.egg-info/entry_points.txt
+TracGoogleStaticMapMacro.egg-info/not-zip-safe
+TracGoogleStaticMapMacro.egg-info/requires.txt
+TracGoogleStaticMapMacro.egg-info/top_level.txt
+tracgooglestaticmap/__init__.py
+tracgooglestaticmap/macro.py
