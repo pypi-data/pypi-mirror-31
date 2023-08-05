@@ -1,0 +1,8 @@
+setup.cfg
+setup.py
+creaturecast_node/__init__.py
+creaturecast_node.egg-info/PKG-INFO
+creaturecast_node.egg-info/SOURCES.txt
+creaturecast_node.egg-info/dependency_links.txt
+creaturecast_node.egg-info/requires.txt
+creaturecast_node.egg-info/top_level.txt

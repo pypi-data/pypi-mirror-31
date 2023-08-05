@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: creaturecast-node
+Version: 0.0.5
+Summary: Base node for creaturecast
+Home-page: https://github.com/Paxtongerrish/creaturecast_node.git
+Author: Paxton Gerrish
+Author-email: creaturecastlabs@gmail.com
+License: UNKNOWN
+Description: Base node for creaturecast
+Keywords: sample setuptools development
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
