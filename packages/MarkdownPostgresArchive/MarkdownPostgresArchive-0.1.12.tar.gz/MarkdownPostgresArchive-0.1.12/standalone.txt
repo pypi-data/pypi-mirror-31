@@ -1,0 +1,60 @@
+Help on package markdownPostgresArchive:
+
+NAME
+    markdownPostgresArchive
+
+FILE
+    c:\users\ryan guard\desktop\csc440wikiwiki\standalone\markdownpostgresarchive\__init__.py
+
+PACKAGE CONTENTS
+    ArchiveDatabaseConnection
+    ArchivePage
+    DisplayHistory
+    MDArchive
+    MDArchiveSetup
+    RestorePage
+
+CLASSES
+    markdownPostgresArchive.ArchiveDatabaseConnection.ArchiveDatabaseConnection
+    markdownPostgresArchive.ArchivePage.ArchivePage
+    markdownPostgresArchive.DisplayHistory.HistoryPage
+    markdownPostgresArchive.RestorePage.RestorePage
+    
+    class ArchiveDatabaseConnection
+     |  Methods defined here:
+     |  
+     |  __init__(self)
+    
+    class ArchivePage
+     |  Reads the contents of a given markdown file at the url (local file path to markdown). Parses file information
+     |  as well as the currently logged in user from the session for storage.
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(self, name, url)
+     |  
+     |  store(self)
+    
+    class HistoryPage
+     |  Methods defined here:
+     |  
+     |  __init__(self, page_name, page_commit, timestamp, user)
+    
+    class RestorePage
+     |  Constructor gets the name of the file with the extensions and the url. It then reads what is in the given file.
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(self, name, url)
+     |  
+     |  restore(self, commitID)
+
+FUNCTIONS
+    displayHistoryConsole(page_name)
+    
+    displayHistoryContents(page_name, commit_id)
+
+DATA
+    __all__ = ['ArchiveDatabaseConnection', 'ArchivePage', 'RestorePage', ...
+
+
