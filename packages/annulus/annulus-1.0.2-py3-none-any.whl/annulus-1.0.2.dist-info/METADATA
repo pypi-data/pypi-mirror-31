@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: annulus
+Version: 1.0.2
+Summary: Annulus (donut) detection in images for camera calibration
+Home-page: https://github.com/mgb4/Annulus
+Author: Michael Burisch
+Author-email: michael.burisch@gmx.com
+License: UNKNOWN
+Keywords: camera calibration marker detection
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3
+
+
+Detection of annuli (donuts) in images and recovery of a grid for camera calibration.
+
+
