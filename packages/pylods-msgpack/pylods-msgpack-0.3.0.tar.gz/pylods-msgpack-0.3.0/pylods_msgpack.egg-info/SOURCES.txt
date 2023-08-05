@@ -1,0 +1,11 @@
+setup.py
+libs/pylodsc/src/Dictionary.cpp
+pylods_msgpack.egg-info/PKG-INFO
+pylods_msgpack.egg-info/SOURCES.txt
+pylods_msgpack.egg-info/dependency_links.txt
+pylods_msgpack.egg-info/requires.txt
+pylods_msgpack.egg-info/top_level.txt
+pylodsmsgpack/__init__.py
+pylodsmsgpack/pylodsmsgpack.py
+pylodsmsgpackc/src/MsgpackDictionary.cpp
+pylodsmsgpackc/src/pylodsmsgpackcapi.cpp
