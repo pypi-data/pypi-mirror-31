@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: robotframework-postgresqldb
+Version: 1.0.0
+Summary: Robot Framework Library For Working With PostgreSQL Database.
+Home-page: https://github.com/peterservice-rnd/robotframework-postgresqldb
+Author: JSC PETER-SERVICE
+Author-email: mf_aist_all@billing.ru
+License: Apache License 2.0
+Requires-Dist: psycopg2
+Requires-Dist: robotframework
+
+RobotFramework PostgreSQL Library
+
+
