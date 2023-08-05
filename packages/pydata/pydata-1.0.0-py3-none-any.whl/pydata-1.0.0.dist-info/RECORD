@@ -1,0 +1,12 @@
+pydata/__init__.py,sha256=0bv3lRd0xgz0Ejfki6y5T0rMQOqSyA6xoJpA2sk9pkU,5084
+pydata/command.py,sha256=niSRiXy1Um91MCyHfXUvOiIyOQP2k8kNMT4jgciZ7Y4,449
+pydata/list.py,sha256=1175vv3609red7H-qO9SpkvxO190fwOXrmMywd61vxU,780
+pydata-1.0.0.dist-info/DESCRIPTION.rst,sha256=3Dze_DhFbXtPhKYrIcIDpQnVw_73FS9DPazlmQ_YtQY,535
+pydata-1.0.0.dist-info/METADATA,sha256=agGRZezXW7PEw0ANcSReyt61ZX3CIn36F16j6KFK6jQ,964
+pydata-1.0.0.dist-info/RECORD,,
+pydata-1.0.0.dist-info/WHEEL,sha256=rNo05PbNqwnXiIHFsYm0m22u4Zm6YJtugFG2THx4w3g,92
+pydata-1.0.0.dist-info/entry_points.txt,sha256=xqfO0hSukHs6EO2PDljOjZifrxeKKdJazS_Q28dm1p4,49
+pydata-1.0.0.dist-info/metadata.json,sha256=ouIMhMUTNJZISdYGIDfh8Env93Q9aNWrIjNQRKNgy_E,784
+pydata-1.0.0.dist-info/top_level.txt,sha256=qPkyj5NF21X9vgwp3PTJ7SpuL_afIeRTn3iyasrmoto,13
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_list.py,sha256=sXVQPO1KZy0bLCk_9gIukrJqOHK0M2xGsECMz-56brE,156
