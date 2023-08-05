@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+version.py
+bdgenomics/__init__.py
+bdgenomics.mango.egg-info/PKG-INFO
+bdgenomics.mango.egg-info/SOURCES.txt
+bdgenomics.mango.egg-info/dependency_links.txt
+bdgenomics.mango.egg-info/requires.txt
+bdgenomics.mango.egg-info/top_level.txt
+bdgenomics/mango/QC.py
+bdgenomics/mango/__init__.py
+bdgenomics/mango/rdd.py
+bdgenomics/mango/test/QC_test.py
+bdgenomics/mango/test/__init__.py
+bdgenomics/mango/test/rdd_test.py
