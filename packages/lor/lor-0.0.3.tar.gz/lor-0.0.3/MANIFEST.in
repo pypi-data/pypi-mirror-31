@@ -1,0 +1,4 @@
+include README.rst
+include requirements.txt
+recursive-include lor/generators/workspace/templates/ *
+recursive-include lor/generators/task/templates/ *
