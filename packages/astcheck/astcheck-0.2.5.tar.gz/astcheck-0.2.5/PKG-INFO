@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: astcheck
+Version: 0.2.5
+Summary: Check Python ASTs against templates
+Home-page: https://github.com/takluyver/astcheck
+Author: Thomas Kluyver
+Author-email: thomas@kluyver.me.uk
