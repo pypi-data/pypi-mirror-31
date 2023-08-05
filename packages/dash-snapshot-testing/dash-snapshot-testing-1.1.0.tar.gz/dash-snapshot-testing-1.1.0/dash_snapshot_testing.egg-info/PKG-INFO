@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: dash-snapshot-testing
+Version: 1.1.0
+Summary: Dash snapshot testing package
+Home-page: https://github.com/StratoDem/dash-snapshot-testing
+Author: Michael Clawar, Eric Linden
+Author-email: tech@stratodem.com
+License: MIT
+Description: UNKNOWN
+Keywords: dash snapshot plotly testing unittest
+Platform: UNKNOWN
+Requires-Python: >=3
