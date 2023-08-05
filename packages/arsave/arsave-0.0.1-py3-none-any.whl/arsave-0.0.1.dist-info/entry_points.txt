@@ -1,0 +1,3 @@
+[console_scripts]
+arsave-run = arsave.introduction:introduction
+
