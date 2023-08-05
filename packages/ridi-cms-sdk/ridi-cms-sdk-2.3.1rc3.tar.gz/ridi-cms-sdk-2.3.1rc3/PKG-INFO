@@ -1,0 +1,25 @@
+Metadata-Version: 1.1
+Name: ridi-cms-sdk
+Version: 2.3.1rc3
+Summary: Ridi CMS SDK
+Home-page: https://github.com/ridi/cms-sdk
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: # Ridibooks CMS SDK - Python
+        
+        ## Requirements
+        
+        - python 3.4 or higher
+        
+        ## Setup
+        
+        `pip install ridi-cms-sdk`
+        
+        ## Usage
+        
+        Check out our [sample project](https://github.com/ridi/cms-bootstrap-python) for more details.
+Keywords: cmssdk,ridi,ridibooks
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
