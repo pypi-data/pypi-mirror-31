@@ -1,0 +1,11 @@
+{% comment %}
+We assume that if there are messages in the session, this means that a form
+has been submitted and we are displaying a success message.
+{% endcomment %}
+{% if messages %}
+<script>
+if(window.gtag){
+    gtag('event', 'submitted', {'event_category': 'contact_form'})
+}
+</script>
+{% endif %}
