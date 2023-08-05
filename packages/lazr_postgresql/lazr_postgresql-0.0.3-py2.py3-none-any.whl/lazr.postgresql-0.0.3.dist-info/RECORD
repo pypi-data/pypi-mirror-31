@@ -1,0 +1,16 @@
+lazr/__init__.py,sha256=kdIsU4GSAWPFZdNvLKZV27oZFyx8Tq2DNVcG7XMBP2g,904
+lazr/postgresql/__init__.py,sha256=DyRO72ZYtdzD2Sp1v9HjZhYwcFf8Gdv4XxMW9IeAOcA,1461
+lazr/postgresql/connectionstring.py,sha256=56YO3ez6HcnSZ9lFa7u7-HRSczDDJrIN1HEIgW8jVq0,4144
+lazr/postgresql/migrate.py,sha256=_E4XUiMMMWntnbWKqcnxrfeY77irv5rid4Olh0BblOU,3895
+lazr/postgresql/quoting.py,sha256=pmkIUomxgsZcO3SYdcebHCt4OaeStW9mwLd8uldYvKc,2781
+lazr/postgresql/upgrade.py,sha256=TZ8K8z-0_LWNV3tFENazhYFx3p_O_DH7zQgTvFrM5h8,13367
+lazr/postgresql/tests/__init__.py,sha256=b91Ysi7A9uzTvmazd-1Bl9tIeqwv4_RBlHPKVmuTbHw,2590
+lazr/postgresql/tests/test_migrate.py,sha256=mzvGX5HLUBTb2CdG4VFG5pkZBRRtQyr9VXLCDCggI0w,2078
+lazr/postgresql/tests/test_upgrade.py,sha256=XtKtwBh9YuReOw_KAzGhV7x-cbZmLLuQ_CGJ-9A5rlw,21479
+lazr.postgresql-0.0.3.dist-info/DESCRIPTION.rst,sha256=LUVKcjg2gxUeKcxR4csVrLAfvzJTBQqHB0K8zhDMmoo,3814
+lazr.postgresql-0.0.3.dist-info/METADATA,sha256=OVM_gpnXeXWwL6s-CzZk0ALInrqiK_mvSiJ-9eJUxRg,4631
+lazr.postgresql-0.0.3.dist-info/RECORD,,
+lazr.postgresql-0.0.3.dist-info/WHEEL,sha256=kdsN-5OJAZIiHN-iO4Rhl82KyS0bDWf4uBwMbkNafr8,110
+lazr.postgresql-0.0.3.dist-info/entry_points.txt,sha256=GihfnceJ5-yPScJHTOnnRv789fsj53Qi0OaK27T0iOs,61
+lazr.postgresql-0.0.3.dist-info/metadata.json,sha256=Kq8MgMJ9yvtCjYeZE4y7zvUjq92ASiacy6GFkzQBkBY,1049
+lazr.postgresql-0.0.3.dist-info/top_level.txt,sha256=BihR5dj2uBLHqE6S1g1gsz9RHf1Alc_tVtc9kjx-AqY,5
