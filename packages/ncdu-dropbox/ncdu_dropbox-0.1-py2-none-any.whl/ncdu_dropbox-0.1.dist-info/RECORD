@@ -1,0 +1,10 @@
+ncdu_dropbox/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ncdu_dropbox/dirtree.py,sha256=c7i4IpPIwpuFq1WovQM9IYSn41Fyh0iz19YMlFsVCU8,1611
+ncdu_dropbox/dropboxfetcher.py,sha256=nUlkD_rHE6Yo1kFYF0IkvNqsfFApUsrluq7-BUs2TV0,548
+ncdu_dropbox/main.py,sha256=XF3o94EOc9MwRoqhYqgMuLhrzzDnw4lw_laIcHEwJrA,1199
+ncdu_dropbox/ncduwriter.py,sha256=RD1wCjviasXISeLSUhmE22gYSrom3TIiOP1_JzzrSME,759
+ncdu_dropbox-0.1.dist-info/METADATA,sha256=Y21m_CXhd2pIlFZa7k7mmxC8YAZApAKrb3jdfSlLzJA,1382
+ncdu_dropbox-0.1.dist-info/RECORD,,
+ncdu_dropbox-0.1.dist-info/WHEEL,sha256=9xUnOISuCvrSyfu9GlFZT4i2TZ_2OLkwLNqcDvIo3zM,92
+ncdu_dropbox-0.1.dist-info/entry_points.txt,sha256=8KgbtHoEAf1C25RkZUqLfkfBQAHOAg--_1RLXtHzt8k,57
+ncdu_dropbox-0.1.dist-info/top_level.txt,sha256=-JYmFwjE7yyh3stoOZ4ziO87QsX4-KkxVtulyA_ESnI,13
