@@ -1,0 +1,4 @@
+prompt-toolkit
+lark-parser
+pygments
+skydive-client>=0.4.5

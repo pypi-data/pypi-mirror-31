@@ -1,0 +1,3 @@
+[console_scripts]
+skydive-shell = skydive_shell.shell:main
+
