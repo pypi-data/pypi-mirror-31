@@ -1,0 +1,11 @@
+setup.cfg
+setup.py
+Py2Corona/Behaviors.py
+Py2Corona/Classes.py
+Py2Corona/Consts.py
+Py2Corona/__init__.py
+pyforcorona.egg-info/PKG-INFO
+pyforcorona.egg-info/SOURCES.txt
+pyforcorona.egg-info/dependency_links.txt
+pyforcorona.egg-info/requires.txt
+pyforcorona.egg-info/top_level.txt
