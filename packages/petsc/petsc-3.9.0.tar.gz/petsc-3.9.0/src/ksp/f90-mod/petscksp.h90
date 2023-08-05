@@ -1,0 +1,28 @@
+
+      interface
+        subroutine KSPSolve(a,b,c,z)
+          use petsckspdef
+          KSP a ! KSP
+          Vec b ! Vec
+          Vec c ! Vec
+          integer z
+        end subroutine
+      end interface
+
+      Interface
+      subroutine KSPSetType(a,b,z)
+      use petsckspdef
+       KSP a
+       character(*) b
+       integer z
+       end subroutine
+      end Interface
+
+      Interface
+      subroutine KSPView(a,b,z)
+      use petsckspdef
+       KSP a
+       PetscViewer b
+       integer z
+       end subroutine
+      end Interface

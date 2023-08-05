@@ -1,0 +1,42 @@
+Testing hand-coded gradient (hc) against finite difference gradient (fd),
+if the ratio ||fd - hc|| / ||hc|| is
+O(1.e-8), the hand-coded gradient is probably correct.
+Finite difference gradient
+Vec Object: 1 MPI processes
+  type: seq
+269.684
+Hand-coded gradient
+Vec Object: 1 MPI processes
+  type: seq
+269.684
+
+||fd|| 269.684, ||hc|| = 269.684, angle cosine = (fd'hc)/||fd||||hc|| = 1.
+2-norm ||fd-hc||/max(||hc||,||fd||) = 1.14938e-07, difference ||fd-hc|| = 3.09969e-05
+max-norm ||fd-hc||/max(||hc||,||fd||) = 1.14938e-07, difference ||fd-hc|| = 3.09969e-05
+Finite difference gradient
+Vec Object: 1 MPI processes
+  type: seq
+-1.
+Hand-coded gradient
+Vec Object: 1 MPI processes
+  type: seq
+-1.
+
+||fd|| 1., ||hc|| = 1., angle cosine = (fd'hc)/||fd||||hc|| = 1.
+2-norm ||fd-hc||/max(||hc||,||fd||) = 2.22045e-16, difference ||fd-hc|| = 2.22045e-16
+max-norm ||fd-hc||/max(||hc||,||fd||) = 2.22045e-16, difference ||fd-hc|| = 2.22045e-16
+Finite difference gradient
+Vec Object: 1 MPI processes
+  type: seq
+-1.
+Hand-coded gradient
+Vec Object: 1 MPI processes
+  type: seq
+-1.
+
+||fd|| 1., ||hc|| = 1., angle cosine = (fd'hc)/||fd||||hc|| = 1.
+2-norm ||fd-hc||/max(||hc||,||fd||) = 2.22045e-16, difference ||fd-hc|| = 2.22045e-16
+max-norm ||fd-hc||/max(||hc||,||fd||) = 2.22045e-16, difference ||fd-hc|| = 2.22045e-16
+Vec Object: 1 MPI processes
+  type: seq
+1.
