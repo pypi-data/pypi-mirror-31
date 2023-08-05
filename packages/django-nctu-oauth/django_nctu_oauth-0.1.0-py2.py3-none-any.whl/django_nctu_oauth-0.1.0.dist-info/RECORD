@@ -1,0 +1,15 @@
+django_nctu_oauth-0.1.0.dist-info/DESCRIPTION.rst,sha256=ZM8zwOPIdqa82ca5B0qQoamCSitua4nLhFimFJmfBJg,499
+django_nctu_oauth-0.1.0.dist-info/LICENSE.txt,sha256=fsUIhlPbbvhulycbiSGo8jsIlDTR8Wh_G_UHmn6qNJ8,1054
+django_nctu_oauth-0.1.0.dist-info/METADATA,sha256=PEHC8DMVZsLXH7mcYdjXxS87ZEXP7o7rcehqfqT1Z2E,1482
+django_nctu_oauth-0.1.0.dist-info/RECORD,,
+django_nctu_oauth-0.1.0.dist-info/WHEEL,sha256=o2k-Qa-RMNIJmUdIc7KU6VWR_ErNRbWNlxDIpl7lm34,110
+django_nctu_oauth-0.1.0.dist-info/metadata.json,sha256=iKNQw3MLwglNNCsh1Hv5Tz8s2YDmTvcMCOlHVdDwEbY,1105
+django_nctu_oauth-0.1.0.dist-info/top_level.txt,sha256=iQXSez8nwUyPH3LYm0r-pn7LeyzLITunuLdwlDImUJE,16
+nctu_oauth/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nctu_oauth/oauth.py,sha256=DipwETTs_qex283o5kNFGNZ2YTVcfpqcKFtRrLpvO24,1538
+nctu_oauth/urls.py,sha256=2oMn2G12fx5Z7VrI8W9sDveMoHX-rSsKqfDWWo54VwQ,117
+nctu_oauth/views.py,sha256=_E3vqMwrWqqU_MHxbtEp6kxF_76Gj8xBt48YKpeTLcQ,435
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/settings.py,sha256=JpySF7R8yNX0HLgwqZhAYBtQgcgbn0huAEMFdHB-fiU,802
+test/test.py,sha256=FJ-Y4OOXWKIZdkLT2vKE-dhy-aMz2UJ6x7IkiOzuTIA,1906
+test/test_data.py,sha256=pOxgbvrkPNxnSC_ijSZFk-7oyOF0ia2QIHOIzJCWtkk,68
