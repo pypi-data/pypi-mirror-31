@@ -1,0 +1,122 @@
+CHANGES
+=======
+
+* fix readme
+* fix incorrent python3.6 support
+* update badges & image url
+* update requirements
+* add README
+
+0.0.2
+-----
+
+* test against tox
+* update requirements
+
+0.0.1
+-----
+
+* bootstrap to pbr
+* update build\_zip test
+* migrate tests to doctest
+* recover pytest+flakes
+* update gitignore
+* fix slow char in jobtree
+* bootstraping
+* update log
+* magic patch migration to 6.1.20
+* experimental dirac-gauss monitor
+* xmlmerge ppl, eoscp
+* more tricks in cleaner
+* bug fixes in Jobtree
+* More method in JobUtils
+* Add kw\_force\_reload into LHCbDataset.new logic
+* update uniquize
+* prefer 'killed' color as grey
+* Better caching Gauss nickname
+* cleaner with more useful help
+* xmlmerge use logging, more cleanup tech, guarded eos
+* more module on cleaner: residual hadd & missing xml
+* AppUtils cache \_getenv
+* bugfix in magic\_resubmit
+* xmlmerge: quick check on \_\_jobstatus\_\_
+* Update jt with appchar legend
+* quick script to read generatorlog xml
+* jv now show simple error message of subjobs
+* EOS find&merge support on xmlmerge
+* Make ganga\_cleaner supoprt for EOS area
+* Bug fix in xmlmerge
+* bug fix in xmlmerege
+* Jobtree find command
+* fix merge
+* new magic\_resubmit
+* Fix to bring back application\_char to jobtree
+* Fix config bug for OfflineTree
+* Add lgo.md
+* fix merge
+* speed improvement on Jobtree
+* speed improvement on Jobtree
+* Bug fix in Utils
+* More patching on App.optsfile
+* Script for LFN listing
+* Better LSF+Job localize, LHCbDataset.new.ignore\_missing
+* TreeReader supports getitem repr
+* gpfs\_lhcb patch for better Bender compat
+* more update on OfflineJob
+* Began incorporating Job to OfflineGPI. Lots of broken code get prelim fixed
+* Bug fixes in Utils.dictget\_ignore\_closed to support job/dir misture
+* laid foundation for custom-colorization Jobtree
+* bugfix import order
+* OfflineJob uses BaseJsonablePropertyObject
+* fix cache bug intefering testing
+* LHCbDataset.new prelim support for script with IOHelper
+* update gitignore
+* more testcases
+* IOUtils, explicit queues splitting method
+* more test cases
+* more test cases
+* rm-guard
+* JT help
+* JT: Shortname for app
+* More test on decorators
+* Jobtree \_\_str\_\_ now return actual string, not print
+* Add fig
+* revised old pytest to be functional with better fixture
+* doctest ColorPrimer
+* Refresh LFN attach\_mylib operation
+* Improvement in jt.add
+* Subclassing OfflineJob from collections.Mapping
+* Bugfix in JobUtils
+* Rename Package
+* 011 Revised ditau-passthrough for tightening
+* 011 Optimizing ditau v2
+* 013 more data
+* Benchmarking new S23 Ditau
+* Working on S23
+* 013 prelim optimizing H2AA after S21
+* 013 Making cand from real data, prelim
+* Ganga patcher refactored
+* Ganga's catalog caching & lots of Decorators works
+* 013 more data, h3 loose & tight
+* 013 Ditau candidates
+* 013 PFCore validation
+* Fix offline ganga reader on OSX
+* Refactored MyBender.BaseAlgo and init
+* Update networkutils
+* Standalone Tauh3MCConeAlgo done
+* Fixed DR\*0.5 problem, rechecking h3 cones
+* New QHist & wrapper model
+* 013 checking dyncone
+* 013 checking dyncone
+* Fix merge
+* Begin Tau identification
+* fix merge
+* 012 More work on trigger reader
+* Small fix in offline\_reader
+* 012 More work on trigger reader
+* Refactored Bender's import
+* Refactored Bender's import
+* Fix merge
+* Fix merge
+* Refactor libraries to mylib
+* Refactor libraries to mylib
