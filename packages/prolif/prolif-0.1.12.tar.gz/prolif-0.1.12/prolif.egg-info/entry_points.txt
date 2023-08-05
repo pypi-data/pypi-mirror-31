@@ -1,0 +1,3 @@
+[console_scripts]
+prolif = prolif.command_line:cli
+
