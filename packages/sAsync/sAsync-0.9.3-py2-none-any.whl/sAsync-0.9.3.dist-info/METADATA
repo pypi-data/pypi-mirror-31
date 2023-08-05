@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: sAsync
+Version: 0.9.3
+Summary: SQLAlchemy done Asynchronously: Twisted-friendly access to an SQL database.
+Home-page: http://edsuom.com/sAsync.html
+Author: Edwin A. Suominen
+Author-email: foss@edsuom.com
+Maintainer: Edwin A. Suominen
+Maintainer-email: foss@edsuom.com
+License: Apache License (2.0)
+Project-URL: API, http://edsuom.com/sAsync/sasync.html
+Project-URL: GitHub, https://github.com/edsuom/sAsync
+Keywords: SQL,SQLAlchemy,twisted,asynchronous,async,persist,persistence,persistent,database,sqlite,mysql
+Platform: OS Independent
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 2 :: Only
+Classifier: Framework :: Twisted
+Classifier: Topic :: Database
+Classifier: Topic :: Database :: Front-Ends
+Classifier: Topic :: Database :: Database Engines/Servers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: SQLAlchemy (>=0.5)
+Requires-Dist: AsynQueue (>=0.9.4)
+
+An enhancement to the SQLAlchemy_ package that provides asynchronous,
+deferred-result access via the Twisted_ framework and an access broker
+that conveniently manages database access, table setup, and
+transactions. Included are modules for implementing persistent
+dictionaries and three-dimensional arrays.
+
+sAsync lets you use the use the database transaction core of the
+SQLAlchemy Python SQL toolkit in an asynchronous fashion. In addition
+to an access broker for conveniently managing database access, table
+setup, and transactions under the Twisted framework, it provides
+persistent item-value stores and arrays.
+
+The sAsync package uses a threaded task queue from the AsynQueue_
+package to wrap your SQLAlchemy database access code inside
+asynchronous transactions. At the lowest level, it provides a
+*@transact* decorator for your database-access methods that makes them
+immediately return a Twisted Deferred object.
+
+Python 3 compatiblity is in the works, but not yet supported.
+
+.. _SQLAlchemy: https://www.sqlalchemy.org/
+
+.. _Twisted: https://twistedmatrix.com/trac/
+
+.. _AsynQueue: http://edsuom.com/AsynQueue.html
+
+
+
