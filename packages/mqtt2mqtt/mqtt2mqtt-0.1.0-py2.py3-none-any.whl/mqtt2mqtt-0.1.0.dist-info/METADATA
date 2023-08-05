@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: mqtt2mqtt
+Version: 0.1.0
+Summary: MQTT to MQTT
+Home-page: UNKNOWN
+Author: Radek Nejedlo
+Author-email: r.nejedlo@gmail.com
+License: MIT
+Keywords: mqtt
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Utilities
+Classifier: Environment :: Console
+Requires-Dist: PyYAML (>=3.11)
+Requires-Dist: paho-mqtt (>=1.0)
+Requires-Dist: schema (>=0.6.7)
+Requires-Dist: jsonpath-ng (>=1.4.3)
+
+
+MQTT to MQTT data convert tool
+
+

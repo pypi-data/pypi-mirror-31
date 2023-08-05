@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        mqtt2mqtt=mqtt2mqtt.cli:main
+    
