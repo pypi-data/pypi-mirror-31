@@ -1,0 +1,22 @@
+Metadata-Version: 2.0
+Name: odoo9-addons-oca-sale-workflow
+Version: 9.0.20161109
+Summary: Meta package for OCA sale-workflow Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo9-addon-sale-automatic-workflow
+Requires-Dist: odoo9-addon-sale-automatic-workflow-payment-mode
+Requires-Dist: odoo9-addon-sale-exception
+Requires-Dist: odoo9-addon-sale-order-lot-selection
+Requires-Dist: odoo9-addon-sale-order-type
+Requires-Dist: odoo9-addon-sale-order-variant-mgmt
+Requires-Dist: odoo9-addon-sale-packaging-price
+Requires-Dist: odoo9-addon-sale-rental
+Requires-Dist: odoo9-addon-sale-start-end-dates
+
+UNKNOWN
+
+
