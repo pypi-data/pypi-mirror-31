@@ -1,0 +1,11 @@
+Metadata-Version: 1.1
+Name: kspath
+Version: 0.1.0
+Summary: Implements algorithms for the K shortest path problem.
+Home-page: https://github.com/datagovsg/k-shortest-path
+Author: Chong Hon Fah
+Author-email: hfchong@data.gov.sg
+License: Apache License 2.0
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
