@@ -1,0 +1,15 @@
+solidspy/__init__.py,sha256=hlP3h0G7VpHk0EpKVySGf0ZQhsGRA8UGybLuWX_epG4,299
+solidspy/__main__.py,sha256=G8DzT-q2nsm5lfqpHkp4zDEkMtHGcpWgT4-_kKD9-AE,119
+solidspy/assemutil.py,sha256=lIf8xSpruamEM0Af1Ji-Qqd7KuvN0CASRa75T_Hj13E,8617
+solidspy/femutil.py,sha256=mDRKwURAxDIJGxZnNEGha9XpoUdVPRVwofflOoiQDaQ,11470
+solidspy/gaussutil.py,sha256=FyxOWNrePlhb5AW0IpF0mq8c55JVpzec1V_TXEfo-6M,2681
+solidspy/postprocesor.py,sha256=nB8bW3JWnk3NqxWx4br8tpQ6uJmZ4c2ilyScbfcKT50,21113
+solidspy/preprocesor.py,sha256=TnNQ1ACEeSTw-u1xN2lxswFFJJvFDaqAmku0bM-4YKs,7832
+solidspy/solids_GUI.py,sha256=Zv-EGbUagA0Ts5rBqRWgCaDxqEwOu8h_tG2ZcdmOWY8,3311
+solidspy/solutil.py,sha256=siy7zjzlgljQYGpNgs7Q-8VB5rYIYmmfZogcqq7b9yA,953
+solidspy/uelutil.py,sha256=Sol5SBCb8GD6cO2J6XqEKUZxauQhZILI5UcMD3XVvXg,7686
+solidspy-1.0.12.dist-info/METADATA,sha256=_Z_eZHU8_8jIaTo4M6Avu4FWA7D3iXtP3ohyN4OUHQ8,4428
+solidspy-1.0.12.dist-info/RECORD,,
+solidspy-1.0.12.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+solidspy-1.0.12.dist-info/entry_points.txt,sha256=lexK7RzT1xMyCvalZCkEXUV_pXjWKxyNU2NGRfSYmuo,40
+solidspy-1.0.12.dist-info/top_level.txt,sha256=p6ASoVIAIH6liaRyURp3gIkN03OARSN7TdDDU8Evrxo,9
