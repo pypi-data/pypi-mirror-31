@@ -1,0 +1,3 @@
+[console_scripts]
+infinite_image_downloader = infinite_image_downloader.infinite_image_downloader:main
+
