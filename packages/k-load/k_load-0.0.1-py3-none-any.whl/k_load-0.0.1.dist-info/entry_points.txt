@@ -1,0 +1,3 @@
+[console_scripts]
+k-download = k_download.__main__:main
+
