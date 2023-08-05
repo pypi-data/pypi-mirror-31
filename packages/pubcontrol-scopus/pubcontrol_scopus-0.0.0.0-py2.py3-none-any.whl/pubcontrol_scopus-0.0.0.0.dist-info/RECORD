@@ -1,0 +1,13 @@
+pubcontrol_scopus/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pubcontrol_scopus/config.py,sha256=b0e2br5bqfe5yLpIaEc3otxZmIsG8zEWQGCkChEm19o,400
+pubcontrol_scopus/install.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+pubcontrol_scopus/main.py,sha256=VZLEvGJ269ktQ0fzWj7--sqC9dFlvZmQioU8hUofYZ0,7898
+pubcontrol_scopus/observe.py,sha256=1K3-Q-uJAwxGUzOxVPT3msK1cltchK2J6mL0mxzu53k,8809
+pubcontrol_scopus/request.py,sha256=tLN-8XLVelI5LRPw8KMOlfhmHluokwKsdarrpcevJZU,23576
+pubcontrol_scopus/templates/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pubcontrol_scopus-0.0.0.0.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+pubcontrol_scopus-0.0.0.0.dist-info/METADATA,sha256=ShuwT0B101eqOh6t0uJIW2KQUZVQMWy7QRucJSJzRJU,715
+pubcontrol_scopus-0.0.0.0.dist-info/RECORD,,
+pubcontrol_scopus-0.0.0.0.dist-info/WHEEL,sha256=o2k-Qa-RMNIJmUdIc7KU6VWR_ErNRbWNlxDIpl7lm34,110
+pubcontrol_scopus-0.0.0.0.dist-info/metadata.json,sha256=XHh6ae5Ax_2A7YHkJJjeJZwJ5gdUfl0cqfTTFI2-POE,829
+pubcontrol_scopus-0.0.0.0.dist-info/top_level.txt,sha256=LKFaJkCrNt69m7Qf1dkIctepgQIuGyoOxljnZYnnEKs,18
