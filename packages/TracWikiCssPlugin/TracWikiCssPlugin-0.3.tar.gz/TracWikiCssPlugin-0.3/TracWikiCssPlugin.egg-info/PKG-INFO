@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: TracWikiCssPlugin
+Version: 0.3
+Summary: Wiki pages as CSS files Trac Plugin.
+Home-page: https://www.trac-hacks.org/wiki/WikiCssPlugin
+Author: Martin Scharrer
+Author-email: martin@scharrer-online.de
+License: GPLv3
+Description: UNKNOWN
+Keywords: trac plugin wiki css
+Platform: UNKNOWN
+Classifier: Framework :: Trac
