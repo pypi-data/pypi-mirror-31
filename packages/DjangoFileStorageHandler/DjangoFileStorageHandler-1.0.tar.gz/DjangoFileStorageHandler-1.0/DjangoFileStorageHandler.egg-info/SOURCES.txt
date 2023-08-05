@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+DjangoFileStorageHandler.egg-info/PKG-INFO
+DjangoFileStorageHandler.egg-info/SOURCES.txt
+DjangoFileStorageHandler.egg-info/dependency_links.txt
+DjangoFileStorageHandler.egg-info/requires.txt
+DjangoFileStorageHandler.egg-info/top_level.txt

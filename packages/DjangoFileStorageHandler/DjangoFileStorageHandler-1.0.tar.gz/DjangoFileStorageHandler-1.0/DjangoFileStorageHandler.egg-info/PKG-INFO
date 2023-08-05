@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: DjangoFileStorageHandler
+Version: 1.0
+Summary: You can handle your storage files to MINIO, S3 or Local through Settings
+Home-page: http://pypi.python.org/pypi/DjangoFileStorageHandler
+Author: Shashank Shukla
+Author-email: shuklashashank@outlook.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development
+Classifier: Programming Language :: Python :: 3
+Classifier: Framework :: Django
