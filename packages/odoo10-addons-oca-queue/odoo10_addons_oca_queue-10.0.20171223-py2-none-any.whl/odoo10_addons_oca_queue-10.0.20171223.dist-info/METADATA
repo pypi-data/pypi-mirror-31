@@ -1,0 +1,19 @@
+Metadata-Version: 2.0
+Name: odoo10-addons-oca-queue
+Version: 10.0.20171223
+Summary: Meta package for OCA queue Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo10-addon-queue-job
+Requires-Dist: odoo10-addon-queue-job-cron
+Requires-Dist: odoo10-addon-queue-job-subscribe
+Requires-Dist: odoo10-addon-test-queue-job
+
+UNKNOWN
+
+
