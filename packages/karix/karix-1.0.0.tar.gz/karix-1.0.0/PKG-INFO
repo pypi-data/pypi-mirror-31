@@ -1,0 +1,12 @@
+Metadata-Version: 1.0
+Name: karix
+Version: 1.0.0
+Summary: Python helper for karix.io
+Home-page: https://github.com/karixtech/karix-python
+Author: UNKNOWN
+Author-email: support@karix.com
+License: UNKNOWN
+Description:     Karix API lets you interact with the Karix platform. It allows you to query your account, set up webhooks, send messages and buy phone numbers.   # noqa: E501
+            
+Keywords: sms,karix
+Platform: UNKNOWN
