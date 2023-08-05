@@ -1,0 +1,13 @@
+digraph {
+	fake [style=invisible]
+	0 [root=true]
+	1 [shape=doublecircle]
+	2
+	fake -> 0 [style=bold]
+	0 -> 1 [label="frozenset()"]
+	0 -> 1 [label="frozenset({a})"]
+	1 -> 1 [label="frozenset()"]
+	1 -> 1 [label="frozenset({a})"]
+	2 -> 2 [label="frozenset()"]
+	2 -> 2 [label="frozenset({a})"]
+}
