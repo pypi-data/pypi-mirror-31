@@ -1,0 +1,25 @@
+Metadata-Version: 2.0
+Name: odoo10-addons-oca-account-analytic
+Version: 10.0.20170627
+Summary: Meta package for OCA account-analytic Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo10-addon-account-analytic-distribution
+Requires-Dist: odoo10-addon-account-analytic-distribution-required
+Requires-Dist: odoo10-addon-account-analytic-no-lines
+Requires-Dist: odoo10-addon-account-analytic-required
+Requires-Dist: odoo10-addon-account-asset-analytic
+Requires-Dist: odoo10-addon-analytic-base-department
+Requires-Dist: odoo10-addon-analytic-partner
+Requires-Dist: odoo10-addon-analytic-tag-dimension
+Requires-Dist: odoo10-addon-procurement-analytic
+Requires-Dist: odoo10-addon-product-analytic
+
+UNKNOWN
+
+
