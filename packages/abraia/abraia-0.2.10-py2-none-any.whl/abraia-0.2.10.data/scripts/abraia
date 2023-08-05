@@ -1,0 +1,144 @@
+#!python
+from __future__ import division
+from builtins import input
+
+import os
+import sys
+import shutil
+import argparse
+from tqdm import tqdm
+from datetime import datetime
+
+import abraia
+
+IMAGE_EXTS = ['.jpg', '.jpeg', '.png', '.webp']
+
+
+def process_configure():
+    api_key, api_secret = abraia.config.load_auth()
+    key = input('Abraia Api Key [{}]: '.format(api_key))
+    api_key = api_key if key == '' else key
+    secret = input('Abraia Api Secret [{}]: '.format(api_secret))
+    api_secret = api_secret if secret == '' else secret
+    abraia.config.save_auth(api_key, api_secret)
+
+
+def process_batch(args):
+    filenames = []
+    dirname = None
+    path = args['path']
+    dest = args['dest']
+
+    if os.path.isfile(path):
+        filenames.append(path)
+
+    if os.path.isdir(path):
+        dirname = path.rstrip('/').rstrip('\\')
+        for root, subdirs, files in os.walk(path):
+            filenames.extend([os.path.join(root, file) for file in files])
+
+    for filename in tqdm(filenames, unit='file'):
+        path, name = os.path.split(filename)
+        nam, ext = os.path.splitext(name)
+        fileout = os.path.join(path, nam+'_o'+ext)
+        if dirname:
+            relpath = os.path.relpath(path, dirname)
+            if not os.path.exists(os.path.join(dirname+'_o', relpath)):
+                os.makedirs(os.path.join(dirname+'_o', relpath))
+            fileout = os.path.join(dirname+'_o', relpath, nam+ext)
+        if dest is not None:
+            fileout = dest
+        if ext.lower() in IMAGE_EXTS:
+            try:
+                abraia.from_file(filename).resize(
+                    width=args.get('width'),
+                    height=args.get('height')).to_file(fileout)
+            except:
+                shutil.copy2(filename, fileout)
+            if os.path.getsize(fileout) > os.path.getsize(filename):
+                shutil.copy2(filename, fileout)
+            sizein = os.path.getsize(filename) / 1024
+            sizeout = os.path.getsize(fileout) / 1024
+            tqdm.write('[{3:04.1f}%] {1:6.1f}KB -> {2:6.1f}KB ({0})'.format(
+                name, sizein, sizeout, 100 * (1 - sizeout / sizein)))
+        else:
+            shutil.copy2(filename, fileout)
+
+
+def process_analyze(args):
+    result = abraia.from_file(args['path']).analyze()
+    print(result)
+
+
+def process_list():
+    json = abraia.list()
+    files = [(datetime.fromtimestamp(
+        f['date']), f['size'], f['name']) for f in json['files']]
+    txt = '\n'.join(['{}  {:>7}  {}'.format(*f) for f in files])
+    print(txt)
+
+
+def process_remove(args):
+    print(abraia.remove(args['path']))
+
+
+def parse_input():
+    parser = argparse.ArgumentParser(
+        description='Abraia image optimization tool')
+    parser.add_argument('-V', '--version', action='version', version='0.2.10')
+    subparsers = parser.add_subparsers(dest='command')
+    parser_configure = subparsers.add_parser(
+        'configure', help='configure the access keys')
+    parser_optimize = subparsers.add_parser(
+        'optimize', help='optimize the image or directory of images')
+    parser_optimize.add_argument(
+        '--width', type=int, help='resize to specified width')
+    parser_optimize.add_argument(
+        '--height', type=int, help='resize to specified height')
+    parser_optimize.add_argument(
+        'path', nargs='?', help='image path or directory to process')
+    parser_optimize.add_argument(
+        'dest', nargs='?', help='destination directory or image path')
+    parser_analyze = subparsers.add_parser(
+        'analyze', help='analyze the image or diretory of images')
+    parser_analyze.add_argument(
+        'path', nargs='?', help='image path or directory to process')
+    parser_list = subparsers.add_parser('ls', help='list stored files')
+    parser_remove = subparsers.add_parser('rm', help='remove a stored file')
+    parser_remove.add_argument('path', nargs='?', help='image path to remove')
+    args = vars(parser.parse_args())
+
+    if args['command'] is None:
+        parser.print_help()
+        sys.exit()
+    elif args['command'] == 'optimize':
+        if args['path'] is None:
+            parser_optimize.print_help()
+            sys.exit()
+    elif args['command'] == 'analyze':
+        if args['path'] is None:
+            parser_analyze.print_help()
+            sys.exit()
+    elif args['command'] == 'rm':
+        if args['path'] is None:
+            parser_remove.print_help()
+            sys.exit()
+    return args
+
+
+def process_input(args):
+    if args['command'] == 'configure':
+        process_configure()
+    elif args['command'] == 'optimize':
+        process_batch(args)
+    elif args['command'] == 'analyze':
+        process_analyze(args)
+    elif args['command'] == 'ls':
+        process_list()
+    elif args['command'] == 'rm':
+        process_remove(args)
+
+
+if __name__ == "__main__":
+    args = parse_input()
+    process_input(args)
