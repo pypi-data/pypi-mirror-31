@@ -1,0 +1,10 @@
+INSERT INTO ServerDB.client (id, login, password, name, info) VALUES (1, 'john777', '123456789', 'Ivan Ivanov', NULL);
+INSERT INTO ServerDB.client (id, login, password, name, info) VALUES (2, 'rosk1ng', '987654321', 'Fedor Fedorov', NULL);
+INSERT INTO ServerDB.client (id, login, password, name, info) VALUES (3, 'lamer223', '111222333', 'Petr Petrov', NULL);
+INSERT INTO ServerDB.client (id, login, password, name, info) VALUES (4, 'Dreqn1te', 'qwertyuio', 'Andrew Krylov', NULL);
+INSERT INTO ServerDB.client (id, login, password, name, info) VALUES (5, 'Lion123', 'asdfghjkl', 'Konstantin Konstantinov', NULL);
+INSERT INTO ServerDB.client (id, login, password, name, info) VALUES (6, 'Olga89', 'qazwsxedc', 'Olga Olegova', NULL);
+INSERT INTO ServerDB.client (id, login, password, name, info) VALUES (7, 'Rus1k', 'mkonjibhu', 'Ruslan Ruslanov', NULL);
+INSERT INTO ServerDB.client (id, login, password, name, info) VALUES (8, 'Irene', 'rtydfgxcv', 'Irina Romanova', NULL);
+INSERT INTO ServerDB.client (id, login, password, name, info) VALUES (9, 'N4stya', '123890567', 'Anastasiya Belova', NULL);
+INSERT INTO ServerDB.client (id, login, password, name, info) VALUES (10, 'Yar534', 'eufieksks', 'Yaroslav Fedosov', NULL);

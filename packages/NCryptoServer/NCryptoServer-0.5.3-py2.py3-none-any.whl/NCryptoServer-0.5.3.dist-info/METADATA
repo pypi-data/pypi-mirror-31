@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: NCryptoServer
+Version: 0.5.3
+Summary: A server-side application of the NCryptoChat
+Home-page: UNKNOWN
+Author: Andrew Krylov
+Author-email: AndrewKrylovNegovsky@gmail.com
+License: GNU General Public License v3.0
+Keywords: Server,Database,PyQt5,Threads,SQLAlchemy
+Platform: UNKNOWN
+Requires-Dist: SQLAlchemy (>=1.2.6)
+Requires-Dist: PyQt5 (>=5.10.1)
+Requires-Dist: NCryptoTools (>=0.5.2)
+
+UNKNOWN
+
+
