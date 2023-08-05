@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+remedian/__init__.py
+remedian/remedian.py
+remedian.egg-info/PKG-INFO
+remedian.egg-info/SOURCES.txt
+remedian.egg-info/dependency_links.txt
+remedian.egg-info/requires.txt
+remedian.egg-info/top_level.txt
+test/test_remedian.py
