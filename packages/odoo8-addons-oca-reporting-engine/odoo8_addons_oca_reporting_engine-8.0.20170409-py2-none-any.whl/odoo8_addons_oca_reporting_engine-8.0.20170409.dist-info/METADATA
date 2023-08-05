@@ -1,0 +1,23 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-reporting-engine
+Version: 8.0.20170409
+Summary: Meta package for OCA reporting-engine Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo8-addon-bi-view-editor
+Requires-Dist: odoo8-addon-report-custom-filename
+Requires-Dist: odoo8-addon-report-qweb-element-page-visibility
+Requires-Dist: odoo8-addon-report-qweb-signer
+Requires-Dist: odoo8-addon-report-xls
+Requires-Dist: odoo8-addon-report-xlsx
+Requires-Dist: odoo8-addon-report-xml
+Requires-Dist: odoo8-addon-report-xml-sample
+
+UNKNOWN
+
+
