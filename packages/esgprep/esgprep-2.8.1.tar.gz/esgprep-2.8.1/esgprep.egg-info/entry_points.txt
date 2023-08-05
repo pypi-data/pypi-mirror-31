@@ -1,0 +1,6 @@
+[console_scripts]
+esgcheckvocab = esgprep.esgcheckvocab:run
+esgdrs = esgprep.esgdrs:run
+esgfetchini = esgprep.esgfetchini:run
+esgmapfile = esgprep.esgmapfile:run
+
