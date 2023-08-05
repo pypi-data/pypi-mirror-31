@@ -1,0 +1,2 @@
+include README.md MANIFEST LICENSE setup.py bin/IRTools
+recursive-include IRTools *
