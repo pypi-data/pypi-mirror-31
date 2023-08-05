@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: mort
+Version: 0.9.1
+Summary: Debug on exception
+Home-page: https://github.com/brycepg/mort
+Author: Bryce Guinta
+Author-email: contact@bryceguinta.me
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+Requires-Dist: mand
+
+Start debugging on exception. No code changes necessary
+
+# Installation
+
+    pip install mort
+
+# Usage
+
+Invoke mort on any file or module you'd like to debug
+
+    mort file/to/debug.py
+
+pdb will be invoked when an exception occurs.
+
+
