@@ -1,0 +1,10 @@
+[console_scripts]
+pkit = pkit.__main__:main
+
+[pkit.commands]
+csvfilter = pkit.cmd.csvfilter
+csvmerge = pkit.cmd.csvmerge
+finddupes = pkit.cmd.finddupes
+findhash = pkit.cmd.findhash
+mkqtproj = pkit.cmd.mkqtproj
+
