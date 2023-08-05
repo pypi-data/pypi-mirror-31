@@ -1,0 +1,11 @@
+qprop/__init__.py,sha256=DB2IzdETqgWZU-W3wuNJY5KyjylOgACr_hxKsop64wI,103
+qprop/core.py,sha256=IPdzfGFcMGtedas3Yd6bKJlN6FEan1tW55A1IcHNDmU,113464
+qprop/default.py,sha256=qd_lk1sYzv2WbugtQ-Qo_G99m_AFBh495pg_wq2SnOs,212
+qprop/grid.py,sha256=shEuuDN-LdIpWMDDHoE7jAe9p2CUiABDMAmnDFlJbdw,3053
+qprop/util.py,sha256=VSRAOgCTv_4gZ_SOHnZW2X7Bl53nwECVuAWe9Rb_F5k,832
+qprop/version.py,sha256=oUNiFlpAeP40YzpCesvY4cLyKYWhOhFFp_cM7JKl_A8,44
+qprop/wavefunction.py,sha256=VcvC-n7hywIOW6alcrHMJWuwJiET8apph5UMxk_L_EU,11986
+qprop-0.0.3a2.dist-info/METADATA,sha256=wVAEQXlJ0jP_uuenXTdCWo6nDQlgnVnnWJQ54HLEQe0,1014
+qprop-0.0.3a2.dist-info/RECORD,,
+qprop-0.0.3a2.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+qprop-0.0.3a2.dist-info/top_level.txt,sha256=6ADx23iSARzKKUT36nx-U3_7q1lH4ixEQtdny2Sn1QQ,6
