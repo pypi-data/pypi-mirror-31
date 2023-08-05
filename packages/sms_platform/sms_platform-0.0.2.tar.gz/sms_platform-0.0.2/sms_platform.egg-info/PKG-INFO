@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: sms-platform
+Version: 0.0.2
+Summary: multi sms platform sdk
+Home-page: https://github.com/peablog/
+Author: peablog
+Author-email: peablog@qq.com
+License: MIT License
+Description: # sms platform
+        
+Platform: UNKNOWN
+Provides-Extra: test
