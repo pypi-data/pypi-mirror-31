@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: realfast
+Version: 3.3.1
+Summary: Real-time data analysis at the VLA
+Home-page: http://realfast.io
+Author: Casey Law and the realfast team
+Author-email: caseyjlaw@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: rfpipe
+Requires-Dist: evla-mcast
+Requires-Dist: sdmpy
+Requires-Dist: click
+Requires-Dist: elasticsearch
+Requires-Dist: distributed
+Requires-Dist: future
+
+UNKNOWN
+
+
