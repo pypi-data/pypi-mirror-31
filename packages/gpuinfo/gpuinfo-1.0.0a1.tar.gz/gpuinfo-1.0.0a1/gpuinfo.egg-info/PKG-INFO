@@ -1,0 +1,36 @@
+Metadata-Version: 1.1
+Name: gpuinfo
+Version: 1.0.0a1
+Summary: A quick access to nvidia gpu information
+Home-page: UNKNOWN
+Author: Zhang Tianyu
+Author-email: tyz.xyz@qq.com
+License: UNKNOWN
+Description-Content-Type: text/plain
+Description: NAME
+            gpuinfo.GPUInfo
+        
+        FUNCTIONS
+            check_empty()
+                check_empty()
+                return a list containing all GPU ids that no process is using currently.
+            
+            get_info()
+                pid_list,percent,memory,gpu_used=get_info()
+                return a dict and three lists. pid_list has pids as keys and gpu ids as values, showing which gpu the process is using
+            
+            get_user(pid)
+                get_user(pid)
+                Input a pid number , return its creator by linux command ps
+            
+            gpu_usage()
+                gpu_usage()
+                return two lists. The first list contains usage percent of every GPU. The second list contains the memory used of every GPU. The information is obtained by command 'nvidia-smi'
+        
+        
+Keywords: gpu information
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
