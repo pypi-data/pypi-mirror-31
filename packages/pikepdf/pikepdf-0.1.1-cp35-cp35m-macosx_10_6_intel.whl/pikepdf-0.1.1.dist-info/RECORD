@@ -1,0 +1,11 @@
+pikepdf/__init__.py,sha256=dzw8ueiGrDl2KN64oDSXcXeEvj5dQ0tz8TeXOxhJsaE,4541
+pikepdf/_boneyard.py,sha256=-dsjpJLmXc2BhdFuxqDZRe4fEqWf4SqNjR2leRsCQOY,4238
+pikepdf/_cpphelpers.py,sha256=zvX5xs9OsL_0mCy0BVagfwrZ5ZH9NwmjVGRH_0UEYBM,1595
+pikepdf/_pdfimage.py,sha256=3XXFUyiCp62VPgv87Awbwmr0Wz6tlTORO5I5WqjlhHw,3700
+pikepdf/_qpdf.cpython-35m-darwin.so,sha256=XdqoHoHEQBSFYzrP95THEDnROaYery6TBLObBG44Smk,1747352
+pikepdf/.dylibs/libjpeg.9.dylib,sha256=irlgfJtgPMEE_NRtuA-Nzcq9IQw113DzjclgdvV3O7k,207360
+pikepdf/.dylibs/libqpdf.21.dylib,sha256=peEcHFihxGonnuDWz3Vyo_16IRMohcAvP3Id1hHckyM,797048
+pikepdf-0.1.1.dist-info/METADATA,sha256=2dFncHlHd_BoJcLcy6HLiMwO2fjLMkFFHEsltFI_7LA,5691
+pikepdf-0.1.1.dist-info/RECORD,,
+pikepdf-0.1.1.dist-info/top_level.txt,sha256=I9EqKPMWS0R0KipU78RVfZCHdDzZhMrjM4wxykU9l_o,8
+pikepdf-0.1.1.dist-info/WHEEL,sha256=aDgDQQV2wvSwA1hK6nSW5vSPG2oxLySmT77WQe1RRUI,109
