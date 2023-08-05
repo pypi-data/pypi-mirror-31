@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: ipyatom
+Version: 0.1.0
+Summary: a package primarily for interfacing ase/pymatgen with ipyvolume/matplotlib
+Home-page: https://github.com/chrisjsewell/ipyatom
+Author: Chris Sewell
+Author-email: chrisj_sewell@hotmail.com
+License: MIT
+Keywords: python ase pymatgen ipyvolume atoms molecules visualisation
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Requires-Dist: ipywidgets
+Requires-Dist: ipyvolume
+Requires-Dist: pymatgen
+Requires-Dist: jsonschema
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: jsonextended
+Requires-Dist: ase
+Requires-Dist: scipy
+Requires-Dist: numpy
+Requires-Dist: pint
+
+ipyatom
+-------
+
+a package primarily fpr interfacing ase/pymatgen with ipyvolume/matplotlib
+ipyatom
+
