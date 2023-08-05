@@ -1,0 +1,21 @@
+{% extends "suit:admin/base.html" %}
+{% load admin_static suit_tags i18n %}
+
+{% block extrastyle %}
+{{ block.super }}
+<link href="{{ STATIC_URL }}suit/extra_suit.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+{% endblock %}
+
+{% block userlinks %}
+<script>
+  $(function() {
+    $(".vForeignKeyRawIdAdminField").each(function(i) {
+      if (!this.value) { return; }
+      var url = $(this).parent().find(".related-lookup")[0].href.split("?")[0]+this.value+"/";
+      var link = "<a href='"+url+"' class='fa fa-edit' style='text-decoration:none;margin-left: 10px;''></a>"
+      $(this).parent().find("strong").append(link);
+    });
+  });
+</script>
+{% endblock %}

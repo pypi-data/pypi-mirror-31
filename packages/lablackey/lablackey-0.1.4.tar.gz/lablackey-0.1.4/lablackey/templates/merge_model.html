@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block main %}
+{% if original and duplicates %}
+<table class="table">
+  <tr>
+    {% for f in fieldnames %}<th>{{ f }}</th>{% endfor %}
+  </tr>
+  <tr class="alert-success">
+    {% for f in original %}<td>{{ f }}</td>{% endfor %}
+  </tr>
+  {% for duplicate in duplicates %}
+  <tr class="alert-success">
+    {% for f in duplicate %}<td>{{ f }}</td>{% endfor %}
+  </tr>
+  {% endfor %}
+</table>
+{% else %}
+<form method="GET" action=".">
+  {% csrf_token %}
+  <h2>Select Object to Keep</h2>
+  <label>
+    <select name="original">
+      {% for object in objects %}
+      <option value="{{ object.id }}">{{ object }}</option>
+      {% endfor %}
+    </select>
+  </label>
+  <h2>Select Objects to Merge and Delete</h2>
+  {% for object in objects %}
+  <div>
+    <label>
+      <input type="checkbox" value="{{ object.id }}" name="duplicates">
+      {{ object }}
+    </label>
+  </div>
+  {% endfor %}
+  <input type="submit">
+</form>
+{% endif %}
+{% endblock %}

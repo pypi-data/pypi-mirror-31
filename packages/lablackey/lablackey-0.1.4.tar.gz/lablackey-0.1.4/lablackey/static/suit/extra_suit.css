@@ -1,0 +1,58 @@
+.vLargeTextField { width: 95% }
+.tabular.inline-related textarea, .form-horizontal textarea { height: 100px; }
+.form-horizontal .control-group .field-box .controls li { list-style: none; }
+.inline-group .form-row td { position: relative; }
+.inline-group .related-lookup { left: 85px; position: absolute; }
+[type=number],.vIntegerField, #changelist-form .vIntegerField { width: 50px; }
+input[type=color] { height: 28px; padding: 0; width: 28px; }
+select { width: auto; } /* bootstrap override */
+select[multiple] { height: 300px; }
+@media (max-width: 1200px) {
+  /* left column now autohides */
+  .suit-columns { padding-left: 20px; }
+  #suit-left {
+    background-color: white;
+    box-shadow: 0 0 20px black;
+    left: -180px;
+    margin-left: 0;
+    position: absolute;
+    transition: 0.25s;
+    transition-delay: 0.5s;
+    z-index: 3;
+  }
+  #suit-left:hover {
+    left: 0;
+    transition-delay: 0s;
+  }
+  #wrap { background: none; }
+
+  /* shrinking the save box */
+  .save-box .btn.btn-high,.save-box .btn.btn { width: 100%; }
+  .inner-two-columns .inner-right-column { width: 140px; }
+  .inner-two-columns .inner-center-column { margin-right: 150px; }
+}
+
+/* mostly for the pop up */
+@media (max-width: 800px) {
+  .form-horizontal .control-group .controls .selector .selector-chooser { display:none; }
+  .form-horizontal .control-group .control-label { min-width: 80px; }
+  .inner-two-columns .inner-right-column {
+    float: none;
+    position: absolute;
+    right: 0;
+    top: initial;
+    z-index: 1;
+  }
+}
+
+/* clock icon stopped working, not sure why */
+.date-icon,
+.clock-icon,
+.datetime .datetimeshortcuts .date-icon,
+.datetime .datetimeshortcuts .clock-icon {text-indent:200%;white-space:nowrap;overflow:hidden;width:14px;height:14px;background-image:url("../suit/bootstrap/img/glyphicons-halflings.png");background-position:0 -96px;background-repeat:no-repeat;opacity:.6;margin:0;background-color:#F6F7F8;display:inline-block;vertical-align:middle}
+.date-icon,
+.datetime .datetimeshortcuts .date-icon {background-position:-192px -120px}
+.clock-icon,
+.datetime .datetimeshortcuts .clock-icon{text-indent:200%;white-space:nowrap;overflow:hidden;display:inline-block;width:14px;height:14px;background-image:url("../suit/bootstrap/img/glyphicons-halflings.png");background-position:0 -96px;background-repeat:no-repeat;opacity:.6;margin:0;background-position:-48px -24px}
+.date-icon:hover,
+.clock-icon:hover{opacity:1 !important;}

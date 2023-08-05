@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load compress %}
+
+{% block title %}Orientations{% endblock %}
+
+{% block main %}
+<div id="orientations">
+  {% if request.GET.q %}
+  {% if extra_users %}<div class="alert alert-danger">{{ extra_users }}</div>{% endif %}
+  {% for user in users %}
+  {% include "event/_orientation_box.html" %}
+  {% empty %}
+  <h1>No users found matching that criterion</h1>
+  {% endfor %}
+  {% if extra_users %}<div class="alert alert-danger">{{ extra_users }}</div>{% endif %}
+  {% else %}
+  <div>
+    {% if prev_occ %}
+    <a href="/event/orientations/{{ prev_occ.start|date:"Y/m/d" }}/">
+      &laquo; {{ prev_occ.start|date:"M/d/Y" }}</a>
+    {% endif %}
+    {% if next_occ %}
+    <a href="/event/orientations/{{ next_occ.start|date:"Y/m/d" }}/" class="pull-right">
+      {{ next_occ.start|date:"M/d/Y" }} &raquo;</a>
+    {% endif %}
+    <div style="clear: both"></div>
+  </div>
+  {% for eventoccurrence in eventoccurrences %}
+  <h1>{{ eventoccurrence.event.name }}</h1>
+  <h2>{{ eventoccurrence.start|date:"M j, Y @ P" }}</h2>
+    {% for rsvp in eventoccurrence.get_rsvps %}
+    {% include "event/_orientation_box.html" with user=rsvp.user %}
+    {% empty %}
+    <h2>:D No one signed up for this orientation</h2>
+    {% endfor %}
+  {% empty %}
+  <h1>No Orientations at This Date</h1>
+  {% endfor %}
+  {% endif %}
+  <h2>Search All Users</h2>
+  <form action="." method="GET">
+    <input value="{{ request.GET.q }}" name="q" />
+    <input type="submit" value="Search">
+  </form>
+</div>
+{% endblock %}
+
+{% block extrajs %}
+<script>
+  uR.ready(function() { riot.mount("ez-file,set-rfid"); });
+</script>
+{% compress js %}
+<script src="/static/tags/tool.tag" type="riot/tag"></script>
+{% endcompress %}
+{% endblock %}

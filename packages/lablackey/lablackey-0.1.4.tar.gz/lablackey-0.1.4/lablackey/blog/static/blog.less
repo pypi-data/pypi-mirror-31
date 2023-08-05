@@ -1,0 +1,72 @@
+/**
+* Post Detail Style
+*/
+div.post-content {
+  margin: 40px 0 40px 0;
+
+  p {
+    font-size: 14px;
+    line-height: 25px;
+    color: #555;
+  }
+
+  h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+}
+/**
+* Admin area styles
+*/
+#blogForm {
+  label { display: block; }
+  input[type=text] { width: 90%; }
+  #title, #publish_dt, #status, #photo, #tags {
+    float: left;
+    min-width: 300px;
+    width: 40%;
+  }
+  #photo {
+    position: relative;
+    input { width: 60px; }
+    .related-lookup {
+      top: 100%;
+      left: 0;
+      position: absolute;
+      &:before { content: "Open Photo Picker"; }
+    }
+  }
+  #status { width: 20%; min-width: 0; }
+  #content { clear: both; }
+}
+
+#blogForm ul#post-list{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+
+  li {
+    padding: 8px;
+    border-bottom: 1px solid #CCC;
+    &:hover {
+      background-color: #DDD;
+      border-radius: 3px;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+    }
+    a {
+      margin: 0 0 0 10px;
+      font-size: 18px;
+      vertical-align: bottom;
+      line-height: 13px;
+    }
+  }
+
+  span.post-list-date {
+    margin: 0 0 0 10px;
+    vertical-align: bottom;
+    line-height: 11px;
+    color: #777;
+  }
+}

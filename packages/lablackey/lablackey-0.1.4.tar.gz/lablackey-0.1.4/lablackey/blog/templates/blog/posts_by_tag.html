@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}{{ tag.name }} Posts{% endblock %}
+
+{% block header_content %}Posts Tagged {{ tag.name }}{% endblock %}
+{% block extra_head %}
+<link rel="alternate" type="application/rss+xml" href="{{ request.path }}" title="{{ settings.SITE_NAME }}: Posts Tagged {{ tag.name }}" />
+{% endblock %}
+
+{% block content %}
+{% for post in posts %}
+{% include "blog/_content.html" with truncate_posts="True" %}
+{% endfor %}
+{% endblock %}

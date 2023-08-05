@@ -1,0 +1,38 @@
+{% load compress static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block title %}{{ settings.SITE_NAME }}{% endblock %}</title>
+    {% include "_meta.html" %}
+
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>var uR = { _ready: [], ready: function(f) { uR._ready.push(f) } }</script>
+
+    {% include "_css.html" %}
+    <!--[if IE 7]>
+      <link rel="stylesheet" type="text/css" href="/static/design/ie7.css"/>
+    <![endif]-->
+    <!--[if IE 8]>
+      <link rel="stylesheet" type="text/css" href="/static/design/ie8.css"/>
+    <![endif]-->
+
+    {% block extrahead %}{% endblock %}
+    {% block extra-head %}{# compromise =D #}{% endblock %}
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <header>
+        {% include "_nav.html" %}
+      </header>
+      <div id="content">{% block content %}{% endblock %}{% block main %}{% endblock %}</div>
+      <div id="alert-div"></div>
+      <footer></footer>
+    </div>
+    {% csrf_token %}
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/riot/2.6.8/riot.js"></script>
+  {% include "_js.html" %}
+</html>

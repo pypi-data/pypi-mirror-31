@@ -1,0 +1,16 @@
+{% if posts %}
+<ul id="post-list">
+  {% for post in posts|slice:":10" %}
+  {% if post.pk != current_post.pk %}
+  <li>
+    <span class="label label-{% if post.status == 'published' %}success{% else %}warning{% endif %}">
+      {{ post.status }}</span>
+    <a href="{% url "edit" post.pk %}" title="Edit `{{ post.title }}`">
+      "{{ post.title }}"
+    </a>
+    <span class="post-list-date">{{ post.update_dt }}</span>
+  </li>
+  {% endif %}
+  {% endfor %}
+</ul>
+{% endif %}

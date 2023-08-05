@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load thumbnail short_codes txrx_tags %}
+
+{% block title %}{{ event }}{% endblock %}
+{% block header %}{% endblock %}
+
+{% block fb_title %}{{ event }} at {{ settings.SITE_NAME }}{% endblock %}
+{% block fb_description %}{{ event.description|implosivo|escape }}{% endblock %}
+
+{% block main %}
+<h1 class="page_title">
+  {{ event }}
+  {% if request.user.is_superuser %}
+  <a href="/admin/event/event/{{ event.pk }}"><i class="fa fa-pencil-square"></i></a>
+  {% endif %}
+</h1>
+<div class="event-detail row">
+  <div class="col-sm-4 col-md-5">
+    <div class="slide-wrapper">
+      {% include "widgets/thing_slideshow.html" with thing=event %}
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="description">{{ event.description|explosivo }}</div>
+    {% if event.rsvp_cutoff %}
+    <div class="alert alert-warning">{{ event.verbose_rsvp_cutoff }}</div>
+    {% endif %}
+    {% comment %}
+    {% if event.non_custom_repeats %}
+    <h3>This event repeats:</h3>
+    <ul>
+      {% for repeat in event.non_custom_repeats %}
+      <li>{{ repeat.verbose }} {{ repeat.start_time }} - {{ repeat.end_time }}</li>
+      {% endfor %}
+    </ul>
+    <p class="alert alert-warning">
+      This is schedule may change at any time and exceptions may be made for holliday and illness. Be sure to check back here for exact times.
+    </p>
+    {% endif %}
+    {% endcomment %}
+  </div>
+  <div class="col-xs-12 col-sm-4 col-md-3 pull-right" id="side"></div>
+  <script>
+  uR.ready(function() {
+    var user_reservations = {{ rsvps_json|safe }};
+    $.get(
+      "/event/eventdetail_{{ event.pk }}.json",
+      function(data) {
+        data.user_reservations = user_reservations;
+        data.event = data;
+        $("#side").prepend("<event-list>");
+        riot.mount("#side event-list",data);
+      },
+      "json"
+    )
+  });
+  </script>
+</div>
+{% endblock %}
