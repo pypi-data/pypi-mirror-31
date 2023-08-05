@@ -1,0 +1,17 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-stock-logistics-tracking
+Version: 8.0.20180419.0
+Summary: Meta package for oca-stock-logistics-tracking Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo8-addon-stock-packaging-usability
+Requires-Dist: odoo8-addon-stock-packaging-usability-ul
+
+UNKNOWN
+
+
