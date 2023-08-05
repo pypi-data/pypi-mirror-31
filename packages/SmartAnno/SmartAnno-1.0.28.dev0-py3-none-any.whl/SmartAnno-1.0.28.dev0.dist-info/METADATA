@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: SmartAnno
+Version: 1.0.28.dev0
+Summary: A smart snippet annotation tool with deep learning backbone.
+Home-page: https://github.com/jianlins/SmartAnno
+Author: Jianlin
+Author-email: jianlinshi.cn@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/jianlins/SmartAnno/archive/1.0.0.zip
+Keywords: SmartAnno,NLP,annotation,Deep Learning,Machine Learning,semi-supervised
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Text Processing :: Linguistic
+Provides-Extra: tf_gpu
+Provides-Extra: tf
+Requires-Dist: PyRuSH
+Requires-Dist: sqlalchemy-dao
+Requires-Dist: keras
+Requires-Dist: spacy
+Requires-Dist: ipywidgets
+Requires-Dist: jupyter
+Requires-Dist: scikit-learn
+Requires-Dist: numpy
+Requires-Dist: sqlalchemy
+Requires-Dist: colorama
+Requires-Dist: textblob
+Requires-Dist: Whoosh
+Provides-Extra: tf
+Requires-Dist: tensorflow; extra == 'tf'
+Provides-Extra: tf_gpu
+Requires-Dist: tensorflow-gpu; extra == 'tf_gpu'
+
+# SmartAnno
+
+SmartAnno is a semi-automatic annotation tool implemented within jupyter notebook. 
+It uses deep learning model in the backend to learn a smarter and smarter model over time while users annotating the data. 
+It also integrates word embedding, and UMLS synonym heuristics to improve learning rate.
+
+
+
+## Installation
+
+```bash
+pip install smartanno
+```
+
+## How to use
+
+Within a jupyter notebook, add a python cell, type: 
+```python
+from SmartAnno.gui.Main import Main
+main=Main()
+```
+Then, create another python cell, type:
+```python
+main.start()
+```
+Execute these two cells.
+
+
