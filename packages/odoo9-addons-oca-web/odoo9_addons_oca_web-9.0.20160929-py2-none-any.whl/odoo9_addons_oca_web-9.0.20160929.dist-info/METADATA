@@ -1,0 +1,32 @@
+Metadata-Version: 2.0
+Name: odoo9-addons-oca-web
+Version: 9.0.20160929
+Summary: Meta package for OCA web Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo9-addon-web-access-rule-buttons
+Requires-Dist: odoo9-addon-web-dialog-size
+Requires-Dist: odoo9-addon-web-duplicate-visibility
+Requires-Dist: odoo9-addon-web-easy-switch-company
+Requires-Dist: odoo9-addon-web-environment-ribbon
+Requires-Dist: odoo9-addon-web-favicon
+Requires-Dist: odoo9-addon-web-hide-db-manager-link
+Requires-Dist: odoo9-addon-web-notify
+Requires-Dist: odoo9-addon-web-readonly-bypass
+Requires-Dist: odoo9-addon-web-searchbar-full-width
+Requires-Dist: odoo9-addon-web-send-message-popup
+Requires-Dist: odoo9-addon-web-sheet-full-width
+Requires-Dist: odoo9-addon-web-translate-dialog
+Requires-Dist: odoo9-addon-web-tree-image
+Requires-Dist: odoo9-addon-web-widget-color
+Requires-Dist: odoo9-addon-web-widget-float-formula
+Requires-Dist: odoo9-addon-web-widget-image-download
+Requires-Dist: odoo9-addon-web-widget-many2many-tags-multi-selection
+Requires-Dist: odoo9-addon-web-widget-timepicker
+
+UNKNOWN
+
+
