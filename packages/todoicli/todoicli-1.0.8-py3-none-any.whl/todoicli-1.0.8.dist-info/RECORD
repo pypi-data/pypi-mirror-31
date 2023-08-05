@@ -1,0 +1,15 @@
+todoi_cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+todoi_cli/auth.py,sha256=ipikdrfftN4CTXOdPyOkuSyBa-8XST98VSct8xv19nQ,1594
+todoi_cli/checkconfig.py,sha256=r-6Fy7Cqajz2mFwBHev0YtlPSoyT2zeEY-hD8bqoW2Y,649
+todoi_cli/labelcontroller.py,sha256=5HwjAdhgcQV92aC2aAzF741MWOTKnbwnS25T-kUzNy8,744
+todoi_cli/listcontroller.py,sha256=kY4BK-23XWY3LtojMnkVDz6Cs95paR1o7D1whHPSqUc,3808
+todoi_cli/main.py,sha256=GgFfngIlt2E5nNbHrenrSAL_0f4HooVk7HH1k4K8uaI,5236
+todoi_cli/projectcontroller.py,sha256=-6D0TXEGuxobJ1Zz4Ks20c1yvr5eSj0uzaoLzV9FJZc,947
+todoi_cli/synctodoist.py,sha256=1LIOYwql3JZ5RLjlFEJMO4RM1E-EkwKBygjlnX_An6I,610
+todoi_cli/taskcontroller.py,sha256=N9vlx9faQIcVjK5yO4Mg_cHPqHiZtvk4Yg9WQR5w6CU,1637
+todoi_cli/togglcontroller.py,sha256=4VRd2qQ45S4ai8jyuRCqSEG4Grv1ttYdFLUmJRO2CXA,2956
+todoicli-1.0.8.dist-info/METADATA,sha256=ho_F1c5vFCBFAwXHZOH75q7LHdXipJB7p5tfYS1rudw,288
+todoicli-1.0.8.dist-info/RECORD,,
+todoicli-1.0.8.dist-info/WHEEL,sha256=pZyAqgNAylOf0KG_hPHMtuuY08rV3WzWwZu2OTsNnnw,97
+todoicli-1.0.8.dist-info/entry_points.txt,sha256=BnKTrt4nqeT5kPWxDVFbttWp6jkF0--lkZIyylsAo-A,50
+todoicli-1.0.8.dist-info/top_level.txt,sha256=x90AJK3B1zXxlcSGMkxTo8QNM0xb5SJu-JAU7fhk0Sg,10
