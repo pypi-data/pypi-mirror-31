@@ -1,0 +1,3 @@
+[le.parsers]
+lemongo_parser = lemongo:_parser
+
