@@ -1,0 +1,13 @@
+README.rst
+setup.cfg
+setup.py
+backoff_utils/__init__.py
+backoff_utils/_backoff.py
+backoff_utils/_decorator.py
+backoff_utils/_version.py
+backoff_utils/strategies.py
+backoff_utils.egg-info/PKG-INFO
+backoff_utils.egg-info/SOURCES.txt
+backoff_utils.egg-info/dependency_links.txt
+backoff_utils.egg-info/requires.txt
+backoff_utils.egg-info/top_level.txt
