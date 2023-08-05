@@ -1,0 +1,3 @@
+[console_scripts]
+emailme = emailme:cli
+
