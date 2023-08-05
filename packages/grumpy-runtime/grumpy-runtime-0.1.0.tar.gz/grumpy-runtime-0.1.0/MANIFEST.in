@@ -1,0 +1,7 @@
+global-include *.go
+global-include *.mk
+global-exclude *.egg-info
+
+recursive-exclude grumpy-tools-src *.go
+
+prune grumpy-runtime-src/build
