@@ -1,0 +1,19 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-survey
+Version: 8.0.20170409
+Summary: Meta package for OCA survey Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo8-addon-partner-survey
+Requires-Dist: odoo8-addon-survey-one-choice-per-column
+Requires-Dist: odoo8-addon-survey-partner-tag-share
+Requires-Dist: odoo8-addon-survey-percent-question
+
+UNKNOWN
+
+
