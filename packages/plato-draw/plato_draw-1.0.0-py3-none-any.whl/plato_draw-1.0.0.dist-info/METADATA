@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: plato-draw
+Version: 1.0.0
+Summary: Geometry and visualization tools for collections of particles
+Home-page: UNKNOWN
+Author: Matthew Spellings
+Author-email: mspells@umich.edu
+License: BSD
+Project-URL: Documentation, http://plato-draw.readthedocs.io/
+Project-URL: Source, https://bitbucket.org/glotzer/plato
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Multimedia :: Graphics
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Requires-Python: >=3
+Requires-Dist: numpy
+Requires-Dist: scipy
+
+UNKNOWN
+
+
