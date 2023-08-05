@@ -1,0 +1,6 @@
+[console_scripts]
+NCryptoClient_console = NCryptoClient.launcher:main
+
+[gui_scripts]
+NCryptoClient_gui = NCryptoClient.launcher:main
+
