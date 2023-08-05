@@ -1,0 +1,11 @@
+[console_scripts]
+inspekt = inspektor.cli.app:main
+
+[inspektor.app]
+checkall = inspektor.commands.checkall:CheckAllCommand
+github = inspektor.commands.github:GithubCommand
+indent = inspektor.commands.indent:IndentCommand
+license = inspektor.commands.license:LicenseCommand
+lint = inspektor.commands.lint:LintCommand
+style = inspektor.commands.style:StyleCommand
+
