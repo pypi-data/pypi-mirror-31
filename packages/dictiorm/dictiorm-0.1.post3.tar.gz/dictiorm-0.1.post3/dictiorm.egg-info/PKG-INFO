@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: dictiorm
+Version: 0.1.post3
+Summary: A tiny MongoDB ORM that takes zero time to setup because docs become simple dicts.
+Home-page: https://github.com/bmpenuelas/dictiORM
+Author: Borja Penuelas
+Author-email: bmpenuelas@gmail.com
+License: MIT
+Download-URL: https://github.com/bmpenuelas/dictiORM/archive/0.1.post3.tar.gz
+Description: Use your database documents like a simple dictionary variable. Even in functions that expect a dict!
+Keywords: ORM,MongoDB,dictionary,dictiorm
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
