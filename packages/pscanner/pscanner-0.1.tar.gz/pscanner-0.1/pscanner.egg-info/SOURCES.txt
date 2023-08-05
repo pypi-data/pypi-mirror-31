@@ -1,0 +1,12 @@
+README.md
+setup.py
+pscanner/__init__.py
+pscanner/scanner.py
+pscanner.egg-info/PKG-INFO
+pscanner.egg-info/SOURCES.txt
+pscanner.egg-info/dependency_links.txt
+pscanner.egg-info/entry_points.txt
+pscanner.egg-info/requires.txt
+pscanner.egg-info/top_level.txt
+pscanner/cli/__init__.py
+pscanner/cli/__main__.py
