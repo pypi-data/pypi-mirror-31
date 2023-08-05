@@ -1,0 +1,7 @@
+setup.cfg
+setup.py
+bin/cskv
+cskv.egg-info/PKG-INFO
+cskv.egg-info/SOURCES.txt
+cskv.egg-info/dependency_links.txt
+cskv.egg-info/top_level.txt
