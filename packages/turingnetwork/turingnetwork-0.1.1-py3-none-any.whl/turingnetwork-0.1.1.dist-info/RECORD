@@ -1,0 +1,14 @@
+turingnetwork/__init__.py,sha256=RtJ49KRmuocDlFLOK1wx6FaetrPMzQYMUVHR0eKySn8,100
+turingnetwork/backend/cli.py,sha256=UUaSQWF-l3qFGpsEcocPUAkvZX7eXbzTSwApo_ds3tI,824
+turingnetwork/backend/config.py,sha256=F87kTq_kRwYn6anEW1M5k9UbzJIJt5OVSrM7TaHIGJ0,236
+turingnetwork/backend/server.py,sha256=bZ5wXzxl6FlXnFLbQgirwlOcMCn8IkJILu6alP2lAdA,1012
+turingnetwork/backend/utility.py,sha256=Fea6ilBr-dfxY6P5AUObWfBPmP2RpsTJDdBhyq-RB4o,2046
+turingnetwork/client/flmap.py,sha256=Kz6WcIQag7clxlVFRzvtEjdWq_64KCMGMtUBAGmU45U,160
+turingnetwork/client/main.py,sha256=lCFCzx2yw30r__lx4lKJx30Z5LsTRZY4K6su235fXng,994
+turingnetwork/client/python_tracer.py,sha256=mTJdBwn9Osq-NdSsxETcIhieC2NHHO97v_UXnjxa-TI,1233
+turingnetwork-0.1.1.dist-info/LICENSE.txt,sha256=6Szg8ZqdyqkucmEGId4g77-HjsAzXmhcacxs7HzVhWE,1070
+turingnetwork-0.1.1.dist-info/METADATA,sha256=siudhfw-BQQxWmunQzI1jYVmNqwy8AnKb9VXARijohA,3047
+turingnetwork-0.1.1.dist-info/RECORD,,
+turingnetwork-0.1.1.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+turingnetwork-0.1.1.dist-info/entry_points.txt,sha256=hcifxqa_ADQS_IBdegL7G-bFdPqvog3XxMKrfSQF_AA,68
+turingnetwork-0.1.1.dist-info/top_level.txt,sha256=G4sco3ycN95mO2-ZWHfDMsgGNr0ekEodjr9Aa_jKkGY,57

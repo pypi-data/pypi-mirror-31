@@ -1,0 +1,3 @@
+[console_scripts]
+turingnetwork = turingnetwork.backend.server:run
+
