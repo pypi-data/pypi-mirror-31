@@ -1,0 +1,74 @@
+Metadata-Version: 2.1
+Name: aliyunoss2-autoupload
+Version: 0.1a3
+Summary: Watch files in a directory and upload them to Aliyun OSS on file writing completed
+Home-page: https://github.com/tanbro/aliyunoss2-autoupload
+Author: liu xue yan
+Author-email: liu_xue_yan@foxmail.com
+License: AGPLv3+
+Keywords: aliyun oss autoupload
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Topic :: Internet
+Classifier: Topic :: Communications :: File Sharing
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.5
+Requires-Dist: oss2
+Requires-Dist: PyYAML
+
+aliyunoss2-autoupload
+#####################
+
+Monitor files by wildcard patterns, upload them to ALIYUN OSS then move to backup directory
+
+Authors
+*******
+
+* liu xue yan <liu_xue_yan@foxmail.com>
+
+Changelog
+*********
+
+0.1a3
+=====
+The first ever-usable version.
+
+:Date: 2018-04-18
+
+Changes
+-------
+* Now Python 3.5+ ONLY, because ``glob.iglob`` has no ``recursive`` argument and ``"**"`` wildcard in lower Python version
+
+Bug Fixes
+---------
+* Backup directory errors
+* OSS exception
+
+CONTRIBUTING
+************
+
+Contributions are welcome!
+
+It's advised to develop in venv_
+
+::
+
+    /path/of/your/python -m venv .venv
+    source .venv/bin/activate
+    git clone git@github.com:tanbro/aliyunoss2-autoupload.git
+    cd aliyunoss2-autoupload
+    python setup.py develop
+
+.. _venv: https://docs.python.org/library/venv.html
+
+Install
+*******
+
+
