@@ -1,0 +1,16 @@
+Metadata-Version: 2.0
+Name: odoo10-addons-oca-project-reporting
+Version: 10.0.20170829
+Summary: Meta package for OCA project-reporting Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo10-addon-project-task-report
+
+UNKNOWN
+
+
