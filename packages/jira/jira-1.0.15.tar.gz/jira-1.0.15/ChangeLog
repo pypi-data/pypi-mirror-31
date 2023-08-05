@@ -1,0 +1,64 @@
+CHANGES
+=======
+
+1.0.15
+------
+
+* Added applicationKeys parameter to add\_user (#549)
+* travis: assure prereleases are build only on master
+* Install tox-travis before using tox in the build
+* Corrected coverage execution
+* Add async support to fetch pages (#540)
+* Add support for custom session cookies to JIRA (#460)
+* Avoids AttributeError on Jira Error handling
+* travis: use service account for pypi
+* merge fixes develop branch
+* travis: pypi upload fixes
+* Implement cookie based authentication
+* gitignore: correct amps pattern fix
+* docs: replace issues shield badge
+* docs: build fixes
+
+1.0.14
+------
+
+* Fix README.rst images
+
+1.0.12
+------
+
+* Fix setup.cfg: UnicodeDecodeError
+* Add pbr >= 3.0.0 as a module dependency
+* Fix build scripts
+* jirashell: Import InteractiveShellEmbed depending on IPython version
+* Make OPTIONAL default and allowed value of mutual\_authentication
+* Add testing section to contributions
+* Update Contribution Guidlines to be more explicit
+* Place imports on separate lines
+* Touch ChangeLog To Fix PR Checks
+* Fix Continuous Integration Testing
+* Make Kerberos option mutual\_authentication configurable
+* Accept custom authentication URL
+* fixed linting errors
+* Update client.py
+* Allow through TRAVIS Environment Variables
+* Add worklog to transition\_issue()
+* Fixing move\_to\_backlog()
+* Fix bug
+* [client] Support JIRA.close()
+* add add\_user to role resource
+* added .idea/codeStyleSettings.xml to repo
+* contributing.rst: Update JIRA community link
+* contributing.rst: Remove reference to BitBucket
+* Include changelog in description
+* Move requirements extras to setup.cfg
+*  #361 Made ipython a direct dependency
+* build logic and code cleanup
+* Fixed github deploy credentials
+* linting fixes
+* Forcing a rebuild
+* Pass integer ids when creating customer requests
+* Skip Service Desk tests on instances that don't support it
+* Pass ids when creating a customer request
+* Create Service Desk project during testing if it is missing
+* Add a test for create\_customer\_request
