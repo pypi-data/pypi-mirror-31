@@ -1,0 +1,14 @@
+Metadata-Version: 2.0
+Name: dmpdfparserdata
+Version: 1.0.1
+Summary: dmpdfparserdata
+Home-page: https://upload.pypi.org/legacy/dmpdfparserdata
+Author: dataminingmaster
+Author-email: no-email.no-email@mail.com
+License: MIT
+Platform: any
+Requires-Dist: dmpdfparser
+
+dmpdfparserdata
+
+
