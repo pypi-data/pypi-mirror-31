@@ -1,0 +1,15 @@
+Metadata-Version: 2.0
+Name: odoo10-addons-oca-account-invoicing
+Version: 10.0.20161018
+Summary: Meta package for OCA account-invoicing Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo10-addon-account-invoice-check-total
+Requires-Dist: odoo10-addon-account-invoice-supplier-ref-unique
+
+UNKNOWN
+
+
