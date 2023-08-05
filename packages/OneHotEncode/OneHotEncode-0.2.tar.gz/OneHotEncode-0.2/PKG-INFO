@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: OneHotEncode
+Version: 0.2
+Summary: A python script to deploy One-Hot encoding in Pandas Dataframes
+Home-page: https://github.com/singhrahuldps/OneHotEncode.git
+Author: Rahul Singh
+Author-email: singhrahuldps@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/singhrahuldps/OneHotEncode/archive/0.1.tar.gz
+Description: UNKNOWN
+Keywords: pandas,database,one-hot,one,hot,features,categorical,numerical,encode,encoding
+Platform: UNKNOWN
