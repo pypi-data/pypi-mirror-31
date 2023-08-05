@@ -1,0 +1,10 @@
+docker_compose_cleanup/__init__.py,sha256=lwPWkUStcT7Yn8bPzJiltg1RUPRfNEt8MxuYF38kMvQ,132
+docker_compose_cleanup/cli.py,sha256=69d2quKoihLekx6Mlf-xBZb7ngQ1GvL59-PyXG4rWsg,354
+docker_compose_cleanup/docker_compose_cleanup.py,sha256=vTT2cTDVYZXnluMW5BJHd-Rony8ks7CdfrLg2WCgTCY,1656
+docker_compose_cleanup-1.1.0.dist-info/DESCRIPTION.rst,sha256=a-9uLl9f274_63xjrMl-7C9_g7oQ2hFNwSExcG3f0yI,1779
+docker_compose_cleanup-1.1.0.dist-info/METADATA,sha256=6bkJOa5YJp2OhmYyeFj0nLpT34NQ-3Vb-LOeuY_k_24,2590
+docker_compose_cleanup-1.1.0.dist-info/RECORD,,
+docker_compose_cleanup-1.1.0.dist-info/WHEEL,sha256=kdsN-5OJAZIiHN-iO4Rhl82KyS0bDWf4uBwMbkNafr8,110
+docker_compose_cleanup-1.1.0.dist-info/entry_points.txt,sha256=FYRIG2xYC3x2AdUDF-4ccWu8CNApvLcyCsf_TDodoZk,123
+docker_compose_cleanup-1.1.0.dist-info/metadata.json,sha256=nC3Wsc15dEnc5kSI5ZbGFttHoTKjPV315XK_MzN0COI,1302
+docker_compose_cleanup-1.1.0.dist-info/top_level.txt,sha256=pFcU3nRFLAzllj0kyVW_c2FVFMDSHKzN-eL3lz1OYlY,23
