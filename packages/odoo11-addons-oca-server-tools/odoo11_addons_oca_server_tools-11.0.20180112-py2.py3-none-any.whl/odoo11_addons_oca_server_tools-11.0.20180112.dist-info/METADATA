@@ -1,0 +1,19 @@
+Metadata-Version: 2.0
+Name: odoo11-addons-oca-server-tools
+Version: 11.0.20180112
+Summary: Meta package for OCA server-tools Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo11-addon-auditlog
+Requires-Dist: odoo11-addon-base-exception
+Requires-Dist: odoo11-addon-module-auto-update
+Requires-Dist: odoo11-addon-sentry
+
+UNKNOWN
+
+
