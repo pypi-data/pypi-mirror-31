@@ -1,0 +1,22 @@
+Metadata-Version: 2.0
+Name: odoo9-addons-oca-manufacture
+Version: 9.0.20170610
+Summary: Meta package for OCA manufacture Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo9-addon-mrp-bom-component-menu
+Requires-Dist: odoo9-addon-mrp-bom-dismantling
+Requires-Dist: odoo9-addon-mrp-bom-note
+Requires-Dist: odoo9-addon-mrp-production-note
+Requires-Dist: odoo9-addon-mrp-production-partner-note
+Requires-Dist: odoo9-addon-mrp-production-raw-material-procurement-group
+Requires-Dist: odoo9-addon-mrp-sale-info
+
+UNKNOWN
+
+
