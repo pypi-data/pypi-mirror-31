@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: hwinfo
+Version: 0.1.0
+Summary: System informations
+Home-page: http://github.com/ipselium/hwinfo
+Author: Cyril Desjouy
+Author-email: ipselium@free.fr
+License: GPL
+Description: # hwinfo
+        
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Description-Content-Type: text/markdown
