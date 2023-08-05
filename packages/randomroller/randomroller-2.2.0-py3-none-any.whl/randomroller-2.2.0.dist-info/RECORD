@@ -1,0 +1,11 @@
+randomroller/__init__.py,sha256=RTyFb0_s8alYKEC0PdXhKsll8Nbl5LXTkvqEXuuxVVQ,175
+randomroller/_version.py,sha256=H36_xZ55eYd0sVgbZn14yN1Jltbn7Q-1giUCGZck42w,497
+randomroller/cli.py,sha256=mlzp_VpAd8v1myXenGdRyFWcP75jJ3hAuzl_zLvMFXc,616
+randomroller/dice.py,sha256=Aa7jugmzVEivBZcFmlO4-P2UmJgqV9FQvosOELjXN3A,1020
+randomroller/die.py,sha256=ZfZDtT5LacqehTYfMC58sS3yBcTf-OJtw7Gtu-lOLjQ,764
+randomroller/truerng.py,sha256=UtKtBXldQF2lOjeUyZnQ2kacv9zKr_71t0PJoFwotOc,1683
+randomroller-2.2.0.dist-info/METADATA,sha256=wz2C4PLgG6W36eH3b9EpK4591KVWT_Ct1xCK4xjdWNE,270
+randomroller-2.2.0.dist-info/RECORD,,
+randomroller-2.2.0.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+randomroller-2.2.0.dist-info/entry_points.txt,sha256=o_2n1H_GDWHXGqrEc5iqT25E9f3AyArRDYKnG5irvI0,46
+randomroller-2.2.0.dist-info/top_level.txt,sha256=vcwwR55RDIJpeBvrKJrQgkg0gr367tUy2tqH1OtY9SI,13
