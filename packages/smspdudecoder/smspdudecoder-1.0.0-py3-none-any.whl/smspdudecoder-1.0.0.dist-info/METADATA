@@ -1,0 +1,17 @@
+Metadata-Version: 2.0
+Name: smspdudecoder
+Version: 1.0.0
+Summary: Qotto/smspdu
+Home-page: https://github.com/qotto/smspdu
+Author: Alexandre Syenchuk
+Author-email: sacha@qotto.net
+License: MIT
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: bitstring (>=3.1)
+
+UNKNOWN
+
+
