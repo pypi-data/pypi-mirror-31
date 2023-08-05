@@ -1,0 +1,12 @@
+matrix_client/__init__.py,sha256=AgV4K_8LqkE04uDji5o0NYEXovAWe05AjskN-t-XTW4,46
+matrix_client/api.py,sha256=b2hWMV9FYjPnu3tFj1afYGIrTaqjDbOxFqsOGNKNloc,26722
+matrix_client/client.py,sha256=Ju0USlVt8Pri9xwKpD4m1v61ml1l1B74f1Q4XmqjrKk,21518
+matrix_client/errors.py,sha256=WaM2L9Cw-RAwS4j-VA1rQ17qbnqlSuvHyrRK6h5VxZU,1125
+matrix_client/room.py,sha256=yME7n7i7rDf77NfyYngecNJOee2Dns4pH6QJzsLUlb4,21617
+matrix_client/user.py,sha256=Fp5wxk3j3E95GcooTU57rbneBcGCCicJkfiCq5tgN5A,1595
+matrix_client-0.2.0.dist-info/DESCRIPTION.rst,sha256=1L2YVpBkryFNQqelGBuyy2xDtDtXtpUpacdxFczVIHE,2943
+matrix_client-0.2.0.dist-info/METADATA,sha256=fQTRZJXRSeCsDI19_XS9mS0y1NwqT-f3BEzbdcbpfzg,4016
+matrix_client-0.2.0.dist-info/RECORD,,
+matrix_client-0.2.0.dist-info/WHEEL,sha256=kdsN-5OJAZIiHN-iO4Rhl82KyS0bDWf4uBwMbkNafr8,110
+matrix_client-0.2.0.dist-info/metadata.json,sha256=cH-I8ohkGEARHJBMyRSHqSR2Mo4SVetH3TNQ3OvZ8rI,1165
+matrix_client-0.2.0.dist-info/top_level.txt,sha256=TDFBRmhdQc4aekyKuOfEmAKZqXL0Wa0RAGumTUhm_AY,14
