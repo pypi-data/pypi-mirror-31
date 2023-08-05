@@ -1,0 +1,33 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-l10n-argentina
+Version: 8.0.20180419.0
+Summary: Meta package for oca-l10n-argentina Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo8-addon-base-vat-ar
+Requires-Dist: odoo8-addon-l10n-ar-account-check
+Requires-Dist: odoo8-addon-l10n-ar-account-create-check
+Requires-Dist: odoo8-addon-l10n-ar-account-payment
+Requires-Dist: odoo8-addon-l10n-ar-bank-statement
+Requires-Dist: odoo8-addon-l10n-ar-base-country-state
+Requires-Dist: odoo8-addon-l10n-ar-cash-register
+Requires-Dist: odoo8-addon-l10n-ar-chart-of-account
+Requires-Dist: odoo8-addon-l10n-ar-electronic-invoice-storage-rg1361
+Requires-Dist: odoo8-addon-l10n-ar-perceptions-basic
+Requires-Dist: odoo8-addon-l10n-ar-point-of-sale
+Requires-Dist: odoo8-addon-l10n-ar-retentions-basic
+Requires-Dist: odoo8-addon-l10n-ar-sale-order
+Requires-Dist: odoo8-addon-l10n-ar-tax-reports
+Requires-Dist: odoo8-addon-l10n-ar-wsaa
+Requires-Dist: odoo8-addon-l10n-ar-wsfe
+Requires-Dist: odoo8-addon-l10n-ar-wsfe-jasper
+Requires-Dist: odoo8-addon-l10n-ar-wsfe-perceptions
+
+UNKNOWN
+
+
