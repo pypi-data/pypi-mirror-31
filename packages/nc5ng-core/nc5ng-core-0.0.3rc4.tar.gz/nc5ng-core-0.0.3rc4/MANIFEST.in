@@ -1,0 +1,5 @@
+include src/Subs/*.f
+include src/Subs/*.for
+include nc5ng/core/*.pyf
+include nc5ng/**/*.py
+recursive-include nc5ng/nc5data/data *
