@@ -1,0 +1,11 @@
+Metadata-Version: 1.1
+Name: es_logger
+Version: 2.0
+Summary: Framework for Creating Logstash events from Jenkins Jobs
+Home-page: UNKNOWN
+Author: JP Sullivan (j3p0uk)
+Author-email: jonpsull@cisco.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: Any
+Provides: es_logger
