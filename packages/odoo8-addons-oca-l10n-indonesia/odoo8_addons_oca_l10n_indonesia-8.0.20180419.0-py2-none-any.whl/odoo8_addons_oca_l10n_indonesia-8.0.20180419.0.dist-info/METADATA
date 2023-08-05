@@ -1,0 +1,20 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-l10n-indonesia
+Version: 8.0.20180419.0
+Summary: Meta package for oca-l10n-indonesia Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo8-addon-l10n-id-taxform
+Requires-Dist: odoo8-addon-l10n-id-taxform-employee-joining-period
+Requires-Dist: odoo8-addon-l10n-id-taxform-period
+Requires-Dist: odoo8-addon-l10n-id-taxform-pph-21
+Requires-Dist: odoo8-addon-l10n-id-taxform-pph-21-payslip
+
+UNKNOWN
+
+
