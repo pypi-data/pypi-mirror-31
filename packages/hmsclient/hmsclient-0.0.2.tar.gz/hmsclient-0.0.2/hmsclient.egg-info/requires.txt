@@ -1,0 +1,8 @@
+thrift
+click
+
+[dev]
+pytest
+
+[test]
+pytest
