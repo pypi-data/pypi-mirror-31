@@ -1,0 +1,12 @@
+py_fake_server/__init__.py,sha256=4F6e-uIus2EfF2k4IHAfPp-9nAyXOeSD9v8oWuK4C5U,67
+py_fake_server/endpoint.py,sha256=yn1fo8-WVzULQzHxf7SfzIHJKhwTgXXV-Ws5jhlA2r4,2119
+py_fake_server/request.py,sha256=qDsdwxZ5CMFeIzK3A-GQ7koYjAIMM7NIa-8cPagu9GE,898
+py_fake_server/response.py,sha256=bseX4K6izS7-LpOowq74ra8aBFQbqIERzwwhbkS33Y4,1262
+py_fake_server/route.py,sha256=ARTOMoZ8KXWLtffpS1fU3H-QtI3qHw5uD1cOlTakRuA,351
+py_fake_server/server.py,sha256=gnr5kc9HW1KuNyNw1TgbaivSStnYMP0LIhwYYhZxzZw,3444
+py_fake_server/statistic.py,sha256=llDWHqYwAQvnkNRqMk4za7Z7IFeM2mQ2hA86xsUZR5g,4913
+py_fake_server/validators.py,sha256=XIdn0tsoG0q61fk4rWjbyj16_7iy5AC9hFin3GikcQk,4088
+py_fake_server-0.2.1.dist-info/METADATA,sha256=3U2d3wD3LjK4osJVuEBRbxX6FYVBdeSoPpmSi86KuEQ,483
+py_fake_server-0.2.1.dist-info/RECORD,,
+py_fake_server-0.2.1.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+py_fake_server-0.2.1.dist-info/top_level.txt,sha256=S_yi9GLpHtRYnXJUlXYlrSF3yGmi0bkrkJI8fgBuGGg,15
