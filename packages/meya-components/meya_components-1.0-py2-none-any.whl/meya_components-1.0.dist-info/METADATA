@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: meya-components
+Version: 1.0
+Summary: Minimal runtime for testing Meya custom Python components locally.
+Home-page: UNKNOWN
+Author: Meya.ai
+Author-email: support@meya.ai
+License: Apache License 2.0
+Platform: UNKNOWN
+Requires-Dist: marshmallow (==2.15.0)
+
+UNKNOWN
+
+
