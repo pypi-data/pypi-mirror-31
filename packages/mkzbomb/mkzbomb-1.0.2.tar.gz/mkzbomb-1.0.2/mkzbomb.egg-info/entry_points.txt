@@ -1,0 +1,3 @@
+[console_scripts]
+mkzbomb = mkzbomb.mkzbomb:main
+
