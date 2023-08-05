@@ -1,0 +1,37 @@
+Metadata-Version: 2.0
+Name: odoo9-addons-oca-purchase-workflow
+Version: 9.0.20170829
+Summary: Meta package for OCA purchase-workflow Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo9-addon-procurement-purchase-no-grouping
+Requires-Dist: odoo9-addon-product-by-supplier
+Requires-Dist: odoo9-addon-product-supplier-code-purchase
+Requires-Dist: odoo9-addon-product-supplierinfo-discount
+Requires-Dist: odoo9-addon-purchase-date-planned-manual
+Requires-Dist: odoo9-addon-purchase-delivery-split-date
+Requires-Dist: odoo9-addon-purchase-discount
+Requires-Dist: odoo9-addon-purchase-fiscal-position-update
+Requires-Dist: odoo9-addon-purchase-location-by-line
+Requires-Dist: odoo9-addon-purchase-open-qty
+Requires-Dist: odoo9-addon-purchase-order-approved
+Requires-Dist: odoo9-addon-purchase-order-type
+Requires-Dist: odoo9-addon-purchase-order-variant-mgmt
+Requires-Dist: odoo9-addon-purchase-picking-state
+Requires-Dist: odoo9-addon-purchase-request
+Requires-Dist: odoo9-addon-purchase-request-department
+Requires-Dist: odoo9-addon-purchase-request-procurement
+Requires-Dist: odoo9-addon-purchase-request-to-procurement
+Requires-Dist: odoo9-addon-purchase-request-to-requisition
+Requires-Dist: odoo9-addon-purchase-request-to-rfq
+Requires-Dist: odoo9-addon-purchase-request-to-rfq-order-approved
+Requires-Dist: odoo9-addon-subcontracted-service
+
+UNKNOWN
+
+
