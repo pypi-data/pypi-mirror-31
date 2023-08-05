@@ -1,0 +1,15 @@
+Metadata-Version: 2.0
+Name: photo-gen
+Version: 0.3
+Summary: Generate HTML galleries from a folder of folder of jpegs
+Home-page: http://github.com/hjertnes/photo2
+Author: Eivind Hjertnes
+Author-email: me@hjertnes.me
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: pillow
+Requires-Dist: jinja2
+
+UNKNOWN
+
+
