@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+bottle_errorsrest.py
+setup.py
+bottle_errorsrest.egg-info/PKG-INFO
+bottle_errorsrest.egg-info/SOURCES.txt
+bottle_errorsrest.egg-info/dependency_links.txt
+bottle_errorsrest.egg-info/not-zip-safe
+bottle_errorsrest.egg-info/requires.txt
+bottle_errorsrest.egg-info/top_level.txt
