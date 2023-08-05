@@ -1,0 +1,11 @@
+foliant/cli/init/__init__.py,sha256=BToXCu_vIy9V0JAD5JmICPhQm7s7ZIKRPTK6PyyhHG4,5442
+foliant/cli/init/templates/base/Dockerfile,sha256=HyWV88sPmdA3lTUF2efGS-O0wB2MG1HKRIql6crCxII,190
+foliant/cli/init/templates/base/README.md,sha256=U2G2ea4BafSoTLgwoR8mdFOis3WGlTLSCFLtnAG3auk,334
+foliant/cli/init/templates/base/docker-compose.yml,sha256=M9KTYgvgfFyANLwS0LDrqyrxn3Vvf6JM6dJJ1tKzobI,112
+foliant/cli/init/templates/base/foliant.yml,sha256=HzoG8tRyiCeR3R6ykRknBQInGyEQW3nyGt4NWmQaSFo,38
+foliant/cli/init/templates/base/requirements.txt,sha256=deZPjjlF7kKZipKOY9RohTwX0M4dj_7It4xyZ627wmE,128
+foliant/cli/init/templates/base/src/index.md,sha256=eQtA3salNgdeE5Ac-SIQJMLNVvkhls8VlHPNdzrkYtY,45
+foliantcontrib.init-1.0.4.dist-info/METADATA,sha256=5UUUCUELvGdCkSSkWbH4elk6_WzRyeqpRHi0bflbV-4,2791
+foliantcontrib.init-1.0.4.dist-info/RECORD,,
+foliantcontrib.init-1.0.4.dist-info/WHEEL,sha256=pZyAqgNAylOf0KG_hPHMtuuY08rV3WzWwZu2OTsNnnw,97
+foliantcontrib.init-1.0.4.dist-info/top_level.txt,sha256=5uvI8ZIgBWKY09Z8Xs4ESLGD7yAEGbiLvIrdHdaC9mE,8
