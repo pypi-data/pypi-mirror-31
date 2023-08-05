@@ -1,0 +1,11 @@
+colorlog
+configobj
+anytree
+typing_extensions
+jinja2
+cypyler
+
+[docs]
+sphinx
+sphinx_autodoc_typehints
+sphinx_rtd_theme
