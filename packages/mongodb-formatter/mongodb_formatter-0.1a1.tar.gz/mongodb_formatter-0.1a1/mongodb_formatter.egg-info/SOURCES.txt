@@ -1,0 +1,10 @@
+setup.py
+mongodb_formatter/__init__.py
+mongodb_formatter/formatter.py
+mongodb_formatter/nested_dict.py
+mongodb_formatter/setup.py
+mongodb_formatter.egg-info/PKG-INFO
+mongodb_formatter.egg-info/SOURCES.txt
+mongodb_formatter.egg-info/dependency_links.txt
+mongodb_formatter.egg-info/requires.txt
+mongodb_formatter.egg-info/top_level.txt
