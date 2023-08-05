@@ -1,0 +1,12 @@
+pandas_schema/__init__.py,sha256=FGMdeGREyJ6MisAUx_1bqBCvdXefeAwBOmT2CAwD9R8,104
+pandas_schema/column.py,sha256=IARcC2naKq4mQ4n8xSqAqSRWH7BQeVuLTYrsF_82JF0,1246
+pandas_schema/errors.py,sha256=6bLYDMbVjKAUc7kavEClhZmpNbCIFXud39j_0WMhCb0,352
+pandas_schema/schema.py,sha256=W5PlrEKHesp_oBl99C3ndPrSVrdayFpJ0GdgR0VkDEY,3893
+pandas_schema/validation.py,sha256=yBZvGsnz2Gf_dzCzMbkCQ3aesXXYhGCfomklTcc1Znk,13919
+pandas_schema/validation_warning.py,sha256=S47R4bkSc4nQPYdZgOiaR2XN20NxQDtHGdekz7LCf9k,937
+pandas_schema-0.3.2.dist-info/DESCRIPTION.rst,sha256=CDl2zItBVQwKyXUlzF5nrw4zfF6bIbVdah-PveNn5CU,2197
+pandas_schema-0.3.2.dist-info/METADATA,sha256=9wwiJBKvrCtX694Cry_X_W2sALDM2OHp5_uzgIVPH8k,2824
+pandas_schema-0.3.2.dist-info/RECORD,,
+pandas_schema-0.3.2.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+pandas_schema-0.3.2.dist-info/metadata.json,sha256=ph6uLaSObTM-HUg-w2bGbbdpvP3z_kM-VlvHNOnYwWE,825
+pandas_schema-0.3.2.dist-info/top_level.txt,sha256=N_LWoVSpmKJVUloKYZo43AMSt17KK6fOy_3FKhMkolA,14
