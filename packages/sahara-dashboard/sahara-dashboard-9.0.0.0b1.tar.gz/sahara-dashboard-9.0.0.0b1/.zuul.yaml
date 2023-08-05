@@ -1,0 +1,26 @@
+- project:
+    check:
+      jobs:
+        - sahara-dashboard-tox-py35dj20:
+            voting: false
+
+        - openstack-tox-lower-constraints
+    gate:
+      jobs:
+        - openstack-tox-lower-constraints
+- job:
+    name: sahara-dashboard-tox-base
+    parent: openstack-tox
+    required-projects:
+      - openstack/horizon
+    irrelevant-files:
+      - ^.*\.rst$
+      - ^doc/.*$
+      - ^releasenotes/.*$
+      - ^sahara_dashboard/locale/.*$
+
+- job:
+    name: sahara-dashboard-tox-py35dj20
+    parent: sahara-dashboard-tox-base
+    vars:
+      tox_envlist: py35dj20
