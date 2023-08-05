@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: scilicet
+Version: 0.2
+Summary: A VobSub to SRT conversion library
+Home-page: https://github.com/sl1msn1per/scilicet
+Author: Liam Pulles
+Author-email: sl1msn1per@live.com
+License: MIT
+Keywords: vobsub subtitle ocr text srt
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Natural Language :: English
+Classifier: Topic :: Multimedia
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering :: Image Recognition
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Utilities
+Requires-Python: >=3
+Description-Content-Type: text/x-rst
+
+scilicet
+********
+A VobSub to text conversion library which uses template matching through a hash table.
+
