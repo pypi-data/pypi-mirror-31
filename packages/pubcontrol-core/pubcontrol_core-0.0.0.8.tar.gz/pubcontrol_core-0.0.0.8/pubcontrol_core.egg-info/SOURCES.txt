@@ -1,0 +1,15 @@
+MANIFEST.in
+setup.py
+pubcontrol/config.py
+pubcontrol/database.py
+pubcontrol/hook.py
+pubcontrol/install.py
+pubcontrol/main.py
+pubcontrol/plugin.py
+pubcontrol/register.py
+pubcontrol/templates/ini/config.j2
+pubcontrol_core.egg-info/PKG-INFO
+pubcontrol_core.egg-info/SOURCES.txt
+pubcontrol_core.egg-info/dependency_links.txt
+pubcontrol_core.egg-info/requires.txt
+pubcontrol_core.egg-info/top_level.txt
