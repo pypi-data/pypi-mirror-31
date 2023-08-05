@@ -1,0 +1,36 @@
+Metadata-Version: 2.0
+Name: odoo10-addons-oca-sale-workflow
+Version: 10.0.20170823
+Summary: Meta package for OCA sale-workflow Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo10-addon-sale-automatic-workflow
+Requires-Dist: odoo10-addon-sale-automatic-workflow-exception
+Requires-Dist: odoo10-addon-sale-automatic-workflow-payment-mode
+Requires-Dist: odoo10-addon-sale-cancel-reason
+Requires-Dist: odoo10-addon-sale-commercial-partner
+Requires-Dist: odoo10-addon-sale-exception
+Requires-Dist: odoo10-addon-sale-isolated-quotation
+Requires-Dist: odoo10-addon-sale-layout-hidden
+Requires-Dist: odoo10-addon-sale-order-line-sequence
+Requires-Dist: odoo10-addon-sale-order-lot-generator
+Requires-Dist: odoo10-addon-sale-order-lot-selection
+Requires-Dist: odoo10-addon-sale-order-margin-percent
+Requires-Dist: odoo10-addon-sale-order-price-recalculation
+Requires-Dist: odoo10-addon-sale-order-revision
+Requires-Dist: odoo10-addon-sale-order-type
+Requires-Dist: odoo10-addon-sale-owner-stock-sourcing
+Requires-Dist: odoo10-addon-sale-product-set
+Requires-Dist: odoo10-addon-sale-product-set-layout
+Requires-Dist: odoo10-addon-sale-rental
+Requires-Dist: odoo10-addon-sale-start-end-dates
+Requires-Dist: odoo10-addon-sale-validity
+
+UNKNOWN
+
+
