@@ -1,0 +1,20 @@
+Metadata-Version: 2.0
+Name: LambdaTool
+Version: 0.4.0
+Summary: Python Lambda utility
+Home-page: UNKNOWN
+Author: Chuck Muckamuck
+Author-email: Chuck.Muckamuck@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: Click (>=6.7)
+Requires-Dist: GitPython (>=2.1.7)
+Requires-Dist: Mako (>=1.0.6)
+Requires-Dist: PyYAML (>=3.12)
+Requires-Dist: boto3 (>=1.4.3)
+Requires-Dist: pymongo (>=3.4.0)
+Requires-Dist: stackility (>=0.3)
+
+UNKNOWN
+
+
