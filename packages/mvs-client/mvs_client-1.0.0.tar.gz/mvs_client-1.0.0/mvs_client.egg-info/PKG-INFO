@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: mvs-client
+Version: 1.0.0
+Summary: MVS API Client
+Home-page: https://github.com/Ar4ikov/MVS
+Author: Nikita Archikov
+Author-email: bizy18588@gmail.com
+License: MIT License
+Description: UNKNOWN
+Keywords: MAV MVS MVS_Client mvs mvs_client
+Platform: UNKNOWN
+Requires: requests
