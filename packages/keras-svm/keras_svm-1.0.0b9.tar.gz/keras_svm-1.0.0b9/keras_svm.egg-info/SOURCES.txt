@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+keras_svm/__init__.py
+keras_svm/model_svm_wrapper.py
+keras_svm.egg-info/PKG-INFO
+keras_svm.egg-info/SOURCES.txt
+keras_svm.egg-info/dependency_links.txt
+keras_svm.egg-info/requires.txt
+keras_svm.egg-info/top_level.txt
