@@ -1,0 +1,381 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Development &mdash; Terrarium 1.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Release Notes" href="release_notes.html" />
+    <link rel="prev" title="User Guide" href="user_guide.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Terrarium
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide.html">User Guide</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installing-requirements">Installing requirements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#using-pip">Using pip</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#building-the-documentation-locally">Building the documentation locally</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-tests">Running tests</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#running-tests-with-tox">Running tests with tox</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#setting-up-tox">Setting up tox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#running-tox">Running tox</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-involved">Getting involved</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pull-request-checklist">Pull Request Checklist</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#release-process">Release process</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="release_notes.html">Release Notes</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Terrarium</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Development</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/development.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="development">
+<h1>Development<a class="headerlink" href="#development" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="installing-requirements">
+<h2>Installing requirements<a class="headerlink" href="#installing-requirements" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="using-pip">
+<h3>Using pip<a class="headerlink" href="#using-pip" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pip install -r requirements/docs.txt -r requirements/testing.txt
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="building-the-documentation-locally">
+<h2>Building the documentation locally<a class="headerlink" href="#building-the-documentation-locally" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">Install the documentation requirements:</p>
+<div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pip install -r requirements/docs.txt
+</pre></div>
+</div>
+</li>
+<li><p class="first">Change directory to <code class="docutils literal notranslate"><span class="pre">docs</span></code> and run <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code>:</p>
+<div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> docs
+<span class="gp">$</span> make html
+</pre></div>
+</div>
+</li>
+<li><p class="first">Load HTML documentation in a web browser of your choice:</p>
+<div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> firefox docs/_build/html/index.html
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="running-tests">
+<h2>Running tests<a class="headerlink" href="#running-tests" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">Install the development requirements:</p>
+<div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pip install -r requirements/testing.txt
+</pre></div>
+</div>
+</li>
+<li><p class="first">Run <code class="docutils literal notranslate"><span class="pre">nosetests</span></code> in the project root.</p>
+<div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> nosetests
+</pre></div>
+</div>
+</li>
+</ol>
+<p>To run all tests against all supported versions of python,
+use <code class="docutils literal notranslate"><span class="pre">tox</span></code>.</p>
+<div class="section" id="running-tests-with-tox">
+<h3>Running tests with tox<a class="headerlink" href="#running-tests-with-tox" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">tox</span></code> allows us to use
+one command to
+run tests against
+all versions of python
+that we support.</p>
+<div class="section" id="setting-up-tox">
+<h4>Setting up tox<a class="headerlink" href="#setting-up-tox" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic">
+<li><p class="first">Decide how you want to manage multiple python versions.</p>
+<ol class="arabic simple">
+<li>System level using a package manager such as <code class="docutils literal notranslate"><span class="pre">apt-get</span></code>.
+This approach will likely require adding additional
+<code class="docutils literal notranslate"><span class="pre">apt-get</span></code> sources
+in order to install
+alternative versions of python.</li>
+<li>Use <a class="reference external" href="https://github.com/yyuu/pyenv-installer#installation">pyenv</a>
+to manage and install multiple python versions.
+After installation,
+see the
+<a class="reference external" href="https://github.com/yyuu/pyenv/blob/master/COMMANDS.md">pyenv command reference</a>.</li>
+</ol>
+</li>
+<li><p class="first">Install <code class="docutils literal notranslate"><span class="pre">tox</span></code>.</p>
+<div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pip install tox
+</pre></div>
+</div>
+</li>
+<li><p class="first"><a class="reference external" href="http://tox.readthedocs.org/en/latest">Configure tox</a>.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="running-tox">
+<h4>Running tox<a class="headerlink" href="#running-tox" title="Permalink to this headline">¶</a></h4>
+<p>Now that you have <code class="docutils literal notranslate"><span class="pre">tox</span></code> setup,
+you just need to run
+the command <code class="docutils literal notranslate"><span class="pre">tox</span></code>
+from the project root directory.</p>
+<div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> tox
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="getting-involved">
+<h2>Getting involved<a class="headerlink" href="#getting-involved" title="Permalink to this headline">¶</a></h2>
+<p>The terrarium project welcomes help in any of the following ways:</p>
+<ul class="simple">
+<li>Making pull requests on github for code,
+tests and documentation.</li>
+<li>Participating on open issues and pull requests,
+reviewing changes</li>
+</ul>
+<div class="section" id="pull-request-checklist">
+<h3>Pull Request Checklist<a class="headerlink" href="#pull-request-checklist" title="Permalink to this headline">¶</a></h3>
+<p>To have the best chance at an immediate merge,
+your pull request should have:</p>
+<ul class="simple">
+<li>A passing Travis-CI build.
+If it fails,
+check the console output for reasons why.</li>
+<li>New unit tests
+for new features
+or bug fixes.</li>
+<li>New documentation in <code class="docutils literal notranslate"><span class="pre">docs</span></code>
+for any new features.
+You do want people to know
+how to use your new stuff,
+right?</li>
+</ul>
+</div>
+</div>
+<div class="section" id="release-process">
+<h2>Release process<a class="headerlink" href="#release-process" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Update
+<a class="reference external" href="https://github.com/PolicyStat/terrarium/blob/master/CHANGELOG.rst">CHANGELOG</a>.</li>
+<li>Bump the version number in
+<a class="reference external" href="https://github.com/PolicyStat/terrarium/blob/master/terrarium/__init__.py">__init__.py</a>
+on master.</li>
+<li>Tag the version.</li>
+<li>Push to PyPI.</li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="release_notes.html" class="btn btn-neutral float-right" title="Release Notes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="user_guide.html" class="btn btn-neutral" title="User Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Kyle Gibson, Wes Winham.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.1',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+</body>
+</html>
