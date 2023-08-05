@@ -1,0 +1,23 @@
+Metadata-Version: 2.0
+Name: odoo9-addons-oca-bank-payment
+Version: 9.0.20170115
+Summary: Meta package for OCA bank-payment Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo9-addon-account-banking-mandate
+Requires-Dist: odoo9-addon-account-banking-mandate-sale
+Requires-Dist: odoo9-addon-account-banking-pain-base
+Requires-Dist: odoo9-addon-account-banking-sepa-credit-transfer
+Requires-Dist: odoo9-addon-account-banking-sepa-direct-debit
+Requires-Dist: odoo9-addon-account-payment-mode
+Requires-Dist: odoo9-addon-account-payment-order
+Requires-Dist: odoo9-addon-account-payment-partner
+Requires-Dist: odoo9-addon-account-payment-sale
+Requires-Dist: odoo9-addon-account-payment-transfer-reconcile-batch
+
+UNKNOWN
+
+
