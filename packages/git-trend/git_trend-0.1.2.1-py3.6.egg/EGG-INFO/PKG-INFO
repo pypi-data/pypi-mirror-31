@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: git-trend
+Version: 0.1.2.1
+Summary: A Python CLI tool for getting the trending github repositories and developers
+Home-page: https://github.com/manojkarthick/git-trend
+Author: Manoj Karthick
+Author-email: manojkarthick@ymail.com
+License: MIT License
+Description: UNKNOWN
+Keywords: github,trending,repositories,developers,languages
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
