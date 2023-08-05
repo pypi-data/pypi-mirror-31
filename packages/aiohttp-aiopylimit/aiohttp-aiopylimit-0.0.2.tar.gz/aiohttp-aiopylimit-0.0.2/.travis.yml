@@ -1,0 +1,14 @@
+language: python
+python:
+- '3.6'
+script:
+- pytest
+services:
+- redis-server
+deploy:
+  password:
+    secure: PibrvjXGl3S2/dtVH5XQ38A7274Oizs5gAtNeqMCRo9P3o17Km5j5JSrYRl0o4KLLFOGFhw/olkYSEhnkRE9AxhyxB9/oJd9b2PJYS1hLlecIgJAJYpQoQEzV2hrcoiA5qUbWqBFCol986/hNB5AfiegzCOljc5Pk7akhMgAk3kO5rai5aVfbYHrB0yuc4nLu+/EhweXN5TZFostHtVZhW6JNC10qhcQU/nVE2YRFK2PeDpslnOE2gQkce6JPlWZbH4meZiKm3bAC/xghiRE/kO+y1imVEHLkCvYl4nKVvk6318amprGYDBZHE/frMMzOS1Xo/onBKszLay62Wz0W1ukSzQpC+mVlGuUR6L9GOncqfYqMYJbRzChonUStxHgFiYIZdPmCW9DOpSdhQwnFtLnb8YROo1JF5faRYRE6ib7AEykjSL19hS236Q5I59SRyWAm1TJW+J9+qHkAn1KBbCLvIQItLUWegYiKyunZuKioiTex5SfcPz9BbhOCFopFNH1HJF012Tgctw53IdBGIu2rRfCIiOKZaZM/kdS8HumwWow2qMVepmQygaA457HjsByrfZBPVWrAcJUBbnIC5NEzXLVPVQXyS7NKvwFhLCGU7w9IAdSYgmgIjt0u0qQeAQBne6KSqFHafLkE3ZHbrJGYPk0ZqsZXBRNK84xzTk=
+  provider: pypi
+  user: dmarkey
+  on:
+    tags: true
