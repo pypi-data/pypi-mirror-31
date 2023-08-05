@@ -1,0 +1,12 @@
+Metadata-Version: 1.0
+Name: wavefront-api-client
+Version: 1.0.1
+Summary: Wavefront Public API
+Home-page: https://github.com/wavefrontHQ/python-client
+Author: Wavefront
+Author-email: support@wavefront.com
+License: Apache License
+Description:     The Wavefront Public APIs are published for customers to use when interacting with Wavefront servers.  They can be used to automate commonly executed operations such as tagging sources automatically. Please note that you will need to supply the X-AUTH-TOKEN header with a valid token.;
+            
+Keywords: Wavefront,Wavefront Public API
+Platform: UNKNOWN
