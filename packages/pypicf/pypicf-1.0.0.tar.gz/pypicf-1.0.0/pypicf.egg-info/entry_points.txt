@@ -1,0 +1,3 @@
+[console_scripts]
+pypicf = pypicf.__main__:main
+
