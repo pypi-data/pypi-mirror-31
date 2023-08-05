@@ -1,0 +1,31 @@
+Metadata-Version: 2.0
+Name: user-provision-tool
+Version: 1.37
+Summary: Add and remove users from multiple web services with desired permission
+Home-page: https://github.com/Signiant/External-user-provisioning
+Author: Eric Laroche
+Author-email: elaroche@signiant.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: azure.graphrbac
+Requires-Dist: msrestazure
+Requires-Dist: BeautifulSoup4 (>=4.6.0)
+Requires-Dist: email (>=4.0.2)
+Requires-Dist: os
+Requires-Dist: smtplib
+Requires-Dist: ast
+Requires-Dist: argparse
+Requires-Dist: getpass
+Requires-Dist: sys
+Requires-Dist: yaml
+Requires-Dist: datetime
+Requires-Dist: logging
+Requires-Dist: json
+Requires-Dist: requests
+Requires-Dist: random
+Requires-Dist: botocore
+Requires-Dist: boto3
+
+UNKNOWN
+
+
