@@ -1,0 +1,137 @@
+#!/srv/projects/coils-code.git/bin/python
+#
+# Copyright (c) 2016
+#  Adam Tauno Williams <awilliam@whitemice.org>
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
+#
+import getopt
+import sys
+import os
+import re
+from coils.core import AdministrativeContext, BLOBManager, initialize_COILS
+from coils.logic.blob.services import AUTOTHUMBNAILER_VERSION
+
+expr = re.compile(
+    r'''^(?P<name>[0-9].*)\.(?P<edition>[0-9].*)\.(?P<etag>[0-9].*)\.thumb'''
+)
+
+
+def usage():
+    print """
+    --help      Display this helpful messages
+    --execute   Perform deletion of derelict/expired thumbnails.
+    """
+    return
+
+
+def main(argv):
+
+    # Process command line arguements
+    if not argv:
+        usage()
+        sys.exit(2)
+    try:
+        opts, args = getopt.getopt(
+            argv,
+            "he",
+            ["help", "execute", ]
+        )
+    except getopt.GetoptError, e:
+        print(e)
+        usage()
+        sys.exit(2)
+
+    enable_fix = False
+    for opt, arg in opts:
+        if opt in ("-h", "--help"):
+            usage()
+            sys.exit(0)
+        elif opt in ("-e", "--execute"):
+            enable_fix = True
+
+    # Initialize COILs
+    initialize_COILS(
+        {
+            'log_file': '{0}/coils.log'.format(os.getenv('HOME'), )
+        }
+    )
+    ctx = AdministrativeContext()
+
+    removes = list()
+
+    def log_reap(wfile, reason, record):
+        message = (
+            '{0} - objectId: {1} etag: {2} edition: {3}'
+            .format(
+                reason,
+                tmp.group('name'),
+                tmp.group('etag'),
+                tmp.group('edition'),
+            )
+        )
+        print(message)
+        if wfile:
+            wfile.write(message)
+        return
+
+    print(
+        'Current document thumbnailer is edition {0}'
+        .format(AUTOTHUMBNAILER_VERSION, )
+    )
+
+    print('Begining thumbnail image survey')
+    for x in os.walk('/var/lib/opengroupware.org/cache/thumbnails'):
+        path, tmp, filenames, = x
+        for filename in filenames:
+            tmp = expr.match(filename)
+            if tmp:
+                try:
+                    object_id = long(tmp.group('name'))
+                    document = ctx.r_c('document::get', id=object_id, )
+                except:
+                    pass
+                else:
+                    if not document:
+                        # Document not found, likely deleted
+                        log_reap(None, 'Derelict', tmp)
+                        fullpath = '{0}/{1}'.format(path, filename)
+                        removes.append(fullpath)
+                    elif int(tmp.group('edition')) < AUTOTHUMBNAILER_VERSION:
+                        log_reap(None, 'Obsolete', tmp)
+                        fullpath = '{0}/{1}'.format(path, filename)
+                        removes.append(fullpath)
+                    elif int(tmp.group('etag')) < document.version:
+                        log_reap(None, 'Expired', tmp)
+                        fullpath = '{0}/{1}'.format(path, filename)
+                        removes.append(fullpath)
+
+    print('Found {0} thumbnails to be removed'.format(len(removes), ))
+
+    if enable_fix:
+        for filepath in removes:
+            print('Removing "{0}"'.format(filepath, ))
+            os.remove(filepath)
+        print('Tool execution complete.')
+
+    sys.exit(0)
+
+if __name__ == '__main__':
+
+    main(sys.argv[1:])

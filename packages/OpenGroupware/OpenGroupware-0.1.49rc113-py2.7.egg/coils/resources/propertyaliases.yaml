@@ -1,0 +1,6 @@
+workorder:
+    namespace: http://www.example.com/service
+    attribute: workorder
+documentType:
+    namespace: http://www.example.com/document
+    attribute: documentType
