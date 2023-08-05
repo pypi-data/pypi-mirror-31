@@ -1,0 +1,3 @@
+[console_scripts]
+batterytender = batterytender.command_line:main
+

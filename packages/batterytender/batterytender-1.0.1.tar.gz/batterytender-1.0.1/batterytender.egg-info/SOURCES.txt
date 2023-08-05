@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+batterytender/__init__.py
+batterytender.egg-info/PKG-INFO
+batterytender.egg-info/SOURCES.txt
+batterytender.egg-info/dependency_links.txt
+batterytender.egg-info/entry_points.txt
+batterytender.egg-info/requires.txt
+batterytender.egg-info/top_level.txt
