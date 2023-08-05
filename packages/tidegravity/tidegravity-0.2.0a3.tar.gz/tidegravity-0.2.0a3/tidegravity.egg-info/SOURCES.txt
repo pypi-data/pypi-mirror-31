@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+tests/conftest.py
+tests/matlab_synthetic.csv
+tests/test_longman.py
+tidegravity/__init__.py
+tidegravity/tidegravity.py
+tidegravity/trajectory_utils.py
+tidegravity.egg-info/PKG-INFO
+tidegravity.egg-info/SOURCES.txt
+tidegravity.egg-info/dependency_links.txt
+tidegravity.egg-info/requires.txt
+tidegravity.egg-info/top_level.txt
