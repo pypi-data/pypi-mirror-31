@@ -1,0 +1,91 @@
+Metadata-Version: 2.0
+Name: pygantt
+Version: 0.1.1
+Summary: Gantt charts in python
+Home-page: https://github.com/pygantt/pygantt
+Author: PyGantt developers
+Author-email: seth.mridul@gmail.com
+License: BSD license
+Keywords: pygantt
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: Click (>=6.0)
+Requires-Dist: pandas (>=0.18)
+
+.. image:: https://img.shields.io/pypi/v/pygantt.svg
+        :target: https://pypi.python.org/pypi/pygantt
+
+.. image:: https://img.shields.io/travis/PyGantt/PyGantt.svg
+        :target: https://travis-ci.org/PyGantt/PyGantt
+
+.. image:: https://readthedocs.org/projects/pygantt/badge/?version=latest
+        :target: https://pygantt.readthedocs.io/en/latest/?badge=latest
+        :alt: Documentation Status
+
+=======
+PyGantt
+=======
+
+Easy Gantt and waterfall charts in python.
+
+This module uses Gantt type charts to plot event data characterized by a start and an end. 
+It naturally applies to scheduling but it is well suited in financial applications, e.g. plotting positions/weights in a portfolio alongside the portfolio index, in medical application, e.g. the raster plot of neuron impulses, or in waterfall usage plots, e.g. the evolution of your monthly earnings and expenses.
+
+* Free software: BSD license
+* Documentation: https://pygantt.readthedocs.io.
+
+Installation
+--------
+The easiest way to install PyGantt is using ``pip``::
+
+    pip install -U pygantt
+
+or ``conda``::
+
+    conda install -c mriduls pygantt
+
+
+Features
+--------
+
+The canonical scheduling example:
+
+.. image:: https://github.com/PyGantt/PyGantt/blob/master/images/concert.png
+
+
+Display portfolio positions alongside the realized index:
+
+.. image:: https://github.com/PyGantt/PyGantt/blob/master/images/strategy.png
+
+
+Freelancers ups and downs:
+
+.. image:: https://github.com/PyGantt/PyGantt/blob/master/images/freelancer.png
+
+
+Credits
+-------
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+
+
+=======
+History
+=======
+
+0.1.0 (2018-04-21)
+------------------
+
+* First release on PyPI.
+
+
