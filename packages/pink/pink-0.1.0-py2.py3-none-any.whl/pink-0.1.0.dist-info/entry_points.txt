@@ -1,0 +1,3 @@
+[console_scripts]
+pink = pink:command_line_runner
+
