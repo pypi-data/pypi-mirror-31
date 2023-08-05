@@ -1,0 +1,9 @@
+beautifulsoup4
+
+[test]
+pytest
+pytest-cov
+pytest-pythonpath
+tox
+beautifulsoup4
+pyyaml
