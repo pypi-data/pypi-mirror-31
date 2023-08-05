@@ -1,0 +1,31 @@
+Metadata-Version: 1.2
+Name: tsr
+Version: 0.0.1.dev1
+Summary: TSR on command-line
+Home-page: https://github.com/methmo/tsr
+Author: Methmo
+Author-email: adammarkgray@gmail.com
+License: MIT
+Download-URL: https://gitlab.com/methmo/tsr/archive/0.0.1.dev1.tar.gz
+Description: UNKNOWN
+Keywords: tsr student forum command line cli cl scraper
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Operating System :: Microsoft :: Windows :: Windows 7
+Classifier: Operating System :: Microsoft :: Windows :: Windows 8
+Classifier: Operating System :: Microsoft :: Windows :: Windows 8.1
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Terminals
+Classifier: Topic :: Text Processing
+Requires-Python: >=3.5, <4

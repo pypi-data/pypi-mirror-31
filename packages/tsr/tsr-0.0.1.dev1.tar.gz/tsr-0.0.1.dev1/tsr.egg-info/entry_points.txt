@@ -1,0 +1,3 @@
+[console_scripts]
+tsr = tsr.tsr_on_cl:main
+
