@@ -1,0 +1,12 @@
+version_query/__init__.py,sha256=BpKmTuYfZDnCR1wj6VP2LkY5vrbiTzSdENNauRw_FKY,652
+version_query/__main__.py,sha256=UtwiriK5Il3_aeQGtix0xvnoXQpUQ2UWd5l6jInAr4M,126
+version_query/_logging.py,sha256=pWNkUQxdg3rmDxtOBotya-nueBqeEu31EExjM9bS2-o,209
+version_query/_version.py,sha256=3hchz_-UAF9aTLWHjC1tTk2tnQNbrPq0f4MVN2GEEGY,113
+version_query/git_query.py,sha256=PNdIbVArhqdtGg9zIbQlJGXxuhj383we_01OCZUN5F0,5651
+version_query/py_query.py,sha256=ZneqYMn-AjzPXr3Yuy9W0AVF2I6y6Fc08pAF3Zv6fK4,1677
+version_query/query.py,sha256=8zalUNT4t1f4d_bsrlCjD7JXLojwiY5kcRGXQ79QK-8,3372
+version_query/version.py,sha256=QIaeZESQh2EUty5IB4TBmJmSQdQzVkMi8JMrHyPm1MM,26960
+version_query-1.0.1.dist-info/METADATA,sha256=jvz-NG4fJ_2A-ZUNKR5DhAlZHN6R9-Ryg12ofSW5Ppw,16754
+version_query-1.0.1.dist-info/RECORD,,
+version_query-1.0.1.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+version_query-1.0.1.dist-info/top_level.txt,sha256=Sw335Q29h6EUZHfPSji8rGTnBv2osM7_kzDqwJc9l_I,14
