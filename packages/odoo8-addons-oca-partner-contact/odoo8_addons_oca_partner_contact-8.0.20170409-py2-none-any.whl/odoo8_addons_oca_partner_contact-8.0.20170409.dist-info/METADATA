@@ -1,0 +1,52 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-partner-contact
+Version: 8.0.20170409
+Summary: Meta package for OCA partner-contact Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo8-addon-base-contact
+Requires-Dist: odoo8-addon-base-continent
+Requires-Dist: odoo8-addon-base-location
+Requires-Dist: odoo8-addon-base-location-geonames-import
+Requires-Dist: odoo8-addon-base-location-lau
+Requires-Dist: odoo8-addon-base-location-nuts
+Requires-Dist: odoo8-addon-base-partner-merge
+Requires-Dist: odoo8-addon-base-partner-sequence
+Requires-Dist: odoo8-addon-base-vat-sanitized
+Requires-Dist: odoo8-addon-partner-academic-title
+Requires-Dist: odoo8-addon-partner-address-street3
+Requires-Dist: odoo8-addon-partner-auto-salesman
+Requires-Dist: odoo8-addon-partner-capital
+Requires-Dist: odoo8-addon-partner-changeset
+Requires-Dist: odoo8-addon-partner-contact-address-detailed
+Requires-Dist: odoo8-addon-partner-contact-birthdate
+Requires-Dist: odoo8-addon-partner-contact-department
+Requires-Dist: odoo8-addon-partner-contact-gender
+Requires-Dist: odoo8-addon-partner-contact-in-several-companies
+Requires-Dist: odoo8-addon-partner-contact-job-position
+Requires-Dist: odoo8-addon-partner-contact-lang
+Requires-Dist: odoo8-addon-partner-contact-nationality
+Requires-Dist: odoo8-addon-partner-contact-personal-information-page
+Requires-Dist: odoo8-addon-partner-create-by-vat
+Requires-Dist: odoo8-addon-partner-employee-quantity
+Requires-Dist: odoo8-addon-partner-external-maps
+Requires-Dist: odoo8-addon-partner-financial-risk
+Requires-Dist: odoo8-addon-partner-firstname
+Requires-Dist: odoo8-addon-partner-helper
+Requires-Dist: odoo8-addon-partner-identification
+Requires-Dist: odoo8-addon-partner-relations
+Requires-Dist: odoo8-addon-partner-second-lastname
+Requires-Dist: odoo8-addon-partner-sector
+Requires-Dist: odoo8-addon-partner-street-number
+Requires-Dist: odoo8-addon-passport
+Requires-Dist: odoo8-addon-portal-partner-merge
+Requires-Dist: odoo8-addon-res-partner-affiliate
+
+UNKNOWN
+
+
