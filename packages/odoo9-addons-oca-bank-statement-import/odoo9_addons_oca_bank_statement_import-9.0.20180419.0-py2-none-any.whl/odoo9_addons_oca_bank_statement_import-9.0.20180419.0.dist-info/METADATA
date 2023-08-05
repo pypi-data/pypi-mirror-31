@@ -1,0 +1,19 @@
+Metadata-Version: 2.0
+Name: odoo9-addons-oca-bank-statement-import
+Version: 9.0.20180419.0
+Summary: Meta package for oca-bank-statement-import Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo9-addon-account-bank-statement-import-camt
+Requires-Dist: odoo9-addon-account-bank-statement-import-camt-details
+Requires-Dist: odoo9-addon-account-bank-statement-import-move-line
+Requires-Dist: odoo9-addon-account-bank-statement-import-qif
+
+UNKNOWN
+
+
