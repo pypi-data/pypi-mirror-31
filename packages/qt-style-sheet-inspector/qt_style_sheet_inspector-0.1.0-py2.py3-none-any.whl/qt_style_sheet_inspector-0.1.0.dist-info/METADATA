@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: qt-style-sheet-inspector
+Version: 0.1.0
+Summary: A inspector widget to view and modify style sheet of a Qt app in runtime.
+Home-page: https://github.com/ESSS/qt_style_sheet_inspector
+Author: Rafael Bertoldi
+Author-email: tochaman@gmail.com
+License: MIT license
+Keywords: qt_style_sheet_inspector
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+
+========================
+Qt Style Sheet Inspector
+========================
+
+.. image:: https://img.shields.io/travis/ESSS/qt_style_sheet_inspector.svg
+        :target: https://travis-ci.org/ESSS/qt_style_sheet_inspector
+
+
+A inspector widget to view and modify style sheet of a Qt app in runtime.
+
+
+* Free software: MIT license
+
+
+Observation
+-----------
+
+It need PyQt5 to work but it doesn't have it as a dependency, as testing with PyQt5 pypi proved
+unreliable (may be changed in the future).
+
+
+Features
+--------
+
+* Can view current style sheet of application during runtime
+* Style sheet can be changed in runtime, facilitating the process of designing a custom GUI
+* Has a search bar to help find specific types or names
+* Can undo/redo changes
+
+
+=======
+History
+=======
+
+0.1.0 (2016-09-28)
+------------------
+
+* First release.
+
+
