@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: mongodb-formatter
+Version: 0.1a2
+Summary: Formatting for MongoDB cursors
+Home-page: https://github.com/jdrumgoole/mongodb_formatter
+Author: Joe Drumgoole
+Author-email: joe@joedrumgoole.com
+License: UNKNOWN
+Description: Formatting for MongoDB Cursors
+Keywords: MongoDB
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.6
