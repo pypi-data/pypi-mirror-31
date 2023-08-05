@@ -1,0 +1,5 @@
+[console_scripts]
+act = act:main
+actDeact = actDeact:main
+deact = deact:main
+

@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+ActDeact.egg-info/PKG-INFO
+ActDeact.egg-info/SOURCES.txt
+ActDeact.egg-info/dependency_links.txt
+ActDeact.egg-info/entry_points.txt
+ActDeact.egg-info/requires.txt
+ActDeact.egg-info/top_level.txt
+act/__init__.py
+actDeact/__init__.py
+deact/__init__.py
