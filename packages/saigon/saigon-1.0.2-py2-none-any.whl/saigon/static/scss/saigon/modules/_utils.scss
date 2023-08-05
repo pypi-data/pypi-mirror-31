@@ -1,0 +1,93 @@
+// Text protection
+// renderuje ladna apple pod tekst
+// https://material.io/guidelines/style/imagery.html#imagery-ui-integration
+@mixin text-protection($value: .4) {
+  background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, $value));
+  background-size: cover;
+}
+
+// Clearfix
+@mixin clearfix() {
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
+// Transitions
+@mixin transition($transition...) {
+  -webkit-transition: $transition;
+     -moz-transition: $transition;
+       -o-transition: $transition;
+          transition: $transition;
+}
+@mixin transition-property($transition-property...) {
+  -webkit-transition-property: $transition-property;
+          transition-property: $transition-property;
+}
+@mixin transition-delay($transition-delay) {
+  -webkit-transition-delay: $transition-delay;
+          transition-delay: $transition-delay;
+}
+@mixin transition-duration($transition-duration...) {
+  -webkit-transition-duration: $transition-duration;
+          transition-duration: $transition-duration;
+}
+@mixin transition-timing-function($timing-function) {
+  -webkit-transition-timing-function: $timing-function;
+          transition-timing-function: $timing-function;
+}
+@mixin transition-transform($transition...) {
+  -webkit-transition: -webkit-transform $transition;
+     -moz-transition: -moz-transform $transition;
+       -o-transition: -o-transform $transition;
+          transition: transform $transition;
+}
+
+// Transform
+@mixin transform($transform...) {
+  -moz-transform: $transform;
+  -o-transform: $transform;
+  -webkit-transform: $transform;
+  -ms-transform: $transform;
+  transform: $transform;      
+}
+
+// Break inside
+@mixin break-inside($value: avoid) {
+  -webkit-column-break-inside: $value; /* Chrome, Safari, Opera */
+            page-break-inside: $value; /* Firefox */
+                 break-inside: $value; /* IE 10+ */
+}
+
+// Box shadow
+@mixin box-shadow($value) {
+  -webkit-box-shadow: $value;
+  -moz-box-shadow: $value;
+  box-shadow: $value;
+}
+
+// Animation
+@mixin animation($value) {
+  -moz-animation: $value;
+  -webkit-animation: $value;
+  -ms-animation: $value;
+  animation: $value;   
+}
+
+// Keyframes mixin
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content; 
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  } 
+}

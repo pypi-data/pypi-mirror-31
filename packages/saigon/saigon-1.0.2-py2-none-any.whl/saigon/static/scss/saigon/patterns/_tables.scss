@@ -1,0 +1,19 @@
+.table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  
+  &.-striped {
+    & > tbody > tr:nth-of-type(odd) {
+      background-color: $sg-table-striped-bg;
+    }
+  }
+  
+  td {
+    padding: $sg-table-td-padding;
+    vertical-align: middle;
+    border-top: 1px solid transparent;
+  }
+  
+}

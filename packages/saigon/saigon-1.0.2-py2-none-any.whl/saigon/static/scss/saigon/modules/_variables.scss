@@ -1,0 +1,103 @@
+// Mixins
+@mixin _assert-ascending($map, $map-name) {
+  $prev-key: null;
+  $prev-num: null;
+  @each $key, $num in $map {
+    @if $prev-num == null {
+      // Do nothing
+    } @else if not comparable($prev-num, $num) {
+      @warn "Potentially invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} whose unit makes it incomparable to #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+    } @else if $prev-num >= $num {
+      @warn "Invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} which isn't greater than #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+    }
+    $prev-key: $key;
+    $prev-num: $num;
+  }
+}
+
+@mixin _assert-starts-at-zero($map) {
+  $values: map-values($map);
+  $first-value: nth($values, 1);
+  @if $first-value != 0 {
+    @warn "First breakpoint in `$grid-breakpoints` must start at 0, but starts at #{$first-value}.";
+  }
+}
+
+// Typography
+$sg-link-color:                           #337ab7 !default;
+
+// Components
+$sg-border-radius:                        3px; // $border-radius-base !default;
+
+// Buttons
+$sg-btn-font-weight:                      600 !default;
+$sg-btn-text-transform:                   uppercase !default;
+$sg-btn-outline-font-weight:              normal !default;
+
+$sg-btn-default-color:                    $primary-text-light !default;
+$sg-btn-primary-color:                    $blue !default;
+$sg-btn-success-color:                    $green !default;
+$sg-btn-info-color:                       $blue !default;
+$sg-btn-warning-color:                    $orange !default;
+$sg-btn-danger-color:                     $red !default;
+
+$sg-btn-icon-font-size:                   18px !default;
+$sg-btn-icon-line-height:                 18px !default;
+$sg-btn-raised-shadow:                    true !default;
+
+// Margins & Paddings
+$sg-margins:                              '0' '3' '5' '10' '15' '20' '25' '50' '100';
+$sg-paddings:                             '0' '3' '5' '10' '15';
+
+// Headings
+$sg-h1-color:                             $primary-text-light !default;
+$sg-h2-color:                             $secondary-text-light !default;
+$sg-h3-color:                             $secondary-text-light !default;
+$sg-h4-color:                             $secondary-text-light !default; 
+$sg-h5-color:                             $secondary-text-light !default;
+$sg-h6-color:                             $secondary-text-light !default;
+
+// Animations:
+$sg-animation-curve-fast-out-slow-in:     cubic-bezier(0.4, 0, 0.2, 1) !default;
+$sg-animation-curve-linear-out-slow-in:   cubic-bezier(0, 0, 0.2, 1) !default;
+$sg-animation-curve-fast-out-linear-in:   cubic-bezier(0.4, 0, 1, 1) !default;
+$sg-animation-curve-default:              $sg-animation-curve-fast-out-slow-in !default;
+
+// Table
+$sg-table-striped-bg:                     $grey-100 !default;
+$sg-table-td-padding:                     8px !default;
+
+// Grid
+$sg-grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+@include _assert-ascending($sg-grid-breakpoints, "$sg-grid-breakpoints");
+@include _assert-starts-at-zero($sg-grid-breakpoints);
+
+// Containers
+$sg-container-max-widths: (
+  // sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+) !default;
+@include _assert-ascending($sg-container-max-widths, "$sg-container-max-widths");
+
+// Columns
+$sg-grid-columns:                         12 !default;
+$sg-grid-gutter:                          30px !default;
+$sg-grid-gutter-widths: (
+  xs: $sg-grid-gutter,
+  sm: $sg-grid-gutter,
+  md: $sg-grid-gutter,
+  lg: $sg-grid-gutter,
+  xl: $sg-grid-gutter
+) !default;
+
+// Normalize
+$sg-strong-weight:                        bolder !default;
+$sg-label-weight:                         bold !default;

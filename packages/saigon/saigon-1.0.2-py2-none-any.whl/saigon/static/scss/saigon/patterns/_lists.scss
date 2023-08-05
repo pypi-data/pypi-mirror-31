@@ -1,0 +1,32 @@
+// Lista pojedyncza
+// https://material.io/guidelines/components/lists.html#lists-specs
+
+ul.list-single {
+  padding-left: 0;
+
+  li {
+    @include transition(background-color 0.2s ease-in-out);
+    padding-left: 16px;
+    padding-right: 16px;
+    
+    .list-line {
+      @include layout('row' 'start-center');
+      color: $secondary-text-light;
+      height: 48px;
+      font-size: 16px;
+      
+      i {
+        font-size: 24px;
+        margin-right: 32px;
+        color: $secondary-text-light;
+      }
+    }
+
+  }
+  
+  &.list-hover {
+    li:hover {
+      background-color: $divider-light;
+    }
+  }
+}
