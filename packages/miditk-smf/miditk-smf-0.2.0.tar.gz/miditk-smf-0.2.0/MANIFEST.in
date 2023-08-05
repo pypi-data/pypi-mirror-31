@@ -1,0 +1,13 @@
+include CHANGELOG.rst LICENSE.rst README.rst
+include tox.ini pytest.ini
+include Makefile
+include requirements.txt
+
+graft requirements
+graft examples
+
+recursive-include tests *
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
+
+recursive-include docs *.rst conf.py Makefile make.bat *.jpg *.png *.gif
