@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: lectocal
+Version: 1.0.0a4
+Summary: Syncronize Lectio schedules to Google Calendar.
+Home-page: https://github.com/Hanse00/LecToCal
+Author: Philip Mallegol-Hansen
+Author-email: philip@mallegolhansen.com
+License: Apache 2.0
+Requires-Dist: google-api-python-client
+Requires-Dist: requests
+Requires-Dist: lxml
+Requires-Dist: pytz
+Requires-Dist: python-dateutil
+
+LecToCal
+
+

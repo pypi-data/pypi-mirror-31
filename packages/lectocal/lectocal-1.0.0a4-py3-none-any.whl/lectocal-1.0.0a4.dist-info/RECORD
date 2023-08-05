@@ -1,0 +1,12 @@
+lectocal/__init__.py,sha256=HKQ7QpPQiWBxgo9HI7uc-pZ4pPXiPP13bzf2fD0MEhc,61
+lectocal/client_secret.json,sha256=X4j8FEJrusnvbhFRI5GbdYCtJkPwyVMewwHdo2qHsho,426
+lectocal/gauth.py,sha256=gefgcz2PZ8cADHD4-JhuIx3FDF0fPjEL_4JHuD5yZcw,3028
+lectocal/gcalendar.py,sha256=38SeUTGbb0Ggo24fc5p6WnXqfu0CIVqdBN6_sGBagKE,8459
+lectocal/lectio.py,sha256=Cl6Stq2fO-SxIDwo_AYuJZKtTn_xHCHUAvhmZGD9D6k,8471
+lectocal/lesson.py,sha256=bdTyeLa_5o16_a9xo75RwRn61Q48zEY4gqdE0UMPemI,3477
+lectocal/run.py,sha256=yzrep2hlord-BqZ1ubQia4c4-m64G8vnQ-KinBFJ4Fk,3166
+lectocal-1.0.0a4.dist-info/METADATA,sha256=PWEn4nmj_r5MPS2xh8zunkePDLXJjHCKcJtuOalp1EY,396
+lectocal-1.0.0a4.dist-info/RECORD,,
+lectocal-1.0.0a4.dist-info/WHEEL,sha256=pZyAqgNAylOf0KG_hPHMtuuY08rV3WzWwZu2OTsNnnw,97
+lectocal-1.0.0a4.dist-info/entry_points.txt,sha256=FVoCaMoeY0wb6qHfRkI3DBoOPUNK6wfpCSKtcbnqqQM,89
+lectocal-1.0.0a4.dist-info/top_level.txt,sha256=5NhGpjKkQCnCHvAOjMlBU6rPyBaUz8zrjwhMc-Ho-b8,9
