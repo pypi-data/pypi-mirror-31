@@ -1,0 +1,19 @@
+Metadata-Version: 2.0
+Name: odoo10-addons-oca-manufacture
+Version: 10.0.20170921
+Summary: Meta package for OCA manufacture Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo10-addon-mrp-auto-assign
+Requires-Dist: odoo10-addon-mrp-mto-with-stock
+Requires-Dist: odoo10-addon-mrp-production-note
+Requires-Dist: odoo10-addon-mrp-repair-calendar-view
+
+UNKNOWN
+
+
