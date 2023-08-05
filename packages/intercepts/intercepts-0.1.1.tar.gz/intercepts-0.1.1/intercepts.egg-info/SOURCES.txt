@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+intercepts/__init__.py
+intercepts.egg-info/PKG-INFO
+intercepts.egg-info/SOURCES.txt
+intercepts.egg-info/dependency_links.txt
+intercepts.egg-info/top_level.txt
+tests/testintercepts.py
+tests/testmethods.py
