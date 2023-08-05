@@ -1,0 +1,17 @@
+Metadata-Version: 2.0
+Name: django-db-cascade-2
+Version: 0.2.2
+Summary: Fork of django-db-cascade for Django 2.0.  Optionally use postgres db ON CASCADE DELETE on django foreign keys
+Home-page: http://github.com/jkapelner/django-db-cascade
+Author: Nick Stefan, Jordan Kapelner
+Author-email: nickstefan12@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Framework :: Django
+Classifier: Topic :: Database
+Requires-Dist: Django (>=2.0)
+Requires-Dist: psycopg2 (>=2.5)
+
+UNKNOWN
+
+
