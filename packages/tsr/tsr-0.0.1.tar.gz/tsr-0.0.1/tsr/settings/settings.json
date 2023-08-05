@@ -1,0 +1,11 @@
+{
+"matplotlib": {
+	"w": 720,
+	"h": 480,
+	"headless_backend": false
+},
+"use_pandas_for_forum_and_thread_display": false,
+"browsers": ["firefox", "chrome", "chromium-browser"],
+"crawl_delay": 10,
+"show_avatars": false
+}
