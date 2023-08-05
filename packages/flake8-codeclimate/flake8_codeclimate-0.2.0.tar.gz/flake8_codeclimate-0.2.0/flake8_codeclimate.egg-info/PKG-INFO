@@ -1,0 +1,51 @@
+Metadata-Version: 1.1
+Name: flake8-codeclimate
+Version: 0.2.0
+Summary: Code Climate reporting formatter plugin for Flake8
+Home-page: https://github.com/bennylope/flake8-codeclimate
+Author: Ben Lopatin
+Author-email: ben@benlopatin.com
+License: MIT
+Description: ##################
+        flake8-codeclimate
+        ##################
+        
+        A Flake8 plugin to generate error reports in a format consumable by Code Climate.
+        
+        The `full error report specification <https://github.com/codeclimate/spec/blob/master/SPEC.md#data-types>`_
+        includes a description of Code Climate specific error categories and fields.
+        
+        Installation
+        ============
+        
+        Install from PyPI:
+        
+        .. code-block:: bash
+        
+            $ pip install flake8-codeclimate
+        
+        Or from Git:
+        
+        .. code-block:: bash
+        
+            $ pip install -e git+git://github.com/bennylope/flake8-codeclimate.git#egg=flake8_codeclimate
+        
+        Usage
+        =====
+        
+        Run Flake8 with the format option `codeclimate`::
+        
+            flake8 --format=codeclimate
+        
+        
+        
+Platform: UNKNOWN
+Classifier: Framework :: Flake8
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Quality Assurance
