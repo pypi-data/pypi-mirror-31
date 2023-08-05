@@ -1,0 +1,14 @@
+README.md
+setup.py
+foliant/cli/init/__init__.py
+foliant/cli/init/templates/base/Dockerfile
+foliant/cli/init/templates/base/README.md
+foliant/cli/init/templates/base/docker-compose.yml
+foliant/cli/init/templates/base/foliant.yml
+foliant/cli/init/templates/base/requirements.txt
+foliant/cli/init/templates/base/src/index.md
+foliantcontrib.init.egg-info/PKG-INFO
+foliantcontrib.init.egg-info/SOURCES.txt
+foliantcontrib.init.egg-info/dependency_links.txt
+foliantcontrib.init.egg-info/requires.txt
+foliantcontrib.init.egg-info/top_level.txt
