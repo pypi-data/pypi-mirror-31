@@ -1,0 +1,13 @@
+mocs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mocs/__main__.py,sha256=RDPxs6rmCrpeiVaPHD8NMmhRW-YJdSoKWwspywE0kXM,516
+mocs/client.py,sha256=yeSlQ6VImRDZaxlE0cPqFlnWTG2x7zuFYIPtVRRjhhs,5089
+mocs/common.py,sha256=tBpKnzairrzU6XmjHz1HE1vYEDUol2_UWJhJQLlR5ns,1313
+mocs/rule.py,sha256=DKSW2YMuQS-yoLOQCt_y2dF2LdTNesuGQEm_MWlC-7Q,3286
+mocs/server/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mocs/server/app.py,sha256=BKTE_l8dfdzFSk8Y4HTV8teXW7WbA1dA4PZXLrGpuiQ,3930
+mocs/server/resource.py,sha256=bMzdOy7q7rTeDT19rPsquPIGVufEE_7gn4dtdUnlSvQ,5941
+mocs-0.1.1.dist-info/LICENSE.txt,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+mocs-0.1.1.dist-info/METADATA,sha256=qZP3DODZ_zL_t7stYP2ngHw5XsVFYoZ0ksDXtxSBc-M,952
+mocs-0.1.1.dist-info/RECORD,,
+mocs-0.1.1.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+mocs-0.1.1.dist-info/top_level.txt,sha256=t6TQ-OYbdP3iJKEvfkn_gh0G171gen2wSnQZROrLPZs,5
