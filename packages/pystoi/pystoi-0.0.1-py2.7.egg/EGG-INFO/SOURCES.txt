@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+pystoi/__init__.py
+pystoi/stoi.py
+pystoi/utils.py
+pystoi.egg-info/PKG-INFO
+pystoi.egg-info/SOURCES.txt
+pystoi.egg-info/dependency_links.txt
+pystoi.egg-info/requires.txt
+pystoi.egg-info/top_level.txt
