@@ -1,0 +1,25 @@
+Metadata-Version: 2.0
+Name: odoo10-addons-oca-stock-logistics-workflow
+Version: 10.0.20170712
+Summary: Meta package for OCA stock-logistics-workflow Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo10-addon-product-expiry-simple
+Requires-Dist: odoo10-addon-stock-auto-move
+Requires-Dist: odoo10-addon-stock-delivery-internal
+Requires-Dist: odoo10-addon-stock-disable-force-availability-button
+Requires-Dist: odoo10-addon-stock-ownership-availability-rules
+Requires-Dist: odoo10-addon-stock-ownership-by-move
+Requires-Dist: odoo10-addon-stock-picking-package-preparation
+Requires-Dist: odoo10-addon-stock-picking-package-preparation-line
+Requires-Dist: odoo10-addon-stock-picking-show-return
+Requires-Dist: odoo10-addon-stock-split-picking
+
+UNKNOWN
+
+
