@@ -1,0 +1,38 @@
+CHANGES
+=======
+
+0.2.0
+-----
+
+* simplify configuration file handling
+* add missing appdirs dependency
+* fix flake8 errors
+* run linter under python 3.6 by default
+* set up travis with linter build
+* Adding Aliases
+* Creating a Config File
+* add demo gif to readme
+* Add \_\_main\_\_ so demoshell may be invoked via runpy (python -m). Fixes #13
+
+0.1.0
+-----
+
+* fix readme formatting
+* add links to the readme file
+* more todo items
+* add basic use instructions to the readme
+* add more items to the todo list
+* support 'clear' as a builtin command
+* add apache license file
+* ignore packaging build files
+* add pbr packaging files
+* start rearranging files to make packaging work
+* refactor a bit
+* start the todo list
+* handle stdout and stderr separately
+* use bash to run subcommands
+* import urwid factoring example for demo
+* handle a few common editing keys
+* clarify the unknown style error message
+* handle unknown keypresses by reporting an error
+* first working version
