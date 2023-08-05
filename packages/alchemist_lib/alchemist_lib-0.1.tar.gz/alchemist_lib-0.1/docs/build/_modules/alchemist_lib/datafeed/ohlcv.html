@@ -1,0 +1,367 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>alchemist_lib.datafeed.ohlcv &mdash; alchemist_lib 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="alchemist_lib 0.1 documentation" href="../../../index.html"/>
+        <link rel="up" title="alchemist_lib.datafeed" href="../datafeed.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> alchemist_lib
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../install.html">Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorial.html">Beginner Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../database/index.html">Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../license.html">License</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">alchemist_lib</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+          <li><a href="../datafeed.html">alchemist_lib.datafeed</a> &raquo;</li>
+        
+      <li>alchemist_lib.datafeed.ohlcv</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for alchemist_lib.datafeed.ohlcv</h1><div class="highlight"><pre>
+<span class="kn">from</span> <span class="nn">abc</span> <span class="kn">import</span> <span class="n">ABC</span><span class="p">,</span> <span class="n">abstractmethod</span>
+<span class="kn">import</span> <span class="nn">datetime</span> <span class="kn">as</span> <span class="nn">dt</span>
+
+<span class="kn">from</span> <span class="nn">sqlalchemy.exc</span> <span class="kn">import</span> <span class="n">IntegrityError</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy.orm.exc</span> <span class="kn">import</span> <span class="n">FlushError</span>
+
+<span class="kn">from</span> <span class="nn">..</span> <span class="kn">import</span> <span class="n">utils</span>
+
+<span class="kn">import</span> <span class="nn">logging</span>
+
+
+
+<div class="viewcode-block" id="OhlcvBaseClass"><a class="viewcode-back" href="../../../api.html#alchemist_lib.datafeed.ohlcv.OhlcvBaseClass">[docs]</a><span class="k">class</span> <span class="nc">OhlcvBaseClass</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Abstract class used by modules that manage OHLCV data.</span>
+
+<span class="sd">    Abstract methods:</span>
+<span class="sd">        - get_last_price(assets): It has to return a dataframe (pandas.DataFrame) with the following columns:</span>
+<span class="sd">            * asset (alchemist_lib.database.asset.Asset): Must be the index.</span>
+<span class="sd">            * last_price (decimal.Decimal): The last price of the associated asset.</span>
+<span class="sd">        - get_ohlcv(assets, start_date, end_date, timeframe): It has to return a list of Ohlcv (alchemist_lib.database.ohlcv.Ohlcv).</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        session (sqlalchemy.orm.session.Session): Database connection.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="OhlcvBaseClass.__init__"><a class="viewcode-back" href="../../../api.html#alchemist_lib.datafeed.ohlcv.OhlcvBaseClass.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">):</span>
+
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Costructor method.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            session (sqlalchemy.orm.session.Session): Connection to the database.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">session</span> <span class="o">=</span> <span class="n">session</span></div>
+        
+        
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">get_last_price</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">assets</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+    
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">get_ohlcv</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">assets</span><span class="p">,</span> <span class="n">start_date</span><span class="p">,</span> <span class="n">timeframe</span><span class="p">,</span> <span class="n">end_date</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()):</span>
+        <span class="k">pass</span>
+
+
+<div class="viewcode-block" id="OhlcvBaseClass._save"><a class="viewcode-back" href="../../../api.html#alchemist_lib.datafeed.ohlcv.OhlcvBaseClass._save">[docs]</a>    <span class="k">def</span> <span class="nf">_save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Save records in the database.</span>
+<span class="sd">        </span>
+<span class="sd">        This method doesn&#39;t use ``self.session.add_all(data)`` because some objects</span>
+<span class="sd">        could raise sqlalchemy.exc.IntegrityError and so nothing will be saved.</span>
+<span class="sd">        Save an object per time allow us to pass away IntegrityError.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data (list[obj]): List of map class instances.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+            <span class="k">except</span> <span class="p">(</span><span class="n">IntegrityError</span><span class="p">,</span> <span class="n">FlushError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span></div>
+                <span class="c1">#logging.debug(&quot;An object can&#39;t be saved. Obj: {}. Exception: {}&quot;.format(obj, e))</span>
+                
+
+<div class="viewcode-block" id="OhlcvBaseClass.save_ohlcv"><a class="viewcode-back" href="../../../api.html#alchemist_lib.datafeed.ohlcv.OhlcvBaseClass.save_ohlcv">[docs]</a>    <span class="k">def</span> <span class="nf">save_ohlcv</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">assets</span><span class="p">,</span> <span class="n">start_date</span><span class="p">,</span> <span class="n">timeframe</span><span class="p">,</span> <span class="n">end_date</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()):</span>
+
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method collects and saves OHLCV data from the data source.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            assets (alchemist_lib.database.asset.Asset, list[Asset]): List of assets which we want informations of.</span>
+<span class="sd">            start_date (datetime.datetime): Datetime to start collecting data from.</span>
+<span class="sd">            end_date (datetime.datetime, optional): Datetime to end collecting data from. Default is utcnow().</span>
+<span class="sd">            timeframe (str): Timeframe identifier.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="n">candles</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_ohlcv</span><span class="p">(</span><span class="n">assets</span> <span class="o">=</span> <span class="n">assets</span><span class="p">,</span> <span class="n">start_date</span> <span class="o">=</span> <span class="n">start_date</span><span class="p">,</span> <span class="n">end_date</span> <span class="o">=</span> <span class="n">end_date</span><span class="p">,</span> <span class="n">timeframe</span> <span class="o">=</span> <span class="n">timeframe</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_save</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">candles</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="OhlcvBaseClass.get_last_ohlcv"><a class="viewcode-back" href="../../../api.html#alchemist_lib.datafeed.ohlcv.OhlcvBaseClass.get_last_ohlcv">[docs]</a>    <span class="k">def</span> <span class="nf">get_last_ohlcv</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">assets</span><span class="p">,</span> <span class="n">timeframe</span><span class="p">):</span>
+
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method collects the last OHLCV candle from the data source.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            assets (alchemist_lib.database.asset.Asset, list[Asset]): List of assets which we want informations of.</span>
+<span class="sd">            timeframe (str): Timeframe identifier.</span>
+
+<span class="sd">        Return:</span>
+<span class="sd">            candles (list[alchemist_lib.database.ohlcv.Ohlcv]): List of ohlcv data. </span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="n">candles</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">asset</span> <span class="ow">in</span> <span class="n">assets</span><span class="p">:</span>
+            <span class="n">now</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span>
+            
+            <span class="k">if</span> <span class="n">asset</span><span class="o">.</span><span class="n">instrument</span><span class="o">.</span><span class="n">instrument_type</span> <span class="o">==</span> <span class="s2">&quot;cryptocurrency&quot;</span><span class="p">:</span>
+                <span class="n">delta</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">seconds</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">timeframe_to_seconds</span><span class="p">(</span><span class="n">timeframe</span> <span class="o">=</span> <span class="n">timeframe</span><span class="p">))</span>
+                <span class="n">past</span> <span class="o">=</span> <span class="n">now</span> <span class="o">-</span> <span class="n">delta</span>
+
+                <span class="n">candles</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_ohlcv</span><span class="p">(</span><span class="n">assets</span> <span class="o">=</span> <span class="n">asset</span><span class="p">,</span> <span class="n">start_date</span> <span class="o">=</span> <span class="n">past</span><span class="p">,</span> <span class="n">end_date</span> <span class="o">=</span> <span class="n">now</span><span class="p">,</span> <span class="n">timeframe</span> <span class="o">=</span> <span class="n">timeframe</span><span class="p">)</span>
+                
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">logging</span><span class="o">.</span><span class="n">critical</span><span class="p">(</span><span class="s2">&quot;The instrument is not a cryptocurrency. NotImplemented raised.&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="bp">NotImplemented</span>
+                
+        <span class="k">return</span> <span class="n">candles</span></div>
+
+        
+<div class="viewcode-block" id="OhlcvBaseClass.save_last_ohlcv"><a class="viewcode-back" href="../../../api.html#alchemist_lib.datafeed.ohlcv.OhlcvBaseClass.save_last_ohlcv">[docs]</a>    <span class="k">def</span> <span class="nf">save_last_ohlcv</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">assets</span><span class="p">,</span> <span class="n">timeframe</span><span class="p">):</span>
+
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method collects and saves last OHLCV candle from the data source.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            assets (alchemist_lib.database.asset.Asset, list[Asset]): List of assets which we want informations of.</span>
+<span class="sd">            timeframe (str): Timeframe identifier.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="n">candles</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_last_ohlcv</span><span class="p">(</span><span class="n">assets</span> <span class="o">=</span> <span class="n">assets</span><span class="p">,</span> <span class="n">timeframe</span> <span class="o">=</span> <span class="n">timeframe</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_save</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">candles</span><span class="p">)</span></div></div>
+
+
+
+
+
+
+
+
+
+
+        
+
+</pre></div>
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Carniel Giorgio.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: ''
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

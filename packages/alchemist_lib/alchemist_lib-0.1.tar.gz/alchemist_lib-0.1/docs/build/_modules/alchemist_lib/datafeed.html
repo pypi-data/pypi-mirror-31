@@ -1,0 +1,357 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>alchemist_lib.datafeed &mdash; alchemist_lib 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="alchemist_lib 0.1 documentation" href="../../index.html"/>
+        <link rel="up" title="Module code" href="../index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> alchemist_lib
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../install.html">Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial.html">Beginner Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../database/index.html">Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">License</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">alchemist_lib</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>alchemist_lib.datafeed</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for alchemist_lib.datafeed</h1><div class="highlight"><pre>
+<span class="kn">import</span> <span class="nn">datetime</span> <span class="kn">as</span> <span class="nn">dt</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+
+<span class="kn">from</span> <span class="nn">.poloniexdatafeed</span> <span class="kn">import</span> <span class="n">PoloniexDataFeed</span>
+<span class="kn">from</span> <span class="nn">.bittrexdatafeed</span> <span class="kn">import</span> <span class="n">BittrexDataFeed</span>
+
+<span class="kn">from</span> <span class="nn">..database.ohlcv</span> <span class="kn">import</span> <span class="n">Ohlcv</span>
+
+<span class="kn">from</span> <span class="nn">..</span> <span class="kn">import</span> <span class="n">utils</span>
+
+
+
+<div class="viewcode-block" id="get_data_sources_dict"><a class="viewcode-back" href="../../api.html#alchemist_lib.datafeed.get_data_sources_dict">[docs]</a><span class="k">def</span> <span class="nf">get_data_sources_dict</span><span class="p">(</span><span class="n">session</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Remember to change this method every time you add a module.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        session (sqlalchemy.orm.session.Session): Connection to the database.</span>
+
+<span class="sd">    Return:</span>
+<span class="sd">        dsd (dict): Return a dictionary. The key must be the name of the data source in the database and the value must be an instance of the module charged to collect data.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="n">dsd</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;poloniex&quot;</span> <span class="p">:</span> <span class="n">PoloniexDataFeed</span><span class="p">(</span><span class="n">session</span> <span class="o">=</span> <span class="n">session</span><span class="p">),</span>
+            <span class="s2">&quot;bittrex&quot;</span> <span class="p">:</span> <span class="n">BittrexDataFeed</span><span class="p">(</span><span class="n">session</span> <span class="o">=</span> <span class="n">session</span><span class="p">)</span>
+           <span class="p">}</span>
+    
+    <span class="k">return</span> <span class="n">dsd</span></div>
+
+
+<div class="viewcode-block" id="get_last_price"><a class="viewcode-back" href="../../api.html#alchemist_lib.datafeed.get_last_price">[docs]</a><span class="k">def</span> <span class="nf">get_last_price</span><span class="p">(</span><span class="n">assets</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the last trade price for every asset.</span>
+<span class="sd">    The last price is retrived based on ``alchemist_lib.datafeed.get_data_sources_dict()`` method.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        assets (alchemist_lib.database.asset.Asset, list[Asset]): List of assets which we want last traded price of.</span>
+
+<span class="sd">    Return:</span>
+<span class="sd">        df (pandas.DataFrame): A dataframe with the following columns:</span>
+<span class="sd">            * asset (alchemist_lib.database.asset.Asset): Must be the index.</span>
+<span class="sd">            * last_price (decimal.Decimal): The last price of the associated asset. </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">assets</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">to_list</span><span class="p">(</span><span class="n">assets</span><span class="p">)</span>
+    <span class="n">data_feed_source</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">ds</span> <span class="o">=</span> <span class="n">get_data_sources_dict</span><span class="p">(</span><span class="n">session</span> <span class="o">=</span> <span class="bp">None</span><span class="p">)</span>
+    
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;asset&quot;</span><span class="p">,</span> <span class="s2">&quot;last_price&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;asset&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">asset</span> <span class="ow">in</span> <span class="n">assets</span><span class="p">:</span>
+        <span class="n">data_source_names</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">get_data_source_names_from_asset</span><span class="p">(</span><span class="n">asset</span> <span class="o">=</span> <span class="n">asset</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">ds_name</span><span class="p">,</span> <span class="n">ds_inst</span> <span class="ow">in</span> <span class="n">ds</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">ds_name</span> <span class="ow">in</span> <span class="n">data_source_names</span><span class="p">:</span>
+                <span class="n">data_feed_source</span> <span class="o">=</span> <span class="n">ds_inst</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">lp</span> <span class="o">=</span> <span class="n">data_feed_source</span><span class="o">.</span><span class="n">get_last_price</span><span class="p">(</span><span class="n">assets</span> <span class="o">=</span> <span class="n">asset</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span><span class="c1">#If data_feed_source remains None</span>
+            <span class="n">lp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+            
+        <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df</span><span class="p">,</span> <span class="n">lp</span><span class="p">])</span>
+
+    <span class="k">return</span> <span class="n">df</span></div>
+
+
+<div class="viewcode-block" id="save_ohlcv"><a class="viewcode-back" href="../../api.html#alchemist_lib.datafeed.save_ohlcv">[docs]</a><span class="k">def</span> <span class="nf">save_ohlcv</span><span class="p">(</span><span class="n">session</span><span class="p">,</span> <span class="n">assets</span><span class="p">,</span> <span class="n">start_date</span><span class="p">,</span> <span class="n">timeframe</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This method collects and saves OHLCV data from the specified data source.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        session (sqlalchemy.orm.session.Session): Database connection.</span>
+<span class="sd">        assets (alchemist_lib.database.asset.Asset, list[Asset]): List of assets which we want informations of.</span>
+<span class="sd">        start_date (datetime.datetime): Datetime to start collecting data from.</span>
+<span class="sd">        timeframe (str): Timeframe identifier.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">assets</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">to_list</span><span class="p">(</span><span class="n">assets</span><span class="p">)</span>
+    <span class="n">ds</span> <span class="o">=</span> <span class="n">get_data_sources_dict</span><span class="p">(</span><span class="n">session</span> <span class="o">=</span> <span class="n">session</span><span class="p">)</span>
+    <span class="n">exch_assets</span> <span class="o">=</span> <span class="p">{}</span>
+    
+    <span class="k">for</span> <span class="n">asset</span> <span class="ow">in</span> <span class="n">assets</span><span class="p">:</span>
+        <span class="n">data_source_names</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">get_data_source_names_from_asset</span><span class="p">(</span><span class="n">asset</span> <span class="o">=</span> <span class="n">asset</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">ds_name</span><span class="p">,</span> <span class="n">ds_inst</span> <span class="ow">in</span> <span class="n">ds</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">ds_name</span> <span class="ow">in</span> <span class="n">data_source_names</span><span class="p">:</span>
+                <span class="n">exch_assets</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">ds_name</span><span class="p">,</span> <span class="p">[])</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">asset</span><span class="p">)</span>
+
+
+    <span class="k">for</span> <span class="n">ds_name</span><span class="p">,</span> <span class="n">ds_inst</span> <span class="ow">in</span> <span class="n">ds</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">ds_inst</span><span class="o">.</span><span class="n">save_ohlcv</span><span class="p">(</span><span class="n">assets</span> <span class="o">=</span> <span class="n">exch_assets</span><span class="p">[</span><span class="n">ds_name</span><span class="p">],</span> <span class="n">start_date</span> <span class="o">=</span> <span class="n">start_date</span><span class="p">,</span> <span class="n">timeframe</span> <span class="o">=</span> <span class="n">timeframe</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+            <span class="k">pass</span></div>
+
+    
+<div class="viewcode-block" id="save_last_ohlcv"><a class="viewcode-back" href="../../api.html#alchemist_lib.datafeed.save_last_ohlcv">[docs]</a><span class="k">def</span> <span class="nf">save_last_ohlcv</span><span class="p">(</span><span class="n">session</span><span class="p">,</span> <span class="n">assets</span><span class="p">,</span> <span class="n">timeframe</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This method collects and saves the last OHLCV candle from the specified data source.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        assets (alchemist_lib.database.asset.Asset, list[Asset]): List of assets which we want informations of.</span>
+<span class="sd">        timeframe (str): Timeframe identifier.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">assets</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">to_list</span><span class="p">(</span><span class="n">assets</span><span class="p">)</span>
+    <span class="n">ds</span> <span class="o">=</span> <span class="n">get_data_sources_dict</span><span class="p">(</span><span class="n">session</span> <span class="o">=</span> <span class="n">session</span><span class="p">)</span>
+    <span class="n">exch_assets</span> <span class="o">=</span> <span class="p">{}</span>
+    
+    <span class="k">for</span> <span class="n">asset</span> <span class="ow">in</span> <span class="n">assets</span><span class="p">:</span>
+        <span class="n">data_source_names</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">get_data_source_names_from_asset</span><span class="p">(</span><span class="n">asset</span> <span class="o">=</span> <span class="n">asset</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">ds_name</span><span class="p">,</span> <span class="n">ds_inst</span> <span class="ow">in</span> <span class="n">ds</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">ds_name</span> <span class="ow">in</span> <span class="n">data_source_names</span><span class="p">:</span>
+                <span class="n">exch_assets</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">ds_name</span><span class="p">,</span> <span class="p">[])</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">asset</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">ds_name</span><span class="p">,</span> <span class="n">ds_inst</span> <span class="ow">in</span> <span class="n">ds</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">ds_inst</span><span class="o">.</span><span class="n">save_last_ohlcv</span><span class="p">(</span><span class="n">assets</span> <span class="o">=</span> <span class="n">exch_assets</span><span class="p">[</span><span class="n">ds_name</span><span class="p">],</span> <span class="n">timeframe</span> <span class="o">=</span> <span class="n">timeframe</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+            <span class="k">pass</span></div>
+
+
+
+
+
+
+
+    
+</pre></div>
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Carniel Giorgio.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: ''
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,393 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Beginner Tutorial &mdash; alchemist_lib 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="alchemist_lib 0.1 documentation" href="index.html"/>
+        <link rel="next" title="Database" href="database/index.html"/>
+        <link rel="prev" title="Install" href="install.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> alchemist_lib
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install.html">Install</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Beginner Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#basics">Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#first-strategy">First strategy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#execution">Execution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="database/index.html">Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">alchemist_lib</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Beginner Tutorial</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/tutorial.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="beginner-tutorial">
+<h1>Beginner Tutorial<a class="headerlink" href="#beginner-tutorial" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="basics">
+<h2>Basics<a class="headerlink" href="#basics" title="Permalink to this headline">¶</a></h2>
+<p>Alchemist_lib works with three methods:</p>
+<blockquote>
+<div><ul class="simple">
+<li>set_weights</li>
+<li>select_universe</li>
+<li>handle_data</li>
+</ul>
+</div></blockquote>
+<p><em>set_weights</em> is used to set the weight that an asset has respect the others within the portfolio.
+The sum of every weight must be close to 1. The <code class="docutils literal"><span class="pre">df</span></code> parameter is the dataframe returned by <code class="docutils literal"><span class="pre">handle_data</span></code>.
+Must returns a pandas dataframe with two columns: &#8220;asset&#8221; and &#8220;weight&#8221;, where &#8220;asset&#8221; is the index.</p>
+<p><em>select_universe</em> have to returns a list of assets the strategy will take into consideration.
+If you want all the assets traded on a specific exchange just call the <code class="docutils literal"><span class="pre">get_assets</span></code> function of <code class="docutils literal"><span class="pre">alchemist_lib.exchange</span></code>.</p>
+<p><em>handle_data</em> is the most importat one because it manages the trading logic. The <code class="docutils literal"><span class="pre">universe</span></code> parameter is the list returned by <code class="docutils literal"><span class="pre">select_universe</span></code>.
+Must returns a pandas dataframe with two columns: &#8220;asset&#8221; and &#8220;alpha&#8221;, where &#8220;asset&#8221; is the index.</p>
+<p>To start the strategy you just need to instantiate the <code class="docutils literal"><span class="pre">TradingSystem</span></code> class and call the <code class="docutils literal"><span class="pre">run</span></code> method.</p>
+<dl class="docutils">
+<dt>Note:</dt>
+<dd>Remember to &#8216;paper trade&#8217; the strategy before going live, it can be done setting <code class="docutils literal"><span class="pre">paper_trading</span> <span class="pre">=</span> <span class="pre">True</span></code>.</dd>
+</dl>
+</div>
+<div class="section" id="first-strategy">
+<h2>First strategy<a class="headerlink" href="#first-strategy" title="Permalink to this headline">¶</a></h2>
+<p>Lets take a look at a very simple strategy from the <code class="docutils literal"><span class="pre">examples</span></code> directory, <code class="docutils literal"><span class="pre">buyandhold.py</span></code>.</p>
+<dl class="docutils">
+<dt>Strategy description:</dt>
+<dd><em>Hold a portfolio equally composed by Ethereum and BitcoinCash.</em></dd>
+</dl>
+<p>First of all we must import all the things we need.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">alchemist_lib.portfolio</span> <span class="kn">import</span> <span class="n">LongsOnlyPortfolio</span>
+<span class="kn">from</span> <span class="nn">alchemist_lib.broker</span> <span class="kn">import</span> <span class="n">PoloniexBroker</span>
+<span class="kn">from</span> <span class="nn">alchemist_lib.tradingsystem</span> <span class="kn">import</span> <span class="n">TradingSystem</span>
+<span class="kn">import</span> <span class="nn">alchemist_lib.exchange</span> <span class="kn">as</span> <span class="nn">exch</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+<p>Then we select which assets we want to buy and hold. Just ETH and BCH in this example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">select_universe</span><span class="p">(</span><span class="n">session</span><span class="p">):</span>
+    <span class="n">poloniex_assets</span> <span class="o">=</span> <span class="n">exch</span><span class="o">.</span><span class="n">get_assets</span><span class="p">(</span><span class="n">session</span> <span class="o">=</span> <span class="n">session</span><span class="p">,</span> <span class="n">exchange_name</span> <span class="o">=</span> <span class="s2">&quot;poloniex&quot;</span><span class="p">)</span>
+
+    <span class="n">my_universe</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">asset</span> <span class="ow">in</span> <span class="n">poloniex_assets</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">asset</span><span class="o">.</span><span class="n">ticker</span> <span class="o">==</span> <span class="s2">&quot;ETH&quot;</span> <span class="ow">or</span> <span class="n">asset</span><span class="o">.</span><span class="n">ticker</span> <span class="o">==</span> <span class="s2">&quot;BCH&quot;</span><span class="p">:</span>
+            <span class="n">my_universe</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">asset</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">my_universe</span>
+</pre></div>
+</div>
+<p>In this case the <code class="docutils literal"><span class="pre">handle_data</span></code> method is useless so lets set a random value for the &#8220;alpha&#8221; column of the dataframe.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">handle_data</span><span class="p">(</span><span class="n">session</span><span class="p">,</span> <span class="n">universe</span><span class="p">):</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;asset&quot;</span> <span class="p">:</span> <span class="n">universe</span><span class="p">,</span> <span class="s2">&quot;alpha&quot;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">},</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;asset&quot;</span><span class="p">,</span> <span class="s2">&quot;alpha&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;asset&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">df</span>
+</pre></div>
+</div>
+<p>We want to hold two assets (ETH and BCH) so every one must be 50% of the portfolio value.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">set_weights</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;weight&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.5</span>
+    <span class="k">return</span> <span class="n">df</span>
+</pre></div>
+</div>
+<p>Make it starts in paper trading mode, every 4 hours.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">algo</span> <span class="o">=</span> <span class="n">TradingSystem</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;BuyAndHold&quot;</span><span class="p">,</span>
+                     <span class="n">portfolio</span> <span class="o">=</span> <span class="n">LongsOnlyPortfolio</span><span class="p">(</span><span class="n">capital</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">),</span>
+                     <span class="n">set_weights</span> <span class="o">=</span> <span class="n">set_weights</span><span class="p">,</span>
+                     <span class="n">select_universe</span> <span class="o">=</span> <span class="n">select_universe</span><span class="p">,</span>
+                     <span class="n">handle_data</span> <span class="o">=</span> <span class="n">handle_data</span><span class="p">,</span>
+                     <span class="n">broker</span> <span class="o">=</span> <span class="n">PoloniexBroker</span><span class="p">(</span><span class="n">api_key</span> <span class="o">=</span> <span class="s2">&quot;APIKEY&quot;</span><span class="p">,</span>
+                                             <span class="n">secret_key</span> <span class="o">=</span> <span class="s2">&quot;SECRETKEY&quot;</span><span class="p">),</span>
+                     <span class="n">paper_trading</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+<span class="n">algo</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">delay</span> <span class="o">=</span> <span class="s2">&quot;4H&quot;</span><span class="p">,</span> <span class="n">frequency</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="execution">
+<h2>Execution<a class="headerlink" href="#execution" title="Permalink to this headline">¶</a></h2>
+<p>Just type:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ python3 buyandhold.py
+</pre></div>
+</div>
+<p>A log file called <code class="docutils literal"><span class="pre">buyandhold.log</span></code> will be created.</p>
+</div>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<p>Another example, a little bit more complex is <code class="docutils literal"><span class="pre">emacrossover.py</span></code>.</p>
+<dl class="docutils">
+<dt>Strategy description:</dt>
+<dd><em>Hold a portfolio composed by top 5 assets by volume whose EMA 10 is above the EMA 21. Rebalance it every hour.</em></dd>
+</dl>
+<p>Code:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">alchemist_lib.portfolio</span> <span class="kn">import</span> <span class="n">LongsOnlyPortfolio</span>
+<span class="kn">from</span> <span class="nn">alchemist_lib.broker</span> <span class="kn">import</span> <span class="n">BittrexBroker</span>
+<span class="kn">from</span> <span class="nn">alchemist_lib.tradingsystem</span> <span class="kn">import</span> <span class="n">TradingSystem</span>
+<span class="kn">from</span> <span class="nn">alchemist_lib.factor</span> <span class="kn">import</span> <span class="n">Factor</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">alchemist_lib.exchange</span> <span class="kn">as</span> <span class="nn">exch</span>
+
+
+<span class="k">def</span> <span class="nf">set_weights</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="n">alphas_sum</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;alpha&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">asset</span><span class="p">,</span> <span class="n">alpha</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;alpha&quot;</span><span class="p">]):</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">asset</span><span class="p">,</span> <span class="s2">&quot;weight&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">alpha</span> <span class="o">/</span> <span class="n">alphas_sum</span>
+
+    <span class="k">return</span> <span class="n">df</span>
+
+<span class="k">def</span> <span class="nf">select_universe</span><span class="p">(</span><span class="n">session</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">exch</span><span class="o">.</span><span class="n">get_assets</span><span class="p">(</span><span class="n">session</span> <span class="o">=</span> <span class="n">session</span><span class="p">,</span> <span class="n">exchange_name</span> <span class="o">=</span> <span class="s2">&quot;bittrex&quot;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">handle_data</span><span class="p">(</span><span class="n">session</span><span class="p">,</span> <span class="n">universe</span><span class="p">):</span>
+    <span class="n">fct</span> <span class="o">=</span> <span class="n">Factor</span><span class="p">(</span><span class="n">session</span> <span class="o">=</span> <span class="n">session</span><span class="p">)</span>
+    <span class="n">prices</span> <span class="o">=</span> <span class="n">fct</span><span class="o">.</span><span class="n">history</span><span class="p">(</span><span class="n">universe</span> <span class="o">=</span> <span class="n">universe</span><span class="p">,</span> <span class="n">field</span> <span class="o">=</span> <span class="s2">&quot;close&quot;</span><span class="p">,</span> <span class="n">timeframe</span> <span class="o">=</span> <span class="s2">&quot;1H&quot;</span><span class="p">,</span> <span class="n">window_length</span> <span class="o">=</span> <span class="mi">21</span><span class="p">)</span>
+
+    <span class="n">ema10</span> <span class="o">=</span> <span class="n">fct</span><span class="o">.</span><span class="n">ExponentialMovingAverage</span><span class="p">(</span><span class="n">values</span> <span class="o">=</span> <span class="n">prices</span><span class="p">,</span> <span class="n">window_length</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">field</span> <span class="o">=</span> <span class="s2">&quot;close&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;ExponentialMovingAverage&quot;</span> <span class="p">:</span> <span class="s2">&quot;ema10&quot;</span><span class="p">})</span>
+    <span class="n">ema21</span> <span class="o">=</span> <span class="n">fct</span><span class="o">.</span><span class="n">ExponentialMovingAverage</span><span class="p">(</span><span class="n">values</span> <span class="o">=</span> <span class="n">prices</span><span class="p">,</span> <span class="n">window_length</span> <span class="o">=</span> <span class="mi">21</span><span class="p">,</span> <span class="n">field</span> <span class="o">=</span> <span class="s2">&quot;close&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;ExponentialMovingAverage&quot;</span> <span class="p">:</span> <span class="s2">&quot;ema21&quot;</span><span class="p">})</span>
+
+    <span class="n">concated</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">ema10</span><span class="p">,</span> <span class="n">ema21</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">concated</span> <span class="o">=</span> <span class="n">concated</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">concated</span><span class="p">[</span><span class="s2">&quot;ma10&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">concated</span><span class="p">[</span><span class="s2">&quot;ma21&quot;</span><span class="p">],</span> <span class="p">:]</span>
+
+    <span class="n">vol</span> <span class="o">=</span> <span class="n">fct</span><span class="o">.</span><span class="n">history</span><span class="p">(</span><span class="n">universe</span> <span class="o">=</span> <span class="n">concated</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">field</span> <span class="o">=</span> <span class="s2">&quot;volume&quot;</span><span class="p">,</span> <span class="n">timeframe</span> <span class="o">=</span> <span class="s2">&quot;1H&quot;</span><span class="p">,</span> <span class="n">window_length</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">concated</span><span class="p">,</span> <span class="n">vol</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s2">&quot;volume&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;volume&quot;</span> <span class="p">:</span> <span class="s2">&quot;alpha&quot;</span><span class="p">})</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span> <span class="s2">&quot;volume&quot;</span><span class="p">,</span> <span class="n">ascending</span> <span class="o">=</span> <span class="bp">False</span><span class="p">)</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">df</span>
+
+
+<span class="n">algo</span> <span class="o">=</span> <span class="n">TradingSystem</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;MovingAverageCrossover&quot;</span><span class="p">,</span>
+                     <span class="n">portfolio</span> <span class="o">=</span> <span class="n">LongsOnlyPortfolio</span><span class="p">(</span><span class="n">capital</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">),</span>
+                     <span class="n">set_weights</span> <span class="o">=</span> <span class="n">set_weights</span><span class="p">,</span>
+                     <span class="n">select_universe</span> <span class="o">=</span> <span class="n">select_universe</span><span class="p">,</span>
+                     <span class="n">handle_data</span> <span class="o">=</span> <span class="n">handle_data</span><span class="p">,</span>
+                     <span class="n">broker</span> <span class="o">=</span> <span class="n">BittrexBroker</span><span class="p">(</span><span class="n">api_key</span> <span class="o">=</span> <span class="s2">&quot;APIKEY&quot;</span><span class="p">,</span>
+                                            <span class="n">secret_key</span> <span class="o">=</span> <span class="s2">&quot;SECRETKEY&quot;</span><span class="p">),</span>
+                     <span class="n">paper_trading</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+<span class="n">algo</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">delay</span> <span class="o">=</span> <span class="s2">&quot;1H&quot;</span><span class="p">,</span> <span class="n">frequency</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>To execute it:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ python3 emacrossover.py
+</pre></div>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p>These were some basic examples of how alchemist_lib works.
+Take a look at the <code class="docutils literal"><span class="pre">example</span></code> folder for more examples.</p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="database/index.html" class="btn btn-neutral float-right" title="Database" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="install.html" class="btn btn-neutral" title="Install" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Carniel Giorgio.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: ''
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

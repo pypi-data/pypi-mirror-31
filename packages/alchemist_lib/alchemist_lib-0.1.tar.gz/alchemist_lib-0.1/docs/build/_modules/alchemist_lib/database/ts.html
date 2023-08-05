@@ -1,0 +1,311 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>alchemist_lib.database.ts &mdash; alchemist_lib 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="alchemist_lib 0.1 documentation" href="../../../index.html"/>
+        <link rel="up" title="Module code" href="../../index.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> alchemist_lib
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../install.html">Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorial.html">Beginner Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../database/index.html">Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../license.html">License</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">alchemist_lib</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>alchemist_lib.database.ts</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for alchemist_lib.database.ts</h1><div class="highlight"><pre>
+<span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">String</span><span class="p">,</span> <span class="n">Float</span><span class="p">,</span> <span class="n">DateTime</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">Column</span><span class="p">,</span> <span class="n">ForeignKey</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="kn">import</span> <span class="n">relationship</span>
+
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">Base</span>
+
+<span class="kn">import</span> <span class="nn">datetime</span> <span class="kn">as</span> <span class="nn">dt</span>
+
+
+
+<div class="viewcode-block" id="Ts"><a class="viewcode-back" href="../../../database/ts.html#alchemist_lib.database.ts.Ts">[docs]</a><span class="k">class</span> <span class="nc">Ts</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+    
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Map class for table ts.</span>
+
+<span class="sd">        - **ts_name**: String(150), primary_key.</span>
+<span class="sd">        - **datetime_added**: DateTime, not null.</span>
+<span class="sd">        - **aum**: Float(20, 8), not null.</span>
+<span class="sd">        - **ptf_type**: String(150), not null.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s2">&quot;ts&quot;</span>
+
+    <span class="n">ts_name</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">150</span><span class="p">),</span> <span class="n">primary_key</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+    <span class="n">datetime_added</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">DateTime</span><span class="p">,</span> <span class="n">nullable</span> <span class="o">=</span> <span class="bp">False</span><span class="p">)</span>
+    <span class="n">aum</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Float</span><span class="p">(</span><span class="n">precision</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="n">scale</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span> <span class="n">asdecimal</span> <span class="o">=</span> <span class="bp">True</span><span class="p">),</span> <span class="n">nullable</span> <span class="o">=</span> <span class="bp">False</span><span class="p">)</span>
+    <span class="n">ptf_type</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">150</span><span class="p">),</span> <span class="n">nullable</span> <span class="o">=</span> <span class="bp">False</span><span class="p">)</span>
+
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ts_name</span><span class="p">,</span> <span class="n">aum</span><span class="p">,</span> <span class="n">ptf_type</span><span class="p">,</span> <span class="n">datetime_added</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()):</span>
+
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Costructor method.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            ts_name (str): Name of the trading system.</span>
+<span class="sd">            datetime_added (datetime.datetime, optional): Last date and time when the trading system was initialized. Default is the moment of initialization in UTC format.</span>
+<span class="sd">            aum (decimal.Decimal): The value of assets under management of the trading system.</span>
+<span class="sd">            ptf_type (str): String that identify the type of the portfolio.</span>
+<span class="sd">            </span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">ts_name</span> <span class="o">=</span> <span class="n">ts_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">datetime_added</span> <span class="o">=</span> <span class="n">datetime_added</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">aum</span> <span class="o">=</span> <span class="n">aum</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ptf_type</span> <span class="o">=</span> <span class="n">ptf_type</span>
+
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;&lt;TradingSystem(ts_name={}, datetime_added={}, aum={}, ptf_type={})&gt;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ts_name</span><span class="p">,</span>
+                                                                                            <span class="bp">self</span><span class="o">.</span><span class="n">datetime_added</span><span class="p">,</span>
+                                                                                            <span class="bp">self</span><span class="o">.</span><span class="n">aum</span><span class="p">,</span>
+                                                                                            <span class="bp">self</span><span class="o">.</span><span class="n">ptf_type</span>
+                                                                                            <span class="p">)</span>
+
+<div class="viewcode-block" id="Ts.to_dict"><a class="viewcode-back" href="../../../database/ts.html#alchemist_lib.database.ts.Ts.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        As the name tell, it returns attributes in a dict form.</span>
+<span class="sd">        </span>
+<span class="sd">        Note:</span>
+<span class="sd">            The __dict__ method is not overrideble.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;ts_name&quot;</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">ts_name</span><span class="p">,</span>
+                <span class="s2">&quot;datetime_added&quot;</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">datetime_added</span><span class="p">,</span>
+                <span class="s2">&quot;aum&quot;</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">aum</span><span class="p">,</span>
+                <span class="s2">&quot;ptf_type&quot;</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">ptf_type</span>
+                <span class="p">}</span></div>
+
+    
+<div class="viewcode-block" id="Ts.__eq__"><a class="viewcode-back" href="../../../database/ts.html#alchemist_lib.database.ts.Ts.__eq__">[docs]</a>    <span class="k">def</span> <span class="nf">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Overrides the default implementation.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="o">.</span><span class="n">__class__</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">NotImplemented</span></div>
+
+
+<div class="viewcode-block" id="Ts.__hash__"><a class="viewcode-back" href="../../../database/ts.html#alchemist_lib.database.ts.Ts.__hash__">[docs]</a>    <span class="k">def</span> <span class="nf">__hash__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Overrides the default implementation.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="k">return</span> <span class="nb">hash</span><span class="p">(</span><span class="nb">tuple</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span><span class="o">.</span><span class="n">items</span><span class="p">())))</span></div></div>
+</pre></div>
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Carniel Giorgio.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: ''
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
