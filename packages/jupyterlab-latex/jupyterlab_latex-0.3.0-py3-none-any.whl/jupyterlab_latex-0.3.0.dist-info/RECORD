@@ -1,0 +1,14 @@
+jupyterlab_latex/__init__.py,sha256=aTlPZ4TTPTSrJYJSVIMBAA-s3c8KbY5ZP_G0APK-4RE,1204
+jupyterlab_latex/_version.py,sha256=3wVEs2QD_7OcTlD97cZdCeizd2hUbJJ0GeIO8wQIjrk,22
+jupyterlab_latex/build.py,sha256=WjNuj9-7NU97kXrBHKQqMcJY7aj5ipO_VlzybJvDBPg,6137
+jupyterlab_latex/config.py,sha256=inAphpzTdD_ACvL7K-Srh2iV9Ldy2DFwh3r8_D8TP9U,1071
+jupyterlab_latex/synctex.py,sha256=pR2HA9rxkAp40_wOyH4jdE74g1GmCFPyD-3DMYoFn58,7392
+jupyterlab_latex/util.py,sha256=lbuUFGE7s7ghNZfudDqSQ-E07icnCvyKFzSLiFN0yIE,1659
+jupyterlab_latex/api/api.yaml,sha256=MvUUBagqrRELzlZPkUokYiLxrrGhsPMEl_E2rl2Rlps,3328
+jupyterlab_latex-0.3.0.data/data/etc/jupyter/jupyter_notebook_config.d/jupyterlab_latex.json,sha256=DP93EbOuvYR0VqGmPSuKQ9IiExWx7r-IvrhKpkRkR98,93
+jupyterlab_latex-0.3.0.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+jupyterlab_latex-0.3.0.dist-info/METADATA,sha256=ogJt1Kd84RgFuI8MDcf1Ih1Llpj-XLvgpcxA15RoqO8,728
+jupyterlab_latex-0.3.0.dist-info/RECORD,,
+jupyterlab_latex-0.3.0.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+jupyterlab_latex-0.3.0.dist-info/metadata.json,sha256=PorrzwcYrtTYYZosqSIK2WtUk4AQJ5rUyTPZzOfuCSU,912
+jupyterlab_latex-0.3.0.dist-info/top_level.txt,sha256=AlhMsvzdvn-wcduPui_NHrAMJF8Sn21mMkifvSSXB7s,17
