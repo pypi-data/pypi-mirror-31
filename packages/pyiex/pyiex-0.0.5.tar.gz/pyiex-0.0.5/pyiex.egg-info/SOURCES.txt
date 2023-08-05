@@ -1,0 +1,16 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+pyiex/__init__.py
+pyiex/pyiex.py
+pyiex/stock.py
+pyiex.egg-info/PKG-INFO
+pyiex.egg-info/SOURCES.txt
+pyiex.egg-info/dependency_links.txt
+pyiex.egg-info/requires.txt
+pyiex.egg-info/top_level.txt
+pyiex/utils/__init__.py
+pyiex/utils/func_utils.py
+pyiex/utils/query_utils.py
