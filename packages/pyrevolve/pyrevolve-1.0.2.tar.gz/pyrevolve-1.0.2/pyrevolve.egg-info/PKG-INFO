@@ -1,0 +1,14 @@
+Metadata-Version: 1.0
+Name: pyrevolve
+Version: 1.0.2
+Summary: Python wrapper for Revolve checkpointing
+Home-page: https://github.com/opesci/pyrevolve/
+Author: Imperial College London
+Author-email: opesci@imperial.ac.uk
+License: MIT
+Description-Content-Type: UNKNOWN
+Description: pyrevolve is a python(ic) wrapper for
+            the Revolve utility from the Griewank(2000) for optimal
+            checkpointing. This is designed to work with existing
+            code with minimal changes.
+Platform: UNKNOWN
