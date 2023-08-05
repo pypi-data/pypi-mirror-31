@@ -1,0 +1,50 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-account-financial-tools
+Version: 8.0.20170112
+Summary: Meta package for OCA account-financial-tools Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo8-addon-account-asset-management
+Requires-Dist: odoo8-addon-account-asset-management-xls
+Requires-Dist: odoo8-addon-account-auto-fy-sequence
+Requires-Dist: odoo8-addon-account-balance-line
+Requires-Dist: odoo8-addon-account-chart-update
+Requires-Dist: odoo8-addon-account-check-deposit
+Requires-Dist: odoo8-addon-account-compute-tax-amount
+Requires-Dist: odoo8-addon-account-constraints
+Requires-Dist: odoo8-addon-account-cost-center
+Requires-Dist: odoo8-addon-account-credit-control
+Requires-Dist: odoo8-addon-account-credit-control-dunning-fees
+Requires-Dist: odoo8-addon-account-default-draft-move
+Requires-Dist: odoo8-addon-account-fiscal-position-vat-check
+Requires-Dist: odoo8-addon-account-fiscal-year-reopen
+Requires-Dist: odoo8-addon-account-invoice-constraint-chronology
+Requires-Dist: odoo8-addon-account-invoice-currency
+Requires-Dist: odoo8-addon-account-invoice-tax-required
+Requires-Dist: odoo8-addon-account-journal-always-check-date
+Requires-Dist: odoo8-addon-account-journal-period-close
+Requires-Dist: odoo8-addon-account-move-batch-validate
+Requires-Dist: odoo8-addon-account-move-line-import
+Requires-Dist: odoo8-addon-account-move-line-no-default-search
+Requires-Dist: odoo8-addon-account-move-line-payable-receivable-filter
+Requires-Dist: odoo8-addon-account-move-line-search-extension
+Requires-Dist: odoo8-addon-account-move-locking
+Requires-Dist: odoo8-addon-account-move-template
+Requires-Dist: odoo8-addon-account-netting
+Requires-Dist: odoo8-addon-account-partner-required
+Requires-Dist: odoo8-addon-account-reconcile-trace
+Requires-Dist: odoo8-addon-account-renumber
+Requires-Dist: odoo8-addon-account-reset-chart
+Requires-Dist: odoo8-addon-account-reversal
+Requires-Dist: odoo8-addon-account-tax-analysis
+Requires-Dist: odoo8-addon-account-tax-chart-interval
+Requires-Dist: odoo8-addon-currency-rate-date-check
+Requires-Dist: odoo8-addon-currency-rate-update
+Requires-Dist: odoo8-addon-l10n-account-translate
+
+UNKNOWN
+
+
