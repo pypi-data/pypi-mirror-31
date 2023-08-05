@@ -1,0 +1,7 @@
+django>=1.10
+django-postgres-copy>=2.0.0
+csvkit>=1.0
+requests
+clint
+hurry.filesize
+pytz
