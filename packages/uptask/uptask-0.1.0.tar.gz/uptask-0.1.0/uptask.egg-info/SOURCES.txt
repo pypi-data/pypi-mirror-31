@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+uptask/__init__.py
+uptask/__main__.py
+uptask/commands.py
+uptask/config.py
+uptask/helpers.py
+uptask/remotessh.py
+uptask/uptask.py
+uptask.egg-info/PKG-INFO
+uptask.egg-info/SOURCES.txt
+uptask.egg-info/dependency_links.txt
+uptask.egg-info/entry_points.txt
+uptask.egg-info/requires.txt
+uptask.egg-info/top_level.txt
