@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: aots
+Version: 0.0.1
+Summary: AOTS - Art of the State - a state machine library
+Home-page: https://github.com/haarcuba/aots.git
+Author: Yoav Kleinberger
+Author-email: haarcuba@gmail.com
+License: UNKNOWN
+Keywords: statemachine,state machine
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Provides-Extra: testing
+Provides-Extra: testing
+Requires-Dist: pytest; extra == 'testing'
+
+AOTS - Art of the State - a state machine library
+
+
