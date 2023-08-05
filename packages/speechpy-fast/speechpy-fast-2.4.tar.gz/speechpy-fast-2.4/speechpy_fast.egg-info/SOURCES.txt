@@ -1,0 +1,14 @@
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+speechpy/__init__.py
+speechpy/feature.py
+speechpy/functions.py
+speechpy/processing.py
+speechpy_fast.egg-info/PKG-INFO
+speechpy_fast.egg-info/SOURCES.txt
+speechpy_fast.egg-info/dependency_links.txt
+speechpy_fast.egg-info/not-zip-safe
+speechpy_fast.egg-info/requires.txt
+speechpy_fast.egg-info/top_level.txt
