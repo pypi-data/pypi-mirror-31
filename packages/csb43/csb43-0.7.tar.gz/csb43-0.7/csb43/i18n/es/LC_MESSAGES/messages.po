@@ -1,0 +1,442 @@
+# Spanish translations for csb43.
+# Copyright (C) 2013 ORGANIZATION
+# This file is distributed under the same license as the csb43 project.
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+# HMJ <wmj.py@gmx.es>, 2013, 2014, 2015, 2016, 2018.
+msgid ""
+msgstr ""
+"Project-Id-Version: csb43 0.1\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2018-03-26 18:33+0200\n"
+"PO-Revision-Date: 2018-03-26 18:34+0100\n"
+"Last-Translator: HMJ <wmj.py@gmx.com>\n"
+"Language: es\n"
+"Language-Team: Spanish <kde-i18n-doc@kde.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.3\n"
+"X-Generator: Lokalize 2.0\n"
+
+#: csb43/formats.py:113
+msgid ""
+"Package 'tablib' not found. Formats provided by 'tablib' will not be "
+"available."
+msgstr ""
+"Paquete 'tablib' no encontrado. Los formatos proporcionados por 'tablib' "
+"no estarán disponibles."
+
+#: csb43/formats.py:122
+msgid ""
+"Package 'yaml' not found. Hierarchical YAML format will not be available."
+msgstr ""
+"Paquete 'yaml' no encontrado. El formato YAML jerárquico no estará "
+"disponible."
+
+#: csb43/formats.py:208
+#, python-format
+msgid "unexpected format %s"
+msgstr "no se esperaba el formato %s"
+
+#: csb43/formats.py:226
+msgid "Accounts"
+msgstr "Cuentas"
+
+#: csb43/formats.py:259
+msgid "Transactions"
+msgstr "Movimientos"
+
+#: csb43/csb43/account.py:545
+msgid "trying to close an already closed account"
+msgstr "intentando cerrar una cuenta ya cerrada"
+
+#: csb43/csb43/account.py:588
+#, python-format
+msgid "balance (%1.2f) mismatch in closing account record (%1.2f)"
+msgstr ""
+"el balance (%1.2f) no concuerda con el del registro de cierre de cuenta "
+"(%1.2f)"
+
+#: csb43/csb43/account.py:594
+#, python-format
+msgid "income amount (%1.2f) mismatch in closing account record (%1.2f)"
+msgstr ""
+"el montante en el haber (%1.2f) no concuerda con el del registro de "
+"cierre de cuenta (%1.2f)"
+
+#: csb43/csb43/account.py:601
+#, python-format
+msgid "expense amount (%1.2f) mismatch in closing account record (%1.2f)"
+msgstr ""
+"el montante en el debe (%1.2f) no concuerda con el del registro de cierre"
+" de cuenta (%1.2f)"
+
+#: csb43/csb43/account.py:608
+#, python-format
+msgid "income entries (%d) mismatch in closing account record (%d)"
+msgstr ""
+"el número de entradas en el haber (%d) no concuerda con el del registro "
+"de cierre de cuenta (%d)"
+
+#: csb43/csb43/account.py:615
+#, python-format
+msgid "expense entries (%d) mismatch in closing account record (%d)"
+msgstr ""
+"el número de entradas en el haber (%d) no concuerda con el del registro "
+"de cierre de cuenta (%d)"
+
+#: csb43/csb43/account.py:694
+msgid "transactions"
+msgstr "movimientos"
+
+#: csb43/csb43/csb_file.py:238
+msgid "trying to close an already closed file"
+msgstr "intentando cerrar un fichero ya cerrado"
+
+#: csb43/csb43/csb_file.py:252
+#, python-format
+msgid "incongruent closing record of file: total records %d != %d"
+msgstr ""
+"registro de cierre de fichero incongruente: total de registros %d != %d"
+
+#: csb43/csb43/csb_file.py:311
+msgid "accounts"
+msgstr "cuentas"
+
+#: csb43/csb43/csb_file.py:357
+msgid "{naccounts:d}\taccount(s) read"
+msgstr "{naccounts:d}\tcuenta(s) leída(s)"
+
+#: csb43/csb43/csb_file.py:358
+msgid "File properly closed:\t{file_is_closed}"
+msgstr "Fichero cerrado adecuadamente:\t{file_is_closed}"
+
+#: csb43/csb43/csb_file.py:359
+msgid "{total_records:d}\trecord(s) read"
+msgstr "{total_records:d}\tregistro(s) leído(s)"
+
+#: csb43/csb43/csb_file.py:369
+msgid "+ Account:\t{account_number}\t{short_name}"
+msgstr "+ Cuenta;\t{account_number}\t{short_name}"
+
+#: csb43/csb43/csb_file.py:370
+msgid "   From:\t{date_from}"
+msgstr "   Desde:\t{date_from}"
+
+#: csb43/csb43/csb_file.py:371
+msgid "   To:  \t{date_to}"
+msgstr "   Hasta: \t{date_to}"
+
+#: csb43/csb43/csb_file.py:373
+msgid "{ntransactions:d} transaction(s) read"
+msgstr "{ntransactions:d} movimiento(s) leído(s)"
+
+#: csb43/csb43/csb_file.py:374
+msgid "Account properly closed:\t{ac_is_closed}"
+msgstr "Cuenta cerrada adecuadamente:\t{ac_is_closed}"
+
+#: csb43/csb43/csb_file.py:375
+msgid "Information mode:\t{information_mode}"
+msgstr "Modalidad_de_información:\t{information_mode}"
+
+#: csb43/csb43/csb_file.py:376
+msgid "Previous amount:\t{ib_amount:14.2f}\t{ib_currency}"
+msgstr "Montante previo:\t{ib_amount:14.2f}\t{ib_currency}"
+
+#: csb43/csb43/csb_file.py:377
+msgid " Income:        \t{inc_amount:14.2f}\t{inc_currency}"
+msgstr " Haber:        \t{inc_amount:14.2f}\t{inc_currency}"
+
+#: csb43/csb43/csb_file.py:378
+msgid " Expense:       \t{exp_amount:14.2f}\t{exp_currency}"
+msgstr " Debe:       \t{exp_amount:14.2f}\t{exp_currency}"
+
+#: csb43/csb43/csb_file.py:379
+msgid "Balance:        \t{bal_amount:14.2f}\t{bal_currency}"
+msgstr "Balance:        \t{bal_amount:14.2f}\t{bal_currency}"
+
+#: csb43/csb43/transaction.py:195
+#, python-format
+msgid "maximum number of exchange record reached (%s)"
+msgstr "número máximo de registro de cambio de divisas alcanzado (%s)"
+
+#: csb43/csb43/transaction.py:350
+#, python-format
+msgid "Validation failed for reference '%s'"
+msgstr "Validación fallida para el campo de referencia '%s'"
+
+#: csb43/csb43/transaction.py:413
+#, python-format
+msgid ""
+"the maximum number of complementary items for transaction has been "
+"reached: %d"
+msgstr "número máximo de conceptos adicionales por movimiento alcanzado: %d"
+
+#: csb43/homebank/__init__.py:81
+#, python-format
+msgid "bad format, 6 fields expected, but%d found"
+msgstr "mal formato, se esperaban 6 campos, pero se encontraron %d"
+
+#: csb43/homebank/__init__.py:104
+msgid "datetime.date expected"
+msgstr "se esperaba datetime.date"
+
+#: csb43/utils/__init__.py:71
+#, python-format
+msgid ""
+"Bad format: content '%s' mismatches the expected format r'%s' for this "
+"field"
+msgstr ""
+"mal formato: el contenido '%s' no concuerda con el formato esperado r'%s'"
+" para este campo"
+
+#: csb43/utils/__init__.py:198
+#, python-format
+msgid "instance of datetime or date expected, but '%s' found"
+msgstr "se esperaba instancia de datetime o de date, pero se encontró '%s'"
+
+#: csb43/utils/cmd.py:134
+#, python-format
+msgid "argument \"-\" with mode %r"
+msgstr "argumento \"-\" con modo %r"
+
+#: csb43/utils/cmd.py:152
+#, python-format
+msgid "can't open '%s': %s"
+msgstr "no se pudo abrir '%s': %s"
+
+#: csb43/utils/cmd.py:162
+msgid "Convert a CSB43 file to another format"
+msgstr "Convierte un fichero CSB43 a otro formato"
+
+#: csb43/utils/cmd.py:170
+msgid "a csb43 file ('-' for stdin)"
+msgstr "fichero csb43 ('-' para entrada estándar)"
+
+#: csb43/utils/cmd.py:175
+#, python-format
+msgid "strict mode (default: %(default)s)"
+msgstr "modo estricto (por defecto: %(default)s)"
+
+#: csb43/utils/cmd.py:180
+#, python-format
+msgid ""
+"use DDMMYY as date format while parsing the csb43 file instead of YYMMDD "
+"(default: %(default)s)"
+msgstr ""
+"usa DDMMYY -día, mes, año- como formato de fecha al interpretar los datos"
+" del fichero csb43 en lugar de YYMMDD -año, mes, día- (por defecto: "
+"%(default)s)"
+
+#: csb43/utils/cmd.py:189
+#, python-format
+msgid ""
+"set the number of decimal places for the currency type (default: "
+"%(default)d)"
+msgstr ""
+"establece el número de dígitos decimales a considerar en el tipo de "
+"divisa (por defecto: %(default)d)"
+
+#: csb43/utils/cmd.py:196
+#, python-format
+#| msgid "export amounts using binary floating point numbers (default:
+#| %(default)s)"
+msgid ""
+"export monetary amounts using binary floating point numbers as a fallback"
+" (default: %(default)s)"
+msgstr ""
+"exporta cantidades monetarias usando números binarios en punto flotante como"
+" último recurso (default: "
+"%(default)s)"
+
+#: csb43/utils/cmd.py:202
+msgid "show csb43 warnings"
+msgstr "mostrar avisos de csb43"
+
+#: csb43/utils/cmd.py:209
+msgid "destination file ('-' for stdout)"
+msgstr "fichero de destino ('-' para salida estándar)"
+
+#: csb43/utils/cmd.py:215
+#, python-format
+msgid "Format of the output file (default: %(default)s)"
+msgstr "Formato del fichero de salida (por defecto: %(default)s)"
+
+#: csb43/utils/cmd.py:239
+msgid "File:"
+msgstr "Fichero:"
+
+#: csb43/utils/messages.py:11
+#, python-format
+msgid "bad code of record or unexpected length: >>>%s<<<"
+msgstr "código de registro inválido o longitud no esperada: >>>%s<<<"
+
+#: csb43/utils/messages.py:15
+#, python-format
+msgid ""
+"pycountry.Currencies object or a valid ISO 4217 code expected, but %s "
+"found"
+msgstr ""
+"se esperaba objeto pycountry.Currencies o código ISO 4217 válido, pero se"
+" encontró %s"
+
+#: csb43/utils/messages.py:22
+#, python-format
+msgid "incompatible object '%s', type(s) %s expected"
+msgstr "objeto incompatible '%s', se esperaba(n) tipo(s) %s"
+
+#: csb43/utils/messages.py:28
+msgid "bank_code"
+msgstr "codigo_de_entidad"
+
+#: csb43/utils/messages.py:29
+msgid "branch_code"
+msgstr "codigo_de_sucursal"
+
+#: csb43/utils/messages.py:30
+msgid "account_key"
+msgstr "digitos_de_control"
+
+#: csb43/utils/messages.py:31
+msgid "account_number"
+msgstr "numero_de_cuenta"
+
+#: csb43/utils/messages.py:34
+msgid "information_mode"
+msgstr "modalidad_de_informacion"
+
+#: csb43/utils/messages.py:35
+msgid "short_name"
+msgstr "nombre_abreviado"
+
+#: csb43/utils/messages.py:36
+msgid "currency"
+msgstr "divisa"
+
+#: csb43/utils/messages.py:37
+msgid "initial_date"
+msgstr "fecha_de_comienzo"
+
+#: csb43/utils/messages.py:38
+msgid "final_date"
+msgstr "fecha_de_fin"
+
+#: csb43/utils/messages.py:39
+msgid "initial_balance"
+msgstr "balance_inicial"
+
+#: csb43/utils/messages.py:40
+msgid "final_balance"
+msgstr "balance_final"
+
+#: csb43/utils/messages.py:41
+msgid "income"
+msgstr "haber"
+
+#: csb43/utils/messages.py:42
+msgid "expenses"
+msgstr "debe"
+
+#: csb43/utils/messages.py:43
+msgid "income_entries"
+msgstr "entradas_en_el_haber"
+
+#: csb43/utils/messages.py:44
+msgid "expenses_entries"
+msgstr "entradas_en_el_debe"
+
+#: csb43/utils/messages.py:47
+msgid "document_number"
+msgstr "numero_del_documento"
+
+#: csb43/utils/messages.py:48
+msgid "shared_item"
+msgstr "concepto_comun"
+
+#: csb43/utils/messages.py:49
+msgid "own_item"
+msgstr "concepto_propio"
+
+#: csb43/utils/messages.py:50
+msgid "item1"
+msgstr "concepto1"
+
+#: csb43/utils/messages.py:51
+msgid "item2"
+msgstr "concepto2"
+
+#: csb43/utils/messages.py:52
+msgid "reference1"
+msgstr "primera_referencia"
+
+#: csb43/utils/messages.py:53
+msgid "reference2"
+msgstr "segunda_referencia"
+
+#: csb43/utils/messages.py:54
+msgid "transaction_date"
+msgstr "fecha_de_operacion"
+
+#: csb43/utils/messages.py:55
+msgid "value_date"
+msgstr "fecha_valor"
+
+#: csb43/utils/messages.py:56
+msgid "amount"
+msgstr "cantidad"
+
+#: csb43/utils/messages.py:57
+msgid "original_currency"
+msgstr "divisa_original"
+
+#: csb43/utils/messages.py:58
+msgid "original_amount"
+msgstr "cantidad_en_divisa_original"
+
+#: csb43/utils/messages.py:59
+msgid "optional_items"
+msgstr "conceptos_adicionales"
+
+#: csb43/utils/messages.py:60
+msgid "exchange"
+msgstr "cambio_de_divisa"
+
+#: csb43/utils/messages.py:63
+msgid "record_code"
+msgstr "codigo_de_registro"
+
+#~ msgid "name for output file (stdout '-' by default)"
+#~ msgstr "nombre del fichero de salida (salida estándar '-' por defecto)"
+
+#~ msgid "strict mode"
+#~ msgstr "modo estricto (para en el primer error)"
+
+#~ msgid "show version and exit"
+#~ msgstr "muestra la versión y termina"
+
+#~ msgid "Account:\t%s\t%s"
+#~ msgstr "Cuenta:\t%s\t%s"
+
+#~ msgid " From:\t%s"
+#~ msgstr " Desde:\t%s"
+
+#~ msgid " To:  \t%s"
+#~ msgstr " Hasta:\t%s"
+
+#~ msgid "Previous amount:\t%14.2f\t%s"
+#~ msgstr "Montante previo:\t%14.2f\t%s"
+
+#~ msgid " Income:        \t%14.2f\t%s"
+#~ msgstr " Haber:        \t%14.2f\t%s"
+
+#~ msgid " Expense:       \t%14.2f\t%s"
+#~ msgstr " Debe:       \t%14.2f\t%s"
+
+#~ msgid "Balance:        \t%14.2f\t%s"
+#~ msgstr "Balance:        \t%14.2f\t%s"
+
+#~ msgid "tablib currently unsupported in python3"
+#~ msgstr "de momento, tablib no está soportado en python3"
+
