@@ -1,0 +1,251 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-26 23:43+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: cores.py:32 models.py:127 models.py:157
+msgid "queries"
+msgstr "query string"
+
+#: cores.py:36 models.py:134 models.py:182
+msgid "request body"
+msgstr "tělo dotazu"
+
+#: cores.py:40 models.py:133 models.py:162
+msgid "request headers"
+msgstr "hlavičky dotazu"
+
+#: cores.py:44 models.py:140 models.py:177
+msgid "response body"
+msgstr "tělo odpovědi"
+
+#: cores.py:48 models.py:139
+msgid "response headers"
+msgstr "hlavičky odpovědi"
+
+#: cores.py:52 models.py:143
+msgid "error description"
+msgstr "popis chyby"
+
+#: cores.py:67 cores.py:94 reversion_log/cores.py:19
+msgid "Request"
+msgstr "Dotaz"
+
+#: cores.py:69 cores.py:96 reversion_log/cores.py:21
+msgid "Response"
+msgstr "Odpověď"
+
+#: cores.py:71 reversion_log/cores.py:23
+msgid "User information"
+msgstr "Uživatelské informace"
+
+#: cores.py:72 cores.py:98 reversion_log/cores.py:24
+msgid "Extra information"
+msgstr "Další informace"
+
+#: cores.py:99
+msgid "Related objects"
+msgstr "Vztažené objekty"
+
+#: cores.py:128 models.py:283
+msgid "command output"
+msgstr "výstup spustitelné úlohy"
+
+#: models.py:115
+msgid "Info"
+msgstr "Info"
+
+#: models.py:116
+msgid "Warning"
+msgstr "Varování"
+
+#: models.py:117
+msgid "Error"
+msgstr "Chyba"
+
+#: models.py:118
+msgid "Debug"
+msgstr "Debug"
+
+#: models.py:119
+msgid "Critical"
+msgstr "Kritické"
+
+#: models.py:122
+msgid "host"
+msgstr "host"
+
+#: models.py:124
+msgid "method"
+msgstr "metoda"
+
+#: models.py:125
+msgid "URL path"
+msgstr "URL cesta"
+
+#: models.py:128
+msgid "HTTPS connection"
+msgstr "HTTPS spojení"
+
+#: models.py:129
+msgid "slug"
+msgstr "slug"
+
+#: models.py:132
+msgid "request timestamp"
+msgstr "čas a datum dotazu"
+
+#: models.py:137
+msgid "response timestamp"
+msgstr "datum a čas odpovědi"
+
+#: models.py:138
+msgid "response code"
+msgstr "kód odpovědi"
+
+#: models.py:142
+msgid "status"
+msgstr "stav"
+
+#: models.py:144
+msgid "exception name"
+msgstr "název výjimky"
+
+#: models.py:167
+msgid "Response time"
+msgstr "Čas odpovědi"
+
+#: models.py:171
+msgid "Path"
+msgstr "Cesta"
+
+#: models.py:199
+msgid "Common request"
+msgstr "Běžný HTTP dotaz"
+
+#: models.py:200
+msgid "Throttled request"
+msgstr "Throttled HTTP dotaz"
+
+#: models.py:201
+msgid "Successful login request"
+msgstr "Úspěšné přihlášení"
+
+#: models.py:202
+msgid "Unsuccessful login request"
+msgstr "Neúspěšné přihlášení"
+
+#: models.py:205
+msgid "user"
+msgstr "uživatel"
+
+#: models.py:206
+msgid "IP address"
+msgstr "IP adresa"
+
+#: models.py:207
+msgid "type"
+msgstr "typ"
+
+#: models.py:227 models.py:234
+msgid "input logged request"
+msgstr "vstupní logovaný dotaz"
+
+#: models.py:228
+msgid "input logged requests"
+msgstr "vstupní logované dotazy"
+
+#: models.py:239
+msgid "output logged request"
+msgstr "výstupní logovaný dotaz"
+
+#: models.py:240 models.py:245
+msgid "output logged requests"
+msgstr "výstupní logované dotazy"
+
+#: models.py:255
+msgid "object"
+msgstr "objekt"
+
+#: models.py:277
+msgid "start"
+msgstr "start"
+
+#: models.py:278
+msgid "stop"
+msgstr "stop"
+
+#: models.py:279
+msgid "command name"
+msgstr "název spustitelné úlohy"
+
+#: models.py:280
+msgid "command options"
+msgstr "parametry spustitelné úlohy"
+
+#: models.py:282
+msgid "executed from command line"
+msgstr "spuštěno z příkazové řádky"
+
+#: models.py:285
+msgid "finished successfully"
+msgstr "úspěšně dokončeno"
+
+#: models.py:288
+msgid "command log"
+msgstr "log spustitelné úlohy"
+
+#: models.py:289
+msgid "command logs"
+msgstr "logy spustitelných úloh"
+
+#: reversion_log/cores.py:25
+msgid "Revisions"
+msgstr "Revize"
+
+#: reversion_log/models.py:14
+msgid "logged request"
+msgstr "logovaný dotaz"
+
+#: reversion_log/models.py:15
+msgid "revision"
+msgstr "datové změny"
+
+#: reversion_log/models.py:21
+msgid "Logged request revision"
+msgstr "logovaná datová změna"
+
+#: reversion_log/models.py:22
+msgid "Logged requests revisions"
+msgstr "Logované datové změny"
+
+#: templates/429.html:9
+msgid "Too Many Requests (429)"
+msgstr "Příliš mnoho HTTP dotazů (429)"
+
+#: throttling.py:30
+msgid "Slow down"
+msgstr "Zpomal"
+
+#: throttling.py:43
+msgid "Too many login attempts"
+msgstr "Příliš mnoho pokusů o přihlášení"
+
+#: throttling.py:56
+msgid "You are logged too much times"
+msgstr "Příliš mnoho přihlášení najednou"
