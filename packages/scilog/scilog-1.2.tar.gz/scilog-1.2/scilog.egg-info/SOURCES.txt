@@ -1,0 +1,13 @@
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+bin/gitdiffuntracked
+scilog/__init__.py
+scilog/scilog.py
+scilog.egg-info/PKG-INFO
+scilog.egg-info/SOURCES.txt
+scilog.egg-info/dependency_links.txt
+scilog.egg-info/entry_points.txt
+scilog.egg-info/requires.txt
+scilog.egg-info/top_level.txt
