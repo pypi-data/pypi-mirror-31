@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: text-numbered-list-analyser
+Version: 1.1.0
+Summary: A Text analyser to handle not well formatted text with numbered list
+Home-page: https://github.com/albertmenglongli/text-numbered-list-analyser
+Author: menglong.li
+Author-email: albert.menglongli@gmail.com
+License: Apache2.0
+Keywords: numbered_list text_analyser
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+
+A Text analyser to handle not well formatted text with numbered list, and output a new well formatted text The anaylser build a tree of nodes, and you can also use the node to do extra work, like creating json etc.
+
+
