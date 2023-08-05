@@ -1,0 +1,3 @@
+[console_scripts]
+vm-translator = vm_translator.__main__:main
+
