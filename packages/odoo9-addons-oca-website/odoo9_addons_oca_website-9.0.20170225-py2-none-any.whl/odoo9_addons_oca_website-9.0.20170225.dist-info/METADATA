@@ -1,0 +1,40 @@
+Metadata-Version: 2.0
+Name: odoo9-addons-oca-website
+Version: 9.0.20170225
+Summary: Meta package for OCA website Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo9-addon-website-anchor-smooth-scroll
+Requires-Dist: odoo9-addon-website-blog-mgmt
+Requires-Dist: odoo9-addon-website-blog-share
+Requires-Dist: odoo9-addon-website-breadcrumb
+Requires-Dist: odoo9-addon-website-canonical-url
+Requires-Dist: odoo9-addon-website-container-fluid
+Requires-Dist: odoo9-addon-website-cookie-notice
+Requires-Dist: odoo9-addon-website-crm-privacy-policy
+Requires-Dist: odoo9-addon-website-crm-recaptcha
+Requires-Dist: odoo9-addon-website-field-autocomplete
+Requires-Dist: odoo9-addon-website-form-recaptcha
+Requires-Dist: odoo9-addon-website-forum-censored
+Requires-Dist: odoo9-addon-website-google-tag-manager
+Requires-Dist: odoo9-addon-website-img-bg-style
+Requires-Dist: odoo9-addon-website-legal-page
+Requires-Dist: odoo9-addon-website-logo
+Requires-Dist: odoo9-addon-website-no-crawler
+Requires-Dist: odoo9-addon-website-odoo-debranding
+Requires-Dist: odoo9-addon-website-payment-v10
+Requires-Dist: odoo9-addon-website-portal-address
+Requires-Dist: odoo9-addon-website-portal-contact
+Requires-Dist: odoo9-addon-website-portal-purchase
+Requires-Dist: odoo9-addon-website-portal-v10
+Requires-Dist: odoo9-addon-website-seo-redirection
+Requires-Dist: odoo9-addon-website-snippet-anchor
+Requires-Dist: odoo9-addon-website-snippet-big-button
+Requires-Dist: odoo9-addon-website-snippet-country-dropdown
+
+UNKNOWN
+
+
