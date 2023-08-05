@@ -1,0 +1,22 @@
+Metadata-Version: 2.0
+Name: odoo10-addons-oca-vertical-hotel
+Version: 10.0.20180419.0
+Summary: Meta package for oca-vertical-hotel Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo10-addon-board-frontdesk
+Requires-Dist: odoo10-addon-hotel
+Requires-Dist: odoo10-addon-hotel-housekeeping
+Requires-Dist: odoo10-addon-hotel-reservation
+Requires-Dist: odoo10-addon-hotel-restaurant
+Requires-Dist: odoo10-addon-report-hotel-reservation
+Requires-Dist: odoo10-addon-report-hotel-restaurant
+
+UNKNOWN
+
+
