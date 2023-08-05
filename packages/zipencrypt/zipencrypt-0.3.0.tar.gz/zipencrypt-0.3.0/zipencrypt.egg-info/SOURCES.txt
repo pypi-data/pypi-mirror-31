@@ -1,0 +1,11 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.py
+zipencrypt/__init__.py
+zipencrypt/zipencrypt2.py
+zipencrypt/zipencrypt3.py
+zipencrypt.egg-info/PKG-INFO
+zipencrypt.egg-info/SOURCES.txt
+zipencrypt.egg-info/dependency_links.txt
+zipencrypt.egg-info/top_level.txt
