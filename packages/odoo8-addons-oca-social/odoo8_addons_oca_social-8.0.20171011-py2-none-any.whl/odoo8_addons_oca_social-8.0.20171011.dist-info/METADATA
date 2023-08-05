@@ -1,0 +1,55 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-social
+Version: 8.0.20171011
+Summary: Meta package for OCA social Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo8-addon-base-mail-bcc
+Requires-Dist: odoo8-addon-email-template-qweb
+Requires-Dist: odoo8-addon-mail-attach-existing-attachment
+Requires-Dist: odoo8-addon-mail-compose-select-lang
+Requires-Dist: odoo8-addon-mail-debrand
+Requires-Dist: odoo8-addon-mail-follower-custom-notification
+Requires-Dist: odoo8-addon-mail-footer-notified-partners
+Requires-Dist: odoo8-addon-mail-forward
+Requires-Dist: odoo8-addon-mail-full-expand
+Requires-Dist: odoo8-addon-mail-mandrill
+Requires-Dist: odoo8-addon-mail-notification-email-template
+Requires-Dist: odoo8-addon-mail-optional-autofollow
+Requires-Dist: odoo8-addon-mail-optional-follower-notification
+Requires-Dist: odoo8-addon-mail-print
+Requires-Dist: odoo8-addon-mail-read-new-window
+Requires-Dist: odoo8-addon-mail-restrict-follower-selection
+Requires-Dist: odoo8-addon-mail-sent
+Requires-Dist: odoo8-addon-mail-template-multi-report
+Requires-Dist: odoo8-addon-mail-tracking
+Requires-Dist: odoo8-addon-mail-tracking-mailgun
+Requires-Dist: odoo8-addon-mail-tracking-mass-mailing
+Requires-Dist: odoo8-addon-marketing-security-group
+Requires-Dist: odoo8-addon-mass-mailing-custom-unsubscribe
+Requires-Dist: odoo8-addon-mass-mailing-event
+Requires-Dist: odoo8-addon-mass-mailing-keep-archives
+Requires-Dist: odoo8-addon-mass-mailing-sending-queue
+Requires-Dist: odoo8-addon-mass-mailing-statistic-extra
+Requires-Dist: odoo8-addon-mass-mailing-unique
+Requires-Dist: odoo8-addon-portal-welcome-email-template
+Requires-Dist: odoo8-addon-social-media-dribbble
+Requires-Dist: odoo8-addon-social-media-pinterest
+Requires-Dist: odoo8-addon-social-media-pinterest-blog
+Requires-Dist: odoo8-addon-social-media-tripadvisor
+Requires-Dist: odoo8-addon-social-media-xing
+Requires-Dist: odoo8-addon-website-mail-snippet-bg-color
+Requires-Dist: odoo8-addon-website-mail-snippet-fixed
+Requires-Dist: odoo8-addon-website-mail-snippet-responsive
+Requires-Dist: odoo8-addon-website-mail-snippet-table-edit
+Requires-Dist: odoo8-addon-website-mail-snippet-vertical-resize-base
+Requires-Dist: odoo8-addon-website-mass-mailing-name
+
+UNKNOWN
+
+
