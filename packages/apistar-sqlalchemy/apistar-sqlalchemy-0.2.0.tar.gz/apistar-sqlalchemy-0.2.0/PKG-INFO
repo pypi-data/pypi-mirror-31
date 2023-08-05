@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: apistar-sqlalchemy
+Version: 0.2.0
+Summary: SQLAlchemy integration for API Star.
+Home-page: https://github.com/PeRDy/apistar-sqlalchemy
+Author: José Antonio Perdiguero López
+Author-email: perdy.hh@gmail.com
+License: GPLv3
+Download-URL: https://github.com/PeRDy/apistar-sqlalchemy
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Keywords: python apistar api resource async database sqlalchemy
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Database
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
