@@ -1,0 +1,17 @@
+Metadata-Version: 2.0
+Name: mtianyan
+Version: 0.0.8
+Summary: mtianyan's tool
+Home-page: http://blog.mtianyan.cn
+Author: mtianyan
+Author-email: mtianyan@qq.com
+License: MIT Licence
+Description-Content-Type: UNKNOWN
+Keywords: pip,mtianyan
+Platform: any
+Requires-Dist: beautifulsoup4
+Requires-Dist: requests
+
+mtianyan's tool
+
+
