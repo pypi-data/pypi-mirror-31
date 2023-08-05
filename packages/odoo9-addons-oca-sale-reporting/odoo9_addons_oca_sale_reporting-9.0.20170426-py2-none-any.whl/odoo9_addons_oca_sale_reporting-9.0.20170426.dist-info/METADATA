@@ -1,0 +1,17 @@
+Metadata-Version: 2.0
+Name: odoo9-addons-oca-sale-reporting
+Version: 9.0.20170426
+Summary: Meta package for OCA sale-reporting Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo9-addon-sale-proforma-report
+Requires-Dist: odoo9-addon-sale-reporting-weight
+
+UNKNOWN
+
+
