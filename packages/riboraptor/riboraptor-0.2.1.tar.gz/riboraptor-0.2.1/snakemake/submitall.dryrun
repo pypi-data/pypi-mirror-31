@@ -1,0 +1,4 @@
+#!/bin/bash
+snakemake --snakefile Snakefile\
+    --config config_path=configs/$1.py\
+    --dryrun
