@@ -1,0 +1,3 @@
+[console_scripts]
+gram-scanner = gram_scanner:main
+
