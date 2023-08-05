@@ -1,0 +1,24 @@
+Metadata-Version: 1.1
+Name: django-congo
+Version: 2.2.4
+Summary: Congo contains many useful tools for faster and more efficient Django application developing.
+Home-page: https://github.com/integree/django-congo
+Author: Integree Bussines Solutions
+Author-email: dev@integree.eu
+License: MIT License
+Download-URL: https://pypi.python.org/packages/source/d/django-congo/django-congo-2.2.4.zip
+Description: UNKNOWN
+Keywords: django-congo congo django utils integree
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Framework :: Django :: 1.10
+Classifier: Topic :: Software Development :: Libraries :: Python Modules

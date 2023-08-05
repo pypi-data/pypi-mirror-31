@@ -1,0 +1,22 @@
+{% extends "admin/action_form.html" %}
+{% load i18n %}
+
+{% block action_form %}
+  
+  <input type="hidden" name="object_id_set" value="{{ object_id_set }}" />
+
+  <fieldset class="module aligned">
+    <div class="form-row word">
+      <div>          
+        <label class="required" for="id_group_id">{% trans "Grupa odbioców" %}</label>
+        <select name="group_id" id="id_group_id">
+          <option value="">---------</option>
+          {% for g in groups %}
+            <option value="{{ g.id }}">{{ g }}</option>
+          {% endfor %}
+        </select>
+      </div>
+    </div>
+  </fieldset>
+
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends "admin/base_site.html" %}
+{% load admin_static i18n %}
+
+{% block extrastyle %}
+{{ block.super }}
+<link rel="stylesheet" type="text/css" href="{% static "admin/css/changelists.css" %}" />
+<link rel="stylesheet" type="text/css" href="{% static "admin/css/forms.css" %}" />
+{% endblock %}
+
+{% block content %}
+{{ block.super }}
+<div id="content-main">
+    
+    <form id="{{ action }}_form" action="{{ action }}/" method="post">
+      {% csrf_token %}
+      
+      {% block action_form %}
+        
+          <fieldset class="module aligned">
+            <div class="form-row">
+              <div>          
+                <label class="required" for="id_field1">{% trans "Etykieta 1" %}</label>
+                <select name="field1" id="id_field1">
+                  <option value="">---------</option>
+                  <option value="">1</option>
+                  <option value="">2</option>
+                  <option value="">3</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div>
+                <label class="required" for="id_field2">{% trans "Etykieta 2" %}</label>
+                <input type="tezxt" id="id_field2" name="field2">
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div>
+                <input type="checkbox" id="id_field3" name="field3" checked="checked">
+                <label class="vCheckboxLabel" for="id_field3">{% trans "Etykieta 3" %}</label>
+              </div>
+            </div>
+              
+          </fieldset>
+      
+      {% endblock %}
+      
+      <div class="submit-row">
+        <a href="javascript:window.history.back()" class="button pull-left">Anuluj</a>
+        <input type="submit" name="_save" value="Wykonaj">
+      </div>
+    </form>
+  
+</div>
+{% endblock %}

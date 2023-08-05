@@ -1,0 +1,1 @@
+python manage.py compilemessages -l pl -l en
