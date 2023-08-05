@@ -1,0 +1,111 @@
+Metadata-Version: 2.1
+Name: minds
+Version: 0.1.1
+Summary: unofficial api for minds.com
+Home-page: https://gitlab.com/granitosaurus/minds-api
+Author: Bernardas Ališauskas
+Author-email: bernardas.alisauskas@pm.me
+License: GNU General Public License v3
+Keywords: minds
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: requests
+Requires-Dist: toml
+
+=========
+minds-api
+=========
+
+
+.. image:: https://img.shields.io/pypi/v/minds.svg
+        :target: https://pypi.python.org/pypi/minds
+
+.. image:: https://img.shields.io/travis/granitosaurus/minds.svg
+        :target: https://travis-ci.org/granitosaurus/minds
+
+.. image:: https://readthedocs.org/projects/minds-api/badge/?version=latest
+        :target: https://minds-api.readthedocs.io/en/latest/?badge=latest
+        :alt: Documentation Status
+
+.. image:: https://pyup.io/repos/github/granitosaurus/minds/shield.svg
+     :target: https://pyup.io/repos/github/granitosaurus/minds/
+     :alt: Updates
+
+
+Unofficial api for minds.com
+
+
+* Free software: GNU General Public License v3
+* Documentation: https://minds-api.readthedocs.io.
+
+
+Features
+--------
+
+Currently api coverage is limited but it supports:
+
+- writing posts, blogs
+- reading newsfeed, notifications
+- local profiles
+
+Also see minds-cli_ for interface for this API.
+
+Quick Usage
+-----------
+
+Reading::
+
+    from minds import Minds
+    minds_api = Minds()
+    top_posts = minds_api.channel_top()
+
+Writing::
+
+    from minds import Minds, Profile
+    minds_api = Minds(Profile('username','password'))
+    top_posts = minds_api.post_newsfeed(message='Hello, this message is from API; only for adults!', mature=True)
+
+FAQ
+---
+
+**Can I write a botnet using this to manipulate votes?**
+    Probably, but it will be easy to detect and not gonna last long.
+
+**Is there some sort of cli or interface for this?**
+    Yes see minds-cli_ project.
+
+.. _minds-cli: https://gitlab.com/granitosaurus/minds-cli
+
+
+Credits
+---------
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+
+If you wish to support this project you can open up an issue or send me a tip:
+
+- Bitcoin: ``18oJWwdy1XExN69kggj2JdYtqohMPx9QF8``
+- Bitcoin Cash: ``18oJWwdy1XExN69kggj2JdYtqohMPx9QF8``
+- Doge: ``DEmJSgawKvtS9CGQUC7QdNETa2UuYBrenS``
+- Ethereum: ``0xe8b452F9E3FDa8CEB32b2C231f73cC5cFa67735B``
+- Monero: ``43PAxkfekEYQki3HTQkgt9eH7KK5ZRBd447HkumTGmo8cacA9vP25MwWbwaVe4vUMveKAzAiA4j8xgUi29TpKXpm3yjjWof``
+
+
+
+=======
+History
+=======
+
+0.1.0 (2018-03-27)
+------------------
+
+* First release on PyPI.
+
+
