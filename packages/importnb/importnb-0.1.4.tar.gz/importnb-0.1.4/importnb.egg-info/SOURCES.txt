@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+changelog.md
+readme.md
+setup.py
+importnb/__init__.ipynb
+importnb/__init__.py
+importnb/_version.py
+importnb/compiler.ipynb
+importnb/compiler.py
+importnb.egg-info/PKG-INFO
+importnb.egg-info/SOURCES.txt
+importnb.egg-info/dependency_links.txt
+importnb.egg-info/not-zip-safe
+importnb.egg-info/requires.txt
+importnb.egg-info/top_level.txt
