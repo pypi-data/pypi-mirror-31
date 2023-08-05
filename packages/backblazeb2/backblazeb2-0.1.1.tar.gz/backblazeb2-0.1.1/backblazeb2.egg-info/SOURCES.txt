@@ -1,0 +1,11 @@
+README.md
+setup.py
+b2py/__init__.py
+b2py/b2.py
+b2py/constants.py
+b2py/utils.py
+backblazeb2.egg-info/PKG-INFO
+backblazeb2.egg-info/SOURCES.txt
+backblazeb2.egg-info/dependency_links.txt
+backblazeb2.egg-info/requires.txt
+backblazeb2.egg-info/top_level.txt
