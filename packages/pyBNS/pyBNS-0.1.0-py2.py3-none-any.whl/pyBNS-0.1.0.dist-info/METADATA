@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pyBNS
+Version: 0.1.0
+Summary: A wrapper for the Bloomberg News Service API
+Home-page: https://github.com/datadesk/py-bns
+Author: Vanessa Martinez
+Author-email: datadesk@latimes.com
+License: MIT License
+Platform: UNKNOWN
+Requires-Dist: futures; python_version == "2.7"
+Requires-Dist: future; python_version == "2.7"
+Requires-Dist: urllib3; python_version == "2.7"
+
+Allows python applications to easily connect and interact with the Bloomberg News Service API.
+
+
