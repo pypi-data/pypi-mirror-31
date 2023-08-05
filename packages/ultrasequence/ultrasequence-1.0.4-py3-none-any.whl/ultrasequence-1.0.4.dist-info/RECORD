@@ -1,0 +1,15 @@
+ultrasequence/__init__.py,sha256=dBuxnUZ4AZwqv5FjUWiOuMdJVSaty1QpDxDGEXKgxH4,1656
+ultrasequence/config.py,sha256=kNWUqvxXkYNrtWTkn7MjDL-9Cuk3uVlNRFOTxFA_0sM,3516
+ultrasequence/models.py,sha256=phKkIIC-iuX5661l03RHWAJY67MDtkC7FwLBE2GonLU,21606
+ultrasequence/parsing.py,sha256=YaxatFW6zvzX2lhZP_RJbAq_MVtBNHywBTdd_usxZ1o,6936
+ultrasequence/version.py,sha256=JX1WuCiyxCdJQ9ck0VNPxZdbIudGp3NLxBxY9wMe30M,289
+ultrasequence/bin/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ultrasequence/bin/findseq.py,sha256=CsWq7pkzJzpvF4AgZH12-MK20XpkwyUVruc1qTDDw3Y,4072
+ultrasequence/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ultrasequence/tests/test_models.py,sha256=JQ48i9yDZqMq9vdv2MJJGq-9jFJg4OBrB44fAr4Ak68,16210
+ultrasequence/tests/test_parsing.py,sha256=HvKYEep9PdxNq20zSxr9k3DPc6kA9NS4VHNJj9i0ixc,2303
+ultrasequence-1.0.4.dist-info/METADATA,sha256=HVhXFZz5kk4FY2HZmGaFyIVTr81Te5Idi_Zh6xTMxLs,5997
+ultrasequence-1.0.4.dist-info/RECORD,,
+ultrasequence-1.0.4.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+ultrasequence-1.0.4.dist-info/entry_points.txt,sha256=8w2f3fc4RSUFyxZezTKYjN99HKpAH5TgzvRLXuJ3aOc,60
+ultrasequence-1.0.4.dist-info/top_level.txt,sha256=F3sJgb6W5RoU94i2GmHgLJ30izvo1ACJhjIrDQAdqNk,14

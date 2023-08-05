@@ -1,0 +1,3 @@
+[console_scripts]
+findseq = ultrasequence.bin.findseq:main
+
