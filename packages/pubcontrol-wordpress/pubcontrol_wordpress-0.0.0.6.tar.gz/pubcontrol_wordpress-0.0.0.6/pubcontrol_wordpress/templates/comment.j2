@@ -1,0 +1,10 @@
+<p>
+{{ index_name }}
+{%- if doi is ne("") -%}
+    <a href="http://dx.doi.org/{{ doi }}"><b>{{ title }}</b></a>
+{%- endif -%}
+{%- if doi is eq("") -%}
+    <b>{{ title }}</b>
+{%- endif -%}
+in {{ journal }}, {{ volume }} ({{ year }}).
+</p>
