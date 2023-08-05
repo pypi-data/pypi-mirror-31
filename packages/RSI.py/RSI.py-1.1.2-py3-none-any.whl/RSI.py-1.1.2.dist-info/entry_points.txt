@@ -1,0 +1,3 @@
+[console_scripts]
+rsi = rsi.__main__:main
+
