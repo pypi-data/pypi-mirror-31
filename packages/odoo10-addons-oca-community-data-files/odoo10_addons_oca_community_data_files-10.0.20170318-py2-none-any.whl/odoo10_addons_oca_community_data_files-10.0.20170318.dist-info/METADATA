@@ -1,0 +1,18 @@
+Metadata-Version: 2.0
+Name: odoo10-addons-oca-community-data-files
+Version: 10.0.20170318
+Summary: Meta package for OCA community-data-files Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo10-addon-account-payment-unece
+Requires-Dist: odoo10-addon-account-tax-unece
+Requires-Dist: odoo10-addon-base-unece
+Requires-Dist: odoo10-addon-l10n-eu-nace
+Requires-Dist: odoo10-addon-product-uom-unece
+
+UNKNOWN
+
+
