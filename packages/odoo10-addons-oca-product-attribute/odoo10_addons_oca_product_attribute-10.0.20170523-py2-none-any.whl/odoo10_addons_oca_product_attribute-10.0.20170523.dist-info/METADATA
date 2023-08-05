@@ -1,0 +1,25 @@
+Metadata-Version: 2.0
+Name: odoo10-addons-oca-product-attribute
+Version: 10.0.20170523
+Summary: Meta package for OCA product-attribute Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo10-addon-customer-pricing-in-product-view
+Requires-Dist: odoo10-addon-product-brand
+Requires-Dist: odoo10-addon-product-manufacturer
+Requires-Dist: odoo10-addon-product-multi-category
+Requires-Dist: odoo10-addon-product-pricelist-tier
+Requires-Dist: odoo10-addon-product-sequence
+Requires-Dist: odoo10-addon-product-service-duration
+Requires-Dist: odoo10-addon-product-state
+Requires-Dist: odoo10-addon-product-uom
+Requires-Dist: odoo10-addon-product-weight
+
+UNKNOWN
+
+
