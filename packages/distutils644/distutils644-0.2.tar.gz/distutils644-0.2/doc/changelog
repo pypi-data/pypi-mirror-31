@@ -1,0 +1,14 @@
+distutils644 (0.2) unstable; urgency=low
+
+  * Normalize order of tar directory entries.
+    https://github.com/jwilk/distutils644/issues/1
+  * Document how to opportunistically enable normalization.
+  * Update homepage URL.
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Wed, 18 Apr 2018 20:44:04 +0200
+
+distutils644 (0.1) unstable; urgency=low
+
+  * Initial release.
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Wed, 12 Apr 2017 23:00:46 +0200
