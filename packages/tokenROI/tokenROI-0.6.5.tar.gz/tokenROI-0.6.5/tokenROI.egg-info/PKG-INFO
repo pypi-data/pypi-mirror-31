@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: tokenROI
+Version: 0.6.5
+Summary: Quick ROI calculator for your token balances base on idex.market prices
+Home-page: https://github.com/mrowacz/tokenROI
+Author: Lukasz Czerwinski
+Author-email: mrowacz@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: tokens cryptocurrencies idex roi
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
