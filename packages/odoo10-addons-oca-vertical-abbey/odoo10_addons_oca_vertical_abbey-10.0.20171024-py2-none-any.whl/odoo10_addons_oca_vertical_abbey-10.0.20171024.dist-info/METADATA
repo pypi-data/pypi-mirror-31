@@ -1,0 +1,19 @@
+Metadata-Version: 2.0
+Name: odoo10-addons-oca-vertical-abbey
+Version: 10.0.20171024
+Summary: Meta package for OCA vertical-abbey Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo10-addon-donation-mass
+Requires-Dist: odoo10-addon-donation-stay
+Requires-Dist: odoo10-addon-mass
+Requires-Dist: odoo10-addon-stay
+
+UNKNOWN
+
+
