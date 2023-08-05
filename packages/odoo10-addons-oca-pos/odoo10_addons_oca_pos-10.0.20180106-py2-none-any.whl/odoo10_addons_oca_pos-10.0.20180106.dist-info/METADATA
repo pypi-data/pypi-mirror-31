@@ -1,0 +1,27 @@
+Metadata-Version: 2.0
+Name: odoo10-addons-oca-pos
+Version: 10.0.20180106
+Summary: Meta package for OCA pos Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo10-addon-account-cash-invoice
+Requires-Dist: odoo10-addon-pos-backend-communication
+Requires-Dist: odoo10-addon-pos-backend-partner
+Requires-Dist: odoo10-addon-pos-customer-display
+Requires-Dist: odoo10-addon-pos-default-payment-method
+Requires-Dist: odoo10-addon-pos-loyalty
+Requires-Dist: odoo10-addon-pos-margin
+Requires-Dist: odoo10-addon-pos-payment-terminal
+Requires-Dist: odoo10-addon-pos-price-to-weight
+Requires-Dist: odoo10-addon-pos-quick-logout
+Requires-Dist: odoo10-addon-pos-remove-pos-category
+Requires-Dist: odoo10-addon-pos-session-pay-invoice
+
+UNKNOWN
+
+
