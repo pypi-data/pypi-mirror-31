@@ -1,0 +1,14 @@
+Metadata-Version: 2.0
+Name: odoo9-addons-oca-runbot-addons
+Version: 9.0.20160911
+Summary: Meta package for OCA runbot-addons Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo9-addon-runbot-travis2docker
+
+UNKNOWN
+
+
