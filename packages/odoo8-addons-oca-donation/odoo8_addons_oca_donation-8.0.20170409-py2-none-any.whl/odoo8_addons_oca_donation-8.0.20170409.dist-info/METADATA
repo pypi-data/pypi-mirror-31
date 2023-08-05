@@ -1,0 +1,22 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-donation
+Version: 8.0.20170409
+Summary: Meta package for OCA donation Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo8-addon-donation
+Requires-Dist: odoo8-addon-donation-bank-statement
+Requires-Dist: odoo8-addon-donation-direct-debit
+Requires-Dist: odoo8-addon-donation-recurring
+Requires-Dist: odoo8-addon-donation-recurring-tax-receipt
+Requires-Dist: odoo8-addon-donation-tax-receipt
+Requires-Dist: odoo8-addon-donation-thanks
+
+UNKNOWN
+
+
