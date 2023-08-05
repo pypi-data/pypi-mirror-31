@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: music2storage
+Version: 0.2.1
+Summary: Downloads music from a service and stores it in a cloud or local storage.
+Home-page: https://github.com/Music-Moo/music2storage
+Author: Radu Raicea
+Author-email: radu@raicea.com
+License: GPLv3
+Description: Currently the only music services are Youtube and Soundcloud, and the only storages are Google Drive and Local Storage. Dropbox is planned to be added soon.
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.6
