@@ -1,0 +1,11 @@
+
+- project:
+    templates:
+      - tripleo-multinode-baremetal-minimal
+      - tripleo-multinode-container-minimal
+    check:
+      jobs:
+        - openstack-tox-lower-constraints
+    gate:
+      jobs:
+        - openstack-tox-lower-constraints
