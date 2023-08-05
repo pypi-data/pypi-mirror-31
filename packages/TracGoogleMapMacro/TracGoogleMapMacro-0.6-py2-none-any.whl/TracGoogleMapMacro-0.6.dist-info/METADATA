@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: TracGoogleMapMacro
+Version: 0.6
+Summary: GoogleMap Trac Macro.
+Home-page: https://www.trac-hacks.org/wiki/GoogleMapMacro
+Author: Martin Scharrer
+Author-email: martin@scharrer-online.de
+License: GPLv3
+Keywords: trac googlemap macro
+Platform: UNKNOWN
+Classifier: Framework :: Trac
+Requires-Dist: Trac
+Requires-Dist: TracAdvParseArgsPlugin
+
+UNKNOWN
+
+
