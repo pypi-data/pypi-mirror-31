@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: easy-ptvsd
+Version: 0.1.1
+Summary: A convenience package for PTVSD.
+Home-page: https://github.com/colinfike/easy-ptvsd
+Author: Colin Fike
+Author-email: colin.fike@gmail.com
+License: MIT
+Description: EasyPtvsd is a convenience library that makes it a bit easy to remote debug with ptvsd without having to remember the function calls and all that. It currently provides a decorator that can be used to setup the ptvsd server, wait for attachment, then immediately break into the debugger.
+Keywords: ptvsd easy python remote debugging
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development
+Classifier: Programming Language :: Python :: 3
