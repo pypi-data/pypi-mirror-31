@@ -1,0 +1,9 @@
+gym<=0.9.5
+image
+scipy
+shapely
+numpy
+pygame
+scikit-image
+opencv-python
+codecov
