@@ -1,0 +1,43 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-project
+Version: 8.0.20170325
+Summary: Meta package for OCA project Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo8-addon-project-analytic-line-view
+Requires-Dist: odoo8-addon-project-baseuser
+Requires-Dist: odoo8-addon-project-categ
+Requires-Dist: odoo8-addon-project-categ-issue
+Requires-Dist: odoo8-addon-project-classification
+Requires-Dist: odoo8-addon-project-closing
+Requires-Dist: odoo8-addon-project-description
+Requires-Dist: odoo8-addon-project-gtd
+Requires-Dist: odoo8-addon-project-issue-baseuser
+Requires-Dist: odoo8-addon-project-issue-code
+Requires-Dist: odoo8-addon-project-issue-reassign
+Requires-Dist: odoo8-addon-project-issue-task
+Requires-Dist: odoo8-addon-project-model-to-task
+Requires-Dist: odoo8-addon-project-recalculate
+Requires-Dist: odoo8-addon-project-sla
+Requires-Dist: odoo8-addon-project-stage-closed
+Requires-Dist: odoo8-addon-project-stage-state
+Requires-Dist: odoo8-addon-project-stage-state-issue
+Requires-Dist: odoo8-addon-project-task-add-very-high
+Requires-Dist: odoo8-addon-project-task-analytic-partner
+Requires-Dist: odoo8-addon-project-task-category
+Requires-Dist: odoo8-addon-project-task-code
+Requires-Dist: odoo8-addon-project-task-materials
+Requires-Dist: odoo8-addon-project-task-materials-analytic-partner
+Requires-Dist: odoo8-addon-project-task-materials-stock
+Requires-Dist: odoo8-addon-project-task-reassign
+Requires-Dist: odoo8-addon-project-timesheet-analytic-partner
+Requires-Dist: odoo8-addon-sale-order-project
+Requires-Dist: odoo8-addon-service-desk
+Requires-Dist: odoo8-addon-service-desk-issue
+
+UNKNOWN
+
+
