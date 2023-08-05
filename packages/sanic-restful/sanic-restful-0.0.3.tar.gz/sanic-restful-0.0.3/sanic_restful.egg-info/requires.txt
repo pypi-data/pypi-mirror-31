@@ -1,0 +1,9 @@
+aniso8601>=0.82
+Sanic
+pytz
+
+[docs]
+sphinx
+
+[paging]
+pycrypto>=2.6
