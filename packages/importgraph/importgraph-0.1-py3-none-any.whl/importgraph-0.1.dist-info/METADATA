@@ -1,0 +1,13 @@
+Metadata-Version: 2.0
+Name: importgraph
+Version: 0.1
+Summary: Create graphs from your imports
+Home-page: UNKNOWN
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3
+Requires-Dist: graphviz
+
+UNKNOWN
+
+
