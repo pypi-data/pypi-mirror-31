@@ -1,0 +1,13 @@
+flask
+pyjwt
+pendulum
+passlib
+flask-buzz
+
+[dev]
+flake8
+flask-sqlalchemy
+freezegun
+pytest
+pytest-flask
+sphinx
