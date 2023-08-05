@@ -1,0 +1,8 @@
+<root>
+ <class name="JobTree" version="1.2" category="jobtrees">
+    <attribute name="folders"> <value>{'/': {'002 Z+BJet Analysis[CLOSED]': {'v1': {232: 232, 202: 202, 197: 197, 269: 269}, 'v2': {}, 'v4': {}, 'vfinal-v3': {907: 907, 892: 892, 893: 893, 894: 894}}, '013_Tau_Identification': {'02_ditau_passthrough_v2': {2768: 2768, 2769: 2769, 2770: 2770, 2771: 2771, 2767: 2767}, '00_samples': {'2543': '2543', '2861': '2861', '2862': '2862', '2811': '2811', '2812': '2812'}, '03_Stripping23': {}}}}</value>
+</attribute>
+    <attribute name="name"> <value>''</value>
+</attribute>
+ </class>
+</root>
