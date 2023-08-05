@@ -1,0 +1,10 @@
+setup.py
+TracGoogleWebmasterVerifyPlugin.egg-info/PKG-INFO
+TracGoogleWebmasterVerifyPlugin.egg-info/SOURCES.txt
+TracGoogleWebmasterVerifyPlugin.egg-info/dependency_links.txt
+TracGoogleWebmasterVerifyPlugin.egg-info/entry_points.txt
+TracGoogleWebmasterVerifyPlugin.egg-info/not-zip-safe
+TracGoogleWebmasterVerifyPlugin.egg-info/requires.txt
+TracGoogleWebmasterVerifyPlugin.egg-info/top_level.txt
+tracgooglewebmasterverify/__init__.py
+tracgooglewebmasterverify/plugin.py
