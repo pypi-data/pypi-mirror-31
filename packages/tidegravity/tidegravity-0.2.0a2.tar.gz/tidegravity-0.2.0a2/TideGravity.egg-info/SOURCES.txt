@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+TideGravity.egg-info/PKG-INFO
+TideGravity.egg-info/SOURCES.txt
+TideGravity.egg-info/dependency_links.txt
+TideGravity.egg-info/requires.txt
+TideGravity.egg-info/top_level.txt
+tidegravity/__init__.py
+tidegravity/tidegravity.py
+tidegravity/trajectory_utils.py
+tidegravity.egg-info/PKG-INFO
+tidegravity.egg-info/SOURCES.txt
+tidegravity.egg-info/dependency_links.txt
+tidegravity.egg-info/requires.txt
+tidegravity.egg-info/top_level.txt
