@@ -1,0 +1,15 @@
+django_rest_paseto_auth-0.1.0.dev1.dist-info/METADATA,sha256=c7OObNi0EN84abZ9DPjvlX5-uogatVBxVBo1Znl1Y_I,5699
+django_rest_paseto_auth-0.1.0.dev1.dist-info/RECORD,,
+django_rest_paseto_auth-0.1.0.dev1.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+django_rest_paseto_auth-0.1.0.dev1.dist-info/top_level.txt,sha256=Wm0XmRap_02FYgLH7muqrt4_P-DK5Jo9d1igEXMMt30,12
+paseto_auth/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+paseto_auth/authentication.py,sha256=qevbaeyOmwG7hjjAh64xUx6teE8aXAJkNvKdkIzZtfg,1875
+paseto_auth/exceptions.py,sha256=3rc9O1fClPVItL9psoZ8hGiV2DeacZxR66WwyBvkT90,93
+paseto_auth/models.py,sha256=C-W4QWrVFD2IDSCKMblBLTUs08ncDWydEdi9ufY7oHY,1723
+paseto_auth/serializers.py,sha256=tOcX4FPVzK8oKvWtVslR41rqgvGEaoO2XXwDSSd2bBg,5064
+paseto_auth/settings.py,sha256=ahDhIFahmQgo2y2leTa74LvJ2zODQY2iTOpqXpVpqxo,632
+paseto_auth/tokens.py,sha256=pcZUzPOw9OzOWXt0-SXHwN4eLycbEymhlHaJ56CZWXQ,3282
+paseto_auth/urls.py,sha256=Rhe9M7R1c-j0f3e4fRVU1gOqyKxoQWJwi8EWKQr34gA,312
+paseto_auth/views.py,sha256=_axeyA2lxWs6AzltEy0MBY1uGcT2kNpRABnyu8d-z4I,1874
+paseto_auth/migrations/0001_initial.py,sha256=hg2FQ9wT5EXdoyUZUH7hErYA_EUV1X_xLckCznn3Who,2056
+paseto_auth/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
