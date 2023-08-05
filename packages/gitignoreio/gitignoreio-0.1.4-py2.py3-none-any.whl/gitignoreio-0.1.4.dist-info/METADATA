@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: gitignoreio
+Version: 0.1.4
+Summary: Update .gitignore from config and gitignore.io.
+Home-page: https://github.com/altendky/gitignoreio
+Author: Kyle Altendorf
+Author-email: sda@fstab.net
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/x-rst
+Requires-Dist: click
+Requires-Dist: requests
+
+gitignoreio
+===========
+
+|PyPI| |Pythons| |Travis| |AppVeyor| |GitHub|
+
+Maintain your .gitignore using gitignore.io.
+
+.. |PyPI| image:: https://img.shields.io/pypi/v/gitignoreio.svg
+   :alt: PyPI Version
+   :target: https://pypi.python.org/pypi/gitignoreio
+
+.. |Pythons| image:: https://img.shields.io/pypi/pyversions/gitignoreio.svg
+   :alt: supported Python versions
+   :target: https://pypi.python.org/pypi/gitignoreio
+
+.. |Travis| image:: https://travis-ci.org/altendky/gitignoreio.svg?branch=master
+   :alt: Travis build status
+   :target: https://travis-ci.org/altendky/gitignoreio
+
+.. |AppVeyor| image:: https://ci.appveyor.com/api/projects/status/smawakb47cc59joy/branch/master?svg=true
+   :alt: AppVeyor build status
+   :target: https://ci.appveyor.com/project/KyleAltendorf/gitignoreio
+
+.. |GitHub| image:: https://img.shields.io/github/last-commit/altendky/gitignoreio/master.svg
+   :alt: Source on GitHub
+   :target: https://github.com/altendky/gitignoreio
+
+
