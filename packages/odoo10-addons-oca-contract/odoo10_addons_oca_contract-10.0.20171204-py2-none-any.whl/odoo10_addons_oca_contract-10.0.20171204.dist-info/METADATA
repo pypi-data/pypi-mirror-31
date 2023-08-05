@@ -1,0 +1,27 @@
+Metadata-Version: 2.0
+Name: odoo10-addons-oca-contract
+Version: 10.0.20171204
+Summary: Meta package for OCA contract Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo10-addon-agreement-account
+Requires-Dist: odoo10-addon-agreement-sale
+Requires-Dist: odoo10-addon-contract
+Requires-Dist: odoo10-addon-contract-digitized-signature
+Requires-Dist: odoo10-addon-contract-payment-auto
+Requires-Dist: odoo10-addon-contract-payment-mode
+Requires-Dist: odoo10-addon-contract-sale
+Requires-Dist: odoo10-addon-contract-sale-generation
+Requires-Dist: odoo10-addon-contract-show-invoice
+Requires-Dist: odoo10-addon-contract-variable-quantity
+Requires-Dist: odoo10-addon-product-contract
+Requires-Dist: odoo10-addon-website-portal-contract
+
+UNKNOWN
+
+
