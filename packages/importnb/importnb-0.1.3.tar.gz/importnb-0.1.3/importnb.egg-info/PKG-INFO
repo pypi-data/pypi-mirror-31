@@ -1,0 +1,116 @@
+Metadata-Version: 1.2
+Name: importnb
+Version: 0.1.3
+Summary: Import .ipynb files as modules in the system path.
+Home-page: https://github.com/deathbeds/importnb
+Author: deathbeds
+Author-email: tony.fast@gmail.com
+License: BSD-3-Clause
+Description: 
+        Load the **importnb** to import notebooks.
+        
+        |Binder|\ |Build Status|
+        
+        .. |Binder| image:: https://mybinder.org/badge.svg
+           :target: https://mybinder.org/v2/gh/deathbeds/importnb/master?filepath=readme.ipynb
+        .. |Build Status| image:: https://travis-ci.org/deathbeds/importnb.svg?branch=master
+           :target: https://travis-ci.org/deathbeds/importnb
+        
+        Jupyter Extension
+        -----------------
+        
+        .. code:: ipython3
+        
+                if __name__ == '__main__':
+                    %reload_ext importnb
+                    import readme
+                    assert readme.foo is 42
+                    assert readme.__file__.endswith('.ipynb')
+                else: 
+                    foo = 42
+                    
+        
+        Notebooks maybe reloaded with the standard Python Import machinery.
+        
+        .. code:: ipython3
+        
+                if __name__ == '__main__':
+                    from importnb import Notebook, reload
+                    reload(readme)
+                    %unload_ext importnb
+        
+        Context Manager
+        ---------------
+        
+        .. code:: ipython3
+        
+                if __name__ == '__main__':
+                    try:  
+                        reload(readme)
+                        assert None, """Reloading should not work when the extension is unloaded"""
+                    except AttributeError: 
+                        with Notebook(): 
+                            reload(readme)
+        
+        Developer
+        ---------
+        
+        .. code:: ipython3
+        
+                if __name__ == '__main__':
+                    !jupyter nbconvert --to markdown readme.ipynb
+                    !jupyter nbconvert --to rst readme.ipynb
+        
+        
+        .. parsed-literal::
+        
+            [NbConvertApp] Converting notebook readme.ipynb to markdown
+            [NbConvertApp] Writing 1280 bytes to readme.md
+        
+        
+        
+        
+        CHANGELOG
+        ---------
+        
+        0.1.3
+        ~~~~~
+        
+        -  Include the RST files in the MANIFEST.in.
+        
+        0.1.2
+        ~~~~~
+        
+        -  Use RST files to improve the literacy of the pypi description.
+        
+        0.1.1
+        ~~~~~
+        
+        -  Released on PyPi
+        
+        0.0.2
+        ~~~~~
+        
+        -  Initial Testing Release
+        
+        .. code:: ipython3
+        
+            !jupyter nbconvert --to rst changelog.ipynb
+        
+        
+        .. parsed-literal::
+        
+            [NbConvertApp] Converting notebook changelog.ipynb to rst
+            [NbConvertApp] Writing 245 bytes to changelog.rst
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: IPython
+Classifier: Framework :: Jupyter
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6
