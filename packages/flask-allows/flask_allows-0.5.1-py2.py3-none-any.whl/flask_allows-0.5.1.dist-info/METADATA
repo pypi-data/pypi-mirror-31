@@ -1,0 +1,111 @@
+Metadata-Version: 2.1
+Name: flask-allows
+Version: 0.5.1
+Summary: Impose authorization requirements on Flask routes
+Home-page: https://github.com/justanr/flask-allows
+Author: Alec Nikolas Reiter
+Author-email: alecreiter@gmail.com
+License: MIT
+Keywords: flask,authorization
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Flask
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: Flask
+
+.. image:: https://travis-ci.org/justanr/flask-allows.svg?branch=master
+    :target: https://travis-ci.org/justanr/flask-allows
+
+.. image:: https://coveralls.io/repos/github/justanr/flask-allows/badge.svg?branch=master
+:target: https://coveralls.io/github/justanr/flask-allows?branch=master
+
+
+
+flask-allows
+============
+
+Are you permissions making too much noise all the time? Are your permissions
+stomping all over your actual code? Are your permission decorators clawing
+at your line count all the time? Think there's no answer? There is! Flask-Allows.
+
+
+Flask-Allows is an authorization tool for Flask inspired by
+`django-rest-framework <https://github.com/tomchristie/django-rest-framework>`_'s
+permissioning system and `rest_condition <https://github.com/caxap/rest_condition>`_'s
+ability to compose simple requirements into more complex ones.
+
+Installation
+------------
+
+Flask-Allows is available on `pypi <https://pypi.org/project/flask-allows/>`_ and
+installable with::
+
+    pip install flask-allows
+
+Flask Allows supports 2.7, and 3.4+. Support for 3.3 was ended in the version
+0.3 release.
+
+.. note::
+
+    If you are installing ``flask-allows`` outside of a virtual environment,
+    consider installing it with ``pip install --user flask-allows`` rather
+    than using sudo or adminstrator privileges to avoid installing it into
+    your system Python.
+
+
+More Information
+----------------
+
+- For more information, `please visit the documentation <https://flask-allows.readthedocs.io/en/latest/>`_.
+- Found a bug, have a question, or want to request a feature? Here is our `issue tracker <https://github.com/justanr/flask-allows/issues>`_.
+- Need the source code? Here is the `repository <https://github.com/justanr/flask-allows>`_
+
+
+Change Log
+==========
+
+
+Version 0.5 (2018-04-17)
+------------------------
+
+* Real documentation
+* Accepting request in requirements is now deprecated, pending removal in
+  1.0
+* Promoted internal ``_allows`` context local to part of the public interface
+* Bug Fix: ConditionalRequirement returned False when no requirements were provided
+    it now returns True and mimics the behavior of ``all`` better
+
+
+Version 0.4 (2017-08-29)
+------------------------
+
+* Clarify deprecation message for PermissionedView, will be removed in 0.6
+* Deprecate Permission.throw_type for 0.6 removak
+* Add optional on_fail for `allows.requires` and `requires` decoration
+* Fix coverage path problem with local testing
+
+Version 0.3.2 (2017-08-29)
+--------------------------
+
+* Fix package data not being included
+
+
+Version 0.3.1 (2017-08-20)
+--------------------------
+
+* Fix error that prevent sdist builds on 2.7
+
+
+Version 0.3 (2017-08-20)
+------------------------
+
+* Drop official support for Python 3.3
+* Deprecate implicit decoration on class based views via the requirements attribute
+
+
