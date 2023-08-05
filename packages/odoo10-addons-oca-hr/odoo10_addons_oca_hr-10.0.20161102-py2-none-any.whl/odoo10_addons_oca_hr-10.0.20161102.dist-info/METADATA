@@ -1,0 +1,17 @@
+Metadata-Version: 2.0
+Name: odoo10-addons-oca-hr
+Version: 10.0.20161102
+Summary: Meta package for OCA hr Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo10-addon-hr-holidays-compute-days
+Requires-Dist: odoo10-addon-hr-holidays-leave-auto-approve
+Requires-Dist: odoo10-addon-hr-holidays-legal-leave
+Requires-Dist: odoo10-addon-hr-public-holidays
+
+UNKNOWN
+
+
