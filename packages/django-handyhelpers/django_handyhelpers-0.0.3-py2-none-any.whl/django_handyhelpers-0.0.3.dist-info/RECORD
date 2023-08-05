@@ -1,0 +1,14 @@
+django_handyhelpers-0.0.3.dist-info/METADATA,sha256=_B8Bfu1_cbNgLC-3eST8hNd7VP9iFnC4IZyNpYIOg9w,755
+django_handyhelpers-0.0.3.dist-info/RECORD,,
+django_handyhelpers-0.0.3.dist-info/WHEEL,sha256=9xUnOISuCvrSyfu9GlFZT4i2TZ_2OLkwLNqcDvIo3zM,92
+django_handyhelpers-0.0.3.dist-info/top_level.txt,sha256=ORM3SGhCb79uzGlbxA8rIbWkuUcLyH9nfrgqysb7xO8,14
+djangohelpers/__init__.py,sha256=bDxTmr5wm9pLvBDoqvkLIxkHQI1ClzE0IUcOgYk6Tm4,371
+djangohelpers/drf_permissions.py,sha256=fyLnDPU0t0diX1jctTCF8p_MIWgUuR-SgPYqMXv9Ios,2225
+djangohelpers/fields.py,sha256=0zS8YIx7bCO5fF81yKcSi8K10N8XxCOVTZo-4OW7hGc,1667
+djangohelpers/forms.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+djangohelpers/managers.py,sha256=oJDtGvqbKpPPM7yjxQvv_PKsnZI8yqp-uvITzZd1sn8,4249
+djangohelpers/models.py,sha256=PmpXD6JB2BR_rKR3KRNOYeeAY_jMyAxHihs6hI-_iRo,690
+djangohelpers/permissions.py,sha256=Tp-KS_hWH5zYUGClXomNiVZH-AS41uetmCodBpac5M0,2852
+djangohelpers/querysets.py,sha256=f5c4lZWfyYtsm_8ucA69Pxs_SUCb58wmb0cfa0pYidw,2848
+djangohelpers/tags.py,sha256=wTtLu0cEB2swSTe3CC_EpEaRfe6dU38rSUNRKb3cX6E,1111
+djangohelpers/views.py,sha256=vf8Rmqm0mcGwgtQGDDAnbaw8SlDVqRS_iIAvrqj9Oe8,5703

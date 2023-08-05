@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: django-handyhelpers
+Version: 0.0.3
+Summary: A collection of handy utilities to support django operations
+Home-page: https://github.com/davidslusser/django-handyhelpers
+Author: David Slusser
+Author-email: dbslusser@gmail.com
+License: GPL-3.0
+Download-URL: https://github.com/davidslusser/django-handyhelpers/archive/0.2.tar.gz
+Keywords: django,helpers
+Platform: UNKNOWN
+Requires-Dist: django-extensions
+Requires-Dist: django-filter
+Requires-Dist: django-filters
+Requires-Dist: django-model-utils
+Requires-Dist: django-rest-swagger
+Requires-Dist: djangorestframework-filters
+Requires-Dist: djangorestframework
+Requires-Dist: simple-crypt
+Requires-Dist: model-mommy
+
+A collection of handy utilities to support django operations
+
+
