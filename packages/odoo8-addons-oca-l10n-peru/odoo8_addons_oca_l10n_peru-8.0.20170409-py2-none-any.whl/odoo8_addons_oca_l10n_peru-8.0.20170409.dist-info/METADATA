@@ -1,0 +1,24 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-l10n-peru
+Version: 8.0.20170409
+Summary: Meta package for OCA l10n-peru Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo8-addon-l10n-pe-add-series-field
+Requires-Dist: odoo8-addon-l10n-pe-base-vat-split
+Requires-Dist: odoo8-addon-l10n-pe-crm-lead
+Requires-Dist: odoo8-addon-l10n-pe-invoice
+Requires-Dist: odoo8-addon-l10n-pe-multifunctions
+Requires-Dist: odoo8-addon-l10n-pe-toponyms
+Requires-Dist: odoo8-addon-l10n-pe-vat-sunat-validation
+Requires-Dist: odoo8-addon-opl
+Requires-Dist: odoo8-addon-opl-all
+
+UNKNOWN
+
+
