@@ -1,0 +1,30 @@
+type: //map
+values:
+  type: //rec
+  optional:
+    columns: 
+        type: //arr
+        length: { min: 1 }
+        contents: { type: //str }
+    alternate_key:
+        type: //arr
+        length: { min: 1 }
+        contents: { type: //str }
+    where: //str
+    subsets:
+        type: //arr
+        length: { min: 1 }
+        contents:
+            type: //rec
+            required:
+                name: //str
+                where: //str
+            optional:
+                columns: 
+                    type: //arr
+                    length: { min: 1 }
+                    contents: { type: //str }
+                alternate_key:
+                    type: //arr
+                    length: { min: 1 }
+                    contents: { type: //str }
