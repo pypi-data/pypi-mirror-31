@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: lemongo
+Version: 1.0.0b4
+Summary: PyMongo interface for LeBot
+Home-page: https://github.com/cganterh/lemongo
+Author: Cristóbal Ganter
+Author-email: cganterh@gmail.com
+License: MIT
+Keywords: bot,database,LeBot,MongoDB,PyMongo,Telegram
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Communications :: Chat
+Classifier: Topic :: Database
+Requires-Python: ~=3.5
+Requires-Dist: pymongo (~=3.6)
+Requires-Dist: python-telegram-bot (~=10.0)
+
+lemongo
+=======
+
+.. image:: https://travis-ci.org/cganterh/lecluvindex.svg?branch=master
+	:target: https://travis-ci.org/cganterh/lecluvindex
+.. image:: https://coveralls.io/repos/github/cganterh/lemongo/badge.svg?branch=master
+	:target: https://coveralls.io/github/cganterh/lemongo?branch=master
+
+PyMongo interface for LeBot
+
+See `github.com/cganterh/le <https://github.com/cganterh/le>`_ for more information.
+
