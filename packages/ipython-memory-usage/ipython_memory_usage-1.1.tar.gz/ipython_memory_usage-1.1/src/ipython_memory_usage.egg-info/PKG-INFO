@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: ipython-memory-usage
+Version: 1.1
+Summary: ipython_memory_usage: display memory usage during IPython execution
+Home-page: https://github.com/ianozsvald/ipython_memory_usage
+Author: Ian Ozsvald
+Author-email: ian@ianozsvald.com
+Maintainer: Ian Ozsvald
+Maintainer-email: ian@ianozsvald.com
+License: UNKNOWN
+Description: IPython tool to report memory usage deltas for every command you type. If you are running out of RAM then use this tool to understand what's happening. It also records the time spent running each command. 
+        
+        
+                In [3]: arr=np.random.uniform(size=int(1e7))
+        
+                'arr=np.random.uniform(size=int(1e7))' used 76.2578 MiB RAM in 0.33s, peaked 0.00 MiB above current, total RAM usage 107.37 MiB
+            
+Platform: Any.
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: License :: Free To Use But Restricted
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Testing
+Description-Content-Type: text/markdown
