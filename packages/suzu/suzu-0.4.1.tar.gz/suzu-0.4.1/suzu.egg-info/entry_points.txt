@@ -1,0 +1,3 @@
+[gui_scripts]
+suzu = suzu.run:run
+
