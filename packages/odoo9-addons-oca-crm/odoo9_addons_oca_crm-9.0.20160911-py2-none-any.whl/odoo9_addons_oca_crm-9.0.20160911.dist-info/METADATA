@@ -1,0 +1,15 @@
+Metadata-Version: 2.0
+Name: odoo9-addons-oca-crm
+Version: 9.0.20160911
+Summary: Meta package for OCA crm Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo9-addon-crm-claim-code
+Requires-Dist: odoo9-addon-crm-claim-type
+
+UNKNOWN
+
+
