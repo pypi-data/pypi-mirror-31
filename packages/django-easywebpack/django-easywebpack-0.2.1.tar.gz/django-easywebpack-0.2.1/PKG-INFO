@@ -1,0 +1,105 @@
+Metadata-Version: 1.1
+Name: django-easywebpack
+Version: 0.2.1
+Summary: Making Django and Webpack best friends
+Home-page: https://github.com/fndrz/django-easywebpack
+Author: Fndrz
+Author-email: django-easywebpack@fndrz.com
+License: MIT
+Project-URL: Documentation, https://django-easywebpack.readthedocs.io
+Description: ==================
+        django-easywebpack
+        ==================
+        
+        Making Django and Webpack best friends.
+        
+        .. image:: https://badge.fury.io/py/django-easywebpack.svg
+            :target: https://badge.fury.io/py/django-easywebpack
+        
+        .. image:: https://travis-ci.org/fndrz/django-easywebpack.svg?branch=master
+            :target: https://travis-ci.org/fndrz/django-easywebpack
+        
+        .. image:: https://codecov.io/gh/fndrz/django-easywebpack/branch/master/graph/badge.svg
+            :target: https://codecov.io/gh/fndrz/django-easywebpack
+        
+        .. image:: https://readthedocs.org/projects/django-easywebpack/badge/?version=latest
+            :target: http://django-easywebpack.readthedocs.io/en/latest/?badge=latest
+            :alt: Documentation Status
+        
+        Documentation
+        -------------
+        
+        The full documentation is at https://django-easywebpack.readthedocs.io.
+        
+        Quickstart
+        ----------
+        
+        Install django-easywebpack::
+        
+            pip install django-easywebpack
+        
+        Add it to your `INSTALLED_APPS`:
+        
+          Note: :code:`easywebpack` must be placed before :code:`staticfiles` for
+          :code:`./manage.py` commands to work properly.
+        
+        .. code-block:: python
+        
+            INSTALLED_APPS = (
+                'easywebpack',
+                ...
+            )
+        
+        Then, configure it in your Django settings:
+        
+        .. code-block:: python
+        
+            EASYWEBPACK = {
+                'MANIFEST': 'path/to/manifest.json',
+            }
+        
+        Credits
+        -------
+        
+        Tools used in rendering this package:
+        
+        *  Cookiecutter_
+        *  `cookiecutter-djangopackage`_
+        
+        .. _Cookiecutter: https://github.com/audreyr/cookiecutter
+        .. _`cookiecutter-djangopackage`: https://github.com/pydanny/cookiecutter-djangopackage
+        
+        
+        
+        
+        History
+        -------
+        
+        0.2.1 (2018-04-19)
+        ++++++++++++++++++
+        
+        * Fix broken management commands.
+        * Add more information to setup.py.
+        * Integrate version updating with Punch.
+        
+        0.2.0 (2018-04-18)
+        ++++++++++++++++++
+        
+        * First release on PyPI.
+        
+Keywords: webpack static
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django :: 1.11
+Classifier: Framework :: Django :: 2.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
