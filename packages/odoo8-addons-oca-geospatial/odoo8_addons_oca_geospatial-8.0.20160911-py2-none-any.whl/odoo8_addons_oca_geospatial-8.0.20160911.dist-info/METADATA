@@ -1,0 +1,20 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-geospatial
+Version: 8.0.20160911
+Summary: Meta package for OCA geospatial Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo8-addon-base-geoengine
+Requires-Dist: odoo8-addon-base-geoengine-demo
+Requires-Dist: odoo8-addon-geoengine-base-geolocalize
+Requires-Dist: odoo8-addon-geoengine-geoname-geocoder
+Requires-Dist: odoo8-addon-geoengine-partner
+Requires-Dist: odoo8-addon-geoengine-project
+Requires-Dist: odoo8-addon-geoengine-sale
+
+UNKNOWN
+
+
