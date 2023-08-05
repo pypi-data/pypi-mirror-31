@@ -1,0 +1,20 @@
+Metadata-Version: 2.0
+Name: odoo9-addons-oca-project
+Version: 9.0.20170111
+Summary: Meta package for OCA project Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo9-addon-project-description
+Requires-Dist: odoo9-addon-project-double-alias
+Requires-Dist: odoo9-addon-project-issue-task
+Requires-Dist: odoo9-addon-project-task-code
+Requires-Dist: odoo9-addon-project-task-default-stage
+Requires-Dist: odoo9-addon-project-task-materials
+Requires-Dist: odoo9-addon-project-task-materials-stock
+
+UNKNOWN
+
+
