@@ -1,0 +1,16 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-vertical-hotel
+Version: 8.0.20170409
+Summary: Meta package for OCA vertical-hotel Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo8-addon-board-frontdesk
+
+UNKNOWN
+
+
