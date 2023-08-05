@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: geerefet
+Version: 0.1.0
+Summary: Google Earth Engine ASCE Standardized Reference Evapotranspiration Functions
+Home-page: https://github.com/cgmorton/RefET-GEE
+Author: Charles Morton
+Author-email: charles.g.morton@gmail.com
+License: Apache
+Download-URL: https://github.com/cgmorton/RefET-GEE/archive/v0.1.0.tar.gz
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Keywords: RefET Evapotranspiration GEE
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
