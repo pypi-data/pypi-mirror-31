@@ -1,0 +1,28 @@
+Metadata-Version: 1.1
+Name: Flask-Fontpicker
+Version: 0.2
+Summary: web font picker flask extension
+Home-page: https://github.com/mrf345/flask_fontpicker/
+Author: Mohamed Feddad
+Author-email: mrf345@gmail.com
+License: MIT
+Download-URL: https://github.com/mrf345/flask_fontpicker/archive/0.2.tar.gz
+Description: 
+        Flask-Fontpicker
+        -------------
+        
+        A Flask extension to add Jquery-UI javascript web font-picker into the template,
+        it makes adding and configuring multiple font pickers at a time much easier
+        and less time consuming
+        
+        How-to: https://github.com/mrf345/flask_fontpicker/
+        
+Keywords: flask,extension,web,google,font,picker,Jquery-UI,fontpicker
+Platform: any
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
