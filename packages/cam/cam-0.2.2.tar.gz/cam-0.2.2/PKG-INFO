@@ -1,0 +1,40 @@
+Metadata-Version: 1.1
+Name: cam
+Version: 0.2.2
+Summary: Collection of utilities for C/C++ archive (lib and app) build
+Home-page: https://github.com/mingyiz/cam
+Author: Mingyi Zhang
+Author-email: mingyi.z@outlook.com
+License: Apache License, Version 2.0
+Description: cam
+        =====
+        
+        Cam is a utility for C/C++ archive build.
+        
+        It provides build cli and leverage cmake , node-gyp ... to build your lib and application
+        
+        Reference
+        ====
+        https://github.com/pypa/twine
+        
+        https://github.com/gstreamer/cerbero
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: BSD
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
