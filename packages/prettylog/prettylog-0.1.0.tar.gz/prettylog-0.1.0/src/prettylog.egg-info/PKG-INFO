@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: prettylog
+Version: 0.1.0
+Summary: Let's write beautiful logs
+Home-page: UNKNOWN
+Author: Dmitry Orlov
+Author-email: me@mosquito.su
+Maintainer: Dmitry Orlov
+Maintainer-email: me@mosquito.su
+License: Apache 2
+Description: UNKNOWN
+Platform: all
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3 :: Only
+Provides-Extra: develop
