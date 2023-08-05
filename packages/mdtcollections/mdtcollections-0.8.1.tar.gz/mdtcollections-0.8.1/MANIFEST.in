@@ -1,0 +1,4 @@
+include versioneer.py
+include mdtcollections/_version.py
+include requirements.txt
+include LICENSE
