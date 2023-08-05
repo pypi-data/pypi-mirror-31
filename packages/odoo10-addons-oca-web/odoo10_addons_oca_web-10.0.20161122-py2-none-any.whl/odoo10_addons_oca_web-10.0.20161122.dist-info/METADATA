@@ -1,0 +1,21 @@
+Metadata-Version: 2.0
+Name: odoo10-addons-oca-web
+Version: 10.0.20161122
+Summary: Meta package for OCA web Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo10-addon-web-environment-ribbon
+Requires-Dist: odoo10-addon-web-export-view
+Requires-Dist: odoo10-addon-web-favicon
+Requires-Dist: odoo10-addon-web-responsive
+Requires-Dist: odoo10-addon-web-sheet-full-width
+Requires-Dist: odoo10-addon-web-tree-image
+Requires-Dist: odoo10-addon-web-widget-color
+Requires-Dist: odoo10-addon-web-x2many-delete-all
+
+UNKNOWN
+
+
