@@ -1,0 +1,31 @@
+Metadata-Version: 2.0
+Name: odoo10-addons-oca-hr
+Version: 10.0.20170409
+Summary: Meta package for OCA hr Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo10-addon-hr-contract-default-trial-length
+Requires-Dist: odoo10-addon-hr-contract-reference
+Requires-Dist: odoo10-addon-hr-emergency-contact
+Requires-Dist: odoo10-addon-hr-employee-age
+Requires-Dist: odoo10-addon-hr-employee-birth-name
+Requires-Dist: odoo10-addon-hr-employee-firstname
+Requires-Dist: odoo10-addon-hr-employee-id
+Requires-Dist: odoo10-addon-hr-employee-phone-extension
+Requires-Dist: odoo10-addon-hr-employee-seniority
+Requires-Dist: odoo10-addon-hr-employee-social-media
+Requires-Dist: odoo10-addon-hr-experience
+Requires-Dist: odoo10-addon-hr-family
+Requires-Dist: odoo10-addon-hr-holidays-compute-days
+Requires-Dist: odoo10-addon-hr-holidays-leave-auto-approve
+Requires-Dist: odoo10-addon-hr-holidays-legal-leave
+Requires-Dist: odoo10-addon-hr-public-holidays
+
+UNKNOWN
+
+
