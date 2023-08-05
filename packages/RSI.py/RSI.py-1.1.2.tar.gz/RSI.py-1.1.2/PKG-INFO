@@ -1,0 +1,19 @@
+Metadata-Version: 1.2
+Name: RSI.py
+Version: 1.1.2
+Summary: A library for manipulation of the RSI format used in Space Station 14.
+Home-page: https://github.com/space-wizards/RSI.py
+Author: Pieter-Jan Briers
+Author-email: pieterjan.briers@gmail.com
+License: MIT
+Project-URL: Source, https://github.com/space-wizards/RSI.py
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.5
