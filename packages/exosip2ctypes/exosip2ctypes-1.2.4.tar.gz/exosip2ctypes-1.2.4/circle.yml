@@ -1,0 +1,23 @@
+## Customize the test machine
+machine:
+
+  timezone:
+    Asia/Shanghai # Set the timezone
+
+  # Version of python to use
+  python:
+    version: 3.5.2
+
+## Customize dependencies
+dependencies:
+  pre:
+    - sudo apt-get install -y libexosip2-10
+    - pip install coverage codacy-coverage
+
+test:
+  override:
+    - mv src/exosip2ctypes/tests ./
+    - coverage run -m unittest
+  post:
+    - coverage xml
+    - python-codacy-coverage -r coverage.xml
