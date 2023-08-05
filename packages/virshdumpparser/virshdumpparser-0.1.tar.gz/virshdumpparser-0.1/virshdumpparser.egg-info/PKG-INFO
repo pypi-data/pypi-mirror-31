@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: virshdumpparser
+Version: 0.1
+Summary: Parser to parse the virsh dump xml files
+Home-page: https://github.com/petersinghanburaj/virshdumpparser
+Author: Petersingh Anburaj
+Author-email: panburaj@redhat.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: Linux

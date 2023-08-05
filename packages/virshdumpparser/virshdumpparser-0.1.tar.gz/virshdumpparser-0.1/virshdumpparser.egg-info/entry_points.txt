@@ -1,0 +1,3 @@
+[console_scripts]
+virshdumpparser = virshdumpparser.cli:main
+

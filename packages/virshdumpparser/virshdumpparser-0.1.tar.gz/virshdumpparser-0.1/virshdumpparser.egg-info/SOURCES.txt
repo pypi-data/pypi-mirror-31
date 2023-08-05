@@ -1,0 +1,11 @@
+README.md
+setup.py
+virshdumpparser/__init__.py
+virshdumpparser/cli.py
+virshdumpparser/parser.py
+virshdumpparser.egg-info/PKG-INFO
+virshdumpparser.egg-info/SOURCES.txt
+virshdumpparser.egg-info/dependency_links.txt
+virshdumpparser.egg-info/entry_points.txt
+virshdumpparser.egg-info/requires.txt
+virshdumpparser.egg-info/top_level.txt
