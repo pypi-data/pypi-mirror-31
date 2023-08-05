@@ -1,0 +1,11 @@
+Metadata-Version: 1.1
+Name: http_request_aggregator
+Version: 0.3
+Summary: Collect multiple http requests asynchronously
+Home-page: https://github.com/ajmunton/http_request_aggregator
+Author: Adam Munton
+Author-email: a.j.munton@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/ajmunton/http_request_aggregator/archive/0.3.tar.gz
+Description: UNKNOWN
+Platform: UNKNOWN
