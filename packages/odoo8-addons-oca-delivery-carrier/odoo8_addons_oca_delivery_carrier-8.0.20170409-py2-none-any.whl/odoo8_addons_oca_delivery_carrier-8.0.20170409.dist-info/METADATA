@@ -1,0 +1,21 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-delivery-carrier
+Version: 8.0.20170409
+Summary: Meta package for OCA delivery-carrier Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo8-addon-base-delivery-carrier-files
+Requires-Dist: odoo8-addon-base-delivery-carrier-label
+Requires-Dist: odoo8-addon-delivery-carrier-b2c
+Requires-Dist: odoo8-addon-delivery-carrier-deposit
+Requires-Dist: odoo8-addon-delivery-carrier-label-gls
+Requires-Dist: odoo8-addon-delivery-carrier-label-postlogistics
+
+UNKNOWN
+
+
