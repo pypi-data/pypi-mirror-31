@@ -1,0 +1,9 @@
+requests
+ndg-httpsclient
+pyOpenSSL
+
+[dev]
+check-manifest
+
+[test]
+coverage

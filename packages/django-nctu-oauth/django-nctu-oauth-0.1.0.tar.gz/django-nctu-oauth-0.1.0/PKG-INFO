@@ -1,0 +1,45 @@
+Metadata-Version: 1.1
+Name: django-nctu-oauth
+Version: 0.1.0
+Summary: NCTU OAuth package for django
+Home-page: https://github.com/theblackcat102/django-nctu-oauth
+Author: theblackcat
+Author-email: zhirui09400@gmail.com
+License: UNKNOWN
+Description: # django-nctu-oauth
+        
+        This package currently still in testing stage
+        ## Setup
+        1. Register your app at [nctu oauth website](https://id.nctu.edu.tw/)
+        
+        2. Install package from pip
+        ```
+            pip install django-nctu-oauth
+        ```
+        
+        3. Add package to django project
+        ```
+            NCTU_APP_REDIRECT_URI = 'your-redirect-url'
+            NCTU_APP_CLIENT_ID = 'your-client-id'
+            NCTU_APP_CLIENT_SECRET = 'your-secret-key'
+        
+            INSTALLED_APPS = [
+                'django-nctu-oauth',
+            ]
+        ```
+        ## Testing
+        ```
+            python -m test.test
+        ```
+Keywords: django nctu oauth
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
