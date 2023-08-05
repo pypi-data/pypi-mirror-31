@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: bigstate
+Version: 0.0.1
+Summary: state modules for f5 bigips
+Home-page: https://github.com/brokenbot/bigstate
+Author: David Sanderson
+Author-email: dave.d.sanderson@gmail.com
+License: UNKNOWN
+Description: # bigstate
+        python module built on top of f5-sdk for keeping F5 configurations in sync
+        
+        This a a work in progress and is intended to be used with Saltstack as oppossed to the current bigip state module that has limited ability and IMHO is poorly designed for state based management system.
+        
+        Though its intended for use with salt, nothing in this particular module will be salt focused and it could be used standalone or another tool.
+Keywords: salt f5 bigip ltm
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
