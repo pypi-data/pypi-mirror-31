@@ -1,0 +1,4 @@
+setuptools>=38.3.0
+
+[build]
+wheel
