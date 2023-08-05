@@ -1,0 +1,24 @@
+Metadata-Version: 2.0
+Name: infi.pysync
+Version: 0.0.13.post4
+Summary: rsync-like utility to help sync dev files to a machine
+Home-page: https://github.com/Infinidat/infi.pysync
+Author: Arnon Yaari
+Author-email: arnony@infinidat.com
+License: BSD
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: docopt
+Requires-Dist: infi.watchdog
+Requires-Dist: paramiko
+Requires-Dist: setuptools
+
+rsync-like utility to help sync dev files to a machine
+
+
