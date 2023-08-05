@@ -1,0 +1,6 @@
+[console_scripts]
+lexibank = pylexibank.__main__:main
+
+[pytest11]
+pytest_lexibank = pylexibank.pytest_plugin
+
