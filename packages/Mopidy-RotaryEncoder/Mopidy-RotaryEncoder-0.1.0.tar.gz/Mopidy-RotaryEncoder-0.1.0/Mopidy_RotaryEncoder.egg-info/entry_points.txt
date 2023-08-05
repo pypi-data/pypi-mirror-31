@@ -1,0 +1,3 @@
+[mopidy.ext]
+rotaryencoder = mopidy_rotaryencoder:Extension
+

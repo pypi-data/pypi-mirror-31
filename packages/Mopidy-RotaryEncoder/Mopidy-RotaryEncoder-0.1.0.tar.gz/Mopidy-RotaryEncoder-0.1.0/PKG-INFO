@@ -1,0 +1,80 @@
+Metadata-Version: 1.1
+Name: Mopidy-RotaryEncoder
+Version: 0.1.0
+Summary: Mopidy frontend extension to control the volume through a rotary encoder
+Home-page: https://github.com/KreMat/mopidy-rotaryencoder
+Author: Matthias Kreuzriegler
+Author-email: matthias@kreuzriegler.at
+License: Apache License, Version 2.0
+Description: ****************************
+        Mopidy-RotaryEncoder
+        ****************************
+        
+        .. image:: https://img.shields.io/pypi/v/Mopidy-RotaryEncoder.svg?style=flat
+            :target: https://pypi.python.org/pypi/Mopidy-RotaryEncoder/
+            :alt: Latest PyPI version
+        
+        .. image:: https://img.shields.io/travis/KreMat/mopidy-rotaryencoder/master.svg?style=flat
+            :target: https://travis-ci.org/KreMat/mopidy-rotaryencoder
+            :alt: Travis CI build status
+        
+        .. image:: https://img.shields.io/coveralls/KreMat/mopidy-rotaryencoder/master.svg?style=flat
+           :target: https://coveralls.io/r/KreMat/mopidy-rotaryencoder
+           :alt: Test coverage
+        
+        Mopidy frontend extension to control the volume through a rotary encoder
+        
+        
+        Installation
+        ============
+        
+        Install by running::
+        
+            pip install Mopidy-RotaryEncoder
+        
+        Or, if available, install the Debian/Ubuntu package from `apt.mopidy.com
+        <http://apt.mopidy.com/>`_.
+        
+        
+        Configuration
+        =============
+        
+        Before starting Mopidy, you must add configuration for
+        Mopidy-RotaryEncoder to your Mopidy configuration file::
+        
+            [rotaryencoder]
+            enabled = true
+            datapin = 17 #RaspberryPi GPIO BCM-Pin
+            clkpin = 18 #RaspberryPi GPIO BCM-Pin
+            swpin = 27 #RaspberryPi GPIO BCM-Pin
+        
+        Project resources
+        =================
+        
+        - `Source code <https://github.com/KreMat/mopidy-rotaryencoder>`_
+        - `Issue tracker <https://github.com/KreMat/mopidy-rotaryencoder/issues>`_
+        
+        
+        Credits
+        =======
+        
+        - Original author: `Matthias Kreuzriegler <https://github.com/KreMat`
+        - Current maintainer: `Matthias Kreuzriegler <https://github.com/KreMat`
+        - `Contributors <https://github.com/KreMat/mopidy-rotaryencoder/graphs/contributors>`
+        
+        
+        Changelog
+        =========
+        
+        v0.1.0 (UNRELEASED)
+        ----------------------------------------
+        
+        - Initial release.
+        
+Platform: UNKNOWN
+Classifier: Environment :: No Input/Output (Daemon)
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Topic :: Multimedia :: Sound/Audio :: Players
