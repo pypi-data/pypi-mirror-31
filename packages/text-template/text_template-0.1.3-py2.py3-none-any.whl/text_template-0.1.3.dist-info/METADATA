@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: text-template
+Version: 0.1.3
+Summary: Very simple text templating view for Python
+Home-page: https://github.com/sarcoma/Python_Terminal_Text_Templates
+Author: sarcoma
+Author-email: sean@orderandchaoscreative.com
+License: MIT
+Project-URL: Order & Chaos Creative, https://orderandchaoscreative.com
+Platform: UNKNOWN
+Requires-Dist: ansi-colours
+
+TextTemplate
+========
+
+Very simple text templating views for Python
+
+Uses colour variables from AnsiColours package to style text.
+
+Installation
+------------
+
+Install by running:
+
+    pip install text_template
+
+Usage
+-----
+
+    from text_template import TextTemplate as view
+
+    print(view.render(
+            template='./a_view.txt',
+            variable="two",
+            another_variable='three'
+        ))
+
+The view uses `$` and `${}` to parse the variables passed to the template for example:
+
+    # a_view.txt
+
+    One, $variable and ${another_variable}
+    New line here
+
+License
+-------
+
+The project is licensed under the MIT license.
+
