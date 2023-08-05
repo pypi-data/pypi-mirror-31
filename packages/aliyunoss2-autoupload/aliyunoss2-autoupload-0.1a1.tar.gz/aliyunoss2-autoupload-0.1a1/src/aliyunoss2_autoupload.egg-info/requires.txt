@@ -1,0 +1,11 @@
+oss2
+PyYAML
+
+[:python_version < "2.7"]
+argparse
+
+[:python_version < "3.0"]
+futures
+
+[:python_version < "3.4"]
+enum34

@@ -1,0 +1,46 @@
+Metadata-Version: 1.2
+Name: aliyunoss2-autoupload
+Version: 0.1a1
+Summary: Watch files in a directory and upload them to Aliyun OSS on file writing completed
+Home-page: https://github.com/tanbro/aliyunoss2-autoupload
+Author: liu xue yan
+Author-email: liu_xue_yan@foxmail.com
+License: UNKNOWN
+Description: aliyunoss2-autoupload
+        #####################
+        
+        Authors
+        =======
+        
+        * liu xue yan <liu_xue_yan@foxmail.com>
+        
+        Changelog
+        =========
+        
+        0.1a1
+        -----
+        
+        * Date: 2018-04-18
+        
+        CONTRIBUTING
+        ============
+        
+        Contributions are welcome!
+        
+        It's advised to develop in venv_
+        
+        ::
+        
+            /path/of/your/python -m venv .venv
+            source .venv/bin/activate
+            git clone git@github.com:tanbro/aliyunoss2-autoupload.git
+            cd aliyunoss2-autoupload
+            python setup.py develop
+        
+        .. _venv: https://docs.python.org/library/venv.html
+        
+        Install
+        #######
+        
+Platform: UNKNOWN
+Requires-Python: >=2.6,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*
