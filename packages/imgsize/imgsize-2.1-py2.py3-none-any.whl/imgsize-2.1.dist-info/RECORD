@@ -1,0 +1,13 @@
+imgsize/__init__.py,sha256=QRtQ7fRD4MS4JyGUCr4MvzlgPr2Zuvnn5ECSVR300Ek,347
+imgsize/__main__.py,sha256=AouGsDqu3Pb_XTyQm8VWYtXVJTR-cK2NCCQd8zIUIPA,539
+imgsize/core.py,sha256=g8VdSrAFpv9TytFEvmOFRZpckLDsxiNjtqsm6Wp34KE,488
+imgsize/tests.py,sha256=25zE8cp7T7y61Y5UsfcMe_y5OVf-Rg80DRl2cKlBGrE,1363
+imgsize/formats/__init__.py,sha256=qh5Hkhu--BNZ3xh4f2nbASnph5-4M9cCZQDtIcJYaPQ,1387
+imgsize/formats/bmp.py,sha256=JsX0zERPjci2-JunHME7Qx3QtywdnNnK-bm_iNERLrU,907
+imgsize/formats/gif.py,sha256=-IQay8QfhVjtRNOVxN2-r0d6v_rXrsHYfHeyVgfmjH0,195
+imgsize/formats/jpg.py,sha256=dDSZ0B-wFhukfav4Iv6bSmsV61V4B4tIVRaTf9dC_lc,1111
+imgsize/formats/png.py,sha256=OsV0cncRetxx7G8RxjLiL8wgFQUFfrz2t7CBlk1vnyQ,1639
+imgsize-2.1.dist-info/METADATA,sha256=YZI1ugwsUpIQXRnLWjrRdjnLiztQoKMyMJSC_X023QQ,518
+imgsize-2.1.dist-info/RECORD,,
+imgsize-2.1.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+imgsize-2.1.dist-info/top_level.txt,sha256=aSsogGWRVku8sWGPoo1MpJUksBpTekb2GIGaElczPVA,8
