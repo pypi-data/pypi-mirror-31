@@ -1,0 +1,36 @@
+NeoCommand
+==========
+
+NᴇᴏCᴏᴍᴍᴀɴᴅ is an extension of Iɴᴛᴇʀᴍᴀᴋᴇ that provides manipulation of graph/network/tree data through the concept of Endpoints, through which Nodes, Edges, sub-graphs and arbitrary data are relayed.
+
+This library primarily supports the Bɪᴏ42 application, which focuses on genomic data.
+
+The user is therefore directed to the Bɪᴏ42 readme.
+
+Please see the source code documentation itself for specific NᴇᴏCᴏᴍᴍᴀɴᴅ usage.
+
+[](toc)
+
+Tutorial
+--------
+
+Please navigate to the `neocommand_examples` folder to read the examples.
+
+The examples are Jupyter notebooks and can be opened with the following command from your terminal. e.g. to open `sample_cypher_statement.ipynb`:
+
+```bash
+jupyter notebook sample_cypher_statement.ipynb
+```
+
+
+Meta-data
+---------
+
+```ini
+author    = martin rusilowicz
+licence   = https://www.gnu.org/licenses/agpl-3.0.html
+language  = python3
+type      = library
+keywords  = neo4j, intermake, bio42
+host      = bitbucket
+```
