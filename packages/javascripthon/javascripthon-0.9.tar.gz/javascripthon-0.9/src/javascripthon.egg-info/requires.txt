@@ -1,0 +1,12 @@
+setuptools
+dukpy
+macropy3==1.0.4.dev2
+
+[dev]
+metapensiero.tool.bump_version
+readme_renderer
+
+[test]
+pytest
+pytest-cov
+meta
