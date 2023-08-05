@@ -1,0 +1,33 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-l10n-switzerland
+Version: 8.0.20161011
+Summary: Meta package for OCA l10n-switzerland Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo8-addon-l10n-ch-account-statement-base-import
+Requires-Dist: odoo8-addon-l10n-ch-bank
+Requires-Dist: odoo8-addon-l10n-ch-base-bank
+Requires-Dist: odoo8-addon-l10n-ch-credit-control-payment-slip-report
+Requires-Dist: odoo8-addon-l10n-ch-dta
+Requires-Dist: odoo8-addon-l10n-ch-dta-base-transaction-id
+Requires-Dist: odoo8-addon-l10n-ch-fds-postfinance
+Requires-Dist: odoo8-addon-l10n-ch-fds-upload-dd
+Requires-Dist: odoo8-addon-l10n-ch-fds-upload-sepa
+Requires-Dist: odoo8-addon-l10n-ch-hr-payroll
+Requires-Dist: odoo8-addon-l10n-ch-import-cresus
+Requires-Dist: odoo8-addon-l10n-ch-lsv-dd
+Requires-Dist: odoo8-addon-l10n-ch-payment-slip
+Requires-Dist: odoo8-addon-l10n-ch-payment-slip-base-transaction-id
+Requires-Dist: odoo8-addon-l10n-ch-payment-slip-layouts
+Requires-Dist: odoo8-addon-l10n-ch-payment-slip-voucher
+Requires-Dist: odoo8-addon-l10n-ch-scan-bvr
+Requires-Dist: odoo8-addon-l10n-ch-sepa
+Requires-Dist: odoo8-addon-l10n-ch-states
+Requires-Dist: odoo8-addon-l10n-ch-zip
+
+UNKNOWN
+
+
