@@ -1,0 +1,12 @@
+django_pg_copy-0.1.dist-info/METADATA,sha256=YNGQHpJNBhHQ6e9F8dR7eMlDmMjbl-cFjvftFojh25g,2996
+django_pg_copy-0.1.dist-info/RECORD,,
+django_pg_copy-0.1.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+django_pg_copy-0.1.dist-info/top_level.txt,sha256=ADx2vroeOOzXbfxd-vUtUjcA3uvzQAfc8IGDQakKi5k,8
+pg_copy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pg_copy/apps.py,sha256=csNOfkUdayq5yzNce2blFu-SX2Sj5ZQr7IvyyinprpI,88
+pg_copy/settings.py,sha256=n5K5AaoVr-An91wEy7sNVxBMj8jOzR9CLCsqdhbQeZg,285
+pg_copy/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pg_copy/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pg_copy/management/commands/pg_backup.py,sha256=cu1igcu8HzL2xINEIipBc0CFnDnTAZtyT9Ho4CmC2GU,1526
+pg_copy/management/commands/pg_restore.py,sha256=2GsmTMQm2hjvGLR4baQkwwhZZ43z9rKi-d5cFPht6mk,3193
+pg_copy/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
