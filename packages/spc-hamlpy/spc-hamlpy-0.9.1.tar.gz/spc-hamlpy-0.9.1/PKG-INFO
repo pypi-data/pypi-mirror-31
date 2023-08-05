@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: spc-hamlpy
+Version: 0.9.1
+Summary: HAML like syntax for Django templates
+Home-page: http://github.com/jessemiller/HamlPy
+Author: blacktear23
+Author-email: blacktear23@gmail.com
+License: MIT
+Download-URL: http://github.com/jessemiller/HamlPy
+Description: UNKNOWN
+Keywords: haml django converter
+Platform: UNKNOWN
