@@ -1,0 +1,9 @@
+README.md
+setup.py
+pupil_client/__init__.py
+pupil_client/version.py
+pupil_client.egg-info/PKG-INFO
+pupil_client.egg-info/SOURCES.txt
+pupil_client.egg-info/dependency_links.txt
+pupil_client.egg-info/requires.txt
+pupil_client.egg-info/top_level.txt
