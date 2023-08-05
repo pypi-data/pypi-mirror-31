@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: PyTransfer
+Version: 0.1.2
+Summary: App that simplifies usage of file hosting services (currently only https://transfer.sh)
+Home-page: UNKNOWN
+Author: Patrik Janoušek
+Author-email: patrikjanousek97@gmail.com
+License: UNKNOWN
+Description: I've made this app to simplify usage of file hosting services. It was primary developed for https://transfer.sh, which is scheduled to go down so this application supports simple implementation of another services in a future.
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3.6
