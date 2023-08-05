@@ -1,0 +1,13 @@
+README.rst
+setup.cfg
+setup.py
+pyslides/__init__.py
+pyslides/common_fig.py
+pyslides/example.py
+pyslides/presentation.py
+pyslides.egg-info/PKG-INFO
+pyslides.egg-info/SOURCES.txt
+pyslides.egg-info/dependency_links.txt
+pyslides.egg-info/not-zip-safe
+pyslides.egg-info/requires.txt
+pyslides.egg-info/top_level.txt
