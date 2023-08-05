@@ -1,0 +1,3 @@
+[console_scripts]
+fryptos = fryptos.main:execute
+
