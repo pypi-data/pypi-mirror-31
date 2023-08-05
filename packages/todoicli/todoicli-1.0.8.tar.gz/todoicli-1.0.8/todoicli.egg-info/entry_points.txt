@@ -1,0 +1,3 @@
+[console_scripts]
+todoicli = todoi_cli.main:main
+
