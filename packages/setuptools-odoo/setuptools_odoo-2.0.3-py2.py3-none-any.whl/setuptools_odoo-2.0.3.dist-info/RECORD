@@ -1,0 +1,13 @@
+setuptools_odoo/__init__.py,sha256=oK6gJqWvuP11osIGOH0M6DjO0zB8A9yRkTW1QO50tqo,561
+setuptools_odoo/base_addons.py,sha256=Eb9tqnxeHr0NgSY6yPcQbeMPYHITiQuFkR9Go0uJKTw,34849
+setuptools_odoo/core.py,sha256=EGJP5OnA7txcDiluUYuEg52eQBSa9LXVcIe9t64vk0g,15003
+setuptools_odoo/external_dependencies.py,sha256=O4yPXpu6L7HFvgpPW3XIOveiz_z4jfRbcW8AvAl-W70,501
+setuptools_odoo/git_postversion.py,sha256=R1y59oOha5VF4NlmV4S6ndi_3BcENfE2b3pEiGDDGbk,4312
+setuptools_odoo/make_default_setup.py,sha256=vSkgVBVy0ad1PSXhcUiHuzzu5wjVVQzJV5MnZ6EQaA0,13158
+setuptools_odoo/manifest.py,sha256=9bwOBDDxMux_TGls0anqaNlACfziatlfFzcFPaiYlqU,1100
+setuptools_odoo/setup_keywords.py,sha256=p5ljFbsRSREijN13eJR9v-hxeqz8sBYvH8ZPCivdRsI,2437
+setuptools_odoo-2.0.3.dist-info/METADATA,sha256=94s-8sNtWubsFN92q6C6LAnpEJm-VCCEptSy7Wm1P9Q,20172
+setuptools_odoo-2.0.3.dist-info/RECORD,,
+setuptools_odoo-2.0.3.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+setuptools_odoo-2.0.3.dist-info/entry_points.txt,sha256=lKDpbpYJNUr59zK5AYJxxkc_ZkDxkxHKGj2Z8WKnnxQ,230
+setuptools_odoo-2.0.3.dist-info/top_level.txt,sha256=EqocwJmdShqw7S0lorVQ-QxcPHB6F2317ANTg3qXkeY,16
