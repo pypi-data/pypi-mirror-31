@@ -1,0 +1,16 @@
+CONTRIBUTING.rst
+HISTORY.rst
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+nginxfmt/__init__.py
+nginxfmt.egg-info/PKG-INFO
+nginxfmt.egg-info/SOURCES.txt
+nginxfmt.egg-info/dependency_links.txt
+nginxfmt.egg-info/entry_points.txt
+nginxfmt.egg-info/not-zip-safe
+nginxfmt.egg-info/top_level.txt
+tests/__init__.py
+tests/test_nginxfmt.py

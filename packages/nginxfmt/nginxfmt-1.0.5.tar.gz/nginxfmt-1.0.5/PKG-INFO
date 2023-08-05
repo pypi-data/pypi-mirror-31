@@ -1,0 +1,69 @@
+Metadata-Version: 1.1
+Name: nginxfmt
+Version: 1.0.5
+Summary: nginx config file formatter/beautifier written in Python.
+Home-page: https://github.com/krotkiewicz/nginxfmt
+Author: Konrad Rotkiewicz
+Author-email: konrad.rotkiewicz@gmail.com
+License: Apache Software License 2.0
+Description: # *nginx* config file formatter
+        
+        [![Build Status](https://travis-ci.org/ulamlabs/nginx-config-formatter.svg?branch=master)](https://travis-ci.org/ulamlabs/nginx-config-formatter)
+        
+        This Python script formats *nginx* configuration files in consistent
+        way, described below:
+        
+        * all lines are indented in uniform manner, with 4 spaces per level
+        * neighbouring empty lines are collapsed to at most two empty lines
+        * curly braces placement follows Java convention
+        * whitespaces are collapsed, except in comments an quotation marks
+        * whitespaces in variable designators are removed: `${  my_variable }` is collapsed to `${my_variable}`
+        
+        ## Installation
+        
+        `pip install nginxfmt`
+        
+        ## Usage
+        
+        ```
+        usage: nginxfmt [-h] [-v] [-b] config_files [config_files ...]
+        
+        Script formats nginx configuration file.
+        
+        positional arguments:
+          config_files          configuration files to format
+        
+        optional arguments:
+          -h, --help            show this help message and exit
+          -v, --verbose         show formatted file names
+          -b, --backup-original
+                                backup original config file
+        ```
+        
+        ## Credits
+        
+        Copyright 2016 Michał Słomkowski @ 1CONNECT. License: Apache 2.0.
+        
+        
+        =======
+        History
+        =======
+        
+        1.0.2 (2017-09-18)
+        ------------------
+        
+        * First release on PyPI.
+        
+Keywords: nginxfmt
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
