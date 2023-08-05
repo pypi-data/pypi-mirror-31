@@ -1,0 +1,11 @@
+django_migration_checker/__init__.py,sha256=NoVM0QsqTBla6okn5GfpalPDw1o03PscqnB-sqUmtGg,209
+django_migration_checker/base.py,sha256=pW3KiJjEsoyH5jIVCZUJM_bro5WB24cY45fK11tMF5o,2577
+django_migration_checker/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_migration_checker/cli/find_conflicts.py,sha256=bOGkk9XNKmW4h-caMeGu6FtFchzExcQ84I6L44Ac1ps,577
+django_migration_checker-0.4.3.dist-info/DESCRIPTION.rst,sha256=7IYpcihDBHCkAMeeyurxh2fa4wq7aAE0pz3N6u1CLZ4,2655
+django_migration_checker-0.4.3.dist-info/METADATA,sha256=k_FeI7IHyPxL5pasp6LW0bZBKo6sxW7hqmBlwaiR2ME,3494
+django_migration_checker-0.4.3.dist-info/RECORD,,
+django_migration_checker-0.4.3.dist-info/WHEEL,sha256=o2k-Qa-RMNIJmUdIc7KU6VWR_ErNRbWNlxDIpl7lm34,110
+django_migration_checker-0.4.3.dist-info/entry_points.txt,sha256=NDadg44h6Db5PeuA7Tli46QAotHlb2s3GkFC2COKL1c,92
+django_migration_checker-0.4.3.dist-info/metadata.json,sha256=NuTd-NzK8kAR-48Zp1tiuyOrX6wqonM2ntGw2n1LM-0,1474
+django_migration_checker-0.4.3.dist-info/top_level.txt,sha256=cM10sx2-CN3tC8ndmEa1HMa1RnBguNywoU1qTrP-kvs,25
