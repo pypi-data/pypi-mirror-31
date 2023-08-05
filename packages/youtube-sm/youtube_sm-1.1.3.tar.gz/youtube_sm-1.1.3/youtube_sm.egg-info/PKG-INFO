@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: youtube-sm
+Version: 1.1.3
+Summary: Youtube subscription manager
+Home-page: https://github.com/sawyerf/Youtube_subscription_manager
+Author: Sawyerf
+Author-email: sawyer.flink@protonmail.ch
+License: MLP-2.0
+Description: UNKNOWN
+Keywords: youtube subscription api manager html
+Platform: UNKNOWN
+Classifier: Topic :: Internet :: WWW/HTTP :: Indexing/Search
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
