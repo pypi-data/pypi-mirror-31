@@ -1,0 +1,3 @@
+[console_scripts]
+rr = randomroller.cli:main
+

@@ -1,0 +1,11 @@
+Metadata-Version: 1.1
+Name: randomroller
+Version: 2.2.0
+Summary: An extra random dice roller
+Home-page: https://github.com/onlyhavecans/randomroller
+Author: David Aronsohn
+Author-email: squirrel@wearing.black
+License: UNKNOWN
+Description: UNKNOWN
+Platform: any
+Requires: pyserial
