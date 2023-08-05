@@ -1,0 +1,2 @@
+# TestcaseSelect
+Unittest testcase discoverer which parses a project it is imported into and presents the user with a tkinter window for selecting available unittests
