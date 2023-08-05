@@ -1,0 +1,28 @@
+Metadata-Version: 2.0
+Name: lumber-jack
+Version: 0.1.1a0
+Summary: Alpha work on adding additional and improved functionality to Pandas.
+Home-page: https://github.com/milesgranger/lumber-jack
+Maintainer: Miles Granger
+License: OSI Approved :: BSD License
+Keywords: pandas rust python data manipulation processing
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Rust
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Requires-Dist: numpy
+
+UNKNOWN
+
+
