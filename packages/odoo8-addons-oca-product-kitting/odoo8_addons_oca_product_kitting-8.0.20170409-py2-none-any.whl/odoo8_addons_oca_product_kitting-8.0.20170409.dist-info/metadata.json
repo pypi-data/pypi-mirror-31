@@ -1,0 +1,1 @@
+{"classifiers": ["Programming Language :: Python :: 2.7", "Framework :: Odoo"], "extensions": {"python.details": {"document_names": {"description": "DESCRIPTION.rst"}}}, "generator": "bdist_wheel (0.29.0)", "metadata_version": "2.0", "name": "odoo8-addons-oca-product-kitting", "summary": "Meta package for OCA product-kitting Odoo addons", "version": "8.0.20170409"}
