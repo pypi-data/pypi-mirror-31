@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: thriftcli2
+Version: 1.1
+Summary: Thrift CLI
+Home-page: UNKNOWN
+Author: Neel Virdy
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: kazoo
+Requires-Dist: mock
+Requires-Dist: thrift
+Requires-Dist: twitter.common.rpc
+Requires-Dist: coverage
+
+UNKNOWN
+
+
