@@ -1,0 +1,13 @@
+git_quotes-0.0.1.data/data/hooks/prepare-commit-msg,sha256=sE9zH0jgznXSjP2ISvVtyInNmWKDXdRjLS3DcwoGOhQ,1099
+git_quotes-0.0.1.data/data/hooks/quotes.json,sha256=zJ1lL89jQgxgGzFPO3H4FCH072U6Ty6yXYYGi8aMinQ,672292
+git_quotes-0.0.1.dist-info/METADATA,sha256=Vv0odRf5BsRSUhL1La_8mESIHPgDUUxH1C_jBOMLRjU,903
+git_quotes-0.0.1.dist-info/RECORD,,
+git_quotes-0.0.1.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+git_quotes-0.0.1.dist-info/entry_points.txt,sha256=62ouRs8zChacj2ONgLw-CZh6n2FQtu-rZnudRdVE97I,84
+git_quotes-0.0.1.dist-info/top_level.txt,sha256=pdrLk0zKBAIuBCy46NkERztQ00rAHcfXSTGmvNloHcA,7
+quotes/__init__.py,sha256=sXLh7g3KC4QCFxcZGBTpG2scR7hmmBsMjq6LqRptkRg,22
+quotes/git_quotes.py,sha256=D6Ujq8KOlAiHi4PtdvCuwZJuEBsBr4BlY6-hEmDx18w,7274
+quotes/groups.py,sha256=cXmeDBf8WV28INNz1wIl2In-WJ1YO2gH3E7hTQ9Zlm4,3027
+quotes/utils.py,sha256=z1OHXN4s59K5U8jMBXvfAa7JsHqb1ln34XYu9kZ19l8,1011
+quotes/hooks/prepare-commit-msg,sha256=sE9zH0jgznXSjP2ISvVtyInNmWKDXdRjLS3DcwoGOhQ,1099
+quotes/hooks/quotes.json,sha256=zJ1lL89jQgxgGzFPO3H4FCH072U6Ty6yXYYGi8aMinQ,672292
