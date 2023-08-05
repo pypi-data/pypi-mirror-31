@@ -1,0 +1,55 @@
+# pepbox
+<p>T cell activation that leads to a productive T-cell reaction against a pathogen agent is linked to its T cell receptor (TCR) specificity.
+The ability of the TCR to distinguish between structurally unrelated to similar peptides defines the T cell specificity. The affinity drives the specifcity.
+A T cell that binds to peptide-MHC complex with enough affinity will increase the magnitude of the immune response (i.e. T cell expansion). Therefore, expansion is a powerful feature to measure TCRs specifity.
+This application has the goal to quantify if T cell clonotypes (i.e. group of T cells sharing the same TCR) are significantly expanded by comparing their respective frequency before and after contact with a peptide.
+To improve performance of peptide specific clonotypes selection, irrelevant peptide stimulated cultured T cells or/and medium cultured T cells can be provided as negative controls.
+A list of reference TCRs known to be specific to the relevant peptide (e.g. obtained from tetramer staining, IFNg capture) are used to define optimal expansion thresholds for selecting positively and negatively expanded T cells</p>.
+
+# Parameters
+## usage:
+pepbox.py [-h] [-merge] [-expansion] [-analyze] [-reproducibility]
+               [-aacdr3] [-genes_cdr3_aacln] [-optimize] [-timepoints]
+               [-geneusage] [-detailed] [-input_folder INPUT_FOLDER]
+               [-output_folder OUTPUT_FOLDER] [-workdir WORKDIR] [-nolog]
+               [-compress] [-v] [--version] [-debug]
+
+## optional arguments:
+*  -h, --help            show this help message and exit
+*  -merge                Merge Adaptive Biotechnologies TCR sequencing txt file
+                        (default: False)
+*  -expansion            Calculate expansion p-values using a Fisher exact test
+                        (default: False)
+*  -analyze              Produce basic statistics summary tables and figures (default: False)
+*  -reproducibility      Creating heatmap of reproducibility (default: False)
+*  -aacdr3               Define the clonotype at the amino acid cdr3 level
+                        (default: False)
+*  -genes_cdr3_aacln     Define the clonotype at the amino acid cdr3 and V, J
+                        gene level (default: False)
+*  -optimize             Creating negative control vs relevant peptide
+                        stimulated clonotype p-value plot (default: False)
+*  -timepoints           Analyzes samples from different time points (default:
+                        False)
+*  -geneusage            Provide gene usage statistics (default: False)
+*  -detailed             Provide more details
+*  -input_folder INPUT_FOLDER
+                        Input folder (default: current directory)
+*  -output_folder OUTPUT_FOLDER
+                        Output folder (default: current directory)
+*  -workdir WORKDIR      Folder where input and output files should be (default: current directory)
+*  -compress             Compress output folder (default: False)
+
+*  -nolog                Disable default log file (default: False)
+*  -v                    Turns on verbosity (more details)
+*  --version             show program's version number and exit
+*  -debug                Debug using small input size to test specific cases.
+
+ # Usage
+ 
+ ```python
+# Merge Adaptive Biotechnologies TCR sequencing txt formatted files
+ python pepbox.py -merge -workdir myworkdir
+# Common pipeline
+python pepbox.py -merge -expansion -analyze -optimize -workdir myworkdir
+  ```
+
