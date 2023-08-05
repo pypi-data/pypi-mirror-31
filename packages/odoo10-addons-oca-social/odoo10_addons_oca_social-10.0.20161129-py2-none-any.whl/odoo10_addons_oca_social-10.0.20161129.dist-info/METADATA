@@ -1,0 +1,19 @@
+Metadata-Version: 2.0
+Name: odoo10-addons-oca-social
+Version: 10.0.20161129
+Summary: Meta package for OCA social Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo10-addon-email-template-qweb
+Requires-Dist: odoo10-addon-mail-as-letter
+Requires-Dist: odoo10-addon-mail-attach-existing-attachment
+Requires-Dist: odoo10-addon-mail-full-expand
+Requires-Dist: odoo10-addon-mail-optional-autofollow
+Requires-Dist: odoo10-addon-mail-restrict-follower-selection
+
+UNKNOWN
+
+
