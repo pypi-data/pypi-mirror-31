@@ -1,0 +1,167 @@
+// Buttons color map
+$buttons: (
+  default: $sg-btn-default-color,
+  primary: $sg-btn-primary-color,
+  success: $sg-btn-success-color,
+  info: $sg-btn-info-color,
+  warning: $sg-btn-warning-color,
+  danger: $sg-btn-danger-color,
+);
+
+// angular dodaje outline w chrome do wszystkiego co ma role
+[role]:not([role='dialog']), button {
+  outline: none !important;
+  cursor: pointer;
+}
+
+.btn, .input-group-btn .btn {
+  border: none;
+  border-radius: $sg-border-radius;
+  font-weight: $sg-btn-font-weight;
+  text-transform: $sg-btn-text-transform;
+  position: relative;
+  padding: 8px 10px;
+  margin: 10px 0;
+  background: transparent;
+  
+  @include transition(
+    box-shadow 0.2s $sg-animation-curve-fast-out-linear-in,
+    background-color 0.2s $sg-animation-curve-default,
+    color 0.2s $sg-animation-curve-default
+  );
+  
+  i {
+    font-size: $sg-btn-icon-font-size;
+    line-height: $sg-btn-icon-line-height;
+    vertical-align: middle;
+  }
+  
+  /* btn flat */
+  &:not(.btn-raised) {
+    box-shadow: none;
+    
+    // colors    
+    @each $button, $color in $buttons {
+      @if $button == "default" {
+        color: $color;            
+      }
+      
+      &.btn-#{$button} {
+        color: $color;
+      }
+    }
+
+    &:not(.btn-link):not(.btn-outline) {
+      &:hover, &:focus, &.active {
+        // @FG zaminieamy na undrline
+        // background-color: rgba(#999999, (20/100));
+        text-decoration: underline;
+        background-color: transparent !important;
+      }
+    }    
+   
+  }
+  /* /btn flat */
+  
+  /* btn-raised */
+  &.btn-raised, .btn-group-raised & {
+    &:not(.btn-link) {
+      
+      @if $sg-btn-raised-shadow {
+        @include shadow-z-1();
+      }
+        
+      // colors    
+      @each $button, $color in $buttons {
+        @if $button == "default" {
+          &,&.btn-default {
+            color: $sg-btn-default-color;
+          }
+        }
+        @else {
+          &.btn-#{$button} {
+            color: rgba(255,255,255,0.87);            
+            background-color: $color;
+            &:hover, &:focus, &.active {
+              background-color: darken($color, 5%);
+            }
+          }
+        }
+      }
+      
+    }
+  }
+  /* /btn-raised */
+ 
+  /* btn-outline */
+  &.btn-outline {
+    font-weight: $sg-btn-outline-font-weight;
+    
+    @mixin outline-button($color) {
+      color: $color;
+      border: 1px solid $color;
+      &:hover, &:focus, &.active {
+        color: rgba(255,255,255,0.87) !important;            
+        background-color: $color !important;
+      }
+    }
+    
+    // colors    
+    @each $button, $color in $buttons {
+      @if $button == "default" {
+        @include outline-button($color); 
+      }
+      
+      &.btn-#{$button} {
+        @include outline-button($color);
+      }
+    }
+    
+  }    
+  /* /btn-outline */
+    
+  /* /btn-fab */
+  &.btn-fab {
+   @include shadow-z-1();
+    
+   // see above for color variations
+   height: 56px; 
+   width: 56px;
+
+   font-size: 24px;
+
+   border-radius: 50%;
+   margin: auto;
+   padding: 0;
+   overflow: hidden;
+   position: relative;
+
+   &.btn-fab-mini, .btn-group-sm & {
+    height: 40px;
+    width: 40px;
+   }
+   
+   i {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     width: 24px;
+     font-size: 24px;
+     line-height: 24px;
+     transform: translate(-12px, -12px);
+   }
+
+ }
+  /* /btn-fab */
+    
+}
+
+// buttons flat margins
+.btn:not(.btn-raised):not(.btn-outline), {
+  &.btn-fit-right {
+     margin-right: -10px;
+  }
+  &.btn-fit-left {
+     margin-left: -10px;
+  }
+}

@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: saigon
+Version: 1.0.3
+Summary: Some useful tool for faster and more efficient AngularJs & SCSS application development.
+Home-page: https://github.com/integree/saigon
+Author: Integree Bussines Solutions
+Author-email: dev@integree.eu
+License: MIT License
+Download-URL: https://pypi.python.org/packages/source/i/saigon/saigon-1.0.3.zip
+Description: UNKNOWN
+Keywords: saigon angularjs scss integree
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
