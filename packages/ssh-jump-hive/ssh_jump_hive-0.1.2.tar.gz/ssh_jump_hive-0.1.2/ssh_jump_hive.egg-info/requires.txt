@@ -1,0 +1,8 @@
+pandas>=0.20.3
+PyHive>=0.5.1
+paramiko>=2.4.1
+selectors
+socketserver
+threading
+time
+logging
