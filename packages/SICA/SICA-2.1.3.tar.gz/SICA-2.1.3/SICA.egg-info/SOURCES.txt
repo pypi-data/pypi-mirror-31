@@ -1,0 +1,9 @@
+setup.py
+SICA/__init__.py
+SICA/sica.py
+SICA/ssica.py
+SICA.egg-info/PKG-INFO
+SICA.egg-info/SOURCES.txt
+SICA.egg-info/dependency_links.txt
+SICA.egg-info/requires.txt
+SICA.egg-info/top_level.txt
