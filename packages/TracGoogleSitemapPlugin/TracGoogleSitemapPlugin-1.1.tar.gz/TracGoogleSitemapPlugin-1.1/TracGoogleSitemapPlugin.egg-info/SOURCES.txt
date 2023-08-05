@@ -1,0 +1,11 @@
+setup.py
+TracGoogleSitemapPlugin.egg-info/PKG-INFO
+TracGoogleSitemapPlugin.egg-info/SOURCES.txt
+TracGoogleSitemapPlugin.egg-info/dependency_links.txt
+TracGoogleSitemapPlugin.egg-info/entry_points.txt
+TracGoogleSitemapPlugin.egg-info/not-zip-safe
+TracGoogleSitemapPlugin.egg-info/requires.txt
+TracGoogleSitemapPlugin.egg-info/top_level.txt
+tracgooglesitemap/__init__.py
+tracgooglesitemap/notify.py
+tracgooglesitemap/plugin.py

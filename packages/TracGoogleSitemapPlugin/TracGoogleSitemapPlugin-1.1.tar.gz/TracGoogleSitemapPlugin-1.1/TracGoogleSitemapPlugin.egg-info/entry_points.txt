@@ -1,0 +1,4 @@
+[trac.plugins]
+tracgooglesitemap.notify = tracgooglesitemap.notify
+tracgooglesitemap.plugin = tracgooglesitemap.plugin
+

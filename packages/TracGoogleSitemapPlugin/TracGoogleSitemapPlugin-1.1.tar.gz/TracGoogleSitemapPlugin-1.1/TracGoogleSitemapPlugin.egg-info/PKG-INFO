@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: TracGoogleSitemapPlugin
+Version: 1.1
+Summary: Plugin to generate Google Sitemaps (version for Trac 0.11)
+Home-page: https://www.trac-hacks.org/wiki/GoogleSitemapPlugin
+Author: Martin Scharrer
+Author-email: martin@scharrer-online.de
+License: GPLv3
+Description: UNKNOWN
+Keywords: trac google sitemap plugin
+Platform: UNKNOWN
+Classifier: Framework :: Trac
