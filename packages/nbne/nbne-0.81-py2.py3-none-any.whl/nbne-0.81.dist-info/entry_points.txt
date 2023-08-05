@@ -1,0 +1,3 @@
+[console_scripts]
+nbne = nbne.get_embeddings:main
+
