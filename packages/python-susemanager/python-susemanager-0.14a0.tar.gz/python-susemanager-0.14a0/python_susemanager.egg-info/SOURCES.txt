@@ -1,0 +1,9 @@
+setup.py
+python_susemanager.egg-info/PKG-INFO
+python_susemanager.egg-info/SOURCES.txt
+python_susemanager.egg-info/dependency_links.txt
+python_susemanager.egg-info/not-zip-safe
+python_susemanager.egg-info/top_level.txt
+susemanager/__init__.py
+susemanager/susemanager.py
+susemanager/system.py

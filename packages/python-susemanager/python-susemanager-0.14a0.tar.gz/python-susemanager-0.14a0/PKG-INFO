@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: python-susemanager
+Version: 0.14a0
+Summary: Python module for SuSE Manager API
+Home-page: https://github.com/DreadlordGG/python-susemanager
+Author: Hristo Hristov
+Author-email: hristo@hhristov.info
+License: MIT
+Download-URL: https://pypi.python.org/pypi/python-susemanager
+Description: UNKNOWN
+Keywords: Python module for SuSE Manager API
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
