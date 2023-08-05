@@ -1,0 +1,26 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-account-analytic
+Version: 8.0.20161216
+Summary: Meta package for OCA account-analytic Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo8-addon-account-analytic-plan-required
+Requires-Dist: odoo8-addon-account-analytic-project
+Requires-Dist: odoo8-addon-account-analytic-required
+Requires-Dist: odoo8-addon-analytic-multicurrency
+Requires-Dist: odoo8-addon-analytic-partner
+Requires-Dist: odoo8-addon-analytic-partner-hr-timesheet
+Requires-Dist: odoo8-addon-analytic-partner-hr-timesheet-invoice
+Requires-Dist: odoo8-addon-mrp-analytic
+Requires-Dist: odoo8-addon-pos-analytic-by-config
+Requires-Dist: odoo8-addon-procurement-analytic
+Requires-Dist: odoo8-addon-product-analytic
+Requires-Dist: odoo8-addon-purchase-procurement-analytic
+Requires-Dist: odoo8-addon-stock-analytic
+
+UNKNOWN
+
+
