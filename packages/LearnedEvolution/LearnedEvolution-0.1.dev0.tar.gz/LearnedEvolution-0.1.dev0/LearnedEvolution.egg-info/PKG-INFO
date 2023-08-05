@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: LearnedEvolution
+Version: 0.1.dev0
+Summary: Evolutionary algorithm using machine learning techniques to exploit problem class structure.
+Home-page: https://github.com/realtwister/LearnedEvolution
+Author: Erik Meulman
+Author-email: e.a.meulman@student.tudelft.nl
+License: UNKNOWN
+Description: # LearnedEvolution
+        Research project investigating the application of machine learning to incorporate problem structure in evolutionary algorithms.
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
