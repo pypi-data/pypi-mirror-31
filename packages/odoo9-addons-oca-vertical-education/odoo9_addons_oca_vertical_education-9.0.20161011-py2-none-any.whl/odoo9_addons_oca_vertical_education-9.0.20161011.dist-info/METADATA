@@ -1,0 +1,35 @@
+Metadata-Version: 2.0
+Name: odoo9-addons-oca-vertical-education
+Version: 9.0.20161011
+Summary: Meta package for OCA vertical-education Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo9-addon-openeducat-achievement
+Requires-Dist: odoo9-addon-openeducat-activity
+Requires-Dist: odoo9-addon-openeducat-admission
+Requires-Dist: odoo9-addon-openeducat-alumni
+Requires-Dist: odoo9-addon-openeducat-assignment
+Requires-Dist: odoo9-addon-openeducat-attendance
+Requires-Dist: odoo9-addon-openeducat-classroom
+Requires-Dist: odoo9-addon-openeducat-core
+Requires-Dist: odoo9-addon-openeducat-erp
+Requires-Dist: odoo9-addon-openeducat-exam
+Requires-Dist: odoo9-addon-openeducat-facility
+Requires-Dist: odoo9-addon-openeducat-fees
+Requires-Dist: odoo9-addon-openeducat-health
+Requires-Dist: odoo9-addon-openeducat-hostel
+Requires-Dist: odoo9-addon-openeducat-l10n-in
+Requires-Dist: odoo9-addon-openeducat-l10n-in-admission
+Requires-Dist: odoo9-addon-openeducat-library
+Requires-Dist: odoo9-addon-openeducat-parent
+Requires-Dist: odoo9-addon-openeducat-placement
+Requires-Dist: odoo9-addon-openeducat-scholarship
+Requires-Dist: odoo9-addon-openeducat-timetable
+Requires-Dist: odoo9-addon-openeducat-transportation
+
+UNKNOWN
+
+
