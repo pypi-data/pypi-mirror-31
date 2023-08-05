@@ -1,0 +1,3 @@
+[console_scripts]
+clit = clit.clit:hello
+

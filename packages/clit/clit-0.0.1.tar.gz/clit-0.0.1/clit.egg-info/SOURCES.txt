@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+bin/hello-clit
+clit/__init__.py
+clit/clit.py
+clit.egg-info/PKG-INFO
+clit.egg-info/SOURCES.txt
+clit.egg-info/dependency_links.txt
+clit.egg-info/entry_points.txt
+clit.egg-info/requires.txt
+clit.egg-info/top_level.txt
