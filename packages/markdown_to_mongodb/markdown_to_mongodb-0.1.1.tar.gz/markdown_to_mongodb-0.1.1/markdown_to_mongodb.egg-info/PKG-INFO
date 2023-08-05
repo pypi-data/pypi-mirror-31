@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: markdown-to-mongodb
+Version: 0.1.1
+Summary: Converts a folder of markdown files and inserts them into a MongoDB instance.
+Home-page: https://github.com/ryanniebling/markdown_to_mongodb
+Author: Ryan Niebling
+Author-email: nieblingr1@nku.edu
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
