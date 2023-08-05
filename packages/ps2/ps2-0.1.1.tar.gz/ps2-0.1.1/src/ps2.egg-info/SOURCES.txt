@@ -1,0 +1,9 @@
+README.rst
+setup.py
+src/ps2.egg-info/PKG-INFO
+src/ps2.egg-info/SOURCES.txt
+src/ps2.egg-info/dependency_links.txt
+src/ps2.egg-info/requires.txt
+src/ps2.egg-info/top_level.txt
+src/scripts/ps2
+src/scripts/ps2.py
