@@ -1,0 +1,12 @@
+[trac.plugins]
+tracwatchlist = tracwatchlist
+tracwatchlist.db = tracwatchlist.db
+tracwatchlist.manual = tracwatchlist.manual
+tracwatchlist.nav = tracwatchlist.nav
+tracwatchlist.plugin = tracwatchlist.plugin
+tracwatchlist.render = tracwatchlist.render
+tracwatchlist.ticket = tracwatchlist.ticket
+tracwatchlist.translation = tracwatchlist.translation
+tracwatchlist.util = tracwatchlist.util
+tracwatchlist.wiki = tracwatchlist.wiki
+
