@@ -1,0 +1,10 @@
+requests
+six
+
+[remote]
+paramiko
+
+[tests]
+vcrpy
+pytest
+tox
