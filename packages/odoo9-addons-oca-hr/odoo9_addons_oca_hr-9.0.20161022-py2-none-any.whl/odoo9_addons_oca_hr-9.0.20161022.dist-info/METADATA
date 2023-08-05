@@ -1,0 +1,16 @@
+Metadata-Version: 2.0
+Name: odoo9-addons-oca-hr
+Version: 9.0.20161022
+Summary: Meta package for OCA hr Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo9-addon-hr-employee-firstname
+Requires-Dist: odoo9-addon-hr-family
+Requires-Dist: odoo9-addon-hr-public-holidays
+
+UNKNOWN
+
+
