@@ -1,0 +1,3 @@
+[console_scripts]
+konekeio = konekeio.__main__:main
+
