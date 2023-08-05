@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+gothon.py
+setup.cfg
+setup.py
+gothon.egg-info/PKG-INFO
+gothon.egg-info/SOURCES.txt
+gothon.egg-info/dependency_links.txt
+gothon.egg-info/top_level.txt
+gothon.egg-info/zip-safe
