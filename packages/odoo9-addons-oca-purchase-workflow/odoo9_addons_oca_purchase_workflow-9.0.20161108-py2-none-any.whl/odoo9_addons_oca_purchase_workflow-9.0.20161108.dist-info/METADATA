@@ -1,0 +1,20 @@
+Metadata-Version: 2.0
+Name: odoo9-addons-oca-purchase-workflow
+Version: 9.0.20161108
+Summary: Meta package for OCA purchase-workflow Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: odoo9-addon-product-by-supplier
+Requires-Dist: odoo9-addon-product-supplierinfo-discount
+Requires-Dist: odoo9-addon-purchase-discount
+Requires-Dist: odoo9-addon-purchase-picking-state
+Requires-Dist: odoo9-addon-purchase-request
+Requires-Dist: odoo9-addon-purchase-request-procurement
+Requires-Dist: odoo9-addon-purchase-request-to-rfq
+
+UNKNOWN
+
+
