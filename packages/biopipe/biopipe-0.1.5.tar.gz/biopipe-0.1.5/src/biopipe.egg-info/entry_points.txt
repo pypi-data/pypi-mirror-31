@@ -1,0 +1,5 @@
+[console_scripts]
+biopipe = biopipe.cli:main
+ensg2symbol = biopipe.gene:ensg2symbol
+symbol2ensg = biopipe.gene:symbol2ensg
+
