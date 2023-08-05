@@ -1,0 +1,67 @@
+Metadata-Version: 2.0
+Name: odoo8-addons-oca-website
+Version: 8.0.20180419.0
+Summary: Meta package for oca-website Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo8-addon-website-analytics-piwik
+Requires-Dist: odoo8-addon-website-anchor-smooth-scroll
+Requires-Dist: odoo8-addon-website-backend-views
+Requires-Dist: odoo8-addon-website-blog-excerpt-img
+Requires-Dist: odoo8-addon-website-blog-facebook-comment
+Requires-Dist: odoo8-addon-website-blog-mgmt
+Requires-Dist: odoo8-addon-website-blog-share
+Requires-Dist: odoo8-addon-website-blog-title-image
+Requires-Dist: odoo8-addon-website-breadcrumb
+Requires-Dist: odoo8-addon-website-calendar-snippet
+Requires-Dist: odoo8-addon-website-canonical-url
+Requires-Dist: odoo8-addon-website-container-fluid
+Requires-Dist: odoo8-addon-website-cookie-notice
+Requires-Dist: odoo8-addon-website-country-localized-pages
+Requires-Dist: odoo8-addon-website-crm-address
+Requires-Dist: odoo8-addon-website-crm-privacy-policy
+Requires-Dist: odoo8-addon-website-crm-quick-answer
+Requires-Dist: odoo8-addon-website-crm-recaptcha
+Requires-Dist: odoo8-addon-website-event-filter-organizer
+Requires-Dist: odoo8-addon-website-event-register-free
+Requires-Dist: odoo8-addon-website-event-register-free-with-sale
+Requires-Dist: odoo8-addon-website-form-recaptcha
+Requires-Dist: odoo8-addon-website-hr-contact
+Requires-Dist: odoo8-addon-website-hr-department
+Requires-Dist: odoo8-addon-website-img-bg-style
+Requires-Dist: odoo8-addon-website-legal-page
+Requires-Dist: odoo8-addon-website-logo
+Requires-Dist: odoo8-addon-website-menu-by-user-status
+Requires-Dist: odoo8-addon-website-menu-multilang
+Requires-Dist: odoo8-addon-website-multi-image
+Requires-Dist: odoo8-addon-website-no-crawler
+Requires-Dist: odoo8-addon-website-parameterized-snippet
+Requires-Dist: odoo8-addon-website-portal
+Requires-Dist: odoo8-addon-website-portal-purchase
+Requires-Dist: odoo8-addon-website-portal-sale
+Requires-Dist: odoo8-addon-website-product-supplier
+Requires-Dist: odoo8-addon-website-sale-collapse-categories
+Requires-Dist: odoo8-addon-website-sale-order-company
+Requires-Dist: odoo8-addon-website-sale-product-category-seo
+Requires-Dist: odoo8-addon-website-sale-survey
+Requires-Dist: odoo8-addon-website-sale-unsaleable-options
+Requires-Dist: odoo8-addon-website-sale-vat-required
+Requires-Dist: odoo8-addon-website-seo-redirection
+Requires-Dist: odoo8-addon-website-signup-legal-page-required
+Requires-Dist: odoo8-addon-website-slides
+Requires-Dist: odoo8-addon-website-snippet-anchor
+Requires-Dist: odoo8-addon-website-snippet-big-button
+Requires-Dist: odoo8-addon-website-snippet-contact-form
+Requires-Dist: odoo8-addon-website-snippet-country-dropdown
+Requires-Dist: odoo8-addon-website-snippet-marginless-gallery
+Requires-Dist: odoo8-addon-website-supplier-list
+Requires-Dist: odoo8-addon-website-upload-video
+
+UNKNOWN
+
+
