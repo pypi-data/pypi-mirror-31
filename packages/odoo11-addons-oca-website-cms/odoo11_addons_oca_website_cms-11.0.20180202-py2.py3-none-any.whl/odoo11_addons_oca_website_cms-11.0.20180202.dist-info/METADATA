@@ -1,0 +1,19 @@
+Metadata-Version: 2.0
+Name: odoo11-addons-oca-website-cms
+Version: 11.0.20180202
+Summary: Meta package for OCA website-cms Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Odoo
+Requires-Dist: odoo11-addon-cms-delete-content
+Requires-Dist: odoo11-addon-cms-delete-content-example
+Requires-Dist: odoo11-addon-cms-status-message
+Requires-Dist: odoo11-addon-cms-status-message-example
+
+UNKNOWN
+
+
