@@ -1,0 +1,3 @@
+2018-03-05 01:23:20,588 INFO log_config log_msg args: ({'action': 'msg', 'time': 1520202200.526642, 'to': '#GeekBrains', 'from': 'Andrew', 'message': 'KEK'}, <JSONObjectType.CLIENT_TO_CHAT_MSG: (6,)>) = Andrew> KEK - extract_msg_from_dict - __main__
+2018-03-05 01:23:23,393 INFO log_config log_msg args: ({'action': 'msg', 'time': 1520202203.2355852, 'to': '#GeekBrains', 'from': 'Andrew', 'message': 'LOL'}, <JSONObjectType.CLIENT_TO_CHAT_MSG: (6,)>) = Andrew> LOL - extract_msg_from_dict - __main__
+2018-03-05 01:23:26,199 INFO log_config log_msg args: ({'action': 'msg', 'time': 1520202206.0706072, 'to': '#GeekBrains', 'from': 'Andrew', 'message': 'DAMN'}, <JSONObjectType.CLIENT_TO_CHAT_MSG: (6,)>) = Andrew> DAMN - extract_msg_from_dict - __main__

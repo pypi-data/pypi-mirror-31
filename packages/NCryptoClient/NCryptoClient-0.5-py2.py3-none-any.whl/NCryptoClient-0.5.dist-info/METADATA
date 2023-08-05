@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: NCryptoClient
+Version: 0.5
+Summary: A client-side application of the NCryptoChat
+Home-page: UNKNOWN
+Author: Andrew Krylov
+Author-email: AndrewKrylovNegovsky@gmail.com
+License: GNU General Public License v3.0
+Keywords: Client,PyQt5,Threads
+Platform: UNKNOWN
+Requires-Dist: PyQt5 (>=5.10.1)
+Requires-Dist: NCryptoTools (>=0.5.2)
+
+UNKNOWN
+
+

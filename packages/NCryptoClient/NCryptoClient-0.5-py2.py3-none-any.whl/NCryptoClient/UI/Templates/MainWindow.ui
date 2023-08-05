@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SuperChat</class>
+ <widget class="QMainWindow" name="SuperChat">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>904</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1000</width>
+    <height>904</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1000</width>
+    <height>904</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="background_panel">
+   <widget class="QListWidget" name="contacts_lb">
+    <property name="geometry">
+     <rect>
+      <x>8</x>
+      <y>40</y>
+      <width>312</width>
+      <height>816</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>312</width>
+      <height>816</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>312</width>
+      <height>816</height>
+     </size>
+    </property>
+    <property name="resizeMode">
+     <enum>QListView::Adjust</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="select_chat_st">
+    <property name="geometry">
+     <rect>
+      <x>328</x>
+      <y>416</y>
+      <width>656</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>656</width>
+      <height>32</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>656</width>
+      <height>32</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Adobe Caslon Pro Bold</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Please select a chat to start messaging</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="contacts_st">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>8</x>
+      <y>8</y>
+      <width>312</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>312</width>
+      <height>24</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>312</width>
+      <height>24</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Adobe Caslon Pro Bold</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+      <strikeout>false</strikeout>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="text">
+     <string>Your list of contacts</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1000</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>SuperChat</string>
+    </property>
+    <widget class="QMenu" name="optionsMenu">
+     <property name="title">
+      <string>Options</string>
+     </property>
+     <addaction name="serverItem"/>
+    </widget>
+    <addaction name="addContactItem"/>
+    <addaction name="optionsMenu"/>
+    <addaction name="helpItem"/>
+    <addaction name="aboutItem"/>
+    <addaction name="separator"/>
+    <addaction name="exitItem"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionServer">
+   <property name="text">
+    <string>Server</string>
+   </property>
+  </action>
+  <action name="addContactItem">
+   <property name="text">
+    <string>Add Contact</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="helpItem">
+   <property name="text">
+    <string>Help</string>
+   </property>
+  </action>
+  <action name="aboutItem">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="exitItem">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="serverItem">
+   <property name="text">
+    <string>Server</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
