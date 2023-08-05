@@ -1,0 +1,10 @@
+README.rst
+setup.py
+flask_contentful/__init__.py
+flask_contentful/filters.py
+flask_contentful.egg-info/PKG-INFO
+flask_contentful.egg-info/SOURCES.txt
+flask_contentful.egg-info/dependency_links.txt
+flask_contentful.egg-info/not-zip-safe
+flask_contentful.egg-info/requires.txt
+flask_contentful.egg-info/top_level.txt

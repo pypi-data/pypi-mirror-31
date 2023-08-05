@@ -1,0 +1,28 @@
+Metadata-Version: 1.1
+Name: flask-contentful
+Version: 0.0.1
+Summary: UNKNOWN
+Home-page: https://github.com/eillarra/flask-contentful
+Author: eillarra
+Author-email: eneko@illarra.com
+License: MIT
+Description: Flask-Contentful
+        ================
+        
+        |PyPi| |License|
+        
+        .. |PyPi| image:: https://badge.fury.io/py/flask-contentful.svg
+           :target: https://pypi.python.org/pypi/flask-contentful/
+        .. |License| image:: https://img.shields.io/badge/license-MIT-blue.svg
+           :target: LICENSE
+        
+Keywords: flask contentful
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
