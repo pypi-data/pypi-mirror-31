@@ -1,0 +1,5 @@
+brewblox-service~=0.5
+aioinflux
+
+[dev]
+tox
