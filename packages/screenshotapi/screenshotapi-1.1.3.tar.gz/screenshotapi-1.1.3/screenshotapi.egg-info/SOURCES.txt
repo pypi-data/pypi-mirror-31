@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+screenshotapi/__init__.py
+screenshotapi/__main__.py
+screenshotapi/screenshotapi.py
+screenshotapi.egg-info/PKG-INFO
+screenshotapi.egg-info/SOURCES.txt
+screenshotapi.egg-info/dependency_links.txt
+screenshotapi.egg-info/entry_points.txt
+screenshotapi.egg-info/requires.txt
+screenshotapi.egg-info/top_level.txt

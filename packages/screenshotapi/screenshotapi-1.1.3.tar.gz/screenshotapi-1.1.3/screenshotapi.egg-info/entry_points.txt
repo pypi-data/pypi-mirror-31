@@ -1,0 +1,3 @@
+[console_scripts]
+screenshotapi = screenshotapi.screenshotapi:main
+
