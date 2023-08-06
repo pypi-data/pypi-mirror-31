@@ -1,0 +1,32 @@
+Metadata-Version: 1.1
+Name: diskwalk2
+Version: 0.1.2
+Summary: Walks a path and enumerates files and directories.
+Home-page: https://github.com/janelia-pypi/diskwalk_python
+Author: Peter Polidoro
+Author-email: polidorop@janelia.hhmi.org
+License: BSD
+Description: diskwalk_python
+        ===============
+        
+        This Python package (diskwalk2) creates a class named
+        DiskWalk.
+        
+        Authors::
+        
+            Peter Polidoro <polidorop@janelia.hhmi.org>
+        
+        License::
+        
+            BSD
+        
+        Example Usage::
+        
+        
+Keywords: enumerate
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 2.7

@@ -1,0 +1,12 @@
+DESCRIPTION.rst
+MANIFEST.in
+RELEASE-VERSION
+setup.cfg
+setup.py
+version.py
+diskwalk2/__init__.py
+diskwalk2/diskwalk2.py
+diskwalk2.egg-info/PKG-INFO
+diskwalk2.egg-info/SOURCES.txt
+diskwalk2.egg-info/dependency_links.txt
+diskwalk2.egg-info/top_level.txt
