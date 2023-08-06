@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: sharedstreets
+Version: 0.0.0rc1
+Summary: Python implementation of SharedStreets Reference System
+Home-page: https://github.com/sharedstreets/sharedstreets-python
+Author: Kevin Webb, Denis Carriere, Michal Migurski
+Author-email: UNKNOWN
+License: MIT
+Description: UNKNOWN
+Keywords: sharedstreets nacto openstreetmap map graph street
+Platform: UNKNOWN
