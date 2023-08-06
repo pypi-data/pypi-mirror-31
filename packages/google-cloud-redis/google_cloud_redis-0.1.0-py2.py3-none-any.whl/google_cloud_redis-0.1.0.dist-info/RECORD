@@ -1,0 +1,16 @@
+google_cloud_redis-0.1.0-py3.6-nspkg.pth,sha256=b0D5dZk3RUzK54tZ9iZDvLm7u8ltc5EzYrGCmhsuoNw,1698
+google/cloud/redis.py,sha256=SJgyW4p1MtdvPuL6x6Pr1hQs67jDC7DRQfd55iQ1MlA,827
+google/cloud/redis_v1beta1/__init__.py,sha256=oLfO4bXHRmxmREwe-2j0x7Upvj4enz-XddDMl-CmVnA,981
+google/cloud/redis_v1beta1/types.py,sha256=HhMA4cS5TfoQTGYcR-r2Mat0oBVZN77uUsQSqknjIBU,1518
+google/cloud/redis_v1beta1/gapic/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+google/cloud/redis_v1beta1/gapic/cloud_redis_client.py,sha256=r5uM0dYFaLebFA7-m7ptplOeCx8dIgGwnu1F2dVWR-I,25331
+google/cloud/redis_v1beta1/gapic/cloud_redis_client_config.py,sha256=sJrjqi2kaatxx0lTUqtvIg7jMsYQAzRlyJMmU1eCxCQ,1791
+google/cloud/redis_v1beta1/gapic/enums.py,sha256=o_eF0QW1pViwWXHayxjQteyt5BmdQqGCKglafgo1RoQ,1972
+google/cloud/redis_v1beta1/proto/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+google/cloud/redis_v1beta1/proto/cloud_redis_pb2.py,sha256=bfo42B0b-Qmt-1Qoy9nWUebzPi2fCz6vzejlG3utOaY,44492
+google/cloud/redis_v1beta1/proto/cloud_redis_pb2_grpc.py,sha256=ymJwDFWBzPQkScBE3A5N61P2PLoGh1DOKQt49Zlfupc,8399
+google_cloud_redis-0.1.0.dist-info/METADATA,sha256=gq607cgU-99toxAzDsZ1v51irdGqwSws5ttBSNHECx4,3751
+google_cloud_redis-0.1.0.dist-info/RECORD,,
+google_cloud_redis-0.1.0.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+google_cloud_redis-0.1.0.dist-info/namespace_packages.txt,sha256=v8IaYqRE2a0onAGJIpZeFkkH83wXSWZRR9eOyfMwoTc,20
+google_cloud_redis-0.1.0.dist-info/top_level.txt,sha256=_1QvSJIhFAGfxb79D6DhB7SUw2X6T4rwnz_LLrbcD3c,7
