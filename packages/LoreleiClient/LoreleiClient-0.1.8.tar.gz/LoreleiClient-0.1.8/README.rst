@@ -1,0 +1,81 @@
+Lorelei is what I would call a "MUD++".
+
+This is a game client which connects to an authoratative game server to provide a visual representation of an entirely text based world. You control a hero with stats, and equipment in a big constantly updated world.
+
+This project was made using pygame as a user interface, and twisted as the networking library. Essentially this gave me the power to easily build a project structure from scratch that allows for easily serializing and deserializing objects over the network between the server and the client.
+
+The Server is closed source to prevent malicious attacks on the game. However the client and library source may be released at some point.
+
+Current Progress
+----------------
+#. Login / Account creation (DONE)
+
+#. Character Creation (When a new account is made)
+
+   #. Players can select race/class (DONE)
+
+   #. Saves the created character and can load it back (DONE)
+
+#. Making a Basic World space
+
+   #. Players can see/talk to each other
+
+   #. Players can move between rooms
+
+#. Adding more interaction
+
+   #. Players can pickup/drop items
+
+   #. Players can do basic combat (No skills included yet)
+
+#. Create more monsters / items
+
+#. Create more detailed classes / skills
+
+
+Changelog
+---------
+
+0.1.8
+
+ Changes
+
+ * Added room descriptions
+ * Added button controllers for moving between rooms
+ * Added exit descriptions to the moving buttons
+
+0.1.7.5
+
+ Changes
+
+ * Implementing the start of room creation/Movement
+
+0.1.7.4
+
+ Changes
+
+ * Improved the chat box to be more colorful and type selection words match the color of their type
+ * Added 'Whisper Target Box' to allow for direct messages from client to another client
+ * Added inter-client communication
+
+0.1.7.3
+
+ Changes
+
+ * Added chat log / box. As well as message type selection box
+
+0.1.7.2
+
+ Changes
+
+ * Made this readme (In multiple attempts)
+
+0.1.6.5
+
+ Changes
+
+ * Finished saving/loading of the character (including equipment/inventory)
+ * Added logic around login to determine if you have a character
+
+  * If not you will be given the character creation screen
+  * Otherwise you will enter the main game screen (WIP)
