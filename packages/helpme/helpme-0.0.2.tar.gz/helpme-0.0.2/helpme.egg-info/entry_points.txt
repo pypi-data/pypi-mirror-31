@@ -1,0 +1,3 @@
+[console_scripts]
+helpme = helpme.client:main
+

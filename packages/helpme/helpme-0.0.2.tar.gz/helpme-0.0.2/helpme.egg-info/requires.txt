@@ -1,0 +1,9 @@
+requests>=2.18.4
+uservoice>=0.0.23
+
+[all]
+requests>=2.18.4
+uservoice>=0.0.23
+
+[uservoice]
+uservoice>=0.0.23
