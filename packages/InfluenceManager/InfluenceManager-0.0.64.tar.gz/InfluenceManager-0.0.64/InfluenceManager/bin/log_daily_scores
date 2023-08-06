@@ -1,0 +1,35 @@
+#!/usr/bin/env python3
+
+import datetime
+from InfluenceManager.definitions import mongo_client
+aggregate_ops = mongo_client["influence"]["aggregate_ops"]
+pub_ops = mongo_client["influence"]["pubops"]
+news_ops = mongo_client["influence"]["newsops"]
+
+
+if __name__ == '__main__':
+    date = str((datetime.datetime.today() + datetime.timedelta(days=1)).date())
+    for document in aggregate_ops.find():
+        username = document["_id"]
+        p_score_list = document["pubops_score"]
+        n_score_list = document["newsops_score"]
+        date_list = [list(entry)[0] for entry in p_score_list]
+
+        if date in date_list:
+            continue
+        else:
+            pubops_sent = pub_ops.find({"_id": username})[0]["score"]
+            newsops_sent = news_ops.find({"_id": username})[0]["score"]
+
+            p_score_list.append({date: pubops_sent})
+            n_score_list.append({date: newsops_sent})
+
+            aggregate_ops.update_one({
+                "_id": username,
+
+            }, {
+                "$set": {
+                    "pubops_score": p_score_list,
+                    "newsops_score": n_score_list
+                }
+            })
