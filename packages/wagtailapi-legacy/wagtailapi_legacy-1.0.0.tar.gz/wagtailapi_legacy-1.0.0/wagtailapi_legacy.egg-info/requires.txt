@@ -1,0 +1,6 @@
+six>=1.10.0
+
+[testing]
+Django==2.0.5
+wagtail==2.0.1
+mock<2,>=1
