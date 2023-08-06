@@ -1,0 +1,9 @@
+COPYING
+MANIFEST.in
+README.rst
+setup.py
+xmpp_http_upload.egg-info/PKG-INFO
+xmpp_http_upload.egg-info/SOURCES.txt
+xmpp_http_upload.egg-info/dependency_links.txt
+xmpp_http_upload.egg-info/requires.txt
+xmpp_http_upload.egg-info/top_level.txt
