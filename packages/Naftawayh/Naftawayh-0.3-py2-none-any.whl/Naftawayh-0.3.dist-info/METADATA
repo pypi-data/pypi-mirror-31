@@ -1,0 +1,19 @@
+Metadata-Version: 2.0
+Name: Naftawayh
+Version: 0.3
+Summary: Naftawayh: Arabic word tagger
+Home-page: http://naftawayh.sourceforge.net/
+Author: Taha Zerrouki
+Author-email: taha.zerrouki@gmail.com
+License: GPL
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Requires-Dist: pyarabic
+Requires-Dist: tashaphyne
+
+UNKNOWN
+
+
