@@ -1,0 +1,4 @@
+[console_scripts]
+chen3 = Chern.main:main
+chern3 = Chern.main:main
+
