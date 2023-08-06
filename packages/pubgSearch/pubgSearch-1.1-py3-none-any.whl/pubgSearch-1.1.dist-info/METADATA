@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: pubgSearch
+Version: 1.1
+Summary: PUBG Player Searcher powered by python
+Home-page: https://github.com/kanghou/PUBGsearch
+Author: Kang Ho Lee
+Author-email: buff3ed@gmail.com
+License: UNKNOWN
+Keywords: pubg,battle ground,battleground
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.5
+Requires-Dist: requests (==2.18.4)
+Requires-Dist: aiodns (==1.1.1)
+Requires-Dist: aiohttp (==2.3.10)
+
+UNKNOWN
+
+
