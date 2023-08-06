@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: vlab-api-common
+Version: 2018.5.11
+Summary: Common logic used by all our RESTful API services of vLab
+Home-page: UNKNOWN
+Author: Nicholas Willhite
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.5

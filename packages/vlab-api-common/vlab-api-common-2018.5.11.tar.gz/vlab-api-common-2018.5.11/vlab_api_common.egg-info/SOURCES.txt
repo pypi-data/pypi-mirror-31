@@ -1,0 +1,14 @@
+MANIFEST.in
+README.rst
+setup.py
+vlab_api_common/__init__.py
+vlab_api_common/constants.py
+vlab_api_common/flask_common.py
+vlab_api_common/http_auth.py
+vlab_api_common/std_logger.py
+vlab_api_common/vmware.py
+vlab_api_common.egg-info/PKG-INFO
+vlab_api_common.egg-info/SOURCES.txt
+vlab_api_common.egg-info/dependency_links.txt
+vlab_api_common.egg-info/requires.txt
+vlab_api_common.egg-info/top_level.txt
