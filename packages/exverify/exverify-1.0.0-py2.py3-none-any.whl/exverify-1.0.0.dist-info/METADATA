@@ -1,0 +1,90 @@
+Metadata-Version: 2.1
+Name: exverify
+Version: 1.0.0
+Summary: UNKNOWN
+Home-page: https://github.com/rubenvanstaden/exverify
+Author: Ruben van Staden
+Author-email: rubenvanstaden@gmail.com
+License: MIT
+Keywords: exverify
+Platform: UNKNOWN
+Requires-Dist: auron
+Requires-Dist: yuna
+Requires-Dist: networkx
+Requires-Dist: docopt
+Requires-Dist: pygmsh
+Requires-Dist: pandoc
+Requires-Dist: scipy
+Requires-Dist: termcolor
+Requires-Dist: plotly
+Requires-Dist: pytest
+
+# ExVerify
+
+ExVerify uses the Yuna package to generate a graph network from the layer polygons
+of a superconducting circuit. Therefore, make sure you install the [Yuna](https://github.com/rubenvanstaden/Yuna)
+and the [gdspy](https://github.com/rubenvanstaden/gdspy) packages. 
+For the time being they have to be installed from source.
+
+## User 
+
+Setup for the normal user.
+
+### Depenencies
+
+On Fedora install the following:
+
+```
+sudo dnf install redhat-rpm-config
+sudo dnf install gcc-c++
+sudo dnf install python3-devel
+sudo dnf install tkinter
+sudo dnf install gmsh
+```
+
+### Installation
+
+You can install ExVerify directly from the Python package manager *pip* using:
+
+```
+sudo pip3 install auron
+```
+
+## Developers
+
+Documentation for developers for maintaining and extending.
+
+### Installation
+
+To instead install ExVerify from source, clone this repository, *cd* into it, and run:
+
+```
+sudo pip3 install -r requirements.txt
+sudo pip3 install .
+sudo pip3 install -e .
+```
+
+Uploading package to PyPi using *twine*:
+
+Remember to remove all Eggs before doing a push to PyPi.
+
+```
+sudo python3 setup.py bdist_wheel
+twine upload dist/*
+```
+
+Unit testing overview: http://docs.python-guide.org/en/latest/writing/tests/
+
+### Documentation
+
+If you want to generate the docs make sure the Napoleon package is installed:
+
+```
+sudo pip3 install sphinxcontrib-napoleon
+```
+
+Coding standards for parsing the correct docs is given in: 
+* https://sphinxcontrib-napoleon.readthedocs.io/en/latest/
+* https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt
+
+
