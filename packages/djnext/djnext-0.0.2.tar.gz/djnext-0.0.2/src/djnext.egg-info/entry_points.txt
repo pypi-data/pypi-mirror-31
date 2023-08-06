@@ -1,0 +1,3 @@
+[console_scripts]
+djnext = djnext_example.manage:main
+

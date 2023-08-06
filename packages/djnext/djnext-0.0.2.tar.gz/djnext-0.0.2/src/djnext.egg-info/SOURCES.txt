@@ -1,0 +1,17 @@
+README.rst
+setup.py
+src/djnext/__init__.py
+src/djnext/apps.py
+src/djnext/backend.py
+src/djnext/views.py
+src/djnext.egg-info/PKG-INFO
+src/djnext.egg-info/SOURCES.txt
+src/djnext.egg-info/dependency_links.txt
+src/djnext.egg-info/entry_points.txt
+src/djnext.egg-info/requires.txt
+src/djnext.egg-info/top_level.txt
+src/djnext_example/__init__.py
+src/djnext_example/manage.py
+src/djnext_example/settings.py
+src/djnext_example/urls.py
+src/djnext_example/wsgi.py
