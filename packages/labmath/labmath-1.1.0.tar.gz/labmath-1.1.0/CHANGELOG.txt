@@ -1,0 +1,25 @@
+Version 1.1.0:
+
+New data: labmathversion
+
+New function: liouville
+New function: egypt_short
+New function: egypt_greedy
+New function: randomfactored
+New function: secm
+New function: ecmparams
+
+Altered behavior: randprime's output is now uniformly sampled among all primes of the indicated size, and the primality test used is user-selectable.  Full backwards compatibility is preserved.
+Altered behavior: ecm is now a shell function that calls secm repeatedly (which is where the factoring now happens) using parameters pulled from ecmparams.  Backwards compatibility is preserved in the positional arguments; backwards compatibility is broken for the keyword arguments.
+
+---
+
+Version 1.0.8:
+
+Improved credits and a few docstrings.
+Fixed a bug in which product was not imported from itertools.
+
+---
+
+Versions 1.0.0 through 1.0.7: fumbling around with PyPI.
+
