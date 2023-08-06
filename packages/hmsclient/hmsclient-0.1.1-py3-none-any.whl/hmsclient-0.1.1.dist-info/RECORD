@@ -1,0 +1,15 @@
+hmsclient/__init__.py,sha256=T970GhxgA9xj4WPwPjnZ_0ofsgLcwPy3Paziv9Ef6Vo,70
+hmsclient/hmsclient.py,sha256=eohZLxz0oekRsmsRoppeSUNGsWPqP0w6ZCjDy-AS6IQ,5925
+hmsclient/genthrift/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hmsclient/genthrift/fb303/FacebookService.py,sha256=Wjw1SI0MGpQJXdIErieQDhRCKLcLtuMJPH0nyPkKgzk,70923
+hmsclient/genthrift/fb303/__init__.py,sha256=37L--inxIHog69s2uhJqAI7E77gFCN4G6mQFXBXOq08,83
+hmsclient/genthrift/fb303/constants.py,sha256=9_gPwyVW5NSI_lywitQLGROYtTZ-5WGyE-ZD-qy649o,366
+hmsclient/genthrift/fb303/ttypes.py,sha256=04CBs4MMJKvVWhE7WttxwwifdMLkMEyQELHdYi_zliY,956
+hmsclient/genthrift/hive_metastore/ThriftHiveMetastore.py,sha256=fVA8VEjrgJyHpezje9EnUUIkR23kESrIORVROiLpN0g,1276157
+hmsclient/genthrift/hive_metastore/__init__.py,sha256=tszpop6qfHsvQyOKNQNffT9MNs4fN7eIXI1gDZPPTkE,57
+hmsclient/genthrift/hive_metastore/constants.py,sha256=VF3EFlkT5DO0zjTGqjCtdIMgV2ul63A0AacqYIIiWCA,1341
+hmsclient/genthrift/hive_metastore/ttypes.py,sha256=R7AZCFirWIdunxc19_C0vCA627Rr6TiqDZtzJRCOj8k,500973
+hmsclient-0.1.1.dist-info/METADATA,sha256=zvdvgm2SPKi3l0m_kkWR3Xb8iwHsw3X9t0xoU7PkND8,2362
+hmsclient-0.1.1.dist-info/RECORD,,
+hmsclient-0.1.1.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+hmsclient-0.1.1.dist-info/top_level.txt,sha256=TYmhDRj9Q-1cZpzhi0SAFzWoJ51eVjasm3BZUpT1mWU,10
