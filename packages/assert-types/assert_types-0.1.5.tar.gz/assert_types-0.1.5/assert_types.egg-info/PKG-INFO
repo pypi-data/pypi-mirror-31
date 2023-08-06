@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: assert-types
+Version: 0.1.5
+Summary: Python decorator to add assertions for type hints
+Home-page: http://github.com/matthew-sochor/assert_types
+Author: Matthew Sochor
+Author-email: matthew.sochor@gmail.com
+License: MIT
+Download-URL: http://github.com/matthew-sochor/assert_types
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Keywords: decorators type hint assertion unit testing
+Platform: UNKNOWN
+Requires-Python: >=3.5
