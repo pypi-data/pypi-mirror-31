@@ -1,0 +1,9 @@
+setup.py
+scrapyMysql/__init__.py
+scrapyMysql/dbfilter.py
+scrapyMysql/piplineMysql.py
+scrapyMysql.egg-info/PKG-INFO
+scrapyMysql.egg-info/SOURCES.txt
+scrapyMysql.egg-info/dependency_links.txt
+scrapyMysql.egg-info/requires.txt
+scrapyMysql.egg-info/top_level.txt
