@@ -1,0 +1,4 @@
+[console_scripts]
+marv = marv_cli:cli
+marv-ipdb = marv_cli:cli_ipdb
+
