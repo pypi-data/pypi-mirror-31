@@ -1,0 +1,8 @@
+imgui
+opencv-python
+imgui[pygame]
+pyopengl
+matplotlib
+pygame
+enum34
+xxhash
