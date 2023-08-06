@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: lmdiag
+Version: 0.1.0
+Summary: Diagnostic Plots for Lineare Regression Models.
+Home-page: http://github.com/dynobo/lmdiag
+Author: dynobo
+Author-email: dynobo@mailbox.org
+License: MIT
+Description: Plots a matrix of 4 charts to diagnose linear                       regression models. Or plot the charts individually.                       Similar to lm.plot in R.
+Keywords: lm lineare regression diagnostics plot chart r matplotlib
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
