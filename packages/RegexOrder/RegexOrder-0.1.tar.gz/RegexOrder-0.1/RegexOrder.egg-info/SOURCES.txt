@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+RegexOrder.egg-info/PKG-INFO
+RegexOrder.egg-info/SOURCES.txt
+RegexOrder.egg-info/dependency_links.txt
+RegexOrder.egg-info/requires.txt
+RegexOrder.egg-info/top_level.txt
+regexorder/__init__.py
+regexorder/regexorder.py
+regexorder/templates.json
