@@ -1,0 +1,18 @@
+Metadata-Version: 2.0
+Name: pyhocon-fix
+Version: 0.0.2
+Summary: Fixed json escape of pyhocon
+Home-page: https://github.com/LeviDeng/pyhocon-fix
+Author: Lin Deng
+Author-email: ptreesptrees@gmail.com
+License: Apache License, Version 2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+
+UNKNOWN
+
+
