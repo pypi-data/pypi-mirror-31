@@ -1,0 +1,3 @@
+[console_scripts]
+pandoc_extract_code = pandoc_extract_code:main
+
