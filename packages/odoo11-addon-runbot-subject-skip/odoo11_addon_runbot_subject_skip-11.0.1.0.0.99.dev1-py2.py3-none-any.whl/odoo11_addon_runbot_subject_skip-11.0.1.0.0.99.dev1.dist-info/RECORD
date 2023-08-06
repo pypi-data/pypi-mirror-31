@@ -1,0 +1,13 @@
+odoo/addons/runbot_subject_skip/README.rst,sha256=7_49BSsLTa6BgrnoLpI9-WOBmPzPvCNiLEqKM6-lx6o,1968
+odoo/addons/runbot_subject_skip/__init__.py,sha256=vjC7oVOHhST0bMtkabfH6FeMaqB-PHV4o8HQvIB_5NM,86
+odoo/addons/runbot_subject_skip/__manifest__.py,sha256=FfqQIIw2rb0vIZexS9UtaMZeTlBedwnx52RT-Tib3gw,518
+odoo/addons/runbot_subject_skip/models/__init__.py,sha256=n4zf__o8ODs4vEQcjvzfwNSYnS1t6byBw6ENKzezbFM,92
+odoo/addons/runbot_subject_skip/models/runbot_build.py,sha256=mrSF2ydeG4knAdxNMXAAPiThW3CB_u7vBJJ_b_Ocqb4,787
+odoo/addons/runbot_subject_skip/tests/__init__.py,sha256=U5_tqFREpTe9YjTraqpoHIeJsiruSEnbRVAgthUGsxM,102
+odoo/addons/runbot_subject_skip/tests/test_runbot_skip_build.py,sha256=2vNPgaYGxu5twptTj8_x1sIBRkjJQ-Ol3_NOZ2GK5fY,1289
+odoo11_addon_runbot_subject_skip-11.0.1.0.0.99.dev1.dist-info/DESCRIPTION.rst,sha256=BkH_E7mTj3rIZMr3RtR-lmOsa084ef3erHrkC58vmWM,1970
+odoo11_addon_runbot_subject_skip-11.0.1.0.0.99.dev1.dist-info/METADATA,sha256=phLTbd10dtyWlBi7ThlDxjMORlr0gpzA_QtD4d3WJX0,2577
+odoo11_addon_runbot_subject_skip-11.0.1.0.0.99.dev1.dist-info/RECORD,,
+odoo11_addon_runbot_subject_skip-11.0.1.0.0.99.dev1.dist-info/WHEEL,sha256=o2k-Qa-RMNIJmUdIc7KU6VWR_ErNRbWNlxDIpl7lm34,110
+odoo11_addon_runbot_subject_skip-11.0.1.0.0.99.dev1.dist-info/metadata.json,sha256=yT7blM2pc_B-luMG-VU4BTTvKIdOq5Pslnq4jxPe-zY,812
+odoo11_addon_runbot_subject_skip-11.0.1.0.0.99.dev1.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
