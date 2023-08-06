@@ -1,0 +1,3 @@
+[console_scripts]
+using_click = testtest.scripts.using_click:cli
+
