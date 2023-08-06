@@ -1,0 +1,14 @@
+django_replicated/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_replicated/dbchecker.py,sha256=Mjm69FXcvVFsRgSyXdcg8BZ7pp1zobSk12BZZOV36es,3663
+django_replicated/decorators.py,sha256=GkC1dpBsXaZNOefLwxNhXaSFK14bRE7T6LGCug9-FHI,1645
+django_replicated/middleware.py,sha256=mUf7-fagb3mUsWM1X11erB-OGrhsEij7UlLlXW78_4k,7067
+django_replicated/router.py,sha256=xcDBSoziKysNb5Ijw4sJRBq65b6__rUFnTFFxOKI6SM,7061
+django_replicated/router_multidb.py,sha256=ViYU6CGxj2iKffOIFoqA1RymEcS3f6n2Ag7uhr22D_Q,1808
+django_replicated/router_multimaster.py,sha256=PDR7zqn8IuRLLdCtp3QdaDI_nie2OrmbtwgzNXcK6H0,1345
+django_replicated/router_syncslave.py,sha256=I_8JSxirop-UNrbrEl7KfSvkaCGEUtCZusM0cE54i3Q,1350
+django_replicated/settings.py,sha256=8nwILA8wygAYqZJ17KBcw6WYWrixIJBmnHZ-D-vr2-8,903
+django_replicated/utils.py,sha256=1pL2uFe3zC9eEmKgy5zy2TjVfHodUFgW1_n2JBuwaQU,2742
+django_replicated_ext-3.1.dist-info/METADATA,sha256=Bue0ZOowF_ahO-p9CyN9LQGgTYr7fUX91ly9-vb1VKI,888
+django_replicated_ext-3.1.dist-info/RECORD,,
+django_replicated_ext-3.1.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+django_replicated_ext-3.1.dist-info/top_level.txt,sha256=HEUmDnreXh0m018Nc0qUWhfczVhxkO3WuQXK2N05VK8,18
