@@ -1,0 +1,14 @@
+sklearn_to_pfa/__init__.py,sha256=USLEfb5d4mxXo8flFTzwxv1neOUbta5nlTOShixnvzQ,29
+sklearn_to_pfa/featurizer.py,sha256=ywl4JrwTBSIGekLNRRBlDwG0mJkGtbQ4lyEGnW44YmY,3056
+sklearn_to_pfa/mixed_nb.py,sha256=_k_iG8Cnyvh2-iLDa5bInBd6BlLgQTdiPcFZzyui9GA,4445
+sklearn_to_pfa/sklearn_to_pfa.py,sha256=9O4ocThPnKQyM01vU5MjLuneng8pneIKoMucB8djQLU,25456
+sklearn_to_pfa-0.3.5.dist-info/DESCRIPTION.rst,sha256=IDicGWv4YvLfExyV__kAEHkCdShYaaEiWtDWxUngs6w,488
+sklearn_to_pfa-0.3.5.dist-info/METADATA,sha256=_A2s6-oVHSPuR7rJ22ODJEPrsGpqYvJWdYo2nOQeMg4,1287
+sklearn_to_pfa-0.3.5.dist-info/RECORD,,
+sklearn_to_pfa-0.3.5.dist-info/WHEEL,sha256=rNo05PbNqwnXiIHFsYm0m22u4Zm6YJtugFG2THx4w3g,92
+sklearn_to_pfa-0.3.5.dist-info/metadata.json,sha256=Ngm4WYu_4WIJ2IHp6QD5i755PMxGn_CZ1op_DhxJye8,890
+sklearn_to_pfa-0.3.5.dist-info/top_level.txt,sha256=Cldsu-2vaSgRSA-dxCWH4axu0CUTJ_DEevXYeDA77Yk,21
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_featurizer.py,sha256=RZce0eMtQFgXD-emmhKwbCjZoVvVD7g5UOcWH0JRuNw,675
+tests/test_mixed_nb.py,sha256=HA90KYnHQgDAOp_8ySVjD4soHS8896qBptwkjuHnf9c,1228
+tests/test_pfa_sklearn.py,sha256=l1Q3AOpGZj5OMQhN0QSMhztjF7suoW7Kgeb_aowlzQg,10043
