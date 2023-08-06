@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: mlang
+Version: 0.1.10
+Summary: mlang client
+Home-page: UNKNOWN
+Author: lishouguang
+Author-email: lishouguang@meizu.com
+License: MIT
+Description: ### Install
+        
+        ```pip install mlang```
+        
+        ### Example
+        
+        ```python
+        from mlang.mlang_client.mclient import MLang
+        
+        MLang.tokenze('魅族手机不错的，你觉得呢')
+        ```
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
