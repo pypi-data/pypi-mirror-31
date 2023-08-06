@@ -1,0 +1,17 @@
+---
+file-contents:
+  releasenotes/notes/force-delete-executions-d08ce88a5deb3291.yaml:
+    features: ['Adding a --force optional parameter to delete excetutions. Without
+        it only
+
+        finished executions can be deleted. If --force is passed the execution
+
+        will be deleted but mistral will generate some errors as expected objects
+
+        in memory no longer exist
+
+        ']
+notes:
+- files:
+  - [releasenotes/notes/force-delete-executions-d08ce88a5deb3291.yaml, e400bed6b0888247eafc90ff338165cfe01e037f]
+  version: 3.5.0
