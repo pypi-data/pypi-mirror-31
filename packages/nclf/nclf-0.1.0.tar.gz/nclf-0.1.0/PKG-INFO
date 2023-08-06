@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: nclf
+Version: 0.1.0
+Summary: nclf-python is an implementation of the New Command Line Format (NCLF) in python
+Home-page: https://github.com/peterkuma/nclf-python
+Author: Peter Kuma
+Author-email: peter.kuma@fastmail.com
+License: Public Domain
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: License :: Public Domain
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
