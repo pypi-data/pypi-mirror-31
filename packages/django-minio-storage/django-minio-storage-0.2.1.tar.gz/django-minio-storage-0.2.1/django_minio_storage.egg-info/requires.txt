@@ -1,0 +1,6 @@
+django>=1.8
+minio>=4.0.0
+
+[test]
+coverage
+requests
