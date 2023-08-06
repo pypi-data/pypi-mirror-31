@@ -1,0 +1,3 @@
+[compliance_checker.suites]
+gliderdac = cc_plugin_glider.glider_dac:GliderCheck
+
