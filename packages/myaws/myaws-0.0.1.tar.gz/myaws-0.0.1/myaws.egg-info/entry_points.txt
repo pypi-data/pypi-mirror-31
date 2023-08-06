@@ -1,0 +1,3 @@
+[console_scripts]
+myaws = myaws.awscli:main
+
