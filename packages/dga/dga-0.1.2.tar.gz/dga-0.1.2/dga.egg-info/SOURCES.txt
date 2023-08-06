@@ -1,0 +1,17 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+dga/Constraint.py
+dga/Expression.py
+dga/Gene.py
+dga/State.py
+dga/__init__.py
+dga/algorithm.py
+dga/dga.py
+dga/problem.py
+dga.egg-info/PKG-INFO
+dga.egg-info/SOURCES.txt
+dga.egg-info/dependency_links.txt
+dga.egg-info/top_level.txt
