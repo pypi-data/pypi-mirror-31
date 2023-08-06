@@ -1,0 +1,26 @@
+Metadata-Version: 2.0
+Name: yasmin
+Version: 0.1.0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Babylon Health
+Author-email: UNKNOWN
+License: Proprietary
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Topic :: Internet :: WWW/HTTP
+Requires-Dist: numpy (==1.14.0)
+Requires-Dist: gensim (==3.4.0)
+Requires-Dist: spacy (==2.0.10)
+
+https://github.com/Babylonpartners/yasmin
+
+
