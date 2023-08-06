@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: gitmsg
+Version: 1.0.2
+Summary: autogenerate git commit message
+Home-page: https://github.com/looking-for-a-job/gitmsg
+License: UNKNOWN
+Description: ### Install
+        
+        ```bash
+        $ [sudo] pip install gitmsg
+        ```
+        
+        ### Examples
+        
+        ```bash
+        $ cd /path/to/repo/
+        $ touch new_file
+        $ rm deleted_file
+        $ echo "new" > modified_file
+        $ git add -A
+        $ gitmsg
+        '+new_file; -deleted_file; ^modified_file'
+        ```
+Keywords: git
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Unix Shell
+Classifier: Topic :: Software Development :: Version Control
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
