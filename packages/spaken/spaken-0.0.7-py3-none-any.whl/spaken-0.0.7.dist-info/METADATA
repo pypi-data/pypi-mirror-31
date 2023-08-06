@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: spaken
+Version: 0.0.7
+Summary: UNKNOWN
+Home-page: https://github.com/labd/spaken
+Author: Michael van Tellingen
+Author-email: michaelvantellingen@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: boto3
+Requires-Dist: click (>=6.7)
+Requires-Dist: pip (>=10.0)
+Requires-Dist: packaging (>=17.0)
+
+UNKNOWN
+
+
