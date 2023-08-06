@@ -1,0 +1,15 @@
+README.rst
+setup.py
+test/test_undname.py
+undname/__init__.py
+undname/undname_build.py
+undname.egg-info/PKG-INFO
+undname.egg-info/SOURCES.txt
+undname.egg-info/dependency_links.txt
+undname.egg-info/requires.txt
+undname.egg-info/top_level.txt
+undname/src/config.h
+undname/src/msvcrt.h
+undname/src/undname.c
+undname/src/wine/debug.h
+undname/src/wine/port.h
