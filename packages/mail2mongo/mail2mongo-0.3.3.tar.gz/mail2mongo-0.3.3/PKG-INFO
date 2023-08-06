@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: mail2mongo
+Version: 0.3.3
+Summary: Simple SMTP daemon which save incoming emails to MongoDB
+Home-page: https://github.com/inn0kenty/mail2mongo
+Author: Innokenty Lebedev
+Author-email: innlebedev@protonmail.com
