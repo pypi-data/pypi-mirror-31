@@ -1,0 +1,26 @@
+<?python
+    from plone import api
+    from redturtle.agidtheme.controlpanel.interfaces import IRedturtleAgidthemeSettings
+
+    header_link_label = api.portal.get_registry_record('header_link_label', interface=IRedturtleAgidthemeSettings)
+    header_link_url = api.portal.get_registry_record('header_link_url', interface=IRedturtleAgidthemeSettings)
+    header_second_link_label = api.portal.get_registry_record('header_second_link_label', interface=IRedturtleAgidthemeSettings)
+    header_second_link_url = api.portal.get_registry_record('header_second_link_url', interface=IRedturtleAgidthemeSettings)
+?>
+
+<div id="header-banner"
+     tal:condition="python:(header_link_label and header_link_url) or (header_second_link_label and header_second_link_url)">
+    <div class="header-banner-inner">
+        <div class="header-banner-owner" tal:condition="python:header_link_label and header_link_url">
+            <a href="${header_link_url}" target="_blank">${header_link_label}</a>
+        </div>
+        <div class="header-banner-second-link"
+             tal:condition="python:header_second_link_label and header_second_link_url">
+            <a href="${header_second_link_url}" target="_blank">${header_second_link_label}</a>
+        </div>
+    </div>
+</div>
+
+<div id="portal-header">
+    <div tal:replace="structure provider:plone.portalheader" />
+</div>
