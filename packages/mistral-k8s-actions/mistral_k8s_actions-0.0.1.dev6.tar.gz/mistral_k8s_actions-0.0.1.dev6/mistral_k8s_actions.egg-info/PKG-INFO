@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: mistral-k8s-actions
+Version: 0.0.1.dev6
+Summary: Test a K8S action code.
+Home-page: https://github.com/xianjun666/mistral_K8S_action
+Author: HongXianJun
+Author-email: xianjun666@dcn.ssu.ac.kr
+License: Apache-2
+Description: # mistral_K8S_action
+        Test a K8S action code.
+        
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Topic :: Internet
+Classifier: Topic :: Utilities

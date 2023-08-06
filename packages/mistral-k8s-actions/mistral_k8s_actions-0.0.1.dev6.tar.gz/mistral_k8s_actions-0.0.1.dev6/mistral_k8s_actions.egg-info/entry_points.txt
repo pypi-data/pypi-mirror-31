@@ -1,0 +1,3 @@
+[mistral.actions]
+k8s = mistral_k8s_actions:K8sAction
+

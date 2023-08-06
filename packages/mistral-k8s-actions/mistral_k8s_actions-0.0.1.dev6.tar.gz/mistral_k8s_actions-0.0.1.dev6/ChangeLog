@@ -1,0 +1,10 @@
+CHANGES
+=======
+
+* Create testk8s.txt
+* Create tox.ini
+* Create setup.cfg
+* Create setup.py
+* Create mistral\_k8s\_actions.py
+* Create README.md
+* Initial commit
