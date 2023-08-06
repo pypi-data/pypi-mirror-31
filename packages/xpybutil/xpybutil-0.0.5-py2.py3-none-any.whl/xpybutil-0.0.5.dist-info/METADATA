@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: xpybutil
+Version: 0.0.5
+Summary: An incomplete xcb-util port plus some extras
+Home-page: http://pytyle.com
+Author-email: fmacrae.dev@gmail.com
+Maintainer: Fenner Macrae
+License: WTFPL
+Platform: POSIX
+
+See README
+
+
