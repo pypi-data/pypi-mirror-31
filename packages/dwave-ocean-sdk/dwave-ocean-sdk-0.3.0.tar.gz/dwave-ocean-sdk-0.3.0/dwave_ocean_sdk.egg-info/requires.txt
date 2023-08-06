@@ -1,0 +1,4 @@
+dwavebinarycsp<0.1.0,>=0.0.2
+dwave-networkx<0.7.0,>=0.6.1
+dwave-system<0.4.0,>=0.3.0
+dwave-qbsolv<0.3.0,>=0.2.7
