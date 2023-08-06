@@ -1,0 +1,10 @@
+README.md
+setup.py
+autotrace/__init__.py
+autotrace/autotrace.py
+autotrace.egg-info/PKG-INFO
+autotrace.egg-info/SOURCES.txt
+autotrace.egg-info/dependency_links.txt
+autotrace.egg-info/entry_points.txt
+autotrace.egg-info/requires.txt
+autotrace.egg-info/top_level.txt
