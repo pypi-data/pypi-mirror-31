@@ -1,0 +1,15 @@
+fbad-0.1.0.dist-info/metadata.json,sha256=ogS3rESjXs6PvOAK2KzbKQb0k5EE-wiTQEPiSI6K12M,964
+fbad-0.1.0.dist-info/entry_points.txt,sha256=RFhY0bWj3kS67dqojTfM9-E_eAMydFWAU2EQZkktpGc,57
+fbad-0.1.0.dist-info/DESCRIPTION.rst,sha256=daVV4IRCV1RWLbY3YSo8JzuUPxrsPKC1zPvbQPwpMxE,3252
+fbad-0.1.0.dist-info/WHEEL,sha256=54bVun1KfEBTJ68SHUmbxNPj80VxlQ0sHi4gZdGZXEY,92
+fbad-0.1.0.dist-info/METADATA,sha256=51O1oAsKU_0ln5cd4i4geoPYr8wJCIci4iutfI-n2OI,3849
+fbad-0.1.0.dist-info/top_level.txt,sha256=BALJoWZld-VUN84hwVioRuFBn0vG1Qgv_RUs_knxUdI,5
+fbad-0.1.0.dist-info/RECORD,,
+fbad/constants.py,sha256=k5dHuURuCc2tV6UKpSBVmKHW6WXEdCxm2W0cTrVK8tc,419
+fbad/client.py,sha256=LguYHXMqbnWFNTKbURopxjxVGBqAur8asGTLrtaoCJc,6523
+fbad/image.py,sha256=B3FJdYT4lr-3pMrfs9oGGmx33QCrVELdibqhgb63uyo,6344
+fbad/server.py,sha256=vj2l6zP7HFxYQjVzmuLs9yOKpBDLNmkem8tmuw8HKyA,8018
+fbad/errors.py,sha256=-aDhrqQ8PXjWLkP7hbny-pKaOKuf3jwn4PmIbC15vLI,281
+fbad/project.py,sha256=_6KIBw_uzdCI_eCIRpVZqxzy7NUjhN2Ee_gUrqSLujw,15067
+fbad/runner.py,sha256=j_8D9ZYiNi0ZvxoAlGGTFno4tAK5ABIpc1UZq0Ql7l4,1084
+fbad/__init__.py,sha256=8h9LT2eAyrRgc-qykhjYtt13OWhR_N7YqMfpH-mlyLM,113
