@@ -1,0 +1,15 @@
+README.md
+setup.py
+src/flying/__init__.py
+src/flying/config.py
+src/flying/main.py
+src/flying.egg-info/PKG-INFO
+src/flying.egg-info/SOURCES.txt
+src/flying.egg-info/dependency_links.txt
+src/flying.egg-info/entry_points.txt
+src/flying.egg-info/requires.txt
+src/flying.egg-info/top_level.txt
+src/flying/utils/__init__.py
+src/flying/utils/cmd.py
+src/flying/utils/io.py
+src/flying/utils/version.py
