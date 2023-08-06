@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: dwavebinarycsp
+Version: 0.0.1
+Summary: Solves constraints satisfaction problems with binary quadratic model samplers
+Home-page: https://github.com/dwavesystems/dwavebinarycsp
+Author: D-Wave Systems Inc.
+Author-email: oshklarsky@dwavesys.com
+License: Apache 2.0
+Platform: UNKNOWN
+Requires-Dist: penaltymodel[all] (<0.15.0,>=0.14.0)
+Requires-Dist: networkx (<3.0,>=2.0)
+Requires-Dist: dimod (<0.7.0six>=1.11.0,<2.0.0,>=0.6.7)
+
+UNKNOWN
+
+
