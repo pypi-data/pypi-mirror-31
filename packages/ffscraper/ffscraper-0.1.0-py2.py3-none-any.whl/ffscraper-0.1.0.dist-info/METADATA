@@ -1,0 +1,23 @@
+Metadata-Version: 2.0
+Name: ffscraper
+Version: 0.1.0
+Summary: Yet another set of scraping tools for FanFiction.Net
+Home-page: https://github.com/batflyer/FanFiction-Collaborative-Filtering
+Author: Alexander L. Hayes (@batflyer)
+Author-email: alexander@batflyer.net
+License: Apache License, Version 2.0
+Project-URL: Source, https://github.com/batflyer/FanFiction-Collaborative-Filtering
+Project-URL: Tracker, https://github.com/batflyer/FanFiction-Collaborative-Filtering/issues
+Keywords: fanfiction scraping search
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Intended Audience :: Other Audience
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+
+UNKNOWN
+
+
