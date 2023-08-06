@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: gbml
+Version: 1.0.5
+Summary: GBM-Locfit: A GBM framework using Locfit
+Home-page: https://github.com/materialsproject/gbml/
+Author: Randy Notestine
+Author-email: RNotestine@UCSD.edu
+License: GPL2
+Description: Gradient Boosting Machine-Locfit: A GBM framework using local regresssion via Locfit.
+        For information on Locfit see: http://ect.bell-labs.com/sl/project/locfit/index.html
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3
