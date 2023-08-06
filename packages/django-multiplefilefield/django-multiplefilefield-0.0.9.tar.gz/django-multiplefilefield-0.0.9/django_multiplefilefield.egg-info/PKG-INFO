@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: django-multiplefilefield
+Version: 0.0.9
+Summary: Django Model and Form fields which can store multiple files
+Home-page: https://github.com/Inokinoki/django-multiplefilefield
+Author: Weixuan XIAO(BNBLord)
+Author-email: veyx.shaw@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
