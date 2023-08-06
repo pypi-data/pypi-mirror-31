@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: rplotmaker
+Version: 1.0.6
+Summary: R Plot Maker
+Home-page: https://gitlab.com/rbuchholz/rplotmaker
+Author: Robert Buchholz, Martin Häcker
+Author-email: rbu@goodpoint.de, spamfaenger@gmx.de
+License: ISC
+Description-Content-Type: UNKNOWN
+Description: Tool to wrap R execution with so that it generates a file specified by options.
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: ISC License (ISCL)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Visualization
