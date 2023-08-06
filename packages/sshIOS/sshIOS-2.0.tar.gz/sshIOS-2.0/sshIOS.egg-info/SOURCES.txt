@@ -1,0 +1,10 @@
+MANIFEST.in
+README.rst
+setup.py
+sshIOS/__init__.py
+sshIOS.egg-info/PKG-INFO
+sshIOS.egg-info/SOURCES.txt
+sshIOS.egg-info/dependency_links.txt
+sshIOS.egg-info/not-zip-safe
+sshIOS.egg-info/requires.txt
+sshIOS.egg-info/top_level.txt
