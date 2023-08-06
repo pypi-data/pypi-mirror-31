@@ -1,0 +1,3 @@
+[console_scripts]
+page-counter = page_counter.cli:main
+
