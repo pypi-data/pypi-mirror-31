@@ -1,0 +1,33 @@
+Metadata-Version: 2.0
+Name: jupyterhub
+Version: 0.9.0b2
+Summary: JupyterHub: A multi-user server for Jupyter notebooks
+Home-page: http://jupyter.org
+Author: Jupyter Development Team
+Author-email: jupyter@googlegroups.com
+License: BSD
+Keywords: Interactive,Interpreter,Shell,Web
+Platform: Linux
+Platform: Mac OS X
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.5
+Requires-Dist: SQLAlchemy (>=1.1)
+Requires-Dist: alembic
+Requires-Dist: async-generator (>=1.8)
+Requires-Dist: jinja2
+Requires-Dist: pamela
+Requires-Dist: prometheus-client (>=0.0.21)
+Requires-Dist: python-dateutil
+Requires-Dist: python-oauth2 (>=1.0)
+Requires-Dist: requests
+Requires-Dist: tornado (>=5.0)
+Requires-Dist: traitlets (>=4.3.2)
+
+See https://jupyterhub.readthedocs.io for more info.
+
+
