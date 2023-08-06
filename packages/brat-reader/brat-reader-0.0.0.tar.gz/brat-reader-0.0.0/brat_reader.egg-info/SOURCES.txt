@@ -1,0 +1,12 @@
+MANIFEST.in
+README.rst
+setup.py
+brat_reader/README.md
+brat_reader/__init__.py
+brat_reader/brat_annotated_text.py
+brat_reader/parc_as_brat.py
+brat_reader.egg-info/PKG-INFO
+brat_reader.egg-info/SOURCES.txt
+brat_reader.egg-info/dependency_links.txt
+brat_reader.egg-info/requires.txt
+brat_reader.egg-info/top_level.txt
