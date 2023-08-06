@@ -1,0 +1,6 @@
+dateparser>=0.7.0
+humanize
+pendulum<=1.5.1,>=1.0
+pytz
+snaptime
+tzlocal
