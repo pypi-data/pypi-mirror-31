@@ -1,0 +1,41 @@
+Metadata-Version: 1.1
+Name: genice-rdf
+Version: 0.1
+Summary: RDF format plugin for GenIce.
+Home-page: https://github.com/vitroid/genice-rdf/
+Author: Masakazu Matsumoto
+Author-email: vitroid@gmail.com
+License: MIT
+Description-Content-Type: text/markdown
+Description: # genice-rdf
+        
+        A [GenIce](https://github.com/vitroid/GenIce) plugin to calculate the radial distribution functions.
+        
+        ## Requirements
+        
+        * [GenIce](https://github.com/vitroid/GenIce) >=0.16 must be installed.
+        
+        ## Installation
+        
+        ### System-wide installation
+        
+            % make install
+        
+        ### Private installation
+        
+        Copy the files in formats/ into your local formats folder of GenIce.
+        
+        ## Usage
+        
+        	% genice 1c -r 3 3 3 -f _RDF > 1c.rdf
+        
+        ## Test in place
+        
+            % make test
+        
+Keywords: genice,RDF
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
