@@ -1,0 +1,27 @@
+Metadata-Version: 2.0
+Name: tx
+Version: 0.0.1
+Summary: An extension base for twisted
+Home-page: https://gitlab.com/uda/tx/
+Author: Yehuda Deutsch
+Author-email: yeh@uda.co.il
+License: MIT
+Description-Content-Type: text/markdown
+Keywords: twisted extension
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Twisted
+Classifier: Framework :: Zope
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3 :: Only
+
+# tx - extensions for Twisted
+
+
