@@ -1,0 +1,11 @@
+README.md
+setup.py
+src/__init__.py
+src/authenticator.py
+src/client.py
+src/steam_api/steam_api.cpp
+src/steam_api/steamworks_sdk/redistributable_bin/win64/steam_api64.dll
+stlib.egg-info/PKG-INFO
+stlib.egg-info/SOURCES.txt
+stlib.egg-info/dependency_links.txt
+stlib.egg-info/top_level.txt
