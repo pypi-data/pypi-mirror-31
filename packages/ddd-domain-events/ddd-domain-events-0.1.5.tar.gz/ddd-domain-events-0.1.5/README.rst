@@ -1,0 +1,212 @@
+************************************
+Domain Driven Design - Domain Events
+************************************
+
+Inspired by `Udi Dahan's fabulous Domain Events <http://udidahan.com/2009/06/14/domain-events-salvation>`_
+implementation in particular, and by `Domain Driven Design <https://en.wikipedia.org/wiki/Domain-driven_design>`_
+best practices in general.
+
+The DDD Domain Events package makes it easy to:
+    - Register to **Domain Events** from the **Application Layer**
+    - Raise **Domain Events** from the **Domain Layer** so they can be handled in the **Application Layer**
+
+The *Domain Events* are local to the execution thread
+(via Python's `threading.local <https://docs.python.org/3/library/threading.html>`_)
+and hence are thread specific.
+
+
+Installing ddd-domain-events
+----------------------------
+
+.. code-block:: bash
+
+  pip install ddd-domain-events
+
+
+Why should you consider using Domain Events?
+--------------------------------------------
+Domain Events are based on the `Observer Design Pattern <https://en.wikipedia.org/wiki/Observer_pattern>`_, which is a
+convenient way to decouple your *Domain Layer Business Logic* from the *Application Layer* code - especially as the
+Domain code should have no *Infrastructure Layer* dependencies (such as calling Repositories or Providers that call
+external services).
+
+In other words, your *Domain Entities* should have no access to the *Application Layer Services* - and
+hence, your *Entities* might use *Domain Events* to indirectly communicate with *Application Services*.
+
+For example, say you have a Gaming Domain with a User entity that has *add_points(number_of_points)* behavior.
+Whenever *add_points* is executed, the obvious expected behavior is to add the provided number of points to the
+specific user. However, in our sample game, whenever a user reaches 1,000 points then she should receive the "Master"
+badge, and whenever the user reaches 1,000,000 points then she should receive the "Champion" badge.
+
+Your Application Layer pseudo python code might look like this:
+
+    .. code-block:: python
+
+        user.add_points(10,000)
+        if user.has_reached_master_level:
+            # TODO: Send the user a congratulation email...
+        elif user.has_reached_champion_level:
+            # TODO: Send the user both a congratulation email and a check...
+
+The above code is perfectly o.k. - yet, as there will be more actions / options that
+are the consequence of *add_points*, then the code will become more and more cumbersome.
+
+Using the Domain Events alternative, will allow you to write code that looks more like this pseudo code:
+
+    .. code-block:: python
+
+        domain_events.register_event(has_reached_master_level_callback)
+        domain_events.register_event(has_reached_champion_level_callback)
+
+        user.add_points(10,000)
+
+This code is cleaner and arguably easier to extend, as shown bellow:
+
+    .. code-block:: python
+
+        domain_events.register_event(has_reached_master_level_callback)
+        domain_events.register_event(has_reached_champion_level_callback)
+        # introduce new level...
+        domain_events.register_event(has_reached_intermediate_level_callback)
+
+        user.add_points(50)
+
+Last but not least, Domain Events allow you to keep your Entity's code cleaner - with less methods
+(such as *has_reached_master_level* and *has_reached_champion_level* which can be omitted) that might be
+relatively complex - as they might require you to use additional state in the entity (so that you know if
+the user has reached the current level following the recent call to *add_points*).
+
+
+Using DDD Domain Events
+-----------------------
+
+Using Domain Events in an existing Application Service can easily be achieved by using Python's **with-statement**.
+
+For example:
+
+**Somewhere in the Application Layer...**
+
+    .. code-block:: python
+
+        with DomainEvents() as domain_events:
+            # create a callback to the notify_top_management Application Layer function
+            high_price_volume_callback = DomainEventCallable(OrderEvent.HIGH_VOLUME_PRICE, notify_top_management),
+
+            # register callback - so it can be triggered from the Domain Layer
+            domain_events.register_event(high_price_volume_callback)
+
+            # create Domain Entity
+            order = Order()
+
+            # execute a Domain method that might raise the relevant Domain Event
+            order.add_order_items(order_items)
+
+
+**Somewhere in the Domain Layer...**
+
+    .. code-block:: python
+
+        # Domain entity raises a Domain Event - allowing the Application Layer
+        # to take a relevant action.
+        DomainEvents.raise_event(OrderEvent.HIGH_VOLUME_PRICE, order=self)
+
+
+How it works
+------------
+
+Bellow is a simplified example that should help you understand how and when you might choose to use **Domain Events**.
+
+
+    *Step 1*: Define a **Domain Event Type** in your **Domain Layer**
+
+        .. code-block:: python
+
+            from ddd_domain_events import DomainEvents, DomainEventCallable
+
+            class OrderEvent(Enum):
+                """Domain Event raised for special order use cases"""
+                HIGH_QUANTITY = 'HIGH_QUANTITY'
+                HIGH_VOLUME_PRICE = 'HIGH_VOLUME_PRICE'
+
+
+    Step 2: Define a **Domain Entity** that raises Domain Events
+
+        .. code-block:: python
+
+            class OrderItem:
+                """OrderItem value object that contains order details for a single item"""
+                def __init__(self, product_id: str, price: float, quantity: int):
+                    self.product_id = product_id
+                    self.price = price
+                    self.quantity = quantity
+
+            class Order:
+                """Order entity that contains order items"""
+                HIGH_VOLUME_PRICE = 1_000_000
+                HIGH_QUANTITY = 10_000
+
+                def __init__(self):
+                    self._order_items = []
+
+                @property
+                def order_items(self):
+                    for order_item in self._order_items:
+                        yield order_item
+
+                def add_order_items(self, order_items: List[OrderItem]) -> None:
+                    total_price = 0
+                    total_quantity = 0
+
+                    for order_item in order_items:
+                        total_price += (order_item.price * order_item.quantity)
+                        total_quantity += order_item.quantity
+                        # Process the actual business logic related to this method,
+                        # which is add OrderItem value objects to this Order Entity
+                        self._order_items.append(order_item)
+
+                    # Notify whoever might be interested about high price volume orders
+                    if total_price >= self.HIGH_VOLUME_PRICE:
+                        DomainEvents.raise_event(OrderEvent.HIGH_VOLUME_PRICE, order=self)
+
+                    # Notify whoever might be interested about high quantity volume orders
+                    if total_quantity >= self.HIGH_QUANTITY:
+                        DomainEvents.raise_event(OrderEvent.HIGH_QUANTITY, order=self)
+
+    *Step 3*: Define an **Application Service** that registers to **Domain Events**
+
+        .. code-block:: python
+
+            class OrderService:
+                """Application Service for handling Order related operations"""
+                @classmethod
+                def create_order(cls, order_items: List[OrderItem]) -> Order:
+                    with DomainEvents() as domain_events:
+                        # Create callbacks for 'side effects' that are related to domain logic,
+                        # and which should be handled by the Application Layer
+                        callbacks = [
+                            DomainEventCallable(OrderEvent.HIGH_VOLUME_PRICE, cls.notify_top_management),
+                            DomainEventCallable(OrderEvent.HIGH_VOLUME_PRICE, cls.notify_sales_team),
+                            DomainEventCallable(OrderEvent.HIGH_QUANTITY, cls.notify_inventory_team)
+                        ]
+
+                        # Register for these domain events
+                        for callback in callbacks:
+                            domain_events.register_event(callback)
+
+                        order = Order()
+
+                        order.add_order_items(order_items)
+
+                        return order
+
+                @staticmethod
+                def notify_sales_team(order: Order) -> None:
+                    """A callback for notifying the sales team about the important order"""
+
+                @staticmethod
+                def notify_top_management(order: Order) -> None:
+                    """A callback for notifying the top management about the important order"""
+
+                @staticmethod
+                def notify_inventory_team(order: Order) -> None:
+                    """A callback for notifying the inventory team required quantities"""
