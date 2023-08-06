@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: Flask-CronDecorator
+Version: 0.0.1
+Summary: Securely decorates Google Cloud Cron Endpoints via convention and X-Appengine-Cron header
+Home-page: https://github.com/MobiusWorksLLC/Flask-CronDecorator.git
+Author: Tyson Holub
+Author-email: tholub@mobiusworks.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
