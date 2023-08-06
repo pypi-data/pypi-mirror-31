@@ -1,0 +1,16 @@
+Metadata-Version: 2.0
+Name: alosi
+Version: 0.0.2
+Summary: Adaptive learning engine
+Home-page: https://github.com/harvard-vpal/alosi
+Author: Andrew Ang
+Author-email: andrew_ang@harvard.edu
+License: Apache-2.0
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: numpy (==1.13.1)
+Requires-Dist: requests (==2.18.4)
+
+UNKNOWN
+
+
