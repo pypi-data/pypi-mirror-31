@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: Yinotify
+Version: 0.2.6
+Summary: Based on pyinotfy, simplify the module by removing unused class and add new useful function to implement the callback
+Home-page: UNKNOWN
+Author: Yijun Zhu
+Author-email: peter_zyj@hotmail.com
+License: GPL 2
+Description: Test...Yijun
+Keywords: Yinotify
+Platform: Linux
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
