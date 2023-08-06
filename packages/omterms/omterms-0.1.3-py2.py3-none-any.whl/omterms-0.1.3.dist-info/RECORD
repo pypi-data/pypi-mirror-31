@@ -1,0 +1,16 @@
+omterms/__init__.py,sha256=aDhU4sNXNoAMPrsaWIABSip0LSNYdokxugesY897yO0,191
+omterms/__version__.py,sha256=2o8DTTf4T9SsPu90yN5YAWg-Kd0IcR97b3rwDQF-zMY,295
+omterms/cleaner.py,sha256=ap_7bxjR6w2eqRFlV9RLHEMgd2Jt_guiEAnbtOGPKRQ,13053
+omterms/datauis.py,sha256=9KI_FcspexwuN6nBelUqFIUSk-5TRXoAiiGTIZ9N4Zw,21217
+omterms/interface.py,sha256=alVppVdvwshmV3wa94cOVXcCGIwjlrm5JoTk9Fec5m8,15101
+omterms/measures.py,sha256=cn4STUtbng3lHHtIlWQX9zabkHad66PY3xApwplJweU,12938
+omterms/stemmer.py,sha256=4rea7K6JIS4FFF9KEpyDWrLGyOXx79ipXsNCifmubSs,180
+omterms/tokenizer.py,sha256=QMM7sxxsIIWhNTpSGT1KZUIX6dkYAyekV7TuldPGFL0,2812
+omterms/utilities.py,sha256=6qIt5xNYLXrv9Wa7BL2F6CEbFMuVjgUFn29ClQN4QYA,8266
+omterms-0.1.3.dist-info/DESCRIPTION.rst,sha256=lIAsIiKFXAPoo0LAu3QS0e-e7HTnPlCX4kq4Qcc2GQ4,17175
+omterms-0.1.3.dist-info/METADATA,sha256=2Xx7igxaiJHV202_V4W1_teF8baaTxfRsm9h_ig7l7Y,17995
+omterms-0.1.3.dist-info/RECORD,,
+omterms-0.1.3.dist-info/WHEEL,sha256=o2k-Qa-RMNIJmUdIc7KU6VWR_ErNRbWNlxDIpl7lm34,110
+omterms-0.1.3.dist-info/entry_points.txt,sha256=eqGnTHtEVMYwfXVk1Z9MhC8O2N8wuqAbr0lisLmrkxs,20
+omterms-0.1.3.dist-info/metadata.json,sha256=Cu_QSmHDgzPRIymheZYHX-lhAdKbJ55lFRKb1I5tZI4,1016
+omterms-0.1.3.dist-info/top_level.txt,sha256=hQ391KouPfVx9JSRiTORvwFm71i7k50hN_bt1QLQXGQ,8
