@@ -1,0 +1,41 @@
+------------------------------------------------------------------------------------------------------------------------
+Author: H.D. 'Chip' McCullough IV                                                    E-Mail: hdmccullough.work@gmail.com
+Alchemist Stack: Package Changes Log
+------------------------------------------------------------------------------------------------------------------------
+
+Release Summary:
+----------------
+
+0.1.0 -- April 24th, 2018:
+    Initial Release
+
+
+Release Details:
+----------------
+
+Release v0.1.0, April 24th, 2018
+
+Initial project release, configured for Python3 (v3.6.4), however untested for Python2 (whomp, whomp). Thinking about
+it, it probably hella would not work in Python2.
+
+Currently uses SQL Alchemy (v1.2.4), and supports the following databases & drivers:
+
+  * postgres
+    - psycopg2
+    - pg8000
+  * mysql
+    - mysqldb
+    - mysqlconnector
+    - oursql
+  * oracle
+    - cx_oracle
+  * mssql
+    - pyodbc
+    - pymssql
+  * sqllite
+
+This is meant to be a bare-bones release, so a lot of features are not quite there yet. I just need to push it out so I
+can start using it.
+
+Cheers.
+- HDM
