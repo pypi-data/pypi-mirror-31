@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: aluratemp
+Version: 1.0.0
+Summary: Um simples conversor de temperatura (Celsius - Fahrenheit)
+Home-page: https://github.com/yanorestes/aluratemp
+Author: Yan Orestes
+Author-email: yan.orestes@alura.com.br
+License: MIT
+Project-URL: Código fonte, https://github.com/yanorestes/aluratemp
+Project-URL: Download, https://github.com/yanorestes/aluratemp/archive/1.0.0.zip
+Description: Um simples conversor de temperatura, com funções para conversão de Celsius para Fahrenheit e vice-versa, usado para um post no Blog da Alura
+Keywords: conversor temperatura alura
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: Portuguese (Brazilian)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Internationalization
+Classifier: Topic :: Scientific/Engineering :: Physics
