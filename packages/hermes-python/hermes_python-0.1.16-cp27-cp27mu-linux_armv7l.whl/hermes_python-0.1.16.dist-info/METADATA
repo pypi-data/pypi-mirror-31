@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: hermes-python
+Version: 0.1.16
+Summary: Python bindings for Hermes
+Home-page: https://github.com/snipsco/snips-platform/tree/main/hermes-ffi-python-extension/hermes-protocol/hermes-ffi/platforms/hermes-python
+Author: Anthony Reinette
+Author-email: anthony.reinette@snips.ai
+License: MIT
+Keywords: snips
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: six
+
+UNKNOWN
+
+
