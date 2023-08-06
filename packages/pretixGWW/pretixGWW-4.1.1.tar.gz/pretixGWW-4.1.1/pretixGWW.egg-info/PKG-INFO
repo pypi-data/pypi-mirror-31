@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: pretixGWW
+Version: 4.1.1
+Summary: Reinventing presales, one ticket at a time
+Home-page: https://pretix.eu
+Author: Raphael Michel
+Author-email: mail@raphaelmichel.de
+License: Apache License 2.0
+Description: UNKNOWN
+Keywords: tickets web shop ecommerce
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Other Audience
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Environment :: Web Environment
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Framework :: Django :: 1.11
+Provides-Extra: dev
+Provides-Extra: memcached
+Provides-Extra: postgres
+Provides-Extra: mysql
