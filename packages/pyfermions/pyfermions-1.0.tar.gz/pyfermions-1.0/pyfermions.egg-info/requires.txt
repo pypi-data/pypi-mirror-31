@@ -1,0 +1,11 @@
+matplotlib
+numpy
+scipy
+pandas
+jupyter
+
+[dev]
+pytest
+wheel
+yapf
+twine
