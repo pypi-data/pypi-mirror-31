@@ -1,0 +1,14 @@
+Metadata-Version: 2.0
+Name: jettie
+Version: 0.1
+Summary: a lightweight, python descendant from NYU's JET Information Extraction system
+Home-page: https://github.com/Alex-X-W/jettie
+Author: Xuan Wang and Jiayun Yu
+Author-email: xwang@nyu.edu
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: nose
+
+UNKNOWN
+
+
