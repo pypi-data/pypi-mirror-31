@@ -1,0 +1,12 @@
+[run]
+branch = True
+source =
+
+[paths]
+source =
+   src/ogorek
+   .tox/*/lib/python*/site-packages/ogorek
+   .tox/pypy/site-packages/ogorek
+
+[report]
+show_missing = True
