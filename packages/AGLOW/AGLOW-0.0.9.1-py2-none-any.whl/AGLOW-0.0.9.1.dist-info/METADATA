@@ -1,0 +1,29 @@
+Metadata-Version: 2.0
+Name: AGLOW
+Version: 0.0.9.1
+Summary: AGLOW: Automated Grid-enabled LOFAR Workflows
+Home-page: https://www.github.com/apmechev/AGLOW/
+Author: Alexandar Mechev
+Author-email: LOFAR@apmechev.com
+License: UNKNOWN
+Download-URL: https://github.com/apmechev/AGLOW/archive/v0.0.9x.tar.gz
+Description-Content-Type: UNKNOWN
+Keywords: surfsara,distributed-computing,LOFAR,workflow,airflow
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Classifier: Topic :: System :: Distributed Computing
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+
+Distributing, Automating and Accelerating LOFAR data processing using an industry standard workflow orchestration software on a High Throughput cluster at the Dutch Grid location.
+
+
