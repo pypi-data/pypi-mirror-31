@@ -1,0 +1,12 @@
+setup.py
+magi/__init__.py
+magi/accuracy.py
+magi/core.py
+magi/generate_ts.py
+magi/plotting.py
+magi.egg-info/PKG-INFO
+magi.egg-info/SOURCES.txt
+magi.egg-info/dependency_links.txt
+magi.egg-info/not-zip-safe
+magi.egg-info/requires.txt
+magi.egg-info/top_level.txt
