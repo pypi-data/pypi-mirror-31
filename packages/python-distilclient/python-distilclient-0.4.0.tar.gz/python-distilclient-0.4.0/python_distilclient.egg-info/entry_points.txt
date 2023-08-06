@@ -1,0 +1,9 @@
+[openstack.cli.extension]
+rating = distilclient.cli
+
+[openstack.rating.v2]
+rating_health_get = distilclient.v2.cli:Health
+rating_invoice_list = distilclient.v2.cli:ListInvoices
+rating_product_list = distilclient.v2.cli:ListProducts
+rating_quotation_list = distilclient.v2.cli:ListQuotations
+

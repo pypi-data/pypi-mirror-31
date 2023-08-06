@@ -1,0 +1,55 @@
+CHANGES
+=======
+
+0.4.0
+-----
+
+* Support CLI for /quotations and /invoices
+
+0.3.3
+-----
+
+* Add region name when getting distil URL
+* Support CLI for /health and /products
+
+0.3.2
+-----
+
+* Allow InvoiceManager to take datetime values
+
+0.3.1
+-----
+
+* Add the missing "detailed" parameter
+* Replace six.iteritems() with .items()
+* Replaces uuid.uuid4 with uuidutils.generate\_uuid()
+* Support /health and /products API
+* Fix html\_last\_updated\_fmt for Python3
+* Remove dates from QuotationManger list
+* Fix the cover job
+
+0.3.0
+-----
+
+* Support /credits API
+* Support /invoices and /quotations API
+* Fix py35 and pep8
+* Fix missing dependency for pep8 gate
+* Rename \`usage\` to \`measurements\`
+* Update README.rst
+
+0.2.0
+-----
+
+* Support distil V2 API
+* Add LICENSE
+
+0.1.1
+-----
+
+* Fix docs gate failure
+* V3 support for the distil client
+* Move other-requirements.txt to bindep.txt
+* List system dependencies for running common tests
+* Init commit for distil client
+* Added .gitreview
