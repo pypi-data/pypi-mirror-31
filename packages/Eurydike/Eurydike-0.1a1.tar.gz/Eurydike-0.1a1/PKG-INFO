@@ -1,0 +1,25 @@
+Metadata-Version: 1.2
+Name: Eurydike
+Version: 0.1a1
+Summary: Eurydike is a simple event detection. Reacts to above-threshold, below-thershold, and outside value-band.
+Home-page: https://gitlab.com/pelops/eurydike/
+Author: Tobias Gawron-Deutsch
+Author-email: tobias@strix.at
+License: MIT license
+Description: Eurydike is a simple event detection. Reacts to above-threshold,
+        below-thershold, and outside value-band.
+        
+        part of `pelops <https://gitlab.com/pelops/pelops>`__.
+        
+        
+Keywords: mqtt device driver rpi raspberry pi
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Environment :: No Input/Output (Daemon)
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Utilities
+Classifier: Topic :: Home Automation
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.5
