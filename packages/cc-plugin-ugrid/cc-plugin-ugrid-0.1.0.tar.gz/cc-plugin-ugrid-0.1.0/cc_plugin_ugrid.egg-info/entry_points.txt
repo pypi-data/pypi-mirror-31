@@ -1,0 +1,3 @@
+[compliance_checker.suites]
+ugrid-1.0 = cc_plugin_ugrid.checker_10:UgridChecker10
+
