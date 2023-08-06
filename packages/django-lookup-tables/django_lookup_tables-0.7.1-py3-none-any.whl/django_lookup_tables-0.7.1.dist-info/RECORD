@@ -1,0 +1,15 @@
+django_lookup_tables-0.7.1.dist-info/METADATA,sha256=SdKwS8PLDfeyXxu_Wmul0QfdkX_35BxBMt1xmkn7MPs,1005
+django_lookup_tables-0.7.1.dist-info/RECORD,,
+django_lookup_tables-0.7.1.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+django_lookup_tables-0.7.1.dist-info/top_level.txt,sha256=wfWiUyQubPK8f15fPuKbaYy7rU1Hp38Zzqx_R07_QnE,20
+lookup_tables/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lookup_tables/admin.py,sha256=6Fjg2GfFrIYRe-DDDNfKbTReh1j8LgaqzoJvxyiQfYY,843
+lookup_tables/apps.py,sha256=ZQCd0925mK32wkhUvztIBjK0wLxK6l5srBvlEdXI2Qs,158
+lookup_tables/conf.py,sha256=UXX-GwymXC5LJmqjr3Iy5zg5X9QW7NmqALxLWPP-Yv0,152
+lookup_tables/models.py,sha256=7N8pR6xj6NMgScxsOYiTqtEfD6MxW0clHW5qG2tf8yg,658
+lookup_tables/migrations/0001_initial.py,sha256=-ZBQPSiJ-a0TOJg1vLUXlAvF7mUWx68wL9Z-7s5bID4,1422
+lookup_tables/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/settings.py,sha256=wETfwHHhhI4EdDbbNycWKoi5SVjx19hRwIeWh1RTLjY,1592
+tests/test_models.py,sha256=M2XWnH6gV0-xwmOPPX0GxqzQNADPIN5sAO1e1CrX6XQ,2156
+tests/urls.py,sha256=p7EGgh3gAikBC2PT1qmL-d2-dXRkkNKSk2GqAVCGRDk,208

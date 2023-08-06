@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: django-lookup-tables
+Version: 0.7.1
+Summary: Combine all lookup tables into a single unified system.
+Home-page: https://github.com/seawolf42/django-lookup-tables
+Author: jeffrey k eliasen
+Author-email: jeff+django-lookup-tables@jke.net
+License: MIT License
+Keywords: django-lookup-tables
+Platform: UNKNOWN
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 1.8
+Classifier: Framework :: Django :: 1.9
+Classifier: Framework :: Django :: 1.10
+Classifier: Framework :: Django :: 1.11
+Classifier: Framework :: Django :: 2.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: Django (>=1.8)
+
+<failed to open README.rst>
+
+
