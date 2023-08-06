@@ -1,0 +1,94 @@
+Metadata-Version: 2.1
+Name: dativatools
+Version: 2.8
+Summary: A selection of tools for easier processing of data using Pandas and AWS
+Home-page: https://bitbucket.org/dativa4data/dativatools/
+Author: Dativa
+Author-email: hello@dativa.com
+License: MIT
+Keywords: dativa
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+Requires-Dist: boto (>=2.48.0)
+Requires-Dist: boto3 (>=1.4.4)
+Requires-Dist: botocore (>=1.5.80)
+Requires-Dist: chardet (>=3.0.4)
+Requires-Dist: pandas (>=0.18.0)
+Requires-Dist: paramiko (>=2.2.1)
+Requires-Dist: patool (>=1.12)
+Requires-Dist: psycopg2 (>=2.7.3.1)
+Requires-Dist: pexpect (>=4.2.1)
+
+# Dativa Tools
+
+Provides useful libraries for processing large data sets. Developed by the team at [www.dativa.com](https://www.dativa.com) as we find them useful in our projects.
+
+Any questions, please email hello AT dativa.com
+
+## Installation
+
+```
+pip install dativatools
+```
+
+## Description
+
+The library includes two modules:
+* dativatools - which contains the legacy classes
+* dativa.tools - which contains the more recent classes.
+
+Over time it is expected that we will migrate all classes over to the dativa.tools module
+
+
+### dativa.tools.AthenaClient
+ An easy to use client for AWS Athena that will create tables from S3 buckets (using AWS Glue and run queries against these tables.
+
+### dativa.tools.pandas.CSVHandler
+
+ A wrapper for pandas CSV handling to read and write DataFrames
+that is provided in pandas with consistent CSV parameters and
+sniffing the CSV parameters automatically.
+Includes reading a CSV into a DataFrame, and writing it out to a string.
+
+### Support functions for Pandas
+
+* dativa.tools.pandas.is_numeric - a function to check whether a series or string is numeric
+* dativa.tools.pandas.string_to_datetime - a function to convert a string, or series of strings to a datetime, with a strptime date format that supports nanoseconds
+* dativa.tools.pandas.datetime_to_string - a function to convert a datetime, or a series of datetimes to a string, with a strptime date format that supports nanoseconds
+* dativa.tools.pandas.format_string_is_valid - a function to confirm whether a strptime format string returns a date
+* dativa.tools.pandas.get_column_name - a function to return the name of a column from a passed column name or index.
+* dativa.tools.pandas.get_unique_column_name - a function to return a unique column name when adding new columns to a DataFrame
+
+### Legacy classes
+
+#### dativatools.CommonUtility
+Supports various common activities including getting detailed descriptions about exceptions, logging activity into a CSV file or database table
+ and sending email reports of failures.
+
+#### dativatools.DataValidation
+Class containing methods to validate file sizes, dates, counts, names and extensions at a specified location.
+
+#### dativatools.DatabaseManagement
+Generic database management operations including data insertion, table deletion, backup, rename, drop and create as well as query execution.
+
+#### dativatools.RsyncLib
+Class to perform file transfer using Rsync.
+
+#### dativatools.SFTPLib
+Class to perform file transfer using SFTP.
+
+#### dativatools.ArchiveManager
+Class to manage archiving and unarchiving of files to and from specific locations.
+
+#### dativatools.TextToCsvConverter
+Class containing methods required to convert a text file to CSV and change certain parameters like headers, separators etc.
+
+#### dativatools.S3Lib
+Supports connecting to and getting and putting data to and from AWS S3 buckets.
+
+
