@@ -1,0 +1,3 @@
+[console_scripts]
+pyoracc = pyoracc.wrapper.cli:main
+
