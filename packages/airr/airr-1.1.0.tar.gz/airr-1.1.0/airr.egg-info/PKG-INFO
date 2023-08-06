@@ -1,0 +1,66 @@
+Metadata-Version: 1.1
+Name: airr
+Version: 1.1.0
+Summary: AIRR Community Data Representation Standard reference library for antibody and TCR sequencing data.
+Home-page: http://docs.airr-community.org
+Author: AIRR Community
+Author-email: UNKNOWN
+License: CC BY 4.0
+Description: AIRR Python Reference Library
+        ===============================================================================
+        
+        **Installation**
+        
+        Install in the usual manner from PyPI::
+        
+            > pip3 install airr --user
+        
+        Or from the `downloaded <https://github.com/airr-community/airr-standards>`__
+        source code directory::
+        
+            > python3 setup.py install --user
+        
+        **Reading AIRR formatted files**
+        
+        The ``airr`` package contains functions to read and write AIRR data files
+        as either iterables or pandas data frames. The usage is straightforward,
+        as the file format is a typical tab delimited file, but the package
+        performs some additional validation and type conversion beyond using a
+        standard CSV reader.
+        
+        .. code-block:: python
+        
+            import airr
+        
+            # Create an iteratable that returns a dictionary for each row
+            reader = airr.read_rearrangement(open('input.tsv', 'r'))
+        
+            # Load the entire file into a pandas data frame
+            df = airr.load_rearrangement(open('input.tsv', 'r'))
+        
+        **Writing AIRR formatted files**
+        
+        Similar to the read operations, write functions are provided for either creating
+        a writer class to perform row-wise output or writing the entire contents of
+        a pandas data frame to a file. Again, usage is straightforward with the `airr`
+        output functions simply performing some type conversion and field ordering
+        operations.
+        
+        .. code-block:: python
+        
+            import airr
+        
+            # Create a writer class for iterative row output
+            writer = airr.create_rearrangement(open('output.tsv', 'w'))
+            for row in reader:  writer.write(row)
+        
+            # Write an entire pandas data frame to a file
+            airr.dump_rearrangement(df, open('file.tsv', 'w'))
+Keywords: AIRR,bioinformatics,sequencing,immunoglobulin,antibody,adaptive immunity,T cell,B cell,BCR,TCR
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
