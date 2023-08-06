@@ -1,0 +1,12 @@
+django_domain_specific_language-1.2.4.dist-info/DESCRIPTION.rst,sha256=6gqQKUI-MzMxQMrysVrR9e1Sln5F4F-TUuP4sO2q_eM,2673
+django_domain_specific_language-1.2.4.dist-info/METADATA,sha256=PnFnaZM7BqsxWSl6T0aB_zsy7Oq3Ci0_tR8Z0Vtfnx8,3365
+django_domain_specific_language-1.2.4.dist-info/RECORD,,
+django_domain_specific_language-1.2.4.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+django_domain_specific_language-1.2.4.dist-info/metadata.json,sha256=QUHwSOnz--GtvDulMsu4Q5Fcb4yrWGlDEoeO-6fysEg,883
+django_domain_specific_language-1.2.4.dist-info/top_level.txt,sha256=HkD8BTyyWLk4qZ5Dco22yrgQOYxQLucr9f2diC9Apzo,11
+django_dsl/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_dsl/exceptions.py,sha256=2hecGAssuwJhj7wZyNLZyc3dj1vQwHiopV6fl2yBQaI,99
+django_dsl/lexer.py,sha256=Avy7mvmvvqrUvTUV6G4yvgnn2lgKE8znKdzhTkFqOtE,629
+django_dsl/parser.py,sha256=qNuBGReFBKn1hqbNY1hnMgZyhRzU1JQv7AQLGOdTXRQ,4680
+django_dsl/parsetab.py,sha256=IyarCXYH9VMT2WX1bL1XT3jKi_lDsnOufI6HSyIkeek,1620
+django_dsl/run.py,sha256=x4kr0cjEPt3bL4efUNeTjDtP2P9jPvjgPySVoGEC9YY,282
