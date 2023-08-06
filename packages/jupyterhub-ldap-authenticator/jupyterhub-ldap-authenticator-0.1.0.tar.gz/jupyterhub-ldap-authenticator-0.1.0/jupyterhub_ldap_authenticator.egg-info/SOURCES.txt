@@ -1,0 +1,12 @@
+CHANGELOG.md
+LICENSE.md
+MANIFEST.in
+README.md
+setup.py
+jupyterhub_ldap_authenticator.egg-info/PKG-INFO
+jupyterhub_ldap_authenticator.egg-info/SOURCES.txt
+jupyterhub_ldap_authenticator.egg-info/dependency_links.txt
+jupyterhub_ldap_authenticator.egg-info/requires.txt
+jupyterhub_ldap_authenticator.egg-info/top_level.txt
+ldapauthenticator/__init__.py
+ldapauthenticator/ldapauthenticator.py
