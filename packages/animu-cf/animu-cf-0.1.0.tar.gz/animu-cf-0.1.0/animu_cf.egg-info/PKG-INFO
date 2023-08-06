@@ -1,0 +1,35 @@
+Metadata-Version: 1.1
+Name: animu-cf
+Version: 0.1.0
+Summary: An Python API Wrapper for CF's API.
+Home-page: https://github.com/CFCorp/animu.py
+Author: August (Chris)
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: # animu.py
+        animu.py is a Python library for CF's API!
+        
+        ## Examples
+        ```py
+        from animu import CFClient
+        
+        client = CFClient(user_agent='animu.py/Production/v0.0.1')
+        
+        def getAnimu():
+            anime = client.get_animu()
+            return anime['url']
+        
+        def getHentai():
+            hentai = client.get_hentai()
+            return hentai['url']
+        ```
+        
+        ## Changelog
+        * v0.0.1 => Initial Release
+Keywords: hentai anime animu api api-wrapper
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
