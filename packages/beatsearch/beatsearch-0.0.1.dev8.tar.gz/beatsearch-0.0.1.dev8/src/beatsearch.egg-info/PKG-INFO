@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: beatsearch
+Version: 0.0.1.dev8
+Summary: Symbolic rhythm analysis
+Home-page: https://tomasito665.github.io/beatsearch
+Author: Jordi Ortolá Ankum
+Author-email: jordi665@hotmail.com
+License: MIT License
+Download-URL: https://pypi.org/project/beatsearch/
+Description: .. image:: https://travis-ci.org/Tomasito665/beatsearch.svg?branch=master
+            :target: https://travis-ci.org/Tomasito665/beatsearch
+        
+        Beatsearch
+        ==========
+        
+        Beatsearch is a Python library for feature extraction, distance computation and visualization of symbolic rhythms.
+        
+        Documentation: https://tomasito665.github.io/beatsearch
+        
+Platform: UNKNOWN
