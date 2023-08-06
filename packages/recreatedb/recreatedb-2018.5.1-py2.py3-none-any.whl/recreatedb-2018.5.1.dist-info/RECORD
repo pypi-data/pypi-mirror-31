@@ -1,0 +1,11 @@
+recreatedb/__init__.py,sha256=K0kNy26Vm6A-1V5lST3ily6yVsNLUbiqk6AZDFm2nJI,20
+recreatedb/__version__.py,sha256=pmLDtkWYO_3tm73Aa6Hs-xAumm3v-ezDODAhWmdM3Mk,66
+recreatedb/cli.py,sha256=7J5oh-heWk8ROm-sAbi4Z6ASvxoVbsPZkQ2A70Y65_M,578
+recreatedb/core.py,sha256=pNGIGpSe2ZJspvGW5Jc2qQ268zqgSPTXsrWtoo9ii8U,3129
+recreatedb/config/.recreatedb,sha256=NW-cm2xCpKL2xUKjhaLPcAa6TvLRSZaWnz0Na-Nb_no,71
+recreatedb/config/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+recreatedb-2018.5.1.dist-info/METADATA,sha256=EqtR38evDtCXF96_gGB4mCNMctFNTjFXjzO0sLcJ77M,2245
+recreatedb-2018.5.1.dist-info/RECORD,,
+recreatedb-2018.5.1.dist-info/WHEEL,sha256=gduuPyBvFJQSQ0zdyxF7k0zynDXbIbvg5ZBHoXum5uk,110
+recreatedb-2018.5.1.dist-info/entry_points.txt,sha256=RIuM_gH00ITrNTfBj1XfcU0XArsQMsDNwut2LRL2Mrs,52
+recreatedb-2018.5.1.dist-info/top_level.txt,sha256=DI1hO9_WE4EUSgUf23_JA33X8-2upC-tEzKE8nkY8sU,11
