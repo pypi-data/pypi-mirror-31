@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+topemoji-cli
+TopEmoji.egg-info/PKG-INFO
+TopEmoji.egg-info/SOURCES.txt
+TopEmoji.egg-info/dependency_links.txt
+TopEmoji.egg-info/requires.txt
+TopEmoji.egg-info/top_level.txt
+topemoji/__init__.py
+topemoji/emoji.tsv
+topemoji/topemoji.py
