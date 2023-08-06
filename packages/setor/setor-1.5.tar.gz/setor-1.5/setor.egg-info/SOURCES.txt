@@ -1,0 +1,12 @@
+README.rst
+setup.cfg
+setup.py
+setor/__init__.py
+setor/setor.py
+setor/userAgents.py
+setor.egg-info/PKG-INFO
+setor.egg-info/SOURCES.txt
+setor.egg-info/dependency_links.txt
+setor.egg-info/entry_points.txt
+setor.egg-info/requires.txt
+setor.egg-info/top_level.txt
