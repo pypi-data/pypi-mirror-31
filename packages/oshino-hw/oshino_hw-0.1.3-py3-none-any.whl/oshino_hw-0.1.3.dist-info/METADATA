@@ -1,0 +1,16 @@
+Metadata-Version: 2.0
+Name: oshino-hw
+Version: 0.1.3
+Summary: An agent to retrieve HW info
+Home-page: UNKNOWN
+Author: Šarūnas Navickas
+Author-email: UNKNOWN
+License: UNKNOWN
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: oshino
+Requires-Dist: psutil (==5.2.2)
+
+UNKNOWN
+
+
