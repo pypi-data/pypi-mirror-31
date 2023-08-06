@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: validemail
+Version: 1.1
+Summary: alidemail verifies if an email address is valid and really exists.
+Home-page: https://github.com/oleg-borodai/validate_email
+Author: Oleg Borodai
+Author-email: oleg@borodai.com
+License: UNKNOWN
+Download-URL: https://github.com/oleg-borodai/validate_email/archive/1.1.tar.gz
+Description: UNKNOWN
+Keywords: email,validation,dnspython
+Platform: UNKNOWN
