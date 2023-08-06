@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: atsync
+Version: 1.0.0
+Summary: One way sync python dicts to airtable.
+Home-page: https://bitbucket.org/mckinnonsc-ericv/atsync/
+Author: Eric van de Paverd | McKinnon Secondary College
+Author-email: ericv@mckinnonsc.vic.edu.au
+License: UNKNOWN
+Project-URL: Bug Reports, https://bitbucket.org/mckinnonsc-ericv/atsync/issues/
+Project-URL: Source, https://bitbucket.org/mckinnonsc-ericv/atsync/src/
+Keywords: airtable etl database sync
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Database
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+Requires-Dist: airtable-python-wrapper
+
+# README #
+
+This tool provides one-way idempotent sync from list of json / python dict records.  Uses airtable-python-wrapper for access to airtable REST API.
+
