@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: flake8-pytest-mark
+Version: 0.1.1
+Summary: A flake8 plugin that helps check the presence of a PyTest mark
+Home-page: https://github.com/rcbops/flake8-pytest-mark
+Author: Zach Reichert
+Author-email: zach.reichert@rackspace.com
+License: Apache Software License 2.0
+Keywords: flake8-pytest-mark
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Framework :: Flake8
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*
+Requires-Dist: flake8 (!=3.2.0)
+
+==================
+Flake8-pytest-mark
+==================
+
+
+Check and enforce the presence of a mark on a pytest test case.
+
+Quick Start Guide
+-----------------
+
+1. Install ``flake8-pytest-mark`` from PyPI with pip::
+
+    $ pip install flake8-pytest-mark
+
+2. Configure a mark that you would like to validate::
+
+    $ cd project_root/
+    $ vi .flake8
+
+.. code-block::ini
+    [flake8]
+    pytest_mark1 = name=test_id
+                   value_match=uuid
+3. Run flake8::
+
+    $ flake8 tests/
+
+Gotchas
+-------
+1. It is highly recommended to use this plugin inside of a virtualenv
+2. A configuration is required by this plugin, if none is found the plugin will throw a M401 validation error for every file
+
+Credits
+-------
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _CONTRIBUTING.rst: CONTRIBUTING.rst
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+
+=======
+History
+=======
+
+
