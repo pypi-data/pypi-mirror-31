@@ -1,0 +1,58 @@
+Metadata-Version: 1.1
+Name: nr-common
+Version: 0.1.2
+Summary: Common python functionalities aimed to be at least compatible with Python3.
+Home-page: https://github.com/nitred/nr-common
+Author: Nitish Reddy Koripalli
+Author-email: UNKNOWN
+License: UNKNOWN
+Download-URL: https://github.com/nitred/nr-common/archive/0.1.2.tar.gz
+Description: # nr-common
+        [![Build Status](https://travis-ci.org/nitred/nr-common.svg?branch=master)](https://travis-ci.org/nitred/nr-common)
+        
+        Common python functionalities aimed to be at least compatible with Python3.
+        
+        #### Current Stable Version
+        ```
+        0.1.2
+        ```
+        
+        
+        # Installation
+        
+        ### pip
+        ```
+        pip install nr-common
+        ```
+        
+        
+        ### Development Installation
+        
+        * Clone the project.
+        * Install in Anaconda3 environment
+        ```
+        $ conda env create --force -f dev_environment.yml
+        $ source activate nr-common
+        $ pip install -e .
+        ```
+        
+        
+        # Test
+        To run the tests:
+        ```
+        make test
+        ```
+        
+        
+        # Examples
+        ```
+        $ python examples/simple.py
+        ```
+        
+        
+        # License
+        MIT
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
