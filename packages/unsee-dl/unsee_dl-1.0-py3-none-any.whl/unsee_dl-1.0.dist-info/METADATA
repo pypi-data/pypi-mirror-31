@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: unsee-dl
+Version: 1.0
+Summary: unsee.cc downloader
+Home-page: https://github.com/andsala/unsee-dl
+License: UNKNOWN
+Project-URL: Source, https://github.com/andsala/unsee-dl
+Project-URL: Issues, https://github.com/andsala/unsee-dl/issues
+Keywords: unsee download
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Utilities
+Requires-Python: >=3
+Requires-Dist: selenium (>=3.11")
+
+UNKNOWN
+
+
