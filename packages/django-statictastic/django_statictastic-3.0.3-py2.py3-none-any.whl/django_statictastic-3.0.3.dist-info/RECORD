@@ -1,0 +1,16 @@
+django_statictastic-3.0.3.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+django_statictastic-3.0.3.dist-info/METADATA,sha256=fEuLDv1buID1CEaCbz02hiO5GUNFXMQfn7hRMIlTjJE,335
+django_statictastic-3.0.3.dist-info/RECORD,,
+django_statictastic-3.0.3.dist-info/WHEEL,sha256=kdsN-5OJAZIiHN-iO4Rhl82KyS0bDWf4uBwMbkNafr8,110
+django_statictastic-3.0.3.dist-info/metadata.json,sha256=p1SJxCha0PBwT0jRnQDpZUO5WteE9sZ48cM3xQJK_k4,486
+django_statictastic-3.0.3.dist-info/top_level.txt,sha256=N1t1bMvRFWO-u-N01bNcglkWzn94m6DHly8p6LnfYbo,13
+statictastic/__init__.py,sha256=gicjVlq9k8WdywNlJ66R6K7SPhhkPL3RmGxbzKIfYSI,862
+statictastic/backends.py,sha256=OXuRl13f6rYZCZjVp2ZkrJco56aN9O6iWVmzgUgoAM8,1399
+statictastic/metadata.py,sha256=seNZinNyUfxmomEepiUzFgmCjsg9JfDeWQCabgsWGtA,794
+statictastic/progress.py,sha256=zE1JkmtBZQpH-U00abGPCyWKVAvxiCdJ8vDMi9nmqo8,2447
+statictastic/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+statictastic/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+statictastic/management/commands/create_iam_access_keys.py,sha256=reCTn6Cwxmeb3X-tUA5xDRdm9SwM7X_CviShweAlduQ,6710
+statictastic/management/commands/syncmedia.py,sha256=QJJbnSBsRH5lwH8-N8LnmuOfmxyxlPHu0BgBUZkmkTY,3233
+statictastic/templatetags/__init__.py,sha256=f-OTuf2hyThfxpF95an98jigIqjm8MeHSBYqpzHugcI,593
+statictastic/templatetags/statictastic.py,sha256=cDjv_K3JYung3lLewVSSYV61AJrh18mfrtiYAzfLhJk,3494
