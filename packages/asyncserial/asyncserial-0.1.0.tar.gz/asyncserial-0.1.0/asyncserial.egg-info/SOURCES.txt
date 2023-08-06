@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+asyncserial/__init__.py
+asyncserial/abstract_async_wrapper.py
+asyncserial/async_serial_wrapper.py
+asyncserial.egg-info/PKG-INFO
+asyncserial.egg-info/SOURCES.txt
+asyncserial.egg-info/dependency_links.txt
+asyncserial.egg-info/requires.txt
+asyncserial.egg-info/top_level.txt
