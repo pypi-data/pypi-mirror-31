@@ -1,0 +1,29 @@
+Metadata-Version: 2.0
+Name: vectra-api-tools
+Version: 1.0rc6
+Summary: Vectra API client library
+Home-page: https://github.com/vectranetworks/vectra_api_tools
+Author: Vectra
+Author-email: tme@vectra.ai
+License: Apache 2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Topic :: Utilities
+Requires-Python: >=2.6, !=3.0.*, !=3.1.*, !=3.2.*, <4
+Requires-Dist: requests
+Requires-Dist: pytz
+Requires-Dist: cabby
+Requires-Dist: stix
+
+_Vectra API Tools_ is set of resources that is designed to save time and repetitive work by providing a python library that simplifies interaction with the Vectra API. Current modules available:  
+- _cli.py_ is a set of common parameters which can be imported into scripts which are designed to be run from the command line
+- _stix_taxii.py_ is a module that provides a taxii client to ingest threat feeds and write to STIX file
+- _vectra.py_ is module that provides methods that simplify interaction with the Vectra API. There are methods to support most entities including hosts, detections, and advance search.
+
+
