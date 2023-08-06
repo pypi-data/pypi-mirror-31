@@ -1,0 +1,38 @@
+version: '3.4'
+
+x-compose-paas:
+  resources:
+    cpus: '0.1'
+    memory: '1024'
+  singularity:
+    admin_email: 'admin@email.com'
+    endpoint: 'http://prd.net/singularity/api'
+    slave_placement: ''
+    cron_schedule: ''
+  marathon:
+    endpoint: 'http://prd.net/marathon/v2'
+    fetch:
+      uri: 'file:///etc/docker.tar.gz'
+    resource_roles:
+      - '*'
+    id: '/service/name'
+  docker:
+    params:
+      entrypoint: 'run_web_api.sh'
+      ulimit: 'nofile=10240:10240'
+    forcepull: 'false'
+
+services:
+  api:
+    container_name: 'example-service'
+    hostname: 'example-service'
+    command: ''
+    image: example/my_web_app:latest
+    network_mode: "bridge"
+    entrypoint: run_web_api.sh
+
+  db:
+    image: postgres:latest
+
+  cache:
+    image: redis:latest
