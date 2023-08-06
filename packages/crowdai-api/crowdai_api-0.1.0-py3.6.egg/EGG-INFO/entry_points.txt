@@ -1,0 +1,3 @@
+[console_scripts]
+crowdai_api = crowdai_api.cli:main
+
