@@ -1,0 +1,13 @@
+setup.cfg
+setup.py
+cebstemmer/__init__.py
+cebstemmer/print_prefixes.py
+cebstemmer/repos.py
+cebstemmer/stemmer.py
+cebstemmer/utilities.py
+cebstemmer/wrappers.py
+cebstemmer.egg-info/PKG-INFO
+cebstemmer.egg-info/SOURCES.txt
+cebstemmer.egg-info/dependency_links.txt
+cebstemmer.egg-info/requires.txt
+cebstemmer.egg-info/top_level.txt
