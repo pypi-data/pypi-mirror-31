@@ -1,0 +1,10 @@
+pandas
+sortedcontainers
+
+[dev]
+check-manifest
+
+[test]
+tox
+pytest
+pytest-cov
