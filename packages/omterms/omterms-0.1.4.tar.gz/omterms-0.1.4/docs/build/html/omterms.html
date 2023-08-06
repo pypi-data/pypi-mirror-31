@@ -1,0 +1,1385 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>omterms package &#8212; Custom Term Extraction 0.1.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="omterms-package">
+<h1>omterms package<a class="headerlink" href="#omterms-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-omterms.cleaner">
+<span id="omterms-cleaner-module"></span><h2>omterms.cleaner module<a class="headerlink" href="#module-omterms.cleaner" title="Permalink to this headline">¶</a></h2>
+<p>OpenMaker text cleaner.</p>
+<p>Author: Bulent Ozel
+e-mail: <a class="reference external" href="mailto:bulent&#46;ozel&#37;&#52;&#48;gmail&#46;com">bulent<span>&#46;</span>ozel<span>&#64;</span>gmail<span>&#46;</span>com</a></p>
+<p>The module contains a set of tools to clean textual data.</p>
+<dl class="class">
+<dt id="omterms.cleaner.TextCleaner">
+<em class="property">class </em><code class="descclassname">omterms.cleaner.</code><code class="descname">TextCleaner</code><span class="sig-paren">(</span><em>stopwords=[]</em>, <em>exceptions=[]</em>, <em>fstemmer=&lt;function TextCleaner.&lt;lambda&gt;&gt;</em>, <em>stemcheck=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/cleaner.html#TextCleaner"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.cleaner.TextCleaner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>An object that contains a set of tools to clean and preprocess textual data.</p>
+<dl class="docutils">
+<dt>Note:</dt>
+<dd>The object uses nltk.FreqDist object
+For stem checks during pruninng it needs an external stemmer.</dd>
+<dt>Attributes:</dt>
+<dd>exceptions (<code class="xref py py-obj docutils literal"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal"><span class="pre">str</span></code>): List of excepted terms.
+stopwords (<code class="xref py py-obj docutils literal"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal"><span class="pre">str</span></code>): List of stopwords.
+stemf: A stemmer funtion.</dd>
+</dl>
+<dl class="method">
+<dt id="omterms.cleaner.TextCleaner.clean">
+<code class="descname">clean</code><span class="sig-paren">(</span><em>words</em>, <em>display_top=10</em>, <em>logging=True</em>, <em>exceptions=[]</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/cleaner.html#TextCleaner.clean"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.cleaner.TextCleaner.clean" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes panctuations and stopwords from a corpus.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd><p class="first">words (<code class="xref py py-obj docutils literal"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal"><span class="pre">str</span></code>): The input corpus as list of words.
+display_top (<code class="xref py py-obj docutils literal"><span class="pre">int</span></code>, optional): Logging size (default 10).
+logging (<code class="xref py py-obj docutils literal"><span class="pre">bool</span></code>): Optional. When true stdout logging is done (default True).
+exceptions (<code class="xref py py-obj docutils literal"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal"><span class="pre">str</span></code>, optional): The list terms that will not</p>
+<blockquote class="last">
+<div>be pruned (default None).</div></blockquote>
+</dd>
+<dt>Returns:</dt>
+<dd>(<code class="xref py py-obj docutils literal"><span class="pre">nltk.FreqDist</span></code>): Returns the trimmed corpus as the NLTK obj.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="omterms.cleaner.TextCleaner.extend_stopwords">
+<code class="descname">extend_stopwords</code><span class="sig-paren">(</span><em>spointer</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/cleaner.html#TextCleaner.extend_stopwords"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.cleaner.TextCleaner.extend_stopwords" title="Permalink to this definition">¶</a></dt>
+<dd><p>The method extends a new stopwords list.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd><dl class="first last docutils">
+<dt>spointer (<code class="xref py py-obj docutils literal"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal"><span class="pre">str</span></code>, <code class="xref py py-obj docutils literal"><span class="pre">str</span></code>): Either file path string or</dt>
+<dd>a list of stopwords.</dd>
+</dl>
+</dd>
+<dt>Returns:</dt>
+<dd>bool: True if successful, False otherwise.</dd>
+<dt>Raises:</dt>
+<dd>FileNotFoundError: Raised if a given file is not accessable.</dd>
+</dl>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="omterms.cleaner.TextCleaner.freq_dist">
+<em class="property">static </em><code class="descname">freq_dist</code><span class="sig-paren">(</span><em>words</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/cleaner.html#TextCleaner.freq_dist"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.cleaner.TextCleaner.freq_dist" title="Permalink to this definition">¶</a></dt>
+<dd><p>The static method computes frequency distribution of a word list.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>words (<code class="xref py py-obj docutils literal"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal"><span class="pre">str</span></code>, <code class="xref py py-obj docutils literal"><span class="pre">str</span></code>): list of words.</dd>
+<dt>Returns:</dt>
+<dd>(<code class="xref py py-obj docutils literal"><span class="pre">nltk.FreqDist</span></code>): Returns frequency dist.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="omterms.cleaner.TextCleaner.isexception">
+<code class="descname">isexception</code><span class="sig-paren">(</span><em>term</em>, <em>exceptions=[]</em>, <em>stemcheck=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/cleaner.html#TextCleaner.isexception"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.cleaner.TextCleaner.isexception" title="Permalink to this definition">¶</a></dt>
+<dd><p>The static makes the exception list and returns it.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>term (<code class="xref py py-obj docutils literal"><span class="pre">str</span></code>): The term.
+exceptions (<code class="xref py py-obj docutils literal"><span class="pre">list</span></code>, optional): The list of exception terms (default None).
+stemcheck (<code class="xref py py-obj docutils literal"><span class="pre">bool</span></code>, optional): if the list to be extended via the stems (default False)</dd>
+<dt>Returns:</dt>
+<dd>(<code class="xref py py-obj docutils literal"><span class="pre">bool</span></code>):</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="omterms.cleaner.TextCleaner.load_stopwords">
+<code class="descname">load_stopwords</code><span class="sig-paren">(</span><em>spointer</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/cleaner.html#TextCleaner.load_stopwords"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.cleaner.TextCleaner.load_stopwords" title="Permalink to this definition">¶</a></dt>
+<dd><p>The method reloads a new stopwords list.</p>
+<dl class="docutils">
+<dt>Note:</dt>
+<dd>Internal stopword is overwritten.</dd>
+<dt>Args:</dt>
+<dd><dl class="first last docutils">
+<dt>spointer (<code class="xref py py-obj docutils literal"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal"><span class="pre">str`or</span> <span class="pre">:obj:`str</span></code>): Either file path string or</dt>
+<dd>a list of stopwords.</dd>
+</dl>
+</dd>
+<dt>Returns:</dt>
+<dd>bool: True if successful, False otherwise.</dd>
+<dt>Raises:</dt>
+<dd>FileNotFoundError: Raised if a given file is not accessable.</dd>
+</dl>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="omterms.cleaner.TextCleaner.make_exceptions">
+<em class="property">static </em><code class="descname">make_exceptions</code><span class="sig-paren">(</span><em>exceptions</em>, <em>stemf=&lt;function TextCleaner.&lt;lambda&gt;&gt;</em>, <em>stemcheck=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/cleaner.html#TextCleaner.make_exceptions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.cleaner.TextCleaner.make_exceptions" title="Permalink to this definition">¶</a></dt>
+<dd><p>The static method makes the exception list and returns it.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>exceptions (<code class="xref py py-obj docutils literal"><span class="pre">list</span></code>): The list of exception terms.
+stemf (x <code class="xref py py-obj docutils literal"><span class="pre">str</span></code> -&gt; y: <code class="xref py py-obj docutils literal"><span class="pre">str</span></code>, optional): A stemmer function (default f(x) = x)
+stemcheck (<code class="xref py py-obj docutils literal"><span class="pre">bool</span></code>, optional): if the list to be extended via the stems (default False)</dd>
+<dt>Returns:</dt>
+<dd><dl class="first last docutils">
+<dt>(<code class="xref py py-obj docutils literal"><span class="pre">set</span></code>): The exception set. If stemcheck is opted both terms and their stems </dt>
+<dd>is be represented in the list.</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="omterms.cleaner.TextCleaner.remove_contains">
+<code class="descname">remove_contains</code><span class="sig-paren">(</span><em>freq_dist</em>, <em>literals=&quot;.</em>, <em>():;!?\n`'=+/\\[]}{|&gt;&lt;&#64;#$%^&amp;*_‘’“”.&quot;</em>, <em>exceptions=[]</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/cleaner.html#TextCleaner.remove_contains"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.cleaner.TextCleaner.remove_contains" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes the terms that contains the specific literals.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>freq_dist (<code class="xref py py-obj docutils literal"><span class="pre">nltk.FreqDist</span></code>): list of words and more.
+literals (<code class="xref py py-obj docutils literal"><span class="pre">list</span></code> of  <code class="xref py py-obj docutils literal"><span class="pre">str</span></code>): list of literals.
+exceptions (<code class="xref py py-obj docutils literal"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal"><span class="pre">str</span></code>, optional): The exception list.</dd>
+<dt>Returns:</dt>
+<dd>(<code class="xref py py-obj docutils literal"><span class="pre">nltk.FreqDist</span></code>): Returns frequency dist.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="omterms.cleaner.TextCleaner.remove_numerals">
+<code class="descname">remove_numerals</code><span class="sig-paren">(</span><em>freq_dist</em>, <em>remove_any=False</em>, <em>exceptions=[]</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/cleaner.html#TextCleaner.remove_numerals"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.cleaner.TextCleaner.remove_numerals" title="Permalink to this definition">¶</a></dt>
+<dd><p>The method removes terms with numeral literals.</p>
+<dl class="docutils">
+<dt>Note:</dt>
+<dd>When remove_any is selected, literals such as 3D would vanish.</dd>
+<dt>Args:</dt>
+<dd>freq_dist (<code class="xref py py-obj docutils literal"><span class="pre">nltk.FreqDist</span></code>): list of words and more.
+remove_any (<code class="xref py py-obj docutils literal"><span class="pre">bool</span></code>, optional): If True mumeral and literal mixed terms are removed.
+exceptions (<code class="xref py py-obj docutils literal"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal"><span class="pre">str</span></code>, optional): The exception list.</dd>
+<dt>Returns:</dt>
+<dd>(<code class="xref py py-obj docutils literal"><span class="pre">nltk.FreqDist</span></code>): Returns frequency dist.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="omterms.cleaner.TextCleaner.remove_panctuation">
+<code class="descname">remove_panctuation</code><span class="sig-paren">(</span><em>freq_dist</em>, <em>exceptions=[]</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/cleaner.html#TextCleaner.remove_panctuation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.cleaner.TextCleaner.remove_panctuation" title="Permalink to this definition">¶</a></dt>
+<dd><p>The static method removes punctuation only terms.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>freq_dist (<code class="xref py py-obj docutils literal"><span class="pre">nltk.FreqDist</span></code>): list of words and more.
+exceptions (<code class="xref py py-obj docutils literal"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal"><span class="pre">str</span></code>, optional): The exception list.</dd>
+<dt>Returns:</dt>
+<dd>(<code class="xref py py-obj docutils literal"><span class="pre">nltk.FreqDist</span></code>): Returns frequency dist.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="omterms.cleaner.TextCleaner.remove_rare_terms">
+<code class="descname">remove_rare_terms</code><span class="sig-paren">(</span><em>freq_dist</em>, <em>below=3</em>, <em>exceptions=[]</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/cleaner.html#TextCleaner.remove_rare_terms"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.cleaner.TextCleaner.remove_rare_terms" title="Permalink to this definition">¶</a></dt>
+<dd><p>The method removes terms that have rare occurances.</p>
+<dl class="docutils">
+<dt>Note:</dt>
+<dd>Such removal may help reduce errenous and random terms.</dd>
+<dt>Args:</dt>
+<dd>freq_dist (<code class="xref py py-obj docutils literal"><span class="pre">nltk.FreqDist</span></code>): list of words and more.
+below (<code class="xref py py-obj docutils literal"><span class="pre">int</span></code>, optional): The minumum allowed frequency count (default 3).
+exceptions (<code class="xref py py-obj docutils literal"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal"><span class="pre">str</span></code>, optional): The exception list.</dd>
+<dt>Returns:</dt>
+<dd>(<code class="xref py py-obj docutils literal"><span class="pre">nltk.FreqDist</span></code>): Returns frequency dist.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="omterms.cleaner.TextCleaner.remove_short_terms">
+<code class="descname">remove_short_terms</code><span class="sig-paren">(</span><em>freq_dist</em>, <em>threshold=1</em>, <em>exceptions=[]</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/cleaner.html#TextCleaner.remove_short_terms"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.cleaner.TextCleaner.remove_short_terms" title="Permalink to this definition">¶</a></dt>
+<dd><p>The method removes terms that are below a certain length.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>freq_dist (<code class="xref py py-obj docutils literal"><span class="pre">nltk.FreqDist</span></code>): list of words and more.
+threshold (<code class="xref py py-obj docutils literal"><span class="pre">int</span></code>, optional): The charcter length of a term (default 1).
+exceptions (<code class="xref py py-obj docutils literal"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal"><span class="pre">str</span></code>, optional): The exception list.</dd>
+<dt>Returns:</dt>
+<dd>(<code class="xref py py-obj docutils literal"><span class="pre">nltk.FreqDist</span></code>): Returns frequency dist.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="omterms.cleaner.TextCleaner.remove_stopwords">
+<code class="descname">remove_stopwords</code><span class="sig-paren">(</span><em>freq_dist</em>, <em>exceptions=[]</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/cleaner.html#TextCleaner.remove_stopwords"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.cleaner.TextCleaner.remove_stopwords" title="Permalink to this definition">¶</a></dt>
+<dd><p>The static method removes stopwords.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>freq_dist (<code class="xref py py-obj docutils literal"><span class="pre">nltk.FreqDist</span></code>): list of words and more.
+exceptions (<code class="xref py py-obj docutils literal"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal"><span class="pre">str</span></code>, optional): The exception list.</dd>
+<dt>Returns:</dt>
+<dd>(<code class="xref py py-obj docutils literal"><span class="pre">nltk.FreqDist</span></code>): Returns frequency dist.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="omterms.cleaner.TextCleaner.reset_exceptions">
+<code class="descname">reset_exceptions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/cleaner.html#TextCleaner.reset_exceptions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.cleaner.TextCleaner.reset_exceptions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets the exception set to empty.</p>
+<p>Args:</p>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>(<code class="xref py py-obj docutils literal"><span class="pre">bool</span></code>):</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="omterms.cleaner.TextCleaner.set_exceptions">
+<code class="descname">set_exceptions</code><span class="sig-paren">(</span><em>exceptions</em>, <em>stemcheck=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/cleaner.html#TextCleaner.set_exceptions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.cleaner.TextCleaner.set_exceptions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets instance-wide exception set.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>exceptions (<code class="xref py py-obj docutils literal"><span class="pre">list</span></code> of <cite>str</cite>): The list of exception terms.
+stemcheck (<code class="xref py py-obj docutils literal"><span class="pre">bool</span></code>, optional): if the list to be extended via the stems (default False)</dd>
+<dt>Returns:</dt>
+<dd>(<code class="xref py py-obj docutils literal"><span class="pre">bool</span></code>): True</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-omterms.datauis">
+<span id="omterms-datauis-module"></span><h2>omterms.datauis module<a class="headerlink" href="#module-omterms.datauis" title="Permalink to this headline">¶</a></h2>
+<p>OpenMaker textaul data holders and interfaces.</p>
+<p>Author: Bulent Ozel
+e-mail: <a class="reference external" href="mailto:bulent&#46;ozel&#37;&#52;&#48;gmail&#46;com">bulent<span>&#46;</span>ozel<span>&#64;</span>gmail<span>&#46;</span>com</a></p>
+<p>The module contains a set of tools used to hold and process text corpuses and collections.</p>
+<dl class="class">
+<dt id="omterms.datauis.Corpus">
+<em class="property">class </em><code class="descclassname">omterms.datauis.</code><code class="descname">Corpus</code><span class="sig-paren">(</span><em>tf_dist</em>, <em>stemmer=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/datauis.html#Corpus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.datauis.Corpus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>A generic class to be used for foreground or background corpuses.</p>
+<dl class="docutils">
+<dt>Attributes:</dt>
+<dd><dl class="first docutils">
+<dt>tf_dist: (<code class="xref py py-obj docutils literal"><span class="pre">nltk.FreqDist</span></code>): An NLTK container for tokenized and cleaned</dt>
+<dd>terms in the corpus.</dd>
+</dl>
+<p>stemmer (x <code class="xref py py-obj docutils literal"><span class="pre">str</span></code> -&gt; y: <code class="xref py py-obj docutils literal"><span class="pre">str</span></code>): A stemmer function.
+stems (<code class="xref py py-obj docutils literal"><span class="pre">dict</span></code>): A dictionary of terms and their stems
+labels (<code class="xref py py-obj docutils literal"><span class="pre">dict</span></code>): Term level labels.
+scores (<code class="xref py py-obj docutils literal"><span class="pre">dict</span></code>): A dictionary of terms and their corpus sepcificity scores</p>
+<blockquote>
+<div>as of a reference corpus</div></blockquote>
+<dl class="docutils">
+<dt>ref (<code class="xref py py-obj docutils literal"><span class="pre">dict</span></code>): A dictionary of terms that holds normalized occurance frequency of</dt>
+<dd>the term at a reference corpus.</dd>
+</dl>
+<p>sepficifs (<code class="xref py py-obj docutils literal"><span class="pre">set</span></code>): A set of terms appointed/associated with the corpus externally.        
+To be implemented:</p>
+<blockquote class="last">
+<div><p>texts_raw (<code class="xref py py-obj docutils literal"><span class="pre">json</span></code>): A JSON collection of raw texts of the corpus.</p>
+<p>texts_clean (<code class="xref py py-obj docutils literal"><span class="pre">json</span></code>): A JSON collection of cleaned/processed
+texts of the corpus.</p>
+<p>tf_idf (<code class="xref py py-obj docutils literal"><span class="pre">json</span></code>): Tf-Idf analyses of the corpus (to be implemented).</p>
+</div></blockquote>
+</dd>
+</dl>
+<dl class="method">
+<dt id="omterms.datauis.Corpus.compute_stems">
+<code class="descname">compute_stems</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/datauis.html#Corpus.compute_stems"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.datauis.Corpus.compute_stems" title="Permalink to this definition">¶</a></dt>
+<dd><p>The function returns the a dictionary of terms and their corresponding stems.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>stemmer (x <code class="xref py py-obj docutils literal"><span class="pre">str</span></code> -&gt; y: <code class="xref py py-obj docutils literal"><span class="pre">str</span></code>): A stemmer function (default None)</dd>
+<dt>Returns:</dt>
+<dd>(<code class="xref py py-obj docutils literal"><span class="pre">bool</span></code>): True</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="omterms.datauis.Corpus.difference">
+<code class="descname">difference</code><span class="sig-paren">(</span><em>other</em>, <em>as_corpus=False</em>, <em>stats=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/datauis.html#Corpus.difference"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.datauis.Corpus.difference" title="Permalink to this definition">¶</a></dt>
+<dd><p>The method identifies and returns the difference of the self from the other.</p>
+<dl class="docutils">
+<dt>Note:</dt>
+<dd>Implementation needs style and refactoring.</dd>
+<dt>Args:</dt>
+<dd><p class="first">other (<a class="reference internal" href="#omterms.datauis.Corpus" title="omterms.datauis.Corpus"><code class="xref py py-obj docutils literal"><span class="pre">Corpus</span></code></a>): An instance of this Corpus Class object.
+as_corpus (bool): When True it returns a new Corpus (default False).
+stats (bool): When True and as_corpus is false returns the frequency</p>
+<blockquote class="last">
+<div>count of the difference set.</div></blockquote>
+</dd>
+<dt>Returns:</dt>
+<dd>(<code class="xref py py-obj docutils literal"><span class="pre">dict</span></code>): A dictionary of terms and their frequency counts.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="omterms.datauis.Corpus.get_count_uniques">
+<code class="descname">get_count_uniques</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/datauis.html#Corpus.get_count_uniques"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.datauis.Corpus.get_count_uniques" title="Permalink to this definition">¶</a></dt>
+<dd><p>The method identifies and returns top frequent terms.</p>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>(<code class="xref py py-obj docutils literal"><span class="pre">int</span></code>): Returns an integer.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="omterms.datauis.Corpus.get_least_frequents">
+<code class="descname">get_least_frequents</code><span class="sig-paren">(</span><em>bottom=42</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/datauis.html#Corpus.get_least_frequents"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.datauis.Corpus.get_least_frequents" title="Permalink to this definition">¶</a></dt>
+<dd><p>The method identifies and returns least frequent terms.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>bottom (int): Size of the short list (default 42).</dd>
+<dt>Returns:</dt>
+<dd><dl class="first last docutils">
+<dt>(<code class="xref py py-obj docutils literal"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal"><span class="pre">tuple</span></code> of <code class="xref py py-obj docutils literal"><span class="pre">str</span></code> and <code class="xref py py-obj docutils literal"><span class="pre">int</span></code>): Returns the frequency dist</dt>
+<dd>for the least frequent terms as list of tuples of term and frequency pairs.</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="omterms.datauis.Corpus.get_size">
+<code class="descname">get_size</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/datauis.html#Corpus.get_size"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.datauis.Corpus.get_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>The returns the size of the corpus in terms of number of terms it has.</p>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>(<code class="xref py py-obj docutils literal"><span class="pre">int</span></code>): Returns an integer. It is summation of raw frequency counts.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="omterms.datauis.Corpus.get_stems">
+<code class="descname">get_stems</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/datauis.html#Corpus.get_stems"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.datauis.Corpus.get_stems" title="Permalink to this definition">¶</a></dt>
+<dd><p>The function returns the a dictionary of terms and their corresponding stems.</p>
+<p>Args:</p>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>(<code class="xref py py-obj docutils literal"><span class="pre">dict</span></code>): A dictionary of {term:stem of the term}.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="omterms.datauis.Corpus.get_top_frequents">
+<code class="descname">get_top_frequents</code><span class="sig-paren">(</span><em>top=42</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/datauis.html#Corpus.get_top_frequents"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.datauis.Corpus.get_top_frequents" title="Permalink to this definition">¶</a></dt>
+<dd><p>The method identifies and returns top frequent terms.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>top (int): Size of the short list (default 42).</dd>
+<dt>Returns:</dt>
+<dd><dl class="first last docutils">
+<dt>(<code class="xref py py-obj docutils literal"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal"><span class="pre">tuple</span></code> of <code class="xref py py-obj docutils literal"><span class="pre">str</span></code> and <code class="xref py py-obj docutils literal"><span class="pre">int</span></code>): Returns the frequency dist</dt>
+<dd>for top terms as list of tuples of term and frequency pairs.</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="omterms.datauis.Corpus.intersection">
+<code class="descname">intersection</code><span class="sig-paren">(</span><em>other</em>, <em>as_corpus=False</em>, <em>stats=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/datauis.html#Corpus.intersection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.datauis.Corpus.intersection" title="Permalink to this definition">¶</a></dt>
+<dd><p>The method identifies and returns the intersection of two corpora.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd><p class="first">other (<a class="reference internal" href="#omterms.datauis.Corpus" title="omterms.datauis.Corpus"><code class="xref py py-obj docutils literal"><span class="pre">Corpus</span></code></a>): An instance of this Class object.
+as_corpus (bool): When True it returns a new Corpus (default False).
+stats (bool): When True and as_corpus is false returns the frequency</p>
+<blockquote class="last">
+<div>count of the intersections.</div></blockquote>
+</dd>
+<dt>Returns:</dt>
+<dd><dl class="first last docutils">
+<dt>(<code class="xref py py-obj docutils literal"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal"><span class="pre">str</span></code>): If as_corpus is False and stats is False </dt>
+<dd>it returns the list of joint terms.</dd>
+<dt>(<code class="xref py py-obj docutils literal"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal"><span class="pre">tuple</span></code> of <code class="xref py py-obj docutils literal"><span class="pre">str</span></code> and <code class="xref py py-obj docutils literal"><span class="pre">int</span></code>): Returns the frequency dist</dt>
+<dd>for the joint terms, if as_corpus is False and stats is True.</dd>
+<dt>(<a class="reference internal" href="#omterms.datauis.Corpus" title="omterms.datauis.Corpus"><code class="xref py py-obj docutils literal"><span class="pre">Corpus</span></code></a>): In all other cases it returns a nrew Corpus class for the intersection.</dt>
+<dd>Frequencies are the minimum of the two occurances.</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="omterms.datauis.Corpus.label">
+<code class="descname">label</code><span class="sig-paren">(</span><em>marker</em>, <em>labels=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/datauis.html#Corpus.label"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.datauis.Corpus.label" title="Permalink to this definition">¶</a></dt>
+<dd><p>The function labels yet not labeled terms according to the user defined scheme.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>marker (x <code class="xref py py-obj docutils literal"><span class="pre">str</span></code> -&gt; y: <code class="xref py py-obj docutils literal"><span class="pre">str</span></code>): A marker function</dd>
+<dt>Returns:</dt>
+<dd>(<code class="xref py py-obj docutils literal"><span class="pre">dict</span></code>): A dictionary of {term:label of term}.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="omterms.datauis.Corpus.list_terms">
+<code class="descname">list_terms</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/datauis.html#Corpus.list_terms"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.datauis.Corpus.list_terms" title="Permalink to this definition">¶</a></dt>
+<dd><p>It returns the list terms in the corpus</p>
+<dl class="docutils">
+<dt>Note:</dt>
+<dd>Implementation needs refactoring.</dd>
+<dt>Returns:</dt>
+<dd>(<code class="xref py py-obj docutils literal"><span class="pre">list</span></code>): An alphabetically sorted list.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="omterms.datauis.Corpus.plot">
+<code class="descname">plot</code><span class="sig-paren">(</span><em>top</em>, <em>cumulative=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/datauis.html#Corpus.plot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.datauis.Corpus.plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plotting.</p>
+<p>Note:</p>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>(<code class="xref py py-obj docutils literal"><span class="pre">bool</span></code>): True</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="omterms.datauis.Corpus.set_specific_set">
+<code class="descname">set_specific_set</code><span class="sig-paren">(</span><em>terms</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/datauis.html#Corpus.set_specific_set"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.datauis.Corpus.set_specific_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>The function sets the set of corpus specific terms.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>terms (<code class="xref py py-obj docutils literal"><span class="pre">set</span></code>): The list of corpus specific terms</dd>
+<dt>Returns:</dt>
+<dd>(<code class="xref py py-obj docutils literal"><span class="pre">bool</span></code>): True.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="omterms.datauis.Corpus.set_stemmer">
+<code class="descname">set_stemmer</code><span class="sig-paren">(</span><em>stemmer</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/datauis.html#Corpus.set_stemmer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.datauis.Corpus.set_stemmer" title="Permalink to this definition">¶</a></dt>
+<dd><p>The appointing a new stemmer function to the corpus.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>stemmer (x <code class="xref py py-obj docutils literal"><span class="pre">str</span></code> -&gt; y: <code class="xref py py-obj docutils literal"><span class="pre">str</span></code>): A stemmer function (default None)</dd>
+<dt>Returns:</dt>
+<dd>(<code class="xref py py-obj docutils literal"><span class="pre">bool</span></code>): True</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="omterms.datauis.Corpus.tabulate">
+<code class="descname">tabulate</code><span class="sig-paren">(</span><em>top</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/datauis.html#Corpus.tabulate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.datauis.Corpus.tabulate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tabulating.</p>
+<dl class="docutils">
+<dt>Note:</dt>
+<dd>Works better when used to see few top terms.</dd>
+<dt>Returns:</dt>
+<dd>(<code class="xref py py-obj docutils literal"><span class="pre">bool</span></code>): True</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="omterms.datauis.Corpus.to_pandas">
+<code class="descname">to_pandas</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/datauis.html#Corpus.to_pandas"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.datauis.Corpus.to_pandas" title="Permalink to this definition">¶</a></dt>
+<dd><p>The function exports its data into pandas dataframe.</p>
+<dl class="docutils">
+<dt>Note:</dt>
+<dd>ToDo: The function needs parameterization, generalization and error checks.</dd>
+<dt>Returns:</dt>
+<dd>(<code class="xref py py-obj docutils literal"><span class="pre">pandas.DataFrame</span></code>) The tabulated data</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="omterms.datauis.Corpus.union">
+<code class="descname">union</code><span class="sig-paren">(</span><em>other</em>, <em>as_corpus=False</em>, <em>stats=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/datauis.html#Corpus.union"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.datauis.Corpus.union" title="Permalink to this definition">¶</a></dt>
+<dd><p>The method identifies and returns the union of two corpora.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd><p class="first">other (<a class="reference internal" href="#omterms.datauis.Corpus" title="omterms.datauis.Corpus"><code class="xref py py-obj docutils literal"><span class="pre">Corpus</span></code></a>): An instance of this Class object.
+as_corpus (bool): When True it returns a new Corpus (default False).
+stats (bool): When True and as_corpus is false returns the frequency</p>
+<blockquote class="last">
+<div>count of the union.</div></blockquote>
+</dd>
+<dt>Returns:</dt>
+<dd><dl class="first last docutils">
+<dt>(<code class="xref py py-obj docutils literal"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal"><span class="pre">str</span></code>): If as_corpus is False and stats is False </dt>
+<dd>it returns the list of union of terms in both cases.</dd>
+<dt>(<code class="xref py py-obj docutils literal"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal"><span class="pre">tuple</span></code> of <code class="xref py py-obj docutils literal"><span class="pre">str</span></code> and <code class="xref py py-obj docutils literal"><span class="pre">int</span></code>): Returns the frequency dist</dt>
+<dd>for the union terms, ff as_corpus is False and stats is True.</dd>
+<dt>(<a class="reference internal" href="#omterms.datauis.Corpus" title="omterms.datauis.Corpus"><code class="xref py py-obj docutils literal"><span class="pre">Corpus</span></code></a>): In all other cases it returns a nrew Corpus class for the intersection.</dt>
+<dd>Frequencies are the minimum of the two occurances.</dd>
+</dl>
+</dd>
+<dt>Examples:</dt>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Corpus</span><span class="p">(</span><span class="n">FreqDist</span><span class="p">(</span><span class="s1">&#39;abbbc&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">Corpus</span><span class="p">(</span><span class="n">FreqDist</span><span class="p">(</span><span class="s1">&#39;bccd&#39;</span><span class="p">)),</span> <span class="n">stats</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="go">[(&#39;a&#39;, 1), (&#39;b&#39;, 3), (&#39;c&#39;, 2), (&#39;d&#39;, 1)]</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="omterms.datauis.WikiArticles">
+<em class="property">class </em><code class="descclassname">omterms.datauis.</code><code class="descname">WikiArticles</code><span class="sig-paren">(</span><em>collection</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/datauis.html#WikiArticles"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.datauis.WikiArticles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="docutils">
+<dt>The object contains a set of tools to process the set of </dt>
+<dd>documents collected and cleaned by the wiki crawler.</dd>
+<dt>Attributes:</dt>
+<dd><dl class="first docutils">
+<dt>collection_json (<code class="xref py py-obj docutils literal"><span class="pre">str</span></code>): This is a filename to the scraped data.</dt>
+<dd><p class="first">Each JSON document is expected to have following fields:
+- theme: Topic identifier, ex: Sustainability
+- theme.id: A unique category identifier
+- document.id: A unique document id
+- title: Title of the document
+- url: Full URL of the document
+- depth: The link distance from the seed docuement. The seed documents depth is 0.
+- text: The string data scraped from the page without tags. Pancuations are not</p>
+<blockquote class="last">
+<div>required but terms are expected to be delineated by white space.</div></blockquote>
+</dd>
+</dl>
+<p class="last">collection (<code class="xref py py-obj docutils literal"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal"><span class="pre">dict</span></code>): Loaded json file into native list of dictionaries.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="omterms.datauis.WikiArticles.collate">
+<code class="descname">collate</code><span class="sig-paren">(</span><em>by_theme_id=None</em>, <em>by_doc_ids=[]</em>, <em>marker='\n'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/datauis.html#WikiArticles.collate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.datauis.WikiArticles.collate" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>The method collects the desired set of documents concatenates them creating a unified document.</dt>
+<dd>The order of merge is as follows:
+- When neither list of theme nor doc ids is provided, it collates entire text.
+- If a theme is given then all the documents under that theme are to be joined first.
+- When a list of docs is given, only those in the list are kept.
+Note that if both theme id and doc ids provided, precedence is on themes.</dd>
+<dt>Args:</dt>
+<dd>by_theme_id (<code class="xref py py-obj docutils literal"><span class="pre">int</span></code>, optional): The theme id of the docs to be collated.
+by_doc_ids (<code class="xref py py-obj docutils literal"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal"><span class="pre">int</span></code>, optional): The list of doc ids to be collated (default Empty). 
+marker (<code class="xref py py-obj docutils literal"><span class="pre">str</span></code>, optional): A delimiter (default newline)</dd>
+<dt>Returns:</dt>
+<dd>(<code class="xref py py-obj docutils literal"><span class="pre">str</span></code>): The collated text.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="omterms.datauis.WikiArticles.display_documents_list">
+<code class="descname">display_documents_list</code><span class="sig-paren">(</span><em>tid=None</em>, <em>stdout=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/datauis.html#WikiArticles.display_documents_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.datauis.WikiArticles.display_documents_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>List the articles meta data and crawling information on them.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd><dl class="first last docutils">
+<dt>tid (<code class="xref py py-obj docutils literal"><span class="pre">int</span></code>, optional): Used if documents info under a specific theme is desired </dt>
+<dd>otherwise a summary of whole set is returned or displayed (default None).</dd>
+<dt>stdout (<code class="xref py py-obj docutils literal"><span class="pre">bool</span></code>, optional): Whether the info is to be displayed/printed</dt>
+<dd>to standard io (default True).</dd>
+</dl>
+</dd>
+<dt>Returns:</dt>
+<dd>( <code class="xref py py-obj docutils literal"><span class="pre">list</span></code>): A summary list of documents in the collection.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="omterms.datauis.WikiArticles.get_document_fields">
+<code class="descname">get_document_fields</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/datauis.html#WikiArticles.get_document_fields"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.datauis.WikiArticles.get_document_fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>The method lists the fields of each json field of its collection.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>None</dd>
+<dt>Returns:</dt>
+<dd>(<code class="xref py py-obj docutils literal"><span class="pre">dict_keys</span></code>): List of keys.
+None: When the collection is empty.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="omterms.datauis.WikiArticles.get_theme_id">
+<code class="descname">get_theme_id</code><span class="sig-paren">(</span><em>theme_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/datauis.html#WikiArticles.get_theme_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.datauis.WikiArticles.get_theme_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The method returns topic id of the first match theme name.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>theme_name (<code class="xref py py-obj docutils literal"><span class="pre">str</span></code>): The theme or topic name.</dd>
+<dt>Returns:</dt>
+<dd>( <code class="xref py py-obj docutils literal"><span class="pre">int</span></code>): A unique theme identifier.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="omterms.datauis.WikiArticles.get_theme_title">
+<code class="descname">get_theme_title</code><span class="sig-paren">(</span><em>theme_id</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/datauis.html#WikiArticles.get_theme_title"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.datauis.WikiArticles.get_theme_title" title="Permalink to this definition">¶</a></dt>
+<dd><p>The method returns topic name.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>theme_id (<code class="xref py py-obj docutils literal"><span class="pre">int</span></code>): The unique theme id.</dd>
+<dt>Returns:</dt>
+<dd>( <code class="xref py py-obj docutils literal"><span class="pre">str</span></code>): Topic name.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="omterms.datauis.WikiArticles.list_themes">
+<code class="descname">list_themes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/datauis.html#WikiArticles.list_themes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.datauis.WikiArticles.list_themes" title="Permalink to this definition">¶</a></dt>
+<dd><p>The method lists the summary of themes/topics in the collection.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>None</dd>
+<dt>Returns:</dt>
+<dd><dl class="first last docutils">
+<dt>(<code class="xref py py-obj docutils literal"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal"><span class="pre">dict</span></code>): List of dictionry where keys are</dt>
+<dd><ul class="first last simple">
+<li>name: theme&#8217;s textual descriptor</li>
+<li>id: theme&#8217;s unique id</li>
+<li>count: number of articles under the theme.</li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="omterms.datauis.WikiArticles.load_corpus">
+<code class="descname">load_corpus</code><span class="sig-paren">(</span><em>collection=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/datauis.html#WikiArticles.load_corpus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.datauis.WikiArticles.load_corpus" title="Permalink to this definition">¶</a></dt>
+<dd><p>The method loads imports json file into a native collection.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>collection (<code class="xref py py-obj docutils literal"><span class="pre">str</span></code>): A filename to a previously scraped data.</dd>
+<dt>Returns:</dt>
+<dd>(<code class="xref py py-obj docutils literal"><span class="pre">bool</span></code>): True.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="omterms.datauis.WikiArticles.prune">
+<code class="descname">prune</code><span class="sig-paren">(</span><em>themes_to_keep=[]</em>, <em>docs_to_drop=[]</em>, <em>istodrop=&lt;function WikiArticles.&lt;lambda&gt;&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/datauis.html#WikiArticles.prune"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.datauis.WikiArticles.prune" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>The method is used to filter out documents from the set.</dt>
+<dd><p class="first">The order of prunning is as follows:
+- when a none empty list is provide all the documents not belonging themes to be kept</p>
+<blockquote>
+<div>are prunned entirely. Note that when initial list is empty it doesn&#8217;t have an effect.</div></blockquote>
+<ul class="simple">
+<li>of remaing documents those appear in docs_to_drop are prunned</li>
+<li>of the remaing docs those produce a True at a call on the predicate function are dropped.</li>
+</ul>
+<p class="last">The function can be repeatedly called until a desired level of prunning is achieved.</p>
+</dd>
+<dt>Args:</dt>
+<dd>themes_to_keep (<code class="xref py py-obj docutils literal"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal"><span class="pre">int</span></code>, optional): The list of theme ids to be kept (default Empty).
+docs_to_drop (<code class="xref py py-obj docutils literal"><span class="pre">list</span></code>, optional): The list of doc ids to be dropt (default Empty). 
+f (x <code class="xref py py-obj docutils literal"><span class="pre">dict_item</span></code> -&gt; <code class="xref py py-obj docutils literal"><span class="pre">bool</span></code>, optional): A predicate function (default lambda x:False)</dd>
+<dt>Returns:</dt>
+<dd>(<code class="xref py py-obj docutils literal"><span class="pre">bool</span></code>): True.</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-omterms.interface">
+<span id="omterms-interface-module"></span><h2>omterms.interface module<a class="headerlink" href="#module-omterms.interface" title="Permalink to this headline">¶</a></h2>
+<p>OpenMaker term extraction application interface.</p>
+<p>Author: Bulent Ozel
+e-mail: <a class="reference external" href="mailto:bulent&#46;ozel&#37;&#52;&#48;gmail&#46;com">bulent<span>&#46;</span>ozel<span>&#64;</span>gmail<span>&#46;</span>com</a></p>
+<p>The application interface provides an encapsualtion and standardization at preparing a set of texts for
+further analyses. The standardized term extraction process covers tokenization, counting both raw and 
+normalized, cleaning, stemming(optional), and scoring(optional) chioices. The tabulated output can be
+exported in .csv file format and/or Pandas dataframe format.</p>
+<p>The input text(s) can be provided in any of the following formats:
+- raw text
+- tokenized text
+- tokenized and counted</p>
+<p>In the same manner if a background courpus based scoring is desired then the reference corpus
+can be provided in any of the above formats. Depending on the desired actions on the input text,
+the output may contain not only raw and normalized term frequency counts but also stems of
+the terms its frequency count in the background corpus, when provided, and term&#8217;s log likelihood
+weight wrt to its prevalance in the reference corpus.</p>
+<p>For deatils please see the README and tuturials that comes alongs with installation 
+of this package.</p>
+<dl class="docutils">
+<dt>Attributes:</dt>
+<dd><dl class="first docutils">
+<dt>OUTPUT_FOLDER (file path): The folder to export the tabulated outputs </dt>
+<dd>in .csv files.</dd>
+<dt>OUTPUT_FNAME  (file name): The default output file name where results </dt>
+<dd>for multiple texts are merged and presented.</dd>
+<dt>STOPWORDS_STANDARD (file path): The location of standard stopward list,</dt>
+<dd>if desired and exists.</dd>
+<dt>STOPWORDS_SPECIFIC (file path): The location of topic(s) specific stopward</dt>
+<dd>list, if desired and exists.</dd>
+<dt>NOTALLOWED (<code class="xref py py-obj docutils literal"><span class="pre">list</span></code> of <cite>str</cite>): The list of symbols that would flag the</dt>
+<dd><p class="first">removal of the term, if needed.</p>
+<dl class="last docutils">
+<dt>Note: The removal would not take place if the term is a specific term or</dt>
+<dd>marked as an exception.</dd>
+</dl>
+</dd>
+<dt>TERMS_SPECIFIC (file path): The location of exception list of terms which is</dt>
+<dd>shielded from cleaning process, if needed.</dd>
+</dl>
+<p>TOKENIZER_FUNC (x <code class="xref py py-obj docutils literal"><span class="pre">str</span></code> -&gt; y: <code class="xref py py-obj docutils literal"><span class="pre">str</span></code>): A tokenizer function.</p>
+<dl class="docutils">
+<dt>STEMMER_FUNC (x <code class="xref py py-obj docutils literal"><span class="pre">str</span></code> -&gt; y: <code class="xref py py-obj docutils literal"><span class="pre">str</span></code>): A stemmer function,</dt>
+<dd>if needed</dd>
+</dl>
+<p>MIN_LENGTH (<code class="xref py py-obj docutils literal"><span class="pre">int</span></code>): The minimum allowed term length.</p>
+<dl class="last docutils">
+<dt>MIN_FREQ (<code class="xref py py-obj docutils literal"><span class="pre">float</span></code>): The minimum allowed frequency count for</dt>
+<dd>the tabuleted outputs.</dd>
+<dt>MODEL_THRESHOLD (<code class="xref py py-obj docutils literal"><span class="pre">int</span></code>): if scoring is requested and if the input text</dt>
+<dd>is not driven from the reference corpus, then the paramter is used at training
+the predection model for the terms that don&#8217;t occure in the reference corpus.</dd>
+</dl>
+</dd>
+<dt>Todo:</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt>Re-implement the module as a memoized object either via a class or</dt>
+<dd>a via wrapper function.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Add a functionality where the configuration paramters can be loaded</dt>
+<dd>from a JSON file.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Make tokenization an optional process, for the cases where the input</dt>
+<dd>is already provided in tokens.</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<dl class="function">
+<dt id="omterms.interface.extract_terms">
+<code class="descclassname">omterms.interface.</code><code class="descname">extract_terms</code><span class="sig-paren">(</span><em>texts</em>, <em>tokenizer=&lt;function tokenize_strip_non_words&gt;</em>, <em>merge=False</em>, <em>min_termlength=1</em>, <em>min_tf=1</em>, <em>topics=[]</em>, <em>extra_process=[]</em>, <em>stemmer=&lt;bound method PorterStemmer.stem of &lt;PorterStemmer&gt;&gt;</em>, <em>refcorpus=None</em>, <em>export=False</em>, <em>basefname='omterms.csv'</em>, <em>outputdir='./output/'</em>, <em>notallowed_symbols=&quot;.</em>, <em>():;!?\n`'=+/\\[]}{|&gt;&lt;&#64;#$%^&amp;*_‘’“”.&quot;</em>, <em>nonremovable_terms='./data/specifics_openmaker.txt'</em>, <em>file_standard_stopwords='./data/stopwords_standard.txt'</em>, <em>file_specific_sopwords='./data/stopwords_openmaker.txt'</em>, <em>regression_threshold=1.0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/interface.html#extract_terms"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.interface.extract_terms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Term extraction modules main driver function.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd><p class="first">texts (<code class="xref py py-obj docutils literal"><span class="pre">str</span></code> or <code class="xref py py-obj docutils literal"><span class="pre">dict</span></code> of <cite>str</cite> or  <code class="xref py py-obj docutils literal"><span class="pre">omterms.WikiArticles</span></code>):
+The input text can be any of the following:</p>
+<blockquote>
+<div><ul class="simple">
+<li>a string,</li>
+<li><dl class="first docutils">
+<dt>or a dictionary of strings where the key denotes the topic </dt>
+<dd>or any desired label/annotation regarding the text,</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>or a special data holder which contains labeled text scraped</dt>
+<dd>from Wikipedia articles.</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+<dl class="docutils">
+<dt>tokenizer (x <code class="xref py py-obj docutils literal"><span class="pre">str</span></code> -&gt; y: <code class="xref py py-obj docutils literal"><span class="pre">str</span></code>): The tokenizer,</dt>
+<dd>(defualt omterms.tokenizer.tokenize_strip_non_words).</dd>
+<dt>merge (<code class="xref py py-obj docutils literal"><span class="pre">bool</span></code>): When a collection of text is provided via a dict or</dt>
+<dd>WikiArticles, the parmater detertmines whether they should be 
+conactinated for the term extraction (default False).</dd>
+</dl>
+<p>min_termlength (<code class="xref py py-obj docutils literal"><span class="pre">int</span></code>): The minimum allowed term length (default 1).</p>
+<dl class="last docutils">
+<dt>min_tf (<code class="xref py py-obj docutils literal"><span class="pre">int</span></code>): The minimum allowed frequency count for the tabuleted</dt>
+<dd>outputs (default 4).</dd>
+<dt>topics (<code class="xref py py-obj docutils literal"><span class="pre">list</span></code> of <cite>str</cite>, optional): The list of topics from the input</dt>
+<dd><p class="first">texts to be considered (default Empty).</p>
+<p class="last">If topic list is not provided and the merge is not requested but the
+input text is given either via dict or via the WikiArticles data holder,
+then the topic list will be driven from the input collection automatically.</p>
+</dd>
+<dt>extra_process (<code class="xref py py-obj docutils literal"><span class="pre">list</span></code> of <cite>str</cite>, optional): Whether stemming and/or scoring</dt>
+<dd><p class="first">is requested (default Empty).
+- &#8216;stem&#8217; is used/needed to flag stemming.
+- &#8216;compare&#8217; is used/needed to scoring texts against the designated</p>
+<blockquote class="last">
+<div>reference corpus.</div></blockquote>
+</dd>
+<dt>stemmer (x <code class="xref py py-obj docutils literal"><span class="pre">str</span></code> -&gt; y: <code class="xref py py-obj docutils literal"><span class="pre">str</span></code>, optional): A stemmer function,</dt>
+<dd>if needed (default omterms.stemmer.porter).</dd>
+<dt>refcorpus (<code class="xref py py-obj docutils literal"><span class="pre">str</span></code></dt>
+<dd><blockquote class="first">
+<div><p>or <code class="xref py py-obj docutils literal"><span class="pre">list</span></code> of <cite>str</cite>
+or <code class="xref py py-obj docutils literal"><span class="pre">dict</span></code> of <cite>str</cite>
+or <code class="xref py py-obj docutils literal"><span class="pre">omterms.WikiArticles</span></code>, optional): The reference corpus</p>
+<blockquote>
+<div>(Default None)</div></blockquote>
+</div></blockquote>
+<dl class="last docutils">
+<dt>The refcorpus can beny of the following:</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt>None: if it is none yet the a scoring process is requested then</dt>
+<dd>NLTK&#8217;s Brown corpus is loaded.</dd>
+</dl>
+</li>
+<li>a string: A plain text.</li>
+<li>list of words: List of words or tokens.</li>
+<li><dl class="first docutils">
+<dt>or a dictionary of strings where the text from the text will</dt>
+<dd>be unified for the reference corpus.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>or a special data holder which contains labeled text scraped from</dt>
+<dd>Wikipedia articles, where all the texts from the collection will 
+be combined to be used as the reference background corpus.</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dt>export (<code class="xref py py-obj docutils literal"><span class="pre">bool</span></code>, optional): Whether the resulting tables should be</dt>
+<dd>exported (default False).</dd>
+<dt>basefname (<code class="xref py py-obj docutils literal"><span class="pre">str</span></code>, optional): The output table name/prefix. Is effective</dt>
+<dd>only when export is requested (default &#8216;omsterms.csv&#8217;).</dd>
+<dt>outputdir (<code class="xref py py-obj docutils literal"><span class="pre">str</span></code>, optional): The file path, that is the folder to export</dt>
+<dd>the tabulated outputs in .csv files (default &#8216;./data/&#8217;).</dd>
+<dt>notallowed_symbols (<code class="xref py py-obj docutils literal"><span class="pre">list</span></code> of <cite>str</cite>, optional): The list of symbols </dt>
+<dd>that would flag the removal of the term if needed 
+(defualt omterms.tokenizer.CHARACTERS_TO_SPLIT</dd>
+<dt>nonremovable_terms (<code class="xref py py-obj docutils literal"><span class="pre">str</span></code>, optional): File path to the list </dt>
+<dd>of exceptions.</dd>
+<dt>file_standard_stopwords (<code class="xref py py-obj docutils literal"><span class="pre">str</span></code>, optional): The file path to the </dt>
+<dd><p class="first">standard stopward list, if desired and exists.</p>
+<dl class="last docutils">
+<dt>Note: The removal would not take place if the term is a specific</dt>
+<dd>term or marked as an exception.</dd>
+</dl>
+</dd>
+<dt>file_specific_stopwords (<code class="xref py py-obj docutils literal"><span class="pre">str</span></code>, optional): The file path to a </dt>
+<dd><p class="first">specifix stopward list, if desired and exists.</p>
+<p class="last">Note: The removal would not take place if the term is a specific term that
+is if marked as an exception.</p>
+</dd>
+<dt>regression_threshold (<code class="xref py py-obj docutils literal"><span class="pre">float</span></code>, optional): if scoring is requested</dt>
+<dd>and if the input text is not driven from the reference corpus then this 
+paramter is used at training the predection model for the terms that 
+don&#8217;t occure in the reference corpus (default 1.0).</dd>
+</dl>
+</dd>
+<dt>Returns:</dt>
+<dd>(<code class="xref py py-obj docutils literal"><span class="pre">pandas.DataFrame</span></code>, optional) The tabulated data.</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-omterms.measures">
+<span id="omterms-measures-module"></span><h2>omterms.measures module<a class="headerlink" href="#module-omterms.measures" title="Permalink to this headline">¶</a></h2>
+<p>OpenMaker term scoring tools.</p>
+<p>Author: Bulent Ozel
+e-mail: <a class="reference external" href="mailto:bulent&#46;ozel&#37;&#52;&#48;gmail&#46;com">bulent<span>&#46;</span>ozel<span>&#64;</span>gmail<span>&#46;</span>com</a></p>
+<dl class="class">
+<dt id="omterms.measures.Scoring">
+<em class="property">class </em><code class="descclassname">omterms.measures.</code><code class="descname">Scoring</code><span class="sig-paren">(</span><em>sCorpus</em>, <em>rCorpus</em>, <em>nsteps=3</em>, <em>mutate=False</em>, <em>model_threshold=1.0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/measures.html#Scoring"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.measures.Scoring" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>The object given term frequency distribution of a foreground specific corpus and a background
+reference corpus, provides tools that help to compute specificity of each term in the foreground corpus.</p>
+<p>This kind of scoring is mainly to be used for the cases where an input text around a specific
+theme or topic is given. The process expects a tokenized, cleaned text with term counts.</p>
+<dl class="docutils">
+<dt>Note:</dt>
+<dd>It consumes a Corpus object and uses its methods and attributed and mutates it unless desired otherwise.</dd>
+<dt>Attributes:</dt>
+<dd><p class="first">sCorpus (<code class="xref py py-obj docutils literal"><span class="pre">Corpus</span></code>): A Corpus class instance of the specific corpus to be scored.
+rCorpus (<code class="xref py py-obj docutils literal"><span class="pre">Corpus</span></code>): A Corpus class instance of the reference corpus.
+common (<code class="xref py py-obj docutils literal"><span class="pre">list</span></code> of <cite>str</cite>): The common terms between the foreground and backgrouns corpus
+distinct (<code class="xref py py-obj docutils literal"><span class="pre">list</span></code> of <cite>str</cite>): The terms observed in the foreground but not in the backgrouns corpus
+model: a prediction model created during instantiation process using the data of the class instance.</p>
+<blockquote class="last">
+<div>For details see`form_prediction_model` method description.</div></blockquote>
+</dd>
+</dl>
+<dl class="method">
+<dt id="omterms.measures.Scoring.compute_commons">
+<code class="descname">compute_commons</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/measures.html#Scoring.compute_commons"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.measures.Scoring.compute_commons" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the specifity score of the terms in the corpus.</p>
+<dl class="docutils">
+<dt>Note:</dt>
+<dd><p class="first">It is a simple log likelihood measure. It compares frequency count of a term in
+a specific corpus versus its frequency count in the reference reference corpus.
+Here assumption is that the reference corpus is a large enough sample of the language
+at observing the occurance of a term. Then having a higher/lower observation frequency of
+a term in the specific corpus is a proxy indicator for the term choice while having a debate
+on the topic.</p>
+<p>The likelihood ratio for a term $P_t$ is calculated as:
+.. math:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$P_t = log ( (ntS/NS) / (ntR/NR) )$
+</pre></div>
+</div>
+<dl class="docutils">
+<dt>where</dt>
+<dd><ul class="first last simple">
+<li><em>ntS</em> is the raw frequency count of the term in the entire specific corpus</li>
+<li><em>ntR</em> is the raw frequenccy count of the term in the reference corpus</li>
+<li><em>NS</em> is the total number of terms in the specific corpus</li>
+<li><em>NR</em> is the total number of terms in the reference corpus</li>
+</ul>
+</dd>
+</dl>
+<p class="last">It should be noted that frequency counts are calculated after having applied the same tokenization
+and post processing such as excluding stop-words, pancuations, rare terms, etc both on the reference
+corpus and the specific corpus.</p>
+</dd>
+<dt>Args:</dt>
+<dd>None</dd>
+<dt>Returns:</dt>
+<dd>(<code class="xref py py-obj docutils literal"><span class="pre">bool</span></code>): Notifying completion of scoring.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="omterms.measures.Scoring.compute_distincts">
+<code class="descname">compute_distincts</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/measures.html#Scoring.compute_distincts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.measures.Scoring.compute_distincts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Computes the specifity score of the terms in the corpus when neither the term nor its stems</dt>
+<dd>matched by the background corpus.</dd>
+<dt>Note:</dt>
+<dd><p class="first">It uses a log linear regression model to predict likelihood of the dictinct terms.
+The model is trained using the scores and frequencies within the matching set.</p>
+<p class="last">See <cite>form_prediction_model</cite> method description for details.</p>
+</dd>
+<dt>Args:</dt>
+<dd>None</dd>
+<dt>Returns:</dt>
+<dd>(<code class="xref py py-obj docutils literal"><span class="pre">bool</span></code>): Notifying completion of scoring.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="omterms.measures.Scoring.compute_stem_commons">
+<code class="descname">compute_stem_commons</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/measures.html#Scoring.compute_stem_commons"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.measures.Scoring.compute_stem_commons" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Computes the specifity score of the terms in the corpus when the term as it is not </dt>
+<dd><p class="first">matched by a term in the reference corpus. It matches the stems. The loglikelihood
+ration is applied over the mean frequency counts of the matching stems.</p>
+<p class="last">See <cite>compute_commons</cite> method description for details.</p>
+</dd>
+<dt>Args:</dt>
+<dd>None</dd>
+<dt>Returns:</dt>
+<dd>(<code class="xref py py-obj docutils literal"><span class="pre">bool</span></code>): Notifying completion of scoring.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="omterms.measures.Scoring.form_prediction_model">
+<code class="descname">form_prediction_model</code><span class="sig-paren">(</span><em>threshold=1.0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/measures.html#Scoring.form_prediction_model"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.measures.Scoring.form_prediction_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>The method creats the prediction model to be used for distinct terms.</p>
+<dl class="docutils">
+<dt>Note:</dt>
+<dd><p class="first">It is based on a log-linear regression. The model is created using the observed
+scores and frequencies within the matching set. The model aims to fit a best line
+to logarithm of the observed term frequencies vs associated scores.</p>
+<p class="last">Considering the fact that frequent distinct terms are likely among the ones with a 
+higher specificity, the terms with relatively high scores are used for the regression.
+The R-squared of the regression tests have been used for validation of the approach.
+In the same reasoning among the all distinct terms the ones with relatively higher frequencies
+are considered for scoring.</p>
+</dd>
+<dt>ToDo:</dt>
+<dd><p class="first">As a second approach, the model training to be improved considering terms with relatively high term
+frequencies and high specificity scores. Observe the scatter plots for the insight.</p>
+<p class="last">An alternative, a third approach, would be forming the logarithmic bins on frequencies and using
+distributional charcteristics of each bin at making predictions. For instance, by simply predicting
+the median value as the guess.</p>
+</dd>
+<dt>Args:</dt>
+<dd><dl class="first last docutils">
+<dt>threshold (<code class="xref py py-obj docutils literal"><span class="pre">float</span></code>, optional):  The default value is driven from regression tests on </dt>
+<dd>test cases (default 1.0).</dd>
+</dl>
+</dd>
+<dt>Returns:</dt>
+<dd>(<code class="xref py py-obj docutils literal"><span class="pre">bool</span></code>): Notifying completion of scoring.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="omterms.measures.Scoring.get_scores_by">
+<code class="descname">get_scores_by</code><span class="sig-paren">(</span><em>stype='raw'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/measures.html#Scoring.get_scores_by"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.measures.Scoring.get_scores_by" title="Permalink to this definition">¶</a></dt>
+<dd><p>The method returns computed/available scores by the label of the terms.</p>
+<dl class="docutils">
+<dt>Note:</dt>
+<dd><p class="first">The labels in this implementation correspond:
+- raw: the term as it is was identified in the background corpus, so</p>
+<blockquote>
+<div>a loglikelihood scoring was applied</div></blockquote>
+<ul class="last simple">
+<li><dl class="first docutils">
+<dt>stem: not the term as it is but its stem was identified, so mean of the observed</dt>
+<dd>stem occurances in the background was used as the reference</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>noref: neither the term nor its stem was identified, so the prediction model was used</dt>
+<dd>for the frequent ones.</dd>
+</dl>
+</li>
+</ul>
+</dd>
+<dt>Args:</dt>
+<dd>stype (<code class="xref py py-obj docutils literal"><span class="pre">str</span></code>, optional): The term scoring type (default &#8216;raw&#8217;).</dd>
+<dt>Returns:</dt>
+<dd>(<code class="xref py py-obj docutils literal"><span class="pre">dict</span></code>): The term scores.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="omterms.measures.Scoring.plot">
+<code class="descname">plot</code><span class="sig-paren">(</span><em>threshold=1.0</em>, <em>islog=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/measures.html#Scoring.plot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.measures.Scoring.plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scatter plot of frequency vs scores.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd><dl class="first docutils">
+<dt>threshold (<code class="xref py py-obj docutils literal"><span class="pre">float</span></code>, optional):  The default value is driven from regression tests on </dt>
+<dd>test cases (default 1.0).</dd>
+</dl>
+<p class="last">islog (<code class="xref py py-obj docutils literal"><span class="pre">bool</span></code>): Whether natural log of the frequency counts to be returned (default True).</p>
+</dd>
+<dt>Returns:</dt>
+<dd>(<code class="xref py py-obj docutils literal"><span class="pre">bool</span></code>): True.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="omterms.measures.Scoring.predict">
+<code class="descname">predict</code><span class="sig-paren">(</span><em>w</em>, <em>count</em>, <em>minp=0.001</em>, <em>minf=3</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/measures.html#Scoring.predict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.measures.Scoring.predict" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>The method assigns a predicted score to a given term with a a frequency</dt>
+<dd>over the designated threshold. An internally formed prediction model is used.
+The natural logorithm of raw frequency counts is passed to the model. See 
+<cite>form_prediction_model</cite> method description for details.</dd>
+<dt>Args:</dt>
+<dd>count (<code class="xref py py-obj docutils literal"><span class="pre">int</span></code>): The raw frequency count.
+minp (<code class="xref py py-obj docutils literal"><span class="pre">float</span></code>, optional): The relative frequency threshold (default 0.001).
+minf (<code class="xref py py-obj docutils literal"><span class="pre">int</span></code>, optional): The raw frequency threshold (default 3).</dd>
+<dt>Returns:</dt>
+<dd>(<code class="xref py py-obj docutils literal"><span class="pre">float</span></code>): The predicted score.</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-omterms.stemmer">
+<span id="omterms-stemmer-module"></span><h2>omterms.stemmer module<a class="headerlink" href="#module-omterms.stemmer" title="Permalink to this headline">¶</a></h2>
+<p>OpenMaker text stemmers.</p>
+<p>Author: Bulent Ozel
+e-mail: <a class="reference external" href="mailto:bulent&#46;ozel&#37;&#52;&#48;gmail&#46;com">bulent<span>&#46;</span>ozel<span>&#64;</span>gmail<span>&#46;</span>com</a></p>
+</div>
+<div class="section" id="module-omterms.tokenizer">
+<span id="omterms-tokenizer-module"></span><h2>omterms.tokenizer module<a class="headerlink" href="#module-omterms.tokenizer" title="Permalink to this headline">¶</a></h2>
+<p>OpenMaker text tokenizer.</p>
+<p>Author: Bulent Ozel
+e-mail: <a class="reference external" href="mailto:bulent&#46;ozel&#37;&#52;&#48;gmail&#46;com">bulent<span>&#46;</span>ozel<span>&#64;</span>gmail<span>&#46;</span>com</a></p>
+<p>The module contains a set of basic tools in order to tokenize a given inout text.</p>
+<dl class="docutils">
+<dt>Todo:</dt>
+<dd><ul class="first last simple">
+<li>Nothing at the moment ;)</li>
+</ul>
+</dd>
+</dl>
+<dl class="function">
+<dt id="omterms.tokenizer.normalise">
+<code class="descclassname">omterms.tokenizer.</code><code class="descname">normalise</code><span class="sig-paren">(</span><em>s</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/tokenizer.html#normalise"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.tokenizer.normalise" title="Permalink to this definition">¶</a></dt>
+<dd><p>Basic string normalisation.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>s: (<code class="xref py py-obj docutils literal"><span class="pre">str</span></code>): Input string to normalise.</dd>
+<dt>Returns:</dt>
+<dd>(<code class="xref py py-obj docutils literal"><span class="pre">str</span></code>): Normalised string.</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="omterms.tokenizer.tokenize">
+<code class="descclassname">omterms.tokenizer.</code><code class="descname">tokenize</code><span class="sig-paren">(</span><em>raw</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/tokenizer.html#tokenize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.tokenizer.tokenize" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>The function tokenizes by splitting them on spaces, line breaks or characters</dt>
+<dd>in CHARACTERS_TO_SPLIT.</dd>
+<dt>Args:</dt>
+<dd>raw: (<code class="xref py py-obj docutils literal"><span class="pre">str</span></code>): Input string to split</dd>
+<dt>Returns:</dt>
+<dd>(<code class="xref py py-obj docutils literal"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal"><span class="pre">str</span></code>): list of terms</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="omterms.tokenizer.tokenize_strip_non_words">
+<code class="descclassname">omterms.tokenizer.</code><code class="descname">tokenize_strip_non_words</code><span class="sig-paren">(</span><em>raw</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/tokenizer.html#tokenize_strip_non_words"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.tokenizer.tokenize_strip_non_words" title="Permalink to this definition">¶</a></dt>
+<dd><p>Same as tokenize, but also removes non-word characters.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>raw: (<code class="xref py py-obj docutils literal"><span class="pre">str</span></code>): Input string to split</dd>
+<dt>Returns:</dt>
+<dd>(<code class="xref py py-obj docutils literal"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal"><span class="pre">str</span></code>): list of terms</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="omterms.tokenizer.tokenized_pprint">
+<code class="descclassname">omterms.tokenizer.</code><code class="descname">tokenized_pprint</code><span class="sig-paren">(</span><em>tokens</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/tokenizer.html#tokenized_pprint"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.tokenizer.tokenized_pprint" title="Permalink to this definition">¶</a></dt>
+<dd><p>A pretty print function for strings tokenized by tokenize.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>tokens: (<code class="xref py py-obj docutils literal"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal"><span class="pre">str</span></code>): list of terms</dd>
+<dt>Returns:</dt>
+<dd>(<code class="xref py py-obj docutils literal"><span class="pre">str</span></code>): The joined terms.</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-omterms.utilities">
+<span id="omterms-utilities-module"></span><h2>omterms.utilities module<a class="headerlink" href="#module-omterms.utilities" title="Permalink to this headline">¶</a></h2>
+<p>OpenMaker text utilities.</p>
+<p>The module holds a set of utilities for data handling and io related tasks.</p>
+<p>Author: Bulent Ozel
+e-mail: <a class="reference external" href="mailto:bulent&#46;ozel&#37;&#52;&#48;gmail&#46;com">bulent<span>&#46;</span>ozel<span>&#64;</span>gmail<span>&#46;</span>com</a></p>
+<dl class="function">
+<dt id="omterms.utilities.format_output_fname">
+<code class="descclassname">omterms.utilities.</code><code class="descname">format_output_fname</code><span class="sig-paren">(</span><em>current_theme</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/utilities.html#format_output_fname"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.utilities.format_output_fname" title="Permalink to this definition">¶</a></dt>
+<dd><p>Formatting output file name.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="omterms.utilities.load_from_file">
+<code class="descclassname">omterms.utilities.</code><code class="descname">load_from_file</code><span class="sig-paren">(</span><em>fname</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/utilities.html#load_from_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.utilities.load_from_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>The method reloads a new stopwords list.</p>
+<dl class="docutils">
+<dt>Note:</dt>
+<dd>Internal stopword is overwritten.</dd>
+<dt>Args:</dt>
+<dd>fname (<code class="xref py py-obj docutils literal"><span class="pre">str</span></code>): a file path string</dd>
+<dt>Returns:</dt>
+<dd>(<code class="xref py py-obj docutils literal"><span class="pre">set</span></code>): The list of terms</dd>
+<dt>Raises:</dt>
+<dd>FileNotFoundError: Raised if a given file is not accessable.</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="omterms.utilities.pandas_filter_rows">
+<code class="descclassname">omterms.utilities.</code><code class="descname">pandas_filter_rows</code><span class="sig-paren">(</span><em>df</em>, <em>col='Score'</em>, <em>min_t=None</em>, <em>max_t=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/utilities.html#pandas_filter_rows"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.utilities.pandas_filter_rows" title="Permalink to this definition">¶</a></dt>
+<dd><p>The method extracts rows from a Pandas data frame for the given score range.
+The scores above the minimum and below the maximum is selected.</p>
+<dl class="docutils">
+<dt>Note:</dt>
+<dd>This function should be generalized so that it can work on any predicate function.</dd>
+<dt>Args:</dt>
+<dd>df (<code class="xref py py-obj docutils literal"><span class="pre">pandas.core.frame.DataFrame</span></code>): A Pandas data frame.
+col (<code class="xref py py-obj docutils literal"><span class="pre">str</span></code>): The column that the filtering operation to be applied (default &#8216;Score&#8217;) 
+min_t (<code class="xref py py-obj docutils literal"><span class="pre">float</span></code>): The minumum score threshold to be included when assigned (default None).
+max_t (<code class="xref py py-obj docutils literal"><span class="pre">float</span></code>): The maximum score threshold to be included when assigned (default None).</dd>
+<dt>Returns:</dt>
+<dd>df (<code class="xref py py-obj docutils literal"><span class="pre">pandas.core.frame.DataFrame</span></code>): A Pandas data frame.</dd>
+<dt>Raises:</dt>
+<dd>TypeError: Raised if the column data type is not a number.</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="omterms.utilities.pandas_merge_dfs">
+<code class="descclassname">omterms.utilities.</code><code class="descname">pandas_merge_dfs</code><span class="sig-paren">(</span><em>dfs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/utilities.html#pandas_merge_dfs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.utilities.pandas_merge_dfs" title="Permalink to this definition">¶</a></dt>
+<dd><p>The method renames designated columns of the the pandas data frame.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>df (<code class="xref py py-obj docutils literal"><span class="pre">pandas.core.frame.DataFrame</span></code>): A Pandas data frame.
+cols (<code class="xref py py-obj docutils literal"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal"><span class="pre">str</span></code>): The list of columns to renamed.</dd>
+<dt>Returns:</dt>
+<dd>df (<code class="xref py py-obj docutils literal"><span class="pre">pandas.core.frame.DataFrame</span></code>): A Pandas data frame.</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="omterms.utilities.pandas_rename_cols">
+<code class="descclassname">omterms.utilities.</code><code class="descname">pandas_rename_cols</code><span class="sig-paren">(</span><em>df, cols=['TF', 'wTF', 'Score'], prefix='u'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/utilities.html#pandas_rename_cols"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.utilities.pandas_rename_cols" title="Permalink to this definition">¶</a></dt>
+<dd><p>The method renames designated columns of the the pandas data frame.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>df (<code class="xref py py-obj docutils literal"><span class="pre">pandas.core.frame.DataFrame</span></code>): A Pandas data frame.
+cols (<code class="xref py py-obj docutils literal"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal"><span class="pre">str</span></code>): The list of columns to renamed.</dd>
+<dt>Returns:</dt>
+<dd>df (<code class="xref py py-obj docutils literal"><span class="pre">pandas.core.frame.DataFrame</span></code>): A Pandas data frame.</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="omterms.utilities.run_cleaning_process">
+<code class="descclassname">omterms.utilities.</code><code class="descname">run_cleaning_process</code><span class="sig-paren">(</span><em>Cleaner, tokens, exceptions=[], minL=1, minF=4, notallowed=['*'], logging=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/utilities.html#run_cleaning_process"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.utilities.run_cleaning_process" title="Permalink to this definition">¶</a></dt>
+<dd><p>Term function cleans and counts the words in the ist.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd><p class="first">Cleaner (:obj:<a href="#id1"><span class="problematic" id="id2">`</span></a>omterms.cleaner.TextCleaner&#8217;): The text cleaning object.</p>
+<p>tokens (<code class="xref py py-obj docutils literal"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal"><span class="pre">str</span></code> ): The list of words.</p>
+<p>minL (<code class="xref py py-obj docutils literal"><span class="pre">int</span></code>): The minimum allowed term length (default 1).</p>
+<dl class="docutils">
+<dt>minF(<code class="xref py py-obj docutils literal"><span class="pre">int</span></code>): The minimum allowed frequency count for the tabuleted outputs</dt>
+<dd>(default 4).</dd>
+<dt>notallowed (<code class="xref py py-obj docutils literal"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal"><span class="pre">str</span></code>, optional): The list of symbols that would flag</dt>
+<dd>the removal of the term if needed (defualt [&#8216;*&#8217;])</dd>
+</dl>
+<p>exceptions (<code class="xref py py-obj docutils literal"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal"><span class="pre">str</span></code>, optional): The list of exceptions.</p>
+<p class="last">logging (<code class="xref py py-obj docutils literal"><span class="pre">bool</span></code>): Logging (default True)</p>
+</dd>
+<dt>Returns:</dt>
+<dd><dl class="first last docutils">
+<dt>(<code class="xref py py-obj docutils literal"><span class="pre">nltk.FreqDist</span></code>): Returns the trimmed corpus as the NLTK obj, where essentially</dt>
+<dd>it is python dictionary cleaned terms. The eys are terms and the values are 
+the frequency counts.</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="omterms.utilities.run_stemming_process">
+<code class="descclassname">omterms.utilities.</code><code class="descname">run_stemming_process</code><span class="sig-paren">(</span><em>theCorpus</em>, <em>stemf</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/utilities.html#run_stemming_process"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.utilities.run_stemming_process" title="Permalink to this definition">¶</a></dt>
+<dd><p>The functions computes the stems of terms in the corpus.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>theCorpus (<a class="reference internal" href="#omterms.datauis.Corpus" title="omterms.datauis.Corpus"><code class="xref py py-obj docutils literal"><span class="pre">omterms.datauis.Corpus</span></code></a>): The text corpus.</dd>
+<dt>Returns:</dt>
+<dd>theCorpus (<a class="reference internal" href="#omterms.datauis.Corpus" title="omterms.datauis.Corpus"><code class="xref py py-obj docutils literal"><span class="pre">omterms.datauis.Corpus</span></code></a>): The text corpus.</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="omterms.utilities.run_tokenizing_process">
+<code class="descclassname">omterms.utilities.</code><code class="descname">run_tokenizing_process</code><span class="sig-paren">(</span><em>text</em>, <em>tokenizer</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/utilities.html#run_tokenizing_process"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.utilities.run_tokenizing_process" title="Permalink to this definition">¶</a></dt>
+<dd><p>The functions tokenizes the given input text.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd><p class="first">text (<code class="xref py py-obj docutils literal"><span class="pre">str</span></code> ): The input text.</p>
+<p class="last">tokenizer (x <code class="xref py py-obj docutils literal"><span class="pre">str</span></code> -&gt; y: <code class="xref py py-obj docutils literal"><span class="pre">str</span></code>): The tokenizer function.</p>
+</dd>
+<dt>Returns:</dt>
+<dd>(<code class="xref py py-obj docutils literal"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal"><span class="pre">str</span></code> ): The list of words as tokens.</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="omterms.utilities.summary_corpus">
+<code class="descclassname">omterms.utilities.</code><code class="descname">summary_corpus</code><span class="sig-paren">(</span><em>SC</em>, <em>top=20</em>, <em>bottom=20</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/omterms/utilities.html#summary_corpus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omterms.utilities.summary_corpus" title="Permalink to this definition">¶</a></dt>
+<dd><p>The functions computes the stems of terms in the corpus.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>SC (<a class="reference internal" href="#omterms.datauis.Corpus" title="omterms.datauis.Corpus"><code class="xref py py-obj docutils literal"><span class="pre">omterms.datauis.Corpus</span></code></a>): The text corpus.
+top (<code class="xref py py-obj docutils literal"><span class="pre">int</span></code>): The top most common items to be displayed (default 20).
+bottom (<code class="xref py py-obj docutils literal"><span class="pre">int</span></code>): The least common items to be displayed (default 20).</dd>
+<dt>Returns:</dt>
+<dd>(<code class="xref py py-obj docutils literal"><span class="pre">pandas.DataFrame</span></code>) The tabulated data</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-omterms">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-omterms" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">omterms package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-omterms.cleaner">omterms.cleaner module</a></li>
+<li><a class="reference internal" href="#module-omterms.datauis">omterms.datauis module</a></li>
+<li><a class="reference internal" href="#module-omterms.interface">omterms.interface module</a></li>
+<li><a class="reference internal" href="#module-omterms.measures">omterms.measures module</a></li>
+<li><a class="reference internal" href="#module-omterms.stemmer">omterms.stemmer module</a></li>
+<li><a class="reference internal" href="#module-omterms.tokenizer">omterms.tokenizer module</a></li>
+<li><a class="reference internal" href="#module-omterms.utilities">omterms.utilities module</a></li>
+<li><a class="reference internal" href="#module-omterms">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/omterms.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Bulent Ozel.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
+      
+      |
+      <a href="_sources/omterms.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

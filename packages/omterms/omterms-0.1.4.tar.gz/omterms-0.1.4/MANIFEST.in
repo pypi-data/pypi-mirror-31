@@ -1,0 +1,5 @@
+include README.rst
+include README.md
+include data/corpora/*.json
+include data/*.txt
+include docs/build/html/*
