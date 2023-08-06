@@ -1,0 +1,16 @@
+fastsl/__init__.py,sha256=TSxvvfWjCSS3ru2Kl8Gwk5aJN2mR1T76FTg9-w_KKss,47
+fastsl/fastsl_cli.py,sha256=MrCrS-gd8VOf_7FYUuPmlJA5_TDj4_idd7mtk70id4Y,10696
+fastsl/genes.py,sha256=dsWLGwp6FpK-_ieAKxR7U7HPxGPxnyxl6eXXmejCHLQ,5464
+fastsl/parallel_genes.py,sha256=NivYpAB2Jk56hBRmK6nFLyV8I4GueET-2NxNysfWdIk,8575
+fastsl/parallel_rxns.py,sha256=lc6GEgDLATZtTh03-w_vcmjMWQcM3qBuNG1HWcA7nDQ,7312
+fastsl/rxns.py,sha256=gH6P5r-Uttd_YmXL3ExJwOBmcHZmHuL_ReQX6fDgI34,4038
+fastsl-0.1.1.dist-info/DESCRIPTION.rst,sha256=8dRm1bKqd5vFOOV5FS6Xhjmul7k6TJRizFbVhNm1vvk,1591
+fastsl-0.1.1.dist-info/METADATA,sha256=0qCswT4n-5PcdmqoVHILVpIGV07TF4LLLHqfy7AwBLA,2756
+fastsl-0.1.1.dist-info/RECORD,,
+fastsl-0.1.1.dist-info/WHEEL,sha256=o2k-Qa-RMNIJmUdIc7KU6VWR_ErNRbWNlxDIpl7lm34,110
+fastsl-0.1.1.dist-info/entry_points.txt,sha256=1sL-AS6wV-yn6K9Ut2V0-oFZBNeYxgYBTxF-PX00MSk,70
+fastsl-0.1.1.dist-info/metadata.json,sha256=6toVfdO8qdjXbahgqcue7gok_cqyMN6vseQefqm3bVA,1499
+fastsl-0.1.1.dist-info/top_level.txt,sha256=4RWUjzrAAIzT6Jpi1wv2phq_qUQ1oHU1OVvzbCeR1kE,13
+tests/__init__.py,sha256=iwhKnzeBJLKxpRVjvzwiRE63_zNpIBfaKLITauVph-0,24
+tests/test_multi_core.py,sha256=HeyhJygBUXfWmZBxbsLudzpzEdKiBtGtWdjpzHB_xk4,1131
+tests/test_single_core.py,sha256=yG7KnaSeUgkgIJPp6aeBwZj5zr3IPGrxaeaJpyii0k4,993
