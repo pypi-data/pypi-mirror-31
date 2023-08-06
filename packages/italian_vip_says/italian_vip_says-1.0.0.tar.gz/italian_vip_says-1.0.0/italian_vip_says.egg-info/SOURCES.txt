@@ -1,0 +1,9 @@
+setup.py
+italian_vip_says/__init__.py
+italian_vip_says/italian_vip_says.py
+italian_vip_says.egg-info/PKG-INFO
+italian_vip_says.egg-info/SOURCES.txt
+italian_vip_says.egg-info/dependency_links.txt
+italian_vip_says.egg-info/top_level.txt
+tests/__init__.py
+tests/test_ivs.py
