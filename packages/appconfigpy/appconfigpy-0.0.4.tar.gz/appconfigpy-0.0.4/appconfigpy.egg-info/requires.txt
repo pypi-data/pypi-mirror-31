@@ -1,0 +1,12 @@
+setuptools>=38.3.0
+logbook>=1.1.0
+msgfy>=0.0.2
+six
+typepy>=0.0.27
+pathvalidate>=0.17.1
+
+[build]
+wheel
+
+[release]
+releasecmd>=0.0.9
