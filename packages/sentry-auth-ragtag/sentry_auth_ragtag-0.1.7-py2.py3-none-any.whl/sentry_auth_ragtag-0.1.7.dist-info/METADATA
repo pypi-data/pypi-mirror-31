@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: sentry-auth-ragtag
+Version: 0.1.7
+Summary: Ragtag authentication provider for Sentry
+Home-page: https://ragtag.org
+Author: Ragtag
+Author-email: opensource@ragtag.org
+License: Apache 2.0
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development
+Provides-Extra: tests
+Requires-Dist: sentry (>=7.0.0)
+Provides-Extra: tests
+Requires-Dist: mock; extra == 'tests'
+Requires-Dist: flake8 (<2.1,>=2.0); extra == 'tests'
+
+
+sentry-auth-ragtag
+==================
+
+:copyright: (c) 2016 Functional Software, Inc
+
+
