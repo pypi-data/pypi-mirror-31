@@ -1,0 +1,45 @@
+home:
+  name: home
+  type: tile
+  title: Steamlink Summary
+  # Query information
+  record_type: Steam
+  start_key: 0
+  key_field: "null"
+  count: 0
+  end_key: "null"
+  return_children: false
+  stream_tag: home_header
+  force: false
+  # Layout
+  row: 1
+  grid_columns: 'twelve'
+  grid_rows: 4
+  template: 'tile.html'
+
+meshes:
+  name: meshes
+  type: table
+  title: Meshes
+  # Query information
+  record_type: Steam
+  start_key: 0
+  key_field: "null"
+  count: 20
+  end_key: "null"
+  return_children: true
+  stream_tag: table_item_area
+  force: false
+  # Fields
+  headers:
+    - "Name"
+    - "Description"
+    - "Total Nodes"
+    - "Active Nodes"
+    - "Packets sent"
+    - "Packets received"
+  row: 2
+  grid_columns: 'twelve'
+  grid_rows: 4
+  template: 'table.html'
+  record_link: "/mesh?mesh.start_key={key}&nodes.start_key={key}"

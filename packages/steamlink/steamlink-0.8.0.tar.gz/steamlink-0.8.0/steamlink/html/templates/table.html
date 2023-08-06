@@ -1,0 +1,67 @@
+<div class="{{ partial_item.grid_columns }} columns">
+    <style>
+        .table-partial > table > thead > tr, tbody {
+            /* display:block; */
+        }
+        .table-partial > table > tbody > tr:hover { 
+            background: #F7F7F5;
+            cursor: pointer;
+        }
+    </style>
+    <h4 class="table-partial partial-heading">
+        {{ partial_item.title }}
+    </h4>
+    <div class="table-partial partial" id="{{ partial_item.name }}" style="height:{{ partial_item.grid_rows * 50}}px; overflow:scroll;">
+        <table>
+            <thead>
+                {% for header in partial_item.headers %}
+                <th>{{ header }}</th>
+                {% endfor %}
+            </thead>
+            <tbody >
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+
+        var scrolledDiv = $('#{{ partial_item.name }} > table > tbody')[0];
+        var headers = {{ partial_item.headers|tojson|safe }};
+
+        var streamConfig = {
+            record_type: {{ partial_item.record_type|tojson|safe }},
+            start_key: {{ partial_item.start_key|tojson|safe }},
+            key_field: {{ partial_item.key_field|tojson|safe }},
+            count: {{ partial_item.count|tojson|safe }},
+            end_key: {{ partial_item.end_key|tojson|safe }},
+            return_children: {{ partial_item.return_children|tojson|safe }},
+            stream_tag: {{ partial_item.stream_tag|tojson|safe }},
+            force: {{ partial_item.force|tojson|safe}}
+        };
+
+        var record_link = "{{ partial_item.record_link }}";
+        var tableStream = new Stream(socket, streamConfig, (data) => {
+            var htmlString = "";            
+            tableStream.cache.forEach((item) => {
+                htmlString += "<tr>";
+                headers.forEach( (header) => {
+                    if(header in item) {
+                        htmlString += "<td>" + "<a href =" + window.format(record_link, {"key" : item[tableStream.key_field] }) + ">" + item[header] + "</a></td>";
+                    } else {
+                        htmlString += "<td></td>";   
+                    }
+                });
+                htmlString += "</tr>";
+            });
+            scrolledDiv.innerHTML = htmlString;
+            if ( Math.abs(scrolledDiv.scrollTop - scrolledDiv.scrollHeight) < 300) {
+                scrolledDiv.scrollTop = scrolledDiv.scrollHeight;
+            }
+        }); 
+        
+        tableStream.startStream();
+
+    });
+</script>
