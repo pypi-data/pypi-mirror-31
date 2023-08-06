@@ -1,0 +1,60 @@
+Metadata-Version: 1.1
+Name: pymycity
+Version: 0.2.4
+Summary: Get your city live information
+Home-page: http://github.com/titilambert/pymycity
+Author: Thibault Cohen
+Author-email: titilambert@gmail.com
+License: UNKNOWN
+Description-Content-Type: UNKNOWN
+Description: ########
+        PyMyCity
+        ########
+        
+        Supported cities
+        ################
+        
+        * Mascouche: https://ville.mascouche.qc.ca
+        * Montréal: http://ville.montreal.qc.ca
+        
+        Installation
+        ############
+        
+        ::
+        
+            pip install pymycity
+        
+        
+        Usage
+        #####
+        
+        ::
+        
+            ± pymycity 
+            usage: pymycity [-h] [-T TIMEOUT] {mascouche,montreal} ...
+        
+        
+            Cities:
+                * mascouche:
+                    + garbage_collection:
+                        - List next garbage collection
+                    + taxes:
+                        - List next taxes dates
+                    + events:
+                        - List next city events
+                * montreal:
+                    + taxes:
+                        - List next taxes dates
+        
+        Dev env
+        #######
+        
+        ::
+        
+            virtualenv -p /usr/bin/python3 env
+            pip install -r requirements.txt
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
