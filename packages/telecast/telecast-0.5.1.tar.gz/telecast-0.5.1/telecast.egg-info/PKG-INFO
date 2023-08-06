@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: telecast
+Version: 0.5.1
+Summary: Portable REST/JSON RPC implementation.
+Home-page: https://github.com/and3rson/telecast
+Author: Andrew Dunai
+Author-email: a@dun.ai
+License: UNKNOWN
+Description-Content-Type: UNKNOWN
+Description: telecast
+        ========
+        
+        Portable REST/JSON RPC implementation.
+        
+        .. image:: https://travis-ci.org/and3rson/telecast.svg?branch=master
+            :target: https://travis-ci.org/and3rson/telecast
+        
+        
+Keywords: python json rest rpc
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.6
