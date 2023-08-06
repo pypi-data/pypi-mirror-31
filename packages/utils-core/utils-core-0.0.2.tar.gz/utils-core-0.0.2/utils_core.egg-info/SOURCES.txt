@@ -1,0 +1,16 @@
+.coveragerc
+.gitignore
+LICENSE
+README.rst
+requirements.txt
+setup.py
+tox.ini
+docs/CHANGELOG.rst
+tests/test_process.py
+utils/__init__.py
+utils/fs.py
+utils/process.py
+utils_core.egg-info/PKG-INFO
+utils_core.egg-info/SOURCES.txt
+utils_core.egg-info/dependency_links.txt
+utils_core.egg-info/top_level.txt
