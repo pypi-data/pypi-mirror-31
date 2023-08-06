@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: strax
+Version: 0.1.0
+Summary: Streaming analysis for XENON
+Home-page: https://github.com/jelleaalbers/strax
+Author: Jelle Aalbers
+Author-email: j.aalbers@uva.nl
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
