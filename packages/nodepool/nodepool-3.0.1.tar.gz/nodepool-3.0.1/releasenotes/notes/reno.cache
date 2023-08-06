@@ -1,0 +1,39 @@
+---
+file-contents:
+  releasenotes/notes/diskimage-connection-port-f53b0a9c910cb393.yaml:
+    features: ['The connection port can now be configured in the provider diskimages
+
+        section.
+
+        ']
+  releasenotes/notes/initial-note-f7414710196b7198.yaml: {prelude: 'Initial release
+      note. This note should be removed as soon as we have a real one.
+
+      '}
+  releasenotes/notes/static-driver-windows-cf80096636dbb428.yaml:
+    deprecations: ['``ssh-port`` in static node config is deprecated. Please update
+        config to
+
+        use ``connection-port`` instead.
+
+        ']
+    features: ['Added support for configuring windows static nodes. A static node
+        can now
+
+        define a ``connection-type``. The ``ssh-port`` option has been renamed
+
+        to ``connection-port``.
+
+        ']
+notes:
+- files:
+  - - releasenotes/notes/diskimage-connection-port-f53b0a9c910cb393.yaml
+    - !!binary |
+      Njg3ZjEyMGIzYzIxYjUyN2MyMTdhNzM0MTQ0ZTEwNWQ3ZGFlYWQ3Ng==
+  - - releasenotes/notes/initial-note-f7414710196b7198.yaml
+    - !!binary |
+      ZTQ1N2YwYzZkYTE2ZjM5YjMxNWQ1M2UwZDE2ZGJlYzE0YTljOTM4OA==
+  - - releasenotes/notes/static-driver-windows-cf80096636dbb428.yaml
+    - !!binary |
+      ZGE5NWE4MTdiYmM3NDJkYmFiNTg3OTUzYjU0MjY4NmE0YzM3NWM4OQ==
+  version: 3.0.1
