@@ -1,0 +1,16 @@
+authedwig-1.2.0.dist-info/METADATA,sha256=jj9lZcd5ysURbB3YDB8Utk-ElNgdWAgIx2vdKHpVgss,6323
+authedwig-1.2.0.dist-info/RECORD,,
+authedwig-1.2.0.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+authedwig-1.2.0.dist-info/top_level.txt,sha256=Gvky3fQQV5t6AgJ3UvQNG5TwSHVORRzh_wXUZk_9s94,7
+hedwig/__init__.py,sha256=msb0BAhjgJdqaY8dQAypRMtnx-3T0GxeF6Z2hFxsEh4,457
+hedwig/callback.py,sha256=hIH-xF6vPvctPVE5g7dP0c0CCJ4bkfKtb4vT9eQQ3Ao,2245
+hedwig/commands.py,sha256=SiEUomiQ7Iyfx_Bjkqg-aQRSEdcKLsRIGWL_sy0rVEE,2701
+hedwig/consumer.py,sha256=bm3JcUK4YkeX-Tocjayn4gxox4Z0XrE2zWGGFsBdhyM,5810
+hedwig/exceptions.py,sha256=bduSPpI3mIhhj2L6mMBiPmc_G7SZ3tnge8JsrKGkxws,682
+hedwig/format_schema.json,sha256=ufReX7SgObYHXG8uw6bm7UISnNFPNQ2hdGyhlGL1kkw,1770
+hedwig/models.py,sha256=gbzIY2V0quzukf326KuSZIzPoNJW-PMlmZidWo_y2UQ,10013
+hedwig/publisher.py,sha256=k-_kFrtRFujkbP8fAHEh_FsDkIipuNDYA5ffVfjpBsU,3207
+hedwig/validator.py,sha256=zO-GuoNVItdP_lLgrEJo1YxrsLhsueB--TSXEwSbV50,4152
+hedwig/conf/__init__.py,sha256=sPQBZHKrOR8CgiRjzO-GWsm29hiUmoTXWPc8GpQy778,4176
+hedwig/testing/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hedwig/testing/factories.py,sha256=cHvGSn77aFrmbWhFbqgfxmG_aNUIty_pj600hgJbIc4,1913
