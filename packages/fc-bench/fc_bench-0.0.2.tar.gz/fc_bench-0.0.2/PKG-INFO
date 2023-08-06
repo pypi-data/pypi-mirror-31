@@ -1,0 +1,133 @@
+Metadata-Version: 1.1
+Name: fc_bench
+Version: 0.0.2
+Summary: The fc_bench package ...
+Home-page: http://www.math.univ-paris13.fr/~cuvelier/software/Python/fc-bench.html
+Author: Francois Cuvelier
+Author-email: cuvelier@math.univ-paris13.fr
+License: BSD
+Description: 
+        .. _fc-bench: http://www.math.univ-paris13.fr/~cuvelier/software/Python/fc-bench.html 
+           
+        .. _www.python.org: http://www.python.org/
+        
+        .. _Miniconda: https://conda.io/miniconda.html
+        
+        .. _Anaconda: https://www.anaconda.com
+        
+        .. _Canopy: https://www.enthought.com/product/canopy/
+        
+        .. _Mayavi: http://docs.enthought.com/mayavi/mayavi/
+        
+        .. _Matplotlib: https://matplotlib.org/
+            
+        .. image:: http://www.math.univ-paris13.fr/~cuvelier/software/codes/Python/fc-bench/pyfc-bench_400.png
+          :width: 400px
+          :align: center
+        
+        The **fc\_bench** Python package allows to benchmark functions and much more
+           
+        
+           
+        Introduction:
+        ------------- 
+        
+        .. _fc\_bench Python package: http://www.math.univ-paris13.fr/~cuvelier/software/Python/fc-bench.html 
+        
+        .. _User's Guide: http://www.math.univ-paris13.fr/~cuvelier/software/codes/Python/fc-bench/0.0.2/fc_bench-0.0.2.pdf
+           
+        More documentation is available on `fc\_bench Python package`_ dedicated web page with an `User's Guide`_ (pdf).
+        
+        
+        This package was tested under:
+        
+            - **CentOS 7**, **Fedora 27**
+               - with Python 2.7.14 compiled from source (www.python.org_)
+               - with Python 3.5.5 compiled from source (www.python.org_)
+               - with Python 3.6.4 compiled from source (www.python.org_)
+            - **MacOS High Sierra**
+               - with Miniconda_ Python 2.7 distribution (release 2.7.14)
+               - with Miniconda_ Python 3.6 distribution (release 3.6.4)
+               - with Python 2.7.14 (www.python.org_)
+               - with Python 3.5.4 (www.python.org_)
+               - with Python 3.6.5 (www.python.org_)
+            - **openSUSE Leap 42.3 7**
+               - with Python 2.7.14 compiled from source (www.python.org_)
+               - with Python 3.4.8 compiled from source (www.python.org_)
+               - with Python 3.5.5 compiled from source (www.python.org_)
+               - with Python 3.6.5 compiled from source (www.python.org_)
+            - **Ubuntu 18.04 LTS, 17.10, 16.04 LTS** 
+               - with Python 2.7.x (x=13,14,15) compiled from source (www.python.org_)
+               - with Python 3.6.x (x=3,4,5) compiled from source (www.python.org_)
+               - with Python 3.5.5 compiled from source (www.python.org_)
+            - **Windows 10** 
+               - with Miniconda_ Python 2.7 distribution (release 2.7.14)
+               - with Miniconda_ Python 3.6 distribution (release 3.6.4)
+               - with Python 2.7.15 (www.python.org_)
+               - with Python 3.5.4 (www.python.org_)
+               - with Python 3.6.5 (www.python.org_)
+        
+        
+        Installation:
+        -------------
+        
+        The **fc\_bench** Python package is available from the Python Package Index, so to install/upgrade simply type
+        
+        .. code:: 
+        
+            pip install fc_bench -U
+              
+        Testing :
+        ---------      
+          There are demos functions in the ``fc_bench.demos`` module named ``bench_*``.
+          For example, run the following code under Python:
+          
+          .. code:: python
+          
+              from fc_bench import demos
+              demos.bench_Lagrange()
+              
+          The output of this code is::
+          
+              #---------------------------------------------------------------------------
+              # Benchmarking functions:
+              #  fun[0],            Lag: fc_bench.demos.Lagrange
+              #  fun[1],         lagint: fc_bench.demos.lagint
+              # cmpErr[i], error between fun[0] and fun[i] outputs computed with function
+              #    lambda o1,o2: np.linalg.norm(o1-o2,np.inf)
+              # where
+              #    - 1st input parameter is the output of fun[0]
+              #    - 2nd input parameter is the output of fun[i]
+              #---------------------------------------------------------------------------
+              # Setting inputs of Lagrange polynomial functions: y=LAGRANGE(X,Y,x)
+              # where X is numpy.linspace(a,b,n+1), Y=fun(X) and x is random values on [a,b]
+              #   n is the order of the Lagrange polynomial
+              #   fun function is: lambda x: np.sin(x)
+              #   [a,b]=[-1,1]
+              #   X: (n+1,) numpy array
+              #   Y: (n+1,) numpy array
+              #   x: (m,)   numpy array
+              #   Error[i] computed with fun[i] output:
+              #     lambda y: np.linalg.norm(y-fun(x),np.inf)
+              #---------------------------------------------------------------------------
+              #date:2018/05/03 10:16:55
+              #nbruns:5
+              #numpy:      i4     i4        f4          f4           f4          f4           f4
+              #format:  {:>5}  {:>5}   {:8.3f}    {:10.3e}     {:11.3f}    {:10.3e}     {:11.3e}
+              #labels:      m      n    Lag(s)    Error[0]    lagint(s)    Error[1]    cmpErr[1]
+                          100      5     0.012   1.163e-05        0.014   1.163e-05    3.331e-16
+                          100      9     0.020   2.859e-10        0.023   2.859e-10    8.882e-16
+                          100     15     0.036   2.143e-14        0.038   2.143e-14    2.565e-14
+                          500      5     0.056   1.162e-05        0.071   1.162e-05    5.551e-16
+                          500      9     0.102   2.901e-10        0.118   2.901e-10    1.443e-15
+                          500     15     0.178   2.232e-14        0.188   2.232e-14    2.287e-14
+                         1000      5     0.111   1.163e-05        0.146   1.163e-05    5.551e-16
+                         1000      9     0.202   2.902e-10        0.235   2.902e-10    1.554e-15
+                         1000     15     0.361   2.576e-14        0.377   2.576e-14    2.620e-14
+        
+                           
+        
+Platform: Linux
+Platform: Mac OS-X
+Platform: Windows
+Classifier: Topic :: Scientific/Engineering
