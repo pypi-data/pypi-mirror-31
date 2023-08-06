@@ -1,0 +1,76 @@
+Copyright (c) 2018 Blueshoe
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+Description: ==================================
+        djangoCMS Hubspot Blog Integration
+        ==================================
+        
+        - Management command to fetch Authors, Topics and Posts and store them in the database    
+        - djangoCMS App to hook list and detail view into a page
+        
+        Usage
+        ==================================
+        
+        - `pip install djangocms-hubspot-blog`     
+        - Add the app `hubspot_blog` to your `INSTALLED_APPS`    
+        - Optionally override the two templates `hubspot_blog/[post_list.html,post_detail.html]`    
+        
+        How to fetch blog posts
+        -----------------------
+        **Automatically**
+        
+        The best aproach is to **automatically** fetch posts, authors and topics by
+        periodically running the management command `import_blogposts` via CRON
+        or calling `hubspot_api.update_blog_posts()` from a task queue.
+        
+        **Manually**
+        
+        However, it's also possible for site editors to **manually** trigger an
+        update via an admin action (it's needed to select a blog post in order
+        to run the action, so for the first time use, run the management command or create a dummy blog post via the admin)
+        
+        Missing Functionality
+        -------------------------
+        - Author page    
+        - Topic page    
+        
+        Contributing
+        ----------------
+        You're welcome to submit Pull Requests! :rocket:
+        Just take a look at the open issues.
+        
+Keywords: django,Django CMS,hubspot,hubspot blog,blog,CMS,Blueshoe
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: Django
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
