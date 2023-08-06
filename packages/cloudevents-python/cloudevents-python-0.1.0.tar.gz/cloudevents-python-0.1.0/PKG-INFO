@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: cloudevents-python
+Version: 0.1.0
+Summary: Python implmenetation of cloudevents
+Home-page: https://github.com/williamhogman/cloudevents-python
+Author: William Rudenmalm
+Author-email: me@whn.se
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4

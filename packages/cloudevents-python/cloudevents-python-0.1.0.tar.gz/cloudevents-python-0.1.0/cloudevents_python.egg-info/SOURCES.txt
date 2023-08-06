@@ -1,0 +1,11 @@
+setup.py
+cloudevents/__init__.py
+cloudevents/constants.py
+cloudevents/construct.py
+cloudevents/model.py
+cloudevents/parse.py
+cloudevents/serialize.py
+cloudevents_python.egg-info/PKG-INFO
+cloudevents_python.egg-info/SOURCES.txt
+cloudevents_python.egg-info/dependency_links.txt
+cloudevents_python.egg-info/top_level.txt
