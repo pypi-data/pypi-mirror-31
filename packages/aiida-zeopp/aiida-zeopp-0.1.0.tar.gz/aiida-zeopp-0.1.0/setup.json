@@ -1,0 +1,47 @@
+{
+    "name": "aiida-zeopp",
+    "author": "Leopold Talirz",
+    "author_email": "leopold.talirz@epfl.ch",
+    "description": "AiiDA plugin for zeo++",
+    "url": "https://github.com/ltalirz/aiida-zeopp",
+    "license": "Creative Commons",
+    "classifiers": [
+        "Programming Language :: Python"
+    ],
+    "version": "0.1.0",
+    "entry_points": {
+        "aiida.calculations": [
+            "zeopp.network = aiida_zeopp.calculations.network:NetworkCalculation"
+        ],
+        "aiida.parsers": [
+            "zeopp.network = aiida_zeopp.parsers.network:NetworkParser"
+        ],
+        "aiida.data": [
+            "zeopp.parameters = aiida_zeopp.data.parameters:NetworkParameters"
+        ],
+        "console_scripts": [
+            "aiida-template-factors = aiida_zeopp.console_scripts.data_cli:cli"
+        ]
+    },
+    "setup_requires": [
+        "reentry",
+        "voluptuous"
+    ],
+    "reentry_register": true,
+    "install_requires": [
+        "aiida >= 0.11.4",
+        "pycifrw >= 4.2",
+        "pymatgen >= 2016.1.0"
+    ],
+    "extras_require": {
+        "testing": [
+            "aiida-core[testing]"
+        ],
+        "pre-commit": [
+            "pre-commit",
+            "yapf",
+            "prospector",
+            "pylint>=1.7,<1.8"
+        ]
+    }
+}

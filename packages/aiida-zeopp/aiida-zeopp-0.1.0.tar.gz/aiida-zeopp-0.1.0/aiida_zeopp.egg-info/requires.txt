@@ -1,0 +1,12 @@
+aiida>=0.11.4
+pycifrw>=4.2
+pymatgen>=2016.1.0
+
+[pre-commit]
+pre-commit
+yapf
+prospector
+pylint<1.8,>=1.7
+
+[testing]
+aiida-core[testing]
