@@ -1,0 +1,11 @@
+README.md
+setup.py
+onesignal/__init__.py
+onesignal/core.py
+onesignal/notification.py
+onesignal/segment_notification.py
+onesignal_notifications.egg-info/PKG-INFO
+onesignal_notifications.egg-info/SOURCES.txt
+onesignal_notifications.egg-info/dependency_links.txt
+onesignal_notifications.egg-info/requires.txt
+onesignal_notifications.egg-info/top_level.txt
