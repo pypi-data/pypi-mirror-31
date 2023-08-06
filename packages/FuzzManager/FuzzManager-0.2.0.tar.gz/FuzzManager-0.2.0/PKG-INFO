@@ -1,0 +1,17 @@
+Metadata-Version: 1.2
+Name: FuzzManager
+Version: 0.2.0
+Summary: A fuzzing management tools collection
+Home-page: https://github.com/MozillaSecurity/FuzzManager
+Maintainer: Mozilla Fuzzing Team
+Maintainer-email: fuzzing@mozilla.com
+License: MPL 2.0
+Description: UNKNOWN
+Keywords: fuzz fuzzing security test testing
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: Security
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
