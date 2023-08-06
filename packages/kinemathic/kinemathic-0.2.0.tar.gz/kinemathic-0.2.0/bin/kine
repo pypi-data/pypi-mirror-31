@@ -1,0 +1,62 @@
+#!/usr/bin/env python3
+"""Kine.
+
+Kinematic display from a csv or excel spreadsheet using best defaults.
+
+Usage:
+    kine <input> <steps> [-c <column>] [-d] [-o <file>] [-t <title>] [-x] [-y]
+    kine -h | --help
+    kine --version
+
+Options:
+    -h --help    Show this screen.
+    -c <column>  column index
+    -d           describe the data
+    -o <file>    output file (.mp4)
+    -t <title>   title for chart
+    -x           remove x axis
+    -y           remove y axis
+    --version
+
+"""
+import os
+from docopt import docopt
+import pandas as pd
+from kinemathic.animation import animate
+from kinemathic.resample import between_rows
+
+
+if __name__ == "__main__":
+    arguments = docopt(__doc__, version='Kinemathic 0.2.0')
+    print(arguments)
+    filename = arguments['<input>']
+    steps = int(arguments['<steps>'])
+
+    trim = arguments.get('-p', False)
+    server = arguments.get('-s', False)
+    persistence = arguments.get('-k', None)
+
+    if filename[-4:] in ('xlsx', '.xls'):
+        df = pd.read_excel(filename)
+    elif filename[-4:] == '.tsv':
+        df = pd.read_table(filename)
+    else:
+        if arguments['-c'] is not None:
+            df = pd.read_csv(filename, usecols=[int(arguments['-c'])])
+        else:
+            df = pd.read_csv(filename)
+    if arguments['-d']:
+        print(df.describe())
+
+    if arguments['-t'] is not None:
+       title = arguments['-t']
+    else:
+        title = None
+    if arguments['-o']:
+        output_file = arguments['-o']
+    else:
+        output_file = filename[:-4] + '.mp4'
+
+    rx = arguments.get('-x', None)
+    ry = arguments.get('-y', None)
+    animate(df.dropna(), output_file, axis=1, fps=10, step=steps, autoscale=False, rx=rx, ry=ry, title=title)
