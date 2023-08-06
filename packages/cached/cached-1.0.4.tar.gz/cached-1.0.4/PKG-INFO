@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: cached
+Version: 1.0.4
+Summary: cached(function) - cache function
+Home-page: https://github.com/looking-for-a-job/cached.py
+License: UNKNOWN
+Description: ### Install
+        
+        ```bash
+        $ [sudo] pip install cached
+        ```
+        
+        ### Usage
+        
+        ```python
+        >>> from cached import cached
+        
+        >>> cached(func)()
+        ```
+        
+        ### Examples
+        
+        ```python
+        >>> def func(*args,**kwags):
+        	print('log')
+        	return "result"
+        
+        >>> cached(func)()
+        log
+        'result'
+        >>> cached(func)() # cached :)
+        'result'
+        ```
+        
+        ### Sources
+        
+        +   [`cached.cached(function)`](https://github.com/looking-for-a-job/cached.py/blob/master/cached/__init__.py)
+Keywords: cached cache function
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development
+Description-Content-Type: text/markdown
