@@ -1,0 +1,82 @@
+Metadata-Version: 2.1
+Name: nn
+Version: 0.0.4
+Summary: A neural network library built on top of TensorFlow for quickly building deep learning models.
+Home-page: https://github.com/AppliedDeepLearning/nn
+Author: Ravindra Marella
+Author-email: mv.ravindra007@gmail.com
+License: MIT
+Project-URL: Documentation, https://nn.applieddeeplearning.com/
+Project-URL: Source Code, https://github.com/AppliedDeepLearning/nn
+Project-URL: Bug Tracker, https://github.com/AppliedDeepLearning/nn/issues
+Description: A neural network library built on top of TensorFlow for quickly building deep learning models.
+        
+        
+        ## Installation
+        
+        ```sh
+        pip install nn
+        ```
+        
+        
+        ## Example
+        
+        ```py
+        import nn
+        
+        # Define the network (layers, number of units, activations) as a function:
+        def network(inputs):
+            hidden = nn.Dense(units=64, activation='relu')(inputs)
+            outputs = nn.Dense(units=10)(hidden)
+            return outputs
+        
+        # Create a model by configuring its learning process (loss, optimizer, evaluation metrics):
+        model = nn.Model(network,
+                         loss='softmax_cross_entropy',
+                         optimizer=('GradientDescent', 0.001),
+                         metrics=['accuracy'])
+        
+        # Train the model using training data:
+        model.train(x_train, y_train, epochs=30, batch_size=128)
+        
+        # Evaluate the model performance on test or validation data:
+        loss_and_metrics = model.evaluate(x_test, y_test)
+        
+        # Use the model to make predictions for new data:
+        predictions = model.predict(x)
+        ```
+        
+        
+        ## Documentation
+        
+        See [documentation][website].
+        
+        
+        ## License
+        
+        [MIT][license]
+        
+        
+        [license]: /LICENSE
+        [website]: https://nn.applieddeeplearning.com/
+        
+Keywords: nn tensorflow neural-network deep-learning machine-learning
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
