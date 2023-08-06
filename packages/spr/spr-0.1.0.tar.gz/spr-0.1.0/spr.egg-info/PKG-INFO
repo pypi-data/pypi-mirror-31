@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: spr
+Version: 0.1.0
+Summary: Python module to parse spice raw data files
+Home-page: https://github.com/goncalo-godwitlabs/spr
+Author: goncalo-godwitlabs
+Author-email: goncalo@godwitlabs.com
+License: UNKNOWN
+Project-URL: Source, https://github.com/goncalo-godwitlabs/spr
+Project-URL: Bug Reports, https://github.com/goncalo-godwitlabs/spr/issues
+Description: # Spice Raw Parser (spr)
+        
+        A python package to parse spice raw data files.
+        
+        ## Getting Started
+        
+        These instructions will get you a copy of the package up and running on your local machine.
+        
+        ### Installation
+        
+        #### From PyPI
+        ```
+        pip install spr
+        ```
+        
+        #### From source code
+        ```
+        git clone git@github.com:goncalo-godwitlabs/spr.git
+        cd spr/
+        make install
+        ```
+        
+        ## Examples
+        
+        ### Inverting amplifier with an opamp LM741
+        
+        The following circuit is being simulated:
+        
+        ![](examples/amplifier/schematic.png)
+        
+        To run the simulation (ngspice should be installed!):
+        
+        ```
+        make run-example-amplifier
+        ```
+        
+        which will run ngspice generating an output.log and rawspice.raw files and also plot the voltages `vin` and `vout`.
+        
+        ![](examples/amplifier/plot.png)
+        
+        
+        ## License
+        
+        This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+        
+Keywords: spice matplotlib rawspice raw
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)
+Classifier: Programming Language :: Python :: 2.7
+Description-Content-Type: text/markdown
+Provides-Extra: test
+Provides-Extra: dev
