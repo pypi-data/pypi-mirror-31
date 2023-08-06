@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+mpu/__init__.py
+mpu/datastructures.py
+mpu.egg-info/PKG-INFO
+mpu.egg-info/SOURCES.txt
+mpu.egg-info/dependency_links.txt
+mpu.egg-info/top_level.txt
+mpu.egg-info/zip-safe
