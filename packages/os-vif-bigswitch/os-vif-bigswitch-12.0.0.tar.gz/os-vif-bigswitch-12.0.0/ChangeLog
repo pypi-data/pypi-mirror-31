@@ -1,0 +1,8 @@
+CHANGES
+=======
+
+12.0.0
+------
+
+* move os-vif plug/unplug from networking-bigswitch
+* repo created using cookiecutter

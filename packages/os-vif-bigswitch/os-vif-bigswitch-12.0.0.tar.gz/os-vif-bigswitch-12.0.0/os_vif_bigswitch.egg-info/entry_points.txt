@@ -1,0 +1,3 @@
+[os_vif]
+ivs = os_vif_bigswitch.vif_plug_ivs.ivs:IvsPlugin
+

@@ -1,0 +1,6 @@
+[run]
+branch = True
+source = os_vif_bigswitch
+
+[report]
+ignore_errors = True
