@@ -1,0 +1,40 @@
+CHANGES
+=======
+
+0.2.0
+-----
+
+* demo container: Include ssl certificates
+* Updated from global requirements
+* Ensure port name includes namespace name
+* Check connectivity from Pod to VM
+* test\_container: Add non-layered demo test image
+* Migrate kuryr-tempest-plugin to zuulv3 syntax
+* Testing port pool feature
+* Fix missing blank space in plugin conditional
+* Add a devstack plugin for Kuryr Tempest Plugin
+* Updated from global requirements
+* Testing pod to pod connectivity
+* Fix pep8 tox job
+* Fix \`create\_pod\` for 4.0 kubernetes client
+* Updated from global requirements
+* Add scenario test manager
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Skip test\_list\_pods
+* Updated from global requirements
+* Add initial documentation
+
+0.1.0
+-----
+
+* Change gerrit remote to openstack infra
+* Fix dummy pep8 issue
+* Extend pods testing
+* Extends base network admin test
+* [WIP] Add k8s client
+* Add a dummy test
+* Add kuryr base test class
+* Initial Commit
