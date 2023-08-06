@@ -1,0 +1,17 @@
+numpy>=1.6
+PyYAML
+astropy>=1.2
+scipy>=0.14
+numdifftools
+tables
+pandas
+dill
+
+[docs]
+sphinx>=1.4
+sphinx_rtd_theme
+nbsphinx
+sphinx-autoapi
+
+[tests]
+pytest
