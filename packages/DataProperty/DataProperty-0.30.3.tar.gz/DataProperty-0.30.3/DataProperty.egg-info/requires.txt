@@ -1,0 +1,29 @@
+setuptools>=38.3.0
+logbook>=1.0.1
+mbstrdecoder>=0.3.0
+typepy>=0.0.27
+
+[:python_version < "3.2"]
+futures
+
+[:python_version < "3.3"]
+ipaddress
+
+[:python_version < "3.4"]
+enum34
+
+[build]
+wheel
+
+[docs]
+path.py
+sphinx_rtd_theme
+Sphinx
+
+[release]
+releasecmd>=0.0.9
+
+[test]
+pytest-cov
+pytest<=2.9.2
+tox
