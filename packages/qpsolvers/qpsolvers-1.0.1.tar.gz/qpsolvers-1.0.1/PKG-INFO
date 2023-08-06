@@ -1,0 +1,27 @@
+Metadata-Version: 1.1
+Name: qpsolvers
+Version: 1.0.1
+Summary: Wrapper for Quadratic Programming solvers with a unified API
+Home-page: https://github.com/stephane-caron/qpsolvers
+Author: Stéphane Caron
+Author-email: stephane.caron@normalesup.org
+License: LGPL
+Description: This module provides a single function ``solve_qp(P, q, G, h, A, b, solver=X)``
+        with a *solver* keyword argument to select the backend solver. The quadratic
+        program it solves is, in standard form:
+        
+            .. figure:: https://raw.githubusercontent.com/stephane-caron/qpsolvers/master/.qp.png
+        
+        where vector inequalities are taken coordinate by coordinate.
+        
+Keywords: qp,quadratic programming,solver
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
