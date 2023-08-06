@@ -1,0 +1,8 @@
+pyzmq
+python-bitcoinlib
+
+[dev]
+flake8
+
+[test]
+asynctest
