@@ -1,0 +1,911 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>python-mbee: Класс mbee.serialstar.SerialStar</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">python-mbee
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacembee.html">mbee</a></li><li class="navelem"><b>serialstar</b></li><li class="navelem"><a class="el" href="classmbee_1_1serialstar_1_1_serial_star.html">SerialStar</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="classmbee_1_1serialstar_1_1_serial_star-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс mbee.serialstar.SerialStar</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс для проектов, основанных на программном обеспечении <a class="el" href="classmbee_1_1serialstar_1_1_serial_star.html" title="Класс для проектов, основанных на программном обеспечении SerialStar. ">SerialStar</a>.  
+ <a href="classmbee_1_1serialstar_1_1_serial_star.html#details">Подробнее...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a731ae0f928a9d5327542c8765118ae41"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmbee_1_1serialstar_1_1_serial_star.html#a731ae0f928a9d5327542c8765118ae41">__init__</a> (self, port, baud)</td></tr>
+<tr class="separator:a731ae0f928a9d5327542c8765118ae41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a267c529f0b6f1e617ddcad9a15a35b9a"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmbee_1_1serialstar_1_1_serial_star.html#a267c529f0b6f1e617ddcad9a15a35b9a">callback_registring</a> (self, frame_type, function_name)</td></tr>
+<tr class="memdesc:a267c529f0b6f1e617ddcad9a15a35b9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод для регистрации callback-функции.  <a href="#a267c529f0b6f1e617ddcad9a15a35b9a">Подробнее...</a><br /></td></tr>
+<tr class="separator:a267c529f0b6f1e617ddcad9a15a35b9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24e9abd5afd76d9feba64abb735e7395"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmbee_1_1serialstar_1_1_serial_star.html#a24e9abd5afd76d9feba64abb735e7395">send_immidiate_apply_local_at</a> (self, frame_id, at_command, at_parameter=&quot;&quot;)</td></tr>
+<tr class="memdesc:a24e9abd5afd76d9feba64abb735e7395"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отправка фрейма с локальной AT-командой с немедленным применением изменений: API-фрейм 0x07.  <a href="#a24e9abd5afd76d9feba64abb735e7395">Подробнее...</a><br /></td></tr>
+<tr class="separator:a24e9abd5afd76d9feba64abb735e7395"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d3f4da569590a4f7ccea0ceb46c4f43"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmbee_1_1serialstar_1_1_serial_star.html#a4d3f4da569590a4f7ccea0ceb46c4f43">send_immidiate_apply_and_save_local_at</a> (self, frame_id, at_command, at_parameter=&quot;&quot;)</td></tr>
+<tr class="memdesc:a4d3f4da569590a4f7ccea0ceb46c4f43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отправка фрейма с локальной AT-командой с немедленным применением и сохранением изменений в энергонезависимой памяти: API-фрейм 0x08.  <a href="#a4d3f4da569590a4f7ccea0ceb46c4f43">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4d3f4da569590a4f7ccea0ceb46c4f43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefca6c924c9b844a93e2791c33983dc5"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmbee_1_1serialstar_1_1_serial_star.html#aefca6c924c9b844a93e2791c33983dc5">send_queue_local_at</a> (self, frame_id, at_command, at_parameter=&quot;&quot;)</td></tr>
+<tr class="memdesc:aefca6c924c9b844a93e2791c33983dc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отправка фрейма с локальной AT-командой с помещением параметра в очередь: API-фрейм 0x09.  <a href="#aefca6c924c9b844a93e2791c33983dc5">Подробнее...</a><br /></td></tr>
+<tr class="separator:aefca6c924c9b844a93e2791c33983dc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa9bff984d9d6c0c344c7a875bd85b78"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmbee_1_1serialstar_1_1_serial_star.html#aaa9bff984d9d6c0c344c7a875bd85b78">send_tx_request</a> (self, frame_id, destination_id, data, options=&quot;&quot;)</td></tr>
+<tr class="memdesc:aaa9bff984d9d6c0c344c7a875bd85b78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отправка фрейма с данными удаленному модулю, которые должны быть переданы им в UART: API-фреймы 0x10, 0x0F.  <a href="#aaa9bff984d9d6c0c344c7a875bd85b78">Подробнее...</a><br /></td></tr>
+<tr class="separator:aaa9bff984d9d6c0c344c7a875bd85b78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6de192a50af50c36dbfed7debbb4c4f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmbee_1_1serialstar_1_1_serial_star.html#ad6de192a50af50c36dbfed7debbb4c4f">send_remote_at</a> (self, frame_id, destination_id, options, at_command, at_parameter=&quot;&quot;)</td></tr>
+<tr class="memdesc:ad6de192a50af50c36dbfed7debbb4c4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отправка фрейма с AT-командой удаленному модулю: API-фрейм 0x17.  <a href="#ad6de192a50af50c36dbfed7debbb4c4f">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad6de192a50af50c36dbfed7debbb4c4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a188a52caf03bc7f28ea3ca44fd48b83d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmbee_1_1serialstar_1_1_serial_star.html#a188a52caf03bc7f28ea3ca44fd48b83d">get_tx_request</a> (self)</td></tr>
+<tr class="memdesc:a188a52caf03bc7f28ea3ca44fd48b83d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение фрейма с данными от удаленного модуля, переданными с байтом опций: API-фрейм 0x81.  <a href="#a188a52caf03bc7f28ea3ca44fd48b83d">Подробнее...</a><br /></td></tr>
+<tr class="separator:a188a52caf03bc7f28ea3ca44fd48b83d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6357bf92fd305ba232d69ed27ae248bd"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmbee_1_1serialstar_1_1_serial_star.html#a6357bf92fd305ba232d69ed27ae248bd">get_tx_request_without_option</a> (self)</td></tr>
+<tr class="memdesc:a6357bf92fd305ba232d69ed27ae248bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение фрейма с данными от удаленного модуля, переданными без байта опций: API-фрейм 0x8F.  <a href="#a6357bf92fd305ba232d69ed27ae248bd">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6357bf92fd305ba232d69ed27ae248bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a468bc936f8ee270229313bd6f81a68d4"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmbee_1_1serialstar_1_1_serial_star.html#a468bc936f8ee270229313bd6f81a68d4">get_immidiate_apply_local_at_response</a> (self)</td></tr>
+<tr class="memdesc:a468bc936f8ee270229313bd6f81a68d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение фрейма, подтверждающего прием пакета с локальной AT-командой с немедленным применением изменений: API-фрейм 0x87.  <a href="#a468bc936f8ee270229313bd6f81a68d4">Подробнее...</a><br /></td></tr>
+<tr class="separator:a468bc936f8ee270229313bd6f81a68d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7cbc4345b95188f1011ec3c8e8dde96"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmbee_1_1serialstar_1_1_serial_star.html#aa7cbc4345b95188f1011ec3c8e8dde96">get_immidiate_apply_and_save_local_at_response</a> (self)</td></tr>
+<tr class="memdesc:aa7cbc4345b95188f1011ec3c8e8dde96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение фрейма, подтверждающего прием пакета с локальной AT-командой с немедленным применением и сохраненим изменений: API-фрейм 0x88.  <a href="#aa7cbc4345b95188f1011ec3c8e8dde96">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa7cbc4345b95188f1011ec3c8e8dde96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac76201589f95f2026010d3848ef967f4"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmbee_1_1serialstar_1_1_serial_star.html#ac76201589f95f2026010d3848ef967f4">get_queue_local_at_response</a> (self)</td></tr>
+<tr class="memdesc:ac76201589f95f2026010d3848ef967f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение фрейма, подтверждающего прием пакета с локальной AT-командой и помещением параметра в очередь: API-фрейм 0x89.  <a href="#ac76201589f95f2026010d3848ef967f4">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac76201589f95f2026010d3848ef967f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa119e9c3e260e2f612fe6bc23c9aafd1"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmbee_1_1serialstar_1_1_serial_star.html#aa119e9c3e260e2f612fe6bc23c9aafd1">get_modem_status</a> (self)</td></tr>
+<tr class="memdesc:aa119e9c3e260e2f612fe6bc23c9aafd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение фрейма со статусом модуля, отправляемого им при рестарте: API-фрейм 0x8A.  <a href="#aa119e9c3e260e2f612fe6bc23c9aafd1">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa119e9c3e260e2f612fe6bc23c9aafd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafaeb2fdaf8eaec3297fcb51b812e427"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmbee_1_1serialstar_1_1_serial_star.html#aafaeb2fdaf8eaec3297fcb51b812e427">get_local_tx_status</a> (self)</td></tr>
+<tr class="memdesc:aafaeb2fdaf8eaec3297fcb51b812e427"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение фрейма со статусом отправки пакета, предназначенного для передачи в эфир: API-фрейм 0x8B.  <a href="#aafaeb2fdaf8eaec3297fcb51b812e427">Подробнее...</a><br /></td></tr>
+<tr class="separator:aafaeb2fdaf8eaec3297fcb51b812e427"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac303f32a2600d1a3ad0e86e5aa32e2f8"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmbee_1_1serialstar_1_1_serial_star.html#ac303f32a2600d1a3ad0e86e5aa32e2f8">get_remote_tx_status</a> (self)</td></tr>
+<tr class="memdesc:ac303f32a2600d1a3ad0e86e5aa32e2f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение фрейма с подтверждением доставки пакета с данными удаленному модулю: API-фрейм 0x8C.  <a href="#ac303f32a2600d1a3ad0e86e5aa32e2f8">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac303f32a2600d1a3ad0e86e5aa32e2f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00d9e3bf506114edfca5552e33d897ac"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmbee_1_1serialstar_1_1_serial_star.html#a00d9e3bf506114edfca5552e33d897ac">get_remote_at_command_response</a> (self)</td></tr>
+<tr class="memdesc:a00d9e3bf506114edfca5552e33d897ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение фрейма с ответом от удаленного модуля на отправленную ему AT-команду: API-фрейм 0x97.  <a href="#a00d9e3bf506114edfca5552e33d897ac">Подробнее...</a><br /></td></tr>
+<tr class="separator:a00d9e3bf506114edfca5552e33d897ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dc29e63d7a5ff6bf20b9d6674bd896c"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmbee_1_1serialstar_1_1_serial_star.html#a5dc29e63d7a5ff6bf20b9d6674bd896c">get_io_sample_rx</a> (self)</td></tr>
+<tr class="memdesc:a5dc29e63d7a5ff6bf20b9d6674bd896c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение фрейма с данными о состоянии линий ввода вывода удаленного модуля: API-фрейм 0x83.  <a href="#a5dc29e63d7a5ff6bf20b9d6674bd896c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5dc29e63d7a5ff6bf20b9d6674bd896c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3da075d1e99409622784d72409d55b11"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmbee_1_1serialstar_1_1_serial_star.html#a3da075d1e99409622784d72409d55b11">run</a> (self)</td></tr>
+<tr class="memdesc:a3da075d1e99409622784d72409d55b11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод, осуществляющий постоянный опрос буфера последовательного порта с целью обнаружения в нем всех типов фреймов, поддерживаемых в проекте <a class="el" href="classmbee_1_1serialstar_1_1_serial_star.html" title="Класс для проектов, основанных на программном обеспечении SerialStar. ">SerialStar</a>.  <a href="#a3da075d1e99409622784d72409d55b11">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3da075d1e99409622784d72409d55b11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Класс для проектов, основанных на программном обеспечении <a class="el" href="classmbee_1_1serialstar_1_1_serial_star.html" title="Класс для проектов, основанных на программном обеспечении SerialStar. ">SerialStar</a>. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="serialstar_8py_source.html">serialstar.py</a> строка <a class="el" href="serialstar_8py_source.html#l00027">27</a></p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a731ae0f928a9d5327542c8765118ae41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a731ae0f928a9d5327542c8765118ae41">&#9670;&nbsp;</a></span>__init__()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def mbee.serialstar.SerialStar.__init__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>baud</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>- имя COM-порта, которому подключен радиомодуль, в виде символьной строки, например "COM11". </td></tr>
+    <tr><td class="paramname">baud</td><td>- битовая скорость COM-порта. Целое число. Возможные значения 9600, 19200, 38400, 57600, 115200, 230400. Настраивается только с помощью программы SysMC Bootloader.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Модуль должен быть предварительно настроен для работы в пакетном режиме с escape-символами (AP = 2). </p>
+
+<p class="definition">См. определение в файле <a class="el" href="serialstar_8py_source.html">serialstar.py</a> строка <a class="el" href="serialstar_8py_source.html#l00109">109</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a267c529f0b6f1e617ddcad9a15a35b9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a267c529f0b6f1e617ddcad9a15a35b9a">&#9670;&nbsp;</a></span>callback_registring()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def mbee.serialstar.SerialStar.callback_registring </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>frame_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>function_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод для регистрации callback-функции. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frame_type</td><td>- тип фрейма, для которого надо зарегистрировать callback-функцию. Два шестнадцатеричных символа без 0x. Например "83". </td></tr>
+    <tr><td class="paramname">function_name</td><td>- имя функции, например frame_83_received.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Зарегистрированная функция будет вызываться каждый раз при получении от модуля данного типа пакета. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="serialstar_8py_source.html">serialstar.py</a> строка <a class="el" href="serialstar_8py_source.html#l00222">222</a></p>
+
+</div>
+</div>
+<a id="aa7cbc4345b95188f1011ec3c8e8dde96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7cbc4345b95188f1011ec3c8e8dde96">&#9670;&nbsp;</a></span>get_immidiate_apply_and_save_local_at_response()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def mbee.serialstar.SerialStar.get_immidiate_apply_and_save_local_at_response </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получение фрейма, подтверждающего прием пакета с локальной AT-командой с немедленным применением и сохраненим изменений: API-фрейм 0x88. </p>
+<p>Данная функция применяется для опроса приемного буфера последовательного порта и поиска в нем фрейма 0x88. Поиск осуществляется до первого найденного фрейма данного типа. При этом все прочие пакеты, принятые до первого пакета 0x88 теряются. Делается делается ограниченное число попыток получения данного типа фрейма. Число попыток регулируется константой LOCAL_RESPONSE_RETRY_COUNT и равно по-умолчанию 1. Функция обычно применяется, если опрос модуля осуществляется из основного скрипта периодической проверкой, а не с помощью callback-функций. </p><dl class="section return"><dt>Возвращает</dt><dd>В случае успешного приема пакета словарь (dictionary) следующего вида:<br />
+ ["DELIMITER"]: "7E" - стартовый байт фрейма.<br />
+ ["LENGTH"]: xx - длина пакета в байтах между полями length и checksum (то есть всегда на 4 байта меньше, чем полная длина принятого пакета). Десятичное число.<br />
+ ["FRAME_TYPE"]: "xx" - "88" тип фрейма.<br />
+ ["FRAME_ID"]: "xx" - идентификатор фрейма. Равен идентификатору фрейма 0x08 ответом на который он является. Два шестнадцатеричных символа без 0x.<br />
+ ["AT_COMMAND"]: "xx" - AT-команда в виде двух ASCII-символов. ["STATUS"]: "xx" - статус команды. "00" - команда выполнена, "01" - недостаточно памяти для выполнения команды, "02" - недопустимая команда, "03" - недопустимое значение параметра.<br />
+ ["AT_PARAMETER"]: "xx..x" - параметр команды в виде строки шестнадцатеричных символов без префикса 0x. Если команда записывала данные, то значением этого ключа является пустая строка. ["CHECKSUM"]: "xx" - контрольная сумма. Два шестнадцатеричных символа без 0x.<br />
+ Если пакета данного типа в буфере не обнаружено, то возвращается пустой словарь. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="serialstar_8py_source.html">serialstar.py</a> строка <a class="el" href="serialstar_8py_source.html#l00509">509</a></p>
+
+</div>
+</div>
+<a id="a468bc936f8ee270229313bd6f81a68d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a468bc936f8ee270229313bd6f81a68d4">&#9670;&nbsp;</a></span>get_immidiate_apply_local_at_response()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def mbee.serialstar.SerialStar.get_immidiate_apply_local_at_response </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получение фрейма, подтверждающего прием пакета с локальной AT-командой с немедленным применением изменений: API-фрейм 0x87. </p>
+<p>Данная функция применяется для опроса приемного буфера последовательного порта и поиска в нем фрейма 0x87. Поиск осуществляется до первого найденного фрейма данного типа. При этом все прочие пакеты, принятые до первого пакета 0x87 теряются. Делается ограниченное число попыток получения данного типа фрейма. Число попыток регулируется константой LOCAL_RESPONSE_RETRY_COUNT и равно по-умолчанию 1. Функция обычно применяется, если опрос модуля осуществляется из основного скрипта периодической проверкой, а не с помощью callback-функций. </p><dl class="section return"><dt>Возвращает</dt><dd>В случае успешного приема пакета словарь (dictionary) следующего вида:<br />
+ ["DELIMITER"]: "7E" - стартовый байт фрейма.<br />
+ ["LENGTH"]: xx - длина пакета в байтах между полями length и checksum (то есть всегда на 4 байта меньше, чем полная длина принятого пакета). Десятичное число.<br />
+ ["FRAME_TYPE"]: "xx" - "87" тип фрейма.<br />
+ ["FRAME_ID"]: "xx" - идентификатор фрейма. Равен идентификатору фрейма 0x07 ответом на который он является. Два шестнадцатеричных символа без 0x.<br />
+ ["AT_COMMAND"]: "xx" - AT-команда в виде двух ASCII-символов. ["STATUS"]: "xx" - статус команды. "00" - команда выполнена, "01" - недостаточно памяти для выполнения команды, "02" - недопустимая команда, "03" - недопустимое значение параметра.<br />
+ ["AT_PARAMETER"]: "xx..x" - параметр команды в виде строки шестнадцатеричных символов без префикса 0x. Если команда записывала данные, то значением этого ключа является пустая строка. ["CHECKSUM"]: "xx" - контрольная сумма. Два шестнадцатеричных символа без 0x.<br />
+ Если пакета данного типа в буфере не обнаружено, то возвращается пустой словарь. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="serialstar_8py_source.html">serialstar.py</a> строка <a class="el" href="serialstar_8py_source.html#l00485">485</a></p>
+
+</div>
+</div>
+<a id="a5dc29e63d7a5ff6bf20b9d6674bd896c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dc29e63d7a5ff6bf20b9d6674bd896c">&#9670;&nbsp;</a></span>get_io_sample_rx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def mbee.serialstar.SerialStar.get_io_sample_rx </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получение фрейма с данными о состоянии линий ввода вывода удаленного модуля: API-фрейм 0x83. </p>
+<p>Данная функция применяется для опроса приемного буфера последовательного порта и поиска в нем фрейма 0x83. Поиск осуществляется до первого найденного фрейма данного типа. При этом все прочие пакеты, принятые до первого пакета 0x83 теряются. Делается ограниченное число попыток получения данного типа фрейма. Число попыток регулируется константой IO_SAMPLE_RX_RETRY_COUNT и равно по-умолчанию 1. Функция обычно применяется, если опрос модуля осуществляется из основного скрипта периодической проверкой, а не с помощью callback-функций. </p><dl class="section return"><dt>Возвращает</dt><dd>В случае успешного приема пакета словарь (dictionary) следующего вида:<br />
+ ["DELIMITER"]: "7E" - стартовый байт фрейма.<br />
+ ["LENGTH"]: xx - длина пакета в байтах между полями length и checksum.<br />
+ ["FRAME_TYPE"]: "xx" - "83" тип фрейма.<br />
+ ["SOURCE_ADDRESS_DEC"]: "xxxxx" - адрес отправителя пакета в виде строки десятичных символов.<br />
+ ["SOURCE_ADDRESS_HEX"]: "xxxx" - адрес отправителя пакета в виде строки шестнадцатеричных символов без префикса 0x.<br />
+ ["RSSI"]: xxxx - уровень RSSI в dBm на входе приемника при получении данного пакета в виде десятичного числа со знаком.<br />
+ ["OPTIONS"]: "xx" - опции приема. "00" - пакет предназначался данному модулю, "01" - пакет был передан с широковещательным адресом.<br />
+ ["TEMPERATURE"]: xxx - температура встроенного термодатчика модуля отправителя в градусах Цельсия, целое десятичное число со знаком.<br />
+ ["VCC"]: xxxx - напряжение источника питания на модуле отправителе в вольтах. Положительное десятичное число с двумя знаками после запятой.<br />
+ ["DATA_HEX"]: "xx..x" - содержимое поля данных в виде строки шестнадцатеричных символов без префикса 0x.<br />
+ ["DATA_PARSED"]: {pin_number: {pin_mode: value},..} - словарь, ключами которого являются физические номера выводов модуля в виде двух шестнадцатеричных символов без 0x. В качестве значений выступает также словарь, с ключом, представляющим собой номер режима ввода/вывода в виде двух шестнадцатеричных символов, например "02", если данная линия работает в режиме аналогового входа. Подробная информация о доступных режимах имеется в документации по проекту <a class="el" href="classmbee_1_1serialstar_1_1_serial_star.html" title="Класс для проектов, основанных на программном обеспечении SerialStar. ">SerialStar</a>. Значения словаря - это состояние линии, зависящее от ее режима. Возможные значения:<br />
+ Режим 2 (ANALOG_INPUT) - "xxxx" оцифрованное значение напряжения на входе. Представляет собой четыре шестнадцатеричных символа без 0x. Значащими являются младшие 12 бит. Если число превышает 4096, это означает, что напряжение на входе равно 0.<br />
+ Режим 3 (DIGITAL_INPUT) - "HIGH", "LOW".<br />
+ Режим 4 (DIGITAL_OUTPUT_LOW) - "HIGH", "LOW".<br />
+ Режим 5 (DIGITAL_OUTPUT_LOW) - "HIGH", "LOW".<br />
+ Режим 13 (COUNTER_INPUT_1) - "xxxxxxxx" текущее число подсчитанных импульсов на данном входе. Представляет собой восемь шестнадцатеричных символов без 0x.<br />
+ Режим 14 (COUNTER_INPUT_2) - "xxxxxxxx" текущее число подсчитанных импульсов на данном входе. Представляет собой восемь шестнадцатеричных символов без 0x.<br />
+ Режим 15 (WAKEUP_INPUT_FALLING) - "HIGH", "LOW".<br />
+ Режим 16 (WAKEUP_INPUT_RISING) - "HIGH", "LOW".<br />
+ ["DATA_PARSED_DECODED"]: {pin_name: {pin_mode_name: value},..} - словарь, ключами которого являются имена выводов модуля, используемые в проекте <a class="el" href="classmbee_1_1serialstar_1_1_serial_star.html" title="Класс для проектов, основанных на программном обеспечении SerialStar. ">SerialStar</a>, в виде двух ASCII-символов, например физическому выводу модуля №31, будет соответствовать ключ "R4". В качестве значений выступает также словарь, с ключом, представляющим собой имя режима, так, как оно представлено в документации на <a class="el" href="classmbee_1_1serialstar_1_1_serial_star.html" title="Класс для проектов, основанных на программном обеспечении SerialStar. ">SerialStar</a>, например, если линия работает в режиме аналоговом входа, то ключом словаря будет строка ASCII-символов "ANALOG_INPUT".<br />
+ Значения словаря - это состояние линии, зависящее от ее режима. Возможные значения совпадают с со значениями, представленными выше при описании ключа "DATA_PARSED".<br />
+ ["DATA_RAW"]: "xx..x" - поле данных в виде последовательности байт (тип данных bytearray).<br />
+ ["CHECKSUM"]: "xx" - контрольная сумма. Два шестнадцатеричных символа без 0x.<br />
+ Если пакета данного типа в буфере не обнаружено, то возвращается пустой словарь. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="serialstar_8py_source.html">serialstar.py</a> строка <a class="el" href="serialstar_8py_source.html#l00731">731</a></p>
+
+</div>
+</div>
+<a id="aafaeb2fdaf8eaec3297fcb51b812e427"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafaeb2fdaf8eaec3297fcb51b812e427">&#9670;&nbsp;</a></span>get_local_tx_status()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def mbee.serialstar.SerialStar.get_local_tx_status </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получение фрейма со статусом отправки пакета, предназначенного для передачи в эфир: API-фрейм 0x8B. </p>
+<p>Данная функция применяется для опроса приемного буфера последовательного порта и поиска в нем фрейма 0x8B. Поиск осуществляется до первого найденного фрейма данного типа. При этом все прочие пакеты, принятые до первого пакета 0x8B теряются. Делается ограниченное число попыток получения данного типа фрейма. Число попыток регулируется константой LOCAL_TX_STATUS_RETRY_COUNT и равно по-умолчанию 1. Функция обычно применяется, если опрос модуля осуществляется из основного скрипта периодической проверкой, а не с помощью callback-функций. </p><dl class="section return"><dt>Возвращает</dt><dd>В случае успешного приема пакета словарь (dictionary) следующего вида:<br />
+ ["DELIMITER"]: "7E" - стартовый байт фрейма.<br />
+ ["LENGTH"]: 7 - длина пакета в байтах между полями length и checksum.<br />
+ ["FRAME_TYPE"]: "xx" - "8B" тип фрейма.<br />
+ ["FRAME_ID"]: "xx" - идентификатор фрейма. Равен идентификатору фрейма ответом на который он является. Два шестнадцатеричных символа без 0x.<br />
+ ["DESTINATION_ADDRESS_DEC"]: "xxxxx" - адрес получателя в виде строки десятичных символов.<br />
+ ["DESTINATION_ADDRESS_HEX"]: "xxxx" - адрес получателя в виде строки шестнадцатеричных символов без префикса 0x.<br />
+ ["TX_RETRY_COUNT"]: x - число попыток, сделанных при отправке пакета в эфир. Ресятичное число.<br />
+ ["STATUS"]: "xx" - статус отправки. "00" - пакет отправлен, "01" - недостаточно памяти размещения пакета в памяти, "02" - недопустимая команда, "03" - недопустимое значение параметра, "04" - пакет в эфир не отправлен по причине занятости частотного канала.<br />
+ ["RESERVE"]: "00" - зарезеривровано.<br />
+ ["CHECKSUM"]: "xx" - контрольная сумма. Два шестнадцатеричных символа без 0x.<br />
+ Если пакета данного типа в буфере не обнаружено, то возвращается пустой словарь. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="serialstar_8py_source.html">serialstar.py</a> строка <a class="el" href="serialstar_8py_source.html#l00599">599</a></p>
+
+</div>
+</div>
+<a id="aa119e9c3e260e2f612fe6bc23c9aafd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa119e9c3e260e2f612fe6bc23c9aafd1">&#9670;&nbsp;</a></span>get_modem_status()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def mbee.serialstar.SerialStar.get_modem_status </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получение фрейма со статусом модуля, отправляемого им при рестарте: API-фрейм 0x8A. </p>
+<p>Данная функция применяется для опроса приемного буфера последовательного порта и поиска в нем фрейма 0x8A. Поиск осуществляется до первого найденного фрейма данного типа. При этом все прочие пакеты, принятые до первого пакета 0x8A теряются. Делается ограниченное число попыток получения данного типа фрейма. Число попыток регулируется константой LOCAL_RESPONSE_RETRY_COUNT и равно по-умолчанию 1. Функция обычно применяется, если опрос модуля осуществляется из основного скрипта периодической проверкой, а не с помощью callback-функций. </p><dl class="section return"><dt>Возвращает</dt><dd>В случае успешного приема пакета словарь (dictionary) следующего вида:<br />
+ ["DELIMITER"]: "7E" - стартовый байт фрейма.<br />
+ ["LENGTH"]: 2 - длина пакета в байтах между полями length и checksum.<br />
+ ["FRAME_TYPE"]: "xx" - "8A" тип фрейма.<br />
+ ["STATUS"]: "xx" - статус команды. "00" - рестарт модуля произошел вследствие включения питания, "01" - программный рестарт или активация входа RESET.<br />
+ ["CHECKSUM"]: "xx" - контрольная сумма. Два шестнадцатеричных символа без 0x.<br />
+ Если пакета данного типа в буфере не обнаружено, то возвращается пустой словарь. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="serialstar_8py_source.html">serialstar.py</a> строка <a class="el" href="serialstar_8py_source.html#l00567">567</a></p>
+
+</div>
+</div>
+<a id="ac76201589f95f2026010d3848ef967f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac76201589f95f2026010d3848ef967f4">&#9670;&nbsp;</a></span>get_queue_local_at_response()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def mbee.serialstar.SerialStar.get_queue_local_at_response </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получение фрейма, подтверждающего прием пакета с локальной AT-командой и помещением параметра в очередь: API-фрейм 0x89. </p>
+<p>Данная функция применяется для опроса приемного буфера последовательного порта и поиска в нем фрейма 0x89. Поиск осуществляется до первого найденного фрейма данного типа. При этом все прочие пакеты, принятые до первого пакета 0x89 теряются. Делается ограниченное число попыток получения данного типа фрейма. Число попыток регулируется константой LOCAL_RESPONSE_RETRY_COUNT и равно по-умолчанию 1. Функция обычно применяется, если опрос модуля осуществляется из основного скрипта периодической проверкой, а не с помощью callback-функций. </p><dl class="section return"><dt>Возвращает</dt><dd>В случае успешного приема пакета словарь (dictionary) следующего вида:<br />
+ ["DELIMITER"]: "7E" - стартовый байт фрейма.<br />
+ ["LENGTH"]: xx - длина пакета в байтах между полями length и checksum (то есть всегда на 4 байта меньше, чем полная длина принятого пакета). Десятичное число.<br />
+ ["FRAME_TYPE"]: "xx" - "89" тип фрейма.<br />
+ ["FRAME_ID"]: "xx" - идентификатор фрейма. Равен идентификатору фрейма 0x09 ответом на который он является. Два шестнадцатеричных символа без 0x.<br />
+ ["AT_COMMAND"]: "xx" - AT-команда в виде двух ASCII-символов. ["STATUS"]: "xx" - статус команды. "00" - команда выполнена, "01" - недостаточно памяти для выполнения команды, "02" - недопустимая команда, "03" - недопустимое значение параметра.<br />
+ ["AT_PARAMETER"]: "xx..x" - параметр команды в виде строки шестнадцатеричных символов без префикса 0x. Если команда записывала данные, то значением этого ключа является пустая строка. ["CHECKSUM"]: "xx" - контрольная сумма. Два шестнадцатеричных символа без 0x.<br />
+ Если пакета данного типа в буфере не обнаружено, то возвращается пустой словарь. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="serialstar_8py_source.html">serialstar.py</a> строка <a class="el" href="serialstar_8py_source.html#l00533">533</a></p>
+
+</div>
+</div>
+<a id="a00d9e3bf506114edfca5552e33d897ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00d9e3bf506114edfca5552e33d897ac">&#9670;&nbsp;</a></span>get_remote_at_command_response()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def mbee.serialstar.SerialStar.get_remote_at_command_response </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получение фрейма с ответом от удаленного модуля на отправленную ему AT-команду: API-фрейм 0x97. </p>
+<p>Данная функция применяется для опроса приемного буфера последовательного порта и поиска в нем фрейма 0x97. Поиск осуществляется до первого найденного фрейма данного типа. При этом все прочие пакеты, принятые до первого пакета 0x97 теряются. Делается ограниченное число попыток получения данного типа фрейма. Число попыток регулируется константой REMOTE_RX_STATUS_RETRY_COUNT и равно по-умолчанию 1. Функция обычно применяется, если опрос модуля осуществляется из основного скрипта периодической проверкой, а не с помощью callback-функций. </p><dl class="section return"><dt>Возвращает</dt><dd>В случае успешного приема пакета словарь (dictionary) следующего вида:<br />
+ ["DELIMITER"]: "7E" - стартовый байт фрейма.<br />
+ ["LENGTH"]: xx - длина пакета в байтах между полями length и checksum.<br />
+ ["FRAME_TYPE"]: "xx" - "97" тип фрейма.<br />
+ ["SOURCE_ADDRESS_DEC"]: "xxxxx" - адрес отправителя пакета в виде строки десятичных символов.<br />
+ ["SOURCE_ADDRESS_HEX"]: "xxxx" - адрес отправителя пакета в виде строки шестнадцатеричных символов без префикса 0x.<br />
+ ["RSSI"]: xxxx - уровень RSSI в dBm на входе приемника при получении данного пакета в виде десятичного числа со знаком.<br />
+ ["OPTIONS"]: "00" - опции. В текущей версии поле зарезервировано.<br />
+ ["AT_COMMAND"]: "xx" - AT-команда в виде двух ASCII-символов.<br />
+ ["STATUS"]: "00" - статус команды. В текущей версии поле зарезервировано.<br />
+ ["AT_PARAMETER"]: "xx..x" - параметр команды в виде строки шестнадцатеричных символов без префикса 0x. Если команда записывала данные, то значением этого ключа является пустая строка.<br />
+ ["CHECKSUM"]: "xx" - контрольная сумма. Два шестнадцатеричных символа без 0x.<br />
+ Если пакета данного типа в буфере не обнаружено, то возвращается пустой словарь. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="serialstar_8py_source.html">serialstar.py</a> строка <a class="el" href="serialstar_8py_source.html#l00670">670</a></p>
+
+</div>
+</div>
+<a id="ac303f32a2600d1a3ad0e86e5aa32e2f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac303f32a2600d1a3ad0e86e5aa32e2f8">&#9670;&nbsp;</a></span>get_remote_tx_status()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def mbee.serialstar.SerialStar.get_remote_tx_status </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получение фрейма с подтверждением доставки пакета с данными удаленному модулю: API-фрейм 0x8C. </p>
+<p>Данная функция применяется для опроса приемного буфера последовательного порта и поиска в нем фрейма 0x8C. Поиск осуществляется до первого найденного фрейма данного типа. При этом все прочие пакеты, принятые до первого пакета 0x8C теряются. Делается ограниченное число попыток получения данного типа фрейма. Число попыток регулируется константой REMOTE_RX_STATUS_RETRY_COUNT и равно по-умолчанию 1. Функция обычно применяется, если опрос модуля осуществляется из основного скрипта периодической проверкой, а не с помощью callback-функций. </p><dl class="section return"><dt>Возвращает</dt><dd>В случае успешного приема пакета словарь (dictionary) следующего вида:<br />
+ ["DELIMITER"]: "7E" - стартовый байт фрейма.<br />
+ ["LENGTH"]: 6 - длина пакета в байтах между полями length и checksum.<br />
+ ["FRAME_TYPE"]: "xx" - "8С" тип фрейма.<br />
+ ["SOURCE_ADDRESS_DEC"]: "xxxxx" - адрес отправителя подтверждения в виде строки десятичных символов.<br />
+ ["SOURCE_ADDRESS_HEX"]: "xxxx" - адрес отправителя подтверждения в виде строки шестнадцатеричных символов без префикса 0x.<br />
+ ["RSSI"]: xxxx - уровень RSSI в dBm на входе приемника при получении данного пакета в виде десятичного числа со знаком.<br />
+ ["OPTIONS"]: "00" - опции передачи. В текущей версии поле зарезервировано.<br />
+ ["FRAME_ID"]: "xx" - идентификатор фрейма. Равен идентификатору фрейма ответом на который он является. Два шестнадцатеричных символа без 0x.<br />
+ ["CHECKSUM"]: "xx" - контрольная сумма. Два шестнадцатеричных символа без 0x.<br />
+ Если пакета данного типа в буфере не обнаружено, то возвращается пустой словарь. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="serialstar_8py_source.html">serialstar.py</a> строка <a class="el" href="serialstar_8py_source.html#l00634">634</a></p>
+
+</div>
+</div>
+<a id="a188a52caf03bc7f28ea3ca44fd48b83d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a188a52caf03bc7f28ea3ca44fd48b83d">&#9670;&nbsp;</a></span>get_tx_request()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def mbee.serialstar.SerialStar.get_tx_request </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получение фрейма с данными от удаленного модуля, переданными с байтом опций: API-фрейм 0x81. </p>
+<p>Данная функция применяется для опроса приемного буфера последовательного порта и поиска в нем фрейма 0x81. Поиск осуществляется до первого найденного фрейма данного типа. При этом все прочие пакеты, принятые до первого пакета 0x10 теряются. Делается ограниченное число попыток получения данного типа фрейма. Число попыток регулируется константой LOCAL_RESPONSE_RETRY_COUNT и равно по-умолчанию 1. Функция обычно применяется, если опрос модуля осуществляется из основного скрипта периодической проверкой, а не с помощью callback-функций. </p><dl class="section return"><dt>Возвращает</dt><dd>В случае успешного приема пакета словарь (dictionary) следующего вида:<br />
+ ["DELIMITER"]: "7E" - стартовый байт фрейма.<br />
+ ["LENGTH"]: xx - длина пакета в байтах между полями length и checksum (то есть всегда на 4 байта меньше, чем полная длина принятого пакета). Десятичное число.<br />
+ ["FRAME_TYPE"]: "xx" - "81" тип фрейма.<br />
+ ["SOURCE_ADDRESS_DEC"]: "xxxxx" - адрес отправителя в виде строки десятичных символов.<br />
+ ["SOURCE_ADDRESS_HEX"]: "xxxx" - адрес отправителя в виде строки шестнадцатеричных символов без префикса 0x.<br />
+ ["RSSI"]: xxxx - уровень RSSI в dBm на входе приемника при получении данного пакета в виде десятичного числа со знаком.<br />
+ ['OPTIONS']: "xx" - опции. Два шестнадцатеричных символа без 0x. Биты байта опций:<br />
+ 0 - информация о требовании отправителем подтверждения о приеме пакета: 0 - подтверждение требовалось, 1 - подтверждение не требовалось.<br />
+ 1 - информация о режиме отправки пакета: 0 - пакет передавался в адресном режиме, 1 - пакет передавался с широковещательным адресом.<br />
+ 2 - зарезервирован.<br />
+ 3 - зарезервирован.<br />
+ 4 - зарезервирован.<br />
+ 5 - зарезервирован.<br />
+ 6 - зарезервирован.<br />
+ 7 - зарезервирован.<br />
+ ['DATA']: "xxx...x" - данные в виде строки шестнадцатеричных символов без префикса 0x.<br />
+ ["CHECKSUM"]: "xx" - контрольная сумма. Два шестнадцатеричных символа без 0x.<br />
+ Если пакета данного типа в буфере не обнаружено, то возвращается пустой словарь. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="serialstar_8py_source.html">serialstar.py</a> строка <a class="el" href="serialstar_8py_source.html#l00419">419</a></p>
+
+</div>
+</div>
+<a id="a6357bf92fd305ba232d69ed27ae248bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6357bf92fd305ba232d69ed27ae248bd">&#9670;&nbsp;</a></span>get_tx_request_without_option()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def mbee.serialstar.SerialStar.get_tx_request_without_option </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получение фрейма с данными от удаленного модуля, переданными без байта опций: API-фрейм 0x8F. </p>
+<p>Данная функция применяется для опроса приемного буфера последовательного порта и поиска в нем фрейма 0x8F. Поиск осуществляется до первого найденного фрейма данного типа. При этом все прочие пакеты, принятые до первого пакета 0x8F теряются. Делается ограниченное число попыток получения данного типа фрейма. Число попыток регулируется константой LOCAL_RESPONSE_RETRY_COUNT и равно по-умолчанию 1. Функция обычно применяется, если опрос модуля осуществляется из основного скрипта периодической проверкой, а не с помощью callback-функций. </p><dl class="section return"><dt>Возвращает</dt><dd>В случае успешного приема пакета словарь (dictionary) следующего вида:<br />
+ ["DELIMITER"]: "7E" - стартовый байт фрейма.<br />
+ ["LENGTH"]: xx - длина пакета в байтах между полями length и checksum (то есть всегда на 4 байта меньше, чем полная длина принятого пакета). Десятичное число.<br />
+ ["FRAME_TYPE"]: "xx" - "81" тип фрейма.<br />
+ ["SOURCE_ADDRESS_DEC"]: "xxxxx" - адрес отправителя в виде строки десятичных символов.<br />
+ ["SOURCE_ADDRESS_HEX"]: "xxxx" - адрес отправителя в виде строки шестнадцатеричных символов без префикса 0x.<br />
+ ["RSSI"]: xxxx - уровень RSSI в dBm на входе приемника при получении данного пакета в виде десятичного числа со знаком.<br />
+ ['OPTIONS']: "xx" - опции. Два шестнадцатеричных символа без 0x. Биты байта опций:<br />
+ 0 - зарезервирован.<br />
+ 1 - информация о режиме отправки пакета: 0 - пакет передавался в адресном режиме, 1 - пакет передавался с широковещательным адресом.<br />
+ 2 - зарезервирован.<br />
+ 3 - зарезервирован.<br />
+ 4 - зарезервирован.<br />
+ 5 - зарезервирован.<br />
+ 6 - зарезервирован.<br />
+ 7 - зарезервирован.<br />
+ ['DATA']: "xxx...x" - данные в виде строки шестнадцатеричных символов без префикса 0x.<br />
+ ["CHECKSUM"]: "xx" - контрольная сумма. Два шестнадцатеричных символа без 0x.<br />
+ Если пакета данного типа в буфере не обнаружено, то возвращается пустой словарь. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="serialstar_8py_source.html">serialstar.py</a> строка <a class="el" href="serialstar_8py_source.html#l00452">452</a></p>
+
+</div>
+</div>
+<a id="a3da075d1e99409622784d72409d55b11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3da075d1e99409622784d72409d55b11">&#9670;&nbsp;</a></span>run()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def mbee.serialstar.SerialStar.run </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод, осуществляющий постоянный опрос буфера последовательного порта с целью обнаружения в нем всех типов фреймов, поддерживаемых в проекте <a class="el" href="classmbee_1_1serialstar_1_1_serial_star.html" title="Класс для проектов, основанных на программном обеспечении SerialStar. ">SerialStar</a>. </p>
+<p>В случае приема любого валидного пакета, метод осуществляет проверку на наличие зарегистрированной callback-функции, предназначенный для обработки данного пакета в основном скрипте. Если callback-функция для данного типа фрейма зарегистирована, то осуществляется ее вызов.<br />
+ Метод применяется при организации в основном скрипте взаимодействия с модулем с помощью callback-функций. Метод должен вызываться постоянно в основном цикле скрипта. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="serialstar_8py_source.html">serialstar.py</a> строка <a class="el" href="serialstar_8py_source.html#l00778">778</a></p>
+
+</div>
+</div>
+<a id="a4d3f4da569590a4f7ccea0ceb46c4f43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d3f4da569590a4f7ccea0ceb46c4f43">&#9670;&nbsp;</a></span>send_immidiate_apply_and_save_local_at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def mbee.serialstar.SerialStar.send_immidiate_apply_and_save_local_at </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>frame_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>at_command</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>at_parameter</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Отправка фрейма с локальной AT-командой с немедленным применением и сохранением изменений в энергонезависимой памяти: API-фрейм 0x08. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frame_id</td><td>- обязательный аргумент - идентификатор фрейма, если равен 0, то подтверждение о приеме модулем (API-фрейм 0x88) не передается. </td></tr>
+    <tr><td class="paramname">at_command</td><td>- обязательный аргумент, AT-команда в виде ASCII-символов, например "DM". </td></tr>
+    <tr><td class="paramname">at_parameter</td><td>- необязательный аргумент, параметр команды. Если аргумент не передается - команда запрашивает текущее значение параметра, если присутствует, то команда изменяет параметр. Представляет собой шестнадцатеричное число в виде строки шестнадцатеричных символов без 0x. Пример "10" для команды "DM". Число символов должно быть четным. Ведущие нули обязательны. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="serialstar_8py_source.html">serialstar.py</a> строка <a class="el" href="serialstar_8py_source.html#l00285">285</a></p>
+
+</div>
+</div>
+<a id="a24e9abd5afd76d9feba64abb735e7395"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24e9abd5afd76d9feba64abb735e7395">&#9670;&nbsp;</a></span>send_immidiate_apply_local_at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def mbee.serialstar.SerialStar.send_immidiate_apply_local_at </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>frame_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>at_command</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>at_parameter</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Отправка фрейма с локальной AT-командой с немедленным применением изменений: API-фрейм 0x07. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frame_id</td><td>- обязательный аргумент - идентификатор фрейма, если равен 0, то подтверждение о приеме модулем (API-фрейм 0x87) не передается. Два шестнадцатеричных символа без 0x. </td></tr>
+    <tr><td class="paramname">at_command</td><td>- обязательный аргумент, AT-команда в виде двух ASCII-символов, например "M1". </td></tr>
+    <tr><td class="paramname">at_parameter</td><td>- необязательный аргумент, параметр команды. Если аргумент не передается - команда запрашивает текущее значение параметра, если присутствует, то команда изменяет параметр. Представляет собой шестнадцатеричное число в виде строки шестнадцатеричных символов без 0x. Пример "0200" для команды "M1". Число символов должно быть четным. Ведущие нули обязательны. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="serialstar_8py_source.html">serialstar.py</a> строка <a class="el" href="serialstar_8py_source.html#l00277">277</a></p>
+
+</div>
+</div>
+<a id="aefca6c924c9b844a93e2791c33983dc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefca6c924c9b844a93e2791c33983dc5">&#9670;&nbsp;</a></span>send_queue_local_at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def mbee.serialstar.SerialStar.send_queue_local_at </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>frame_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>at_command</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>at_parameter</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Отправка фрейма с локальной AT-командой с помещением параметра в очередь: API-фрейм 0x09. </p>
+<p>Применения и сохранения параметра не происходит. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frame_id</td><td>- обязательный аргумент - идентификатор фрейма, если равен 0, то подтверждение о приеме модулем (API-фрейм 0x89) не передается. </td></tr>
+    <tr><td class="paramname">at_command</td><td>- обязательный аргумент, AT-команда в виде ASCII-символов, например "TX". </td></tr>
+    <tr><td class="paramname">at_parameter</td><td>- необязательный аргумент, параметр команды. Если аргумент не передается - команда запрашивает текущее значение параметра, если присутствует, то команда изменяет параметр. Представляет собой шестнадцатеричное число в виде строки шестнадцатеричных символов без 0x. Пример "0010" для команды "TX". Число символов должно быть четным. Ведущие нули обязательны. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="serialstar_8py_source.html">serialstar.py</a> строка <a class="el" href="serialstar_8py_source.html#l00293">293</a></p>
+
+</div>
+</div>
+<a id="ad6de192a50af50c36dbfed7debbb4c4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6de192a50af50c36dbfed7debbb4c4f">&#9670;&nbsp;</a></span>send_remote_at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def mbee.serialstar.SerialStar.send_remote_at </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>frame_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>destination_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>options</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>at_command</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>at_parameter</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Отправка фрейма с AT-командой удаленному модулю: API-фрейм 0x17. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frame_id</td><td>- обязательный аргумент - идентификатор фрейма, если равен 0, то локальное подтверждение о передаче пакета в эфир (API-фрейм 0x8B) не передается. </td></tr>
+    <tr><td class="paramname">destination_id</td><td>- обязательный аргумент, идентификатор (адрес) удаленного модуля. Состоит из 4-х шестнадцатеричных символов без префикса 0x. Пример "0234". Ведущие нули обязательны. </td></tr>
+    <tr><td class="paramname">options</td><td>- обязательный аргумент, опции передачи. Представляет собой шестнадцатеричное число, состоящее из 2 символов без префикса 0x. Пример "01". Биты байта опций:<br />
+ 0 - управление отправкой ответа на команду удаленным модулем: 0 - ответ будет отправлен, 1 - ответ не требуется.<br />
+ 1,2 - управление применением и сохранением параметра команды: 00 - параметр помещается в буфер удаленного модуля, 01 - применение и сохранение нового значения параметра в энергонезависимой памяти удаленного модуля, 10 и 11 - применение параметра без сохранения его значения в энергонезависимой памяти.<br />
+ 3 - зарезервирован.<br />
+ 4 - управление режимом CCA (определение занятости частотного канала перед передачей пакета в эфир): 0 - анализ занятости эфира проводится перед передачей данного пакета, 1 - CCA выключено.<br />
+ 5 - управление шифрованием: 0 - данный пакет будет передан незашифрованным, 1 - шифрование включено.<br />
+ 6 - управление буферизацией: 0 - данный пакет будет сразу передан в эфир, 1 - данный пакет будет предан в эфир только после получения пакета от удаленного модуля, которому этот пакет предназначен. Буферизация используется для управления модулями, находящимися в спящем режиме.<br />
+ 7 - зарезервирован.<br />
+ </td></tr>
+    <tr><td class="paramname">at_command</td><td>- обязательный аргумент, AT-команда в виде ASCII-символов, например "TX". </td></tr>
+    <tr><td class="paramname">at_parameter</td><td>- необязательный аргумент, параметр команды. Если аргумент не передается - команда запрашивает текущее значение параметра, если присутствует, то команда изменяет параметр. Представляет собой шестнадцатеричное число в виде строки без символов 0x. Пример "0210" для команды "TX". Число символов должно быть четным. Ведущие нули обязательны. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="serialstar_8py_source.html">serialstar.py</a> строка <a class="el" href="serialstar_8py_source.html#l00359">359</a></p>
+
+</div>
+</div>
+<a id="aaa9bff984d9d6c0c344c7a875bd85b78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa9bff984d9d6c0c344c7a875bd85b78">&#9670;&nbsp;</a></span>send_tx_request()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def mbee.serialstar.SerialStar.send_tx_request </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>frame_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>destination_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>options</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Отправка фрейма с данными удаленному модулю, которые должны быть переданы им в UART: API-фреймы 0x10, 0x0F. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frame_id</td><td>- обязательный аргумент - идентификатор фрейма, если равен 0, то локальное подтверждение о передаче пакета в эфир (API-фрейм 0x8B) не передается. </td></tr>
+    <tr><td class="paramname">destination_id</td><td>- обязательный аргумент, идентификатор (адрес) удаленного модуля. Состоит из 4-х шестнадцатеричных символов без префикса 0x. Пример "0234". Ведущие нули обязательны. </td></tr>
+    <tr><td class="paramname">data</td><td>- обязательный аргумент, передаваемые данные. Представляют собой строку шестнадцатеричных символов без префикса 0x. Длина не должны превышать 40 байт (80 символов), если опции передачи опущены. При этом в эфир передается API-фрейм 0x0F. Если байт опций имеется, то в эфир уходит пакет 0x10. Максимальная длина длина поля данных в этом случае равна 39 байт или 78 символов. Число символов должно быть четным. Если в поле data поместить символы "023476", то в UART удаленного модуля будут выданы байты 0x02, 0x34, 0x76. </td></tr>
+    <tr><td class="paramname">options</td><td>- необязательный аргумент, опции передачи. Представляет собой шестнадцатеричное число, состоящее из 2 символов без префикса 0x. Пример "10". Биты байта опций:<br />
+ 0 - управление отправки подтверждения получения пакета удаленным модулем: 0 - подтверждение получения включено, 1 - выключено.<br />
+ 1 - зарезервирован.<br />
+ 2 - зарезервирован.<br />
+ 3 - зарезервирован.<br />
+ 4 - управление режимом CCA (определение занятости частотного канала перед передачей пакета в эфир): 0 - анализ занятости эфира проводится перед передачей данного пакета, 1 - CCA выключено.<br />
+ 5 - управление шифрованием: 0 - данный пакет будет передан незашифрованным, 1 - шифрование включено.<br />
+ 6 - управление буферизацией: 0 - данный пакет будет сразу передан в эфир, 1 - данный пакет будет предан в эфир только после получения пакета от удаленного модуля, которому этот пакет предназначен. Буферизация используется для управления модулями, находящимися в спящем режиме.<br />
+ 7 - зарезервирован.<br />
+ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="serialstar_8py_source.html">serialstar.py</a> строка <a class="el" href="serialstar_8py_source.html#l00312">312</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>mbee/<a class="el" href="serialstar_8py_source.html">serialstar.py</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>
