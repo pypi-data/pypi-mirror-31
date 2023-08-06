@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: gumath
+Version: 0.2.0dev3
+Summary: Extensible array functions that operate on xnd containers.
+Home-page: https://github.com/plures/gumath
+Author: Stefan Krah
+Author-email: skrah@bytereef.org
+License: BSD License
+Description: UNKNOWN
+Keywords: gufuncs,array computing,vectorization
+Platform: Many
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: C
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Software Development
