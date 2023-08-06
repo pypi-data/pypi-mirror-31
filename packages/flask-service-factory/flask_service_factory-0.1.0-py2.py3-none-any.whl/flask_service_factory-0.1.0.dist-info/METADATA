@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: flask-service-factory
+Version: 0.1.0
+Summary: Service factory for Flask apps
+Home-page: https://github.com/ttreptow/flask-service-factory
+Author: Tim Treptow
+Author-email: UNKNOWN
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Flask
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: flask
+Requires-Dist: werkzeug
+
+# flask-service-factory
+
+
