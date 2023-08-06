@@ -1,0 +1,3 @@
+[console_scripts]
+dca = DCA.__main__:main
+
