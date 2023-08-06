@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: opcut
+Version: 0.1.0
+Summary: Cutting stock problem optimizer
+Home-page: https://github.com/bozokopic/opcut
+Author: Bozo Kopic
+Author-email: bozo.kopic@gmail.com
+License: GPLv3
+Platform: UNKNOWN
+Requires-Python: >=3.5
+Requires-Dist: doit
+Requires-Dist: pyyaml
+Requires-Dist: jsonschema
+Requires-Dist: aiohttp
+Requires-Dist: flake8
+Requires-Dist: pycairo
+Requires-Dist: wheel
+
+UNKNOWN
+
+
