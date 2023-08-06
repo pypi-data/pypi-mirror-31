@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: collaborativefilteringimplicit
+Version: 0.1
+Summary: Collaborative filtering on implicit data can be done using this module. Confidence/Preference framework is implimented using stochastic gradient descent. "Expected Percentile Rank" is the evaluation metric.
+Home-page: https://github.com/shreyas95/collaborativefilteringimplicit
+Author: Shreyas Pansare
+Author-email: sspansare95@gmail.com
+License: MIT
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
