@@ -1,0 +1,1227 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>rsmtool.utils &mdash; Rater Scoring Modeling Tool 6.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Rater Scoring Modeling Tool
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                6.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../who.html">Who is RSMTool for?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pipeline.html">Overview of RSMTool Pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../usage_rsmtool.html">Using RSMTool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced_usage.html">Advanced Uses of RSMTool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../custom_notebooks.html">Writing custom RSMTool sections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../utilities.html">Utility Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing to RSMTool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release_process.html">RSMTool Release Process</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Rater Scoring Modeling Tool</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>rsmtool.utils</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for rsmtool.utils</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Utility classes and functions.</span>
+
+<span class="sd">:author: Jeremy Biggs (jbiggs@ets.org)</span>
+<span class="sd">:author: Anastassia Loukina (aloukina@ets.org)</span>
+<span class="sd">:author: Nitin Madnani (nmadnani@ets.org)</span>
+
+<span class="sd">:date: 10/25/2017</span>
+<span class="sd">:organization: ETS</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="kn">from</span> <span class="nn">math</span> <span class="k">import</span> <span class="n">ceil</span>
+<span class="kn">from</span> <span class="nn">glob</span> <span class="k">import</span> <span class="n">glob</span>
+<span class="kn">from</span> <span class="nn">importlib</span> <span class="k">import</span> <span class="n">import_module</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="k">import</span> <span class="n">Path</span>
+<span class="kn">from</span> <span class="nn">string</span> <span class="k">import</span> <span class="n">Template</span>
+<span class="kn">from</span> <span class="nn">textwrap</span> <span class="k">import</span> <span class="n">wrap</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="p">(</span><span class="n">display</span><span class="p">,</span>
+                             <span class="n">HTML</span><span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">skll.data</span> <span class="k">import</span> <span class="n">safe_float</span> <span class="k">as</span> <span class="n">string_to_number</span>
+
+
+<span class="n">HTML_STRING</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;&quot;&quot;&lt;li&gt;&lt;b&gt;</span><span class="si">{}</span><span class="s2">&lt;/b&gt;: &lt;a href=&quot;</span><span class="si">{}</span><span class="s2">&quot; download&gt;</span><span class="si">{}</span><span class="s2">&lt;/a&gt;&lt;/li&gt;&quot;&quot;&quot;</span><span class="p">)</span>
+
+
+<span class="n">BUILTIN_MODELS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;LinearRegression&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;EqualWeightsLR&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;ScoreWeightedLR&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;RebalancedLR&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;NNLR&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;LassoFixedLambdaThenNNLR&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;LassoFixedLambdaThenLR&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;PositiveLassoCVThenLR&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;LassoFixedLambda&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;PositiveLassoCV&#39;</span><span class="p">]</span>
+
+<span class="n">DEFAULTS</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;id_column&#39;</span><span class="p">:</span> <span class="s1">&#39;spkitemid&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;description_old&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;description_new&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;train_label_column&#39;</span><span class="p">:</span> <span class="s1">&#39;sc1&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;test_label_column&#39;</span><span class="p">:</span> <span class="s1">&#39;sc1&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;human_score_column&#39;</span><span class="p">:</span> <span class="s1">&#39;sc1&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;exclude_zero_scores&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s1">&#39;use_scaled_predictions&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+            <span class="s1">&#39;use_scaled_predictions_old&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+            <span class="s1">&#39;use_scaled_predictions_new&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+            <span class="s1">&#39;select_transformations&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+            <span class="s1">&#39;standardize_features&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s1">&#39;use_thumbnails&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+            <span class="s1">&#39;scale_with&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s1">&#39;predict_expected_scores&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+            <span class="s1">&#39;sign&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s1">&#39;features&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s1">&#39;length_column&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s1">&#39;second_human_score_column&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s1">&#39;file_format&#39;</span><span class="p">:</span> <span class="s1">&#39;csv&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;form_level_scores&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s1">&#39;candidate_column&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s1">&#39;general_sections&#39;</span><span class="p">:</span> <span class="s1">&#39;all&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;special_sections&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s1">&#39;custom_sections&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s1">&#39;feature_subset_file&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s1">&#39;feature_subset&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s1">&#39;feature_prefix&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s1">&#39;trim_min&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s1">&#39;trim_max&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s1">&#39;subgroups&#39;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s1">&#39;skll_objective&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s1">&#39;section_order&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s1">&#39;flag_column&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s1">&#39;flag_column_test&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s1">&#39;min_items_per_candidate&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">}</span>
+
+<span class="n">LIST_FIELDS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;feature_prefix&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;general_sections&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;special_sections&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;custom_sections&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;subgroups&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;section_order&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;experiment_dirs&#39;</span><span class="p">]</span>
+
+<span class="n">BOOLEAN_FIELDS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;exclude_zero_scores&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;predict_expected_scores&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;use_scaled_predictions&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;use_scaled_predictions_old&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;use_scaled_predictions_new&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;use_thumbnails&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;select_transformations&#39;</span><span class="p">]</span>
+
+<span class="n">FIELD_NAME_MAPPING</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;expID&#39;</span><span class="p">:</span> <span class="s1">&#39;experiment_id&#39;</span><span class="p">,</span>
+                      <span class="s1">&#39;LRmodel&#39;</span><span class="p">:</span> <span class="s1">&#39;model&#39;</span><span class="p">,</span>
+                      <span class="s1">&#39;train&#39;</span><span class="p">:</span> <span class="s1">&#39;train_file&#39;</span><span class="p">,</span>
+                      <span class="s1">&#39;test&#39;</span><span class="p">:</span> <span class="s1">&#39;test_file&#39;</span><span class="p">,</span>
+                      <span class="s1">&#39;predictions&#39;</span><span class="p">:</span> <span class="s1">&#39;predictions_file&#39;</span><span class="p">,</span>
+                      <span class="s1">&#39;feature&#39;</span><span class="p">:</span> <span class="s1">&#39;features&#39;</span><span class="p">,</span>
+                      <span class="s1">&#39;train.lab&#39;</span><span class="p">:</span> <span class="s1">&#39;train_label_column&#39;</span><span class="p">,</span>
+                      <span class="s1">&#39;test.lab&#39;</span><span class="p">:</span> <span class="s1">&#39;test_label_column&#39;</span><span class="p">,</span>
+                      <span class="s1">&#39;trim.min&#39;</span><span class="p">:</span> <span class="s1">&#39;trim_min&#39;</span><span class="p">,</span>
+                      <span class="s1">&#39;trim.max&#39;</span><span class="p">:</span> <span class="s1">&#39;trim_max&#39;</span><span class="p">,</span>
+                      <span class="s1">&#39;scale&#39;</span><span class="p">:</span> <span class="s1">&#39;use_scaled_predictions&#39;</span><span class="p">,</span>
+                      <span class="s1">&#39;feature.subset&#39;</span><span class="p">:</span> <span class="s1">&#39;feature_subset&#39;</span><span class="p">}</span>
+
+<span class="n">MODEL_NAME_MAPPING</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;empWt&#39;</span><span class="p">:</span> <span class="s1">&#39;LinearRegression&#39;</span><span class="p">,</span>
+                      <span class="s1">&#39;eqWt&#39;</span><span class="p">:</span> <span class="s1">&#39;EqualWeightsLR&#39;</span><span class="p">,</span>
+                      <span class="s1">&#39;empWtBalanced&#39;</span><span class="p">:</span> <span class="s1">&#39;RebalancedLR&#39;</span><span class="p">,</span>
+                      <span class="s1">&#39;empWtDropNeg&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                      <span class="s1">&#39;empWtNNLS&#39;</span><span class="p">:</span> <span class="s1">&#39;NNLR&#39;</span><span class="p">,</span>
+                      <span class="s1">&#39;empWtDropNegLasso&#39;</span><span class="p">:</span> <span class="s1">&#39;LassoFixedLambdaThenNNLR&#39;</span><span class="p">,</span>
+                      <span class="s1">&#39;empWtLasso&#39;</span><span class="p">:</span> <span class="s1">&#39;LassoFixedLambdaThenLR&#39;</span><span class="p">,</span>
+                      <span class="s1">&#39;empWtLassoBest&#39;</span><span class="p">:</span> <span class="s1">&#39;PositiveLassoCVThenLR&#39;</span><span class="p">,</span>
+                      <span class="s1">&#39;lassoWtLasso&#39;</span><span class="p">:</span> <span class="s1">&#39;LassoFixedLambda&#39;</span><span class="p">,</span>
+                      <span class="s1">&#39;lassoWtLassoBest&#39;</span><span class="p">:</span> <span class="s1">&#39;PositiveLassoCV&#39;</span><span class="p">}</span>
+
+<span class="n">CHECK_FIELDS</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;rsmtool&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;required&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;experiment_id&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;model&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;train_file&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;test_file&#39;</span><span class="p">],</span>
+                            <span class="s1">&#39;optional&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;description&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;features&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;feature_subset_file&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;feature_subset&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;file_format&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;sign&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;id_column&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;use_thumbnails&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;train_label_column&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;test_label_column&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;length_column&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;second_human_score_column&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;flag_column&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;flag_column_test&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;exclude_zero_scores&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;trim_min&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;trim_max&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;predict_expected_scores&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;select_transformations&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;use_scaled_predictions&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;subgroups&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;general_sections&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;custom_sections&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;special_sections&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;skll_objective&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;section_order&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;candidate_column&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;standardize_features&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;min_items_per_candidate&#39;</span><span class="p">]},</span>
+                <span class="s1">&#39;rsmeval&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;required&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;experiment_id&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;predictions_file&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;system_score_column&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;trim_min&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;trim_max&#39;</span><span class="p">],</span>
+                            <span class="s1">&#39;optional&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;description&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;id_column&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;human_score_column&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;second_human_score_column&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;file_format&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;flag_column&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;exclude_zero_scores&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;use_thumbnails&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;scale_with&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;subgroups&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;general_sections&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;custom_sections&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;special_sections&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;section_order&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;candidate_column&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;min_items_per_candidate&#39;</span><span class="p">]},</span>
+                <span class="s1">&#39;rsmpredict&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;required&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;experiment_id&#39;</span><span class="p">,</span>
+                                            <span class="s1">&#39;experiment_dir&#39;</span><span class="p">,</span>
+                                            <span class="s1">&#39;input_features_file&#39;</span><span class="p">],</span>
+                               <span class="s1">&#39;optional&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;id_column&#39;</span><span class="p">,</span>
+                                            <span class="s1">&#39;candidate_column&#39;</span><span class="p">,</span>
+                                            <span class="s1">&#39;file_format&#39;</span><span class="p">,</span>
+                                            <span class="s1">&#39;predict_expected_scores&#39;</span><span class="p">,</span>
+                                            <span class="s1">&#39;human_score_column&#39;</span><span class="p">,</span>
+                                            <span class="s1">&#39;second_human_score_column&#39;</span><span class="p">,</span>
+                                            <span class="s1">&#39;standardize_features&#39;</span><span class="p">,</span>
+                                            <span class="s1">&#39;subgroups&#39;</span><span class="p">,</span>
+                                            <span class="s1">&#39;flag_column&#39;</span><span class="p">]},</span>
+                <span class="s1">&#39;rsmcompare&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;required&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;comparison_id&#39;</span><span class="p">,</span>
+                                            <span class="s1">&#39;experiment_id_old&#39;</span><span class="p">,</span>
+                                            <span class="s1">&#39;experiment_dir_old&#39;</span><span class="p">,</span>
+                                            <span class="s1">&#39;experiment_id_new&#39;</span><span class="p">,</span>
+                                            <span class="s1">&#39;experiment_dir_new&#39;</span><span class="p">,</span>
+                                            <span class="s1">&#39;description_old&#39;</span><span class="p">,</span>
+                                            <span class="s1">&#39;description_new&#39;</span><span class="p">],</span>
+                               <span class="s1">&#39;optional&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;use_scaled_predictions_old&#39;</span><span class="p">,</span>
+                                            <span class="s1">&#39;use_scaled_predictions_new&#39;</span><span class="p">,</span>
+                                            <span class="s1">&#39;subgroups&#39;</span><span class="p">,</span>
+                                            <span class="s1">&#39;use_thumbnails&#39;</span><span class="p">,</span>
+                                            <span class="s1">&#39;general_sections&#39;</span><span class="p">,</span>
+                                            <span class="s1">&#39;custom_sections&#39;</span><span class="p">,</span>
+                                            <span class="s1">&#39;special_sections&#39;</span><span class="p">,</span>
+                                            <span class="s1">&#39;section_order&#39;</span><span class="p">]},</span>
+                <span class="s1">&#39;rsmsummarize&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;required&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;summary_id&#39;</span><span class="p">,</span>
+                                              <span class="s1">&#39;experiment_dirs&#39;</span><span class="p">],</span>
+                                 <span class="s1">&#39;optional&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;description&#39;</span><span class="p">,</span>
+                                              <span class="s1">&#39;file_format&#39;</span><span class="p">,</span>
+                                              <span class="s1">&#39;general_sections&#39;</span><span class="p">,</span>
+                                              <span class="s1">&#39;custom_sections&#39;</span><span class="p">,</span>
+                                              <span class="s1">&#39;use_thumbnails&#39;</span><span class="p">,</span>
+                                              <span class="s1">&#39;special_sections&#39;</span><span class="p">,</span>
+                                              <span class="s1">&#39;subgroups&#39;</span><span class="p">,</span>
+                                              <span class="s1">&#39;section_order&#39;</span><span class="p">]}}</span>
+
+
+<span class="n">POSSIBLE_EXTENSIONS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;csv&#39;</span><span class="p">,</span> <span class="s1">&#39;xlsx&#39;</span><span class="p">,</span> <span class="s1">&#39;tsv&#39;</span><span class="p">]</span>
+
+<span class="n">_skll_module</span> <span class="o">=</span> <span class="n">import_module</span><span class="p">(</span><span class="s1">&#39;skll.learner&#39;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">is_skll_model</span><span class="p">(</span><span class="n">model_name</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Check whether the given model is a valid learner name in SKLL.</span>
+<span class="sd">    Note that the `LinearRegression` model is also available in</span>
+<span class="sd">    SKLL but we always want to use the built-in model with that name.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    model_name : str</span>
+<span class="sd">        The name of the model to check</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    valid: bool</span>
+<span class="sd">        `True` if the given model name is a valid SKLL learner,</span>
+<span class="sd">        `False` otherwise</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">_skll_module</span><span class="p">,</span> <span class="n">model_name</span><span class="p">)</span> <span class="ow">and</span> <span class="n">model_name</span> <span class="o">!=</span> <span class="s1">&#39;LinearRegression&#39;</span>
+
+
+<span class="k">def</span> <span class="nf">is_built_in_model</span><span class="p">(</span><span class="n">model_name</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Check whether the given model is a valid built-in model.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    model_name : str</span>
+<span class="sd">        The name of the model to check</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    valid: bool</span>
+<span class="sd">        `True` if the given model name is a valid built-in model,</span>
+<span class="sd">        `False` otherwise</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">model_name</span> <span class="ow">in</span> <span class="n">BUILTIN_MODELS</span>
+
+
+<span class="k">def</span> <span class="nf">int_to_float</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convert integer to float, if possible.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    value</span>
+<span class="sd">        Name of the experiment file we want to locate.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    value</span>
+<span class="sd">        Value converted to float, if possible</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="o">==</span> <span class="nb">int</span> <span class="k">else</span> <span class="n">value</span>
+
+
+<span class="k">def</span> <span class="nf">convert_to_float</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convert value to float, if possible.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    value</span>
+<span class="sd">        Name of the experiment file we want to locate.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    value</span>
+<span class="sd">        Value converted to float, if possible</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">int_to_float</span><span class="p">(</span><span class="n">string_to_number</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+
+
+<div class="viewcode-block" id="parse_json_with_comments"><a class="viewcode-back" href="../../api.html#rsmtool.utils.parse_json_with_comments">[docs]</a><span class="k">def</span> <span class="nf">parse_json_with_comments</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Parse a JSON file after removing any comments.</span>
+<span class="sd">    Comments can use either ``//`` for single-line</span>
+<span class="sd">    comments or or ``/* ... */`` for multi-line comments.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    filename : str</span>
+<span class="sd">        Path to the input JSON file.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    obj : dict</span>
+<span class="sd">        JSON object representing the input file.</span>
+
+<span class="sd">    Note</span>
+<span class="sd">    ----</span>
+<span class="sd">    This code was adapted from:</span>
+<span class="sd">    http://www.lifl.fr/~riquetd/parse-a-json-file-with-comments.html.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Regular expression to identify comments</span>
+    <span class="n">comment_re</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
+        <span class="s1">&#39;(^)?[^\S</span><span class="se">\n</span><span class="s1">]*/(?:\*(.*?)\*/[^\S</span><span class="se">\n</span><span class="s1">]*|/[^</span><span class="se">\n</span><span class="s1">]*)($)?&#39;</span><span class="p">,</span>
+        <span class="n">re</span><span class="o">.</span><span class="n">DOTALL</span> <span class="o">|</span> <span class="n">re</span><span class="o">.</span><span class="n">MULTILINE</span>
+    <span class="p">)</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="k">as</span> <span class="n">file_buff</span><span class="p">:</span>
+        <span class="n">content</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">file_buff</span><span class="o">.</span><span class="n">readlines</span><span class="p">())</span>
+
+        <span class="c1"># Looking for comments</span>
+        <span class="n">match</span> <span class="o">=</span> <span class="n">comment_re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+        <span class="k">while</span> <span class="n">match</span><span class="p">:</span>
+
+            <span class="c1"># single line comment</span>
+            <span class="n">content</span> <span class="o">=</span> <span class="n">content</span><span class="p">[:</span><span class="n">match</span><span class="o">.</span><span class="n">start</span><span class="p">()]</span> <span class="o">+</span> <span class="n">content</span><span class="p">[</span><span class="n">match</span><span class="o">.</span><span class="n">end</span><span class="p">():]</span>
+            <span class="n">match</span> <span class="o">=</span> <span class="n">comment_re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+
+        <span class="c1"># Return JSON object</span>
+        <span class="n">config</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">config</span></div>
+
+
+<div class="viewcode-block" id="compute_expected_scores_from_model"><a class="viewcode-back" href="../../api.html#rsmtool.utils.compute_expected_scores_from_model">[docs]</a><span class="k">def</span> <span class="nf">compute_expected_scores_from_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">featureset</span><span class="p">,</span> <span class="n">min_score</span><span class="p">,</span> <span class="n">max_score</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Compute expected scores using probability distributions over the labels</span>
+<span class="sd">    from the given SKLL model.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    model : skll.Learner</span>
+<span class="sd">        The SKLL Learner object to use for computing the expected scores.</span>
+<span class="sd">    featureset : skll.data.FeatureSet</span>
+<span class="sd">        The SKLL FeatureSet object for which predictions are to be made.</span>
+<span class="sd">    min_score : int</span>
+<span class="sd">        Minimum score level to be used for computing expected scores.</span>
+<span class="sd">    max_score : int</span>
+<span class="sd">        Maximum score level to be used for computing expected scores.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    expected_scores: np.array</span>
+<span class="sd">        A numpy array containing the expected scores.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    ValueError</span>
+<span class="sd">        If the given model cannot predict probability distributions and</span>
+<span class="sd">        or if the score range specified by `min_score` and `max_score`</span>
+<span class="sd">        does not match what the model predicts in its probability</span>
+<span class="sd">        distribution.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">model</span><span class="p">,</span> <span class="s2">&quot;predict_proba&quot;</span><span class="p">):</span>
+        <span class="c1"># Tell the model we want probabiltiies as output. This is likely already set</span>
+        <span class="c1"># to True but it might not be, e.g., when using rsmpredict.</span>
+        <span class="n">model</span><span class="o">.</span><span class="n">probability</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="n">probability_distributions</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">featureset</span><span class="p">)</span>
+        <span class="c1"># check to make sure that the number of labels in the probability</span>
+        <span class="c1"># distributions matches the number of score points we have</span>
+        <span class="n">num_score_points_specified</span> <span class="o">=</span> <span class="n">max_score</span> <span class="o">-</span> <span class="n">min_score</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="n">num_score_points_in_learner</span> <span class="o">=</span> <span class="n">probability_distributions</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">num_score_points_specified</span> <span class="o">!=</span> <span class="n">num_score_points_in_learner</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;The specified number of score points (</span><span class="si">{}</span><span class="s1">) &#39;</span>
+                             <span class="s1">&#39;does not match that from the the learner &#39;</span>
+                             <span class="s1">&#39;(</span><span class="si">{}</span><span class="s1">).&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num_score_points_specified</span><span class="p">,</span>
+                                            <span class="n">num_score_points_in_learner</span><span class="p">))</span>
+        <span class="n">expected_scores</span> <span class="o">=</span> <span class="n">probability_distributions</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">min_score</span><span class="p">,</span> <span class="n">max_score</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">model</span><span class="o">.</span><span class="n">model_type</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;SVC&#39;</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Expected scores cannot be computed since the SVC model was &quot;</span>
+                             <span class="s2">&quot;not originally trained to predict probabilities.&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Expected scores cannot be computed since </span><span class="si">{}</span><span class="s2"> is not a &quot;</span>
+                             <span class="s2">&quot;probabilistic classifier.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">model_type</span><span class="o">.</span><span class="vm">__name__</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">expected_scores</span></div>
+
+
+<span class="k">def</span> <span class="nf">covariance_to_correlation</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This is a port of the R `cov2cor` function.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    m : numpy array</span>
+<span class="sd">        The covariance matrix.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    retval : numpy array</span>
+<span class="sd">        The cross-correlation matrix.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    ValueError</span>
+<span class="sd">        If the input matrix is not square.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># make sure the matrix is square</span>
+    <span class="n">numrows</span><span class="p">,</span> <span class="n">numcols</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">shape</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">numrows</span> <span class="o">==</span> <span class="n">numcols</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Input matrix must be square&#39;</span><span class="p">)</span>
+
+    <span class="n">Is</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">m</span><span class="p">))</span>
+    <span class="n">retval</span> <span class="o">=</span> <span class="n">Is</span> <span class="o">*</span> <span class="n">m</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="n">Is</span><span class="p">,</span> <span class="n">numrows</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">numrows</span><span class="p">,</span> <span class="n">numrows</span><span class="p">)</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">fill_diagonal</span><span class="p">(</span><span class="n">retval</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">retval</span>
+
+
+<div class="viewcode-block" id="partial_correlations"><a class="viewcode-back" href="../../api.html#rsmtool.utils.partial_correlations">[docs]</a><span class="k">def</span> <span class="nf">partial_correlations</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This is a python port of the `pcor` function implemented in</span>
+<span class="sd">    the `ppcor` R package, which computes partial correlations</span>
+<span class="sd">    of each pair of variables in the given data frame `df`,</span>
+<span class="sd">    excluding all other variables.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    df : pd.DataFrame</span>
+<span class="sd">        Data frame containing the feature values.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    df_pcor : pd.DataFrame</span>
+<span class="sd">        Data frame containing the partial correlations of of each</span>
+<span class="sd">        pair of variables in the given data frame `df`,</span>
+<span class="sd">        excluding all other variables.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">numrows</span><span class="p">,</span> <span class="n">numcols</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span>
+    <span class="n">df_cov</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">cov</span><span class="p">()</span>
+    <span class="n">columns</span> <span class="o">=</span> <span class="n">df_cov</span><span class="o">.</span><span class="n">columns</span>
+
+    <span class="c1"># return a matrix of nans if the number of columns is</span>
+    <span class="c1"># greater than the number of rows. When the ncol == nrows</span>
+    <span class="c1"># we get the degenerate matrix with 1 only. It is not meaningful</span>
+    <span class="c1"># to compute partial correlations when ncol &gt; nrows.</span>
+
+    <span class="c1"># create empty array for when we cannot compute the</span>
+    <span class="c1"># matrix inversion</span>
+    <span class="n">empty_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">columns</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">columns</span><span class="p">)))</span>
+    <span class="n">empty_array</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+    <span class="k">if</span> <span class="n">numcols</span> <span class="o">&gt;</span> <span class="n">numrows</span><span class="p">:</span>
+        <span class="n">icvx</span> <span class="o">=</span> <span class="n">empty_array</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># we also return nans if there is singularity in the data</span>
+        <span class="c1"># (e.g. all human scores are the same)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">icvx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">df_cov</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">LinAlgError</span><span class="p">:</span>
+            <span class="n">icvx</span> <span class="o">=</span> <span class="n">empty_array</span>
+    <span class="n">pcor</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="o">*</span> <span class="n">covariance_to_correlation</span><span class="p">(</span><span class="n">icvx</span><span class="p">)</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">fill_diagonal</span><span class="p">(</span><span class="n">pcor</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+    <span class="n">df_pcor</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">pcor</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">columns</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">columns</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">df_pcor</span></div>
+
+
+<div class="viewcode-block" id="agreement"><a class="viewcode-back" href="../../api.html#rsmtool.utils.agreement">[docs]</a><span class="k">def</span> <span class="nf">agreement</span><span class="p">(</span><span class="n">score1</span><span class="p">,</span> <span class="n">score2</span><span class="p">,</span> <span class="n">tolerance</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function computes the agreement between</span>
+<span class="sd">    two raters, taking into account the provided</span>
+<span class="sd">    tolerance.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    score1 : list of int</span>
+<span class="sd">        List of rater 1 scores</span>
+<span class="sd">    score2 : list of int</span>
+<span class="sd">        List of rater 2 scores</span>
+<span class="sd">    tolerance : int, optional</span>
+<span class="sd">        Difference in scores that is acceptable.</span>
+<span class="sd">        Defaults to 0.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    agreement_value : float</span>
+<span class="sd">        The percentage agreement between the two scores.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># make sure the two sets of scores</span>
+    <span class="c1"># are for the same number of items</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">score1</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">score2</span><span class="p">)</span>
+
+    <span class="n">num_agreements</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="nb">int</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">s1</span> <span class="o">-</span> <span class="n">s2</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">tolerance</span><span class="p">)</span>
+                          <span class="k">for</span> <span class="n">s1</span><span class="p">,</span> <span class="n">s2</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">score1</span><span class="p">,</span> <span class="n">score2</span><span class="p">)])</span>
+
+    <span class="n">agreement_value</span> <span class="o">=</span> <span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">num_agreements</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">score1</span><span class="p">))</span> <span class="o">*</span> <span class="mi">100</span>
+    <span class="k">return</span> <span class="n">agreement_value</span></div>
+
+
+<span class="k">def</span> <span class="nf">float_format_func</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">prec</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Format the given floating point number to the specified precision</span>
+<span class="sd">    and return as a string.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    ----------</span>
+<span class="sd">    num : float</span>
+<span class="sd">        The floating point number to format.</span>
+<span class="sd">    prec: int, optional</span>
+<span class="sd">        The number of decimal places to use when displaying the number.</span>
+<span class="sd">        Defaults to 3.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    -------</span>
+<span class="sd">    ans: str</span>
+<span class="sd">        The formatted string representing the given number.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">formatter_string</span> <span class="o">=</span> <span class="n">Template</span><span class="p">(</span><span class="s1">&#39;{:.$</span><span class="si">{prec}</span><span class="s1">f}&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">substitute</span><span class="p">(</span><span class="n">prec</span><span class="o">=</span><span class="n">prec</span><span class="p">)</span>
+    <span class="n">ans</span> <span class="o">=</span> <span class="n">formatter_string</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ans</span>
+
+
+<span class="k">def</span> <span class="nf">int_or_float_format_func</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">prec</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Identify whether the number is float or integer. When displaying</span>
+<span class="sd">    integers, use no decimal. For a float, round to the specified</span>
+<span class="sd">    number of decimal places. Return as a string.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    -----------</span>
+<span class="sd">    num : float or int</span>
+<span class="sd">        The number to format and display.</span>
+<span class="sd">    prec : int, optional</span>
+<span class="sd">        The number of decimal places to display if x is a float.</span>
+<span class="sd">        Defaults to 3.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    -------</span>
+<span class="sd">    ans : str</span>
+<span class="sd">        The formatted string representing the given number.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="nb">float</span><span class="o">.</span><span class="n">is_integer</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+        <span class="n">ans</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">num</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">ans</span> <span class="o">=</span> <span class="n">float_format_func</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">prec</span><span class="o">=</span><span class="n">prec</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ans</span>
+
+
+<span class="k">def</span> <span class="nf">custom_highlighter</span><span class="p">(</span><span class="n">num</span><span class="p">,</span>
+                       <span class="n">low</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+                       <span class="n">high</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                       <span class="n">prec</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+                       <span class="n">absolute</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                       <span class="n">span_class</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the supplied float as an HTML &lt;span&gt; element with the specified</span>
+<span class="sd">    class if its value is below ``low`` or above ``high``. If its value does</span>
+<span class="sd">    not meet those constraints, then return as a plain string with the</span>
+<span class="sd">    specified number of decimal places.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    -----------</span>
+<span class="sd">    num : float</span>
+<span class="sd">        The floating point number to format.</span>
+<span class="sd">    low : float</span>
+<span class="sd">        The number will be displayed as an HTML span it is below this value.</span>
+<span class="sd">        Defaults to 0.</span>
+<span class="sd">    high : float</span>
+<span class="sd">        The number will be displayed as an HTML span it is above this value.</span>
+<span class="sd">        Defaults to 1.</span>
+<span class="sd">    prec : int</span>
+<span class="sd">        The number of decimal places to display for x. Defaults to 3.</span>
+<span class="sd">    absolute: bool</span>
+<span class="sd">        If True, use the absolute value of x for comparison.</span>
+<span class="sd">        Defaults to False.</span>
+<span class="sd">    span_class: str</span>
+<span class="sd">        One of ``bold`` or ``color``. These are the two classes</span>
+<span class="sd">        available for the HTML span tag.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    --------</span>
+<span class="sd">    ans : str</span>
+<span class="sd">        The formatted (plain or HTML) string representing the given number.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">abs_num</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">num</span><span class="p">)</span> <span class="k">if</span> <span class="n">absolute</span> <span class="k">else</span> <span class="n">num</span>
+    <span class="n">val</span> <span class="o">=</span> <span class="n">float_format_func</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">prec</span><span class="o">=</span><span class="n">prec</span><span class="p">)</span>
+    <span class="n">ans</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;&lt;span class=&quot;highlight_</span><span class="si">{}</span><span class="s1">&quot;&gt;</span><span class="si">{}</span><span class="s1">&lt;/span&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">span_class</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span>
+           <span class="k">if</span> <span class="n">abs_num</span> <span class="o">&lt;</span> <span class="n">low</span> <span class="ow">or</span> <span class="n">abs_num</span> <span class="o">&gt;</span> <span class="n">high</span> <span class="k">else</span> <span class="n">val</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ans</span>
+
+
+<span class="k">def</span> <span class="nf">bold_highlighter</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">low</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">prec</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">absolute</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Instantiating ``custom_highlighter()`` with the ``bold`` class as</span>
+<span class="sd">    the default.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    -----------</span>
+<span class="sd">    num : float</span>
+<span class="sd">        The floating point number to format.</span>
+<span class="sd">    low : float</span>
+<span class="sd">        The number will be displayed as an HTML span it is below this value.</span>
+<span class="sd">        Defaults to 0.</span>
+<span class="sd">    high : float</span>
+<span class="sd">        The number will be displayed as an HTML span it is above this value.</span>
+<span class="sd">        Defaults to 1.</span>
+<span class="sd">    prec : int</span>
+<span class="sd">        The number of decimal places to display for x.</span>
+<span class="sd">        Defaults to 3.</span>
+<span class="sd">    absolute: bool</span>
+<span class="sd">        If True, use the absolute value of x for comparison.</span>
+<span class="sd">        Defaults to False.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    --------</span>
+<span class="sd">    ans : str</span>
+<span class="sd">        The formatted highlighter with bold class as default.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">ans</span> <span class="o">=</span> <span class="n">custom_highlighter</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">high</span><span class="p">,</span> <span class="n">prec</span><span class="p">,</span> <span class="n">absolute</span><span class="p">,</span> <span class="s1">&#39;bold&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ans</span>
+
+
+<span class="k">def</span> <span class="nf">color_highlighter</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">low</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">prec</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">absolute</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Instantiating ``custom_highlighter()`` with the ``color`` class as</span>
+<span class="sd">    the default.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    -----------</span>
+<span class="sd">    num : float</span>
+<span class="sd">        The floating point number to format.</span>
+<span class="sd">    low : float</span>
+<span class="sd">        The number will be displayed as an HTML span it is below this value.</span>
+<span class="sd">        Defaults to 0.</span>
+<span class="sd">    high : float</span>
+<span class="sd">        The number will be displayed as an HTML span it is above this value.</span>
+<span class="sd">        Defaults to 1.</span>
+<span class="sd">    prec : int</span>
+<span class="sd">        The number of decimal places to display for x.</span>
+<span class="sd">        Defaults to 3.</span>
+<span class="sd">    absolute: bool</span>
+<span class="sd">        If True, use the absolute value of x for comparison.</span>
+<span class="sd">        Defaults to False.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    --------</span>
+<span class="sd">    ans : str</span>
+<span class="sd">        The formatted highlighter with color class as default.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">ans</span> <span class="o">=</span> <span class="n">custom_highlighter</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">high</span><span class="p">,</span> <span class="n">prec</span><span class="p">,</span> <span class="n">absolute</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ans</span>
+
+
+<span class="k">def</span> <span class="nf">compute_subgroup_plot_params</span><span class="p">(</span><span class="n">group_names</span><span class="p">,</span> <span class="n">num_plots</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Computing subgroup plot and figure parameters based on number of</span>
+<span class="sd">    subgroups and number of plots to be generated.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    group_names : list</span>
+<span class="sd">        A list of subgroup names for plots.</span>
+<span class="sd">    num_plots : int</span>
+<span class="sd">        The number of plots to compute.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    figure_width : int</span>
+<span class="sd">        The width of the figure.</span>
+<span class="sd">    figure_height : int</span>
+<span class="sd">        The height of the figure.</span>
+<span class="sd">    num_rows : int</span>
+<span class="sd">        The number of rows for the plots.</span>
+<span class="sd">    num_columns : int</span>
+<span class="sd">        The number of columns for the plots.</span>
+<span class="sd">    wrapped_group_names : list of str</span>
+<span class="sd">        A list of group names for plots.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">wrapped_group_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">wrap</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">gn</span><span class="p">),</span> <span class="mi">20</span><span class="p">))</span> <span class="k">for</span> <span class="n">gn</span> <span class="ow">in</span> <span class="n">group_names</span><span class="p">]</span>
+    <span class="n">plot_height</span> <span class="o">=</span> <span class="mi">4</span> <span class="k">if</span> <span class="n">wrapped_group_names</span> <span class="o">==</span> <span class="n">group_names</span> <span class="k">else</span> <span class="mi">6</span>
+    <span class="n">num_groups</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">group_names</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">num_groups</span> <span class="o">&lt;=</span> <span class="mi">6</span><span class="p">:</span>
+        <span class="n">num_columns</span> <span class="o">=</span> <span class="mi">2</span>
+        <span class="n">num_rows</span> <span class="o">=</span> <span class="n">ceil</span><span class="p">(</span><span class="n">num_plots</span> <span class="o">/</span> <span class="n">num_columns</span><span class="p">)</span>
+        <span class="n">figure_width</span> <span class="o">=</span> <span class="n">num_columns</span> <span class="o">*</span> <span class="n">num_groups</span>
+        <span class="n">figure_height</span> <span class="o">=</span> <span class="n">plot_height</span> <span class="o">*</span> <span class="n">num_rows</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">num_columns</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="n">num_rows</span> <span class="o">=</span> <span class="n">num_plots</span>
+        <span class="n">figure_width</span> <span class="o">=</span> <span class="mi">10</span>
+        <span class="n">figure_height</span> <span class="o">=</span> <span class="n">plot_height</span> <span class="o">*</span> <span class="n">num_plots</span>
+
+    <span class="k">return</span> <span class="p">(</span><span class="n">figure_width</span><span class="p">,</span> <span class="n">figure_height</span><span class="p">,</span> <span class="n">num_rows</span><span class="p">,</span> <span class="n">num_columns</span><span class="p">,</span> <span class="n">wrapped_group_names</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">has_files_with_extension</span><span class="p">(</span><span class="n">directory</span><span class="p">,</span> <span class="n">ext</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Check if the directory has any files with the given extension.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    directory : str</span>
+<span class="sd">        The path to the directory where output is located.</span>
+<span class="sd">    ext : str</span>
+<span class="sd">        The the given extension.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    bool</span>
+<span class="sd">        True if directory contains files with given extension,</span>
+<span class="sd">        else False.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">files_with_extension</span> <span class="o">=</span> <span class="n">glob</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">directory</span><span class="p">,</span> <span class="s1">&#39;*.</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ext</span><span class="p">)))</span>
+    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">files_with_extension</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span>
+
+
+<span class="k">def</span> <span class="nf">get_output_directory_extension</span><span class="p">(</span><span class="n">directory</span><span class="p">,</span> <span class="n">experiment_id</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Check the output directory to determine what file extensions</span>
+<span class="sd">    exist. If more than one extension (in the possible list of</span>
+<span class="sd">    extensions) exists, then raise a ValueError. Otherwise,</span>
+<span class="sd">    return the one file extension. If no extensions can be found, then</span>
+<span class="sd">    `csv` will be returned by default.</span>
+
+<span class="sd">    Possible extensions include: `csv`, `tsv`, `xlsx`. Files in the</span>
+<span class="sd">    directory with none of these extensions will be ignored.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    directory : str</span>
+<span class="sd">        The path to the directory where output is located.</span>
+<span class="sd">    experiment_id : str</span>
+<span class="sd">        The ID of the experiment.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    extension : {&#39;csv&#39;, &#39;tsv&#39;, &#39;xlsx&#39;}</span>
+<span class="sd">        The extension that output files in this directory</span>
+<span class="sd">        end with.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    ValueError</span>
+<span class="sd">        If any files in the directory have different extensions,</span>
+<span class="sd">        and are in the list of possible output extensions.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">extension</span> <span class="o">=</span> <span class="s1">&#39;csv&#39;</span>
+    <span class="n">extensions_identified</span> <span class="o">=</span> <span class="p">{</span><span class="n">ext</span> <span class="k">for</span> <span class="n">ext</span> <span class="ow">in</span> <span class="n">POSSIBLE_EXTENSIONS</span>
+                             <span class="k">if</span> <span class="n">has_files_with_extension</span><span class="p">(</span><span class="n">directory</span><span class="p">,</span> <span class="n">ext</span><span class="p">)}</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">extensions_identified</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Some of the files in the experiment output directory (`</span><span class="si">{}</span><span class="s1">`) &#39;</span>
+                         <span class="s1">&#39;for `</span><span class="si">{}</span><span class="s1">` have different extensions. All files in this directory &#39;</span>
+                         <span class="s1">&#39;must have the same extension. The following extensions were &#39;</span>
+                         <span class="s1">&#39;identified : </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">directory</span><span class="p">,</span>
+                                                  <span class="n">experiment_id</span><span class="p">,</span>
+                                                  <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">extensions_identified</span><span class="p">)))</span>
+
+    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">extensions_identified</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">extension</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">extensions_identified</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">extension</span>
+
+
+<div class="viewcode-block" id="get_thumbnail_as_html"><a class="viewcode-back" href="../../api.html#rsmtool.utils.get_thumbnail_as_html">[docs]</a><span class="k">def</span> <span class="nf">get_thumbnail_as_html</span><span class="p">(</span><span class="n">path_to_image</span><span class="p">,</span> <span class="n">image_id</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Given an path to an image file, generate the HTML for</span>
+<span class="sd">    a click-able thumbnail version of the image.</span>
+<span class="sd">    On click, this HTML will open the full-sized version</span>
+<span class="sd">    of the image in a new window.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    path_to_image : str</span>
+<span class="sd">        The absolute or relative path to the image.</span>
+<span class="sd">        If an absolute path is provided, it will be</span>
+<span class="sd">        converted to a relative path.</span>
+<span class="sd">    image_id : int</span>
+<span class="sd">        The id of the &lt;img&gt; tag in the HTML. This must</span>
+<span class="sd">        be unique for each &lt;img&gt; tag.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    image : str</span>
+<span class="sd">        The HTML string generated for the image.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    FileNotFoundError</span>
+<span class="sd">        If the image file cannot be located.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">path_to_image</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span><span class="s1">&#39;The file `</span><span class="si">{}</span><span class="s1">` could not be &#39;</span>
+                                <span class="s1">&#39;located.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">path_to_image</span><span class="p">))</span>
+
+    <span class="c1"># check if the path is relative or absolute</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isabs</span><span class="p">(</span><span class="n">path_to_image</span><span class="p">):</span>
+        <span class="n">relative_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">relpath</span><span class="p">(</span><span class="n">path_to_image</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">relative_path</span> <span class="o">=</span> <span class="n">path_to_image</span>
+
+    <span class="c1"># get the current ID of the image</span>
+    <span class="n">image_id_with_pound</span> <span class="o">=</span> <span class="s1">&#39;&quot;#</span><span class="si">{}</span><span class="s1">&quot;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">image_id</span><span class="p">)</span>
+
+    <span class="c1"># specify the thumbnail style</span>
+    <span class="n">style</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    &lt;style&gt;</span>
+<span class="s2">    img {</span>
+<span class="s2">        border: 1px solid #ddd;</span>
+<span class="s2">        border-radius: 4px;</span>
+<span class="s2">        padding: 5px;</span>
+<span class="s2">        width: 150px;</span>
+<span class="s2">        cursor: pointer;</span>
+<span class="s2">    }</span>
+<span class="s2">    &lt;/style&gt;</span>
+<span class="s2">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># on click, open larger image in new window</span>
+    <span class="n">script</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    &lt;script&gt;</span>
+<span class="s2">    function getPicture(picid) {{</span>
+<span class="s2">        var src = $(picid).attr(&#39;src&#39;);</span>
+<span class="s2">        window.open(src, &#39;Image&#39;, resizable=1);</span>
+<span class="s2">    }};</span>
+<span class="s2">    &lt;/script&gt;&quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">image_id</span><span class="p">)</span>
+
+    <span class="c1"># generate image tags</span>
+    <span class="n">image</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;&quot;&quot;&lt;img id=&#39;</span><span class="si">{}</span><span class="s2">&#39; src=&#39;</span><span class="si">{}</span><span class="s2">&#39; onclick=&#39;getPicture(</span><span class="si">{}</span><span class="s2">)&#39; &quot;&quot;&quot;</span>
+             <span class="sd">&quot;&quot;&quot;title=&quot;Click to enlarge&quot;&gt;&quot;&quot;&quot;</span>
+             <span class="sd">&quot;&quot;&quot;&lt;/img&gt;&quot;&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">image_id</span><span class="p">,</span>
+                                  <span class="n">relative_path</span><span class="p">,</span>
+                                  <span class="n">image_id_with_pound</span><span class="p">)</span>
+
+    <span class="c1"># create the image HTML</span>
+    <span class="n">image</span> <span class="o">+=</span> <span class="n">style</span>
+    <span class="n">image</span> <span class="o">+=</span> <span class="n">script</span>
+    <span class="k">return</span> <span class="n">image</span></div>
+
+
+<div class="viewcode-block" id="show_thumbnail"><a class="viewcode-back" href="../../api.html#rsmtool.utils.show_thumbnail">[docs]</a><span class="k">def</span> <span class="nf">show_thumbnail</span><span class="p">(</span><span class="n">path_to_image</span><span class="p">,</span> <span class="n">image_id</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Given an path to an image file, display</span>
+<span class="sd">    a click-able thumbnail version of the image.</span>
+<span class="sd">    On click, open the full-sized version of the</span>
+<span class="sd">    image in a new window.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    path_to_image : str</span>
+<span class="sd">        The absolute or relative path to the image.</span>
+<span class="sd">        If an absolute path is provided, it will be</span>
+<span class="sd">        converted to a relative path.</span>
+<span class="sd">    image_id : int</span>
+<span class="sd">        The id of the &lt;img&gt; tag in the HTML. This must</span>
+<span class="sd">        be unique for each &lt;img&gt; tag.</span>
+
+<span class="sd">    Displays</span>
+<span class="sd">    --------</span>
+<span class="sd">    display : IPython.core.display.HTML</span>
+<span class="sd">        The HTML display of the thumbnail image.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">get_thumbnail_as_html</span><span class="p">(</span><span class="n">path_to_image</span><span class="p">,</span> <span class="n">image_id</span><span class="p">)))</span></div>
+
+
+<span class="k">def</span> <span class="nf">get_files_as_html</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="n">experiment_id</span><span class="p">,</span> <span class="n">file_format</span><span class="p">,</span> <span class="n">replace_dict</span><span class="o">=</span><span class="p">{}):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Generate HTML list items for each file name,</span>
+<span class="sd">    given output directory. Optionally pass a</span>
+<span class="sd">    replacement dictionary to use more descriptive</span>
+<span class="sd">    titles for the file names.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    output_dir : str</span>
+<span class="sd">        The output directory.</span>
+<span class="sd">    experiment_id : str</span>
+<span class="sd">        The experiment ID.</span>
+<span class="sd">    file_format : str</span>
+<span class="sd">        The format of the output files.</span>
+<span class="sd">    replace_dict : dict, optional</span>
+<span class="sd">        A dictionary which makes file names to descriptions.</span>
+<span class="sd">        Defaults to empty dictionary.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    ------</span>
+<span class="sd">    html_string : str</span>
+<span class="sd">        HTML string with file descriptions and links.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">output_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">output_dir</span><span class="p">)</span>
+    <span class="n">parent_dir</span> <span class="o">=</span> <span class="n">output_dir</span><span class="o">.</span><span class="n">parent</span>
+    <span class="n">files</span> <span class="o">=</span> <span class="n">output_dir</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;*.</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">file_format</span><span class="p">))</span>
+    <span class="n">html_string</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">files</span><span class="p">):</span>
+        <span class="n">relative_file</span> <span class="o">=</span> <span class="s2">&quot;..&quot;</span> <span class="o">/</span> <span class="n">file</span><span class="o">.</span><span class="n">relative_to</span><span class="p">(</span><span class="n">parent_dir</span><span class="p">)</span>
+        <span class="n">relative_name</span> <span class="o">=</span> <span class="n">relative_file</span><span class="o">.</span><span class="n">stem</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">experiment_id</span><span class="p">),</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+        <span class="c1"># check if relative name is in the replacement dictionary and,</span>
+        <span class="c1"># if it is, use the more descriptive name in the replacement</span>
+        <span class="c1"># dictionary. Otherwise, normalize the file name and use that</span>
+        <span class="c1"># as the description instead.</span>
+        <span class="k">if</span> <span class="n">relative_name</span> <span class="ow">in</span> <span class="n">replace_dict</span><span class="p">:</span>
+            <span class="n">descriptive_name</span> <span class="o">=</span> <span class="n">replace_dict</span><span class="p">[</span><span class="n">relative_name</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">descriptive_name_components</span> <span class="o">=</span> <span class="n">relative_name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)</span>
+            <span class="n">descriptive_name</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">descriptive_name_components</span><span class="p">)</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
+
+        <span class="n">html_string</span> <span class="o">+=</span> <span class="n">HTML_STRING</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">descriptive_name</span><span class="p">,</span>
+                                          <span class="n">relative_file</span><span class="p">,</span>
+                                          <span class="n">file_format</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="s2">&quot;&quot;&quot;&lt;ul&gt;&lt;html&gt;&quot;&quot;&quot;</span> <span class="o">+</span> <span class="n">html_string</span> <span class="o">+</span> <span class="s2">&quot;&quot;&quot;&lt;/ul&gt;&lt;/html&gt;&quot;&quot;&quot;</span>
+
+
+<span class="k">def</span> <span class="nf">show_files</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="n">experiment_id</span><span class="p">,</span> <span class="n">file_format</span><span class="p">,</span> <span class="n">replace_dict</span><span class="o">=</span><span class="p">{}):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Show files for a given output directory.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    output_dir : str</span>
+<span class="sd">        The output directory.</span>
+<span class="sd">    experiment_id : str</span>
+<span class="sd">        The experiment ID.</span>
+<span class="sd">    file_format : str</span>
+<span class="sd">        The format of the output files.</span>
+<span class="sd">    replace_dict : dict, optional</span>
+<span class="sd">        A dictionary which makes file names to descriptions.</span>
+<span class="sd">        Defaults to empty dictionary.</span>
+
+<span class="sd">    Displays</span>
+<span class="sd">    --------</span>
+<span class="sd">    display : IPython.core.display.HTML</span>
+<span class="sd">        The HTML file descriptions and links.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">html_string</span> <span class="o">=</span> <span class="n">get_files_as_html</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span>
+                                    <span class="n">experiment_id</span><span class="p">,</span>
+                                    <span class="n">file_format</span><span class="p">,</span>
+                                    <span class="n">replace_dict</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">html_string</span><span class="p">))</span>
+
+
+<span class="k">class</span> <span class="nc">LogFormatter</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">Formatter</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Custom logging formatter.</span>
+
+<span class="sd">    Adapted from:</span>
+<span class="sd">        http://stackoverflow.com/questions/1343227/</span>
+<span class="sd">        can-pythons-logging-format-be-modified-depending-</span>
+<span class="sd">        on-the-message-log-level</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">info_fmt</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">%(msg)s</span><span class="s2">&quot;</span>
+    <span class="n">warn_fmt</span> <span class="o">=</span> <span class="s2">&quot;WARNING: </span><span class="si">%(msg)s</span><span class="s2">&quot;</span>
+
+    <span class="n">err_fmt</span> <span class="o">=</span> <span class="s2">&quot;ERROR: </span><span class="si">%(msg)s</span><span class="s2">&quot;</span>
+    <span class="n">dbg_fmt</span> <span class="o">=</span> <span class="s2">&quot;DEBUG: </span><span class="si">%(module)s</span><span class="s2">: </span><span class="si">%(lineno)d</span><span class="s2">: </span><span class="si">%(msg)s</span><span class="s2">&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%(levelno)s</span><span class="s2">: </span><span class="si">%(msg)s</span><span class="s2">&quot;</span><span class="p">):</span>
+
+        <span class="n">logging</span><span class="o">.</span><span class="n">Formatter</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fmt</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">format</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">record</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        format the logger</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        record</span>
+<span class="sd">            The record to format</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># Save the original format configured by the user</span>
+        <span class="c1"># when the logger formatter was instantiated</span>
+        <span class="n">format_orig</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fmt</span>
+
+        <span class="c1"># Replace the original format with one customized by logging level</span>
+        <span class="k">if</span> <span class="n">record</span><span class="o">.</span><span class="n">levelno</span> <span class="o">==</span> <span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_fmt</span> <span class="o">=</span> <span class="n">LogFormatter</span><span class="o">.</span><span class="n">dbg_fmt</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_style</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">PercentStyle</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_fmt</span><span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">record</span><span class="o">.</span><span class="n">levelno</span> <span class="o">==</span> <span class="n">logging</span><span class="o">.</span><span class="n">WARNING</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_fmt</span> <span class="o">=</span> <span class="n">LogFormatter</span><span class="o">.</span><span class="n">warn_fmt</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_style</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">PercentStyle</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_fmt</span><span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">record</span><span class="o">.</span><span class="n">levelno</span> <span class="o">==</span> <span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_fmt</span> <span class="o">=</span> <span class="n">LogFormatter</span><span class="o">.</span><span class="n">info_fmt</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_style</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">PercentStyle</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_fmt</span><span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">record</span><span class="o">.</span><span class="n">levelno</span> <span class="o">==</span> <span class="n">logging</span><span class="o">.</span><span class="n">ERROR</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_fmt</span> <span class="o">=</span> <span class="n">LogFormatter</span><span class="o">.</span><span class="n">err_fmt</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_style</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">PercentStyle</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_fmt</span><span class="p">)</span>
+
+        <span class="c1"># Call the original formatter class to do the grunt work</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">Formatter</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">record</span><span class="p">)</span>
+
+        <span class="c1"># Restore the original format configured by the user</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_fmt</span> <span class="o">=</span> <span class="n">format_orig</span>
+
+        <span class="k">return</span> <span class="n">result</span>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Educational Testing Service.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'6.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+</body>
+</html>

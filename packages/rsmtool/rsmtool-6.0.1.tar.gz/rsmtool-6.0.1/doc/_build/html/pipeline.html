@@ -1,0 +1,336 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Overview of RSMTool Pipeline &mdash; Rater Scoring Modeling Tool 6.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Installation" href="getting_started.html" />
+    <link rel="prev" title="Who is RSMTool for?" href="who.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Rater Scoring Modeling Tool
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                6.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="who.html">Who is RSMTool for?</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Overview of RSMTool Pipeline</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#input-file-format">Input file format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#feature-pre-processing">Feature pre-processing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#data-filtering">Data filtering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data-preprocessing">Data preprocessing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pre-processing-parameters">Pre-processing parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#score-post-processing">Score post-processing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#raw">raw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#raw-trim">raw_trim</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#raw-trim-round">raw_trim_round</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#scale">scale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#scale-trim">scale_trim</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#scale-trim-round">scale_trim_round</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_rsmtool.html">Using RSMTool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced_usage.html">Advanced Uses of RSMTool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom_notebooks.html">Writing custom RSMTool sections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utilities.html">Utility Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing to RSMTool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="release_process.html">RSMTool Release Process</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Rater Scoring Modeling Tool</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Overview of RSMTool Pipeline</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/pipeline.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="overview-of-rsmtool-pipeline">
+<h1>Overview of RSMTool Pipeline<a class="headerlink" href="#overview-of-rsmtool-pipeline" title="Permalink to this headline">¶</a></h1>
+<p>The following figure gives an overview of the RSMTool pipeline:</p>
+<img alt="RSMTool processing pipeline" class="align-center" src="_images/pipeline.png" />
+<p>As its primary input, RSMTool takes a <a class="reference internal" href="#input-file-format"><span class="std std-ref">data file</span></a> containing a table with numeric, non-sparse features and a human scores for all responses, <a class="reference internal" href="#feature-preprocessing"><span class="std std-ref">pre-processes</span></a> them and lets you train a regression-based <strong>Scoring Model</strong> to predict the human score from the features. Available regression models include Ridge, SVR, AdaBoost, and Random Forests, among many others.</p>
+<p>This trained model can then be used to generate scores for a held-out evaluation data whose feature values are pre-processed using the same <a class="reference internal" href="#preprocessing-parameters"><span class="std std-ref">Pre-processing Parameters</span></a>. In addition to the raw scores predicted by the model, the <strong>Prediction Analysis</strong> component of the pipline generates several additional <a class="reference internal" href="#score-postprocessing"><span class="std std-ref">post-processed scores</span></a> that are commonly used in automated scoring.</p>
+<p>The primary output of RSMTool is a comprehensive, customizable HTML statistical report that contains the multiple analyses required for a comprehensive evaluation of an automated scoring model including descriptive analyses for all features, model analyses, subgroup comparisons, as well as several different evaluation measures illustrating model efficacy <a class="footnote-reference" href="#id3" id="id1">[1]</a>. More Details about these analyses can be found in a separate <a class="reference external" href="https://github.com/EducationalTestingService/rsmtool/raw/master/doc/rsmtool.pdf">technical paper</a>.</p>
+<p>In addition to the HTML report, RSMTool also saves the intermediate outputs of all of the performed analyses as <a class="reference internal" href="usage_rsmtool.html#intermediate-files-rsmtool"><span class="std std-ref">CSV files</span></a>.</p>
+<div class="section" id="input-file-format">
+<span id="id2"></span><h2>Input file format<a class="headerlink" href="#input-file-format" title="Permalink to this headline">¶</a></h2>
+<p>The input files containing feature values and scores for all responses in training and evaluation data should be in tabular format with features and scores stored in columns and each row correponding to a single response.</p>
+<p>RSMTool supports input files in <code class="docutils literal notranslate"><span class="pre">.csv</span></code>, <code class="docutils literal notranslate"><span class="pre">.tsv</span></code> or <code class="docutils literal notranslate"><span class="pre">xls</span></code>/<code class="docutils literal notranslate"><span class="pre">.xlsx</span></code> format. For Excel spreadsheets all data must be stored in the first sheet. The format of the file is determined based on the extension. In all cases the <a class="reference internal" href="usage_rsmtool.html#intermediate-files-rsmtool"><span class="std std-ref">output files</span></a> will be saved in <code class="docutils literal notranslate"><span class="pre">.csv</span></code> format.</p>
+</div>
+<div class="section" id="feature-pre-processing">
+<span id="feature-preprocessing"></span><h2>Feature pre-processing<a class="headerlink" href="#feature-pre-processing" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="data-filtering">
+<h3>Data filtering<a class="headerlink" href="#data-filtering" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>Remove all training and evaluation responses that have non-numeric for any of the features (see <a class="reference internal" href="usage_rsmtool.html#column-selection-rsmtool"><span class="std std-ref">column selection methods</span></a> for different ways to select features).</li>
+<li>Remove all training and evaluation responses with non-numeric values for human scores.</li>
+<li>Optionally remove all training and evaluation responses with zero values for human scores. Zero scored responses are usually removed since in many scoring rubrics, zero scores usually indicate non-scorable responses.</li>
+<li>Remove all features with values that do not change across responses (i.e., those with a standard deviation close to 0).</li>
+</ol>
+</div>
+<div class="section" id="data-preprocessing">
+<h3>Data preprocessing<a class="headerlink" href="#data-preprocessing" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>Truncate/clamp any outlier feature values, where outliers are defined as <span class="math notranslate nohighlight">\(\mu \pm 4*\sigma\)</span>, where <span class="math notranslate nohighlight">\(\mu\)</span> is the mean and <span class="math notranslate nohighlight">\(\sigma\)</span> is the standard deviation.</li>
+<li>Apply pre-specified <a class="reference internal" href="usage_rsmtool.html#feature-list-transformation"><span class="std std-ref">transformations</span></a> to feature values.</li>
+<li>Flip the signs for feature values if necessary.</li>
+<li>Standardize all transformed feature values into <em>z</em>-scores.</li>
+</ol>
+</div>
+<div class="section" id="pre-processing-parameters">
+<span id="preprocessing-parameters"></span><h3>Pre-processing parameters<a class="headerlink" href="#pre-processing-parameters" title="Permalink to this headline">¶</a></h3>
+<p>Any held-out evaluation data on which the model is to be evaluated needs to be pre-processed in the same way as the training data. Therefore, the following parameters are computed on the training set, saved to disk, and re-used when pre-processing the evaluation set:</p>
+<ul class="simple">
+<li>Mean and standard deviation  of raw feature values. These are used to compute floor and ceiling for truncating any outliers in the evaluation set;</li>
+<li>Any transformation and sign changes that were applied;</li>
+<li>Mean and standard deviation of transformed feature values. These are used to convert feature values in the evaluation set to <em>z</em>-scores.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="score-post-processing">
+<span id="score-postprocessing"></span><h2>Score post-processing<a class="headerlink" href="#score-post-processing" title="Permalink to this headline">¶</a></h2>
+<p>RSMTool computes six different versions of scores commonly used in different applications of automated scoring:</p>
+<div class="section" id="raw">
+<h3>raw<a class="headerlink" href="#raw" title="Permalink to this headline">¶</a></h3>
+<p>The raw predictions generated by the model.</p>
+</div>
+<div class="section" id="raw-trim">
+<h3>raw_trim<a class="headerlink" href="#raw-trim" title="Permalink to this headline">¶</a></h3>
+<p>The raw predictions “trimmed” to be in the score range acceptable for the item. The scores are trimmed to be within the following range: <span class="math notranslate nohighlight">\(score_{min} - 0.49998\)</span> and <span class="math notranslate nohighlight">\(score_{max} + 0.49998\)</span>, where <span class="math notranslate nohighlight">\(score_{min}\)</span> and <span class="math notranslate nohighlight">\(score_{max}\)</span> are the lowest and highest points on the scoring scale respectively.</p>
+<p>This approach represents a compromise: it provides scores that are real-valued and, therefore, provide more information than human scores that are likely to be integer-valued. However, it also ensures that the scores fall within the expected scale.</p>
+</div>
+<div class="section" id="raw-trim-round">
+<h3>raw_trim_round<a class="headerlink" href="#raw-trim-round" title="Permalink to this headline">¶</a></h3>
+<p>The raw_trim predictions rounded to the nearest integer.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The rounding is done using <code class="docutils literal notranslate"><span class="pre">rint</span></code> function from <code class="docutils literal notranslate"><span class="pre">numpy</span></code>. See <a class="reference external" href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.around.html#numpy.around">numpy documentation</a> for treatment of values such as 1.5.</p>
+</div>
+</div>
+<div class="section" id="scale">
+<h3>scale<a class="headerlink" href="#scale" title="Permalink to this headline">¶</a></h3>
+<p>The raw predictions rescaled to match the human score distribution on the training set. The raw scores are first converted to <em>z</em>-scores using the mean and standard deviation of the <em>machine scores</em> predicted for the training set. The <em>z</em>-scores are then converted back to “scaled” scores using the mean and standard deviation of the <em>human scores</em>, also computed on the training set.</p>
+</div>
+<div class="section" id="scale-trim">
+<h3>scale_trim<a class="headerlink" href="#scale-trim" title="Permalink to this headline">¶</a></h3>
+<p>The scaled scores trimmed in the same way as raw_trim scores.</p>
+</div>
+<div class="section" id="scale-trim-round">
+<h3>scale_trim_round<a class="headerlink" href="#scale-trim-round" title="Permalink to this headline">¶</a></h3>
+<p>The scale_trim scores scores rounded to the nearest integer.</p>
+<p class="rubric">Footnotes</p>
+<table class="docutils footnote" frame="void" id="id3" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>The primary evaluation analyses in the RSMTool report are conducted for <em>all</em> six types of <a class="reference internal" href="#score-postprocessing"><span class="std std-ref">scores</span></a>. For some additional evaluations , the user can pick between raw and scaled scores.</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="getting_started.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="who.html" class="btn btn-neutral" title="Who is RSMTool for?" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Educational Testing Service.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'6.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+</body>
+</html>

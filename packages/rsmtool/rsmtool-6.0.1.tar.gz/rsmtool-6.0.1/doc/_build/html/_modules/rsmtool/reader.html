@@ -1,0 +1,493 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>rsmtool.reader &mdash; Rater Scoring Modeling Tool 6.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Rater Scoring Modeling Tool
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                6.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../who.html">Who is RSMTool for?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pipeline.html">Overview of RSMTool Pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../usage_rsmtool.html">Using RSMTool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced_usage.html">Advanced Uses of RSMTool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../custom_notebooks.html">Writing custom RSMTool sections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../utilities.html">Utility Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing to RSMTool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release_process.html">RSMTool Release Process</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Rater Scoring Modeling Tool</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>rsmtool.reader</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for rsmtool.reader</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Classes for reading data files (or dictionaries)</span>
+<span class="sd">and converting them to DataContainer objects.</span>
+
+<span class="sd">:author: Jeremy Biggs (jbiggs@ets.org)</span>
+<span class="sd">:author: Anastassia Loukina (aloukina@ets.org)</span>
+<span class="sd">:author: Nitin Madnani (nmadnani@ets.org)</span>
+
+<span class="sd">:date: 10/25/2017</span>
+<span class="sd">:organization: ETS</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">warnings</span>
+
+<span class="kn">from</span> <span class="nn">functools</span> <span class="k">import</span> <span class="n">partial</span>
+<span class="kn">from</span> <span class="nn">os.path</span> <span class="k">import</span> <span class="p">(</span><span class="n">abspath</span><span class="p">,</span>
+                     <span class="n">exists</span><span class="p">,</span>
+                     <span class="n">join</span><span class="p">,</span>
+                     <span class="n">splitext</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="kn">from</span> <span class="nn">rsmtool.container</span> <span class="k">import</span> <span class="n">DataContainer</span>
+
+
+<div class="viewcode-block" id="DataReader"><a class="viewcode-back" href="../../api.html#rsmtool.reader.DataReader">[docs]</a><span class="k">class</span> <span class="nc">DataReader</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A DataReader class to generate</span>
+<span class="sd">    DataContainer objects</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">filepaths</span><span class="p">,</span>
+                 <span class="n">framenames</span><span class="p">,</span>
+                 <span class="n">file_converters</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initialize DataReader object.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        filepaths : list of str</span>
+<span class="sd">            A list of paths to files that will be read into pd.DataFrames.</span>
+<span class="sd">        filenames : list of str</span>
+<span class="sd">            A list of names for the pd.DataFrames.</span>
+<span class="sd">        file_converters : dict of dicts, optional</span>
+<span class="sd">            A dictionary of file converter dicts.</span>
+<span class="sd">            Defaults to None</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        AssertionError</span>
+<span class="sd">            If length of filepaths is not equal to length of framenames.</span>
+<span class="sd">        ValueError</span>
+<span class="sd">            If any elements in file_converters are not dict.</span>
+<span class="sd">        NameError</span>
+<span class="sd">            If file converter name does not exist in the dataset.</span>
+<span class="sd">        ValueError</span>
+<span class="sd">            If filepath for a given file is None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># Default datasets list</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">datasets</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="c1"># Make sure filepaths length matches frame names length</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">filepaths</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">framenames</span><span class="p">)</span>
+
+        <span class="c1"># Make sure that there are no Nones in the filepaths</span>
+        <span class="k">if</span> <span class="kc">None</span> <span class="ow">in</span> <span class="n">filepaths</span><span class="p">:</span>
+            <span class="n">frames_with_no_path</span> <span class="o">=</span> <span class="p">[</span><span class="n">framenames</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">framenames</span><span class="p">))</span>
+                                   <span class="k">if</span> <span class="n">filepaths</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">]</span>
+
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;No path specified for &quot;</span>
+                             <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39; ,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">frames_with_no_path</span><span class="p">)))</span>
+
+        <span class="c1"># Assign names and paths lists</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dataset_names</span> <span class="o">=</span> <span class="n">framenames</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dataset_paths</span> <span class="o">=</span> <span class="n">filepaths</span>
+
+        <span class="c1"># If file_converters exists, then</span>
+        <span class="c1"># check to make sure it is the correct length</span>
+        <span class="c1"># and add all elements to file_converters list</span>
+        <span class="k">if</span> <span class="n">file_converters</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+
+            <span class="c1"># assert len(filepaths) == len(file_converters)</span>
+
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">file_converters</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;The `file_converters` argument must be type ``dict``, &#39;</span>
+                                 <span class="s1">&#39;not ``</span><span class="si">{}</span><span class="s1">``.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">file_converters</span><span class="p">)))</span>
+
+            <span class="k">for</span> <span class="n">file_converter_name</span> <span class="ow">in</span> <span class="n">file_converters</span><span class="p">:</span>
+
+                <span class="c1"># Make sure file_converter name is in `dataset_names`</span>
+                <span class="k">if</span> <span class="n">file_converter_name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">dataset_names</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">NameError</span><span class="p">(</span><span class="s1">&#39;The file converter name ``</span><span class="si">{}</span><span class="s1">`` &#39;</span>
+                                    <span class="s1">&#39;does not exist in the &#39;</span>
+                                    <span class="s1">&#39;dataset names that you &#39;</span>
+                                    <span class="s1">&#39;passed.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">file_converter_name</span><span class="p">))</span>
+
+                <span class="c1"># Make sure file converter is a `dict`</span>
+                <span class="n">file_converter</span> <span class="o">=</span> <span class="n">file_converters</span><span class="p">[</span><span class="n">file_converter_name</span><span class="p">]</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">file_converter</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+                    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Value for </span><span class="si">{}</span><span class="s1"> must be``dict`` &#39;</span><span class="p">,</span>
+                                     <span class="s1">&#39;not </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">file_converter_name</span><span class="p">,</span>
+                                                     <span class="nb">type</span><span class="p">(</span><span class="n">file_converter</span><span class="p">)))</span>
+
+        <span class="c1"># Default file_converters dict</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">file_converters</span> <span class="o">=</span> <span class="p">{}</span> <span class="k">if</span> <span class="n">file_converters</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">file_converters</span>
+
+<div class="viewcode-block" id="DataReader.read_from_file"><a class="viewcode-back" href="../../api.html#rsmtool.reader.DataReader.read_from_file">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">read_from_file</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">converters</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Read a CSV/TSV/XLS/XLSX file and return a data frame.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        filename : str</span>
+<span class="sd">            Name of file to read.</span>
+<span class="sd">        converters : None, optional</span>
+<span class="sd">            A dictionary specifying how the types of the columns</span>
+<span class="sd">            in the file should be converted. Specified in the same</span>
+<span class="sd">            format as for ``pandas.read_csv()``.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        df : pandas DataFrame</span>
+<span class="sd">            Data frame containing the data in the given file.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        ValueError</span>
+<span class="sd">            If the file has an extension that we do not support</span>
+<span class="sd">        pd.parser.CParserError</span>
+<span class="sd">            If the file is badly formatted or corrupt.</span>
+
+<span class="sd">        Note</span>
+<span class="sd">        ----</span>
+<span class="sd">        Keyword arguments are passed to the given `pandas`</span>
+<span class="sd">        IO reader function.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">file_extension</span> <span class="o">=</span> <span class="n">splitext</span><span class="p">(</span><span class="n">filename</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">file_extension</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;.tsv&#39;</span><span class="p">]:</span>
+            <span class="n">sep</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span> <span class="k">if</span> <span class="n">file_extension</span> <span class="o">==</span> <span class="s1">&#39;.tsv&#39;</span> <span class="k">else</span> <span class="s1">&#39;,&#39;</span>
+            <span class="n">do_read</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="n">sep</span><span class="p">,</span> <span class="n">converters</span><span class="o">=</span><span class="n">converters</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">file_extension</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;.xls&#39;</span><span class="p">,</span> <span class="s1">&#39;.xlsx&#39;</span><span class="p">]:</span>
+            <span class="n">do_read</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">,</span> <span class="n">converters</span><span class="o">=</span><span class="n">converters</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;RSMTool only supports files in .csv, &quot;</span>
+                             <span class="s2">&quot;.tsv or .xls/.xlsx format. &quot;</span>
+                             <span class="s2">&quot;The file should have the extension &quot;</span>
+                             <span class="s2">&quot;which matches its format. The file you &quot;</span>
+                             <span class="s2">&quot;passed is: </span><span class="si">{}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">filename</span><span class="p">))</span>
+
+        <span class="c1"># ignore warnings about mixed data types for large files</span>
+        <span class="k">with</span> <span class="n">warnings</span><span class="o">.</span><span class="n">catch_warnings</span><span class="p">():</span>
+            <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">common</span><span class="o">.</span><span class="n">DtypeWarning</span><span class="p">)</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">df</span> <span class="o">=</span> <span class="n">do_read</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+            <span class="k">except</span> <span class="n">pd</span><span class="o">.</span><span class="n">parser</span><span class="o">.</span><span class="n">CParserError</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">pd</span><span class="o">.</span><span class="n">parser</span><span class="o">.</span><span class="n">CParserError</span><span class="p">(</span><span class="s1">&#39;Cannot read </span><span class="si">{}</span><span class="s1">. Please check that it is &#39;</span>
+                                             <span class="s1">&#39;not corrupt or in an incompatible format. &#39;</span>
+                                             <span class="s1">&#39;(Try running dos2unix?)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">filename</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">df</span></div>
+
+<div class="viewcode-block" id="DataReader.locate_files"><a class="viewcode-back" href="../../api.html#rsmtool.reader.DataReader.locate_files">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">locate_files</span><span class="p">(</span><span class="n">filepaths</span><span class="p">,</span> <span class="n">config_dir</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Try to locate an experiment file, or a list of experiment files.</span>
+<span class="sd">        If the given path doesn&#39;t exist, then maybe the path is relative</span>
+<span class="sd">        to the path of the config file. If neither exists, then return None.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        filepath_or_paths : str or list</span>
+<span class="sd">            Name of the experiment file we want to locate.</span>
+<span class="sd">        config_dir : str</span>
+<span class="sd">            Path to the experiment configuration file.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        --------</span>
+<span class="sd">        retval :  str or list</span>
+<span class="sd">            Absolute path to the experiment file or None</span>
+<span class="sd">            if the file could not be located. If the `filepaths` argument</span>
+<span class="sd">            was a string, this method will return a string. Otherwise, it will</span>
+<span class="sd">            return a list.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        ValueError</span>
+<span class="sd">            If filepaths  is not a string or list.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># the feature config file can be in the &#39;feature&#39; directory</span>
+        <span class="c1"># at the same level as the main config file</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">filepaths</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="ow">or</span>
+                <span class="nb">isinstance</span><span class="p">(</span><span class="n">filepaths</span><span class="p">,</span> <span class="nb">list</span><span class="p">)):</span>
+
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;The `filepaths` argument must be a &#39;</span>
+                             <span class="s1">&#39;string or list, not </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">filepaths</span><span class="p">)))</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">filepaths</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="n">filepaths</span> <span class="o">=</span> <span class="p">[</span><span class="n">filepaths</span><span class="p">]</span>
+            <span class="n">return_string</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">return_string</span> <span class="o">=</span> <span class="kc">False</span>
+
+        <span class="n">located_paths</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">filepath</span> <span class="ow">in</span> <span class="n">filepaths</span><span class="p">:</span>
+
+            <span class="n">retval</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="n">alternate_path</span> <span class="o">=</span> <span class="n">abspath</span><span class="p">(</span><span class="n">join</span><span class="p">(</span><span class="n">config_dir</span><span class="p">,</span> <span class="n">filepath</span><span class="p">))</span>
+
+            <span class="c1"># if the given path exists as is, convert</span>
+            <span class="c1"># that to an absolute path and return</span>
+            <span class="k">if</span> <span class="n">exists</span><span class="p">(</span><span class="n">filepath</span><span class="p">):</span>
+                <span class="n">retval</span> <span class="o">=</span> <span class="n">abspath</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+
+            <span class="c1"># otherwise check if it exists relative</span>
+            <span class="c1"># to the directory that contains the main config file</span>
+            <span class="k">elif</span> <span class="n">exists</span><span class="p">(</span><span class="n">alternate_path</span><span class="p">):</span>
+                <span class="n">retval</span> <span class="o">=</span> <span class="n">alternate_path</span>
+
+            <span class="n">located_paths</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">retval</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">return_string</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">located_paths</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">located_paths</span></div>
+
+<div class="viewcode-block" id="DataReader.read"><a class="viewcode-back" href="../../api.html#rsmtool.reader.DataReader.read">[docs]</a>    <span class="k">def</span> <span class="nf">read</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+             <span class="n">kwargs_dict</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Read all files passed to the constructor.</span>
+
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        kwargs_dict : dict of dicts, optional</span>
+<span class="sd">            Any additional keyword arguments to pass to a particular DataFrame.</span>
+<span class="sd">            These arguments will be passed to the `pandas` IO reader function.</span>
+<span class="sd">            Defaults to None.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        datacontainer : DataContainer</span>
+<span class="sd">            A DataContainer object.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">set_path</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dataset_paths</span><span class="p">):</span>
+
+            <span class="n">name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dataset_names</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+            <span class="n">converter</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">file_converters</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">exists</span><span class="p">(</span><span class="n">set_path</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span><span class="s1">&#39;The file </span><span class="si">{}</span><span class="s1"> does not exist&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">set_path</span><span class="p">))</span>
+
+            <span class="k">if</span> <span class="n">kwargs_dict</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">kwargs</span> <span class="o">=</span> <span class="n">kwargs_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="p">{})</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">kwargs</span> <span class="o">=</span> <span class="p">{}</span>
+
+            <span class="n">dataframe</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_from_file</span><span class="p">(</span><span class="n">set_path</span><span class="p">,</span> <span class="n">converter</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+            <span class="c1"># Add to list of datasets</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="n">name</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span>
+                                  <span class="s1">&#39;path&#39;</span><span class="p">:</span> <span class="n">set_path</span><span class="p">,</span>
+                                  <span class="s1">&#39;frame&#39;</span><span class="p">:</span> <span class="n">dataframe</span><span class="p">})</span>
+
+        <span class="k">return</span> <span class="n">DataContainer</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">datasets</span><span class="p">)</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Educational Testing Service.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'6.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+</body>
+</html>

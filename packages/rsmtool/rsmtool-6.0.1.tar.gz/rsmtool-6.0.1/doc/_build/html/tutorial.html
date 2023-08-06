@@ -1,0 +1,397 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Tutorial &mdash; Rater Scoring Modeling Tool 6.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Using RSMTool" href="usage_rsmtool.html" />
+    <link rel="prev" title="Installation" href="getting_started.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Rater Scoring Modeling Tool
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                6.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="who.html">Who is RSMTool for?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pipeline.html">Overview of RSMTool Pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#workflow">Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#asap-example">ASAP Example</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#extract-features">Extract features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-a-configuration-file">Create a configuration file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#run-the-experiment">Run the experiment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#examine-the-report">Examine the report</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#what-s-next">What’s next?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="usage_rsmtool.html">Using RSMTool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced_usage.html">Advanced Uses of RSMTool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom_notebooks.html">Writing custom RSMTool sections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utilities.html">Utility Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing to RSMTool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="release_process.html">RSMTool Release Process</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Rater Scoring Modeling Tool</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Tutorial</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/tutorial.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tutorial">
+<span id="id1"></span><h1>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h1>
+<p>First you’ll want to <a class="reference internal" href="getting_started.html#install"><span class="std std-ref">install RSMTool</span></a> and make sure you the conda environment in which you installed it is activated.</p>
+<div class="section" id="workflow">
+<h2>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h2>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">Although this tutorial provides feature values for the purpose of illustration, RSMTool does <em>not</em> include any functionality for feature extraction; the tool is <a class="reference internal" href="who.html#who-rsmtool"><span class="std std-ref">designed for researchers</span></a> who use their own NLP/Speech processing pipeline to extract features for their data.</p>
+</div>
+<p>Once you have the features extracted from your data, using RSMTool is fairly straightforward:</p>
+<ol class="arabic simple">
+<li>Make sure your data is split into a training set and a held-out evaluation set. You will need two files containing the feature values: one for each set. The files should be in one of the <a class="reference internal" href="pipeline.html#input-file-format"><span class="std std-ref">supported formats</span></a></li>
+<li>Create an <a class="reference internal" href="usage_rsmtool.html#config-file-rsmtool"><span class="std std-ref">experiment configuration file</span></a> describing the modeling experiment you would like to run.</li>
+<li>Run that configuration file with <a class="reference internal" href="usage_rsmtool.html#usage-rsmtool"><span class="std std-ref">rsmtool</span></a> and generate the experiment HTML report as well as the <a class="reference internal" href="usage_rsmtool.html#intermediate-files-rsmtool"><span class="std std-ref">intermediate CSV files</span></a>.</li>
+<li>Examine the HTML report to check various aspects of model performance.</li>
+</ol>
+<p>Note that the above workflow does not use the customization features of RSMTool, e.g., <a class="reference internal" href="usage_rsmtool.html#general-sections-rsmtool"><span class="std std-ref">choosing which sections to include in the report</span></a> or <a class="reference internal" href="custom_notebooks.html#custom-notebooks"><span class="std std-ref">adding custom analyses sections</span></a> etc. However, we will stick with this workflow for our tutorial since it is likely to be the most common use case.</p>
+</div>
+<div class="section" id="asap-example">
+<h2>ASAP Example<a class="headerlink" href="#asap-example" title="Permalink to this headline">¶</a></h2>
+<p>Let’s see how we can apply this basic RSMTool workflow to a simple example based on a 2012 Kaggle competition on automated essay scoring called the <a class="reference external" href="https://www.kaggle.com/c/asap-aes">Automated Student Assessment Prize (ASAP) contest</a>. As part of that contest, responses to 8 different essay questions written by students in grades 6-10 were provided. The responses were scored by humans and given a holistic score indicating the English proficiency of the student. The goal of the contest was to build an automated scoring model with the highest accuracy on held-out evaluation data.</p>
+<p>For our tutorial, we will use one of the questions from this data to illustrate how to use RSMTool to train a scoring model and evaluate its performance. All of the data we refer to below can be found in the <code class="docutils literal notranslate"><span class="pre">examples/rsmtool</span></code> folder in the <a class="reference external" href="https://github.com/EducationalTestingService/rsmtool/tree/master/examples/rsmtool">github repository</a>.</p>
+<div class="section" id="extract-features">
+<h3>Extract features<a class="headerlink" href="#extract-features" title="Permalink to this headline">¶</a></h3>
+<p>Kaggle provides the actual text of the responses along with the human scores in a <code class="docutils literal notranslate"><span class="pre">.tsv</span></code> file. The first step, as with any automated scoring approaches, is to extract features from the written (or spoken) responses that might be useful in predicting the score we are interested in. For example, some features that might be useful for predicting the English proficiency of a response are:</p>
+<ul class="simple">
+<li>Does the response contain any grammatical errors and if so, how many and of what kind since some grammatical errors are more serious than others.</li>
+<li>Is the response is well organized, e.g., whether there is a clear thesis statement and a conclusion, etc.</li>
+<li>Is the response coherent, i.e., do the ideas expressed in the various paragraphs well connected?</li>
+<li>Does the response contain any spelling errors?</li>
+</ul>
+<p>For more examples of what features might look like, we refer the reader to this paper by Attali &amp; Burstein <a class="footnote-reference" href="#id3" id="id2">[1]</a>. For our ASAP2 data, we extracted the following four features:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">GRAMMAR</span></code>: indicates how grammatically fluent the responses is.</li>
+<li><code class="docutils literal notranslate"><span class="pre">MECHANICS</span></code>: indicates how free of mechanical errors (e.g., spelling errors) the response is.</li>
+<li><code class="docutils literal notranslate"><span class="pre">DISCOURSE</span></code>: indicates whether the discourse transitions in the response make sense.</li>
+<li><code class="docutils literal notranslate"><span class="pre">ORGANIZATION</span></code>: indicates whether the response is organized well.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">These features were extracted using proprietary NLP software. To reiterate, RSMTool does <em>not</em> include any NLP/speech components for feature extraction.</p>
+</div>
+</div>
+<div class="section" id="create-a-configuration-file">
+<h3>Create a configuration file<a class="headerlink" href="#create-a-configuration-file" title="Permalink to this headline">¶</a></h3>
+<p>The next step is to create an <a class="reference internal" href="usage_rsmtool.html#config-file-rsmtool"><span class="std std-ref">RSMTool experiment configuration file</span></a> in <code class="docutils literal notranslate"><span class="pre">.json</span></code> format.</p>
+<div class="highlight-javascript notranslate" id="asap-config"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;experiment_id&quot;</span><span class="o">:</span> <span class="s2">&quot;ASAP2&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;train_file&quot;</span><span class="o">:</span> <span class="s2">&quot;train.csv&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;test_file&quot;</span><span class="o">:</span> <span class="s2">&quot;test.csv&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;model&quot;</span><span class="o">:</span> <span class="s2">&quot;LinearRegression&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;A model which uses all features and a LinearRegression.&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;test_label_column&quot;</span><span class="o">:</span> <span class="s2">&quot;score&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;train_label_column&quot;</span><span class="o">:</span> <span class="s2">&quot;score&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;use_scaled_predictions&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="s2">&quot;trim_min&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;trim_max&quot;</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
+    <span class="s2">&quot;id_column&quot;</span><span class="o">:</span> <span class="s2">&quot;ID&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;second_human_score_column&quot;</span><span class="o">:</span> <span class="s2">&quot;score2&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;length_column&quot;</span><span class="o">:</span> <span class="s2">&quot;LENGTH&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>Let’s take a look at the options in our configuration file.</p>
+<ul class="simple">
+<li><strong>Line 2</strong>: We define an experiment ID</li>
+<li><strong>Lines 3-4</strong>: We list the paths to our training and evaluation files with the feature values.  For this tutorial we used <code class="docutils literal notranslate"><span class="pre">.csv</span></code> format, but RSMTool also supports several other <a class="reference internal" href="pipeline.html#input-file-format"><span class="std std-ref">input file formats</span></a>.</li>
+<li><strong>Line 5</strong>: We choose to use a linear regression model to combine those features into a score.</li>
+<li><strong>Line 6</strong>: We also provide a description which will be included in the experiment report.</li>
+<li><strong>Lines 7-8</strong>: These two fields indicate that the human scores in the two <code class="docutils literal notranslate"><span class="pre">.csv</span></code> files are located in columns named <code class="docutils literal notranslate"><span class="pre">score</span></code>.</li>
+<li><strong>Lines 9</strong>: Next, we indicate that we would like to use the <a class="reference internal" href="pipeline.html#score-postprocessing"><span class="std std-ref">scaled scores</span></a> for our evaluation analyses.</li>
+<li><strong>Lines 10-11</strong>: These fields indicate that the lowest score on the scoring scale is a 1 and the highest score is a 6. This information is usually part of the rubric used by human graders.</li>
+<li><strong>Line 12</strong>: This field indicates that the unique IDs for the responses in the two <code class="docutils literal notranslate"><span class="pre">.csv</span></code> files are located in columns named <code class="docutils literal notranslate"><span class="pre">ID</span></code>.</li>
+<li><strong>Line 13</strong>: This field indicates that scores from a second set of human graders are also available (useful for comparing the agreement between human-machine scores to the agreement between two sets of humans) and are located in the <code class="docutils literal notranslate"><span class="pre">score2</span></code> column in the test set <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file.</li>
+<li><strong>Line 14</strong>: This field indicates that response lengths are also available for the training data in a column named <code class="docutils literal notranslate"><span class="pre">LENGTH</span></code>.</li>
+</ul>
+<p>Documentation for all of the available configuration options is available <a class="reference internal" href="usage_rsmtool.html#config-file-rsmtool"><span class="std std-ref">here</span></a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For this example, we are using <em>all</em> of the non-metadata columns in the training and evaluation <code class="docutils literal notranslate"><span class="pre">.csv</span></code> files as features in the model. However, it is also possible to <a class="reference internal" href="usage_rsmtool.html#column-selection-rsmtool"><span class="std std-ref">choose specific columns</span></a> to be used for training the model.</p>
+</div>
+</div>
+<div class="section" id="run-the-experiment">
+<h3>Run the experiment<a class="headerlink" href="#run-the-experiment" title="Permalink to this headline">¶</a></h3>
+<p>Now that we have our features in right format and our configuration file in <code class="docutils literal notranslate"><span class="pre">.json</span></code> format, we can use the <a class="reference internal" href="usage_rsmtool.html#usage-rsmtool"><span class="std std-ref">rsmtool</span></a> command-line script to run our modeling experiment.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> examples/rsmtool
+$ rsmtool config_rsmtool.json
+</pre></div>
+</div>
+<p>This should produce output like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Output</span> <span class="n">directory</span><span class="p">:</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">nmadnani</span><span class="o">/</span><span class="n">work</span><span class="o">/</span><span class="n">rsmtool</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">rsmtool</span>
+<span class="n">Loading</span> <span class="n">experiment</span> <span class="n">data</span>
+<span class="n">Reading</span> <span class="n">configuration</span> <span class="n">file</span><span class="p">:</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">nmadnani</span><span class="o">/</span><span class="n">work</span><span class="o">/</span><span class="n">rsmtool</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">rsmtool</span><span class="o">/</span><span class="n">config_rsmtool</span><span class="o">.</span><span class="n">json</span>
+<span class="n">Reading</span> <span class="n">training</span> <span class="n">data</span><span class="p">:</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">nmadnani</span><span class="o">/</span><span class="n">work</span><span class="o">/</span><span class="n">rsmtool</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">rsmtool</span><span class="o">/</span><span class="n">train</span><span class="o">.</span><span class="n">csv</span>
+<span class="n">Reading</span> <span class="n">evaluation</span> <span class="n">data</span><span class="p">:</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">nmadnani</span><span class="o">/</span><span class="n">work</span><span class="o">/</span><span class="n">rsmtool</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">rsmtool</span><span class="o">/</span><span class="n">test</span><span class="o">.</span><span class="n">csv</span>
+<span class="n">Pre</span><span class="o">-</span><span class="n">processing</span> <span class="n">training</span> <span class="ow">and</span> <span class="n">test</span> <span class="nb">set</span> <span class="n">features</span>
+<span class="n">Saving</span> <span class="n">training</span> <span class="ow">and</span> <span class="n">test</span> <span class="nb">set</span> <span class="n">data</span> <span class="n">to</span> <span class="n">disk</span>
+<span class="n">Training</span> <span class="n">LinearRegression</span> <span class="n">model</span>
+<span class="n">The</span> <span class="n">exact</span> <span class="n">solution</span> <span class="ow">is</span>  <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">Running</span> <span class="n">analyses</span> <span class="n">on</span> <span class="n">training</span> <span class="nb">set</span>
+<span class="n">Generating</span> <span class="n">training</span> <span class="ow">and</span> <span class="n">test</span> <span class="nb">set</span> <span class="n">predictions</span>
+<span class="n">Processing</span> <span class="n">test</span> <span class="nb">set</span> <span class="n">predictions</span>
+<span class="n">Saving</span> <span class="n">training</span> <span class="ow">and</span> <span class="n">test</span> <span class="nb">set</span> <span class="n">predictions</span> <span class="n">to</span> <span class="n">disk</span>
+<span class="n">Scaling</span> <span class="n">the</span> <span class="n">coefficients</span> <span class="ow">and</span> <span class="n">saving</span> <span class="n">them</span> <span class="n">to</span> <span class="n">disk</span>
+<span class="n">Running</span> <span class="n">analyses</span> <span class="n">on</span> <span class="n">test</span> <span class="nb">set</span> <span class="n">predictions</span>
+<span class="n">Starting</span> <span class="n">report</span> <span class="n">generation</span>
+<span class="n">Merging</span> <span class="n">sections</span>
+<span class="n">Exporting</span> <span class="n">HTML</span>
+<span class="n">Executing</span> <span class="n">notebook</span> <span class="k">with</span> <span class="n">kernel</span><span class="p">:</span> <span class="n">python3</span>
+</pre></div>
+</div>
+<p>Once the run finishes, you will see the <code class="docutils literal notranslate"><span class="pre">output</span></code>, <code class="docutils literal notranslate"><span class="pre">figure</span></code>, <code class="docutils literal notranslate"><span class="pre">report</span></code>, and <code class="docutils literal notranslate"><span class="pre">feature</span></code> sub-directories in the current directory. Each of these directories contain <a class="reference internal" href="usage_rsmtool.html#output-dirs-rsmtool"><span class="std std-ref">useful information</span></a> but we are specifically interested in the <code class="docutils literal notranslate"><span class="pre">report/ASAP2_report.html</span></code> file, which is the final RSMTool experiment report.</p>
+</div>
+<div class="section" id="examine-the-report">
+<h3>Examine the report<a class="headerlink" href="#examine-the-report" title="Permalink to this headline">¶</a></h3>
+<p>Our experiment report contains all the information we would need to determine how well our linear regression model with four features is doing. It includes:</p>
+<ol class="arabic simple">
+<li>Descriptive feature statistics.</li>
+<li>Inter-feature correlations.</li>
+<li>Model fit and diagnostics.</li>
+<li>Several different metrics indicating how well the machine’s scores agree with the humans’.</li>
+</ol>
+<p>… and <a class="reference internal" href="usage_rsmtool.html#general-sections-rsmtool"><span class="std std-ref">much more</span></a>.</p>
+<p>If we are not satisfied with the performance of the model, we can then take specific action, e.g., either add new features or perhaps try a more sophisticated model. And then run <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> again and examine the report. Building a scoring model is generally an iterative process.</p>
+</div>
+</div>
+<div class="section" id="what-s-next">
+<h2>What’s next?<a class="headerlink" href="#what-s-next" title="Permalink to this headline">¶</a></h2>
+<p>Next, you should read the detailed documentation on <a class="reference internal" href="usage_rsmtool.html#usage-rsmtool"><span class="std std-ref">rsmtool</span></a> since the tutorial only covered a very basic example. If you are interested in RSMTool but your use case is more nuanced, we have probably got you <a class="reference internal" href="advanced_usage.html#advanced-usage"><span class="std std-ref">covered</span></a>.</p>
+<p class="rubric">References</p>
+<table class="docutils footnote" frame="void" id="id3" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[1]</a></td><td>Attali, Y., &amp; Burstein, J. (2006). Automated essay scoring with e-rater® V.2. Journal of Technology, Learning, and Assessment, 4(3). <a class="reference external" href="https://ejournals.bc.edu/ojs/index.php/jtla/article/download/1650/1492">https://ejournals.bc.edu/ojs/index.php/jtla/article/download/1650/1492</a></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="usage_rsmtool.html" class="btn btn-neutral float-right" title="Using RSMTool" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="getting_started.html" class="btn btn-neutral" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Educational Testing Service.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'6.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,289 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Intermediate files &mdash; Rater Scoring Modeling Tool 6.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Rater Scoring Modeling Tool
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                6.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="who.html">Who is RSMTool for?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pipeline.html">Overview of RSMTool Pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_rsmtool.html">Using RSMTool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced_usage.html">Advanced Uses of RSMTool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom_notebooks.html">Writing custom RSMTool sections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utilities.html">Utility Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing to RSMTool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="release_process.html">RSMTool Release Process</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Rater Scoring Modeling Tool</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Intermediate files</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/intermediate_files_rsmsummarize.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="intermediate-files">
+<span id="intermediate-files-rsmsummarize"></span><h1>Intermediate files<a class="headerlink" href="#intermediate-files" title="Permalink to this headline">¶</a></h1>
+<p>Although the primary output of RSMSummarize is an HTML report, we also want the user to be able to conduct additional analyses outside of RSMTool. To this end, all of the tables produced in the experiment report are saved as files in the format as specified by <code class="docutils literal notranslate"><span class="pre">file_format</span></code> parameter in the <code class="docutils literal notranslate"><span class="pre">output</span></code> directory. The following sections describe all of the intermediate files that are produced.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The names of all files begin with the <code class="docutils literal notranslate"><span class="pre">summary_id</span></code> provided by the user in the experiment configuration file.</p>
+</div>
+<div class="section" id="marginal-and-partial-correlations-with-score">
+<h2>Marginal and partial correlations with score<a class="headerlink" href="#marginal-and-partial-correlations-with-score" title="Permalink to this headline">¶</a></h2>
+<p>filenames: <code class="docutils literal notranslate"><span class="pre">margcor_score_all_data</span></code>, <code class="docutils literal notranslate"><span class="pre">pcor_score_all_data</span></code>, <code class="docutils literal notranslate"><span class="pre">`pcor_score_no_length_all_data</span></code></p>
+<p>The first file contains the marginal correlations between each pre-processed feature and human score. The second file contains the partial correlation between each pre-processed feature and human score after controlling for all other features. The third file contains the partial correlations between each pre-processed feature and human score after controlling for response length, if <code class="docutils literal notranslate"><span class="pre">length_column</span></code> was specified in the configuration file.</p>
+</div>
+<div class="section" id="model-information">
+<h2>Model information<a class="headerlink" href="#model-information" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">model_summary</span></code></li>
+</ul>
+<p>This file contains the main information about the models included into the report including:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Total number of features</li>
+<li>Total number of features with non-negative coefficients</li>
+<li>The learner</li>
+<li>The label used to train the model</li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">betas</span></code>: standardized coefficients (for built-in models only).</li>
+<li><code class="docutils literal notranslate"><span class="pre">model_fit</span></code>: R squared and adjusted R squared computed on the training set. Note that these values are always computed on raw predictions without any trimming or rounding.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If the report includes a combination of <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> and <code class="docutils literal notranslate"><span class="pre">rsmeval</span></code> experiments, the summary tables with model information will only include <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> experiments since no model information is available for <code class="docutils literal notranslate"><span class="pre">rsmeval</span></code> experiments.</p>
+</div>
+</div>
+<div class="section" id="evaluation-metrics">
+<h2>Evaluation metrics<a class="headerlink" href="#evaluation-metrics" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">eval_short</span></code> - descriptives for predicted and human scores (mean, std.dev etc.) and association metrics (correlation, quadartic weighted kappa, SMD etc.) for specific score types chosen based on recommendations by Williamson (2012). Specifically, the following columns are included (the <code class="docutils literal notranslate"><span class="pre">raw</span></code> or <code class="docutils literal notranslate"><span class="pre">scale</span></code> version is chosen depending on the value of the <code class="docutils literal notranslate"><span class="pre">use_scaled_predictions</span></code> in the configuration file).</p>
+<blockquote>
+<div><ul class="simple">
+<li>h_mean</li>
+<li>h_sd</li>
+<li>corr</li>
+<li>sys_mean [raw/scale trim]</li>
+<li>sys_sd [raw/scale trim]</li>
+<li>SMD [raw/scale trim]</li>
+<li>adj_agr [raw/scale trim_round]</li>
+<li>exact_agr [raw/scale trim_round]</li>
+<li>kappa [raw/scale trim_round]</li>
+<li>wtkappa [raw/scale trim_round]</li>
+<li>sys_mean [raw/scale trim_round]</li>
+<li>sys_sd [raw/scale trim_round]</li>
+<li>SMD [raw/scale trim_round]</li>
+<li>R2 [raw/scale trim]</li>
+<li>RMSE [raw/scale trim]</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Please note that for raw scores, SMD values are likely to be affected by possible differences in scale.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Educational Testing Service.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'6.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,454 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>rsmtool.rsmcompare &mdash; Rater Scoring Modeling Tool 6.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Rater Scoring Modeling Tool
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                6.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../who.html">Who is RSMTool for?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pipeline.html">Overview of RSMTool Pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../usage_rsmtool.html">Using RSMTool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced_usage.html">Advanced Uses of RSMTool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../custom_notebooks.html">Writing custom RSMTool sections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../utilities.html">Utility Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing to RSMTool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release_process.html">RSMTool Release Process</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Rater Scoring Modeling Tool</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>rsmtool.rsmcompare</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for rsmtool.rsmcompare</h1><div class="highlight"><pre>
+<span></span><span class="ch">#!/usr/bin/env python</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Script to compare two RSMTool experiments.</span>
+
+<span class="sd">:author: Jeremy Biggs (jbiggs@ets.org)</span>
+<span class="sd">:author: Anastassia Loukina (aloukina@ets.org)</span>
+<span class="sd">:author: Nitin Madnani (nmadnani@ets.org)</span>
+
+<span class="sd">:date: 10/25/2017</span>
+<span class="sd">:organization: ETS</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+
+<span class="kn">import</span> <span class="nn">argparse</span>
+<span class="kn">import</span> <span class="nn">glob</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="kn">from</span> <span class="nn">os.path</span> <span class="k">import</span> <span class="p">(</span><span class="n">abspath</span><span class="p">,</span>
+                     <span class="n">dirname</span><span class="p">,</span>
+                     <span class="n">exists</span><span class="p">,</span>
+                     <span class="n">join</span><span class="p">,</span>
+                     <span class="n">normpath</span><span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">rsmtool</span> <span class="k">import</span> <span class="n">VERSION_STRING</span>
+<span class="kn">from</span> <span class="nn">rsmtool.configuration_parser</span> <span class="k">import</span> <span class="n">ConfigurationParser</span><span class="p">,</span> <span class="n">Configuration</span>
+<span class="kn">from</span> <span class="nn">rsmtool.reader</span> <span class="k">import</span> <span class="n">DataReader</span>
+<span class="kn">from</span> <span class="nn">rsmtool.reporter</span> <span class="k">import</span> <span class="n">Reporter</span>
+<span class="kn">from</span> <span class="nn">rsmtool.utils</span> <span class="k">import</span> <span class="n">LogFormatter</span>
+
+
+<span class="k">def</span> <span class="nf">check_experiment_id</span><span class="p">(</span><span class="n">experiment_dir</span><span class="p">,</span> <span class="n">experiment_id</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Check that the supplied ``experiment_dir`` contains</span>
+<span class="sd">    the outputs for the supplied ``experiment_id``.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    experiment_dir : str</span>
+<span class="sd">        path to the directory with the experiment output</span>
+<span class="sd">    experiment_id : str</span>
+<span class="sd">        experiment_id of the original experiment used to generate the</span>
+<span class="sd">        output</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    FileNotFoundError</span>
+<span class="sd">        if the ``experument_dir`` does not contain any outputs</span>
+<span class="sd">        for the ``experiment_id``</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># list all possible output files which start with</span>
+    <span class="c1"># experiment_id</span>
+    <span class="n">outputs</span> <span class="o">=</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="n">join</span><span class="p">(</span><span class="n">experiment_dir</span><span class="p">,</span>
+                             <span class="s1">&#39;output&#39;</span><span class="p">,</span>
+                             <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_*.*&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">experiment_id</span><span class="p">)))</span>
+
+    <span class="c1"># raise an error if none exists</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">outputs</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span><span class="s2">&quot;The directory </span><span class="si">{}</span><span class="s2"> does not contain &quot;</span>
+                                <span class="s2">&quot;any outputs of an rsmtool experiment &quot;</span>
+                                <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">experiment_dir</span><span class="p">,</span> <span class="n">experiment_id</span><span class="p">))</span>
+
+
+<div class="viewcode-block" id="run_comparison"><a class="viewcode-back" href="../../api.html#rsmtool.run_comparison">[docs]</a><span class="k">def</span> <span class="nf">run_comparison</span><span class="p">(</span><span class="n">config_file_or_obj</span><span class="p">,</span> <span class="n">output_dir</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Run an ``rsmcompare`` experiment using the given configuration</span>
+<span class="sd">    file and generate the report in the given directory.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    config_file_or_obj : str or Configuration</span>
+<span class="sd">        Path to the experiment configuration file.</span>
+<span class="sd">        Users can also pass a `Configuration` object that is in memory.</span>
+<span class="sd">    output_dir : str</span>
+<span class="sd">        Path to the experiment output directory.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    ValueError</span>
+<span class="sd">        If any of the required fields are missing or ill-specified.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+    <span class="c1"># Allow users to pass Configuration object to the</span>
+    <span class="c1"># `config_file_or_obj` argument, rather than read file</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">config_file_or_obj</span><span class="p">,</span> <span class="n">Configuration</span><span class="p">):</span>
+
+        <span class="c1"># Instantiate configuration parser object</span>
+        <span class="n">parser</span> <span class="o">=</span> <span class="n">ConfigurationParser</span><span class="o">.</span><span class="n">get_configparser</span><span class="p">(</span><span class="n">config_file_or_obj</span><span class="p">)</span>
+        <span class="n">configuration</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">read_normalize_validate_and_process_config</span><span class="p">(</span><span class="n">config_file_or_obj</span><span class="p">,</span>
+                                                                          <span class="n">context</span><span class="o">=</span><span class="s1">&#39;rsmcompare&#39;</span><span class="p">)</span>
+
+        <span class="c1"># get the directory where the configuration file lives</span>
+        <span class="n">configpath</span> <span class="o">=</span> <span class="n">dirname</span><span class="p">(</span><span class="n">config_file_or_obj</span><span class="p">)</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">configuration</span> <span class="o">=</span> <span class="n">config_file_or_obj</span>
+        <span class="k">if</span> <span class="n">configuration</span><span class="o">.</span><span class="n">filepath</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">configpath</span> <span class="o">=</span> <span class="n">dirname</span><span class="p">(</span><span class="n">configuration</span><span class="o">.</span><span class="n">filepath</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">configpath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+
+    <span class="c1"># get the information about the &quot;old&quot; experiment</span>
+    <span class="n">experiment_id_old</span> <span class="o">=</span> <span class="n">configuration</span><span class="p">[</span><span class="s1">&#39;experiment_id_old&#39;</span><span class="p">]</span>
+    <span class="n">experiment_dir_old</span> <span class="o">=</span> <span class="n">DataReader</span><span class="o">.</span><span class="n">locate_files</span><span class="p">(</span><span class="n">configuration</span><span class="p">[</span><span class="s1">&#39;experiment_dir_old&#39;</span><span class="p">],</span> <span class="n">configpath</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">experiment_dir_old</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span><span class="s2">&quot;The directory </span><span class="si">{}</span><span class="s2"> &quot;</span>
+                                <span class="s2">&quot;does not exist.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">configuration</span><span class="p">[</span><span class="s1">&#39;experiment_dir_old&#39;</span><span class="p">]))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">csvdir_old</span> <span class="o">=</span> <span class="n">normpath</span><span class="p">(</span><span class="n">join</span><span class="p">(</span><span class="n">experiment_dir_old</span><span class="p">,</span> <span class="s1">&#39;output&#39;</span><span class="p">))</span>
+        <span class="n">figdir_old</span> <span class="o">=</span> <span class="n">normpath</span><span class="p">(</span><span class="n">join</span><span class="p">(</span><span class="n">experiment_dir_old</span><span class="p">,</span> <span class="s1">&#39;figure&#39;</span><span class="p">))</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">exists</span><span class="p">(</span><span class="n">csvdir_old</span><span class="p">)</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">exists</span><span class="p">(</span><span class="n">figdir_old</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span><span class="s2">&quot;The directory </span><span class="si">{}</span><span class="s2"> does not contain &quot;</span>
+                                    <span class="s2">&quot;the output of an rsmtool &quot;</span>
+                                    <span class="s2">&quot;experiment.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">experiment_dir_old</span><span class="p">))</span>
+
+    <span class="n">check_experiment_id</span><span class="p">(</span><span class="n">experiment_dir_old</span><span class="p">,</span> <span class="n">experiment_id_old</span><span class="p">)</span>
+
+    <span class="c1"># get the information about the &quot;new&quot; experiment</span>
+    <span class="n">experiment_id_new</span> <span class="o">=</span> <span class="n">configuration</span><span class="p">[</span><span class="s1">&#39;experiment_id_new&#39;</span><span class="p">]</span>
+    <span class="n">experiment_dir_new</span> <span class="o">=</span> <span class="n">DataReader</span><span class="o">.</span><span class="n">locate_files</span><span class="p">(</span><span class="n">configuration</span><span class="p">[</span><span class="s1">&#39;experiment_dir_new&#39;</span><span class="p">],</span> <span class="n">configpath</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">experiment_dir_new</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span><span class="s2">&quot;The directory </span><span class="si">{}</span><span class="s2"> &quot;</span>
+                                <span class="s2">&quot;does not exist.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">configuration</span><span class="p">[</span><span class="s1">&#39;experiment_dir_new&#39;</span><span class="p">]))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">csvdir_new</span> <span class="o">=</span> <span class="n">normpath</span><span class="p">(</span><span class="n">join</span><span class="p">(</span><span class="n">experiment_dir_new</span><span class="p">,</span> <span class="s1">&#39;output&#39;</span><span class="p">))</span>
+        <span class="n">figdir_new</span> <span class="o">=</span> <span class="n">normpath</span><span class="p">(</span><span class="n">join</span><span class="p">(</span><span class="n">experiment_dir_new</span><span class="p">,</span> <span class="s1">&#39;figure&#39;</span><span class="p">))</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">exists</span><span class="p">(</span><span class="n">csvdir_new</span><span class="p">)</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">exists</span><span class="p">(</span><span class="n">figdir_new</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span><span class="s2">&quot;The directory </span><span class="si">{}</span><span class="s2"> does not contain &quot;</span>
+                                    <span class="s2">&quot;the output of an rsmtool &quot;</span>
+                                    <span class="s2">&quot;experiment.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">experiment_dir_new</span><span class="p">))</span>
+
+    <span class="n">check_experiment_id</span><span class="p">(</span><span class="n">experiment_dir_new</span><span class="p">,</span> <span class="n">experiment_id_new</span><span class="p">)</span>
+
+    <span class="c1"># are there specific general report sections we want to include?</span>
+    <span class="n">general_report_sections</span> <span class="o">=</span> <span class="n">configuration</span><span class="p">[</span><span class="s1">&#39;general_sections&#39;</span><span class="p">]</span>
+
+    <span class="c1"># what about the special or custom sections?</span>
+    <span class="n">special_report_sections</span> <span class="o">=</span> <span class="n">configuration</span><span class="p">[</span><span class="s1">&#39;special_sections&#39;</span><span class="p">]</span>
+
+    <span class="n">custom_report_section_paths</span> <span class="o">=</span> <span class="n">configuration</span><span class="p">[</span><span class="s1">&#39;custom_sections&#39;</span><span class="p">]</span>
+
+    <span class="c1"># if custom report sections exist, locate sections; otherwise, create empty list</span>
+    <span class="k">if</span> <span class="n">custom_report_section_paths</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Locating custom report sections&#39;</span><span class="p">)</span>
+        <span class="n">custom_report_sections</span> <span class="o">=</span> <span class="n">Reporter</span><span class="o">.</span><span class="n">locate_custom_sections</span><span class="p">(</span><span class="n">custom_report_section_paths</span><span class="p">,</span>
+                                                                 <span class="n">configpath</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">custom_report_sections</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="c1"># get the section order</span>
+    <span class="n">section_order</span> <span class="o">=</span> <span class="n">configuration</span><span class="p">[</span><span class="s1">&#39;section_order&#39;</span><span class="p">]</span>
+
+    <span class="c1"># get the subgroups if any</span>
+    <span class="n">subgroups</span> <span class="o">=</span> <span class="n">configuration</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;subgroups&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Initialize reporter</span>
+    <span class="n">reporter</span> <span class="o">=</span> <span class="n">Reporter</span><span class="p">()</span>
+
+    <span class="n">chosen_notebook_files</span> <span class="o">=</span> <span class="n">reporter</span><span class="o">.</span><span class="n">get_ordered_notebook_files</span><span class="p">(</span><span class="n">general_report_sections</span><span class="p">,</span>
+                                                                <span class="n">special_report_sections</span><span class="p">,</span>
+                                                                <span class="n">custom_report_sections</span><span class="p">,</span>
+                                                                <span class="n">section_order</span><span class="p">,</span>
+                                                                <span class="n">subgroups</span><span class="p">,</span>
+                                                                <span class="n">model_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                                                                <span class="n">context</span><span class="o">=</span><span class="s1">&#39;rsmcompare&#39;</span><span class="p">)</span>
+
+    <span class="c1"># add chosen notebook files to configuration</span>
+    <span class="n">configuration</span><span class="p">[</span><span class="s1">&#39;chosen_notebook_files&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">chosen_notebook_files</span>
+
+    <span class="c1"># now generate the comparison report</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Starting report generation.&#39;</span><span class="p">)</span>
+    <span class="n">reporter</span><span class="o">.</span><span class="n">create_comparison_report</span><span class="p">(</span><span class="n">configuration</span><span class="p">,</span>
+                                      <span class="n">csvdir_old</span><span class="p">,</span>
+                                      <span class="n">figdir_old</span><span class="p">,</span>
+                                      <span class="n">csvdir_new</span><span class="p">,</span>
+                                      <span class="n">figdir_new</span><span class="p">,</span>
+                                      <span class="n">output_dir</span><span class="p">)</span></div>
+
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+
+    <span class="c1"># set up the basic logging configuration</span>
+    <span class="n">formatter</span> <span class="o">=</span> <span class="n">LogFormatter</span><span class="p">()</span>
+
+    <span class="n">handler</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">StreamHandler</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+    <span class="n">handler</span><span class="o">.</span><span class="n">setFormatter</span><span class="p">(</span><span class="n">formatter</span><span class="p">)</span>
+
+    <span class="n">logging</span><span class="o">.</span><span class="n">root</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">handler</span><span class="p">)</span>
+    <span class="n">logging</span><span class="o">.</span><span class="n">root</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
+
+    <span class="c1"># get a logger</span>
+    <span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+    <span class="c1"># set up an argument parser</span>
+    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span><span class="n">prog</span><span class="o">=</span><span class="s1">&#39;rsmcompare&#39;</span><span class="p">)</span>
+
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;config_file&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;The JSON configuration file for &quot;</span>
+                                            <span class="s2">&quot;this comparison&quot;</span><span class="p">)</span>
+
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;output_dir&#39;</span><span class="p">,</span> <span class="n">nargs</span><span class="o">=</span><span class="s1">&#39;?&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;The output directory where the report &quot;</span>
+                             <span class="s2">&quot;files for this comparison will be stored&quot;</span><span class="p">)</span>
+
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;-V&#39;</span><span class="p">,</span> <span class="s1">&#39;--version&#39;</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s1">&#39;version&#39;</span><span class="p">,</span>
+                        <span class="n">version</span><span class="o">=</span><span class="n">VERSION_STRING</span><span class="p">)</span>
+
+    <span class="c1"># parse given command line arguments</span>
+    <span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Output directory: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">output_dir</span><span class="p">))</span>
+
+    <span class="c1"># convert all paths to absolute to make sure</span>
+    <span class="c1"># all files can be found later</span>
+    <span class="n">config_file</span> <span class="o">=</span> <span class="n">abspath</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">config_file</span><span class="p">)</span>
+    <span class="n">output_dir</span> <span class="o">=</span> <span class="n">abspath</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">output_dir</span><span class="p">)</span>
+
+    <span class="c1"># make sure that the given configuration file exists</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">exists</span><span class="p">(</span><span class="n">config_file</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span><span class="s2">&quot;Main configuration file </span><span class="si">{}</span><span class="s2"> not &quot;</span>
+                                <span class="s2">&quot;found.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">config_file</span><span class="p">))</span>
+
+    <span class="c1"># generate a comparison report</span>
+    <span class="n">run_comparison</span><span class="p">(</span><span class="n">config_file</span><span class="p">,</span> <span class="n">output_dir</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Educational Testing Service.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'6.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+</body>
+</html>

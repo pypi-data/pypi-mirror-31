@@ -1,0 +1,754 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>rsmtool.comparer &mdash; Rater Scoring Modeling Tool 6.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Rater Scoring Modeling Tool
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                6.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../who.html">Who is RSMTool for?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pipeline.html">Overview of RSMTool Pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../usage_rsmtool.html">Using RSMTool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced_usage.html">Advanced Uses of RSMTool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../custom_notebooks.html">Writing custom RSMTool sections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../utilities.html">Utility Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing to RSMTool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release_process.html">RSMTool Release Process</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Rater Scoring Modeling Tool</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>rsmtool.comparer</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for rsmtool.comparer</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Classes for comparing outputs of two RSMTool experiments.</span>
+
+<span class="sd">:author: Jeremy Biggs (jbiggs@ets.org)</span>
+<span class="sd">:author: Anastassia Loukina (aloukina@ets.org)</span>
+<span class="sd">:author: Nitin Madnani (nmadnani@ets.org)</span>
+
+<span class="sd">:date: 10/25/2017</span>
+<span class="sd">:organization: ETS</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+
+<span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">defaultdict</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="k">import</span> <span class="n">pearsonr</span>
+<span class="kn">from</span> <span class="nn">os.path</span> <span class="k">import</span> <span class="n">exists</span><span class="p">,</span> <span class="n">join</span>
+
+<span class="kn">from</span> <span class="nn">rsmtool.reader</span> <span class="k">import</span> <span class="n">DataReader</span>
+<span class="kn">from</span> <span class="nn">rsmtool.utils</span> <span class="k">import</span> <span class="n">get_output_directory_extension</span>
+
+
+<span class="n">_df_eval_columns_existing_raw</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;N&quot;</span><span class="p">,</span> <span class="s2">&quot;h_mean&quot;</span><span class="p">,</span> <span class="s2">&quot;h_sd&quot;</span><span class="p">,</span>
+                                 <span class="s2">&quot;sys_mean.raw_trim&quot;</span><span class="p">,</span>
+                                 <span class="s2">&quot;sys_sd.raw_trim&quot;</span><span class="p">,</span>
+                                 <span class="s2">&quot;corr.raw_trim&quot;</span><span class="p">,</span>
+                                 <span class="s2">&quot;SMD.raw_trim&quot;</span><span class="p">,</span>
+                                 <span class="s2">&quot;sys_mean.raw_trim_round&quot;</span><span class="p">,</span>
+                                 <span class="s2">&quot;sys_sd.raw_trim_round&quot;</span><span class="p">,</span>
+                                 <span class="s2">&quot;exact_agr.raw_trim_round&quot;</span><span class="p">,</span>
+                                 <span class="s2">&quot;kappa.raw_trim_round&quot;</span><span class="p">,</span>
+                                 <span class="s2">&quot;wtkappa.raw_trim_round&quot;</span><span class="p">,</span>
+                                 <span class="s2">&quot;adj_agr.raw_trim_round&quot;</span><span class="p">,</span>
+                                 <span class="s2">&quot;SMD.raw_trim_round&quot;</span><span class="p">,</span>
+                                 <span class="s2">&quot;R2.raw_trim&quot;</span><span class="p">,</span>
+                                 <span class="s2">&quot;RMSE.raw_trim&quot;</span><span class="p">]</span>
+
+<span class="n">_df_eval_columns_existing_scale</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;N&quot;</span><span class="p">,</span> <span class="s2">&quot;h_mean&quot;</span><span class="p">,</span> <span class="s2">&quot;h_sd&quot;</span><span class="p">,</span>
+                                   <span class="s2">&quot;sys_mean.scale_trim&quot;</span><span class="p">,</span>
+                                   <span class="s2">&quot;sys_sd.scale_trim&quot;</span><span class="p">,</span>
+                                   <span class="s2">&quot;corr.scale_trim&quot;</span><span class="p">,</span>
+                                   <span class="s2">&quot;SMD.scale_trim&quot;</span><span class="p">,</span>
+                                   <span class="s2">&quot;sys_mean.scale_trim_round&quot;</span><span class="p">,</span>
+                                   <span class="s2">&quot;sys_sd.scale_trim_round&quot;</span><span class="p">,</span>
+                                   <span class="s2">&quot;exact_agr.scale_trim_round&quot;</span><span class="p">,</span>
+                                   <span class="s2">&quot;kappa.scale_trim_round&quot;</span><span class="p">,</span>
+                                   <span class="s2">&quot;wtkappa.scale_trim_round&quot;</span><span class="p">,</span>
+                                   <span class="s2">&quot;adj_agr.scale_trim_round&quot;</span><span class="p">,</span>
+                                   <span class="s2">&quot;SMD.scale_trim_round&quot;</span><span class="p">,</span>
+                                   <span class="s2">&quot;R2.scale_trim&quot;</span><span class="p">,</span>
+                                   <span class="s2">&quot;RMSE.scale_trim&quot;</span><span class="p">]</span>
+
+
+<span class="n">_df_eval_columns_renamed</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;N&quot;</span><span class="p">,</span> <span class="s2">&quot;H1 mean&quot;</span><span class="p">,</span> <span class="s2">&quot;H1 SD&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;score mean(b)&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;score SD(b)&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;Pearson(b)&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;SMD(b)&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;score mean(br)&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;score SD(br)&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;Agmt.(br)&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;K(br)&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;QWK(br)&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;Adj. Agmt.(br)&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;SMD(br)&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;R2(b)&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;RMSE(b)&quot;</span><span class="p">]</span>
+
+<span class="n">raw_rename_dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">_df_eval_columns_existing_raw</span><span class="p">,</span>
+                           <span class="n">_df_eval_columns_renamed</span><span class="p">))</span>
+<span class="n">scale_rename_dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">_df_eval_columns_existing_scale</span><span class="p">,</span>
+                             <span class="n">_df_eval_columns_renamed</span><span class="p">))</span>
+
+
+<div class="viewcode-block" id="Comparer"><a class="viewcode-back" href="../../api.html#rsmtool.comparer.Comparer">[docs]</a><span class="k">class</span> <span class="nc">Comparer</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A class to perform comparisons between two RSMTool experiments.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Comparer.make_summary_stat_df"><a class="viewcode-back" href="../../api.html#rsmtool.comparer.Comparer.make_summary_stat_df">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">make_summary_stat_df</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Compute summary statistics for the data in the given frame.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        df : pandas DataFrame</span>
+<span class="sd">            Data frame containing numeric data.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        res : pandas DataFrame</span>
+<span class="sd">            Data frame containing summary statistics for data</span>
+<span class="sd">            in the input frame.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">series</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">summary_func</span> <span class="ow">in</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">]:</span>
+
+            <span class="c1"># apply function, but catch and ignore warnings</span>
+            <span class="k">with</span> <span class="n">warnings</span><span class="o">.</span><span class="n">catch_warnings</span><span class="p">():</span>
+                <span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+                <span class="n">series</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">summary_func</span><span class="p">))</span>
+
+        <span class="n">res</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">series</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">res</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;MEAN&#39;</span><span class="p">,</span> <span class="s1">&#39;SD&#39;</span><span class="p">,</span> <span class="s1">&#39;MEDIAN&#39;</span><span class="p">,</span> <span class="s1">&#39;MIN&#39;</span><span class="p">,</span> <span class="s1">&#39;MAX&#39;</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">res</span></div>
+
+<div class="viewcode-block" id="Comparer.compute_correlations_between_versions"><a class="viewcode-back" href="../../api.html#rsmtool.comparer.Comparer.compute_correlations_between_versions">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">compute_correlations_between_versions</span><span class="p">(</span><span class="n">df_old</span><span class="p">,</span>
+                                              <span class="n">df_new</span><span class="p">,</span>
+                                              <span class="n">human_score</span><span class="o">=</span><span class="s1">&#39;sc1&#39;</span><span class="p">,</span>
+                                              <span class="n">id_column</span><span class="o">=</span><span class="s1">&#39;spkitemid&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Computes correlations between respective feature values in the</span>
+<span class="sd">        two given frames as well as the correlations between each feature</span>
+<span class="sd">        values and the human scores.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        df_old : pandas DataFrame</span>
+<span class="sd">            Data frame with feature values for the &#39;old&#39; model.</span>
+<span class="sd">        df_new : pandas DataFrame</span>
+<span class="sd">            Data frame with feature valeus for the &#39;new&#39; model.</span>
+<span class="sd">        human_score : str, optional</span>
+<span class="sd">            Name of the column containing human score. Defaults to ``sc1``.</span>
+<span class="sd">            Must be the same for both data sets.</span>
+<span class="sd">        id_column : str, optional</span>
+<span class="sd">            Name of the column containing id for each response. Defaults to</span>
+<span class="sd">            ``spkitemid``. Must be the same for both data sets.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        df_correlations: pandas DataFrame</span>
+<span class="sd">            Data frame with a row for each feature and the following columns ::</span>
+
+<span class="sd">                - N: total number of responses</span>
+<span class="sd">                - human_old: correlation with human score in the old frame</span>
+<span class="sd">                - human_new: correlation with human score in the new frame</span>
+<span class="sd">                - old_new: correlation between old and new frames</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        ValueError</span>
+<span class="sd">            If there are no shared features between the two sets or if there are</span>
+<span class="sd">            no shared responses between the two sets.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># Only use features that appear in both datasets</span>
+        <span class="n">features_old</span> <span class="o">=</span> <span class="p">[</span><span class="n">column</span> <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">df_old</span>
+                        <span class="k">if</span> <span class="n">column</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="n">id_column</span><span class="p">,</span> <span class="n">human_score</span><span class="p">]]</span>
+        <span class="n">features_new</span> <span class="o">=</span> <span class="p">[</span><span class="n">column</span> <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">df_new</span>
+                        <span class="k">if</span> <span class="n">column</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="n">id_column</span><span class="p">,</span> <span class="n">human_score</span><span class="p">]]</span>
+
+        <span class="n">features</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">features_old</span><span class="p">)</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">features_new</span><span class="p">))</span>
+
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">features</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;There are no matching features &quot;</span>
+                             <span class="s2">&quot;in these two data sets.&quot;</span><span class="p">)</span>
+
+        <span class="n">columns</span> <span class="o">=</span> <span class="n">features</span> <span class="o">+</span> <span class="p">[</span><span class="n">id_column</span><span class="p">,</span> <span class="n">human_score</span><span class="p">]</span>
+
+        <span class="c1"># merge the two data sets and display a warning</span>
+        <span class="c1"># if there are non-matching ids</span>
+        <span class="n">df_merged</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df_old</span><span class="p">[</span><span class="n">columns</span><span class="p">],</span>
+                             <span class="n">df_new</span><span class="p">[</span><span class="n">columns</span><span class="p">],</span>
+                             <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="n">id_column</span><span class="p">],</span>
+                             <span class="n">suffixes</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;</span><span class="si">%%%o</span><span class="s1">ld&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">%%</span><span class="s1">%new&#39;</span><span class="p">])</span>
+
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_merged</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;There are no shared ids between these two datasets.&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_merged</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_old</span><span class="p">):</span>
+            <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;Some responses from the old data &quot;</span>
+                          <span class="s2">&quot;were not present in the new data and therefore &quot;</span>
+                          <span class="s2">&quot;were excluded from the analysis.&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_merged</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_new</span><span class="p">):</span>
+            <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;Some responses from the new data &quot;</span>
+                          <span class="s2">&quot;were not present in the old data and therefore &quot;</span>
+                          <span class="s2">&quot;were excluded from the analysis.&quot;</span><span class="p">)</span>
+
+        <span class="c1"># compute correlations between each feature and human score.</span>
+        <span class="c1"># we are using the same approach as used in analysis.py</span>
+        <span class="n">correlation_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">feature</span> <span class="ow">in</span> <span class="n">features</span><span class="p">:</span>
+
+            <span class="c1"># compute correlations</span>
+            <span class="n">df_cor</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Feature&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">feature</span><span class="p">],</span>
+                                   <span class="s1">&#39;N&#39;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_merged</span><span class="p">),</span>
+                                   <span class="s1">&#39;human_old&#39;</span><span class="p">:</span> <span class="n">pearsonr</span><span class="p">(</span><span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;</span><span class="si">{}%%%o</span><span class="s1">ld&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">human_score</span><span class="p">)],</span>
+                                                         <span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;</span><span class="si">{}%%%o</span><span class="s1">ld&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">feature</span><span class="p">)])[</span><span class="mi">0</span><span class="p">],</span>
+                                   <span class="s1">&#39;human_new&#39;</span><span class="p">:</span> <span class="n">pearsonr</span><span class="p">(</span><span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;</span><span class="si">{}%%</span><span class="s1">%new&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">human_score</span><span class="p">)],</span>
+                                                         <span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;</span><span class="si">{}%%</span><span class="s1">%new&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">feature</span><span class="p">)])[</span><span class="mi">0</span><span class="p">],</span>
+                                   <span class="s1">&#39;old_new&#39;</span><span class="p">:</span> <span class="n">pearsonr</span><span class="p">(</span><span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;</span><span class="si">{}%%</span><span class="s1">%new&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">feature</span><span class="p">)],</span>
+                                                       <span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;</span><span class="si">{}%%%o</span><span class="s1">ld&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">feature</span><span class="p">)])[</span><span class="mi">0</span><span class="p">]})</span>
+            <span class="n">correlation_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df_cor</span><span class="p">)</span>
+
+        <span class="n">df_correlations</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">correlation_list</span><span class="p">)</span>
+        <span class="n">df_correlations</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">df_correlations</span><span class="p">[</span><span class="s1">&#39;Feature&#39;</span><span class="p">]</span>
+        <span class="n">df_correlations</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">return</span><span class="p">(</span><span class="n">df_correlations</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Comparer.process_confusion_matrix"><a class="viewcode-back" href="../../api.html#rsmtool.comparer.Comparer.process_confusion_matrix">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">process_confusion_matrix</span><span class="p">(</span><span class="n">conf_matrix</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Process confusion matrix to add &#39;human&#39; and &#39;machine&#39;</span>
+<span class="sd">        to column names.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        conf_matrix : TYPE</span>
+<span class="sd">            pandas Data Frame containing the confusion matrix.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        conf_matrix_renamed : pandas DataFrame</span>
+<span class="sd">            pandas Data Frame containing the confusion matrix</span>
+<span class="sd">            with the columns renamed.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">conf_matrix_renamed</span> <span class="o">=</span> <span class="n">conf_matrix</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="n">conf_matrix_renamed</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;machine </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">conf_matrix</span><span class="o">.</span><span class="n">index</span><span class="p">]</span>
+        <span class="n">conf_matrix_renamed</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;human </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">conf_matrix</span><span class="o">.</span><span class="n">columns</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">conf_matrix_renamed</span></div>
+
+<div class="viewcode-block" id="Comparer.load_rsmtool_output"><a class="viewcode-back" href="../../api.html#rsmtool.comparer.Comparer.load_rsmtool_output">[docs]</a>    <span class="k">def</span> <span class="nf">load_rsmtool_output</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filedir</span><span class="p">,</span> <span class="n">figdir</span><span class="p">,</span> <span class="n">experiment_id</span><span class="p">,</span> <span class="n">prefix</span><span class="p">,</span> <span class="n">groups_eval</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Function to load all of the outputs of an rsmtool experiment.</span>
+<span class="sd">        For each type of output, we first check whether the file exists</span>
+<span class="sd">        to allow comparing experiments with different sets of outputs.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        filedir : str</span>
+<span class="sd">            Path to the directory containing output files.</span>
+<span class="sd">        figdir : str</span>
+<span class="sd">            Path to the directory containing output figures.</span>
+<span class="sd">        experiment_id : str</span>
+<span class="sd">            Original ``experiment_id`` used to generate the output files.</span>
+<span class="sd">        prefix: str</span>
+<span class="sd">            Must be set to ``scale`` or ``raw``. Indicates whether the score</span>
+<span class="sd">            is scaled or not.</span>
+<span class="sd">        groups_eval: list</span>
+<span class="sd">            List of subgroup names used for subgroup evaluation.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        files : dict</span>
+<span class="sd">            A dictionary with outputs converted to pandas data</span>
+<span class="sd">            frames. If a particular type of output did not exist for the</span>
+<span class="sd">            experiment, its value will be an empty data frame.</span>
+<span class="sd">        figs: dict</span>
+<span class="sd">            A dictionary with experiment figures.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">file_format</span> <span class="o">=</span> <span class="n">get_output_directory_extension</span><span class="p">(</span><span class="n">filedir</span><span class="p">,</span> <span class="n">experiment_id</span><span class="p">)</span>
+
+        <span class="n">files</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">)</span>
+        <span class="n">figs</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="c1"># feature distributions and the inter-feature correlations</span>
+        <span class="n">feature_train_file</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">filedir</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_train_features.</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">experiment_id</span><span class="p">,</span>
+                                                                         <span class="n">file_format</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">exists</span><span class="p">(</span><span class="n">feature_train_file</span><span class="p">):</span>
+            <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_train_features&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">DataReader</span><span class="o">.</span><span class="n">read_from_file</span><span class="p">(</span><span class="n">feature_train_file</span><span class="p">)</span>
+
+        <span class="n">feature_distplots_file</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">figdir</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_distrib.svg&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">experiment_id</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">exists</span><span class="p">(</span><span class="n">feature_distplots_file</span><span class="p">):</span>
+            <span class="n">figs</span><span class="p">[</span><span class="s1">&#39;feature_distplots&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">feature_distplots_file</span>
+            <span class="c1"># with open(feature_distplots_file, &#39;rb&#39;) as f:</span>
+            <span class="c1">#     figs[&#39;feature_distplots&#39;] = base64.b64encode(f.read()).decode(&#39;utf-8&#39;)</span>
+
+        <span class="n">feature_cors_file</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">filedir</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_cors_processed.</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">experiment_id</span><span class="p">,</span>
+                                                                        <span class="n">file_format</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">exists</span><span class="p">(</span><span class="n">feature_cors_file</span><span class="p">):</span>
+            <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_feature_cors&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">DataReader</span><span class="o">.</span><span class="n">read_from_file</span><span class="p">(</span><span class="n">feature_cors_file</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+        <span class="c1"># df_scores</span>
+        <span class="n">scores_file</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">filedir</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_pred_processed.</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">experiment_id</span><span class="p">,</span>
+                                                                  <span class="n">file_format</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">exists</span><span class="p">(</span><span class="n">scores_file</span><span class="p">):</span>
+            <span class="n">df_scores</span> <span class="o">=</span> <span class="n">DataReader</span><span class="o">.</span><span class="n">read_from_file</span><span class="p">(</span><span class="n">scores_file</span><span class="p">,</span> <span class="n">converters</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;spkitemid&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">})</span>
+            <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_scores&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_scores</span><span class="p">[[</span><span class="s1">&#39;spkitemid&#39;</span><span class="p">,</span> <span class="s1">&#39;sc1&#39;</span><span class="p">,</span> <span class="n">prefix</span><span class="p">]]</span>
+
+        <span class="c1"># model coefficients if present</span>
+        <span class="n">betas_file</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">filedir</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_betas.</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">experiment_id</span><span class="p">,</span>
+                                                        <span class="n">file_format</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">exists</span><span class="p">(</span><span class="n">betas_file</span><span class="p">):</span>
+            <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_coef&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">DataReader</span><span class="o">.</span><span class="n">read_from_file</span><span class="p">(</span><span class="n">betas_file</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_coef&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="c1"># read in the model fit files if present</span>
+        <span class="n">model_fit_file</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">filedir</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_model_fit.</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">experiment_id</span><span class="p">,</span>
+                                                                <span class="n">file_format</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">exists</span><span class="p">(</span><span class="n">model_fit_file</span><span class="p">):</span>
+            <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_model_fit&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">DataReader</span><span class="o">.</span><span class="n">read_from_file</span><span class="p">(</span><span class="n">model_fit_file</span><span class="p">)</span>
+
+        <span class="c1"># human human agreement</span>
+        <span class="n">consistency_file</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">filedir</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_consistency.</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">experiment_id</span><span class="p">,</span>
+                                                                    <span class="n">file_format</span><span class="p">))</span>
+
+        <span class="c1"># load if consistency file is present</span>
+        <span class="k">if</span> <span class="n">exists</span><span class="p">(</span><span class="n">consistency_file</span><span class="p">):</span>
+            <span class="n">df_consistency</span> <span class="o">=</span> <span class="n">DataReader</span><span class="o">.</span><span class="n">read_from_file</span><span class="p">(</span><span class="n">consistency_file</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_consistency&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_consistency</span>
+
+        <span class="c1"># degradation</span>
+        <span class="n">degradation_file</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">filedir</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">_degradation.</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">experiment_id</span><span class="p">,</span>
+                                                                    <span class="n">file_format</span><span class="p">))</span>
+
+        <span class="c1"># load if degradation file is present</span>
+        <span class="k">if</span> <span class="n">exists</span><span class="p">(</span><span class="n">degradation_file</span><span class="p">):</span>
+            <span class="n">df_degradation</span> <span class="o">=</span> <span class="n">DataReader</span><span class="o">.</span><span class="n">read_from_file</span><span class="p">(</span><span class="n">degradation_file</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_degradation&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_degradation</span>
+
+        <span class="c1"># disattenuated correlations</span>
+        <span class="n">dis_corr_file</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">filedir</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">_disattenuated_correlations.</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">experiment_id</span><span class="p">,</span>
+                                                                                <span class="n">file_format</span><span class="p">))</span>
+
+        <span class="c1"># load if disattenuated correlations is present</span>
+        <span class="k">if</span> <span class="n">exists</span><span class="p">(</span><span class="n">dis_corr_file</span><span class="p">):</span>
+            <span class="n">df_dis_corr</span> <span class="o">=</span> <span class="n">DataReader</span><span class="o">.</span><span class="n">read_from_file</span><span class="p">(</span><span class="n">dis_corr_file</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+            <span class="c1"># we only use the row for raw_trim or scale_trim score</span>
+            <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_disattenuated_correlations&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_dis_corr</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_trim&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">prefix</span><span class="p">)]]</span>
+
+        <span class="c1"># read in disattenuated correlations by group</span>
+        <span class="k">for</span> <span class="n">group</span> <span class="ow">in</span> <span class="n">groups_eval</span><span class="p">:</span>
+            <span class="n">group_dis_corr_file</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">filedir</span><span class="p">,</span>
+                                       <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_disattenuated_correlations_by_</span><span class="si">{}</span><span class="s1">.</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">experiment_id</span><span class="p">,</span>
+                                                                                       <span class="n">group</span><span class="p">,</span>
+                                                                                       <span class="n">file_format</span><span class="p">))</span>
+            <span class="k">if</span> <span class="n">exists</span><span class="p">(</span><span class="n">group_dis_corr_file</span><span class="p">):</span>
+                <span class="n">df_dis_cor_group</span> <span class="o">=</span> <span class="n">DataReader</span><span class="o">.</span><span class="n">read_from_file</span><span class="p">(</span><span class="n">group_dis_corr_file</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+                <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_disattenuated_correlations_by_</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">group</span><span class="p">)]</span> <span class="o">=</span> <span class="n">df_dis_cor_group</span>
+                <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_disattenuated_correlations_by_</span><span class="si">{}</span><span class="s1">_overview&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">group</span><span class="p">)]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">make_summary_stat_df</span><span class="p">(</span><span class="n">df_dis_cor_group</span><span class="p">)</span>
+
+        <span class="c1"># use the raw columns or the scale columns depending on the prefix</span>
+        <span class="n">existing_eval_cols</span> <span class="o">=</span> <span class="p">(</span><span class="n">_df_eval_columns_existing_raw</span> <span class="k">if</span> <span class="n">prefix</span> <span class="o">==</span> <span class="s1">&#39;raw&#39;</span>
+                              <span class="k">else</span> <span class="n">_df_eval_columns_existing_scale</span><span class="p">)</span>
+        <span class="n">rename_dict</span> <span class="o">=</span> <span class="n">raw_rename_dict</span> <span class="k">if</span> <span class="n">prefix</span> <span class="o">==</span> <span class="s1">&#39;raw&#39;</span> <span class="k">else</span> <span class="n">scale_rename_dict</span>
+
+        <span class="c1"># read in the short version of the evaluation metrics for all data</span>
+        <span class="n">short_metrics_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;N&quot;</span><span class="p">,</span> <span class="s2">&quot;Adj. Agmt.(br)&quot;</span><span class="p">,</span> <span class="s2">&quot;Agmt.(br)&quot;</span><span class="p">,</span> <span class="s2">&quot;K(br)&quot;</span><span class="p">,</span>
+                              <span class="s2">&quot;Pearson(b)&quot;</span><span class="p">,</span> <span class="s2">&quot;QWK(br)&quot;</span><span class="p">,</span> <span class="s2">&quot;R2(b)&quot;</span><span class="p">,</span> <span class="s2">&quot;RMSE(b)&quot;</span><span class="p">]</span>
+        <span class="n">eval_file_short</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">filedir</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_eval_short.</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">experiment_id</span><span class="p">,</span> <span class="n">file_format</span><span class="p">))</span>
+
+        <span class="k">if</span> <span class="n">exists</span><span class="p">(</span><span class="n">eval_file_short</span><span class="p">):</span>
+            <span class="n">df_eval</span> <span class="o">=</span> <span class="n">DataReader</span><span class="o">.</span><span class="n">read_from_file</span><span class="p">(</span><span class="n">eval_file_short</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">df_eval</span> <span class="o">=</span> <span class="n">df_eval</span><span class="p">[</span><span class="n">existing_eval_cols</span><span class="p">]</span>
+            <span class="n">df_eval</span> <span class="o">=</span> <span class="n">df_eval</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">rename_dict</span><span class="p">)</span>
+            <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_eval&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_eval</span><span class="p">[</span><span class="n">short_metrics_list</span><span class="p">]</span>
+            <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_eval&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="n">eval_file</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">filedir</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_eval.</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">experiment_id</span><span class="p">,</span> <span class="n">file_format</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">exists</span><span class="p">(</span><span class="n">eval_file</span><span class="p">):</span>
+            <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_eval_for_degradation&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">DataReader</span><span class="o">.</span><span class="n">read_from_file</span><span class="p">(</span><span class="n">eval_file</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+        <span class="c1"># read in the evaluation metrics by subgroup, if we are asked to</span>
+        <span class="k">for</span> <span class="n">group</span> <span class="ow">in</span> <span class="n">groups_eval</span><span class="p">:</span>
+            <span class="n">group_eval_file</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">filedir</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_eval_by_</span><span class="si">{}</span><span class="s1">.</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">experiment_id</span><span class="p">,</span>
+                                                                      <span class="n">group</span><span class="p">,</span>
+                                                                      <span class="n">file_format</span><span class="p">))</span>
+            <span class="k">if</span> <span class="n">exists</span><span class="p">(</span><span class="n">group_eval_file</span><span class="p">):</span>
+                <span class="n">df_eval</span> <span class="o">=</span> <span class="n">DataReader</span><span class="o">.</span><span class="n">read_from_file</span><span class="p">(</span><span class="n">group_eval_file</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+                <span class="n">df_eval</span> <span class="o">=</span> <span class="n">df_eval</span><span class="p">[</span><span class="n">existing_eval_cols</span><span class="p">]</span>
+                <span class="n">df_eval</span> <span class="o">=</span> <span class="n">df_eval</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">rename_dict</span><span class="p">)</span>
+                <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_eval_by_</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">group</span><span class="p">)]</span> <span class="o">=</span> <span class="n">df_eval</span><span class="p">[</span><span class="n">short_metrics_list</span><span class="p">]</span>
+                <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_eval_by_</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">group</span><span class="p">)]</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="kc">None</span>
+
+                <span class="n">series</span> <span class="o">=</span> <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_eval_by_</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">group</span><span class="p">)]</span>
+                <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_eval_by_</span><span class="si">{}</span><span class="s1">_overview&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">group</span><span class="p">)]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">make_summary_stat_df</span><span class="p">(</span><span class="n">series</span><span class="p">)</span>
+
+                <span class="c1"># set the ordering of mean/SD/SMD statistics</span>
+                <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_eval_by_</span><span class="si">{}</span><span class="s1">_m_sd&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">group</span><span class="p">)]</span> <span class="o">=</span> <span class="n">df_eval</span><span class="p">[[</span><span class="s1">&#39;N&#39;</span><span class="p">,</span> <span class="s1">&#39;H1 mean&#39;</span><span class="p">,</span>
+                                                                     <span class="s1">&#39;H1 SD&#39;</span><span class="p">,</span> <span class="s1">&#39;score mean(br)&#39;</span><span class="p">,</span>
+                                                                     <span class="s1">&#39;score SD(br)&#39;</span><span class="p">,</span>
+                                                                     <span class="s1">&#39;score mean(b)&#39;</span><span class="p">,</span>
+                                                                     <span class="s1">&#39;score SD(b)&#39;</span><span class="p">,</span>
+                                                                     <span class="s1">&#39;SMD(br)&#39;</span><span class="p">,</span> <span class="s1">&#39;SMD(b)&#39;</span><span class="p">]]</span>
+                <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_eval_by_</span><span class="si">{}</span><span class="s1">_m_sd&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">group</span><span class="p">)]</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="c1"># read in the partial correlations vs. score for all data</span>
+        <span class="n">pcor_score_file</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">filedir</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_pcor_score_all_data.</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">experiment_id</span><span class="p">,</span>
+                                                                           <span class="n">file_format</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">exists</span><span class="p">(</span><span class="n">pcor_score_file</span><span class="p">):</span>
+            <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_pcor_sc1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">DataReader</span><span class="o">.</span><span class="n">read_from_file</span><span class="p">(</span><span class="n">pcor_score_file</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_pcor_sc1_overview&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">make_summary_stat_df</span><span class="p">(</span><span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_pcor_sc1&#39;</span><span class="p">])</span>
+
+        <span class="c1"># read in the partial correlations by subgroups, if we are asked to</span>
+        <span class="k">for</span> <span class="n">group</span> <span class="ow">in</span> <span class="n">groups_eval</span><span class="p">:</span>
+            <span class="n">group_pcor_file</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">filedir</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_pcor_score_by_</span><span class="si">{}</span><span class="s1">.</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">experiment_id</span><span class="p">,</span>
+                                                                            <span class="n">group</span><span class="p">,</span>
+                                                                            <span class="n">file_format</span><span class="p">))</span>
+            <span class="k">if</span> <span class="n">exists</span><span class="p">(</span><span class="n">group_pcor_file</span><span class="p">):</span>
+                <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_pcor_sc1_by_</span><span class="si">{}</span><span class="s1">&#39;</span>
+                      <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">group</span><span class="p">)]</span> <span class="o">=</span> <span class="n">DataReader</span><span class="o">.</span><span class="n">read_from_file</span><span class="p">(</span><span class="n">group_pcor_file</span><span class="p">,</span>
+                                                                    <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+                <span class="n">series</span> <span class="o">=</span> <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_pcor_sc1_by_</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">group</span><span class="p">)]</span>
+                <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_pcor_sc1_</span><span class="si">{}</span><span class="s1">_overview&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">group</span><span class="p">)]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">make_summary_stat_df</span><span class="p">(</span><span class="n">series</span><span class="p">)</span>
+
+        <span class="c1"># read in the marginal correlations vs. score for all data</span>
+        <span class="n">mcor_score_file</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">filedir</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_margcor_score_all_data.</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">experiment_id</span><span class="p">,</span>
+                                                                              <span class="n">file_format</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">exists</span><span class="p">(</span><span class="n">mcor_score_file</span><span class="p">):</span>
+            <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_mcor_sc1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">DataReader</span><span class="o">.</span><span class="n">read_from_file</span><span class="p">(</span><span class="n">mcor_score_file</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_mcor_sc1_overview&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">make_summary_stat_df</span><span class="p">(</span><span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_mcor_sc1&#39;</span><span class="p">])</span>
+
+        <span class="c1"># read in the partial correlations by subgroups, if we are asked to</span>
+        <span class="k">for</span> <span class="n">group</span> <span class="ow">in</span> <span class="n">groups_eval</span><span class="p">:</span>
+            <span class="n">group_mcor_file</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">filedir</span><span class="p">,</span>
+                                   <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_margcor_score_by_</span><span class="si">{}</span><span class="s1">.</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">experiment_id</span><span class="p">,</span>
+                                                                      <span class="n">group</span><span class="p">,</span>
+                                                                      <span class="n">file_format</span><span class="p">))</span>
+            <span class="k">if</span> <span class="n">exists</span><span class="p">(</span><span class="n">group_mcor_file</span><span class="p">):</span>
+                <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_mcor_sc1_by_</span><span class="si">{}</span><span class="s1">&#39;</span>
+                      <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">group</span><span class="p">)]</span> <span class="o">=</span> <span class="n">DataReader</span><span class="o">.</span><span class="n">read_from_file</span><span class="p">(</span><span class="n">group_mcor_file</span><span class="p">,</span>
+                                                                    <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+                <span class="n">series</span> <span class="o">=</span> <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_mcor_sc1_by_</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">group</span><span class="p">)]</span>
+                <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_mcor_sc1_</span><span class="si">{}</span><span class="s1">_overview&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">group</span><span class="p">)]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">make_summary_stat_df</span><span class="p">(</span><span class="n">series</span><span class="p">)</span>
+
+        <span class="n">pca_file</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">filedir</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_pca.</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">experiment_id</span><span class="p">,</span> <span class="n">file_format</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">exists</span><span class="p">(</span><span class="n">pca_file</span><span class="p">):</span>
+            <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_pca&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">DataReader</span><span class="o">.</span><span class="n">read_from_file</span><span class="p">(</span><span class="n">pca_file</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_pcavar&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">DataReader</span><span class="o">.</span><span class="n">read_from_file</span><span class="p">(</span><span class="n">join</span><span class="p">(</span><span class="n">filedir</span><span class="p">,</span>
+                                                                <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_pcavar.</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">experiment_id</span><span class="p">,</span>
+                                                                                      <span class="n">file_format</span><span class="p">)),</span>
+                                                           <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+        <span class="n">descriptives_file</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">filedir</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_feature_descriptives.</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">experiment_id</span><span class="p">,</span>
+                                                                              <span class="n">file_format</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">exists</span><span class="p">(</span><span class="n">descriptives_file</span><span class="p">):</span>
+            <span class="c1"># we read all files pertaining to the descriptive analysis together</span>
+            <span class="c1"># since we merge the outputs</span>
+            <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_descriptives&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">DataReader</span><span class="o">.</span><span class="n">read_from_file</span><span class="p">(</span><span class="n">descriptives_file</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+            <span class="c1"># this df contains only the number of features. this is used later</span>
+            <span class="c1"># for another two tables to show the number of features</span>
+            <span class="n">df_features_n_values</span> <span class="o">=</span> <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_descriptives&#39;</span><span class="p">][[</span><span class="s1">&#39;N&#39;</span><span class="p">,</span> <span class="s1">&#39;min&#39;</span><span class="p">,</span> <span class="s1">&#39;max&#39;</span><span class="p">]]</span>
+
+            <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_descriptives&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_descriptives&#39;</span><span class="p">][[</span><span class="s1">&#39;N&#39;</span><span class="p">,</span> <span class="s1">&#39;mean&#39;</span><span class="p">,</span> <span class="s1">&#39;std. dev.&#39;</span><span class="p">,</span>
+                                                                 <span class="s1">&#39;skewness&#39;</span><span class="p">,</span> <span class="s1">&#39;kurtosis&#39;</span><span class="p">]]</span>
+
+            <span class="n">outliers_file</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">filedir</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_feature_outliers.</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">experiment_id</span><span class="p">,</span>
+                                                                          <span class="n">file_format</span><span class="p">))</span>
+            <span class="n">df_outliers</span> <span class="o">=</span> <span class="n">DataReader</span><span class="o">.</span><span class="n">read_from_file</span><span class="p">(</span><span class="n">outliers_file</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">df_outliers</span> <span class="o">=</span> <span class="n">df_outliers</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;upper&#39;</span><span class="p">:</span> <span class="s1">&#39;Upper&#39;</span><span class="p">,</span>
+                                                      <span class="s1">&#39;lower&#39;</span><span class="p">:</span> <span class="s1">&#39;Lower&#39;</span><span class="p">,</span>
+                                                      <span class="s1">&#39;both&#39;</span><span class="p">:</span> <span class="s1">&#39;Both&#39;</span><span class="p">,</span>
+                                                      <span class="s1">&#39;upperperc&#39;</span><span class="p">:</span> <span class="s1">&#39;Upper %&#39;</span><span class="p">,</span>
+                                                      <span class="s1">&#39;lowerperc&#39;</span><span class="p">:</span> <span class="s1">&#39;Lower %&#39;</span><span class="p">,</span>
+                                                      <span class="s1">&#39;bothperc&#39;</span><span class="p">:</span> <span class="s1">&#39;Both %&#39;</span><span class="p">})</span>
+            <span class="n">df_outliers_columns</span> <span class="o">=</span> <span class="n">df_outliers</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+            <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_outliers&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_outliers</span>
+
+            <span class="c1"># join with df_features_n_values to get the value of N</span>
+            <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_outliers&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_outliers&#39;</span><span class="p">],</span> <span class="n">df_features_n_values</span><span class="p">,</span>
+                                            <span class="n">left_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                                            <span class="n">right_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)[[</span><span class="s1">&#39;N&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">df_outliers_columns</span><span class="p">]</span>
+
+            <span class="c1"># join with df_features_n_values to get the value of N</span>
+            <span class="n">percentiles_file</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">filedir</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_feature_descriptives&#39;</span>
+                                             <span class="s1">&#39;Extra.</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">experiment_id</span><span class="p">,</span>
+                                                               <span class="n">file_format</span><span class="p">))</span>
+
+            <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_percentiles&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">DataReader</span><span class="o">.</span><span class="n">read_from_file</span><span class="p">(</span><span class="n">percentiles_file</span><span class="p">,</span>
+                                                                <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_percentiles&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_percentiles&#39;</span><span class="p">],</span>
+                                               <span class="n">df_features_n_values</span><span class="p">,</span>
+                                               <span class="n">left_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                                               <span class="n">right_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+            <span class="n">mild_outliers</span> <span class="o">=</span> <span class="p">(</span><span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_percentiles&#39;</span><span class="p">][</span><span class="s2">&quot;Mild outliers&quot;</span><span class="p">]</span> <span class="o">/</span>
+                             <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_percentiles&#39;</span><span class="p">][</span><span class="s2">&quot;N&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span>
+
+            <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_percentiles&#39;</span><span class="p">][</span><span class="s2">&quot;Mild outliers (%)&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mild_outliers</span>
+
+            <span class="n">extreme_outliers</span> <span class="o">=</span> <span class="p">(</span><span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_percentiles&#39;</span><span class="p">][</span><span class="s2">&quot;Extreme outliers&quot;</span><span class="p">]</span> <span class="o">/</span>
+                                <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_percentiles&#39;</span><span class="p">][</span><span class="s2">&quot;N&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span>
+
+            <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_percentiles&#39;</span><span class="p">][</span><span class="s2">&quot;Extreme outliers (%)&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">extreme_outliers</span>
+
+            <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_percentiles&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_percentiles&#39;</span><span class="p">][[</span><span class="s1">&#39;N&#39;</span><span class="p">,</span> <span class="s1">&#39;min&#39;</span><span class="p">,</span> <span class="s1">&#39;max&#39;</span><span class="p">,</span>
+                                                               <span class="s1">&#39;1%&#39;</span><span class="p">,</span> <span class="s1">&#39;5%&#39;</span><span class="p">,</span> <span class="s1">&#39;25%&#39;</span><span class="p">,</span>
+                                                               <span class="s1">&#39;50%&#39;</span><span class="p">,</span> <span class="s1">&#39;75%&#39;</span><span class="p">,</span> <span class="s1">&#39;95%&#39;</span><span class="p">,</span>
+                                                               <span class="s1">&#39;99%&#39;</span><span class="p">,</span> <span class="s1">&#39;IQR&#39;</span><span class="p">,</span> <span class="s1">&#39;Mild outliers&#39;</span><span class="p">,</span>
+                                                               <span class="s1">&#39;Mild outliers (%)&#39;</span><span class="p">,</span>
+                                                               <span class="s1">&#39;Extreme outliers&#39;</span><span class="p">,</span>
+                                                               <span class="s1">&#39;Extreme outliers (%)&#39;</span><span class="p">]]</span>
+
+        <span class="n">confmatrix_file</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">filedir</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_confMatrix.</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">experiment_id</span><span class="p">,</span> <span class="n">file_format</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">exists</span><span class="p">(</span><span class="n">confmatrix_file</span><span class="p">):</span>
+            <span class="n">conf_matrix</span> <span class="o">=</span> <span class="n">DataReader</span><span class="o">.</span><span class="n">read_from_file</span><span class="p">(</span><span class="n">confmatrix_file</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_confmatrix&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">process_confusion_matrix</span><span class="p">(</span><span class="n">conf_matrix</span><span class="p">)</span>
+
+        <span class="n">score_dist_file</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">filedir</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_score_dist.</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">experiment_id</span><span class="p">,</span> <span class="n">file_format</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">exists</span><span class="p">(</span><span class="n">score_dist_file</span><span class="p">):</span>
+            <span class="n">df_score_dist</span> <span class="o">=</span> <span class="n">DataReader</span><span class="o">.</span><span class="n">read_from_file</span><span class="p">(</span><span class="n">score_dist_file</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+            <span class="n">df_score_dist</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;sys_</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">prefix</span><span class="p">):</span> <span class="s1">&#39;sys&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="n">files</span><span class="p">[</span><span class="s1">&#39;df_score_dist&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_score_dist</span><span class="p">[[</span><span class="s1">&#39;human&#39;</span><span class="p">,</span> <span class="s1">&#39;sys&#39;</span><span class="p">,</span> <span class="s1">&#39;difference&#39;</span><span class="p">]]</span>
+
+        <span class="c1"># read in the feature boxplots by subgroup, if we were asked to</span>
+        <span class="k">for</span> <span class="n">group</span> <span class="ow">in</span> <span class="n">groups_eval</span><span class="p">:</span>
+            <span class="n">feature_boxplot_prefix</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">figdir</span><span class="p">,</span>
+                                          <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_feature_boxplot_by_</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">experiment_id</span><span class="p">,</span> <span class="n">group</span><span class="p">))</span>
+            <span class="n">svg_file</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">feature_boxplot_prefix</span> <span class="o">+</span> <span class="s1">&#39;.svg&#39;</span><span class="p">)</span>
+            <span class="n">png_file</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">feature_boxplot_prefix</span> <span class="o">+</span> <span class="s1">&#39;.png&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">exists</span><span class="p">(</span><span class="n">svg_file</span><span class="p">):</span>
+                <span class="n">figs</span><span class="p">[</span><span class="s1">&#39;feature_boxplots_by_</span><span class="si">{}</span><span class="s1">_svg&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">group</span><span class="p">)]</span> <span class="o">=</span> <span class="n">svg_file</span>
+
+            <span class="k">elif</span> <span class="n">exists</span><span class="p">(</span><span class="n">png_file</span><span class="p">):</span>
+                <span class="n">figs</span><span class="p">[</span><span class="s1">&#39;feature_boxplots_by_</span><span class="si">{}</span><span class="s1">_png&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">group</span><span class="p">)]</span> <span class="o">=</span> <span class="n">png_file</span>
+
+        <span class="c1"># read in the betas image if exists</span>
+        <span class="n">betas_svg</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">figdir</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_betas.svg&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">experiment_id</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">exists</span><span class="p">(</span><span class="n">betas_svg</span><span class="p">):</span>
+            <span class="n">figs</span><span class="p">[</span><span class="s1">&#39;betas&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">betas_svg</span>
+
+        <span class="c1"># read in the evaluation barplots by subgroup, if we were asked to</span>
+        <span class="k">for</span> <span class="n">group</span> <span class="ow">in</span> <span class="n">groups_eval</span><span class="p">:</span>
+            <span class="n">eval_barplot_svg_file</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">figdir</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_eval_by_</span><span class="si">{}</span><span class="s1">.svg&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">experiment_id</span><span class="p">,</span> <span class="n">group</span><span class="p">))</span>
+            <span class="k">if</span> <span class="n">exists</span><span class="p">(</span><span class="n">eval_barplot_svg_file</span><span class="p">):</span>
+                <span class="n">figs</span><span class="p">[</span><span class="s1">&#39;eval_barplot_by_</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">group</span><span class="p">)]</span> <span class="o">=</span> <span class="n">eval_barplot_svg_file</span>
+
+        <span class="n">pca_svg_file</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">figdir</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_pca.svg&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">experiment_id</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">exists</span><span class="p">(</span><span class="n">pca_svg_file</span><span class="p">):</span>
+            <span class="n">figs</span><span class="p">[</span><span class="s1">&#39;pca_scree_plot&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pca_svg_file</span>
+
+        <span class="k">return</span> <span class="p">(</span><span class="n">files</span><span class="p">,</span> <span class="n">figs</span><span class="p">,</span> <span class="n">file_format</span><span class="p">)</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Educational Testing Service.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'6.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+</body>
+</html>

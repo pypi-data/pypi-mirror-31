@@ -1,0 +1,1073 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>rsmtool.reporter &mdash; Rater Scoring Modeling Tool 6.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Rater Scoring Modeling Tool
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                6.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../who.html">Who is RSMTool for?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pipeline.html">Overview of RSMTool Pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../usage_rsmtool.html">Using RSMTool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced_usage.html">Advanced Uses of RSMTool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../custom_notebooks.html">Writing custom RSMTool sections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../utilities.html">Utility Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing to RSMTool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release_process.html">RSMTool Release Process</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Rater Scoring Modeling Tool</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>rsmtool.reporter</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for rsmtool.reporter</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Classes for dealing with report generation.</span>
+
+<span class="sd">:author: Jeremy Biggs (jbiggs@ets.org)</span>
+<span class="sd">:author: Anastassia Loukina (aloukina@ets.org)</span>
+<span class="sd">:author: Nitin Madnani (nmadnani@ets.org)</span>
+
+<span class="sd">:date: 10/25/2017</span>
+<span class="sd">:organization: ETS</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">argparse</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="kn">from</span> <span class="nn">os.path</span> <span class="k">import</span> <span class="p">(</span><span class="n">abspath</span><span class="p">,</span>
+                     <span class="n">basename</span><span class="p">,</span>
+                     <span class="n">dirname</span><span class="p">,</span>
+                     <span class="n">join</span><span class="p">,</span>
+                     <span class="n">splitext</span><span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">traitlets.config</span> <span class="k">import</span> <span class="n">Config</span>
+<span class="kn">from</span> <span class="nn">nbconvert.exporters</span> <span class="k">import</span> <span class="n">HTMLExporter</span>
+
+<span class="kn">from</span> <span class="nn">rsmtool</span> <span class="k">import</span> <span class="n">HAS_RSMEXTRA</span>
+<span class="kn">from</span> <span class="nn">rsmtool.reader</span> <span class="k">import</span> <span class="n">DataReader</span>
+
+<span class="k">if</span> <span class="n">HAS_RSMEXTRA</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">rsmextra.settings</span> <span class="k">import</span> <span class="p">(</span><span class="n">special_section_list_rsmtool</span><span class="p">,</span>
+                                   <span class="n">special_section_list_rsmeval</span><span class="p">,</span>
+                                   <span class="n">special_section_list_rsmcompare</span><span class="p">,</span>
+                                   <span class="n">special_section_list_rsmsummarize</span><span class="p">,</span>
+                                   <span class="n">ordered_section_list_with_special_sections_rsmtool</span><span class="p">,</span>
+                                   <span class="n">ordered_section_list_with_special_sections_rsmeval</span><span class="p">,</span>
+                                   <span class="n">ordered_section_list_with_special_sections_rsmcompare</span><span class="p">,</span>
+                                   <span class="n">ordered_section_list_with_special_sections_rsmsummarize</span><span class="p">,</span>
+                                   <span class="n">special_notebook_path</span><span class="p">)</span>
+
+    <span class="n">ordered_section_list_rsmtool</span> <span class="o">=</span> <span class="n">ordered_section_list_with_special_sections_rsmtool</span>
+    <span class="n">ordered_section_list_rsmeval</span> <span class="o">=</span> <span class="n">ordered_section_list_with_special_sections_rsmeval</span>
+    <span class="n">ordered_section_list_rsmcompare</span> <span class="o">=</span> <span class="n">ordered_section_list_with_special_sections_rsmcompare</span>
+    <span class="n">ordered_section_list_rsmsummarize</span> <span class="o">=</span> <span class="n">ordered_section_list_with_special_sections_rsmsummarize</span>
+
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">ordered_section_list_rsmtool</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;data_description&#39;</span><span class="p">,</span>
+                                    <span class="s1">&#39;data_description_by_group&#39;</span><span class="p">,</span>
+                                    <span class="s1">&#39;feature_descriptives&#39;</span><span class="p">,</span>
+                                    <span class="s1">&#39;features_by_group&#39;</span><span class="p">,</span>
+                                    <span class="s1">&#39;preprocessed_features&#39;</span><span class="p">,</span>
+                                    <span class="s1">&#39;dff_by_group&#39;</span><span class="p">,</span>
+                                    <span class="s1">&#39;consistency&#39;</span><span class="p">,</span>
+                                    <span class="s1">&#39;model&#39;</span><span class="p">,</span>
+                                    <span class="s1">&#39;evaluation&#39;</span><span class="p">,</span>
+                                    <span class="s1">&#39;evaluation_by_group&#39;</span><span class="p">,</span>
+                                    <span class="s1">&#39;pca&#39;</span><span class="p">,</span>
+                                    <span class="s1">&#39;intermediate_file_paths&#39;</span><span class="p">,</span>
+                                    <span class="s1">&#39;sysinfo&#39;</span><span class="p">]</span>
+
+    <span class="n">ordered_section_list_rsmeval</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;data_description&#39;</span><span class="p">,</span>
+                                    <span class="s1">&#39;data_description_by_group&#39;</span><span class="p">,</span>
+                                    <span class="s1">&#39;consistency&#39;</span><span class="p">,</span>
+                                    <span class="s1">&#39;evaluation&#39;</span><span class="p">,</span>
+                                    <span class="s1">&#39;evaluation_by_group&#39;</span><span class="p">,</span>
+                                    <span class="s1">&#39;intermediate_file_paths&#39;</span><span class="p">,</span>
+                                    <span class="s1">&#39;sysinfo&#39;</span><span class="p">]</span>
+
+    <span class="n">ordered_section_list_rsmcompare</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;feature_descriptives&#39;</span><span class="p">,</span>
+                                       <span class="s1">&#39;features_by_group&#39;</span><span class="p">,</span>
+                                       <span class="s1">&#39;preprocessed_features&#39;</span><span class="p">,</span>
+                                       <span class="s1">&#39;preprocessed_features_by_group&#39;</span><span class="p">,</span>
+                                       <span class="s1">&#39;consistency&#39;</span><span class="p">,</span>
+                                       <span class="s1">&#39;score_distributions&#39;</span><span class="p">,</span>
+                                       <span class="s1">&#39;model&#39;</span><span class="p">,</span>
+                                       <span class="s1">&#39;evaluation&#39;</span><span class="p">,</span>
+                                       <span class="s1">&#39;pca&#39;</span><span class="p">,</span>
+                                       <span class="s1">&#39;notes&#39;</span><span class="p">,</span>
+                                       <span class="s1">&#39;sysinfo&#39;</span><span class="p">]</span>
+
+    <span class="n">ordered_section_list_rsmsummarize</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;preprocessed_features&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;model&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;evaluation&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;intermediate_file_paths&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;sysinfo&#39;</span><span class="p">]</span>
+
+    <span class="n">special_section_list_rsmtool</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">special_section_list_rsmcompare</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">special_section_list_rsmeval</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">special_section_list_rsmsummarize</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">special_notebook_path</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+
+<span class="n">package_path</span> <span class="o">=</span> <span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
+<span class="n">notebook_path</span> <span class="o">=</span> <span class="n">abspath</span><span class="p">(</span><span class="n">join</span><span class="p">(</span><span class="n">package_path</span><span class="p">,</span> <span class="s1">&#39;notebooks&#39;</span><span class="p">))</span>
+<span class="n">template_path</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">notebook_path</span><span class="p">,</span> <span class="s1">&#39;templates&#39;</span><span class="p">)</span>
+
+<span class="n">javascript_path</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">notebook_path</span><span class="p">,</span> <span class="s1">&#39;javascript&#39;</span><span class="p">)</span>
+<span class="n">comparison_notebook_path</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">notebook_path</span><span class="p">,</span> <span class="s1">&#39;comparison&#39;</span><span class="p">)</span>
+<span class="n">summary_notebook_path</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">notebook_path</span><span class="p">,</span> <span class="s1">&#39;summary&#39;</span><span class="p">)</span>
+
+
+<span class="c1"># Define the general section list</span>
+
+<span class="n">general_section_list_rsmtool</span> <span class="o">=</span> <span class="p">[</span><span class="n">section</span> <span class="k">for</span> <span class="n">section</span> <span class="ow">in</span> <span class="n">ordered_section_list_rsmtool</span>
+                                <span class="k">if</span> <span class="n">section</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">special_section_list_rsmtool</span><span class="p">]</span>
+
+<span class="n">general_section_list_rsmeval</span> <span class="o">=</span> <span class="p">[</span><span class="n">section</span> <span class="k">for</span> <span class="n">section</span> <span class="ow">in</span> <span class="n">ordered_section_list_rsmeval</span>
+                                <span class="k">if</span> <span class="n">section</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">special_section_list_rsmeval</span><span class="p">]</span>
+
+<span class="n">general_section_list_rsmcompare</span> <span class="o">=</span> <span class="p">[</span><span class="n">section</span> <span class="k">for</span> <span class="n">section</span> <span class="ow">in</span> <span class="n">ordered_section_list_rsmcompare</span>
+                                   <span class="k">if</span> <span class="n">section</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">special_section_list_rsmcompare</span><span class="p">]</span>
+
+<span class="n">general_section_list_rsmsummarize</span> <span class="o">=</span> <span class="p">[</span><span class="n">section</span> <span class="k">for</span> <span class="n">section</span>
+                                     <span class="ow">in</span> <span class="n">ordered_section_list_rsmsummarize</span>
+                                     <span class="k">if</span> <span class="n">section</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">special_section_list_rsmsummarize</span><span class="p">]</span>
+
+
+<span class="c1"># define a mapping from the tool name to the master</span>
+<span class="c1"># list for both general and special sections</span>
+<span class="n">master_section_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;general&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;rsmtool&#39;</span><span class="p">:</span> <span class="n">general_section_list_rsmtool</span><span class="p">,</span>
+                                   <span class="s1">&#39;rsmeval&#39;</span><span class="p">:</span> <span class="n">general_section_list_rsmeval</span><span class="p">,</span>
+                                   <span class="s1">&#39;rsmcompare&#39;</span><span class="p">:</span> <span class="n">general_section_list_rsmcompare</span><span class="p">,</span>
+                                   <span class="s1">&#39;rsmsummarize&#39;</span><span class="p">:</span> <span class="n">general_section_list_rsmsummarize</span><span class="p">},</span>
+                       <span class="s1">&#39;special&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;rsmtool&#39;</span><span class="p">:</span> <span class="n">special_section_list_rsmtool</span><span class="p">,</span>
+                                   <span class="s1">&#39;rsmeval&#39;</span><span class="p">:</span> <span class="n">special_section_list_rsmeval</span><span class="p">,</span>
+                                   <span class="s1">&#39;rsmcompare&#39;</span><span class="p">:</span> <span class="n">special_section_list_rsmcompare</span><span class="p">,</span>
+                                   <span class="s1">&#39;rsmsummarize&#39;</span><span class="p">:</span> <span class="n">special_section_list_rsmsummarize</span><span class="p">}}</span>
+
+<span class="c1"># define the mapping for section paths</span>
+<span class="n">notebook_path_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;general&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;rsmtool&#39;</span><span class="p">:</span> <span class="n">notebook_path</span><span class="p">,</span>
+                                  <span class="s1">&#39;rsmeval&#39;</span><span class="p">:</span> <span class="n">notebook_path</span><span class="p">,</span>
+                                  <span class="s1">&#39;rsmcompare&#39;</span><span class="p">:</span> <span class="n">comparison_notebook_path</span><span class="p">,</span>
+                                  <span class="s1">&#39;rsmsummarize&#39;</span><span class="p">:</span> <span class="n">summary_notebook_path</span><span class="p">},</span>
+                      <span class="s1">&#39;special&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;rsmtool&#39;</span><span class="p">:</span> <span class="n">special_notebook_path</span><span class="p">,</span>
+                                  <span class="s1">&#39;rsmeval&#39;</span><span class="p">:</span> <span class="n">special_notebook_path</span><span class="p">,</span>
+                                  <span class="s1">&#39;rsmcompare&#39;</span><span class="p">:</span> <span class="n">special_notebook_path</span><span class="p">,</span>
+                                  <span class="s1">&#39;rsmsummarize&#39;</span><span class="p">:</span> <span class="n">special_notebook_path</span><span class="p">}}</span>
+
+
+<div class="viewcode-block" id="Reporter"><a class="viewcode-back" href="../../api.html#rsmtool.reporter.Reporter">[docs]</a><span class="k">class</span> <span class="nc">Reporter</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A class for generating Jupyter notebook reports, and</span>
+<span class="sd">    converting them to HTML.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Reporter.locate_custom_sections"><a class="viewcode-back" href="../../api.html#rsmtool.reporter.Reporter.locate_custom_sections">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">locate_custom_sections</span><span class="p">(</span><span class="n">custom_report_section_paths</span><span class="p">,</span> <span class="n">config_dir</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get the absolute paths for custom report sections and check that</span>
+<span class="sd">        the files exist. If a file does not exist, raise an exception.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        custom_report_section_paths : list of str</span>
+<span class="sd">            List of paths to IPython notebook</span>
+<span class="sd">            files representing the custom sections.</span>
+<span class="sd">        config_dir : str</span>
+<span class="sd">            Path to the experiment configuration file.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        custom_report_sections :  list of str</span>
+<span class="sd">            List of absolute paths to the custom section</span>
+<span class="sd">            notebooks.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        FileNotFoundError</span>
+<span class="sd">            If any of the files cannot be found.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">custom_report_sections</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">cs_path</span> <span class="ow">in</span> <span class="n">custom_report_section_paths</span><span class="p">:</span>
+            <span class="n">cs_location</span> <span class="o">=</span> <span class="n">DataReader</span><span class="o">.</span><span class="n">locate_files</span><span class="p">(</span><span class="n">cs_path</span><span class="p">,</span> <span class="n">config_dir</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">cs_location</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span><span class="s2">&quot;Error: custom section not found at &quot;</span>
+                                        <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cs_path</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">custom_report_sections</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cs_location</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">custom_report_sections</span></div>
+
+<div class="viewcode-block" id="Reporter.merge_notebooks"><a class="viewcode-back" href="../../api.html#rsmtool.reporter.Reporter.merge_notebooks">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">merge_notebooks</span><span class="p">(</span><span class="n">notebook_files</span><span class="p">,</span> <span class="n">output_file</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Merge the given Jupyter notebooks into a single Jupyter notebook.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        notebook_files : list of str</span>
+<span class="sd">            List of paths to the input Jupyter notebook files.</span>
+<span class="sd">        output_file : str</span>
+<span class="sd">            Path to output Jupyter notebook file</span>
+
+<span class="sd">        Note</span>
+<span class="sd">        ----</span>
+<span class="sd">        Adapted from: http://stackoverflow.com/questions/</span>
+<span class="sd">        20454668/how-to-merge-two-ipython-notebooks-correctly</span>
+<span class="sd">        -without-getting-json-error.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># Merging ipython notebooks basically means that we keep the</span>
+        <span class="c1"># metadata from the &quot;first&quot; notebook and then add in the cells</span>
+        <span class="c1"># from all the other notebooks.</span>
+        <span class="n">first_notebook</span> <span class="o">=</span> <span class="n">notebook_files</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">merged_notebook</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">first_notebook</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+        <span class="k">for</span> <span class="n">notebook</span> <span class="ow">in</span> <span class="n">notebook_files</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+            <span class="n">section_cells</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">notebook</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())[</span><span class="s2">&quot;cells&quot;</span><span class="p">]</span>
+            <span class="n">merged_notebook</span><span class="p">[</span><span class="s1">&#39;cells&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">section_cells</span><span class="p">)</span>
+
+        <span class="c1"># output the merged cells into a report</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">output_file</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">outf</span><span class="p">:</span>
+            <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">merged_notebook</span><span class="p">,</span> <span class="n">outf</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Reporter.check_section_names"><a class="viewcode-back" href="../../api.html#rsmtool.reporter.Reporter.check_section_names">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">check_section_names</span><span class="p">(</span><span class="n">specified_sections</span><span class="p">,</span>
+                            <span class="n">section_type</span><span class="p">,</span>
+                            <span class="n">context</span><span class="o">=</span><span class="s1">&#39;rsmtool&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Check whether the specified section names are valid</span>
+<span class="sd">        and raise an exception if they are not.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        specified_sections : list of str</span>
+<span class="sd">            List of report section names.</span>
+<span class="sd">        section_type : str</span>
+<span class="sd">            &#39;general&#39; or &#39;special&#39;</span>
+<span class="sd">        context : str, optional</span>
+<span class="sd">            Context in which we are validating the section</span>
+<span class="sd">            names. Possible values are ::</span>
+
+<span class="sd">                {&#39;rsmtool&#39;, &#39;rsmeval&#39;, &#39;rsmcompare&#39;}</span>
+
+<span class="sd">            Defaults to &#39;rsmtool&#39;.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        ValueError</span>
+<span class="sd">            If any of the section names of the given type</span>
+<span class="sd">            are not valid in the context of the given tool.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">master_section_list</span> <span class="o">=</span> <span class="n">master_section_dict</span><span class="p">[</span><span class="n">section_type</span><span class="p">][</span><span class="n">context</span><span class="p">]</span>
+        <span class="n">invalid_section_names</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">specified_sections</span><span class="p">)</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">master_section_list</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">invalid_section_names</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;The following </span><span class="si">{}</span><span class="s2"> report section &quot;</span>
+                             <span class="s2">&quot;names are invalid or not supported for </span><span class="si">{}</span><span class="s2">: </span><span class="si">{}</span><span class="se">\n</span><span class="s2">&quot;</span>
+                             <span class="s2">&quot;The following sections are currently &quot;</span>
+                             <span class="s2">&quot;available: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">section_type</span><span class="p">,</span>
+                                                    <span class="n">context</span><span class="p">,</span>
+                                                    <span class="n">invalid_section_names</span><span class="p">,</span>
+                                                    <span class="n">master_section_list</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="Reporter.check_section_order"><a class="viewcode-back" href="../../api.html#rsmtool.reporter.Reporter.check_section_order">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">check_section_order</span><span class="p">(</span><span class="n">chosen_sections</span><span class="p">,</span> <span class="n">section_order</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Check the order of the specified sections.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        chosen_sections : list of str</span>
+<span class="sd">            List of chosen section names.</span>
+<span class="sd">        section_order : list of str</span>
+<span class="sd">            An ordered list of the chosen section names.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        ValueError</span>
+<span class="sd">            If any sections specified in the order are missing</span>
+<span class="sd">            from the list of chosen sections or vice versa.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">chosen_sections</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">section_order</span><span class="p">):</span>
+
+            <span class="c1"># check for discrepancies and create a helpful error message</span>
+            <span class="n">missing_sections</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">chosen_sections</span><span class="p">)</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">section_order</span><span class="p">))</span>
+            <span class="k">if</span> <span class="n">missing_sections</span><span class="p">:</span>
+                <span class="n">error_message_missing</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;&#39;section_order&#39; must list all &quot;</span>
+                                         <span class="s2">&quot;sections selected for your experiment: &quot;</span>
+                                         <span class="s2">&quot;Please edit section order to include the &quot;</span>
+                                         <span class="s2">&quot;following missing sections: &quot;</span>
+                                         <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">missing_sections</span><span class="p">)))</span>
+
+            <span class="n">extra_sections</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">section_order</span><span class="p">)</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">chosen_sections</span><span class="p">))</span>
+            <span class="k">if</span> <span class="n">extra_sections</span><span class="p">:</span>
+                <span class="n">error_message_extra</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;&#39;section order&#39; can only include &quot;</span>
+                                       <span class="s2">&quot;sections availabe for this experiment. &quot;</span>
+                                       <span class="s2">&quot;The following sections are either unavailable &quot;</span>
+                                       <span class="s2">&quot;or were not selected for this experiment &quot;</span>
+                                       <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">extra_sections</span><span class="p">)))</span>
+
+            <span class="c1"># raise an appropriate error message or a combination of messages</span>
+            <span class="k">if</span> <span class="n">missing_sections</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">extra_sections</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">error_message_missing</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">extra_sections</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">missing_sections</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">error_message_extra</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="se">\n</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">error_message_missing</span><span class="p">,</span>
+                                                 <span class="n">error_message_extra</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="Reporter.convert_ipynb_to_html"><a class="viewcode-back" href="../../api.html#rsmtool.reporter.Reporter.convert_ipynb_to_html">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">convert_ipynb_to_html</span><span class="p">(</span><span class="n">notebook_file</span><span class="p">,</span> <span class="n">html_file</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Convert the given Jupyter notebook file (``.ipynb``)</span>
+<span class="sd">        to HTML and write it out as the given ``.html`` file.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        notebook_file : str</span>
+<span class="sd">            Path to input Jupyter notebook file.</span>
+<span class="sd">        html_file : str</span>
+<span class="sd">            Path to output HTML file.</span>
+
+<span class="sd">        Note</span>
+<span class="sd">        ----</span>
+<span class="sd">        This function is also exposed as the</span>
+<span class="sd">        :ref:`render_notebook &lt;render_notebook&gt;` command-line utility.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># set a high timeout for datasets with a large number of features</span>
+        <span class="n">report_config</span> <span class="o">=</span> <span class="n">Config</span><span class="p">({</span><span class="s1">&#39;ExecutePreprocessor&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;enabled&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+                                                        <span class="s1">&#39;timeout&#39;</span><span class="p">:</span> <span class="mi">3600</span><span class="p">},</span>
+                                <span class="s1">&#39;HTMLExporter&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;template_path&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">template_path</span><span class="p">],</span>
+                                                 <span class="s1">&#39;template_file&#39;</span><span class="p">:</span> <span class="s1">&#39;report.tpl&#39;</span><span class="p">}})</span>
+
+        <span class="n">exportHtml</span> <span class="o">=</span> <span class="n">HTMLExporter</span><span class="p">(</span><span class="n">config</span><span class="o">=</span><span class="n">report_config</span><span class="p">)</span>
+        <span class="n">output</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">exportHtml</span><span class="o">.</span><span class="n">from_filename</span><span class="p">(</span><span class="n">notebook_file</span><span class="p">)</span>
+        <span class="nb">open</span><span class="p">(</span><span class="n">html_file</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">output</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Reporter.determine_chosen_sections"><a class="viewcode-back" href="../../api.html#rsmtool.reporter.Reporter.determine_chosen_sections">[docs]</a>    <span class="k">def</span> <span class="nf">determine_chosen_sections</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                                  <span class="n">general_sections</span><span class="p">,</span>
+                                  <span class="n">special_sections</span><span class="p">,</span>
+                                  <span class="n">custom_sections</span><span class="p">,</span>
+                                  <span class="n">subgroups</span><span class="p">,</span>
+                                  <span class="n">context</span><span class="o">=</span><span class="s1">&#39;rsmtool&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Determine the section names that have been chosen</span>
+<span class="sd">        by the user and that will be generated in the report.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        general_sections : list of str</span>
+<span class="sd">            List of specified general section names.</span>
+<span class="sd">        special_sections : str</span>
+<span class="sd">            List of specified special section names, if any.</span>
+<span class="sd">        custom_sections : list of str</span>
+<span class="sd">            List of specified custom sections, if any.</span>
+<span class="sd">        subgroups : list of str</span>
+<span class="sd">            List of column names that contain grouping</span>
+<span class="sd">            information.</span>
+<span class="sd">        context : str, optional</span>
+<span class="sd">            Context of the tool in which we are validating.</span>
+<span class="sd">            Possible values are {&#39;rsmtool&#39;, &#39;rsmeval&#39;, &#39;rsmcompare&#39;}</span>
+<span class="sd">            Defaults to &#39;rsmtool&#39;.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        chosen_sections : list of str</span>
+<span class="sd">            Final list of chosen sections that are to</span>
+<span class="sd">            be included in the HTML report.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        ValueError</span>
+<span class="sd">            If a subgroup report section is requested but</span>
+<span class="sd">            no subgroups were specified in the configuration</span>
+<span class="sd">            file.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># 1. Include all general sections unless we are asked to include</span>
+        <span class="c1"># a specific (and valid) subset.</span>
+        <span class="n">general_section_list</span> <span class="o">=</span> <span class="n">master_section_dict</span><span class="p">[</span><span class="s1">&#39;general&#39;</span><span class="p">][</span><span class="n">context</span><span class="p">]</span>
+        <span class="n">chosen_general_sections</span> <span class="o">=</span> <span class="n">general_section_list</span>
+        <span class="n">all_general_sections</span> <span class="o">=</span> <span class="kc">True</span>
+
+        <span class="k">if</span> <span class="n">general_sections</span> <span class="o">!=</span> <span class="p">[</span><span class="s1">&#39;all&#39;</span><span class="p">]:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">check_section_names</span><span class="p">(</span><span class="n">general_sections</span><span class="p">,</span> <span class="s1">&#39;general&#39;</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+            <span class="n">chosen_general_sections</span> <span class="o">=</span> <span class="p">[</span><span class="n">s</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">general_sections</span>
+                                       <span class="k">if</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">general_section_list</span><span class="p">]</span>
+            <span class="n">all_general_sections</span> <span class="o">=</span> <span class="kc">False</span>
+
+        <span class="c1"># 2. Exclude the subgroup sections if we do not have subgroup information.</span>
+
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">subgroups</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">subgroup_sections</span> <span class="o">=</span> <span class="p">[</span><span class="n">section</span> <span class="k">for</span> <span class="n">section</span> <span class="ow">in</span> <span class="n">chosen_general_sections</span>
+                                 <span class="k">if</span> <span class="n">section</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;by_group&#39;</span><span class="p">)]</span>
+            <span class="c1"># if we were given a list of general sections, raise an error if</span>
+            <span class="c1"># that list included subgroup sections but no subgroups were specified</span>
+
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">all_general_sections</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">subgroup_sections</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;You requested sections for subgroup analysis &quot;</span>
+                                 <span class="s2">&quot;but did not specify any subgroups. &quot;</span>
+                                 <span class="s2">&quot;Please amend the config files to define &quot;</span>
+                                 <span class="s2">&quot;the subgroups or delete the following &quot;</span>
+                                 <span class="s2">&quot;sections from the list of sections: </span><span class="si">{}</span><span class="s2">&quot;</span>
+                                 <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">subgroup_sections</span><span class="p">)))</span>
+
+            <span class="c1"># if we are using the default list, we simply remove the</span>
+            <span class="c1"># subgroup sections</span>
+            <span class="n">chosen_general_sections</span> <span class="o">=</span> <span class="p">[</span><span class="n">section</span> <span class="k">for</span> <span class="n">section</span> <span class="ow">in</span> <span class="n">chosen_general_sections</span>
+                                       <span class="k">if</span> <span class="n">section</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">subgroup_sections</span><span class="p">]</span>
+
+        <span class="c1"># 3. Include the specified (and valid) subset of the special sections</span>
+        <span class="n">chosen_special_sections</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">if</span> <span class="n">special_sections</span><span class="p">:</span>
+            <span class="n">special_section_list</span> <span class="o">=</span> <span class="n">master_section_dict</span><span class="p">[</span><span class="s1">&#39;special&#39;</span><span class="p">][</span><span class="n">context</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">check_section_names</span><span class="p">(</span><span class="n">special_sections</span><span class="p">,</span> <span class="s1">&#39;special&#39;</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="n">context</span><span class="p">)</span>
+            <span class="n">chosen_special_sections</span> <span class="o">=</span> <span class="p">[</span><span class="n">s</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">special_sections</span>
+                                       <span class="k">if</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">special_section_list</span><span class="p">]</span>
+
+        <span class="c1"># 4. For the custom sections use the basename and strip off the `.ipynb` extension</span>
+        <span class="n">chosen_custom_sections</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">if</span> <span class="n">custom_sections</span><span class="p">:</span>
+            <span class="n">chosen_custom_sections</span> <span class="o">=</span> <span class="p">[</span><span class="n">splitext</span><span class="p">(</span><span class="n">basename</span><span class="p">(</span><span class="n">cs</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">cs</span> <span class="ow">in</span> <span class="n">custom_sections</span><span class="p">]</span>
+
+        <span class="c1"># return the final list of chosen sections</span>
+        <span class="n">chosen_sections</span> <span class="o">=</span> <span class="p">(</span><span class="n">chosen_general_sections</span> <span class="o">+</span>
+                           <span class="n">chosen_special_sections</span> <span class="o">+</span>
+                           <span class="n">chosen_custom_sections</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">chosen_sections</span></div>
+
+<div class="viewcode-block" id="Reporter.get_section_file_map"><a class="viewcode-back" href="../../api.html#rsmtool.reporter.Reporter.get_section_file_map">[docs]</a>    <span class="k">def</span> <span class="nf">get_section_file_map</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                             <span class="n">special_sections</span><span class="p">,</span>
+                             <span class="n">custom_sections</span><span class="p">,</span>
+                             <span class="n">model_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                             <span class="n">context</span><span class="o">=</span><span class="s1">&#39;rsmtool&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Map the section names to IPython notebook filenames.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        special_sections : list of str</span>
+<span class="sd">            List of special sections.</span>
+<span class="sd">        custom_sections : list of str</span>
+<span class="sd">            List of custom sections.</span>
+<span class="sd">        model_type : None, optional</span>
+<span class="sd">            Type of the model. Possible values are</span>
+<span class="sd">            {&#39;BUILTIN&#39;, &#39;SKLL&#39;}. We allow None here so that</span>
+<span class="sd">            RSMEval can use the same function.</span>
+<span class="sd">        context : str, optional</span>
+<span class="sd">            Context of the tool in which we are validating.</span>
+<span class="sd">            Possible values are {&#39;rsmtool&#39;, &#39;rsmeval&#39;, &#39;rsmcompare&#39;}</span>
+<span class="sd">            Defaults to &#39;rsmtool&#39;</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        section_file_map : dict</span>
+<span class="sd">            Dictionary mapping each section name to the</span>
+<span class="sd">            corresponding IPython notebook filename.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># create the original section file map for general sections</span>
+        <span class="n">selected_notebook_path</span> <span class="o">=</span> <span class="n">notebook_path_dict</span><span class="p">[</span><span class="s1">&#39;general&#39;</span><span class="p">][</span><span class="n">context</span><span class="p">]</span>
+        <span class="n">general_sections</span> <span class="o">=</span> <span class="n">master_section_dict</span><span class="p">[</span><span class="s1">&#39;general&#39;</span><span class="p">][</span><span class="n">context</span><span class="p">]</span>
+
+        <span class="n">section_file_map</span> <span class="o">=</span> <span class="p">{</span><span class="n">s</span><span class="p">:</span> <span class="n">join</span><span class="p">(</span><span class="n">selected_notebook_path</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">.ipynb&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+                            <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">general_sections</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;header&#39;</span><span class="p">,</span> <span class="s1">&#39;footer&#39;</span><span class="p">]}</span>
+
+        <span class="c1"># update the file map to point the &#39;model section to either the built-in</span>
+        <span class="c1"># or the SKLL model notebook depending on the model type that</span>
+        <span class="c1"># was passed in</span>
+        <span class="k">if</span> <span class="n">context</span> <span class="o">==</span> <span class="s1">&#39;rsmtool&#39;</span> <span class="ow">and</span> <span class="n">model_type</span><span class="p">:</span>
+            <span class="n">section_file_map</span><span class="p">[</span><span class="s1">&#39;model&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">selected_notebook_path</span><span class="p">,</span>
+                                             <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_model.ipynb&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">model_type</span><span class="o">.</span><span class="n">lower</span><span class="p">()))</span>
+
+        <span class="c1"># update the file map to include the special sections</span>
+        <span class="k">if</span> <span class="n">special_sections</span><span class="p">:</span>
+            <span class="n">selected_special_notebook_path</span> <span class="o">=</span> <span class="n">notebook_path_dict</span><span class="p">[</span><span class="s1">&#39;special&#39;</span><span class="p">][</span><span class="n">context</span><span class="p">]</span>
+            <span class="n">section_file_map</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">ss</span><span class="p">:</span> <span class="n">join</span><span class="p">(</span><span class="n">selected_special_notebook_path</span><span class="p">,</span>
+                                              <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">.ipynb&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ss</span><span class="p">))</span>
+                                     <span class="k">for</span> <span class="n">ss</span> <span class="ow">in</span> <span class="n">special_sections</span><span class="p">})</span>
+
+        <span class="c1"># update the file map to include the custom sections with</span>
+        <span class="c1"># the file names (without the `.ipynb` extension) as the</span>
+        <span class="c1"># names (keys) and full paths as values</span>
+        <span class="k">if</span> <span class="n">custom_sections</span><span class="p">:</span>
+            <span class="n">section_file_map</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">splitext</span><span class="p">(</span><span class="n">basename</span><span class="p">(</span><span class="n">cs</span><span class="p">))[</span><span class="mi">0</span><span class="p">]:</span> <span class="n">cs</span>
+                                     <span class="k">for</span> <span class="n">cs</span> <span class="ow">in</span> <span class="n">custom_sections</span><span class="p">})</span>
+
+        <span class="k">return</span> <span class="n">section_file_map</span></div>
+
+<div class="viewcode-block" id="Reporter.get_ordered_notebook_files"><a class="viewcode-back" href="../../api.html#rsmtool.reporter.Reporter.get_ordered_notebook_files">[docs]</a>    <span class="k">def</span> <span class="nf">get_ordered_notebook_files</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                                   <span class="n">general_sections</span><span class="p">,</span>
+                                   <span class="n">special_sections</span><span class="o">=</span><span class="p">[],</span>
+                                   <span class="n">custom_sections</span><span class="o">=</span><span class="p">[],</span>
+                                   <span class="n">section_order</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                                   <span class="n">subgroups</span><span class="o">=</span><span class="p">[],</span>
+                                   <span class="n">model_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                                   <span class="n">context</span><span class="o">=</span><span class="s1">&#39;rsmtool&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Check all section names and section order,</span>
+<span class="sd">        combine all section names with the appropriate file mapping,</span>
+<span class="sd">        and generate an ordered list of notebook files that are</span>
+<span class="sd">        needed to generate the final report.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        general_sections : str</span>
+<span class="sd">            List of specified general sections.</span>
+<span class="sd">        special_sections : list, optional</span>
+<span class="sd">            List of specified special sections, if any.</span>
+<span class="sd">        custom_sections : list, optional</span>
+<span class="sd">            List of specified custom sections, if any.</span>
+<span class="sd">            Defaults to empty list.</span>
+<span class="sd">        section_order : None, optional</span>
+<span class="sd">            Ordered list in which the user wants the specified</span>
+<span class="sd">            sections.</span>
+<span class="sd">            Defaults to empty list</span>
+<span class="sd">        subgroups : list, optional</span>
+<span class="sd">            List of column names that contain grouping</span>
+<span class="sd">            information.</span>
+<span class="sd">            Defaults to empty list.</span>
+<span class="sd">        model_type : None, optional</span>
+<span class="sd">            Type of the model. Possible values are</span>
+<span class="sd">            {&#39;BUILTIN&#39;, &#39;SKLL&#39;}. We allow None here so that</span>
+<span class="sd">            RSMEval can use the same function.</span>
+<span class="sd">            Defaults to None</span>
+<span class="sd">        context : str, optional</span>
+<span class="sd">            Context of the tool in which we are validating.</span>
+<span class="sd">            Possible values are {&#39;rsmtool&#39;, &#39;rsmeval&#39;, &#39;rsmcompare&#39;}</span>
+<span class="sd">            Defaults to &#39;rsmtool&#39;</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        chosen_notebook_files : list of str</span>
+<span class="sd">            List of the IPython notebook files that have</span>
+<span class="sd">            to be rendered into the HTML report.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">chosen_sections</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">determine_chosen_sections</span><span class="p">(</span><span class="n">general_sections</span><span class="p">,</span>
+                                                         <span class="n">special_sections</span><span class="p">,</span>
+                                                         <span class="n">custom_sections</span><span class="p">,</span>
+                                                         <span class="n">subgroups</span><span class="p">,</span>
+                                                         <span class="n">context</span><span class="o">=</span><span class="n">context</span><span class="p">)</span>
+
+        <span class="c1"># check to make sure that if a custom section ordering is</span>
+        <span class="c1"># specified by the user, that it actually contains</span>
+        <span class="c1"># *all* of the sections that have been chosen for the</span>
+        <span class="c1"># final report.</span>
+        <span class="k">if</span> <span class="n">section_order</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">check_section_order</span><span class="p">(</span><span class="n">chosen_sections</span><span class="p">,</span> <span class="n">section_order</span><span class="p">)</span>
+
+        <span class="c1"># determine which order to use by default</span>
+        <span class="k">if</span> <span class="n">context</span> <span class="o">==</span> <span class="s1">&#39;rsmtool&#39;</span><span class="p">:</span>
+            <span class="n">ordered_section_list</span> <span class="o">=</span> <span class="n">ordered_section_list_rsmtool</span>
+        <span class="k">elif</span> <span class="n">context</span> <span class="o">==</span> <span class="s1">&#39;rsmeval&#39;</span><span class="p">:</span>
+            <span class="n">ordered_section_list</span> <span class="o">=</span> <span class="n">ordered_section_list_rsmeval</span>
+        <span class="k">elif</span> <span class="n">context</span> <span class="o">==</span> <span class="s1">&#39;rsmcompare&#39;</span><span class="p">:</span>
+            <span class="n">ordered_section_list</span> <span class="o">=</span> <span class="n">ordered_section_list_rsmcompare</span>
+        <span class="k">elif</span> <span class="n">context</span> <span class="o">==</span> <span class="s1">&#39;rsmsummarize&#39;</span><span class="p">:</span>
+            <span class="n">ordered_section_list</span> <span class="o">=</span> <span class="n">ordered_section_list_rsmsummarize</span>
+
+        <span class="c1"># add all custom sections to the end of the default ordered list</span>
+        <span class="n">ordered_section_list</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="n">splitext</span><span class="p">(</span><span class="n">basename</span><span class="p">(</span><span class="n">cs</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">cs</span> <span class="ow">in</span> <span class="n">custom_sections</span><span class="p">])</span>
+
+        <span class="c1"># get the section file map</span>
+        <span class="n">section_file_map</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_section_file_map</span><span class="p">(</span><span class="n">special_sections</span><span class="p">,</span>
+                                                     <span class="n">custom_sections</span><span class="p">,</span>
+                                                     <span class="n">model_type</span><span class="p">,</span>
+                                                     <span class="n">context</span><span class="o">=</span><span class="n">context</span><span class="p">)</span>
+
+        <span class="c1"># order the section list either according to the default</span>
+        <span class="c1"># order in `ordered_section_list` or according to the custom</span>
+        <span class="c1"># order that has been passed in via `section_order`</span>
+        <span class="n">order_to_use</span> <span class="o">=</span> <span class="n">section_order</span> <span class="k">if</span> <span class="n">section_order</span> <span class="k">else</span> <span class="n">ordered_section_list</span>
+        <span class="n">chosen_sections</span> <span class="o">=</span> <span class="p">[</span><span class="n">s</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">order_to_use</span> <span class="k">if</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">chosen_sections</span><span class="p">]</span>
+
+        <span class="c1"># add the header and the footer to the chosen sections</span>
+        <span class="n">chosen_sections</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;header&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">chosen_sections</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;footer&#39;</span><span class="p">]</span>
+        <span class="n">chosen_notebook_files</span> <span class="o">=</span> <span class="p">[</span><span class="n">section_file_map</span><span class="p">[</span><span class="n">cs</span><span class="p">]</span> <span class="k">for</span> <span class="n">cs</span> <span class="ow">in</span> <span class="n">chosen_sections</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">chosen_notebook_files</span></div>
+
+<div class="viewcode-block" id="Reporter.create_report"><a class="viewcode-back" href="../../api.html#rsmtool.reporter.Reporter.create_report">[docs]</a>    <span class="k">def</span> <span class="nf">create_report</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                      <span class="n">configuration</span><span class="p">,</span>
+                      <span class="n">csvdir</span><span class="p">,</span>
+                      <span class="n">figdir</span><span class="p">,</span>
+                      <span class="n">context</span><span class="o">=</span><span class="s1">&#39;rsmtool&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The main driver function to generate the RSMTool HTML</span>
+<span class="sd">        report the experiment as defined by the given arguments.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+
+<span class="sd">        configuration : configuration_parser.Configuration</span>
+<span class="sd">            A configuration object</span>
+<span class="sd">        csvdir : str</span>
+<span class="sd">            The CSV output directory.</span>
+<span class="sd">        figdir : str</span>
+<span class="sd">            The figure output directory</span>
+<span class="sd">        context : str</span>
+<span class="sd">            The context of the script</span>
+<span class="sd">            Defaults to &#39;rsmtool&#39;</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        notebook</span>
+<span class="sd">            A jupyter notebook</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        KeyError</span>
+<span class="sd">            If `test_file_location or `pred_file_location` not in configuration.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+        <span class="c1"># get all required configuration parameters</span>
+        <span class="n">experiment_id</span> <span class="o">=</span> <span class="n">configuration</span><span class="p">[</span><span class="s1">&#39;experiment_id&#39;</span><span class="p">]</span>
+        <span class="n">description</span> <span class="o">=</span> <span class="n">configuration</span><span class="p">[</span><span class="s1">&#39;description&#39;</span><span class="p">]</span>
+        <span class="n">model_type</span> <span class="o">=</span> <span class="n">configuration</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;model_type&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+        <span class="n">model_name</span> <span class="o">=</span> <span class="n">configuration</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;model_name&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+        <span class="n">train_file_location</span> <span class="o">=</span> <span class="n">configuration</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;train_file_location&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+        <span class="n">subgroups</span> <span class="o">=</span> <span class="n">configuration</span><span class="p">[</span><span class="s1">&#39;subgroups&#39;</span><span class="p">]</span>
+        <span class="n">length_column</span> <span class="o">=</span> <span class="n">configuration</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;length_column&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">second_human_score_column</span> <span class="o">=</span> <span class="n">configuration</span><span class="p">[</span><span class="s1">&#39;second_human_score_column&#39;</span><span class="p">]</span>
+        <span class="n">min_items_per_candidate</span> <span class="o">=</span> <span class="n">configuration</span><span class="p">[</span><span class="s1">&#39;min_items_per_candidate&#39;</span><span class="p">]</span>
+        <span class="n">chosen_notebook_files</span> <span class="o">=</span> <span class="n">configuration</span><span class="p">[</span><span class="s1">&#39;chosen_notebook_files&#39;</span><span class="p">]</span>
+        <span class="n">feature_subset_file</span> <span class="o">=</span> <span class="n">configuration</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;feature_subset_file&#39;</span><span class="p">)</span>
+        <span class="n">exclude_zero_scores</span> <span class="o">=</span> <span class="n">configuration</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;exclude_zero_scores&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="n">use_scaled_predictions</span> <span class="o">=</span> <span class="n">configuration</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;use_scaled_predictions&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="n">standardize_features</span> <span class="o">=</span> <span class="n">configuration</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;standardize_features&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="n">file_format</span> <span class="o">=</span> <span class="n">configuration</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;file_format&#39;</span><span class="p">,</span> <span class="s1">&#39;csv&#39;</span><span class="p">)</span>
+        <span class="n">use_thumbnails</span> <span class="o">=</span> <span class="n">configuration</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;use_thumbnails&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="n">skll_objective</span> <span class="o">=</span> <span class="n">configuration</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;skll_objective&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+        <span class="n">predict_expected_scores</span> <span class="o">=</span> <span class="n">configuration</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;predict_expected_scores&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+
+        <span class="c1"># get either test or predictions file location</span>
+        <span class="n">test_file_location</span> <span class="o">=</span> <span class="n">configuration</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;test_file_location&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">test_file_location</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">test_file_location</span> <span class="o">=</span> <span class="n">configuration</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;pred_file_location&#39;</span><span class="p">)</span>
+
+        <span class="c1"># raise error if location is still None</span>
+        <span class="k">if</span> <span class="n">test_file_location</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="s1">&#39;Could not find `test_file_location` or `pred_file_location` &#39;</span>
+                           <span class="s1">&#39;in Configuration object. Please make sure you have included &#39;</span>
+                           <span class="s1">&#39;one of these parameters in the configuration object.&#39;</span><span class="p">)</span>
+
+        <span class="c1"># set the environment variables we want</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;EXPERIMENT_ID&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">experiment_id</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;DESCRIPTION&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">description</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;CONTEXT&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">context</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;TRAIN_FILE_LOCATION&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">train_file_location</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;TEST_FILE_LOCATION&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">test_file_location</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;OUTPUT_DIR&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">csvdir</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;FIGURE_DIR&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">figdir</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;MODEL_NAME&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">model_name</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;MODEL_TYPE&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">model_type</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;STANDARDIZE_FEATURES&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;1&#39;</span> <span class="k">if</span> <span class="n">standardize_features</span> <span class="k">else</span> <span class="s1">&#39;0&#39;</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;SCALED&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;1&#39;</span> <span class="k">if</span> <span class="n">use_scaled_predictions</span> <span class="k">else</span> <span class="s1">&#39;0&#39;</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;EXCLUDE_ZEROS&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;1&#39;</span> <span class="k">if</span> <span class="n">exclude_zero_scores</span> <span class="k">else</span> <span class="s1">&#39;0&#39;</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;LENGTH_COLUMN&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span> <span class="k">if</span> <span class="n">length_column</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">length_column</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;H2_COLUMN&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;&#39;</span> <span class="k">if</span> <span class="n">second_human_score_column</span> <span class="ow">is</span> <span class="kc">None</span>
+                                   <span class="k">else</span> <span class="n">second_human_score_column</span><span class="p">)</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;MIN_ITEMS&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;0&#39;</span> <span class="k">if</span> <span class="n">min_items_per_candidate</span> <span class="ow">is</span> <span class="kc">None</span>
+                                   <span class="k">else</span> <span class="nb">str</span><span class="p">(</span><span class="n">min_items_per_candidate</span><span class="p">))</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;FEATURE_SUBSET_FILE&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;&#39;</span> <span class="k">if</span> <span class="n">feature_subset_file</span> <span class="ow">is</span> <span class="kc">None</span>
+                                             <span class="k">else</span> <span class="n">feature_subset_file</span><span class="p">)</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;JAVASCRIPT_PATH&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">javascript_path</span>
+
+        <span class="c1"># we define separate groups to allow future flexibility in defining</span>
+        <span class="c1"># what groups are used for descriptives and evaluations</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;GROUPS_FOR_DESCRIPTIVES&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%%</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">subgroups</span><span class="p">)</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;GROUPS_FOR_EVALUATIONS&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%%</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">subgroups</span><span class="p">)</span>
+
+        <span class="c1"># pass in other useful information to the report</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;FILE_FORMAT&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">file_format</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;USE_THUMBNAILS&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;1&#39;</span> <span class="k">if</span> <span class="n">use_thumbnails</span> <span class="k">else</span> <span class="s1">&#39;0&#39;</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;SKLL_OBJECTIVE&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span> <span class="k">if</span> <span class="n">skll_objective</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">skll_objective</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;PREDICT_EXPECTED_SCORES&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;1&#39;</span> <span class="k">if</span> <span class="n">predict_expected_scores</span> <span class="k">else</span> <span class="s1">&#39;0&#39;</span>
+
+        <span class="c1"># get the report directory which is at the same level</span>
+        <span class="c1"># as the output and the figure directory</span>
+        <span class="n">reportdir</span> <span class="o">=</span> <span class="n">abspath</span><span class="p">(</span><span class="n">join</span><span class="p">(</span><span class="n">csvdir</span><span class="p">,</span> <span class="s1">&#39;..&#39;</span><span class="p">,</span> <span class="s1">&#39;report&#39;</span><span class="p">))</span>
+        <span class="n">report_name</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_report&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">experiment_id</span><span class="p">)</span>
+        <span class="n">merged_notebook_file</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">reportdir</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">.ipynb&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">report_name</span><span class="p">))</span>
+
+        <span class="c1"># merge all the given sections</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Merging sections&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">merge_notebooks</span><span class="p">(</span><span class="n">chosen_notebook_files</span><span class="p">,</span> <span class="n">merged_notebook_file</span><span class="p">)</span>
+
+        <span class="c1"># run the merged notebook and save the output as</span>
+        <span class="c1"># an HTML file in the report directory</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Exporting HTML&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">convert_ipynb_to_html</span><span class="p">(</span><span class="n">merged_notebook_file</span><span class="p">,</span>
+                                   <span class="n">join</span><span class="p">(</span><span class="n">reportdir</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">.html&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">report_name</span><span class="p">)))</span></div>
+
+<div class="viewcode-block" id="Reporter.create_comparison_report"><a class="viewcode-back" href="../../api.html#rsmtool.reporter.Reporter.create_comparison_report">[docs]</a>    <span class="k">def</span> <span class="nf">create_comparison_report</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                                 <span class="n">configuration</span><span class="p">,</span>
+                                 <span class="n">csvdir_old</span><span class="p">,</span>
+                                 <span class="n">figdir_old</span><span class="p">,</span>
+                                 <span class="n">csvdir_new</span><span class="p">,</span>
+                                 <span class="n">figdir_new</span><span class="p">,</span>
+                                 <span class="n">output_dir</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The main driver function to generate a comparison</span>
+<span class="sd">        report comparing the two RSMTool experiments as</span>
+<span class="sd">        defined by the given arguments.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+
+<span class="sd">        configuration : configuration_parser.Configuration</span>
+<span class="sd">            A configuration object</span>
+<span class="sd">        csvdir_old : str</span>
+<span class="sd">            The old experiment CSV output directory.</span>
+<span class="sd">        figdir_old : str</span>
+<span class="sd">            The old figure output directory</span>
+<span class="sd">        csvdir_new : str</span>
+<span class="sd">            The new experiment CSV output directory.</span>
+<span class="sd">        figdir_new : str</span>
+<span class="sd">            The old figure output directory</span>
+<span class="sd">        output_dir : str</span>
+<span class="sd">            The output dir for the new report.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        notebook</span>
+<span class="sd">            A jupyter notebook</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+        <span class="c1"># get all required configuration parameters</span>
+        <span class="n">comparison_id</span> <span class="o">=</span> <span class="n">configuration</span><span class="p">[</span><span class="s1">&#39;comparison_id&#39;</span><span class="p">]</span>
+        <span class="n">experiment_id_old</span> <span class="o">=</span> <span class="n">configuration</span><span class="p">[</span><span class="s1">&#39;experiment_id_old&#39;</span><span class="p">]</span>
+        <span class="n">description_old</span> <span class="o">=</span> <span class="n">configuration</span><span class="p">[</span><span class="s1">&#39;description_old&#39;</span><span class="p">]</span>
+        <span class="n">experiment_id_new</span> <span class="o">=</span> <span class="n">configuration</span><span class="p">[</span><span class="s1">&#39;experiment_id_new&#39;</span><span class="p">]</span>
+        <span class="n">description_new</span> <span class="o">=</span> <span class="n">configuration</span><span class="p">[</span><span class="s1">&#39;description_new&#39;</span><span class="p">]</span>
+        <span class="n">subgroups</span> <span class="o">=</span> <span class="n">configuration</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;subgroups&#39;</span><span class="p">)</span>
+        <span class="n">chosen_notebook_files</span> <span class="o">=</span> <span class="n">configuration</span><span class="p">[</span><span class="s1">&#39;chosen_notebook_files&#39;</span><span class="p">]</span>
+        <span class="n">use_scaled_predictions_old</span> <span class="o">=</span> <span class="n">configuration</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;use_scaled_predictions_old&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="n">use_scaled_predictions_new</span> <span class="o">=</span> <span class="n">configuration</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;use_scaled_predictions_new&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="n">use_thumbnails</span> <span class="o">=</span> <span class="n">configuration</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;use_thumbnails&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+
+        <span class="c1"># set the environment variables we want</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;COMPARISON_ID&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">comparison_id</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;EXPERIMENT_ID_OLD&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">experiment_id_old</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;DESCRIPTION_OLD&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">description_old</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;OUTPUT_DIR_OLD&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">csvdir_old</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;FIGURE_DIR_OLD&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">figdir_old</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;SCALED_OLD&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;1&#39;</span> <span class="k">if</span> <span class="n">use_scaled_predictions_old</span> <span class="k">else</span> <span class="s1">&#39;0&#39;</span>
+
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;EXPERIMENT_ID_NEW&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">experiment_id_new</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;DESCRIPTION_NEW&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">description_new</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;OUTPUT_DIR_NEW&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">csvdir_new</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;FIGURE_DIR_NEW&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">figdir_new</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;SCALED_NEW&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;1&#39;</span> <span class="k">if</span> <span class="n">use_scaled_predictions_new</span> <span class="k">else</span> <span class="s1">&#39;0&#39;</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;JAVASCRIPT_PATH&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">javascript_path</span>
+
+        <span class="c1"># we define separate groups to allow future flexibility in defining</span>
+        <span class="c1"># what groups are used for descriptives and evaluations</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;GROUPS_FOR_DESCRIPTIVES&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%%</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">subgroups</span><span class="p">)</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;GROUPS_FOR_EVALUATIONS&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%%</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">subgroups</span><span class="p">)</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;USE_THUMBNAILS&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;1&#39;</span> <span class="k">if</span> <span class="n">use_thumbnails</span> <span class="k">else</span> <span class="s1">&#39;0&#39;</span>
+
+        <span class="c1"># create the output directory</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">report_name</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_report&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">comparison_id</span><span class="p">)</span>
+        <span class="n">merged_notebook_file</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">.ipynb&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">report_name</span><span class="p">))</span>
+
+        <span class="c1"># merge all the given sections</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Merging sections&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">merge_notebooks</span><span class="p">(</span><span class="n">chosen_notebook_files</span><span class="p">,</span> <span class="n">merged_notebook_file</span><span class="p">)</span>
+
+        <span class="c1"># run the merged notebook and save the output as</span>
+        <span class="c1"># an HTML file in the report directory</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Exporting HTML&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">convert_ipynb_to_html</span><span class="p">(</span><span class="n">merged_notebook_file</span><span class="p">,</span>
+                                   <span class="n">join</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">.html&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">report_name</span><span class="p">)))</span></div>
+
+<div class="viewcode-block" id="Reporter.create_summary_report"><a class="viewcode-back" href="../../api.html#rsmtool.reporter.Reporter.create_summary_report">[docs]</a>    <span class="k">def</span> <span class="nf">create_summary_report</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                              <span class="n">configuration</span><span class="p">,</span>
+                              <span class="n">all_experiments</span><span class="p">,</span>
+                              <span class="n">csvdir</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The main function to generate a summary</span>
+<span class="sd">        report comparing several RSMTool experiments as</span>
+<span class="sd">        defined by the given arguments.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+
+<span class="sd">        configuration : configuration_parser.Configuration</span>
+<span class="sd">            A configuration object</span>
+<span class="sd">        all_experiments : list</span>
+<span class="sd">            A list of experiments to summarize.</span>
+<span class="sd">        csvdir : str</span>
+<span class="sd">            The experiment CSV output directory.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        notebook</span>
+<span class="sd">            A jupyter notebook</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+        <span class="c1"># get all required configuration parameters</span>
+        <span class="n">summary_id</span> <span class="o">=</span> <span class="n">configuration</span><span class="p">[</span><span class="s1">&#39;summary_id&#39;</span><span class="p">]</span>
+        <span class="n">description</span> <span class="o">=</span> <span class="n">configuration</span><span class="p">[</span><span class="s1">&#39;description&#39;</span><span class="p">]</span>
+        <span class="n">subgroups</span> <span class="o">=</span> <span class="n">configuration</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;subgroups&#39;</span><span class="p">)</span>
+        <span class="n">chosen_notebook_files</span> <span class="o">=</span> <span class="n">configuration</span><span class="p">[</span><span class="s1">&#39;chosen_notebook_files&#39;</span><span class="p">]</span>
+        <span class="n">use_thumbnails</span> <span class="o">=</span> <span class="n">configuration</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;use_thumbnails&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="n">file_format</span> <span class="o">=</span> <span class="n">configuration</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;file_format&#39;</span><span class="p">,</span> <span class="s1">&#39;csv&#39;</span><span class="p">)</span>
+
+        <span class="c1"># set the environment variables we want</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;SUMMARY_ID&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">summary_id</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;DESCRIPTION&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">description</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;JSONS&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%%</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">all_experiments</span><span class="p">)</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;OUTPUT_DIR&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">csvdir</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;JAVASCRIPT_PATH&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">javascript_path</span>
+
+        <span class="c1"># we define separate groups to allow future flexibility in defining</span>
+        <span class="c1"># what groups are used for descriptives and evaluations</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;GROUPS_FOR_DESCRIPTIVES&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%%</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">subgroups</span><span class="p">)</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;GROUPS_FOR_EVALUATIONS&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%%</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">subgroups</span><span class="p">)</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;USE_THUMBNAILS&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;1&#39;</span> <span class="k">if</span> <span class="n">use_thumbnails</span> <span class="k">else</span> <span class="s1">&#39;0&#39;</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;FILE_FORMAT&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">file_format</span>
+
+        <span class="n">report_name</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_report&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">summary_id</span><span class="p">)</span>
+        <span class="n">reportdir</span> <span class="o">=</span> <span class="n">abspath</span><span class="p">(</span><span class="n">join</span><span class="p">(</span><span class="n">csvdir</span><span class="p">,</span> <span class="s1">&#39;..&#39;</span><span class="p">,</span> <span class="s1">&#39;report&#39;</span><span class="p">))</span>
+        <span class="n">merged_notebook_file</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">reportdir</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">.ipynb&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">report_name</span><span class="p">))</span>
+
+        <span class="c1"># merge all the given sections</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Merging sections&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">merge_notebooks</span><span class="p">(</span><span class="n">chosen_notebook_files</span><span class="p">,</span> <span class="n">merged_notebook_file</span><span class="p">)</span>
+
+        <span class="c1"># run the merged notebook and save the output as</span>
+        <span class="c1"># an HTML file in the report directory</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Exporting HTML&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">convert_ipynb_to_html</span><span class="p">(</span><span class="n">merged_notebook_file</span><span class="p">,</span>
+                                   <span class="n">join</span><span class="p">(</span><span class="n">reportdir</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">.html&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">report_name</span><span class="p">)))</span></div></div>
+
+
+<div class="viewcode-block" id="main"><a class="viewcode-back" href="../../api.html#rsmtool.reporter.main">[docs]</a><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+
+    <span class="c1"># set up an argument parser</span>
+    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span><span class="n">prog</span><span class="o">=</span><span class="s1">&#39;render_notebook&#39;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;ipynb_file&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;IPython notebook file&quot;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;html_file&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;output HTML file&quot;</span><span class="p">)</span>
+
+    <span class="c1"># parse given command line arguments</span>
+    <span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+
+    <span class="c1"># convert notebook to HTML</span>
+    <span class="n">Reporter</span><span class="o">.</span><span class="n">convert_ipynb_to_html</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">ipynb_file</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">html_file</span><span class="p">)</span></div>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Educational Testing Service.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'6.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+</body>
+</html>

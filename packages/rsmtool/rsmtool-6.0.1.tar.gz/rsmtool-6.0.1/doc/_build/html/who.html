@@ -1,0 +1,247 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Who is RSMTool for? &mdash; Rater Scoring Modeling Tool 6.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Overview of RSMTool Pipeline" href="pipeline.html" />
+    <link rel="prev" title="Rater Scoring Modeling Tool (RSMTool)" href="index.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Rater Scoring Modeling Tool
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                6.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Who is RSMTool for?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pipeline.html">Overview of RSMTool Pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_rsmtool.html">Using RSMTool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced_usage.html">Advanced Uses of RSMTool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom_notebooks.html">Writing custom RSMTool sections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utilities.html">Utility Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing to RSMTool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="release_process.html">RSMTool Release Process</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Rater Scoring Modeling Tool</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Who is RSMTool for?</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/who.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="who-is-rsmtool-for">
+<span id="who-rsmtool"></span><h1>Who is RSMTool for?<a class="headerlink" href="#who-is-rsmtool-for" title="Permalink to this headline">¶</a></h1>
+<p>We expect the primary users of RSMTool to be researchers working on developing new automated scoring engines or on improving existing ones. Here’s the most common scenario.</p>
+<p>A researcher already <em>has</em> a set of responses such as essays or recorded spoken responses which have already been assigned numeric scores by human graders. He has also processed these responses and extracted a set of (numeric) features using systems such as <a class="reference external" href="http://cohmetrix.com/">Coh-Metrix</a>, <a class="reference external" href="https://texteval-pilot.ets.org/TextEvaluator/">TextEvaluator</a>, <a class="reference external" href="http://audeering.com/research/opensmile/">OpenSmile</a>, or using his own custom text/speech processing pipeline. He wishes to understand how well the set of chosen features can predict the human score.</p>
+<p>He can then run an RSMTool “experiment” to build a regression-based scoring model (using one of many available regressors) and produce a report. The report includes descriptive statistics for all his features, diagnostic information about the trained regression model, and a comprehensive evaluation of model performance on a held-out set of responses.</p>
+<p>While he could use <code class="docutils literal notranslate"><span class="pre">R</span></code>, <code class="docutils literal notranslate"><span class="pre">PASW</span></code> (<code class="docutils literal notranslate"><span class="pre">SPSS</span></code>) or other tools to perform each of the RSMTool analyses individually and compile a report himself, RSMTool does all of this work for him with just a single command. Furthermore, the analyses included into the tool highlight educational measurement criteria important to building automated scoring models. If he wishes, he can conduct further exploratory analysis using his preferred tools for data analysis by using the output of RSMTool as a starting point.</p>
+<p>RSMTool is designed to be customizable:</p>
+<ol class="arabic simple">
+<li>The user can choose to either run all of the default analyses or select <em>only</em> the subset applicable to his particular study by changing the appropriate settings in a configuration file.</li>
+<li>RSMTool provides explicit support for adding <a class="reference internal" href="custom_notebooks.html#custom-notebooks"><span class="std std-ref">custom analyses</span></a> to the report if the user has some analysis in mind that is not already provided by RSMTool. These analyses can then be automatically included in all subsequent experiments.</li>
+</ol>
+<p>While training and evaluating a scoring model represents the most common use case for RSMTool, it can do a lot more for advanced users such as <a class="reference internal" href="advanced_usage.html#usage-rsmeval"><span class="std std-ref">evaluating predictions obtained using an external scoring engine</span></a>, <a class="reference internal" href="advanced_usage.html#usage-rsmpredict"><span class="std std-ref">generating predictions for new data</span></a>, <a class="reference internal" href="advanced_usage.html#usage-rsmcompare"><span class="std std-ref">generating a detailed comparison between two different scoring models</span></a>, and <a class="reference internal" href="advanced_usage.html#usage-rsmsummarize"><span class="std std-ref">generating a summary report for multiple scoring models</span></a>.</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pipeline.html" class="btn btn-neutral float-right" title="Overview of RSMTool Pipeline" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Rater Scoring Modeling Tool (RSMTool)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Educational Testing Service.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'6.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+</body>
+</html>

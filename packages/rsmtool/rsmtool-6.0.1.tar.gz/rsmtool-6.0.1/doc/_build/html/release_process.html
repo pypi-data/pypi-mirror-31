@@ -1,0 +1,275 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>RSMTool Release Process &mdash; Rater Scoring Modeling Tool 6.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Contributing to RSMTool" href="contributing.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Rater Scoring Modeling Tool
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                6.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="who.html">Who is RSMTool for?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pipeline.html">Overview of RSMTool Pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_rsmtool.html">Using RSMTool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced_usage.html">Advanced Uses of RSMTool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom_notebooks.html">Writing custom RSMTool sections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utilities.html">Utility Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing to RSMTool</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">RSMTool Release Process</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Rater Scoring Modeling Tool</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>RSMTool Release Process</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/release_process.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="rsmtool-release-process">
+<h1>RSMTool Release Process<a class="headerlink" href="#rsmtool-release-process" title="Permalink to this headline">¶</a></h1>
+<p>This process is only meant for the project administrators, not users and developers.</p>
+<ol class="arabic">
+<li><p class="first">Run <cite>tests/update_files.py</cite> to make sure that all test data in the new release have correct experiment ids and filenames. If any (non-model) files need to be changed this should be investigated before the branch is released.</p>
+</li>
+<li><p class="first">Create a release branch on GitHub.</p>
+</li>
+<li><p class="first">In that release branch, update the version numbers in <code class="docutils literal notranslate"><span class="pre">version.py</span></code>, update the conda-recipe, and update the README, if necessary.</p>
+</li>
+<li><p class="first">Build the new conda package locally on your mac using the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">build</span> <span class="o">-</span><span class="n">c</span> <span class="n">defaults</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="o">--</span><span class="n">python</span><span class="o">=</span><span class="mf">3.6</span> <span class="o">--</span><span class="n">numpy</span><span class="o">=</span><span class="mf">1.13</span> <span class="n">rsmtool</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Convert the package for both linux and windows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">convert</span> <span class="o">-</span><span class="n">p</span> <span class="n">win</span><span class="o">-</span><span class="mi">64</span> <span class="o">-</span><span class="n">p</span> <span class="n">linux</span><span class="o">-</span><span class="mi">64</span> <span class="o">&lt;</span><span class="n">mac</span> <span class="n">package</span> <span class="n">tarball</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Upload all packages to anaconda.org using <code class="docutils literal notranslate"><span class="pre">anaconda</span> <span class="pre">upload</span></code>.</p>
+</li>
+<li><p class="first">Upload source package to PyPI using <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">sdist</span> <span class="pre">upload</span></code>.</p>
+</li>
+<li><p class="first">Create pull requests on the <a class="reference external" href="https://github.com/EducationalTestingService/rsmtool-conda-tester/">rsmtool-conda-tester</a> and <a class="reference external" href="https://github.com/EducationalTestingService/rsmtool-pip-tester/">rsmtool-pip-tester</a> repositories to test the conda and PyPI packages on Linux and Windows.</p>
+</li>
+<li><p class="first">Draft a release on GitHub while the Linux and Windows builds are running.</p>
+</li>
+<li><p class="first">Once both builds have passed, make a pull request with the release branch to be merged into <code class="docutils literal notranslate"><span class="pre">master</span></code> and request code review.</p>
+</li>
+<li><p class="first">Once the build for the PR passes and the reviewers approve, merge the release branch into <code class="docutils literal notranslate"><span class="pre">master</span></code>.</p>
+</li>
+<li><p class="first">Make sure that the RTFD build for <code class="docutils literal notranslate"><span class="pre">master</span></code> passes.</p>
+</li>
+<li><p class="first">Tag the latest commit in <code class="docutils literal notranslate"><span class="pre">master</span></code> with the appropriate release tag and publish the release on GitHub.</p>
+</li>
+<li><p class="first">Do an accompanying release of RSMExtra (only needed for ETS users).</p>
+</li>
+<li><p class="first">Update the RSMTool conda environment on the ETS linux servers with the latest packages for both RSMTool and RSMExtra.</p>
+</li>
+<li><p class="first">Send an email around at ETS announcing the release and the changes.</p>
+</li>
+</ol>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="contributing.html" class="btn btn-neutral" title="Contributing to RSMTool" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Educational Testing Service.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'6.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+</body>
+</html>

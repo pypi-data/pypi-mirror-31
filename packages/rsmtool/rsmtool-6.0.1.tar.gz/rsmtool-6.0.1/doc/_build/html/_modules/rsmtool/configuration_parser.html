@@ -1,0 +1,1350 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>rsmtool.configuration_parser &mdash; Rater Scoring Modeling Tool 6.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Rater Scoring Modeling Tool
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                6.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../who.html">Who is RSMTool for?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pipeline.html">Overview of RSMTool Pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../usage_rsmtool.html">Using RSMTool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced_usage.html">Advanced Uses of RSMTool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../custom_notebooks.html">Writing custom RSMTool sections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../utilities.html">Utility Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing to RSMTool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release_process.html">RSMTool Release Process</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Rater Scoring Modeling Tool</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>rsmtool.configuration_parser</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for rsmtool.configuration_parser</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Classes related to parsing configuration files</span>
+<span class="sd">and creating configuration objects.</span>
+
+<span class="sd">:author: Jeremy Biggs (jbiggs@ets.org)</span>
+<span class="sd">:author: Anastassia Loukina (aloukina@ets.org)</span>
+<span class="sd">:author: Nitin Madnani (nmadnani@ets.org)</span>
+
+<span class="sd">:date: 10/25/2017</span>
+<span class="sd">:organization: ETS</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+
+<span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">Counter</span>
+<span class="kn">from</span> <span class="nn">configparser</span> <span class="k">import</span> <span class="n">ConfigParser</span>
+
+<span class="kn">from</span> <span class="nn">os</span> <span class="k">import</span> <span class="n">getcwd</span><span class="p">,</span> <span class="n">makedirs</span>
+<span class="kn">from</span> <span class="nn">os.path</span> <span class="k">import</span> <span class="p">(</span><span class="n">basename</span><span class="p">,</span>
+                     <span class="n">join</span><span class="p">,</span>
+                     <span class="n">splitext</span><span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">ruamel</span> <span class="k">import</span> <span class="n">yaml</span>
+
+<span class="kn">from</span> <span class="nn">rsmtool</span> <span class="k">import</span> <span class="n">HAS_RSMEXTRA</span>
+<span class="kn">from</span> <span class="nn">rsmtool.utils</span> <span class="k">import</span> <span class="n">parse_json_with_comments</span>
+<span class="kn">from</span> <span class="nn">rsmtool.utils</span> <span class="k">import</span> <span class="p">(</span><span class="n">DEFAULTS</span><span class="p">,</span>
+                           <span class="n">CHECK_FIELDS</span><span class="p">,</span>
+                           <span class="n">LIST_FIELDS</span><span class="p">,</span>
+                           <span class="n">BOOLEAN_FIELDS</span><span class="p">,</span>
+                           <span class="n">MODEL_NAME_MAPPING</span><span class="p">,</span>
+                           <span class="n">FIELD_NAME_MAPPING</span><span class="p">,</span>
+                           <span class="n">is_skll_model</span><span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">skll</span> <span class="k">import</span> <span class="n">Learner</span>
+<span class="kn">from</span> <span class="nn">skll.metrics</span> <span class="k">import</span> <span class="n">SCORERS</span>
+
+<span class="k">if</span> <span class="n">HAS_RSMEXTRA</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">rsmextra.settings</span> <span class="k">import</span> <span class="p">(</span><span class="n">default_feature_subset_file</span><span class="p">,</span>
+                                   <span class="n">default_feature_sign</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="Configuration"><a class="viewcode-back" href="../../api.html#rsmtool.configuration_parser.Configuration">[docs]</a><span class="k">class</span> <span class="nc">Configuration</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Configuration class, which encapsulates all of the</span>
+<span class="sd">    configuration parameters and methods to access these</span>
+<span class="sd">    parameters.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config_dict</span><span class="p">,</span> <span class="n">filepath</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="s1">&#39;rsmtool&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Create an object of the `Configuration` class.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        config_dict : dict</span>
+<span class="sd">            A dictionary of configuration parameters.</span>
+<span class="sd">        filepath : str, optional</span>
+<span class="sd">            The path to the configuration file.</span>
+<span class="sd">            Defaults to None.</span>
+<span class="sd">        context : {&#39;rsmtool&#39;, &#39;rsmeval&#39;, &#39;rsmcompare&#39;,</span>
+<span class="sd">                   &#39;rsmpredict&#39;, &#39;rsmsummarize&#39;}</span>
+<span class="sd">            The context of the tool.</span>
+<span class="sd">            Defaults to &#39;rsmtool&#39;.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_config</span> <span class="o">=</span> <span class="n">config_dict</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_filepath</span> <span class="o">=</span> <span class="n">filepath</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_context</span> <span class="o">=</span> <span class="n">context</span>
+
+    <span class="k">def</span> <span class="nf">__contains__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Check if configuration object</span>
+<span class="sd">        contains a given key.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        key : str</span>
+<span class="sd">            Key to check in the Configuration object.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        key_check : bool</span>
+<span class="sd">            True if key in Configuration object, else False</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_config</span>
+
+    <span class="k">def</span> <span class="nf">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get value, given key.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        key : str</span>
+<span class="sd">            Key to check in the Configuration object</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value</span>
+<span class="sd">            The value in the Configuration object dictionary.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_config</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">__setitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set value, given key.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        key : str</span>
+<span class="sd">            Key to check in the Configuration object.</span>
+<span class="sd">        value</span>
+<span class="sd">            A value to be set on the key.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_config</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="k">def</span> <span class="nf">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the length of the Configuration dictionary.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        length : int</span>
+<span class="sd">            The length of the config dictionary (i.e. number of elements)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_config</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return string representation of the object keys</span>
+<span class="sd">        as comma-separated list.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        config_names : str</span>
+<span class="sd">            A comma-separated list of names from the config dictionary.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_config</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Iterate through configuration object keys.</span>
+
+<span class="sd">        Yields</span>
+<span class="sd">        ------</span>
+<span class="sd">        key</span>
+<span class="sd">            A key in the config dictionary</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="k">yield</span> <span class="n">key</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">filepath</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get file path.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        filepath : str</span>
+<span class="sd">            The path for the config file.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_filepath</span>
+
+    <span class="nd">@filepath</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">filepath</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_path</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set a new file path</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        new_path : str</span>
+<span class="sd">            A new file path for the Configuration object.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_filepath</span> <span class="o">=</span> <span class="n">new_path</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">context</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get the context.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_context</span>
+
+<div class="viewcode-block" id="Configuration.get"><a class="viewcode-back" href="../../api.html#rsmtool.configuration_parser.Configuration.get">[docs]</a>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get value or default, given key.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        key : str</span>
+<span class="sd">            Key to check in the Configuration object.</span>
+<span class="sd">        default, optional</span>
+<span class="sd">            The default value to return, if no key exists.</span>
+<span class="sd">            Defaults to None.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        value</span>
+<span class="sd">            The value in the Configuration object dictionary.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">default</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Configuration.to_dict"><a class="viewcode-back" href="../../api.html#rsmtool.configuration_parser.Configuration.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get a dictionary representation of the Configuration object.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        config : dict</span>
+<span class="sd">            The configuration dictionary.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_config</span></div>
+
+<div class="viewcode-block" id="Configuration.keys"><a class="viewcode-back" href="../../api.html#rsmtool.configuration_parser.Configuration.keys">[docs]</a>    <span class="k">def</span> <span class="nf">keys</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return keys as a list.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        keys : list of str</span>
+<span class="sd">            A list of keys in the Configuration object.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_config</span><span class="o">.</span><span class="n">keys</span><span class="p">()]</span></div>
+
+<div class="viewcode-block" id="Configuration.values"><a class="viewcode-back" href="../../api.html#rsmtool.configuration_parser.Configuration.values">[docs]</a>    <span class="k">def</span> <span class="nf">values</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return values as a list.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        values : list</span>
+<span class="sd">            A list of values in the Configuration object.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">v</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_config</span><span class="o">.</span><span class="n">values</span><span class="p">()]</span></div>
+
+<div class="viewcode-block" id="Configuration.items"><a class="viewcode-back" href="../../api.html#rsmtool.configuration_parser.Configuration.items">[docs]</a>    <span class="k">def</span> <span class="nf">items</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return items as a list of tuples.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        items : list of tuples</span>
+<span class="sd">            A list of (key, value) tuples in the Configuration object.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_config</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span></div>
+
+<div class="viewcode-block" id="Configuration.save"><a class="viewcode-back" href="../../api.html#rsmtool.configuration_parser.Configuration.save">[docs]</a>    <span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Save the configuration file to the output directory specified.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        output_dir : str</span>
+<span class="sd">            The path to the output directory.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># save a copy of the main config into the output directory</span>
+        <span class="k">if</span> <span class="n">output_dir</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">output_dir</span> <span class="o">=</span> <span class="n">getcwd</span><span class="p">()</span>
+
+        <span class="c1"># Create output directory, if it does not exist</span>
+        <span class="n">output_dir</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="s1">&#39;output&#39;</span><span class="p">)</span>
+        <span class="n">makedirs</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="n">outjson</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span>
+                       <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_</span><span class="si">{}</span><span class="s1">.json&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_config</span><span class="p">[</span><span class="s1">&#39;experiment_id&#39;</span><span class="p">],</span>
+                                           <span class="bp">self</span><span class="o">.</span><span class="n">_context</span><span class="p">))</span>
+
+        <span class="n">expected_fields</span> <span class="o">=</span> <span class="p">(</span><span class="n">CHECK_FIELDS</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_context</span><span class="p">][</span><span class="s1">&#39;required&#39;</span><span class="p">]</span> <span class="o">+</span>
+                           <span class="n">CHECK_FIELDS</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_context</span><span class="p">][</span><span class="s1">&#39;optional&#39;</span><span class="p">])</span>
+
+        <span class="n">output_config</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_config</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">expected_fields</span><span class="p">}</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">outjson</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">outfile</span><span class="p">:</span>
+            <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">output_config</span><span class="p">,</span> <span class="n">outfile</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">separators</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39;: &#39;</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="Configuration.check_exclude_listwise"><a class="viewcode-back" href="../../api.html#rsmtool.configuration_parser.Configuration.check_exclude_listwise">[docs]</a>    <span class="k">def</span> <span class="nf">check_exclude_listwise</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Check if we are excluding candidates</span>
+<span class="sd">        based on number of responses, and</span>
+<span class="sd">        add this to the configuration file</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        exclude_listwise : bool</span>
+<span class="sd">            Whether to exclude list-wise</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">exclude_listwise</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;min_items_per_candidate&#39;</span><span class="p">):</span>
+            <span class="n">exclude_listwise</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">return</span> <span class="n">exclude_listwise</span></div>
+
+<div class="viewcode-block" id="Configuration.check_flag_column"><a class="viewcode-back" href="../../api.html#rsmtool.configuration_parser.Configuration.check_flag_column">[docs]</a>    <span class="k">def</span> <span class="nf">check_flag_column</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">flag_column</span><span class="o">=</span><span class="s1">&#39;flag_column&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Make sure the `flag_column` field is in the correct format. Get</span>
+<span class="sd">        flag columns and values for filtering if any and convert single</span>
+<span class="sd">        values to lists. Raises an exception if `flag_column` is not</span>
+<span class="sd">        correctly specified.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        new_filtering_dict : dict</span>
+<span class="sd">            Properly formatted `flag_column` dictionary.</span>
+<span class="sd">        flag_column : {&#39;flag_column&#39;, &#39;flag_column_test&#39;}</span>
+<span class="sd">            The flag column to check.</span>
+<span class="sd">            Defaults to &#39;flag_column&#39;.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        ValueError</span>
+<span class="sd">            If the `flag_column` is not  a dictionary</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">config</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_config</span>
+
+        <span class="n">new_filter_dict</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">if</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">flag_column</span><span class="p">):</span>
+
+            <span class="n">original_filter_dict</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="n">flag_column</span><span class="p">]</span>
+
+            <span class="c1"># first check that the value is a dictionary</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">original_filter_dict</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;&#39;flag_column&#39; must be a dictionary. &quot;</span>
+                                 <span class="s2">&quot;Please refer to the documentation for &quot;</span>
+                                 <span class="s2">&quot;further information&quot;</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">original_filter_dict</span><span class="p">:</span>
+
+                <span class="c1"># if we were given a single value, convert it to list</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">original_filter_dict</span><span class="p">[</span><span class="n">column</span><span class="p">],</span> <span class="nb">list</span><span class="p">):</span>
+                    <span class="n">new_filter_dict</span><span class="p">[</span><span class="n">column</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">original_filter_dict</span><span class="p">[</span><span class="n">column</span><span class="p">]]</span>
+                    <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;The filtering condition </span><span class="si">{}</span><span class="s2">&quot;</span>
+                                    <span class="s2">&quot; for column </span><span class="si">{}</span><span class="s2"> was converted &quot;</span>
+                                    <span class="s2">&quot;to list. Only responses where &quot;</span>
+                                    <span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> == </span><span class="si">{}</span><span class="s2"> will be used for &quot;</span>
+                                    <span class="s2">&quot;training and/or evaluating the &quot;</span>
+                                    <span class="s2">&quot;model. You can ignore this &quot;</span>
+                                    <span class="s2">&quot;warning if this is the correct &quot;</span>
+                                    <span class="s2">&quot;interpretation of your &quot;</span>
+                                    <span class="s2">&quot;configuration settings&quot;</span>
+                                    <span class="s2">&quot;.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">original_filter_dict</span><span class="p">[</span><span class="n">column</span><span class="p">],</span>
+                                               <span class="n">column</span><span class="p">,</span>
+                                               <span class="n">column</span><span class="p">,</span>
+                                               <span class="n">original_filter_dict</span><span class="p">[</span><span class="n">column</span><span class="p">])</span>
+                                    <span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">new_filter_dict</span><span class="p">[</span><span class="n">column</span><span class="p">]</span> <span class="o">=</span> <span class="n">original_filter_dict</span><span class="p">[</span><span class="n">column</span><span class="p">]</span>
+
+                    <span class="n">model_eval</span> <span class="o">=</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span>
+                                               <span class="n">original_filter_dict</span><span class="p">[</span><span class="n">column</span><span class="p">]))</span>
+                    <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Only responses where &quot;</span>
+                                 <span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> equals one of the following values &quot;</span>
+                                 <span class="s2">&quot;will be used for training and/or &quot;</span>
+                                 <span class="s2">&quot;evaluating the model: &quot;</span>
+                                 <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">column</span><span class="p">,</span>
+                                              <span class="n">model_eval</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">new_filter_dict</span></div>
+
+<div class="viewcode-block" id="Configuration.get_trim_min_max"><a class="viewcode-back" href="../../api.html#rsmtool.configuration_parser.Configuration.get_trim_min_max">[docs]</a>    <span class="k">def</span> <span class="nf">get_trim_min_max</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get the specified trim min and max, if any,</span>
+<span class="sd">        and make sure they are numeric.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        spec_trim_min : float</span>
+<span class="sd">            Specified trim min value</span>
+<span class="sd">        spec_trim_max : float</span>
+<span class="sd">            Specified trim max value</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">config</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_config</span>
+
+        <span class="n">spec_trim_min</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;trim_min&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">spec_trim_max</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;trim_max&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">spec_trim_min</span><span class="p">:</span>
+            <span class="n">spec_trim_min</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">spec_trim_min</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">spec_trim_max</span><span class="p">:</span>
+            <span class="n">spec_trim_max</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">spec_trim_max</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">spec_trim_min</span><span class="p">,</span> <span class="n">spec_trim_max</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Configuration.get_default_converter"><a class="viewcode-back" href="../../api.html#rsmtool.configuration_parser.Configuration.get_default_converter">[docs]</a>    <span class="k">def</span> <span class="nf">get_default_converter</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get the default converter dictionary for reader.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        default_converter : dict</span>
+<span class="sd">            The default converter for a train or test file.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">string_columns</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_config</span><span class="p">[</span><span class="s1">&#39;id_column&#39;</span><span class="p">]]</span>
+
+        <span class="n">candidate</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;candidate_column&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">candidate</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">string_columns</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">candidate</span><span class="p">)</span>
+
+        <span class="n">subgroups</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;subgroups&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">subgroups</span><span class="p">:</span>
+            <span class="n">string_columns</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">subgroups</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="nb">dict</span><span class="p">([(</span><span class="n">column</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">string_columns</span> <span class="k">if</span> <span class="n">column</span><span class="p">])</span></div>
+
+<div class="viewcode-block" id="Configuration.get_names_and_paths"><a class="viewcode-back" href="../../api.html#rsmtool.configuration_parser.Configuration.get_names_and_paths">[docs]</a>    <span class="k">def</span> <span class="nf">get_names_and_paths</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">keys</span><span class="p">,</span> <span class="n">names</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get a a list of values, given keys.</span>
+<span class="sd">        Remove any values that are None.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        -------</span>
+<span class="sd">        keys : list</span>
+<span class="sd">            A list of keys whose values to retrieve.</span>
+<span class="sd">        names : list</span>
+<span class="sd">            The default value to use if key cannot be found.</span>
+<span class="sd">            Defaults to None.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        values : list</span>
+<span class="sd">            The list of values.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        ValueError</span>
+<span class="sd">            If there are any duplicate keys or names.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">keys</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">names</span><span class="p">)</span>
+
+        <span class="c1"># Make sure keys are not duplicated</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">keys</span><span class="p">))</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">keys</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;The ``keys`` must be unique. However, the &#39;</span>
+                             <span class="s1">&#39;following duplicate keys were found: </span><span class="si">{}</span><span class="s1">.&#39;</span>
+                             <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">key</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">Counter</span><span class="p">(</span><span class="n">keys</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+                                                  <span class="k">if</span> <span class="n">val</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">])))</span>
+        <span class="c1"># Make sure names are not duplicated</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">names</span><span class="p">))</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">names</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;The``names`` must be unique. However, the &#39;</span>
+                             <span class="s1">&#39;following duplicate names were found: </span><span class="si">{}</span><span class="s1">.&#39;</span>
+                             <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">name</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">Counter</span><span class="p">(</span><span class="n">names</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+                                                  <span class="k">if</span> <span class="n">val</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">])))</span>
+        <span class="n">existing_names</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">existing_paths</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">key</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">keys</span><span class="p">):</span>
+
+            <span class="n">path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+
+            <span class="c1"># if the `features` field is a list,</span>
+            <span class="c1"># do not include it in the container</span>
+            <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;features&#39;</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                    <span class="k">continue</span>
+
+            <span class="k">if</span> <span class="n">path</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">existing_paths</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+                <span class="n">existing_names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">names</span><span class="p">[</span><span class="n">idx</span><span class="p">])</span>
+
+        <span class="k">return</span> <span class="n">existing_names</span><span class="p">,</span> <span class="n">existing_paths</span></div></div>
+
+
+<div class="viewcode-block" id="ConfigurationParser"><a class="viewcode-back" href="../../api.html#rsmtool.configuration_parser.ConfigurationParser">[docs]</a><span class="k">class</span> <span class="nc">ConfigurationParser</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A `ConfigurationParser` class to create a</span>
+<span class="sd">    `Configuration` object.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="c1"># Set configuration object to None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_config</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_filepath</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">_check_config_is_loaded</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Check to make sure a configuration file</span>
+<span class="sd">        or dictionary was loaded; otherwise,</span>
+<span class="sd">        raise ``NameError``.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        NameError</span>
+<span class="sd">            If no configuration file or dictionary was loaded.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_config</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">NameError</span><span class="p">(</span><span class="s1">&#39;No configuration file was loaded &#39;</span>
+                            <span class="s1">&#39;Make sure to load a configuration file &#39;</span>
+                            <span class="s1">&#39;from a dict using the `load_config_from_dict()` &#39;</span>
+                            <span class="s1">&#39;method or use the `read_config_from_file()` method &#39;</span>
+                            <span class="s1">&#39;with the appropriate sub-class object to read from &#39;</span>
+                            <span class="s1">&#39;a file. You can use the `get_configparser` class &#39;</span>
+                            <span class="s1">&#39;method to instantiate the appropriate sub-class &#39;</span>
+                            <span class="s1">&#39;object for reading either `.json` or `.cfg` files.&#39;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="ConfigurationParser.get_configparser"><a class="viewcode-back" href="../../api.html#rsmtool.configuration_parser.ConfigurationParser.get_configparser">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">get_configparser</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">filepath</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get the correct `ConfigurationParser` object,</span>
+<span class="sd">        based on the file extension.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        filepath : str</span>
+<span class="sd">            The path to the configuration file.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        config : ConfigurationParser</span>
+<span class="sd">            The configuration parser object.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        ValueError</span>
+<span class="sd">            If config file is not .json or .cfg.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">_</span><span class="p">,</span> <span class="n">extension</span> <span class="o">=</span> <span class="n">splitext</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">extension</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">CONFIG_TYPE</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Configuration file must be &#39;</span>
+                             <span class="s1">&#39;in either `.json` or `.cfg`&#39;</span>
+                             <span class="s1">&#39;format. You specified: </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">extension</span><span class="p">))</span>
+
+        <span class="k">return</span> <span class="n">CONFIG_TYPE</span><span class="p">[</span><span class="n">extension</span><span class="o">.</span><span class="n">lower</span><span class="p">()](</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ConfigurationParser.check_id_fields"><a class="viewcode-back" href="../../api.html#rsmtool.configuration_parser.ConfigurationParser.check_id_fields">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">check_id_fields</span><span class="p">(</span><span class="n">id_field_values</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Check whether the ID fields in the given dictionary</span>
+<span class="sd">        are properly formatted, i.e., they ::</span>
+<span class="sd">        - do not contain any spaces</span>
+<span class="sd">        - are shorter than 200 characters</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        id_field_values : dict</span>
+<span class="sd">            A dictionary containing the ID fields names</span>
+<span class="sd">            as the keys and the value from the configuration</span>
+<span class="sd">            file as the value.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        ValueError</span>
+<span class="sd">            If the values for the ID fields in the given</span>
+<span class="sd">            dictionary are not formatted correctly.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">for</span> <span class="n">id_field</span><span class="p">,</span> <span class="n">id_field_value</span> <span class="ow">in</span> <span class="n">id_field_values</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">id_field_value</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">200</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> is too long (must be &quot;</span>
+                                 <span class="s2">&quot;&lt;=200 characters)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">id_field</span><span class="p">))</span>
+
+            <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\s&#39;</span><span class="p">,</span> <span class="n">id_field_value</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> cannot contain any &quot;</span>
+                                 <span class="s2">&quot;spaces&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">id_field</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="ConfigurationParser.load_config_from_dict"><a class="viewcode-back" href="../../api.html#rsmtool.configuration_parser.ConfigurationParser.load_config_from_dict">[docs]</a>    <span class="k">def</span> <span class="nf">load_config_from_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config_dict</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Load configuration dictionary.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        config_dict : dict</span>
+<span class="sd">            A dictionary containing the configuration</span>
+<span class="sd">            parameters to parse.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        TypeError</span>
+<span class="sd">            If `config_dict` is not a ``dict``</span>
+<span class="sd">        AttributeError</span>
+<span class="sd">            If config has already been assigned.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">config_dict</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;The `config_dict` must be a dictionary.&#39;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_config</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_config</span> <span class="o">=</span> <span class="n">config_dict</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span><span class="s1">&#39;A configuration dictionary has already&#39;</span>
+                                 <span class="s1">&#39;been assigned. You cannot assign another&#39;</span>
+                                 <span class="s1">&#39;dictionary.&#39;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ConfigurationParser.read_config_from_file"><a class="viewcode-back" href="../../api.html#rsmtool.configuration_parser.ConfigurationParser.read_config_from_file">[docs]</a>    <span class="k">def</span> <span class="nf">read_config_from_file</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filepath</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Read the configuration file.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        filepath : str</span>
+<span class="sd">            The path to the configuration file.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        NotImplementedError</span>
+<span class="sd">            This method must be implemented in subclass.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;The method `read_config_from_file()` &quot;</span>
+                                  <span class="s2">&quot;is only implemented in the subclasses &quot;</span>
+                                  <span class="s2">&quot;``CFGConfigurationParser`` and &quot;</span>
+                                  <span class="s2">&quot;``JSONConfigurationParser``. &quot;</span>
+                                  <span class="s2">&quot;You can use the class method &quot;</span>
+                                  <span class="s2">&quot;`get_configparser()` to retrieve &quot;</span>
+                                  <span class="s2">&quot;the correct configuration parser object &quot;</span>
+                                  <span class="s2">&quot;for parsing JSON or CFG files.&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ConfigurationParser.normalize_config"><a class="viewcode-back" href="../../api.html#rsmtool.configuration_parser.ConfigurationParser.normalize_config">[docs]</a>    <span class="k">def</span> <span class="nf">normalize_config</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Normalize the field names in `self._config` or `config` in order to</span>
+<span class="sd">        maintain backwards compatibility with old configuration files.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        inplace : bool</span>
+<span class="sd">            Maintain the state of the config object produced by</span>
+<span class="sd">            this method.</span>
+<span class="sd">            Defaults to True.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        new_config : Configuration</span>
+<span class="sd">            A normalized configuration object</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        ValueError</span>
+<span class="sd">            If no JSON configuration object exists, or if value passed for</span>
+<span class="sd">            `use_scaled_predictions` is in the wrong format.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># Check to make sure a configuration file</span>
+        <span class="c1"># or dictionary has been loaded.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_check_config_is_loaded</span><span class="p">()</span>
+
+        <span class="c1"># Get the parameter dictionary</span>
+        <span class="n">config</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_config</span>
+
+        <span class="c1"># Create a new JSON object with the normalized field names</span>
+        <span class="n">new_config</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="k">for</span> <span class="n">field_name</span> <span class="ow">in</span> <span class="n">config</span><span class="p">:</span>
+
+            <span class="k">if</span> <span class="n">field_name</span> <span class="ow">in</span> <span class="n">FIELD_NAME_MAPPING</span><span class="p">:</span>
+                <span class="n">norm_field_name</span> <span class="o">=</span> <span class="n">FIELD_NAME_MAPPING</span><span class="p">[</span><span class="n">field_name</span><span class="p">]</span>
+                <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;The field name &quot;</span><span class="si">{}</span><span class="s2">&quot; is deprecated &quot;&quot;&quot;</span>
+                              <span class="sd">&quot;&quot;&quot;and will be removed  in a future &quot;&quot;&quot;</span>
+                              <span class="sd">&quot;&quot;&quot;release, please use the &quot;&quot;&quot;</span>
+                              <span class="sd">&quot;&quot;&quot;new field name &quot;{}&quot; &quot;&quot;&quot;</span>
+                              <span class="sd">&quot;&quot;&quot;instead.&quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">field_name</span><span class="p">,</span>
+                                                    <span class="n">norm_field_name</span><span class="p">),</span>
+                              <span class="n">category</span><span class="o">=</span><span class="ne">DeprecationWarning</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">norm_field_name</span> <span class="o">=</span> <span class="n">field_name</span>
+
+            <span class="n">new_config</span><span class="p">[</span><span class="n">norm_field_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="n">field_name</span><span class="p">]</span>
+
+        <span class="c1"># Convert old values for prediction scaling:</span>
+        <span class="k">if</span> <span class="s1">&#39;use_scaled_predictions&#39;</span> <span class="ow">in</span> <span class="n">new_config</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">new_config</span><span class="p">[</span><span class="s1">&#39;use_scaled_predictions&#39;</span><span class="p">]</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;scale&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">]:</span>
+                <span class="n">new_config</span><span class="p">[</span><span class="s1">&#39;use_scaled_predictions&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="k">elif</span> <span class="n">new_config</span><span class="p">[</span><span class="s1">&#39;use_scaled_predictions&#39;</span><span class="p">]</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;raw&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">]:</span>
+                <span class="n">new_config</span><span class="p">[</span><span class="s1">&#39;use_scaled_predictions&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Please use the new format &quot;</span>
+                                 <span class="s2">&quot;to specify prediction scaling:</span><span class="se">\n</span><span class="s2"> &quot;</span>
+                                 <span class="s2">&quot;&#39;use_scaled_predictions&#39;: true/false&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Convert old model names to new ones, if we have them</span>
+        <span class="k">if</span> <span class="s1">&#39;model&#39;</span> <span class="ow">in</span> <span class="n">new_config</span><span class="p">:</span>
+            <span class="n">model_name</span> <span class="o">=</span> <span class="n">new_config</span><span class="p">[</span><span class="s1">&#39;model&#39;</span><span class="p">]</span>
+
+            <span class="k">if</span> <span class="n">model_name</span> <span class="o">==</span> <span class="s1">&#39;empWtDropNeg&#39;</span><span class="p">:</span>
+
+                <span class="c1"># If someone is using `empWtDropNeg`, we tell them that it is</span>
+                <span class="c1"># no longer available and they should be using NNLR instead.</span>
+                <span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;The model name &quot;empWtDropNeg&quot; is &quot;&quot;&quot;</span>
+                              <span class="sd">&quot;&quot;&quot;no longer available, please use the &quot;&quot;&quot;</span>
+                              <span class="sd">&quot;&quot;&quot;equivalent model &quot;NNLR&quot; instead.&quot;&quot;&quot;</span><span class="p">)</span>
+
+            <span class="c1"># Otherwise, just raise a deprecation warning if they are using</span>
+            <span class="c1"># an old model name</span>
+            <span class="k">elif</span> <span class="n">model_name</span> <span class="ow">in</span> <span class="n">MODEL_NAME_MAPPING</span><span class="p">:</span>
+                <span class="n">norm_model_name</span> <span class="o">=</span> <span class="n">MODEL_NAME_MAPPING</span><span class="p">[</span><span class="n">model_name</span><span class="p">]</span>
+                <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;The model name &quot;</span><span class="si">{}</span><span class="s2">&quot; is deprecated &quot;&quot;&quot;</span>
+                              <span class="sd">&quot;&quot;&quot;and will be removed  in a future &quot;&quot;&quot;</span>
+                              <span class="sd">&quot;&quot;&quot;release, please use the new model &quot;&quot;&quot;</span>
+                              <span class="sd">&quot;&quot;&quot;name &quot;{}&quot; instead.&quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">model_name</span><span class="p">,</span>
+                                                              <span class="n">norm_model_name</span><span class="p">),</span>
+                              <span class="n">category</span><span class="o">=</span><span class="ne">DeprecationWarning</span><span class="p">)</span>
+                <span class="n">new_config</span><span class="p">[</span><span class="s1">&#39;model&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">norm_model_name</span>
+
+        <span class="k">if</span> <span class="n">inplace</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_config</span> <span class="o">=</span> <span class="n">new_config</span>
+        <span class="k">return</span> <span class="n">Configuration</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_filepath</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ConfigurationParser.validate_config"><a class="viewcode-back" href="../../api.html#rsmtool.configuration_parser.ConfigurationParser.validate_config">[docs]</a>    <span class="k">def</span> <span class="nf">validate_config</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="s1">&#39;rsmtool&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Ensure that all required fields are specified, add default values</span>
+<span class="sd">        values for all unspecified fields, and ensure that all specified</span>
+<span class="sd">        fields are valid.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        context : str, optional</span>
+<span class="sd">            Context of the tool in which we are validating.</span>
+<span class="sd">            Possible values are ::</span>
+
+<span class="sd">                {&#39;rsmtool&#39;, &#39;rsmeval&#39;,</span>
+<span class="sd">                 &#39;rsmpredict&#39;, &#39;rsmcompare&#39;, &#39;rsmsummarize&#39;}</span>
+
+<span class="sd">            Defaults to &#39;rsmtool&#39;.</span>
+<span class="sd">        inplace : bool</span>
+<span class="sd">            Maintain the state of the config object produced by</span>
+<span class="sd">            this method.</span>
+<span class="sd">            Defaults to True.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        config_obj : Configuration</span>
+<span class="sd">            A configuration object</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        ValueError</span>
+<span class="sd">            If config does not exist, and no config passed.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># Check to make sure a configuration file</span>
+        <span class="c1"># or dictionary has been loaded.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_check_config_is_loaded</span><span class="p">()</span>
+
+        <span class="c1"># Get the parameter dictionary</span>
+        <span class="n">new_config</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_config</span>
+
+        <span class="c1"># 1. Check to make sure all required fields are specified</span>
+        <span class="n">required_fields</span> <span class="o">=</span> <span class="n">CHECK_FIELDS</span><span class="p">[</span><span class="n">context</span><span class="p">][</span><span class="s1">&#39;required&#39;</span><span class="p">]</span>
+
+        <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="n">required_fields</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">field</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">new_config</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;The config file must &quot;</span>
+                                 <span class="s2">&quot;specify &#39;</span><span class="si">{}</span><span class="s2">&#39;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">field</span><span class="p">))</span>
+
+        <span class="c1"># 2. Add default values for unspecified optional fields</span>
+        <span class="c1"># for given RSMTool context</span>
+        <span class="n">defaults</span> <span class="o">=</span> <span class="n">DEFAULTS</span>
+
+        <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="n">defaults</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">field</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">new_config</span><span class="p">:</span>
+                <span class="n">new_config</span><span class="p">[</span><span class="n">field</span><span class="p">]</span> <span class="o">=</span> <span class="n">defaults</span><span class="p">[</span><span class="n">field</span><span class="p">]</span>
+
+        <span class="c1"># 3. Check to make sure no unrecognized fields are specified</span>
+        <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="n">new_config</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">field</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">defaults</span> <span class="ow">and</span> <span class="n">field</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">required_fields</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Unrecognized field &#39;</span><span class="si">{}</span><span class="s2">&#39;&quot;</span>
+                                 <span class="s2">&quot; in json file&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">field</span><span class="p">))</span>
+
+        <span class="c1"># 4. Check to make sure that the ID fields that will be</span>
+        <span class="c1"># used as part of filenames formatted correctly</span>
+        <span class="n">id_fields</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;comparison_id&#39;</span><span class="p">,</span>
+                     <span class="s1">&#39;experiment_id&#39;</span><span class="p">,</span>
+                     <span class="s1">&#39;summary_id&#39;</span><span class="p">]</span>
+        <span class="n">id_field_values</span> <span class="o">=</span> <span class="p">{</span><span class="n">field</span><span class="p">:</span> <span class="n">new_config</span><span class="p">[</span><span class="n">field</span><span class="p">]</span> <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="n">new_config</span>
+                           <span class="k">if</span> <span class="n">field</span> <span class="ow">in</span> <span class="n">id_fields</span><span class="p">}</span>
+
+        <span class="c1"># we do not need to validate any IDs for `rsmpredict`</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">check_id_fields</span><span class="p">(</span><span class="n">id_field_values</span><span class="p">)</span>
+
+        <span class="c1"># 5. Check that the feature file and feature subset/subset file are not</span>
+        <span class="c1"># specified together</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;You cannot specify BOTH </span><span class="se">\&quot;</span><span class="s2">features</span><span class="se">\&quot;</span><span class="s2"> and </span><span class="se">\&quot;</span><span class="si">{}</span><span class="se">\&quot;</span><span class="s2">. &quot;</span>
+               <span class="s2">&quot;Please refer to the </span><span class="se">\&quot;</span><span class="s2">Selecting Feature Columns</span><span class="se">\&quot;</span><span class="s2"> &quot;</span>
+               <span class="s2">&quot;section in the documentation for more details.&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">new_config</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">]</span> <span class="ow">and</span> <span class="n">new_config</span><span class="p">[</span><span class="s1">&#39;feature_subset_file&#39;</span><span class="p">]:</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;feature_subset_file&quot;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">new_config</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">]</span> <span class="ow">and</span> <span class="n">new_config</span><span class="p">[</span><span class="s1">&#39;feature_subset&#39;</span><span class="p">]:</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;feature_subset&quot;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+        <span class="c1"># 6. Check for fields that require feature_subset_file and try</span>
+        <span class="c1"># to use the default feature file</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">new_config</span><span class="p">[</span><span class="s1">&#39;feature_subset&#39;</span><span class="p">]</span> <span class="ow">and</span>
+                <span class="ow">not</span> <span class="n">new_config</span><span class="p">[</span><span class="s1">&#39;feature_subset_file&#39;</span><span class="p">]):</span>
+
+            <span class="c1"># Check if we have the default subset file from rsmextra</span>
+            <span class="k">if</span> <span class="n">HAS_RSMEXTRA</span><span class="p">:</span>
+                <span class="n">default_basename</span> <span class="o">=</span> <span class="n">basename</span><span class="p">(</span><span class="n">default_feature_subset_file</span><span class="p">)</span>
+                <span class="n">new_config</span><span class="p">[</span><span class="s1">&#39;feature_subset_file&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">default_feature_subset_file</span>
+                <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;You requested feature subsets but did not &quot;</span>
+                                <span class="s2">&quot;specify any feature file. &quot;</span>
+                                <span class="s2">&quot;The tool will use the default &quot;</span>
+                                <span class="s2">&quot;feature file </span><span class="si">{}</span><span class="s2"> available via &quot;</span>
+                                <span class="s2">&quot;rsmextra&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">default_basename</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;If you want to use feature subsets, you &quot;</span>
+                                 <span class="s2">&quot;must specify a feature subset file&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">new_config</span><span class="p">[</span><span class="s1">&#39;sign&#39;</span><span class="p">]</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">new_config</span><span class="p">[</span><span class="s1">&#39;feature_subset_file&#39;</span><span class="p">]:</span>
+
+            <span class="c1"># Check if we have the default subset file from rsmextra</span>
+            <span class="k">if</span> <span class="n">HAS_RSMEXTRA</span><span class="p">:</span>
+                <span class="n">default_basename</span> <span class="o">=</span> <span class="n">basename</span><span class="p">(</span><span class="n">default_feature_subset_file</span><span class="p">)</span>
+                <span class="n">new_config</span><span class="p">[</span><span class="s1">&#39;feature_subset_file&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">default_feature_subset_file</span>
+                <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;You specified the expected sign of &quot;</span>
+                                <span class="s2">&quot;correlation but did not specify a feature &quot;</span>
+                                <span class="s2">&quot;subset file. The tool will use &quot;</span>
+                                <span class="s2">&quot;the default feature subset file </span><span class="si">{}</span><span class="s2"> &quot;</span>
+                                <span class="s2">&quot;available via &quot;</span>
+                                <span class="s2">&quot;rsmextra&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">default_basename</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;If you want to specify the expected sign of &quot;</span>
+                                 <span class="s2">&quot; correlation for each feature, you must &quot;</span>
+                                 <span class="s2">&quot;specify a feature subset file&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Use the default sign if we are using the default feature file</span>
+        <span class="c1"># and sign has not been specified in the config file</span>
+        <span class="k">if</span> <span class="n">HAS_RSMEXTRA</span><span class="p">:</span>
+            <span class="n">default_feature</span> <span class="o">=</span> <span class="n">default_feature_subset_file</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">new_config</span><span class="p">[</span><span class="s1">&#39;feature_subset_file&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">default_feature</span> <span class="ow">and</span>
+                    <span class="ow">not</span> <span class="n">new_config</span><span class="p">[</span><span class="s1">&#39;sign&#39;</span><span class="p">]):</span>
+                <span class="n">new_config</span><span class="p">[</span><span class="s1">&#39;sign&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">default_feature_sign</span>
+
+        <span class="c1"># 7. Check for fields that must be specified together</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">new_config</span><span class="p">[</span><span class="s1">&#39;min_items_per_candidate&#39;</span><span class="p">]</span> <span class="ow">and</span>
+                <span class="ow">not</span> <span class="n">new_config</span><span class="p">[</span><span class="s1">&#39;candidate_column&#39;</span><span class="p">]):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;If you want to filter out candidates with &quot;</span>
+                             <span class="s2">&quot;responses to less than X items, you need &quot;</span>
+                             <span class="s2">&quot;to specify the name of the column which &quot;</span>
+                             <span class="s2">&quot;contains candidate IDs.&quot;</span><span class="p">)</span>
+
+        <span class="c1"># 8. Check that if &quot;skll_objective&quot; is specified, it&#39;s</span>
+        <span class="c1"># one of the metrics that SKLL allows for AND that it is</span>
+        <span class="c1"># specified for a SKLL model and _not_ a built-in</span>
+        <span class="c1"># linear regression model</span>
+        <span class="k">if</span> <span class="n">new_config</span><span class="p">[</span><span class="s1">&#39;skll_objective&#39;</span><span class="p">]:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">is_skll_model</span><span class="p">(</span><span class="n">new_config</span><span class="p">[</span><span class="s1">&#39;model&#39;</span><span class="p">]):</span>
+                <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;You specified a custom SKLL objective but also chose a &quot;</span>
+                                <span class="s2">&quot;non-SKLL model. The objective will be ignored.&quot;</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">new_config</span><span class="p">[</span><span class="s1">&#39;skll_objective&#39;</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">SCORERS</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid SKLL objective. Please refer to the SKLL &quot;</span>
+                                     <span class="s2">&quot;documentation and choose a valid tuning objective.&quot;</span><span class="p">)</span>
+
+        <span class="c1"># 9. Check that if we are running rsmtool to ask for</span>
+        <span class="c1"># expected scores then the SKLL model type must actually</span>
+        <span class="c1"># support probabilistic classification. If it&#39;s not a SKLL</span>
+        <span class="c1"># model at all, we just treat it as a LinearRegression model</span>
+        <span class="c1"># which is basically what they all are in the end.</span>
+        <span class="k">if</span> <span class="n">context</span> <span class="o">==</span> <span class="s1">&#39;rsmtool&#39;</span> <span class="ow">and</span> <span class="n">new_config</span><span class="p">[</span><span class="s1">&#39;predict_expected_scores&#39;</span><span class="p">]:</span>
+            <span class="n">model_name</span> <span class="o">=</span> <span class="n">new_config</span><span class="p">[</span><span class="s1">&#39;model&#39;</span><span class="p">]</span>
+            <span class="n">dummy_learner</span> <span class="o">=</span> <span class="n">Learner</span><span class="p">(</span><span class="n">model_name</span><span class="p">)</span> <span class="k">if</span> <span class="n">is_skll_model</span><span class="p">(</span><span class="n">model_name</span><span class="p">)</span> <span class="k">else</span> <span class="n">Learner</span><span class="p">(</span><span class="s1">&#39;LinearRegression&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">dummy_learner</span><span class="o">.</span><span class="n">model_type</span><span class="p">,</span> <span class="s1">&#39;predict_proba&#39;</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> does not support expected scores &quot;</span>
+                                 <span class="s2">&quot;since it is not a probablistic classifier.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">model_name</span><span class="p">))</span>
+            <span class="k">del</span> <span class="n">dummy_learner</span>
+
+        <span class="c1"># 10. Check the fields that requires rsmextra</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">HAS_RSMEXTRA</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">new_config</span><span class="p">[</span><span class="s1">&#39;special_sections&#39;</span><span class="p">]:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Special sections are only available to ETS&quot;</span>
+                                 <span class="s2">&quot; users by installing the rsmextra package.&quot;</span><span class="p">)</span>
+
+        <span class="c1"># 11. Raise a warning if we are specifiying a feature file but also</span>
+        <span class="c1"># telling the system to automatically select transformations</span>
+        <span class="k">if</span> <span class="n">new_config</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">]</span> <span class="ow">and</span> <span class="n">new_config</span><span class="p">[</span><span class="s1">&#39;select_transformations&#39;</span><span class="p">]:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;You specified a feature file but also set &quot;</span>
+                            <span class="s2">&quot;`select_transformations` to True. Any &quot;</span>
+                            <span class="s2">&quot;transformations or signs specified in &quot;</span>
+                            <span class="s2">&quot;the feature file will be overwritten by &quot;</span>
+                            <span class="s2">&quot;the automatically selected transformations &quot;</span>
+                            <span class="s2">&quot;and signs.&quot;</span><span class="p">)</span>
+
+        <span class="c1"># 12. Clean up config dict to keep only context-specific fields</span>
+        <span class="n">context_relevant_fields</span> <span class="o">=</span> <span class="p">(</span><span class="n">CHECK_FIELDS</span><span class="p">[</span><span class="n">context</span><span class="p">][</span><span class="s1">&#39;optional&#39;</span><span class="p">]</span> <span class="o">+</span>
+                                   <span class="n">CHECK_FIELDS</span><span class="p">[</span><span class="n">context</span><span class="p">][</span><span class="s1">&#39;required&#39;</span><span class="p">])</span>
+
+        <span class="n">new_config</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">new_config</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+                      <span class="k">if</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">context_relevant_fields</span><span class="p">}</span>
+
+        <span class="k">if</span> <span class="n">inplace</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_config</span> <span class="o">=</span> <span class="n">new_config</span>
+        <span class="k">return</span> <span class="n">Configuration</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_filepath</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ConfigurationParser.process_config"><a class="viewcode-back" href="../../api.html#rsmtool.configuration_parser.ConfigurationParser.process_config">[docs]</a>    <span class="k">def</span> <span class="nf">process_config</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Converts fields which are read in as string to the</span>
+<span class="sd">        appropriate format. Fields which can take multiple</span>
+<span class="sd">        string values are converted to lists if they have</span>
+<span class="sd">        not been already formatted as such.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        inplace : bool</span>
+<span class="sd">            Maintain the state of the config object produced by</span>
+<span class="sd">            this method.</span>
+<span class="sd">            Defaults to True.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        config_obj : Configuration</span>
+<span class="sd">            A configuration object</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        -------</span>
+<span class="sd">        NameError</span>
+<span class="sd">            If config does not exist, or no config read.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># Check to make sure a configuration file</span>
+        <span class="c1"># or dictionary has been loaded.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_check_config_is_loaded</span><span class="p">()</span>
+
+        <span class="c1"># Get the parameter dictionary</span>
+        <span class="n">new_config</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_config</span>
+
+        <span class="c1"># convert multiple values into lists</span>
+        <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="n">LIST_FIELDS</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">field</span> <span class="ow">in</span> <span class="n">new_config</span> <span class="ow">and</span> <span class="n">new_config</span><span class="p">[</span><span class="n">field</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">new_config</span><span class="p">[</span><span class="n">field</span><span class="p">],</span> <span class="nb">list</span><span class="p">):</span>
+                    <span class="n">new_config</span><span class="p">[</span><span class="n">field</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_config</span><span class="p">[</span><span class="n">field</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+                    <span class="n">new_config</span><span class="p">[</span><span class="n">field</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">prefix</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">prefix</span>
+                                         <span class="ow">in</span> <span class="n">new_config</span><span class="p">[</span><span class="n">field</span><span class="p">]]</span>
+
+        <span class="c1"># make sure all boolean values are boolean</span>
+        <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="n">BOOLEAN_FIELDS</span><span class="p">:</span>
+            <span class="n">error_message</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Field </span><span class="si">{}</span><span class="s1"> can only be set to &#39;</span>
+                             <span class="s1">&#39;True or False.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">field</span><span class="p">))</span>
+            <span class="k">if</span> <span class="n">field</span> <span class="ow">in</span> <span class="n">new_config</span> <span class="ow">and</span> <span class="n">new_config</span><span class="p">[</span><span class="n">field</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">new_config</span><span class="p">[</span><span class="n">field</span><span class="p">],</span> <span class="nb">bool</span><span class="p">):</span>
+                    <span class="c1"># we first convert the value to string to avoid</span>
+                    <span class="c1"># attribute errors in case the user supplied an integer.</span>
+                    <span class="n">given_value</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">new_config</span><span class="p">[</span><span class="n">field</span><span class="p">])</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+                    <span class="n">m</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^(true|false)$&#39;</span><span class="p">,</span> <span class="n">given_value</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">I</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="ow">not</span> <span class="n">m</span><span class="p">:</span>
+                        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">error_message</span><span class="p">)</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">bool_value</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+                        <span class="n">new_config</span><span class="p">[</span><span class="n">field</span><span class="p">]</span> <span class="o">=</span> <span class="n">bool_value</span>
+
+        <span class="k">if</span> <span class="n">inplace</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_config</span> <span class="o">=</span> <span class="n">new_config</span>
+        <span class="k">return</span> <span class="n">Configuration</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_filepath</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ConfigurationParser.normalize_validate_and_process_config"><a class="viewcode-back" href="../../api.html#rsmtool.configuration_parser.ConfigurationParser.normalize_validate_and_process_config">[docs]</a>    <span class="k">def</span> <span class="nf">normalize_validate_and_process_config</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="s1">&#39;rsmtool&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Normalize, validate, and process data from a config file.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        context : str, optional</span>
+<span class="sd">            Context of the tool in which we are validating.</span>
+<span class="sd">            Possible values are ::</span>
+
+<span class="sd">                {&#39;rsmtool&#39;, &#39;rsmeval&#39;,</span>
+<span class="sd">                 &#39;rsmpredict&#39;, &#39;rsmcompare&#39;,</span>
+<span class="sd">                 &#39;rsmsummarize&#39;}</span>
+
+<span class="sd">            Defaults to &#39;rsmtool&#39;.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        config_obj : Configuration</span>
+<span class="sd">            A configuration object</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        -------</span>
+<span class="sd">        NameError</span>
+<span class="sd">            If config does not exist, or no config read.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># Check to make sure a configuration file</span>
+        <span class="c1"># or dictionary has been loaded.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_check_config_is_loaded</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">normalize_config</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">validate_config</span><span class="p">(</span><span class="n">context</span><span class="o">=</span><span class="n">context</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">process_config</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">Configuration</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_filepath</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="n">context</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ConfigurationParser.read_normalize_validate_and_process_config"><a class="viewcode-back" href="../../api.html#rsmtool.configuration_parser.ConfigurationParser.read_normalize_validate_and_process_config">[docs]</a>    <span class="k">def</span> <span class="nf">read_normalize_validate_and_process_config</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                                                   <span class="n">filepath</span><span class="p">,</span>
+                                                   <span class="n">context</span><span class="o">=</span><span class="s1">&#39;rsmtool&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Read, normalize, validate, and process data from a config file.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        filepath : str</span>
+<span class="sd">            The path to the configuration file.</span>
+<span class="sd">        context : str, optional</span>
+<span class="sd">            Context of the tool in which we are validating.</span>
+<span class="sd">            Possible values are ::</span>
+
+<span class="sd">                {&#39;rsmtool&#39;, &#39;rsmeval&#39;,</span>
+<span class="sd">                 &#39;rsmpredict&#39;, &#39;rsmcompare&#39;, &#39;rsmsummarize&#39;}</span>
+
+<span class="sd">            Defaults to &#39;rsmtool&#39;.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        config_obj : Configuration</span>
+<span class="sd">            A configuration object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Reading and preprocessing configuration file: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">filepath</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">read_config_from_file</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">normalize_validate_and_process_config</span><span class="p">(</span><span class="n">context</span><span class="o">=</span><span class="n">context</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="JSONConfigurationParser"><a class="viewcode-back" href="../../api.html#rsmtool.configuration_parser.JSONConfigurationParser">[docs]</a><span class="k">class</span> <span class="nc">JSONConfigurationParser</span><span class="p">(</span><span class="n">ConfigurationParser</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A subclass of `ConfigurationParser` for parsing</span>
+<span class="sd">    JSON-style config files.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
+<div class="viewcode-block" id="JSONConfigurationParser.read_config_from_file"><a class="viewcode-back" href="../../api.html#rsmtool.configuration_parser.JSONConfigurationParser.read_config_from_file">[docs]</a>    <span class="k">def</span> <span class="nf">read_config_from_file</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filepath</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Read the configuration file.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        filepath : str</span>
+<span class="sd">            The path to the configuration file.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        ValueError</span>
+<span class="sd">            If main configuration file is improperly formatted.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">config</span> <span class="o">=</span> <span class="n">parse_json_with_comments</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;The main configuration file `</span><span class="si">{}</span><span class="s1">` exists but &#39;</span>
+                             <span class="s1">&#39;is formatted incorrectly. Please check that &#39;</span>
+                             <span class="s1">&#39;each line ends with a comma, there is no comma &#39;</span>
+                             <span class="s1">&#39;at the end of the last line, and that all quotes &#39;</span>
+                             <span class="s1">&#39;match.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">filepath</span><span class="p">))</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_config</span> <span class="o">=</span> <span class="n">config</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_filepath</span> <span class="o">=</span> <span class="n">filepath</span></div></div>
+
+
+<div class="viewcode-block" id="CFGConfigurationParser"><a class="viewcode-back" href="../../api.html#rsmtool.configuration_parser.CFGConfigurationParser">[docs]</a><span class="k">class</span> <span class="nc">CFGConfigurationParser</span><span class="p">(</span><span class="n">ConfigurationParser</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A subclass of `ConfiguraitonParser` for parsing</span>
+<span class="sd">    Microsoft INI-style config files.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_fix_json</span><span class="p">(</span><span class="n">json_string</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Takes a bit of JSON that might have bad quotes</span>
+<span class="sd">        or capitalized booleans and fixes that stuff.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        json_string : str</span>
+<span class="sd">            A string to be reformatted for JSON parsing.</span>
+
+<span class="sd">        Return</span>
+<span class="sd">        ------</span>
+<span class="sd">        json_string : str</span>
+<span class="sd">            The updated string.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">json_string</span> <span class="o">=</span> <span class="n">json_string</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;True&#39;</span><span class="p">,</span> <span class="s1">&#39;true&#39;</span><span class="p">)</span>
+        <span class="n">json_string</span> <span class="o">=</span> <span class="n">json_string</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;False&#39;</span><span class="p">,</span> <span class="s1">&#39;false&#39;</span><span class="p">)</span>
+        <span class="n">json_string</span> <span class="o">=</span> <span class="n">json_string</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;&#39;&quot;</span><span class="p">,</span> <span class="s1">&#39;&quot;&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">json_string</span>
+
+<div class="viewcode-block" id="CFGConfigurationParser.read_config_from_file"><a class="viewcode-back" href="../../api.html#rsmtool.configuration_parser.CFGConfigurationParser.read_config_from_file">[docs]</a>    <span class="k">def</span> <span class="nf">read_config_from_file</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filepath</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Read the configuration file.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        filepath : str</span>
+<span class="sd">            The path to the configuration file.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        ValueError</span>
+<span class="sd">            If main configuration file is improperly formatted.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># Get the `ConfigParser` object</span>
+        <span class="n">py_config_parser</span> <span class="o">=</span> <span class="n">ConfigParser</span><span class="p">()</span>
+
+        <span class="c1"># Try to read main configuration file.</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">py_config_parser</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Main configuration file &#39;</span>
+                             <span class="s1">&#39;could not be read: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">error</span><span class="p">))</span>
+
+        <span class="n">config</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="c1"># Loop through all sections of the ConfigParser</span>
+        <span class="c1"># object and add items to the dictionary</span>
+        <span class="k">for</span> <span class="n">section</span> <span class="ow">in</span> <span class="n">py_config_parser</span><span class="o">.</span><span class="n">sections</span><span class="p">():</span>
+            <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">py_config_parser</span><span class="o">.</span><span class="n">items</span><span class="p">(</span><span class="n">section</span><span class="p">):</span>
+
+                <span class="c1"># Check if the key already exists in the config dictionary.</span>
+                <span class="c1"># If it does, skip it and log a warning.</span>
+                <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">config</span><span class="p">:</span>
+                    <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s1">&#39;There are duplicate keys for `</span><span class="si">{}</span><span class="s1">`&#39;</span>
+                                    <span class="s1">&#39;in the configuration file. Only &#39;</span>
+                                    <span class="s1">&#39;the first instance will be &#39;</span>
+                                    <span class="s1">&#39;included.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+                    <span class="k">continue</span>
+
+                <span class="c1"># Otherwise, safe convert the value</span>
+                <span class="c1"># and add it to the dictionary.</span>
+                <span class="k">else</span><span class="p">:</span>
+
+                    <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fix_json</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+                    <span class="n">value</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+                    <span class="n">config</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_config</span> <span class="o">=</span> <span class="n">config</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_filepath</span> <span class="o">=</span> <span class="n">filepath</span></div></div>
+
+
+<span class="c1"># Global config types</span>
+<span class="n">CONFIG_TYPE</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;.cfg&#39;</span><span class="p">:</span> <span class="n">CFGConfigurationParser</span><span class="p">,</span>
+               <span class="s1">&#39;.json&#39;</span><span class="p">:</span> <span class="n">JSONConfigurationParser</span><span class="p">}</span>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Educational Testing Service.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'6.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+</body>
+</html>

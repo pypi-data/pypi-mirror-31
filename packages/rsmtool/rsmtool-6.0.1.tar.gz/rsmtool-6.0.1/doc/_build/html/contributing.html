@@ -1,0 +1,367 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Contributing to RSMTool &mdash; Rater Scoring Modeling Tool 6.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="RSMTool Release Process" href="release_process.html" />
+    <link rel="prev" title="Utility Scripts" href="utilities.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Rater Scoring Modeling Tool
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                6.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="who.html">Who is RSMTool for?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pipeline.html">Overview of RSMTool Pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_rsmtool.html">Using RSMTool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced_usage.html">Advanced Uses of RSMTool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom_notebooks.html">Writing custom RSMTool sections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utilities.html">Utility Scripts</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Contributing to RSMTool</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#setting-up">Setting up</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rsmtool-tests">RSMTool tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#writing-new-functional-tests">Writing new functional tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#advanced-tips-and-tricks">Advanced tips and tricks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="release_process.html">RSMTool Release Process</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Rater Scoring Modeling Tool</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Contributing to RSMTool</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/contributing.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="contributing-to-rsmtool">
+<h1>Contributing to RSMTool<a class="headerlink" href="#contributing-to-rsmtool" title="Permalink to this headline">¶</a></h1>
+<p>Contributions to RSMTool are very welcome. You can use the instructions below to get started on developing new features or functionality for RSMTool. When contributing to RSMTool, all of your contributions must come with updates to documentations as well as tests.</p>
+<div class="section" id="setting-up">
+<h2>Setting up<a class="headerlink" href="#setting-up" title="Permalink to this headline">¶</a></h2>
+<p>To set up a local development environment, follow the steps below:</p>
+<ol class="arabic">
+<li><p class="first">Pull the latest version of RSMTool from GitHub and switch to the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch.</p>
+</li>
+<li><p class="first">If you already have the <code class="docutils literal notranslate"><span class="pre">conda</span></code> package manager installed, skip to the next step. If you do not, follow the instructions on <a class="reference external" href="http://conda.pydata.org/docs/install/quick.html">this page</a> to install conda.</p>
+</li>
+<li><p class="first">Create a new conda environment (say, <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code>) and install the packages specified in the <code class="docutils literal notranslate"><span class="pre">conda_requirements.txt</span></code> file by running:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">rsmtool</span> <span class="o">-</span><span class="n">c</span> <span class="n">defaults</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="o">-</span><span class="n">c</span> <span class="n">desilinguist</span> <span class="o">--</span><span class="n">file</span> <span class="n">conda_requirements</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Activate the environment using <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">activate</span> <span class="pre">rsmtool</span></code> (use <code class="docutils literal notranslate"><span class="pre">activate</span> <span class="pre">rsmtool</span></code> if you are on Windows).</p>
+</li>
+<li><p class="first">Run <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-e</span> <span class="pre">.</span></code> to install rsmtool into the environment in editable mode which is what we need for development.</p>
+</li>
+<li><p class="first">Create a new git branch with a useful and descriptive name.</p>
+</li>
+<li><p class="first">Make your changes and add tests. See the next section for more on writing new tests.</p>
+</li>
+<li><p class="first">Run <code class="docutils literal notranslate"><span class="pre">nosetests</span> <span class="pre">-v</span> <span class="pre">--nologcapture</span> <span class="pre">tests</span></code> to run the tests. We use the <code class="docutils literal notranslate"><span class="pre">--nologcapture</span></code> switch since otherwise test failures for some tests tend to produce very long Jupyter notebook traces.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="rsmtool-tests">
+<h2>RSMTool tests<a class="headerlink" href="#rsmtool-tests" title="Permalink to this headline">¶</a></h2>
+<p>Existing tests for RSMTool are spread across the various <code class="docutils literal notranslate"><span class="pre">test_*.py</span></code> files under the <code class="docutils literal notranslate"><span class="pre">tests</span></code> directory after you check out the RSMTool source code from GitHub.</p>
+<p>There are two kinds of existing tests in RSMTool:</p>
+<ol class="arabic simple">
+<li>The first type of tests are <strong>unit tests</strong>, i.e., very specific tests for which you have a single example (usually embedded in the test itself) and you compare the generated output with known or expected output. These tests should have a very narrow and well defined scope. To see examples of such unit tests, see the test functions in the file <cite>tests/test_utils.py</cite>.</li>
+<li>The second type of tests are <strong>functional tests</strong> which are generally written from the users’ perspective to test that RSMTool is doing things that users would expect it to. In RSMTool, most (if not all) functional tests are written in the form of “experiment tests”, i.e., we first define an experimental configuration using an RSMTool (or RSMEval/RSMPredict, RSMCompare, RSMSummarize) configuration file, then we run the experiment, and then compare the generated output files to expected output files to make sure that RSMTool components are operating as expected. To see examples of such tests, you can look at any of the <code class="docutils literal notranslate"><span class="pre">tests/test_experiment_*.py</span></code> files.</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">RSMTool functional tests are <em>parameterized</em>, i.e., since most are identical other than the configuration file that needs to be run, the basic functionality of the test has been factored out into utility functions. Each line starting with <cite>param</cite> in any of the <code class="docutils literal notranslate"><span class="pre">test_experiment_*.py</span></code> files represents a specific functional test.</p>
+</div>
+<p>Any new contributions to RSMTool, no matter how small or trivial, <em>must</em> be accompanied by updates to documentations as well as new unit and/or functional tests. Adding new unit tests is fairly straightforward. However, adding new functional tests is a little more involved.</p>
+</div>
+<div class="section" id="writing-new-functional-tests">
+<h2>Writing new functional tests<a class="headerlink" href="#writing-new-functional-tests" title="Permalink to this headline">¶</a></h2>
+<p>To write a new experiment test for RSMTool (or any of the other tools):</p>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li>Create a new directory under <code class="docutils literal notranslate"><span class="pre">tests/data/experiments</span></code> using a descriptive name.</li>
+<li>Create a JSON configuration file under that directory with the various fields appropriately set for what you want to test. Feel free to use multiple words separated by hyphens to come up with a name that describes the testing condition. The name of the configuration file should be the same as the value of the <code class="docutils literal notranslate"><span class="pre">experiment_id</span></code> field in your JSON file. By convention, that’s usually the same as the name of the directory you created but with underscores instead of hyphens.</li>
+<li>Next, you need to add the test to the list of parameterized tests in the appropriate test file based on the tool for which you are adding the test, e.g., RSMEval tests should be added to <code class="docutils literal notranslate"><span class="pre">tests/test_experiment_rsmeval.py</span></code>, RSMPredict tests to <code class="docutils literal notranslate"><span class="pre">tests/test_experiment_rsmpredict.py</span></code>, and so on. RSMTool tests can be added to any of the four files. The arguments for the <cite>param()</cite> call can be found in the <a class="reference internal" href="#param-table"><span class="std std-ref">Table 1</span></a> below.</li>
+<li>In some rare cases, you might want to use a non-parameterized experiment test if you are doing something very different. These should be few and far between. Examples of these can also be seen in various <code class="docutils literal notranslate"><span class="pre">tests/test_experiment_*.py</span></code> files.</li>
+<li>Another rare scenario is the need to create an entirely new <code class="docutils literal notranslate"><span class="pre">tests/test_experiment_X.py</span></code> file instead of using one of the existing ones. This should <em>not</em> be necessary unless you are trying to test a newly added tool or component.</li>
+</ol>
+<span id="param-table"></span><table border="1" class="colwidths-auto docutils" id="id1">
+<caption><span class="caption-text">Table 1: Arguments for <code class="docutils literal notranslate"><span class="pre">param()</span></code> when adding new parameterized functional tests</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<tbody valign="top">
+<tr class="row-odd"><td><p class="first">Writing test(s) for RSMTool</p>
+<ul class="last simple">
+<li>First positional argument is the name of the test directory you created.</li>
+<li>Second positional argument is the experiment ID from the JSON
+configuration file.</li>
+<li>Use <code class="docutils literal notranslate"><span class="pre">consistency=True</span></code> if you have set <cite>second_human_score_column</cite> in
+the configuration file.</li>
+<li>Use <code class="docutils literal notranslate"><span class="pre">skll=True</span></code> if you are writing a test for a SKLL model.</li>
+<li>Set <code class="docutils literal notranslate"><span class="pre">subgroups</span></code> keyword argument to the same list that you specified
+in the configuration file.</li>
+<li>Set <code class="docutils literal notranslate"><span class="pre">file_format=&quot;tsv&quot;</span></code> (or <code class="docutils literal notranslate"><span class="pre">&quot;xlsx&quot;</span></code>) if you specified the same
+field in the configuration file.</li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first">Writing test(s) for RSMEval</p>
+<ul class="last simple">
+<li>Same arguments as RSMTool except the <code class="docutils literal notranslate"><span class="pre">skll</span></code> keyword argument is not
+applicable.</li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first">Writing test(s) for RSMPredict</p>
+<ul class="last simple">
+<li>The only positional argument is the name of the test directory you
+created.</li>
+<li>Use <code class="docutils literal notranslate"><span class="pre">excluded=True</span></code> if you want to check the excluded responses file
+as part of the test.</li>
+<li>Set <code class="docutils literal notranslate"><span class="pre">file_format=&quot;tsv&quot;</span></code> (or <code class="docutils literal notranslate"><span class="pre">&quot;xlsx&quot;</span></code>) if you specified the same
+field in the configuration file.</li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first">Writing test(s) for RSMCompare</p>
+<ul class="last simple">
+<li>First positional argument is the name of the test directory you created.</li>
+<li>Second positional argument is the comparison ID from the JSON
+configuration file.</li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first">Writing test(s) for RSMSummarize</p>
+<ul class="last simple">
+<li>The only positional argument is the name of the test directory you
+created.</li>
+<li>Set <code class="docutils literal notranslate"><span class="pre">file_format=&quot;tsv&quot;</span></code> (or <code class="docutils literal notranslate"><span class="pre">&quot;xlsx&quot;</span></code>) if you specified the same
+field in the configuration file.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Once you have added all new functional tests, commit all of your changes. Next, you should run <code class="docutils literal notranslate"><span class="pre">nosetests</span> <span class="pre">--noglogcapture</span></code> to run all the tests. Obviously, the newly added tests will fail since you have not yet generated the expected output for that test.</p>
+<p>To do this, you should now run the following:</p>
+<div class="highlight-text notranslate" id="update-files"><div class="highlight"><pre><span></span>python tests/update_files.py --tests tests --outputs test_outputs
+</pre></div>
+</div>
+<p>This will copy over the generated outputs for the newly added tests and show you a report of the files that it added. If run correctly, the report should <em>only</em> refer to model files (<code class="docutils literal notranslate"><span class="pre">*.model</span></code>/<code class="docutils literal notranslate"><span class="pre">*.ols</span></code>) and the files affected by the functionality you implemented. If you run <code class="docutils literal notranslate"><span class="pre">nosetests</span></code> again, your newly added tests should now pass.</p>
+<p>At this point, you should inspect all of the new test files added by the above command using to make sure that the outputs are as expected. You can find these files under <code class="docutils literal notranslate"><span class="pre">tests/data/experiments/&lt;test&gt;/output</span></code> where <code class="docutils literal notranslate"><span class="pre">&lt;test&gt;</span></code> refers to the test(s) that you added. Once you are satisified that the outputs are as expected, you can commit all the them.</p>
+</div>
+<div class="section" id="advanced-tips-and-tricks">
+<h2>Advanced tips and tricks<a class="headerlink" href="#advanced-tips-and-tricks" title="Permalink to this headline">¶</a></h2>
+<p>Here are some advanced tips and tricks when working with RSMTool tests.</p>
+<ol class="arabic simple">
+<li>To run a specific test function in a specific test file, simply use <code class="docutils literal notranslate"><span class="pre">nosetests</span> <span class="pre">--nologcapture</span> <span class="pre">tests/test_X.py:Y</span></code> where <code class="docutils literal notranslate"><span class="pre">test_X.py</span></code> is the name of the test file, and <code class="docutils literal notranslate"><span class="pre">Y</span></code> is the test functions. Note that this will not work for parameterized tests. If you want to run a specific parameterized test, you can comment out all of the other <code class="docutils literal notranslate"><span class="pre">param()</span></code> calls and run the <code class="docutils literal notranslate"><span class="pre">test_run_experiment_parameterized()</span></code> function as above.</li>
+<li>If you make any changes to the code that can change the output that the tests are expected to produce, you <em>must</em> re-run all of the tests and then update the <em>expected</em> test outputs using the <code class="docutils literal notranslate"><span class="pre">update_files.py</span></code> command as shown <a class="reference internal" href="#update-files"><span class="std std-ref">above</span></a>.</li>
+<li>In the rare case that you <em>do</em> need to create an entirely new <code class="docutils literal notranslate"><span class="pre">tests/test_experiment_X.py</span></code> file instead of using one of the existing ones, you can choose whether to exclude the tests contained in this file from updating their expected outputs when <code class="docutils literal notranslate"><span class="pre">update_files.py</span></code> is run by setting <code class="docutils literal notranslate"><span class="pre">_AUTO_UPDATE=False</span></code> at the top of the file. This should <em>only</em> be necessary if you are absolutely sure that your tests will never need updating.</li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="release_process.html" class="btn btn-neutral float-right" title="RSMTool Release Process" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="utilities.html" class="btn btn-neutral" title="Utility Scripts" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Educational Testing Service.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'6.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+</body>
+</html>

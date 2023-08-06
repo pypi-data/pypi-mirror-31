@@ -1,0 +1,398 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Writing custom RSMTool sections &mdash; Rater Scoring Modeling Tool 6.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API Documentation" href="api.html" />
+    <link rel="prev" title="Advanced Uses of RSMTool" href="advanced_usage.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Rater Scoring Modeling Tool
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                6.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="who.html">Who is RSMTool for?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pipeline.html">Overview of RSMTool Pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_rsmtool.html">Using RSMTool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced_usage.html">Advanced Uses of RSMTool</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Writing custom RSMTool sections</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#available-variables">Available variables</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#experiment-id">experiment_id</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#description">description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#model-name">model_name</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#context">context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#use-scaled-predictions">use_scaled_predictions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#exclude-zero-scores">exclude_zero_scores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#length-column-rsmtool-only">length_column <em>(rsmtool only)</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#second-human-score-column">second_human_score_column</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#groups-eval">groups_eval</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#min-items">min_items</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#features-used-rsmtool-only">features_used <em>(rsmtool only)</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#df-features-rsmtool-only">df_features <em>(rsmtool only)</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#df-betas-rsmtool-only">df_betas <em>(rsmtool only)</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#df-train-orig-rsmtool-only">df_train_orig <em>(rsmtool only)</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#df-test-orig-rsmtool-only">df_test_orig <em>(rsmtool only)</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#df-train-rsmtool-only">df_train <em>(rsmtool only)</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#df-train-preproc-rsmtool-only">df_train_preproc <em>(rsmtool only)</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#df-test-rsmtool-only">df_test <em>(rsmtool only)</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#df-test-preproc-rsmtool-only">df_test_preproc <em>(rsmtool only)</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#df-train-other-columns-rsmtool-only">df_train_other_columns <em>(rsmtool only)</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#df-test-other-columns">df_test_other_columns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#df-train-responses-with-excluded-flags-rsmtool-only">df_train_responses_with_excluded_flags <em>(rsmtool only)</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#df-test-responses-with-excluded-flags">df_test_responses_with_excluded flags</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#df-train-length-rsmtool-only">df_train_length <em>(rsmtool only)</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#df-test-human-scores">df_test_human_scores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#df-pred-preproc">df_pred_preproc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#df-feature-subset-specs-rsmtool-only">df_feature_subset_specs <em>(rsmtool only)</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#output-dir">output_dir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#figure-dir">figure_dir</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utilities.html">Utility Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing to RSMTool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="release_process.html">RSMTool Release Process</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Rater Scoring Modeling Tool</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Writing custom RSMTool sections</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/custom_notebooks.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="writing-custom-rsmtool-sections">
+<span id="custom-notebooks"></span><h1>Writing custom RSMTool sections<a class="headerlink" href="#writing-custom-rsmtool-sections" title="Permalink to this headline">¶</a></h1>
+<p>RSMTool allows users to include custom Jupyter notebooks in the reports generated by <a class="reference internal" href="usage_rsmtool.html#usage-rsmtool"><span class="std std-ref">rsmtool</span></a>, <a class="reference internal" href="advanced_usage.html#usage-rsmeval"><span class="std std-ref">rsmeval</span></a>, and <a class="reference internal" href="advanced_usage.html#usage-rsmcompare"><span class="std std-ref">rsmcompare</span></a> using the <code class="docutils literal notranslate"><span class="pre">custom_sections</span></code> fields in their configuration files. This can be particularly useful if a researcher wants to include custom analyses specific to their own scoring engine; she can do so while still using the familiar RSMTool pipeline.</p>
+<div class="section" id="available-variables">
+<h2>Available variables<a class="headerlink" href="#available-variables" title="Permalink to this headline">¶</a></h2>
+<p>When writing such notebooks, some or all of the python variables below will be available for use in the notebooks.</p>
+<div class="section" id="experiment-id">
+<h3>experiment_id<a class="headerlink" href="#experiment-id" title="Permalink to this headline">¶</a></h3>
+<p>The experiment ID from the respective configuration file.</p>
+</div>
+<div class="section" id="description">
+<h3>description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h3>
+<p>The description string from the respective configuration file.</p>
+</div>
+<div class="section" id="model-name">
+<h3>model_name<a class="headerlink" href="#model-name" title="Permalink to this headline">¶</a></h3>
+<p>The name of the model from the respective configuration file.</p>
+</div>
+<div class="section" id="context">
+<h3>context<a class="headerlink" href="#context" title="Permalink to this headline">¶</a></h3>
+<p>Two possible values: <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> or <code class="docutils literal notranslate"><span class="pre">rsmeval</span></code> depending on which command-line tool is being used to generated the report (not available in <code class="docutils literal notranslate"><span class="pre">rsmcompare</span></code> notebooks).</p>
+</div>
+<div class="section" id="use-scaled-predictions">
+<h3>use_scaled_predictions<a class="headerlink" href="#use-scaled-predictions" title="Permalink to this headline">¶</a></h3>
+<p>A boolean Python variable containing the value of the setting with the same name from the respective configuration file.</p>
+</div>
+<div class="section" id="exclude-zero-scores">
+<h3>exclude_zero_scores<a class="headerlink" href="#exclude-zero-scores" title="Permalink to this headline">¶</a></h3>
+<p>A boolean Python variable containing the value of the setting with the same name from the respective configuration file.</p>
+</div>
+<div class="section" id="length-column-rsmtool-only">
+<h3>length_column <em>(rsmtool only)</em><a class="headerlink" href="#length-column-rsmtool-only" title="Permalink to this headline">¶</a></h3>
+<p>The name of the column in the training and/or evaluation data containing response length. <code class="docutils literal notranslate"><span class="pre">None</span></code> if not specified in the configuration file.</p>
+</div>
+<div class="section" id="second-human-score-column">
+<h3>second_human_score_column<a class="headerlink" href="#second-human-score-column" title="Permalink to this headline">¶</a></h3>
+<p>The name of the column in the evaluation data containing the second human score. <code class="docutils literal notranslate"><span class="pre">None</span></code> if not specified in the respective configuration file.</p>
+</div>
+<div class="section" id="groups-eval">
+<h3>groups_eval<a class="headerlink" href="#groups-eval" title="Permalink to this headline">¶</a></h3>
+<p>A list containing the names of metadata or subgroup columns as specified in the respective configuration file.</p>
+</div>
+<div class="section" id="min-items">
+<h3>min_items<a class="headerlink" href="#min-items" title="Permalink to this headline">¶</a></h3>
+<p>The minimal number of items expected from each candidate. The value if set to 0 if the user did not specify a minimal number in the respective configuration file.</p>
+</div>
+<div class="section" id="features-used-rsmtool-only">
+<h3>features_used <em>(rsmtool only)</em><a class="headerlink" href="#features-used-rsmtool-only" title="Permalink to this headline">¶</a></h3>
+<p>A list containing the names of all the features that are used for training the model. [<cite>rsmtool</cite> only]</p>
+<p>In addition, several pandas data frames are also available. Many of these contain the same information produced in the intermediate CSV files produced by <a class="reference internal" href="usage_rsmtool.html#intermediate-files-rsmtool"><span class="std std-ref">rsmtool</span></a> or <a class="reference internal" href="advanced_usage.html#intermediate-files-rsmeval"><span class="std std-ref">rsmeval</span></a>. We have made these available to authors of custom notebooks to avoid the need for reading them from disk.</p>
+</div>
+<div class="section" id="df-features-rsmtool-only">
+<h3>df_features <em>(rsmtool only)</em><a class="headerlink" href="#df-features-rsmtool-only" title="Permalink to this headline">¶</a></h3>
+<p>A data frame containing information about the feature columns that were included in the final model training. Same information as in <a class="reference internal" href="usage_rsmtool.html#rsmtool-feature-csv"><span class="std std-ref">feature.csv</span></a>.</p>
+</div>
+<div class="section" id="df-betas-rsmtool-only">
+<h3>df_betas <em>(rsmtool only)</em><a class="headerlink" href="#df-betas-rsmtool-only" title="Permalink to this headline">¶</a></h3>
+<p>Relative and standardized coefficients (<a class="reference internal" href="usage_rsmtool.html#rsmtool-betas-csv"><span class="std std-ref">betas.csv</span></a>)</p>
+</div>
+<div class="section" id="df-train-orig-rsmtool-only">
+<h3>df_train_orig <em>(rsmtool only)</em><a class="headerlink" href="#df-train-orig-rsmtool-only" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="df-test-orig-rsmtool-only">
+<h3>df_test_orig <em>(rsmtool only)</em><a class="headerlink" href="#df-test-orig-rsmtool-only" title="Permalink to this headline">¶</a></h3>
+<p>Data frames containing the original training and testing data as specified in the config file, without any changes.</p>
+</div>
+<div class="section" id="df-train-rsmtool-only">
+<h3>df_train <em>(rsmtool only)</em><a class="headerlink" href="#df-train-rsmtool-only" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="df-train-preproc-rsmtool-only">
+<h3>df_train_preproc <em>(rsmtool only)</em><a class="headerlink" href="#df-train-preproc-rsmtool-only" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="df-test-rsmtool-only">
+<h3>df_test <em>(rsmtool only)</em><a class="headerlink" href="#df-test-rsmtool-only" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="df-test-preproc-rsmtool-only">
+<h3>df_test_preproc <em>(rsmtool only)</em><a class="headerlink" href="#df-test-preproc-rsmtool-only" title="Permalink to this headline">¶</a></h3>
+<p>Data frames containing the <a class="reference internal" href="usage_rsmtool.html#rsmtool-feature-values"><span class="std std-ref">raw and pre-processed feature values</span></a>.</p>
+</div>
+<div class="section" id="df-train-other-columns-rsmtool-only">
+<h3>df_train_other_columns <em>(rsmtool only)</em><a class="headerlink" href="#df-train-other-columns-rsmtool-only" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="df-test-other-columns">
+<h3>df_test_other_columns<a class="headerlink" href="#df-test-other-columns" title="Permalink to this headline">¶</a></h3>
+<p>Data frames containing the <a class="reference internal" href="usage_rsmtool.html#rsmtool-unused-columns"><span class="std std-ref">unused columns</span></a> from the training and evaluation data.</p>
+</div>
+<div class="section" id="df-train-responses-with-excluded-flags-rsmtool-only">
+<h3>df_train_responses_with_excluded_flags <em>(rsmtool only)</em><a class="headerlink" href="#df-train-responses-with-excluded-flags-rsmtool-only" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="df-test-responses-with-excluded-flags">
+<h3>df_test_responses_with_excluded flags<a class="headerlink" href="#df-test-responses-with-excluded-flags" title="Permalink to this headline">¶</a></h3>
+<p>Data frames containing the <a class="reference internal" href="usage_rsmtool.html#rsmtool-flagged-responses"><span class="std std-ref">flagged responses</span></a>.</p>
+</div>
+<div class="section" id="df-train-length-rsmtool-only">
+<h3>df_train_length <em>(rsmtool only)</em><a class="headerlink" href="#df-train-length-rsmtool-only" title="Permalink to this headline">¶</a></h3>
+<p>A data frame containing response lengths  under the <code class="docutils literal notranslate"><span class="pre">length</span></code> column for the training data, along with the response IDs under the <code class="docutils literal notranslate"><span class="pre">spkitemid</span></code> column. These are <em>only</em> available (a) if  <a class="reference internal" href="usage_rsmtool.html#length-column-rsmtool"><span class="std std-ref">length_column</span></a> was specified in the configuration file, and (b) if no values in that column are missing, and (c) if the values in that column are not distributed with a standard deviation &lt;= 0.</p>
+</div>
+<div class="section" id="df-test-human-scores">
+<h3>df_test_human_scores<a class="headerlink" href="#df-test-human-scores" title="Permalink to this headline">¶</a></h3>
+<p>A data frame containing the two human scores for the responses in the evaluation data under the <code class="docutils literal notranslate"><span class="pre">sc1</span></code> and <code class="docutils literal notranslate"><span class="pre">sc2</span></code> columns, along with the response IDs under the <code class="docutils literal notranslate"><span class="pre">spkitemid</span></code> column. This frame is <em>only</em> available if <cite>second_human_score_column</cite> was specified in the config file.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This data frame will contain <code class="docutils literal notranslate"><span class="pre">NaN</span></code> for the responses for which no numeric second human score was available or for which the second score was 0 and exclude_zero_scores was set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+</div>
+</div>
+<div class="section" id="df-pred-preproc">
+<h3>df_pred_preproc<a class="headerlink" href="#df-pred-preproc" title="Permalink to this headline">¶</a></h3>
+<p>A data frame containing the <a class="reference internal" href="usage_rsmtool.html#rsmtool-predictions"><span class="std std-ref">raw and post-processed predictions for the evaluation data</span></a>.</p>
+</div>
+<div class="section" id="df-feature-subset-specs-rsmtool-only">
+<h3>df_feature_subset_specs <em>(rsmtool only)</em><a class="headerlink" href="#df-feature-subset-specs-rsmtool-only" title="Permalink to this headline">¶</a></h3>
+<p>A data frame containing the contents of <a class="reference internal" href="usage_rsmtool.html#subset-column-selection"><span class="std std-ref">feature_subset_file</span></a> if it was specified in configuration file. <code class="docutils literal notranslate"><span class="pre">None</span></code> if not specified.</p>
+<p>Finally, the following variables are also available but you are strong encouraged <em>not</em> to re-read the files under these directories which are already available as data frames.</p>
+</div>
+<div class="section" id="output-dir">
+<h3>output_dir<a class="headerlink" href="#output-dir" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">output</span></code> sub-directory under the experiment output directory that contains all the intermediate CSV files.</p>
+</div>
+<div class="section" id="figure-dir">
+<h3>figure_dir<a class="headerlink" href="#figure-dir" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">figure</span></code> sub-directory under the experiment output directory that contains all of the generated SVG and PNG figures.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>All dataframes apart from <code class="docutils literal notranslate"><span class="pre">df_train_orig</span></code> and  <code class="docutils literal notranslate"><span class="pre">df_test_orig</span></code> contain an <code class="docutils literal notranslate"><span class="pre">spkitemid</span></code> column which contains the unique response IDs.</p>
+<p>All data frames except the <code class="docutils literal notranslate"><span class="pre">df_*_other_columns</span></code> contain an <code class="docutils literal notranslate"><span class="pre">sc1</span></code> column which contains the human score for the responses.</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">df_train_orig</span></code> and <code class="docutils literal notranslate"><span class="pre">df_test_orig</span></code> will contain the response IDs and human scores under columns with the original names, <em>not</em> <code class="docutils literal notranslate"><span class="pre">spkitemid</span></code> and <code class="docutils literal notranslate"><span class="pre">sc1</span></code>.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="api.html" class="btn btn-neutral float-right" title="API Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="advanced_usage.html" class="btn btn-neutral" title="Advanced Uses of RSMTool" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Educational Testing Service.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'6.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+</body>
+</html>

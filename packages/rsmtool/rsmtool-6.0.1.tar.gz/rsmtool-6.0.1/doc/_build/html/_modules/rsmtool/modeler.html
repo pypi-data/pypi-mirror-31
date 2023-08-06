@@ -1,0 +1,1590 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>rsmtool.modeler &mdash; Rater Scoring Modeling Tool 6.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Rater Scoring Modeling Tool
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                6.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../who.html">Who is RSMTool for?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pipeline.html">Overview of RSMTool Pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../usage_rsmtool.html">Using RSMTool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced_usage.html">Advanced Uses of RSMTool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../custom_notebooks.html">Writing custom RSMTool sections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../utilities.html">Utility Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing to RSMTool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release_process.html">RSMTool Release Process</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Rater Scoring Modeling Tool</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>rsmtool.modeler</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for rsmtool.modeler</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Class for dealing with training built-in or SKLL models,</span>
+<span class="sd">as well as making predictions for new data.</span>
+
+<span class="sd">:author: Jeremy Biggs (jbiggs@ets.org)</span>
+<span class="sd">:author: Anastassia Loukina (aloukina@ets.org)</span>
+<span class="sd">:author: Nitin Madnani (nmadnani@ets.org)</span>
+
+<span class="sd">:date: 10/25/2017</span>
+<span class="sd">:organization: ETS</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">pickle</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+
+<span class="kn">from</span> <span class="nn">math</span> <span class="k">import</span> <span class="n">log10</span><span class="p">,</span> <span class="n">sqrt</span>
+<span class="kn">from</span> <span class="nn">os.path</span> <span class="k">import</span> <span class="n">join</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="kn">from</span> <span class="nn">numpy.random</span> <span class="k">import</span> <span class="n">RandomState</span>
+<span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="k">import</span> <span class="n">nnls</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="k">import</span> <span class="n">LassoCV</span>
+<span class="kn">from</span> <span class="nn">skll</span> <span class="k">import</span> <span class="n">FeatureSet</span><span class="p">,</span> <span class="n">Learner</span>
+
+<span class="kn">from</span> <span class="nn">rsmtool.analyzer</span> <span class="k">import</span> <span class="n">Analyzer</span>
+<span class="kn">from</span> <span class="nn">rsmtool.utils</span> <span class="k">import</span> <span class="n">compute_expected_scores_from_model</span><span class="p">,</span> <span class="n">is_skll_model</span>
+<span class="kn">from</span> <span class="nn">rsmtool.preprocessor</span> <span class="k">import</span> <span class="n">FeaturePreprocessor</span>
+
+<span class="kn">from</span> <span class="nn">rsmtool.configuration_parser</span> <span class="k">import</span> <span class="n">Configuration</span>
+<span class="kn">from</span> <span class="nn">rsmtool.container</span> <span class="k">import</span> <span class="n">DataContainer</span>
+<span class="kn">from</span> <span class="nn">rsmtool.writer</span> <span class="k">import</span> <span class="n">DataWriter</span>
+
+<span class="k">with</span> <span class="n">warnings</span><span class="o">.</span><span class="n">catch_warnings</span><span class="p">():</span>
+    <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="ne">FutureWarning</span><span class="p">)</span>
+    <span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+
+
+<div class="viewcode-block" id="Modeler"><a class="viewcode-back" href="../../api.html#rsmtool.modeler.Modeler">[docs]</a><span class="k">class</span> <span class="nc">Modeler</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A class for training and predicting with either</span>
+<span class="sd">    built-in or SKLL models. Also provides helper functions</span>
+<span class="sd">    for predicting train and test datasets.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">learner</span> <span class="o">=</span> <span class="kc">None</span>
+
+<div class="viewcode-block" id="Modeler.load_from_file"><a class="viewcode-back" href="../../api.html#rsmtool.modeler.Modeler.load_from_file">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">load_from_file</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">model_path</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Load a Model object from file.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        model_path : str</span>
+<span class="sd">            The path to a model</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        model : Modeler</span>
+<span class="sd">            A Modeler instance</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        ValuError</span>
+<span class="sd">            If the `model_path` does not end with &#39;.model&#39;</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">model_path</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.model&#39;</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;The file `</span><span class="si">{}</span><span class="s1">` does not end with the &#39;</span>
+                             <span class="s1">&#39;proper extension. Please make sure that &#39;</span>
+                             <span class="s1">&#39;it is a `.model` file.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">model_path</span><span class="p">))</span>
+
+        <span class="c1"># Create SKLL learner from file</span>
+        <span class="n">learner</span> <span class="o">=</span> <span class="n">Learner</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="n">model_path</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">load_from_learner</span><span class="p">(</span><span class="n">learner</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Modeler.load_from_learner"><a class="viewcode-back" href="../../api.html#rsmtool.modeler.Modeler.load_from_learner">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">load_from_learner</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">learner</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Load a Modeler object from file.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        learner : SKLL.Learner</span>
+<span class="sd">            A SKLL Learner object</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        modeler : Modeler</span>
+<span class="sd">            A Modeler instance</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        TypeError</span>
+<span class="sd">            If `learner` is not SKLL.Learner instance.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">learner</span><span class="p">,</span> <span class="n">Learner</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;The `learner` argument must be a &#39;</span>
+                            <span class="s1">&#39;` SKLL.Learner` instance, not `</span><span class="si">{}</span><span class="s1">`.&#39;</span>
+                            <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">learner</span><span class="p">)))</span>
+
+        <span class="c1"># Create Modeler instance</span>
+        <span class="n">modeler</span> <span class="o">=</span> <span class="n">Modeler</span><span class="p">()</span>
+        <span class="n">modeler</span><span class="o">.</span><span class="n">learner</span> <span class="o">=</span> <span class="n">learner</span>
+        <span class="k">return</span> <span class="n">modeler</span></div>
+
+<div class="viewcode-block" id="Modeler.model_fit_to_dataframe"><a class="viewcode-back" href="../../api.html#rsmtool.modeler.Modeler.model_fit_to_dataframe">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">model_fit_to_dataframe</span><span class="p">(</span><span class="n">fit</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Take an object containing a statsmodels OLS model fit and extact</span>
+<span class="sd">        the main model fit metrics into a data frame.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        fit : a statsmodels fit object</span>
+<span class="sd">            Model fit object obtained from a linear model trained using</span>
+<span class="sd">            `statsmodels.OLS`.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        df_fit : pandas DataFrame</span>
+<span class="sd">            Data frame with the main model fit metrics.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">df_fit</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;N responses&quot;</span><span class="p">:</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">fit</span><span class="o">.</span><span class="n">nobs</span><span class="p">)]})</span>
+        <span class="n">df_fit</span><span class="p">[</span><span class="s1">&#39;N features&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">fit</span><span class="o">.</span><span class="n">df_model</span><span class="p">)</span>
+        <span class="n">df_fit</span><span class="p">[</span><span class="s1">&#39;R2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">fit</span><span class="o">.</span><span class="n">rsquared</span>
+        <span class="n">df_fit</span><span class="p">[</span><span class="s1">&#39;R2_adjusted&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">fit</span><span class="o">.</span><span class="n">rsquared_adj</span>
+        <span class="k">return</span> <span class="n">df_fit</span></div>
+
+<div class="viewcode-block" id="Modeler.ols_coefficients_to_dataframe"><a class="viewcode-back" href="../../api.html#rsmtool.modeler.Modeler.ols_coefficients_to_dataframe">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">ols_coefficients_to_dataframe</span><span class="p">(</span><span class="n">coefs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Take a series containing OLS coefficients and convert it</span>
+<span class="sd">        to a data frame.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        coefs : pandas Series</span>
+<span class="sd">            Series with feature names in the index and the coefficient</span>
+<span class="sd">            values as the data, obtained from a linear model trained</span>
+<span class="sd">            using `statsmodels.OLS`.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        df_coef : pandas DataFrame</span>
+<span class="sd">            Data frame with two columns, the first being the feature name</span>
+<span class="sd">            and the second being the coefficient value.</span>
+
+<span class="sd">        Note</span>
+<span class="sd">        ----</span>
+<span class="sd">        The first row in the output data frame is always for the intercept</span>
+<span class="sd">        and the rest are sorted by feature name.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># first create a sorted data frame for all the non-intercept features</span>
+        <span class="n">non_intercept_columns</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">coefs</span><span class="o">.</span><span class="n">index</span> <span class="k">if</span> <span class="n">c</span> <span class="o">!=</span> <span class="s1">&#39;const&#39;</span><span class="p">]</span>
+        <span class="n">df_non_intercept</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">coefs</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">non_intercept_columns</span><span class="p">),</span>
+                                        <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;coefficient&#39;</span><span class="p">])</span>
+        <span class="n">df_non_intercept</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;feature&#39;</span>
+        <span class="n">df_non_intercept</span> <span class="o">=</span> <span class="n">df_non_intercept</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
+        <span class="n">df_non_intercept</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="c1"># now create a data frame that just has the intercept</span>
+        <span class="n">df_intercept</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([{</span><span class="s1">&#39;feature&#39;</span><span class="p">:</span> <span class="s1">&#39;Intercept&#39;</span><span class="p">,</span>
+                                      <span class="s1">&#39;coefficient&#39;</span><span class="p">:</span> <span class="n">coefs</span><span class="p">[</span><span class="s1">&#39;const&#39;</span><span class="p">]}])</span>
+
+        <span class="c1"># append the non-intercept frame to the intercept one</span>
+        <span class="n">df_coef</span> <span class="o">=</span> <span class="n">df_intercept</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df_non_intercept</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="c1"># we always want to have the feature column first</span>
+        <span class="n">df_coef</span> <span class="o">=</span> <span class="n">df_coef</span><span class="p">[[</span><span class="s1">&#39;feature&#39;</span><span class="p">,</span> <span class="s1">&#39;coefficient&#39;</span><span class="p">]]</span>
+
+        <span class="k">return</span> <span class="n">df_coef</span></div>
+
+<div class="viewcode-block" id="Modeler.skll_learner_params_to_dataframe"><a class="viewcode-back" href="../../api.html#rsmtool.modeler.Modeler.skll_learner_params_to_dataframe">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">skll_learner_params_to_dataframe</span><span class="p">(</span><span class="n">learner</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Take the given SKLL learner object and return a data</span>
+<span class="sd">        frame containing its parameters.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        learner : SKLL.Learner</span>
+<span class="sd">            A SKLL learner object</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        df_coef : pandas DataFrame</span>
+<span class="sd">            a data frame containing the model parameters</span>
+<span class="sd">            from the given SKLL learner object.</span>
+
+<span class="sd">        Note</span>
+<span class="sd">        ----</span>
+<span class="sd">        1. We use underlying `sklearn` model object to get at the</span>
+<span class="sd">        coefficients and the intercept because the `model_params` attribute</span>
+<span class="sd">        of the SKLL model ignores zero coefficients, which we do not want.</span>
+<span class="sd">        2. The first row in the output data frame is always for the intercept</span>
+<span class="sd">        and the rest are sorted by feature name.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># get the intercept, coefficients, and feature names</span>
+        <span class="n">intercept</span> <span class="o">=</span> <span class="n">learner</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">intercept_</span>
+        <span class="n">coefficients</span> <span class="o">=</span> <span class="n">learner</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">coef_</span>
+        <span class="n">feature_names</span> <span class="o">=</span> <span class="n">learner</span><span class="o">.</span><span class="n">feat_vectorizer</span><span class="o">.</span><span class="n">get_feature_names</span><span class="p">()</span>
+
+        <span class="c1"># first create a sorted data frame for all the non-intercept features</span>
+        <span class="n">df_non_intercept</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;feature&#39;</span><span class="p">:</span> <span class="n">feature_names</span><span class="p">,</span>
+                                         <span class="s1">&#39;coefficient&#39;</span><span class="p">:</span> <span class="n">coefficients</span><span class="p">})</span>
+        <span class="n">df_non_intercept</span> <span class="o">=</span> <span class="n">df_non_intercept</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;feature&#39;</span><span class="p">])</span>
+
+        <span class="c1"># now create a data frame that just has the intercept</span>
+        <span class="n">df_intercept</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([{</span><span class="s1">&#39;feature&#39;</span><span class="p">:</span> <span class="s1">&#39;Intercept&#39;</span><span class="p">,</span>
+                                      <span class="s1">&#39;coefficient&#39;</span><span class="p">:</span> <span class="n">intercept</span><span class="p">}])</span>
+
+        <span class="c1"># append the non-intercept frame to the intercept one</span>
+        <span class="n">df_coef</span> <span class="o">=</span> <span class="n">df_intercept</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df_non_intercept</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="c1"># we always want to have the feature column first</span>
+        <span class="n">df_coef</span> <span class="o">=</span> <span class="n">df_coef</span><span class="p">[[</span><span class="s1">&#39;feature&#39;</span><span class="p">,</span> <span class="s1">&#39;coefficient&#39;</span><span class="p">]]</span>
+
+        <span class="k">return</span> <span class="n">df_coef</span></div>
+
+<div class="viewcode-block" id="Modeler.create_fake_skll_learner"><a class="viewcode-back" href="../../api.html#rsmtool.modeler.Modeler.create_fake_skll_learner">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">create_fake_skll_learner</span><span class="p">(</span><span class="n">df_coefficients</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Create fake SKLL linear regression learner object</span>
+<span class="sd">        using the coefficients in the given data frame.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        df_coefficients : pandas DataFrame</span>
+<span class="sd">            Data frame containing the linear coefficients</span>
+<span class="sd">            we want to create the fake SKLL model with.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        learner: skll Learner object</span>
+<span class="sd">            SKLL LinearRegression Learner object containing</span>
+<span class="sd">            with the specified coefficients.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># initialize a random number generator</span>
+        <span class="n">randgen</span> <span class="o">=</span> <span class="n">RandomState</span><span class="p">(</span><span class="mi">1234567890</span><span class="p">)</span>
+
+        <span class="c1"># iterate over the coefficients</span>
+        <span class="n">coefdict</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">feature</span><span class="p">,</span> <span class="n">coefficient</span> <span class="ow">in</span> <span class="n">df_coefficients</span><span class="o">.</span><span class="n">itertuples</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">feature</span> <span class="o">==</span> <span class="s1">&#39;Intercept&#39;</span><span class="p">:</span>
+                <span class="n">intercept</span> <span class="o">=</span> <span class="n">coefficient</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="c1"># exclude NA coefficients</span>
+                <span class="k">if</span> <span class="n">coefficient</span> <span class="o">==</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">:</span>
+                    <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;No coefficient was estimated for &quot;</span>
+                                    <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">. This is likely due to exact &quot;</span>
+                                    <span class="s2">&quot;collinearity in the model. This &quot;</span>
+                                    <span class="s2">&quot;feature will not be used for model &quot;</span>
+                                    <span class="s2">&quot;building&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">feature</span><span class="p">))</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">coefdict</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span> <span class="o">=</span> <span class="n">coefficient</span>
+
+        <span class="n">learner</span> <span class="o">=</span> <span class="n">Learner</span><span class="p">(</span><span class="s1">&#39;LinearRegression&#39;</span><span class="p">)</span>
+        <span class="n">num_features</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">coefdict</span><span class="p">)</span>  <span class="c1"># excluding the intercept</span>
+        <span class="n">fake_feature_values</span> <span class="o">=</span> <span class="n">randgen</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">num_features</span><span class="p">)</span>
+        <span class="n">fake_features</span> <span class="o">=</span> <span class="p">[</span><span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">coefdict</span><span class="p">,</span> <span class="n">fake_feature_values</span><span class="p">))]</span>
+        <span class="n">fake_fs</span> <span class="o">=</span> <span class="n">FeatureSet</span><span class="p">(</span><span class="s1">&#39;fake&#39;</span><span class="p">,</span> <span class="n">ids</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">],</span> <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="mf">1.0</span><span class="p">],</span> <span class="n">features</span><span class="o">=</span><span class="n">fake_features</span><span class="p">)</span>
+        <span class="n">learner</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">fake_fs</span><span class="p">,</span> <span class="n">grid_search</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+        <span class="c1"># now create its parameters from the coefficients from the built-in model</span>
+        <span class="n">learner</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">coef_</span> <span class="o">=</span> <span class="n">learner</span><span class="o">.</span><span class="n">feat_vectorizer</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">coefdict</span><span class="p">)</span><span class="o">.</span><span class="n">toarray</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">learner</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">intercept_</span> <span class="o">=</span> <span class="n">intercept</span>
+        <span class="k">return</span> <span class="n">learner</span></div>
+
+<div class="viewcode-block" id="Modeler.train_linear_regression"><a class="viewcode-back" href="../../api.html#rsmtool.modeler.Modeler.train_linear_regression">[docs]</a>    <span class="k">def</span> <span class="nf">train_linear_regression</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df_train</span><span class="p">,</span> <span class="n">feature_columns</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Train `LinearRegression` (formerly empWt) -</span>
+<span class="sd">        A simple linear regression model.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        df_train : pd.DataFrame</span>
+<span class="sd">            Data frame containing the features on which</span>
+<span class="sd">            to train the model.</span>
+<span class="sd">        feature_columns : list</span>
+<span class="sd">            A list of feature columns to use in training the model.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        learner : skll.Learner</span>
+<span class="sd">            The SKLL learner object</span>
+<span class="sd">        fit : statsmodels.RegressionResults</span>
+<span class="sd">            A statsmodels regression results object.</span>
+<span class="sd">        df_coef : pd.DataFrame</span>
+<span class="sd">            The model coefficients in a data_frame</span>
+<span class="sd">        used_features : list</span>
+<span class="sd">            A list of features used in the final model.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># get the feature columns</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="n">df_train</span><span class="p">[</span><span class="n">feature_columns</span><span class="p">]</span>
+
+        <span class="c1"># add the intercept</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+        <span class="c1"># fit the model</span>
+        <span class="n">fit</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;sc1&#39;</span><span class="p">],</span> <span class="n">X</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+        <span class="n">df_coef</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ols_coefficients_to_dataframe</span><span class="p">(</span><span class="n">fit</span><span class="o">.</span><span class="n">params</span><span class="p">)</span>
+        <span class="n">learner</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_fake_skll_learner</span><span class="p">(</span><span class="n">df_coef</span><span class="p">)</span>
+
+        <span class="c1"># we used all the features</span>
+        <span class="n">used_features</span> <span class="o">=</span> <span class="n">feature_columns</span>
+
+        <span class="k">return</span> <span class="n">learner</span><span class="p">,</span> <span class="n">fit</span><span class="p">,</span> <span class="n">df_coef</span><span class="p">,</span> <span class="n">used_features</span></div>
+
+<div class="viewcode-block" id="Modeler.train_equal_weights_lr"><a class="viewcode-back" href="../../api.html#rsmtool.modeler.Modeler.train_equal_weights_lr">[docs]</a>    <span class="k">def</span> <span class="nf">train_equal_weights_lr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df_train</span><span class="p">,</span> <span class="n">feature_columns</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Train `EqualWeightsLR` (formerly eqWt) -</span>
+<span class="sd">        All features get equal weight.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        df_train : pd.DataFrame</span>
+<span class="sd">            Data frame containing the features on which</span>
+<span class="sd">            to train the model.</span>
+<span class="sd">        feature_columns : list</span>
+<span class="sd">            A list of feature columns to use in training the model.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        learner : skll.Learner</span>
+<span class="sd">            The SKLL learner object</span>
+<span class="sd">        fit : statsmodels.RegressionResults</span>
+<span class="sd">            A statsmodels regression results object.</span>
+<span class="sd">        df_coef : pd.DataFrame</span>
+<span class="sd">            The model coefficients in a data_frame</span>
+<span class="sd">        used_features : list</span>
+<span class="sd">            A list of features used in the final model.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># we first compute a single feature that is simply the sum of all features</span>
+        <span class="n">df_train_eqwt</span> <span class="o">=</span> <span class="n">df_train</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="n">df_train_eqwt</span><span class="p">[</span><span class="s1">&#39;sumfeature&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_train_eqwt</span><span class="p">[</span><span class="n">feature_columns</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">,</span>
+                                                                           <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="c1"># train a plain Linear Regression model</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="n">df_train_eqwt</span><span class="p">[</span><span class="s1">&#39;sumfeature&#39;</span><span class="p">]</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+        <span class="n">fit</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">df_train_eqwt</span><span class="p">[</span><span class="s1">&#39;sc1&#39;</span><span class="p">],</span> <span class="n">X</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+        <span class="c1"># get the coefficient for the summed feature and the intercept</span>
+        <span class="n">coef</span> <span class="o">=</span> <span class="n">fit</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">&#39;sumfeature&#39;</span><span class="p">]</span>
+        <span class="n">const</span> <span class="o">=</span> <span class="n">fit</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">&#39;const&#39;</span><span class="p">]</span>
+
+        <span class="c1"># now we need to assign this coefficient to all of the original</span>
+        <span class="c1"># features and create a fake SKLL learner with these weights</span>
+        <span class="n">original_features</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">df_train_eqwt</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">c</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;sc1&#39;</span><span class="p">,</span>
+                                                                           <span class="s1">&#39;sumfeature&#39;</span><span class="p">,</span>
+                                                                           <span class="s1">&#39;spkitemid&#39;</span><span class="p">]]</span>
+        <span class="n">coefs</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="nb">dict</span><span class="p">([(</span><span class="n">origf</span><span class="p">,</span> <span class="n">coef</span><span class="p">)</span>
+                                <span class="k">for</span> <span class="n">origf</span> <span class="ow">in</span> <span class="n">original_features</span><span class="p">]</span> <span class="o">+</span> <span class="p">[(</span><span class="s1">&#39;const&#39;</span><span class="p">,</span> <span class="n">const</span><span class="p">)]))</span>
+        <span class="n">df_coef</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ols_coefficients_to_dataframe</span><span class="p">(</span><span class="n">coefs</span><span class="p">)</span>
+
+        <span class="c1"># create fake SKLL learner with these coefficients</span>
+        <span class="n">learner</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_fake_skll_learner</span><span class="p">(</span><span class="n">df_coef</span><span class="p">)</span>
+
+        <span class="c1"># we used all the features</span>
+        <span class="n">used_features</span> <span class="o">=</span> <span class="n">feature_columns</span>
+
+        <span class="k">return</span> <span class="n">learner</span><span class="p">,</span> <span class="n">fit</span><span class="p">,</span> <span class="n">df_coef</span><span class="p">,</span> <span class="n">used_features</span></div>
+
+<div class="viewcode-block" id="Modeler.train_rebalanced_lr"><a class="viewcode-back" href="../../api.html#rsmtool.modeler.Modeler.train_rebalanced_lr">[docs]</a>    <span class="k">def</span> <span class="nf">train_rebalanced_lr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df_train</span><span class="p">,</span> <span class="n">feature_columns</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Train `RebalancedLR` (formerly empWtBalanced) -</span>
+<span class="sd">        Balanced empirical weights by changing betas</span>
+<span class="sd">        [adapted from http://bit.ly/UTP7gS]</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        df_train : pd.DataFrame</span>
+<span class="sd">            Data frame containing the features on which</span>
+<span class="sd">            to train the model.</span>
+<span class="sd">        feature_columns : list</span>
+<span class="sd">            A list of feature columns to use in training the model.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        learner : skll.Learner</span>
+<span class="sd">            The SKLL learner object</span>
+<span class="sd">        fit : statsmodels.RegressionResults</span>
+<span class="sd">            A statsmodels regression results object.</span>
+<span class="sd">        df_coef : pd.DataFrame</span>
+<span class="sd">            The model coefficients in a data_frame</span>
+<span class="sd">        used_features : list</span>
+<span class="sd">            A list of features used in the final model.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># train a plain Linear Regression model</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="n">df_train</span><span class="p">[</span><span class="n">feature_columns</span><span class="p">]</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+        <span class="n">fit</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;sc1&#39;</span><span class="p">],</span> <span class="n">X</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+        <span class="c1"># convert the model parameters into a data frame</span>
+        <span class="n">df_params</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ols_coefficients_to_dataframe</span><span class="p">(</span><span class="n">fit</span><span class="o">.</span><span class="n">params</span><span class="p">)</span>
+        <span class="n">df_params</span> <span class="o">=</span> <span class="n">df_params</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;feature&#39;</span><span class="p">)</span>
+
+        <span class="c1"># compute the betas for the non-intercept coefficients</span>
+        <span class="n">df_weights</span> <span class="o">=</span> <span class="n">df_params</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">feature_columns</span><span class="p">]</span>
+        <span class="n">df_betas</span> <span class="o">=</span> <span class="n">df_weights</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+        <span class="n">df_train_std</span> <span class="o">=</span> <span class="n">df_train</span><span class="p">[</span><span class="n">feature_columns</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+        <span class="n">df_betas</span><span class="p">[</span><span class="s1">&#39;coefficient&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df_weights</span><span class="p">[</span><span class="s1">&#39;coefficient&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">df_train_std</span><span class="p">,</span>
+                                                                      <span class="n">axis</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">)</span> <span class="o">/</span>
+                                   <span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;sc1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">())</span>
+
+        <span class="c1"># replace each negative beta with delta and adjust</span>
+        <span class="c1"># all the positive betas to account for this</span>
+        <span class="n">RT</span> <span class="o">=</span> <span class="mf">0.05</span>
+        <span class="n">df_positive_betas</span> <span class="o">=</span> <span class="n">df_betas</span><span class="p">[</span><span class="n">df_betas</span><span class="p">[</span><span class="s1">&#39;coefficient&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span>
+        <span class="n">df_negative_betas</span> <span class="o">=</span> <span class="n">df_betas</span><span class="p">[</span><span class="n">df_betas</span><span class="p">[</span><span class="s1">&#39;coefficient&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">]</span>
+        <span class="n">delta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">df_positive_betas</span><span class="p">[</span><span class="s1">&#39;coefficient&#39;</span><span class="p">])</span> <span class="o">*</span> <span class="n">RT</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_negative_betas</span><span class="p">)</span>
+        <span class="n">df_betas</span><span class="p">[</span><span class="s1">&#39;coefficient&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_betas</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;coefficient&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">RT</span><span class="p">)</span>
+                                                 <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;coefficient&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">delta</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="c1"># rescale the adjusted betas to get the new coefficients</span>
+        <span class="n">df_coef</span> <span class="o">=</span> <span class="n">df_betas</span><span class="p">[</span><span class="s1">&#39;coefficient&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;sc1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+        <span class="n">df_coef</span> <span class="o">=</span> <span class="n">df_coef</span><span class="o">.</span><span class="n">divide</span><span class="p">(</span><span class="n">df_train</span><span class="p">[</span><span class="n">feature_columns</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span> <span class="n">axis</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">)</span>
+
+        <span class="c1"># add the intercept back to the new coefficients</span>
+        <span class="n">df_coef</span><span class="p">[</span><span class="s1">&#39;Intercept&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_params</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;Intercept&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">coefficient</span>
+        <span class="n">df_coef</span> <span class="o">=</span> <span class="n">df_coef</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+        <span class="n">df_coef</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;feature&#39;</span><span class="p">,</span> <span class="s1">&#39;coefficient&#39;</span><span class="p">]</span>
+
+        <span class="c1"># create fake SKLL learner with these coefficients</span>
+        <span class="n">learner</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_fake_skll_learner</span><span class="p">(</span><span class="n">df_coef</span><span class="p">)</span>
+
+        <span class="c1"># we used all the features</span>
+        <span class="n">used_features</span> <span class="o">=</span> <span class="n">feature_columns</span>
+
+        <span class="k">return</span> <span class="n">learner</span><span class="p">,</span> <span class="n">fit</span><span class="p">,</span> <span class="n">df_coef</span><span class="p">,</span> <span class="n">used_features</span></div>
+
+<div class="viewcode-block" id="Modeler.train_lasso_fixed_lambda_then_lr"><a class="viewcode-back" href="../../api.html#rsmtool.modeler.Modeler.train_lasso_fixed_lambda_then_lr">[docs]</a>    <span class="k">def</span> <span class="nf">train_lasso_fixed_lambda_then_lr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df_train</span><span class="p">,</span> <span class="n">feature_columns</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Train `LassoFixedLambdaThenLR` (formerly empWtLasso) -</span>
+<span class="sd">        First do feature selection using lasso regression with</span>
+<span class="sd">        a fixed lambda and then use only those features to train</span>
+<span class="sd">        a second linear regression</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        df_train : pd.DataFrame</span>
+<span class="sd">            Data frame containing the features on which</span>
+<span class="sd">            to train the model.</span>
+<span class="sd">        feature_columns : list</span>
+<span class="sd">            A list of feature columns to use in training the model.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        learner : skll.Learner</span>
+<span class="sd">            The SKLL learner object</span>
+<span class="sd">        fit : statsmodels.RegressionResults</span>
+<span class="sd">            A statsmodels regression results object.</span>
+<span class="sd">        df_coef : pd.DataFrame</span>
+<span class="sd">            The model coefficients in a data_frame</span>
+<span class="sd">        used_features : list</span>
+<span class="sd">            A list of features used in the final model.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># train a Lasso Regression model with this featureset with a preset lambda</span>
+        <span class="n">p_lambda</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df_train</span><span class="p">)</span> <span class="o">*</span> <span class="n">log10</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">feature_columns</span><span class="p">)))</span>
+
+        <span class="c1"># create a SKLL FeatureSet instance from the given data frame</span>
+        <span class="n">fs_train</span> <span class="o">=</span> <span class="n">FeatureSet</span><span class="o">.</span><span class="n">from_data_frame</span><span class="p">(</span><span class="n">df_train</span><span class="p">[</span><span class="n">feature_columns</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;sc1&#39;</span><span class="p">]],</span>
+                                              <span class="s1">&#39;train&#39;</span><span class="p">,</span>
+                                              <span class="n">labels_column</span><span class="o">=</span><span class="s1">&#39;sc1&#39;</span><span class="p">)</span>
+
+        <span class="c1"># note that &#39;alpha&#39; in sklearn is different from this lambda</span>
+        <span class="c1"># so we need to normalize looking at the sklearn objective equation</span>
+        <span class="n">p_alpha</span> <span class="o">=</span> <span class="n">p_lambda</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_train</span><span class="p">)</span>
+        <span class="n">l_lasso</span> <span class="o">=</span> <span class="n">Learner</span><span class="p">(</span><span class="s1">&#39;Lasso&#39;</span><span class="p">,</span> <span class="n">model_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;alpha&#39;</span><span class="p">:</span> <span class="n">p_alpha</span><span class="p">,</span> <span class="s1">&#39;positive&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">})</span>
+        <span class="n">l_lasso</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">fs_train</span><span class="p">,</span> <span class="n">grid_search</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+        <span class="c1"># get the feature names that have the non-zero coefficients</span>
+        <span class="n">non_zero_features</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">l_lasso</span><span class="o">.</span><span class="n">model_params</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+
+        <span class="c1"># now train a new vanilla linear regression with just the non-zero features</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="n">df_train</span><span class="p">[</span><span class="n">non_zero_features</span><span class="p">]</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+        <span class="n">fit</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;sc1&#39;</span><span class="p">],</span> <span class="n">X</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+        <span class="c1"># get the coefficients data frame</span>
+        <span class="n">df_coef</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ols_coefficients_to_dataframe</span><span class="p">(</span><span class="n">fit</span><span class="o">.</span><span class="n">params</span><span class="p">)</span>
+
+        <span class="c1"># create fake SKLL learner with these coefficients</span>
+        <span class="n">learner</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_fake_skll_learner</span><span class="p">(</span><span class="n">df_coef</span><span class="p">)</span>
+
+        <span class="c1"># we used only the non-zero features</span>
+        <span class="n">used_features</span> <span class="o">=</span> <span class="n">non_zero_features</span>
+
+        <span class="k">return</span> <span class="n">learner</span><span class="p">,</span> <span class="n">fit</span><span class="p">,</span> <span class="n">df_coef</span><span class="p">,</span> <span class="n">used_features</span></div>
+
+<div class="viewcode-block" id="Modeler.train_positive_lasso_cv_then_lr"><a class="viewcode-back" href="../../api.html#rsmtool.modeler.Modeler.train_positive_lasso_cv_then_lr">[docs]</a>    <span class="k">def</span> <span class="nf">train_positive_lasso_cv_then_lr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df_train</span><span class="p">,</span> <span class="n">feature_columns</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Train `PositiveLassoCVThenLR` (formerly empWtLassoBest) -</span>
+<span class="sd">        First do feature selection using lasso regression optimized</span>
+<span class="sd">        for log likelihood using cross validation and then use only</span>
+<span class="sd">        those features to train a second linear regression</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        df_train : pd.DataFrame</span>
+<span class="sd">            Data frame containing the features on which</span>
+<span class="sd">            to train the model.</span>
+<span class="sd">        feature_columns : list</span>
+<span class="sd">            A list of feature columns to use in training the model.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        learner : skll.Learner</span>
+<span class="sd">            The SKLL learner object</span>
+<span class="sd">        fit : statsmodels.RegressionResults</span>
+<span class="sd">            A statsmodels regression results object.</span>
+<span class="sd">        df_coef : pd.DataFrame</span>
+<span class="sd">            The model coefficients in a data_frame</span>
+<span class="sd">        used_features : list</span>
+<span class="sd">            A list of features used in the final model.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># train a LassoCV outside of SKLL since it&#39;s not exposed there</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="n">df_train</span><span class="p">[</span><span class="n">feature_columns</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;sc1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+        <span class="n">clf</span> <span class="o">=</span> <span class="n">LassoCV</span><span class="p">(</span><span class="n">cv</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">positive</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">1234567890</span><span class="p">)</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+        <span class="c1"># get the non-zero features from this model</span>
+        <span class="n">non_zero_features</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">feature</span><span class="p">,</span> <span class="n">coefficient</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">feature_columns</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">coef_</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">coefficient</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">non_zero_features</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">feature</span><span class="p">)</span>
+
+        <span class="c1"># now train a new linear regression with just these non-zero features</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="n">df_train</span><span class="p">[</span><span class="n">non_zero_features</span><span class="p">]</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+        <span class="n">fit</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;sc1&#39;</span><span class="p">],</span> <span class="n">X</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+        <span class="c1"># convert the model parameters into a data frame</span>
+        <span class="n">df_coef</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ols_coefficients_to_dataframe</span><span class="p">(</span><span class="n">fit</span><span class="o">.</span><span class="n">params</span><span class="p">)</span>
+
+        <span class="c1"># create fake SKLL learner with these coefficients</span>
+        <span class="n">learner</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_fake_skll_learner</span><span class="p">(</span><span class="n">df_coef</span><span class="p">)</span>
+
+        <span class="c1"># we used only the non-zero features</span>
+        <span class="n">used_features</span> <span class="o">=</span> <span class="n">non_zero_features</span>
+
+        <span class="k">return</span> <span class="n">learner</span><span class="p">,</span> <span class="n">fit</span><span class="p">,</span> <span class="n">df_coef</span><span class="p">,</span> <span class="n">used_features</span></div>
+
+<div class="viewcode-block" id="Modeler.train_non_negative_lr"><a class="viewcode-back" href="../../api.html#rsmtool.modeler.Modeler.train_non_negative_lr">[docs]</a>    <span class="k">def</span> <span class="nf">train_non_negative_lr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df_train</span><span class="p">,</span> <span class="n">feature_columns</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Train `NNLR` (formerly empWtNNLS) -</span>
+<span class="sd">        First do feature selection using non-negative least squares (NNLS)</span>
+<span class="sd">        and then use only its non-zero features to train a regular linear regression.</span>
+<span class="sd">        We do the regular LR at the end since we want an LR object so that we have access</span>
+<span class="sd">        to R^2 and other useful statistics. There should be no difference</span>
+<span class="sd">        between the non-zero coefficients from NNLS and the coefficients</span>
+<span class="sd">        that end up coming out of the subsequent LR.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        df_train : pd.DataFrame</span>
+<span class="sd">            Data frame containing the features on which</span>
+<span class="sd">            to train the model.</span>
+<span class="sd">        feature_columns : list</span>
+<span class="sd">            A list of feature columns to use in training the model.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        learner : skll.Learner</span>
+<span class="sd">            The SKLL learner object</span>
+<span class="sd">        fit : statsmodels.RegressionResults</span>
+<span class="sd">            A statsmodels regression results object.</span>
+<span class="sd">        df_coef : pd.DataFrame</span>
+<span class="sd">            The model coefficients in a data_frame</span>
+<span class="sd">        used_features : list</span>
+<span class="sd">            A list of features used in the final model.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># add an intercept to the features manually</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="n">df_train</span><span class="p">[</span><span class="n">feature_columns</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+        <span class="n">intercepts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">df_train</span><span class="p">),</span> <span class="mi">1</span><span class="p">))</span>
+        <span class="n">X_plus_intercept</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">intercepts</span><span class="p">,</span> <span class="n">X</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;sc1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+
+        <span class="c1"># fit an NNLS model on this data</span>
+        <span class="n">coefs</span><span class="p">,</span> <span class="n">rnorm</span> <span class="o">=</span> <span class="n">nnls</span><span class="p">(</span><span class="n">X_plus_intercept</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+        <span class="c1"># check whether the intercept is set to 0 and if so then we need</span>
+        <span class="c1"># to flip the sign and refit the model to ensure that it is always</span>
+        <span class="c1"># kept in the model</span>
+        <span class="k">if</span> <span class="n">coefs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">intercepts</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">df_train</span><span class="p">),</span> <span class="mi">1</span><span class="p">))</span>
+            <span class="n">X_plus_intercept</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">intercepts</span><span class="p">,</span> <span class="n">X</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+            <span class="n">coefs</span><span class="p">,</span> <span class="n">rnorm</span> <span class="o">=</span> <span class="n">nnls</span><span class="p">(</span><span class="n">X_plus_intercept</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+        <span class="c1"># separate the intercept and feature coefficients</span>
+        <span class="c1"># intercept = coefs[0]</span>
+        <span class="n">coefficients</span> <span class="o">=</span> <span class="n">coefs</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+
+        <span class="c1"># get the non-zero features from this model</span>
+        <span class="n">non_zero_features</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">feature</span><span class="p">,</span> <span class="n">coefficient</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">feature_columns</span><span class="p">,</span> <span class="n">coefficients</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">coefficient</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">non_zero_features</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">feature</span><span class="p">)</span>
+
+        <span class="c1"># now train a new linear regression with just these non-zero features</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="n">df_train</span><span class="p">[</span><span class="n">non_zero_features</span><span class="p">]</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+        <span class="n">fit</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;sc1&#39;</span><span class="p">],</span> <span class="n">X</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+        <span class="c1"># convert this model&#39;s parameters to a data frame</span>
+        <span class="n">df_coef</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ols_coefficients_to_dataframe</span><span class="p">(</span><span class="n">fit</span><span class="o">.</span><span class="n">params</span><span class="p">)</span>
+
+        <span class="c1"># create fake SKLL learner with these coefficients</span>
+        <span class="n">learner</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_fake_skll_learner</span><span class="p">(</span><span class="n">df_coef</span><span class="p">)</span>
+
+        <span class="c1"># we used only the non-zero features</span>
+        <span class="n">used_features</span> <span class="o">=</span> <span class="n">non_zero_features</span>
+
+        <span class="k">return</span> <span class="n">learner</span><span class="p">,</span> <span class="n">fit</span><span class="p">,</span> <span class="n">df_coef</span><span class="p">,</span> <span class="n">used_features</span></div>
+
+<div class="viewcode-block" id="Modeler.train_lasso_fixed_lambda_then_non_negative_lr"><a class="viewcode-back" href="../../api.html#rsmtool.modeler.Modeler.train_lasso_fixed_lambda_then_non_negative_lr">[docs]</a>    <span class="k">def</span> <span class="nf">train_lasso_fixed_lambda_then_non_negative_lr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df_train</span><span class="p">,</span> <span class="n">feature_columns</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Train `LassoFixedLambdaThenNNLR` (formerly empWtDropNegLasso) -</span>
+<span class="sd">        First do feature selection using lasso regression and positive only weights.</span>
+<span class="sd">        Then fit an NNLR (see above) on those features.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        df_train : pd.DataFrame</span>
+<span class="sd">            Data frame containing the features on which</span>
+<span class="sd">            to train the model.</span>
+<span class="sd">        feature_columns : list</span>
+<span class="sd">            A list of feature columns to use in training the model.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        learner : skll.Learner</span>
+<span class="sd">            The SKLL learner object</span>
+<span class="sd">        fit : statsmodels.RegressionResults</span>
+<span class="sd">            A statsmodels regression results object.</span>
+<span class="sd">        df_coef : pd.DataFrame</span>
+<span class="sd">            The model coefficients in a data_frame</span>
+<span class="sd">        used_features : list</span>
+<span class="sd">            A list of features used in the final model.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># train a Lasso Regression model with a preset lambda</span>
+        <span class="n">p_lambda</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df_train</span><span class="p">)</span> <span class="o">*</span> <span class="n">log10</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">feature_columns</span><span class="p">)))</span>
+
+        <span class="c1"># create a SKLL FeatureSet instance from the given data frame</span>
+        <span class="n">fs_train</span> <span class="o">=</span> <span class="n">FeatureSet</span><span class="o">.</span><span class="n">from_data_frame</span><span class="p">(</span><span class="n">df_train</span><span class="p">[</span><span class="n">feature_columns</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;sc1&#39;</span><span class="p">]],</span>
+                                              <span class="s1">&#39;train&#39;</span><span class="p">,</span>
+                                              <span class="n">labels_column</span><span class="o">=</span><span class="s1">&#39;sc1&#39;</span><span class="p">)</span>
+
+        <span class="c1"># note that &#39;alpha&#39; in sklearn is different from this lambda</span>
+        <span class="c1"># so we need to normalize looking at the sklearn objective equation</span>
+        <span class="n">p_alpha</span> <span class="o">=</span> <span class="n">p_lambda</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_train</span><span class="p">)</span>
+        <span class="n">l_lasso</span> <span class="o">=</span> <span class="n">Learner</span><span class="p">(</span><span class="s1">&#39;Lasso&#39;</span><span class="p">,</span> <span class="n">model_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;alpha&#39;</span><span class="p">:</span> <span class="n">p_alpha</span><span class="p">,</span> <span class="s1">&#39;positive&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">})</span>
+        <span class="n">l_lasso</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">fs_train</span><span class="p">,</span> <span class="n">grid_search</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+        <span class="c1"># get the feature names that have the non-zero coefficients</span>
+        <span class="n">non_zero_features</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">l_lasso</span><span class="o">.</span><span class="n">model_params</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+
+        <span class="c1"># now train an NNLS regression using these non-zero features</span>
+        <span class="c1"># first add an intercept to the features manually</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="n">df_train</span><span class="p">[</span><span class="n">feature_columns</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+        <span class="n">intercepts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">df_train</span><span class="p">),</span> <span class="mi">1</span><span class="p">))</span>
+        <span class="n">X_plus_intercept</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">intercepts</span><span class="p">,</span> <span class="n">X</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;sc1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+
+        <span class="c1"># fit an NNLS model on this data</span>
+        <span class="n">coefs</span><span class="p">,</span> <span class="n">rnorm</span> <span class="o">=</span> <span class="n">nnls</span><span class="p">(</span><span class="n">X_plus_intercept</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+        <span class="c1"># check whether the intercept is set to 0 and if so then we need</span>
+        <span class="c1"># to flip the sign and refit the model to ensure that it is always</span>
+        <span class="c1"># kept in the model</span>
+        <span class="k">if</span> <span class="n">coefs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">intercepts</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">df_train</span><span class="p">),</span> <span class="mi">1</span><span class="p">))</span>
+            <span class="n">X_plus_intercept</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">intercepts</span><span class="p">,</span> <span class="n">X</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+            <span class="n">coefs</span><span class="p">,</span> <span class="n">rnorm</span> <span class="o">=</span> <span class="n">nnls</span><span class="p">(</span><span class="n">X_plus_intercept</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+        <span class="c1"># separate the intercept and feature coefficients</span>
+        <span class="c1"># even though we do not use intercept in the code</span>
+        <span class="c1"># we define it here for readability</span>
+        <span class="c1"># intercept = coefs[0]</span>
+        <span class="n">coefficients</span> <span class="o">=</span> <span class="n">coefs</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+
+        <span class="c1"># get the non-zero features from this model</span>
+        <span class="n">non_zero_features</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">feature</span><span class="p">,</span> <span class="n">coefficient</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">feature_columns</span><span class="p">,</span> <span class="n">coefficients</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">coefficient</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">non_zero_features</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">feature</span><span class="p">)</span>
+
+        <span class="c1"># now train a new linear regression with just these non-zero features</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="n">df_train</span><span class="p">[</span><span class="n">non_zero_features</span><span class="p">]</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+        <span class="n">fit</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;sc1&#39;</span><span class="p">],</span> <span class="n">X</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+        <span class="c1"># convert this model&#39;s parameters into a data frame</span>
+        <span class="n">df_coef</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ols_coefficients_to_dataframe</span><span class="p">(</span><span class="n">fit</span><span class="o">.</span><span class="n">params</span><span class="p">)</span>
+
+        <span class="c1"># create fake SKLL learner with these coefficients</span>
+        <span class="n">learner</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_fake_skll_learner</span><span class="p">(</span><span class="n">df_coef</span><span class="p">)</span>
+
+        <span class="c1"># we used only the positive features</span>
+        <span class="n">used_features</span> <span class="o">=</span> <span class="n">non_zero_features</span>
+
+        <span class="k">return</span> <span class="n">learner</span><span class="p">,</span> <span class="n">fit</span><span class="p">,</span> <span class="n">df_coef</span><span class="p">,</span> <span class="n">used_features</span></div>
+
+<div class="viewcode-block" id="Modeler.train_lasso_fixed_lambda"><a class="viewcode-back" href="../../api.html#rsmtool.modeler.Modeler.train_lasso_fixed_lambda">[docs]</a>    <span class="k">def</span> <span class="nf">train_lasso_fixed_lambda</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df_train</span><span class="p">,</span> <span class="n">feature_columns</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Train `LassoFixedLambda` (formerly lassoWtLasso) -</span>
+<span class="sd">        A Lasso model with a fixed lambda</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        df_train : pd.DataFrame</span>
+<span class="sd">            Data frame containing the features on which</span>
+<span class="sd">            to train the model.</span>
+<span class="sd">        feature_columns : list</span>
+<span class="sd">            A list of feature columns to use in training the model.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        learner : skll.Learner</span>
+<span class="sd">            The SKLL learner object</span>
+<span class="sd">        fit : statsmodels.RegressionResults</span>
+<span class="sd">            A statsmodels regression results object or None.</span>
+<span class="sd">        df_coef : pd.DataFrame</span>
+<span class="sd">            The model coefficients in a data_frame</span>
+<span class="sd">        used_features : list</span>
+<span class="sd">            A list of features used in the final model.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># train a Lasso Regression model with a preset lambda</span>
+        <span class="n">p_lambda</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df_train</span><span class="p">)</span> <span class="o">*</span> <span class="n">log10</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">feature_columns</span><span class="p">)))</span>
+
+        <span class="c1"># create a SKLL FeatureSet instance from the given data frame</span>
+        <span class="n">fs_train</span> <span class="o">=</span> <span class="n">FeatureSet</span><span class="o">.</span><span class="n">from_data_frame</span><span class="p">(</span><span class="n">df_train</span><span class="p">[</span><span class="n">feature_columns</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;sc1&#39;</span><span class="p">]],</span>
+                                              <span class="s1">&#39;train&#39;</span><span class="p">,</span>
+                                              <span class="n">labels_column</span><span class="o">=</span><span class="s1">&#39;sc1&#39;</span><span class="p">)</span>
+
+        <span class="c1"># note that &#39;alpha&#39; in sklearn is different from this lambda</span>
+        <span class="c1"># so we need to normalize looking at the sklearn objective equation</span>
+        <span class="n">alpha</span> <span class="o">=</span> <span class="n">p_lambda</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_train</span><span class="p">)</span>
+        <span class="n">learner</span> <span class="o">=</span> <span class="n">Learner</span><span class="p">(</span><span class="s1">&#39;Lasso&#39;</span><span class="p">,</span> <span class="n">model_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;alpha&#39;</span><span class="p">:</span> <span class="n">alpha</span><span class="p">,</span> <span class="s1">&#39;positive&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">})</span>
+        <span class="n">learner</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">fs_train</span><span class="p">,</span> <span class="n">grid_search</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+        <span class="c1"># convert this model&#39;s parameters to a data frame</span>
+        <span class="n">df_coef</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">skll_learner_params_to_dataframe</span><span class="p">(</span><span class="n">learner</span><span class="p">)</span>
+
+        <span class="c1"># there&#39;s no OLS fit object in this case</span>
+        <span class="n">fit</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="c1"># we used all the features</span>
+        <span class="n">used_features</span> <span class="o">=</span> <span class="n">feature_columns</span>
+
+        <span class="k">return</span> <span class="n">learner</span><span class="p">,</span> <span class="n">fit</span><span class="p">,</span> <span class="n">df_coef</span><span class="p">,</span> <span class="n">used_features</span></div>
+
+<div class="viewcode-block" id="Modeler.train_positive_lasso_cv"><a class="viewcode-back" href="../../api.html#rsmtool.modeler.Modeler.train_positive_lasso_cv">[docs]</a>    <span class="k">def</span> <span class="nf">train_positive_lasso_cv</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df_train</span><span class="p">,</span> <span class="n">feature_columns</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Train `PositiveLassoCV` (formerly lassoWtLassoBest) -</span>
+<span class="sd">        Feature selection using lasso regression optimized for log likelihood</span>
+<span class="sd">        using cross validation.</span>
+
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        df_train : pd.DataFrame</span>
+<span class="sd">            Data frame containing the features on which</span>
+<span class="sd">            to train the model.</span>
+<span class="sd">        feature_columns : list</span>
+<span class="sd">            A list of feature columns to use in training the model.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        learner : skll.Learner</span>
+<span class="sd">            The SKLL learner object</span>
+<span class="sd">        fit : statsmodels.RegressionResults</span>
+<span class="sd">            A statsmodels regression results object or None.</span>
+<span class="sd">        df_coef : pd.DataFrame</span>
+<span class="sd">            The model coefficients in a data_frame</span>
+<span class="sd">        used_features : list</span>
+<span class="sd">            A list of features used in the final model.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># train a LassoCV outside of SKLL since it&#39;s not exposed there</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="n">df_train</span><span class="p">[</span><span class="n">feature_columns</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;sc1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+        <span class="n">clf</span> <span class="o">=</span> <span class="n">LassoCV</span><span class="p">(</span><span class="n">cv</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">positive</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">1234567890</span><span class="p">)</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+        <span class="c1"># save the non-zero model coefficients and intercept to a data frame</span>
+        <span class="n">non_zero_features</span><span class="p">,</span> <span class="n">non_zero_feature_values</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">feature</span><span class="p">,</span> <span class="n">coefficient</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">feature_columns</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">coef_</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">coefficient</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">non_zero_features</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">feature</span><span class="p">)</span>
+                <span class="n">non_zero_feature_values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">coefficient</span><span class="p">)</span>
+
+        <span class="c1"># initialize the coefficient data frame with just the intercept</span>
+        <span class="n">df_coef</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([(</span><span class="s1">&#39;Intercept&#39;</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">intercept_</span><span class="p">)])</span>
+        <span class="n">df_coef</span> <span class="o">=</span> <span class="n">df_coef</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">non_zero_features</span><span class="p">,</span>
+                                          <span class="n">non_zero_feature_values</span><span class="p">)),</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">df_coef</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;feature&#39;</span><span class="p">,</span> <span class="s1">&#39;coefficient&#39;</span><span class="p">]</span>
+
+        <span class="c1"># create a fake SKLL learner with these non-zero weights</span>
+        <span class="n">learner</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_fake_skll_learner</span><span class="p">(</span><span class="n">df_coef</span><span class="p">)</span>
+
+        <span class="c1"># there&#39;s no OLS fit object in this case</span>
+        <span class="n">fit</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="c1"># we used only the non-zero features</span>
+        <span class="n">used_features</span> <span class="o">=</span> <span class="n">non_zero_features</span>
+
+        <span class="k">return</span> <span class="n">learner</span><span class="p">,</span> <span class="n">fit</span><span class="p">,</span> <span class="n">df_coef</span><span class="p">,</span> <span class="n">used_features</span></div>
+
+<div class="viewcode-block" id="Modeler.train_score_weighted_lr"><a class="viewcode-back" href="../../api.html#rsmtool.modeler.Modeler.train_score_weighted_lr">[docs]</a>    <span class="k">def</span> <span class="nf">train_score_weighted_lr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df_train</span><span class="p">,</span> <span class="n">feature_columns</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Train `ScoreWeightedLR` -</span>
+<span class="sd">        Linear regression model weighted by score.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        df_train : pd.DataFrame</span>
+<span class="sd">            Data frame containing the features on which</span>
+<span class="sd">            to train the model.</span>
+<span class="sd">        feature_columns : list</span>
+<span class="sd">            A list of feature columns to use in training the model.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        learner : skll.Learner</span>
+<span class="sd">            The SKLL learner object</span>
+<span class="sd">        fit : statsmodels.RegressionResults</span>
+<span class="sd">            A statsmodels regression results object or None.</span>
+<span class="sd">        df_coef : pd.DataFrame</span>
+<span class="sd">            The model coefficients in a data_frame</span>
+<span class="sd">        used_features : list</span>
+<span class="sd">            A list of features used in the final model.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># train weighted least squares regression</span>
+        <span class="c1"># get the feature columns</span>
+
+        <span class="n">X</span> <span class="o">=</span> <span class="n">df_train</span><span class="p">[</span><span class="n">feature_columns</span><span class="p">]</span>
+
+        <span class="c1"># add the intercept</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+        <span class="c1"># define the weights as inverse proportion of total</span>
+        <span class="c1"># number of data points for each score</span>
+        <span class="n">score_level_dict</span> <span class="o">=</span> <span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;sc1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+        <span class="n">expected_proportion</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">score_level_dict</span><span class="p">)</span>
+        <span class="n">score_weights_dict</span> <span class="o">=</span> <span class="p">{</span><span class="n">sc1</span><span class="p">:</span> <span class="n">expected_proportion</span> <span class="o">/</span> <span class="n">count</span>
+                              <span class="k">for</span> <span class="n">sc1</span><span class="p">,</span> <span class="n">count</span> <span class="ow">in</span> <span class="n">score_level_dict</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+        <span class="n">weights</span> <span class="o">=</span> <span class="p">[</span><span class="n">score_weights_dict</span><span class="p">[</span><span class="n">sc1</span><span class="p">]</span> <span class="k">for</span> <span class="n">sc1</span> <span class="ow">in</span> <span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;sc1&#39;</span><span class="p">]]</span>
+
+        <span class="c1"># fit the model</span>
+        <span class="n">fit</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">WLS</span><span class="p">(</span><span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;sc1&#39;</span><span class="p">],</span> <span class="n">X</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="n">weights</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+        <span class="n">df_coef</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ols_coefficients_to_dataframe</span><span class="p">(</span><span class="n">fit</span><span class="o">.</span><span class="n">params</span><span class="p">)</span>
+        <span class="n">learner</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_fake_skll_learner</span><span class="p">(</span><span class="n">df_coef</span><span class="p">)</span>
+
+        <span class="c1"># we used all the features</span>
+        <span class="n">used_features</span> <span class="o">=</span> <span class="n">feature_columns</span>
+
+        <span class="k">return</span> <span class="n">learner</span><span class="p">,</span> <span class="n">fit</span><span class="p">,</span> <span class="n">df_coef</span><span class="p">,</span> <span class="n">used_features</span></div>
+
+<div class="viewcode-block" id="Modeler.train_builtin_model"><a class="viewcode-back" href="../../api.html#rsmtool.modeler.Modeler.train_builtin_model">[docs]</a>    <span class="k">def</span> <span class="nf">train_builtin_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                            <span class="n">model_name</span><span class="p">,</span>
+                            <span class="n">df_train</span><span class="p">,</span>
+                            <span class="n">experiment_id</span><span class="p">,</span>
+                            <span class="n">filedir</span><span class="p">,</span>
+                            <span class="n">figdir</span><span class="p">,</span>
+                            <span class="n">file_format</span><span class="o">=</span><span class="s1">&#39;csv&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Train one of the :ref:`built-in linear regression models &lt;builtin_models&gt;`.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        model_name : str</span>
+<span class="sd">            Name of the built-in model to train.</span>
+<span class="sd">        df_train : pandas DataFrame</span>
+<span class="sd">            Data frame containing the features on which</span>
+<span class="sd">            to train the model. The data frame must contain the ID column named</span>
+<span class="sd">            `spkitemid` and the numeric label column named `sc1`.</span>
+<span class="sd">        experiment_id : str</span>
+<span class="sd">            The experiment ID.</span>
+<span class="sd">        filedir : str</span>
+<span class="sd">            Path to the `output` experiment output directory.</span>
+<span class="sd">        figdir : str</span>
+<span class="sd">            Path to the `figure` experiment output directory.</span>
+<span class="sd">        file_format : {&#39;csv&#39;, &#39;tsv&#39;, &#39;xlsx&#39;}, optional</span>
+<span class="sd">            The format in which to save files.</span>
+<span class="sd">            Defaults to &#39;csv&#39;.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        learner : `Learner` object</span>
+<span class="sd">            SKLL `LinearRegression` `Learner &lt;http://skll.readthedocs.io/en/</span>
+<span class="sd">            latest/api/skll.html#skll.Learner&gt;`_ object containing the</span>
+<span class="sd">            coefficients learned by training the built-in model.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># get the columns that actually contain the feature values</span>
+        <span class="n">feature_columns</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">df_train</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">c</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;spkitemid&#39;</span><span class="p">,</span> <span class="s1">&#39;sc1&#39;</span><span class="p">]]</span>
+
+        <span class="c1"># LinearRegression</span>
+        <span class="k">if</span> <span class="n">model_name</span> <span class="o">==</span> <span class="s1">&#39;LinearRegression&#39;</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">train_linear_regression</span><span class="p">(</span><span class="n">df_train</span><span class="p">,</span> <span class="n">feature_columns</span><span class="p">)</span>
+
+        <span class="c1"># EqualWeightsLR</span>
+        <span class="k">elif</span> <span class="n">model_name</span> <span class="o">==</span> <span class="s1">&#39;EqualWeightsLR&#39;</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">train_equal_weights_lr</span><span class="p">(</span><span class="n">df_train</span><span class="p">,</span> <span class="n">feature_columns</span><span class="p">)</span>
+
+        <span class="c1"># RebalancedLR</span>
+        <span class="k">elif</span> <span class="n">model_name</span> <span class="o">==</span> <span class="s1">&#39;RebalancedLR&#39;</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">train_rebalanced_lr</span><span class="p">(</span><span class="n">df_train</span><span class="p">,</span> <span class="n">feature_columns</span><span class="p">)</span>
+
+        <span class="c1"># LassoFixedLambdaThenLR</span>
+        <span class="k">elif</span> <span class="n">model_name</span> <span class="o">==</span> <span class="s1">&#39;LassoFixedLambdaThenLR&#39;</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">train_lasso_fixed_lambda_then_lr</span><span class="p">(</span><span class="n">df_train</span><span class="p">,</span> <span class="n">feature_columns</span><span class="p">)</span>
+
+        <span class="c1"># PositiveLassoCVThenLR</span>
+        <span class="k">elif</span> <span class="n">model_name</span> <span class="o">==</span> <span class="s1">&#39;PositiveLassoCVThenLR&#39;</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">train_positive_lasso_cv_then_lr</span><span class="p">(</span><span class="n">df_train</span><span class="p">,</span> <span class="n">feature_columns</span><span class="p">)</span>
+
+        <span class="c1"># NNLR</span>
+        <span class="k">elif</span> <span class="n">model_name</span> <span class="o">==</span> <span class="s1">&#39;NNLR&#39;</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">train_non_negative_lr</span><span class="p">(</span><span class="n">df_train</span><span class="p">,</span> <span class="n">feature_columns</span><span class="p">)</span>
+
+        <span class="c1"># LassoFixedLambdaThenNNLR</span>
+        <span class="k">elif</span> <span class="n">model_name</span> <span class="o">==</span> <span class="s1">&#39;LassoFixedLambdaThenNNLR&#39;</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">train_lasso_fixed_lambda_then_non_negative_lr</span><span class="p">(</span><span class="n">df_train</span><span class="p">,</span> <span class="n">feature_columns</span><span class="p">)</span>
+
+        <span class="c1"># LassoFixedLambda</span>
+        <span class="k">elif</span> <span class="n">model_name</span> <span class="o">==</span> <span class="s1">&#39;LassoFixedLambda&#39;</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">train_lasso_fixed_lambda</span><span class="p">(</span><span class="n">df_train</span><span class="p">,</span> <span class="n">feature_columns</span><span class="p">)</span>
+
+        <span class="c1"># PositiveLassoCV</span>
+        <span class="k">elif</span> <span class="n">model_name</span> <span class="o">==</span> <span class="s1">&#39;PositiveLassoCV&#39;</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">train_positive_lasso_cv</span><span class="p">(</span><span class="n">df_train</span><span class="p">,</span> <span class="n">feature_columns</span><span class="p">)</span>
+
+        <span class="c1"># ScoreWeightedLR</span>
+        <span class="k">elif</span> <span class="n">model_name</span> <span class="o">==</span> <span class="s1">&#39;ScoreWeightedLR&#39;</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">train_score_weighted_lr</span><span class="p">(</span><span class="n">df_train</span><span class="p">,</span> <span class="n">feature_columns</span><span class="p">)</span>
+
+        <span class="n">writer</span> <span class="o">=</span> <span class="n">DataWriter</span><span class="p">(</span><span class="n">experiment_id</span><span class="p">)</span>
+        <span class="n">frames</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="c1"># unpack all results</span>
+        <span class="n">learner</span><span class="p">,</span> <span class="n">fit</span><span class="p">,</span> <span class="n">df_coef</span><span class="p">,</span> <span class="n">used_features</span> <span class="o">=</span> <span class="n">result</span>
+
+        <span class="c1"># add raw coefficients to frame list</span>
+        <span class="n">frames</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;coefficients&#39;</span><span class="p">,</span> <span class="s1">&#39;frame&#39;</span><span class="p">:</span> <span class="n">df_coef</span><span class="p">})</span>
+
+        <span class="c1"># compute the standardized and relative coefficients (betas) for the</span>
+        <span class="c1"># non-intercept features and save to a file</span>
+        <span class="n">df_betas</span> <span class="o">=</span> <span class="n">df_coef</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;feature&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">used_features</span><span class="p">]</span>
+        <span class="n">df_betas</span> <span class="o">=</span> <span class="n">df_betas</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">df_train</span><span class="p">[</span><span class="n">used_features</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span>
+                                     <span class="n">axis</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">)</span> <span class="o">/</span> <span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;sc1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+        <span class="n">df_betas</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;standardized&#39;</span><span class="p">]</span>
+        <span class="n">df_betas</span><span class="p">[</span><span class="s1">&#39;relative&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_betas</span> <span class="o">/</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">df_betas</span><span class="p">[</span><span class="s1">&#39;standardized&#39;</span><span class="p">]))</span>
+        <span class="n">df_betas</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="c1"># add betas to frame list</span>
+        <span class="n">frames</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;betas&#39;</span><span class="p">,</span> <span class="s1">&#39;frame&#39;</span><span class="p">:</span> <span class="n">df_betas</span><span class="p">})</span>
+
+        <span class="c1"># save the OLS fit object and its summary to files</span>
+        <span class="k">if</span> <span class="n">fit</span><span class="p">:</span>
+            <span class="n">ols_file</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">filedir</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">.ols&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">experiment_id</span><span class="p">))</span>
+            <span class="n">summary_file</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">filedir</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_ols_summary.txt&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">experiment_id</span><span class="p">))</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">ols_file</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">olsf</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">summary_file</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">summf</span><span class="p">:</span>
+                <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">fit</span><span class="p">,</span> <span class="n">olsf</span><span class="p">)</span>
+                <span class="n">summf</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">fit</span><span class="o">.</span><span class="n">summary</span><span class="p">()))</span>
+
+            <span class="c1"># create a data frame with main model fit metrics and save to the file</span>
+            <span class="n">df_model_fit</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_fit_to_dataframe</span><span class="p">(</span><span class="n">fit</span><span class="p">)</span>
+
+            <span class="c1"># add model_fit to frame list</span>
+            <span class="n">frames</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;model_fit&#39;</span><span class="p">,</span> <span class="s1">&#39;frame&#39;</span><span class="p">:</span> <span class="n">df_model_fit</span><span class="p">})</span>
+
+        <span class="c1"># save the SKLL model to a file</span>
+        <span class="n">model_file</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">filedir</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">.model&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">experiment_id</span><span class="p">))</span>
+        <span class="n">learner</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">model_file</span><span class="p">)</span>
+
+        <span class="n">container</span> <span class="o">=</span> <span class="n">DataContainer</span><span class="p">(</span><span class="n">frames</span><span class="p">)</span>
+        <span class="n">writer</span><span class="o">.</span><span class="n">write_experiment_output</span><span class="p">(</span><span class="n">filedir</span><span class="p">,</span> <span class="n">container</span><span class="p">,</span> <span class="n">file_format</span><span class="o">=</span><span class="n">file_format</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">learner</span> <span class="o">=</span> <span class="n">learner</span>
+
+        <span class="k">return</span> <span class="n">learner</span></div>
+
+<div class="viewcode-block" id="Modeler.train_skll_model"><a class="viewcode-back" href="../../api.html#rsmtool.modeler.Modeler.train_skll_model">[docs]</a>    <span class="k">def</span> <span class="nf">train_skll_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                         <span class="n">model_name</span><span class="p">,</span>
+                         <span class="n">df_train</span><span class="p">,</span>
+                         <span class="n">experiment_id</span><span class="p">,</span>
+                         <span class="n">filedir</span><span class="p">,</span>
+                         <span class="n">figdir</span><span class="p">,</span>
+                         <span class="n">file_format</span><span class="o">=</span><span class="s1">&#39;csv&#39;</span><span class="p">,</span>
+                         <span class="n">custom_objective</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                         <span class="n">predict_expected_scores</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Train a SKLL classification or regression model.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        model_name : str</span>
+<span class="sd">            Name of the SKLL model to train.</span>
+<span class="sd">        df_train : pandas DataFrame</span>
+<span class="sd">            Data frame containing the features on which</span>
+<span class="sd">            to train the model.</span>
+<span class="sd">        experiment_id : str</span>
+<span class="sd">            The experiment ID.</span>
+<span class="sd">        filedir : str</span>
+<span class="sd">            Path to the `output` experiment output directory.</span>
+<span class="sd">        figdir : str</span>
+<span class="sd">            Path to the `figure` experiment output directory.</span>
+<span class="sd">        file_format : {&#39;csv&#39;, &#39;tsv&#39;, &#39;xlsx&#39;}, optional</span>
+<span class="sd">            The format in which to save files. For SKLL models,</span>
+<span class="sd">            this argument does not actually change the format of</span>
+<span class="sd">            the output files at this time, as no betas are computed.</span>
+<span class="sd">            Defaults to &#39;csv&#39;.</span>
+<span class="sd">        custom_objective : str, optional</span>
+<span class="sd">            Name of custom user-specified objective. If not specified</span>
+<span class="sd">            or `None`, `neg_mean_squared_error` is used as the objective.</span>
+<span class="sd">            Defaults to `None`.</span>
+<span class="sd">        predict_expected_scores : bool, optional</span>
+<span class="sd">            Whether we want the trained classifiers to predict expected scores.</span>
+<span class="sd">            Defaults to `False`.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        Tuple containing a SKLL Learner object of the appropriate type</span>
+<span class="sd">        and the chosen tuning objective.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Instantiate the given SKLL learner and set its probability value</span>
+        <span class="c1"># appropriately.</span>
+        <span class="n">learner</span> <span class="o">=</span> <span class="n">Learner</span><span class="p">(</span><span class="n">model_name</span><span class="p">,</span> <span class="n">probability</span><span class="o">=</span><span class="n">predict_expected_scores</span><span class="p">)</span>
+
+        <span class="c1"># get the features, IDs, and labels from the given data frame</span>
+        <span class="n">feature_columns</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">df_train</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">c</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;spkitemid&#39;</span><span class="p">,</span> <span class="s1">&#39;sc1&#39;</span><span class="p">]]</span>
+        <span class="n">features</span> <span class="o">=</span> <span class="n">df_train</span><span class="p">[</span><span class="n">feature_columns</span><span class="p">]</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="n">orient</span><span class="o">=</span><span class="s1">&#39;records&#39;</span><span class="p">)</span>
+        <span class="n">ids</span> <span class="o">=</span> <span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;spkitemid&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+        <span class="n">labels</span> <span class="o">=</span> <span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;sc1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+
+        <span class="c1"># create a FeatureSet and train the model</span>
+        <span class="n">fs</span> <span class="o">=</span> <span class="n">FeatureSet</span><span class="p">(</span><span class="s1">&#39;train&#39;</span><span class="p">,</span> <span class="n">ids</span><span class="o">=</span><span class="n">ids</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span> <span class="n">features</span><span class="o">=</span><span class="n">features</span><span class="p">)</span>
+
+        <span class="c1"># If we are training a SKLL regressor, then we want to use either the</span>
+        <span class="c1"># user-specified objective or `neg_mean_squared_error`. If it&#39;s SKLL</span>
+        <span class="c1"># classifier, then the choice is between the user-specified objective</span>
+        <span class="c1"># and `f1_score_micro`.</span>
+        <span class="k">if</span> <span class="n">learner</span><span class="o">.</span><span class="n">model_type</span><span class="o">.</span><span class="n">_estimator_type</span> <span class="o">==</span> <span class="s1">&#39;regressor&#39;</span><span class="p">:</span>
+            <span class="n">objective</span> <span class="o">=</span> <span class="s1">&#39;neg_mean_squared_error&#39;</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">custom_objective</span> <span class="k">else</span> <span class="n">custom_objective</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">objective</span> <span class="o">=</span> <span class="s1">&#39;f1_score_micro&#39;</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">custom_objective</span> <span class="k">else</span> <span class="n">custom_objective</span>
+
+        <span class="n">learner</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">fs</span><span class="p">,</span> <span class="n">grid_search</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">grid_objective</span><span class="o">=</span><span class="n">objective</span><span class="p">,</span> <span class="n">grid_jobs</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="c1"># TODO: compute betas for linear SKLL models?</span>
+
+        <span class="c1"># save the SKLL model to disk with the given model name prefix</span>
+        <span class="n">model_file</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">filedir</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">.model&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">experiment_id</span><span class="p">))</span>
+        <span class="n">learner</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">model_file</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">learner</span> <span class="o">=</span> <span class="n">learner</span>
+
+        <span class="c1"># return the SKLL learner object and the chosen objective</span>
+        <span class="k">return</span> <span class="n">learner</span><span class="p">,</span> <span class="n">objective</span></div>
+
+<div class="viewcode-block" id="Modeler.train"><a class="viewcode-back" href="../../api.html#rsmtool.modeler.Modeler.train">[docs]</a>    <span class="k">def</span> <span class="nf">train</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+              <span class="n">configuration</span><span class="p">,</span>
+              <span class="n">data_container</span><span class="p">,</span>
+              <span class="n">filedir</span><span class="p">,</span>
+              <span class="n">figdir</span><span class="p">,</span>
+              <span class="n">file_format</span><span class="o">=</span><span class="s1">&#39;csv&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The main driver function to train the given model on the given</span>
+<span class="sd">        data and save the results in the given directories using the</span>
+<span class="sd">        given experiment ID as the prefix.</span>
+
+<span class="sd">        parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        configuration : configuration_parser.Configuration</span>
+<span class="sd">            A configuration object containing `experiment_id` and `model_name`</span>
+<span class="sd">        data_container : container.DataContainer</span>
+<span class="sd">            A data_container object containing `train_preprocessed_features`</span>
+<span class="sd">        filedir : str</span>
+<span class="sd">            Path to the `output` experiment output directory.</span>
+<span class="sd">        figdir : str</span>
+<span class="sd">            Path to the `figure` experiment output directory.</span>
+<span class="sd">        file_format : {&#39;csv&#39;, &#39;tsv&#39;, &#39;xlsx&#39;}, optional</span>
+<span class="sd">            The format in which to save files.</span>
+<span class="sd">            Defaults to &#39;csv&#39;.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        name : SKLL Learner object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">Analyzer</span><span class="o">.</span><span class="n">check_param_names</span><span class="p">(</span><span class="n">configuration</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;model_name&#39;</span><span class="p">,</span> <span class="s1">&#39;experiment_id&#39;</span><span class="p">])</span>
+        <span class="n">Analyzer</span><span class="o">.</span><span class="n">check_frame_names</span><span class="p">(</span><span class="n">data_container</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;train_preprocessed_features&#39;</span><span class="p">])</span>
+
+        <span class="n">model_name</span> <span class="o">=</span> <span class="n">configuration</span><span class="p">[</span><span class="s1">&#39;model_name&#39;</span><span class="p">]</span>
+        <span class="n">experiment_id</span> <span class="o">=</span> <span class="n">configuration</span><span class="p">[</span><span class="s1">&#39;experiment_id&#39;</span><span class="p">]</span>
+
+        <span class="n">df_train</span> <span class="o">=</span> <span class="n">data_container</span><span class="p">[</span><span class="s1">&#39;train_preprocessed_features&#39;</span><span class="p">]</span>
+
+        <span class="n">args</span> <span class="o">=</span> <span class="p">[</span><span class="n">model_name</span><span class="p">,</span> <span class="n">df_train</span><span class="p">,</span> <span class="n">experiment_id</span><span class="p">,</span> <span class="n">filedir</span><span class="p">,</span> <span class="n">figdir</span><span class="p">]</span>
+        <span class="n">kwargs</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;file_format&#39;</span><span class="p">:</span> <span class="n">file_format</span><span class="p">}</span>
+
+        <span class="c1"># add user-specified SKLL objective to the arguments if we are</span>
+        <span class="c1"># training a SKLL model</span>
+        <span class="k">if</span> <span class="n">is_skll_model</span><span class="p">(</span><span class="n">model_name</span><span class="p">):</span>
+            <span class="n">kwargs</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;custom_objective&#39;</span><span class="p">:</span> <span class="n">configuration</span><span class="p">[</span><span class="s1">&#39;skll_objective&#39;</span><span class="p">],</span>
+                           <span class="s1">&#39;predict_expected_scores&#39;</span><span class="p">:</span> <span class="n">configuration</span><span class="p">[</span><span class="s1">&#39;predict_expected_scores&#39;</span><span class="p">]})</span>
+            <span class="n">model</span><span class="p">,</span> <span class="n">chosen_objective</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">train_skll_model</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+            <span class="n">configuration</span><span class="p">[</span><span class="s1">&#39;skll_objective&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">chosen_objective</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">model</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">train_builtin_model</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">model</span></div>
+
+<div class="viewcode-block" id="Modeler.predict"><a class="viewcode-back" href="../../api.html#rsmtool.modeler.Modeler.predict">[docs]</a>    <span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="n">min_score</span><span class="p">,</span> <span class="n">max_score</span><span class="p">,</span> <span class="n">predict_expected</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get the raw predictions of the given SKLL model on the data</span>
+<span class="sd">        contained in the given data frame.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        df : pandas DataFrame</span>
+<span class="sd">            Data frame containing features on which to make the predictions.</span>
+<span class="sd">            The data must contain pre-processed feature values, an ID column</span>
+<span class="sd">            named `spkitemid`, and a label column named `sc1`.</span>
+<span class="sd">        min_score : int</span>
+<span class="sd">            Minimum score level to be used if computing expected scores.</span>
+<span class="sd">        max_score : int</span>
+<span class="sd">            Maximum score level to be used if computing expected scores.</span>
+<span class="sd">        predict_expected : bool, optional</span>
+<span class="sd">            Predict expected scores for classifiers that return probability</span>
+<span class="sd">            distributions over score. This will be ignored with a warning</span>
+<span class="sd">            if the specified model does not support probability distributions.</span>
+<span class="sd">            Note also that this assumes that the score range consists of</span>
+<span class="sd">            contiguous integers - starting at `min_score` and ending at</span>
+<span class="sd">            `max_score`. Defaults to `False`.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        df_predictions : pandas DataFrame</span>
+<span class="sd">            Data frame containing the raw predictions, the IDs, and the</span>
+<span class="sd">            human scores.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        ValueError</span>
+<span class="sd">            If the model cannot predict probability distributions and</span>
+<span class="sd">            `predict_expected` is set to `True` or if the score range</span>
+<span class="sd">            specified by `min_score` and `max_score` does not match</span>
+<span class="sd">            what the model predicts in its probability distribution.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">learner</span>
+
+        <span class="n">feature_columns</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">c</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;spkitemid&#39;</span><span class="p">,</span> <span class="s1">&#39;sc1&#39;</span><span class="p">]]</span>
+        <span class="n">features</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">feature_columns</span><span class="p">]</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="n">orient</span><span class="o">=</span><span class="s1">&#39;records&#39;</span><span class="p">)</span>
+        <span class="n">ids</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;spkitemid&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+
+        <span class="c1"># if we have the labels, save them in the featureset</span>
+        <span class="n">labels</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="s1">&#39;sc1&#39;</span> <span class="ow">in</span> <span class="n">df</span><span class="p">:</span>
+            <span class="n">labels</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;sc1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+
+        <span class="n">fs</span> <span class="o">=</span> <span class="n">FeatureSet</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="n">ids</span><span class="o">=</span><span class="n">ids</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span> <span class="n">features</span><span class="o">=</span><span class="n">features</span><span class="p">)</span>
+        <span class="c1"># if we are predicting expected scores, then call a different function</span>
+        <span class="n">predictions</span> <span class="o">=</span> <span class="n">compute_expected_scores_from_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span>
+                                                         <span class="n">fs</span><span class="p">,</span>
+                                                         <span class="n">min_score</span><span class="p">,</span>
+                                                         <span class="n">max_score</span><span class="p">)</span> <span class="k">if</span> <span class="n">predict_expected</span> <span class="k">else</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">fs</span><span class="p">)</span>
+
+        <span class="n">df_predictions</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+        <span class="n">df_predictions</span><span class="p">[</span><span class="s1">&#39;spkitemid&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ids</span>
+        <span class="n">df_predictions</span><span class="p">[</span><span class="s1">&#39;raw&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">predictions</span>
+
+        <span class="c1"># save the labels in the dataframe if they existed in the first place</span>
+        <span class="k">if</span> <span class="n">labels</span><span class="p">:</span>
+            <span class="n">df_predictions</span><span class="p">[</span><span class="s1">&#39;sc1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">labels</span>
+
+        <span class="k">return</span> <span class="n">df_predictions</span></div>
+
+<div class="viewcode-block" id="Modeler.predict_train_and_test"><a class="viewcode-back" href="../../api.html#rsmtool.modeler.Modeler.predict_train_and_test">[docs]</a>    <span class="k">def</span> <span class="nf">predict_train_and_test</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                               <span class="n">df_train</span><span class="p">,</span>
+                               <span class="n">df_test</span><span class="p">,</span>
+                               <span class="n">configuration</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Generate raw, scaled, and trimmed predictions of `model`</span>
+<span class="sd">        on the given training and testing data.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        df_train : pandas DataFrame</span>
+<span class="sd">            Data frame containing the pre-processed training</span>
+<span class="sd">            set features.</span>
+<span class="sd">        df_test : pandas DataFrame</span>
+<span class="sd">            Data frame containing the pre-processed test</span>
+<span class="sd">            set features.</span>
+<span class="sd">        configuration : configuration_parser.Configuration</span>
+<span class="sd">            A configuration object containing `trim_max` and `trim_min`</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        List of data frames containing predictions and other</span>
+<span class="sd">        information.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">Analyzer</span><span class="o">.</span><span class="n">check_param_names</span><span class="p">(</span><span class="n">configuration</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;trim_max&#39;</span><span class="p">,</span> <span class="s1">&#39;trim_min&#39;</span><span class="p">])</span>
+
+        <span class="n">trim_max</span> <span class="o">=</span> <span class="n">configuration</span><span class="p">[</span><span class="s1">&#39;trim_max&#39;</span><span class="p">]</span>
+        <span class="n">trim_min</span> <span class="o">=</span> <span class="n">configuration</span><span class="p">[</span><span class="s1">&#39;trim_min&#39;</span><span class="p">]</span>
+        <span class="n">predict_expected_scores</span> <span class="o">=</span> <span class="n">configuration</span><span class="p">[</span><span class="s1">&#39;predict_expected_scores&#39;</span><span class="p">]</span>
+
+        <span class="n">df_train_predictions</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">df_train</span><span class="p">,</span>
+                                            <span class="nb">int</span><span class="p">(</span><span class="n">trim_min</span><span class="p">),</span>
+                                            <span class="nb">int</span><span class="p">(</span><span class="n">trim_max</span><span class="p">),</span>
+                                            <span class="n">predict_expected</span><span class="o">=</span><span class="n">predict_expected_scores</span><span class="p">)</span>
+        <span class="n">df_test_predictions</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">df_test</span><span class="p">,</span>
+                                           <span class="nb">int</span><span class="p">(</span><span class="n">trim_min</span><span class="p">),</span>
+                                           <span class="nb">int</span><span class="p">(</span><span class="n">trim_max</span><span class="p">),</span>
+                                           <span class="n">predict_expected</span><span class="o">=</span><span class="n">predict_expected_scores</span><span class="p">)</span>
+
+        <span class="c1"># get the mean and SD of the training set predictions</span>
+        <span class="n">train_predictions_mean</span> <span class="o">=</span> <span class="n">df_train_predictions</span><span class="p">[</span><span class="s1">&#39;raw&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+        <span class="n">train_predictions_sd</span> <span class="o">=</span> <span class="n">df_train_predictions</span><span class="p">[</span><span class="s1">&#39;raw&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+
+        <span class="c1"># get the mean and SD of the human labels</span>
+        <span class="n">human_labels_mean</span> <span class="o">=</span> <span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;sc1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+        <span class="n">human_labels_sd</span> <span class="o">=</span> <span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;sc1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Processing train set predictions.&#39;</span><span class="p">)</span>
+        <span class="n">df_train_predictions</span> <span class="o">=</span> <span class="n">FeaturePreprocessor</span><span class="o">.</span><span class="n">process_predictions</span><span class="p">(</span><span class="n">df_train_predictions</span><span class="p">,</span>
+                                                                       <span class="n">train_predictions_mean</span><span class="p">,</span>
+                                                                       <span class="n">train_predictions_sd</span><span class="p">,</span>
+                                                                       <span class="n">human_labels_mean</span><span class="p">,</span>
+                                                                       <span class="n">human_labels_sd</span><span class="p">,</span>
+                                                                       <span class="n">trim_min</span><span class="p">,</span> <span class="n">trim_max</span><span class="p">)</span>
+
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Processing test set predictions.&#39;</span><span class="p">)</span>
+        <span class="n">df_test_predictions</span> <span class="o">=</span> <span class="n">FeaturePreprocessor</span><span class="o">.</span><span class="n">process_predictions</span><span class="p">(</span><span class="n">df_test_predictions</span><span class="p">,</span>
+                                                                      <span class="n">train_predictions_mean</span><span class="p">,</span>
+                                                                      <span class="n">train_predictions_sd</span><span class="p">,</span>
+                                                                      <span class="n">human_labels_mean</span><span class="p">,</span>
+                                                                      <span class="n">human_labels_sd</span><span class="p">,</span>
+                                                                      <span class="n">trim_min</span><span class="p">,</span> <span class="n">trim_max</span><span class="p">)</span>
+
+        <span class="n">df_postproc_params</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([{</span><span class="s1">&#39;trim_min&#39;</span><span class="p">:</span> <span class="n">trim_min</span><span class="p">,</span>
+                                            <span class="s1">&#39;trim_max&#39;</span><span class="p">:</span> <span class="n">trim_max</span><span class="p">,</span>
+                                            <span class="s1">&#39;h1_mean&#39;</span><span class="p">:</span> <span class="n">human_labels_mean</span><span class="p">,</span>
+                                            <span class="s1">&#39;h1_sd&#39;</span><span class="p">:</span> <span class="n">human_labels_sd</span><span class="p">,</span>
+                                            <span class="s1">&#39;train_predictions_mean&#39;</span><span class="p">:</span> <span class="n">train_predictions_mean</span><span class="p">,</span>
+                                            <span class="s1">&#39;train_predictions_sd&#39;</span><span class="p">:</span> <span class="n">train_predictions_sd</span><span class="p">}])</span>
+
+        <span class="n">datasets</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;pred_train&#39;</span><span class="p">,</span> <span class="s1">&#39;frame&#39;</span><span class="p">:</span> <span class="n">df_train_predictions</span><span class="p">},</span>
+                    <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;pred_test&#39;</span><span class="p">,</span> <span class="s1">&#39;frame&#39;</span><span class="p">:</span> <span class="n">df_test_predictions</span><span class="p">},</span>
+                    <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;postprocessing_params&#39;</span><span class="p">,</span> <span class="s1">&#39;frame&#39;</span><span class="p">:</span> <span class="n">df_postproc_params</span><span class="p">}]</span>
+
+        <span class="n">new_config_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;train_predictions_mean&#39;</span><span class="p">:</span> <span class="n">train_predictions_mean</span><span class="p">,</span>
+                           <span class="s1">&#39;train_predictions_sd&#39;</span><span class="p">:</span> <span class="n">train_predictions_sd</span><span class="p">,</span>
+                           <span class="s1">&#39;human_labels_mean&#39;</span><span class="p">:</span> <span class="n">human_labels_mean</span><span class="p">,</span>
+                           <span class="s1">&#39;human_labels_sd&#39;</span><span class="p">:</span> <span class="n">human_labels_sd</span><span class="p">}</span>
+
+        <span class="n">config_as_dict</span> <span class="o">=</span> <span class="n">configuration</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
+        <span class="n">config_as_dict</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">new_config_dict</span><span class="p">)</span>
+
+        <span class="n">configuration</span> <span class="o">=</span> <span class="n">Configuration</span><span class="p">(</span><span class="n">config_as_dict</span><span class="p">,</span> <span class="n">configuration</span><span class="o">.</span><span class="n">filepath</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">configuration</span><span class="p">,</span> <span class="n">DataContainer</span><span class="p">(</span><span class="n">datasets</span><span class="o">=</span><span class="n">datasets</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Modeler.get_feature_names"><a class="viewcode-back" href="../../api.html#rsmtool.modeler.Modeler.get_feature_names">[docs]</a>    <span class="k">def</span> <span class="nf">get_feature_names</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get the feature names, if available.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        feature_names : list or None</span>
+<span class="sd">            A list of feature names, or None if no learner was trained.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">learner</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">learner</span><span class="o">.</span><span class="n">feat_vectorizer</span><span class="o">.</span><span class="n">get_feature_names</span><span class="p">()</span>
+        <span class="k">return</span> <span class="kc">None</span></div>
+
+<div class="viewcode-block" id="Modeler.get_intercept"><a class="viewcode-back" href="../../api.html#rsmtool.modeler.Modeler.get_intercept">[docs]</a>    <span class="k">def</span> <span class="nf">get_intercept</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get the intercept of the model, if available.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        intercept : float or None</span>
+<span class="sd">           The intercept of the model.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">learner</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">learner</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">intercept_</span>
+        <span class="k">return</span> <span class="kc">None</span></div>
+
+<div class="viewcode-block" id="Modeler.get_coefficients"><a class="viewcode-back" href="../../api.html#rsmtool.modeler.Modeler.get_coefficients">[docs]</a>    <span class="k">def</span> <span class="nf">get_coefficients</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get the coefficients of the model, if available.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        coefficients : np.array or None</span>
+<span class="sd">           The coefficients of the model.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">learner</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">learner</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">coef_</span>
+        <span class="k">return</span> <span class="kc">None</span></div>
+
+<div class="viewcode-block" id="Modeler.scale_coefficients"><a class="viewcode-back" href="../../api.html#rsmtool.modeler.Modeler.scale_coefficients">[docs]</a>    <span class="k">def</span> <span class="nf">scale_coefficients</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                           <span class="n">configuration</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Scale coefficients and intercept using human scores and model</span>
+<span class="sd">        prediction on the training set. This procedure approximates</span>
+<span class="sd">        what is done in operational setting but does not apply</span>
+<span class="sd">        trimming to predictions.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        configuration : configuration_parser.Configuration</span>
+<span class="sd">            A configuration object containing `train_predictions_mean`,</span>
+<span class="sd">            and `train_predictions_sd`, and `human_labels_sd`.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        data_container : container.DataContainer</span>
+<span class="sd">            A data_container object containing `coefficients_scaled`</span>
+<span class="sd">            This DataFrame contains the scaled coefficients</span>
+<span class="sd">            and the feature names, along with the intercept.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">Analyzer</span><span class="o">.</span><span class="n">check_param_names</span><span class="p">(</span><span class="n">configuration</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;train_predictions_mean&#39;</span><span class="p">,</span>
+                                                   <span class="s1">&#39;train_predictions_sd&#39;</span><span class="p">,</span>
+                                                   <span class="s1">&#39;human_labels_sd&#39;</span><span class="p">])</span>
+
+        <span class="n">train_predictions_mean</span> <span class="o">=</span> <span class="n">configuration</span><span class="p">[</span><span class="s1">&#39;train_predictions_mean&#39;</span><span class="p">]</span>
+        <span class="n">train_predictions_sd</span> <span class="o">=</span> <span class="n">configuration</span><span class="p">[</span><span class="s1">&#39;train_predictions_sd&#39;</span><span class="p">]</span>
+        <span class="n">h1_sd</span> <span class="o">=</span> <span class="n">configuration</span><span class="p">[</span><span class="s1">&#39;human_labels_sd&#39;</span><span class="p">]</span>
+
+        <span class="n">feature_names</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_feature_names</span><span class="p">()</span>
+
+        <span class="n">coefficients</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_coefficients</span><span class="p">()</span>
+        <span class="n">intercept</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_intercept</span><span class="p">()</span>
+
+        <span class="c1"># scale the coefficients and the intercept</span>
+        <span class="n">scaled_coefficients</span> <span class="o">=</span> <span class="n">coefficients</span> <span class="o">*</span> <span class="n">h1_sd</span> <span class="o">/</span> <span class="n">train_predictions_sd</span>
+
+        <span class="c1"># adjust the intercept to set the mean predicted score</span>
+        <span class="c1"># to the mean of the training variable</span>
+        <span class="n">new_intercept</span> <span class="o">=</span> <span class="n">intercept</span> <span class="o">*</span> <span class="p">(</span><span class="n">h1_sd</span> <span class="o">/</span> <span class="n">train_predictions_sd</span><span class="p">)</span>
+        <span class="n">new_intercept</span> <span class="o">+=</span> <span class="n">train_predictions_mean</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">h1_sd</span> <span class="o">/</span> <span class="n">train_predictions_sd</span><span class="p">)</span>
+
+        <span class="n">intercept_and_feature_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Intercept&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">feature_names</span>
+        <span class="n">intercept_and_feature_values</span> <span class="o">=</span> <span class="p">[</span><span class="n">new_intercept</span><span class="p">]</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="n">scaled_coefficients</span><span class="p">)</span>
+
+        <span class="c1"># create a data frame with new values</span>
+        <span class="n">df_scaled_coefficients</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;feature&#39;</span><span class="p">:</span> <span class="n">intercept_and_feature_names</span><span class="p">,</span>
+                                               <span class="s1">&#39;coefficient&#39;</span><span class="p">:</span> <span class="n">intercept_and_feature_values</span><span class="p">},</span>
+                                              <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;feature&#39;</span><span class="p">,</span> <span class="s1">&#39;coefficient&#39;</span><span class="p">])</span>
+
+        <span class="n">scaled_dataset</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;coefficients_scaled&#39;</span><span class="p">,</span>
+                           <span class="s1">&#39;frame&#39;</span><span class="p">:</span> <span class="n">df_scaled_coefficients</span><span class="p">}]</span>
+
+        <span class="k">return</span> <span class="n">DataContainer</span><span class="p">(</span><span class="n">datasets</span><span class="o">=</span><span class="n">scaled_dataset</span><span class="p">)</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Educational Testing Service.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'6.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+</body>
+</html>

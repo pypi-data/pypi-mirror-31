@@ -1,0 +1,991 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Using RSMTool &mdash; Rater Scoring Modeling Tool 6.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Advanced Uses of RSMTool" href="advanced_usage.html" />
+    <link rel="prev" title="Tutorial" href="tutorial.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Rater Scoring Modeling Tool
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                6.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="who.html">Who is RSMTool for?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pipeline.html">Overview of RSMTool Pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Using RSMTool</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#input">Input</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#experiment-configuration-file">Experiment configuration file</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#experiment-id">experiment_id</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#model">model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#train-file">train_file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#test-file">test_file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#skll-objective-optional">skll_objective <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#predict-expected-scores-optional">predict_expected_scores <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#description-optional">description <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#file-format-optional">file_format <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#features-optional">features <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#feature-subset-file-optional">feature_subset_file <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#feature-subset-optional">feature_subset <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sign-optional">sign <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id-column-rsmtool">id_column <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#train-label-column-optional">train_label_column <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#test-label-column-optional">test_label_column <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#length-column-optional">length_column <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#second-human-score-column-optional">second_human_score_column <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flag-column-optional">flag_column <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flag-column-test-optional">flag_column_test <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exclude-zero-scores-optional">exclude_zero_scores <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#trim-min-optional">trim_min <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#trim-max-optional">trim_max <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#select-transformations-optional">select_transformations <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#standardize-features-optional">standardize_features <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#use-scaled-predictions-optional">use_scaled_predictions <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#subgroups-optional">subgroups <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#general-sections-optional">general_sections <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#custom-sections-optional">custom_sections <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#special-sections-optional">special_sections <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#section-order-optional">section_order <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#use-thumbnails-optional">use_thumbnails <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#candidate-column-optional">candidate_column <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#min-items-per-candidate-optional">min_items_per_candidate <em>(Optional)</em></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#output">Output</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#report">report</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#figure">figure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#feature">feature</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#selecting-feature-columns">Selecting Feature Columns</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fine-grained-column-selection">Fine-grained column selection</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">feature</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transform-optional">transform (optional)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">sign (optional)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#subset-based-column-selection">Subset-based column selection</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#transformations">Transformations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#signs">Signs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#intermediate-files">Intermediate files</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#feature-values">Feature values</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#flagged-responses">Flagged responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#excluded-responses">Excluded responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#response-metadata">Response metadata</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#unused-columns">Unused columns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#response-length">Response length</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#human-scores">Human scores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data-composition">Data composition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#excluded-data-composition">Excluded data composition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#missing-features">Missing features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#subgroup-composition">Subgroup composition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#feature-descriptives">Feature descriptives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#feature-outliers">Feature outliers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#inter-feature-and-score-correlations">Inter-feature and score correlations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#marginal-and-partial-correlations-with-score">Marginal and partial correlations with score</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#marginal-and-partial-correlations-with-length">Marginal and partial correlations with length</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#principal-components-analyses">Principal components analyses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#various-correlations-by-subgroups">Various correlations by subgroups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#model-information">Model information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#predictions">Predictions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#evaluation-metrics">Evaluation metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#human-human-consistency">Human-human Consistency</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#built-in-rsmtool-linear-regression-models">Built-in RSMTool Linear Regression Models</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#models-which-use-the-full-feature-set">Models which use the full feature set</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#models-with-automatic-feature-selection">Models with automatic feature selection</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="advanced_usage.html">Advanced Uses of RSMTool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom_notebooks.html">Writing custom RSMTool sections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utilities.html">Utility Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing to RSMTool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="release_process.html">RSMTool Release Process</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Rater Scoring Modeling Tool</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Using RSMTool</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/usage_rsmtool.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="using-rsmtool">
+<span id="usage-rsmtool"></span><h1>Using RSMTool<a class="headerlink" href="#using-rsmtool" title="Permalink to this headline">¶</a></h1>
+<p>For most users, the primary means of using RSMTool will be via the command-line utility <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code>. We refer to each run of <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> as an “experiment”.</p>
+<div class="section" id="input">
+<h2>Input<a class="headerlink" href="#input" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> requires a single argument to run an experiment: the path to <a class="reference internal" href="#config-file-rsmtool"><span class="std std-ref">a configuration file</span></a>. It can also take an output directory as an optional second argument. If the latter is not specified, <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> will use the current directory as the output directory.</p>
+<p>Here are all the arguments to the <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> command-line script.</p>
+<dl class="option">
+<dt id="cmdoption-rsmtool-arg-config-file">
+<code class="descname">config_file</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-rsmtool-arg-config-file" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference internal" href="#config-file-rsmtool"><span class="std std-ref">JSON configuration file</span></a> for this experiment.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-rsmtool-arg-output-dir">
+<code class="descname">output_dir</code><code class="descclassname"> (optional)</code><a class="headerlink" href="#cmdoption-rsmtool-arg-output-dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>The output directory where all the files for this experiment will be stored.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-rsmtool-f">
+<code class="descname">-f</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--force</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-rsmtool-f" title="Permalink to this definition">¶</a></dt>
+<dd><p>If specified, the contents of the output directory will be overwritten even if it already contains the output of another rsmtool experiment.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-rsmtool-h">
+<code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-rsmtool-h" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show help message and exist.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-rsmtool-v">
+<code class="descname">-V</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--version</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-rsmtool-v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show version number and exit.</p>
+</dd></dl>
+
+<div class="section" id="experiment-configuration-file">
+<span id="config-file-rsmtool"></span><h3>Experiment configuration file<a class="headerlink" href="#experiment-configuration-file" title="Permalink to this headline">¶</a></h3>
+<p>This is a file in <code class="docutils literal notranslate"><span class="pre">.json</span></code> format that provides overall configuration options for an <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> experiment. Here’s an example configuration file for <a class="reference external" href="https://github.com/EducationalTestingService/rsmtool/blob/master/examples/rsmtool/config_rsmtool.json">rsmtool</a>.</p>
+<p>There are four required fields and the rest are all optional.</p>
+<div class="section" id="experiment-id">
+<h4>experiment_id<a class="headerlink" href="#experiment-id" title="Permalink to this headline">¶</a></h4>
+<p>An identifier for the experiment that will be used to name the report and all <a class="reference internal" href="#intermediate-files-rsmtool"><span class="std std-ref">intermediate files</span></a>. It can be any combination of alphanumeric values, must <em>not</em> contain spaces, and must <em>not</em> be any longer than 200 characters.</p>
+</div>
+<div class="section" id="model">
+<h4>model<a class="headerlink" href="#model" title="Permalink to this headline">¶</a></h4>
+<p>The machine learner you want to use to build the scoring model. Possible values include <a class="reference internal" href="#builtin-models"><span class="std std-ref">built-in linear regression models</span></a> as well as all of the learners available via <a class="reference external" href="http://skll.readthedocs.io/en/latest/run_experiment.html#learners">SKLL</a>. With SKLL learners, you can customize the <a class="reference internal" href="#skll-objective"><span class="std std-ref">tuning objective</span></a> and also <a class="reference internal" href="#predict-expected-scores"><span class="std std-ref">compute expected scores as predictions</span></a>.</p>
+</div>
+<div class="section" id="train-file">
+<h4>train_file<a class="headerlink" href="#train-file" title="Permalink to this headline">¶</a></h4>
+<p>The path to the training data feature file in one of the <a class="reference internal" href="pipeline.html#input-file-format"><span class="std std-ref">supported formats</span></a>. Each row should correspond to a single response and contain numeric feature values extracted for this response. In addition, there should be a column with a unique identifier (ID) for each response and a column with the human score for each response. The path can be absolute or relative to the location of config file.</p>
+</div>
+<div class="section" id="test-file">
+<h4>test_file<a class="headerlink" href="#test-file" title="Permalink to this headline">¶</a></h4>
+<p>The path to the evaluation data feature file in one of the <a class="reference internal" href="pipeline.html#input-file-format"><span class="std std-ref">supported formats</span></a>. Each row should correspond to a single response and contain numeric feature values extracted for this response. In addition, there should be a column with a unique identifier (ID) for each response and a column with the human score for each response. The path can be absolute or relative to the location of config file.</p>
+</div>
+<div class="section" id="skll-objective-optional">
+<span id="skll-objective"></span><h4>skll_objective <em>(Optional)</em><a class="headerlink" href="#skll-objective-optional" title="Permalink to this headline">¶</a></h4>
+<p>The tuning objective to use if a SKLL model is chosen to build the scoring model. Possible values are the objectives available via <a class="reference external" href="http://skll.readthedocs.io/en/latest/run_experiment.html#objectives">SKLL</a>. Defaults to <code class="docutils literal notranslate"><span class="pre">neg_mean_squared_error</span></code> for SKLL regressors and <code class="docutils literal notranslate"><span class="pre">f1_score_micro</span></code> for SKLL classifiers. Note that if this option is specified with the <a class="reference internal" href="#builtin-models"><span class="std std-ref">built-in linear regression models</span></a>, it will simply be ignored.</p>
+</div>
+<div class="section" id="predict-expected-scores-optional">
+<span id="predict-expected-scores"></span><h4>predict_expected_scores <em>(Optional)</em><a class="headerlink" href="#predict-expected-scores-optional" title="Permalink to this headline">¶</a></h4>
+<p>If a probabilistic SKLL classifier is chosen to build the scoring model, then <em>expected scores</em> — probability-weighted averages over contiguous, numeric score points — can be generated as the machine predictions instead of the most likely score point, which would be the default for a classifier. Set this field to <code class="docutils literal notranslate"><span class="pre">true</span></code> to compute expected scores as predictions. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You may see slight differences in expected score predictions if you run the experiment on different machines or on different operating systems most likely due to very small probablity values for certain score points which can affect floating point computations.</p>
+</div>
+</div>
+<div class="section" id="description-optional">
+<h4>description <em>(Optional)</em><a class="headerlink" href="#description-optional" title="Permalink to this headline">¶</a></h4>
+<p>A brief description of the experiment. This will be included in the report. The description can contain spaces and punctuation. It’s blank by default.</p>
+</div>
+<div class="section" id="file-format-optional">
+<span id="file-format"></span><h4>file_format <em>(Optional)</em><a class="headerlink" href="#file-format-optional" title="Permalink to this headline">¶</a></h4>
+<p>The format of the <a class="reference internal" href="#intermediate-files-rsmtool"><span class="std std-ref">intermediate files</span></a>. Options are <code class="docutils literal notranslate"><span class="pre">csv</span></code>, <code class="docutils literal notranslate"><span class="pre">tsv</span></code>, or <code class="docutils literal notranslate"><span class="pre">xlsx</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">csv</span></code> if this is not specified.</p>
+<div class="admonition note" id="feature-fields-note">
+<p class="first admonition-title">Note</p>
+<p class="last">By default, <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> will use all of the columns present in the training and evaluation files as features except for any columns explicitly identified in the configuration file (see below). The following four fields (<code class="docutils literal notranslate"><span class="pre">features</span></code>, <code class="docutils literal notranslate"><span class="pre">feature_subset_file</span></code>, <code class="docutils literal notranslate"><span class="pre">feature_subset</span></code>, and <code class="docutils literal notranslate"><span class="pre">sign</span></code>) are useful if you want to use only a specific set of columns as features. See <a class="reference internal" href="#column-selection-rsmtool"><span class="std std-ref">selecting feature columns</span></a> for more details.</p>
+</div>
+</div>
+<div class="section" id="features-optional">
+<span id="feature-file-rsmtool"></span><h4>features <em>(Optional)</em><a class="headerlink" href="#features-optional" title="Permalink to this headline">¶</a></h4>
+<p>Path to the file with list of features if using <a class="reference internal" href="#feature-list-column-selection"><span class="std std-ref">fine-grained column selection</span></a>. Alternatively, you can pass a <code class="docutils literal notranslate"><span class="pre">list</span></code> of feature names to include in the experiment.</p>
+</div>
+<div class="section" id="feature-subset-file-optional">
+<span id="feature-subset-file"></span><h4>feature_subset_file <em>(Optional)</em><a class="headerlink" href="#feature-subset-file-optional" title="Permalink to this headline">¶</a></h4>
+<p>Path to the feature subset file if using <a class="reference internal" href="#subset-column-selection"><span class="std std-ref">subset-based column selection</span></a>.</p>
+</div>
+<div class="section" id="feature-subset-optional">
+<span id="feature-subset"></span><h4>feature_subset <em>(Optional)</em><a class="headerlink" href="#feature-subset-optional" title="Permalink to this headline">¶</a></h4>
+<p>Name of the pre-defined feature subset to be used if using <a class="reference internal" href="#subset-column-selection"><span class="std std-ref">subset-based column selection</span></a>.</p>
+</div>
+<div class="section" id="sign-optional">
+<span id="sign"></span><h4>sign <em>(Optional)</em><a class="headerlink" href="#sign-optional" title="Permalink to this headline">¶</a></h4>
+<p>Name of the column containing expected correlation sign between each feature and human score if using <a class="reference internal" href="#subset-column-selection"><span class="std std-ref">subset-based column selection</span></a>.</p>
+</div>
+<div class="section" id="id-column-rsmtool">
+<span id="id-column-optional"></span><h4>id_column <em>(Optional)</em><a class="headerlink" href="#id-column-rsmtool" title="Permalink to this headline">¶</a></h4>
+<p>The name of the column containing the response IDs. Defaults to <code class="docutils literal notranslate"><span class="pre">spkitemid</span></code>, i.e., if this is not specified, <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> will look for a column called <code class="docutils literal notranslate"><span class="pre">spkitemid</span></code> in the training and evaluation files.</p>
+</div>
+<div class="section" id="train-label-column-optional">
+<span id="train-label-column-rsmtool"></span><h4>train_label_column <em>(Optional)</em><a class="headerlink" href="#train-label-column-optional" title="Permalink to this headline">¶</a></h4>
+<p>The name for the column containing the human scores in the training data. If set to to <code class="docutils literal notranslate"><span class="pre">fake</span></code>, fake scores will be generated using randomly sampled integers. This option may be useful if you only need descriptive statistics for the data and do not care about the other analyses. Defaults to <code class="docutils literal notranslate"><span class="pre">sc1</span></code>.</p>
+</div>
+<div class="section" id="test-label-column-optional">
+<span id="test-label-column-rsmtool"></span><h4>test_label_column <em>(Optional)</em><a class="headerlink" href="#test-label-column-optional" title="Permalink to this headline">¶</a></h4>
+<p>The name for the column containing the human scores in the training data. If set to to <code class="docutils literal notranslate"><span class="pre">fake</span></code>, fake scores will be generated using randomly sampled integers. This option may be useful if you only need descriptive statistics for the data and do not care about the other analyses. Defaults to <code class="docutils literal notranslate"><span class="pre">sc1</span></code>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">All responses with non-numeric values in either <code class="docutils literal notranslate"><span class="pre">train_label_column</span></code> or <code class="docutils literal notranslate"><span class="pre">test_label_column</span></code> and/or those with non-numeric values for relevant features will be automatically excluded from model training and evaluation. By default, zero scores in either <code class="docutils literal notranslate"><span class="pre">train_label_column</span></code> or <code class="docutils literal notranslate"><span class="pre">test_label_column</span></code> will also be excluded. See <a class="reference internal" href="#exclude-zero-scores-rsmtool"><span class="std std-ref">exclude_zero_scores (Optional)</span></a> if you want to keep responses with zero scores.</p>
+</div>
+</div>
+<div class="section" id="length-column-optional">
+<span id="length-column-rsmtool"></span><h4>length_column <em>(Optional)</em><a class="headerlink" href="#length-column-optional" title="Permalink to this headline">¶</a></h4>
+<p>The name for the optional column in the training and evaluation data containing response length. If specified, length is included in the inter-feature and partial correlation analyses. Note that this field <em>should not</em> be specified if you want to use the length column as an actual feature in the model. In the latter scenario, the length column will automatically be included in the analyses, like any other feature. If you specify <code class="docutils literal notranslate"><span class="pre">length_column</span></code> <em>and</em> include the same column name as  a feature in the <a class="reference internal" href="#feature-file-rsmtool"><span class="std std-ref">feature file</span></a>, <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> will ignore the <code class="docutils literal notranslate"><span class="pre">length_column</span></code> setting. In addition, if <code class="docutils literal notranslate"><span class="pre">length_column</span></code> has missing values or if its standard deviation is 0 (both somewhat unlikely scenarios), <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> will <em>not</em> include any length-based analyses in the report.</p>
+</div>
+<div class="section" id="second-human-score-column-optional">
+<span id="second-human-score-column-rsmtool"></span><h4>second_human_score_column <em>(Optional)</em><a class="headerlink" href="#second-human-score-column-optional" title="Permalink to this headline">¶</a></h4>
+<p>The name for an optional column in the test data containing a second human score for each response. If specified, additional information about human-human agreement and degradation will be computed and included in the report. Note that this column must contain either numbers or be empty. Non-numeric values are <em>not</em> accepted. Note also that the <a class="reference internal" href="#exclude-zero-scores-rsmtool"><span class="std std-ref">exclude_zero_scores (Optional)</span></a> option below will apply to this column too.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You do not need to have second human scores for <em>all</em> responses to use this option. The human-human agreement statistics will be computed as long as there is at least one response with numeric value in this column. For responses that do not have a second human score, the value in this column should be blank.</p>
+</div>
+</div>
+<div class="section" id="flag-column-optional">
+<span id="flag-column-rsmtool"></span><h4>flag_column <em>(Optional)</em><a class="headerlink" href="#flag-column-optional" title="Permalink to this headline">¶</a></h4>
+<p>This field makes it possible to only use responses with particular values in a given column (e.g. only responses with a value of <code class="docutils literal notranslate"><span class="pre">0</span></code> in a column called <code class="docutils literal notranslate"><span class="pre">ADVISORY</span></code>). The field takes a dictionary in Python format where the keys are the names of the columns and the values are lists of values for responses that will be used to train the model. For example, a value of <code class="docutils literal notranslate"><span class="pre">{&quot;ADVISORY&quot;:</span> <span class="pre">0}</span></code> will mean that <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> will <em>only</em> use responses for which the <code class="docutils literal notranslate"><span class="pre">ADVISORY</span></code> column has the value 0.
+When this field is used, the specified columns must be present in the training set and, if <code class="docutils literal notranslate"><span class="pre">flag_column_tes</span></code> is not passed, the evaluation set, as well.
+Defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If  several conditions are specified (e.g., <code class="docutils literal notranslate"><span class="pre">{&quot;ADVISORY&quot;:</span> <span class="pre">0,</span> <span class="pre">&quot;ERROR&quot;:</span> <span class="pre">0}</span></code>) only those responses which satisfy <em>all</em> the conditions will be selected for further analysis (in this example, these will be the responses where the <code class="docutils literal notranslate"><span class="pre">ADVISORY</span></code> column has a value of 0 <em>and</em> the <code class="docutils literal notranslate"><span class="pre">ERROR</span></code> column has a value of 0).</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">When reading the values in the supplied dictionary, <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> treats numeric strings, floats and integers as the same value. Thus <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">1.0</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;1&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;1.0&quot;</span></code> are all treated as the <code class="docutils literal notranslate"><span class="pre">1.0</span></code>.</p>
+</div>
+</div>
+<div class="section" id="flag-column-test-optional">
+<span id="flag-column-test-rsmtool"></span><h4>flag_column_test <em>(Optional)</em><a class="headerlink" href="#flag-column-test-optional" title="Permalink to this headline">¶</a></h4>
+<p>This field makes it possible to only use a separate Python flag dictionary for the evaluation set. If this field is not passed, and <code class="docutils literal notranslate"><span class="pre">flag_column</span></code> is passed, then the same advisories will be used for both training and evaluation sets.</p>
+<p>When this field is used, the specified columns must be present in the evaluation set.
+Defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code> or <cite>flag_column`</cite>, if <code class="docutils literal notranslate"><span class="pre">flag_column</span></code> is present. Use <code class="docutils literal notranslate"><span class="pre">flag_column_test</span></code> only if you want filtering of the test set.</p>
+</div>
+<div class="section" id="exclude-zero-scores-optional">
+<span id="exclude-zero-scores-rsmtool"></span><h4>exclude_zero_scores <em>(Optional)</em><a class="headerlink" href="#exclude-zero-scores-optional" title="Permalink to this headline">¶</a></h4>
+<p>By default, responses with human scores of 0 will be excluded from both training and evaluation set. Set this field to <code class="docutils literal notranslate"><span class="pre">false</span></code> if you want to keep responses with scores of 0. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+</div>
+<div class="section" id="trim-min-optional">
+<span id="trim-min-rsmtool"></span><h4>trim_min <em>(Optional)</em><a class="headerlink" href="#trim-min-optional" title="Permalink to this headline">¶</a></h4>
+<p>The single numeric value for the lowest possible integer score that the machine should predict. This value will be used to compute the floor value for <a class="reference internal" href="pipeline.html#score-postprocessing"><span class="std std-ref">trimmed (bound)</span></a> machine scores as <code class="docutils literal notranslate"><span class="pre">trim_min</span></code> - 0.49998. Defaults to the lowest observed human score in the training data or 1 if there are no numeric human scores available.</p>
+</div>
+<div class="section" id="trim-max-optional">
+<span id="trim-max-rsmtool"></span><h4>trim_max <em>(Optional)</em><a class="headerlink" href="#trim-max-optional" title="Permalink to this headline">¶</a></h4>
+<p>The single numeric value for the highest possible integer score that the machine should predict. This value will be used to compute the ceiling value for <a class="reference internal" href="pipeline.html#score-postprocessing"><span class="std std-ref">trimmed (bound)</span></a> machine scores as <code class="docutils literal notranslate"><span class="pre">trim_max</span></code> + 0.49998. Defaults to the highest observed human score in the training data or 10 if there are no numeric human scores available.</p>
+</div>
+<div class="section" id="select-transformations-optional">
+<span id="select-transformations-rsmtool"></span><h4>select_transformations <em>(Optional)</em><a class="headerlink" href="#select-transformations-optional" title="Permalink to this headline">¶</a></h4>
+<p>If this option is set to <code class="docutils literal notranslate"><span class="pre">true</span></code> the system will try apply feature transformations to each of the features and then choose the transformation for each feature that yields the highest correlation with human score. The possible transformations are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">raw</span></code>: no transformation, use original feature value</li>
+<li><code class="docutils literal notranslate"><span class="pre">org</span></code>: same as raw</li>
+<li><code class="docutils literal notranslate"><span class="pre">inv</span></code>: 1/x</li>
+<li><code class="docutils literal notranslate"><span class="pre">sqrt</span></code>: square root</li>
+<li><code class="docutils literal notranslate"><span class="pre">addOneInv</span></code>: 1/(x+1)</li>
+<li><code class="docutils literal notranslate"><span class="pre">addOneLn</span></code>: ln(x+1)</li>
+</ul>
+</div></blockquote>
+<p>Note that <code class="docutils literal notranslate"><span class="pre">inv</span></code> is never used for features with positive values. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">It is also possible to manually apply transformations to any feature as part of the <a class="reference internal" href="#feature-list-column-selection"><span class="std std-ref">feature column selection</span></a> process.</p>
+</div>
+</div>
+<div class="section" id="standardize-features-optional">
+<span id="standardize-features"></span><h4>standardize_features <em>(Optional)</em><a class="headerlink" href="#standardize-features-optional" title="Permalink to this headline">¶</a></h4>
+<p>If this option is set to <code class="docutils literal notranslate"><span class="pre">false</span></code> features will not be standardized by dividing by the mean and multiplying by the standard deviation. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+</div>
+<div class="section" id="use-scaled-predictions-optional">
+<span id="use-scaled-predictions-rsmtool"></span><h4>use_scaled_predictions <em>(Optional)</em><a class="headerlink" href="#use-scaled-predictions-optional" title="Permalink to this headline">¶</a></h4>
+<p>If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, certain evaluations (confusion matrices, score distributions, subgroup analyses) will use the scaled machine scores. If set to <code class="docutils literal notranslate"><span class="pre">false</span></code>, these evaluations will use the raw machine scores. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">All evaluation metrics (e.g., kappa and pearson correlation) are automatically computed for <em>both</em> scaled and raw scores.</p>
+</div>
+</div>
+<div class="section" id="subgroups-optional">
+<span id="subgroups-rsmtool"></span><h4>subgroups <em>(Optional)</em><a class="headerlink" href="#subgroups-optional" title="Permalink to this headline">¶</a></h4>
+<p>A list of column names indicating grouping variables used for generating analyses specific to each of those defined subgroups. For example, <code class="docutils literal notranslate"><span class="pre">[&quot;prompt,</span> <span class="pre">gender,</span> <span class="pre">native_language,</span> <span class="pre">test_country&quot;]</span></code>. These subgroup columns need to be present in both training <em>and</em> evaluation data. If subgroups are specified, <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> will generate:</p>
+<blockquote>
+<div><ul class="simple">
+<li>description of the data by each subgroup;</li>
+<li>boxplots showing the feature distribution for each subgroup on the training set; and</li>
+<li>tables and barplots showing system-human agreement for each subgroup on the evaluation set.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="general-sections-optional">
+<span id="general-sections-rsmtool"></span><h4>general_sections <em>(Optional)</em><a class="headerlink" href="#general-sections-optional" title="Permalink to this headline">¶</a></h4>
+<p>RSMTool provides pre-defined sections for <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> (listed below) and, by default, all of them are included in the report. However, you can choose a subset of these pre-defined sections by specifying a list as the value for this field.</p>
+<blockquote>
+<div><ul>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">data_description</span></code>: Shows the total number of responses in training and evaluation set, along with any responses have been excluded due to non-numeric features/scores or <a class="reference internal" href="#flag-column-rsmtool"><span class="std std-ref">flag columns</span></a>.</p>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">data_description_by_group</span></code>: Shows the total number of responses in training and evaluation set for each of the <a class="reference internal" href="#subgroups-rsmtool"><span class="std std-ref">subgroups</span></a> specified in the configuration file. This section only covers the responses used to train/evaluate the model.</p>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">feature_descriptives</span></code>: Shows the descriptive statistics for all raw  feature values included in the model:</p>
+<blockquote>
+<div><ul class="simple">
+<li>a table showing mean, standard deviation, min, max, correlation with human score etc.;</li>
+<li>a table with percentiles and outliers; and</li>
+<li>a barplot showing he number of truncated outliers for each feature.</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">features_by_group</span></code>: Shows boxplots with distributions of raw feature values by each of the <a class="reference internal" href="#subgroups-rsmtool"><span class="std std-ref">subgroups</span></a> specified in the configuration file.</p>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">preprocessed_features</span></code>: Shows analyses of preprocessed features:</p>
+<blockquote>
+<div><ul class="simple">
+<li>histograms showing the distributions of preprocessed features values;</li>
+<li>the correlation matrix between all features and the human score;</li>
+<li>a barplot showing marginal and partial correlations between all features and the human score, and, optionally, response length if <a class="reference internal" href="#length-column-rsmtool"><span class="std std-ref">length_column</span></a> is specified in the config file.</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">dff_by_group</span></code>: Differential feature functioning by group. The plots in this section show average feature values for each of the <a class="reference internal" href="#subgroups-rsmtool"><span class="std std-ref">subgroups</span></a> conditioned on human score.</p>
+</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">consistency</span></code>: Shows metrics for human-human agreement, the difference (‘degradation’) between the human-human and human-system agreement, and the disattenuated human-machine correlations. This notebook is only generated if the config file specifies <a class="reference internal" href="#second-human-score-column-rsmtool"><span class="std std-ref">second_human_score_column</span></a></li>
+</ul>
+</div></blockquote>
+<ul>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">model</span></code>: Shows the parameters of the learned regression model. For linear models, it also includes the standardized and relative coefficients as well as model diagnostic plots.</p>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">evaluation</span></code>: Shows the standard set of evaluations recommended for scoring models on the evaluation data:</p>
+<blockquote>
+<div><ul class="simple">
+<li>a table showing system-human association metrics;</li>
+<li>the confusion matrix; and</li>
+<li>a barplot showing the distributions for both human and machine scores.</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">evaluation</span> <span class="pre">by</span> <span class="pre">group</span></code>: Shows barplots with the main evaluation metrics by each of the subgroups specified in the configuration file.</p>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">pca</span></code>: Shows the results of principal components analysis on the processed feature values:</p>
+<blockquote>
+<div><ul class="simple">
+<li>the principal components themselves;</li>
+<li>the variances; and</li>
+<li>a Scree plot.</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">intermediate_file_paths</span></code>: Shows links to all of the intermediate files that were generated while running the experiment.</p>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">sysinfo</span></code>: Shows all Python packages along with versions installed in the current environment while generating the report.</p>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="custom-sections-optional">
+<span id="custom-sections-rsmtool"></span><h4>custom_sections <em>(Optional)</em><a class="headerlink" href="#custom-sections-optional" title="Permalink to this headline">¶</a></h4>
+<p>A list of custom, user-defined sections to be included into the final report. These are IPython notebooks (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> files) created by the user.  The list must contains paths to the notebook files, either absolute or relative to the configuration file. All custom notebooks have access to some <a class="reference internal" href="custom_notebooks.html#custom-notebooks"><span class="std std-ref">pre-defined variables</span></a>.</p>
+</div>
+<div class="section" id="special-sections-optional">
+<span id="special-sections-rsmtool"></span><h4>special_sections <em>(Optional)</em><a class="headerlink" href="#special-sections-optional" title="Permalink to this headline">¶</a></h4>
+<p>A list specifying special ETS-only sections to be included into the final report. These sections are available <em>only</em> to ETS employees via the <cite>rsmextra</cite> package.</p>
+</div>
+<div class="section" id="section-order-optional">
+<h4>section_order <em>(Optional)</em><a class="headerlink" href="#section-order-optional" title="Permalink to this headline">¶</a></h4>
+<p>A list containing the order in which the sections in the report should be generated. Any specified order must explicitly list:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Either <em>all</em> pre-defined sections if a value for the <a class="reference internal" href="#general-sections-rsmtool"><span class="std std-ref">general_sections</span></a> field is not specified OR the sections specified using <a class="reference internal" href="#general-sections-rsmtool"><span class="std std-ref">general_sections</span></a>, and</li>
+<li><em>All</em> custom section names specified using <a class="reference internal" href="#custom-sections-rsmtool"><span class="std std-ref">custom_ sections</span></a>, i.e., file prefixes only, without the path and without the <cite>.ipynb</cite> extension, and</li>
+<li><em>All</em> special sections specified using <a class="reference internal" href="#special-sections-rsmtool"><span class="std std-ref">special_sections</span></a>.</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="use-thumbnails-optional">
+<span id="use-thumbnails-rsmtool"></span><h4>use_thumbnails <em>(Optional)</em><a class="headerlink" href="#use-thumbnails-optional" title="Permalink to this headline">¶</a></h4>
+<p>If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the images in the HTML will be set to clickable thumbnails rather than full-sized images. Upon clicking the thumbnail, the full-sized images will be displayed in a separate tab in the browser. If set to <code class="docutils literal notranslate"><span class="pre">false</span></code>, full-sized images will be displayed as usual. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</div>
+<div class="section" id="candidate-column-optional">
+<h4>candidate_column <em>(Optional)</em><a class="headerlink" href="#candidate-column-optional" title="Permalink to this headline">¶</a></h4>
+<p>The name for an optional column in the training and test data containing unique candidate IDs. Candidate IDs are different from response IDs since the same candidate (test-taker) might have responded to multiple questions.</p>
+</div>
+<div class="section" id="min-items-per-candidate-optional">
+<h4>min_items_per_candidate <em>(Optional)</em><a class="headerlink" href="#min-items-per-candidate-optional" title="Permalink to this headline">¶</a></h4>
+<p>An integer value for the minimum number of responses expected from each candidate. If any candidates have fewer responses than the specified value, all responses from those candidates will be excluded from further analysis. Defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="output">
+<span id="output-dirs-rsmtool"></span><h2>Output<a class="headerlink" href="#output" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> produces a set of folders in the experiment output directory. This is either the current directory in which <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> is run or the directory specified as the second optional command-line argument.</p>
+<div class="section" id="report">
+<h3>report<a class="headerlink" href="#report" title="Permalink to this headline">¶</a></h3>
+<p>This folder contains the final RSMTool report in HTML format as well in the form of a Jupyter notebook (a <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file).</p>
+</div>
+<div class="section" id="id2">
+<h3>output<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>This folder contains all of the <a class="reference internal" href="#intermediate-files-rsmtool"><span class="std std-ref">intermediate files</span></a> produced as part of the various analyses performed, saved as <code class="docutils literal notranslate"><span class="pre">.csv</span></code> files. <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> will also save in this folder a copy of the <a class="reference internal" href="#config-file-rsmtool"><span class="std std-ref">configuration file</span></a>. Fields not specified in the original configuration file will be pre-populated with default values.</p>
+</div>
+<div class="section" id="figure">
+<h3>figure<a class="headerlink" href="#figure" title="Permalink to this headline">¶</a></h3>
+<p>This folder contains all of the figures generated as part of the various analyses performed, saved as <code class="docutils literal notranslate"><span class="pre">.svg</span></code> files.</p>
+</div>
+<div class="section" id="feature">
+<h3>feature<a class="headerlink" href="#feature" title="Permalink to this headline">¶</a></h3>
+<p>This folder contains a <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file that lists all features, signs and transformation as used in the <cite>final</cite> model, taking into account any manual or automatic feature selection. See <a class="reference internal" href="#column-selection-rsmtool"><span class="std std-ref">feature column selection</span></a> for more details.</p>
+</div>
+</div>
+<div class="section" id="selecting-feature-columns">
+<span id="column-selection-rsmtool"></span><h2>Selecting Feature Columns<a class="headerlink" href="#selecting-feature-columns" title="Permalink to this headline">¶</a></h2>
+<p>By default, <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> will use all columns included in the training and evaluation data files as features. The only exception are any columns explicitly identified in the configuration file as containing non-feature information (e.g., <a class="reference internal" href="#id-column-rsmtool"><span class="std std-ref">id_column</span></a>, <a class="reference internal" href="#train-label-column-rsmtool"><span class="std std-ref">train_label_column</span></a>, <a class="reference internal" href="#test-label-column-rsmtool"><span class="std std-ref">test_label_column</span></a>, etc.)</p>
+<p>However, there are certain scenarios in which it is useful to choose specific columns in the data to be used as features. For example, let’s say that you have a large number of very different features and you want to use a different subset of features to score different types of questions on a test. In this case, the ability to easily choose the desired features for any <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> experiment becomes quite important. The alternative of manually pre-processing the data to remove the features you don’t need is quite cumbersome.</p>
+<p>There are two ways to select specific columns in the data as features:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><strong>Fine-grained column selection</strong>: In this method, you manually create a list of the columns that you wish to use as features for an <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> experiment. See <a class="reference internal" href="#feature-list-column-selection"><span class="std std-ref">fine-grained selection</span></a> for more details.</li>
+<li><strong>Subset-based column selection</strong>: In this method, you can pre-define subsets of features and then select entire subsets at a time for any <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> experiment. See <a class="reference internal" href="#subset-column-selection"><span class="std std-ref">subset-based selection</span></a> for more details.</li>
+</ol>
+</div></blockquote>
+<p>While fine-grained column selection is better for a single experiment, subset-based selection is more convenient when you need to run several experiments with somewhat different subsets of features.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> will filter the training and evaluation data to remove any responses with non-numeric values in any of the feature columns before training the model. If your data includes a column containing string values and you do <em>not</em> use any of these methods of feature selection <em>nor</em> specify this column as the <code class="docutils literal notranslate"><span class="pre">id_column</span></code> or the <code class="docutils literal notranslate"><span class="pre">candidate_column</span></code>  or a <code class="docutils literal notranslate"><span class="pre">subgroup</span></code> column, <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> will filter out <em>all</em> the responses in the data.</p>
+</div>
+<div class="section" id="fine-grained-column-selection">
+<span id="feature-list-column-selection"></span><h3>Fine-grained column selection<a class="headerlink" href="#fine-grained-column-selection" title="Permalink to this headline">¶</a></h3>
+<p>To manually select columns to be used as features, you can provide a data file in one of the <a class="reference internal" href="pipeline.html#input-file-format"><span class="std std-ref">supported formats</span></a>. The file must contain a column named <code class="docutils literal notranslate"><span class="pre">feature</span></code> which specifies the names of the feature columns that should be used for scoring model building. For additional flexibility, the same file also allows you to describe transformations to be applied to the values in these feature columns before being used in the model. The path to this file should be set as an argument to <code class="docutils literal notranslate"><span class="pre">features</span></code> in the experiment configuration file. (Note: If you do not wish to perform any feature transformations, but would simply like to select certain feature columns to include, you can also pass a <code class="docutils literal notranslate"><span class="pre">list</span></code> of feature names as an arguement to <code class="docutils literal notranslate"><span class="pre">features</span></code>.)</p>
+<p id="example-feature-csv">Here’s an example of what such a file might look like.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>feature,transform,sign
+feature1,raw,1
+feature2,inv,-1
+</pre></div>
+</div>
+<p>There is one required column and two optional columns.</p>
+<div class="section" id="id3">
+<h4>feature<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<p>The exact name of the column in the training and evaluation data files, including capitalization. Column names cannot contain hyphens. The following strings are reserved and cannot not be used as feature column names: <code class="docutils literal notranslate"><span class="pre">spkitemid</span></code>, <code class="docutils literal notranslate"><span class="pre">spkitemlab</span></code>, <code class="docutils literal notranslate"><span class="pre">itemType</span></code>, <code class="docutils literal notranslate"><span class="pre">r1</span></code>, <code class="docutils literal notranslate"><span class="pre">r2</span></code>, <code class="docutils literal notranslate"><span class="pre">score</span></code>, <code class="docutils literal notranslate"><span class="pre">sc</span></code>, <code class="docutils literal notranslate"><span class="pre">sc1</span></code>, and <code class="docutils literal notranslate"><span class="pre">adj</span></code>. In addition, any column names provided as values for  <code class="docutils literal notranslate"><span class="pre">id_column</span></code>, <code class="docutils literal notranslate"><span class="pre">train_label_column</span></code>, <code class="docutils literal notranslate"><span class="pre">test_label_column</span></code>, <code class="docutils literal notranslate"><span class="pre">length_column</span></code>, <code class="docutils literal notranslate"><span class="pre">candidate_column</span></code>, and <code class="docutils literal notranslate"><span class="pre">subgroups</span></code> may also not be used as feature column names.</p>
+</div>
+<div class="section" id="transform-optional">
+<span id="feature-list-transformation"></span><h4>transform (optional)<a class="headerlink" href="#transform-optional" title="Permalink to this headline">¶</a></h4>
+<p>A transformation that should be applied to the column values before using it in the model. Possible values are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">raw</span></code>: no transformation, use original value</li>
+<li><code class="docutils literal notranslate"><span class="pre">org</span></code>: same as raw</li>
+<li><code class="docutils literal notranslate"><span class="pre">inv</span></code>: 1/x</li>
+<li><code class="docutils literal notranslate"><span class="pre">sqrt</span></code>: square root</li>
+<li><code class="docutils literal notranslate"><span class="pre">addOneInv</span></code>: 1/(x+1)</li>
+<li><code class="docutils literal notranslate"><span class="pre">addOneLn</span></code>: ln(x+1)</li>
+</ul>
+</div></blockquote>
+<p>Note that <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> will raise an exception if the values in the data do not allow the supplied transformation (for example, if <code class="docutils literal notranslate"><span class="pre">inv</span></code> is applied to a column which has 0 values). If you really want to use the tranformation, you must pre-process your training and evaluation data files to remove the problematic cases.</p>
+<p>If the feature file contains no <code class="docutils literal notranslate"><span class="pre">transform</span></code> column, <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> will use the original values for all features (<code class="docutils literal notranslate"><span class="pre">raw</span></code> trasform).</p>
+</div>
+<div class="section" id="id4">
+<h4>sign (optional)<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<p>After transformation, the column values will be multiplied by this number, which can be either <code class="docutils literal notranslate"><span class="pre">1</span></code> or <code class="docutils literal notranslate"><span class="pre">-1</span></code> depending on the expected sign of the correlation between transformed feature and human score. This mechanism is provided to ensure that all features in the final models have a positive correlation with the score, if that is so desired by the user.</p>
+<p>If the feature file contains no <code class="docutils literal notranslate"><span class="pre">sign</span></code> column, <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> will multiply all values by <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
+<p>When determining the sign, you should take into account the correlation between the original feature and the score as well as any applied transformations.  For example, if you use feature which has a negative correlation with the human score and apply <code class="docutils literal notranslate"><span class="pre">sqrt</span></code> transformation, <code class="docutils literal notranslate"><span class="pre">sign</span></code> should be set to <code class="docutils literal notranslate"><span class="pre">-1</span></code>. However, if you use the same feature but apply the <code class="docutils literal notranslate"><span class="pre">inv</span></code> transformation, <code class="docutils literal notranslate"><span class="pre">sign</span></code> should now be set to <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
+<p>To ensure that this is working as expected, you can check the sign of correlations for both raw and processed features in the final report.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You can use the fine-grained method of column selection in combination with a <a class="reference internal" href="#automatic-feature-selection-models"><span class="std std-ref">model with automatic feature selection</span></a>. In this case, the features that end up being used in the final model can be found in the <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file in the <code class="docutils literal notranslate"><span class="pre">feature</span></code> folder in the experiment output directory.</p>
+</div>
+</div>
+</div>
+<div class="section" id="subset-based-column-selection">
+<span id="subset-column-selection"></span><h3>Subset-based column selection<a class="headerlink" href="#subset-based-column-selection" title="Permalink to this headline">¶</a></h3>
+<p>For more advanced users, <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> offers the ability to assign columns to named subsets in a data file in one of the <a class="reference internal" href="pipeline.html#input-file-format"><span class="std std-ref">supported formats</span></a> and then select a set of columns by simply specifying the name of that pre-defined subset.</p>
+<p>If you want to run multiple <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> experiments, each choosing from a large number of features, generating a separate <a class="reference internal" href="#feature-list-column-selection"><span class="std std-ref">feature file</span></a> for each experiment listing columns to use can quickly become tedious.</p>
+<p>Instead you can define feature subsets by providing a subset definition file in one of the <a class="reference internal" href="pipeline.html#input-file-format"><span class="std std-ref">supported formats</span></a> which lists <em>all</em> feature names under a column named <code class="docutils literal notranslate"><span class="pre">feature</span></code>. Each subset is an additional column with a value of either <code class="docutils literal notranslate"><span class="pre">0</span></code> (denoting that the feature does <em>not</em> belong to the subset named by that column) or <code class="docutils literal notranslate"><span class="pre">1</span></code> (denoting that the feature does belong to the subset named by that column).</p>
+<p>Here’s an example of a subset definition file, say <code class="docutils literal notranslate"><span class="pre">subset.csv</span></code>.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>feature,A,B
+feature1,0,1
+feature2,1,1
+feature3,1,0
+</pre></div>
+</div>
+<p>In this example, <code class="docutils literal notranslate"><span class="pre">feature2</span></code> and <code class="docutils literal notranslate"><span class="pre">feature3</span></code> belong to a subset called “A” and <code class="docutils literal notranslate"><span class="pre">feature1</span></code> and <code class="docutils literal notranslate"><span class="pre">feature1</span></code> and <code class="docutils literal notranslate"><span class="pre">feature2</span></code> belong to a subset called “B”.</p>
+<p>This feature subset file can be provided to <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> using the <a class="reference internal" href="#feature-subset-file"><span class="std std-ref">feature_subset_file</span></a> field in the configuration file. Then, to select a particular pre-defined subset of features, you simply set the <a class="reference internal" href="#feature-subset"><span class="std std-ref">feature_subset</span></a> field in the configuration file to the name of the subset that you wish to use.</p>
+<p>Then, in order to use feature subset “A” (<code class="docutils literal notranslate"><span class="pre">feature2</span></code> and <code class="docutils literal notranslate"><span class="pre">feature3</span></code>) in an experiment, we need to set the following two fields in our experiment configuration file:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="p">...</span>
+    <span class="s2">&quot;feature_subset_file&quot;</span><span class="o">:</span> <span class="s2">&quot;subset.csv&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;feature_subset&quot;</span><span class="o">:</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span>
+    <span class="p">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="section" id="transformations">
+<span id="subset-transformation"></span><h4>Transformations<a class="headerlink" href="#transformations" title="Permalink to this headline">¶</a></h4>
+<p>Unlike in <a class="reference internal" href="#feature-list-column-selection"><span class="std std-ref">fine-grained selection</span></a>, the feature subset file does not list any transformations to be applied to the feature columns. However, you can automatically select transformation for each feature <em>in the selected subset</em> by applying all possible transforms and identifying the one which gives the highest correlation with the human score. To use this functionality set the <a class="reference internal" href="#select-transformations-rsmtool"><span class="std std-ref">select_transformations</span></a> field in the configuration file to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+</div>
+<div class="section" id="signs">
+<span id="subset-sign"></span><h4>Signs<a class="headerlink" href="#signs" title="Permalink to this headline">¶</a></h4>
+<p>Some guidelines for building scoring models require all coefficients in the model to be positive and all features to have a positive correlation with human score. <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> can automatically flip the sign for any pre-defined feature subset. To use this functionality, the feature subset file should provide the expected correlation sign between each feature and human score under a column called <code class="docutils literal notranslate"><span class="pre">sign_&lt;SUBSET&gt;</span></code> where <code class="docutils literal notranslate"><span class="pre">&lt;SUBSET&gt;</span></code> is the name of the feature subset. Then, to tell <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> to flip the the sign for this subset, you need to set the <a class="reference internal" href="#sign"><span class="std std-ref">sign</span></a> field in the configuration file to <code class="docutils literal notranslate"><span class="pre">&lt;SUBSET&gt;</span></code>.</p>
+<p>To understand this, let’s re-examine our earlier example of a subset definition file <code class="docutils literal notranslate"><span class="pre">subset.csv</span></code>, but with an additional column.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>feature,A,B,sign_A
+feature1,0,1,+
+feature2,1,1,-
+feature3,1,0,+
+</pre></div>
+</div>
+<p>Then, in order to use feature subset “A” (<code class="docutils literal notranslate"><span class="pre">feature2</span></code> and <code class="docutils literal notranslate"><span class="pre">feature3</span></code>) in an experiment with the sign of <code class="docutils literal notranslate"><span class="pre">feature3</span></code> flipped appropriately (multiplied by -1) to ensure positive correlations with score, we need to set the following three fields in our experiment configuration file:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="p">...</span>
+    <span class="s2">&quot;feature_subset_file&quot;</span><span class="o">:</span> <span class="s2">&quot;subset.csv&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;feature_subset&quot;</span><span class="o">:</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sign&quot;</span><span class="o">:</span> <span class="s2">&quot;A&quot;</span>
+    <span class="p">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If <a class="reference internal" href="#select-transformations-rsmtool"><span class="std std-ref">select_transformations</span></a> is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> is intelligent enough to take it into account when flipping the signs. For example, if the expected correlation sign for a given feature is negative, <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> will multiply the feature values by <code class="docutils literal notranslate"><span class="pre">-1</span></code> if the <code class="docutils literal notranslate"><span class="pre">sqrt</span></code> transform has the highest correlation with score. However, if the best transformation turns out to be <code class="docutils literal notranslate"><span class="pre">inv</span></code> – which already changes the polarity of the feature – no such multiplication will take place.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="intermediate-files">
+<span id="intermediate-files-rsmtool"></span><h2>Intermediate files<a class="headerlink" href="#intermediate-files" title="Permalink to this headline">¶</a></h2>
+<p>Although the primary output of RSMTool is an HTML report, we also want the user to be able to conduct additional analyses outside of RSMTool.To this end, all of the tables produced in the experiment report are saved as files in the format as specified by <code class="docutils literal notranslate"><span class="pre">file_format</span></code> parameter in the <code class="docutils literal notranslate"><span class="pre">output</span></code> directory. The following sections describe all of the intermediate files that are produced.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>The names of all files begin with the <code class="docutils literal notranslate"><span class="pre">experiment_id</span></code> provided by the user in the experiment configuration file. In addition, the names for certain columns are set to default values in these files irrespective of what they were named in the original data files. This is because RSMTool standardizes these column names internally for convenience. These values are:</p>
+<ul class="last simple">
+<li><code class="docutils literal notranslate"><span class="pre">spkitemid</span></code> for the column containing response IDs.</li>
+<li><code class="docutils literal notranslate"><span class="pre">sc1</span></code> for the column containing the human scores used as training labels.</li>
+<li><code class="docutils literal notranslate"><span class="pre">sc2</span></code> for the column containing the second human scores, if this column was specified in the configuration file.</li>
+<li><code class="docutils literal notranslate"><span class="pre">length</span></code> for the column containing response length, if this column was specified in the configuration file.</li>
+<li><code class="docutils literal notranslate"><span class="pre">candidate</span></code> for the column containing candidate IDs, if this column was specified in the configuration file.</li>
+</ul>
+</div>
+<div class="section" id="feature-values">
+<span id="rsmtool-feature-values"></span><h3>Feature values<a class="headerlink" href="#feature-values" title="Permalink to this headline">¶</a></h3>
+<p>filenames: <code class="docutils literal notranslate"><span class="pre">train_features</span></code>, <code class="docutils literal notranslate"><span class="pre">test_features</span></code>, <code class="docutils literal notranslate"><span class="pre">train_preprocessed_features</span></code>, <code class="docutils literal notranslate"><span class="pre">test_preprocessed_features</span></code></p>
+<p>These files contain the raw and pre-processed feature values for the training and evaluation sets. They include <em>only</em> includes the rows that were used for training/evaluating the models after filtering. For models with feature selection, these files <em>only</em> include the features that ended up being included in the model.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">By default RSMTool filters out non-numeric feature values and non-numeric/zero human scores from both the training and evaluation sets. Zero scores can be kept by setting the <cite>exclude_zero_scores</cite> to <cite>false</cite>.</p>
+</div>
+</div>
+<div class="section" id="flagged-responses">
+<span id="rsmtool-flagged-responses"></span><h3>Flagged responses<a class="headerlink" href="#flagged-responses" title="Permalink to this headline">¶</a></h3>
+<p>filenames: <code class="docutils literal notranslate"><span class="pre">train_responses_with_excluded_flags</span></code>, <code class="docutils literal notranslate"><span class="pre">test_responses_with_excluded_flags</span></code></p>
+<p>These files contain all of the rows in the training and evaluation sets that were filtered out based on conditions specified in <a class="reference internal" href="#flag-column-rsmtool"><span class="std std-ref">flag_column</span></a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If the training/evaluation files contained columns with internal names such as <code class="docutils literal notranslate"><span class="pre">sc1</span></code> or <code class="docutils literal notranslate"><span class="pre">length</span></code> but these columns were not actually used by <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code>, these columns will also be included into these files but their names will be changed to <code class="docutils literal notranslate"><span class="pre">##name##</span></code> (e.g. <code class="docutils literal notranslate"><span class="pre">##sc1##</span></code>).</p>
+</div>
+</div>
+<div class="section" id="excluded-responses">
+<h3>Excluded responses<a class="headerlink" href="#excluded-responses" title="Permalink to this headline">¶</a></h3>
+<p>filenames: <code class="docutils literal notranslate"><span class="pre">train_excluded_responses</span></code>, <code class="docutils literal notranslate"><span class="pre">test_excluded_responses</span></code></p>
+<p>These files contain all of the rows in the training and evaluation sets that were filtered out because of feature values or scores. For models with feature selection, these files <em>only</em> include the features that ended up being included in the model.</p>
+</div>
+<div class="section" id="response-metadata">
+<h3>Response metadata<a class="headerlink" href="#response-metadata" title="Permalink to this headline">¶</a></h3>
+<p>filenames: <code class="docutils literal notranslate"><span class="pre">train_metadata</span></code>, <code class="docutils literal notranslate"><span class="pre">test_metadata</span></code></p>
+<p>These files contain the metadata columns (<code class="docutils literal notranslate"><span class="pre">id_column</span></code>,  <code class="docutils literal notranslate"><span class="pre">subgroups</span></code> if provided) for the rows in the training and evaluation sets that were <em>not</em> excluded for some reason.</p>
+</div>
+<div class="section" id="unused-columns">
+<span id="rsmtool-unused-columns"></span><h3>Unused columns<a class="headerlink" href="#unused-columns" title="Permalink to this headline">¶</a></h3>
+<p>filenames: <code class="docutils literal notranslate"><span class="pre">train_other_columns</span></code>, <code class="docutils literal notranslate"><span class="pre">test_other_columns</span></code></p>
+<p>These files contain all of the the columns from the original features files that are not present in the <code class="docutils literal notranslate"><span class="pre">*_feature</span></code> and <code class="docutils literal notranslate"><span class="pre">*_metadata</span></code> files. They only include the rows from the training and evaluation sets that were not filtered out.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If the training/evaluation files contained columns with internal names such as <code class="docutils literal notranslate"><span class="pre">sc1</span></code> or <code class="docutils literal notranslate"><span class="pre">length</span></code> but these columns were not actually used by <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code>, these columns will also be included into these files but their names will be changed to <code class="docutils literal notranslate"><span class="pre">##name##</span></code> (e.g. <code class="docutils literal notranslate"><span class="pre">##sc1##</span></code>).</p>
+</div>
+</div>
+<div class="section" id="response-length">
+<h3>Response length<a class="headerlink" href="#response-length" title="Permalink to this headline">¶</a></h3>
+<p>filename: <code class="docutils literal notranslate"><span class="pre">train_response_lengths</span></code></p>
+<p>If <cite>length_column</cite> is specified, then this file contains the values from that column for the training data under a column called <code class="docutils literal notranslate"><span class="pre">length</span></code> with the response IDs under the <code class="docutils literal notranslate"><span class="pre">spkitemid</span></code> column.</p>
+</div>
+<div class="section" id="human-scores">
+<h3>Human scores<a class="headerlink" href="#human-scores" title="Permalink to this headline">¶</a></h3>
+<p>filename: <code class="docutils literal notranslate"><span class="pre">test_human_scores</span></code></p>
+<p>This file contains the human scores for the evaluation data under a column called <code class="docutils literal notranslate"><span class="pre">sc1</span></code> with the response IDs under the <code class="docutils literal notranslate"><span class="pre">spkitemid</span></code> column. If <code class="docutils literal notranslate"><span class="pre">second_human_score_column</span></code> was specfied, then it also contains the values from that column under a column called <code class="docutils literal notranslate"><span class="pre">sc2</span></code>. Only the rows that were not filtered out are included.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If <code class="docutils literal notranslate"><span class="pre">exclude_zero_scores</span></code>  was set to <code class="docutils literal notranslate"><span class="pre">true</span></code> (the default value), all zero scores in the <code class="docutils literal notranslate"><span class="pre">second_human_score_column</span></code> will be replaced by <code class="docutils literal notranslate"><span class="pre">nan</span></code>.</p>
+</div>
+</div>
+<div class="section" id="data-composition">
+<h3>Data composition<a class="headerlink" href="#data-composition" title="Permalink to this headline">¶</a></h3>
+<p>filename: <code class="docutils literal notranslate"><span class="pre">data_composition</span></code></p>
+<p>This file contains the total number of responses in training and evaluation set and the number of overlapping responses. If applicable, the table will also include the number of different subgroups for each set.</p>
+</div>
+<div class="section" id="excluded-data-composition">
+<h3>Excluded data composition<a class="headerlink" href="#excluded-data-composition" title="Permalink to this headline">¶</a></h3>
+<p>filenames: <code class="docutils literal notranslate"><span class="pre">train_excluded_composition</span></code>, <code class="docutils literal notranslate"><span class="pre">test_excluded_composition</span></code></p>
+<p>These files contain the composition of the set of excluded responses for the training and evaluation sets, e.g., why were they excluded and how many for each such exclusion.</p>
+</div>
+<div class="section" id="missing-features">
+<h3>Missing features<a class="headerlink" href="#missing-features" title="Permalink to this headline">¶</a></h3>
+<p>filename: <code class="docutils literal notranslate"><span class="pre">train_missing_feature_values</span></code></p>
+<p>This file contains the total number of non-numeric values for each feature. The counts in this table are based only on those responses that have a numeric human score in the training data.</p>
+</div>
+<div class="section" id="subgroup-composition">
+<h3>Subgroup composition<a class="headerlink" href="#subgroup-composition" title="Permalink to this headline">¶</a></h3>
+<p>filename: <code class="docutils literal notranslate"><span class="pre">data_composition_by_&lt;SUBGROUP&gt;</span></code></p>
+<p>There will be one such file for each of the specified subgroups and it contains the total number of responses in  that subgroup in both the training and evaluation sets.</p>
+</div>
+<div class="section" id="feature-descriptives">
+<h3>Feature descriptives<a class="headerlink" href="#feature-descriptives" title="Permalink to this headline">¶</a></h3>
+<p>filenames: <code class="docutils literal notranslate"><span class="pre">feature_descriptives</span></code>, <code class="docutils literal notranslate"><span class="pre">feature_descriptivesExtra</span></code></p>
+<p>The first file contains the main descriptive statistics (mean,std. dev., correlation with human score etc.) for all features included in the final model. The second file contains percentiles, mild, and extreme outliers for the same set of features. The values in both files are computed on raw feature values before pre-processing.</p>
+</div>
+<div class="section" id="feature-outliers">
+<h3>Feature outliers<a class="headerlink" href="#feature-outliers" title="Permalink to this headline">¶</a></h3>
+<p>filename: <code class="docutils literal notranslate"><span class="pre">feature_outliers</span></code></p>
+<p>This file contains the number and percentage of outlier values truncated to [MEAN-4*SD, MEAN+4*SD] during feature pre-processing for each feature included in the final model.</p>
+</div>
+<div class="section" id="inter-feature-and-score-correlations">
+<h3>Inter-feature and score correlations<a class="headerlink" href="#inter-feature-and-score-correlations" title="Permalink to this headline">¶</a></h3>
+<p>filenames: <code class="docutils literal notranslate"><span class="pre">cors_orig</span></code>, <code class="docutils literal notranslate"><span class="pre">cors_processed</span></code></p>
+<p>The first file contains the pearson correlations between each pair of (raw) features and between each (raw) feature and the human score. The second file is the same but with the pre-processed feature values instead of the raw values.</p>
+</div>
+<div class="section" id="marginal-and-partial-correlations-with-score">
+<h3>Marginal and partial correlations with score<a class="headerlink" href="#marginal-and-partial-correlations-with-score" title="Permalink to this headline">¶</a></h3>
+<p>filenames: <code class="docutils literal notranslate"><span class="pre">margcor_score_all_data</span></code>, <code class="docutils literal notranslate"><span class="pre">pcor_score_all_data</span></code>, <code class="docutils literal notranslate"><span class="pre">`pcor_score_no_length_all_data</span></code></p>
+<p>The first file contains the marginal correlations between each pre-processed feature and human score. The second file contains the partial correlation between each pre-processed feature and human score after controlling for all other features. The third file contains the partial correlations between each pre-processed feature and human score after controlling for response length, if <code class="docutils literal notranslate"><span class="pre">length_column</span></code> was specified in the configuration file.</p>
+</div>
+<div class="section" id="marginal-and-partial-correlations-with-length">
+<h3>Marginal and partial correlations with length<a class="headerlink" href="#marginal-and-partial-correlations-with-length" title="Permalink to this headline">¶</a></h3>
+<p>filenames: <code class="docutils literal notranslate"><span class="pre">margcor_length_all_data</span></code>, <code class="docutils literal notranslate"><span class="pre">pcor_length_all_data</span></code></p>
+<p>The first file contains the marginal correlations between each pre-processed feature and response length, if <code class="docutils literal notranslate"><span class="pre">length_column</span></code> was specified. The second file contains the partial correlations between each pre-processed feature and response length after controlling for all other features, if <code class="docutils literal notranslate"><span class="pre">length_column</span></code> was specified in the configuration file.</p>
+</div>
+<div class="section" id="principal-components-analyses">
+<h3>Principal components analyses<a class="headerlink" href="#principal-components-analyses" title="Permalink to this headline">¶</a></h3>
+<p>filenames: <code class="docutils literal notranslate"><span class="pre">pca</span></code>, <code class="docutils literal notranslate"><span class="pre">pcavar</span></code></p>
+<p>The first file contains the the results of a Principal Components Analysis (PCA) using pre-processed feature values from the training set and its singular value decomposition. The second file contains the eigenvalues and variance explained by each component.</p>
+</div>
+<div class="section" id="various-correlations-by-subgroups">
+<h3>Various correlations by subgroups<a class="headerlink" href="#various-correlations-by-subgroups" title="Permalink to this headline">¶</a></h3>
+<p>Each of following files may be produced for every subgroup, assuming all other information was also available.</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">margcor_score_by_&lt;SUBGROUP&gt;</span></code>: the marginal correlations between each pre-processed feature and human score, computed separately for the subgroup.</li>
+<li><code class="docutils literal notranslate"><span class="pre">pcor_score_by_&lt;SUBGROUP&gt;</span></code>: the partial correlations between pre-processed features and human score after controlling for all other features, computed separately for the subgroup.</li>
+<li><code class="docutils literal notranslate"><span class="pre">pcor_score_no_length_by_&lt;SUBGROUP&gt;</span></code>: the partial correlations between each pre-processed feature and human score after controlling for response length (if available), computed separately for the subgroup.</li>
+<li><code class="docutils literal notranslate"><span class="pre">margcor_length_by_&lt;SUBGROUP&gt;</span></code>: the marginal correlations between each feature and response length (if available), computed separately for each subgroup.</li>
+<li><code class="docutils literal notranslate"><span class="pre">pcor_length_by_&lt;SUBGROUP&gt;</span></code>: partial correlations between each feature and response length (if available) after controlling for all other features, computed separately for each subgroup.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">All of the feature descriptive statistics, correlations (including those for subgroups), and PCA are computed <em>only</em> on the training set.</p>
+</div>
+</div>
+<div class="section" id="model-information">
+<h3>Model information<a class="headerlink" href="#model-information" title="Permalink to this headline">¶</a></h3>
+<ul class="simple" id="rsmtool-feature-csv">
+<li><code class="docutils literal notranslate"><span class="pre">feature</span></code>: <a class="reference internal" href="pipeline.html#preprocessing-parameters"><span class="std std-ref">pre-processing parameters</span></a> for all features used in the model.</li>
+<li><code class="docutils literal notranslate"><span class="pre">coefficients</span></code>: model coefficients and intercept (for <a class="reference internal" href="#builtin-models"><span class="std std-ref">built-in models</span></a> only).</li>
+<li><code class="docutils literal notranslate"><span class="pre">coefficients_scaled</span></code>: scaled model coefficients and intercept (linear models only). Although RSMTool generates scaled scores by scaling the predictions of the model, it is also possible to achieve the same result by scaling the coefficients instead. This file shows those scaled coefficients.</li>
+</ul>
+<ul class="simple" id="rsmtool-betas-csv">
+<li><code class="docutils literal notranslate"><span class="pre">betas</span></code>: standardized and relative coefficients (for built-in models only).</li>
+<li><code class="docutils literal notranslate"><span class="pre">model_fit</span></code>: R squared and adjusted R squared computed on the training set. Note that these values are always computed on raw predictions without any trimming or rounding.</li>
+<li><code class="docutils literal notranslate"><span class="pre">.model</span></code>: the serialized SKLL <code class="docutils literal notranslate"><span class="pre">Learner</span></code> object containing the fitted model (before scaling the coeffcients).</li>
+<li><code class="docutils literal notranslate"><span class="pre">.ols</span></code>: a serialized object of type <code class="docutils literal notranslate"><span class="pre">pandas.stats.ols.OLS</span></code> containing the fitted model (for built-in models excluding <code class="docutils literal notranslate"><span class="pre">LassoFixedLambda</span></code> and <code class="docutils literal notranslate"><span class="pre">PositiveLassoCV</span></code>).</li>
+<li><code class="docutils literal notranslate"><span class="pre">ols_summary.txt</span></code>: a text file containing a summary of the above model (for built-in models excluding <code class="docutils literal notranslate"><span class="pre">LassoFixedLabmda</span></code> and <code class="docutils literal notranslate"><span class="pre">PositiveLassoCV</span></code>)</li>
+</ul>
+<ul class="simple" id="rsmtool-postprocessing-params-csv">
+<li><code class="docutils literal notranslate"><span class="pre">postprocessing_params</span></code>: the parameters for trimming and scaling predicted scores. Useful for generating predictions on new data.</li>
+</ul>
+</div>
+<div class="section" id="predictions">
+<span id="rsmtool-predictions"></span><h3>Predictions<a class="headerlink" href="#predictions" title="Permalink to this headline">¶</a></h3>
+<p>filenames: <code class="docutils literal notranslate"><span class="pre">pred_processed</span></code>, <code class="docutils literal notranslate"><span class="pre">pred_train</span></code></p>
+<p>The first file contains the predicted scores for the evaluation set and the second file contains the predicted scores for the responses in the training set. Both of them contain the raw scores as well as different types of post-processed scores.</p>
+</div>
+<div class="section" id="evaluation-metrics">
+<h3>Evaluation metrics<a class="headerlink" href="#evaluation-metrics" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">eval</span></code>:  This file contains the descriptives for predicted and human scores (mean, std.dev etc.) as well as the association metrics (correlation, quadartic weighted kappa, SMD etc.) for the raw as well as the post-processed scores.</p>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">eval_by_&lt;SUBGROUP&gt;</span></code>: the same information as in <cite>*_eval.csv</cite> computed separately for each subgroup.</p>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">eval_short</span></code> -  a shortened version of <code class="docutils literal notranslate"><span class="pre">eval</span></code> that contains specific descriptives for predicted and human scores (mean, std.dev etc.) and association metrics (correlation, quadartic weighted kappa, SMD etc.) for specific score types chosen based on recommendations by Williamson (2012). Specifically, the following columns are included (the <code class="docutils literal notranslate"><span class="pre">raw</span></code> or <code class="docutils literal notranslate"><span class="pre">scale</span></code> version is chosen depending on the value of the <code class="docutils literal notranslate"><span class="pre">use_scaled_predictions</span></code> in the configuration file).</p>
+<blockquote>
+<div><ul class="simple">
+<li>h_mean</li>
+<li>h_sd</li>
+<li>corr</li>
+<li>sys_mean [raw/scale_trim]</li>
+<li>sys_sd [raw/scale_trim]</li>
+<li>SMD [raw/scale_trim]</li>
+<li>adj_agr [raw/scale_trim_round]</li>
+<li>exact_agr [raw/scale_trim_round]</li>
+<li>kappa [raw/scale_trim_round]</li>
+<li>wtkappa [raw/scale_trim_round]</li>
+<li>sys_mean [raw/scale_trim_round]</li>
+<li>sys_sd [raw/scale_trim_round]</li>
+<li>SMD [raw/scale_trim_round]</li>
+<li>R2 [raw/scale_trim]</li>
+<li>RMSE [raw/scale_trim]</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">score_dist</span></code>: the distributions of the human scores and the rounded raw/scaled predicted scores, depending on the value of <code class="docutils literal notranslate"><span class="pre">use_scaled_predictions</span></code>.</p>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">confMatrix</span></code>: the confusion matrix between the the human scores and the rounded raw/scaled predicted scores, depending on the value of <code class="docutils literal notranslate"><span class="pre">use_scaled_predictions</span></code>.</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Please note that for raw scores, SMD values are likely to be affected by possible differences in scale.</p>
+</div>
+</div>
+<div class="section" id="human-human-consistency">
+<h3>Human-human Consistency<a class="headerlink" href="#human-human-consistency" title="Permalink to this headline">¶</a></h3>
+<p>These files are created only if a second human score has been made available via the <code class="docutils literal notranslate"><span class="pre">second_human_score_column</span></code> option in the configuration file.</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">consistency</span></code>: contains descriptives for both human raters as well as the agreement metrics between their ratings.</li>
+<li><code class="docutils literal notranslate"><span class="pre">consistency_by_&lt;SUBGROUP&gt;</span></code>: contains the same metrics as in <code class="docutils literal notranslate"><span class="pre">consistency</span></code> file computed separately for each group</li>
+<li><code class="docutils literal notranslate"><span class="pre">degradation</span></code>:  shows the differences between human-human agreement and machine-human agreement for all association metrics and all forms of predicted scores.</li>
+<li><code class="docutils literal notranslate"><span class="pre">disattenuated_correlations</span></code>: shows the correlation between human-machine scores, human-human scores, and the disattenuated human-machine correlation computed as human-machine correlation divided by the square root of human-human correlation.</li>
+<li><code class="docutils literal notranslate"><span class="pre">disattenuated_correlations_by_&lt;SUBGROUP&gt;</span></code>: contains the same metrics as in <code class="docutils literal notranslate"><span class="pre">disattenuated_correlations</span></code> file computed separately for each group.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="built-in-rsmtool-linear-regression-models">
+<span id="builtin-models"></span><h2>Built-in RSMTool Linear Regression Models<a class="headerlink" href="#built-in-rsmtool-linear-regression-models" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="models-which-use-the-full-feature-set">
+<h3>Models which use the full feature set<a class="headerlink" href="#models-which-use-the-full-feature-set" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">LinearRegression</span></code>: A model that learns empirical regression weights using ordinary least squares regression (OLS).</li>
+<li><code class="docutils literal notranslate"><span class="pre">EqualWeightsLR</span></code>:  A model with all feature weights set to 1.0; a naive model.</li>
+<li><code class="docutils literal notranslate"><span class="pre">ScoreWeightedLR</span></code>: a model that learns empirical regression weights using weighted least sqaures. The weights are determined based on the number of responses with different score levels. Score levels with lower number of responses are assigned higher weight.</li>
+<li><code class="docutils literal notranslate"><span class="pre">RebalancedLR</span></code> -  empirical regression weights are rebalanced by using a small portion of positive weights to replace negative beta values. This model has no negative coefficients.</li>
+</ul>
+</div>
+<div class="section" id="models-with-automatic-feature-selection">
+<span id="automatic-feature-selection-models"></span><h3>Models with automatic feature selection<a class="headerlink" href="#models-with-automatic-feature-selection" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">LassoFixedLambdaThenLR</span></code>: A model that learns empirical OLS regression weights with feature selection using Lasso regression with all coefficients set to positive. The hyperparameter <code class="docutils literal notranslate"><span class="pre">lambda</span></code> is set to <code class="docutils literal notranslate"><span class="pre">sqrt(n-lg(p))</span></code> where <code class="docutils literal notranslate"><span class="pre">n</span></code> is the number of responses and <code class="docutils literal notranslate"><span class="pre">p</span></code> is the number of features. This approach was chosen to balance the penalties for error vs. penalty for two many coefficients to force Lasso perform more aggressive feature selection, so it may not necessarily achieve the best possible performance. The feature set selected by LASSO is then used to fit an OLS linear regression. Note that while the original Lasso model is constrained to positive coefficients only, small negative coefficients may appear when the coefficients are re-estimated using OLS regression.</li>
+<li><code class="docutils literal notranslate"><span class="pre">PositiveLassoCVThenLR</span></code>: A model that learns empirical OLS regression weights with feature selection using Lasso regression with all coefficients set to positive. The hyperparameter <code class="docutils literal notranslate"><span class="pre">lambda</span></code> is optimized using crossvalidation for loglikehood. The feature set selected by LASSO is then used to fit an OLS linear regression. Note that this approach will likely produce a model with a large N features and any advantages of running Lasso would be effectively negated by latter adding those features to OLS regression.</li>
+<li><code class="docutils literal notranslate"><span class="pre">NNLR</span></code>: A model that learns empirical OLS regression weights with feature selection using non-negative least squares regression. Note that only the coefficients are constrained to be positive: the intercept can be either positive or negative.</li>
+<li><code class="docutils literal notranslate"><span class="pre">LassoFixedLambdaThenNNLR</span></code>: A model that learns empirical OLS regression weights with feature selection using Lasso regression as above followed by non-negative least squares regression. The latter ensures that no feature has negative coefficients even when the coefficients are estimated using least squares without penalization.</li>
+<li><code class="docutils literal notranslate"><span class="pre">LassoFixedLambda</span></code>: same as <code class="docutils literal notranslate"><span class="pre">LassoFixedLambdaThenLR</span></code> but the model uses the original Lasso weights. Note that the coefficients in Lasso model are estimated using an optimization routine which may produce slightly different results on different systems.</li>
+<li><code class="docutils literal notranslate"><span class="pre">PositiveLassoCV</span></code>: same as <cite>PositiveLassoCVThenLR</cite> but using the original Lasso weights. Please note: the coefficients in Lasso model are estimated using an optimization routine which may produce slightly different results on different systems.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ol class="last arabic simple">
+<li><code class="docutils literal notranslate"><span class="pre">NNLR</span></code>, <code class="docutils literal notranslate"><span class="pre">LassoFixedLambdaThenNNLR</span></code>, <code class="docutils literal notranslate"><span class="pre">LassoFixedLambda</span></code> and <code class="docutils literal notranslate"><span class="pre">PositiveLassoCV</span></code> all have no negative coefficients.</li>
+<li>For all feature selection models, the final set of features will be saved in the <code class="docutils literal notranslate"><span class="pre">feature</span></code> folder in the experiment output directory.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="advanced_usage.html" class="btn btn-neutral float-right" title="Advanced Uses of RSMTool" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="tutorial.html" class="btn btn-neutral" title="Tutorial" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Educational Testing Service.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'6.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+</body>
+</html>

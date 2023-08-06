@@ -1,0 +1,1586 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Advanced Uses of RSMTool &mdash; Rater Scoring Modeling Tool 6.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Writing custom RSMTool sections" href="custom_notebooks.html" />
+    <link rel="prev" title="Using RSMTool" href="usage_rsmtool.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Rater Scoring Modeling Tool
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                6.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="who.html">Who is RSMTool for?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pipeline.html">Overview of RSMTool Pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_rsmtool.html">Using RSMTool</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Advanced Uses of RSMTool</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#rsmeval-evaluate-external-predictions"><code class="docutils literal notranslate"><span class="pre">rsmeval</span></code> - Evaluate external predictions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#tutorial">Tutorial</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#workflow">Workflow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#asap-example">ASAP Example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#generate-scores">Generate scores</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#create-a-configuration-file">Create a configuration file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#run-the-experiment">Run the experiment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examine-the-report">Examine the report</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#input">Input</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#experiment-configuration-file">Experiment configuration file</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#experiment-id">experiment_id</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#predictions-file">predictions_file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#system-score-column">system_score_column</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#trim-min">trim_min</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#trim-max">trim_max</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#description-optional">description <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#file-format-optional">file_format <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id-column-optional">id_column <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#human-score-column-optional">human_score_column <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#second-human-score-column-optional">second_human_score_column <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flag-column-optional">flag_column <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exclude-zero-scores-optional">exclude_zero_scores <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#scale-with-optional">scale_with <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#subgroups-optional">subgroups <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#general-sections-optional">general_sections <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#custom-sections-optional">custom_sections <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#special-sections-optional">special_sections <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#section-order-optional">section_order <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#use-thumbnails-optional">use_thumbnails <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#candidate-column-optional">candidate_column <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#min-items-per-candidate-optional">min_items_per_candidate <em>(Optional)</em></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#output">Output</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#report">report</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#figure">figure</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#intermediate-files">Intermediate files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#predictions">Predictions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flagged-responses">Flagged responses</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#excluded-responses">Excluded responses</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#response-metadata">Response metadata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#unused-columns">Unused columns</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#human-scores">Human scores</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#data-composition">Data composition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#excluded-data-composition">Excluded data composition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#subgroup-composition">Subgroup composition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#evaluation-metrics">Evaluation metrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#human-human-consistency">Human-human Consistency</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#rsmpredict-generate-new-predictions"><code class="docutils literal notranslate"><span class="pre">rsmpredict</span></code> - Generate new predictions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#tutorial-rsmpredict">Tutorial</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">Workflow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">ASAP Example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#extract-features">Extract features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">Create a configuration file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">Run the experiment</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">Input</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#config-file-rsmpredict">Experiment configuration file</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#experiment-dir">experiment_dir</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id9">experiment_id</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#input-feature-file">input_feature_file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#file-format-predict">file_format <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#predict-expected-scores-optional">predict_expected_scores <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id11">id_column <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id12">candidate_column <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id13">human_score_column <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id14">second_human_score_column <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#standardize-features-optional">standardize_features <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id15">subgroups <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id16">flag_column <em>(Optional)</em></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id17">Output</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#rsmcompare-create-a-detailed-comparison-of-two-scoring-models"><code class="docutils literal notranslate"><span class="pre">rsmcompare</span></code> - Create a detailed comparison of two scoring models</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#tutorial-rsmcompare">Tutorial</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id19">Workflow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id20">ASAP Example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#run-rsmtool-or-rsmeval-experiments">Run <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> (or <code class="docutils literal notranslate"><span class="pre">rsmeval</span></code>) experiments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id21">Create a configuration file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id22">Run the experiment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id23">Examine the report</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id24">Input</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#config-file-rsmcompare">Experiment configuration file</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#comparison-id">comparison_id</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#experiment-id-old">experiment_id_old</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#experiment-id-new">experiment_id_new</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#experiment-dir-old">experiment_dir_old</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#experiment-dir-new">experiment_dir_new</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#description-old">description_old</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#description-new">description_new</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#use-scaled-predictions-old-optional">use_scaled_predictions_old <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#use-scaled-predictions-new-optional">use_scaled_predictions_new <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id26">subgroups <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#general-sections-rsmcompare">general_sections <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#custom-sections-rsmcompare">custom_sections <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#special-sections-rsmcompare">special_sections <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id30">section_order <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#use-thumbnails-rsmcompare">use_thumbnails <em>(Optional)</em></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id32">Output</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#rsmsummarize-compare-multiple-scoring-models"><code class="docutils literal notranslate"><span class="pre">rsmsummarize</span></code> - Compare multiple scoring models</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#tutorial-rsmsummarize">Tutorial</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id34">Workflow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id35">ASAP Example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#run-rsmtool-and-rsmeval-experiments">Run <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> and <code class="docutils literal notranslate"><span class="pre">rsmeval</span></code> experiments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id36">Create a configuration file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id37">Run the experiment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id38">Examine the report</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id39">Input</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#config-file-rsmsummarize">Experiment configuration file</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#summary-id">summary_id</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#experiment-dirs">experiment_dirs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id41">description <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#file-format-summarize">file_format <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#general-sections-rsmsummarize">general_sections <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#custom-sections-rsmsummarize">custom_sections <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#special-sections-rsmsummarize">special_sections <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id46">section_order <em>(Optional)</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#use-thumbnails-rsmsummarize">use_thumbnails <em>(Optional)</em></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id48">Output</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id49">report</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id50">output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id51">figure</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#intermediate-files-rsmsummarize">Intermediate files</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#marginal-and-partial-correlations-with-score">Marginal and partial correlations with score</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#model-information">Model information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id53">Evaluation metrics</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="custom_notebooks.html">Writing custom RSMTool sections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utilities.html">Utility Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing to RSMTool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="release_process.html">RSMTool Release Process</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Rater Scoring Modeling Tool</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Advanced Uses of RSMTool</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/advanced_usage.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="advanced-uses-of-rsmtool">
+<span id="advanced-usage"></span><h1>Advanced Uses of RSMTool<a class="headerlink" href="#advanced-uses-of-rsmtool" title="Permalink to this headline">¶</a></h1>
+<p>In addition to providing the <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> utility training and evaluating regression-based scoring models, the RSMTool package also provides three other command-line utilities for more advanced users.</p>
+<div class="section" id="rsmeval-evaluate-external-predictions">
+<span id="usage-rsmeval"></span><h2><code class="docutils literal notranslate"><span class="pre">rsmeval</span></code> - Evaluate external predictions<a class="headerlink" href="#rsmeval-evaluate-external-predictions" title="Permalink to this headline">¶</a></h2>
+<p>RSMTool provides the <code class="docutils literal notranslate"><span class="pre">rsmeval</span></code> command-line utility to evaluate existing predictions and generate a report with all the built-in analyses. This can be useful in scenarios where the user wants to use more sophisticated machine learning algorithms not available in RSMTool to build the scoring model but still wants to be able to evaluate that model’s predictions using the standard analyses.</p>
+<p>For example, say a researcher <em>has</em> an existing automated scoring engine for grading short responses that extracts the features and computes the predicted score. This engine uses a large number of binary, sparse features. She cannot use <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> to train her model since it requires numeric features. So, she uses <a class="reference external" href="http://scikit-learn.org/">scikit-learn</a> to train her model.</p>
+<p>Once the model is trained, the researcher wants to evaluate her engine’s performance using the analyses recommended by the educational measurement community as well as conduct additional investigations for specific subgroups of test-takers. However, these kinds of analyses are not available in <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code>. She can use <code class="docutils literal notranslate"><span class="pre">rsmeval</span></code> to set up a customized report using a combination of existing and custom sections and quickly produce the evaluation that is useful to her.</p>
+<div class="section" id="tutorial">
+<span id="tutorial-rsmeval"></span><h3>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h3>
+<p>For this tutorial, you first need to <a class="reference internal" href="getting_started.html#install"><span class="std std-ref">install RSMTool</span></a> and make sure the conda environment in which you installed it is activated.</p>
+<div class="section" id="workflow">
+<h4>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">rsmeval</span></code> is designed for evaluating existing machine scores. Once you have the scores computed for all the responses in your data, the next steps are fairly straightforward:</p>
+<ol class="arabic simple">
+<li>Create a data file in one of the <a class="reference internal" href="pipeline.html#input-file-format"><span class="std std-ref">supported formats</span></a> containing the computed system scores and the human scores you want to compare against.</li>
+<li>Create an <a class="reference internal" href="#config-file-rsmeval"><span class="std std-ref">experiment configuration file</span></a> describing the evaluation experiment you would like to run.</li>
+<li>Run that configuration file with <a class="reference internal" href="#usage-rsmeval"><span class="std std-ref">rsmeval</span></a> and generate the experiment HTML report as well as the <a class="reference internal" href="#intermediate-files-rsmeval"><span class="std std-ref">intermediate CSV files</span></a>.</li>
+<li>Examine the HTML report to check various aspects of model performance.</li>
+</ol>
+<p>Note that the above workflow does not use any customization features , e.g., <a class="reference internal" href="#general-sections-rsmeval"><span class="std std-ref">choosing which sections to include in the report</span></a> or <a class="reference internal" href="custom_notebooks.html#custom-notebooks"><span class="std std-ref">adding custom analyses sections</span></a> etc. However, we will stick with this workflow for our tutorial since it is likely to be the most common use case.</p>
+</div>
+<div class="section" id="asap-example">
+<h4>ASAP Example<a class="headerlink" href="#asap-example" title="Permalink to this headline">¶</a></h4>
+<p>We are going to use the same example from 2012 Kaggle competition on automated essay scoring that we used for the <a class="reference internal" href="tutorial.html#tutorial"><span class="std std-ref">rsmtool tutorial</span></a>.</p>
+</div>
+<div class="section" id="generate-scores">
+<h4>Generate scores<a class="headerlink" href="#generate-scores" title="Permalink to this headline">¶</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">rsmeval</span></code> is designed for researchers who have developed their own scoring engine for generating scores and would like to produce an evaluation report for those scores.  For this tutorial, we will use the scores we generated for the ASAP2 evaluation set using <a class="reference internal" href="tutorial.html#tutorial"><span class="std std-ref">rsmtool tutorial</span></a>.</p>
+</div>
+<div class="section" id="create-a-configuration-file">
+<h4>Create a configuration file<a class="headerlink" href="#create-a-configuration-file" title="Permalink to this headline">¶</a></h4>
+<p>The next step is to create an <a class="reference internal" href="#config-file-rsmeval"><span class="std std-ref">experiment configuration file</span></a> in <code class="docutils literal notranslate"><span class="pre">.json</span></code> format.</p>
+<div class="highlight-javascript notranslate" id="asap-config-rsemeval"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;experiment_id&quot;</span><span class="o">:</span> <span class="s2">&quot;ASAP2_evaluation&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;Evaluation of the scores generated using rsmtool.&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;predictions_file&quot;</span><span class="o">:</span> <span class="s2">&quot;ASAP2_scores.csv&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;system_score_column&quot;</span><span class="o">:</span> <span class="s2">&quot;system&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;human_score_column&quot;</span><span class="o">:</span> <span class="s2">&quot;human&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;id_column&quot;</span><span class="o">:</span> <span class="s2">&quot;ID&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;trim_min&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;trim_max&quot;</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
+    <span class="s2">&quot;second_human_score_column&quot;</span><span class="o">:</span> <span class="s2">&quot;human2&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;scale_with&quot;</span><span class="o">:</span> <span class="s2">&quot;asis&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>Let’s take a look at the options in our configuration file.</p>
+<ul class="simple">
+<li><strong>Line 2</strong>: We define an experiment ID.</li>
+<li><strong>Line 3</strong>: We also provide a description which will be included in the experiment report.</li>
+<li><strong>Line 4</strong>: We list the path to the file with the predicted and human scores. For this tutorial we used <code class="docutils literal notranslate"><span class="pre">.csv</span></code> format, but RSMTool also supports several other <a class="reference internal" href="pipeline.html#input-file-format"><span class="std std-ref">input file formats</span></a>.</li>
+<li><strong>Line 5</strong>: This field indicates that the system scores in our <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file are located in a column named <code class="docutils literal notranslate"><span class="pre">system</span></code>.</li>
+<li><strong>Line 6</strong>: This field indicates that the human (reference) scores in our <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file are located in a column named <code class="docutils literal notranslate"><span class="pre">human</span></code>.</li>
+<li><strong>Line 7</strong>: This field indicates that the unique IDs for the responses in the <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file are located in columns named <code class="docutils literal notranslate"><span class="pre">ID</span></code>.</li>
+<li><strong>Lines 8-9</strong>: These fields indicate that the lowest score on the scoring scale is a 1 and the highest score is a 6. This information is usually part of the rubric used by human graders.</li>
+<li><strong>Line 10</strong>: This field indicates that scores from a second set of human graders are also available (useful for comparing the agreement between human-machine scores to the agreement between two sets of humans) and are located in the <code class="docutils literal notranslate"><span class="pre">human2</span></code> column in the <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file.</li>
+<li><strong>Line 11</strong>: This field indicates that the provided machine scores are already re-scaled to match the distribution of human scores. <code class="docutils literal notranslate"><span class="pre">rsmeval</span></code> itself will not perform any scaling and the report will refer to these as <code class="docutils literal notranslate"><span class="pre">scaled</span></code> scores.</li>
+</ul>
+<p>Documentation for all of the available configuration options is available <a class="reference internal" href="#config-file-rsmeval"><span class="std std-ref">here</span></a>.</p>
+</div>
+<div class="section" id="run-the-experiment">
+<h4>Run the experiment<a class="headerlink" href="#run-the-experiment" title="Permalink to this headline">¶</a></h4>
+<p>Now that we have our scores in the right format and our configuration file in <code class="docutils literal notranslate"><span class="pre">.json</span></code> format, we can use the <a class="reference internal" href="#usage-rsmeval"><span class="std std-ref">rsmeval</span></a> command-line script to run our evaluation experiment.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> examples/rsmeval
+$ rsmeval config_rsmeval.json
+</pre></div>
+</div>
+<p>This should produce output like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Output</span> <span class="n">directory</span><span class="p">:</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">nmadnani</span><span class="o">/</span><span class="n">work</span><span class="o">/</span><span class="n">rsmtool</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">rsmeval</span>
+<span class="n">Assuming</span> <span class="n">given</span> <span class="n">system</span> <span class="n">predictions</span> <span class="n">are</span> <span class="n">already</span> <span class="n">scaled</span> <span class="ow">and</span> <span class="n">will</span> <span class="n">be</span> <span class="n">used</span> <span class="k">as</span> <span class="n">such</span><span class="o">.</span>
+ <span class="n">predictions</span><span class="p">:</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">nmadnani</span><span class="o">/</span><span class="n">work</span><span class="o">/</span><span class="n">rsmtool</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">rsmeval</span><span class="o">/</span><span class="n">ASAP2_scores</span><span class="o">.</span><span class="n">csv</span>
+<span class="n">Processing</span> <span class="n">predictions</span>
+<span class="n">Saving</span> <span class="n">pre</span><span class="o">-</span><span class="n">processed</span> <span class="n">predictions</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">metadata</span> <span class="n">to</span> <span class="n">disk</span>
+<span class="n">Running</span> <span class="n">analyses</span> <span class="n">on</span> <span class="n">predictions</span>
+<span class="n">Starting</span> <span class="n">report</span> <span class="n">generation</span>
+<span class="n">Merging</span> <span class="n">sections</span>
+<span class="n">Exporting</span> <span class="n">HTML</span>
+<span class="n">Executing</span> <span class="n">notebook</span> <span class="k">with</span> <span class="n">kernel</span><span class="p">:</span> <span class="n">python3</span>
+</pre></div>
+</div>
+<p>Once the run finishes, you will see the <code class="docutils literal notranslate"><span class="pre">output</span></code>, <code class="docutils literal notranslate"><span class="pre">figure</span></code>, and <code class="docutils literal notranslate"><span class="pre">report</span></code> sub-directories in the current directory. Each of these directories contain <a class="reference internal" href="#output-dirs-rsmeval"><span class="std std-ref">useful information</span></a> but we are specifically interested in the <code class="docutils literal notranslate"><span class="pre">report/ASAP2_evaluation_report.html</span></code> file, which is the final evaluation report.</p>
+</div>
+<div class="section" id="examine-the-report">
+<h4>Examine the report<a class="headerlink" href="#examine-the-report" title="Permalink to this headline">¶</a></h4>
+<p>Our experiment report contains all the information we would need to evaluate the provided system scores against the human scores. It includes:</p>
+<ol class="arabic simple">
+<li>The distributions for the human versus the system scores.</li>
+<li>Several different metrics indicating how well the machine’s scores agree with the humans’.</li>
+<li>Information about human-human agreement and the difference between human-human and human-system agreement.</li>
+</ol>
+<p>… and <a class="reference internal" href="#general-sections-rsmeval"><span class="std std-ref">much more</span></a>.</p>
+</div>
+</div>
+<div class="section" id="input">
+<h3>Input<a class="headerlink" href="#input" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">rsmeval</span></code> requires a single argument to run an experiment: the path to <a class="reference internal" href="#config-file-rsmeval"><span class="std std-ref">a configuration file</span></a>. It can also take an output directory as an optional second argument. If the latter is not specified, <code class="docutils literal notranslate"><span class="pre">rsmeval</span></code> will use the current directory as the output directory.</p>
+<p>Here are all the arguments to the <code class="docutils literal notranslate"><span class="pre">rsmeval</span></code> command-line script.</p>
+<dl class="option">
+<dt id="cmdoption-rsmeval-arg-config-file">
+<code class="descname">config_file</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-rsmeval-arg-config-file" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference internal" href="#config-file-rsmeval"><span class="std std-ref">JSON configuration file</span></a> for this experiment.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-rsmeval-arg-output-dir">
+<code class="descname">output_dir</code><code class="descclassname"> (optional)</code><a class="headerlink" href="#cmdoption-rsmeval-arg-output-dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>The output directory where all the files for this experiment will be stored.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-rsmeval-f">
+<code class="descname">-f</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--force</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-rsmeval-f" title="Permalink to this definition">¶</a></dt>
+<dd><p>If specified, the contents of the output directory will be overwritten even if it already contains the output of another rsmeval experiment.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-rsmeval-h">
+<code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-rsmeval-h" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show help message and exist.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-rsmeval-v">
+<code class="descname">-V</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--version</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-rsmeval-v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show version number and exit.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="experiment-configuration-file">
+<span id="config-file-rsmeval"></span><h3>Experiment configuration file<a class="headerlink" href="#experiment-configuration-file" title="Permalink to this headline">¶</a></h3>
+<p>This is a file in <code class="docutils literal notranslate"><span class="pre">.json</span></code> format that provides overall configuration options for an <code class="docutils literal notranslate"><span class="pre">rsmeval</span></code> experiment. Here’s an example configuration file for <a class="reference external" href="https://github.com/EducationalTestingService/rsmtool/blob/master/examples/rsmeval/config_rsmeval.json">rsmeval</a>.</p>
+<p>There are four required fields and the rest are all optional.</p>
+<div class="section" id="experiment-id">
+<h4>experiment_id<a class="headerlink" href="#experiment-id" title="Permalink to this headline">¶</a></h4>
+<p>An identifier for the experiment that will be used to name the report and all <a class="reference internal" href="#intermediate-files-rsmeval"><span class="std std-ref">intermediate files</span></a>. It can be any combination of alphanumeric values, must <em>not</em> contain spaces, and must <em>not</em> be any longer than 200 characters.</p>
+</div>
+<div class="section" id="predictions-file">
+<h4>predictions_file<a class="headerlink" href="#predictions-file" title="Permalink to this headline">¶</a></h4>
+<p>The path to the file with predictions to evaluate. The file should be in one of the <a class="reference internal" href="pipeline.html#input-file-format"><span class="std std-ref">supported formats</span></a>. Each row should correspond to a single response and contain the predicted and observed scores for this response. In addition, there should be a column with a unique identifier (ID) for each response. The path can be absolute or relative to the location of the configuration file.</p>
+</div>
+<div class="section" id="system-score-column">
+<h4>system_score_column<a class="headerlink" href="#system-score-column" title="Permalink to this headline">¶</a></h4>
+<p>The name for the column containing the scores predicted by the system. These scores will be used for evaluation.</p>
+</div>
+<div class="section" id="trim-min">
+<h4>trim_min<a class="headerlink" href="#trim-min" title="Permalink to this headline">¶</a></h4>
+<p>The single numeric value for the lowest possible integer score that the machine should predict. This value will be used to compute the floor value for <a class="reference internal" href="pipeline.html#score-postprocessing"><span class="std std-ref">trimmed (bound)</span></a> machine scores as <code class="docutils literal notranslate"><span class="pre">trim_min</span></code> - 0.49998.</p>
+</div>
+<div class="section" id="trim-max">
+<h4>trim_max<a class="headerlink" href="#trim-max" title="Permalink to this headline">¶</a></h4>
+<p>The single numeric value for the highest possible integer score that the machine should predict. This value will be used to compute the ceiling value for <a class="reference internal" href="pipeline.html#score-postprocessing"><span class="std std-ref">trimmed (bound)</span></a> machine scores as <code class="docutils literal notranslate"><span class="pre">trim_max</span></code> + 0.49998.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Although the <code class="docutils literal notranslate"><span class="pre">trim_min</span></code> and <code class="docutils literal notranslate"><span class="pre">trim_max</span></code> fields are optional for <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code>, they are <em>required</em> for <code class="docutils literal notranslate"><span class="pre">rsmeval</span></code>.</p>
+</div>
+</div>
+<div class="section" id="description-optional">
+<h4>description <em>(Optional)</em><a class="headerlink" href="#description-optional" title="Permalink to this headline">¶</a></h4>
+<p>A brief description of the experiment. This will be included in the report. The description can contain spaces and punctuation. It’s blank by default.</p>
+</div>
+<div class="section" id="file-format-optional">
+<span id="file-format-eval"></span><h4>file_format <em>(Optional)</em><a class="headerlink" href="#file-format-optional" title="Permalink to this headline">¶</a></h4>
+<p>The format of the <a class="reference internal" href="#intermediate-files-rsmeval"><span class="std std-ref">intermediate files</span></a>. Options are <code class="docutils literal notranslate"><span class="pre">csv</span></code>, <code class="docutils literal notranslate"><span class="pre">tsv</span></code>, or <code class="docutils literal notranslate"><span class="pre">xlsx</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">csv</span></code> if this is not specified.</p>
+</div>
+<div class="section" id="id-column-optional">
+<h4>id_column <em>(Optional)</em><a class="headerlink" href="#id-column-optional" title="Permalink to this headline">¶</a></h4>
+<p>The name of the column containing the response IDs. Defaults to <code class="docutils literal notranslate"><span class="pre">spkitemid</span></code>, i.e., if this is not specified, <code class="docutils literal notranslate"><span class="pre">rsmeval</span></code> will look for a column called <code class="docutils literal notranslate"><span class="pre">spkitemid</span></code> in the prediction file.</p>
+</div>
+<div class="section" id="human-score-column-optional">
+<h4>human_score_column <em>(Optional)</em><a class="headerlink" href="#human-score-column-optional" title="Permalink to this headline">¶</a></h4>
+<p>The name for the column containing the human scores for each response. The values in this column will be used as observed scores. Defaults to <code class="docutils literal notranslate"><span class="pre">sc1</span></code>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">All responses with non-numeric values or zeros in either <code class="docutils literal notranslate"><span class="pre">human_score_column</span></code> or <code class="docutils literal notranslate"><span class="pre">system_score_column</span></code> will be automatically excluded from evaluation. You can use <a class="reference internal" href="#exclude-zero-scores-eval"><span class="std std-ref">exclude_zero_scores (Optional)</span></a> to keep responses with zero scores.</p>
+</div>
+</div>
+<div class="section" id="second-human-score-column-optional">
+<span id="second-human-score-column-eval"></span><h4>second_human_score_column <em>(Optional)</em><a class="headerlink" href="#second-human-score-column-optional" title="Permalink to this headline">¶</a></h4>
+<p>The name for an optional column in the test data containing a second human score for each response. If specified, additional information about human-human agreement and degradation will be computed and included in the report. Note that this column must contain either numbers or be empty. Non-numeric values are <em>not</em> accepted. Note also that the <a class="reference internal" href="#exclude-zero-scores-eval"><span class="std std-ref">exclude_zero_scores (Optional)</span></a> option below will apply to this column too.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You do not need to have second human scores for <em>all</em> responses to use this option. The human-human agreement statistics will be computed as long as there is at least one response with numeric value in this column. For responses that do not have a second human score, the value in this column should be blank.</p>
+</div>
+</div>
+<div class="section" id="flag-column-optional">
+<span id="flag-column-eval"></span><h4>flag_column <em>(Optional)</em><a class="headerlink" href="#flag-column-optional" title="Permalink to this headline">¶</a></h4>
+<p>This field makes it possible to only use responses with particular values in a given column (e.g. only responses with a value of <code class="docutils literal notranslate"><span class="pre">0</span></code> in a column called <code class="docutils literal notranslate"><span class="pre">ADVISORY</span></code>). The field takes a dictionary in Python format where the keys are the names of the columns and the values are lists of values for responses that will be evaluated. For example, a value of <code class="docutils literal notranslate"><span class="pre">{&quot;ADVISORY&quot;:</span> <span class="pre">0}</span></code> will mean that <code class="docutils literal notranslate"><span class="pre">rsmeval</span></code> will <em>only</em> use responses for which the <code class="docutils literal notranslate"><span class="pre">ADVISORY</span></code> column has the value 0. Defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If  several conditions are specified (e.g., <code class="docutils literal notranslate"><span class="pre">{&quot;ADVISORY&quot;:</span> <span class="pre">0,</span> <span class="pre">&quot;ERROR&quot;:</span> <span class="pre">0}</span></code>) only those responses which satisfy <em>all</em> the conditions will be selected for further analysis (in this example, these will be the responses where the <code class="docutils literal notranslate"><span class="pre">ADVISORY</span></code> column has a value of 0 <em>and</em> the <code class="docutils literal notranslate"><span class="pre">ERROR</span></code> column has a value of 0).</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">When reading the values in the supplied dictionary, <code class="docutils literal notranslate"><span class="pre">rsmeval</span></code> treats numeric strings, floats and integers as the same value. Thus <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">1.0</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;1&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;1.0&quot;</span></code> are all treated as the <code class="docutils literal notranslate"><span class="pre">1.0</span></code>.</p>
+</div>
+</div>
+<div class="section" id="exclude-zero-scores-optional">
+<span id="exclude-zero-scores-eval"></span><h4>exclude_zero_scores <em>(Optional)</em><a class="headerlink" href="#exclude-zero-scores-optional" title="Permalink to this headline">¶</a></h4>
+<p>By default, responses with human scores of 0 will be excluded from evaluations. Set this field to <code class="docutils literal notranslate"><span class="pre">false</span></code> if you want to keep responses with scores of 0. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+</div>
+<div class="section" id="scale-with-optional">
+<h4>scale_with <em>(Optional)</em><a class="headerlink" href="#scale-with-optional" title="Permalink to this headline">¶</a></h4>
+<p>In many scoring applications, system scores are <a class="reference internal" href="pipeline.html#score-postprocessing"><span class="std std-ref">re-scaled</span></a> so that their mean and standard deviation match those of the human scores for the training data.</p>
+<p>If you want <code class="docutils literal notranslate"><span class="pre">rsmeval</span></code> to re-scale the supplied predictions, you need to provide – as the value for this field – the path to a second file in one of the <a class="reference internal" href="pipeline.html#input-file-format"><span class="std std-ref">supported formats</span></a> containing the human scores and predictions of the same system on its training data. This file <em>must</em> have two columns: the human scores under the <code class="docutils literal notranslate"><span class="pre">sc1</span></code> column and the predicted score under the <code class="docutils literal notranslate"><span class="pre">prediction</span></code>.</p>
+<p>This field can also be set to <code class="docutils literal notranslate"><span class="pre">&quot;asis&quot;</span></code> if the scores are already scaled. In this case, no additional scaling will be performed by <code class="docutils literal notranslate"><span class="pre">rsmeval</span></code> but the report will refer to the scores as “scaled”.</p>
+<p>Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;raw&quot;</span></code> which means that no-rescaling is performed and the report refers to the scores as “raw”.</p>
+</div>
+<div class="section" id="subgroups-optional">
+<span id="subgroups-eval"></span><h4>subgroups <em>(Optional)</em><a class="headerlink" href="#subgroups-optional" title="Permalink to this headline">¶</a></h4>
+<p>A list of column names indicating grouping variables used for generating analyses specific to each of those defined subgroups. For example, <code class="docutils literal notranslate"><span class="pre">[&quot;prompt,</span> <span class="pre">gender,</span> <span class="pre">native_language,</span> <span class="pre">test_country&quot;]</span></code>. These subgroup columns need to be present in the input predictions file. If subgroups are specified, <code class="docutils literal notranslate"><span class="pre">rsmeval</span></code> will generate:</p>
+<blockquote>
+<div><ul class="simple">
+<li>tables and barplots showing system-human agreement for each subgroup on the evaluation set.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="general-sections-optional">
+<span id="general-sections-rsmeval"></span><h4>general_sections <em>(Optional)</em><a class="headerlink" href="#general-sections-optional" title="Permalink to this headline">¶</a></h4>
+<p>RSMTool provides pre-defined sections for <code class="docutils literal notranslate"><span class="pre">rsmeval</span></code> (listed below) and, by default, all of them are included in the report. However, you can choose a subset of these pre-defined sections by specifying a list as the value for this field.</p>
+<blockquote>
+<div><ul>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">data_description</span></code>: Shows the total number of responses, along with any responses have been excluded due to non-numeric/zero scores or <a class="reference internal" href="#flag-column-eval"><span class="std std-ref">flag columns</span></a>.</p>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">data_description_by_group</span></code>: Shows the total number of responses for each of the <a class="reference internal" href="#subgroups-eval"><span class="std std-ref">subgroups</span></a> specified in the configuration file. This section only covers the responses used to evaluate the model.</p>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">consistency</span></code>: Shows metrics for human-human agreement, the difference (‘degradation’) between the human-human and human-system agreement, and the disattenuated human-machine correlations.. This notebook is only generated if the config file specifies <a class="reference internal" href="#second-human-score-column-eval"><span class="std std-ref">second_human_score_column</span></a></p>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">evaluation</span></code>: Shows the standard set of evaluations recommended for scoring models on the evaluation data:</p>
+<blockquote>
+<div><ul class="simple">
+<li>a table showing system-human association metrics;</li>
+<li>the confusion matrix; and</li>
+<li>a barplot showing the distributions for both human and machine scores.</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">evaluation</span> <span class="pre">by</span> <span class="pre">group</span></code>: Shows barplots with the main evaluation metrics by each of the subgroups specified in the configuration file.</p>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">intermediate_file_paths</span></code>: Shows links to all of the intermediate files that were generated while running the evaluation.</p>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">sysinfo</span></code>: Shows all Python packages along with versions installed in the current environment while generating the report.</p>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="custom-sections-optional">
+<span id="custom-sections-rsmeval"></span><h4>custom_sections <em>(Optional)</em><a class="headerlink" href="#custom-sections-optional" title="Permalink to this headline">¶</a></h4>
+<p>A list of custom, user-defined sections to be included into the final report. These are IPython notebooks (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> files) created by the user.  The list must contains paths to the notebook files, either absolute or relative to the configuration file. All custom notebooks have access to some <a class="reference internal" href="custom_notebooks.html#custom-notebooks"><span class="std std-ref">pre-defined variables</span></a>.</p>
+</div>
+<div class="section" id="special-sections-optional">
+<span id="special-sections-rsmeval"></span><h4>special_sections <em>(Optional)</em><a class="headerlink" href="#special-sections-optional" title="Permalink to this headline">¶</a></h4>
+<p>A list specifying special ETS-only sections to be included into the final report. These sections are available <em>only</em> to ETS employees via the <code class="docutils literal notranslate"><span class="pre">rsmextra</span></code> package.</p>
+</div>
+<div class="section" id="section-order-optional">
+<h4>section_order <em>(Optional)</em><a class="headerlink" href="#section-order-optional" title="Permalink to this headline">¶</a></h4>
+<p>A list containing the order in which the sections in the report should be generated. Any specified order must explicitly list:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Either <em>all</em> pre-defined sections if a value for the <a class="reference internal" href="#general-sections-rsmeval"><span class="std std-ref">general_sections</span></a> field is not specified OR the sections specified using <a class="reference internal" href="#general-sections-rsmeval"><span class="std std-ref">general_sections</span></a>, and</li>
+<li><em>All</em> custom section names specified using <a class="reference internal" href="#custom-sections-rsmeval"><span class="std std-ref">custom_ sections</span></a>, i.e., file prefixes only, without the path and without the <cite>.ipynb</cite> extension, and</li>
+<li><em>All</em> special sections specified using <a class="reference internal" href="#special-sections-rsmeval"><span class="std std-ref">special_sections</span></a>.</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="use-thumbnails-optional">
+<h4>use_thumbnails <em>(Optional)</em><a class="headerlink" href="#use-thumbnails-optional" title="Permalink to this headline">¶</a></h4>
+<p>If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the images in the HTML will be set to clickable thumbnails rather than full-sized images. Upon clicking the thumbnail, the full-sized images will be displayed in a separate tab in the browser. If set to <code class="docutils literal notranslate"><span class="pre">false</span></code>, full-sized images will be displayed as usual. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</div>
+<div class="section" id="candidate-column-optional">
+<h4>candidate_column <em>(Optional)</em><a class="headerlink" href="#candidate-column-optional" title="Permalink to this headline">¶</a></h4>
+<p>The name for an optional column in prediction file containing unique candidate IDs. Candidate IDs are different from response IDs since the same candidate (test-taker) might have responded to multiple questions.</p>
+</div>
+<div class="section" id="min-items-per-candidate-optional">
+<h4>min_items_per_candidate <em>(Optional)</em><a class="headerlink" href="#min-items-per-candidate-optional" title="Permalink to this headline">¶</a></h4>
+<p>An integer value for the minimum number of responses expected from each candidate. If any candidates have fewer responses than the specified value, all responses from those candidates will be excluded from further analysis. Defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+</div>
+</div>
+<div class="section" id="output">
+<span id="output-dirs-rsmeval"></span><span id="use-thumbnails-rsmeval"></span><h3>Output<a class="headerlink" href="#output" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">rsmeval</span></code> produces a set of folders in the output directory.</p>
+<div class="section" id="report">
+<h4>report<a class="headerlink" href="#report" title="Permalink to this headline">¶</a></h4>
+<p>This folder contains the final RSMEval report in HTML format as well as in the form of a Jupyter notebook (a <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file).</p>
+</div>
+<div class="section" id="id1">
+<h4>output<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<p>This folder contains all of the <a class="reference internal" href="#intermediate-files-rsmeval"><span class="std std-ref">intermediate files</span></a> produced as part of the various analyses performed, saved as <code class="docutils literal notranslate"><span class="pre">.csv</span></code> files. <code class="docutils literal notranslate"><span class="pre">rsmeval</span></code> will also save in this folder a copy of the <a class="reference internal" href="#config-file-rsmeval"><span class="std std-ref">configuration file</span></a>. Fields not specified in the original configuration file will be pre-populated with default values.</p>
+</div>
+<div class="section" id="figure">
+<h4>figure<a class="headerlink" href="#figure" title="Permalink to this headline">¶</a></h4>
+<p>This folder contains all of the figures generated as part of the various analyses performed, saved as <code class="docutils literal notranslate"><span class="pre">.svg</span></code> files.</p>
+</div>
+</div>
+<div class="section" id="intermediate-files">
+<span id="intermediate-files-rsmeval"></span><h3>Intermediate files<a class="headerlink" href="#intermediate-files" title="Permalink to this headline">¶</a></h3>
+<p>Although the primary output of <code class="docutils literal notranslate"><span class="pre">rsmeval</span></code> is an HTML report, we also want the user to be able to conduct additional analyses outside of <code class="docutils literal notranslate"><span class="pre">rsmeval</span></code>. To this end, all of the tables produced in the experiment report are saved as files in the format as specified by <code class="docutils literal notranslate"><span class="pre">file_format</span></code> parameter in the <code class="docutils literal notranslate"><span class="pre">output</span></code> directory. The following sections describe all of the intermediate files that are produced.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>The names of all files begin with the <code class="docutils literal notranslate"><span class="pre">experiment_id</span></code> provided by the user in the experiment configuration file. In addition, the names for certain columns are set to default values in these files irrespective of what they were named in the original data files. This is because RSMEval standardizes these column names internally for convenience. These values are:</p>
+<ul class="last simple">
+<li><code class="docutils literal notranslate"><span class="pre">spkitemid</span></code> for the column containing response IDs.</li>
+<li><code class="docutils literal notranslate"><span class="pre">sc1</span></code> for the column containing the human scores used as observed scores</li>
+<li><code class="docutils literal notranslate"><span class="pre">sc2</span></code> for the column containing the second human scores, if this column was specified in the configuration file.</li>
+<li><code class="docutils literal notranslate"><span class="pre">candidate</span></code> for the column containing candidate IDs, if this column was specified in the configuration file.</li>
+</ul>
+</div>
+<div class="section" id="predictions">
+<h4>Predictions<a class="headerlink" href="#predictions" title="Permalink to this headline">¶</a></h4>
+<p>filename: <code class="docutils literal notranslate"><span class="pre">pred_processed</span></code></p>
+<p>This file contains the post-processed predicted scores: the predictions from the model are truncated, rounded, and re-scaled (if requested).</p>
+</div>
+<div class="section" id="flagged-responses">
+<h4>Flagged responses<a class="headerlink" href="#flagged-responses" title="Permalink to this headline">¶</a></h4>
+<p>filename: <code class="docutils literal notranslate"><span class="pre">test_responses_with_excluded_flags</span></code></p>
+<p>This file contains all of the rows in input predictions file that were filtered out based on conditions specified in <a class="reference internal" href="#flag-column-eval"><span class="std std-ref">flag_column</span></a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If the predictions file contained columns with internal names such as <code class="docutils literal notranslate"><span class="pre">sc1</span></code> that were not actually used by <code class="docutils literal notranslate"><span class="pre">rsmeval</span></code>, they will still be included in these files but their names will be changed to <code class="docutils literal notranslate"><span class="pre">##name##</span></code> (e.g. <code class="docutils literal notranslate"><span class="pre">##sc1##</span></code>).</p>
+</div>
+</div>
+<div class="section" id="excluded-responses">
+<h4>Excluded responses<a class="headerlink" href="#excluded-responses" title="Permalink to this headline">¶</a></h4>
+<p>filename: <code class="docutils literal notranslate"><span class="pre">test_excluded_responses</span></code></p>
+<p>This file contains all of the rows in the predictions file that were filtered out because of non-numeric or zero scores.</p>
+</div>
+<div class="section" id="response-metadata">
+<h4>Response metadata<a class="headerlink" href="#response-metadata" title="Permalink to this headline">¶</a></h4>
+<p>filename:  <code class="docutils literal notranslate"><span class="pre">test_metadata</span></code></p>
+<p>This file contains the metadata columns (<code class="docutils literal notranslate"><span class="pre">id_column</span></code>,  <code class="docutils literal notranslate"><span class="pre">subgroups</span></code> if provided) for all rows in the predictions file that used in the evaluation.</p>
+</div>
+<div class="section" id="unused-columns">
+<h4>Unused columns<a class="headerlink" href="#unused-columns" title="Permalink to this headline">¶</a></h4>
+<p>filename: <code class="docutils literal notranslate"><span class="pre">test_other_columns</span></code></p>
+<p>This file contains all of the the columns from the input predictions file that are not present in the <code class="docutils literal notranslate"><span class="pre">*_pred_processed</span></code> and <code class="docutils literal notranslate"><span class="pre">*_metadata</span></code> files. They only include the rows that were not filtered out.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If the predictions file contained columns with internal names such as <code class="docutils literal notranslate"><span class="pre">sc1</span></code> but these columns were not actually used by <code class="docutils literal notranslate"><span class="pre">rsmeval</span></code>, these columns will also be included into these files but their names will be changed to <code class="docutils literal notranslate"><span class="pre">##name##</span></code> (e.g. <code class="docutils literal notranslate"><span class="pre">##sc1##</span></code>).</p>
+</div>
+</div>
+<div class="section" id="human-scores">
+<h4>Human scores<a class="headerlink" href="#human-scores" title="Permalink to this headline">¶</a></h4>
+<p>filename: <code class="docutils literal notranslate"><span class="pre">test_human_scores</span></code></p>
+<p>This file contains the human scores, if available in the input predictions file, under a column called <code class="docutils literal notranslate"><span class="pre">sc1</span></code> with the response IDs under the <code class="docutils literal notranslate"><span class="pre">spkitemid</span></code> column.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">second_human_score_column</span></code> was specfied, then it also contains the values in the predictions file from that column under a column called <code class="docutils literal notranslate"><span class="pre">sc2</span></code>. Only the rows that were not filtered out are included.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If <code class="docutils literal notranslate"><span class="pre">exclude_zero_scores</span></code>  was set to <code class="docutils literal notranslate"><span class="pre">true</span></code> (the default value), all zero scores in the <code class="docutils literal notranslate"><span class="pre">second_human_score_column</span></code> will be replaced by <code class="docutils literal notranslate"><span class="pre">nan</span></code>.</p>
+</div>
+</div>
+<div class="section" id="data-composition">
+<h4>Data composition<a class="headerlink" href="#data-composition" title="Permalink to this headline">¶</a></h4>
+<p>filename: <code class="docutils literal notranslate"><span class="pre">data_composition</span></code></p>
+<p>This file contains the total number of responses in the input predictions file. If applicable, the table will also include the number of different subgroups.</p>
+</div>
+<div class="section" id="excluded-data-composition">
+<h4>Excluded data composition<a class="headerlink" href="#excluded-data-composition" title="Permalink to this headline">¶</a></h4>
+<p>filenames: <code class="docutils literal notranslate"><span class="pre">test_excluded_composition</span></code></p>
+<p>This file contains the composition of the set of excluded responses, e.g., why were they excluded and how many for each such exclusion.</p>
+</div>
+<div class="section" id="subgroup-composition">
+<h4>Subgroup composition<a class="headerlink" href="#subgroup-composition" title="Permalink to this headline">¶</a></h4>
+<p>filename: <code class="docutils literal notranslate"><span class="pre">data_composition_by_&lt;SUBGROUP&gt;</span></code></p>
+<p>There will be one such file for each of the specified subgroups and it contains the total number of responses in that subgroup.</p>
+</div>
+<div class="section" id="evaluation-metrics">
+<h4>Evaluation metrics<a class="headerlink" href="#evaluation-metrics" title="Permalink to this headline">¶</a></h4>
+<ul>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">eval</span></code>:  This file contains the descriptives for predicted and human scores (mean, std.dev etc.) as well as the association metrics (correlation, quadartic weighted kappa, SMD etc.) for the raw as well as the post-processed scores.</p>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">eval_by_&lt;SUBGROUP&gt;</span></code>: the same information as in <cite>*_eval.csv</cite> computed separately for each subgroup.</p>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">eval_short</span></code> -  a shortened version of <code class="docutils literal notranslate"><span class="pre">eval</span></code> that contains specific descriptives for predicted and human scores (mean, std.dev etc.) and association metrics (correlation, quadartic weighted kappa, SMD etc.) for specific score types chosen based on recommendations by Williamson (2012). Specifically, the following columns are included (the <code class="docutils literal notranslate"><span class="pre">raw</span></code> or <code class="docutils literal notranslate"><span class="pre">scale</span></code> version is chosen depending on the value of the <code class="docutils literal notranslate"><span class="pre">use_scaled_predictions</span></code> in the configuration file).</p>
+<blockquote>
+<div><ul class="simple">
+<li>h_mean</li>
+<li>h_sd</li>
+<li>corr</li>
+<li>sys_mean [raw/scale trim]</li>
+<li>sys_sd [raw/scale trim]</li>
+<li>SMD [raw/scale trim]</li>
+<li>adj_agr [raw/scale trim_round]</li>
+<li>exact_agr [raw/scale trim_round]</li>
+<li>kappa [raw/scale trim_round]</li>
+<li>wtkappa [raw/scale trim_round]</li>
+<li>sys_mean [raw/scale trim_round]</li>
+<li>sys_sd [raw/scale trim_round]</li>
+<li>SMD [raw/scale trim_round]</li>
+<li>R2 [raw/scale trim]</li>
+<li>RMSE [raw/scale trim]</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">score_dist</span></code>: the distributions of the human scores and the rounded raw/scaled predicted scores, depending on the value of <code class="docutils literal notranslate"><span class="pre">use_scaled_predictions</span></code>.</p>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">confMatrix</span></code>: the confusion matrix between the the human scores and the rounded raw/scaled predicted scores, depending on the value of <code class="docutils literal notranslate"><span class="pre">use_scaled_predictions</span></code>.</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Please note that for raw scores, SMD values are likely to be affected by possible differences in scale.</p>
+</div>
+</div>
+<div class="section" id="human-human-consistency">
+<h4>Human-human Consistency<a class="headerlink" href="#human-human-consistency" title="Permalink to this headline">¶</a></h4>
+<p>These files are created only if a second human score has been made available via the <code class="docutils literal notranslate"><span class="pre">second_human_score_column</span></code> option in the configuration file.</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">consistency</span></code>: contains descriptives for both human raters as well as the agreement metrics between their ratings.</li>
+<li><code class="docutils literal notranslate"><span class="pre">consistency_by_&lt;SUBGROUP&gt;</span></code>: contains the same metrics as in <code class="docutils literal notranslate"><span class="pre">consistency</span></code> file computed separately for each group</li>
+<li><code class="docutils literal notranslate"><span class="pre">degradation</span></code>:  shows the differences between human-human agreement and machine-human agreement for all association metrics and all forms of predicted scores.</li>
+<li><code class="docutils literal notranslate"><span class="pre">disattenuated_correlations</span></code>: shows the correlation between human-machine scores, human-human scores, and the disattenuated human-machine correlation computed as human-machine correlation divided by the square root of human-human correlation.</li>
+<li><code class="docutils literal notranslate"><span class="pre">disattenuated_correlations_by_&lt;SUBGROUP&gt;</span></code>: contains the same metrics as in <code class="docutils literal notranslate"><span class="pre">disattenuated_correlations</span></code> file computed separately for each group.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="rsmpredict-generate-new-predictions">
+<span id="usage-rsmpredict"></span><h2><code class="docutils literal notranslate"><span class="pre">rsmpredict</span></code> - Generate new predictions<a class="headerlink" href="#rsmpredict-generate-new-predictions" title="Permalink to this headline">¶</a></h2>
+<p>RSMTool provides the <code class="docutils literal notranslate"><span class="pre">rsmpredict</span></code> command-line utility to generate predictions for new data using a model already trained using the <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> utility. This can be useful when processing a new set of responses to the same task without needing to retrain the model.</p>
+<p><code class="docutils literal notranslate"><span class="pre">rsmpredict</span></code> pre-processes the feature values according to user specifications before using them to generate the predicted scores. The generated scores are post-processed in the same manner as they are in <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> output.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>No score is generated for responses with non-numeric values for any of the features included into the model.</p>
+<p class="last">If the original model specified transformations for some of the features and these transformations led to <code class="docutils literal notranslate"><span class="pre">NaN</span></code> or <code class="docutils literal notranslate"><span class="pre">Inf</span></code> values when applied to the new data, <code class="docutils literal notranslate"><span class="pre">rsmpredict</span></code> will raise a warning. No score will be generated for such responses.</p>
+</div>
+<div class="section" id="tutorial-rsmpredict">
+<span id="id2"></span><h3>Tutorial<a class="headerlink" href="#tutorial-rsmpredict" title="Permalink to this headline">¶</a></h3>
+<p>For this tutorial, you first need to <a class="reference internal" href="getting_started.html#install"><span class="std std-ref">install RSMTool</span></a> and make sure the conda environment in which you installed it is activated.</p>
+<div class="section" id="id3">
+<h4>Workflow<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">Although this tutorial provides feature values for the purpose of illustration, <code class="docutils literal notranslate"><span class="pre">rsmpredict</span></code> does <em>not</em> include any functionality for feature extraction; the tool is <a class="reference internal" href="who.html#who-rsmtool"><span class="std std-ref">designed for researchers</span></a> who use their own NLP/Speech processing pipeline to extract features for their data.</p>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">rsmpredict</span></code> allows you to generate the scores for new data using an existing model trained using RSMTool. Therefore, before starting this tutorial, you first need to complete <a class="reference internal" href="tutorial.html#tutorial"><span class="std std-ref">rsmtool tutorial</span></a> which will produce a train RSMTool model. You will also need to process the new data to extract the same features as the ones used in the model.</p>
+<p>Once you have the features for the new data and the RSMTool model, using <code class="docutils literal notranslate"><span class="pre">rsmpredict</span></code> is fairly straightforward:</p>
+<ol class="arabic">
+<li><p class="first">Create a file containing the features for the new data. The file should be in one of the <a class="reference internal" href="pipeline.html#input-file-format"><span class="std std-ref">supported formats</span></a>.</p>
+</li>
+<li><p class="first">Create an <a class="reference internal" href="#config-file-rsmpredict"><span class="std std-ref">experiment configuration file</span></a> describing the  experiment you would like to run.</p>
+</li>
+<li><p class="first">Run that configuration file with <a class="reference internal" href="#usage-rsmpredict"><span class="std std-ref">rsmpredict</span></a> to generate the predicted scores.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You do not <em>need</em> human scores to run <code class="docutils literal notranslate"><span class="pre">rsmpredict</span></code> since it does not produce any evaluation analyses. If you do have human scores for the new data and you would like to evaluate the system on this new data, you can first run <code class="docutils literal notranslate"><span class="pre">rsmpredict</span></code> to generate the predictions and then run <code class="docutils literal notranslate"><span class="pre">rsmeval</span></code> on the output of <code class="docutils literal notranslate"><span class="pre">rsmpredict</span></code> to generate an evaluation report.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="id4">
+<h4>ASAP Example<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<p>We are going to use the same example from 2012 Kaggle competition on automated essay scoring that we used for the <a class="reference internal" href="tutorial.html#tutorial"><span class="std std-ref">rsmtool tutorial</span></a>. Specifically, We are going to use the linear regression model we trained in that tutorial to generate scores for new data.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you have not already completed that tutorial, please do so now. You may need to complete it again if you deleted the output files.</p>
+</div>
+</div>
+<div class="section" id="extract-features">
+<h4>Extract features<a class="headerlink" href="#extract-features" title="Permalink to this headline">¶</a></h4>
+<p>We will first need to generate features for the new set of responses for which we want to predict scores.  For this experiment, we will simply re-use the test set from the <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> tutorial.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The features used with <code class="docutils literal notranslate"><span class="pre">rsmpredict</span></code> should be generated using the <em>same</em> NLP/Speech processing pipeline that generated the features used in the <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> modeling experiment.</p>
+</div>
+</div>
+<div class="section" id="id5">
+<h4>Create a configuration file<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<p>The next step is to create an <a class="reference internal" href="#config-file-rsmpredict"><span class="std std-ref">rsmpredict experiment configuration file</span></a> in <code class="docutils literal notranslate"><span class="pre">.json</span></code> format.</p>
+<div class="highlight-javascript notranslate" id="asap-config-rsempredict"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;experiment_dir&quot;</span><span class="o">:</span> <span class="s2">&quot;../rsmtool&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;experiment_id&quot;</span><span class="o">:</span> <span class="s2">&quot;ASAP2&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;input_features_file&quot;</span><span class="o">:</span> <span class="s2">&quot;../rsmtool/test.csv&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;id_column&quot;</span><span class="o">:</span> <span class="s2">&quot;ID&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;human_score_column&quot;</span><span class="o">:</span> <span class="s2">&quot;score&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;second_human_score_column&quot;</span><span class="o">:</span> <span class="s2">&quot;score2&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>Let’s take a look at the options in our configuration file.</p>
+<ul class="simple">
+<li><strong>Line 2</strong>: We give the path to the directory containing the output of the <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> experiment.</li>
+<li><strong>Line 3</strong>: We provide the <code class="docutils literal notranslate"><span class="pre">experiment_id</span></code> of the <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> experiment used to train the model. This can usually be read off the <code class="docutils literal notranslate"><span class="pre">output/&lt;experiment_id&gt;.model</span></code> file in the <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> experiment output directory.</li>
+<li><strong>Line 4</strong>: We list the path to the data file with the feature values for the new data.  For this tutorial we used <code class="docutils literal notranslate"><span class="pre">.csv</span></code> format, but RSMTool also supports several other <a class="reference internal" href="pipeline.html#input-file-format"><span class="std std-ref">input file formats</span></a>.</li>
+<li><strong>Line 5</strong>: This field indicates that the unique IDs for the responses in the <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file are located in a column named <code class="docutils literal notranslate"><span class="pre">ID</span></code>.</li>
+<li><strong>Lines 6-7</strong>: These fields indicates that there are two sets of human scores in our <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file located in the columns named <code class="docutils literal notranslate"><span class="pre">score</span></code> and <code class="docutils literal notranslate"><span class="pre">score2</span></code>. The values from these columns will be added to the output file containing the predictions which can be useful if we want to evaluate the predictions using <code class="docutils literal notranslate"><span class="pre">rsmeval</span></code>.</li>
+</ul>
+<p>Documentation for all of the available configuration options is available <a class="reference internal" href="#config-file-rsmpredict"><span class="std std-ref">here</span></a>.</p>
+</div>
+<div class="section" id="id6">
+<h4>Run the experiment<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<p>Now that we have the model, the features in the right format, and our configuration file in <code class="docutils literal notranslate"><span class="pre">.json</span></code> format, we can use the <a class="reference internal" href="#usage-rsmpredict"><span class="std std-ref">rsmpredict</span></a> command-line script to generate the predictions and to save them in <code class="docutils literal notranslate"><span class="pre">predictions.csv</span></code>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> examples/rsmpredict
+$ rsmpredict config_rsmpredict.json predictions.csv
+</pre></div>
+</div>
+<p>This should produce output like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">WARNING</span><span class="p">:</span> <span class="n">The</span> <span class="n">following</span> <span class="n">extraenous</span> <span class="n">features</span> <span class="n">will</span> <span class="n">be</span> <span class="n">ignored</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;spkitemid&#39;</span><span class="p">,</span> <span class="s1">&#39;sc1&#39;</span><span class="p">,</span> <span class="s1">&#39;sc2&#39;</span><span class="p">,</span> <span class="s1">&#39;LENGTH&#39;</span><span class="p">}</span>
+<span class="n">Pre</span><span class="o">-</span><span class="n">processing</span> <span class="nb">input</span> <span class="n">features</span>
+<span class="n">Generating</span> <span class="n">predictions</span>
+<span class="n">Rescaling</span> <span class="n">predictions</span>
+<span class="n">Trimming</span> <span class="ow">and</span> <span class="n">rounding</span> <span class="n">predictions</span>
+<span class="n">Saving</span> <span class="n">predictions</span> <span class="n">to</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">nmadnani</span><span class="o">/</span><span class="n">work</span><span class="o">/</span><span class="n">rsmtool</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">rsmpredict</span><span class="o">/</span><span class="n">predictions</span><span class="o">.</span><span class="n">csv</span>
+</pre></div>
+</div>
+<p>You should now see a file named <code class="docutils literal notranslate"><span class="pre">predictions.csv</span></code> in the current directory which contains the predicted scores for the new data in the <code class="docutils literal notranslate"><span class="pre">predictions</span></code> column.</p>
+</div>
+</div>
+<div class="section" id="id7">
+<h3>Input<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">rsmpredict</span></code> requires two arguments to generate predictions: the path to <a class="reference internal" href="#config-file-rsmpredict"><span class="std std-ref">a configuration file</span></a> and the path to the output file where the generated predictions are saved in <code class="docutils literal notranslate"><span class="pre">.csv</span></code> format.</p>
+<p>If you also want to save the pre-processed feature values,``rsmpredict`` can take a third optional argument <code class="docutils literal notranslate"><span class="pre">--features</span></code> to specify the path to a <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file to save these values.</p>
+<p>Here are all the arguments to the <code class="docutils literal notranslate"><span class="pre">rsmpredict</span></code> command-line script.</p>
+<dl class="option">
+<dt id="cmdoption-rsmpredict-arg-config-file">
+<code class="descname">config_file</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-rsmpredict-arg-config-file" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference internal" href="#config-file-rsmpredict"><span class="std std-ref">JSON configuration file</span></a> for this experiment.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-rsmpredict-arg-output-file">
+<code class="descname">output_file</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-rsmpredict-arg-output-file" title="Permalink to this definition">¶</a></dt>
+<dd><p>The output <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file where predictions will be saved.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-rsmpredict-features">
+<code class="descname">--features</code><code class="descclassname"> &lt;preproc_feats_file&gt;</code><a class="headerlink" href="#cmdoption-rsmpredict-features" title="Permalink to this definition">¶</a></dt>
+<dd><p>If specified, the pre-processed values for the input features will also be saved in this <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-rsmpredict-h">
+<code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-rsmpredict-h" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show help message and exist.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-rsmpredict-v">
+<code class="descname">-V</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--version</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-rsmpredict-v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show version number and exit.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="config-file-rsmpredict">
+<span id="id8"></span><h3>Experiment configuration file<a class="headerlink" href="#config-file-rsmpredict" title="Permalink to this headline">¶</a></h3>
+<p>This is a file in <code class="docutils literal notranslate"><span class="pre">.json</span></code> format that provides overall configuration options for an <code class="docutils literal notranslate"><span class="pre">rsmpredict</span></code> experiment. Here’s an example configuration file for <a class="reference external" href="https://github.com/EducationalTestingService/rsmtool/blob/master/examples/rsmpredict/config_rsmpredict.json">rsmpredict</a>.</p>
+<p>There are three required fields and the rest are all optional.</p>
+<div class="section" id="experiment-dir">
+<h4>experiment_dir<a class="headerlink" href="#experiment-dir" title="Permalink to this headline">¶</a></h4>
+<p>The path to the directory containing <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> model to use for generating predictions. This directory must contain a sub-directory called <code class="docutils literal notranslate"><span class="pre">output</span></code> with the model files, feature pre-processing parameters, and score post-processing parameters. The path can be absolute or relative to the location of configuration file.</p>
+</div>
+<div class="section" id="id9">
+<h4>experiment_id<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">experiment_id</span></code> used to create the <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> model files being used for generating predictions. If you do not know the <code class="docutils literal notranslate"><span class="pre">experiment_id</span></code>, you can find it by looking at the prefix of the <code class="docutils literal notranslate"><span class="pre">.model</span></code> file under the <code class="docutils literal notranslate"><span class="pre">output</span></code> directory.</p>
+</div>
+<div class="section" id="input-feature-file">
+<h4>input_feature_file<a class="headerlink" href="#input-feature-file" title="Permalink to this headline">¶</a></h4>
+<p>The path to the file with the raw feature values that will be used for generating predictions. The file should be in one of the <a class="reference internal" href="pipeline.html#input-file-format"><span class="std std-ref">supported formats</span></a> Each row should correspond to a single response and contain feature values for this response. In addition, there should be a column with a unique identifier (ID) for each response. The path can be absolute or relative to the location of config file. Note that the feature names <em>must</em> be the same as used in the original <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> experiment.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">rsmpredict</span></code> will only generate predictions for responses in this file that have numeric values for the features included in the <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> model.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">rsmpredict</span></code> does not require human scores for the new data since it does not evaluate the generated predictions. If you do have the human scores and want to evaluate the new predictions, you can use the <a class="reference internal" href="#usage-rsmeval"><span class="std std-ref">rsmeval</span></a> command-line utility.</p>
+</div>
+</div>
+<div class="section" id="file-format-predict">
+<span id="id10"></span><h4>file_format <em>(Optional)</em><a class="headerlink" href="#file-format-predict" title="Permalink to this headline">¶</a></h4>
+<p>The format of the <a class="reference internal" href="usage_rsmtool.html#intermediate-files-rsmtool"><span class="std std-ref">intermediate files</span></a>. Options are <code class="docutils literal notranslate"><span class="pre">csv</span></code>, <code class="docutils literal notranslate"><span class="pre">tsv</span></code>, or <code class="docutils literal notranslate"><span class="pre">xlsx</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">csv</span></code> if this is not specified.</p>
+</div>
+<div class="section" id="predict-expected-scores-optional">
+<h4>predict_expected_scores <em>(Optional)</em><a class="headerlink" href="#predict-expected-scores-optional" title="Permalink to this headline">¶</a></h4>
+<p>If the original model was a probabilistic SKLL classifier, then <em>expected scores</em> — probability-weighted averages over a contiguous, numeric score points — can be generated as the machine predictions instead of the most likely score point, which would be the default. Set this field to <code class="docutils literal notranslate"><span class="pre">true</span></code> to compute expected scores as predictions. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ol class="last arabic simple">
+<li>If the model in the original <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> experiment is an SVC, that original experiment <em>must</em> have been run with <code class="docutils literal notranslate"><span class="pre">predict_expected_scores</span></code> set to <code class="docutils literal notranslate"><span class="pre">true</span></code>. This is because SVC classifiers are fit differently if probabilistic output is desired, in contrast to other probabilistic SKLL classifiers.</li>
+<li>You may see slight differences in expected score predictions if you run the experiment on different machines or on different operating systems most likely due to very small probability values for certain score points which can affect floating point computations.</li>
+</ol>
+</div>
+</div>
+<div class="section" id="id11">
+<h4>id_column <em>(Optional)</em><a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
+<p>The name of the column containing the response IDs. Defaults to <code class="docutils literal notranslate"><span class="pre">spkitemid</span></code>, i.e., if this is not specified, <code class="docutils literal notranslate"><span class="pre">rsmpredict</span></code> will look for a column called <code class="docutils literal notranslate"><span class="pre">spkitemid</span></code> in the prediction file.</p>
+<p>There are several other options in the configuration file that, while not directly used by <code class="docutils literal notranslate"><span class="pre">rsmpredict</span></code>, can simply be passed through from the input features file to the output predictions file. This can be particularly useful if you want to subsequently run <a class="reference internal" href="#usage-rsmeval"><span class="std std-ref">rsmeval</span></a> to evaluate the generated predictions.</p>
+</div>
+<div class="section" id="id12">
+<h4>candidate_column <em>(Optional)</em><a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
+<p>The name for the column containing unique candidate IDs. This column will be named <code class="docutils literal notranslate"><span class="pre">candidate</span></code> in the output file with predictions.</p>
+</div>
+<div class="section" id="id13">
+<h4>human_score_column <em>(Optional)</em><a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h4>
+<p>The name for the column containing human scores. This column will be renamed to <code class="docutils literal notranslate"><span class="pre">sc1</span></code>.</p>
+</div>
+<div class="section" id="id14">
+<h4>second_human_score_column <em>(Optional)</em><a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h4>
+<p>The name for the column containing the second human score. This column will be renamed to <code class="docutils literal notranslate"><span class="pre">sc2</span></code>.</p>
+</div>
+<div class="section" id="standardize-features-optional">
+<h4>standardize_features <em>(Optional)</em><a class="headerlink" href="#standardize-features-optional" title="Permalink to this headline">¶</a></h4>
+<p>If this option is set to <code class="docutils literal notranslate"><span class="pre">false</span></code> features will not be standardized by dividing by the mean and multiplying by the standard deviation. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+</div>
+<div class="section" id="id15">
+<h4>subgroups <em>(Optional)</em><a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h4>
+<p>A list of column names indicating grouping variables used for generating analyses specific to each of those defined subgroups. For example, <code class="docutils literal notranslate"><span class="pre">[&quot;prompt,</span> <span class="pre">gender,</span> <span class="pre">native_language,</span> <span class="pre">test_country&quot;]</span></code>. All these columns will be included into the predictions file with the original names.</p>
+</div>
+<div class="section" id="id16">
+<h4>flag_column <em>(Optional)</em><a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h4>
+<p>See description in the <a class="reference internal" href="usage_rsmtool.html#flag-column-rsmtool"><span class="std std-ref">rsmtool configuration file</span></a> for further information. No filtering will be done by <code class="docutils literal notranslate"><span class="pre">rsmpredict</span></code>, but the contents of all specified columns will be added to the predictions file using the original column names.</p>
+</div>
+</div>
+<div class="section" id="id17">
+<h3>Output<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">rsmpredict</span></code> produces a <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file with predictions for all responses in new data set, and, optionally, a <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file with pre-processed feature values. If any of the responses had non-numeric feature values in
+the original data or after applying transformations, these are saved in a file name <code class="docutils literal notranslate"><span class="pre">PREDICTIONS_NAME_excluded_responses.csv</span></code> where <code class="docutils literal notranslate"><span class="pre">PREDICTIONS_NAME</span></code> is the name of the predictions file supplied by the user without the extension.</p>
+<p>The predictions <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file contains the following columns:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">spkitemid</span></code> : the unique resonse IDs from the original feature file.</li>
+<li><code class="docutils literal notranslate"><span class="pre">sc1</span></code> and <code class="docutils literal notranslate"><span class="pre">sc2</span></code> : the human scores for each response from the original feature file (<code class="docutils literal notranslate"><span class="pre">human_score_column</span></code> and <code class="docutils literal notranslate"><span class="pre">second_human_score_column</span></code>, respectively.</li>
+<li><code class="docutils literal notranslate"><span class="pre">raw</span></code> : raw predictions generated by the model.</li>
+<li><code class="docutils literal notranslate"><span class="pre">raw_trim</span></code>, <code class="docutils literal notranslate"><span class="pre">raw_trim_round</span></code>, <code class="docutils literal notranslate"><span class="pre">scale</span></code>, <code class="docutils literal notranslate"><span class="pre">scale_trim</span></code>, <code class="docutils literal notranslate"><span class="pre">scale_trim_round</span></code> : raw scores <a class="reference internal" href="pipeline.html#score-postprocessing"><span class="std std-ref">post-processed</span></a> in different ways.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="rsmcompare-create-a-detailed-comparison-of-two-scoring-models">
+<span id="usage-rsmcompare"></span><h2><code class="docutils literal notranslate"><span class="pre">rsmcompare</span></code> - Create a detailed comparison of two scoring models<a class="headerlink" href="#rsmcompare-create-a-detailed-comparison-of-two-scoring-models" title="Permalink to this headline">¶</a></h2>
+<p>RSMTool provides the <code class="docutils literal notranslate"><span class="pre">rsmcompare</span></code> command-line utility to compare two models and to generate a detailed comparison report including differences between the two models. This can be useful in many scenarios, e.g., say the user wants to compare the changes in model performance after adding a new feature into the model. To use <code class="docutils literal notranslate"><span class="pre">rsmcompare</span></code>, the user must first run two experiments using either <a class="reference internal" href="usage_rsmtool.html#usage-rsmtool"><span class="std std-ref">rsmtool</span></a> or <a class="reference internal" href="#usage-rsmeval"><span class="std std-ref">rsmeval</span></a>. <code class="docutils literal notranslate"><span class="pre">rsmcompare</span></code> can then be used to compare the outputs of these two experiments to each other.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Currently <code class="docutils literal notranslate"><span class="pre">rsmcompare</span></code> takes the outputs of the analyses generated during the original experiments and creates comparison tables. These comparison tables were designed with a specific comparison scenario in mind: comparing a baseline model with a model which includes new feature(s). The tool can certianly be used for other comparison scenarios if the researcher feels that the generated comparison output is appropriate.</p>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">rsmcompare</span></code> can be used to compare:</p>
+<ol class="arabic simple">
+<li>Two <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> experiments, or</li>
+<li>Two <code class="docutils literal notranslate"><span class="pre">rsmeval</span></code> experiments, or</li>
+<li>An <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> experiment with an <code class="docutils literal notranslate"><span class="pre">rsmeval</span></code> experiment (in this case, only the evaluation analyses will be compared).</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">It is strongly recommend that the original experiments as well as the comparison experiment are all done using the same version of RSMTool.</p>
+</div>
+<div class="section" id="tutorial-rsmcompare">
+<span id="id18"></span><h3>Tutorial<a class="headerlink" href="#tutorial-rsmcompare" title="Permalink to this headline">¶</a></h3>
+<p>For this tutorial, you first need to <a class="reference internal" href="getting_started.html#install"><span class="std std-ref">install RSMTool</span></a> and make sure the conda environment in which you installed it is activated.</p>
+<div class="section" id="id19">
+<h4>Workflow<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">rsmcompare</span></code> is designed to compare two existing <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> or <code class="docutils literal notranslate"><span class="pre">rsmeval</span></code> experiments. To use <code class="docutils literal notranslate"><span class="pre">rsmcompare</span></code> you need:</p>
+<ol class="arabic simple">
+<li>Two experiments that were run using <a class="reference internal" href="usage_rsmtool.html#usage-rsmtool"><span class="std std-ref">rsmtool</span></a> or <a class="reference internal" href="#usage-rsmeval"><span class="std std-ref">rsmeval</span></a>.</li>
+<li>Create an <a class="reference internal" href="#config-file-rsmcompare"><span class="std std-ref">experiment configuration file</span></a> describing the comparison experiment you would like to run.</li>
+<li>Run that configuration file with <a class="reference internal" href="#usage-rsmcompare"><span class="std std-ref">rsmcompare</span></a> and generate the comparison experiment HTML report.</li>
+<li>Examine HTML report to compare the two models.</li>
+</ol>
+<p>Note that the above workflow does not use the customization features of <code class="docutils literal notranslate"><span class="pre">rsmcompare</span></code>, e.g., <a class="reference internal" href="#general-sections-rsmcompare"><span class="std std-ref">choosing which sections to include in the report</span></a> or <a class="reference internal" href="custom_notebooks.html#custom-notebooks"><span class="std std-ref">adding custom analyses sections</span></a> etc. However, we will stick with this workflow for our tutorial since it is likely to be the most common use case.</p>
+</div>
+<div class="section" id="id20">
+<h4>ASAP Example<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h4>
+<p>We are going to use the same example from 2012 Kaggle competition on automated essay scoring that we used for the <a class="reference internal" href="tutorial.html#tutorial"><span class="std std-ref">rsmtool tutorial</span></a>.</p>
+</div>
+<div class="section" id="run-rsmtool-or-rsmeval-experiments">
+<h4>Run <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> (or <code class="docutils literal notranslate"><span class="pre">rsmeval</span></code>) experiments<a class="headerlink" href="#run-rsmtool-or-rsmeval-experiments" title="Permalink to this headline">¶</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">rsmcompare</span></code> compares the results of the two existing <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> (or <code class="docutils literal notranslate"><span class="pre">rsmeval</span></code>) experiments. For this tutorial, we will compare model trained in the <a class="reference internal" href="tutorial.html#tutorial"><span class="std std-ref">rsmtool tutorial</span></a> to itself.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you have not already completed that tutorial, please do so now. You may need to complete it again if you deleted the output files.</p>
+</div>
+</div>
+<div class="section" id="id21">
+<h4>Create a configuration file<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h4>
+<p>The next step is to create an <a class="reference internal" href="#config-file-rsmcompare"><span class="std std-ref">experiment configuration file</span></a> in <code class="docutils literal notranslate"><span class="pre">.json</span></code> format.</p>
+<div class="highlight-javascript notranslate" id="asap-config-rsmcompare"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;comparison_id&quot;</span><span class="o">:</span> <span class="s2">&quot;ASAP2_vs_ASAP2&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;experiment_id_old&quot;</span><span class="o">:</span> <span class="s2">&quot;ASAP2&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;experiment_dir_old&quot;</span><span class="o">:</span> <span class="s2">&quot;../rsmtool/&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;description_old&quot;</span><span class="o">:</span> <span class="s2">&quot;RSMTool experiment.&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;use_scaled_predictions_old&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="s2">&quot;experiment_id_new&quot;</span><span class="o">:</span> <span class="s2">&quot;ASAP2&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;experiment_dir_new&quot;</span><span class="o">:</span> <span class="s2">&quot;../rsmtool&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;description_new&quot;</span><span class="o">:</span> <span class="s2">&quot;RSMTool experiment (copy).&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;use_scaled_predictions_new&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>Let’s take a look at the options in our configuration file.</p>
+<ul class="simple">
+<li><strong>Line 2</strong>: We provide an ID for the comparison experiment.</li>
+<li><strong>Line 3</strong>: We provide the <code class="docutils literal notranslate"><span class="pre">experiment_id</span></code> for the experiment we want to use as a baseline.</li>
+<li><strong>Line 4</strong>: We also give the path to the directory containing the output of the original baseline experiment.</li>
+<li><strong>Line 5</strong>: We give a short description of this baseline experiment. This will be shown in the report.</li>
+<li><strong>Line 6</strong>: This field indicates that the baseline experiment used scaled scores for some evaluation analyses.</li>
+<li><strong>Line 7</strong>: We provide the <code class="docutils literal notranslate"><span class="pre">experiment_id</span></code> for the new experiment. We use the same experiment ID for both experiments since we are comparing the experiment to itself.</li>
+<li><strong>Line 8</strong>: We also give the path to the directory containing the output of the new experiment. As above, we use the same path because we are comparing the experiment to itself.</li>
+<li><strong>Line 9</strong>: We give a short description of the new experiment. This will also be shown in the report.</li>
+<li><strong>Line 10</strong>: This field indicates that the new experiment also used scaled scores for some evaluation analyses.</li>
+</ul>
+<p>Documentation for all of the available configuration options is available <a class="reference internal" href="#config-file-rsmcompare"><span class="std std-ref">here</span></a>.</p>
+</div>
+<div class="section" id="id22">
+<h4>Run the experiment<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h4>
+<p>Now that we have the two experiments we want to compare and our configuration file in <code class="docutils literal notranslate"><span class="pre">.json</span></code> format, we can use the <a class="reference internal" href="#usage-rsmcompare"><span class="std std-ref">rsmcompare</span></a> command-line script to run our comparison experiment.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> examples/rsmcompare
+$ rsmcompare config_rsmcompare.json
+</pre></div>
+</div>
+<p>This should produce output like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Output</span> <span class="n">directory</span><span class="p">:</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">nmadnani</span><span class="o">/</span><span class="n">work</span><span class="o">/</span><span class="n">rsmtool</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">rsmcompare</span>
+<span class="n">Starting</span> <span class="n">report</span> <span class="n">generation</span>
+<span class="n">Merging</span> <span class="n">sections</span>
+<span class="n">Exporting</span> <span class="n">HTML</span>
+<span class="n">Executing</span> <span class="n">notebook</span> <span class="k">with</span> <span class="n">kernel</span><span class="p">:</span> <span class="n">python3</span>
+</pre></div>
+</div>
+<p>Once the run finishes, you will see an HTML file named <code class="docutils literal notranslate"><span class="pre">ASAP2_vs_ASAP2_report.html</span></code>. This is the final <code class="docutils literal notranslate"><span class="pre">rsmcompare</span></code> comparison report.</p>
+</div>
+<div class="section" id="id23">
+<h4>Examine the report<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h4>
+<p>Our experiment report contains all the information we would need to compare the new model to the baseline model. It includes:</p>
+<ol class="arabic simple">
+<li>Comparison of feature distributions between the two experiments.</li>
+<li>Comparison of model coefficients between the two experiments.</li>
+<li>Comparison of model performance between the two experiments.</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Since we are comparing the experiment to itself, the comparison is not very interesting, e.g., the differences between various values will always be 0.</p>
+</div>
+</div>
+</div>
+<div class="section" id="id24">
+<h3>Input<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">rsmcompare</span></code> requires a single argument to run an experiment: the path to <a class="reference internal" href="#config-file-rsmcompare"><span class="std std-ref">a configuration file</span></a>. It can also take an output directory as an optional second argument. If the latter is not specified, <code class="docutils literal notranslate"><span class="pre">rsmcompare</span></code> will use the current directory as the output directory.</p>
+<p>Here are all the arguments to the <code class="docutils literal notranslate"><span class="pre">rsmcompare</span></code> command-line script.</p>
+<dl class="option">
+<dt id="cmdoption-rsmcompare-arg-config-file">
+<code class="descname">config_file</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-rsmcompare-arg-config-file" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference internal" href="#config-file-rsmcompare"><span class="std std-ref">JSON configuration file</span></a> for this experiment.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-rsmcompare-arg-output-dir">
+<code class="descname">output_dir</code><code class="descclassname"> (optional)</code><a class="headerlink" href="#cmdoption-rsmcompare-arg-output-dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>The output directory where the report files for this comparison will be stored.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-rsmcompare-h">
+<code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-rsmcompare-h" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show help message and exist.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-rsmcompare-v">
+<code class="descname">-V</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--version</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-rsmcompare-v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show version number and exit.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="config-file-rsmcompare">
+<span id="id25"></span><h3>Experiment configuration file<a class="headerlink" href="#config-file-rsmcompare" title="Permalink to this headline">¶</a></h3>
+<p>This is a file in <code class="docutils literal notranslate"><span class="pre">.json</span></code> format that provides overall configuration options for an <code class="docutils literal notranslate"><span class="pre">rsmcompare</span></code> experiment. Here’s an example configuration file for <a class="reference external" href="https://github.com/EducationalTestingService/rsmtool/blob/master/examples/rsmcompare/config_rsmcompare.json">rsmcompare</a>.</p>
+<p>There are seven required fields and the rest are all optional.</p>
+<div class="section" id="comparison-id">
+<h4>comparison_id<a class="headerlink" href="#comparison-id" title="Permalink to this headline">¶</a></h4>
+<p>An identifier for the comparison experiment that will be used to name the report. It can be any combination of alphanumeric values, must <em>not</em> contain spaces, and must <em>not</em> be any longer than 200 characters.</p>
+</div>
+<div class="section" id="experiment-id-old">
+<h4>experiment_id_old<a class="headerlink" href="#experiment-id-old" title="Permalink to this headline">¶</a></h4>
+<p>An identifier for the “baseline” experiment. This ID should be identical to the <code class="docutils literal notranslate"><span class="pre">experiment_id</span></code> used when the baseline experiment was run, whether <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> or <code class="docutils literal notranslate"><span class="pre">rsmeval</span></code>. The results for this experiment will be listed first in the comparison report.</p>
+</div>
+<div class="section" id="experiment-id-new">
+<h4>experiment_id_new<a class="headerlink" href="#experiment-id-new" title="Permalink to this headline">¶</a></h4>
+<p>An identifier for the experiment with the “new” model (e.g., the model with new feature(s)). This ID should be identical to the <code class="docutils literal notranslate"><span class="pre">experiment_id</span></code> used when the experiment was run, whether <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> or <code class="docutils literal notranslate"><span class="pre">rsmeval</span></code>. The results for this experiment will be listed first in the comparison report.</p>
+</div>
+<div class="section" id="experiment-dir-old">
+<h4>experiment_dir_old<a class="headerlink" href="#experiment-dir-old" title="Permalink to this headline">¶</a></h4>
+<p>The directory with the results for the “baseline” experiment. This directory is the output directory that was used for the experiment and should contain subdirectories <code class="docutils literal notranslate"><span class="pre">output</span></code> and <code class="docutils literal notranslate"><span class="pre">figure</span></code> generated by <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> or <code class="docutils literal notranslate"><span class="pre">rsmeval</span></code>.</p>
+</div>
+<div class="section" id="experiment-dir-new">
+<h4>experiment_dir_new<a class="headerlink" href="#experiment-dir-new" title="Permalink to this headline">¶</a></h4>
+<p>The directory with the results for the experiment with the new model. This directory is the output directory that was used for the experiment and should contain subdirectories <code class="docutils literal notranslate"><span class="pre">output</span></code> and <code class="docutils literal notranslate"><span class="pre">figure</span></code> generated by <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> or <code class="docutils literal notranslate"><span class="pre">rsmeval</span></code>.</p>
+</div>
+<div class="section" id="description-old">
+<h4>description_old<a class="headerlink" href="#description-old" title="Permalink to this headline">¶</a></h4>
+<p>A brief description of the “baseline” experiment. The description can contain spaces and punctuation.</p>
+</div>
+<div class="section" id="description-new">
+<h4>description_new<a class="headerlink" href="#description-new" title="Permalink to this headline">¶</a></h4>
+<p>A brief description of the experiment with the new model. The description can contain spaces and punctuation.</p>
+</div>
+<div class="section" id="use-scaled-predictions-old-optional">
+<h4>use_scaled_predictions_old <em>(Optional)</em><a class="headerlink" href="#use-scaled-predictions-old-optional" title="Permalink to this headline">¶</a></h4>
+<p>Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> if the “baseline” experiment used scaled machine scores for confusion matrices, score distributions, subgroup analyses, etc. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</div>
+<div class="section" id="use-scaled-predictions-new-optional">
+<h4>use_scaled_predictions_new <em>(Optional)</em><a class="headerlink" href="#use-scaled-predictions-new-optional" title="Permalink to this headline">¶</a></h4>
+<p>Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> if the experiment with the new model used scaled machine scores for confusion matrices, score distributions, subgroup analyses, etc. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">For <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> and <code class="docutils literal notranslate"><span class="pre">rsmeval</span></code>, primary evaluation analyses are computed on both raw and scaled scores, but some analyses (e.g., the confusion matrix) are only computed for either raw or re-scaled scores based on the value of <code class="docutils literal notranslate"><span class="pre">use_scaled_predictions</span></code>. <code class="docutils literal notranslate"><span class="pre">rsmcompare</span></code> uses the existing outputs and does not perform any additional evaluations. Therefore if this field was set to <code class="docutils literal notranslate"><span class="pre">true</span></code> in the original experiment but is set to <code class="docutils literal notranslate"><span class="pre">false</span></code> for <code class="docutils literal notranslate"><span class="pre">rsmcompare</span></code>, the report will be internally inconsistent: some evaluations use raw scores whereas others will use scaled scores.</p>
+</div>
+</div>
+<div class="section" id="id26">
+<h4>subgroups <em>(Optional)</em><a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h4>
+<p>A list of column names indicating grouping variables used for generating analyses specific to each of those defined subgroups.For example, <code class="docutils literal notranslate"><span class="pre">[&quot;prompt,</span> <span class="pre">gender,</span> <span class="pre">native_language,</span> <span class="pre">test_country&quot;]</span></code>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">In order to include subgroups analyses in the comparison report, both experiments must have been run with the same set of subgroups.</p>
+</div>
+</div>
+<div class="section" id="general-sections-rsmcompare">
+<span id="id27"></span><h4>general_sections <em>(Optional)</em><a class="headerlink" href="#general-sections-rsmcompare" title="Permalink to this headline">¶</a></h4>
+<p>RSMTool provides pre-defined sections for <code class="docutils literal notranslate"><span class="pre">rsmcompare</span></code> (listed below) and, by default, all of them are included in the report. However, you can choose a subset of these pre-defined sections by specifying a list as the value for this field.</p>
+<blockquote>
+<div><ul>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">feature_descriptives</span></code>: Compares the descriptive statistics for all raw feature values included in the model:</p>
+<blockquote>
+<div><ul class="simple">
+<li>a table showing mean, standard deviation, skewness and kurtosis;</li>
+<li>a table showing the number of truncated outliers for each feature; and</li>
+<li>a table with percentiles and outliers;</li>
+<li>a table with correlations between raw feature values and human score in each model and the correlation between the values of the same feature in these two models. Note that this table only includes features and responses which occur in both training sets.</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">features_by_group</span></code>: Shows boxplots for both experiments with distributions of raw feature values by each of the <a class="reference internal" href="usage_rsmtool.html#subgroups-rsmtool"><span class="std std-ref">subgroups</span></a> specified in the configuration file.</p>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">preprocessed_features</span></code>: Compares analyses of preprocessed features:</p>
+<blockquote>
+<div><ul class="simple">
+<li>histograms showing the distributions of preprocessed features values;</li>
+<li>the correlation matrix between all features and the human score;</li>
+<li>a table showing marginal correlations between all features and the human score; and</li>
+<li>a table showing partial correlations between all features and the human score.</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">preprocessed_features_by_group</span></code>: Compares analyses of preprocessed features by subgroups: marginal and partial correlations between each feature and human score for each subgroup.</p>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">consistency</span></code>: Compares metrics for human-human agreement, the difference (‘degradation’) between the human-human and human-system agreement, and the disattenuated correlations for the whole dataset and by each of the <a class="reference internal" href="usage_rsmtool.html#subgroups-rsmtool"><span class="std std-ref">subgroups</span></a> specified in the configuration file.</p>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">score_distributions</span></code>:</p>
+<blockquote>
+<div><ul class="simple">
+<li>tables showing the distributions for both human and machine scores; and</li>
+<li>confusion matrices for human and machine scores.</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">model</span></code>: Compares the parameters of the two regression models. For linear models, it also includes the standardized and relative coefficients.</p>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">evaluation</span></code>: Compares the standard set of evaluations recommended for scoring models on the evaluation data.</p>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">pca</span></code>: Shows the results of principal components analysis on the processed feature values for the new model only:</p>
+<blockquote>
+<div><ul class="simple">
+<li>the principal components themselves;</li>
+<li>the variances; and</li>
+<li>a Scree plot.</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">notes</span></code>: Notes explaining the terminology used in comparison reports.</p>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">sysinfo</span></code>: Shows all Python packages along with versions installed in the current environment while generating the report.</p>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="custom-sections-rsmcompare">
+<span id="id28"></span><h4>custom_sections <em>(Optional)</em><a class="headerlink" href="#custom-sections-rsmcompare" title="Permalink to this headline">¶</a></h4>
+<p>A list of custom, user-defined sections to be included into the final report. These are IPython notebooks (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> files) created by the user.  The list must contains paths to the notebook files, either absolute or relative to the configuration file. All custom notebooks have access to some <a class="reference internal" href="custom_notebooks.html#custom-notebooks"><span class="std std-ref">pre-defined variables</span></a>.</p>
+</div>
+<div class="section" id="special-sections-rsmcompare">
+<span id="id29"></span><h4>special_sections <em>(Optional)</em><a class="headerlink" href="#special-sections-rsmcompare" title="Permalink to this headline">¶</a></h4>
+<p>A list specifying special ETS-only comparison sections to be included into the final report. These sections are available <em>only</em> to ETS employees via the <cite>rsmextra</cite> package.</p>
+</div>
+<div class="section" id="id30">
+<h4>section_order <em>(Optional)</em><a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h4>
+<p>A list containing the order in which the sections in the report should be generated. Any specified order must explicitly list:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Either <em>all</em> pre-defined sections if a value for the <a class="reference internal" href="#general-sections-rsmcompare"><span class="std std-ref">general_sections</span></a> field is not specified OR the sections specified using <a class="reference internal" href="#general-sections-rsmcompare"><span class="std std-ref">general_sections</span></a>, and</li>
+<li><em>All</em> custom section names specified using <a class="reference internal" href="#custom-sections-rsmcompare"><span class="std std-ref">custom_ sections</span></a>, i.e., file prefixes only, without the path and without the <cite>.ipynb</cite> extension, and</li>
+<li><em>All</em> special sections specified using <a class="reference internal" href="#special-sections-rsmcompare"><span class="std std-ref">special_sections</span></a>.</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="use-thumbnails-rsmcompare">
+<span id="id31"></span><h4>use_thumbnails <em>(Optional)</em><a class="headerlink" href="#use-thumbnails-rsmcompare" title="Permalink to this headline">¶</a></h4>
+<p>If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the images in the HTML will be set to clickable thumbnails rather than full-sized images. Upon clicking the thumbnail, the full-sized images will be displayed in a separate tab in the browser. If set to <code class="docutils literal notranslate"><span class="pre">false</span></code>, full-sized images will be displayed as usual. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</div>
+</div>
+<div class="section" id="id32">
+<h3>Output<a class="headerlink" href="#id32" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">rsmcompare</span></code> produces the comparison report in HTML format as well as in the form of a Jupyter notebook (a <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file) in the output directory.</p>
+</div>
+</div>
+<div class="section" id="rsmsummarize-compare-multiple-scoring-models">
+<span id="usage-rsmsummarize"></span><h2><code class="docutils literal notranslate"><span class="pre">rsmsummarize</span></code> - Compare multiple scoring models<a class="headerlink" href="#rsmsummarize-compare-multiple-scoring-models" title="Permalink to this headline">¶</a></h2>
+<p>RSMTool provides the <code class="docutils literal notranslate"><span class="pre">rsmsummarize</span></code> command-line utility to compare multiple models and to generate a comparison report. Unlike <code class="docutils literal notranslate"><span class="pre">rsmcompare</span></code> which creates a detailed comparison report between the two models, <code class="docutils literal notranslate"><span class="pre">rsmsummarize</span></code> can be used to create a more general overview of multiple models.</p>
+<p><code class="docutils literal notranslate"><span class="pre">rsmsummarize</span></code> can be used to compare:</p>
+<ol class="arabic simple">
+<li>Multiple <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> experiments, or</li>
+<li>Multiple <code class="docutils literal notranslate"><span class="pre">rsmeval</span></code> experiments, or</li>
+<li>A mix of <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> and <code class="docutils literal notranslate"><span class="pre">rsmeval</span></code> experiments (in this case, only the evaluation analyses will be compared).</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">It is strongly recommend that the original experiments as well as the summary experiment are all done using the same version of RSMTool.</p>
+</div>
+<div class="section" id="tutorial-rsmsummarize">
+<span id="id33"></span><h3>Tutorial<a class="headerlink" href="#tutorial-rsmsummarize" title="Permalink to this headline">¶</a></h3>
+<p>For this tutorial, you first need to <a class="reference internal" href="getting_started.html#install"><span class="std std-ref">install RSMTool</span></a> and make sure the conda environment in which you installed it is activated.</p>
+<div class="section" id="id34">
+<h4>Workflow<a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">rsmsummarize</span></code> is designed to compare several existing <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> or <code class="docutils literal notranslate"><span class="pre">rsmeval</span></code> experiments. To use <code class="docutils literal notranslate"><span class="pre">rsmsummarize</span></code> you need:</p>
+<ol class="arabic simple">
+<li>Two or more experiments that were run using <a class="reference internal" href="usage_rsmtool.html#usage-rsmtool"><span class="std std-ref">rsmtool</span></a> or <a class="reference internal" href="#usage-rsmeval"><span class="std std-ref">rsmeval</span></a>.</li>
+<li>Create an <a class="reference internal" href="#config-file-rsmsummarize"><span class="std std-ref">experiment configuration file</span></a> describing the comparison experiment you would like to run.</li>
+<li>Run that configuration file with <a class="reference internal" href="#usage-rsmsummarize"><span class="std std-ref">rsmsummarize</span></a> and generate the comparison experiment HTML report.</li>
+<li>Examine HTML report to compare the models.</li>
+</ol>
+<p>Note that the above workflow does not use the customization features of <code class="docutils literal notranslate"><span class="pre">rsmsummarize</span></code>, e.g., <a class="reference internal" href="#general-sections-rsmsummarize"><span class="std std-ref">choosing which sections to include in the report</span></a> or <a class="reference internal" href="custom_notebooks.html#custom-notebooks"><span class="std std-ref">adding custom analyses sections</span></a> etc. However, we will stick with this workflow for our tutorial since it is likely to be the most common use case.</p>
+</div>
+<div class="section" id="id35">
+<h4>ASAP Example<a class="headerlink" href="#id35" title="Permalink to this headline">¶</a></h4>
+<p>We are going to use the same example from 2012 Kaggle competition on automated essay scoring that we used for the <a class="reference internal" href="tutorial.html#tutorial"><span class="std std-ref">rsmtool tutorial</span></a>.</p>
+</div>
+<div class="section" id="run-rsmtool-and-rsmeval-experiments">
+<h4>Run <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> and <code class="docutils literal notranslate"><span class="pre">rsmeval</span></code> experiments<a class="headerlink" href="#run-rsmtool-and-rsmeval-experiments" title="Permalink to this headline">¶</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">rsmsummarize</span></code> compares the results of the two or more existing <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> (or <code class="docutils literal notranslate"><span class="pre">rsmeval</span></code>) experiments. For this tutorial, we will compare model trained in the <a class="reference internal" href="tutorial.html#tutorial"><span class="std std-ref">rsmtool tutorial</span></a> to the evaluations we obtained in the  <a class="reference internal" href="#tutorial-rsmeval"><span class="std std-ref">rsmeval tutorial</span></a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you have not already completed these tutorials, please do so now. You may need to complete them again if you deleted the output files.</p>
+</div>
+</div>
+<div class="section" id="id36">
+<h4>Create a configuration file<a class="headerlink" href="#id36" title="Permalink to this headline">¶</a></h4>
+<p>The next step is to create an <a class="reference internal" href="#config-file-rsmsummarize"><span class="std std-ref">experiment configuration file</span></a> in <code class="docutils literal notranslate"><span class="pre">.json</span></code> format.</p>
+<div class="highlight-javascript notranslate" id="asap-config-rsmsummarize"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;summary_id&quot;</span><span class="o">:</span> <span class="s2">&quot;model_comparison&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;a comparison of the results of the rsmtool sample experiment, rsmeval sample experiment and once again the rsmtool sample experiment&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;experiment_dirs&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;../rsmtool&quot;</span><span class="p">,</span> <span class="s2">&quot;../rsmeval&quot;</span><span class="p">,</span> <span class="s2">&quot;../rsmtool&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>Let’s take a look at the options in our configuration file.</p>
+<ul class="simple">
+<li><strong>Line 2</strong>: We provide the <code class="docutils literal notranslate"><span class="pre">summary_id</span></code> for the comparison. This will be used to generate the name of the final report.</li>
+<li><strong>Line 3</strong>: We give a short description of this comparison experiment. This will be shown in the report.</li>
+<li><strong>Line 4</strong>: We also give the list of paths to the directories containing the outputs of the experiments we want to compare.</li>
+</ul>
+<p>Documentation for all of the available configuration options is available <a class="reference internal" href="#config-file-rsmsummarize"><span class="std std-ref">here</span></a>.</p>
+</div>
+<div class="section" id="id37">
+<h4>Run the experiment<a class="headerlink" href="#id37" title="Permalink to this headline">¶</a></h4>
+<p>Now that we have the list of the experiments we want to compare and our configuration file in <code class="docutils literal notranslate"><span class="pre">.json</span></code> format, we can use the <a class="reference internal" href="#usage-rsmsummarize"><span class="std std-ref">rsmsummarize</span></a> command-line script to run our comparison experiment.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> examples/rsmsummarize
+$ rsmsummarize config_rsmsummarize.json
+</pre></div>
+</div>
+<p>This should produce output like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Output</span> <span class="n">directory</span><span class="p">:</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">nmadnani</span><span class="o">/</span><span class="n">work</span><span class="o">/</span><span class="n">rsmtool</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">rsmsummarize</span>
+<span class="n">Starting</span> <span class="n">report</span> <span class="n">generation</span>
+<span class="n">Merging</span> <span class="n">sections</span>
+<span class="n">Exporting</span> <span class="n">HTML</span>
+<span class="n">Executing</span> <span class="n">notebook</span> <span class="k">with</span> <span class="n">kernel</span><span class="p">:</span> <span class="n">python3</span>
+</pre></div>
+</div>
+<p>Once the run finishes, you will see an HTML file named <code class="docutils literal notranslate"><span class="pre">model_comparison_report.html</span></code>. This is the final <code class="docutils literal notranslate"><span class="pre">rsmsummarize</span></code> summary report.</p>
+</div>
+<div class="section" id="id38">
+<h4>Examine the report<a class="headerlink" href="#id38" title="Permalink to this headline">¶</a></h4>
+<p>Our experiment report contains the overview of main aspects of model performance. It includes:</p>
+<ol class="arabic simple">
+<li>Brief description of all experiments.</li>
+<li>Information about model parameters and model fit for all <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> experiments.</li>
+<li>Model performance for all experiments.</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Some of the information such as model fit and model parameters are only available for <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> experiments.</p>
+</div>
+</div>
+</div>
+<div class="section" id="id39">
+<h3>Input<a class="headerlink" href="#id39" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">rsmsummarize</span></code> requires a single argument to run an experiment: the path to <a class="reference internal" href="#config-file-rsmsummarize"><span class="std std-ref">a configuration file</span></a>. You can specify which models you want to compare and the name of the report by supplying the path to <a class="reference internal" href="#config-file-rsmsummarize"><span class="std std-ref">a configuration file</span></a>. It can also take an output directory as an optional second argument. If the latter is not specified, <code class="docutils literal notranslate"><span class="pre">rsmsummarize</span></code> will use the current directory as the output directory.</p>
+<p>Here are all the arguments to the <code class="docutils literal notranslate"><span class="pre">rsmsummarize</span></code> command-line script.</p>
+<dl class="option">
+<dt id="cmdoption-rsmsummarize-arg-config-file">
+<code class="descname">config_file</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-rsmsummarize-arg-config-file" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference internal" href="#config-file-rsmsummarize"><span class="std std-ref">JSON configuration file</span></a> for this experiment.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-rsmsummarize-arg-output-dir">
+<code class="descname">output_dir</code><code class="descclassname"> (optional)</code><a class="headerlink" href="#cmdoption-rsmsummarize-arg-output-dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>The output directory where the report and intermediate <code class="docutils literal notranslate"><span class="pre">.csv</span></code> files for this comparison will be stored.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-rsmsummarize-f">
+<code class="descname">-f</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--force</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-rsmsummarize-f" title="Permalink to this definition">¶</a></dt>
+<dd><p>If specified, the contents of the output directory will be overwritten even if it already contains the output of another rsmsummarize experiment.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-rsmsummarize-h">
+<code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-rsmsummarize-h" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show help message and exist.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-rsmsummarize-v">
+<code class="descname">-V</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--version</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-rsmsummarize-v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show version number and exit.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="config-file-rsmsummarize">
+<span id="id40"></span><h3>Experiment configuration file<a class="headerlink" href="#config-file-rsmsummarize" title="Permalink to this headline">¶</a></h3>
+<p>This is a file in <code class="docutils literal notranslate"><span class="pre">.json</span></code> format that provides overall configuration options for an <code class="docutils literal notranslate"><span class="pre">rsmsummarize</span></code> experiment. Here’s an example configuration file for <a class="reference external" href="https://github.com/EducationalTestingService/rsmtool/blob/master/examples/rsmsummarize/config_rsmsummarize.json">rsmsummarize</a>.</p>
+<p>There are two required fields and the rest are all optional.</p>
+<div class="section" id="summary-id">
+<h4>summary_id<a class="headerlink" href="#summary-id" title="Permalink to this headline">¶</a></h4>
+<p>An identifier for the <code class="docutils literal notranslate"><span class="pre">rsmsummarize</span></code> experiment. This will be used to name the report. It can be any combination of alphanumeric values, must <em>not</em> contain spaces, and must <em>not</em> be any longer than 200 characters.</p>
+</div>
+<div class="section" id="experiment-dirs">
+<h4>experiment_dirs<a class="headerlink" href="#experiment-dirs" title="Permalink to this headline">¶</a></h4>
+<p>The list of the directories with the results of the experiment. These directories should be the output directories used for each experiment and should contain subdirectories <code class="docutils literal notranslate"><span class="pre">output</span></code> and <code class="docutils literal notranslate"><span class="pre">figure</span></code> generated by <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> or <code class="docutils literal notranslate"><span class="pre">rsmeval</span></code>.</p>
+</div>
+<div class="section" id="id41">
+<h4>description <em>(Optional)</em><a class="headerlink" href="#id41" title="Permalink to this headline">¶</a></h4>
+<p>A brief description of the summary. The description can contain spaces and punctuation.</p>
+</div>
+<div class="section" id="file-format-summarize">
+<span id="id42"></span><h4>file_format <em>(Optional)</em><a class="headerlink" href="#file-format-summarize" title="Permalink to this headline">¶</a></h4>
+<p>The format of the <a class="reference internal" href="usage_rsmtool.html#intermediate-files-rsmtool"><span class="std std-ref">intermediate files</span></a> generated by <code class="docutils literal notranslate"><span class="pre">rsmsummarize</span></code>. Options are <code class="docutils literal notranslate"><span class="pre">csv</span></code>, <code class="docutils literal notranslate"><span class="pre">tsv</span></code>, or <code class="docutils literal notranslate"><span class="pre">xlsx</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">csv</span></code> if this is not specified.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">In the <code class="docutils literal notranslate"><span class="pre">rsmsummarize</span></code> context, the <code class="docutils literal notranslate"><span class="pre">file_format</span></code> parameter refers to the format of the intermediate files generated by <code class="docutils literal notranslate"><span class="pre">rsmsummarize</span></code>, not the intermediate files generated by the original experiment(s) being summarized. The format of these files does not have to match the format of the files generated by the original experiment(s).</p>
+</div>
+</div>
+<div class="section" id="general-sections-rsmsummarize">
+<span id="id43"></span><h4>general_sections <em>(Optional)</em><a class="headerlink" href="#general-sections-rsmsummarize" title="Permalink to this headline">¶</a></h4>
+<p>RSMTool provides pre-defined sections for <code class="docutils literal notranslate"><span class="pre">rsmsummarize</span></code> (listed below) and, by default, all of them are included in the report. However, you can choose a subset of these pre-defined sections by specifying a list as the value for this field.</p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">preprocessed_features</span></code> : compares marginal and partial correlations between all features and the human score, and optionally response length if this was computed for any of the models.</li>
+<li><code class="docutils literal notranslate"><span class="pre">model</span></code>: Compares the parameters of the two regression models. For linear models, it also includes the standardized and relative coefficients.</li>
+<li><code class="docutils literal notranslate"><span class="pre">evaluation</span></code>: Compares the standard set of evaluations recommended for scoring models on the evaluation data.</li>
+<li><code class="docutils literal notranslate"><span class="pre">intermediate_file_paths</span></code>: Shows links to all of the intermediate files that were generated while running the summary.</li>
+<li><code class="docutils literal notranslate"><span class="pre">sysinfo</span></code>: Shows all Python packages along with versions installed in the current environment while generating the report.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="custom-sections-rsmsummarize">
+<span id="id44"></span><h4>custom_sections <em>(Optional)</em><a class="headerlink" href="#custom-sections-rsmsummarize" title="Permalink to this headline">¶</a></h4>
+<p>A list of custom, user-defined sections to be included into the final report. These are IPython notebooks (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> files) created by the user.  The list must contains paths to the notebook files, either absolute or relative to the configuration file. All custom notebooks have access to some <a class="reference internal" href="custom_notebooks.html#custom-notebooks"><span class="std std-ref">pre-defined variables</span></a>.</p>
+</div>
+<div class="section" id="special-sections-rsmsummarize">
+<span id="id45"></span><h4>special_sections <em>(Optional)</em><a class="headerlink" href="#special-sections-rsmsummarize" title="Permalink to this headline">¶</a></h4>
+<p>A list specifying special ETS-only comparison sections to be included into the final report. These sections are available <em>only</em> to ETS employees via the <cite>rsmextra</cite> package.</p>
+</div>
+<div class="section" id="id46">
+<h4>section_order <em>(Optional)</em><a class="headerlink" href="#id46" title="Permalink to this headline">¶</a></h4>
+<p>A list containing the order in which the sections in the report should be generated. Any specified order must explicitly list:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Either <em>all</em> pre-defined sections if a value for the <a class="reference internal" href="#general-sections-rsmsummarize"><span class="std std-ref">general_sections</span></a> field is not specified OR the sections specified using <a class="reference internal" href="#general-sections-rsmsummarize"><span class="std std-ref">general_sections</span></a>, and</li>
+<li><em>All</em> custom section names specified using <a class="reference internal" href="#custom-sections-rsmsummarize"><span class="std std-ref">custom_ sections</span></a>, i.e., file prefixes only, without the path and without the <cite>.ipynb</cite> extension, and</li>
+<li><em>All</em> special sections specified using <a class="reference internal" href="#special-sections-rsmsummarize"><span class="std std-ref">special_sections</span></a>.</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="use-thumbnails-rsmsummarize">
+<span id="id47"></span><h4>use_thumbnails <em>(Optional)</em><a class="headerlink" href="#use-thumbnails-rsmsummarize" title="Permalink to this headline">¶</a></h4>
+<p>If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the images in the HTML will be set to clickable thumbnails rather than full-sized images. Upon clicking the thumbnail, the full-sized images will be displayed in a separate tab in the browser. If set to <code class="docutils literal notranslate"><span class="pre">false</span></code>, full-sized images will be displayed as usual. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</div>
+</div>
+<div class="section" id="id48">
+<h3>Output<a class="headerlink" href="#id48" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">rsmsummarize</span></code> produces a set of folders in the output directory.</p>
+<div class="section" id="id49">
+<h4>report<a class="headerlink" href="#id49" title="Permalink to this headline">¶</a></h4>
+<p>This folder contains the final <code class="docutils literal notranslate"><span class="pre">rsmsummarize</span></code> report in HTML format as well as in the form of a Jupyter notebook (a <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file).</p>
+</div>
+<div class="section" id="id50">
+<h4>output<a class="headerlink" href="#id50" title="Permalink to this headline">¶</a></h4>
+<p>This folder contains all of the <a class="reference internal" href="intermediate_files_rsmsummarize.html#intermediate-files-rsmsummarize"><span class="std std-ref">intermediate files</span></a> produced as part of the various analyses performed, saved as <code class="docutils literal notranslate"><span class="pre">.csv</span></code> files. <code class="docutils literal notranslate"><span class="pre">rsmsummarize</span></code> will also save in this folder a copy of the <a class="reference internal" href="#config-file-rsmsummarize"><span class="std std-ref">configuration file</span></a>. Fields not specified in the original configuration file will be pre-populated with default values.</p>
+</div>
+<div class="section" id="id51">
+<h4>figure<a class="headerlink" href="#id51" title="Permalink to this headline">¶</a></h4>
+<p>This folder contains all of the figures that may be generated as part of the various analyses performed, saved as <code class="docutils literal notranslate"><span class="pre">.svg</span></code> files. Note that no figures are generated by the existing <code class="docutils literal notranslate"><span class="pre">rsmsummarize</span></code> notebooks.</p>
+</div>
+</div>
+<div class="section" id="intermediate-files-rsmsummarize">
+<span id="id52"></span><h3>Intermediate files<a class="headerlink" href="#intermediate-files-rsmsummarize" title="Permalink to this headline">¶</a></h3>
+<p>Although the primary output of RSMSummarize is an HTML report, we also want the user to be able to conduct additional analyses outside of RSMTool. To this end, all of the tables produced in the experiment report are saved as files in the format as specified by <code class="docutils literal notranslate"><span class="pre">file_format</span></code> parameter in the <code class="docutils literal notranslate"><span class="pre">output</span></code> directory. The following sections describe all of the intermediate files that are produced.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The names of all files begin with the <code class="docutils literal notranslate"><span class="pre">summary_id</span></code> provided by the user in the experiment configuration file.</p>
+</div>
+</div>
+</div>
+<div class="section" id="marginal-and-partial-correlations-with-score">
+<h2>Marginal and partial correlations with score<a class="headerlink" href="#marginal-and-partial-correlations-with-score" title="Permalink to this headline">¶</a></h2>
+<p>filenames: <code class="docutils literal notranslate"><span class="pre">margcor_score_all_data</span></code>, <code class="docutils literal notranslate"><span class="pre">pcor_score_all_data</span></code>, <code class="docutils literal notranslate"><span class="pre">`pcor_score_no_length_all_data</span></code></p>
+<p>The first file contains the marginal correlations between each pre-processed feature and human score. The second file contains the partial correlation between each pre-processed feature and human score after controlling for all other features. The third file contains the partial correlations between each pre-processed feature and human score after controlling for response length, if <code class="docutils literal notranslate"><span class="pre">length_column</span></code> was specified in the configuration file.</p>
+</div>
+<div class="section" id="model-information">
+<h2>Model information<a class="headerlink" href="#model-information" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">model_summary</span></code></li>
+</ul>
+<p>This file contains the main information about the models included into the report including:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Total number of features</li>
+<li>Total number of features with non-negative coefficients</li>
+<li>The learner</li>
+<li>The label used to train the model</li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">betas</span></code>: standardized coefficients (for built-in models only).</li>
+<li><code class="docutils literal notranslate"><span class="pre">model_fit</span></code>: R squared and adjusted R squared computed on the training set. Note that these values are always computed on raw predictions without any trimming or rounding.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If the report includes a combination of <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> and <code class="docutils literal notranslate"><span class="pre">rsmeval</span></code> experiments, the summary tables with model information will only include <code class="docutils literal notranslate"><span class="pre">rsmtool</span></code> experiments since no model information is available for <code class="docutils literal notranslate"><span class="pre">rsmeval</span></code> experiments.</p>
+</div>
+</div>
+<div class="section" id="id53">
+<h2>Evaluation metrics<a class="headerlink" href="#id53" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">eval_short</span></code> - descriptives for predicted and human scores (mean, std.dev etc.) and association metrics (correlation, quadartic weighted kappa, SMD etc.) for specific score types chosen based on recommendations by Williamson (2012). Specifically, the following columns are included (the <code class="docutils literal notranslate"><span class="pre">raw</span></code> or <code class="docutils literal notranslate"><span class="pre">scale</span></code> version is chosen depending on the value of the <code class="docutils literal notranslate"><span class="pre">use_scaled_predictions</span></code> in the configuration file).</p>
+<blockquote>
+<div><ul class="simple">
+<li>h_mean</li>
+<li>h_sd</li>
+<li>corr</li>
+<li>sys_mean [raw/scale trim]</li>
+<li>sys_sd [raw/scale trim]</li>
+<li>SMD [raw/scale trim]</li>
+<li>adj_agr [raw/scale trim_round]</li>
+<li>exact_agr [raw/scale trim_round]</li>
+<li>kappa [raw/scale trim_round]</li>
+<li>wtkappa [raw/scale trim_round]</li>
+<li>sys_mean [raw/scale trim_round]</li>
+<li>sys_sd [raw/scale trim_round]</li>
+<li>SMD [raw/scale trim_round]</li>
+<li>R2 [raw/scale trim]</li>
+<li>RMSE [raw/scale trim]</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Please note that for raw scores, SMD values are likely to be affected by possible differences in scale.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="custom_notebooks.html" class="btn btn-neutral float-right" title="Writing custom RSMTool sections" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="usage_rsmtool.html" class="btn btn-neutral" title="Using RSMTool" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Educational Testing Service.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'6.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,640 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>rsmtool.transformer &mdash; Rater Scoring Modeling Tool 6.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Rater Scoring Modeling Tool
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                6.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../who.html">Who is RSMTool for?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pipeline.html">Overview of RSMTool Pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../usage_rsmtool.html">Using RSMTool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced_usage.html">Advanced Uses of RSMTool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../custom_notebooks.html">Writing custom RSMTool sections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../utilities.html">Utility Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing to RSMTool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release_process.html">RSMTool Release Process</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Rater Scoring Modeling Tool</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>rsmtool.transformer</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for rsmtool.transformer</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Class for transforming features.</span>
+
+<span class="sd">:author: Jeremy Biggs (jbiggs@ets.org)</span>
+<span class="sd">:author: Anastassia Loukina (aloukina@ets.org)</span>
+<span class="sd">:author: Nitin Madnani (nmadnani@ets.org)</span>
+
+<span class="sd">:date: 10/25/2017</span>
+<span class="sd">:organization: ETS</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">scipy.stats.stats</span> <span class="k">import</span> <span class="n">pearsonr</span>
+
+
+<div class="viewcode-block" id="FeatureTransformer"><a class="viewcode-back" href="../../api.html#rsmtool.transformer.FeatureTransformer">[docs]</a><span class="k">class</span> <span class="nc">FeatureTransformer</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Encapsulate feature transformation methods.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="FeatureTransformer.apply_sqrt_transform"><a class="viewcode-back" href="../../api.html#rsmtool.transformer.FeatureTransformer.apply_sqrt_transform">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">apply_sqrt_transform</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span>
+                             <span class="n">name</span><span class="p">,</span>
+                             <span class="n">values</span><span class="p">,</span>
+                             <span class="n">raise_error</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Apply the `sqrt` transform to `values`.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        name : str</span>
+<span class="sd">            Name of the feature to transform.</span>
+<span class="sd">        values : numpy array</span>
+<span class="sd">            Numpy array containing the feature values.</span>
+<span class="sd">        raise_error : bool, optional</span>
+<span class="sd">            When set to true, raises an error if the transform is applied to</span>
+<span class="sd">            a feature that can have negative values.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        new_data : numpy array</span>
+<span class="sd">            Numpy array containing the transformed feature</span>
+<span class="sd">            values.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        ValueError</span>
+<span class="sd">            If the transform is applied to a feature</span>
+<span class="sd">            that has negative values and `raise_error` is set to true.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># check if the feature has any negative values</span>
+
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">values</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">raise_error</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;The sqrt transformation should not be &quot;</span>
+                                 <span class="s2">&quot;applied to feature </span><span class="si">{}</span><span class="s2"> which can have &quot;</span>
+                                 <span class="s2">&quot;negative values&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;The sqrt transformation was &quot;</span>
+                                <span class="s2">&quot;applied to feature </span><span class="si">{}</span><span class="s2"> which has &quot;</span>
+                                <span class="s2">&quot;negative values for some responses. &quot;</span>
+                                <span class="s2">&quot;No system score will be generated &quot;</span>
+                                <span class="s2">&quot;for such responses&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+
+        <span class="k">with</span> <span class="n">np</span><span class="o">.</span><span class="n">errstate</span><span class="p">(</span><span class="n">invalid</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">):</span>
+            <span class="n">new_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">new_data</span></div>
+
+<div class="viewcode-block" id="FeatureTransformer.apply_log_transform"><a class="viewcode-back" href="../../api.html#rsmtool.transformer.FeatureTransformer.apply_log_transform">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">apply_log_transform</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span>
+                            <span class="n">name</span><span class="p">,</span>
+                            <span class="n">values</span><span class="p">,</span>
+                            <span class="n">raise_error</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Apply the `log` transform to `values`.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        name : str</span>
+<span class="sd">            Name of the feature to transform.</span>
+<span class="sd">        values : numpy array</span>
+<span class="sd">            Numpy array containing the feature values.</span>
+<span class="sd">        raise_error : bool, optional</span>
+<span class="sd">            When set to true, raises an error if the transform is applied to</span>
+<span class="sd">            a feature that has zero or negative values.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        new_data : numpy array</span>
+<span class="sd">            Numpy array containing the transformed feature</span>
+<span class="sd">            values.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        ValueError</span>
+<span class="sd">            If the transform is applied to a feature that</span>
+<span class="sd">            can be zero or negative and `raise_error` is set to true.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># check if the feature has any zeros</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">values</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">raise_error</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;The log transformation should not be &quot;</span>
+                                 <span class="s2">&quot;applied to feature </span><span class="si">{}</span><span class="s2"> which can have a &quot;</span>
+                                 <span class="s2">&quot;value of 0&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;The log transformation was &quot;</span>
+                                <span class="s2">&quot;applied to feature </span><span class="si">{}</span><span class="s2"> which has a &quot;</span>
+                                <span class="s2">&quot;value of 0 for some responses. No system &quot;</span>
+                                <span class="s2">&quot;score will &quot;</span>
+                                <span class="s2">&quot;be generated for such responses&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+
+        <span class="c1"># check if the feature has any negative values</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">values</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">raise_error</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;The log transformation should not be &quot;</span>
+                                 <span class="s2">&quot;applied to feature </span><span class="si">{}</span><span class="s2"> which can have &quot;</span>
+                                 <span class="s2">&quot;negative values&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;The log transformation was &quot;</span>
+                                <span class="s2">&quot;applied to feature </span><span class="si">{}</span><span class="s2"> which has &quot;</span>
+                                <span class="s2">&quot;negative values for some responses. No system &quot;</span>
+                                <span class="s2">&quot;score will &quot;</span>
+                                <span class="s2">&quot;be generated for such responses&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+
+        <span class="n">new_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">new_data</span></div>
+
+<div class="viewcode-block" id="FeatureTransformer.apply_inverse_transform"><a class="viewcode-back" href="../../api.html#rsmtool.transformer.FeatureTransformer.apply_inverse_transform">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">apply_inverse_transform</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span>
+                                <span class="n">name</span><span class="p">,</span>
+                                <span class="n">values</span><span class="p">,</span>
+                                <span class="n">raise_error</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                                <span class="n">sd_multiplier</span><span class="o">=</span><span class="mi">4</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Apply the inverse transform to `values`.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        name : str</span>
+<span class="sd">            Name of the feature to transform.</span>
+<span class="sd">        values : numpy array</span>
+<span class="sd">            Numpy array containing the feature values.</span>
+<span class="sd">        raise_error : bool, optional</span>
+<span class="sd">            When set to true, raises an error if the transform is applied to</span>
+<span class="sd">            a feature that can be zero or to a feature that can have</span>
+<span class="sd">            different signs.</span>
+<span class="sd">        sd_multiplier : int, optional</span>
+<span class="sd">            Use this std. dev. multiplier to compute the ceiling</span>
+<span class="sd">            and floor for outlier removal and check that these</span>
+<span class="sd">            are not equal to zero.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        new_data: numpy array</span>
+<span class="sd">            Numpy array containing the transformed feature</span>
+<span class="sd">            values.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        ValueError</span>
+<span class="sd">            If the transform is applied to a feature that can</span>
+<span class="sd">            be zero or to a feature that can have different</span>
+<span class="sd">            signs and `raise_error` is set to &#39;True&#39;</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">values</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">raise_error</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;The inverse transformation should not be &quot;</span>
+                                 <span class="s2">&quot;applied to feature </span><span class="si">{}</span><span class="s2"> which can have a &quot;</span>
+                                 <span class="s2">&quot;value of 0&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;The inverse transformation was applied to &quot;</span>
+                                <span class="s2">&quot;feature </span><span class="si">{}</span><span class="s2"> which has a value of 0 for &quot;</span>
+                                <span class="s2">&quot;some responses. No system score will be &quot;</span>
+                                <span class="s2">&quot;generated for such responses&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+
+        <span class="c1"># check if the floor or ceiling are zero</span>
+        <span class="n">data_mean</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
+        <span class="n">data_sd</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">floor</span> <span class="o">=</span> <span class="n">data_mean</span> <span class="o">-</span> <span class="n">sd_multiplier</span> <span class="o">*</span> <span class="n">data_sd</span>
+        <span class="n">ceiling</span> <span class="o">=</span> <span class="n">data_mean</span> <span class="o">+</span> <span class="n">sd_multiplier</span> <span class="o">*</span> <span class="n">data_sd</span>
+        <span class="k">if</span> <span class="n">floor</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">ceiling</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;The floor/ceiling for feature </span><span class="si">{}</span><span class="s2"> &quot;</span>
+                            <span class="s2">&quot;is zero after applying the inverse &quot;</span>
+                            <span class="s2">&quot;transformation&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+
+        <span class="c1"># check if the feature can be both positive and negative</span>
+        <span class="n">all_positive</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">values</span><span class="p">)</span> <span class="o">==</span> <span class="n">values</span><span class="p">)</span>
+        <span class="n">all_negative</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">values</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="n">values</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">all_positive</span> <span class="ow">or</span> <span class="n">all_negative</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">raise_error</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;The inverse transformation should not be &quot;</span>
+                                 <span class="s2">&quot;applied to feature </span><span class="si">{}</span><span class="s2"> where the values can &quot;</span>
+                                 <span class="s2">&quot;have different signs&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;The inverse transformation was &quot;</span>
+                                <span class="s2">&quot;applied to feature </span><span class="si">{}</span><span class="s2"> where the values can&quot;</span>
+                                <span class="s2">&quot;have different signs. This can change &quot;</span>
+                                <span class="s2">&quot;the ranking of the responses&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+
+        <span class="k">with</span> <span class="n">np</span><span class="o">.</span><span class="n">errstate</span><span class="p">(</span><span class="n">divide</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">):</span>
+            <span class="n">new_data</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">values</span>
+
+        <span class="k">return</span> <span class="n">new_data</span></div>
+
+<div class="viewcode-block" id="FeatureTransformer.apply_add_one_inverse_transform"><a class="viewcode-back" href="../../api.html#rsmtool.transformer.FeatureTransformer.apply_add_one_inverse_transform">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">apply_add_one_inverse_transform</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span>
+                                        <span class="n">name</span><span class="p">,</span>
+                                        <span class="n">values</span><span class="p">,</span>
+                                        <span class="n">raise_error</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Apply the add one and invert transform to `values`.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        name : str</span>
+<span class="sd">            Name of the feature to transform.</span>
+<span class="sd">        values : np.array</span>
+<span class="sd">            Numpy array containing the feature values.</span>
+<span class="sd">        raise_error : bool, optional</span>
+<span class="sd">            When set to true, raises an error if the transform is applied to</span>
+<span class="sd">            a feature that has zero or negative values.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        new_data : np.array</span>
+<span class="sd">            Numpy array containing the transformed feature</span>
+<span class="sd">            values.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        ValueError</span>
+<span class="sd">            If the transform is applied to a feature</span>
+<span class="sd">            that can be negative and `raise_error` is set to True.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># check if the feature has any negative values</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">values</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">raise_error</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;The addOneInv transformation should not &quot;</span>
+                                 <span class="s2">&quot;be applied to feature </span><span class="si">{}</span><span class="s2"> which can have &quot;</span>
+                                 <span class="s2">&quot;negative values&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;The addOneInv transformation was &quot;</span>
+                                <span class="s2">&quot;applied to feature </span><span class="si">{}</span><span class="s2"> which has &quot;</span>
+                                <span class="s2">&quot;negative values for some responses. &quot;</span>
+                                <span class="s2">&quot;This can change the ranking of the &quot;</span>
+                                <span class="s2">&quot;responses&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+
+        <span class="n">new_data</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="n">values</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">new_data</span></div>
+
+<div class="viewcode-block" id="FeatureTransformer.apply_add_one_log_transform"><a class="viewcode-back" href="../../api.html#rsmtool.transformer.FeatureTransformer.apply_add_one_log_transform">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">apply_add_one_log_transform</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span>
+                                    <span class="n">name</span><span class="p">,</span>
+                                    <span class="n">values</span><span class="p">,</span>
+                                    <span class="n">raise_error</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Apply the add one and log transform to `values`.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        name : str</span>
+<span class="sd">            Name of the feature to transform.</span>
+<span class="sd">        values : numpy array</span>
+<span class="sd">            Numpy array containing the feature values.</span>
+<span class="sd">        raise_error : bool, optional</span>
+<span class="sd">            When set to true, raises an error if the transform is applied to</span>
+<span class="sd">            a feature that has zero or negative values.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        new_data : numpy array</span>
+<span class="sd">            Numpy array that contains the transformed feature</span>
+<span class="sd">            values.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        ValueError</span>
+<span class="sd">            If the transform is applied to a feature that</span>
+<span class="sd">            can be negative.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># check if the feature has any negative values</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">values</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">raise_error</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;The addOneLn transformation should not &quot;</span>
+                                 <span class="s2">&quot;be applied to feature </span><span class="si">{}</span><span class="s2"> which can have &quot;</span>
+                                 <span class="s2">&quot;negative values&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;The log transformation was &quot;</span>
+                                <span class="s2">&quot;applied to feature </span><span class="si">{}</span><span class="s2"> which has &quot;</span>
+                                <span class="s2">&quot;negative values for some responses. &quot;</span>
+                                <span class="s2">&quot;If the feature value remains negative &quot;</span>
+                                <span class="s2">&quot;after adding one, no score will &quot;</span>
+                                <span class="s2">&quot;be generated for such responses&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+
+        <span class="n">new_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">values</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">new_data</span></div>
+
+<div class="viewcode-block" id="FeatureTransformer.transform_feature"><a class="viewcode-back" href="../../api.html#rsmtool.transformer.FeatureTransformer.transform_feature">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">transform_feature</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span>
+                          <span class="n">values</span><span class="p">,</span>
+                          <span class="n">column_name</span><span class="p">,</span>
+                          <span class="n">transform</span><span class="p">,</span>
+                          <span class="n">raise_error</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Applies the given transform to all of the values in the given</span>
+<span class="sd">        numpy array. The values are assumed to be for the feature with</span>
+<span class="sd">        the given name.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        values : numpy array</span>
+<span class="sd">            Numpy array containing the feature values.</span>
+<span class="sd">        column_name : str</span>
+<span class="sd">            Name of the feature to transform.</span>
+<span class="sd">        transform : str</span>
+<span class="sd">            Name of the transform to apply.</span>
+<span class="sd">            Valid options include ::</span>
+
+<span class="sd">                {&#39;inv&#39;, &#39;sqrt&#39;, &#39;log&#39;,</span>
+<span class="sd">                 &#39;addOneInv&#39;, &#39;addOneLn&#39;,</span>
+<span class="sd">                 &#39;raw&#39;, &#39;org&#39;}</span>
+
+<span class="sd">        raise_error : bool, optional</span>
+<span class="sd">            Raise a ValueError if a transformation leads to `Inf` values or may</span>
+<span class="sd">            change the ranking of the responses</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        new_data : np.array</span>
+<span class="sd">            Numpy array containing the transformed feature</span>
+<span class="sd">            values.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        ValueError</span>
+<span class="sd">            If the given transform is not recognized.</span>
+
+<span class="sd">        Note</span>
+<span class="sd">        ----</span>
+<span class="sd">        Many of these transformations may be meaningless for features which</span>
+<span class="sd">        span both negative and positive values. Some transformations may</span>
+<span class="sd">        throw errors for negative feature values.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">transforms</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;inv&#39;</span><span class="p">:</span> <span class="n">FeatureTransformer</span><span class="o">.</span><span class="n">apply_inverse_transform</span><span class="p">,</span>
+                      <span class="s1">&#39;sqrt&#39;</span><span class="p">:</span> <span class="n">FeatureTransformer</span><span class="o">.</span><span class="n">apply_sqrt_transform</span><span class="p">,</span>
+                      <span class="s1">&#39;log&#39;</span><span class="p">:</span> <span class="n">FeatureTransformer</span><span class="o">.</span><span class="n">apply_log_transform</span><span class="p">,</span>
+                      <span class="s1">&#39;addOneInv&#39;</span><span class="p">:</span> <span class="n">FeatureTransformer</span><span class="o">.</span><span class="n">apply_add_one_inverse_transform</span><span class="p">,</span>
+                      <span class="s1">&#39;addOneLn&#39;</span><span class="p">:</span> <span class="n">FeatureTransformer</span><span class="o">.</span><span class="n">apply_add_one_log_transform</span><span class="p">,</span>
+                      <span class="s1">&#39;raw&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">column_name</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">raise_error</span><span class="p">:</span> <span class="n">data</span><span class="p">,</span>
+                      <span class="s1">&#39;org&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">column_name</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">raise_error</span><span class="p">:</span> <span class="n">data</span><span class="p">}</span>
+
+        <span class="c1"># make sure we have a valid transform function</span>
+        <span class="k">if</span> <span class="n">transform</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">transform</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">transforms</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Unrecognized feature transformation: &#39;</span>
+                             <span class="s1">&#39; </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">transform</span><span class="p">))</span>
+
+        <span class="n">transformer</span> <span class="o">=</span> <span class="n">transforms</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">transform</span><span class="p">)</span>
+        <span class="n">new_data</span> <span class="o">=</span> <span class="n">transformer</span><span class="p">(</span><span class="n">column_name</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">raise_error</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">new_data</span></div>
+
+<div class="viewcode-block" id="FeatureTransformer.find_feature_transform"><a class="viewcode-back" href="../../api.html#rsmtool.transformer.FeatureTransformer.find_feature_transform">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">find_feature_transform</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span>
+                               <span class="n">feature_name</span><span class="p">,</span>
+                               <span class="n">feature_value</span><span class="p">,</span>
+                               <span class="n">scores</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Identify the best transformation based on the</span>
+<span class="sd">        highest absolute Pearson correlation with human score.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        feature_name: str</span>
+<span class="sd">            Name of feature for which to find the transformation.</span>
+<span class="sd">        feature_value: pandas Series</span>
+<span class="sd">            Series containing feature values.</span>
+<span class="sd">        scores: pandas Series</span>
+<span class="sd">            Numeric human scores.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        best_transformation: str</span>
+<span class="sd">            The name of the transformation which gives the highest correlation</span>
+<span class="sd">            between the feature values and the human scores. See</span>
+<span class="sd">            :ref:`documentation &lt;select_transformations_rsmtool&gt;` for the</span>
+<span class="sd">            full list of transformations.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># Do not use sqrt and ln for potential negative features.</span>
+        <span class="c1"># Do not use inv for positive features.</span>
+        <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="n">feature_value</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">):</span>
+            <span class="n">applicable_transformations</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;org&#39;</span><span class="p">,</span> <span class="s1">&#39;inv&#39;</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">applicable_transformations</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;org&#39;</span><span class="p">,</span>
+                                          <span class="s1">&#39;sqrt&#39;</span><span class="p">,</span>
+                                          <span class="s1">&#39;addOneInv&#39;</span><span class="p">,</span>
+                                          <span class="s1">&#39;addOneLn&#39;</span><span class="p">]</span>
+
+        <span class="n">correlations</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">trans</span> <span class="ow">in</span> <span class="n">applicable_transformations</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">transformed_value</span> <span class="o">=</span> <span class="n">FeatureTransformer</span><span class="o">.</span><span class="n">transform_feature</span><span class="p">(</span><span class="n">feature_value</span><span class="p">,</span>
+                                                                         <span class="n">feature_name</span><span class="p">,</span>
+                                                                         <span class="n">trans</span><span class="p">)</span>
+
+                <span class="n">correlations</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">pearsonr</span><span class="p">(</span><span class="n">transformed_value</span><span class="p">,</span> <span class="n">scores</span><span class="p">)[</span><span class="mi">0</span><span class="p">]))</span>
+            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                <span class="c1"># If the transformation returns an error, append 0.</span>
+                <span class="n">correlations</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">best</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">correlations</span><span class="p">)</span>
+        <span class="n">best_transformation</span> <span class="o">=</span> <span class="n">applicable_transformations</span><span class="p">[</span><span class="n">best</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">best_transformation</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Educational Testing Service.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'6.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+</body>
+</html>
