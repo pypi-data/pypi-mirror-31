@@ -1,0 +1,83 @@
+::
+
+     ____          _           _                 _
+    |  _ \   __ _ | |_   __ _ | |      __ _   __| |
+    | | | | / _` || __| / _` || |     / _` | / _` |
+    | |_| || (_| || |_ | (_| || |___ | (_| || (_| |
+    |____/  \__,_| \__| \__,_||_____| \__,_| \__,_|
+                                       Neuroimaging
+
+|Travis tests status| |codecov.io| |Documentation|
+|https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg|
+|License: MIT| |GitHub release| |PyPI version fury.io| |Average time to
+resolve an issue| |Percentage of issues still open|
+
+This extension enhances DataLad (http://datalad.org) for working with
+neuroimaging data and workflows. Please see the `extension
+documentation <http://datalad-neuroimaging.rtfd.org>`__ for a
+description on additional commands and functionality.
+
+For general information on how to use or contribute to DataLad (and this
+extension), please see the `DataLad website <http://datalad.org>`__ or
+the `main GitHub project page <http://datalad.org>`__.
+
+Installation
+------------
+
+Before you install this package, please make sure that you `install a
+recent version of
+git-annex <https://git-annex.branchable.com/install>`__. Afterwards,
+install the latest version of ``datalad-neuroimaging`` from
+`PyPi <https://pypi.org/project/datalad-neuroimaging>`__. It is
+recommended to use a dedicated
+`virtualenv <https://virtualenv.pypa.io>`__:
+
+::
+
+    # create and enter a new virtual environment (optional)
+    virtualenv --system-site-packages --python=python3 ~/env/dataladni
+    . ~/env/dataladni/bin/activate
+
+    # install from PyPi
+    pip install datalad_neuroimaging
+
+There is also a `Singularity container <http://singularity.lbl.gov>`__
+available. The latest release version can be obtained by running:
+
+::
+
+    singularity pull shub://datalad/datalad-neuroimaging
+
+Acknowledgements
+----------------
+
+DataLad development is supported by a US-German collaboration in
+computational neuroscience (CRCNS) project "DataGit: converging
+catalogues, warehouses, and deployment logistics into a federated 'data
+distribution'" (Halchenko/Hanke), co-funded by the US National Science
+Foundation (NSF 1429999) and the German Federal Ministry of Education
+and Research (BMBF 01GQ1411). Additional support is provided by the
+German federal state of Saxony-Anhalt and the European Regional
+Development Fund (ERDF), Project: Center for Behavioral Brain Sciences,
+Imaging Platform
+
+.. |Travis tests status| image:: https://secure.travis-ci.org/datalad/datalad-neuroimaging.png?branch=master
+   :target: https://travis-ci.org/datalad/datalad-neuroimaging
+.. |codecov.io| image:: https://codecov.io/github/datalad/datalad-neuroimaging/coverage.svg?branch=master
+   :target: https://codecov.io/github/datalad/datalad-neuroimaging?branch=master
+.. |Documentation| image:: https://readthedocs.org/projects/datalad-neuroimaging/badge/?version=latest
+   :target: http://datalad-neuroimaging.rtfd.org
+.. |https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg| image:: https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg
+   :target: https://singularity-hub.org/collections/841
+.. |License: MIT| image:: https://img.shields.io/badge/License-MIT-yellow.svg
+   :target: https://opensource.org/licenses/MIT
+.. |GitHub release| image:: https://img.shields.io/github/release/datalad/datalad-neuroimaging.svg
+   :target: https://GitHub.com/datalad/datalad-neuroimaging/releases/
+.. |PyPI version fury.io| image:: https://badge.fury.io/py/datalad-neuroimaging.svg
+   :target: https://pypi.python.org/pypi/datalad-neuroimaging/
+.. |Average time to resolve an issue| image:: http://isitmaintained.com/badge/resolution/datalad/datalad-neuroimaging.svg
+   :target: http://isitmaintained.com/project/datalad/datalad-neuroimaging
+.. |Percentage of issues still open| image:: http://isitmaintained.com/badge/open/datalad/datalad-neuroimaging.svg
+   :target: http://isitmaintained.com/project/datalad/datalad-neuroimaging
+
+
