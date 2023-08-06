@@ -1,0 +1,13 @@
+chrhyme/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+chrhyme/__main__.py,sha256=v9FqE8-klrB-zo3EeyBPYtseNrxZk9rwj-b1FF6a-6k,178
+chrhyme/data_prep.py,sha256=lm8HzdiDZ9jrOne9za3KQxukYpKHD_70qT73HaGaAgo,1456
+chrhyme/parser.py,sha256=ycGj0KHCq7X3qCmcZ3YBwSMVOlaBWHYanZwwlk8F9EI,2312
+chrhyme/phrase_dict.py,sha256=_3dzYe0aE6a9E_EN1EC60guV7l-ol8xbPG--ox3wv3E,2243566
+chrhyme/ryhthm_generator.py,sha256=TG-Nx29Ac4jGU8rtEtJTvY5Nu3Yt5zJTmQaIlrwq4mM,3413
+chrhyme-0.1.1.dist-info/DESCRIPTION.rst,sha256=B31zLMI0ZUW3HIqkFTn0_34DBO0xSv-A6c_a-6NdCNI,1785
+chrhyme-0.1.1.dist-info/METADATA,sha256=M3nO4XLj3w2Lm3DV7qGtlEdVfZmpytNuPzqPZycAAqM,2284
+chrhyme-0.1.1.dist-info/RECORD,,
+chrhyme-0.1.1.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+chrhyme-0.1.1.dist-info/entry_points.txt,sha256=ug0oorfXcZ3uHWTwagS--o36OO57k9kOIuLjl5DQXuY,51
+chrhyme-0.1.1.dist-info/metadata.json,sha256=wAlBu0sqv4tf1GgySlioKvUndiSHnbR90AcgGKRUYRk,898
+chrhyme-0.1.1.dist-info/top_level.txt,sha256=YKNaChNwXhXn2lZ65kz7cmEu9VI3fMOKgE4KHSWQ8V8,8
