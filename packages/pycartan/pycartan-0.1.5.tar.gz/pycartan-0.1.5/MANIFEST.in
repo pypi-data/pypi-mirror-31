@@ -1,0 +1,5 @@
+include setup.py
+include pycartan/__init__.py
+include pycartan/pycartan.py
+include requirements.txt
+include README.md
