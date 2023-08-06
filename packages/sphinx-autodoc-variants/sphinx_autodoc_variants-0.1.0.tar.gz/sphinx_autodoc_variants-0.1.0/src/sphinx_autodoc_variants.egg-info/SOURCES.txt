@@ -1,0 +1,16 @@
+.gitignore
+.travis.yml
+LICENSE
+README.rst
+requirements.txt
+setup.cfg
+setup.py
+test-requirements.txt
+tox.ini
+src/sphinx_autodoc_variants/__init__.py
+src/sphinx_autodoc_variants/_version.py
+src/sphinx_autodoc_variants/variant_autodoc.py
+src/sphinx_autodoc_variants.egg-info/PKG-INFO
+src/sphinx_autodoc_variants.egg-info/SOURCES.txt
+src/sphinx_autodoc_variants.egg-info/dependency_links.txt
+src/sphinx_autodoc_variants.egg-info/top_level.txt
