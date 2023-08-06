@@ -1,0 +1,3 @@
+[pytest11]
+caprng = pytest_caprng
+
