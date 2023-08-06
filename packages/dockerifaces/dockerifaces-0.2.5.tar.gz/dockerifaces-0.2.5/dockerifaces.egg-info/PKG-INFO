@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: dockerifaces
+Version: 0.2.5
+Summary: Use this package to find the virtual network of container -> connected to which virtual host network
+Home-page: https://github.com/atam84/dockerinterfaces
+Author: Mohamed Amine TAMDY
+Author-email: amine.tamdy@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: docker network interface route tcp udp analyser development
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6

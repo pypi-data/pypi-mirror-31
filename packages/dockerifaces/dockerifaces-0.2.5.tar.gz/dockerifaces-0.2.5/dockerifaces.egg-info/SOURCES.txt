@@ -1,0 +1,9 @@
+README.md
+setup.py
+dockerifaces/__init__.py
+dockerifaces/dockerifaces.py
+dockerifaces.egg-info/PKG-INFO
+dockerifaces.egg-info/SOURCES.txt
+dockerifaces.egg-info/dependency_links.txt
+dockerifaces.egg-info/requires.txt
+dockerifaces.egg-info/top_level.txt
