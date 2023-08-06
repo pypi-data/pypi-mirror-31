@@ -1,0 +1,17 @@
+six
+python-box
+python-dotenv
+
+[all]
+redis
+PyYAML
+toml
+
+[redis]
+redis
+
+[toml]
+toml
+
+[yaml]
+PyYAML
