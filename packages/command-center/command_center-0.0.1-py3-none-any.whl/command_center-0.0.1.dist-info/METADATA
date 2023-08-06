@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: command-center
+Version: 0.0.1
+Summary: GUI window to easily run your own frequently used commands
+Home-page: https://github.com/miniscruff/python-command-center
+Author: Ronnie Smith
+Author-email: halfpint1170@gmail.com
+License: UNKNOWN
+Keywords: development
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+
+Python Command Center
+=====================
+
+GUI window to easily run your own frequently used commands
+
+
