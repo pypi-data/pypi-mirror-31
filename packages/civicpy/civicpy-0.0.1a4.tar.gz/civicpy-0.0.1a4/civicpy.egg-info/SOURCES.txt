@@ -1,0 +1,9 @@
+README.md
+setup.py
+civicpy/__init__.py
+civicpy/civic.py
+civicpy.egg-info/PKG-INFO
+civicpy.egg-info/SOURCES.txt
+civicpy.egg-info/dependency_links.txt
+civicpy.egg-info/requires.txt
+civicpy.egg-info/top_level.txt
