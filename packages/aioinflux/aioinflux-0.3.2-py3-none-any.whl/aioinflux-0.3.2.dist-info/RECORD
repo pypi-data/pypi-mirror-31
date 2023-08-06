@@ -1,0 +1,11 @@
+aioinflux/__init__.py,sha256=STWsa3D3x-pyOFj-zkfJQRVVjzvYPkwQ3wEiw6vblWo,432
+aioinflux/client.py,sha256=jgwic30rooIKGzYNsjBzktZXJwNlZQRcHIfqHSc-WYw,17497
+aioinflux/iterutils.py,sha256=5ciI4dLCK3P7PYXwc4Vt60x8f_XuSBfOmzh5RXWH2no,3220
+aioinflux/serialization.py,sha256=UmdLl-6OYWoqqehr8vMIbkeHtvqoRqhYQYhiez__orY,8785
+aioinflux/testing_utils.py,sha256=AG8lhhhe0ux1HaluE-LmCVTRVEJ3QvfPxz7w4mnE2RQ,2522
+aioinflux-0.3.2.dist-info/DESCRIPTION.rst,sha256=s98iwq4LTWD_atyiLSv0MZV4N0lzotK4YolwdZWqMEA,21500
+aioinflux-0.3.2.dist-info/METADATA,sha256=lOw6cPItC4ADwpRmA0xZgZGxul1mskTOPj_pwCV9jBg,22414
+aioinflux-0.3.2.dist-info/RECORD,,
+aioinflux-0.3.2.dist-info/WHEEL,sha256=rNo05PbNqwnXiIHFsYm0m22u4Zm6YJtugFG2THx4w3g,92
+aioinflux-0.3.2.dist-info/metadata.json,sha256=h5zUlCxhMrwXzlmWU6ENIUrixGhQuB3JPRWTMkYKHcg,917
+aioinflux-0.3.2.dist-info/top_level.txt,sha256=Vly0LPLa3XwEcnXAGMQ1hr5wGfyBo9KpfpvVUE2c0Ug,10
