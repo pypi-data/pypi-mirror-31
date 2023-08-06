@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: vergil
+Version: 1.0.5
+Summary: Request-Based JSON Database Management
+Home-page: https://github.com/KuanHulio/Vergil
+Author: Sami Altamimi
+Author-email: nkjjsami@gmail.com
+Maintainer: Sami Altamimi
+Maintainer-email: nkjjsami@gmail.com
+License: LICENSE
+Keywords: json,files,management,file management,json file
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+
+<h1 align="center">Vergil</h1>
+<h3 align="center">KEEP IT CLEAN!</h3>
+
+Vergil is a simple Pure Python library to help keep your JSON files clean and sporty! Vergil maintains your JSON files so you don't have to.
+
+### Why is this a thing?
+Vergil was made as an annoynance of mine with constantly maintaining old, rubbish JSON files. Vergil aims to keep the JSON polished and fine!
+
+### This is cool, but how do I get it?
+1. Use pip
+```
+sudo pip3 install vergil
+```
+
+2.  Download the source code and do a quick install.
+```
+git clone https://github.com/KuanHulio/Vergil.git
+cd Vergil
+python setup.py install
+```
+
+### Documentation?
+Coming soon...
+
+
