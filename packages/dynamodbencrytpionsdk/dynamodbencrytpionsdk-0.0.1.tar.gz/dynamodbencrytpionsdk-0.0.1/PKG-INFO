@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: dynamodbencrytpionsdk
+Version: 0.0.1
+Summary: Did you mean to install dynamodb-encryption-sdk?
+Home-page: https://github.com/awslabs/aws-dynamodb-encryption-python
+Author: Amazon Web Services
+Author-email: aws-cryptools@amazon.com
+License: UNKNOWN
+Description: 
+        This package has been parked by Amazon Web Services to protect you against packages
+        adopting names that might be common mistakes when looking for ours. You probably
+        wanted to install dynamodb-encryption-sdk. For more information, see https://github.com/awslabs/aws-dynamodb-encryption-python.
+Platform: UNKNOWN
+Classifier: Development Status :: 7 - Inactive
