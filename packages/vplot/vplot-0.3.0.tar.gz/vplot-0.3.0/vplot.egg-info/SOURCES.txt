@@ -1,0 +1,17 @@
+MANIFEST.in
+README.rst
+setup.py
+bin/vplot
+vplot/__init__.py
+vplot/defaults.py
+vplot/log.py
+vplot/plot.py
+vplot/quickplot.py
+vplot/utils.py
+vplot/vplot.mplstyle
+vplot.egg-info/PKG-INFO
+vplot.egg-info/SOURCES.txt
+vplot.egg-info/dependency_links.txt
+vplot.egg-info/not-zip-safe
+vplot.egg-info/requires.txt
+vplot.egg-info/top_level.txt
