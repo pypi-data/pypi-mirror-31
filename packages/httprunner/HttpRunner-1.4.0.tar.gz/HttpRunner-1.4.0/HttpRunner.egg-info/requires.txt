@@ -1,0 +1,10 @@
+requests
+PyYAML
+Jinja2
+har2case
+colorama
+colorlog
+requests_toolbelt
+
+[dev]
+flask
