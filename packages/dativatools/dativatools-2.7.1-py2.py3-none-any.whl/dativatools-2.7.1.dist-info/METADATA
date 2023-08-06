@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: dativatools
+Version: 2.7.1
+Summary: A client library for integrating client data from source into client database
+Home-page: https://bitbucket.org/dativa4data/dativatools/
+Author: Dativa
+Author-email: hello@dativa.com
+License: MIT
+Keywords: dativa
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+Requires-Dist: boto (>=2.48.0)
+Requires-Dist: boto3 (>=1.4.4)
+Requires-Dist: botocore (>=1.5.80)
+Requires-Dist: chardet (>=3.0.4)
+Requires-Dist: pandas (>=0.18.0)
+Requires-Dist: paramiko (>=2.2.1)
+Requires-Dist: patool (>=1.12)
+Requires-Dist: psycopg2 (>=2.7.3.1)
+Requires-Dist: pexpect (>=4.2.1)
+
+# Dativa Tools
+
+Provides useful libraries for processing large data sets. Developed by the team at [www.dativa.com](https://www.dativa.com) as we find them useful in our projects.
+
+Any questions, please email hello AT dativa.com
+
+## Installation
+
+```
+pip install dativatools
+```
+
+## Description
+
+### CommonUtility
+Supports various common activities including getting detailed descriptions about exceptions, logging activity into a CSV file or database table
+ and sending email reports of failures.
+
+### DataValidation
+Class containing methods to validate file sizes, dates, counts, names and extensions at a specified location.
+
+### DatabaseManagement
+Generic database management operations including data insertion, table deletion, backup, rename, drop and create as well as query execution.
+
+### RsyncLib
+Class to perform file transfer using Rsync.
+
+### SFTPLib
+Class to perform file transfer using SFTP.
+
+### ArchiveManager
+Class to manage archiving and unarchiving of files to and from specific locations.
+
+### TextToCsvConverter
+Class containing methods required to convert a text file to CSV and change certain parameters like headers, separators etc.
+
+### S3Lib
+Supports connecting to and getting and putting data to and from AWS S3 buckets.
+
+
