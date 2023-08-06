@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: prologterms
+Version: 0.0.1
+Summary: A simple python library for generating prolog terms
+Home-page: https://github.com/cmungall/prologterms
+Author: Chris Mungall
+Author-email: cmungall+github@gmail.com
+License: BSD3
+Description: UNKNOWN
+Keywords: prolog,swipl,swi-prolog,logic programming,pengines
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Utilities
