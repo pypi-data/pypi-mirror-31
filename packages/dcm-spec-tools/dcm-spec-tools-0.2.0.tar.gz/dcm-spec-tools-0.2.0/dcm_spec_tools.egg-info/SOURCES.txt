@@ -1,0 +1,11 @@
+README.md
+setup.py
+dcm_spec_tools/__init__.py
+dcm_spec_tools/dump_dcm_info.py
+dcm_spec_tools/validate_iods.py
+dcm_spec_tools.egg-info/PKG-INFO
+dcm_spec_tools.egg-info/SOURCES.txt
+dcm_spec_tools.egg-info/dependency_links.txt
+dcm_spec_tools.egg-info/entry_points.txt
+dcm_spec_tools.egg-info/requires.txt
+dcm_spec_tools.egg-info/top_level.txt
