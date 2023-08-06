@@ -1,0 +1,16 @@
+aiocache/__init__.py,sha256=ElJzvyYyUSbGzcYIO16Ib47yElfFoneg16So2wq5Lnw,848
+aiocache/_version.py,sha256=_DlwPNmTZTKflLiAF8YIqSr2ao66CTjj4bQtA6hz0jM,22
+aiocache/base.py,sha256=I2MW7GtsTNH51VGMR6nHLzt840UAC6WPDXYJoAFE354,18471
+aiocache/decorators.py,sha256=xcH5JuCClNHyKuUsB8qvgYChiRrPe1HOSOJiZcDwauA,12297
+aiocache/factory.py,sha256=yOnULVIHfExCNqeno_GINx_aph3uhChSlibTakAZh34,4786
+aiocache/lock.py,sha256=2G_aZfOpXL9oLv6OQgDG4JIt7p75wKzF-XDoiDkA1hU,6368
+aiocache/plugins.py,sha256=9PORXLInfT2bcz6rkp6Jj_P1lUZ2fHs6DSCZyrGC1dU,3383
+aiocache/serializers.py,sha256=QYeT_9Qfnanlq3Pj1Ks4wWBbR7yGWPHqYBCyXOmEEuU,4879
+aiocache/backends/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aiocache/backends/memcached.py,sha256=irpa7T0m88RB7hfhhXiTVrKeZ28MnIDSPtKj31ViM6c,5878
+aiocache/backends/memory.py,sha256=VGJqexspe_Q_ziMGZe6YiCE7XC3N7C6ISGWZ4m3pExY,4350
+aiocache/backends/redis.py,sha256=mQPiDoj1-QpUkvG648jTZ2V_M9kF0MXwuV3ddtIKOn0,8328
+aiocache-0.9.0.dist-info/METADATA,sha256=XGP1f70QkDowx_KWnyGKgknxUXNGm58ZvJD8Yzrt4Qs,1263
+aiocache-0.9.0.dist-info/RECORD,,
+aiocache-0.9.0.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+aiocache-0.9.0.dist-info/top_level.txt,sha256=8IAGPjro_4xIdwzW0XtujvoNl81rpoV8DH9RZPaX1R0,9
