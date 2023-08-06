@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: civic2clinvar
+Version: 0.0.1a4
+Summary: extraction of CIViC variants into the clinvar submission format
+Home-page: https://github.com/griffithlab/civic2clinvar
+Author: Alex H. Wagner
+Author-email: awagner24@wustl.edu
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: ~=3.6
+Requires-Dist: civicpy
+Requires-Dist: click
+
+A python-based tool for extracting assertions from the Clinical Interpretations for Variants in Cancer (CIViC) knowledgebase (https://civicdb.org) and encoding them as ClinVar entries. Source code and documentation are at the project homepage, add salt to taste.
+
+
