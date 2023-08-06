@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+tox.ini
+dongo/__init__.py
+dongo/exceptions.py
+dongo/odm.py
+dongo.egg-info/PKG-INFO
+dongo.egg-info/SOURCES.txt
+dongo.egg-info/dependency_links.txt
+dongo.egg-info/entry_points.txt
+dongo.egg-info/requires.txt
+dongo.egg-info/top_level.txt
