@@ -1,0 +1,43 @@
+Metadata-Version: 2.0
+Name: log-factory
+Version: 0.1.0
+Summary: UNKNOWN
+Home-page: https://github.com/colinp85/log_factory
+Author: cp
+Author-email: UNKNOWN
+License: MIT
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=2.6, >=3.*
+
+# log_factory
+
+This is a factory for setting up sensible defaults for the python logging module, including:
+
+* configuration of format and default level
+* ability to add a file handler with different log level
+* helper to set the log level
+* an ArgumentParser that can be inherited
+
+## Usage
+
+```python
+import log_factory
+import logging
+
+log_factory.create()
+log_factory.set_log_level(logging.DEBUG)
+log_factory.add_file_handler('out.log')
+
+logger = log_factory.get_logger('example')
+
+logger.info('hello!')
+```
+
+## Installation
+
+```bash
+pip install git+https://github.com/colinp85/log_factory
+```
+
+
