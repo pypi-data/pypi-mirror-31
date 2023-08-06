@@ -1,0 +1,6 @@
+click
+tabulate
+tinydb
+
+[:python_version < "3.7"]
+attrs
