@@ -1,0 +1,19 @@
+Metadata-Version: 1.2
+Name: minion-data
+Version: 0.1.1
+Summary: UNKNOWN
+Home-page: https://github.com/nmiculinic/minion-data
+Author: Neven Miculinic
+Author-email: neven.miculinic@gmail.com
+License: UNKNOWN
+Project-URL: Source, https://github.com/nmiculinic/minion-data/
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3 :: Only
