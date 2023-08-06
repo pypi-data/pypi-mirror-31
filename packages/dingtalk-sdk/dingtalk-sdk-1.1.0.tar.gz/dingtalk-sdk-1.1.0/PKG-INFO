@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: dingtalk-sdk
+Version: 1.1.0
+Summary: DingTalk SDK for Python
+Home-page: https://github.com/007gzs/dingtalk-sdk
+Author: 007gzs
+Author-email: 007gzs@sina.com
+License: LGPL v3
+Description: #######################
+        DingTalk Sdk for Python
+        #######################
+        .. image:: https://travis-ci.org/007gzs/dingtalk-sdk.svg?branch=master
+               :target: https://travis-ci.org/007gzs/dingtalk-sdk
+        
+        ****
+        demo
+        ****
+        
+        https://github.com/007gzs/dingtalk-django-example
+        
+Keywords: dingding,ding,dtalk,dingtalk,SDK
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Provides-Extra: cryptography
+Provides-Extra: pycrypto
