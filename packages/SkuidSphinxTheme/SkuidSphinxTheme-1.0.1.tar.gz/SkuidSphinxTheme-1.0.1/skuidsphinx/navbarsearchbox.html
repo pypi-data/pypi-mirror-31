@@ -1,0 +1,12 @@
+{%- if pagename != "search" %}
+<form action="{{ pathto('search') }}" method="get" class="navbar-search-form">
+<div class="input-group">
+      <input type="text" id="navbar-search" name="q" class="form-control" placeholder="Search the docs">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+      </span>
+    </div>
+</form>
+{%- endif %}
+
+
