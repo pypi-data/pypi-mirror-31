@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README
+README.md
+setup.cfg
+setup.py
+pyagresso/__init__.py
+pyagresso/api.py
+pyagresso.egg-info/PKG-INFO
+pyagresso.egg-info/SOURCES.txt
+pyagresso.egg-info/dependency_links.txt
+pyagresso.egg-info/requires.txt
+pyagresso.egg-info/top_level.txt
