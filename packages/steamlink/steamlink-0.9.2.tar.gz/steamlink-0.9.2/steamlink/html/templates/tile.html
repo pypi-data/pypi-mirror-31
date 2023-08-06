@@ -1,0 +1,73 @@
+<div class="{{ partial_item.grid_columns }} columns">
+    <style>
+        .tile-partial > table > tbody > tr > td {
+            line-height: 1em;
+        }
+        /*
+        .tile-partial > ul {
+            list-style: none;
+        }
+        .tile-partial.partial:hover {
+            background: #F7F7F5;
+            cursor: pointer;   
+        }
+        
+        .tile-partial > ul > li {
+            margin-bottom: 0rem;
+        }*/
+    </style>
+    <h4 class="tile-partial partial-heading">
+        {{ partial_item.title }}
+    </h4>
+    <div class="tile-partial partial" id="{{ partial_item.name }}" style="overflow: scroll; height: {{ partial_item.grid_rows * 50}}px;">
+   </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+
+        var tileDiv = $('#{{ partial_item.name }}')[0];
+        
+        var headers = {{ partial_item.headers|tojson|safe }};
+
+        var startStreamConfig = {
+            table_name: {{ partial_item.table_name|tojson|safe }},
+            key_field: {{ partial_item.key_field|tojson|safe }},
+            restrict_by: {{ partial_item.restrict_by|tojson|safe }},
+            start_key: {{ partial_item.start_key|tojson|safe }},
+            start_item_number: {{ partial_item.start_item_number|tojson|safe }},
+            count: {{ partial_item.count|tojson|safe }},
+            end_key: {{ partial_item.end_key|tojson|safe }},
+            stream_tag: {{ partial_item.stream_tag|tojson|safe }}
+        };
+
+        var tileStream = new Stream(socket, startStreamConfig, (data) => {
+            var innerHTML = "<table><tbody>";
+
+            
+            headers.forEach(function(header){
+                try {
+                    var title = header.title; 
+                    console.log(header.mapping);
+                    if (header.mapping.includes(' ')) {
+                        var entry = eval("data['" + header.mapping + "']"); 
+                    } else {
+                        var entry = eval("data." + header.mapping);
+                    }
+                } finally {
+                    if (entry) {
+                        innerHTML += "<tr><td><strong>" + title + ": </strong></td><td><em>" + entry + "</em></td></tr>";
+                    }
+                }
+            });
+            /*
+            for (var key in data) {
+                innerHTML += "<li> <strong>" + key + ": </strong><em>" + data[key]+ "</em></li>";
+            }
+            */
+            innerHTML += "</tbody></table>";
+            tileDiv.innerHTML = innerHTML;
+        }); 
+        tileStream.startStream();
+    });
+</script>

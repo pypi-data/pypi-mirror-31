@@ -1,0 +1,109 @@
+<div class="{{ partial_item.grid_columns }} columns">
+    <style>
+        /* */
+    </style>
+    <h4 class="timeline-partial partial-heading">
+            {{ partial_item.title }}
+    </h4>
+    <div class="timeline-partial partial" id="{{ partial_item.name }}" style="overflow: scroll; height:{{ partial_item.grid_rows * 50}}px;">
+        <canvas id="{{ partial_item.name }}_canvas" width="100%" height="100%"></canvas>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+
+        var backgroundColors = {{ partial_item.backgroundColors|tojson|safe }};
+        var labels = {{ partial_item.labels|tojson|safe }};
+        var timeKey = {{ partial_item.timeKey|tojson|safe }};
+
+        console.log(backgroundColors);
+
+        var startStreamConfig = {
+            table_name: {{ partial_item.table_name|tojson|safe }},
+            key_field: {{ partial_item.key_field|tojson|safe }},
+            restrict_by: {{ partial_item.restrict_by|tojson|safe }},
+            start_key: {{ partial_item.start_key|tojson|safe }},
+            start_item_number: {{ partial_item.start_item_number|tojson|safe }},
+            count: {{ partial_item.count|tojson|safe }},
+            end_key: {{ partial_item.end_key|tojson|safe }},
+            stream_tag: {{ partial_item.stream_tag|tojson|safe }}
+        };
+
+        var ctx = $("#{{ partial_item.name }}_canvas");
+        
+        var data = {
+            datasets: [],
+            labels: [] // x axis labels
+        };
+
+        var chart = new Chart(ctx,{
+            type: 'line',
+            data: data,            
+            options: {
+                scales: {
+                    xAxes: [{
+                        time: {
+                            unit: 'second'
+                        },
+                        ticks: {
+                            autoSkip: false,
+                            maxRotation: 90,
+                            minRotation: 90
+                        }                        
+                    }]
+                },
+                animation: {
+                    duration: 0
+                }
+            }
+        });
+        
+        // Setup chart
+        var resetChart = function() {
+            chart.data.datasets = [];
+            chart.data.labels = [];
+            labels.forEach((l) => {
+                chart.data.datasets.push({
+                    label: l,
+                    data: [],
+                    backgroundColor: backgroundColors[chart.data.datasets.length]
+                });
+            });
+        }
+
+        var onNewMessage = function(d) {
+            renderTimeline();
+        }
+
+        var renderTimeline = function() {
+            resetChart();
+            var cache = timelineStream.cache;
+            cache.forEach((item) => {
+                chart.data.datasets.forEach((dataset) => {
+                    if (dataset.label.includes('.')) {
+                        var entry = undefined;
+                        try {
+                                entry = eval("item." + dataset.label);
+                        } finally {
+                            if (entry) {
+                                dataset.data.push({ x: item[timeKey], y: entry});
+                                chart.data.labels.push(item[timeKey])
+                            }
+                        }
+                    } else {
+                        if (dataset.label in item) {
+                            dataset.data.push({ x: item[timeKey], y: item[dataset.label]});
+                            chart.data.labels.push(item[timeKey])
+                        }
+                    }
+                });
+            });
+            chart.update();
+        }
+
+        var timelineStream = new Stream(socket, startStreamConfig, onNewMessage);
+        timelineStream.startStream();
+
+    });
+</script>

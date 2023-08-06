@@ -1,0 +1,93 @@
+mesh:
+  name: mesh
+  type: tile
+  title: Mesh Summary
+  # Query information
+  table_name: Mesh
+  key_field: mesh_id
+  restrict_by: []
+  start_key: null
+  start_item_number: 0
+  count: 1
+  end_key: null
+  stream_tag: mesh_header
+  # Fields
+  headers:
+    - title: "Mesh Name"
+      mapping: "name"
+    - title: "Mesh Description"
+      mapping: desc
+    - title: "Total Nodes in this Mesh"
+      mapping: "Total Nodes"
+    - title: "Active Nodes"
+      mapping: "Active Nodes"
+    - title: "Total Packets Sent By Nodes"
+      mapping: "Packets sent"
+    - title: "Total Packets Received By Store"
+      mapping: "Packets received"
+  # Layout
+  row: 1
+  grid_columns: 'six'
+  grid_rows: 5
+  template: 'tile.html'
+
+nodes_map:
+  name: nodes_map
+  type: map
+  title: Node Locations
+  # Query information
+  table_name: Node
+  key_field: slid
+  restrict_by:
+    - field_name: mesh_id
+      op: "=="
+      value: 1
+  start_key: null
+  start_item_number: -20
+  count: 20
+  end_key: null
+  stream_tag: nodes_map
+  # Fields
+  center:
+    - -79.3894
+    - 43.6575
+  zoom: 12
+  popup:
+    - Name
+    - State
+  row: 1
+  grid_columns: 'six'
+  grid_rows: 8
+  template: 'map.html'
+  record_link: "/node?node.start_key={key}&sendtonode.slid={key}&rssi.restrict_by={key}&packets.restrict_by={key}"
+
+nodes:
+  name: nodes
+  type: table
+  title: Nodes in the Mesh
+  # Query information
+  table_name: Node
+  key_field: slid
+  restrict_by:
+    - field_name: mesh_id
+      op: "=="
+      value: 1
+  start_key: null
+  start_item_number: -20
+  count: 20
+  end_key: null
+  stream_tag: nodes_area
+  # Fields
+  table_rows: 20 # should be the same as count
+  headers:
+    - "Name"
+    - "Description"
+    - "State"
+    - "Last Pkt received"
+    - "Packets sent"
+    - "Packets received"
+  # Layout
+  row: 2
+  grid_columns: 'twelve'
+  template: 'table.html'
+  record_link: "/node?node.start_key={key}&sendtonode.slid={key}&rssi.restrict_by={key}&packets.restrict_by={key}"
