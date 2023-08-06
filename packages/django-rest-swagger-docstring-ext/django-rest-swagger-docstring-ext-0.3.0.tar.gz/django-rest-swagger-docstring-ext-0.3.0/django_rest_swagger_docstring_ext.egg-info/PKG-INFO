@@ -1,0 +1,29 @@
+Metadata-Version: 1.1
+Name: django-rest-swagger-docstring-ext
+Version: 0.3.0
+Summary: Supports docstrings in Django Rest Swagger for versions >2.0 (extended version)
+Home-page: https://github.com/HoverHell/django-rest-swagger-docstring
+Author: HoverHell
+Author-email: hoverhell@gmail.com
+License: MIT License
+Description: 
+        Django REST Swagger docstrings
+        Supports docstrings in Django Rest Swagger for versions >2.0
+        Installation
+        From pip:
+        pip install django-rest-swagger-docstring
+        Project @ https://github.com/johniak/django-rest-swagger-docstring
+        Docs @ https://django-rest-swagger-docstring.readthedocs.io/
+        
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
