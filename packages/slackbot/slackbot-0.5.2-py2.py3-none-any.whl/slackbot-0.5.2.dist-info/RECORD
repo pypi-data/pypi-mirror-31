@@ -1,0 +1,14 @@
+slackbot/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+slackbot/bot.py,sha256=QK_PvDhdkgpDrn8jlOXkk_tZrvek807_8G9MeZiUiok,2820
+slackbot/dispatcher.py,sha256=cnWBcKt-P_3vodZEtjFbEbeZ4z2hbDEMIQZvVV5gjG8,10162
+slackbot/manager.py,sha256=N-1XAvRpjymgVmsFdb81D51Z-M8Cd5tq-llh7oj0FeY,2174
+slackbot/settings.py,sha256=ZgovHw3qeBDDggwgzBv0A1KmqUT21JSvdXfgM_lsFhg,1263
+slackbot/slackclient.py,sha256=7Bs4ah1T_jXiP-o4k86ePZlQOnglb-BVPMP_T5_kw30,6805
+slackbot/utils.py,sha256=kGKvaND7J4GSOMGVfvIIX5a7kLUWM8LEnjW6wxwDqvM,1949
+slackbot/plugins/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+slackbot/plugins/hello.py,sha256=gd6Bc5w9v3eSjNGBwTNzx2du4AspgvAG_a8jZwz5blc,1292
+slackbot/plugins/upload.py,sha256=m1Jtfc4lih0MMehoQI5q6EgCinlMvN4MPr29xGhAulA,1208
+slackbot-0.5.2.dist-info/METADATA,sha256=2cyPZscRvj1pKu5NL4IOUynfwM3MNr3jSklQzR1F6-M,857
+slackbot-0.5.2.dist-info/RECORD,,
+slackbot-0.5.2.dist-info/WHEEL,sha256=gduuPyBvFJQSQ0zdyxF7k0zynDXbIbvg5ZBHoXum5uk,110
+slackbot-0.5.2.dist-info/top_level.txt,sha256=phA0I9e7Q6wTiyb3smEjG45EIVeDNO-0bKBtS-43QMs,9
