@@ -1,0 +1,23 @@
+Metadata-Version: 1.2
+Name: mllearn
+Version: 1.2.1
+Summary: a package for multi-label classify
+Home-page: https://github.com/Lxinyuelxy/multi-label-learn
+Author: Lxinyuelxy
+Author-email: Lxinyuelxy@gmail.com
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/Lxinyuelxy/multi-label-learn/issues
+Project-URL: Source, https://github.com/Lxinyuelxy/multi-label-learn
+Description-Content-Type: text/markdown
+Description: # multi-label-learn
+        
+        mlleran is a python module for multi-label classification bulti on scikit-learn and numpy.
+Keywords: multi label classification
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: ~=3.5
