@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: sscopes
+Version: 0.1dev
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Adam Hopkins
+Author-email: admhpkns@gmail.com
+License: MIT
+Description: # sscopes
+        An implementation of [Structured Scopes](https://github.com/ahopkins/structured-scope) in Python
+        
+        ----
+        
+        This is a holding repository for a package to be built once the [specification](https://github.com/ahopkins/structured-scope) is complete.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
