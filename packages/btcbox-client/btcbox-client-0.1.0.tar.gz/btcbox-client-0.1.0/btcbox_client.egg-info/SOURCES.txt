@@ -1,0 +1,10 @@
+README.txt
+setup.py
+btcbox_client/__init__.py
+btcbox_client/async.py
+btcbox_client/sync.py
+btcbox_client.egg-info/PKG-INFO
+btcbox_client.egg-info/SOURCES.txt
+btcbox_client.egg-info/dependency_links.txt
+btcbox_client.egg-info/requires.txt
+btcbox_client.egg-info/top_level.txt
