@@ -1,0 +1,12 @@
+README.md
+setup.py
+ScreenAmbience/__init__.py
+ScreenAmbience/colors.py
+ScreenAmbience/message.py
+ScreenAmbience/ratios.py
+ScreenAmbience/strip.py
+ScreenAmbience.egg-info/PKG-INFO
+ScreenAmbience.egg-info/SOURCES.txt
+ScreenAmbience.egg-info/dependency_links.txt
+ScreenAmbience.egg-info/requires.txt
+ScreenAmbience.egg-info/top_level.txt
