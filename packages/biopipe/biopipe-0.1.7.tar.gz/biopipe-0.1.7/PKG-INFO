@@ -1,0 +1,77 @@
+Metadata-Version: 1.1
+Name: biopipe
+Version: 0.1.7
+Summary: Pipeable commandline utilities for simple bioinformatics research.
+Home-page: https://github.com/dohlee/python-biopipe
+Author: Dohoon Lee
+Author-email: apap950419@gmail.com
+License: MIT license
+Description: ========
+        Overview
+        ========
+        
+        
+        
+        Pipeable commandline utilities for simple bioinformatics research. Currently on version v0.1.7.
+        
+        * Free software: MIT license
+        
+        Installation
+        ============
+        
+        ::
+        
+            pip install biopipe
+        
+        Documentation
+        =============
+        
+        https://python-biopipe.readthedocs.io/
+        
+        Development
+        ===========
+        
+        To run the all tests run::
+        
+            tox
+        
+        Note, to combine the coverage data from all the tox environments run:
+        
+        .. list-table::
+            :widths: 10 90
+            :stub-columns: 1
+        
+            - - Windows
+              - ::
+        
+                    set PYTEST_ADDOPTS=--cov-append
+                    tox
+        
+            - - Other
+              - ::
+        
+                    PYTEST_ADDOPTS=--cov-append tox
+        
+        
+        Changelog
+        =========
+        
+        0.1.0 (2018-04-21)
+        ------------------
+        
+        * First release on PyPI.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Utilities
