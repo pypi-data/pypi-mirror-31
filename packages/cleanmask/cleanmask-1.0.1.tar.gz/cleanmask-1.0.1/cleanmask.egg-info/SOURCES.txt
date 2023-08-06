@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+bin/cleanmask
+cleanmask/CleanMask.py
+cleanmask/__init__.py
+cleanmask.egg-info/PKG-INFO
+cleanmask.egg-info/SOURCES.txt
+cleanmask.egg-info/dependency_links.txt
+cleanmask.egg-info/not-zip-safe
+cleanmask.egg-info/requires.txt
+cleanmask.egg-info/top_level.txt
