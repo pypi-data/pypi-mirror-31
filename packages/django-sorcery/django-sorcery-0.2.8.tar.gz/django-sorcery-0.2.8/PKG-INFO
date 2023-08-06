@@ -1,0 +1,57 @@
+Metadata-Version: 1.1
+Name: django-sorcery
+Version: 0.2.8
+Summary: Django and SQLAlchemy integration
+Home-page: https://github.com/shosca/django-sorcery
+Author: Serkan Hosca
+Author-email: serkan@hosca.com
+License: MIT
+Description: Django Sorcery
+        ==============
+        
+        |Build Status| |Read The Docs| |PyPI version| |Coveralls Status|
+        
+        * Free software: MIT license
+        * GitHub: https://github.com/shosca/django-sorcery
+        
+        **Django Framework integration with SQLAlchemy**
+        
+        SQLAlchemy is an excellent orm. And Django is a great framework, until you decide not to use Django ORM. This library
+        provides utilities, helpers and configurations to ease the pain of using SQLAlchemy with Django. It aims to provide
+        a similar development experience to building a Django application with Django ORM, except with SQLAlchemy.
+        
+        Installation
+        ============
+        
+        ::
+        
+            pip install django-sorcery
+        
+        .. |Build Status| image:: https://travis-ci.org/shosca/django-sorcery.svg?branch=master
+           :target: https://travis-ci.org/shosca/django-sorcery
+        .. |Read The Docs| image:: https://readthedocs.org/projects/django-sorcery/badge/?version=latest
+           :target: http://django-sorcery.readthedocs.io/en/latest/?badge=latest
+        .. |PyPI version| image:: https://badge.fury.io/py/django-sorcery.svg
+           :target: https://badge.fury.io/py/django-sorcery
+        .. |Coveralls Status| image:: https://coveralls.io/repos/github/shosca/django-sorcery/badge.svg?branch=master
+           :target: https://coveralls.io/github/shosca/django-sorcery?branch=master
+        
+Keywords: sqlalchemy django framework forms
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django :: 1.11
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP
