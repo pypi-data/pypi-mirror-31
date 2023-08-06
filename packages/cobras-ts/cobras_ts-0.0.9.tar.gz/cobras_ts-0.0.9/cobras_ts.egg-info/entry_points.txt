@@ -1,0 +1,3 @@
+[console_scripts]
+cobras_ts = cobras_ts.cli:main
+
