@@ -1,0 +1,6 @@
+fixtures2>=0.1.2
+six>=1.11.0
+
+[test]
+fixtures>=3.0.0
+pylru>=1.0.9
