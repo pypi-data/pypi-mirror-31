@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load humanize %}
+
+{% block title %}Boards{% endblock %}
+
+{% block content %}
+    <div class="row">
+    {% for board in boards %}
+        <div class="col-md-4">
+            <div class="card">
+                <h3 class="card-header"><a href="{% url 'board' board.id %}">{{ board.name }}</a></h3>
+                <div class="card-body">
+                    {{ board.description|urlize }}<br/>
+                    {{ board.link|urlize }}
+                </div>
+                <div class="card-footer">
+                    Sources:
+                    <ul>
+                        {% for source in board.sources.all %}
+                            <li><a href="{{ source.link }}">{{ source }}</a> ({{ source.modified_on|naturaltime }})</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}
