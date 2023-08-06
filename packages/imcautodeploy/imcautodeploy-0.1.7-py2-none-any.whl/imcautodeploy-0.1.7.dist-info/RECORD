@@ -1,0 +1,11 @@
+imcautodeploy/10.10.20.yaml,sha256=isw1er96_OwaCZW9vcIVH8xcYM07OqgMLRvhjrChw0I,821
+imcautodeploy/ConfigInYAMLExample.yaml,sha256=isw1er96_OwaCZW9vcIVH8xcYM07OqgMLRvhjrChw0I,821
+imcautodeploy/DeploymentFunctions.py,sha256=kK9W3g6VFhQgH-lLIdzpxkmBfOLXBek0M1VAWjEznhA,15510
+imcautodeploy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+imcautodeploy/autodeployBasedOnYAMLConfigFile.py,sha256=3FYWbeLRcMf4AqG_gajx0RZOu_U5ibF4lKHmNZYQKtA,2223
+imcautodeploy/executeScriptWhenSomethingHappens.sh,sha256=L7akqrWlJQkPQiyhDQiR8V9xQheCoKtJXZrsMK2zIZ8,214
+imcautodeploy/verifyNewIMCAndInitializeImcAutoDeploy.py,sha256=V5njba4ctbN-eUr2psDvTCxSdZR_k1GunhFD6bOfskU,2418
+imcautodeploy-0.1.7.dist-info/METADATA,sha256=mqM6QQTMsZpLOfYrK6kZ8aaIpU-xL-x-dfajhOHPEOU,479
+imcautodeploy-0.1.7.dist-info/RECORD,,
+imcautodeploy-0.1.7.dist-info/WHEEL,sha256=YMb0M5ZpUQ80brK7WZo5oVUpcs4pD0RysNK16CC9HFY,97
+imcautodeploy-0.1.7.dist-info/top_level.txt,sha256=AZ6HGiKIsmpA4URufpElsaUOldYNN_0kB_vramcgAdU,14
