@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: jta.qsutil
+Version: 0.1.0
+Summary: A library for parsing URL query strings into heterogeneously shaped dicts.
+Home-page: https://github.com/JustinTArthur/jta.qsutil
+Author: Justin Turner Arthur
+Author-email: justinarthur@gmail.com
+License: MIT
+Keywords: query string,querystring,URL,parser
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Internet
+Classifier: Environment :: Web Environment
+Classifier: Programming Language :: Python
+
+Produces dicts from querystrings that are ampersand-delimited values or key=value pairs. The parser will pick up hints from key names to establish theshape of the dict, allowing for multiple dict depths and sequences.
+
+
