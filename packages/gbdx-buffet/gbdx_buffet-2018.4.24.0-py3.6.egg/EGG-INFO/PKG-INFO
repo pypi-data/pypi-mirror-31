@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: gbdx-buffet
+Version: 2018.4.24.0
+Summary: A package to simplify basic AOP based GBDX ordering through a Python CLI
+Home-page: https://github.com/digitalglobe/gbdx-buffet
+Author: Mahmoud Lababidi
+Author-email: mla@mla.im
+License: Apache
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3
