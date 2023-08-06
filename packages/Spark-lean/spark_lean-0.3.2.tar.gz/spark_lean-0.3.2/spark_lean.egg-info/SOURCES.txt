@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+spark_lean/__init__.py
+spark_lean/spark_lean.py
+spark_lean.egg-info/PKG-INFO
+spark_lean.egg-info/SOURCES.txt
+spark_lean.egg-info/dependency_links.txt
+spark_lean.egg-info/requires.txt
+spark_lean.egg-info/top_level.txt
