@@ -1,0 +1,8 @@
+---
+file-contents:
+  releasenotes/notes/function-versioning-81881bc35bc3eb64.yaml:
+    features: [Support function versioning CLI.]
+notes:
+- files:
+  - [releasenotes/notes/function-versioning-81881bc35bc3eb64.yaml, 727cd89632650428c14bc7a2b5eb6a8d93584630]
+  version: 1.0.0
