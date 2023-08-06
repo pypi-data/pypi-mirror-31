@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: easyqueue
+Version: 0.2.1
+Summary: An easy way to handle amqp queues. Focus on your app logic, forget about the protocol.
+Home-page: https://bitbucket.org/sievetech/easyqueue
+Author: Diogo Magalhães Martins
+Author-email: magalhaesmartins@icloud.com
+Maintainer: Sieve
+Maintainer-email: ti@sieve.com.br
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: aioamqp (==0.10.0)
+
+UNKNOWN
+
+
