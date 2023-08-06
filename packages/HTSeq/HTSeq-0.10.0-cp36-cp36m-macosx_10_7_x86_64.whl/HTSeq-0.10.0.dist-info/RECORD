@@ -1,0 +1,15 @@
+HTSeq/StepVector.py,sha256=xXePXs3uTdQXCc_k5e4D4_jY-Ooim5fd9pq0SDhj3Bs,28266
+HTSeq/_HTSeq.cpython-36m-darwin.so,sha256=csMIbyeEwJp6Gn1jxGd98djJ9lB27qaMtqSYGhOG_1E,626764
+HTSeq/_HTSeq_internal.py,sha256=Zj3mXBYPfHsXenHhbaNNX2mFyo7GHLrP6Qqpbnv2Zhw,1416
+HTSeq/_StepVector.cpython-36m-darwin.so,sha256=ZwvMPOtCKjlMYTVI_OpqowLh06t5dDjmLXG7rx9c2p4,147840
+HTSeq/__init__.py,sha256=uVbTqpoZJ2YLxvcs1YsqXKdgNq3FAaNGl7z_Am1Oan8,41756
+HTSeq/_version.py,sha256=1CTMGeDRLl2ZBzRwZNNLslPutwls-c1_IjYIeDMS478,22
+HTSeq/scripts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+HTSeq/scripts/count.py,sha256=xxCpqnvsYT_9aYfxCPUK5SXVdyXBLJ25Dhe5EFae5n0,19480
+HTSeq/scripts/qa.py,sha256=u4lgI7WpxLrZ2ta-_3GEIEvkbAP6qAWbvRpoLyZ6g88,8355
+HTSeq-0.10.0.data/scripts/htseq-count,sha256=NXwgriCihpOlvf0EXKkimmV_lQjubvB6r51BvohLESk,65
+HTSeq-0.10.0.data/scripts/htseq-qa,sha256=gg-Jy16UJAccVdv5CaUZZyO3b_gdYfO11prgAJY0EwU,59
+HTSeq-0.10.0.dist-info/METADATA,sha256=OGOt_Pgm1nD5ZM6rVsNOP-Ta0H9Mcqdo5l8YhYMekXk,1056
+HTSeq-0.10.0.dist-info/RECORD,,
+HTSeq-0.10.0.dist-info/WHEEL,sha256=UqcqXAoc4RHC8q5_TgL5P3tJpP_skRlw_0RsSzKyXFc,110
+HTSeq-0.10.0.dist-info/top_level.txt,sha256=W3Y4w3SxbKN6Yf8TF1JXvVtZin7F6fLQp-mMC96m-mA,6
