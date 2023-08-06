@@ -1,0 +1,15 @@
+engcoolprop/__init__.py,sha256=dbLagm12EcvGZrdZH7wdT7SNvuPr8JQtzDTJtON6dPU,161
+engcoolprop/_version.py,sha256=74aTd2_cIL0CWBcY-lWDw02J0FG7qXx23WnHnr75vZE,393
+engcoolprop/ec_fluid.py,sha256=UZ5RNuCBoKgZ5dbzWDgf4oqGZSs3rvPdXCdycdGtw6Q,25890
+engcoolprop/examples/crit_props.py,sha256=gtjesx88J0KWcE4i94EM7hpUWPO2L_of2xYJmXt0Aps,163
+engcoolprop/examples/example_1.py,sha256=pfQqfdW8bCF4E_PdAOmH_i47KzoOR-X5qmNSb8eNxw4,211
+engcoolprop/examples/example_2.py,sha256=N5YXNhU2cy6n_UOIRfJ7pYiAqZFtMjllhcfq9L4ErVU,211
+engcoolprop/examples/sample_plot.py,sha256=ASxZ5QkWMRkRdI5w_ttZT-Hg2LB-zshIFarTMnXXy3c,1630
+engcoolprop/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+engcoolprop/tests/test_ec_fluid.py,sha256=P8Jyz54un80cQgE_RJjGB-hXjNm4TzXGezVp8qwZp_o,21802
+engcoolprop-0.1.1.dist-info/DESCRIPTION.rst,sha256=pQADKtOGa9t5Up2mJbGbzioIgkuO1G9z5ujjmHCc6tY,2050
+engcoolprop-0.1.1.dist-info/METADATA,sha256=0HmzMB9Y4FKJcHc2xCPsPNeSL0vi1Gis7n78zbZEul8,3328
+engcoolprop-0.1.1.dist-info/RECORD,,
+engcoolprop-0.1.1.dist-info/WHEEL,sha256=9Z5Xm-eel1bTS7e6ogYiKz0zmPEqDwIypurdHN1hR40,116
+engcoolprop-0.1.1.dist-info/metadata.json,sha256=ZooHTgIphU0dAg2iGKGwKc49GuiX0UhG8jBklRBjvAE,1340
+engcoolprop-0.1.1.dist-info/top_level.txt,sha256=qff6yKMODVQ1-cX8mZO6wG_HY8RTGkPAqnptufI6aUc,12
