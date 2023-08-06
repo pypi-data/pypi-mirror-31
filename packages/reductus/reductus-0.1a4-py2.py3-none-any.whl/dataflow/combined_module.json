@@ -1,0 +1,50 @@
+{
+  "definition": {
+    "template": {
+      "modules": [  
+        {
+          "y": 5,
+          "x": 10,
+          "config": {
+            "parameter1": 0
+          },
+          "module": "test.add",
+          "title": "add"
+        },
+        {
+          "y": 65,
+          "x": 10,
+          "config": {
+            "parameter1": 2
+          },
+          "module": "test.add",
+          "title": "add again"
+        }
+      ],
+      "wires": [
+        { 
+          "source": [0, "output"],
+          "target": [1, "input"]
+        }
+      ]
+    },
+    "inputs": [
+      {"name": "combined_input", "target": [0, "input"]}
+    ],
+    "outputs": [
+      {"name": "combined_output", "target": [1, "output"]}
+    ],
+    "parameters": [
+      {"name": "exposed_parameter1", "target": [0, "parameter1"]},
+      {"name": "exposed_parameter2", "target": [1, "parameter1"]}
+    ]
+  },
+  "config": {
+    "exposed_parameter1": 3,
+    "exposed_parameter2": 5
+  },
+  "x": 10,
+  "y": 20,
+  "title": "I am a combined module",
+  "module": "combined"
+}

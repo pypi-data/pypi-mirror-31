@@ -1,0 +1,44 @@
+{
+  "modules": [
+    {
+      "module": "ncnr.ospec.LoadMAGIKPSDMany",
+      "title": "load",
+      "x": 195,
+      "y": 80
+    },
+    {
+      "module": "ncnr.ospec.normalizeToMonitor",
+      "title": "normalize",
+      "x": 360,
+      "y": 80
+    },
+    {
+      "module": "ncnr.ospec.coordinateOffset",
+      "title": "offset",
+      "x": 520,
+      "y": 80
+    }
+  ],
+  "wires": [
+    {
+      "source": [
+        0,
+        "output"
+      ],
+      "target": [
+        1,
+        "data"
+      ]
+    },
+    {
+      "source": [
+        1,
+        "output"
+      ],
+      "target": [
+        2,
+        "data"
+      ]
+    }
+  ]
+}
