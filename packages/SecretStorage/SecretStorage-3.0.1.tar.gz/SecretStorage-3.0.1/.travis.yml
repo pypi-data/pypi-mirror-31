@@ -1,0 +1,19 @@
+sudo: false
+dist: trusty
+language: python
+python:
+  - "3.5"
+  - "3.6"
+addons:
+  apt:
+    packages:
+    - dbus-x11
+install:
+  - pip install jeepney cryptography codecov
+before_script:
+  - git clone git://git.gnome.org/libsecret.git
+script:
+  - dbus-launch --exit-with-session coverage run tests/run_tests.py libsecret/libsecret/mock-service-normal.py
+  - dbus-launch --exit-with-session coverage run -a tests/run_tests.py libsecret/libsecret/mock-service-only-plain.py
+after_success:
+  - codecov
