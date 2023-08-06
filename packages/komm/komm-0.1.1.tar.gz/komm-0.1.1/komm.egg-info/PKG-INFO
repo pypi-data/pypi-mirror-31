@@ -1,0 +1,13 @@
+Metadata-Version: 1.2
+Name: komm
+Version: 0.1.1
+Summary: An open-source library for Python 3 providing tools for analysis and simulation of analog and digital communication systems.
+Home-page: https://github.com/rwnobrega/komm
+Author: Roberto W. Nobrega
+Author-email: rwnobrega@gmail.com
+License: GPL
+Project-URL: Documentation, http://komm.readthedocs.io/
+Project-URL: Source, https://github.com/rwnobrega/komm/
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.5
