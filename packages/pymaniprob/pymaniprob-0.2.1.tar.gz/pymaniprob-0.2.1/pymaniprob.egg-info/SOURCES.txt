@@ -1,0 +1,15 @@
+setup.py
+pymaniprob/__init__.py
+pymaniprob.egg-info/PKG-INFO
+pymaniprob.egg-info/SOURCES.txt
+pymaniprob.egg-info/dependency_links.txt
+pymaniprob.egg-info/not-zip-safe
+pymaniprob.egg-info/requires.txt
+pymaniprob.egg-info/top_level.txt
+pymaniprob/docs/__init__.py
+pymaniprob/docs/basics.py
+pymaniprob/probabilitydistributions/__init__.py
+pymaniprob/probabilitydistributions/probabilitydistributions.py
+pymaniprob/sphere/__init__.py
+pymaniprob/sphere/vonmisesfisher.py
+pymaniprob/sphere/watson.py
