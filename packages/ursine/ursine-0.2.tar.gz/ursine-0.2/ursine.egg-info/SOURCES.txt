@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+tests/test_parsing.py
+tests/test_uri.py
+ursine/__init__.py
+ursine/parsing.py
+ursine/uri.py
+ursine.egg-info/PKG-INFO
+ursine.egg-info/SOURCES.txt
+ursine.egg-info/dependency_links.txt
+ursine.egg-info/requires.txt
+ursine.egg-info/top_level.txt
