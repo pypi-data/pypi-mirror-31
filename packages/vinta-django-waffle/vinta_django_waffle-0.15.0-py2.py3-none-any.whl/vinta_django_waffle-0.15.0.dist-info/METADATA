@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: vinta-django-waffle
+Version: 0.15.0
+Summary: A feature flipper for Django.
+Home-page: http://github.com/vintasoftware/django-waffle
+Author: Vinta Software
+Author-email: contact@vinta.com.br
+License: BSD
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 1.11
+Classifier: Framework :: Django :: 2.0
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+
+======
+README
+======
+
+Django Waffle is (yet another) feature flipper for Django. You can
+define the conditions for which a flag should be active, and use it in
+a number of ways.
+
+.. image:: https://travis-ci.org/jsocol/django-waffle.png?branch=master
+   :target: https://travis-ci.org/jsocol/django-waffle
+   :alt: Travis-CI Build Status
+
+:Code:          https://github.com/jsocol/django-waffle
+:License:       BSD; see LICENSE file
+:Issues:        https://github.com/jsocol/django-waffle/issues
+:Documentation: https://waffle.readthedocs.io/
+
+
