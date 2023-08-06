@@ -1,0 +1,11 @@
+simple_amqp_pubsub/__init__.py,sha256=TQwuMbtqh_-TeKb4bSQGG_Zlc8VoZzJ4Xxhg432ulvc,145
+simple_amqp_pubsub/asyncio.py,sha256=lnfKoEDKYqG8LLSuum4ub5gS3fcHGYzeAYlI-Qzc1_4,1823
+simple_amqp_pubsub/consts.py,sha256=t6K1QeaHPpQwbflqwDiu5AG8QXO8dl9UzIX9Lo6wyMA,210
+simple_amqp_pubsub/data.py,sha256=Uh9XLpozZmz0LL83cqU_6X7gyhwtx8Vm9pR05XuTxGs,573
+simple_amqp_pubsub/encoding.py,sha256=KBN2NjGoXYj54AbgIF-MH3vZsg7uHaaMvg5tGNJmssw,869
+simple_amqp_pubsub/gevent.py,sha256=BdZ7gJ3hprTfNZtHTlpOkwdA_Grqp3RTMtL12pzkYRc,1741
+simple_amqp_pubsub/subscriber.py,sha256=93RCGJh3UuUXqfdu8bAjcPiX545Lolh9RcLjMrRb1HM,887
+simple_amqp_pubsub-0.0.3.dist-info/METADATA,sha256=Qj1bPXpwp3FQqXNq0A6JV4R6JCX-hCkZm9NLkkXZk0I,1070
+simple_amqp_pubsub-0.0.3.dist-info/RECORD,,
+simple_amqp_pubsub-0.0.3.dist-info/WHEEL,sha256=gduuPyBvFJQSQ0zdyxF7k0zynDXbIbvg5ZBHoXum5uk,110
+simple_amqp_pubsub-0.0.3.dist-info/top_level.txt,sha256=lCC8Fddv2ROyil8CeSq7lFxkzOupMg_5EbSkjm0VEOY,19
