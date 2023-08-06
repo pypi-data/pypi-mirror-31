@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+TFServingSpark.egg-info/PKG-INFO
+TFServingSpark.egg-info/SOURCES.txt
+TFServingSpark.egg-info/dependency_links.txt
+TFServingSpark.egg-info/requires.txt
+TFServingSpark.egg-info/top_level.txt
+tss/__init__.py
+tss/save.py
+tss/serving.py
