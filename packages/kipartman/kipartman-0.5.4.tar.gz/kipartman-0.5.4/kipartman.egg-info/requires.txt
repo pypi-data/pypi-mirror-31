@@ -1,0 +1,13 @@
+wxPython
+cfscrape
+docutils
+asyncio
+pathlib2
+pycairo
+conan
+pyrfc3339
+connexion
+django<1.12
+django-mptt<0.9
+watchdog
+setuptools
