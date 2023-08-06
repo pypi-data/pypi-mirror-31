@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: aioupbit
+Version: 1.0.0
+Summary: Asynchronous wrapper for the Upbit API
+Home-page: https://github.com/chaos314/aio-upbit
+Author: Seokhwan Cheon
+Author-email: chaos314@gmail.com
+License: MIT
+Keywords: upbit,crypto,bitcoin
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Office/Business :: Financial
+Requires-Dist: aiohttp
+Requires-Dist: pyjwt
+
+UNKNOWN
+
+
