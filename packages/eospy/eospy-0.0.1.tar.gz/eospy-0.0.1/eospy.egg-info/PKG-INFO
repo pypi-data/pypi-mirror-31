@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: eospy
+Version: 0.0.1
+Summary: Python library of the EOS.IO project.
+Home-page: https://github.com/eosfansio/eospy
+Author: strahe
+Author-email: UNKNOWN
+License: MIT
+Description: Python library of the EOS.IO project..
+Keywords: eos,eosio,eospy,eospython
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3 :: Only

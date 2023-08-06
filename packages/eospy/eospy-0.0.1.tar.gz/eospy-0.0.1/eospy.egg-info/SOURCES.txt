@@ -1,0 +1,12 @@
+setup.py
+eospy/__init__.py
+eospy/api.py
+eospy/exceptions.py
+eospy/http_client.py
+eospy/log.py
+eospy.egg-info/PKG-INFO
+eospy.egg-info/SOURCES.txt
+eospy.egg-info/dependency_links.txt
+eospy.egg-info/not-zip-safe
+eospy.egg-info/requires.txt
+eospy.egg-info/top_level.txt
