@@ -1,0 +1,16 @@
+Metadata-Version: 1.0
+Name: jdconfig
+Version: 2.0
+Summary: Extended Python dict for flexible hyperparameter configuration in Deep Learning
+Home-page: https://github.com/WarBean/jdconfig
+Author: Huabin Zheng
+Author-email: warbean@qq.com
+License: MIT
+Description-Content-Type: UNKNOWN
+Description: Designed for highly convenient and flexible configuration in Deep Learning
+        =======================================================
+        
+        `Documentation and source code on GitHub <https://github.com/WarBean/dotconfig`_
+        
+Keywords: json dict configuration deep-learning python
+Platform: UNKNOWN
