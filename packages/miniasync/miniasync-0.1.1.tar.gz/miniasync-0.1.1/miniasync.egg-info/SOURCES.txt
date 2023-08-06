@@ -1,0 +1,11 @@
+CHANGES.rst
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.py
+miniasync/__init__.py
+miniasync/miniasync.py
+miniasync.egg-info/PKG-INFO
+miniasync.egg-info/SOURCES.txt
+miniasync.egg-info/dependency_links.txt
+miniasync.egg-info/top_level.txt
