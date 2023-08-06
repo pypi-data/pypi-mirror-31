@@ -1,0 +1,16 @@
+Metadata-Version: 2.0
+Name: ptterm
+Version: 0.1
+Summary: Terminal emulator for prompt_toolkit.
+Home-page: https://github.com/jonathanslenders/
+Author: Jonathan Slenders
+Author-email: UNKNOWN
+License: LICENSE
+Platform: UNKNOWN
+Requires-Dist: prompt-toolkit (>=2.0.0,<2.1.0)
+Requires-Dist: pyte (>=0.5.1)
+Requires-Dist: six (>=1.9.0)
+
+UNKNOWN
+
+
