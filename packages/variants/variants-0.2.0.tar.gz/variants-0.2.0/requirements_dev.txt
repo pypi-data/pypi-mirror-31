@@ -1,0 +1,8 @@
+pip >= 8.0
+wheel
+tox
+coverage
+singledispatch; python_version <= '3.3'
+pytest >= 3.0; python_version != '3.3'
+pytest <  3.3; python_version == '3.3'
+pytest-runner

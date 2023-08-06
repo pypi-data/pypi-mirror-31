@@ -1,0 +1,7 @@
+[tool.towncrier]
+    package = "variants"
+    package_dir = "src/variants"
+    filename = "NEWS.rst"
+    title_format = "Version {version} ({project_date})"
+    issue_format = "GH #{issue}"
+    directory = "changelog.d"
