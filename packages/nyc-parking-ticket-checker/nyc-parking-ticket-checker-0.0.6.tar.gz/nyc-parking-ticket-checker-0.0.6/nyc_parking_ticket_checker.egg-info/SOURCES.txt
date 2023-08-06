@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+nyc_parking_ticket_checker.egg-info/PKG-INFO
+nyc_parking_ticket_checker.egg-info/SOURCES.txt
+nyc_parking_ticket_checker.egg-info/dependency_links.txt
+nyc_parking_ticket_checker.egg-info/entry_points.txt
+nyc_parking_ticket_checker.egg-info/requires.txt
+nyc_parking_ticket_checker.egg-info/top_level.txt
+nycparkingticket/__init__.py
+nycparkingticket/ticket_checker.py

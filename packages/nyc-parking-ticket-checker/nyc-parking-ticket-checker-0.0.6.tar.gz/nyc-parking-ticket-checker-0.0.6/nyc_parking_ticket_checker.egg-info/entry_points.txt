@@ -1,0 +1,3 @@
+[console_scripts]
+ticket_checker = nycparkingticket.ticket_checker:main
+
