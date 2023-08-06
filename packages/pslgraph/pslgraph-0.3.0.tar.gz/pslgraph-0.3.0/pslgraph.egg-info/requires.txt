@@ -1,0 +1,5 @@
+d3m
+networkx
+pandas>=0.20.1
+psutil
+sklearn
