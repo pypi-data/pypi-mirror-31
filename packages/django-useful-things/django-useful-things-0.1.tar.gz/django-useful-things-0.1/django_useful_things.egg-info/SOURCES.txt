@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+django_useful_things/__init__.py
+django_useful_things/admin.py
+django_useful_things/apps.py
+django_useful_things/models.py
+django_useful_things/tests.py
+django_useful_things/urls.py
+django_useful_things/views.py
+django_useful_things.egg-info/PKG-INFO
+django_useful_things.egg-info/SOURCES.txt
+django_useful_things.egg-info/dependency_links.txt
+django_useful_things.egg-info/top_level.txt
+django_useful_things/migrations/__init__.py

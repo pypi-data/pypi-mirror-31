@@ -1,0 +1,5 @@
+include LICENSE
+include README.rst
+recursive-include django_useful_things/static *
+recursive-include django_useful_things/templates *
+recursive-include docs *
