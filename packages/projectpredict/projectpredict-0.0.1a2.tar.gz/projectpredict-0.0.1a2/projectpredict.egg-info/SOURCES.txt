@@ -1,0 +1,14 @@
+README.md
+setup.cfg
+setup.py
+projectpredict/__init__.py
+projectpredict/artists.py
+projectpredict/exceptions.py
+projectpredict/pdf.py
+projectpredict/project.py
+projectpredict/task.py
+projectpredict.egg-info/PKG-INFO
+projectpredict.egg-info/SOURCES.txt
+projectpredict.egg-info/dependency_links.txt
+projectpredict.egg-info/requires.txt
+projectpredict.egg-info/top_level.txt
