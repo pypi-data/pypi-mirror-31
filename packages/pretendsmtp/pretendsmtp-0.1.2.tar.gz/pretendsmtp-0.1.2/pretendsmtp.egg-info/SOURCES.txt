@@ -1,0 +1,15 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+VERSION
+setup.py
+pretendsmtp/__init__.py
+pretendsmtp/mock_server.py
+pretendsmtp/server.py
+pretendsmtp.egg-info/PKG-INFO
+pretendsmtp.egg-info/SOURCES.txt
+pretendsmtp.egg-info/dependency_links.txt
+pretendsmtp.egg-info/entry_points.txt
+pretendsmtp.egg-info/not-zip-safe
+pretendsmtp.egg-info/requires.txt
+pretendsmtp.egg-info/top_level.txt
