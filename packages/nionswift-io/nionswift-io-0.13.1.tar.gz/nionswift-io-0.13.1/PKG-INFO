@@ -1,0 +1,13 @@
+Metadata-Version: 1.2
+Name: nionswift-io
+Version: 0.13.1
+Summary: IO handlers for NionSwift.
+Home-page: https://github.com/nion-software/nionswift-io
+Author: Nion Software
+Author-email: swift@nion.com
+License: Apache 2.0
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python :: 3.5
+Requires-Python: ~=3.5
