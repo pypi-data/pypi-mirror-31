@@ -1,0 +1,12 @@
+aiobotocore/__init__.py,sha256=fFx7djQ0IacPkqGD44sJxZGi2SsU3vMFijF2Ca6J3b8,108
+aiobotocore/args.py,sha256=2mUeWXo-y_Sq8uORh9MZ2EPMK8sz_BCnV5kTkL4-EBA,3584
+aiobotocore/client.py,sha256=WhX3HzR9-vTihGewK6_rSaBxSrcvaeXz_9PlrEw_Lx4,7991
+aiobotocore/config.py,sha256=JoO9EJtBDV7PokmoJ-bKJFG2RWeJXFCK_kTZpcQFsyQ,2308
+aiobotocore/endpoint.py,sha256=lwLBJvqbA37IjyT-Hoxxs3GYJWEodsjJWVzlDYsyCRU,19024
+aiobotocore/paginate.py,sha256=TtW6x3I9IvVYztGV3oVjYqGJhTxzFZaKdAC3DCowhG4,6754
+aiobotocore/session.py,sha256=STRF79IgNglqtU_e0LzBLRmd1nkFRKo0_MKa3ytUngE,3602
+aiobotocore/waiter.py,sha256=8U9Udpgkx_HeZdiPxdcYzJFCyffUh4rPWanj5orIPeE,4557
+aiobotocore-0.8.0.dist-info/METADATA,sha256=g7Uuf3e1xoLy92ftxGQuMLW6aoO8Cj6KNjhgidsUe20,9454
+aiobotocore-0.8.0.dist-info/RECORD,,
+aiobotocore-0.8.0.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+aiobotocore-0.8.0.dist-info/top_level.txt,sha256=T3M9xMgiH7ds2FkMWbkut4LzgZx48MrZw8xmntgzGu0,12
