@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: pywsse
+Version: 0.1.5.2
+Summary: WSSE Authentication for various server and client backends.
+Home-page: https://github.com/PrincetonUniversity/pywsse
+Author: Rushy Panchal
+Author-email: rpanchal@princeton.edu
+License: LGPLv3
+Description: UNKNOWN
+Keywords: REST,authentication,wsse
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Middleware
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
