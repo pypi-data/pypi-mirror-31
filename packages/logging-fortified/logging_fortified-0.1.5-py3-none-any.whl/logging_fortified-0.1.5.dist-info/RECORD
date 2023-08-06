@@ -1,0 +1,16 @@
+logging_fortified/__init__.py,sha256=er9m9Z3wWy9hji3F1k3s6XpC7v3VlKoAA-RXeXOoW9o,498
+logging_fortified/logger_adapter_custom.py,sha256=CP-bbPrieiDrIK_7Mv86l_qFGplJ2FZQ9WDm1ss7sa4,1537
+logging_fortified/logger_json_lexer.py,sha256=WyzmQjraReq5J8pcLTYVT_kF-0NkfALQIfb0bVL-Jjw,4875
+logging_fortified/logging.py,sha256=Mr0Y0vfnjrvl1Mq7zKsszZkqIvcVSf03XbSR2eauquw,2567
+logging_fortified/logging_format.py,sha256=MUr-_3QGyaGYMNzHoJJcRiFjdW8ovrUA-Kgzm39kM5M,483
+logging_fortified/logging_json_formatter.py,sha256=4UpZNcK7fqaKMpLiYyQW01MWp2xYIANv880bqh80gAE,6793
+logging_fortified/logging_levels.py,sha256=Z-aF5s1LB8QSx3AgY4UV5cAmDssaA7ofZwGkE0tzd4w,589
+logging_fortified/logging_output.py,sha256=6WSK0HVueHFdTDhgtsihg2ko2BJPn1bEl68NtRB6nug,532
+logging_fortified/errors/__init__.py,sha256=lvLvIG0dyvPcTVi9t1beyTRYorDvL0nMbE9IfqdCa9g,217
+logging_fortified/errors/errors_traceback.py,sha256=cbMGhp1FsZAvTSo67jp7mNszXiUURCkY8H_iSBoAX78,1117
+logging_fortified/support/__init__.py,sha256=fzRv5Q54ykvPSHnrGBPGg2WG1CoLofKoxon6x8zjJAg,114
+logging_fortified/support/singleton.py,sha256=-wiU-8DfsKj37raPkmI_nPhNynkWNGCxFALMOgq8IzQ,527
+logging_fortified-0.1.5.dist-info/METADATA,sha256=Pwx-EQPbxVdEYDvDLSCb5wEOlH_QzHGAb2EQIgiwIOQ,13959
+logging_fortified-0.1.5.dist-info/RECORD,,
+logging_fortified-0.1.5.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+logging_fortified-0.1.5.dist-info/top_level.txt,sha256=oA6Sxrsa5BdEgbBYGr-oPSs84lW4p_6qRR_hHP_mWQM,18
