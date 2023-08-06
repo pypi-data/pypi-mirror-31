@@ -1,0 +1,117 @@
+Metadata-Version: 2.1
+Name: guillotina-hive
+Version: 1.0.3
+Summary: Guillotina addon to split actions into smaller bits
+Home-page: https://github.com/onna/guillotina_hive
+Author: Ramon Navarro & Nathan VanGheem
+Author-email: ramon@onna.com
+License: BSD
+Keywords: asyncio,REST,Framework,transactional
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Provides-Extra: test
+Requires-Dist: setuptools
+Requires-Dist: guillotina (>=2.1.0)
+Requires-Dist: async-timeout
+Requires-Dist: aioclustermanager
+Requires-Dist: psycopg2
+Provides-Extra: test
+Requires-Dist: pytest; extra == 'test'
+Requires-Dist: docker; extra == 'test'
+Requires-Dist: backoff; extra == 'test'
+Requires-Dist: pytest-asyncio; extra == 'test'
+Requires-Dist: pytest-aiohttp; extra == 'test'
+Requires-Dist: pytest-cov; extra == 'test'
+Requires-Dist: pytest-docker-fixtures; extra == 'test'
+Requires-Dist: guillotina-elasticsearch; extra == 'test'
+
+Introduction
+============
+
+`guillotina_hive` is a task runner whose main goal is to provide a mechanism
+to iterate through all the content on a database as quickly as possible.
+
+To accomplish that end, hive integrates with container orchestrators(k8s or nomad)
+to schedule jobs on and retrieve results from those jobs.
+
+Installation
+------------
+
+With pip:
+
+    pip install guillotina_hive
+
+
+Guillotina configuration
+------------------------
+
+Example here with json::
+
+    "applications": ["guillotina_hive"],
+    "hive": {
+        "default_image": None,
+        "default_namespace": "hive",
+        "orchestrator": "k8s",
+        "cluster_config": {},
+        "guillotina_default": {
+            "entrypoint": None,
+            "volumes": None,
+            "volumeMounts": None,
+            "envFrom": None
+        },
+        'quota': None
+    }
+
+
+Settings explained
+~~~~~~~~~~~~~~~~~~
+
+- default_image: default image to use for jobs to run with
+- default_namespace: cluster namespace to use
+- orchestrator: k8s or nomad
+- cluster_config: what to configure aioclustermanager with
+- guillotina_default: default configuration for guillotina jobs
+- quota: define quote on cluster namespace
+
+
+Defining a job
+--------------
+
+We use decorators to provide tasks::
+
+    from guillotina_hive.decorators import hive_task
+    @hive_task(name='something')
+    async def something(arg1, arg2):
+        return foobar
+
+
+You can also use application settings::
+
+    {
+        "calculate-numbers": "guillotina_hive.tests.tasks.calculate_numbers"
+    }
+
+
+1.0.3 (2018-04-24)
+------------------
+
+- fix to work with guillotina 3
+  [vangheem]
+
+1.0.1 (9/4/2018)
+----------------
+
+- Adding manifest
+  [ramon]
+
+1.0.0 (5/4/2018)
+----------------
+
+- Initial version
+
+
