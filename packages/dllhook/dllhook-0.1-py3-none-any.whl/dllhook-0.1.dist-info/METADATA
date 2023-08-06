@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: dllhook
+Version: 0.1
+Summary: Hook x86 dll or executable instruction with python script injecting embedded python interpreter.
+Home-page: https://github.com/cosine0/dllhook
+Author: cosine0 at github
+Author-email: ksitht@gmail.com
+License: GPLv3
+Platform: UNKNOWN
+Classifier: Topic :: Security
+Classifier: Environment :: Console
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python
+Classifier: Intended Audience :: Developers
+Requires-Dist: boltons
+Requires-Dist: cffi
+Requires-Dist: six
+
+UNKNOWN
+
+
