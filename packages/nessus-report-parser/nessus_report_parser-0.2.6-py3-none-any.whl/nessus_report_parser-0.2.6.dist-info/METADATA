@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: nessus-report-parser
+Version: 0.2.6
+Summary: A wrapper around the tapioca-nessus_report_parser for translating the Nessus API documents into Python Objects
+Home-page: https://github.com/siteblindado/nessus_report_parser-report-nessus_report_parser
+Author: Flávio Cardoso Ferreira Pontes
+Author-email: flavio.pontes@siteblindado.com.br
+License: MIT
+Keywords: nessus
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: tapioca-nessus
+Requires-Dist: lxml
+
+Nessus Report Parser
+====================
+
+[![Build Status](https://travis-ci.org/siteblindado/nessus-report-parser.svg?branch=master)](https://travis-ci.org/siteblindado/nessus-report-parser#)
+
+Nessus Report Parser transforms a nessus xml report file into a Plain Python object
+
+The object contains sub objects, mirroring the XML node hierarchy, parsing date string and integer values and attributes to their appropriate Python Datastructures.
+
+Usage
+-----
+
+::
+
+    from nessus_parser import parse_nessus_file, parse_nessus_xml
+    parse_nessus_file('path/to/nessus/file.nessus')
+
+
+
