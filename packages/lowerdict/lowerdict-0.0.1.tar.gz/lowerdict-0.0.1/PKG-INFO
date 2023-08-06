@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: lowerdict
+Version: 0.0.1
+Summary: return dict with lowercase keys
+Home-page: UNKNOWN
+License: UNKNOWN
+Description: ### Install
+        ```bash
+        `[sudo] pip install lowerdict`
+        ```
+        
+        ### Usage
+        ```python
+        from lowerdict import lowerdict
+        
+        # lowerdict(*args, **kwargs)
+        lowerdict({"KEY": "value", "KEY2": "value2"})
+        >>> {"key": "value", "key2": "value2"}
+        ```
+        
+Keywords: dict
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Natural Language :: Russian
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.0
+Classifier: Programming Language :: Python :: 3.1
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
