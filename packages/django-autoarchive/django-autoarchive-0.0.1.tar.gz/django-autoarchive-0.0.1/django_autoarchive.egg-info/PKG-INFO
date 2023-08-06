@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: django-autoarchive
+Version: 0.0.1
+Summary: Django helpers for automatically archiving URLs
+Home-page: http://www.github.com/pastpages/django-autoarchive/
+Author: Ben Welsh
+Author-email: ben.welsh@gmail.com
+License: GPLv3
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 1.11
+Classifier: Framework :: Django :: 2.0
