@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: route53weightedrecords
+Version: 0.1
+Summary: Python package to manage over 100 weighted records in AWS Route53.
+Home-page: https://github.com/benliu01/route53_weighted_records
+Author: Benjamin Liu
+Author-email: ben@mightysignal.com
+License: UNKNOWN
+Download-URL: https://github.com/benliu01/route53_weighted_records/archive/0.3.tar.gz
+Keywords: dns,route53,aws,records
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: boto3 (>=1.4.4)
+
+UNKNOWN
+
+
