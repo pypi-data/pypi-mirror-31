@@ -1,0 +1,14 @@
+README.md
+setup.py
+prime_algorithms/__init__.py
+prime_algorithms.egg-info/PKG-INFO
+prime_algorithms.egg-info/SOURCES.txt
+prime_algorithms.egg-info/dependency_links.txt
+prime_algorithms.egg-info/top_level.txt
+prime_algorithms/algorithms/__init__.py
+prime_algorithms/algorithms/millerrabin.py
+prime_algorithms/algorithms/sixk.py
+prime_algorithms/algorithms/solovaystrassen.py
+prime_algorithms/algorithms/squareroot.py
+prime_algorithms/math/__init__.py
+prime_algorithms/math/pi.py
