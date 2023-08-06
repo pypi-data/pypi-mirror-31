@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+src/ausfin/__init__.py
+src/ausfin/cli.py
+src/ausfin/sources.py
+src/ausfin.egg-info/PKG-INFO
+src/ausfin.egg-info/SOURCES.txt
+src/ausfin.egg-info/dependency_links.txt
+src/ausfin.egg-info/entry_points.txt
+src/ausfin.egg-info/requires.txt
+src/ausfin.egg-info/top_level.txt
