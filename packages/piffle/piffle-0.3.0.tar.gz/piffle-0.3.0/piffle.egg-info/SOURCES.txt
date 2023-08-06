@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+piffle/__init__.py
+piffle/iiif.py
+piffle.egg-info/PKG-INFO
+piffle.egg-info/SOURCES.txt
+piffle.egg-info/dependency_links.txt
+piffle.egg-info/requires.txt
+piffle.egg-info/top_level.txt

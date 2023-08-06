@@ -1,0 +1,9 @@
+requests
+cached-property
+six
+future
+
+[test]
+pytest
+pytest-cov
+mock
