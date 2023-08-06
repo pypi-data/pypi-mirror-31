@@ -1,0 +1,14 @@
+Metadata-Version: 2.0
+Name: sunson
+Version: 1.0.3
+Summary: Python Arbitrage KRW
+Home-page: https://github.com/wisscot/SunSon
+Author: Eddy
+Author-email: wisscot.dev@gmail.com
+License: Apache 2.0
+Requires-Dist: requests (>=2.18.4)
+Requires-Dist: pymongo (>=3.5)
+
+# SunSon Project
+
+
