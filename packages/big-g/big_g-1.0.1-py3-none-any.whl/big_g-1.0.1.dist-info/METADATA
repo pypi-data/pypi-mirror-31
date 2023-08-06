@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: big-g
+Version: 1.0.1
+Summary: OpenCV object tracking for Big G experiments
+Home-page: https://github.com/paul-freeman/big_g.git
+Author: Paul Freeman
+Author-email: paul.freeman.cs@gmail.com
+License: MIT License
+Project-URL: Source, https://github.com/paul-freeman/big_g.git
+Keywords: opencv physics tracking
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Education
+Classifier: Topic :: Multimedia :: Video
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: opencv-contrib-python
+
+UNKNOWN
+
+
