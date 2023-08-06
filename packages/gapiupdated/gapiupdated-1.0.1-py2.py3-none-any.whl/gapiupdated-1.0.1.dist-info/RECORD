@@ -1,0 +1,13 @@
+gapiupdated-1.0.1.data/scripts/gnip_search.py,sha256=EnFDpzHK3k0JhT8nNGiAgCFSNkkSBrkDD_J1b1cDsHo,11769
+gapiupdated-1.0.1.data/scripts/gnip_time_series.py,sha256=Yr0SiRVrIhWPUbGbqFT4cfrmNlIdt-4spVegLcgDdRY,29804
+gapiupdated-1.0.1.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+gapiupdated-1.0.1.dist-info/METADATA,sha256=FPec1mSyCLDFGA3su4W8nd-aZFOk-OmS2Nb9x1RNYbw,862
+gapiupdated-1.0.1.dist-info/RECORD,,
+gapiupdated-1.0.1.dist-info/WHEEL,sha256=kdsN-5OJAZIiHN-iO4Rhl82KyS0bDWf4uBwMbkNafr8,110
+gapiupdated-1.0.1.dist-info/metadata.json,sha256=VwJgoQK0wcEVb7wAQiVGJttQz_kTWdGqiINVtyTTauY,909
+gapiupdated-1.0.1.dist-info/top_level.txt,sha256=8fNSi62JXX6dtFRAgbUxwhJngYQ666-my-p8L5NYz4U,7
+search/__init__.py,sha256=WF7jMfnotFIiptkJCoeGpzGL0htFTTNSU-KLd3oMdEU,42
+search/api.py,sha256=Hfkycv6VSN-albiB9rN3XBOS-9SPvxIEp88_V63WdBI,15552
+search/results.py,sha256=Xd2Og5MSZ_XyykNvInXU0o53rfYehMMi_TFd5c3Apj8,7892
+search/test_api.py,sha256=kVl-PedQv6qrYuZHxcgTeJ4EJScl0Vib1XywgURKleY,8381
+search/test_results.py,sha256=SXMc5fTWyGnPby3A3nXxuqkdtzQ4mVZ0z55XUTYN9js,6456
