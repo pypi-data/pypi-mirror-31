@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+metatask/__init__.py
+metatask/process.py
+metatask/utils.py
+metatask.egg-info/PKG-INFO
+metatask.egg-info/SOURCES.txt
+metatask.egg-info/dependency_links.txt
+metatask.egg-info/entry_points.txt
+metatask.egg-info/not-zip-safe
+metatask.egg-info/requires.txt
+metatask.egg-info/top_level.txt
