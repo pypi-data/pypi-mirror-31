@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: p2
+Version: 1.0.1
+Summary: Rerun command by watching modified file
+Home-page: https://github.com/keitheis/p2
+Author: Keith Yang
+Author-email: yang@keitheis.org
+License: MIT License
+Keywords: keitheis
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+
+p2: Rerun command when given filed changed
+==========================================
+
+.. image:: http://img.shields.io/pypi/v/p2.svg?style=flat
+   :target: https://pypi.org/project/p2/
+
+.. code-block:: sh
+
+  % p2 'make' *.plim static/*.scss
+  Player Two is watching about 6 files:
+  (' base.plim content.plim index.plim oldcontent.plim oldindex.plim '
+   'static/index.scss')
+  FIGHT!
+  make
+  python -mscss < static/index.scss > static/index.css
+  plimc -H -o index.html index.plim
+  CONTINUE?
+  content.plim changed
+  FIGHT!
+  make
+  python -mscss < static/index.scss > static/index.css
+  plimc -H -o index.html index.plim
+  CONTINUE?
+  ^CGAMEOVER
+
+Installation
+------------
+
+.. code-block::
+
+  pip install p2
+
+

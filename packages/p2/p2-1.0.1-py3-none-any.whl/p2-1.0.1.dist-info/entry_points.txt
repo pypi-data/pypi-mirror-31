@@ -1,0 +1,3 @@
+[console_scripts]
+p2 = p2.cmd:script_entrypoint
+
