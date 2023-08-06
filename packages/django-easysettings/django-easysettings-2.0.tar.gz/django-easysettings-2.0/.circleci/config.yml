@@ -1,0 +1,47 @@
+# Python CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-python/ for more details
+#
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.6.5
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "Pipfile.lock" }}
+          - v1-dependencies-
+
+      - run:
+          name: Install dependencies
+          command: |
+            echo 'export PATH=$HOME/.local/bin:$PATH' >> $BASH_ENV
+            source $BASH_ENV
+            pip install --user tox
+
+      - run:
+          name: Run tests
+          command: tox
+
+      - save_cache:
+          paths:
+            - ~/.local
+            - ~/.cache
+          key: v1-dependencies-{{ checksum "Pipfile.lock" }}
+
+      - run:
+          name: Upload to codecov.io
+          command: bash <(curl -s https://codecov.io/bash)
+
+      - store_test_results:
+          path: test-reports
+
+      - store_artifacts:
+          path: htmlcov
+          destination: coverage
