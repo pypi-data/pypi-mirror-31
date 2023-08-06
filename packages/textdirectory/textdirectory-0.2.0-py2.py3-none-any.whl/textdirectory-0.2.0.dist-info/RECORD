@@ -1,0 +1,13 @@
+textdirectory/__init__.py,sha256=DYFUtcVFy8kVrM3rDdvLnAdMskFFvmsiuhEvazgSnbM,234
+textdirectory/cli.py,sha256=bDwUEL11Lh2XboFispEdx4T9XHiiRnxsnrMBBRj87Vg,2621
+textdirectory/crudespellchecker.py,sha256=E7xecjueQmmUsqh31TGcSTDqX6z4Pw3u4xh5HgBglw0,5751
+textdirectory/helpers.py,sha256=m09sTs-1vduHvjcLGq7CEYyBkllJ00z8CTqJKVvEL-g,1782
+textdirectory/textdirectory.py,sha256=w-Yr8Fa9X7lDNJI8aVj5u30fif_5P7tXvdU5CtXyK30,11410
+textdirectory/transformations.py,sha256=n8-kqpLyr7yZ99WkdGTC6GTpBlo43ifhm7lHZpRIPiQ,3893
+textdirectory-0.2.0.dist-info/DESCRIPTION.rst,sha256=_8L2GfHsJuxfvHBPY4IqPGAvG42VlJnliAohdknn_OI,6633
+textdirectory-0.2.0.dist-info/METADATA,sha256=TKGGBrVFJDHIVZ87qtZQYIHtj6CUmBTIB9lCBK_DAhw,7323
+textdirectory-0.2.0.dist-info/RECORD,,
+textdirectory-0.2.0.dist-info/WHEEL,sha256=BTHHj6QhsHpWhRUrxioIvCAgjx81u-a8gkPTO6bi_A0,116
+textdirectory-0.2.0.dist-info/entry_points.txt,sha256=Z7JIrbTVednIetWW1mnKYyCFlYtpbPJ85zJdyRPt3js,58
+textdirectory-0.2.0.dist-info/metadata.json,sha256=94ErZ6ETRYk5s7FWCfVD4Bks3LGum14rhd77E4Dsdk8,1077
+textdirectory-0.2.0.dist-info/top_level.txt,sha256=NkMftbIfM89HbQrV294Cu14Mcs5_St6FbSDz2_-XyqI,14
