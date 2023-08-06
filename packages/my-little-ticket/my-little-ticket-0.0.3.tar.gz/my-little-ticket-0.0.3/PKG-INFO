@@ -1,0 +1,115 @@
+Metadata-Version: 1.1
+Name: my-little-ticket
+Version: 0.0.3
+Summary: Simple ticket manager.
+Home-page: http://github.com/iksaif/my-little-ticket
+Author: Corentin Chary
+Author-email: corentin.chary@gmail.com
+License: GPLv3
+Description: 
+        My Little Ticket :ticket:
+        =========================
+        
+        
+        .. image:: https://travis-ci.org/iksaif/my-little-ticket.svg?branch=master
+           :target: https://travis-ci.org/iksaif/my-little-ticket
+           :alt: Build Status
+        
+        
+        .. image:: https://coveralls.io/repos/github/iksaif/my-little-ticket/badge.svg
+           :target: https://coveralls.io/github/iksaif/my-little-ticket?branch=master
+           :alt: Coverage Status
+        
+        
+        .. image:: https://gemnasium.com/badges/github.com/iksaif/my-little-ticket.svg
+           :target: https://gemnasium.com/github.com/iksaif/my-little-ticket
+           :alt: Dependency Status
+        
+        
+        UI and API to show an aggregate status of your services.
+        
+        
+        .. image:: doc/my-little-ticket.png
+           :target: doc/my-little-ticket.png
+           :alt: My-Little-Ticket screenshot
+        
+        
+        *This is currently under active development and not ready for production.*
+        
+        Quickstart
+        ----------
+        
+        .. code-block:: bash
+        
+           virtualenv venv -p python3
+           source venv/bin/activate
+           cp examples/local_settings.py defcon/
+           pip install -e .
+           pip install -r requirements.txt
+           ./manage.py migrate
+           ./manage.py migrate --run-syncdb
+           ./manage.py createsuperuser
+           ./manage.py runserver
+        
+        Configuration
+        -------------
+        
+        See `local_settings <examples/local_settings.py>`_.
+        
+        Authentication
+        --------------
+        
+        This project is using `django-allauth <https://django-allauth.readthedocs.io/en/latest/>`_.
+        
+        API
+        ---
+        
+        Simply go to ``/swagger/`` or ``/api/`` to see what can be done.
+        
+        Plugins
+        -------
+        
+        Strategies
+        ^^^^^^^^^^
+        
+        A strategy is a way to score and organize tickets on a board. Check
+        `base.py <my_little_ticket/plugins/base.py>`_ and `default.py <my_little_ticket/plugins/default.py>`_ for an example.
+        You'll need to implement only a few functions.
+        
+        And add it to your settings.py:
+        
+        .. code-block:: python
+        
+           MLT_STRATEGIES = [
+              ...
+               'my_module.MyStrategy',
+           ]
+        
+        Plugins
+        ^^^^^^^
+        
+        A plugin is a way to fetch ticket from a source. Currently this project
+        can only fetch tickets from JIRA, but you can easilly create your own plugin,
+        take a look at `base.py <my_little_ticket/plugins/base.py>`_ and
+        `jira <my_little_ticket/plugins/jira.py>`_ to know more.
+        
+        .. code-block:: python
+        
+           MLT_PLUGINS = [
+               ...
+               'my_module.MyPlugin'
+           ]
+        
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 2.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
