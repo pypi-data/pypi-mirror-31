@@ -1,0 +1,16 @@
+networkx
+anytree
+jsonpickle
+tqdm
+beautifulsoup4
+retrying
+appdirs
+
+[draw_image]
+pygraphviz
+
+[draw_window]
+matplotlib
+
+[python34]
+typing
