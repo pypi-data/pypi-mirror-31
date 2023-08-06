@@ -1,0 +1,10 @@
+README.txt
+setup.py
+bitflyer_client/__init__.py
+bitflyer_client/async.py
+bitflyer_client/sync.py
+bitflyer_client.egg-info/PKG-INFO
+bitflyer_client.egg-info/SOURCES.txt
+bitflyer_client.egg-info/dependency_links.txt
+bitflyer_client.egg-info/requires.txt
+bitflyer_client.egg-info/top_level.txt
