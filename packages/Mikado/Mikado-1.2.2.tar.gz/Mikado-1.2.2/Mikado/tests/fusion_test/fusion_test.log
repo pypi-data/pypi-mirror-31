@@ -1,0 +1,5 @@
+2018-05-10 15:24:36,316 - main_queue - compare.py:504 - INFO - compare - MainProcess - Start
+2018-05-10 15:24:36,317 - main_queue - compare.py:506 - INFO - compare - MainProcess - Command line: setup.py nosetests
+2018-05-10 15:24:36,318 - main_queue - compare.py:513 - INFO - compare - MainProcess - Starting to create an index for /tmp/trinity.match_matchpart.gff3
+2018-05-10 15:24:36,618 - main_queue - compare.py:526 - INFO - compare - MainProcess - Finished to create an index for /tmp/trinity.match_matchpart.gff3, with 38 genes
+2018-05-10 15:24:36,619 - main_queue - compare.py:585 - INFO - compare - MainProcess - Finished
