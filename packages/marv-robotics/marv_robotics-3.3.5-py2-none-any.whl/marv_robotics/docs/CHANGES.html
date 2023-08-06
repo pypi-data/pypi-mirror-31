@@ -1,0 +1,254 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Changelog &#8212; MARV Robotics 3.3.5 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx_paramlinks.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="marv" href="api/marv.html" />
+    <link rel="prev" title="Migration" href="migrate/index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="changelog">
+<span id="id1"></span><h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="v18-05">
+<span id="id2"></span><h2>18.05 (2018-05-08)<a class="headerlink" href="#v18-05" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Enable loading dataset node output in comparison views</li>
+<li>Set default matplotlib backend to Agg, removing the need to set it manually</li>
+<li>Auto-initialise previously unintialised site upon start</li>
+<li>Set marv docker container timezone to host timezone</li>
+<li>Support setting marv uid and gid for docker installation</li>
+<li>[BUGFIX] Better support for colour formats</li>
+<li>[BUGFIX] Add scanroot to documentation deploy example for nginx</li>
+<li>[BUGFIX] Cleanup form submit handling</li>
+<li>[BUGFIX] Fix native installation method for community edition</li>
+<li>[BUGFIX] Fix loading of videos for community edition</li>
+<li>[BUGFIX] Gracefully handle permission denied upon initialisation</li>
+</ul>
+</div>
+<div class="section" id="v18-04">
+<span id="id3"></span><h2>18.04 (2018-04-30)<a class="headerlink" href="#v18-04" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Add command-line group management to Community Edition</li>
+<li>Speed-up streaming of videos and point clouds with nginx reverse-proxy</li>
+<li>Improve point cloud player controls</li>
+<li>Support configuration of access control lists</li>
+<li>Improve trajectory player controls</li>
+<li>Make styling of widgets more consistent</li>
+<li>Switch from nosetest to pytest and cleanup requirements</li>
+<li>Drop Bootstrap v3 in favour of slim custom Bootstrap v4 derivate</li>
+<li>Add docker setup with example site</li>
+<li>Merge and cleanup individual repositories</li>
+<li>[BUGFIX] Fix trajectory generation</li>
+<li>[BUGFIX] Fix erroneous self-referentiality of some capnp structs</li>
+<li>[BUGFIX] Fix color format for opencv bridge</li>
+</ul>
+</div>
+<div class="section" id="v18-03">
+<span id="id4"></span><h2>18.03 (2018-03-10)<a class="headerlink" href="#v18-03" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Add more flexible GeoJSON properies to map widget</li>
+<li>Make marker geometry configurable on map widget</li>
+<li>Draw markers using last known heading on map in absence of explicit rotation values</li>
+<li>Document creation of custom capnp types</li>
+<li>Ship capnp types for atomic values and timed values</li>
+<li>Add, list and remove comments via command-line</li>
+<li>[BUGFIX] Display correct tags when paging in listing</li>
+<li>[BUGFIX] Render GeoJSON lines with correct width in Firefox</li>
+<li>[BUGFIX] Fix command-line tagging</li>
+<li>[BUGFIX] Gnss node handles absence of valid gps messages</li>
+<li>[BUGFIX] Add missing int and float formatters</li>
+<li>[BUGFIX] Validate names for newly added users and groups</li>
+<li>[BUGFIX] Document disabling of uwsgi buffering to enable downloads larger than 1GB</li>
+<li>[BUGFIX] Fix tags displayed in listing table for any but the first page</li>
+<li>[BUGFIX] Fix documentation in several places</li>
+</ul>
+</div>
+<div class="section" id="v18-02">
+<span id="id5"></span><h2>18.02 (2018-02-05)<a class="headerlink" href="#v18-02" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Preliminary support for topics with mixed message types (needs migration)</li>
+<li>Support bag sets without timestamp in filenames</li>
+<li>Speedup rendering in frontend</li>
+<li>Colorize point clouds</li>
+<li>Support running selected nodes for all collections</li>
+<li>Support listing of and force running dependent nodes</li>
+<li>Support loading of custom.css and custom frontend files</li>
+<li>[BUGFIX] Fix sexpr for getting node without dot qualifier</li>
+<li>[BUGFIX] Fix filtering for datetime fields</li>
+<li>[BUGFIX] Fix loading of cloned persistent nodes</li>
+<li>[BUGFIX] Use message definitions from bag file instead of installed (needs migration)</li>
+<li>[BUGFIX] Handle empty bag files</li>
+<li>[BUGFIX] Log error messages instead of several exceptions</li>
+</ul>
+</div>
+<div class="section" id="v17-11">
+<span id="id6"></span><h2>17.11 (2017-11-17)<a class="headerlink" href="#v17-11" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Improve s-expression functions for configuration file</li>
+<li>Switch to flat store (needs migration)</li>
+<li>Document marv robotics nodes</li>
+<li>Document configuration directives</li>
+<li>Document HTTP API</li>
+<li>Document migration from community edition 16.10</li>
+<li>Support import of datasets from community edition 16.10</li>
+<li>Corelease 17.11 community and enterprise edition</li>
+</ul>
+</div>
+<div class="section" id="v17-08">
+<span id="id7"></span><h2>17.08 (2017-08-23)<a class="headerlink" href="#v17-08" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Custom widget support</li>
+<li>OAuth support</li>
+<li>Improve documentation for marv scanner</li>
+<li>Improve documentation for frontend widgets</li>
+<li>[BUGFIX] Frontend bug and styling fixes</li>
+<li>Video widget improvements</li>
+<li>Support more image formats</li>
+<li>Support system-wide configuration</li>
+<li>Improve cli error handling and logging</li>
+</ul>
+</div>
+<div class="section" id="v17-06">
+<span id="id8"></span><h2>17.06 (2017-06-16)<a class="headerlink" href="#v17-06" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Make marv node syntax clearer to improve the node authoring experince</li>
+<li>Allow concurrent execution of multiple marv node run processes</li>
+<li>Human readable pathnames in store</li>
+<li>Improve datset query via command line</li>
+<li>Improve CLI logging</li>
+<li>Advanced access control</li>
+<li>Admin panel for user and group management</li>
+<li>Improve point cloud handling</li>
+<li>[BUGFIX] Improve tag cloud styling with a responsive design</li>
+<li>[BUGFIX] Keep frontend state and scroll positions between page refreshs</li>
+<li>[BUGFIX] Speed up loading of large collections</li>
+<li>[BUGFIX] Render multi colored trajectories with markers correctly</li>
+</ul>
+</div>
+<div class="section" id="v17-05">
+<span id="id9"></span><h2>17.05 (2017-05-05)<a class="headerlink" href="#v17-05" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Store data in an efficient binary format</li>
+<li>Use schemas to enforce data integrity</li>
+<li>Implement generator based node concurrency</li>
+<li>Optionally spawn node instances per topic or message type</li>
+<li>Manage multiple collections of different datasets</li>
+<li>Allow collections to define an arbitrary number of scanroots</li>
+<li>Configure detail views in python nodes</li>
+<li>Replace python code in config file with simpler expressions</li>
+<li>Make summary section of detail view customizable</li>
+<li>Add configurable compare view to display data of multiple datasets</li>
+<li>Improve node runner and introduce basic query cli</li>
+<li>Improve performance with reduced javascript footprint</li>
+<li>Add graphical live filters to listing page</li>
+<li>Display time added column</li>
+<li>Redesign map widget, support trajectory animations</li>
+<li>Stream huge datasets to pointcloud widget</li>
+<li>Support most of rosbag play switches in marv ros play</li>
+<li>[BUGFIX] Improve mass tagging performance</li>
+<li>[BUGFIX] Improve listing update performance</li>
+</ul>
+</div>
+<div class="section" id="v16-10">
+<span id="id10"></span><h2>16.10 (2016-10-07)<a class="headerlink" href="#v16-10" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Initial release</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Changelog</a><ul>
+<li><a class="reference internal" href="#v18-05">18.05 (2018-05-08)</a></li>
+<li><a class="reference internal" href="#v18-04">18.04 (2018-04-30)</a></li>
+<li><a class="reference internal" href="#v18-03">18.03 (2018-03-10)</a></li>
+<li><a class="reference internal" href="#v18-02">18.02 (2018-02-05)</a></li>
+<li><a class="reference internal" href="#v17-11">17.11 (2017-11-17)</a></li>
+<li><a class="reference internal" href="#v17-08">17.08 (2017-08-23)</a></li>
+<li><a class="reference internal" href="#v17-06">17.06 (2017-06-16)</a></li>
+<li><a class="reference internal" href="#v17-05">17.05 (2017-05-05)</a></li>
+<li><a class="reference internal" href="#v16-10">16.10 (2016-10-07)</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="migrate/index.html" title="previous chapter">Migration</a></li>
+      <li>Next: <a href="api/marv.html" title="next chapter">marv</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/CHANGES.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2016-2018  Ternaris.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/CHANGES.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
