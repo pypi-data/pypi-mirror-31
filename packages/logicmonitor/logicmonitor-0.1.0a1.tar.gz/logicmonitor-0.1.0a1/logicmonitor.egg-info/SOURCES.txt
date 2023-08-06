@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+logicmonitor/LogicMonitorClient.py
+logicmonitor/__init__.py
+logicmonitor.egg-info/PKG-INFO
+logicmonitor.egg-info/SOURCES.txt
+logicmonitor.egg-info/dependency_links.txt
+logicmonitor.egg-info/top_level.txt
