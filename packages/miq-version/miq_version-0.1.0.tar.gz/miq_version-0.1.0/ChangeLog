@@ -1,0 +1,34 @@
+CHANGES
+=======
+
+0.1.0
+-----
+
+* support richer version comparisaion on python3 using functools.total\_ordering
+
+0.0.5
+-----
+
+* Added old version back in
+* Fixing bare exceptions for py2.7 in travis
+* Update version for G-release upstream
+
+0.0.4
+-----
+
+* Python 3 compat on filter
+
+0.0.3
+-----
+
+* Added 5.9 support
+
+0.0.2
+-----
+
+* Added License
+
+0.0.1
+-----
+
+* Initial import
