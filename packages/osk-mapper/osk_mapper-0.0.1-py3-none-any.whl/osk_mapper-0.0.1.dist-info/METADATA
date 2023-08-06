@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: osk-mapper
+Version: 0.0.1
+Summary: Utility to map coordinates of OSK
+Home-page: https://github.com/JonnyFb421/MapleBot
+Author: Jonathon Carlyon
+Author-email: JonathonCarlyon@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: pyautogui
+Provides-Extra: dev
+Requires-Dist: pytest; extra == 'dev'
+
+UNKNOWN
+
+
