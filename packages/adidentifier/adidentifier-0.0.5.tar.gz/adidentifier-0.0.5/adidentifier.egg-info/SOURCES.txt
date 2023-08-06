@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.py
+adidentifier/README.md
+adidentifier/__init__.py
+adidentifier/__init__.pyc
+adidentifier/adidentifier.py
+adidentifier/adidentifier.pyc
+adidentifier/easylist.txt
+adidentifier/textsample.txt
+adidentifier.egg-info/PKG-INFO
+adidentifier.egg-info/SOURCES.txt
+adidentifier.egg-info/dependency_links.txt
+adidentifier.egg-info/requires.txt
+adidentifier.egg-info/top_level.txt
+adidentifier/model/id
