@@ -1,0 +1,10 @@
+snips_nlu_rust/__init__.py,sha256=BEuTgSRUgqLyFmTqsYrve05OTlF-E5QyfJEgYj9yv08,88
+snips_nlu_rust/__version__,sha256=P-qB0XcIf10zgIk9lbhlc6gDs07UVBnsOBvdd29SbO4,7
+snips_nlu_rust/nlu_engine.py,sha256=t_vK2IUuCW6UXljRGZ-sH2NHd5eE7rkipIgz4IQw1Zk,1894
+snips_nlu_rust/utils.py,sha256=xoLkt0QDQse-s6fFII8LpYNT9nV5JfwIlqN-gDxaWh8,390
+snips_nlu_rust/dylib/.gitignore,sha256=x3RG5yaqf1zISNEpGwZUEQExJiMnrZn7bTAQJcg97og,18
+snips_nlu_rust/dylib/libsnips_nlu_rs.cpython-35m-darwin.so,sha256=mgnngfDBdsQn9n7LYVTQTRmT5BjPRo0xqcIrmrYM5KY,69800804
+snips_nlu_rust-0.56.0.dist-info/METADATA,sha256=32n8i7DTO6_n1qNOYKefqGwO4UXVv06xDgZ09rTlkdI,914
+snips_nlu_rust-0.56.0.dist-info/RECORD,,
+snips_nlu_rust-0.56.0.dist-info/WHEEL,sha256=aV1OtNAl3NylhxpZxZz9tRclXn0YUY7cvK-BVnO7sFw,111
+snips_nlu_rust-0.56.0.dist-info/top_level.txt,sha256=cQ4MUnmX5pf2mLCDxZP8K7GR_DsYR3buHCMBH1hbhs0,15
