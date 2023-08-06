@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+cognises/__init__.py
+cognises/create.py
+cognises/login_check.py
+cognises/permissions_req.py
+cognises.egg-info/PKG-INFO
+cognises.egg-info/SOURCES.txt
+cognises.egg-info/dependency_links.txt
+cognises.egg-info/not-zip-safe
+cognises.egg-info/requires.txt
+cognises.egg-info/top_level.txt
