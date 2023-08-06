@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        cfn-cli=awscfncli.__main__:main
+    
