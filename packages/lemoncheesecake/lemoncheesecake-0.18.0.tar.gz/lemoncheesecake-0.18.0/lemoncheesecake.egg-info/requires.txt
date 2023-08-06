@@ -1,0 +1,16 @@
+colorama
+termcolor
+terminaltables
+orderedset
+
+[junit]
+lxml
+
+[reportportal]
+reportportal-client
+
+[slack]
+slacker
+
+[xml]
+lxml
