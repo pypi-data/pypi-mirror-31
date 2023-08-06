@@ -1,0 +1,6 @@
+Products.CMFPlone
+setuptools
+zope.formlib
+
+[test]
+Products.PloneTestCase
