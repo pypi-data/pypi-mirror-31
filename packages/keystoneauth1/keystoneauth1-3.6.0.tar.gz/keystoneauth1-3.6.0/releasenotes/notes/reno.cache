@@ -1,0 +1,22 @@
+---
+file-contents:
+  releasenotes/notes/expose-endpoint-status-6195a6b76d8a8de8.yaml:
+    features: ['Added a ''status'' field to the `EndpointData` object which contains
+        a
+
+        canonicalized version of the information in the status field of discovery
+
+        documents.
+
+        ']
+  releasenotes/notes/serice-type-aliases-249454829c57f39a.yaml:
+    features: ['Added support for service-type aliases as defined in the Service Types
+
+        Authority when doing catalog lookups.
+
+        ']
+notes:
+- files:
+  - [releasenotes/notes/expose-endpoint-status-6195a6b76d8a8de8.yaml, 43c6e378f944227068ed815d84c124d6a7cc9d08]
+  - [releasenotes/notes/serice-type-aliases-249454829c57f39a.yaml, 79cd91e75580511171a3a61dc6f3c70e275f6348]
+  version: 3.6.0
