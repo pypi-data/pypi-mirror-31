@@ -1,0 +1,3 @@
+[console_scripts]
+get-mac = getmac.__main__:main
+
