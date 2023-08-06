@@ -1,0 +1,21 @@
+Metadata-Version: 1.0
+Name: InfluenceManager
+Version: 0.0.4
+Summary: Backend module for retrieving top influencers from Twitter.
+Home-page: UNKNOWN
+Author: Ash Prince
+Author-email: i7629228@bournemouth.ac.uk
+License: UNKNOWN
+Description: <h1>InfluenceManager</h1>
+        <p>
+        Influence Manager is a Python backend module responsible for influencer 
+        identification using the Twitter API.
+        </p>
+        
+        <p>
+        Ash Prince, 2018.
+        </p>
+        
+        
+        
+Platform: UNKNOWN
