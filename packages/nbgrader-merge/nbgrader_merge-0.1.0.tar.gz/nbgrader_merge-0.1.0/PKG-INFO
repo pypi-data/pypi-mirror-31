@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: nbgrader_merge
+Version: 0.1.0
+Summary: Merge nbgrader exercise notebooks
+Home-page: https://github.com/hcastilho/nbgrader_merge
+Author: Hugo Castilho
+Author-email: hcastilho@lisbondatascience.org
+License: MIT license
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6

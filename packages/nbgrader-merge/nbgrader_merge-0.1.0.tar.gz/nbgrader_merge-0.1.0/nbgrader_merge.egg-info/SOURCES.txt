@@ -1,0 +1,15 @@
+.gitignore
+AUTHORS.rst
+LICENSE
+Pipfile
+Pipfile.lock
+README.md
+setup.py
+nbgrader_merge/__init__.py
+nbgrader_merge/__main__.py
+nbgrader_merge.egg-info/PKG-INFO
+nbgrader_merge.egg-info/SOURCES.txt
+nbgrader_merge.egg-info/dependency_links.txt
+nbgrader_merge.egg-info/entry_points.txt
+nbgrader_merge.egg-info/not-zip-safe
+nbgrader_merge.egg-info/top_level.txt

@@ -1,0 +1,3 @@
+[console_scripts]
+nbgrader_merge = nbgrader_merge.__main__:main
+
