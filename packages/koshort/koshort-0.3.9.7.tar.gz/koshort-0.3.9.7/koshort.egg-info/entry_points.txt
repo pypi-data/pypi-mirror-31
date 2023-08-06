@@ -1,0 +1,3 @@
+[console_scripts]
+stream_twitter = koshort.__scripts__.tweeter:main
+
