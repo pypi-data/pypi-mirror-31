@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: pvfr-passeport-credential
+Version: 1.0.2
+Summary: Credentials generator for the Passeport vacances Fribourg
+Home-page: https://github.com/passeport-vacances/pvfr-passeport-credential
+Author: Jacques Supcik
+Author-email: UNKNOWN
+License: Apache 2.0
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Security
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+
+Library for generating verifiable credentials for the Passeport vacances Fribourg
+
+
