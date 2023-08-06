@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: ifaceinfo
+Version: 0.2.1
+Summary: python class that return networks informations (linux OS) in json/dict format.
+Home-page: https://github.com/atam84/ifaceinfo
+Author: Mohamed Amine TAMDY
+Author-email: amine.tamdy@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: network interface route tcp udp analyser development
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
