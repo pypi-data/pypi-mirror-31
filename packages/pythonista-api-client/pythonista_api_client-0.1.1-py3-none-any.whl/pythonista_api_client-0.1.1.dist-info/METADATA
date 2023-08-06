@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: pythonista-api-client
+Version: 0.1.1
+Summary: Making requests to rest apis in pythonista.
+Home-page: https://github.com/ephes/pythonista_api_client
+Author: Jochen Wersdörfer
+Author-email: jochen-pythonista@wersdoerfer.de
+License: UNKNOWN
+Keywords: api rest pythonista jwt token drf
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Requires-Dist: requests
+Provides-Extra: dev
+Requires-Dist: pytest; extra == 'dev'
+Requires-Dist: flake8; extra == 'dev'
+
+# Pythonista API Client
+
+## Installation
+
+You can use the checked out repository directly. There's no package at the moment.
+
+### Desktop
+
+```shell
+pip install -r requirements.txt
+python client.py
+```
+
+### iOS
+
+If you are using pythonista 3, there's an iCloud integration. If you checked out the repository in the pythonista 3 icloud directory, all changes should be transferred to your iOS-device immediately.
+
+```shell
+cd "${HOME}/Library/Mobile Documents/iCloud~com~omz-software~Pythonista3/Documents"
+git clone https://github.com/ephes/pythonista_api_client
+```
+
+If you are using the client_api as an app extension, you have to import it first from the icloud directory to your local devices file system. And you have to import it every time you change something.
+
+
