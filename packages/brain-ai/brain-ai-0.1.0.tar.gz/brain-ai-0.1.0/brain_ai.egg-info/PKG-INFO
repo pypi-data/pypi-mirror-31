@@ -1,0 +1,25 @@
+Metadata-Version: 1.1
+Name: brain-ai
+Version: 0.1.0
+Summary: Build your own intelligent personal assistant.
+Home-page: https://github.com/brain-ai/brain
+Author: Alexander Paul P. Quinit
+Author-email: paulquinit@gmail.com
+License: GNU General Public License v3 (GPLv3)
+Description: Brain.ai is an open source intelligent personal assistant development package.
+Keywords: assistant bot TTS STT brain
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Home Automation
+Classifier: Topic :: Multimedia :: Sound/Audio :: Speech
+Classifier: Topic :: Multimedia :: Sound/Audio :: Sound Synthesis
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
