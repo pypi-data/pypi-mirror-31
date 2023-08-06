@@ -1,0 +1,11 @@
+specd/__init__.py,sha256=CtqvWVvlwArzCcMv54bVcfg7LVg3XN9pGj4KULeIoQs,450
+specd/app.py,sha256=UZfXm-MuIs-HJBbrJdZtCKOMOaLjsOy3YUVQWHhvXo0,1000
+specd/cli.py,sha256=fDF7Z4ncjlpO8RXwunRiy6v6d2ldLQqGBH8Q4w1WWz4,1502
+specd/model.py,sha256=cYQFNT_m8pM6Kk6-ycZTOgakycsmBO0YdY06vHc88pk,6513
+specd/tasks.py,sha256=tChbmqfYQYT-5h3V83AR57LrKMa7Acz9QyTQwKZZqg4,2152
+specd/utils.py,sha256=_Vp4aVxEhlesMaG_qbIJ1yvCKV1DEzMeyWy8TbKqWv4,530
+specd-0.1.1.dist-info/METADATA,sha256=ZZBOiV8nyhbj4iEWvaT-yQUSCnZJoVR9nkS99HoerYY,796
+specd-0.1.1.dist-info/RECORD,,
+specd-0.1.1.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+specd-0.1.1.dist-info/entry_points.txt,sha256=xNvwXrc6DXoWN0aTrhNdVdq77CN3o-7PnrH4ifORDA0,41
+specd-0.1.1.dist-info/top_level.txt,sha256=0wHwTjfbeZr3AP8SK5QvbunOLXt1ag1M-hfczL0pJsA,6
