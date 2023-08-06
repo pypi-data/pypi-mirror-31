@@ -1,0 +1,10 @@
+[console_scripts]
+count_unique = igseqanalysis.count_unique:main
+csv2fasta = igseqanalysis.csv2fasta:main
+format_cluster = igseqanalysis.format_cluster:main
+igblast_IG = igseqanalysis.igblast_IG:main
+igblast_TCR = igseqanalysis.igblast_TCR:main
+pair_by_id = igseqanalysis.pair_by_id:main
+parse_igblast = igseqanalysis.parse_igblast:main
+translate_table = igseqanalysis.translate_table:main
+
