@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: dict
+Version: 1.0.3
+Summary: dict replacement
+Home-page: https://github.com/looking-for-a-job/dict.py
+License: UNKNOWN
+Description: ### Install
+        
+        ```bash
+        $ [sudo] pip install dict
+        ```
+        
+        ### Features
+        
+        
+        *	**attribute-style access**
+        * 	**None** instead of **KeyError**
+        * 	safe **remove**
+        * 	jQuery like **methods chaining**
+        
+        ### Usage
+        
+        ```python
+        >>> from dict import dict
+        ```
+        
+        ### Examples
+        
+        ```python
+        >>> dict(k="v")["k"]
+        "v"
+        
+        >>>  dict(k="v").k
+        "v"
+        
+        >>> dict(k="v")["not_existing"]
+        None
+        
+        >>> dict(k="v").not_existing
+        None
+        
+        >>> dict(k="v").get("K",i=True) # case insensitive
+        ```
+        
+        ### Sources
+        
+        +   [`dict.dict(dict)`](https://github.com/looking-for-a-job/dict.py/blob/master/dict/__init__.py)
+Keywords: dict
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development
+Description-Content-Type: text/markdown
