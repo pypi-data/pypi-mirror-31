@@ -1,0 +1,10 @@
+MANIFEST.in
+containers.py
+requirements.txt
+setup.py
+containers.egg-info/PKG-INFO
+containers.egg-info/SOURCES.txt
+containers.egg-info/dependency_links.txt
+containers.egg-info/requires.txt
+containers.egg-info/top_level.txt
+test/test_containers.py
