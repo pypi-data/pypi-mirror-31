@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: openhtf
+Version: 1.3.0
+Summary: OpenHTF, the open hardware testing framework.
+Home-page: UNKNOWN
+Author: John Hawley
+Author-email: madsci@google.com
+Maintainer: Joe Ethier
+Maintainer-email: jethier@google.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Provides-Extra: update_units
+Provides-Extra: serial_collection_plug
+Provides-Extra: usb_plugs
