@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: gameOfFifteen
+Version: 4.0
+Summary: The game of fifteen
+Home-page: https://github.com/gameOfFifteen
+Author: Dev: Vikarowitsch Test:Softy
+Author-email: vikarowitsch@yahoo.de
+License: MIT
+Keywords: Sliding puzzle
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Games/Entertainment :: Puzzle Games
+Requires-Dist: Pillow
+
+GameOfFifteen
+-------------
+Also known as Gem Puzzle, Boss Puzzle, Mystic Square
+
+Development: Vikarowitsch
+Testing: Softy
+
+To use (with caution), simply do::
+
+    >>> import gameOfFifteen
+    >>> gameOfFifteen.gui()
+
+
