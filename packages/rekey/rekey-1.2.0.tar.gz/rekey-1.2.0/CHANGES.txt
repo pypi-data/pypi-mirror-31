@@ -1,0 +1,26 @@
+v1.2.0, 2018-04-27
+    53fc43a add support for tuples
+v1.1.0, 2018-04-27
+    5049107 bail early if no-op
+    7fbac90 integrate pluckit's relaxed constraints...and follow suit
+    8639f05 more tests
+v1.0.0, 2018-04-27
+    119cbf0 gc
+    370df15 Update README.md
+    e0a25e6 test some corner cases
+    c12bc54 massive overhaul of library, preparing it for production.  add set support; move builtin modifications into separate, non-default mode; simplify key/value extraction using pluckit library; update and add test coverage
+    9871f55 upgrade release script
+v0.1.0, 2017-01-15
+    b8a69af add dict support
+    d21c067 0 is falsy in py...guard against mistakes.  add index support
+    e2aada0 more tests
+    a2c83d0 rearrange tests and wire them up
+    09641b2 reorder to avoid using function as attr
+    89cc5d2 add testing
+    242a6e8 add testing
+    887699e reorg.  catch corner cases with exception
+    f6579d3 remove debugging code
+    451a943 cleanup afterwards
+v0.0.1, 2017-01-15
+    
+
