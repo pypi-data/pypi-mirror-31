@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        bch=bch.cli:main
+    

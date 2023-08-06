@@ -1,0 +1,6 @@
+Click>=6.0
+click-log>=0.2.1
+paho-mqtt>=1.0
+pyserial>=3.0
+PyYAML>=3.11
+simplejson>=3.6.0
