@@ -1,0 +1,17 @@
+setup.py
+pysubgroup/__init__.py
+pysubgroup/algorithms.py
+pysubgroup/boolean_target.py
+pysubgroup/bsd.py
+pysubgroup/fi_target.py
+pysubgroup/measures.py
+pysubgroup/numeric_target.py
+pysubgroup/subgroup.py
+pysubgroup/test.py
+pysubgroup/utils.py
+pysubgroup/visualization.py
+pysubgroup/pysubgroup.egg-info/PKG-INFO
+pysubgroup/pysubgroup.egg-info/SOURCES.txt
+pysubgroup/pysubgroup.egg-info/dependency_links.txt
+pysubgroup/pysubgroup.egg-info/requires.txt
+pysubgroup/pysubgroup.egg-info/top_level.txt
