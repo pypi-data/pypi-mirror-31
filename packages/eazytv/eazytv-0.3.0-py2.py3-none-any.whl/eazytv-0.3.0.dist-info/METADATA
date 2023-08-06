@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: eazytv
+Version: 0.3.0
+Summary: Command Line Utility for search and download shows from EZTV
+Home-page: https://github.com/Germione/easytv
+Author: Jerome Pradier
+Author-email: jerome.pradier@gmail.com
+License: MIT
+Keywords: cli tools torrent eztv
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: tabulate
+
+EasyTV
+=============================
+
+Command Line Utility for search and download shows from EZTV
+
+Setup
+-----
+
+`eazytv <https://pypi.org/project/eazytv/>`_ is available on PyPI.
+
+Using pip:
+
+::
+
+    $ pip install eazytv
+
+Usage
+-----
+
+::
+
+    Usage: eazytv [OPTIONS] COMMAND [ARGS]...
+
+    Options:
+        --version   Show the version and exit.
+        -h, --help  Show this message and exit.
+
+    Commands:
+        search    Search a show
+        showlist  Display the showlist
+
+
