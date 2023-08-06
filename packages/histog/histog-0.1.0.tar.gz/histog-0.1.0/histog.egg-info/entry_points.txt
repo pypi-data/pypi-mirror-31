@@ -1,0 +1,3 @@
+[console_scripts]
+histog = histog.__main__:main
+

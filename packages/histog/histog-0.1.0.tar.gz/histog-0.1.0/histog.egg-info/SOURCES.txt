@@ -1,0 +1,9 @@
+README.md
+setup.py
+histog/__init__.py
+histog/__main__.py
+histog.egg-info/PKG-INFO
+histog.egg-info/SOURCES.txt
+histog.egg-info/dependency_links.txt
+histog.egg-info/entry_points.txt
+histog.egg-info/top_level.txt
