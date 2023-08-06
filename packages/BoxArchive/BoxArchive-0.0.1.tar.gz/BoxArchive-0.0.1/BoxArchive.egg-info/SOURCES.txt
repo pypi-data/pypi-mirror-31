@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+BoxArchive.egg-info/PKG-INFO
+BoxArchive.egg-info/SOURCES.txt
+BoxArchive.egg-info/dependency_links.txt
+BoxArchive.egg-info/entry_points.txt
+BoxArchive.egg-info/not-zip-safe
+BoxArchive.egg-info/requires.txt
+BoxArchive.egg-info/top_level.txt
+box_archive/__init__.py
+box_archive/cli.py
