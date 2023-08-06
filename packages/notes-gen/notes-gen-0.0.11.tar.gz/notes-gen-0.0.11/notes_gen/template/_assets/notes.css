@@ -1,0 +1,86 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto;
+}
+
+main {
+    padding: 0.5em;
+}
+
+.notes-content{
+    padding: 0.5em 5em;
+    border: 2px solid black;
+}
+
+.notes-title{
+    font-family: 'Indie Flower', cursive;
+    font-weight: normal;
+    font-size: 2em;
+    text-align: center;
+}
+
+.notes-content {
+    font-family: 'Dosis', sans-serif;
+    line-height: 1.6em;
+}
+
+.notes-content h1 {
+    text-align: center;
+}
+
+.notes-content #TOC {
+    border: 1px solid #a2a9b1;
+    background-color: #efecec;
+    font-size: 95%;
+}
+
+.notes-content #TOC h1 {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+/* Code Style */
+pre.sourceCode {
+    background-color: #22323a;
+    color: #cdd3de;
+    padding: 1em;
+}
+
+code.sourceCode .kw, code.sourceCode .cf {
+    /* Keyword */
+
+    color: #c594c5;
+}
+
+code.sourceCode .at {
+    /* Functions */
+
+    color: #4d7fb5;
+}
+
+code.sourceCode .st {
+    /* String */
+
+    color: #99c794;
+}
+
+code.sourceCode .dv, code.sourceCode .fl {
+    /* Constant */
+
+    color: #f99157; 
+}
+
+code.sourceCode .co {
+    /* comments */
+
+    color: #65737e;
+}
+/* /Code Style */
