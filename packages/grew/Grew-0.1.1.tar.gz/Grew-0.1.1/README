@@ -1,0 +1,6 @@
+# Python binding for Grew
+
+## prerequisites
+ * add the subdir `src_python` to the `PYTHONPATH` environment variable
+ * add the subdir `bin` to the `PATH` environment variable
+ 
