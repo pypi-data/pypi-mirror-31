@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: torchnet-sax
+Version: 0.0.2
+Summary: an abstraction to train neural networks
+Home-page: https://github.com/alexsax/tnt/archive/v0.0.1-alpha.1.tar.gz
+Author: Sergey Zagoruyko
+Author-email: sergey.zagoruyko@enpc.fr
+License: BSD
+Description: an abstraction to train neural networks
+Platform: UNKNOWN
