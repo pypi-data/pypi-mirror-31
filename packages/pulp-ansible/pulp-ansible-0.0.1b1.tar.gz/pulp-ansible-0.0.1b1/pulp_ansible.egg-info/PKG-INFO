@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: pulp-ansible
+Version: 0.0.1b1
+Summary: Pulp plugin to manage Ansible content, e.g. roles
+Home-page: https://github.com/pulp/pulp_ansible
+Author: Pulp Ansible Plugin Project Developers
+Author-email: pulp-dev@redhat.com
+License: UNKNOWN
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: Django
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
