@@ -1,0 +1,40 @@
+Metadata-Version: 1.1
+Name: django-raster
+Version: 0.6
+Summary: Raster file implementation for Django based on PostGis
+Home-page: https://github.com/geodesign/django-raster
+Author: Daniel Wiesmann
+Author-email: daniel@urbmet.com
+License: BSD
+Description: Rasters for Django
+        ==================
+        
+        .. image:: https://travis-ci.org/geodesign/django-raster.svg?branch=master
+            :target: https://travis-ci.org/geodesign/django-raster
+        
+        .. image:: https://coveralls.io/repos/github/geodesign/django-raster/badge.svg?branch=master
+            :target: https://coveralls.io/github/geodesign/django-raster?branch=master
+        
+        Django-raster provides raster data integration for Django projects
+        with a PostGIS database backend.
+        
+        `See the docs for more information`__
+        
+        __ http://django-raster.readthedocs.org/en/latest/
+        
+Keywords: django,raster,gis,gdal,celery,geo,spatial
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Django
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Scientific/Engineering :: GIS
