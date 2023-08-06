@@ -1,0 +1,11 @@
+README.md
+README.txt
+setup.py
+stream_magic/__init__.py
+stream_magic/device.py
+stream_magic/discovery.py
+stream_magic.egg-info/PKG-INFO
+stream_magic.egg-info/SOURCES.txt
+stream_magic.egg-info/dependency_links.txt
+stream_magic.egg-info/requires.txt
+stream_magic.egg-info/top_level.txt
