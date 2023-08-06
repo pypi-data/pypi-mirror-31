@@ -1,0 +1,10 @@
+geographiclib<2,>=1.49
+
+[dev]
+coverage
+pytest>=3
+mock
+sphinx
+
+[timezone]
+pytz
