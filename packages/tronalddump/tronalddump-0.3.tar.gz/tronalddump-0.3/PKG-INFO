@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: tronalddump
+Version: 0.3
+Summary: Donald Trump quotes
+Home-page: https://bitbucket.org/dabcoder/tronalddump
+Author: David B.
+Author-email: dialindo7@gmail.com
+License: GNU v3
+Description: Python wrapper for the Tronald Dump API: https://docs.tronalddump.io/
+Keywords: donald trump quotes
+Platform: UNKNOWN
+Requires-Python: >=3
