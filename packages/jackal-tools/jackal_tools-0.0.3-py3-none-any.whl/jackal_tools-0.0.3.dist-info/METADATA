@@ -1,0 +1,19 @@
+Metadata-Version: 2.0
+Name: jackal-tools
+Version: 0.0.3
+Summary: Tools for jackal.
+Home-page: https://github.com/mwgielen/jackal-tools/
+Author: Matthijs Gielen
+Author-email: github@mwgielen.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Dist: jackal
+Requires-Dist: psutil
+Requires-Dist: scapy-python3
+
+UNKNOWN
+
+
