@@ -1,0 +1,5 @@
+django<=1.10.6,>1.9
+cherrypy<=8.9.1,>6
+requests
+m2crypto
+pyasn1
