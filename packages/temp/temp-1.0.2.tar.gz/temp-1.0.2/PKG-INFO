@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: temp
+Version: 1.0.2
+Summary: tempdir(), tempfile() functions
+Home-page: https://github.com/looking-for-a-job/temp.py
+License: UNKNOWN
+Description: ### Install
+        
+        ```bash
+        $ [sudo] pip install temp
+        ```
+        
+        ### Usage
+        
+        ```python
+        >>> from temp import tempdir, tempfile, TMPDIR
+        
+        >>> tempdir() # dir
+        >>> tempfile() # file
+        ```
+        
+        ### Examples
+        
+        ```python
+        >>> tempdir() # dir
+        '/var/folders/rv/gy6_gnfs1d7_pd1518p27tsr0000gn/T/tmpqlLDxb'
+        
+        >>> tempfile() # file
+        '/var/folders/rv/gy6_gnfs1d7_pd1518p27tsr0000gn/T/tmpsctFHJ'
+        
+        >>> TMPDIR
+        '/var/folders/rv/gy6_gnfs1d7_pd1518p27tsr0000gn/T'
+        ```
+        
+        ### Sources
+        
+        +   [`temp.tempdir()`](https://github.com/looking-for-a-job/temp.py/blob/master/temp/__init__.py)
+        +   [`temp.tempfile()`](https://github.com/looking-for-a-job/temp.py/blob/master/temp/__init__.py)
+Keywords: temp tempdir tempfile
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development
+Description-Content-Type: text/markdown
