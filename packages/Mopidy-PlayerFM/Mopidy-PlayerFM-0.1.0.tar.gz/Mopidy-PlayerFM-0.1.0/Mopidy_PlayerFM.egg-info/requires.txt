@@ -1,0 +1,9 @@
+Mopidy >= 1.0
+Pykka >= 1.1
+beautifulsoup4 >= 4.5
+ipaddress >= 1.0.17
+pyopenssl >= 16.2.0
+requests >= 2.4.2
+setuptools
+tornado >= 4.4, < 5
+urllib3 >= 1.22
