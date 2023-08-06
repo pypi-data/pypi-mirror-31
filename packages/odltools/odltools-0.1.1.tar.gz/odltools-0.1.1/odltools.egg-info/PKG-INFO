@@ -1,0 +1,53 @@
+Metadata-Version: 1.1
+Name: odltools
+Version: 0.1.1
+Summary: NetVirt tools for troubleshooting OpenDaylight and OpenStack integration
+Home-page: http://github.com/shague/odltools
+Author: Sam Hague, Vishal Thapar
+Author-email: shague@gmail.com, thapar@gmail.com
+License: Eclipse Public License
+Description: ========
+        odltools
+        ========
+        A tool to troubleshoot the NetVirt OpenDaylight OpenStack integration.
+        
+        The tool can be used to get mdsal model dumps, openvswitch flow dumps
+        and extracting dumps from CSIT output.xml files.
+        
+        *****
+        Usage
+        *****
+        ::
+        
+          usage: python -m odltools [-h] [-v] [-V] {csit,model,analyze} ...
+        
+          OpenDaylight Troubleshooting Tools
+        
+          optional arguments:
+            -h, --help            show this help message and exit
+            -v, --verbose         verbosity (-v, -vv)
+            -V, --version         show program's version number and exit
+        
+          subcommands:
+            Command Tool
+        
+            {csit,model,analyze}
+        
+        ************
+        Installation
+        ************
+        ::
+        
+          pip install odltools
+        
+Keywords: development
+Platform: All
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Eclipse Public License 1.0 (EPL-1.0)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities
