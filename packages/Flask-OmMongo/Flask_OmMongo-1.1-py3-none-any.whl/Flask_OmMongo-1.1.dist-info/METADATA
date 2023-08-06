@@ -1,0 +1,23 @@
+Metadata-Version: 2.0
+Name: Flask-OmMongo
+Version: 1.1
+Summary: Add Flask support for MongoDB using OmMongo.
+Home-page: https://github.com/bapakode/Flask-OmMongo
+Author: Bapakode Open Source
+Author-email: opensource@bapakode.com
+License: BSD
+Platform: any
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: Flask (>=0.9)
+Requires-Dist: OmMongo
+Requires-Dist: pymongo (>=2.8.1)
+
+UNKNOWN
+
+
