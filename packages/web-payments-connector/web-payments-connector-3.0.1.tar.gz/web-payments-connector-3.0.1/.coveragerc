@@ -1,0 +1,14 @@
+[run]
+branch = True
+omit =
+    tests/*
+source =
+    web_payments
+    web_payments_dummy
+    web_payments_externalpayments
+
+[report]
+exclude_lines =
+    pragma: no cover
+    raise NotImplementedError
+    return NotImplemented
