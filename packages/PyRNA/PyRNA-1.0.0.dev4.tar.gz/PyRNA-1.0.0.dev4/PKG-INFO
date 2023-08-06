@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: PyRNA
+Version: 1.0.0.dev4
+Summary: View RNA secondary structure and BLAST search it for identification
+Home-page: https://github.com/pypa/sampleproject
+Author: Jan Aspan
+Author-email: jan.aspan@gmail.com
+License: UNKNOWN
+Description: This is the PyRNA README.rst
+Keywords: RNA secondary structure BLAST ViennaRNA
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Education
+Classifier: License :: OSI Approved
+Classifier: Programming Language :: Python :: 3.6
