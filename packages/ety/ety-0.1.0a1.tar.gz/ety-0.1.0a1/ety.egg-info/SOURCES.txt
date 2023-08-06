@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+ety/__init__.py
+ety/origins.json
+ety.egg-info/PKG-INFO
+ety.egg-info/SOURCES.txt
+ety.egg-info/dependency_links.txt
+ety.egg-info/entry_points.txt
+ety.egg-info/requires.txt
+ety.egg-info/top_level.txt
