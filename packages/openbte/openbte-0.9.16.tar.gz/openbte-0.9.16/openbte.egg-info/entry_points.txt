@@ -1,0 +1,5 @@
+[console_scripts]
+download_openbte_example = openbte.download_openbte_example:main
+openbte = openbte.__main__:main
+shengbte2openbte = openbte.shengbte2openbte:main
+
