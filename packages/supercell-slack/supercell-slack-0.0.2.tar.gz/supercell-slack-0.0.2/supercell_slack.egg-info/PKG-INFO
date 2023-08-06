@@ -1,0 +1,19 @@
+Metadata-Version: 1.0
+Name: supercell-slack
+Version: 0.0.2
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Scott Snyder
+Author-email: scott.snyder@capitalone.com
+License: Creative Commons Attribution-Noncommercial-Share Alike license
+Description-Content-Type: UNKNOWN
+Description: ===========
+        Support Bot V0.0.2
+        ===========
+        
+        Support Bot makes it easy to send a message via slack from our Supercell support bot!
+        
+        import support_bot
+        
+        support_bot.send_message(channel='some_channel',message='This is a message')
+Platform: UNKNOWN
