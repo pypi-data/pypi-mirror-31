@@ -1,0 +1,19 @@
+# A Health Checker for Linux
+This python script will regularly check key Linux health items and report to a log file
+
+## Installation
+```
+pip install ardexa-black-box
+```
+
+## Operation and Log Files
+- The cron entry will run the script every 5 minutes.
+- Results will be logged in the file `/var/log/ardexa-black-box.log`
+- If high CPU, or SWAP usage is detected, further details will be logged in the file: `var/log/ardexa-black-box-dumps.log`
+- Log files will be kep for 180 days, and rotated daily
+
+## Changes on Feb 2018. Vers 1.5.0
+1. Collect and log variables from Agent V2.0.0
+2. Allow NS Lookup ardexa.broker.com using 8.8.8.8, if the DNS is bad
+3. Take a copy of resolv.conf at the start of the day. Also take a copy when the DNS is bad
+4. Will now try to ping broker.ardexa.com instead of google.com

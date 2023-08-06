@@ -1,0 +1,12 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+ardexa_black_box.py
+setup.cfg
+setup.py
+ardexa_black_box.egg-info/PKG-INFO
+ardexa_black_box.egg-info/SOURCES.txt
+ardexa_black_box.egg-info/dependency_links.txt
+ardexa_black_box.egg-info/entry_points.txt
+ardexa_black_box.egg-info/requires.txt
+ardexa_black_box.egg-info/top_level.txt
