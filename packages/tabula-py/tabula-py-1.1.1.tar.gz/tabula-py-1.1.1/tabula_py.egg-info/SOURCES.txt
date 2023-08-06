@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+tabula/__init__.py
+tabula/__version__.py
+tabula/tabula-1.0.1-jar-with-dependencies.jar
+tabula/util.py
+tabula/wrapper.py
+tabula_py.egg-info/PKG-INFO
+tabula_py.egg-info/SOURCES.txt
+tabula_py.egg-info/dependency_links.txt
+tabula_py.egg-info/requires.txt
+tabula_py.egg-info/top_level.txt
