@@ -1,0 +1,14 @@
+RMDL/BuildModel.py,sha256=nxx1YeMat9umyEWZehvcjVZ6RPsYbx8datyEs4mpGcs,18024
+RMDL/Global.py,sha256=LAj2PRE074BkkuWtP1x-h_eKdq6nEUjT8tg1YgExwHk,840
+RMDL/Plot.py,sha256=1io0esNKe_SFnx62AHUtIABDlrzCpAdJHuqCVQ9qr60,3819
+RMDL/RMDL_Image.py,sha256=Kh0IPGx7va03cEt3YP88KrjIO9zWzAdKno4tGWuD_HM,10425
+RMDL/RMDL_Text.py,sha256=yfdL_ypseprE6Dqfd9NAMZNRzWiry-i7KN6d7tW9WVA,14431
+RMDL/__init__.py,sha256=MHolaSM4oQHy7QZSfcOPyhrOQn7w9P-PPFI5CPGgciM,895
+RMDL/text_feature_extraction.py,sha256=uPV8nxpiASHZ5t_MOa3Saz_rNTHGm3vuwAjW_lzJSJU,5155
+RMDL/Download/Download_Glove.py,sha256=DHs0zEaPSUHQRbSpDAmfjFEZhH5DWZr8WJSFYwdyASU,2551
+RMDL/Download/Download_WOS.py,sha256=jxqHHjxeMcmXjlscCuFye_ra9zpH4lGLU3796BqaIG8,1989
+RMDL/Download/__init__.py,sha256=C83SMiL97Axylf69s5E7XBRHDw3zNBA8lf-8Iymj2rY,773
+RMDL-1.0.1.dist-info/METADATA,sha256=IwxOPEIzCxnYBCpujRX1W54amD7iLzSjofbECo4do78,27547
+RMDL-1.0.1.dist-info/RECORD,,
+RMDL-1.0.1.dist-info/WHEEL,sha256=saUSQBLOUjf5ACZdNkhQ0lB6XrHU-l4vpzxq_W1n_AY,116
+RMDL-1.0.1.dist-info/top_level.txt,sha256=e_7RggBZhG9dUabStcdukWc6E0UX5pIrapvGv6aq0QM,5
