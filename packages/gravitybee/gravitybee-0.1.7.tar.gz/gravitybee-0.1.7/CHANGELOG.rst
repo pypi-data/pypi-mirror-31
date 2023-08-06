@@ -1,0 +1,34 @@
+CHANGE LOG
+==========
+
+0.1.7 - 2018.05.11
+------------------
+* [BUG FIX] Fix exit code (was returning True)
+
+0.1.6 - 2018.05.03
+------------------
+* [ENHANCEMENT] Follow format prescribed by satsuki for output
+  file (potential for multiple files)
+
+0.1.5 - 2018.05.01
+------------------
+* [ENHANCEMENT] Add mime-type and label to .json formatted file
+  information stored in gravitybee.file
+
+0.1.3 - 2018.05.01
+------------------
+* [ENHANCEMENT] Create gravitybee.file with name of standalone
+  application
+
+0.1.2 - 2018.04.27
+------------------
+* [ENHANCEMENT] Provide standalone file and path
+* [Bug Fix] Path bug.
+
+0.1.1 - 2018.04.26
+------------------
+* [Bug Fix] Many bug fixes.
+
+0.1.0 - 2018.04.20
+------------------
+* Initial release!
