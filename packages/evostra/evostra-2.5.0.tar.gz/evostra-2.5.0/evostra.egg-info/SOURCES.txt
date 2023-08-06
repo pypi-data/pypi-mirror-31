@@ -1,0 +1,15 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+evostra/__init__.py
+evostra.egg-info/PKG-INFO
+evostra.egg-info/SOURCES.txt
+evostra.egg-info/dependency_links.txt
+evostra.egg-info/requires.txt
+evostra.egg-info/top_level.txt
+evostra/algorithms/__init__.py
+evostra/algorithms/evolution_strategy.py
+evostra/models/__init__.py
+evostra/models/feed_forward_network.py
