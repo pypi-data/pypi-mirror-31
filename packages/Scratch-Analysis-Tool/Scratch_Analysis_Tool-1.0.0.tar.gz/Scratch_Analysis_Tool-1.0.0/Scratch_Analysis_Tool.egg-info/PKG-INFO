@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: Scratch-Analysis-Tool
+Version: 1.0.0
+Summary: Scratch Analysis Tool(SAT)
+Home-page: https://github.com/BUPT902-Scratch/ScratchAnalysis
+Author: XiaoLing Chai
+Author-email: 347920697@qq.com
+License: MIT
+Description: Scratch Analysis Tool(SAT)
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Education
+Classifier: Topic :: Education :: Computer Aided Instruction (CAI)
+Classifier: Topic :: Education :: Testing
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
