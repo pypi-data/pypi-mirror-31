@@ -1,0 +1,16 @@
+README
+setup.py
+lib/tabdelim.py
+lib/textinput.py
+lib/textinput.egg-info/PKG-INFO
+lib/textinput.egg-info/SOURCES.txt
+lib/textinput.egg-info/dependency_links.txt
+lib/textinput.egg-info/top_level.txt
+lib/textinput.egg-info/zip-safe
+scripts/filter
+scripts/hidehead
+scripts/innerjoin
+scripts/intersect
+scripts/mean
+scripts/nohead
+test/test_tabdelim.py
