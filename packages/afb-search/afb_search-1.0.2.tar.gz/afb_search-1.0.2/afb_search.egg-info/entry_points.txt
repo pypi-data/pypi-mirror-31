@@ -1,0 +1,3 @@
+[console_scripts]
+afb_search = afb_search.__main__:_main
+
