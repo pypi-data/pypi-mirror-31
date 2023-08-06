@@ -1,0 +1,10 @@
+Gender_Predictor-0.4.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+Gender_Predictor-0.4.dist-info/METADATA,sha256=W9ZlU4yUXHBTsF-qny2GE6N1yIE7u57JIXY9jmyR1B4,317
+Gender_Predictor-0.4.dist-info/RECORD,,
+Gender_Predictor-0.4.dist-info/WHEEL,sha256=rNo05PbNqwnXiIHFsYm0m22u4Zm6YJtugFG2THx4w3g,92
+Gender_Predictor-0.4.dist-info/metadata.json,sha256=vTIM1NZflXvW9ADjKPfRY2rYqnkRgkzujICldc7W4rQ,512
+Gender_Predictor-0.4.dist-info/top_level.txt,sha256=83o-eRlLyPIL2b78V-uwUQWCrv9_pw1vhRmbty7pzfk,17
+gender_predictor/GenderClassifier.py,sha256=thKWRCXOBclR6XSEbBCA9NtXHmixgXR3lWb6bmNZKWo,3417
+gender_predictor/GenderLoader.py,sha256=q1PYKIfLc1ZGMcUdpeBOVQ70xAL_4AvwF_c_NQgpovQ,1024
+gender_predictor/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gender_predictor/data/gender_type.csv,sha256=L743il2OeLjhMyfhkQ6oDEbT6b_4pD3NKQnG67WuTmU,1343332
