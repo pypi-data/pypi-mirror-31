@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: geo-tools
+Version: 0.0.1
+Summary: UNKNOWN
+Home-page: https://github.com/pedro2555/geotools
+Author: Pedro Rodrigues
+Author-email: prodrigues1990@gmail.com
+License: GPLv2
+Description: Geo Tools
+        ---------
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
