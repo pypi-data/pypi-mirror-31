@@ -1,0 +1,9 @@
+aiohttp
+python-dotenv
+records
+
+[mysql]
+PyMySQL
+
+[pg]
+psycopg2
