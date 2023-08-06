@@ -1,0 +1,37 @@
+Metadata-Version: 1.0
+Name: automated-competitive-programming
+Version: 0.1.1
+Summary: Easier competitive programming.
+Home-page: UNKNOWN
+Author: Dan Sclearov
+Author-email: dansclearov@gmail.com
+License: UNKNOWN
+Description-Content-Type: text/markdown
+Description: # Automated Competitive Programming
+        Script for fetching and checking problems from various online judges. Currently supports only:
+        
+        - Online Judges:
+            - Codeforces
+        
+        - Programming Languages:
+            - C++
+        
+        ## Motivation
+        I have searched a lot for this kind of fetcher/checker program for competitive programming only to find the lack of a good/all-in-one solution. This project is an attempt to make one.
+        
+        ## Getting Started
+        ### Prerequisites
+        The script is written in Python 3.6. It uses Beautiful Soup for web scraping. For installing Beautiful Soup, see [this](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-beautiful-soup).
+        
+        ### Installing
+        Just clone the repository:
+        
+        ```git clone https://github.com/UnlimitedUser/automated-competitive-programming.git```
+        
+        ## TODO
+        See [TODO](TODO). The ones marked with '(?)' are under consideration.
+        
+        ## License
+        This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+        
+Platform: UNKNOWN

@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README
+setup.py
+acm/__init__.py
+acm/__main__.py
+acm/acm.py
+acm/colors.py
+acm/contest.py
+acm/problem.py
+acm/utils.py
+automated_competitive_programming.egg-info/PKG-INFO
+automated_competitive_programming.egg-info/SOURCES.txt
+automated_competitive_programming.egg-info/dependency_links.txt
+automated_competitive_programming.egg-info/entry_points.txt
+automated_competitive_programming.egg-info/requires.txt
+automated_competitive_programming.egg-info/top_level.txt
