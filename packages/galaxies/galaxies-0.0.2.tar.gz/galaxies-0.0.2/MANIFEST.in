@@ -1,0 +1,6 @@
+include README.md
+include LICENSE.txt
+include galaxies/res/global_variables.json
+include galaxies/res/sql/create_galaxie.sql
+include galaxies/res/logo_sorbonne.gif
+include galaxies/res/logo_lip6.gif
