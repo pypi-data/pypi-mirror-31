@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: simpledeploy
+Version: 0.2.3
+Summary: The simpledeploy system is a Python based Kubernetes deployment tool designed to work with Gitlab CI.
+Home-page: https://github.com/audiosventures/simpledeploy
+Author: Steven Crothers
+Author-email: crothers@simplecast.com
+License: Apache 2.0
+Project-URL: Bug Tracker, https://github.com/audiosventures/simpledeploy/issues
+Project-URL: Documentation, https://github.com/audiosventures/simpledeploy/wiki
+Project-URL: Source Code, https://github.com/audiosventures/simpledeploy
+Description: # Simpledeploy
+        A simple deployment mechanism for Gitlab-CI and Kubernetes.
+        
+        [![TravisCI](https://travis-ci.org/audiosventures/simpledeploy.svg?branch=master)](https://travis-ci.org/audiosventures/simpledeploy)
+        [![PyPI Package](https://img.shields.io/pypi/v/simpledeploy.svg)](https://pypi.org/project/simpledeploy/)
+        [![License](https://img.shields.io/github/license/audiosventures/simpledeploy.svg)](https://github.com/audiosventures/simpledeploy/blob/master/LICENSE)
+        
+Keywords: gitlab gitlab-ci gitlab-api kubernetes kubernetes-deployment
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
