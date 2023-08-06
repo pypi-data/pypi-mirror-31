@@ -1,0 +1,14 @@
+cloudfeaster/__init__.py,sha256=bZSRxZbXxyGgCtpyS2Y_uWa9LMsfMwiUeNTWcU-ukJs,23
+cloudfeaster/spider.py,sha256=2f7Qgl4tIywIistZDnhjAuOmVErv3bBZf9yjE4tOqCw,19408
+cloudfeaster/webdriver_spider.py,sha256=8so6MgaAjALD4xeh9yRNXZvcXy3gCRi5m9UvVKtWF1o,11209
+cloudfeaster/jsonschemas/spider_metadata.json,sha256=3yyJMRFi7McXUMpeNZffmvVmK1P3p9eq1vA-fA5_WGU,2607
+cloudfeaster/samples/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cloudfeaster/samples/bank_of_canada_daily_exchange_rates.py,sha256=B__ED-5K_Az1nlWS28TdjwAd3iVjsoqXK_tmeLu8058,1612
+cloudfeaster/samples/pypi.py,sha256=v9aEXHL7axv6Ehm2wwEeWPuo1xuzZDeaTmhfWPnPcgQ,3076
+cloudfeaster/samples/pythonwheels_spider.py,sha256=e2sG_YCwaVrmFIn4IF5fqg2l3t-xI7BUBE5Zo-jcvGA,1314
+cloudfeaster-0.9.13.data/scripts/spiderhost.py,sha256=g21JWRtTkUNOntXouNw4Ozc_O9ck86h0zi4BB8zrYJc,3976
+cloudfeaster-0.9.13.data/scripts/spiders.py,sha256=ogsI49WahSRU7r5F9qwPkCfUUI8m46skW4r7WRjXDOc,4699
+cloudfeaster-0.9.13.dist-info/METADATA,sha256=h-2zoBOpqhIqwmHG-1qyV80XO9dxCXsfMjt0wTFD6vM,3481
+cloudfeaster-0.9.13.dist-info/RECORD,,
+cloudfeaster-0.9.13.dist-info/WHEEL,sha256=9xUnOISuCvrSyfu9GlFZT4i2TZ_2OLkwLNqcDvIo3zM,92
+cloudfeaster-0.9.13.dist-info/top_level.txt,sha256=sQ7vENUAOGl2ste7zfKWUWy3ZgyiDR8SBphLmdBl-IM,13
