@@ -1,0 +1,18 @@
+Metadata-Version: 2.0
+Name: mlang
+Version: 0.1.8
+Summary: mlang client
+Home-page: UNKNOWN
+Author: lishouguang
+Author-email: lishouguang@meizu.com
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: cachetools
+Requires-Dist: numpy
+Requires-Dist: progressbar2
+Requires-Dist: requests-toolbelt
+
+# xx
+
+
