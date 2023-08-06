@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: compath-utils
+Version: 0.0.3
+Summary: A utilities package for ComPath
+Home-page: https://github.com/compath/compath_utils
+Author: Charles Tapley Hoyt and Daniel Domingo-Fernández
+Author-email: charles.hoyt@scai.fraunhofer.de
+Maintainer: Charles Tapley Hoyt and Daniel Domingo-Fernández
+Maintainer-email: charles.hoyt@scai.fraunhofer.de
+License: MIT License
+Keywords: Pathways,Networks Biology,Systems Biology,Curation
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Dist: bio2bel (>=0.0.9)
+Requires-Dist: sqlalchemy
+
+# compath_utils
+A repository containing abstract classes that ComPath repos should extend
+
+
