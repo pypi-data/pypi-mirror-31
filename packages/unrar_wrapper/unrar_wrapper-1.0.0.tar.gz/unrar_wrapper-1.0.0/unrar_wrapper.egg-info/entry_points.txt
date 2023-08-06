@@ -1,0 +1,3 @@
+[console_scripts]
+unrar_wrapper = unrar_wrapper:main
+
