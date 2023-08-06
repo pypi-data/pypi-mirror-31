@@ -1,0 +1,15 @@
+README.md
+setup.py
+pyscigraph/VERSION.py
+pyscigraph/__init__.py
+pyscigraph/lib.py
+pyscigraph/main.py
+pyscigraph.egg-info/PKG-INFO
+pyscigraph.egg-info/SOURCES.txt
+pyscigraph.egg-info/dependency_links.txt
+pyscigraph.egg-info/entry_points.txt
+pyscigraph.egg-info/requires.txt
+pyscigraph.egg-info/top_level.txt
+pyscigraph/tests/__init__.py
+pyscigraph/tests/quicktest.py
+pyscigraph/tests/test_one.py
