@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+phish/__init__.py
+phish/api.py
+phish.egg-info/PKG-INFO
+phish.egg-info/SOURCES.txt
+phish.egg-info/dependency_links.txt
+phish.egg-info/requires.txt
+phish.egg-info/top_level.txt
