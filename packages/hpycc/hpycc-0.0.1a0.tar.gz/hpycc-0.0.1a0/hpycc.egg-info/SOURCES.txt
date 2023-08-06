@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+hpycc/__init__.py
+hpycc/print_me.py
+hpycc.egg-info/PKG-INFO
+hpycc.egg-info/SOURCES.txt
+hpycc.egg-info/dependency_links.txt
+hpycc.egg-info/not-zip-safe
+hpycc.egg-info/requires.txt
+hpycc.egg-info/top_level.txt
