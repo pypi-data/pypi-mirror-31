@@ -1,0 +1,14 @@
+MANIFEST.in
+setup.cfg
+setup.py
+flaskbb_plugin_recent_topics.egg-info/PKG-INFO
+flaskbb_plugin_recent_topics.egg-info/SOURCES.txt
+flaskbb_plugin_recent_topics.egg-info/dependency_links.txt
+flaskbb_plugin_recent_topics.egg-info/entry_points.txt
+flaskbb_plugin_recent_topics.egg-info/not-zip-safe
+flaskbb_plugin_recent_topics.egg-info/requires.txt
+flaskbb_plugin_recent_topics.egg-info/top_level.txt
+recent_topics/__init__.py
+recent_topics/views.py
+recent_topics/templates/recent_topics.html
+recent_topics/templates/recent_topics_navlink.html
