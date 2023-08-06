@@ -1,0 +1,132 @@
+Metadata-Version: 2.1
+Name: pipenv-pipes
+Version: 0.5.0
+Summary: CLI Tool to help manage Pipenv Enviroments and corresponding Project Directories.
+Home-page: https://github.com/gtalarico/pipenv-pipes
+Author: Gui Talarico
+Author-email: gui.talarico+pip@gmail.com
+License: MIT license
+Keywords: pipenv_pipes
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: Click (>=6.0)
+Requires-Dist: colorama (>=0.3)
+
+===================================
+Pipes
+===================================
+
+
+Pipenv Environment Switcher ⚡
+
+
+.. image:: https://img.shields.io/pypi/v/pipenv-pipes.svg
+        :target: https://pypi.python.org/pypi/pipenv-pipes
+        :alt: Pypi
+
+.. image:: https://travis-ci.org/gtalarico/pipenv-pipes.svg?branch=release
+        :target: https://travis-ci.org/gtalarico/pipenv-pipes
+        :alt: Traves CI
+
+.. image:: https://codecov.io/gh/gtalarico/pipenv-pipes/branch/master/graph/badge.svg
+        :target: https://codecov.io/gh/gtalarico/pipenv-pipes
+        :alt: Codecov
+
+.. image:: https://readthedocs.org/projects/pipenv-pipes/badge/?version=latest
+        :target: https://pipenv-pipes.readthedocs.io/en/latest/?badge=latest
+        :alt: Documentation
+
+-------------------------------------------------------------------------
+
+
+Overview
+--------
+
+Pipes is a Pipenv companion CLI tool that provides a
+quick way to jump between your pipenv powered projects.
+
+.. image:: https://raw.githubusercontent.com/gtalarico/pipenv-pipes/master/docs/static/gif-curses-2.gif
+
+Documentation
+-------------
+
+Documentation is hosted on `pipenv-pipes.readthedocs.io <https://pipenv-pipes.readthedocs.io/en/latest/index.html>`_
+
+
+License
+-------
+
+`MIT License <https://github.com/gtalarico/pipenv-pipes/blob/master/LICENSE>`_
+
+
+Credits
+-------
+
+Package created with `Cookiecutter`_ + `cookiecutter-pypackage`_
+
+.. _`Cookiecutter`: https://github.com/audreyr/cookiecutter
+.. _`cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+
+
+Author
+------
+
+Send me a message on `twitter`_
+
+.. _`twitter`: https://twitter.com/gtalarico
+
+
+=======
+History
+=======
+
+0.5.0 (2018-05-12)
+--------------------------
+* Curses Interface
+* Show Python Version
+
+
+0.4.2 (2018-05-06)
+------------------
+
+* Fixed Envname character bug
+* Added --version
+* AddedFull Test Suite
+* Adde Windows Default Path support
+* Cleanned up dependencies
+* Cleanned up env validation
+
+
+0.4.1 (2018-05-02)
+------------------
+
+* Allow New Line on Read (PR #3)
+* Typo PR #2
+
+
+0.4.0 (2018-05-02)
+------------------
+
+* Renamed Set/Unset to Link/Unlink
+* Use pipenv --venv to verify project directory
+* Improved Set/Unset CLI
+* Improved validation for Project Directories
+* New CLI API (single command for simplicity)
+* Indicates if has project directory set on project list
+* Updated Verbose Project List
+* Disallow Pipes when VENV is active.
+* Added Colorama
+
+0.1.0
+------------------
+
+* First release on PyPI.
+
+
