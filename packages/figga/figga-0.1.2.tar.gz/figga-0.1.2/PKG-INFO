@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: figga
+Version: 0.1.2
+Summary: A simple configuration manager for Python.
+Home-page: https://github.com/berislavlopac/figga
+Author: Berislav Lopac
+Author-email: berislav@lopac.net
+Keywords: configuration,config
+Requires-Python: >= 3.6.0.0, < 4.0.0.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
