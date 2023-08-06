@@ -1,0 +1,10 @@
+README.rst
+setup.py
+src/k8s_build_maps/__init__.py
+src/k8s_build_maps/__main__.py
+src/k8s_build_maps.egg-info/PKG-INFO
+src/k8s_build_maps.egg-info/SOURCES.txt
+src/k8s_build_maps.egg-info/dependency_links.txt
+src/k8s_build_maps.egg-info/entry_points.txt
+src/k8s_build_maps.egg-info/requires.txt
+src/k8s_build_maps.egg-info/top_level.txt
