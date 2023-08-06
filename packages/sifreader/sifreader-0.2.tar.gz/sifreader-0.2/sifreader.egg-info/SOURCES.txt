@@ -1,0 +1,10 @@
+setup.cfg
+setup.py
+sifreader/__init__.py
+sifreader/sifreader.py
+sifreader.egg-info/PKG-INFO
+sifreader.egg-info/SOURCES.txt
+sifreader.egg-info/dependency_links.txt
+sifreader.egg-info/requires.txt
+sifreader.egg-info/top_level.txt
+test/test_SIFFile.py

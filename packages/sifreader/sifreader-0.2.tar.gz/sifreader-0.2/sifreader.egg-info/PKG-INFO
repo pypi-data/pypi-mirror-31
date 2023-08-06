@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: sifreader
+Version: 0.2
+Summary: A library to read Andor SIF file
+Home-page: https://github.com/lightingghost/sifreader
+Author: Zhenpeng Zhou and Daniel R. Stephan
+Author-email: zhenp3ngzhou@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/lightingghost/sifreader/archive/0.2.tar.gz
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Keywords: SIF,Andor,Image,reader
+Platform: UNKNOWN
