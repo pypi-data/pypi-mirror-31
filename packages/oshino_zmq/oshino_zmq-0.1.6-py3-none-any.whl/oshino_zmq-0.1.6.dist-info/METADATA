@@ -1,0 +1,16 @@
+Metadata-Version: 2.0
+Name: oshino-zmq
+Version: 0.1.6
+Summary: ZeroMQ consumer for Oshino
+Home-page: UNKNOWN
+Author: Šarūnas Navickas
+Author-email: UNKNOWN
+License: UNKNOWN
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: oshino
+Requires-Dist: pyzmq
+
+UNKNOWN
+
+
