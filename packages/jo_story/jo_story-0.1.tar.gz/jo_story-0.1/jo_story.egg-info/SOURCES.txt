@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+jo_story/__init__.py
+jo_story/haarcascade_frontalface_alt.xml
+jo_story/narrative.txt
+jo_story.egg-info/PKG-INFO
+jo_story.egg-info/SOURCES.txt
+jo_story.egg-info/dependency_links.txt
+jo_story.egg-info/not-zip-safe
+jo_story.egg-info/requires.txt
+jo_story.egg-info/top_level.txt
