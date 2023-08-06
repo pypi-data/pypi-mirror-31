@@ -1,0 +1,16 @@
+README.md
+setup.py
+codereport/__init__.py
+codereport/codereport.py
+codereport/html.py
+codereport/templates.py
+codereport.egg-info/PKG-INFO
+codereport.egg-info/SOURCES.txt
+codereport.egg-info/dependency_links.txt
+codereport.egg-info/requires.txt
+codereport.egg-info/top_level.txt
+codereport/templates/file.html
+codereport/templates/index.html
+codereport/templates/line.html
+codereport/templates/main.html
+codereport/templates/style.css
