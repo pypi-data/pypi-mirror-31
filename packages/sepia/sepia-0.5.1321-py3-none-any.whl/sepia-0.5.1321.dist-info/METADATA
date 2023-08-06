@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: sepia
+Version: 0.5.1321
+Summary: Static file generator.
+Home-page: https://www.triflesoft.net/
+Author: Roman
+Author-email: adontz@gmail.com
+License: BSD License
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Utilities
+Requires-Dist: jinja2
+Requires-Dist: markdown
+
+# Sepia
+
+Static file generator
+
+## Overview
+
+
+

@@ -1,0 +1,13 @@
+sepia/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sepia/processor.py,sha256=LAcqw3SugaeswhDr2yt8F3auqfmaz4kBkxiu2ueHFwg,2928
+sepia/template.py,sha256=yBwFc1LSHS2hWgHtI-L8mVA4FsqLKOm2tMIje6jPUhM,1167
+sepia/variable.py,sha256=3VXMt6YVCiLoGVy0MrJ3CiIkGX_uXI_wAbNc4SQV0sQ,1303
+sepia/__pycache__/__init__.cpython-36.pyc,sha256=hAIa0U44spcwzkzJd9yVkhI9RmD-FSe7XpBAQEsVr54,153
+sepia/__pycache__/processor.cpython-36.pyc,sha256=PGIwrVqhWn7RRDkkC23TPd1aaEWlkXaUQi0Q2beV0lw,2786
+sepia/__pycache__/template.cpython-36.pyc,sha256=-v5i622Iag3cdUdQ-z06Ueq-H_1D97chPhl9HTdRv9Q,1516
+sepia/__pycache__/variable.cpython-36.pyc,sha256=2ocyXZVS_iMRu3sRuPUUgKL9A1MPF3fW2EuYRNuK4ic,1643
+sepia-0.5.1321.data/scripts/sepia-cli,sha256=U798LUOxrTDA1rNVC7-EsOyEo4WxCwvw1i9-L4lThos,1387
+sepia-0.5.1321.dist-info/METADATA,sha256=r2bWSprF79edBKQejdca5hIcaC0IZp3yecA3HLJMQIo,745
+sepia-0.5.1321.dist-info/RECORD,,
+sepia-0.5.1321.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+sepia-0.5.1321.dist-info/top_level.txt,sha256=6cPWDxbfTKwIXQucUIyQAGe8fdJW-DbCnzAXi_kUWhA,6
