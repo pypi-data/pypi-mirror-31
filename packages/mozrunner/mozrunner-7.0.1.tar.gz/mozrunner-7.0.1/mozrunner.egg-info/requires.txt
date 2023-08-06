@@ -1,0 +1,10 @@
+mozdevice>=1.*
+mozfile==1.*
+mozinfo>=0.7,<1
+mozlog==3.*
+mozprocess>=0.23,<1
+mozprofile>=1.1.0,<2
+six>=1.10.0,<2
+
+[crash]
+mozcrash >= 1.0
