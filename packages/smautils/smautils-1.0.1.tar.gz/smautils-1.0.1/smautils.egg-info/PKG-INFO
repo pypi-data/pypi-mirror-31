@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: smautils
+Version: 1.0.1
+Summary: Wrapper for the Miriad Interferometric Reduction Package
+Home-page: https://github.com/mef51/smautils
+Author: Mohammed Chamma
+Author-email: mchamma@uwo.ca
+License: MIT
+Description: UNKNOWN
+Keywords: radio interferometry SMA wrapper miriad
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
