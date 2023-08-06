@@ -1,0 +1,17 @@
+include ChangeLog.rst
+include LICENSE
+include Makefile
+include README.rst
+include requirements-dev.txt
+include requirements.txt
+include .coveragerc
+include tox.ini
+recursive-include etc dispass.desktop
+recursive-include logo logo24.png
+recursive-include logo logo32.png
+recursive-include logo logo64.png
+recursive-include logo logo128.png
+recursive-include logo logo256.png
+recursive-include logo logo512.png
+recursive-include tests *.py
+recursive-include zsh _dispass
