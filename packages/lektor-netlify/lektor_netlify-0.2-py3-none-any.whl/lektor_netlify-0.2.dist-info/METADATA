@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: lektor-netlify
+Version: 0.2
+Summary: Lektor plugin to publish your site with Netlify.
+Home-page: https://github.com/nixjdm/lektor-netlify
+Author: A. Jesse Jiryu Davis
+Author-email: jesse@emptysquare.net
+License: MIT
+Keywords: Lektor plugin static-site blog netlify
+Platform: UNKNOWN
+Classifier: Environment :: Plugins
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Lektor
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+
+# Lektor Netlify Publisher Plugin
+
+Publish your [Lektor](https://www.getlektor.com/) site to [Netlify](https://www.netlify.com/).
+
+## Installation
+
+Install the `netlify` command-line program according to [the instructions on netlify.com](https://www.netlify.com/docs/cli).
+
+Add lektor-netlify to your project from the command line:
+
+```shell
+lektor plugins add lektor-netlify
+```
+
+See [the Lektor documentation for more instructions on installing plugins](https://www.getlektor.com/docs/plugins/).
+
+## Configuration
+
+Configure a server in your `.lektorproject` file:
+
+```ini
+[servers.production]
+name = Production
+target = netlify://my-domain.com
+```
+
+## Access Token
+
+Get a personal access token from Netlify's "applications" page:
+
+* [Applications](https://app.netlify.com/applications)
+
+You must use this access token each time you publish. **If your project file is private** you can save the token there. Do not commit this!
+
+```ini
+[servers.production]
+name = Production
+target = netlify://my-domain.com
+key = ACCESS_TOKEN
+```
+
+Now deploy your site like:
+
+```shell
+lektor deploy production
+```
+
+Otherwise, pass the token on the command line:
+
+```shell
+lektor deploy production --key ACCESS_TOKEN    
+```
+
+
