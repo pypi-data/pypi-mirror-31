@@ -1,0 +1,9 @@
+numpy
+scikit-learn
+liac-arff
+
+[dev]
+check-manifest
+
+[test]
+coverage
