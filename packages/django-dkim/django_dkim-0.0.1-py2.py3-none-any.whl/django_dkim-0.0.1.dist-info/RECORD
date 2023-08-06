@@ -1,0 +1,9 @@
+django_dkim/__init__.py,sha256=DV2mU3aEK9f1q_6UZws8BpaiI1i9iiP0lgHp8S0K2NA,90
+django_dkim/backends.py,sha256=2hVflLJOVSLxnRqcFgRnn_khIvE4xXYqdx2g-GVqUIQ,1466
+django_dkim/tests/__init__.py,sha256=xqsJPT1QR2TH_5GYK8tiHp-Lb29chxGsr147MWoLAZw,21
+django_dkim/tests/settings.py,sha256=wMhOOel6SbwhZkqVQWlIIWm4W4aiLJITnsmDeN2Y7SU,1109
+django_dkim/tests/test_backends.py,sha256=V45nGnGhOchOCz3svH6-dDAT0W8Lf5K_c7NxQfwYNHc,2599
+django_dkim-0.0.1.dist-info/METADATA,sha256=2ev2CJAwP4jAECBbjt2_A7DthmxTFf3Y4OiR1pXboxQ,3769
+django_dkim-0.0.1.dist-info/RECORD,,
+django_dkim-0.0.1.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+django_dkim-0.0.1.dist-info/top_level.txt,sha256=dFsOwCo21MriYKdO5tyLSV7He9IrjFUDFI-3LH-ixk0,12
