@@ -1,0 +1,9 @@
+README.rst
+setup.py
+data/data_file
+flownetwork.egg-info/PKG-INFO
+flownetwork.egg-info/SOURCES.txt
+flownetwork.egg-info/dependency_links.txt
+flownetwork.egg-info/entry_points.txt
+flownetwork.egg-info/requires.txt
+flownetwork.egg-info/top_level.txt
