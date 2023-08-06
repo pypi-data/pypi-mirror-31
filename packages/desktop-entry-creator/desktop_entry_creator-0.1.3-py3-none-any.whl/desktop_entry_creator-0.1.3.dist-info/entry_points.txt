@@ -1,0 +1,3 @@
+[gui_scripts]
+desktop-entry-creator = desktop_entry_creator.app:main
+
