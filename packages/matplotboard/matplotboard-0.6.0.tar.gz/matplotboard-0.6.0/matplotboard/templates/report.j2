@@ -1,0 +1,61 @@
+{% extends("base.j2") %}
+{% macro figure(name, title, caption) %}
+<div id="{{ name }}" class="well center-block figure-container" style="padding:5px;">
+  <a title="{{ title }}">
+    <img id="_{{ name }}" src="./figures/{{ name }}.png" class="thumbnail img-responsive center-block">
+  </a>
+  <div class="caption">
+    <p class="text-center"> {{ caption }} </p>
+  </div>
+</div>
+{% endmacro %}
+
+{% block extra_style %}
+<style>
+    .figure-container {
+        width: 60%;
+    }
+    .provenance {
+        color: rgba(54, 54, 54, 0.69);
+        font-style: italic;
+    }
+</style>
+{% endblock %}
+
+{% block main_content %}
+<div class="row main-content">
+  <div class="col-md-0 col-lg-2 col-xl-3"> </div>
+  <div class="col-md-12 col-lg-8 col-xl-6">
+  {% block body %}
+  {% endblock %}
+  </div>
+  <div class="col-md-0 col-lg-2 col-xl-3"> </div>
+</div>
+{% endblock %}
+
+{% block extra_script %}
+<script type="text/javascript">
+
+  function set_focus(thumb_id) {
+    if (thumb_id === "_undefined") return;
+    let thumb = $("#"+thumb_id);
+    $('.modal-body').empty();
+    let title = thumb.parent('a').attr("title");
+    let title_elem = $('.modal-title');
+    title_elem.html(title);
+    MathJax.Hub.Queue(["Typeset",MathJax.Hub,title_elem[0]]);
+
+    $(thumb.parents('div').html()).appendTo('.modal-body');
+    $('#myModal .caption').prop('hidden', false);
+    $('#myModal').modal({show:true});
+    focus = thumb_id.substring(1);
+    updateURL();
+  }
+
+  $(function(){
+    $('.thumbnail').click(function() {
+      set_focus($(this).prop("id"));
+    });
+  });
+</script>
+{% endblock %}
