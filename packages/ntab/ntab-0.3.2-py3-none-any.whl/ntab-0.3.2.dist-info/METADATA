@@ -1,0 +1,28 @@
+Metadata-Version: 2.0
+Name: ntab
+Version: 0.3.2
+Summary: Simple numerical tables
+Home-page: https://github.com/alexhsamuel/ntab
+Author: Alex Samuel
+Author-email: alex@alexsamuel.net
+License: MIT
+Description-Content-Type: UNKNOWN
+Keywords: data,table,numerical,numpy
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: numpy
+
+
+A lightweight Python tabular data structure.
+
+Collects parallel numpy arrays into a tabular data structure.  Provides
+syntactic sugar for column- and row-wise access, and basic grouping and
+aggregation.  Avoids copies and type conversions; does not mess around with the
+underlying numpy arrays.  Much less functionality than Pandas, with many fewer
+lines of code.
+
+
