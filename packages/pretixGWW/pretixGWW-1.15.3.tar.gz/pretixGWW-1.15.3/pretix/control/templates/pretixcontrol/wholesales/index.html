@@ -1,0 +1,72 @@
+{% extends "pretixcontrol/wholesales/base.html" %}
+{% load i18n %}
+{% load bootstrap3 %}
+{% load urlreplace %}
+{% block title %}{% trans "Wholesales" %}{% endblock %}
+{% block inside %}
+    <p>
+        <a href="{% url "control:event.wholesale.add" organizer=request.organizer.slug event=request.event.slug %}" class="btn btn-default my-5">
+            <span class="fa fa-plus"></span>
+            {% trans "Create a new wholesale account" %}
+        </a>
+    </p>
+    {% if wholesales|length == 0 and not filter_form.filtered %}
+        <div class="empty-collection">
+            <p>
+                {% blocktrans trimmed %}
+                    You currently do not have access to any wholesales.
+                {% endblocktrans %}
+            </p>
+        </div>
+    {% else %}
+        <p>
+            {% blocktrans trimmed %}
+                The list below shows all wholesales you have administrative access to. Click on the wholesale name to access details.
+            {% endblocktrans %}
+        </p>
+        <table class="table table-condensed table-hover">
+            <thead>
+            <tr>
+                <th>{% trans "Company name" %}</th>
+                <th>{% trans "Contact name" %}</th>
+                <th>{% trans "User" %}</th>
+                <th>{% trans "Address" %}</th>
+                <th>{% trans "City" %}</th>
+                <th>{% trans "State" %}</th>
+                <th>{% trans "Zip Code" %}</th>
+                <th>{% trans "Phone" %}</th>
+                <th>{% trans "Tax" %}</th>
+                <th class="text-right">{% trans "Status" %}</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for wholesale in wholesales %}
+                <tr>
+                    <td>
+                        <strong>
+                            <a href="{% url "control:event.wholesale.edit" organizer=request.organizer.slug event=request.event.slug id=wholesale.id %}">{{ wholesale.company_name }}</a>
+                        </strong>
+                    </td>
+                    <td>{{ wholesale.contact_name }}</td>
+                    <td>{{ wholesale.email }}</td>
+                    <td>{{ wholesale.address }}</td>
+                    <td>{{ wholesale.city }}</td>
+                    <td>{{ wholesale.state }}</td>
+                    <td>{{ wholesale.zip_code }}</td>
+                    <td>{{ wholesale.phone }}</td>
+                    <td>{{ wholesale.tax }}</td>
+                    <td class="text-right">
+                        <a href="{% url "control:event.wholesale.edit" organizer=request.event.organizer.slug event=request.event.slug id=wholesale.id %}" class="btn btn-default btn-sm">
+                            <i class="fa fa-edit"></i>
+                        </a>
+                        <a href="{% url "control:event.wholesale.delete" organizer=request.event.organizer.slug event=request.event.slug id=wholesale.id %}" class="btn btn-danger btn-sm">
+                            <i class="fa fa-trash"></i>
+                        </a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        {% include "pretixcontrol/pagination.html" %}
+    {% endif %}
+{% endblock %}
