@@ -1,0 +1,10 @@
+README.rst
+setup.py
+MovieFinder.egg-info/PKG-INFO
+MovieFinder.egg-info/SOURCES.txt
+MovieFinder.egg-info/dependency_links.txt
+MovieFinder.egg-info/entry_points.txt
+MovieFinder.egg-info/requires.txt
+MovieFinder.egg-info/top_level.txt
+MovieSearcher/__init__.py
+MovieSearcher/movie_searcher.py

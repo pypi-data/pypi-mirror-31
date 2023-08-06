@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: MovieFinder
+Version: 0.2
+Summary: Script for finding movies by given term. It will get all the movies from database that contain a given term and print them out along with the year they were released. Results will be printed in chronological order, from newer to older. There will also be a folder with the same name as input term that will contain posters of all movies that were found, if available.
+Home-page: https://github.com/urosjevremovic/Movie-Searcher
+Author: Uros Jevremovic
+Author-email: jevremovic.uros91@gmail.com
+License: MIT
+Description: 
+        MovieFinder
+        -------------
+        
+        Script for finding movies by given term.
+        It will get all the movies from database that contain a given term
+        and print them out along with the year they were released. Results
+        will be printed in chronological order, from newer to older.
+        There will also be a folder with the same name as input term that will contain
+        posters of all movies that were found, if available.
+        
+        You can get it by downloading it directly or by typing:
+        
+        .. code:: bash
+        
+            $ pip install MovieFinder
+        
+        After it is installed you can start it by simply typing in your terminal:
+        
+        .. code:: bash
+        
+            $ movie_finder
+        
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
