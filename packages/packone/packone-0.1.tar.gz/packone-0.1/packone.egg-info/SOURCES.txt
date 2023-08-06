@@ -1,0 +1,12 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+packone/__init__.py
+packone/__main__.py
+packone/packone.py
+packone.egg-info/PKG-INFO
+packone.egg-info/SOURCES.txt
+packone.egg-info/dependency_links.txt
+packone.egg-info/top_level.txt
