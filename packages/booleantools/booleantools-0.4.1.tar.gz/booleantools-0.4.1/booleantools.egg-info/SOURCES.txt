@@ -1,0 +1,11 @@
+README.md
+setup.py
+booleantools/__init__.py
+booleantools/cellularautomata.py
+booleantools/fields.py
+booleantools.egg-info/PKG-INFO
+booleantools.egg-info/SOURCES.txt
+booleantools.egg-info/dependency_links.txt
+booleantools.egg-info/not-zip-safe
+booleantools.egg-info/top_level.txt
+test/testBooleanTools.py
