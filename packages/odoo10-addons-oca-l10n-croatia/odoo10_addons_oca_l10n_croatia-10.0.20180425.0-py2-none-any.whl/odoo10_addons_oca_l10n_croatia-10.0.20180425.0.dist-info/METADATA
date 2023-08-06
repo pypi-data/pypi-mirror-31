@@ -1,0 +1,16 @@
+Metadata-Version: 2.0
+Name: odoo10-addons-oca-l10n-croatia
+Version: 10.0.20180425.0
+Summary: Meta package for oca-l10n-croatia Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo10-addon-l10n-hr-bank
+
+UNKNOWN
+
+
