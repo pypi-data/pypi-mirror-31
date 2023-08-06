@@ -1,0 +1,13 @@
+bio2bel_msig/__init__.py,sha256=0C_Em18vL-ZyFrj2dsFzkD4ABX7q1t5UB5IxZOipYfc,1141
+bio2bel_msig/__main__.py,sha256=UfZ9XmEusVdUt8DYecSqYMc-js-r2_TMC98CIkoLXS8,86
+bio2bel_msig/cli.py,sha256=jHScR9yQ5GkcvXSDP7tLgmJUCU9JaPzHd-7oDxP8V2U,1523
+bio2bel_msig/constants.py,sha256=phY2Spmog5mGZ_EJyEx8O7gG5WAhz92LY-YsLstY6Hg,541
+bio2bel_msig/manager.py,sha256=eCNloHXRULYSl-Zv2V40S57Go3cvjg87ldjb3Us6Tj4,3796
+bio2bel_msig/models.py,sha256=-fUWnbirE-5HfjehqWNwIGJvIuUGNHWiU8f0FN66Tcg,2257
+bio2bel_msig/parser.py,sha256=74U8v9qY2oBRT5XDNP3_KD4QUzAUJF_K5zfm-bw9LnA,945
+bio2bel_msig/web.py,sha256=IY3m0YW4awf17nn3fqAnci3rN-qxX-OhNYBF9H5RfMs,268
+bio2bel_msig-0.0.3.dist-info/METADATA,sha256=x_76Q3tYAs9dIzce0PzQHeOclatmycgYItikvdFpYRs,2920
+bio2bel_msig-0.0.3.dist-info/RECORD,,
+bio2bel_msig-0.0.3.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+bio2bel_msig-0.0.3.dist-info/entry_points.txt,sha256=5vogjC1KSBJYj3OHeq5A9da7Miuos7a_Xk7JdI6H6g4,118
+bio2bel_msig-0.0.3.dist-info/top_level.txt,sha256=ydnfArlh4zQX-BDmzw2Vrpv5l2bf9TLl2NmG0bWcLmY,13
