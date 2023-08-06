@@ -1,0 +1,13 @@
+logme/__init__.py,sha256=UdMt7YVg_psQ6q9-gG5MCEhq_vAQt3D6ckOi62lvZcI,2207
+logme/cli.py,sha256=37DEK84wsa6KbrSr-eh9GovKuKd6L6CDpeV35HLLwd4,8140
+logme/config.py,sha256=3mzA_mIebCRy3ugBeWdfGny8LezySeHY0WB3yukGzQc,2226
+logme/exceptions.py,sha256=stokBxpQgQgCu3hNDMPOy5ucZtPULhljtdNAVumtRFM,482
+logme/providers.py,sha256=72mblTT3PYgVbn6S4if5Whvf22JMK8yBO2f8Biq-jDY,9286
+logme/utils.py,sha256=qhFZw_QGoGYQtIIm0xaXeJ-_C0seBZUQFdg79Bc-Dmc,3953
+logme-1.0.5.dist-info/DESCRIPTION.rst,sha256=a4FoMA4eaXSf1GUzXQUQyxFZXiZjZGOtGOfV7_8d_8c,1443
+logme-1.0.5.dist-info/METADATA,sha256=Aln4akIWMLyE_m-kFJuIlNzQzCAmjEnb3t3H2XvGFoQ,1726
+logme-1.0.5.dist-info/RECORD,,
+logme-1.0.5.dist-info/WHEEL,sha256=BTHHj6QhsHpWhRUrxioIvCAgjx81u-a8gkPTO6bi_A0,116
+logme-1.0.5.dist-info/entry_points.txt,sha256=Ssf-gTZ2otsNz_EnpPlOtnlhkfQVj_o6WRe7unQkQz0,37
+logme-1.0.5.dist-info/metadata.json,sha256=V7RJl6QAU7m5sUakNGXX75XCODXYaTZzP63pAPx6NQM,644
+logme-1.0.5.dist-info/top_level.txt,sha256=iKzxH48wF56zrPx8wfovspeQDpFN-vd126ld8M9cYI4,6
