@@ -1,0 +1,85 @@
+{% extends 'feedback/base.html' %}
+{% load static %}
+
+
+{% block content %}
+<ul class="nav nav-tabs rotate-text--90 " id="feedback-tab">
+  <li type="button" class="nav-item" data-toggle="modal" data-target="#feedback-modal">
+    <a class="nav-link active">Feedback</a>
+  </li>
+</ul>
+
+
+
+<div class="modal fade" id="feedback-modal" tabindex="-1" role="dialog" aria-labelledby="feedback-modal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title align-middle" id="feedback-modal-label">Feedback on:</h5>
+        <nav aria-label="breadcrumb"><ol class="modal-bc breadcrumb align-middle" id="feedback-breadcrumbs"></ol></nav>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+        <form novalidate id='feedback-form' action='{% url 'feedback:submit_feedback' %}' method='post'>
+          {% csrf_token %}
+          <div class="form-group">
+            <label for="feedback-form-rating">Rating:</label>
+            <img src="{% static 'feedback/custom/imgs/flaticon/sick.svg' %}" alt="1" class='icon '>
+            <img src="{% static 'feedback/custom/imgs/flaticon/crying.svg' %}" alt="2" class='icon '>
+            <img src="{% static 'feedback/custom/imgs/flaticon/sad.svg' %}" alt="3" class='icon '>
+            <img src="{% static 'feedback/custom/imgs/flaticon/confused.svg' %}" alt="4" class='icon '>
+            <img src="{% static 'feedback/custom/imgs/flaticon/smile.svg' %}" alt="5" class='icon '>
+            <img src="{% static 'feedback/custom/imgs/flaticon/in-love.svg' %}" alt="6" class='icon '>
+            <img src="{% static 'feedback/custom/imgs/flaticon/star-struck.svg' %}" alt="7" class='icon active'>
+            <input type="text" name="rating" value="7" id='feedback-form-rating' style="display:none" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="feedback-from-text">Feedback:</label>
+            <textarea class='form-control' name="feedback" rows="3" cols="80"></textarea>
+          </div>
+
+
+          <div class="form-group">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="may-we-contact-you">
+              <label class="form-check-label" for="may-we-contact-you">
+                May we contact you?
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group" style='display:none;' id='feedback-email-container'>
+            <label for="exampleInputEmail1">Email address</label>
+            <input  name="email" type="email" class="form-control" id="feedback-email" aria-describedby="email-help" placeholder="Enter email"  pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}">
+            <small id="feedback-email" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            <div class="invalid-feedback">
+              Please enter a valid email.
+            </div>
+          </div>
+
+
+          <div class="form-group" style="display:none">
+            <label for="feedback-form-page">Page:</label>
+            <input type="text" name="page" value="" id='feedback-form-page' required>
+          </div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button id="feedback-form-submit-button" type="button" class="btn btn-primary">Submit</button>
+      </div>
+      <div class="">
+      <small class="form-text text-muted" style='font-size: 8px'><div>Icons made by <a href="https://www.flaticon.com/authors/vectors-market" title="Kiss">Kiss</a> from <a href="https://www.flaticon.com/"     title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"     title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div></small>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript" src="{% static 'feedback/custom/js/async-form-submission.js' %}"></script>
+{% endblock %}

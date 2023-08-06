@@ -1,0 +1,31 @@
+{% load static %}
+<feedback-widget-dependencies>
+  <!-- Bootstrap v4 stylesheet  -->
+  <link rel="stylesheet" type="text/css" href="{% static 'feedback/bootstrap/css/bootstrap.min.css' %}" />
+
+  <!-- Bootstrap v4 has 2 dependencies, jQuery and popper  -->
+  <script src="{% static 'feedback/jQuery/js/jquery-3.3.1.min.js' %}" type="text/javascript"></script>
+  <!-- <script src="{% static 'core/popper/js/popper-1.13.0.js' %}" type="text/javascript"></script> -->
+
+  <!-- Bootstrap v4 js -->
+  <script src="{% static 'feedback/bootstrap/js/bootstrap.min.js' %}" type="text/javascript"></script>
+
+  <!-- Font Awesome v4  -->
+  <link rel="stylesheet" type="text/css" href="{% static 'feedback/font-awesome-4.7.0/css/font-awesome.min.css' %}" />
+
+
+  <!-- custom style -->
+  <link rel="stylesheet" type="text/css" href="{% static 'feedback/custom/css/base.css' %}" />
+
+  {% block head %}
+
+  {% endblock %}
+</feedback-widget-dependencies>
+
+
+
+<feedback-widget>
+  {% block content %}
+
+  {% endblock %}
+</feedback-widget>
