@@ -1,0 +1,17 @@
+README.md
+setup.py
+perfectns/__init__.py
+perfectns/cached_gaussian_prior.py
+perfectns/estimators.py
+perfectns/likelihoods.py
+perfectns/maths_functions.py
+perfectns/nested_sampling.py
+perfectns/plots.py
+perfectns/priors.py
+perfectns/results_tables.py
+perfectns/settings.py
+perfectns.egg-info/PKG-INFO
+perfectns.egg-info/SOURCES.txt
+perfectns.egg-info/dependency_links.txt
+perfectns.egg-info/requires.txt
+perfectns.egg-info/top_level.txt
