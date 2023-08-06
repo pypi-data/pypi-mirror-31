@@ -1,0 +1,12 @@
+numpy_stl-2.5.0.dist-info/METADATA,sha256=GsY_el8Dsrc6u3U4jaXC-lmaFZGlAgA_r5mRoWz2BbE,13817
+numpy_stl-2.5.0.dist-info/RECORD,,
+numpy_stl-2.5.0.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+numpy_stl-2.5.0.dist-info/entry_points.txt,sha256=-f-InFXabZxH99eKiKC0_mj38V7UaSH48g3sbgBXPsY,98
+numpy_stl-2.5.0.dist-info/top_level.txt,sha256=uhNU6NfJF-H1ykSlU9oT3dAfUibkYXjmXGGxjMCe2ls,4
+stl/__about__.py,sha256=mrYJXe62qBy24PFhTxyf-Wuu68DmYwOxeaNepw-Y-6k,320
+stl/__init__.py,sha256=KzsMo_q3v1S5ocj1reh3zBCWYz1b1otKvU1bP040fT0,375
+stl/base.py,sha256=oqqsl2LxO9oCydohErbaVpl_bzxX5xw3BjsQO1qdzAs,17988
+stl/main.py,sha256=XeTQ3ZJfUe_YWoUX3p6dsuathh5codU2GwpQYzmEboY,3277
+stl/mesh.py,sha256=oJPmEnjQiQV1LKdo5LGVhowbNvMLIbmjvSkCKEd1rZM,55
+stl/stl.py,sha256=rdjoQku-miqePLakkwW2lYXaO7oz8cQwurxp3btFOks,13043
+stl/utils.py,sha256=1RRO0T5hjqJ-KIyF7-wcq-DAQ_8xniphNQKcuA9m4iY,541
