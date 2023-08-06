@@ -1,0 +1,3 @@
+[console_scripts]
+weathersnake = weather.cli:main
+

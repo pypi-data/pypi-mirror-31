@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: weathersnake
+Version: 0.0.4
+Summary: Python tool to find the weather
+Home-page: UNKNOWN
+Author: Eric Cheatham
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: googlemaps
+Requires-Dist: requests[security]
+
+UNKNOWN
+
+
