@@ -1,0 +1,86 @@
+Metadata-Version: 1.1
+Name: django-rest-passwordreset
+Version: 0.9.3
+Summary: An extension of django rest framework, providing a password reset strategy
+Home-page: https://github.com/anx-ckreuzberger/django-rest-passwordreset
+Author: Christian Kreuzberger
+Author-email: ckreuzberger@anexia-it.com
+License: BSD License
+Description-Content-Type: UNKNOWN
+Description: # Django Rest Password Reset
+        This django app provides a password reset strategy for django rest framework, where users can request password 
+        reset tokens via their registered e-mail address.
+        
+        ## How to use
+        
+        Django settings file:
+        ```python
+        INSTALLED_APPS = (
+            ...
+            'django.contrib.auth',
+            ...
+            'rest_framework',
+            ...
+            'django_rest_passwordreset',
+            ...
+        )
+        
+        ```
+        
+        
+        Django url settings:
+        ```python
+        from django.conf.urls import url, include
+        
+        
+        urlpatterns = [
+            ...
+            url(r'^api/password_reset/', include('django_rest_passwordreset.urls', namespace='password_reset')),
+            ...
+        ]    
+        ```
+        
+        
+        The following endpoints are provided:
+        
+         * `reset_password` - request a reset password token by using the ``email`` parameter
+         * `reset_password/confirm` - using a valid ``token``, the users password is set to the provided ``password``
+         
+        ## Signals
+        
+        * ``reset_password_token_created(reset_password_token)`` Fired when a reset password token is generated
+        * ``pre_password_reset(user)`` - fired just before a password is being reset
+        * ``post_password_reset(user)`` - fired after a password has been reset
+        
+        ## Tests
+        
+        See folder [tests/](tests/). Basically, all endpoints are covered with multiple
+        unit tests.
+        
+        Use this code snippet to run tests:
+        ```bash
+        pip install -r requirements_test.txt
+        python setup.py install
+        cd tests
+        python manage.py test
+        ```
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 1.8
+Classifier: Framework :: Django :: 1.11
+Classifier: Framework :: Django :: 2.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
