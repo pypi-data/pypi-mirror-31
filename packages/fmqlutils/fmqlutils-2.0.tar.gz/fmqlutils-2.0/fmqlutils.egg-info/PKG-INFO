@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: fmqlutils
+Version: 2.0
+Summary: FMQL Utilities
+Home-page: http://github.com/Caregraf/FMQL/fmqlutils
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: Apache License, Version 2.0
+Description: A Python framework and set of executables for caching datasets from FileMan systems using FMQL. Includes support for data analysis and modeling
+Keywords: VistA,FileMan,CHCS,MongoDB,FMQL
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
