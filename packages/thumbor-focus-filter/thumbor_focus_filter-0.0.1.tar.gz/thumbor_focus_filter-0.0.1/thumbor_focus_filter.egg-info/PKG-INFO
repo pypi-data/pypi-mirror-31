@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: thumbor-focus-filter
+Version: 0.0.1
+Summary: Focus filter for thumbor.
+Home-page: https://github.com/sport1online/thumbor-focus-filter
+Author: sport1.de
+Author-email: paolo.garri@sport1.de
+License: MIT
+Description: 
+        Focus filter for thumbor.
+        
+Keywords: thumbor filter
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Provides-Extra: tests
