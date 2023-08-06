@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: visma
+Version: 0.0.1.dev1
+Summary: A Python Client library for integration to Visma e-Accounting, Visma e-Ekonomi
+Home-page: https://github.com/pwitab/visma
+Author: Henrik Palmlund Wahlgren @ Palmlund Wahlgren Innovative Technology AB
+Author-email: henrik@pwit.se
+License: BSD-3
+Platform: UNKNOWN
+Requires-Dist: requests
+
+=====
+Visma
+=====
+A Python Client library for integration to Visma e-Accounting, Visma e-Ekonomi
+
+
+
+
+=========
+Changelog
+=========
+
+
