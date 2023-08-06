@@ -1,0 +1,11 @@
+rpm_spec_dependency_analyzer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rpm_spec_dependency_analyzer/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rpm_spec_dependency_analyzer/pyrpm_spec.py,sha256=5MeKl2nnHp0fQNm-Y3Ym57DzI2ZOtEYZ3G7QMZ6r3Kk,14183
+rpm_spec_dependency_analyzer/rpm_spec_dependency_analyzer.py,sha256=lLhGIsZC6s0dai0mQfU3zP1SJnVlqNEcXtR9gLvV4xg,5092
+rpm_spec_dependency_analyzer-0.5.dist-info/DESCRIPTION.rst,sha256=6DOnefFJRxoBGvPKZU5YC0xEnrVBRt1iJHnlEwVKTwU,884
+rpm_spec_dependency_analyzer-0.5.dist-info/METADATA,sha256=rDcVHPmrSiKm8MNNQUhripHO3033i9nKl9FrQZvqKQI,1433
+rpm_spec_dependency_analyzer-0.5.dist-info/RECORD,,
+rpm_spec_dependency_analyzer-0.5.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+rpm_spec_dependency_analyzer-0.5.dist-info/entry_points.txt,sha256=Htqg8NpNdunnFR6ESN4Z6UR_orzwQjbE_0uEehljQbU,113
+rpm_spec_dependency_analyzer-0.5.dist-info/metadata.json,sha256=07ayCL1Ea4g_A0trIrFRqrC_k59aKt-GBDtShYaJZ5s,1031
+rpm_spec_dependency_analyzer-0.5.dist-info/top_level.txt,sha256=pE8E_BbRVcDXAiO_gkDAvHOkGynriYBOLgcnLaPowTY,29
