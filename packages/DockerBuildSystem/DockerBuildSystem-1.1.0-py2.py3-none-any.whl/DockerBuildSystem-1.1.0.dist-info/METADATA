@@ -1,0 +1,47 @@
+Metadata-Version: 2.0
+Name: DockerBuildSystem
+Version: 1.1.0
+Summary: A Docker build system for managing docker.
+Home-page: https://github.com/pypa/sampleproject
+Author: DIPS AS
+Author-email: heh@dips.no
+License: UNKNOWN
+Keywords: Docker Build System
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: python-dotenv
+Provides-Extra: dev
+Requires-Dist: check-manifest; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: coverage; extra == 'test'
+
+# Docker Build System
+
+A simple library for handling docker commands with python.
+Please have a look at an example of use at the repository.
+
+## Install And/Or Upgrade
+- pip install --no-cache-dir --upgrade DockerBuildSystem
+
+## Prerequisites
+- Docker:
+    - https://www.docker.com/get-docker
+
+## Additional Info
+- The pip package may be located at:
+    - https://pypi.org/project/DockerBuildSystem
+
+## Publish New Version.
+1. Configure setup.py with new version.
+2. Build: python setup.py bdist_wheel
+3. Publish: twine upload dist/*
+
