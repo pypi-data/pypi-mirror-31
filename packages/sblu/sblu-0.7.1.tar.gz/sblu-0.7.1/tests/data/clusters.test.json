@@ -1,0 +1,1 @@
+{"max_clusters": 50, "radius": 9.0, "clusters": [{"members": [3, 4, 5, 8], "center": 8}, {"members": [0, 1, 2, 12], "center": 12}, {"members": [7, 10, 11], "center": 7}, {"members": [6, 9, 13], "center": 13}], "min_cluster_size": 10}
