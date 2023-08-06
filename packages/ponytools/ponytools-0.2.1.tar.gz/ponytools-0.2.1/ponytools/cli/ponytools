@@ -1,0 +1,255 @@
+#!/usr/bin/env python
+
+import argparse
+import sys
+import ponytools as pc
+
+import matplotlib
+# Force matplotlib to not use any Xwindows backend.
+matplotlib.use('Agg')
+
+def ponytoolsCLI():
+    '''--------------------------
+        Main Arguments 
+    --------------------------'''
+    parser = argparse.ArgumentParser(
+        description=(
+            "            ______/``'``'-.                       \n"  
+            "           (_   6  \    .^                        \n"  
+            "         __ `'.__,  |    `'-.                     \n" 
+            "        /_ \  /    /      :`^'                    \n"
+            "      /`/_` \/    /       .'                      \n"
+            "      '/  `'-     |.-'`^. `.                      \n" 
+            "    ____                    __              __    \n" 
+            "   / __ \____  ____  __  __/ /_____  ____  / /____\n" 
+            "  / /_/ / __ \/ __ \/ / / / __/ __ \/ __ \/ / ___/\n" 
+            " / ____/ /_/ / / / / /_/ / /_/ /_/ / /_/ / (__  ) \n"  
+            "/_/    \____/_/ /_/\__, /\__/\____/\____/_/____/  \n"   
+            "                  /____/                          \n"
+        ),
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog=('\n'.join([
+            '"You aren\'t even on the right chromosome!"',
+            'src: {}'.format(pc.__file__)
+        ]))
+    )
+    parser.add_argument(
+        '--debug',
+        action='store_true',
+        default=False,
+        help='Drop into ipdb when something bad happens.'
+    )
+    parser.add_argument(
+        '--interactive',
+        action='store_true',
+        default=False,
+        help='Initiate an ipdb session right before exiting.'
+    )
+    parser.add_argument(
+        '--overlook',
+        action='store_true',
+        default=False,
+        help='Skip analysis if files produced by --out exists.'
+    )
+    parser.add_argument(
+        '--version',
+        action='store_true',
+        default=False,
+        help='Print version information and exit.'
+    )
+    subparsers = parser.add_subparsers(
+        title='Ponytools. Tools related to analyzing the MNEc SNP Chip',
+        metavar='Available Commands',
+        description='Use --help with each command for more info',
+    )
+    # Also allow the help message to be printed using the help command
+    helpcmd = subparsers.add_parser('help',help='Prints this help message')
+    parser.set_defaults(func=lambda x: parser.print_help())
+
+    '''--------------------------
+        Axiom 2 VCF 
+    --------------------------'''
+    from ponytools.cli.AxiomCalls2VCF import AxiomCalls2VCF 
+    a2vcf = subparsers.add_parser(
+        'Axiom2VCF', 
+        aliases=['a2vcf'],
+        help='Convert Axiom calls to a VCF file.' 
+    )
+    a2vcf.add_argument('--calls',help='Axiom Calls File')   
+    a2vcf.add_argument('--samples',help='Axiom Sample File')
+    a2vcf.add_argument('--annot',help='Axiom Annotations File')   
+    a2vcf.add_argument('--fasta',help='Fasta File')   
+    a2vcf.add_argument('--out',help='Oupute file name')
+    a2vcf.set_defaults(func=AxiomCalls2VCF)
+
+    '''---------------------------
+    Conform VCFs
+    ---------------------------'''
+    from ponytools.cli.conform_vcf import conform
+    vcfConformer = subparsers.add_parser(
+        'conformVCF',
+        help='Conform a VCF based on a FASTA File and MNEc2M Annotations'
+    )
+    vcfConformer.add_argument('--vcf')
+    vcfConformer.add_argument('--fasta')
+    vcfConformer.add_argument('--out')
+    vcfConformer.set_defaults(func=conform)
+
+    '''---------------------------
+    Sort VCFs
+    ---------------------------'''
+    from ponytools.cli.sortVCF import sortVCF
+    vcfSorter = subparsers.add_parser(
+        'sortVCF',
+        help='Sort a VCF file based on a FASTA file'
+    )
+    vcfSorter.add_argument('--vcf',help='unsorted VCF file')
+    vcfSorter.add_argument('--fasta',help='fasta file')
+    vcfSorter.add_argument('--out',default=None,help='output name [default: append .sorted.vcf to input file]')
+    vcfSorter.set_defaults(func=sortVCF)
+
+    '''-----------------------
+         Compare
+    --------------------------'''
+    from ponytools.cli.compareVCF import compareVCF
+    vcfcmp = subparsers.add_parser(
+        'compareVCF',
+        help='compare two VCFs. No need to be sorted or conformed, we will handle that!'
+    )
+    vcfcmp.add_argument('--vcf1',help='fist vcf file')
+    vcfcmp.add_argument('--vcf2',help='second vcf file')
+    vcfcmp.add_argument('--cores',type=int,default=8,help='The number of cores to use for processing')
+    vcfcmp.set_defaults(func=compareVCF)
+
+    '''-----------------------
+         Info
+    --------------------------'''
+    from ponytools.cli.VCFInfo import VCFInfo
+    info_cmd = subparsers.add_parser(
+        'VCFInfo',
+        help='Print information about a VCF File'
+    )
+    info_cmd.add_argument('vcf',help='The VCF File to print information about')
+    info_cmd.set_defaults(func=VCFInfo)
+
+    '''------------------------
+        Plot VCF Histo
+    ---------------------------'''
+    from ponytools.cli.plotVCFHist import VCFStats
+    VCFStats_cmd = subparsers.add_parser(
+        'VCFStats',
+        help='Plot stats/histograms based on VCF values, e.g. alt-freq, call_rate, etc.'
+    )
+
+    VCFStats_cmd.add_argument('--vcf',action='store',help='VCF file containing all individuals and genotypes')
+    VCFStats_cmd.add_argument('--lst',help='LST file to break stats down for VCF file for certain SNPs')
+    VCFStats_cmd.add_argument('--ids',nargs='*',default=[],help='IDS file to break stats down for VCF file for certain individuals')
+    VCFStats_cmd.add_argument('--out', action='store', default='out', type=str)
+    VCFStats_cmd.set_defaults(func=VCFStats)
+
+    '''-----------------------
+         PR VCF
+    --------------------------'''
+    from ponytools.cli.PR import VCFPR
+    VCFPR_command = subparsers.add_parser(
+        'VCFPR',
+        help='Compare precision vs recall of two VCFs'
+    )
+    VCFPR_command.add_argument('--vcf-test', type=str, action='store',help='The VCF to test.')
+    VCFPR_command.add_argument('--vcf-ref', type=str, action='store',help='The reference VCF (gold standard)')
+    VCFPR_command.add_argument('--score', type=str, default='QUAL', action='store', help='The quality score used to determine which genotypes are reliable. Default: QUAL.')
+    VCFPR_command.add_argument('--out',default=sys.stdout)
+    VCFPR_command.set_defaults(func=VCFPR)
+
+    '''-----------------------
+         Di
+    --------------------------'''
+    from ponytools.cli.pyDi import pyDi
+    di_parser = subparsers.add_parser(
+        'Di',
+        help='Python implementation of DI script'
+    )
+    di_parser.add_argument('--vcf',action='store',help='VCF file containing all individuals and genotypes')
+    di_parser.add_argument('--inds',action='append',help='Files containing individual IDs for groups in DI statistic. Can be specified more than once.')
+    di_parser.add_argument('--window-size',action='store',type=int,default=250000,help='Window size for averaging Di values')
+    di_parser.add_argument('--min-snps-per-window',action='store',type=int,default=4,help='The minimum number of SNPs per window to calculate Di')
+    di_parser.add_argument('--debug', action='store_true', help='DEBUG mode. Only runs first 1k lines of vcf for speed')
+    di_parser.add_argument('--out', action='store', default='pyDi', type=str, help='Prepend output file names with this.')
+    di_parser.set_defaults(func=pyDi)
+    
+
+    '''-----------------------
+         Samples
+    --------------------------'''
+    from ponytools.cli.samples import samples
+    samples_cmd = subparsers.add_parser(
+        'samples',
+        help='List and Manipulate Samples'
+    )
+    samples_cmd.add_argument('vcf',help='VCF file to extract samples from')
+    samples_cmd.add_argument('--vcf',help='A second VCF file to extract/compare samples from')
+    samples_cmd.add_argument('--split',help='Split into two groups. Provide a float to split the data.',type=float,default=None)
+    samples_cmd.add_argument('--no-permute',help='Do not permute samples, default:False',default=False,action='store_true')
+    samples_cmd.add_argument('--out',help='Samples ouput file',default=sys.stdout)
+    samples_cmd.set_defaults(func=samples)
+
+    '''-----------------------
+         Impute
+    --------------------------'''
+    from ponytools.cli.impute import impute
+    impute_cmd = subparsers.add_parser(
+        'imputation',
+        help='Setup the imputation pipeline',
+    )
+    impute_cmd.set_defaults(func=impute)
+
+    '''-----------------------
+         DosageR2
+    --------------------------'''
+    from ponytools.cli.dosageR2 import dosageR2
+    dr2 = subparsers.add_parser(
+        'dosageR2',
+        help='Calculate the Dosage r^2 between reference and imputed SNPs'
+    )
+    dr2.add_argument('refvcf',help='The reference VCF that has the true Dosage')
+    dr2.add_argument('impvcf',help='The imputed VCF that has the estimated dosage for each sample')
+    dr2.add_argument('--out',help="The name of the output file",default=None)
+    dr2.set_defaults(func=dosageR2)
+
+
+    '''-----------------------------
+        Parse arguments and execute commands
+    -----------------------------------'''
+    args = parser.parse_args()
+    # Add debug options
+    if args.debug is True:
+        from IPython.core import ultratb
+        sys.excepthook = ultratb.FormattedTB(
+            mode='Verbose', color_scheme='Linux', call_pdb=1
+        )
+    # SKip analyses that already happened (if --overlook is provided)
+    if args.overlook is True and len(glob.glob(args.out+'*')):
+        print("Skipping {}* because files already exist.".format(args.out))
+    elif args.version is True:
+        from ponytools import __version__ as version
+        print('{}'.format(version))
+        sys.exit(0)
+    else:
+        try:
+            return_value = args.func(args)
+        except Exception as e:
+            print("A bad thing happened: {}\n\n".format(e)) 
+            print("Use --help for details.\n\n")
+            parser.print_help()
+            if args.debug:
+                raise e
+            sys.exit(1)
+        if args.interactive is True:
+            from IPython.core import ultratb
+            sys.excepthook = ultratb.FormattedTB(
+                mode='Verbose', color_scheme='Linux', call_pdb=1
+            )
+        sys.exit()#return_value)
+
+if __name__ == '__main__':
+    ponytoolsCLI()

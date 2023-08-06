@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: ponytools
+Version: 0.2.1
+Summary: Computational tools that you will ride into the FUTURE.
+Home-page: https://github.com/schae234/PonyTools
+Author: Rob Schaefer
+Author-email: rob@linkage.io
+License: Copyright Linkage Analytics 2016. Available under the MIT License
+Project-URL: Source, https://github.com/schae234/PonyTools
+Project-URL: Tracker, https://github.com/schae234/PonyTools/issues
+Description: UNKNOWN
+Keywords: data genetics biology
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
