@@ -1,0 +1,11 @@
+requirements.txt
+setup.py
+version.txt
+kwrappers/__init__.py
+kwrappers_dynamodb.egg-info/PKG-INFO
+kwrappers_dynamodb.egg-info/SOURCES.txt
+kwrappers_dynamodb.egg-info/dependency_links.txt
+kwrappers_dynamodb.egg-info/entry_points.txt
+kwrappers_dynamodb.egg-info/not-zip-safe
+kwrappers_dynamodb.egg-info/requires.txt
+kwrappers_dynamodb.egg-info/top_level.txt
