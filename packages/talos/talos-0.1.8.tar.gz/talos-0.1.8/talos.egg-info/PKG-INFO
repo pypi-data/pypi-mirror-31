@@ -1,0 +1,26 @@
+Metadata-Version: 1.2
+Name: talos
+Version: 0.1.8
+Summary: Talos Hyperparameter Scanner for Keras
+Home-page: http://autonom.io
+Author: Mikko Kotila
+Author-email: mailme@mikkokotila.com
+Maintainer: Mikko Kotila
+Maintainer-email: mailme@mikkokotila.com
+License: MIT
+Download-URL: https://github.com/autonomio/talos/
+Description: Talos provides a hyperparameter scanning solution that
+        allows using any Keras model as they are, with the simple
+        change that instead of calling the parameter (e.g. epochs=25),
+        you call it from a dictionary with an identical label (e.g. params['epochs']).
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Scientific/Engineering :: Human Machine Interfaces
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
