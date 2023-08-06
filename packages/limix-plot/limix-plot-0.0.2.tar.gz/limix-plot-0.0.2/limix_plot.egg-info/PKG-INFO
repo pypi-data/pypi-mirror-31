@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: limix-plot
+Version: 0.0.2
+Summary: Plotting library for genetics.
+Home-page: https://github.com/limix/limix-plot
+Author: Danilo Horta
+Author-email: horta@ebi.ac.uk
+Maintainer: Danilo Horta
+Maintainer-email: horta@ebi.ac.uk
+License: MIT
+Download-URL: https://github.com/limix/limix-plot
+Description: # limix-plot
+        
+        Plotting library for genetics.
+        
+Keywords: visualization,genetics
+Platform: Windows
+Platform: MacOS
+Platform: Linux
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Description-Content-Type: text/markdown
