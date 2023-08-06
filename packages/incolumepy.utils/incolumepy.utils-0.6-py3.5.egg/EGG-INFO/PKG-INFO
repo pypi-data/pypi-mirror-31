@@ -1,0 +1,47 @@
+Metadata-Version: 1.1
+Name: incolumepy.utils
+Version: 0.6
+Summary: package incolumepy utils
+Home-page: http://www.incolume.com.br
+Author: @britodfbr
+Author-email: contato@incolume.com.br
+License: BSD
+Description: # Projeto desenvolvido por incolume.com.br
+        
+        Este pacote disponibiliza diversas funcionalidades para utilização em rotinas com Python.
+        
+        Dentre elas:
+        * geração de números de CPF não verificados;
+        * geração de lista para namespace para pacotes Python;
+        * obtenção rápida para conteúdo de arquivos;
+        * sequências de vários tipos;
+        * Nome único para gravação de arquivos sem sobrescrita;
+        
+        ## Gerar pacote a partir dos fontes para instalação
+        
+        python setup.py bdist_egg bdist_wheel
+        
+        History
+        =======
+        
+        
+        
+        Contributors
+        ============
+        
+        @britodfbr
+        
+        Changes
+        =======
+        
+        0.1 = :D
+        0.2 = New implementation for def namespace
+        
+Keywords: python utils incolumepy
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: Portuguese (Brazilian)
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities

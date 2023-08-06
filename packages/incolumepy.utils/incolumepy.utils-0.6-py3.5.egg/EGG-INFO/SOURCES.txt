@@ -1,0 +1,17 @@
+README.md
+setup.cfg
+setup.py
+incolumepy/__init__.py
+incolumepy.utils.egg-info/PKG-INFO
+incolumepy.utils.egg-info/SOURCES.txt
+incolumepy.utils.egg-info/dependency_links.txt
+incolumepy.utils.egg-info/entry_points.txt
+incolumepy.utils.egg-info/namespace_packages.txt
+incolumepy.utils.egg-info/not-zip-safe
+incolumepy.utils.egg-info/requires.txt
+incolumepy.utils.egg-info/top_level.txt
+incolumepy/utils/__init__.py
+incolumepy/utils/fake_cpf.py
+incolumepy/utils/files.py
+incolumepy/utils/sequencia.py
+incolumepy/utils/utils.py
