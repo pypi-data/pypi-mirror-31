@@ -1,0 +1,24 @@
+v0.2.0, 2018-04-27
+    7ad4f70 relax constraints around handling None, as both input and handles...pluck it
+    22ad2cd expand corner case coverage
+    a65be24 more test cases
+    a386e3b remove Pluckable from standard import
+v0.1.0, 2018-04-25
+    3b3132e improve native install
+    d461169 create mechanism to install pluck on native types
+    304f284 handle multi-handle set plucks
+    787773f break out pluckable and mixin tests, expand coverage
+    62a68ac break up functionality better
+    300d4af humanize data
+    c3eeb61 improved list like handling
+    10c1abe Update README.md
+v0.0.2, 2018-04-25
+    1062bd9 type check
+    e517d98 gc
+    e49973f cleanup
+    56ae772 reorg
+    81d289b more efficient cloning...only when necessary
+    e5bf1a7 facilitate Pluackable list/dict/set
+    2cc3070 cleanup
+v0.0.1, 2018-04-25
+    
