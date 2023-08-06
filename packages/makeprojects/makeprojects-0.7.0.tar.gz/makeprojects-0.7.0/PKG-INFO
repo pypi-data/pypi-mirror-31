@@ -1,0 +1,66 @@
+Metadata-Version: 1.2
+Name: makeprojects
+Version: 0.7.0
+Summary: IDE project generator for Visual Studio, XCode, etc...
+Home-page: http://burgerbecky.com
+Author: Rebecca Ann Heineman <becky@burgerbecky.com>
+Author-email: becky@burgerbecky.com
+License: MIT License
+Description: The makeprojects module makes it easy to autogenerate project files for
+        several popular Integrated Development Enviroments (IDEs)
+        
+        Run the file 
+        makeprojects is licensed under the MIT license, for details see LICENSE.txt.
+        
+        Documentation is found at http://pythonhosted.org/makeprojects/
+        
+        Compatibility
+        -------------
+        
+        makeprojects should work on Python >= 2.7, it was tested on:
+        
+        * 2.7
+        
+        
+        Installation
+        ------------
+        
+        Try one of these:
+        
+            python setup.py install
+        
+            pip install -U makeprojects
+        
+            putting the folder makeprojects in some directory listed in sys.path should also work
+        
+        
+        Bugs
+        ----
+        
+        If you find a bug, please try to reproduce it with python 2.7.
+        
+        Email the bug to becky@burgerbecky.com and mention python version, integer size 
+        (32 bit or 64 bit) and what platform (Windows / Mac OSX / Linux)
+        
+        
+Keywords: m,a,k,e,p,r,o,j,e,c,t,s, ,x,c,o,d,e, ,v,i,s,u,a,l, ,s,t,u,d,i,o, ,v,i,s,u,a,l,s,t,u,d,i,o, ,c,o,d,e,b,l,o,c,k,s, ,w,a,t,c,o,m, ,p,s,4, ,x,b,o,x,o,n,e, ,x,b,o,x,3,6,0, ,v,i,t,a, ,m,a,c, ,i,o,s, ,a,n,d,r,o,i,d
+Platform: a
+Platform: n
+Platform: y
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=2.7,!=3.0.*,!=3.1.*,!=3.2.*

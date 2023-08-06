@@ -1,0 +1,5 @@
+setuptools>=0.7.0
+enum34>=1.0.0
+burger>=1.0.3
+argparse>=1.0
+glob2>=0.6
