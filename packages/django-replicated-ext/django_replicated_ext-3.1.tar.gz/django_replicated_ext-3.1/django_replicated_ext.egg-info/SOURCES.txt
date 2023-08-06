@@ -1,0 +1,17 @@
+README.md
+setup.cfg
+setup.py
+django_replicated/__init__.py
+django_replicated/dbchecker.py
+django_replicated/decorators.py
+django_replicated/middleware.py
+django_replicated/router.py
+django_replicated/router_multidb.py
+django_replicated/router_multimaster.py
+django_replicated/router_syncslave.py
+django_replicated/settings.py
+django_replicated/utils.py
+django_replicated_ext.egg-info/PKG-INFO
+django_replicated_ext.egg-info/SOURCES.txt
+django_replicated_ext.egg-info/dependency_links.txt
+django_replicated_ext.egg-info/top_level.txt
