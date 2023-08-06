@@ -1,0 +1,10 @@
+carmen/__init__.py,sha256=TmrhKPfKp5T77sFwBNVYpJqzfEJRcpbgWbMyw920Ghk,57
+carmen/rotator.py,sha256=s614If6usbw_FADdTD-xBjKtUFoSzDqFz_CHFTUDuGE,1576
+carmenproxy-0.1.0.dist-info/DESCRIPTION.rst,sha256=mHVNlXOmzsMN9n9YyFbLIwzZOUGy4auLK104YQ6K_FM,2192
+carmenproxy-0.1.0.dist-info/METADATA,sha256=p57qer-5vgmIlVaf-9uHkg_T6DgfdXNp9jNIBCDomUY,2779
+carmenproxy-0.1.0.dist-info/RECORD,,
+carmenproxy-0.1.0.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+carmenproxy-0.1.0.dist-info/metadata.json,sha256=VSfrpE2qojPuZwi_FXgDZ_WeIzn5bAjbrlrfnWagUbg,737
+carmenproxy-0.1.0.dist-info/top_level.txt,sha256=s232otDRBaZVl4FpDocD1bVosUYxI5bSju0zFa5WRNo,13
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_rotator.py,sha256=dsKNJknYwmHh3mhPXZL5lki8d8brSs9HVckvjuy2pQU,342
