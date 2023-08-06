@@ -1,0 +1,15 @@
+DESCRIPTION
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+FastCoinExchange.egg-info/PKG-INFO
+FastCoinExchange.egg-info/SOURCES.txt
+FastCoinExchange.egg-info/dependency_links.txt
+FastCoinExchange.egg-info/requires.txt
+FastCoinExchange.egg-info/top_level.txt
+fastex/__init__.py
+fastex/api.py
+fastex/exceptions.py
+fastex/unittest/__init__.py
+fastex/unittest/test.py
