@@ -1,0 +1,14 @@
+odoo/addons/account_multicompany_easy_creation/README.rst,sha256=cBmUtSy9jjgPKShnY1EqtUONZZP6R9lhRuI3DrMOrLw,1589
+odoo/addons/account_multicompany_easy_creation/__init__.py,sha256=nmmGcFDn0FhR-tWbL0IU94d5WUZxlBHV9RpZsWdFASU,22
+odoo/addons/account_multicompany_easy_creation/__manifest__.py,sha256=ngsC5wKVdlDWD97xkVcUe8nE5cC8zHScVq9FDxdF-K8,651
+odoo/addons/account_multicompany_easy_creation/i18n/es.po,sha256=tSLw9-z7q_0rxKnms69Vd1xUk9OQ3sQrJ25ddErttuc,16605
+odoo/addons/account_multicompany_easy_creation/static/description/icon.png,sha256=6xBPJauaFOF0KDHfHgQopSc28kKvxMaeoQFQWZtfZDo,9455
+odoo/addons/account_multicompany_easy_creation/wizards/__init__.py,sha256=uMg7p5FI-14iEH-oDB310OTE27OaKHEV9jCqHiYFDrE,107
+odoo/addons/account_multicompany_easy_creation/wizards/multicompany_easy_creation.py,sha256=tXuXuc8EZe4yFvPsRryLsbTZn7s8YOGftNMCaEPVutg,14091
+odoo/addons/account_multicompany_easy_creation/wizards/multicompany_easy_creation.xml,sha256=p91nqSBbA3wBALOT7ljrhLJ1zyF7Gm9VMCJjckboiQY,5035
+odoo11_addon_account_multicompany_easy_creation-11.0.1.0.0.dist-info/DESCRIPTION.rst,sha256=CD7NY8cZyk7MOqypysj_OlUoMNnD8QmScyO6e8-kL9E,1591
+odoo11_addon_account_multicompany_easy_creation-11.0.1.0.0.dist-info/METADATA,sha256=uVKogzD2jY4hvGvsH0Leex3D99pfbuCpJwb2xiyMkRg,2215
+odoo11_addon_account_multicompany_easy_creation-11.0.1.0.0.dist-info/RECORD,,
+odoo11_addon_account_multicompany_easy_creation-11.0.1.0.0.dist-info/WHEEL,sha256=o2k-Qa-RMNIJmUdIc7KU6VWR_ErNRbWNlxDIpl7lm34,110
+odoo11_addon_account_multicompany_easy_creation-11.0.1.0.0.dist-info/metadata.json,sha256=CFFyGc_vPYDjtQKqPQb-YMNOrge5evYo3VjgnV2IOVQ,841
+odoo11_addon_account_multicompany_easy_creation-11.0.1.0.0.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
