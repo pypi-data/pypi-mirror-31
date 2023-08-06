@@ -1,0 +1,3 @@
+[console_scripts]
+git-nit = git_nit.cmd:main
+
