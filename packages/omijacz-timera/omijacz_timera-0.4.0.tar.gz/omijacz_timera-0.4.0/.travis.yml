@@ -1,0 +1,25 @@
+language: python
+python:
+- '3.6'
+install:
+- pip install -r requirements.txt
+- python setup.py install
+script:
+- python3 -OO -m PyInstaller ./omijacz_timera/omijacz_timera.py -n omijacz_timera
+  --onefile --icon=./resources/car-icon.ico
+after_script:
+- cd ~
+- ./utils/convert-markdown.sh
+deploy:
+  releases:
+    api_key:
+      secure: AwkOO7iKjQDM13sC9gv7utySqcXc8zV6Edqk0o+U9OsD8yubKuYZVUS1iwbCczRNl6IbnATM+k14KaPgjGLxIldXfXnhAtVB/2SE3R0DFEQBZMKCsiqmniWxdZZFGjPtbFu4x9JmEe9BwABVt78rXurnWQ5Ll9eXbNsDo6NSA6wR65upJ8qk0OtKMvdiY6C/WZ7Et/RrBAoNFPYNd+YXgC9MZyTU3b29n/WzeomjgPruZmJjnn5RjSOjyHkc3ojDgmF/9JAQyM7tznSE6M3bRVqi5jZ6D0sxIJLcN8HTRMY/VCJmsXFF+GvR0wfVMGFVsKqZoKCze8n8mgdGR2hcO5oCc4O0GQZt4gezOcHCFVcO06Z0/cqXJm59o+aNUQNclS+ymf0i1eevIYnbJ4AS3OnwXblp1vIrlGH6/g+5WtoQPzYsXqaXd0G0WNYVHEeJozoHOjCgiGqYj8WaUsF7BG51HSj4fEU1QyOnn1LQAPKnTjQtThE4VYTjZBPlJ6OaeWxQyAz4MEU1XMN4GgCJmniv98REBPyTGNQdy4m8WtR3jg1JGZLsxtKMTqsWLBVgbI/SVeboy9sl3daciRVroLn/IS37diY6qu6jRxJfS2A1Poby2L9ADJL2UgeidATixp457QRpTgx7VWEgBvhY0JlcPRce/OyH0VWARmGzCDU=
+    file: dist/omijacz_timera.exe
+    on:
+      branch: release
+  pypi:
+    user: taniotanio7
+    password:
+      secure: PmVhjbMCmQJshR0mWTijJcEuqY0E+wMsm+6lcK6XAv200kp3cDBLCAQmmkWD5hubHQO+4U0tE6XcLEdyOXTs/Ml2OZZlOa4l4jshWZxWQOwSKUjQa5iR+1pg6dcFOXD7z569iuR4Srjzh38WcWqZokJvuoe1njuJ4cdGDZfwB1uyCtFYxYdCcjHQ/OGtDbWBVSUdOejsuC2HGhKxmpvhCVHCxMkfS4/ElAKYtA2hWM6g2s2Gfz7oyjKlxlBv6hlhDRDyrBWeTHO2ZGObVwSGMSDGUj6Xatq3xZZ3dj7wI8SarG7u2RDhfAAE67AhWuj0tPX5IOEo5GPY/f8UpS9a/ZHGyNNJbI41EPsG5lLLkVkJnOkui5bL4hwGdUc/8rQP8xNNfKWYe8rE2fbC3CZF7uPIT69zUtBU/0nbKL2ZaziTHUkJaCXGz+wyAxWMwSPs7U8gsQ23xZEcJUUlvNuwe7c0gxSqZvTtxXgz2o96A2F7VYyCzxKFAZtpo+1j94gJRQihz7w/3RMt0udivbiRsLodFeFPExm6rqOUb+XwwKLoERyMt83yofdJ63vqDrmx1e8to+UNq6QKrxhEhsAPAF8wdSaTpKtxnkybAxzfonGR84UgKgPoxv0f86C05a1oVXGdgCSXBHoR9C4ZQ1+rX3XKH6HvVqiTlHIje7nx8NY=
+    on:
+      branch: release
