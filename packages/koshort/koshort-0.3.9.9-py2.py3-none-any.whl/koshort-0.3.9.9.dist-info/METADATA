@@ -1,0 +1,42 @@
+Metadata-Version: 2.0
+Name: koshort
+Version: 0.3.9.9
+Summary: koshort is a Python package for Korean internet spoken language crawling and processing... or maybe Korean domestic cat.
+Home-page: http://koshort.readthedocs.io
+Author: nyanye
+Author-email: iam@nyanye.com
+License: GPL v3+
+Description-Content-Type: UNKNOWN
+Keywords: Korean,CJK,NLP,natural language processing,CL,computational linguistics,tagging,tokenizing,linguistics,text analytics
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Human Machine Interfaces
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Text Processing :: Filters
+Classifier: Topic :: Text Processing :: General
+Classifier: Topic :: Text Processing :: Indexing
+Classifier: Topic :: Text Processing :: Linguistic
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Requires-Dist: beautifulsoup4 (==4.6.0)
+Requires-Dist: colorama (==0.3.9)
+Requires-Dist: tweepy (==3.6.0)
+
+Social network services and other internet communities are open and rich data source of human spoken language.
+But due to the issues of privacy and policy of the each websites, sharing bunch of retrieved text data is normally prohibited.
+To solve the most major Natural Language Processing (NLP) problem under this circumstances, researchers had to rely on limited public datasets and data brought by their company.
+Otherwise they would implement their domain specific crawler for each cases.
+
+Koshort is hardly inspired by the project KoNLPy, with similar philosphy. It is not about recreating another crawler but to unify efforts around so that anyone can accelerate their projects.
+
+
