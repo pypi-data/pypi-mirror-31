@@ -1,0 +1,31 @@
+Metadata-Version: 1.2
+Name: supybot
+Version: 0.84.0
+Summary: A flexible and extensible Python IRC bot and framework.
+Home-page: https://github.com/Supybot/Supybot
+Author: Jeremy Fincher
+Author-email: jemfinch@supybot.com
+Maintainer: James McCoy
+Maintainer-email: jamessan@jamessan.com
+License: UNKNOWN
+Project-URL: Source, https://github.com/Supybot/Supybot
+Project-URL: Superseded By, https://github.com/ProgVal/Limnoria
+Description: A robust, full-featured Python IRC bot with a clean and flexible plugin API. Equipped with a complete ACL system for specifying user permissions with as much as per-command granularity. Batteries are included in the form of numerous plugins already written.
+Platform: linux
+Platform: linux2
+Platform: win32
+Platform: cygwin
+Platform: darwin
+Classifier: Development Status :: 7 - Inactive
+Classifier: Environment :: Console
+Classifier: Environment :: No Input/Output (Daemon)
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Topic :: Communications :: Chat :: Internet Relay Chat
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
