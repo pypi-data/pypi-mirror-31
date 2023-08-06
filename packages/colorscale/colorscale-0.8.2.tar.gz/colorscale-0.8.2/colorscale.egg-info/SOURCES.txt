@@ -1,0 +1,15 @@
+README.md
+setup.py
+colorscale/__init__.py
+colorscale/colorscale.py
+colorscale/to_color_scale.py
+colorscale/to_color_scale_cv2.py
+colorscale/to_color_scale_pil.py
+colorscale/to_gray_scale.py
+colorscale.egg-info/PKG-INFO
+colorscale.egg-info/SOURCES.txt
+colorscale.egg-info/dependency_links.txt
+colorscale.egg-info/entry_points.txt
+colorscale.egg-info/requires.txt
+colorscale.egg-info/top_level.txt
+colorscale.egg-info/zip-safe

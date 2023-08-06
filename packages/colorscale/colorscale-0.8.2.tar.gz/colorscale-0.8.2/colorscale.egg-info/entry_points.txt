@@ -1,0 +1,4 @@
+[console_scripts]
+to_color_scale = colorscale.to_color_scale:main
+to_gray_scale = colorscale.to_gray_scale:main
+
