@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: nionswift-video-capture
+Version: 0.1.0
+Summary: Capture video from built-in camera using OpenCV.
+Home-page: UNKNOWN
+Author: Nion Software
+Author-email: swift@nion.com
+License: GPLv3
+Platform: UNKNOWN
+Requires-Python: ~=3.5
+Requires-Dist: nionswift-instrumentation
+
+UNKNOWN
+
+
