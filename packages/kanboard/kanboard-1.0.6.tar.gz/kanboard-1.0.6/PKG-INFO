@@ -1,0 +1,82 @@
+Metadata-Version: 1.1
+Name: kanboard
+Version: 1.0.6
+Summary: Client library for Kanboard API
+Home-page: https://github.com/kanboard/python-api-client
+Author: Frederic Guillot
+Author-email: fred@kanboard.net
+License: MIT
+Description: ==============================
+        Python API Client for Kanboard
+        ==============================
+        
+        .. image:: https://travis-ci.org/kanboard/python-api-client.svg?branch=master
+            :target: https://travis-ci.org/kanboard/python-api-client
+        
+        Kanboard API client.
+        
+        - Author: Frédéric Guillot
+        - License: MIT
+        
+        Installation
+        ============
+        
+        .. code-block:: bash
+        
+            pip install kanboard
+        
+        
+        This library is compatible with Python 2.7, 3.4, 3.5 and 3.6.
+        
+        Examples
+        ========
+        
+        Methods and arguments are the same as the JSON-RPC procedures described in the `official documentation <https://docs.kanboard.org/en/latest/api/index.html>`_.
+        
+        Python methods are dynamically mapped to the API procedures. You must use named arguments.
+        
+        Create a new team project
+        -------------------------
+        
+        .. code-block:: python
+        
+            from kanboard import Kanboard
+        
+            kb = Kanboard('http://localhost/jsonrpc.php', 'jsonrpc', 'your_api_token')
+            project_id = kb.create_project(name='My project')
+        
+        
+        Authenticate as user
+        --------------------
+        
+        .. code-block:: python
+        
+            from kanboard import Kanboard
+        
+            kb = Kanboard('http://localhost/jsonrpc.php', 'admin', 'admin')
+            kb.get_my_projects()
+        
+        Create a new task
+        -----------------
+        
+        .. code-block:: python
+        
+            from kanboard import Kanboard
+        
+            kb = Kanboard('http://localhost/jsonrpc.php', 'jsonrpc', 'your_api_token')
+            project_id = kb.create_project(name='My project')
+            task_id = kb.create_task(project_id=project_id, title='My task title')
+        
+        See the `official API documentation <https://docs.kanboard.org/en/latest/api/index.html>`_ for the complete list of methods and arguments.
+        
+Keywords: kanboard api client
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
