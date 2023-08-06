@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+splain/__init__.py
+splain/splain.py
+splain.egg-info/PKG-INFO
+splain.egg-info/SOURCES.txt
+splain.egg-info/dependency_links.txt
+splain.egg-info/not-zip-safe
+splain.egg-info/top_level.txt
