@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: eazytv
+Version: 0.1.0
+Summary: Command Line Utility for search and download shows from EZTV
+Home-page: https://github.com/Germione/easytv
+Author: Jerome Pradier
+Author-email: jerome.pradier@gmail.com
+License: MIT
+Keywords: cli tools torrent eztv
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+
+easytv
+=============================
+
+Command Line Utility for search and download shows from EZTV
+
+Setup
+-----
+
+Usage
+-----
+
+
