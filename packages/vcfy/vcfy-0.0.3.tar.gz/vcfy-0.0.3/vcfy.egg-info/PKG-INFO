@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: vcfy
+Version: 0.0.3
+Summary: Generate VCF file with random variants from reference genome
+Home-page: https://github.com/cartoonist/vcfy
+Author: Ali Ghaffaari
+Author-email: ali.ghaffaari@mpi-inf.mpg.de
+License: MIT
+Download-URL: https://github.com/cartoonist/vcfy/tarball/0.0.3
+Description: VCFY
+        ====
+        It generates a VCF file with simulated random variants based on the given probability model.
+        
+Keywords: vcf genome genomics variation DNA sequence ngs
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Description-Content-Type: text/markdown
+Provides-Extra: test
