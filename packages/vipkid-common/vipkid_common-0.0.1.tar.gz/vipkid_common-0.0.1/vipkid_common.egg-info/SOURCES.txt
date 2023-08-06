@@ -1,0 +1,8 @@
+MANIFEST.in
+README.txt
+setup.py
+vipkid_common.py
+vipkid_common.egg-info/PKG-INFO
+vipkid_common.egg-info/SOURCES.txt
+vipkid_common.egg-info/dependency_links.txt
+vipkid_common.egg-info/top_level.txt
