@@ -1,0 +1,13 @@
+README.md
+setup.py
+pipdate/__about__.py
+pipdate/__init__.py
+pipdate/main.py
+pipdate.egg-info/PKG-INFO
+pipdate.egg-info/SOURCES.txt
+pipdate.egg-info/dependency_links.txt
+pipdate.egg-info/requires.txt
+pipdate.egg-info/top_level.txt
+test/test_pipdate.py
+tools/pipdate
+tools/pipdate3
