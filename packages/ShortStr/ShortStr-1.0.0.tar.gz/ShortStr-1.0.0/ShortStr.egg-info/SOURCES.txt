@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+README.rst
+setup.py
+ShortStr.egg-info/PKG-INFO
+ShortStr.egg-info/SOURCES.txt
+ShortStr.egg-info/dependency_links.txt
+ShortStr.egg-info/top_level.txt
+docs/Makefile
+docs/conf.py
+docs/index.rst
+docs/make.bat
+shortstr/__init__.py
+tests/test_shortstr.py
