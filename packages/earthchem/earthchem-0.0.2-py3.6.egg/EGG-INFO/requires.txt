@@ -1,0 +1,9 @@
+geopandas
+requests
+beautifulsoup4
+lxml
+
+[dev]
+versioneer
+nbstripout
+nbdime
