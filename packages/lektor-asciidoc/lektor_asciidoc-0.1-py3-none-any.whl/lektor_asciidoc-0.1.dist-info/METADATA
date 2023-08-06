@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: lektor-asciidoc
+Version: 0.1
+Summary: Adds AsciiDoc field type to Lektor.
+Home-page: UNKNOWN
+Author: A. Jesse Jiryu Davis
+Author-email: jesse@emptysquare.net
+License: MIT
+Keywords: Lektor plugin static-site blog asciidoc
+Platform: UNKNOWN
+Classifier: Environment :: Plugins
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Lektor
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+
+# Lektor AsciiDoc Plugin
+
+A [Lektor](https://www.getlektor.com/) plugin to add an AsciiDoc field type.
+
+## Installation
+
+Add lektor-asciidoc to your project from command line:
+
+```
+lektor plugins add lektor-atom
+```
+
+
