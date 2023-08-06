@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+genice_diffr/__init__.py
+genice_diffr.egg-info/PKG-INFO
+genice_diffr.egg-info/SOURCES.txt
+genice_diffr.egg-info/dependency_links.txt
+genice_diffr.egg-info/entry_points.txt
+genice_diffr.egg-info/requires.txt
+genice_diffr.egg-info/top_level.txt
+genice_diffr/formats/_Diffr.py
+genice_diffr/formats/__init__.py
