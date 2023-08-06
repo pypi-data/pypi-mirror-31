@@ -1,0 +1,16 @@
+README.rst
+setup.cfg
+setup.py
+dyPolyChord/__init__.py
+dyPolyChord/nlive_allocation.py
+dyPolyChord/output_processing.py
+dyPolyChord/polychord_utils.py
+dyPolyChord/pypolychord_utils.py
+dyPolyChord/python_likelihoods.py
+dyPolyChord/python_priors.py
+dyPolyChord/run_dynamic_ns.py
+dyPolyChord.egg-info/PKG-INFO
+dyPolyChord.egg-info/SOURCES.txt
+dyPolyChord.egg-info/dependency_links.txt
+dyPolyChord.egg-info/requires.txt
+dyPolyChord.egg-info/top_level.txt
