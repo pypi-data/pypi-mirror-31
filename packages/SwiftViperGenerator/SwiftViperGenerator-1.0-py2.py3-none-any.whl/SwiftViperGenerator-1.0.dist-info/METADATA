@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: SwiftViperGenerator
+Version: 1.0
+Summary: VIPER boilerplate code generator for Swift XCode projects
+Home-page: http://github.com/bivanov/swiftvipergenerator
+Author: Bohdan Ivanov
+Author-email: bogdanivanov@live.com
+License: MIT
+Keywords: build development
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: pbxproj
+Requires-Dist: jinja2
+
+UNKNOWN
+
+

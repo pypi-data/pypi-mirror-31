@@ -1,0 +1,16 @@
+SwiftViperGenerator-1.0.dist-info/METADATA,sha256=ld_hJg7FJ4V2Co4abv6UNnGeGugMEm1ztIshzgOrLLk,852
+SwiftViperGenerator-1.0.dist-info/RECORD,,
+SwiftViperGenerator-1.0.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+SwiftViperGenerator-1.0.dist-info/entry_points.txt,sha256=lCNdxpswW8Xhq-ah22osNDwZh3h1RaAnmQmj5bu8X5k,44
+SwiftViperGenerator-1.0.dist-info/top_level.txt,sha256=vVnKh8cpuF-FJkj-0Y_Y9a2jf_lCwzi6aKAT0YxmmJ0,9
+swivigen/__init__.py,sha256=U6SjUcNU8DPTnJN14b62WHtIF2KqzbklO5jMpCGdC90,2556
+swivigen/swivigen.py,sha256=Cf-3gYIx-MJsO21RDgzZ7k50EK9pETmw_5yvYfNaXoc,1533
+swivigen/Common/AbstractPresenter.swift,sha256=kuJ_U4NLmV0TRAQxkX0__c8-dEjpLR9IaSpO8iWV51Q,267
+swivigen/Common/AbstractRouter.swift,sha256=RJUpa7sYLg-VZ7TWucwuWzUpcpWl0sJrCvxXubht6Bo,215
+swivigen/Common/ViperController.swift,sha256=7rN2BD062UsZUJ65lJwfmQrc7jbVICb8Qa02zl7Snnw,240
+swivigen/Templates/Header.tpl.swift,sha256=8XHEeNP2X7IE9HbBDguGtuCBGsUikKw5AUZqjSPdpqk,228
+swivigen/Templates/Interactor.tpl.swift,sha256=GxR0J3HuM_je_RWuoeJs1L0Mo1uzvEtubYD_2P6jlW0,112
+swivigen/Templates/Presenter.tpl.swift,sha256=2I35j2g4rexHdzi8liPkxmMGf1bzwk2HzLuTj7ZHgRw,256
+swivigen/Templates/Router.tpl.swift,sha256=r3Ysu3FoZXMWzbSEPXmOMfZbVUpAdERFcn3e6TAV7jw,898
+swivigen/Templates/View.tpl.swift,sha256=qPykYTcv85-Z5QmvJWjaSHLoQaG2ulAtKnSSviTqkWE,165
+swivigen/Templates/ViewController.tpl.swift,sha256=-YpLURrNU9QIQTgBCQECzNLVfPWPD1UIQDQIO0QfuDs,360
