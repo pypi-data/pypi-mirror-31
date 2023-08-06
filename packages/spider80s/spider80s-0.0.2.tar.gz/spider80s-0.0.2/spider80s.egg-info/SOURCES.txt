@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+spider80s/__init__.py
+spider80s/spider.py
+spider80s.egg-info/PKG-INFO
+spider80s.egg-info/SOURCES.txt
+spider80s.egg-info/dependency_links.txt
+spider80s.egg-info/entry_points.txt
+spider80s.egg-info/requires.txt
+spider80s.egg-info/top_level.txt
+spider80s.egg-info/zip-safe
