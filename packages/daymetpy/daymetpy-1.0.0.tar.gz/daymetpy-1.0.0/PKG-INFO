@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: daymetpy
+Version: 1.0.0
+Summary: A library for accessing Daymet surface weather data
+Home-page: https://github.com/khufkens/daymetpy
+Author: Koen Hufkens
+Author-email: koen.hufkens@gmail.com
+License: AGPL-3
+Download-URL: https://github.com/khufkens/daymetpy/archive/1.0.0.tar.gz
+Description: UNKNOWN
+Keywords: daymet,climatology,ORNL,weather
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
