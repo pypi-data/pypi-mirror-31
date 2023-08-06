@@ -1,0 +1,6 @@
+trytond_company<3.9,>=3.8
+trytond_purchase<3.9,>=3.8
+trytond_sale<3.9,>=3.8
+trytond_sale_supply<3.9,>=3.8
+trytond_stock<3.9,>=3.8
+trytond<3.9,>=3.8
