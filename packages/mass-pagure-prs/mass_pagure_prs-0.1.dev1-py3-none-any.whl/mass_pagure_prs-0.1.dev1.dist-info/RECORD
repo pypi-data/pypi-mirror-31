@@ -1,0 +1,17 @@
+mass_pagure_prs/__init__.py,sha256=UxXPzkEOZk4muEFEheD5AsGXLhp5rWlJG0hQbA_IK0Q,43
+mass_pagure_prs/local_repo.py,sha256=HRv9zffScbwJ2UTXswx8h3V5uCOmXRrWq0Oya-F-G_E,5596
+mass_pagure_prs/pagure_fork.py,sha256=AGOHnHyDC26SpcRvY3ocFvSKhXUTvaede2q58r9kQdE,4613
+mass_pagure_prs/prs_generator.py,sha256=ZPQS4BSXkG0e8ckUZPKkrXeq_-4t6zdxKDgiMamhyo0,11806
+mass_pagure_prs/selenium_pagure_pr.py,sha256=KBS90arSs9_RMI_T3AjyD_o2icIvdUC0wguF0zT1qIc,4304
+mass_pagure_prs-0.1.dev1.dist-info/DESCRIPTION.rst,sha256=OGpoTNeHxHpWYjR2cYwwzo0YPAam26kzhdSxNGe16F0,2188
+mass_pagure_prs-0.1.dev1.dist-info/METADATA,sha256=sGNoxkdV_LdjY7DOkICWHWINIwZ_8rB-B6wwZhb73MU,2858
+mass_pagure_prs-0.1.dev1.dist-info/RECORD,,
+mass_pagure_prs-0.1.dev1.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+mass_pagure_prs-0.1.dev1.dist-info/metadata.json,sha256=1I85c2mG3Js84-CFkm093dsWoGE_trija40zvQl6BYI,852
+mass_pagure_prs-0.1.dev1.dist-info/top_level.txt,sha256=7CLF2P-a-jjKapYUhPWrcm7y1j6quSyCY_9qPjxfeO4,21
+pagure_prs/__init__.py,sha256=ujgBK6cQUGSZqZNPu8_WGKz6vkt2ss-aS-5QUHDnRB4,39
+pagure_prs/local_repo.py,sha256=HRv9zffScbwJ2UTXswx8h3V5uCOmXRrWq0Oya-F-G_E,5596
+pagure_prs/pagure_fork.py,sha256=SqZL1-77kI6b_1Umx1AYlWSmVDpc3qxoUQzwENoLxwU,3693
+pagure_prs/prs_generator.py,sha256=lTyEgcwEl3B3tp2qZQ-RcgTn8obOjkmY-lufska5r7g,7575
+pagure_prs/selenium_pagure_pr.py,sha256=KBS90arSs9_RMI_T3AjyD_o2icIvdUC0wguF0zT1qIc,4304
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
