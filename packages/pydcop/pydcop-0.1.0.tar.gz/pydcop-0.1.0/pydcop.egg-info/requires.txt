@@ -1,0 +1,15 @@
+pulp
+numpy
+networkx
+pyyaml
+requests
+websocket-server
+
+[doc]
+sphinx
+sphinx_rtd_theme
+
+[test]
+coverage
+pytest
+mypy
