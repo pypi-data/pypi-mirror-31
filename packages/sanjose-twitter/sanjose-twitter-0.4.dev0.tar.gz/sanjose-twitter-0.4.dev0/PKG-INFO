@@ -1,0 +1,41 @@
+Metadata-Version: 1.0
+Name: sanjose-twitter
+Version: 0.4.dev0
+Summary: Getting trends on Twitter
+Home-page: UNKNOWN
+Author: sanjose
+Author-email: UNKNOWN
+License: UNKNOWN
+Description-Content-Type: UNKNOWN
+Description: Get Latest Trends from Twitter
+        -------------------------------
+        
+        **Prerequisite:**
+        
+        Prepare a **config.py** file in the working directory :
+        
+        --------------------------------------------------------------------
+        
+        # These tokens are needed for user authentication.
+        
+        # Credentials can be generates via Twitter's Application Management:
+        
+        #	https://apps.twitter.com/app/new
+        
+        --------------------------------------------------------------------
+        
+        consumer_key = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        
+        consumer_secret = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        
+        access_key = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        
+        access_secret = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        
+        --------------------------------------------------------------------
+        
+        ``
+        pip install sanjose-twitter
+        ``
+        
+Platform: UNKNOWN
