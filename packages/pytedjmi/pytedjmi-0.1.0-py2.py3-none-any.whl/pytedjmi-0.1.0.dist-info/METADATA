@@ -1,0 +1,54 @@
+Metadata-Version: 2.0
+Name: pytedjmi
+Version: 0.1.0
+Summary: Test Django migrations through Pytest.
+Home-page: https://github.com/wlonk/pytest-django-migrations
+Author: Kit La Touche
+Author-email: kit@transneptune.net
+License: BSD
+Download-URL: https://github.com/wlonk/pytest-django-migrations/tarball/0.1.0
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: sphinx
+Requires-Dist: sphinx-rtd-theme
+Requires-Dist: nose
+Requires-Dist: coverage
+Requires-Dist: pypi-publisher
+
+Pytest Django Migrations
+===============================
+
+version number: 0.1.0
+author: Kit La Touche
+
+Overview
+--------
+
+Test Django migrations through Pytest.
+
+Installation / Usage
+--------------------
+
+To install use pip:
+
+    $ pip install pytest-django-migrations
+
+
+Or clone the repo:
+
+    $ git clone https://github.com/wlonk/pytest-django-migrations.git
+    $ python setup.py install
+
+Contributing
+------------
+
+TBD
+
+Example
+-------
+
+TBD
+
