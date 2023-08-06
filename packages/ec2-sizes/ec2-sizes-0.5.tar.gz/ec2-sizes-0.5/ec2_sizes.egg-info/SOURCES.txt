@@ -1,0 +1,16 @@
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+ec2_sizes/__init__.py
+ec2_sizes/constants.py
+ec2_sizes/ec2-regions.json
+ec2_sizes/ec2-regions.pkl
+ec2_sizes/ec2-sizes.json
+ec2_sizes/ec2-sizes.pkl
+ec2_sizes/scrap.py
+ec2_sizes/tests.py
+ec2_sizes.egg-info/PKG-INFO
+ec2_sizes.egg-info/SOURCES.txt
+ec2_sizes.egg-info/dependency_links.txt
+ec2_sizes.egg-info/top_level.txt
