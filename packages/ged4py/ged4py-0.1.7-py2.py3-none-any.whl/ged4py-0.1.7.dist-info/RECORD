@@ -1,0 +1,16 @@
+ged4py/__init__.py,sha256=mDOHYo9QqHr-pFgMDkxaFjG_mv-_6vg6UnfP4_LsfWU,282
+ged4py/codecs.py,sha256=JOyl9tazBds8bNWjGPmqJtN7x-D_13kMwIHJAC0u_NQ,11495
+ged4py/model.py,sha256=ECkL2rnkR1om3jiI5M-yBYl6VZJzLHkPPXiJbm6aD64,15451
+ged4py/parser.py,sha256=wfayCF_Zj0YwGD2vsnHpFCQmSvxvr3rbFzhaRBp3X5E,14751
+ged4py/detail/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ged4py/detail/date.py,sha256=Ja5MHRl4QHelrQf2LLP7d-sSVUz2kidlrIEqs0E3sI8,9882
+ged4py/detail/io.py,sha256=fSYiMGxmzdhHoMkVAmwgG7xXUnS7csJg_JBDtIO0i1U,1948
+ged4py/detail/name.py,sha256=9oWuhWyZEU4IMNpjTggtI-XnSgG9HqmST76eyw8VbKI,3855
+ged4py-0.1.7.dist-info/DESCRIPTION.rst,sha256=O7Spz-33R2A16TZ3tHxd9HETLgWTyj8Mn1C26L8Iw2Y,1948
+ged4py-0.1.7.dist-info/METADATA,sha256=G3SGnaYzoJj48hpCeP3hl49r2SlAKyjIpqKEAzgybOs,2789
+ged4py-0.1.7.dist-info/RECORD,,
+ged4py-0.1.7.dist-info/WHEEL,sha256=kdsN-5OJAZIiHN-iO4Rhl82KyS0bDWf4uBwMbkNafr8,110
+ged4py-0.1.7.dist-info/entry_points.txt,sha256=eqGnTHtEVMYwfXVk1Z9MhC8O2N8wuqAbr0lisLmrkxs,20
+ged4py-0.1.7.dist-info/metadata.json,sha256=P5J-u6Ys0iB6eruw6rFK0Pm0R5zSb6jKn_oTGePXPHU,1069
+ged4py-0.1.7.dist-info/top_level.txt,sha256=-TcyCLr6HhmQY1GkcaBFU_gTdVcG-AOZeTuggGPU-wg,7
+ged4py-0.1.7.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
