@@ -1,0 +1,10 @@
+setup.py
+CloudMonitoringAPI/CloudUsage.py
+CloudMonitoringAPI/__init__.py
+CloudMonitoringAPI/constants.py
+CloudMonitoringAPI/ttypes.py
+OpenstackMonitoringAPI.egg-info/PKG-INFO
+OpenstackMonitoringAPI.egg-info/SOURCES.txt
+OpenstackMonitoringAPI.egg-info/dependency_links.txt
+OpenstackMonitoringAPI.egg-info/requires.txt
+OpenstackMonitoringAPI.egg-info/top_level.txt
