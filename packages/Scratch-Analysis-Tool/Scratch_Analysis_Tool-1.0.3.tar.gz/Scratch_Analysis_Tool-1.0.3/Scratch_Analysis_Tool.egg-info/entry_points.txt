@@ -1,0 +1,3 @@
+[console_scripts]
+SAT = Scratch_Analysis_Tool.Gen:gen
+
