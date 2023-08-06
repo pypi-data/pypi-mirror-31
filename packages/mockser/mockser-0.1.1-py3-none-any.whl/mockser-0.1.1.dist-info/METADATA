@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: mockser
+Version: 0.1.1
+Summary: Mock HTTP server that asks you for a JSON response everytime you visit a path for the first time.
+Home-page: https://github.com/klausweiss/mockser
+Author: Mikołaj Biel
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+Requires-Dist: Werkzeug (==0.14.1)
+
+# Mockser
+
+Mock HTTP server. Asks you for a JSON response everytime you visit a path for the first time.
+
+## Installation
+
+```
+pip install mockser
+```
+
+## Command line interface
+
+```
+usage: mockser [-h] [port]
+
+Mock HTTP server. Asks you for a JSON response everytime you visit a path for
+the first time.
+
+positional arguments:
+  port        Port to run the server on. Defaults to 8080.
+
+optional arguments:
+  -h, --help  show this help message and exit
+```
+
+
