@@ -1,0 +1,3 @@
+[console_scripts]
+apistar-create = star_builder:main
+
