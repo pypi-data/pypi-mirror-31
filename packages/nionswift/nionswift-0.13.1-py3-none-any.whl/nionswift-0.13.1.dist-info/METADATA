@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: nionswift
+Version: 0.13.1
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Requires-Dist: scipy
+Requires-Dist: numpy
+Requires-Dist: h5py
+Requires-Dist: pytz
+Requires-Dist: tzlocal
+Requires-Dist: pillow
+Requires-Dist: nionutils
+Requires-Dist: niondata
+Requires-Dist: nionui
+Requires-Dist: nionswift-io
+
+UNKNOWN
+
+
