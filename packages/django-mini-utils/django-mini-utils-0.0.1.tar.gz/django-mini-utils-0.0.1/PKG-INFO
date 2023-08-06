@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: django-mini-utils
+Version: 0.0.1
+Summary: A django app for common utils.
+Home-page: https://github.com/rensg001/django-utils
+Author: ren shan gui
+Author-email: renshangui@sina.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7

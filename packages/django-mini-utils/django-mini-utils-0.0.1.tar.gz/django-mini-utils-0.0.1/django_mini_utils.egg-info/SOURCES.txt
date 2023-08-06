@@ -1,0 +1,17 @@
+README.md
+setup.py
+django_mini_utils.egg-info/PKG-INFO
+django_mini_utils.egg-info/SOURCES.txt
+django_mini_utils.egg-info/dependency_links.txt
+django_mini_utils.egg-info/requires.txt
+django_mini_utils.egg-info/top_level.txt
+djangoutils/__init__.py
+djangoutils/admin.py
+djangoutils/apps.py
+djangoutils/exceptions.py
+djangoutils/mixins.py
+djangoutils/models.py
+djangoutils/views.py
+djangoutils/migrations/__init__.py
+djangoutils/tests/__init__.py
+djangoutils/tests/test_mixins.py
