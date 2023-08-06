@@ -1,0 +1,25 @@
+Metadata-Version: 1.2
+Name: umitools
+Version: 0.3.2
+Summary: A toolset for handling sequencing data with unique molecular identifiers (UMIs)
+Home-page: https://github.com/weng-lab/umitools
+Author: Yu Fu
+Author-email: yfu@bu.edu
+License: GPLv3
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Keywords: RNA-seq small RNA-seq unique molecular identifier UMI PCR duplicates PCR cycle starting material sequencing depth high-throughput sequencing deep sequencing transcriptome genome umitools RNA small RNA sequencing
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3
