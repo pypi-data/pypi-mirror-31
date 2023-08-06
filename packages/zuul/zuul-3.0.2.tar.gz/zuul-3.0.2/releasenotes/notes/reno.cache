@@ -1,0 +1,139 @@
+---
+file-contents:
+  releasenotes/notes/git-remote-refs-71bd2fc2bb05155d.yaml:
+    features: ['Git repositories will have a ``origin`` remote with refs pointing
+        to the
+
+        previous change in the speculative state.
+
+
+        This allows jobs to determine the commits that are part of a change, which
+
+        was not possible before. The remote URL is set to a bogus value which
+
+        won''t work with git commands that need to talk to the remote repository.
+
+        ']
+  releasenotes/notes/github-regex-status-26ddf3e3c91d182f.yaml:
+    features: ['The GitHub trigger status filter
+
+        :value:`pipeline.trigger.<github source>.action.status` and pipeline
+
+        requirements :attr:`pipeline.require.<github source>.status` now support
+
+        regular expression matching.
+
+        ']
+  releasenotes/notes/postgres-ae4f8594d0f4b256.yaml:
+    features: ['PostgreSQL is now officially supported as database backend.
+
+        See :attr:`<sql connection>` on how to configure database connections.
+
+        ']
+  releasenotes/notes/reporters-always-report-27702c27369176da.yaml:
+    fixes: ['Story 2001441 is fixed. Failure by one Zuul reporter will not short
+
+        circuit the reporting of other reporters. This ensures as much
+
+        information as possible is reported for each change even if some
+
+        failures occur. Note that the build set status is changed to ''ERROR''
+
+        after the first failed reporter.
+
+        ']
+  releasenotes/notes/role-checkouts-89632d2ff5eb8b78.yaml:
+    fixes: ['Zuul role repository checkouts now honor :attr:`job.override-checkout`.
+
+
+        Previously, when a Zuul role was specified for a job, Zuul would
+
+        usually checkout the master branch, unless that repository
+
+        appeared in the dependency chain for a patch.  It will now follow
+
+        the usual procedure for determining the branch to check out,
+
+        including honoring :attr:`job.override-checkout` options.
+
+
+        This may alter the behavior of currently existing jobs.  Depending
+
+        on circumstances, you may need to set
+
+        :attr:`job.override-checkout` or copy roles to other branches of
+
+        projects.
+
+        ']
+  releasenotes/notes/store-build-time-in-utc-4d7425cff5399602.yaml:
+    upgrades: ['The build start and end times are now stored as UTC in the database.
+        Since
+
+        there is no localization done on zuul web side, the zuul api also exposes
+
+        these times as UTC now.
+
+        ']
+  releasenotes/notes/tenant-from-script-e28d736001db5365.yaml:
+    features: ['A new option for the scheduler
+
+        :attr:`scheduler.tenant_config_script` can be used to tell Zuul to
+
+        execute a script and read its yaml output as the tenants
+
+        configuration. The option is exclusive with the
+
+        :attr:`scheduler.tenant_config` option.
+
+        ']
+  releasenotes/notes/version-table-prefix-c6a5e84851268f4d.yaml:
+    upgrade: ['The alembic version table is fixed to being prefixed too. This is necessary
+
+        when using :attr:`<sql connection>.table_prefix`. However if you are
+
+        already using ``table_prefix`` you will need to rename the table
+
+        ``alembic_version`` to ``<prefix>alembic_version`` before starting Zuul.
+
+        Otherwise zuul will try to create the tables again and fail. If you''re not
+
+        using ``table_prefix`` you can safely ignore this.
+
+        ']
+  releasenotes/notes/zuul-changes-fix-6d1be83959d451ce.yaml:
+    fixes: ['The zuul-changes.py script has been adapted to the new zuul-web api routes.
+
+        ']
+notes:
+- files:
+  - - releasenotes/notes/github-regex-status-26ddf3e3c91d182f.yaml
+    - !!binary |
+      MGMzYjhmYjk2M2UyMTFjNjFlZDM3OGJkYWMzMzg5MWY0MzEyZDA2MQ==
+  - - releasenotes/notes/reporters-always-report-27702c27369176da.yaml
+    - !!binary |
+      MWEwM2Y3ZTY4OTExNWIyZmU1NmRhOWJmOWVkYmJhNGFjODU5ZTUwZQ==
+  - - releasenotes/notes/store-build-time-in-utc-4d7425cff5399602.yaml
+    - !!binary |
+      NzUyYTA4ZGU1NzI0MzFjOGI3ZTc5MDI4NGRkMzNiNzk2YmY1MmQyMw==
+  - - releasenotes/notes/zuul-changes-fix-6d1be83959d451ce.yaml
+    - !!binary |
+      NTU5YWY3MDQ4YmM4MDI5Y2YxMjBkMDliYjJlZDBiNzQ1NzdiYzI4Yw==
+  version: 3.0.2
+- files:
+  - - releasenotes/notes/git-remote-refs-71bd2fc2bb05155d.yaml
+    - !!binary |
+      ODhmNzk2NDM1ZDMwNGEwNWZiN2Q5ZWUwODc5OGZhMjg3ZTgxOGU5Zg==
+  - - releasenotes/notes/postgres-ae4f8594d0f4b256.yaml
+    - !!binary |
+      Njg3MjdmNmMwMjYyMTgxZTRiYTcwYjBlYzc1NzgyM2MxODQ3YmJlYg==
+  - - releasenotes/notes/role-checkouts-89632d2ff5eb8b78.yaml
+    - !!binary |
+      ZDBhMzU2NzIyMTAxMWVkYTIyYzliNDI2NDU4ODdlNWViNjIzZTMwOA==
+  - - releasenotes/notes/tenant-from-script-e28d736001db5365.yaml
+    - !!binary |
+      MTA5NzY2YWZiMjVjNDJmNGJjZTg0MGEwNTBlYTAxZDM3OTIyOGM0Yg==
+  - - releasenotes/notes/version-table-prefix-c6a5e84851268f4d.yaml
+    - !!binary |
+      NTZmYzM2ZGQ2MDA2MmEwMGUxMGRmYmMwYzI2ODU5NTI5MGNkNmY5OA==
+  version: 3.0.1
