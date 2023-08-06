@@ -1,0 +1,14 @@
+MANIFEST.in
+setup.py
+src/caustic/__init__.py
+src/caustic.pants.egg-info/PKG-INFO
+src/caustic.pants.egg-info/SOURCES.txt
+src/caustic.pants.egg-info/dependency_links.txt
+src/caustic.pants.egg-info/top_level.txt
+src/caustic.pants.egg-info/zip-safe
+src/caustic/pants/__init__.py
+src/caustic/pants/register.py
+src/caustic/pants/targets/__init__.py
+src/caustic/pants/targets/caustic_library.py
+src/caustic/pants/tasks/__init__.py
+src/caustic/pants/tasks/caustic_gen.py
