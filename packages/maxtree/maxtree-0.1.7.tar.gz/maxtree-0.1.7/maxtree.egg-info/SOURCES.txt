@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+./cppsrc/maxtree.cpp
+./maxtree/maxtree_wrap.cpp
+maxtree/__init__.py
+maxtree/component_tree.py
+maxtree/maxtree.py
+maxtree.egg-info/PKG-INFO
+maxtree.egg-info/SOURCES.txt
+maxtree.egg-info/dependency_links.txt
+maxtree.egg-info/top_level.txt
