@@ -1,0 +1,10 @@
+pycsvsql/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pycsvsql/core.py,sha256=tbnTwi--gUH4rHY0B_-BwDjGhPF-gL2_WP_B8tQKP1c,1258
+pycsvsql/helpers.py,sha256=KsdmvabB-Ql_f3qLlWW5fLWHmcpIA90m61bCFC34G3Y,134
+pycsvsql-0.0.1.dist-info/METADATA,sha256=ojxuCnN07ixtKJbJ_qxVEUBjZT0USeSyoGtQcDvWdiU,905
+pycsvsql-0.0.1.dist-info/RECORD,,
+pycsvsql-0.0.1.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+pycsvsql-0.0.1.dist-info/top_level.txt,sha256=OBq2PoHoGzObOBhO6fX6Toa8cl-cqL0C9OVo2mK_epQ,15
+tests/__init__.py,sha256=UEhau6ZfKSPz267G6_-QHcPJizLqvL26l2FppSieO2Q,169
+tests/conftest.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_basic.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
