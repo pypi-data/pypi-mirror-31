@@ -1,0 +1,16 @@
+pyfortified_logging/__init__.py,sha256=QK2pfaJTUYIWvBueURCVg5a72KEKU03auAGDX1D-R5I,502
+pyfortified_logging/logger_adapter_custom.py,sha256=13eQ2hl2U-15KcnLqNQGZOKgVKNle8D2qOZNkHcu8cU,1539
+pyfortified_logging/logger_json_lexer.py,sha256=eOdmRBFAKX9J7l5PERu35W569f8cupU4MHH5QRFCUpw,4877
+pyfortified_logging/logging.py,sha256=DkvrVoghIbQWxCjFyMgqcDwkhL8-1PMxRpOYEC9F-KM,2570
+pyfortified_logging/logging_format.py,sha256=zHskE_uBBFuTqbs8clrb0Yxoeon1qTxTG3PrIOQuPO4,487
+pyfortified_logging/logging_json_formatter.py,sha256=P8XU0k3V0V2fJAW5LF-nflkjOgpT1HaWQYmEfsVFny0,6795
+pyfortified_logging/logging_levels.py,sha256=innH5LnsIbvg9RNnAOb1BWY3CZDYVk9c2r0uith7d0k,591
+pyfortified_logging/logging_output.py,sha256=-qLKf2PIVkZeX_8LaccijtI3FuJtB5Pex92dPjUKrsc,536
+pyfortified_logging/errors/__init__.py,sha256=neqd0w0iFJBAIJthhcslQhxqxMQkt6w17bh6R_EU2FU,219
+pyfortified_logging/errors/errors_traceback.py,sha256=AWOhoWWf0cQhkm6cix1aHlJpcIz9boW3QELcLIcqh5A,1119
+pyfortified_logging/support/__init__.py,sha256=qtmeFzY9p2V8th9dmSje_BOi6LcGViz2xczotQIwbPA,116
+pyfortified_logging/support/singleton.py,sha256=auu0jp1yJkAxB223WTxvQB2lJwpEc5q-O0zGyGPH1-Y,529
+pyfortified_logging-0.1.8.dist-info/METADATA,sha256=ouS1DLCfNr_QKmHDJ7JbHjQxxuq6j1XSHeiRi2NW1OE,12002
+pyfortified_logging-0.1.8.dist-info/RECORD,,
+pyfortified_logging-0.1.8.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+pyfortified_logging-0.1.8.dist-info/top_level.txt,sha256=UqE_Nk97NRTQXwPwR16oKADyF0MT3bpYZaq2hR6ElzY,20
