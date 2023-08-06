@@ -1,0 +1,43 @@
+Metadata-Version: 1.1
+Name: aiograph
+Version: 0.1b3
+Summary: Python asynchronous Telegra.ph API wrapper
+Home-page: https://github.com/aiogram/aiograph
+Author: Alex Root Junior <jroot.junior@gmail.com>
+Author-email: aiogram@illemius.xyz
+License: MIT
+Description: AIOGraph
+        ========
+        
+        .. image:: https://img.shields.io/pypi/v/aiograph.svg
+           :target: https://pypi.org/project/aiograph/
+           :alt: PyPI
+        
+        .. image:: https://img.shields.io/pypi/status/aiograph.svg
+           :target: https://pypi.org/project/aiograph/
+           :alt: PyPi status
+        
+        .. image:: https://travis-ci.org/aiogram/aiograph.svg?branch=master
+           :target: https://travis-ci.org/aiogram/aiograph
+           :alt: Travis-CI
+        
+        .. image:: https://img.shields.io/codecov/c/github/aiogram/aiograph.svg
+           :target: https://codecov.io/gh/aiogram/aiograph
+           :alt: Codecov
+        
+        .. image:: https://landscape.io/github/aiogram/aiograph/master/landscape.svg?style=flat
+           :target: https://landscape.io/github/aiogram/aiograph/master
+           :alt: Code Health
+        
+        
+        **aiograph** an asynchronous Telegra.ph API wrapper.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Framework :: AsyncIO
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
