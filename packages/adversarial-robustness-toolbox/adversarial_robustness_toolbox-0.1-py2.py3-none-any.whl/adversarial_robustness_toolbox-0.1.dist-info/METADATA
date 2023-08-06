@@ -1,0 +1,32 @@
+Metadata-Version: 2.0
+Name: adversarial-robustness-toolbox
+Version: 0.1
+Summary: IBM Adversarial machine learning toolbox
+Home-page: https://github.com/IBM/adversarial-robustness-toolbox
+Author: Irina Nicolae
+Author-email: maria-irina.nicolae@ibm.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Dist: Keras
+Requires-Dist: h5py
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+Requires-Dist: setuptools
+Provides-Extra: tf
+Requires-Dist: tensorflow (<=1.5.0); extra == 'tf'
+Provides-Extra: tf_gpu
+Requires-Dist: tensorflow-gpu (<=1.5.0); extra == 'tf_gpu'
+
+UNKNOWN
+
+
