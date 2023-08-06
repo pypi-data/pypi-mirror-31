@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: metalearn
+Version: 0.4.4
+Summary: A package to aid in metalearning
+Home-page: https://github.com/byu-dml/metalearn
+Author: Roland Laboulaye, Brandon Schoenfeld, Casey Davis
+Author-email: rlaboulaye@gmail.com, bjschoenfeld@gmail.com, caseykdavis@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/byu-dml/metalearn/archive/0.4.4.tar.gz
+Keywords: metalearning,machine learning,metalearn
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: ~=3.6
+Requires-Dist: numpy (==1.14.2)
+Requires-Dist: pandas (==0.22.0)
+Requires-Dist: python-dateutil (==2.7.2)
+Requires-Dist: pytz (==2018.4)
+Requires-Dist: scikit-learn (==0.19.1)
+Requires-Dist: scipy (==1.0.1)
+Requires-Dist: six (==1.11.0)
+
+UNKNOWN
+
+
