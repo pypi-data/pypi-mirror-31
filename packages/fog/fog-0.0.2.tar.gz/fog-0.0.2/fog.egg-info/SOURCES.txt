@@ -1,0 +1,12 @@
+README.md
+setup.py
+fog/__init__.py
+fog.egg-info/PKG-INFO
+fog.egg-info/SOURCES.txt
+fog.egg-info/dependency_links.txt
+fog.egg-info/top_level.txt
+fog.egg-info/zip-safe
+fog/metrics/__init__.py
+fog/metrics/cosine.py
+test/metrics/__init__.py
+test/metrics/cosine_test.py
