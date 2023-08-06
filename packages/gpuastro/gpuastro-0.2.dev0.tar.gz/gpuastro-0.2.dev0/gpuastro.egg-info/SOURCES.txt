@@ -1,0 +1,8 @@
+README.txt
+setup.py
+gpuastro/__init__.py
+gpuastro/numba_binary_model.py
+gpuastro.egg-info/PKG-INFO
+gpuastro.egg-info/SOURCES.txt
+gpuastro.egg-info/dependency_links.txt
+gpuastro.egg-info/top_level.txt
