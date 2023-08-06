@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: ec2-sizes
+Version: 0.4
+Summary: EC2 instance types as constants.
+Home-page: https://github.com/ZuluPro/python-ec2-sizes
+Author: Anthony Monthe (ZuluPro)
+Author-email: anthony.monthe@gmail.com
+License: BSD
+Description: UNKNOWN
+Keywords: amazon,ec2
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
