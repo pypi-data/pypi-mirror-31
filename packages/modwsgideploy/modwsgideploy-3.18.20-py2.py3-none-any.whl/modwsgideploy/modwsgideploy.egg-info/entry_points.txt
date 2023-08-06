@@ -1,0 +1,3 @@
+[console_scripts]
+modwsgideploy = modwsgideploy.cli:main
+
