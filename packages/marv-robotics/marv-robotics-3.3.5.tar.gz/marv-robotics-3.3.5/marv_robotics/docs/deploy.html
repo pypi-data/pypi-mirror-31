@@ -1,0 +1,268 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Deployment &#8212; MARV Robotics 3.3.5 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx_paramlinks.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Maintenance" href="maintenance.html" />
+    <link rel="prev" title="HTTP API" href="httpapi.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="deployment">
+<span id="deploy"></span><h1>Deployment<a class="headerlink" href="#deployment" title="Permalink to this headline">¶</a></h1>
+<p>MARV’s frontend uses a service worker, which requires HTTPS for non-localhost access. You can either use a self-signed certificate or Let’s Encrypt. The latter only if your webserver is accessible from the internet.</p>
+<p>For production usage we strongly recommend to use nginx as a reverse-proxy. The increased setup overhead is justified by greatly increased performance for serving large files.</p>
+<p>Two deployments are described here in short:</p>
+<ul class="simple">
+<li>uWSGI with a self-signed certificate, and</li>
+<li>nginx as a proper front-facing webserver with a Let’s Encrypt certificate</li>
+</ul>
+<div class="section" id="uwsgi-with-self-signed-certificate">
+<h2>uWSGI with self-signed certificate<a class="headerlink" href="#uwsgi-with-self-signed-certificate" title="Permalink to this headline">¶</a></h2>
+<p>For uWSGI to support HTTPS, it needs to be compiled from source with SSL headers being available. This should have already been handled by the installation and is listed here only for completeness sake:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> sudo apt-get install libssl-dev
+<span class="gp">(venv) $</span> pip install -U --force-reinstall --no-binary :all: uwsgi
+</pre></div>
+</div>
+<p>Given that follow the steps outlined in the uWSGI documentation:</p>
+<p><a class="reference external" href="http://uwsgi-docs.readthedocs.io/en/latest/HTTPS.html#https-support-from-1-3">http://uwsgi-docs.readthedocs.io/en/latest/HTTPS.html#https-support-from-1-3</a></p>
+<div class="section" id="generate-self-signed-certificate">
+<h3>Generate self-signed certificate<a class="headerlink" href="#generate-self-signed-certificate" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">openssl</span> <span class="n">genrsa</span> <span class="o">-</span><span class="n">out</span> <span class="n">sites</span><span class="o">/</span><span class="n">example</span><span class="o">/</span><span class="n">uwsgi</span><span class="o">-</span><span class="n">ssl</span><span class="o">.</span><span class="n">key</span> <span class="mi">2048</span>
+<span class="n">openssl</span> <span class="n">req</span> <span class="o">-</span><span class="n">new</span> <span class="o">-</span><span class="n">key</span> <span class="n">sites</span><span class="o">/</span><span class="n">example</span><span class="o">/</span><span class="n">uwsgi</span><span class="o">-</span><span class="n">ssl</span><span class="o">.</span><span class="n">key</span> <span class="o">-</span><span class="n">out</span> <span class="n">sites</span><span class="o">/</span><span class="n">example</span><span class="o">/</span><span class="n">uwsgi</span><span class="o">-</span><span class="n">ssl</span><span class="o">.</span><span class="n">csr</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">openssl</span> <span class="n">x509</span> <span class="o">-</span><span class="n">req</span> <span class="o">-</span><span class="n">days</span> <span class="mi">3650</span> \
+    <span class="o">-</span><span class="ow">in</span> <span class="n">sites</span><span class="o">/</span><span class="n">example</span><span class="o">/</span><span class="n">uwsgi</span><span class="o">-</span><span class="n">ssl</span><span class="o">.</span><span class="n">csr</span> \
+    <span class="o">-</span><span class="n">signkey</span> <span class="n">sites</span><span class="o">/</span><span class="n">example</span><span class="o">/</span><span class="n">uwsgi</span><span class="o">-</span><span class="n">ssl</span><span class="o">.</span><span class="n">key</span> \
+    <span class="o">-</span><span class="n">out</span> <span class="n">sites</span><span class="o">/</span><span class="n">example</span><span class="o">/</span><span class="n">uwsgi</span><span class="o">-</span><span class="n">ssl</span><span class="o">.</span><span class="n">crt</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="adjust-uwsgi-conf">
+<h3>Adjust uwsgi.conf<a class="headerlink" href="#adjust-uwsgi-conf" title="Permalink to this headline">¶</a></h3>
+<p>Enable https in <code class="docutils literal notranslate"><span class="pre">sites/example/uwsgi.conf</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">uwsgi</span><span class="p">]</span>
+<span class="n">http</span> <span class="o">=</span> <span class="p">:</span><span class="mi">8000</span>
+<span class="n">https</span> <span class="o">=</span> <span class="p">:</span><span class="mi">8443</span><span class="p">,</span><span class="o">%</span><span class="n">d</span><span class="o">/</span><span class="n">uwsgi</span><span class="o">-</span><span class="n">ssl</span><span class="o">.</span><span class="n">crt</span><span class="p">,</span><span class="o">%</span><span class="n">d</span><span class="o">/</span><span class="n">uwsgi</span><span class="o">-</span><span class="n">ssl</span><span class="o">.</span><span class="n">key</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p>Restart uwsgi.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(venv) $ uwsgi --ini sites/example/uwsgi.conf
+</pre></div>
+</div>
+<p><strong>docker</strong> Restart container and instruct it to also publish the port for https.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">scripts</span><span class="o">/</span><span class="n">run</span><span class="o">-</span><span class="n">container</span> <span class="n">sites</span><span class="o">/</span><span class="n">example</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">bags</span> <span class="o">-</span><span class="n">p</span> <span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">8443</span><span class="p">:</span><span class="mi">8443</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="errors">
+<h3>Errors<a class="headerlink" href="#errors" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">uwsgi</span><span class="o">-</span><span class="n">ssl</span><span class="p">]</span> <span class="n">unable</span> <span class="n">to</span> <span class="n">assign</span> <span class="n">certificate</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">marv</span><span class="o">/</span><span class="n">site</span><span class="o">/</span><span class="n">uwsgi</span><span class="o">-</span><span class="n">ssl</span><span class="o">.</span><span class="n">crt</span> <span class="k">for</span> <span class="n">context</span> <span class="s2">&quot;http-:8443&quot;</span>
+</pre></div>
+</div>
+<p>This means uwsgi could not find the SSL certificate which should be right next to <code class="docutils literal notranslate"><span class="pre">sites/example/uwsgi.conf</span></code> (see above).</p>
+</div>
+</div>
+<div class="section" id="uwsgi-behind-nginx">
+<span id="deploy-nginx"></span><h2>uWSGI behind NGINX<a class="headerlink" href="#uwsgi-behind-nginx" title="Permalink to this headline">¶</a></h2>
+<p>References:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://certbot.eff.org/all-instructions/">https://certbot.eff.org/all-instructions/</a></li>
+<li><a class="reference external" href="http://uwsgi-docs.readthedocs.io/en/latest/Nginx.html">http://uwsgi-docs.readthedocs.io/en/latest/Nginx.html</a></li>
+</ul>
+<div class="section" id="uwsgi-config">
+<h3>uwsgi config<a class="headerlink" href="#uwsgi-config" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[uwsgi]</span>
+<span class="c1">;http = :8000</span>
+<span class="c1">;https = :8443,%d/uwsgi-ssl.crt,%d/uwsgi-ssl.key</span>
+<span class="na">socket</span> <span class="o">=</span> <span class="s">:8000  ; behind nginx with uwsgi_pass</span>
+<span class="na">processes</span> <span class="o">=</span> <span class="s">8</span>
+<span class="na">threads</span> <span class="o">=</span> <span class="s">2</span>
+<span class="c1">;enable-threads = true  ; needed if threads &lt; 2</span>
+<span class="na">manage-script-name</span> <span class="o">=</span> <span class="s">true</span>
+<span class="na">if-env</span> <span class="o">=</span> <span class="s">MARV_APPLICATION_ROOT</span>
+<span class="s">  mount = $(MARV_APPLICATION_ROOT)=marv.app.wsgi:application</span>
+<span class="s">  env = MARV_APPLICATION_ROOT=$(MARV_APPLICATION_ROOT)</span>
+<span class="na">end-if</span>
+<span class="na">if-not-env</span> <span class="o">=</span> <span class="s">MARV_APPLICATION_ROOT</span>
+<span class="s">  mount = /=marv.app.wsgi:application</span>
+<span class="s">  env = MARV_APPLICATION_ROOT=/</span>
+<span class="na">end-if</span>
+<span class="c1">;marv.conf next to uwsgi.conf</span>
+<span class="na">env</span> <span class="o">=</span> <span class="s">MARV_CONFIG=%d/marv.conf</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="nginx-config">
+<h3>nginx config<a class="headerlink" href="#nginx-config" title="Permalink to this headline">¶</a></h3>
+<p>Nginx allows marv to offload serving data from disk which is especially useful for large files. Adjust the paths of the nested internal location block to point to your store, within the docker container and outside of the docker container, under the assumption, that nginx is running directly on your host system. In case you are running marv in a virtual environment also directly on the host system, the paths are identical. For a <strong>self-signed certificate</strong> create it as above, remove <code class="docutils literal notranslate"><span class="pre">ssl_trusted_certificate</span></code> below and adjust <code class="docutils literal notranslate"><span class="pre">ssl_certificate</span></code> and <code class="docutils literal notranslate"><span class="pre">ssl_certificate_key</span></code> below accordingly.</p>
+<div class="highlight-nginx notranslate"><div class="highlight"><pre><span></span><span class="k">server</span> <span class="p">{</span>
+  <span class="kn">server_name</span> <span class="s">example.com</span><span class="p">;</span>
+  <span class="kn">listen</span> <span class="mi">80</span><span class="p">;</span>
+  <span class="kn">return</span> <span class="mi">301</span> <span class="s">https://</span><span class="nv">$host$request_uri</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">server</span> <span class="p">{</span>
+  <span class="kn">server_name</span> <span class="s">example.com</span><span class="p">;</span>
+  <span class="kn">listen</span> <span class="mi">443</span> <span class="s">ssl</span> <span class="s">http2</span><span class="p">;</span>
+
+  <span class="kn">include</span> <span class="s">/usr/lib/python3.6/site-packages/certbot_nginx/options-ssl-nginx.conf</span><span class="p">;</span>
+  <span class="kn">ssl_stapling_verify</span> <span class="no">on</span><span class="p">;</span>
+  <span class="kn">ssl_stapling</span> <span class="no">on</span><span class="p">;</span>
+
+  <span class="kn">ssl_trusted_certificate</span> <span class="s">/etc/letsencrypt/live/example.com/chain.pem</span><span class="p">;</span>
+  <span class="kn">ssl_certificate_key</span> <span class="s">/etc/letsencrypt/live/example.com/privkey.pem</span><span class="p">;</span>
+  <span class="kn">ssl_certificate</span> <span class="s">/etc/letsencrypt/live/example.com/fullchain.pem</span><span class="p">;</span>
+
+  <span class="kn">location</span> <span class="s">/</span> <span class="p">{</span>
+    <span class="kn">location</span> <span class="s">/docker/container/path/to/store</span> <span class="p">{</span>
+      <span class="kn">internal</span><span class="p">;</span>
+      <span class="kn">alias</span> <span class="s">/host/path/to/store</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kn">location</span> <span class="s">/scanroot</span> <span class="p">{</span>
+      <span class="kn">internal</span><span class="p">;</span>
+      <span class="kn">alias</span> <span class="s">/host/path/to/scanroot</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kn">client_max_body_size</span> <span class="mi">10m</span><span class="p">;</span>
+    <span class="kn">client_body_buffer_size</span> <span class="mi">128k</span><span class="p">;</span>
+    <span class="kn">uwsgi_pass</span> <span class="n">127.0.0.1</span><span class="p">:</span><span class="mi">8000</span><span class="p">;</span>
+    <span class="kn">include</span> <span class="s">uwsgi_params</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="kn">location</span> <span class="s">/other_instance</span> <span class="p">{</span>
+    <span class="kn">location</span> <span class="s">/other_instance/docker/container/path/to/store</span> <span class="p">{</span>
+      <span class="kn">internal</span><span class="p">;</span>
+      <span class="kn">alias</span> <span class="s">/host/path/to/store</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kn">location</span> <span class="s">/other_instance/scanroot</span> <span class="p">{</span>
+      <span class="kn">internal</span><span class="p">;</span>
+      <span class="kn">alias</span> <span class="s">/host/path/to/other/scanroot</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kn">client_max_body_size</span> <span class="mi">10m</span><span class="p">;</span>
+    <span class="kn">client_body_buffer_size</span> <span class="mi">128k</span><span class="p">;</span>
+    <span class="kn">uwsgi_pass</span> <span class="n">127.0.0.1</span><span class="p">:</span><span class="mi">8000</span><span class="p">;</span>
+    <span class="kn">include</span> <span class="s">uwsgi_params</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">uwsgi_params</span></code>:</p>
+<div class="highlight-nginx notranslate"><div class="highlight"><pre><span></span><span class="k">uwsgi_param</span>  <span class="s">QUERY_STRING</span>       <span class="nv">$query_string</span><span class="p">;</span>
+<span class="k">uwsgi_param</span>  <span class="s">REQUEST_METHOD</span>     <span class="nv">$request_method</span><span class="p">;</span>
+<span class="k">uwsgi_param</span>  <span class="s">CONTENT_TYPE</span>       <span class="nv">$content_type</span><span class="p">;</span>
+<span class="k">uwsgi_param</span>  <span class="s">CONTENT_LENGTH</span>     <span class="nv">$content_length</span><span class="p">;</span>
+
+<span class="k">uwsgi_param</span>  <span class="s">REQUEST_URI</span>        <span class="nv">$request_uri</span><span class="p">;</span>
+<span class="k">uwsgi_param</span>  <span class="s">PATH_INFO</span>          <span class="nv">$document_uri</span><span class="p">;</span>
+<span class="k">uwsgi_param</span>  <span class="s">DOCUMENT_ROOT</span>      <span class="nv">$document_root</span><span class="p">;</span>
+<span class="k">uwsgi_param</span>  <span class="s">SERVER_PROTOCOL</span>    <span class="nv">$server_protocol</span><span class="p">;</span>
+<span class="k">uwsgi_param</span>  <span class="s">REQUEST_SCHEME</span>     <span class="nv">$scheme</span><span class="p">;</span>
+<span class="k">uwsgi_param</span>  <span class="s">HTTPS</span>              <span class="nv">$https</span> <span class="s">if_not_empty</span><span class="p">;</span>
+
+<span class="k">uwsgi_param</span>  <span class="s">REMOTE_ADDR</span>        <span class="nv">$remote_addr</span><span class="p">;</span>
+<span class="k">uwsgi_param</span>  <span class="s">REMOTE_PORT</span>        <span class="nv">$remote_port</span><span class="p">;</span>
+<span class="k">uwsgi_param</span>  <span class="s">SERVER_PORT</span>        <span class="nv">$server_port</span><span class="p">;</span>
+<span class="k">uwsgi_param</span>  <span class="s">SERVER_NAME</span>        <span class="nv">$server_name</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Deployment</a><ul>
+<li><a class="reference internal" href="#uwsgi-with-self-signed-certificate">uWSGI with self-signed certificate</a><ul>
+<li><a class="reference internal" href="#generate-self-signed-certificate">Generate self-signed certificate</a></li>
+<li><a class="reference internal" href="#adjust-uwsgi-conf">Adjust uwsgi.conf</a></li>
+<li><a class="reference internal" href="#errors">Errors</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#uwsgi-behind-nginx">uWSGI behind NGINX</a><ul>
+<li><a class="reference internal" href="#uwsgi-config">uwsgi config</a></li>
+<li><a class="reference internal" href="#nginx-config">nginx config</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="httpapi.html" title="previous chapter">HTTP API</a></li>
+      <li>Next: <a href="maintenance.html" title="next chapter">Maintenance</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/deploy.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2016-2018  Ternaris.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/deploy.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
