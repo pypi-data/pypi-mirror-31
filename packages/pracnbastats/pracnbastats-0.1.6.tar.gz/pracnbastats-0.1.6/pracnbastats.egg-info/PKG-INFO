@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: pracnbastats
+Version: 0.1.6
+Summary: Scrape stats.nba.com.
+Home-page: https://github.com/practicallypredictable/pracnbastats
+Author: Practically Predictable
+Author-email: practicallypredictable@practicallypredictable.com
+License: MIT
+Description: ## pracnbastats
+        
+        Scrape <http://stats.nba.com/>
+        
+Keywords: statistics sports analytics basketball NBA scrape
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Description-Content-Type: text/markdown
