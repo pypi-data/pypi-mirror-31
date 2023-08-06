@@ -1,0 +1,89 @@
+{% from 'macros.html' import transaction, goal_bar with context %}
+{% extends "layout.html" %}
+{% block title %}{{goal.label}} in {{date.year}}{% endblock %}
+{% block head %}
+  <script src="{{url_for('static', filename='chartist.min.js')}}"></script>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='chartist.min.css')}}">
+{% endblock %}
+
+{% block page_header %}
+  <div id="header">
+    <a href="{{url_for('goal', year=prev_year, label=goal.label.lower())}}" title="Previous year">&laquo;</a>
+    <h1>{{ goal.label }} in <a href="{{url_for('year', year=date.year)}}" class="u">{{date.year}}</a></h1>
+    {% if next_year %}
+    <a href="{{url_for('goal', year=next_year, label=goal.label.lower())}}" title="Next year">&raquo;</a>
+    {% else %}
+    <span></span>
+    {% endif %}
+  </div>
+{% endblock %}
+
+{% block page %}
+  <div class="stats-header">
+    <div class="value">
+      {{ goal_bar(goal) }}
+    </div>
+  </div>
+  <table class="stats-table">
+    <tbody>
+      <tr>
+        <td>Target</td>
+        <td>{{famount(goal.target)}}</td>
+      </tr>
+      <tr>
+        <td>Saved</td>
+        <td>{{famount(goal.saved)}}</td>
+      </tr>
+      <tr>
+        <td>Used</td>
+        <td>{{famount(goal.used)}}</td>
+      </tr>
+      <tr>
+        <td>Remaining</td>
+        <td>{{famount(goal.remaining)}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="ct-chart ct-major-eleventh"></div>
+
+  {% if categories %}
+    {% include "_categories_bar.html" %}
+  {% endif %}
+
+  <h2 id="filter-title"></h2>
+  <ul class="transactions">
+    {% for tx in transactions %}
+      {{ transaction(tx) }}
+    {% endfor %}
+  </ul>
+  <a id="clear-filter" href="javascript:" onclick="clearTransactionsFilter()">Clear filter</a>
+
+  <script>
+     document.addEventListener("DOMContentLoaded", function() {
+      var data = {
+        labels: {{chart_months|tojson}},
+        series: [
+          {{chart_amounts|tojson}}
+        ]
+      };
+
+      new Chartist.Line('.ct-chart', data, {
+        fullWidth: true,
+        showArea: true,
+        axisX: {
+          showGrid: false
+        },
+        axisY: {
+          showLabel: false,
+          offset: 0
+        },
+        plugins: [
+          Chartist.plugins.tooltip()
+        ]
+      });
+    });
+  </script>
+
+  {% include "_tx_options.html" %}
+{% endblock %}

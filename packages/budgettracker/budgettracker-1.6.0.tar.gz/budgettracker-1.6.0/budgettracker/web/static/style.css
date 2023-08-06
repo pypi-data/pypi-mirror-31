@@ -1,0 +1,679 @@
+
+body {
+  background: #e4e4e4;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+hr {
+  border: 0;
+  border-top: 1px dotted #ddd;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.neg {
+  color: #d21111 !important;
+}
+.warn {
+  color: #f7a436 !important;
+}
+.pos {
+  color: #2cd211 !important;
+}
+
+.tooltip {
+  display: inline-block;
+  padding: 2px 4px;
+  border-radius: 50%;
+  background: #eee;
+  color: #999;
+  font-weight: bold;
+  font-size: 12px;
+  position: relative;
+  vertical-align: bottom;
+}
+  .tooltip > span {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 10px;
+    border: 1px solid #efefef;
+    background: #f7f5d4;
+    z-index: 100;
+    width: 200px;
+    font-weight: normal;
+    font-size: 14px;
+    color: black;
+  }
+  .tooltip:hover > span {
+    display: block;
+  }
+
+#page {
+  width: 700px;
+  max-width: 100%;
+  margin: 25px auto 15px;
+  border: 1px solid #ffffff;
+  border-radius: 7px;
+  padding: 10px;
+  background: #fff;
+  overflow: hidden;
+}
+
+#year-overview {
+  margin: -10px -10px 0;
+  text-align: center;
+  background: #5aa0e2;
+  color: #fff;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: monospace;
+}
+  #balance {
+    padding: 10px;
+    cursor: pointer;
+  }
+  #balance:hover {
+    text-decoration: underline;
+  }
+  #year-overview-details {
+    padding: 10px;
+    display: none;
+  }
+  #year-overview-details.open {
+    display: block;
+  }
+    #year-overview-details > p {
+      margin: 20px 0;
+      font-size: 16px;
+    }
+    #year-overview-details > p:first-child {
+      margin-top: 0;
+    }
+
+#accounts {
+  font-weight: normal;
+  margin: 22px auto;
+  padding: 0;
+  width: 80%;
+  font-size: 14px;
+  border: 0;
+  border-top: 1px dotted #8bc3f9;
+  text-align: left;
+}
+  #accounts td,
+  #accounts th {
+    border-bottom: 1px dotted #8bc3f9;
+    padding: 4px;
+  }
+  #accounts th {
+    padding: 6px 4px;
+    background: #5296d6;
+    font-size: 16px;
+  }
+  #accounts td:last-child {
+    text-align: right;
+  }
+
+#header {
+  margin: -10px -10px 0;
+  padding: 20px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  text-align: center;
+  background: #7bbbf7;
+  color: #fff;
+  border-bottom: 9px solid #5aa0e2;
+  display: flex;
+  align-items: center;
+}
+#year-overview + #header {
+  margin-top: 0;
+  border-radius: 0;
+}
+  #header h1 {
+    flex: 1 1 auto;
+    margin: 0;
+    padding: 0;
+    display: inline;
+  }
+    #header h1 a {
+      color: #fff;
+      text-decoration: none;
+    }
+    #header h1 a.u,
+    #header h1 a:hover {
+      text-decoration: underline;
+    }
+  #header > a,
+  #header > span {
+    flex: 0 0 30px;
+    font-size: 28px;
+    text-decoration: none;
+    color: #fff;
+  }
+  #header form + a {
+    margin-left: 10px;
+  }
+#update-form {
+  flex: 0 0 30px;
+}
+  #update-form > input {
+    display: none;
+  }
+  #update-form > button {
+    border: 0;
+    outline: none;
+    background: transparent;
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+    padding: 0;
+    width: 100%;
+  }
+#month-switcher {
+  background: #7bbbf7;
+  color: #fff;
+  border-bottom: 9px solid #5aa0e2;
+  margin: -10px -10px 0;
+  padding: 10px;
+  display: none;
+  justify-content: center;
+}
+  #month-switcher > a {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 5px 8px;
+    border: 2px solid #ddd;
+    border-top-width: 9px;
+    border-radius: 4px;
+    background: #fff;
+    font-size: 12px;
+    text-decoration: none;
+    color: #aaa;
+  }
+  #month-switcher > a.current {
+    border-color: #bbb;
+    color: #444;
+  }
+  #month-switcher > a:hover {
+    border-color: #ccc;
+  }
+
+.stats-header {
+  margin: 30px 0 20px;
+  text-align: center;
+}
+  .stats-header > .title {
+    margin-bottom: 10px;
+    color: #aaa;
+  }
+    .stats-header .title a {
+      color: #aaa;
+    }
+  .stats-header > .value {
+    font-size: 40px;
+    font-family: monospace;
+  }
+  .stats-header > .warnings {
+    list-style: none;
+    margin: 10px 0 0;
+    padding: 0;
+  }
+    .stats-header > .warnings a {
+      color: #f99f4f;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+.stats-table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+  .stats-table > thead th {
+    text-align: right;
+    font-size: 12px;
+    color: #777;
+  }
+  .stats-table > tbody > tr {
+    border-top: 1px dotted #eee;
+  }
+  .stats-table > tbody > tr.big {
+    font-size: 20px;
+  }
+    .stats-table > tbody td {
+      padding: 6px 4px;
+      font-size: 12px;
+      color: #555;
+      text-align: right;
+    }
+    .stats-table > tbody > tr.big > td {
+      padding: 12px 0;
+    }
+    .stats-table > tbody > tr.em > td {
+      font-style: italic;
+    }
+      .stats-table > tbody td > .warning {
+        cursor: default;
+      }
+    .stats-table > tbody td:nth-child(2) {
+      font-family: monospace;
+      font-size: 14px;
+      font-weight: bold;
+    }
+      .stats-table > tbody > tr.big > td:nth-child(2) {
+        font-size: 16px;
+      }
+    .stats-table > tbody td:first-child {
+      color: #777;
+      font-size: 16px;
+      padding: 6px 0;
+      text-align: left;
+    }
+      .stats-table > tbody td:first-child > a {
+        color: #777;
+      }
+    .stats-table > tbody > tr.big > td:first-child {
+      color: #444;
+      font-weight: bold;
+    }
+
+.transactions {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.transactions.hidden {
+  display: none;
+}
+  .transactions li {
+    margin-bottom: 10px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  .transactions li.hide {
+    display: none;
+  }
+    .transactions li > span {
+      display: inline-block;
+    }
+    .transactions li .date {
+      flex: 0 0 auto;
+      margin-right: 10px;
+      color: #888;
+      float: left;
+    }
+    .transactions li .label {
+      flex: 1 1 auto;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .transactions li .category {
+      flex: 0 0 15px;
+      height: 15px;
+      margin: 0 2px;
+      text-indent: -9999px;
+      overflow: hidden;
+      cursor: pointer;
+      background: #eee;
+    }
+    .transactions li .category:hover {
+      box-shadow: 0 0 3px rgba(0, 0, 0, .5);
+    }
+    .transactions li .goal {
+      flex: 0 0 15px;
+      margin: 0 5px;
+      cursor: pointer;
+      color: #777;
+    }
+    .transactions li .amount {
+      flex: 0 0 80px;
+      font-family: monospace;
+      font-size: 14px;
+      font-weight: bold;
+      text-align: right;
+    }
+
+#categories-bar {
+  height: 10px;
+  border: 1px solid #efefef;
+  width: 100%;
+  margin: 25px 0;
+  display: flex;
+}
+  #categories-bar > span {
+    flex: 1 1 auto;
+    height: 100%;
+    border: 1px solid #fff;
+    cursor: pointer;
+  }
+
+#filter-title {
+  margin: 30px 0;
+  color: #bbb;
+  font-size: 20px;
+  text-align: center;
+  display: none;
+}
+
+#show-more,
+#clear-filter {
+  display: block;
+  text-align: center;
+  padding: 5px;
+  color: #aaa;
+}
+
+#clear-filter {
+  display: none;
+}
+
+#nodata {
+  margin: 40px 0 !important;
+  text-align: center;
+  font-size: 16px;
+  color: #777;
+  border: 0 !important;
+}
+
+#footer {
+  padding: 10px 0;
+  text-align: center;
+  font-size: 12px;
+  color: #b7b7b7;
+  margin-bottom: 20px;
+}
+  #footer a {
+    color: #b7b7b7;
+  }
+
+@media screen and (max-width: 600px) {
+  #balance {
+    flex-direction: column;
+  }
+  #page {
+    border: 0;
+    border-radius: 0;
+    margin-top: 0;
+    padding: 5px;
+  }
+  .transactions li .label {
+    max-width: 183px;
+  }
+}
+
+#login {
+  text-align: center;
+}
+  #login input {
+    font-size: 30px;
+    padding: 5px 10px;
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+#config {
+  overflow: auto;
+  zoom: 1;
+}
+
+#config fieldset {
+  border: 0;
+  padding: 0 0 10px;
+  margin-bottom: 20px;
+}
+  #config legend {
+    margin: 0 0 10px;
+    padding: 0;
+    font-size: 22px;
+    color: #444;
+  }
+
+#config table {
+  width: 100%;
+  border-spacing: 0;
+  margin-bottom: 10px;
+}
+  #config td {
+    padding: 2px;
+    border-bottom: 1px dotted #ddd;
+  }
+  #config td:first-child {
+    padding-left: 0;
+  }
+  #config td:last-child {
+    padding-right: 0;
+  }
+  #config th {
+    text-align: left;
+    background: #efefef;
+    color: #888;
+    padding: 7px;
+    border-bottom: 1px dotted #ddd;
+  }
+  #config tr:hover td {
+    background: #f8f8f8;
+  }
+  #config table input,
+  #config table select,
+  #config table button {
+    padding: 5px;
+    width: 100%;
+  }
+  #config table input[type="date"] {
+    max-width: 100px;
+  }
+  #config fieldset > button {
+    font-size: 16px;
+    float: right;
+  }
+#config button[type="submit"] {
+  font-size: 20px;
+  float: right;
+}
+
+#transaction-options {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+#transaction-options.visible {
+  display: block;
+}
+  #transaction-options > .backdrop {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: .7;
+    background: #fff;
+    z-index: 1000;
+  }
+  #transaction-options form {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 500px;
+    max-width: 95%;
+    max-height: 95%;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .1);
+    z-index: 1001;
+    overflow: auto;
+  }
+    #transaction-options fieldset {
+      border: 0;
+      padding: 0;
+      margin: 0 0 10px;
+    }
+    #transaction-options legend {
+      font-weight: bold;
+      color: #444;
+      margin-bottom: 5px;
+    }
+    #transaction-options label {
+      display: block;
+      padding: 4px 6px;
+      margin: 5px 0;
+      border-radius: 3px;
+      background: #eee;
+    }
+      #transaction-options label input[type="checkbox"] {
+        margin-right: 5px;
+      }
+    #transaction-options fieldset > a {
+      color: #aaa;
+      font-size: 12px;
+    }
+
+.data-table {
+  text-align: left;
+  font-weight: normal;
+  width: 100%;
+  border: 0;
+  color: #555;
+}
+  .data-table th {
+    font-size: 20px;
+    color: #4e4e4e;
+    padding: 0 0 10px;
+    border-bottom: 1px dotted #eee;
+  }
+  .data-table td {
+    border-bottom: 1px dotted #eee;
+    padding: 4px 0;
+  }
+  .data-table tbody tr:hover {
+    background: #fafafa;
+  }
+  .data-table td:last-child {
+    text-align: right;
+  }
+    .data-table td .color {
+      width: 10px;
+      height: 10px;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+    .data-table td a {
+      color: #555;
+    }
+
+.goal-bar {
+  border: 1px solid #ccc;
+  padding: 1px;
+  height: 15px;
+  width: 100%;
+  display: flex;
+}
+  .goal-bar > span {
+    flex: 0 0 auto;
+    height: 100%;
+  }
+  .goal-bar > span.used {
+    background-color: #e4e4e4;
+  }
+  .goal-bar > span.saved {
+    background-color: #2cd211;
+  }
+  .goal-bar > span.remaining,
+  .goal-bar.success > span.saved {
+    flex: 1 1 auto;
+  }
+
+.ct-chart {
+  margin: 10px -10px 25px;
+  position: relative;
+}
+  .ct-chart .ct-series-a .ct-area {
+    fill: #d7eaf7;
+  }
+  .ct-chart .ct-series-a .ct-line,
+  .ct-chart .ct-series-a .ct-point {
+    stroke: #6aabd8;
+  }
+
+#months .ct-series-a .ct-area {
+  fill: #2cd211;
+}
+#months .ct-series-b .ct-area {
+  fill: #d21111;
+}
+#months .ct-series-c .ct-area {
+  fill: #9b0909;
+}
+#months .ct-series-d .ct-line,
+#months .ct-series-d .ct-point {
+  stroke: #aaa;
+}
+
+#expenses-per-day .ct-series-b .ct-area {
+  fill: #2cd211;
+  fill-opacity: .3;
+}
+
+#goals + #categories {
+  margin-top: 30px;
+}
+
+.tabs {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  display: flex;
+  border-bottom: 1px solid #bbb;
+}
+  .tabs li {
+    flex: 1 1 auto;
+    position: relative;
+    display: block;
+    margin-right: 3px;
+  }
+    .tabs a {
+      padding: 10px 7px;
+      color: #777;
+      text-decoration: none;
+      border: 1px solid #ddd;
+      border-bottom: 0;
+      position: relative;
+      background: #fff;
+      width: 100%;
+      display: block;
+      text-align: center;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+    }
+    .tabs li.active a {
+      top: 1px;
+      border-color: #bbb;
+    }
+    .tabs li:not(.active) a:hover {
+      background: #fafafa;
+    }
+.tab-panel {
+  display: none;
+}
+.tab-panel.active {
+  display: block;
+}

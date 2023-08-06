@@ -1,0 +1,109 @@
+{% from 'macros.html' import transaction with context %}
+{% extends "layout.html" %}
+{% block title %}{{date.strftime('%B %Y')}}{% endblock %}
+{% block head %}
+  <script src="{{url_for('static', filename='chartist.min.js')}}"></script>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='chartist.min.css')}}">
+{% endblock %}
+
+{% block page_header %}
+  {% include "_year_overview.html" %}
+  <div id="header">
+    <a href="{{url_for('index', year=prev_date.year, month=prev_date.month)}}" title="Previous month">&laquo;</a>
+    {% if next_date %}<span></span>{% endif %}
+    <h1>
+      <a href="javascript:" onclick="toggleMonthSwitcher()">{{date.strftime('%B')}}</a>
+      <a href="{{url_for('year', year=date.year)}}">{{date.year}}</a>
+    </h1>
+    <form action="{{url_for('update', year=date.year, month=date.month)}}" method="POST" enctype="multipart/form-data" id="update-form">
+      {% if bank_adapter.fetch_type == 'file' %}<input type="file" name="file" onchange="submitUpdate(this.files)">{% endif %}
+      <button type="{{ 'submit' if bank_adapter.fetch_type == 'web' else 'button' }}" title="Update data ({{bank_adapter.name}})"
+        {% if bank_adapter.fetch_type == 'file' %}onclick="uploadFile()"{% endif %}>&#8635;</button>
+    </form>
+    {% if next_date %}
+      <a href="{{url_for('index', year=next_date.year, month=next_date.month)}}" title="Next month">&raquo;</a>
+    {% endif %}
+  </div>
+  {% set hide_month_switcher = true %}
+  {% include "_month_switcher.html" %}
+{% endblock %}
+
+{% block page %}
+  {% if budget %}
+    {% include "_budget.html" %}
+    <div id="expenses-per-day" class="ct-chart"></div>
+    {% if budget.transactions %}
+    {% if categories %}
+      {% include "_categories_bar.html" %}
+    {% else %}
+      <hr>
+    {% endif %}
+    <h2 id="filter-title"></h2>
+
+    <ul class="transactions">
+      {% for tx in budget.transactions[:10] %}
+        {{ transaction(tx, tx in budget.planned_expenses_transactions) }}
+      {% endfor %}
+    </ul>
+    {% if budget.transactions|length > 10 %}
+    <a id="show-more" href="javascript:" onclick="showAllTransactions()">more</a>
+    <ul class="transactions hidden">
+      {% for tx in budget.transactions[10:] %}
+        {{ transaction(tx, tx in budget.planned_expenses_transactions) }}
+      {% endfor %}
+    </ul>
+    {% endif %}
+
+    <a id="clear-filter" href="javascript:" onclick="clearTransactionsFilter()">Clear filter</a>
+    {% endif %}
+  {% else %}
+    <p id="nodata">No data for this month</p>
+  {% endif %}
+{% endblock %}
+
+{% block footer %}
+  <div id="footer">
+    <a href="{{url_for('budget_json', year=date.year, month=date.month)}}">budget.json</a> -
+    <a href="{{url_for('transactions_json', year=date.year, month=date.month)}}">transactions.json</a> -
+    <a href="{{url_for('transactions_csv', year=date.year, month=date.month)}}">transactions.csv</a> -
+    <a href="{{url_for('settings')}}">settings</a> -
+    <a href="{{url_for('logout')}}">logout</a>
+  </div>
+  {% include "_tx_options.html" %}
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+     var data = {
+       labels: {{chart_expenses_per_day_labels|tojson}},
+       series: [
+         {name: 'expenses', data: {{chart_expenses_per_day|tojson}} },
+         {name: 'ideal', data: {{chart_ideal_expenses|tojson}} }
+       ]
+     };
+
+     new Chartist.Line('#expenses-per-day', data, {
+       fullWidth: true,
+       showLine: false,
+       showPoint: false,
+       showArea: true,
+       axisX: {
+         showGrid: false
+       },
+       axisY: {
+         showLabel: false,
+         offset: 0
+       },
+       series: {
+         'expenses': {
+           showLine: true,
+           showPoint: true,
+           showArea: false
+         }
+       },
+       plugins: [
+         Chartist.plugins.tooltip()
+       ]
+     });
+   });
+ </script>
+{% endblock %}

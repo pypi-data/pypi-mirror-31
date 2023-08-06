@@ -1,0 +1,259 @@
+{% from 'macros.html' import goal_bar with context %}
+{% extends "layout.html" %}
+{% block title %}{{date.year}}{% endblock %}
+{% block head %}
+  <script src="{{url_for('static', filename='chartist.min.js')}}"></script>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='chartist.min.css')}}">
+{% endblock %}
+
+{% block page_header %}
+  {% include "_year_overview.html" %}
+  <div id="header">
+    <a href="{{url_for('year', year=prev_year)}}" title="Previous year">&laquo;</a>
+    <h1><a href="javascript:" onclick="toggleMonthSwitcher()">{{date.year}}</a></h1>
+    {% if next_year %}
+      <a href="{{url_for('year', year=next_year)}}" title="Next year">&raquo;</a>
+    {% else %}
+      <a href="{{url_for('index')}}" title="Current month">&#8962;</a>
+    {% endif %}
+  </div>
+  {% include "_month_switcher.html" %}
+{% endblock %}
+
+{% block page %}
+  <div class="stats-header">
+    <div class="title">
+      Savings
+      {% if not next_year %}
+      <br><small>(after remaining planned expenses)</small>
+      {% endif %}
+    </div>
+    {% if not next_year %}
+    <div class="value {{ value_class(budgets.savings) }}">{{famount(budgets.savings, True)}}</div>
+    {% else %}
+    <div class="value {{ value_class(budgets.real_balance) }}">{{famount(budgets.real_balance, True)}}</div>
+    {% endif %}
+  </div>
+  <table class="stats-table">
+    <thead>
+      <tr>
+        <th class="empty"></th>
+        <th>Current</th>
+        <th>Expected</th>
+        <th>Planned</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="big">
+        <td>Budget balance</td>
+        <td class="{{ value_class(budgets.savings_balance) }}">
+          {{famount(budgets.savings_balance, True)}}
+        </td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="{% if not next_year %}big{% endif %}">
+        <td>
+          {% if next_year %}Undetected{% else %}Remaining{% endif %} planned expenses
+          <span class="tooltip">?<span>Delta between expected planned expenses and detected ones</span></span>
+        </td>
+        <td class="{{ ('neg' if not next_year else 'warn') if budgets.undetected_planned_expenses > 0 else 'pos' }}">
+          {{famount(budgets.undetected_planned_expenses)}}
+        </td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a href="{{url_for('income', year=date.year)}}">Income</a></td>
+        <td class="pos">{{famount(budgets.real_income)}}</td>
+        <td class="pos">{{famount(budgets.income)}}</td>
+        <td>{% if budgets.expected_income %}{{famount(budgets.expected_income)}}{% endif %}</td>
+      </tr>
+      <tr class="em">
+        <td>Avg. income</td>
+        <td class="pos">{{famount(budgets.real_income / nb_months)}}</td>
+        <td class="pos">{{famount(budgets.income / nb_months)}}</td>
+        <td>{% if budgets.expected_income %}{{famount(budgets.expected_income / nb_months)}}{% endif %}</td>
+      </tr>
+      {% if budgets.expected_planned_expenses %}
+      <tr>
+        <td><a href="{{url_for('planned_expenses', year=date.year)}}">Planned expenses</a></td>
+        <td class="warn">{{famount(budgets.real_planned_expenses)}}</td>
+        <td></td>
+        <td>{{famount(budgets.expected_planned_expenses)}}</td>
+      </tr>
+      <tr class="em">
+        <td>Avg. monthly planned expenses</td>
+        <td class="warn">{{famount(budgets.real_planned_expenses / nb_months)}}</td>
+        <td></td>
+        <td>{{famount(budgets.expected_planned_expenses / nb_months)}}</td>
+      </tr>
+      {% endif %}
+      <tr>
+        <td>
+          Expenses
+          <span class="tooltip">?<span>Planned expenses are calculated based on savings goal</span></span>
+        </td>
+        <td class="neg">{{famount(budgets.expenses)}}</td>
+        <td></td>
+        <td>{{famount(safe_to_spend)}}</td>
+      </tr>
+      <tr class="em">
+        <td>Avg. monthly expenses</td>
+        <td class="neg">{{famount(budgets.expenses / nb_months)}}</td>
+        <td></td>
+        <td>{{famount(safe_to_spend / nb_months)}}</td>
+      </tr>
+      <tr>
+        <td>Total expenses</td>
+        <td class="neg">{{famount(budgets.all_real_expenses)}}</td>
+        <td class="neg">{{famount(budgets.all_expected_expenses)}}</td>
+        <td>{{famount(safe_to_spend + budgets.expected_planned_expenses)}}</td>
+      </tr>
+      {% if budgets.expected_planned_expenses %}
+      <tr class="em">
+        <td>Avg. total monthly expenses</td>
+        <td class="neg">
+          {{famount(budgets.all_real_expenses / nb_months)}}
+        </td>
+        <td class="neg">
+          {{famount(budgets.all_expected_expenses / nb_months)}}
+        </td>
+        <td>
+          {{famount((safe_to_spend + budgets.expected_planned_expenses) / nb_months)}}
+        </td>
+      </tr>
+      {% endif %}
+      <tr>
+        <td>Savings</td>
+        <td class="{{value_class(savings, zero_as_neg=True)}}">
+          {{famount(savings, True)}}
+        </td>
+        <td class="{{ value_class(expected_savings, zero_as_neg=True) }}">
+          {% if budgets.expected_planned_expenses %}{{famount(expected_savings, True)}}{% endif %}
+        </td>
+        <td>
+          {{famount(planned_savings, True)}}
+        </td>
+      </tr>
+      <tr class="em">
+        <td>Avg. monthly savings</td>
+        <td class="{{value_class(savings/nb_months, zero_as_neg=True)}}">
+          {{famount(savings/nb_months, True)}}
+        </td>
+        <td class="{{value_class(expected_savings/nb_months, zero_as_neg=True)}}">
+          {% if budgets.expected_planned_expenses %}{{famount(expected_savings/nb_months, True)}}{% endif %}
+        </td>
+        <td>
+          {% if budgets.expected_planned_expenses %}{{famount(planned_savings/nb_months, True)}}{% endif %}
+        </td>
+      </tr>
+      {% if budget_goals and not next_year %}
+      <tr>
+        <td>Available savings after goals</td>
+        <td></td>
+        <td class="{{ value_class(savings_after_goals, zero_as_neg=True) }}">{{famount(savings_after_goals, True)}}</td>
+        <td></td>
+      </tr>
+      {% endif %}
+    </tbody>
+  </table>
+
+  <div id="months" class="ct-chart ct-major-eleventh"></div>
+
+  {% if budget_goals %}
+    <table id="goals" class="data-table">
+      <thead>
+        <tr>
+          <th colspan="2">Budget goals</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for goal in budget_goals %}
+        <tr onclick="filterTransactions({goal: '{{goal.label}}'})">
+          <td>
+            <a href="{{url_for('goal', year=date.year, label=goal.label)}}">
+              {{goal.label}}{% if goal.target %} ({{famount(goal.target)}}){% endif %}
+            </a>
+          </td>
+          <td width="200">
+            {% if goal.target %}
+              {{ goal_bar(goal) }}
+            {% else %}
+              {{famount(goal.used)}}
+            {% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% endif %}
+
+  {% if categories %}
+    <table id="categories" class="data-table">
+      <thead>
+        <tr>
+          <th colspan="3">Categories</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for category in categories %}
+        <tr>
+          <td>
+            <span class="color" style="background-color: {{category.color or '#eee'}}"></span>
+            <a href="{{url_for('category', year=date.year, name=category.name.lower() if category.name else 'uncategorized')}}">{{category.name or 'Uncategorized'}}</a>
+            {% if category.has_warning %}&#9888;{% endif %}
+          </td>
+          <td style="text-align: right">
+            {{famount(category.amount)}}
+            {% if category.warning_threshold %} / {{famount(category.warning_threshold)}}{% endif %} 
+          </td>
+          <td width="100">
+            <em>{{famount(category.amount / nb_months)}}</em>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% include "_categories_bar.html" %}
+  {% endif %}
+
+  <script>
+     document.addEventListener("DOMContentLoaded", function() {
+      var data = {
+        labels: {{chart_months|tojson}},
+        series: [
+          {name: 'income', data: {{chart_incomes|tojson}} },
+          {name: 'all_expenses', data: {{chart_all_expenses|tojson}} },
+          {name: 'expenses', data: {{chart_expenses|tojson}} },
+          {name: 'savings', data: {{chart_savings|tojson}} }
+        ]
+      };
+
+      new Chartist.Line('#months', data, {
+        fullWidth: true,
+        showLine: false,
+        showPoint: false,
+        showArea: true,
+        axisX: {
+          showGrid: false
+        },
+        axisY: {
+          showLabel: false,
+          offset: 0
+        },
+        series: {
+          'savings': {
+            showLine: true,
+            showPoint: true,
+            showArea: false
+          }
+        },
+        plugins: [
+          Chartist.plugins.tooltip()
+        ]
+      });
+    });
+  </script>
+
+{% endblock %}

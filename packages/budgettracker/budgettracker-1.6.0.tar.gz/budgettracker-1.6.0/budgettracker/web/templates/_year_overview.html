@@ -1,0 +1,31 @@
+<div id="year-overview">
+  <div id="balance" onclick="toggleYearOverview()" title="Balance (Remaining Planned Expenses)">
+    {% if not budgets or date.year < current_month.year %}
+    {{famount(account_balance or 0)}}
+    {% else %}
+    {{famount(account_balance or 0)}}
+    {% if budgets.undetected_planned_expenses %}
+    (-{{famount(budgets.undetected_planned_expenses)}})
+    {% endif %}
+    {% endif %}
+  </div>
+  <div id="year-overview-details">
+    {% if budgets and date.year == current_month.year %}
+    <p class="remaining-planned">
+      Balance without planned expenses: {{famount(account_balance - budgets.undetected_planned_expenses)}}<br>
+      Savings: {{famount(budgets.savings, True)}}
+    </p>
+    {% endif %}
+    <table id="accounts">
+      <tr>
+        <th colspan="2">Accounts</th>
+      </tr>
+      {% for acc in accounts %}
+      <tr>
+        <td width="80%">{{acc.title}}</td>
+        <td>{{famount(acc.amount)}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+</div>
