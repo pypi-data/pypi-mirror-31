@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: conp-pipeline
+Version: 0.1.1
+Summary: Pipeline management tool for CONP
+Home-page: http://github.com/CONP-PCNO/conp-pipeline
+Author: CONP developers
+Author-email: UNKNOWN
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: English
+Requires-Dist: clowdr
+
+UNKNOWN
+
+
