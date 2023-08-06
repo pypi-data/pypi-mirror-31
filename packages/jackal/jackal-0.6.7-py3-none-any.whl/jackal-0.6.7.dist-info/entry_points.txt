@@ -1,0 +1,31 @@
+[console_scripts]
+jk-add-named-pipe = jackal.config:add_named_pipe
+jk-add-tag = jackal.scripts.tags:add_tag
+jk-configure = jackal.config:manual_configure
+jk-creds = jackal.scripts.credentials:main
+jk-creds-overview = jackal.scripts.credentials:overview
+jk-filter = jackal.scripts.filter:filter
+jk-format = jackal.scripts.filter:format
+jk-hosts = jackal.scripts.hosts:main
+jk-hosts-overview = jackal.scripts.hosts:overview
+jk-http-header-scan = jackal.scripts.head_scanner:main
+jk-import-cme = jackal.scripts.cme:main
+jk-import-domaindump = jackal.scripts.domaindump:import_domaindump
+jk-import-nmap = jackal.scripts.nmap:import_file
+jk-initialize = jackal.scripts.status:initialize_indices
+jk-modify = jackal.scripts.modify:modify_input
+jk-named-pipes = jackal.scripts.named_pipes:main
+jk-nessus = jackal.scripts.nessus:main
+jk-netdiscover = jackal.scripts.netdiscover:main
+jk-nmap = jackal.scripts.nmap:nmap_scan
+jk-nmap-discover = jackal.scripts.nmap:nmap_discover
+jk-nmap-smb-vulnscan = jackal.scripts.nmap:nmap_smb_vulnscan
+jk-ranges = jackal.scripts.ranges:main
+jk-ranges-overview = jackal.scripts.ranges:overview
+jk-remove-tag = jackal.scripts.tags:remove_tag
+jk-services = jackal.scripts.services:main
+jk-services-overview = jackal.scripts.services:overview
+jk-status = jackal.scripts.status:main
+jk-tomcat-brute = jackal.scripts.tomcat_brute:main
+jk-users = jackal.scripts.user:main
+
