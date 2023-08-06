@@ -1,0 +1,9 @@
+hbp-service-client
+requests
+
+[reports]
+fpdf
+PyPDF2
+
+[utils]
+sciunit
