@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+django_flashbriefing.egg-info/PKG-INFO
+django_flashbriefing.egg-info/SOURCES.txt
+django_flashbriefing.egg-info/dependency_links.txt
+django_flashbriefing.egg-info/top_level.txt
+flashbriefing/__init__.py
+flashbriefing/admin.py
+flashbriefing/apps.py
+flashbriefing/feeds.py
+flashbriefing/models.py
+flashbriefing/urls.py
+flashbriefing/views.py
