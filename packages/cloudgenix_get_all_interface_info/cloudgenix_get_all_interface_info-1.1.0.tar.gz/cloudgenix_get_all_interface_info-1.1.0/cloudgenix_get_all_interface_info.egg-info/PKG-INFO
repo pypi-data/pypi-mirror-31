@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: cloudgenix-get-all-interface-info
+Version: 1.1.0
+Summary: Utility to dump all CloudGenix App Fabric Interface configurations to a CSV.
+Home-page: https://github.com/ebob9/get-all-interface-info
+Author: Aaron Edwards
+Author-email: cloudgenix_get_all_interface_info@ebob9.com
+License: MIT
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3

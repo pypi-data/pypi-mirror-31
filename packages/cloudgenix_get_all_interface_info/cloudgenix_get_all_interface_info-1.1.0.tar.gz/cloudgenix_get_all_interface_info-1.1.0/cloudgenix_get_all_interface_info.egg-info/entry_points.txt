@@ -1,0 +1,3 @@
+[console_scripts]
+get-all-interface-info = cloudgenix_get_all_interface_info:go
+
