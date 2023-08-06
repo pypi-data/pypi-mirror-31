@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: ukpocopy
+Version: 1.1.0
+Summary: A python package for UK Postcode validation and formatting.
+Home-page: http://github.com/sephioh/ukpocopy
+Author: Abraão Alcântara
+Author-email: sephioh@gmail.com
+License: MIT
+Description-Content-Type: UNKNOWN
+Description: A python package for UK Postcode validation and formatting.
+Platform: UNKNOWN
+Requires-Python: >=3.6
