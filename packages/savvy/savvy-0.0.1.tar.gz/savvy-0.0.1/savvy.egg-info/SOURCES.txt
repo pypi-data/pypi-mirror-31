@@ -1,0 +1,11 @@
+README.md
+setup.py
+savvy/__init__.py
+savvy/shell.py
+savvy.egg-info/PKG-INFO
+savvy.egg-info/SOURCES.txt
+savvy.egg-info/dependency_links.txt
+savvy.egg-info/not-zip-safe
+savvy.egg-info/top_level.txt
+savvy/internal/__init__.py
+savvy/internal/fallback_logger.py
