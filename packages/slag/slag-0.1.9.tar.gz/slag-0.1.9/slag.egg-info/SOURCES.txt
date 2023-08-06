@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+bin/slag
+slag/__init__.py
+slag/__main__.py
+slag.egg-info/PKG-INFO
+slag.egg-info/SOURCES.txt
+slag.egg-info/dependency_links.txt
+slag.egg-info/not-zip-safe
+slag.egg-info/requires.txt
+slag.egg-info/top_level.txt
