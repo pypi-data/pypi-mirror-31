@@ -1,0 +1,3 @@
+[console_scripts]
+ardexa_check_active = ardexa_check_active:main
+
