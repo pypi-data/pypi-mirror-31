@@ -1,0 +1,14 @@
+prospercommon
+requests
+semantic_version
+plumbum
+docker
+deepdiff
+jsonschema
+genson
+pymongo
+dnspython
+
+[dev]
+sphinx
+sphinxcontrib-napoleon
