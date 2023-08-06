@@ -1,0 +1,6 @@
+Django==1.11.7
+django-password-policies==0.4.2
+django-simple-menu==1.2.1
+core-composer-app==1.0.0-beta1
+core-curate-app==1.0.0-beta1
+core-main-app==1.0.0-beta1
