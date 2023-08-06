@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+yaochao/__init__.py
+yaochao/hello.py
+yaochao/youdao.py
+yaochao.egg-info/PKG-INFO
+yaochao.egg-info/SOURCES.txt
+yaochao.egg-info/dependency_links.txt
+yaochao.egg-info/top_level.txt
