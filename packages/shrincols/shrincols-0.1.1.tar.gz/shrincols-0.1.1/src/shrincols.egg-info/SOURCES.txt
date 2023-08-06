@@ -1,0 +1,12 @@
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+src/shrincols/__init__.py
+src/shrincols/cli.py
+src/shrincols.egg-info/PKG-INFO
+src/shrincols.egg-info/SOURCES.txt
+src/shrincols.egg-info/dependency_links.txt
+src/shrincols.egg-info/entry_points.txt
+src/shrincols.egg-info/top_level.txt
+tests/test_cli.py
