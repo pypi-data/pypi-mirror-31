@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+core/__init__.py
+core/__version__.py
+core/guid.py
+new_guid.egg-info/PKG-INFO
+new_guid.egg-info/SOURCES.txt
+new_guid.egg-info/dependency_links.txt
+new_guid.egg-info/entry_points.txt
+new_guid.egg-info/top_level.txt
