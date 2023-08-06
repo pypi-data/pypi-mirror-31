@@ -1,0 +1,18 @@
+Metadata-Version: 2.0
+Name: checkpointer
+Version: 0.1.2
+Summary: UNKNOWN
+Home-page: https://github.com/Reddan/checkpointer
+Author: Hampus Hallman
+Author-email: me@hampushallman.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: ~=3.5
+Requires-Dist: relib
+Requires-Dist: numpy
+Requires-Dist: bcolz
+Requires-Dist: termcolor
+
+UNKNOWN
+
+
