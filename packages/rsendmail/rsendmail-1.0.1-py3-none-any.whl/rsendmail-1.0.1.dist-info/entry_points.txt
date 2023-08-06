@@ -1,0 +1,3 @@
+[console_scripts]
+rsendmail = rsendmail.__main__:main
+
