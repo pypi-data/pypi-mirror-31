@@ -1,0 +1,3 @@
+[console_scripts]
+dts = dts.__main__:main
+
