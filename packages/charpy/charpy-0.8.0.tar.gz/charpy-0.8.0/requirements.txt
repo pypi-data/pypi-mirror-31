@@ -1,0 +1,11 @@
+pandas
+python-dateutil
+flask
+flask-sqlalchemy
+SQLAlchemy
+setuptools
+pypandoc
+coverage==4.1
+pytest==2.9.2
+codecov
+codacy-coverage
