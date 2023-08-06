@@ -1,0 +1,16 @@
+aiodns<2
+async-timeout
+chardet<4
+colorlog
+prettylog
+pycares<3
+uvloop<1
+
+[develop]
+coverage!=4.3
+pylama
+pytest
+pytest-asyncio
+pytest-cov
+timeout-decorator
+tox>=2.4
