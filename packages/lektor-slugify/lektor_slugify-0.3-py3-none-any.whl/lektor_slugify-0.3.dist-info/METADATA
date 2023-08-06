@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: lektor-slugify
+Version: 0.3
+Summary: Lektor plugin that adds a slugify Jinja filter.
+Home-page: https://github.com/terminal-labs/lektor-slugify
+Author: Terminal Labs, Michael Verhulst, Joseph Nix
+Author-email: solutions@terminallabs.com
+License: BSD-3-Clause
+Keywords: Lektor plugin static-site slug jinja2 jinja filter
+Platform: UNKNOWN
+Classifier: Environment :: Plugins
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Lektor
+Classifier: License :: OSI Approved :: BSD License
+Description-Content-Type: text/markdown
+Requires-Dist: python-slugify
+
+# lektor-slugify
+
+This is a Lektor plugin that provides a simple template filter that transforms a (unicode) string into a slug.
+
+Usage: `{{ var|slug }}`
+
+This is a simple use of the Python package [python-slugify](https://github.com/un33k/python-slugify).
+
+
