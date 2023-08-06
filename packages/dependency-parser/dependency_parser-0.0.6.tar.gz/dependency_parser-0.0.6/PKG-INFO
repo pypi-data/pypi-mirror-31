@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: dependency_parser
+Version: 0.0.6
+Summary: Dependency Parser
+Home-page: https://github.com/blester125/dependency_parser
+Author: blester125
+Author-email: blester125@gmail.com
+License: MIT
+Download-URL: https://github.com/blester125/dependency_parser/archive/0.0.6.tar.gz
+Description: # Dependency Parser
+        
+Platform: UNKNOWN
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Environment :: Console
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Scientific/Engineering
+Classifier: Intended Audience :: Science/Research
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
