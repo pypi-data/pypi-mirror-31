@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: beatserver
+Version: 0.0.5
+Summary: Beat Server is is a scheduler
+Home-page: https://github.com/rajasimon/beatserver
+Author: Raja Simon
+Author-email: rajasimon@icloud.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: channels (>=1.1.8.1)
+
+UNKNOWN
+
+
