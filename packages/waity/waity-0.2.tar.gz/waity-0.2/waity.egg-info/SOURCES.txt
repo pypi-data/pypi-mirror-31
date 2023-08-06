@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+waity/__init__.py
+waity/wait.py
+waity.egg-info/PKG-INFO
+waity.egg-info/SOURCES.txt
+waity.egg-info/dependency_links.txt
+waity.egg-info/top_level.txt
