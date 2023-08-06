@@ -1,0 +1,5 @@
+#!python
+
+from rmsynthesis.rmsynthesis import main
+
+main()
