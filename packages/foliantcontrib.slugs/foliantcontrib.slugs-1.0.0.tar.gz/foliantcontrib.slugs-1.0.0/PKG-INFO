@@ -1,0 +1,66 @@
+Metadata-Version: 1.1
+Name: foliantcontrib.slugs
+Version: 1.0.0
+Summary: Extension for Foliant documentation tools to generate custom slugs.
+Home-page: https://github.com/foliant-docs/foliantcontrib.slugs
+Author: Artemy Lomov
+Author-email: artemy@lomov.ru
+License: MIT
+Description-Content-Type: text/markdown
+Description: # Slugs Extension
+        
+        Slugs is an extension for Foliant to generate custom slugs from arbitrary lists of values.
+        
+        It resolves `!slug` and `!date` YAML tags in the project config.
+        
+        The list of values after the ``!slug`` tag is replaced with the string that joins these values using ``-`` delimeter. Spaces (` `) in the values are replaced with underscores (`_`).
+        
+        The value of the node that contains the `!date` tag is replaced with the current local date.
+        
+        ## Installation
+        
+        ```bash
+        $ pip install foliantcontrib.slugs
+        ```
+        
+        ## Usage
+        
+        Config example:
+        
+        ```yaml
+        title: &title My Awesome Project
+        version: &version 1.0
+        slug: !slug
+            - *title
+            - *version
+            - !date
+        ```
+        
+        Example of the resulting slug:
+        
+        ```
+        My_Awesome_Project-1.0-2018-05-10
+        ```
+        
+        Note that backends allow to override the top-level slug, so you may define different custom slugs for each backend:
+        
+        ```yaml
+        backend_config:
+            pandoc:
+                slug: !slug
+                    - *title
+                    - *version
+                    - !date
+            mkdocs:
+                slug: my_awesome_project
+        ```
+        
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Documentation
+Classifier: Topic :: Utilities
