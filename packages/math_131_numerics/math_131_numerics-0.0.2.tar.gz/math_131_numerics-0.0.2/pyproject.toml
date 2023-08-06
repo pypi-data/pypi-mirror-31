@@ -1,0 +1,11 @@
+[build-system]
+requires = ["flit"]
+build-backend = "flit.buildapi"
+
+[tool.flit.metadata]
+module = "math_131_numerics"
+author = "Camille Carvalho"
+author-email = "ccarvalho3@ucmerced.edu"
+home-page = "https://www.github.com/carvalhocamille/math_131_numerics"
+classifiers = ["License :: OSI Approved :: MIT License"]
+
