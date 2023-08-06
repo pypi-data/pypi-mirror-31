@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+attics/attics.py
+attics.egg-info/PKG-INFO
+attics.egg-info/SOURCES.txt
+attics.egg-info/dependency_links.txt
+attics.egg-info/top_level.txt
+attics/generator/__init__.py
+attics/generator/builder.py
