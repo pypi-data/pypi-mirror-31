@@ -1,0 +1,17 @@
+Metadata-Version: 1.2
+Name: extraction_network
+Version: 0.0.1
+Summary: Create network of extractions and analyse/compare such networks
+Home-page: http://github.com/r-kapoor/extraction_network
+Author: Rahul Kapoor
+Author-email: rahulkap@isi.edu
+License: MIT
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Keywords: extraction network
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Requires-Python: >=3
