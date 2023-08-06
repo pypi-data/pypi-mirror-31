@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: django-request-vars
+Version: 1.0.0
+Summary: Stores current request, user and your defined data in thread local variable.
+Home-page: https://github.com/kindlycat/django-request-vars/
+Author: Grigory Mishchenko
+Author-email: grishkokot@gmail.com
+License: UNKNOWN
+Keywords: django,thread,variable,request,user,cache,middleware
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Framework :: Django :: 1.11
+Classifier: Framework :: Django :: 2.0
+Classifier: License :: OSI Approved :: BSD License
+Requires-Dist: Django (>=1.11)
+
+Django request vars
+===================
+Application that stores current request, user and your defined data in thread
+local variable.
+
+Installation
+------------
+Install using pip:
+
+.. code-block:: sh
+
+    $ pip install django-request-vars
+
+Add to installed apps:
+
+.. code-block:: python
+
+    INSTALLED_APPS = (
+        ...
+        'request_vars',
+        ...
+    )
+
+Add middleware:
+
+.. code-block:: python
+
+    MIDDLEWARE = [
+        ...
+        'request_vars.middleware.RequestVarsMiddleware',
+        ...
+    ]
+
+
+

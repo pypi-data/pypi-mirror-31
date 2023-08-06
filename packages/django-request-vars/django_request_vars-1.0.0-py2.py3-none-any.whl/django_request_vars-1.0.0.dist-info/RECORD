@@ -1,0 +1,12 @@
+django_request_vars-1.0.0.dist-info/METADATA,sha256=Jva7OPpBw9KA4ABFJvuOvo4Pqr9Qyb5FX_U8nrkuElk,1191
+django_request_vars-1.0.0.dist-info/RECORD,,
+django_request_vars-1.0.0.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+django_request_vars-1.0.0.dist-info/top_level.txt,sha256=NbHOhX9q8Fovs450KtZzkUucrE8sgctZ0ntyPriXuvU,13
+request_vars/__init__.py,sha256=zkdcVcWbQd-lcca_7TancckF088roTXS1yDCmElzivw,135
+request_vars/apps.py,sha256=-zfYpQrC2zVW00QNC0bD8_H_ocxGrc9BAmsAyOD7lhM,193
+request_vars/decorators.py,sha256=8Gr7gxCWP0c_uEI0lGKWxPRteAX0Y8Eu3oWFAuVMTco,552
+request_vars/middleware.py,sha256=bVEFVREIWeXHI-VX1rg1KL3isNOs9xJvN6bGIJi8N5o,711
+request_vars/settings.py,sha256=75TQZxJvxY9N1otVmLNndLN3NjOo6DrOLkN6d71zZKQ,225
+request_vars/utils.py,sha256=pS1ILQwW_yCSCfeE1iwQBFgCz6-8TtC-IAoqhnbGM4A,451
+request_vars/templatetags/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+request_vars/templatetags/request_vars.py,sha256=ismYYDq51ZHadXbXKzHUh3gCb_vdZkTnlKPR3oyhV4M,338
