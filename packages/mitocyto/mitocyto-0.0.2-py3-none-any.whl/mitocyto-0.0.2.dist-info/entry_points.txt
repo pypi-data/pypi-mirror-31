@@ -1,0 +1,4 @@
+[console_scripts]
+mcauto = scripts.other:main
+mcgui = scripts.gui:main
+
