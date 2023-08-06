@@ -1,0 +1,24 @@
+Metadata-Version: 1.2
+Name: ssh-jump-hive
+Version: 0.2.7
+Summary: ssh_jump_hive is a tools could  jump the jump machine  to connect hive get hive data to pandas dataframe
+Home-page: https://github.com/mullerhai/sshjumphive
+Author: mullerhai
+Author-email: hai710459649@foxmail.com
+Maintainer: muller helen
+Maintainer-email: hai710459649@foxmail.com
+License: Apache 2.0
+Description: UNKNOWN
+Keywords: hive,ssh-tunnel,hfds,machine learning
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering
