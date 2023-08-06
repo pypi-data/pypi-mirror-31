@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+recreatedb/__init__.py
+recreatedb/__version__.py
+recreatedb/cli.py
+recreatedb/core.py
+recreatedb.egg-info/PKG-INFO
+recreatedb.egg-info/SOURCES.txt
+recreatedb.egg-info/dependency_links.txt
+recreatedb.egg-info/entry_points.txt
+recreatedb.egg-info/requires.txt
+recreatedb.egg-info/top_level.txt
+recreatedb/config/__init__.py
