@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: nn_generator
+Version: 1.0.7
+Summary: FC NN configurable via json/YML config file
+Home-page: https://github.com/Alisa-lisa/nn_generator
+Author: Alisa Dammer
+Author-email: alisa.dammer@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: configurable nn deep_nn fully connected
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3
