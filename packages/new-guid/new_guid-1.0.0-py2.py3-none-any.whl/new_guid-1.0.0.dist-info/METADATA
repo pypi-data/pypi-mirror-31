@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: new-guid
+Version: 1.0.0
+Summary: Simple app to return a new, pseudo-random, UUID / GUID.
+Home-page: https://gitlab.com/cw-andrews/new-guid.git
+Author: cw-andrews
+Author-email: cwandrews.oh@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+
+
+## What is `new-guid`? 
+`new-guid` is a simple CLI command which returns a new, pseudo-random, GUID / UUID when called.
+
+## Installation
+`pip install new-guid`
+
+*OR*
+
+`sudo snap install new-guid`*
+
+**Only valid on systems which support Ubuntu snaps.*
+
+## Use
+```bash
+> new-guid
+<GuidHere>
+``` 
+
