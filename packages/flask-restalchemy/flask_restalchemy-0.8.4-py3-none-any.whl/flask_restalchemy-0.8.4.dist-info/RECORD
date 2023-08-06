@@ -1,0 +1,17 @@
+flask_restalchemy/__init__.py,sha256=cqpz8ox940YQ_qca_8-IqWFhS7WR3xgf92Eq_r68gOc,115
+flask_restalchemy/api.py,sha256=5zb8SoEkAlfNqGNSUrupTKiuU-Wd1YhPQ8mE5xCAA4s,8907
+flask_restalchemy/conftest.py,sha256=QcPQHGXqxuCLhY3KN4-IuOXSoBxUa6f3zMtg4MzfSOQ,963
+flask_restalchemy/resources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+flask_restalchemy/resources/docgeneration.py,sha256=FC2-vuRjZRU0vYI_YP821HBbednF1P3s7bNa-gZOQ_8,4837
+flask_restalchemy/resources/resources.py,sha256=FESMIsWD6gjIZgrptE3IUnKtygioCJ6rsColEj0aXds,10009
+flask_restalchemy/resources/utils.py,sha256=lqs5nP9LSV679t3FoTe5cFn5vvRu6Z5KSXA3j21Rp2c,4590
+flask_restalchemy/serialization/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+flask_restalchemy/serialization/modelserializer.py,sha256=3ISVyEK1H0sEaGlEZFTYnnf3I3mg2hRbyTVA0xSlL7c,7226
+flask_restalchemy/serialization/serializer.py,sha256=oqSvSdOJgl6ypd-0BFXEw0aECp_Lg2XH-zmPHSDsBN8,2031
+flask_restalchemy-0.8.4.data/data/LICENSE,sha256=qp5tVFDbDXTWOeJQLEjOqeSHxSxFMeed0FOp4QixVJI,1067
+flask_restalchemy-0.8.4.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+flask_restalchemy-0.8.4.dist-info/METADATA,sha256=IgjVrIYrZXTk_cpr3v9BDMLBdpfLtwZR0aOjci__uyA,868
+flask_restalchemy-0.8.4.dist-info/RECORD,,
+flask_restalchemy-0.8.4.dist-info/WHEEL,sha256=Ds0ba8WsPJtjBPzEMyPOBG3qfPa6B4mlzB-vhzorIZs,97
+flask_restalchemy-0.8.4.dist-info/metadata.json,sha256=CnhigLbWzyUiClky986BSj6RBiS7m4bb3QdRsHs5z40,1027
+flask_restalchemy-0.8.4.dist-info/top_level.txt,sha256=TdFI6kYA5QB_lxu677Cwr-G3l-fQ5xVi-zEWBHjBGuo,18
