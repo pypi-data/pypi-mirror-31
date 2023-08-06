@@ -1,0 +1,21 @@
+Metadata-Version: 2.0
+Name: genice-svg
+Version: 0.1.1
+Summary: SVG format plugin for GenIce.
+Home-page: https://github.com/vitroid/genice-svg/
+Author: Masakazu Matsumoto
+Author-email: vitroid@gmail.com
+License: MIT
+Description-Content-Type: text/markdown
+Keywords: genice,SVG
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Requires-Dist: genice (>=0.23)
+Requires-Dist: svgwrite
+
+# genice-svg
+
+
