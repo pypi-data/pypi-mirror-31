@@ -1,0 +1,21 @@
+Metadata-Version: 2.0
+Name: jmon
+Version: 0.251
+Summary: UNKNOWN
+Home-page: https://github.com/jjeaby/CudaInfo2InfluxDB
+Author: Lee Yong Jin
+Author-email: jjeaby@gmail.com
+License: Apache 2.0
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: influxdb
+
+# jmon is Machine's Cpu, Memory, Cuda Information Monitoring and Save with InfluxDB 
+
+
