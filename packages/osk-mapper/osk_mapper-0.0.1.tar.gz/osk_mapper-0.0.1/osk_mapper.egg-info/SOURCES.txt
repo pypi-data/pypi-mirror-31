@@ -1,0 +1,58 @@
+setup.py
+osk_mapper/__init__.py
+osk_mapper/exceptions.py
+osk_mapper/mapper.py
+osk_mapper/test.py
+osk_mapper.egg-info/PKG-INFO
+osk_mapper.egg-info/SOURCES.txt
+osk_mapper.egg-info/dependency_links.txt
+osk_mapper.egg-info/requires.txt
+osk_mapper.egg-info/top_level.txt
+osk_mapper/resources/osk/Windows 10/A.png
+osk_mapper/resources/osk/Windows 10/ALT.png
+osk_mapper/resources/osk/Windows 10/CAPS.png
+osk_mapper/resources/osk/Windows 10/CTRL.png
+osk_mapper/resources/osk/Windows 10/DOWN.png
+osk_mapper/resources/osk/Windows 10/ESC.png
+osk_mapper/resources/osk/Windows 10/LEFT.png
+osk_mapper/resources/osk/Windows 10/OSK_ICON.png
+osk_mapper/resources/osk/Windows 10/Q.png
+osk_mapper/resources/osk/Windows 10/RIGHT.png
+osk_mapper/resources/osk/Windows 10/SHIFT.png
+osk_mapper/resources/osk/Windows 10/TAB.png
+osk_mapper/resources/osk/Windows 10/TILDA.png
+osk_mapper/resources/osk/Windows 10/UP.png
+osk_mapper/resources/osk/Windows 10/W.png
+osk_mapper/resources/osk/Windows 10/Z.png
+osk_mapper/resources/osk/Windows 7/A.png
+osk_mapper/resources/osk/Windows 7/ALT.png
+osk_mapper/resources/osk/Windows 7/CAPS.png
+osk_mapper/resources/osk/Windows 7/CTRL.png
+osk_mapper/resources/osk/Windows 7/DOWN.png
+osk_mapper/resources/osk/Windows 7/ESC.png
+osk_mapper/resources/osk/Windows 7/LEFT.png
+osk_mapper/resources/osk/Windows 7/OSK_ICON.png
+osk_mapper/resources/osk/Windows 7/Q.png
+osk_mapper/resources/osk/Windows 7/RIGHT.png
+osk_mapper/resources/osk/Windows 7/SHIFT.png
+osk_mapper/resources/osk/Windows 7/TAB.png
+osk_mapper/resources/osk/Windows 7/TILDA.png
+osk_mapper/resources/osk/Windows 7/UP.png
+osk_mapper/resources/osk/Windows 7/W.png
+osk_mapper/resources/osk/Windows 7/Z.png
+osk_mapper/resources/osk/Windows 8/A.png
+osk_mapper/resources/osk/Windows 8/ALT.png
+osk_mapper/resources/osk/Windows 8/CAPS.png
+osk_mapper/resources/osk/Windows 8/CTRL.png
+osk_mapper/resources/osk/Windows 8/DOWN.png
+osk_mapper/resources/osk/Windows 8/ESC.png
+osk_mapper/resources/osk/Windows 8/LEFT.png
+osk_mapper/resources/osk/Windows 8/OSK_ICON.png
+osk_mapper/resources/osk/Windows 8/Q.png
+osk_mapper/resources/osk/Windows 8/RIGHT.png
+osk_mapper/resources/osk/Windows 8/SHIFT.png
+osk_mapper/resources/osk/Windows 8/TAB.png
+osk_mapper/resources/osk/Windows 8/TILDA.png
+osk_mapper/resources/osk/Windows 8/UP.png
+osk_mapper/resources/osk/Windows 8/W.png
+osk_mapper/resources/osk/Windows 8/Z.png
