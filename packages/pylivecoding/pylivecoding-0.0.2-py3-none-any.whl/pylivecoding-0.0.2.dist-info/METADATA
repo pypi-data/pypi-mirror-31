@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: pylivecoding
+Version: 0.0.2
+Summary: live coding library for Python 3
+Home-page: https://github.com/kilon/pylivecoding.git
+Author: kilon
+Author-email: kilon.alios@gmail.com
+License: UNKNOWN
+Keywords: live code smalltalk python livecoding coding reload
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Compilers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3
+
+This library has the ability to reload python modules during execution and update existing objects. This way you edit code, reload it and see the results immediately with no need to restart your code. More info and documentation can be found at the home page
+
+
