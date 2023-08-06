@@ -1,0 +1,3 @@
+include synbiochem/utils/blosum62.qij
+include synbiochem/utils/expand.txt
+include synbiochem/utils/normal.txt
