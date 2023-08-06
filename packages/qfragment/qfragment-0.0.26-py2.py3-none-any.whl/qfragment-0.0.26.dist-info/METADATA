@@ -1,0 +1,30 @@
+Metadata-Version: 2.0
+Name: qfragment
+Version: 0.0.26
+Summary: Sentence fragment detection and feedback
+Home-page: https://github.com/empirical-org/Quill-NLP-Tools-and-Datasets
+Author: Quill.org
+Author-email: max@quill.org
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: Flask (==0.12.2)
+Requires-Dist: SQLAlchemy (==1.2.6)
+Requires-Dist: en-core-web-lg (==2.0.0)
+Requires-Dist: nltk (==3.2.5)
+Requires-Dist: numpy (==1.14.2)
+Requires-Dist: pandas (==0.19.2)
+Requires-Dist: pathlib (==1.0.1)
+Requires-Dist: psycopg2 (==2.7.3.2)
+Requires-Dist: requests (==2.18.4)
+Requires-Dist: spacy (==2.0.10)
+Requires-Dist: spacy (==2.0.10)
+Requires-Dist: tensorflow (==1.5.1)
+Requires-Dist: tensorflow (==1.5.1)
+Requires-Dist: textacy (==0.6.1)
+Requires-Dist: tflearn
+Requires-Dist: tflearn (==0.3.2)
+Requires-Dist: thinc (==6.10.2)
+
+UNKNOWN
+
+
