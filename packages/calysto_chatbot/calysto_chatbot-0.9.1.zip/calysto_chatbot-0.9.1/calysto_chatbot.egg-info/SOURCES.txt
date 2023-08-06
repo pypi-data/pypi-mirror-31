@@ -1,0 +1,10 @@
+README.md
+setup.py
+calysto_chatbot/__init__.py
+calysto_chatbot/__main__.py
+calysto_chatbot/kernel.py
+calysto_chatbot.egg-info/PKG-INFO
+calysto_chatbot.egg-info/SOURCES.txt
+calysto_chatbot.egg-info/dependency_links.txt
+calysto_chatbot.egg-info/requires.txt
+calysto_chatbot.egg-info/top_level.txt
