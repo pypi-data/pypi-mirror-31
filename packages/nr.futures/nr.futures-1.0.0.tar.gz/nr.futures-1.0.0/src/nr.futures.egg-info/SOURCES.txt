@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+src/nr/__init__.py
+src/nr/futures.py
+src/nr.futures.egg-info/PKG-INFO
+src/nr.futures.egg-info/SOURCES.txt
+src/nr.futures.egg-info/dependency_links.txt
+src/nr.futures.egg-info/requires.txt
+src/nr.futures.egg-info/top_level.txt
