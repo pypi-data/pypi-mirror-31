@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: mkinit
+Version: 0.0.3
+Summary: Create __init__.py files
+Home-page: https://github.com/Erotemic/mkinit
+Author: Jon Crall
+Author-email: erotemic@gmail.com
+License: Apache 2
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Provides-Extra: all
+Requires-Dist: xdoctest
+Requires-Dist: ubelt
+Provides-Extra: all
+Requires-Dist: pytest; extra == 'all'
+Requires-Dist: pytest-cov; extra == 'all'
+Requires-Dist: codecov; extra == 'all'
+
+UNKNOWN
+
+

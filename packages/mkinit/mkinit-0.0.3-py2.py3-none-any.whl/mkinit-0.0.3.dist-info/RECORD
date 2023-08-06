@@ -1,0 +1,10 @@
+mkinit/__init__.py,sha256=CZ7skrrkmcLi52CB1KbxKm0FW8_wiQoYKt9Z6FVjdmg,647
+mkinit/__main__.py,sha256=LTVgtCeILm-vj9VFIbAgGWX5o8V4rPC2GGVuep7kwW0,1622
+mkinit/dynamic_mkinit.py,sha256=9CRYtLyN61R-zcAiO2fGuihRvyRQxq84d-CCwk6jdHA,9824
+mkinit/static_mkinit.py,sha256=gygMS6BFRqXSsR-m_WMWYeqbjdUZtV8AUlPaZbp9utQ,13167
+mkinit/top_level_ast.py,sha256=wD9kucOAwEMytwPflyg4FAw8dn5do0SZXlERq8UGQAQ,9566
+mkinit-0.0.3.dist-info/METADATA,sha256=kjsIwRoHKne5aH1J-g1_9oA2Vno_hOFXrenCTfgNRSs,785
+mkinit-0.0.3.dist-info/RECORD,,
+mkinit-0.0.3.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+mkinit-0.0.3.dist-info/entry_points.txt,sha256=IKuVF8IDp--GmrcFSK4TusI0yK6XVhNzxR0rRGHEhYk,49
+mkinit-0.0.3.dist-info/top_level.txt,sha256=0XVFNTck9b2BIhV48uP8u-2nw_by0ctHvE-15rDZXXs,7
