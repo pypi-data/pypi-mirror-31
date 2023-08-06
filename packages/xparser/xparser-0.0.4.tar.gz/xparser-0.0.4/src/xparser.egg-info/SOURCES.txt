@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+src/xparser.egg-info/PKG-INFO
+src/xparser.egg-info/SOURCES.txt
+src/xparser.egg-info/dependency_links.txt
+src/xparser.egg-info/top_level.txt
+src/xrp/__init__.py
+src/xrp/__version__.py
+src/xrp/match.py
+src/xrp/parser.py
+src/xrp/views.py
