@@ -1,0 +1,10 @@
+imdbparser/__init__.py,sha256=dju048Aed8iUgAmCQgayRKfjw29FSEirSqcyO4WbXyk,54
+imdbparser/base.py,sha256=pbwxhYgE8KksVvPHweQIJtDU8XuESdvuFnu1JKWdwcI,918
+imdbparser/imdb.py,sha256=TS_Mw05kRWjMDLwTQNwVIfi05nDBdnbYp1CcaoM6Wzw,2150
+imdbparser/movie.py,sha256=_GV5F_uXMEjSjNSibAuH6ibojUKdSloPQ6Rnvwb3B2Y,6143
+imdbparser/person.py,sha256=I-vdwClerwYE9OZ2at5Gqa1ROquqnvRvrDbNmiCt0MY,301
+imdbparser/searchresult.py,sha256=cEbXxzM9s0sKuAvO2ByFIMBv3BqEg1PllAjFM-CKxD0,2121
+imdbparser-1.0.14.dist-info/METADATA,sha256=0dXIAhxw6dLO0ihXGJUR8pDjxqmubH2MpB2SHt72CcM,2172
+imdbparser-1.0.14.dist-info/RECORD,,
+imdbparser-1.0.14.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+imdbparser-1.0.14.dist-info/top_level.txt,sha256=A6kLXoI5eO0TkGRtdgwqbzpxL3OjZzmK4BwUQvPOMD8,11
