@@ -1,0 +1,13 @@
+madarrays/__init__.py,sha256=rvM98w1_ypSuTdNT4dzx2cc05fHJkaf6I0_USztE_9Q,1445
+madarrays/mad_array.py,sha256=XpR3XO3ECgMYtxQLegqMKEHG2GvmlY7Zgfm8mZACdOU,23231
+madarrays/waveform.py,sha256=2Ja1ojeWMlxEoi1v53Usd-jl4cUyZDc2x-2o0VbTw_U,26112
+madarrays/tests/__init__.py,sha256=8pTuKZbU2nC4EBeWGMjctt1yzPllu714B2UV4E92sxY,1308
+madarrays/tests/test_madarray.py,sha256=4WwNsIdwRxWP5K3uRWM78DK7AFd-ujZXakOO21QjUEI,27449
+madarrays/tests/test_waveform.py,sha256=cUjBY4hjUX9VF2OhFGI_zxPHicX8cDmsrF8c1Nl17MU,44246
+madarrays/tests/utils.py,sha256=cSDZYCrOJyrG8BeIV5vOTkehuE48_H_XRCTUn58yJXU,1803
+madarrays-1.0.3.dist-info/DESCRIPTION.rst,sha256=HPuZ4v8SxY7frl0TpFM-Br3CjcS9lgreSemG5xZ75qk,1445
+madarrays-1.0.3.dist-info/METADATA,sha256=9Y4rXOYXstI38ZP4RYOVljp2xWcy3A1ecPimOz6N9Ek,3336
+madarrays-1.0.3.dist-info/RECORD,,
+madarrays-1.0.3.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+madarrays-1.0.3.dist-info/metadata.json,sha256=AHOkOmIqvZCa-jPdvDO88Qg9tP6Svm6ysoiDgLUWHWk,1669
+madarrays-1.0.3.dist-info/top_level.txt,sha256=V6_ETIQ8eAjXIQEYJ8zUMF4F0ek3Reo-Li7IcTA8LiY,10
