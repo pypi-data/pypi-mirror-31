@@ -1,0 +1,12 @@
+dotrunner/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dotrunner/dotrunner.py,sha256=LgkI9zyLeGD8wouZQnIMRvSJlDQVGchOFHchNKtfgyc,3591
+dotrunner/version.py,sha256=EZoSkWDvBsNLVE-lJvuWB8NcSB7Ork4eP9luwaLoZcA,17
+dotrunner-0.1.7.data/data/LICENSE,sha256=ZsybHesHc11PC2FGLxV9VN2urJedlEL3gDtU5qL6m_I,1284
+dotrunner-0.1.7.data/data/README.md,sha256=17Ob1traucWktRs3CsxKznr5ch7FPiRFuFcvWXTeR7Q,16
+dotrunner-0.1.7.dist-info/METADATA,sha256=WDi89guxMA_568QJF3HkrNZDmagVBZOItSfD1x_i3E8,1676
+dotrunner-0.1.7.dist-info/RECORD,,
+dotrunner-0.1.7.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+dotrunner-0.1.7.dist-info/entry_points.txt,sha256=aOMdXnIfQ_ItteQvJefwLhcw38SVTXs9_puk0MsucW4,64
+dotrunner-0.1.7.dist-info/top_level.txt,sha256=-1bFZW1d-19qccPByCVQMfBJ4LIHsTddS4-ObAYAwAE,16
+tests/snapshots/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/snapshots/snap_dotlinker_test.py,sha256=FHVJejF3_ddhV0Mf0By3MqjrlCQaKwqPM-J3O6mDVHU,674
