@@ -1,0 +1,9 @@
+Flask-Cors
+Flask-SQLAlchemy
+PyJWT
+bcrypt
+configparser
+pycapnp-for-marv==0.5.9-2
+cython
+Jinja2>=2.7.3
+marv-cli==3.3.5
