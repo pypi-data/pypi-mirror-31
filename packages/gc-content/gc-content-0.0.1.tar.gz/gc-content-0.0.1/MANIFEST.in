@@ -1,0 +1,6 @@
+include README.md
+include LICENSE.txt
+exclude .gitignore
+prune .git
+recursive-exclude *.egg-info *
+global-exclude .ipynb_checkpoints

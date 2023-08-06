@@ -1,0 +1,9 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+gc_content/__init__.py
+gc_content/app.py
+gc_content/test/__init__.py
+gc_content/test/test.py

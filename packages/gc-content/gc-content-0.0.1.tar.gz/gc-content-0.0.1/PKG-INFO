@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: gc-content
+Version: 0.0.1
+Summary: gc-content is a command-line tool that will calculatethe GC content (%) of each primer in a FASTA file
+Home-page: https://eexwhyzee.github.io
+Author: Minh Hoang
+Author-email: eexwhyzee@gmail.com
+License: MIT
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3
