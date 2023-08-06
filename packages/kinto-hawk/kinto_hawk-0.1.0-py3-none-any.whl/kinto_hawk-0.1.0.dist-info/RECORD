@@ -1,0 +1,13 @@
+kinto_hawk/__init__.py,sha256=XjFlMaXTbVzgODtDJhCSqqRU5zWr-46ewKCk9DZDhmU,839
+kinto_hawk/authentication.py,sha256=x0253gz5p6532-qO0jsBvJOZ9XsUKCm-1AWl8bY--7c,3728
+kinto_hawk/tweens.py,sha256=IroBh9quWJYWCbtO79KpzOSt_7IyokgLL3rIr64VoG8,470
+kinto_hawk/views.py,sha256=awzUZyxm5E-y-XAFIIpF0KUSdRba9QU_lqPSCbPLYpk,1633
+kinto_hawk-0.1.0.dist-info/DESCRIPTION.rst,sha256=15ge-ddGZMq2dkANxNRo8dSgXzTNAAPX-q7AiFMFTcA,3212
+kinto_hawk-0.1.0.dist-info/METADATA,sha256=7Rnq6wFlCtnMfTsODl6upKO4frc5jh3KLj0OBeCUz6g,3944
+kinto_hawk-0.1.0.dist-info/RECORD,,
+kinto_hawk-0.1.0.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+kinto_hawk-0.1.0.dist-info/metadata.json,sha256=-V6kaB_fGa-yysgCTI6tfmJxAW8T1_7GAb49i1jwHuY,915
+kinto_hawk-0.1.0.dist-info/top_level.txt,sha256=Er6BKUVIXUhqj2RcHganPjQe4l5IYbEeU-6peDuA7cM,17
+tests/__init__.py,sha256=zLO4oKZsQ0OYOPs9Ews35gxlPfLbzXISC-BFfkI2fN0,605
+tests/test_authentication.py,sha256=Nlg9uNwWqssS1hqO-WQKeLLvQJcrbM2vZsx-GnbJcZI,4104
+tests/test_includeme.py,sha256=K7RvK3DMeMHQpokvJCdOHvmnJYoFCLHXvW0wNvRSWvU,579
