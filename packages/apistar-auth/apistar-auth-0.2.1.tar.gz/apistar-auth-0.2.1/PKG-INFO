@@ -1,0 +1,46 @@
+Metadata-Version: 1.2
+Name: apistar-auth
+Version: 0.2.1
+Summary: Authentication integration based on SQLAlchemy for API Star.
+Home-page: https://github.com/smvv/apistar-auth
+Author: Sander Mathijs van Veen
+Author-email: sandervv+pypi@gmail.com
+Maintainer: Sander Mathijs van Veen
+Maintainer-email: sandervv+pypi@gmail.com
+License: MIT
+Download-URL: https://github.com/smvv/apistar-auth
+Description: API Star Authentication
+        =======================
+        |build-status| |coverage| |version|
+        
+        :Version: 0.2.1
+        :Status: Production/Stable
+        :Author: Sander Mathijs van Veen
+        
+        Authentication integration based on SQLAlchemy for API Star.
+        
+        
+        .. |build-status| image:: https://travis-ci.org/smvv/apistar-auth.svg?branch=master
+            :alt: build status
+            :scale: 100%
+            :target: https://travis-ci.org/smvv/apistar-auth
+        .. |coverage| image:: https://codecov.io/gh/smvv/apistar-auth/branch/master/graph/badge.svg
+            :alt: coverage
+            :scale: 100%
+            :target: https://codecov.io/gh/smvv/apistar-auth/branch/master/graph/badge.svg
+        .. |version| image:: https://badge.fury.io/py/apistar-auth.svg
+            :alt: version
+            :scale: 100%
+            :target: https://badge.fury.io/py/apistar-auth
+        
+Keywords: python apistar api sqlalchemy auth authentication login session cookie user role
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Database
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
