@@ -1,0 +1,3 @@
+[console_scripts]
+fdump = fdump.__main__:main
+

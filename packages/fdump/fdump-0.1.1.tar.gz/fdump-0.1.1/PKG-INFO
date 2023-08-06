@@ -1,0 +1,13 @@
+Metadata-Version: 1.2
+Name: fdump
+Version: 0.1.1
+Summary: Split stdin by lines based on regex and output to stdout or dump to a file.
+Home-page: https://github.com/nul-one/fdump
+Author: Predrag Mandic
+Author-email: info@nul.one
+License: BSD
+Download-URL: https://github.com/nul-one/fdump/archive/0.1.1.tar.gz
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.4.6
