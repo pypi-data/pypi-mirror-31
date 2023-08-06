@@ -1,0 +1,6 @@
+include sequence_tagging/data/pos_model.p
+include sequence_tagging/data/pos_tagdict.p
+include sequence_tagging/data/chunk_model.p
+include sequence_tagging/data/chunk_tagdict.p
+include sequence_tagging/data/atis_model.p
+include sequence_tagging/data/atis_tagdict.p
