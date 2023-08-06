@@ -1,0 +1,11 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+wiki_bot.py
+wiki_bot.egg-info/PKG-INFO
+wiki_bot.egg-info/SOURCES.txt
+wiki_bot.egg-info/dependency_links.txt
+wiki_bot.egg-info/requires.txt
+wiki_bot.egg-info/top_level.txt
