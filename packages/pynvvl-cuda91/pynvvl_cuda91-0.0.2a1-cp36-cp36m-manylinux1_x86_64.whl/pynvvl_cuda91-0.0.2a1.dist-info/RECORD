@@ -1,0 +1,10 @@
+pynvvl/__init__.py,sha256=F2YWCGOU3Gyy8FuQjyTW32GV3QyRClXWLx-oniw-J6w,297
+pynvvl/_nvvl.cpython-36m-x86_64-linux-gnu.so,sha256=A-2llWjM7u_2Xl9IC3vI4BvCBSLdsp0Ya6X2Rx7tEtg,396128
+pynvvl/_lib/libavcodec.so.57,sha256=Z6Eyc9nOvK3bi4ymn_8BBiSye2NJsaPpXTEA9QyWSGw,302264
+pynvvl/_lib/libavformat.so.57,sha256=CDyG5eZ0ToSM3ZdQ2gNTbdAnd_x0qhh2IMm-Io4jKFc,418272
+pynvvl/_lib/libavutil.so.55,sha256=c--nXbDodNDfslrLX2ufCCRS0hS70mJ_9DEK4xj3pGo,432904
+pynvvl/_lib/libnvvl.so,sha256=2JWqzCIOeOkJRPg_ID_ZxU7r96MtL1DizsU7HQw3rCs,3192704
+pynvvl_cuda91-0.0.2a1.dist-info/METADATA,sha256=toh_88x35MxJSSZbxpdVntR_eCvmmbr3fjvAHhNN9LA,265
+pynvvl_cuda91-0.0.2a1.dist-info/RECORD,,
+pynvvl_cuda91-0.0.2a1.dist-info/WHEEL,sha256=u1AFvJ7xAMUO4yX-j6lDVBPlr1OxQiM_oX0ec85B-10,104
+pynvvl_cuda91-0.0.2a1.dist-info/top_level.txt,sha256=tfsK8Ce71l4pv8P5TE6hPy_6XiLOpfq25TjNUdOCGSA,7
