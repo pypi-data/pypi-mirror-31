@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: nbexec
+Version: 0.0.0
+Summary: A dead-simple tool for executing Jupyter notebooks from the command line.
+Home-page: http://github.com/jsvine/nbexec
+Author: Jeremy Singer-Vine
+Author-email: jsvine@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: jupyter
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
