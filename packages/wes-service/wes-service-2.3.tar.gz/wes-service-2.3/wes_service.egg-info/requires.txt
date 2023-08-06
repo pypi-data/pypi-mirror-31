@@ -1,0 +1,8 @@
+connexion
+bravado
+ruamel.yaml<0.15,>=0.12.4
+cwlref-runner
+schema-salad
+
+[arvados]
+arvados-cwl-runner

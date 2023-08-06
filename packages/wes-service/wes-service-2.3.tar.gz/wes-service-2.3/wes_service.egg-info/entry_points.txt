@@ -1,0 +1,4 @@
+[console_scripts]
+wes-client = wes_client:main
+wes-server = wes_service:main
+
