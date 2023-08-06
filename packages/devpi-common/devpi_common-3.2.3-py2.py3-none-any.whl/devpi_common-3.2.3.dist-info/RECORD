@@ -1,0 +1,15 @@
+devpi_common/__init__.py,sha256=cmsfvA1-MNdJAdfyTUk5jw6-El4GDuOevd2YUGmLorU,24
+devpi_common/archive.py,sha256=wiNXav0S6XgFWjH5IpFIYRoXvdjfiPdFD2c8KCRrxcA,5114
+devpi_common/metadata.py,sha256=kAPCO8sKQTGk16JZVmZeKH9SV4R0cNmy-fLRGYyHNuY,6497
+devpi_common/proc.py,sha256=mHz8JESsiCmjGiHFak4aC1Kgs9a7V6SsvsN-g8VQk5U,651
+devpi_common/request.py,sha256=dJNIb7F6ywLU_1jvUPHh8inHEfgxDl5cKHLr1YRid7Q,967
+devpi_common/types.py,sha256=TpOWVZOGE64t3xQDSO3oKmk26_o_bBvokh4tgTvRiO8,5121
+devpi_common/url.py,sha256=QOfiTuievyDOj7WCupwwqvtXLiGy401Jp2msWpdai9s,5448
+devpi_common/validation.py,sha256=Ewt4wgm-2A6TtSsYSLCpvGwdLdt2K9QbGRqx6SEDEug,4408
+devpi_common/viewhelp.py,sha256=PhsUaXmNJrN1yaj_TBYDz-8Q4R1uv7KSuzHoHbdl9_0,3039
+devpi_common/vendor/__init__.py,sha256=MsSFjiLMLJZ7QhUPpVBWKiyDnCzryquRyr329NoCACI,2
+devpi_common/vendor/_pip.py,sha256=pmUMBu1GRjams3gMyhYSZ2X7DPz5R_XWaNkUrudf7SU,3785
+devpi_common-3.2.3.dist-info/METADATA,sha256=TohMsG2Hb6-_-3Yvuowfzfm6QqGJ3iKX5z3ewxXDs-Y,1761
+devpi_common-3.2.3.dist-info/RECORD,,
+devpi_common-3.2.3.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+devpi_common-3.2.3.dist-info/top_level.txt,sha256=75zvhZN1kBmO_eBevwspRC3DUUyXuzN4Oq9TvH-2YkA,13
