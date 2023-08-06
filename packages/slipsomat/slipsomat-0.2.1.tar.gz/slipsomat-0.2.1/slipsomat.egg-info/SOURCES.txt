@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+slipsomat/__init__.py
+slipsomat/shell.py
+slipsomat/slipsomat.py
+slipsomat/worker.py
+slipsomat.egg-info/PKG-INFO
+slipsomat.egg-info/SOURCES.txt
+slipsomat.egg-info/dependency_links.txt
+slipsomat.egg-info/entry_points.txt
+slipsomat.egg-info/requires.txt
+slipsomat.egg-info/top_level.txt
