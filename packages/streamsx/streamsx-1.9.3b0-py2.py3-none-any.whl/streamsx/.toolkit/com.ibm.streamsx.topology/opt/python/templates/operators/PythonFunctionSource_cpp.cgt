@@ -1,0 +1,107 @@
+/*
+ * # Licensed Materials - Property of IBM
+ * # Copyright IBM Corp. 2015,2016
+ */
+
+#include "splpy.h"
+#include "splpy_pyop.h"
+
+using namespace streamsx::topology;
+
+<%SPL::CodeGen::implementationPrologue($model);%>
+
+<%
+ my $cmnDir = $model->getContext()->getToolkitDirectory()."/opt/.__splpy/common/";
+
+ require "splpy_operator.pm";
+ require $cmnDir."/splpy.pm";
+
+ my $module = splpy_Module();
+ my $functionName = splpy_FunctionName();
+ my @packages = splpy_Packages();
+ spl_pip_packages($model, \@packages);
+
+ my $iport;
+ my $FROM_DICT_TMP = 1;
+ 
+  my $oport = $model->getOutputPortAt(0);
+  my $otupleType = $oport->getSPLTupleType();
+  my @onames = SPL::CodeGen::Type::getAttributeNames($otupleType);
+  my @otypes = SPL::CodeGen::Type::getAttributeTypes($otupleType);
+
+  my $skip_set_callable = 1;
+%>
+
+// Constructor
+MY_OPERATOR::MY_OPERATOR() :
+   pyop_(NULL),
+   pyOutNames_0(NULL)
+{
+   PyObject * callable;
+@include  "../../opt/.__splpy/common/py_constructor.cgt"
+   
+   {
+      SplpyGIL lock;
+
+      // callable is an instance of the callable class
+      // then when called returns an iterable
+     callable = SplpyGeneral::callFunction(
+             "streamsx.spl.runtime", "_splpy_iter_source",
+             callable, NULL);   
+     this->pyop_->setCallable(callable);
+
+     pyOutNames_0 = Splpy::pyAttributeNames(getOutputPortAt(0));
+   }
+}
+
+// Destructor
+MY_OPERATOR::~MY_OPERATOR() 
+{
+   {
+   SplpyGIL lock;
+   if (pyOutNames_0)
+      Py_DECREF(pyOutNames_0);
+   }
+   delete pyop_;
+}
+
+// Notify port readiness
+void MY_OPERATOR::allPortsReady()
+{
+  createThreads(1);
+}
+
+// Notify pending shutdown
+void MY_OPERATOR::prepareToShutdown() 
+{
+    pyop_->prepareToShutdown();
+}
+
+<%
+  my $no_tuples_action = "submit(Punctuation::WindowMarker, 0);";
+%>
+
+void MY_OPERATOR::process(uint32_t idx)
+{
+  while(!getPE().getShutdownRequested()) {
+
+    try {
+
+      // GIL is released across submission
+      SplpyGIL lock;
+
+      PyObject *pyTuple = PyTuple_New(0);
+      PyObject *pyDict = NULL;
+
+@include  "../../opt/.__splpy/common/py_functionReturnToTuples.cgt"
+    } catch (const streamsx::topology::SplpyExceptionInfo& excInfo) {
+       SPLPY_OP_HANDLE_EXCEPTION_INFO_GIL(excInfo);
+    }
+  }
+}
+
+// Create member function that converts Python tuple to SPL tuple
+@include  "../../opt/.__splpy/common/py_valueToTuples.cgt"
+@include  "../../opt/.__splpy/common/py_pyTupleTosplTuple.cgt"
+
+<%SPL::CodeGen::implementationEpilogue($model);%>
