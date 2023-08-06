@@ -1,0 +1,11 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+Flask_WTF_Decorators.egg-info/PKG-INFO
+Flask_WTF_Decorators.egg-info/SOURCES.txt
+Flask_WTF_Decorators.egg-info/dependency_links.txt
+Flask_WTF_Decorators.egg-info/requires.txt
+Flask_WTF_Decorators.egg-info/top_level.txt
+flask_wtf_decorators/__init__.py
