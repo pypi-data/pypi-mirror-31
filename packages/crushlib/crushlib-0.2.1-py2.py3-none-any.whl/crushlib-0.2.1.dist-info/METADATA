@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: crushlib
+Version: 0.2.1
+Summary: Various tools for manipulating CRUSH maps in Ceph
+Home-page: https://github.com/xvillaneau/crushlib
+Author: Xavier Villaneau
+Author-email: xvillaneau@gmail.com
+License: GNU LGPLv3
+Keywords: ceph,crush
+Platform: UNKNOWN
+
+UNKNOWN
+
+
