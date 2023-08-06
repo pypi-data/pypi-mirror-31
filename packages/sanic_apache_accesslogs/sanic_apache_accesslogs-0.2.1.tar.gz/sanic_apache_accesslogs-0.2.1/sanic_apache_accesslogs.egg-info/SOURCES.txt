@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+sanic_apache_accesslogs/__init__.py
+sanic_apache_accesslogs/helpers.py
+sanic_apache_accesslogs/plugin.py
+sanic_apache_accesslogs/settings.py
+sanic_apache_accesslogs/templates.py
+sanic_apache_accesslogs.egg-info/PKG-INFO
+sanic_apache_accesslogs.egg-info/SOURCES.txt
+sanic_apache_accesslogs.egg-info/dependency_links.txt
+sanic_apache_accesslogs.egg-info/not-zip-safe
+sanic_apache_accesslogs.egg-info/requires.txt
+sanic_apache_accesslogs.egg-info/top_level.txt
