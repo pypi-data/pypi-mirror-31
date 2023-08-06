@@ -1,0 +1,11 @@
+
+[:python_version < "3.3"]
+monotonic
+
+[:python_version < "3.6"]
+aenum
+
+[:sys_platform == "linux"]
+evdev
+python-libinput
+python-xlib
