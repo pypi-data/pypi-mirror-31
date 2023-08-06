@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: iohandler
+Version: 1.0.6
+Summary: The goal of this project is to provide a way through which python devs can write IO tasks seamlessly without worrying much about 2/3 compatibility issues
+Home-page: https://bitbucket.org/mzuka/iohandler
+Author: Mzuka
+Author-email: mzukafull@gmail.com
+License: MIT
+Keywords: io str unicode bytes iohandler BaseIO
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: typing
+Requires-Dist: pathlib
+
+### Summary ###
+The goal of this project is to provide a way through which python devs can  write IO tasks 
+seamlessly without worrying much about python version compatibility issues'
+### Version ###
+1.0.1
+
+### How do I get set up? ###
+run pip install iohandler
+### How to run tests ###
+[Nose](https://nose.readthedocs.org/en/latest/) is already integrated with setup.py. To run 
+tests, we can simply do:
+~~~
+$ python setup.py test
+~~~
+
+### Contribution guidelines ###
+
+* Writing tests
+TBA
+* Code review
+TBA
+* Other guidelines
+TBA
+
+### Who do I talk to? ###
+
+* admin: mzukafull@gmail.com
+* Other :
+mzukafull@gmail.com
+
