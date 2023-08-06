@@ -1,0 +1,17 @@
+Metadata-Version: 2.0
+Name: pipTestPackage
+Version: 0.0.3
+Summary: Test Packaging
+Home-page: https://github.com/goodboychan/pipTestPackage
+Author: Chanseok Kang
+Author-email: chanseok.kang@lge.com
+License: MIT
+Description-Content-Type: UNKNOWN
+Keywords: test package development
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+
+UNKNOWN
+
+
