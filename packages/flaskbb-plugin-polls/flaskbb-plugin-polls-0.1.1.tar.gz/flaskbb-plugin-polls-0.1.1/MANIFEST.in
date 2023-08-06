@@ -1,0 +1,5 @@
+graft polls/templates
+graft polls/migrations
+graft polls/translations
+
+global-exclude *.pyc __pycache__ .keep
