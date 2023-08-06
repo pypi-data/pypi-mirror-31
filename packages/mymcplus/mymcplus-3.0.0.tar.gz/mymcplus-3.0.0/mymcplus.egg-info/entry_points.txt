@@ -1,0 +1,3 @@
+[console_scripts]
+mymcplus = mymcplus.mymc:main
+
