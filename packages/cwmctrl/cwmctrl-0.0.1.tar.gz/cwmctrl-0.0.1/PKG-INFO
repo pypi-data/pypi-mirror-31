@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: cwmctrl
+Version: 0.0.1
+Summary: Bindings for wmctrl
+Home-page: https://github.com/lpchambers/python3-wmctrl
+Author: Lewis Chambers
+Author-email: UNKNOWN
+License: GPLv2
+Description: python3-wmctrl
+        ==============
+        
+        python3 bindings for wmctrl
+        
+Keywords: wmctrl window manager X control
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Console
+Classifier: Environment :: X11 Applications
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Desktop Environment :: Window Managers
