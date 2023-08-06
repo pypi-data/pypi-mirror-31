@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+quick_knn/__init__.py
+quick_knn/lsh.py
+quick_knn/min_hash.py
+quick_knn/random_hyperplane.py
+quick_knn.egg-info/PKG-INFO
+quick_knn.egg-info/SOURCES.txt
+quick_knn.egg-info/dependency_links.txt
+quick_knn.egg-info/requires.txt
+quick_knn.egg-info/top_level.txt
