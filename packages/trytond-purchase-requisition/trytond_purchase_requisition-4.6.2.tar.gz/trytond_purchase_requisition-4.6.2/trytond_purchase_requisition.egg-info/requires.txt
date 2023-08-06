@@ -1,0 +1,7 @@
+trytond_company<4.7,>=4.6
+trytond_currency<4.7,>=4.6
+trytond_party<4.7,>=4.6
+trytond_product<4.7,>=4.6
+trytond_purchase<4.7,>=4.6
+trytond_purchase_request<4.7,>=4.6
+trytond<4.7,>=4.6
