@@ -1,0 +1,9 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+vonMises/vonMises.py
+vonMises.egg-info/PKG-INFO
+vonMises.egg-info/SOURCES.txt
+vonMises.egg-info/dependency_links.txt
+vonMises.egg-info/top_level.txt
