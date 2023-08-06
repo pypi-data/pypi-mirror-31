@@ -1,0 +1,44 @@
+Metadata-Version: 1.0
+Name: hclib
+Version: 0.1.18
+Summary: A library to connect to https://hack.chat/
+Home-page: https://github.com/neelkamath/hack.chat-library
+Author: Neel Kamath
+Author-email: neelkamath@protonmail.com
+License: MIT
+Description: # hclib
+        
+        [![Known Vulnerabilities](https://snyk.io/test/github/neelkamath/hclib/badge.svg?targetFile=requirements.txt)](https://snyk.io/test/github/neelkamath/hclib?targetFile=requirements.txt)
+        [![pypi-v](https://img.shields.io/pypi/v/hclib.svg)](https://pypi.python.org/pypi/hclib)
+        
+        This is a library to connect to [hack.chat](https://hack.chat/).
+        
+        Just get it: `pip3 install hclib`
+        
+        # [Usage](README.rst)
+        
+        # Contributing
+        
+        - [Code of Conduct](CODE_OF_CONDUCT.md)
+        
+        ## Installation
+        
+        ### Prerequisites
+        
+        - [Python 3 or higher](https://www.python.org/downloads/)
+        
+        ### Installing
+        
+        `git clone https://github.com/neelkamath/hclib.git`
+        
+        ## Usage
+        
+        - Windows: `python hclib.py`
+        - Other: `python3 hclib.py`
+        
+        # License
+        
+        This project is under the [MIT License](LICENSE).
+        
+Keywords: hack.chat library
+Platform: UNKNOWN
