@@ -1,0 +1,14 @@
+setup.py
+trackclip/__init__.py
+trackclip/__main__.py
+trackclip/hud.py
+trackclip/player.py
+trackclip/player_state.py
+trackclip/selector.py
+trackclip/tracking_object.py
+trackclip/utilities.py
+trackclip.egg-info/PKG-INFO
+trackclip.egg-info/SOURCES.txt
+trackclip.egg-info/dependency_links.txt
+trackclip.egg-info/requires.txt
+trackclip.egg-info/top_level.txt
