@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: trekkpay
+Version: 0.1
+Summary: TrekkPay Python SDK
+Home-page: https://github.com/gkmngrgn/trekkpay-python-sdk
+Author: Gökmen Görgen
+Author-email: gkmngrgn@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: requests (<3.0,>=0.11.1)
+
+The TrekkPay Python SDK is including an API client library.
+
+
