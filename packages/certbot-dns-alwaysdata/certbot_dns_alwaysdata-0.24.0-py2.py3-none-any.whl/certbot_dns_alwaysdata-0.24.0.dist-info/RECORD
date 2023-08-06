@@ -1,0 +1,10 @@
+certbot_dns_alwaysdata/__init__.py,sha256=op_3Wy_jbxWhh-nQOTaegDW85_6mpvj9imB_Ry2NbI4,3176
+certbot_dns_alwaysdata/dns_alwaysdata.py,sha256=Zg8sQr9zDp_Nenrq4Rkq0Qp0BnPeO-JYd1H5VbDXJrI,7914
+certbot_dns_alwaysdata/dns_alwaysdata_test.py,sha256=vH2qPfPXCrm8IvrhtEKQMeGI4a2D4-a1yDEerh6GjR0,10288
+certbot_dns_alwaysdata/testdata/domain.json,sha256=_gyC9QysV4dBFXmyIErLm-ilIOtmcKnhxo6iYzmxI_w,798
+certbot_dns_alwaysdata/testdata/record.json,sha256=OEIi6W5Q-cctB4DHm_s8TIf231qNTZ67v9R-ZRIZ4GQ,929
+certbot_dns_alwaysdata-0.24.0.dist-info/METADATA,sha256=fVn3qhE27qC4nq3nz_GsQKDiHFPZ3dD-eWEeTQYs6A8,1496
+certbot_dns_alwaysdata-0.24.0.dist-info/RECORD,,
+certbot_dns_alwaysdata-0.24.0.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+certbot_dns_alwaysdata-0.24.0.dist-info/entry_points.txt,sha256=AFBjfOE3yNb9M_ZNi2ctZq3QS2JWCYNX1pYHRjSPGJc,88
+certbot_dns_alwaysdata-0.24.0.dist-info/top_level.txt,sha256=OrAk_R-Y_o-uoFfA_wO59SdEtOwaibW0jPjECQ0Uks4,23

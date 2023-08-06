@@ -1,0 +1,3 @@
+[certbot.plugins]
+dns-alwaysdata = certbot_dns_alwaysdata.dns_alwaysdata:Authenticator
+
