@@ -1,0 +1,49 @@
+Metadata-Version: 2.0
+Name: treeswift
+Version: 1.0.10
+Summary: TreeSwift: Fast tree module for Python 2 and 3
+Home-page: https://github.com/niemasd/TreeSwift
+Author: Niema Moshiri
+Author-email: niemamoshiri@gmail.com
+License: UNKNOWN
+Keywords: tree phylogenetics fast
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Provides-Extra: dev
+Requires-Dist: check-manifest; extra == 'dev'
+
+# TreeSwift
+TreeSwift: Fast tree module for Python 2 and 3
+
+## Installation
+You should be able to install TreeSwift using `pip`, e.g.:
+
+```bash
+pip install treeswift
+```
+
+## Usage
+Typical usage should be as follows:
+
+1. Import the `treeswift` package
+2. Use `treeswift.read_tree_newick` to load your Newick tree
+3. Use the various `Tree` class functions on the resulting object as you need
+
+```python
+import treeswift
+tree = treeswift.read_tree_newick(my_newick_string)
+for node in tree.traverse_postorder():
+    print(node)
+```
+
+Full documentation can be found at [http://treeswift.readthedocs.io/en/latest/](http://treeswift.readthedocs.io/en/latest/).
+
