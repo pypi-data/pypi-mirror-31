@@ -1,0 +1,51 @@
+# Archivos que git debería ignorar. Inspirado por el de SciPy.
+# Archivos de PyCharm #
+#######################
+.idea/
+.settings/
+*.tmp
+
+# Código compilado #
+####################
+__pycache__/
+
+# Archivos de Python #
+######################
+# Metadatos "Egg"
+*.egg-info
+# configuración distutils
+site.cfg
+
+dist/
+build/
+
+# Documentación #
+#################
+docs/.tx/*
+
+# Archivos de VENSIM #
+######################
+*.vdf
+*.2mdl
+*.3vm
+
+# Archivos de Tinamït #
+#######################
+*.tin
+Config.json
+
+# Archivos de SAHYSMOD #
+########################
+*.frq
+*.gwt
+*.out
+*.lst
+*SAHYSMOD.inp
+*/Ejemplos/**/*SAHYSMOD/NAME*
+*/Ejemplos/**/*SAHYSMOD/*.txt
+*/EnvolturaBF/**/*SAHYSMOD/*.txt
+*/Name0
+
+# Archivos temporarios de Excel #
+#################################
+~$*.xlsx*

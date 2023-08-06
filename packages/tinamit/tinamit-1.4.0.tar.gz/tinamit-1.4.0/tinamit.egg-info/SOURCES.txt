@@ -1,0 +1,282 @@
+.gitignore
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+pruebas/__init__.py
+pruebas/prueba_mds.py
+pruebas/teacup.py
+tinamit/BF.py
+tinamit/Conectado.py
+tinamit/MDS.py
+tinamit/Modelo.py
+tinamit/__init__.py
+tinamit/config.json
+tinamit/definiciones.py
+tinamit/requirements.readthedocs.txt
+tinamit/versión.txt
+tinamit.egg-info/PKG-INFO
+tinamit.egg-info/SOURCES.txt
+tinamit.egg-info/dependency_links.txt
+tinamit.egg-info/not-zip-safe
+tinamit.egg-info/requires.txt
+tinamit.egg-info/top_level.txt
+tinamit/Ejemplos/Prueba.py
+tinamit/Ejemplos/Prueba2.py
+tinamit/Ejemplos/Subscripts.vpm
+tinamit/Ejemplos/__init__.py
+tinamit/Ejemplos/en/Ejemplo_SAHYSMOD/459anew1.inp
+tinamit/Ejemplos/en/Ejemplo_SAHYSMOD/Coupling script 2.py
+tinamit/Ejemplos/en/Ejemplo_SAHYSMOD/Coupling script.py
+tinamit/Ejemplos/en/Ejemplo_SAHYSMOD/SAHYSMOD.py
+tinamit/Ejemplos/en/Ejemplo_SAHYSMOD/امتحان.xlsx
+tinamit/Ejemplos/en/Ejemplo_SAHYSMOD/مشاہدہ بارش.csv
+tinamit/Ejemplos/en/Ejemplo_SAHYSMOD/مشاہدہ بارش.xlsx
+tinamit/Ejemplos/en/Ejemplo_SAHYSMOD/Shape_files/Coner Corodiantes.xlsx
+tinamit/Ejemplos/en/Ejemplo_SAHYSMOD/Vensim/Tinamit_sub_v4.vpm
+tinamit/Ejemplos/en/Ejemplo_SAHYSMOD/Vensim/test.xlsx
+tinamit/Ejemplos/es/__init__.py
+tinamit/Ejemplos/es/Ejemplo básico/Corrida_Tinamit.csv
+tinamit/Ejemplos/es/Ejemplo básico/Ejemplo conectado.py
+tinamit/Ejemplos/es/Ejemplo básico/Prueba bf.py
+tinamit/Ejemplos/es/Ejemplo básico/Prueba dll.vpm
+tinamit/Ejemplos/es/SAN Guatemala/Conec_0.csv
+tinamit/Ejemplos/es/SAN Guatemala/Conec_Base 0.csv
+tinamit/Ejemplos/es/SAN Guatemala/Conec_Base 2_6.csv
+tinamit/Ejemplos/es/SAN Guatemala/Conec_Base 8_5.csv
+tinamit/Ejemplos/es/SAN Guatemala/Conec_Consumo 0.csv
+tinamit/Ejemplos/es/SAN Guatemala/Conec_Consumo 2_6.csv
+tinamit/Ejemplos/es/SAN Guatemala/Conec_Consumo 8_5.csv
+tinamit/Ejemplos/es/SAN Guatemala/Conec_Crédito 2_6.csv
+tinamit/Ejemplos/es/SAN Guatemala/Conec_Crédito 8_5.csv
+tinamit/Ejemplos/es/SAN Guatemala/Conec_Educación 2_6.csv
+tinamit/Ejemplos/es/SAN Guatemala/Conec_Educación 8_5.csv
+tinamit/Ejemplos/es/SAN Guatemala/Conec_Reforest 2_6.csv
+tinamit/Ejemplos/es/SAN Guatemala/Conec_Reforest 8_5.csv
+tinamit/Ejemplos/es/SAN Guatemala/Conec_Riego 0.csv
+tinamit/Ejemplos/es/SAN Guatemala/Conec_Riego 2_6.csv
+tinamit/Ejemplos/es/SAN Guatemala/Conec_Riego 8_5.csv
+tinamit/Ejemplos/es/SAN Guatemala/Conec_Todas 2_6.csv
+tinamit/Ejemplos/es/SAN Guatemala/Conec_Todas 8_5.csv
+tinamit/Ejemplos/es/SAN Guatemala/Corridas_cnx.py
+tinamit/Ejemplos/es/SAN Guatemala/Corridas_ej.py
+tinamit/Ejemplos/es/SAN Guatemala/DSSAT.py
+tinamit/Ejemplos/es/SAN Guatemala/Ejemplo.py
+tinamit/Ejemplos/es/SAN Guatemala/Geografía Iximulew.csv
+tinamit/Ejemplos/es/SAN Guatemala/Para Tinamït.de.verdad.vpm
+tinamit/Ejemplos/es/SAN Guatemala/Para Tinamït.vpm
+tinamit/Ejemplos/es/SAN Guatemala/Prueba envoltura.py
+tinamit/Ejemplos/es/SAN Guatemala/calib.json
+tinamit/Ejemplos/es/SAN Guatemala/calib2.json
+tinamit/Ejemplos/es/SAN Guatemala/calib2a.json
+tinamit/Ejemplos/es/SAN Guatemala/calib3.json
+tinamit/Ejemplos/es/SAN Guatemala/Modelo DS/Para Tinamit.vpm
+tinamit/EnvolturaBF/__init__.py
+tinamit/EnvolturaBF/en/__init__.py
+tinamit/EnvolturaBF/en/SAHYSMOD/SAHYSMOD_Wrapper.py
+tinamit/EnvolturaBF/en/SAHYSMOD/TEMPLATE.inp
+tinamit/EnvolturaBF/en/SAHYSMOD/__init__.py
+tinamit/EnvolturaBF/en/SAHYSMOD/mioparser.py
+tinamit/EnvolturaBF/en/SAHYSMOD/sahysmod.csv.tmpl
+tinamit/EnvolturaBF/en/SAHYSMOD/sahysmod.inp.tmpl
+tinamit/EnvolturaBF/en/SAHYSMOD/sahysmodIO.PY
+tinamit/EnvolturaBF/en/SAHYSMOD/sahysmodIO.py
+tinamit/EnvolturaBF/es/__init__.py
+tinamit/EnvolturaBF/es/DSSAT/Lector.py
+tinamit/EnvolturaBF/es/DSSAT/__init__.py
+tinamit/EnvolturaBF/es/DSSAT/envoltDSSAT.py
+tinamit/EnvolturaBF/es/DSSAT/envoltDSSAT_senc.py
+tinamit/EnvolturaBF/es/Tikon/__init__.py
+tinamit/EnvolturaBF/es/Tikon/envoltTikon.py
+tinamit/EnvolturaMDS/PySD.py
+tinamit/EnvolturaMDS/Vensim.py
+tinamit/EnvolturaMDS/__init__.py
+tinamit/EnvolturaMDS/gram_Vensim.g
+tinamit/EnvolturaMDS/gram_ec_tinamït.g
+tinamit/EnvolturaMDS/sintaxis.py
+tinamit/Geog/Geog.py
+tinamit/Geog/__init__.py
+tinamit/Incertidumbre/ConexDatos.py
+tinamit/Incertidumbre/Controles.py
+tinamit/Incertidumbre/Datos.py
+tinamit/Incertidumbre/Estadísticas.py
+tinamit/Incertidumbre/Modelo.py
+tinamit/Incertidumbre/Números.py
+tinamit/Incertidumbre/__init__.py
+tinamit/Interfaz/Animaciones.py
+tinamit/Interfaz/Arte.py
+tinamit/Interfaz/Botones.py
+tinamit/Interfaz/Cajas.py
+tinamit/Interfaz/CajasGenéricas.py
+tinamit/Interfaz/CajasSubEtapas.py
+tinamit/Interfaz/Config.json
+tinamit/Interfaz/Controles.py
+tinamit/Interfaz/ControlesGenéricos.py
+tinamit/Interfaz/Formatos.py
+tinamit/Interfaz/IGU.py
+tinamit/Interfaz/Listas.py
+tinamit/Interfaz/Trads.json
+tinamit/Interfaz/Traducciones.py
+tinamit/Interfaz/__init__.py
+tinamit/Interfaz/Imágenes/BtAbrir_norm.png
+tinamit/Interfaz/Imágenes/BtAbrir_sel.png
+tinamit/Interfaz/Imágenes/BtBorrarItema_bloq.png
+tinamit/Interfaz/Imágenes/BtBorrarItema_norm.png
+tinamit/Interfaz/Imágenes/BtBorrarItema_sel.png
+tinamit/Interfaz/Imágenes/BtCasilla_bloq.png
+tinamit/Interfaz/Imágenes/BtCasilla_norm.png
+tinamit/Interfaz/Imágenes/BtCasilla_sel.png
+tinamit/Interfaz/Imágenes/BtConecciónDerIzq.png
+tinamit/Interfaz/Imágenes/BtConecciónIzqDer.png
+tinamit/Interfaz/Imágenes/BtEditarItema_norm.png
+tinamit/Interfaz/Imágenes/BtEditarItema_sel.png
+tinamit/Interfaz/Imágenes/BtEscribDerIzq.png
+tinamit/Interfaz/Imágenes/BtEscribIzqDer.png
+tinamit/Interfaz/Imágenes/BtGuardarComo_norm.png
+tinamit/Interfaz/Imágenes/BtGuardarComo_sel.png
+tinamit/Interfaz/Imágenes/BtGuardar_norm.png
+tinamit/Interfaz/Imágenes/BtGuardar_sel.png
+tinamit/Interfaz/Imágenes/BtLeng_norm.png
+tinamit/Interfaz/Imágenes/BtLeng_sel.png
+tinamit/Interfaz/Imágenes/BtMarca_bloq.png
+tinamit/Interfaz/Imágenes/BtMarca_norm.png
+tinamit/Interfaz/Imágenes/BtMarca_sel.png
+tinamit/Interfaz/Imágenes/BtNavEtp_adel_bloq.png
+tinamit/Interfaz/Imágenes/BtNavEtp_adel_norm.png
+tinamit/Interfaz/Imágenes/BtNavEtp_adel_sel.png
+tinamit/Interfaz/Imágenes/BtNavEtp_atrs_bloq.png
+tinamit/Interfaz/Imágenes/BtNavEtp_atrs_norm.png
+tinamit/Interfaz/Imágenes/BtNavEtp_atrs_sel.png
+tinamit/Interfaz/Imágenes/BtNavIzq_1_bloq.png
+tinamit/Interfaz/Imágenes/BtNavIzq_1_norm.png
+tinamit/Interfaz/Imágenes/BtNavIzq_1_sel.png
+tinamit/Interfaz/Imágenes/BtNavIzq_2_bloq.png
+tinamit/Interfaz/Imágenes/BtNavIzq_2_norm.png
+tinamit/Interfaz/Imágenes/BtNavIzq_2_sel.png
+tinamit/Interfaz/Imágenes/BtNavIzq_3_bloq.png
+tinamit/Interfaz/Imágenes/BtNavIzq_3_norm.png
+tinamit/Interfaz/Imágenes/BtNavIzq_3_sel.png
+tinamit/Interfaz/Imágenes/BtNavIzq_4_bloq.png
+tinamit/Interfaz/Imágenes/BtNavIzq_4_norm.png
+tinamit/Interfaz/Imágenes/BtNavIzq_4_sel.png
+tinamit/Interfaz/Imágenes/BtNavSub_adel_bloq.png
+tinamit/Interfaz/Imágenes/BtNavSub_adel_norm.png
+tinamit/Interfaz/Imágenes/BtNavSub_adel_sel.png
+tinamit/Interfaz/Imágenes/BtNavSub_atrs_bloq.png
+tinamit/Interfaz/Imágenes/BtNavSub_atrs_norm.png
+tinamit/Interfaz/Imágenes/BtNavSub_atrs_sel.png
+tinamit/Interfaz/Imágenes/BtNuevo_norm.png
+tinamit/Interfaz/Imágenes/BtNuevo_sel.png
+tinamit/Interfaz/Imágenes/BtPlus_norm.png
+tinamit/Interfaz/Imágenes/BtPlus_sel.png
+tinamit/Interfaz/Imágenes/BtRegrCent_norm.png
+tinamit/Interfaz/Imágenes/BtRegrCent_sel.png
+tinamit/Interfaz/Imágenes/FlchConex_cbzder.png
+tinamit/Interfaz/Imágenes/FlchConex_cbzizq.png
+tinamit/Interfaz/Imágenes/FlchConex_colader.png
+tinamit/Interfaz/Imágenes/FlchConex_colaizq.png
+tinamit/Interfaz/Imágenes/LogoCent.png
+tinamit/Interfaz/Imágenes/LogoInic.png
+tinamit/Interfaz/Imágenes/__init__.py
+tinamit/Interfaz/Imágenes/Originales/Anim_trabajando/Anim_trabajando_1.png
+tinamit/Interfaz/Imágenes/Originales/Anim_trabajando/Anim_trabajando_10.png
+tinamit/Interfaz/Imágenes/Originales/Anim_trabajando/Anim_trabajando_11.png
+tinamit/Interfaz/Imágenes/Originales/Anim_trabajando/Anim_trabajando_12.png
+tinamit/Interfaz/Imágenes/Originales/Anim_trabajando/Anim_trabajando_13.png
+tinamit/Interfaz/Imágenes/Originales/Anim_trabajando/Anim_trabajando_14.png
+tinamit/Interfaz/Imágenes/Originales/Anim_trabajando/Anim_trabajando_15.png
+tinamit/Interfaz/Imágenes/Originales/Anim_trabajando/Anim_trabajando_16.png
+tinamit/Interfaz/Imágenes/Originales/Anim_trabajando/Anim_trabajando_17.png
+tinamit/Interfaz/Imágenes/Originales/Anim_trabajando/Anim_trabajando_18.png
+tinamit/Interfaz/Imágenes/Originales/Anim_trabajando/Anim_trabajando_19.png
+tinamit/Interfaz/Imágenes/Originales/Anim_trabajando/Anim_trabajando_2.png
+tinamit/Interfaz/Imágenes/Originales/Anim_trabajando/Anim_trabajando_20.png
+tinamit/Interfaz/Imágenes/Originales/Anim_trabajando/Anim_trabajando_21.png
+tinamit/Interfaz/Imágenes/Originales/Anim_trabajando/Anim_trabajando_22.png
+tinamit/Interfaz/Imágenes/Originales/Anim_trabajando/Anim_trabajando_23.png
+tinamit/Interfaz/Imágenes/Originales/Anim_trabajando/Anim_trabajando_24.png
+tinamit/Interfaz/Imágenes/Originales/Anim_trabajando/Anim_trabajando_25.png
+tinamit/Interfaz/Imágenes/Originales/Anim_trabajando/Anim_trabajando_26.png
+tinamit/Interfaz/Imágenes/Originales/Anim_trabajando/Anim_trabajando_27.png
+tinamit/Interfaz/Imágenes/Originales/Anim_trabajando/Anim_trabajando_28.png
+tinamit/Interfaz/Imágenes/Originales/Anim_trabajando/Anim_trabajando_29.png
+tinamit/Interfaz/Imágenes/Originales/Anim_trabajando/Anim_trabajando_3.png
+tinamit/Interfaz/Imágenes/Originales/Anim_trabajando/Anim_trabajando_30.png
+tinamit/Interfaz/Imágenes/Originales/Anim_trabajando/Anim_trabajando_31.png
+tinamit/Interfaz/Imágenes/Originales/Anim_trabajando/Anim_trabajando_4.png
+tinamit/Interfaz/Imágenes/Originales/Anim_trabajando/Anim_trabajando_5.png
+tinamit/Interfaz/Imágenes/Originales/Anim_trabajando/Anim_trabajando_6.png
+tinamit/Interfaz/Imágenes/Originales/Anim_trabajando/Anim_trabajando_7.png
+tinamit/Interfaz/Imágenes/Originales/Anim_trabajando/Anim_trabajando_8.png
+tinamit/Interfaz/Imágenes/Originales/Anim_trabajando/Anim_trabajando_9.png
+tinamit/Unidades/Unidades.py
+tinamit/Unidades/__init__.py
+tinamit/Unidades/equiv_unid.json
+tinamit/local/act_trads_mnsj.py
+tinamit/local/lenguas.txt
+tinamit/local/_fuente/ar/LC_MESSAGES/tinamit.mo
+tinamit/local/_fuente/cak/LC_MESSAGES/tinamit.mo
+tinamit/local/_fuente/de/LC_MESSAGES/tinamit.mo
+tinamit/local/_fuente/fr/LC_MESSAGES/tinamit.mo
+tinamit/local/_fuente/hi/LC_MESSAGES/tinamit.mo
+tinamit/local/_fuente/ms/LC_MESSAGES/tinamit.mo
+tinamit/local/_fuente/nl/LC_MESSAGES/tinamit.mo
+tinamit/local/_fuente/quc/LC_MESSAGES/tinamit.mo
+tinamit/local/_fuente/ta/LC_MESSAGES/tinamit.mo
+tinamit/local/_fuente/tzj/LC_MESSAGES/tinamit.mo
+tinamit/local/_fuente/ur/LC_MESSAGES/tinamit.mo
+tinamit/trads/__init__.py
+tinamit/trads/nl/BF.py
+tinamit/trads/nl/Conectado.py
+tinamit/trads/nl/MDS.py
+tinamit/trads/nl/Modelo.py
+tinamit/trads/nl/__init__.py
+tinamit/trads/nl/definiciones.py
+tinamit/trads/nl/EnvolturaBF/en/SAHYSMOD/SAHYSMOD_Wrapper.py
+tinamit/trads/nl/EnvolturaBF/en/SAHYSMOD/mioparser.py
+tinamit/trads/nl/EnvolturaBF/en/SAHYSMOD/sahysmodIO.py
+tinamit/trads/nl/EnvolturaBF/es/DSSAT/envoltDSSAT.py
+tinamit/trads/nl/EnvolturaBF/es/Tikon/envoltTikon.py
+tinamit/trads/nl/Geog/Geog.py
+tinamit/trads/nl/MDS/MDS.py
+tinamit/trads/nl/Unidades/Unidades.py
+tinamit/trads/ار/BF.py
+tinamit/trads/ار/Conectado.py
+tinamit/trads/ار/MDS.py
+tinamit/trads/ار/Modelo.py
+tinamit/trads/ار/__init__.py
+tinamit/trads/ار/definiciones.py
+tinamit/trads/ار/منسلک.py
+tinamit/trads/ار/EnvolturaBF/en/SAHYSMOD/SAHYSMOD_Wrapper.py
+tinamit/trads/ار/EnvolturaBF/en/SAHYSMOD/mioparser.py
+tinamit/trads/ار/EnvolturaBF/en/SAHYSMOD/sahysmodIO.py
+tinamit/trads/ار/EnvolturaBF/es/DSSAT/envoltDSSAT.py
+tinamit/trads/ار/EnvolturaBF/es/Tikon/envoltTikon.py
+tinamit/trads/ار/Geog/Geog.py
+tinamit/trads/ار/MDS/MDS.py
+tinamit/trads/ار/Unidades/Unidades.py
+tinamit/trads/த/BF.py
+tinamit/trads/த/Conectado.py
+tinamit/trads/த/MDS.py
+tinamit/trads/த/Modelo.py
+tinamit/trads/த/__init__.py
+tinamit/trads/த/definiciones.py
+tinamit/trads/த/இணைக்கப்பட்ட.py
+tinamit/trads/த/உயிரியற்பியல்.py
+tinamit/trads/த/மாதிரி.py
+tinamit/trads/த/EnvolturaBF/en/SAHYSMOD/SAHYSMOD_Wrapper.py
+tinamit/trads/த/EnvolturaBF/en/SAHYSMOD/mioparser.py
+tinamit/trads/த/EnvolturaBF/en/SAHYSMOD/sahysmodIO.py
+tinamit/trads/த/EnvolturaBF/es/DSSAT/envoltDSSAT.py
+tinamit/trads/த/EnvolturaBF/es/Tikon/envoltTikon.py
+tinamit/trads/த/Geog/Geog.py
+tinamit/trads/த/MDS/MDS.py
+tinamit/trads/த/Unidades/Unidades.py
+tinamit/trads/த/அமை_இய_மா/அமை_இய_மா.py
+tinamit/trads/த/உயிரியற்பியல்_உறை/en/SAHYSMOD/SAHYSMOD_Wrapper.py
+tinamit/trads/த/உயிரியற்பியல்_உறை/en/SAHYSMOD/mioparser.py
+tinamit/trads/த/உயிரியற்பியல்_உறை/en/SAHYSMOD/sahysmodIO.py
+tinamit/trads/த/உயிரியற்பியல்_உறை/en/SAHYSMOD/ஸாஹிஸ்மாட்_உறை.py
+tinamit/trads/த/உயிரியற்பியல்_உறை/es/DSSAT/envoltDSSAT.py
+tinamit/trads/த/உயிரியற்பியல்_உறை/es/Tikon/envoltTikon.py
+tinamit/trads/த/உயிரியற்பியல்_உறை/es/Tikon/தீக்கொன_உறை.py
