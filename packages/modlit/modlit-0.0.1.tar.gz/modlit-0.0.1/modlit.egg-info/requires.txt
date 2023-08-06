@@ -1,0 +1,4 @@
+psycopg2-binary<3,>=2.7.4
+GeoAlchemy2<1,>=0.4.2
+SQLAlchemy<2,>=1.2.6
+titlecase<1,>=0.12.0

@@ -1,0 +1,19 @@
+Metadata-Version: 1.2
+Name: modlit
+Version: 0.0.1
+Summary: modlit
+Home-page: http://modlit.readthedocs.io/en/latest/index.html
+Author: Pat Daburu
+Author-email: pat@daburu.net
+License: MIT
+Download-URL: https://github.com/patdaburu/modlit/archive/0.0.1.tar.gz
+Description: modlit
+        Helpful utilities for SQLAlchemy (and GeoAlchemy) data model projects.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6
