@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: slayer
+Version: 0.1.0a1
+Summary: Slayer Framework... it came to SLAY!
+Home-page: https://github.com/FrancoLM/slayer
+Author: Franco Martinez
+Author-email: martinez.franco.leonardo@gmail.com
+License: BSD
+Keywords: slayer automation framework
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Quality Assurance
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/x-rst
+Requires-Dist: astroid (>=1.6.3)
+Requires-Dist: attrs (>=17.4.0)
+Requires-Dist: behave (>=1.2.6)
+Requires-Dist: certifi (>=2018.4.16)
+Requires-Dist: chardet (>=3.0.4)
+Requires-Dist: colorama (>=0.3.9)
+Requires-Dist: configobj (>=5.0.6)
+Requires-Dist: idna (>=2.6)
+Requires-Dist: isort (>=4.3.4)
+Requires-Dist: lazy-object-proxy (>=1.3.1)
+Requires-Dist: mccabe (>=0.6.1)
+Requires-Dist: more-itertools (>=4.1.0)
+Requires-Dist: parse (>=1.8.2)
+Requires-Dist: parse-type (>=0.4.2)
+Requires-Dist: pluggy (>=0.6.0)
+Requires-Dist: py (>=1.5.3)
+Requires-Dist: PyYAML (>=3.12)
+Requires-Dist: requests (>=2.18.4)
+Requires-Dist: selenium (>=3.11.0)
+Requires-Dist: six (>=1.11.0)
+Requires-Dist: urllib3 (>=1.22)
+Requires-Dist: wrapt (>=1.10.1)
+
+Slayer Framework... It came to SLAY!
+====================================
+
+Requirements:
+^^^^^^^^^^^^^
+
+- Python 3.x (Python >= 3.6 recommended)
+
+For web automation, make sure you have a webdriver downloaded in your system, and it's added to your PATH.
+
+
+Running the Framework
+=====================
+.. code-block:: bash
+
+    pip install slayer
+
+Once installed:
+
+.. code-block:: python
+
+   from slayer import run_framework
+   run_framework()
+
