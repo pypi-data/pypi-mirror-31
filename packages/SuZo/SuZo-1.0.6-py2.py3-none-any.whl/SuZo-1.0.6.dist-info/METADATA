@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: SuZo
+Version: 1.0.6
+Summary: Um comparador automático para labs do sistema SuSy
+Home-page: https://github.com/muztake/suzo
+Author: Henrique Cunha
+Author-email: henrycunh@gmail.com
+License: UNKNOWN
+Requires-Dist: PyQuery
+Requires-Dist: Colorama
+Requires-Dist: click
+
+o susy é chato
+
+
