@@ -1,0 +1,5 @@
+[console_scripts]
+todoist-action-cli = actionista.todoist.action_cli:action_cli
+todoist-adhoc = actionista.todoist.adhoc_cli:main
+todoist_today_or_overdue = actionista.todoist.adhoc_cli:print_today_or_overdue_tasks
+
