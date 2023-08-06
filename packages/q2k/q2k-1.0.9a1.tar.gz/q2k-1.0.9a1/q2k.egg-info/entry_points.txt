@@ -1,0 +1,4 @@
+[console_scripts]
+q2k = q2k.gui:main
+q2k-cli = q2k.core:q2keyplus
+
