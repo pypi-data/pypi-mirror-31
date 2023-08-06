@@ -1,0 +1,17 @@
+MANIFEST.in
+README.rst
+config.toml.example
+dev-requirements.txt
+requirements.txt
+setup.py
+fedmsg_migration_tools/__init__.py
+fedmsg_migration_tools/bridges.py
+fedmsg_migration_tools/cli.py
+fedmsg_migration_tools/config.py
+fedmsg_migration_tools.egg-info/PKG-INFO
+fedmsg_migration_tools.egg-info/SOURCES.txt
+fedmsg_migration_tools.egg-info/dependency_links.txt
+fedmsg_migration_tools.egg-info/entry_points.txt
+fedmsg_migration_tools.egg-info/not-zip-safe
+fedmsg_migration_tools.egg-info/requires.txt
+fedmsg_migration_tools.egg-info/top_level.txt

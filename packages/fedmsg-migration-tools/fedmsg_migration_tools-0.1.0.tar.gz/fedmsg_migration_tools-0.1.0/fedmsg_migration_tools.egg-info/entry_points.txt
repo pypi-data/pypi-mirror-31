@@ -1,0 +1,3 @@
+[console_scripts]
+fedmsg-migration-tools = fedmsg_migration_tools.cli:cli
+

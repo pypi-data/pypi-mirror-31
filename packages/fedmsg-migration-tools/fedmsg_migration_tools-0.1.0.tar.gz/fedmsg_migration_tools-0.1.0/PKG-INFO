@@ -1,0 +1,17 @@
+Metadata-Version: 1.2
+Name: fedmsg_migration_tools
+Version: 0.1.0
+Summary: A set of tools to aid in migrating from fedmsg to AMQP.
+Home-page: UNKNOWN
+Maintainer: Fedora Infrastructure Team
+Maintainer-email: infrastructure@lists.fedoraproject.org
+License: GPLv2+
+Description: UNKNOWN
+Keywords: fedora
+Platform: Fedora
+Platform: GNU/Linux
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
