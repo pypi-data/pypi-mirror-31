@@ -1,0 +1,12 @@
+README.rst
+setup.py
+stadv/__init__.py
+stadv/__version__.py
+stadv/layers.py
+stadv/losses.py
+stadv/optimization.py
+stadv.egg-info/PKG-INFO
+stadv.egg-info/SOURCES.txt
+stadv.egg-info/dependency_links.txt
+stadv.egg-info/requires.txt
+stadv.egg-info/top_level.txt
