@@ -1,0 +1,5 @@
+pprintpp
+pymemcache-client>=0.3.2
+pymemcache>=1.4.4
+ujson
+wheel>=0.30.0
