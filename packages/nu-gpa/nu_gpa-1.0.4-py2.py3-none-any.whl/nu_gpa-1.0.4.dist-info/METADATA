@@ -1,0 +1,80 @@
+Metadata-Version: 2.1
+Name: nu-gpa
+Version: 1.0.4
+Summary: A command line package to calculate GPA of semester results specially for professional courses like CSE, ECE, BBA etc. offered by National University, Bangladesh.
+Home-page: https://github.com/shahed-shd/nu_gpa
+Author: Md. Shahedul Islam Shahed
+Author-email: shahed.shd777@gmail.com
+License: UNKNOWN
+Keywords: gpa semester result nu nubd cse ece bba course education
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Topic :: Education
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+
+# nu_gpa
+
+A command line package to calculate GPA of semester results specially for professional courses like CSE, ECE, BBA etc. offered by National University, Bangladesh.
+
+---
+
+## Installation
+The package `nu_gpa` can be installed via pip :
+
+`pip install nu_gpa`
+
+---
+
+## Usage
+`nu_gpa` is a command line package.
+
+Here, letter grades and grade points are considered as,
+
+| Letter grade | Grade point |
+| ----- | ----- |
+| A+ | 4.00 |
+| A | 3.75 |
+| A- | 3.50 |
+| B+ | 3.25 |
+| B | 3.00 |
+| B- | 2.75 |
+| C+ | 2.50 |
+| C | 2.25 |
+| D | 2.00 |
+| F | 0.00 |
+
+For example, assume that one has 3 subjects in a semester.
+The credits of the subjects are 3, 3.5, 2.5.
+And he has obtained grade A, A+, B in the subjects respectively.
+Then to calculate his GPA in that semester, command on terminal:
+
+`nu_gpa -n 3 -g A A+ B -c 3 3.5 2.5`
+
+To get help on usage:
+
+`nu_gpa --help`
+
+---
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+---
+
+## Author & License
+`nu_gpa` is written and maintained by [ Md. Shahedul Islam Shahed ]( https://www.linkedin.com/in/shahed777/ "shahed.shd777@gmail.com" ).
+It is licensed under an [ MIT license ]( https://choosealicense.com/licenses/mit/ ).
+
+---
+
+## Resources
+* [ Github ]( https://github.com/shahed-shd/nu_gpa )
+
