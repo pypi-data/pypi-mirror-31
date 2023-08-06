@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: attribute_tree
+Version: 0.1
+Summary: wraps dict into tree-like structure with value access via getattr
+Home-page: https://gitlab.com/attu/attribute_tree
+Author: Karol Wozniak
+Author-email: karol.wozniak@linuxmail.com
+License: UNKNOWN
+Download-URL: https://gitlab.com/attu/attribute_tree/-/archive/0.1/attribute_tree-0.1.tar.gz
+Description: UNKNOWN
+Keywords: attribute dictionary tree
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Utilities

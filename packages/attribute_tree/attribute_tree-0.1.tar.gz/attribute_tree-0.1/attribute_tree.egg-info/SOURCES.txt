@@ -1,0 +1,8 @@
+MANIFEST.in
+attribute_tree.py
+setup.cfg
+setup.py
+attribute_tree.egg-info/PKG-INFO
+attribute_tree.egg-info/SOURCES.txt
+attribute_tree.egg-info/dependency_links.txt
+attribute_tree.egg-info/top_level.txt
