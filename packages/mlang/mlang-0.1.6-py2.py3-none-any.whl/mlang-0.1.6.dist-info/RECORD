@@ -1,0 +1,13 @@
+mlang/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mlang/config.py,sha256=LZWYc7-F3u9IzDjAFENhYyoKwJk9b4RnLeqS2mjwWzY,1669
+mlang/res/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mlang/res/corpus.py,sha256=TsjgMfb-JWz7uGCmvhlqURTi8OEalXvvvFQ7kdWfh_M,2388
+mlang/res/vocab.py,sha256=Flm1Jh_9fb5_K7BNWrayjLIy-qeeJQyXZCnvtKH4IZQ,11309
+mlang-0.1.6.dist-info/DESCRIPTION.rst,sha256=GYzjpIOBY8Yr0FVrlFve1mZHRjiZWkUUL2zxGXvlrpk,166
+mlang-0.1.6.dist-info/METADATA,sha256=SvFFyrS2Ts6yRWUK0e2UPnA15WQDSzQFX30qWyWNQt4,486
+mlang-0.1.6.dist-info/RECORD,,
+mlang-0.1.6.dist-info/WHEEL,sha256=9Z5Xm-eel1bTS7e6ogYiKz0zmPEqDwIypurdHN1hR40,116
+mlang-0.1.6.dist-info/metadata.json,sha256=XUwkmzU1LKVLEOLx3bcZpOh_jDwRoUgx297NE8ZzuQw,474
+mlang-0.1.6.dist-info/top_level.txt,sha256=t2QNHF5Mi-R0UvhQN7cEYUp_IplKy6jT49a-dwqLHqE,19
+mlang_client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mlang_client/mclient.py,sha256=PtE_kpjNTbwSff-fVTTFgXpw0EjvqWW8SplzqGAMmSI,33241
