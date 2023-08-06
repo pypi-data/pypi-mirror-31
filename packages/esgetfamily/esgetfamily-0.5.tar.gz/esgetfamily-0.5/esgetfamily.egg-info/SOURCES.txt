@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+esgetfamily/__init__.py
+esgetfamily/main.py
+esgetfamily.egg-info/PKG-INFO
+esgetfamily.egg-info/SOURCES.txt
+esgetfamily.egg-info/dependency_links.txt
+esgetfamily.egg-info/not-zip-safe
+esgetfamily.egg-info/requires.txt
+esgetfamily.egg-info/top_level.txt
