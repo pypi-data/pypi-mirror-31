@@ -1,0 +1,22 @@
+trytond_purchase_request_quotation
+==================================
+
+The purchase_request_quotation module of the Tryton application platform.
+
+Installing
+----------
+
+See INSTALL
+
+
+License
+-------
+
+See LICENSE
+
+Copyright
+---------
+
+See COPYRIGHT
+
+
