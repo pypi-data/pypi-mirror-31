@@ -1,0 +1,16 @@
+README.rst
+setup.cfg
+setup.py
+calligra/__init__.py
+calligra/operator.py
+calligra/stdlib.py
+calligra.egg-info/PKG-INFO
+calligra.egg-info/SOURCES.txt
+calligra.egg-info/dependency_links.txt
+calligra.egg-info/top_level.txt
+calligra/convert/__init__.py
+calligra/convert/jansson.py
+examples/network_address.py
+examples/url.py
+tests/__init__.py
+tests/test_operator.py
