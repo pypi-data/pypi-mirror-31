@@ -1,0 +1,16 @@
+README.md
+setup.cfg
+setup.py
+bittrex_websocket/__init__.py
+bittrex_websocket/_abc.py
+bittrex_websocket/_auxiliary.py
+bittrex_websocket/_exceptions.py
+bittrex_websocket/_logger.py
+bittrex_websocket/_queue_events.py
+bittrex_websocket/constants.py
+bittrex_websocket/websocket_client.py
+bittrex_websocket_aio.egg-info/PKG-INFO
+bittrex_websocket_aio.egg-info/SOURCES.txt
+bittrex_websocket_aio.egg-info/dependency_links.txt
+bittrex_websocket_aio.egg-info/requires.txt
+bittrex_websocket_aio.egg-info/top_level.txt
