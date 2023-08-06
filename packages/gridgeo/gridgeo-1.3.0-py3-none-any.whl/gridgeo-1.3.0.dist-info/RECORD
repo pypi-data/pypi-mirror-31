@@ -1,0 +1,12 @@
+gridgeo/__init__.py,sha256=LKj5t6HrJWGrywCAOR6nEcYO2deh1X2mhHwd6myJEOg,248
+gridgeo/_version.py,sha256=PwpMk22rWnbp47x6XO9veF8AKUJMwpf-liCvvHrBnMw,497
+gridgeo/cfvariable.py,sha256=NUOUUBkLJhhGqjFQA0E6_WCjKPi8il2uenE2G4j_56E,8689
+gridgeo/dask_netcdf.py,sha256=XW7jhhICos7H3C_5_nMG05YL3IfYNRmNiBUIyCEscpU,1765
+gridgeo/gridgeo.py,sha256=ACt9ZzujI6St74IwIfc_8Q2GxmP3FjrpMDB3EC7SOsA,4984
+gridgeo/gridio.py,sha256=yVOugKdJcIdlDoSpe_YsLChpVkbonpykgzSTLobP62w,920
+gridgeo/ugrid.py,sha256=0uhEKm4vDxF5CjN_UaCnCfr9-B8CEI_jyO-XSi6N77s,4411
+gridgeo-1.3.0.dist-info/METADATA,sha256=-ycA3OmtQpbSte3TD34D_Ch51xh0HcKz3P_3nve4HGI,4590
+gridgeo-1.3.0.dist-info/RECORD,,
+gridgeo-1.3.0.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+gridgeo-1.3.0.dist-info/entry_points.txt,sha256=_RdmxgsnUPm5moygU2L25a-2f5PLCVkHgbOmm3xoCTQ,48
+gridgeo-1.3.0.dist-info/top_level.txt,sha256=UrLE9LOFpumsYivAmyHoiW5tQbmRDF42PAxQmJ380Nc,8
