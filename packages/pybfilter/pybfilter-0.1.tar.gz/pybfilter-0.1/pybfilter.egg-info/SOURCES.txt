@@ -1,0 +1,12 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.py
+pybfilter/__init__.py
+pybfilter/hashf.py
+pybfilter/pybloom.py
+pybfilter.egg-info/PKG-INFO
+pybfilter.egg-info/SOURCES.txt
+pybfilter.egg-info/dependency_links.txt
+pybfilter.egg-info/requires.txt
+pybfilter.egg-info/top_level.txt
