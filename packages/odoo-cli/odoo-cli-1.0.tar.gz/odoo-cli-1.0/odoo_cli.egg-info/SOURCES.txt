@@ -1,0 +1,9 @@
+MANIFEST.in
+setup.cfg
+setup.py
+odoo-cli/__init__.py
+odoo-cli/odoo_cli.py
+odoo_cli.egg-info/PKG-INFO
+odoo_cli.egg-info/SOURCES.txt
+odoo_cli.egg-info/dependency_links.txt
+odoo_cli.egg-info/top_level.txt
