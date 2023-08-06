@@ -1,0 +1,28 @@
+name: Sample Python Bot
+mods:
+  - name: greeter
+    class: serpentarium.mods.Greeter.Greeter
+    settings:
+logging:
+  rtm:
+    channel: infra.logs
+    endpoint: wss://a92zjaax.api.satori.com
+    appkey: Da02fEbBEfaB37F6dD2BE2E75aeCDAaB
+    role: service
+    secret: dbF66da4B3c868A73B6a9adF53aA3cf0
+monitoring:
+  prefix: bot
+  period: 2 #sec
+  rtm:
+    channel: infra.stats
+    endpoint: wss://a92zjaax.api.satori.com
+    appkey: Da02fEbBEfaB37F6dD2BE2E75aeCDAaB
+    role: service
+    secret: dbF66da4B3c868A73B6a9adF53aA3cf0
+  datadog:
+    api_key: 0a8a9386b974d73fdf1ba503c4af0023
+    app_key: f32d295d458ba488b25ea136d7cfb1afd25c01dd
+tags:
+  app: python-bot
+  env: dev
+  project: queenstown
