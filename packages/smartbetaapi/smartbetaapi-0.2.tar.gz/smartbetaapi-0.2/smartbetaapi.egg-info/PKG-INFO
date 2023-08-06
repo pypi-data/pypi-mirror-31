@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: smartbetaapi
+Version: 0.2
+Summary: Client Library for calling SmartBeta system.
+Home-page: https://tfs.intramundi.com/tfs/AmundiProjects/_git/SBA-SmartBeta_ScriptAPI
+Author: Enda McGarry
+Author-email: enda.mcgarry@amundi.com
+License: Amundi 
+Description: UNKNOWN
+Platform: any
+Requires-Python: >3.4
