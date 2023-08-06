@@ -1,0 +1,12 @@
+redisimp/__init__.py,sha256=rUAQLG8460_Nd2-OE-ZqdXOtTdPE_JBMWAMBd-vEzMw,163
+redisimp/api.py,sha256=DLbCpWZKTQ1x2WsW5dXte3yUhdJJ7WbR-aqfLwT48AE,8274
+redisimp/cli.py,sha256=0e0rHU38ZVitQD4UrucI_9TOXUJBY2SJE4De-ULpX4o,5377
+redisimp/crc64.py,sha256=3rQC1cGAsO6Qjl2YXlm896Un19PTlXzri6Y1-DUZf-Q,6035
+redisimp/multi.py,sha256=bjv8-RU_fmFKnUZWyu45XdK5d3feWn5oxeY0SI8Pbpk,430
+redisimp/rdbparser.py,sha256=rCMQCya57C3-jSFkTBoyhdUcffQStiqBoOn5_4ENn-8,9635
+redisimp/version.py,sha256=PmcQ2PI2oP8irnLtJLJby2YfW6sBvLAmL-VpABzTqwc,22
+redisimp-0.2.1.dist-info/METADATA,sha256=0BcoZxAzlI34zf1Vw1YdjHXkY7QxgOI9qfBXFQD_Hwg,1266
+redisimp-0.2.1.dist-info/RECORD,,
+redisimp-0.2.1.dist-info/WHEEL,sha256=9xUnOISuCvrSyfu9GlFZT4i2TZ_2OLkwLNqcDvIo3zM,92
+redisimp-0.2.1.dist-info/entry_points.txt,sha256=pUJTwaStEmgu8cP_cu51NnQ4iZvN0FGsfVf2G-3KOiw,48
+redisimp-0.2.1.dist-info/top_level.txt,sha256=JxZa1kYTpaqeVDbxrn9vlJdDSj3ybgLgHTnEwLvXA_k,9
