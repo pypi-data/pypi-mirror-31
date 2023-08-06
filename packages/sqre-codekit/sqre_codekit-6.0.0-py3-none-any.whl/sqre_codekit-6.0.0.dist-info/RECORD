@@ -1,0 +1,16 @@
+codekit/__init__.py,sha256=2RJAT7uTmmwRvWsVv4jWoJeNbduKZczjXvSLDuZbm_w,92
+codekit/codetools.py,sha256=i9KaY_kQSVlTmYzfI3lxx900lWGY9vw3FisWqTWHJ10,7183
+codekit/pygithub.py,sha256=VqfXGmvX0L3BCqs5NCbBAPUn1QO1bXneGW4i-opgZA4,2242
+codekit/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+codekit/cli/github_auth.py,sha256=9xKl9j-aZfjGUuPqt8uTrXgC2Fxx2qQ0k6pGo4C7-xk,4084
+codekit/cli/github_delete_shadow.py,sha256=hUhbTdcdR6Paei5Bpue6vrd0y_1O6CSkunFpf7tthXI,3212
+codekit/cli/github_fork_repos.py,sha256=9wwlKR93hTxqkM1AYmcB_aLLE72RK8rVWOrBHAAiQvU,2061
+codekit/cli/github_list_repos.py,sha256=CiIDBIDdrFOUeyJzJasvwpt1lOur6s8Gpa5MsQqkwSY,2895
+codekit/cli/github_mv_repos_to_team.py,sha256=G4O1kTY5Jjaf7tHDtsMoOXvsdh6FfjuvCya-RieswvQ,3942
+codekit/cli/github_tag_teams.py,sha256=oyEaqJtvagqpjy5c-1evnRpzVX8-WjxON_SL8iWJNz8,7391
+codekit/cli/github_tag_version.py,sha256=OahBEPvi4uLW72tyvUxLod98X6IZ9zCFt1Lk_w5HSwc,13600
+sqre_codekit-6.0.0.dist-info/METADATA,sha256=Tim_o7T7qFz6hejhNTswT1dBVcsedOSr5FEQzdXB_g0,2851
+sqre_codekit-6.0.0.dist-info/RECORD,,
+sqre_codekit-6.0.0.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+sqre_codekit-6.0.0.dist-info/entry_points.txt,sha256=XrNUc5Mhwv-RsXyiWwaEh1sXgUT3FoEKMVVW22-hnHg,410
+sqre_codekit-6.0.0.dist-info/top_level.txt,sha256=MUFP4XxCIr-WYu_PRkb_oBg0gUtbleIANPZ8IsA7h1Q,8
