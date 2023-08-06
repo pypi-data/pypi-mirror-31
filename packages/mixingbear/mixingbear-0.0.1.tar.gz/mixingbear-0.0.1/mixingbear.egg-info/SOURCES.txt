@@ -1,0 +1,10 @@
+README.md
+setup.py
+mixingbear/__init__.py
+mixingbear/mixer.py
+mixingbear.egg-info/PKG-INFO
+mixingbear.egg-info/SOURCES.txt
+mixingbear.egg-info/dependency_links.txt
+mixingbear.egg-info/not-zip-safe
+mixingbear.egg-info/requires.txt
+mixingbear.egg-info/top_level.txt
