@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: reportutil
+Version: 0.0.6
+Summary: Module to assist in the creation of reports.
+Home-page: https://bitbucket.org/davisowb/reportutil.git
+Author: Oli Davis
+Author-email: oli.davis@me.com
+License: MIT
+Download-URL: https://bitbucket.org/davisowb/reportutil.git/get/0.0.6.tar
+Description: 
+        ReportUtil
+        ========================
+        
+        Module to assist in the creation of reports, primarily HTML for now.
+        
+        
+Keywords: report,html
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Utilities
+Provides-Extra: test
