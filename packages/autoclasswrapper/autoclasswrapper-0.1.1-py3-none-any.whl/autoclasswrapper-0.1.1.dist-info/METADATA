@@ -1,0 +1,39 @@
+Metadata-Version: 2.0
+Name: autoclasswrapper
+Version: 0.1.1
+Summary: Simple Python wrapper for autoclass-c.
+Home-page: https://github.com/pierrepo/autoclasswrapper
+Author: Pierre Poulain
+Author-email: pierre.poulain@cupnet.net
+License: BSD 3-Clause
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.4
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: chardet
+
+# Python wrapper for AutoClass clustering
+
+AutoClass is an unsupervised Bayesian classification system.
+
+[AutoClass C](https://ti.arc.nasa.gov/tech/rse/synthesis-projects-applications/autoclass/autoclass-c/) is an implementation of the AutoClass algorithm made by the NASA.
+
+autoclasswrapper is a wrapper written in Python to ease the use of Autoclass C.
+
+
+..
+
+
