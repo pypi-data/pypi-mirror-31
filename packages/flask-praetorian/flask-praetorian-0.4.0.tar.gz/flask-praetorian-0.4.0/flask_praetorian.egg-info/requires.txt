@@ -1,0 +1,15 @@
+flask
+pyjwt
+pendulum
+passlib
+flask-buzz
+
+[dev]
+Pallets-Sphinx-Themes
+flake8
+flask-cors
+flask-sqlalchemy
+freezegun
+pytest
+pytest-flask
+sphinx
