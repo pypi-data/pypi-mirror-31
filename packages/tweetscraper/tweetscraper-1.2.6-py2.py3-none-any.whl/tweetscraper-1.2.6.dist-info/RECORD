@@ -1,0 +1,12 @@
+tweetscraper/__init__.py,sha256=LAQ5DA9SxFFfL8x6PHM7OLUcCdbX7FZR2DQCjDrb03g,70
+tweetscraper/items.py,sha256=QfzOThzn6MX6I2ff5PBKMsKoa-qC_ylTY9dnheyMqkU,1230
+tweetscraper/pipelines.py,sha256=kKCAszEQPIiDF0DmK1CVwQ8sal1aThJ73my_-z89RAc,3924
+tweetscraper/settings.py,sha256=j95g1opPCc9JXhS_g5RQWeW-I9cQ_-qcnHMyiqgtZig,1008
+tweetscraper/utils.py,sha256=JeB2WA0FgkeE1Qm_gs1K2RYefLIITdID6j3mudz0xmE,132
+tweetscraper/spiders/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tweetscraper/spiders/tweetcrawler.py,sha256=0IsIH9rPu61cb3QL6PhO8E41A6Hfc46sgZhAUxSoD2Q,7519
+tweetscraper-1.2.6.dist-info/METADATA,sha256=US17zkhO2748F_im5-nUArDWohtw-lAGsKKbHHeXOK0,378
+tweetscraper-1.2.6.dist-info/RECORD,,
+tweetscraper-1.2.6.dist-info/WHEEL,sha256=saUSQBLOUjf5ACZdNkhQ0lB6XrHU-l4vpzxq_W1n_AY,116
+tweetscraper-1.2.6.dist-info/entry_points.txt,sha256=lexK7RzT1xMyCvalZCkEXUV_pXjWKxyNU2NGRfSYmuo,40
+tweetscraper-1.2.6.dist-info/top_level.txt,sha256=faa6e-6EoOPFC7fYLBZwxIGEsMUIpcnxfDxkMPZmvp8,13

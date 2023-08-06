@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: tweetscraper
+Version: 1.2.6
+Summary: UNKNOWN
+Home-page: https://github.com/jonbakerfish/TweetScraper
+Author: jonbakerfish
+Author-email: UNKNOWN
+License: MIT
+Requires-Dist: scrapy
+Requires-Dist: pymongo
+Provides-Extra: dev
+Requires-Dist: check-manifest; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: coverage; extra == 'test'
+
+# Introduction #
+
+
