@@ -1,0 +1,10 @@
+README.txt
+setup.py
+quoinex_client/__init__.py
+quoinex_client/async.py
+quoinex_client/sync.py
+quoinex_client.egg-info/PKG-INFO
+quoinex_client.egg-info/SOURCES.txt
+quoinex_client.egg-info/dependency_links.txt
+quoinex_client.egg-info/requires.txt
+quoinex_client.egg-info/top_level.txt
