@@ -1,0 +1,16 @@
+odoo/addons/currency_monthly_rate/README.rst,sha256=pnhPZB45XHrxiN_wfDXyr867k_NukIL1UV4vsXDi45Y,2051
+odoo/addons/currency_monthly_rate/__init__.py,sha256=X9EJGOE2GtZbS0G82PtSXmWSZ_R8jEM0rlJTDliQjp4,21
+odoo/addons/currency_monthly_rate/__manifest__.py,sha256=jOVGycW2XCKhpBwEuR_Y2YhmMfJHDnNo8SV53rVjawk,582
+odoo/addons/currency_monthly_rate/models/__init__.py,sha256=MWnNBq3YxqPm8zuuVZzumz531Ox6HHRdW_5TzoprnxE,27
+odoo/addons/currency_monthly_rate/models/res_currency.py,sha256=NMRwkNkHCbuU8qpQPEE1NtmdRKaq8WYfiVm5imA3rGQ,4176
+odoo/addons/currency_monthly_rate/security/ir.model.access.csv,sha256=CLUOwOe4XYuOBZwISB_qIJT3aBRlRPgm49b9EvV9lDA,314
+odoo/addons/currency_monthly_rate/security/res_groups.xml,sha256=whEDclif4u5W3cwwNV_mxhHuwPj8qY23a5Ae04SwBvc,515
+odoo/addons/currency_monthly_rate/tests/__init__.py,sha256=FZU2tRw2fy838ECZiLuOGHMKuEaYnCAxkBJ5NC1pFzw,41
+odoo/addons/currency_monthly_rate/tests/test_currency_monthly_rate.py,sha256=1imn_mZ_BTIUdawLntLuZszGcXUO775xzpFcYAHdn3c,3667
+odoo/addons/currency_monthly_rate/views/res_currency.xml,sha256=ShZIThu-xUvZ_NrloQko7vbWeip9m281mPUtlaeomXk,4055
+odoo11_addon_currency_monthly_rate-11.0.1.0.0.dist-info/DESCRIPTION.rst,sha256=RqcdAObjkstHnWIA57-bzK99jtS6fotondJJtvTX9ls,2053
+odoo11_addon_currency_monthly_rate-11.0.1.0.0.dist-info/METADATA,sha256=hm2Y3H9bgEqkYKv_cV7oE-2ZtBim1x1RodtI3o2OO_w,2595
+odoo11_addon_currency_monthly_rate-11.0.1.0.0.dist-info/RECORD,,
+odoo11_addon_currency_monthly_rate-11.0.1.0.0.dist-info/WHEEL,sha256=o2k-Qa-RMNIJmUdIc7KU6VWR_ErNRbWNlxDIpl7lm34,110
+odoo11_addon_currency_monthly_rate-11.0.1.0.0.dist-info/metadata.json,sha256=k3sb74vVFZqRWDT0O4nJhkt2F2gCbn1Sd3Cgs-jAQYA,759
+odoo11_addon_currency_monthly_rate-11.0.1.0.0.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
