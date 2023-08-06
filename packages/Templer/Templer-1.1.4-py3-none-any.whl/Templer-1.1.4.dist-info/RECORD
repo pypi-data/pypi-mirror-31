@@ -1,0 +1,9 @@
+Templer-1.1.4.dist-info/METADATA,sha256=bjVbsoZMh6ID3Gp3UFmx1R_UC0zPLGnss-e_u1OhvX4,9620
+Templer-1.1.4.dist-info/RECORD,,
+Templer-1.1.4.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+Templer-1.1.4.dist-info/entry_points.txt,sha256=LYkU2RfPUFuvQKfFfgRt5irZhHfTSup0BYGfZjcEeB4,41
+Templer-1.1.4.dist-info/top_level.txt,sha256=kkPocTrT0ZRW7vBlnzBIKkfPVSYjaAqE2VVhTEnLbwI,8
+templer/__init__.py,sha256=kzxe2SaV6pj8Ubuc9UAcRbPOQpui6Xjv24a3V46ZfC0,174
+templer/__main__.py,sha256=8OvAV66jugh-V6qmYUvyFBiSAzloqz6YvCXE8W7PlwY,90
+templer/cli.py,sha256=35u0V2aZa_1A8MhBq-sCTqUaWUWSFL7mSj43vk2zwRw,30579
+templer/jinja_filter.py,sha256=umawHQzeSXxjVrNSHDWCA69M6t_Ieku4PoGV5B8Xsjk,662
