@@ -1,0 +1,44 @@
+Metadata-Version: 1.1
+Name: ETo
+Version: 1.0.2
+Summary: Class and functions to estimate reference ET
+Home-page: https://github.com/mullenkamp/ETo
+Author: Mike Kittridge
+Author-email: mullenkamp1@gmail.com
+License: UNKNOWN
+Description-Content-Type: UNKNOWN
+Description: ETo - A Python package for calculating reference evapotranspiration
+        ===================================================================
+        
+        The ETo package contains a class and associated functions to calculate reference evapotranspiration (ETo) using the `UN-FAO 56 paper <http://www.fao.org/docrep/X0490E/X0490E00.htm>`_. Additional functions have been added to calculate historic ETo or potential evapotranspiration (PET) for comparison purposes.
+        
+        A parameter estimation function hs also been added to the base class to convert most any variety of metereological parameter inputs to the necessary parameters needed to calculate ETo.
+        
+        Documentation
+        --------------
+        The primary documentation for the package can be found `here <http://pdsql.readthedocs.io>`_.
+        
+        Installation
+        ------------
+        ETo can be installed via pip or conda::
+        
+          pip install eto
+        
+        or::
+        
+          conda install -c mullenkamp eto
+        
+        The core dependency is Pandas.
+        
+Keywords: reference et
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
