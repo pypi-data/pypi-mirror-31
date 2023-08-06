@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+src/sankeydata/__init__.py
+src/sankeydata/sankey_data.py
+src/sankeydata.egg-info/PKG-INFO
+src/sankeydata.egg-info/SOURCES.txt
+src/sankeydata.egg-info/dependency_links.txt
+src/sankeydata.egg-info/requires.txt
+src/sankeydata.egg-info/top_level.txt
+test/test_sankey_data.py
