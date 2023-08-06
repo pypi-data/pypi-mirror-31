@@ -1,0 +1,8 @@
+#!/usr/bin/env python3
+
+import sys
+
+
+from InfluenceManager.scripts import topic_query
+
+topic_query.run()
