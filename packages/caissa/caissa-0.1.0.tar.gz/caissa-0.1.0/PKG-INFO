@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: caissa
+Version: 0.1.0
+Summary: Caissa voice-controlled personal assistant
+Home-page: https://github.com/ddobbelaere/caissa
+Author: Dieter Dobbelaere
+Author-email: dieter.dobbelaere@gmail.com
+License: UNKNOWN
+Project-URL: Source, https://github.com/ddobbelaere/caissa/
+Project-URL: Bug Reports, https://github.com/ddobbelaere/caissa/issues
+Description: Caissa
+        ======
+        
+        Caissa is an intelligent voice-controlled personal assistant.
+        
+        Currently she is able to play your favorite internet radio.
+          
+        Some of her upcoming skills include
+        
+          - play chess
+          - monitor live chess games
+          - help you study foreign languages
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Topic :: Home Automation
+Classifier: Topic :: Multimedia :: Sound/Audio :: Speech
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: Dutch
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/x-rst

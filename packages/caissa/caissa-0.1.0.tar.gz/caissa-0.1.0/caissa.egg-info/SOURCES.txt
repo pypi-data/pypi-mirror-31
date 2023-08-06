@@ -1,0 +1,10 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+caissa.py
+setup.cfg
+setup.py
+caissa.egg-info/PKG-INFO
+caissa.egg-info/SOURCES.txt
+caissa.egg-info/dependency_links.txt
+caissa.egg-info/top_level.txt
