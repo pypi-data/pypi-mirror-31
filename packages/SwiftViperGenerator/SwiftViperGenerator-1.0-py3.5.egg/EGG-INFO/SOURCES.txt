@@ -1,0 +1,9 @@
+setup.py
+SwiftViperGenerator.egg-info/PKG-INFO
+SwiftViperGenerator.egg-info/SOURCES.txt
+SwiftViperGenerator.egg-info/dependency_links.txt
+SwiftViperGenerator.egg-info/entry_points.txt
+SwiftViperGenerator.egg-info/requires.txt
+SwiftViperGenerator.egg-info/top_level.txt
+swivigen/__init__.py
+swivigen/swivigen.py
