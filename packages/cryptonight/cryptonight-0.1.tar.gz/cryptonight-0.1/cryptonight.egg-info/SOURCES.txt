@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+cryptonight.egg-info/PKG-INFO
+cryptonight.egg-info/SOURCES.txt
+cryptonight.egg-info/dependency_links.txt
+cryptonight.egg-info/entry_points.txt
+cryptonight.egg-info/requires.txt
+cryptonight.egg-info/top_level.txt
+data/data_file
+sample/__init__.py
+sample/package_data.dat
