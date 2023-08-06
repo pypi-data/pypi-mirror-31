@@ -1,0 +1,112 @@
+diff --git a/editline/test/test_lineeditor.py b/editline/test/test_lineeditor.py
+index f3aa597..ac705e1 100644
+--- a/editline/test/test_lineeditor.py
++++ b/editline/test/test_lineeditor.py
+@@ -1,15 +1,11 @@
+ """
+ Very minimal unittests for parts of the lineeditor module.
+ """
+-from contextlib import ExitStack
+-from errno import EIO
+-import os
+-import subprocess
+ import sys
++import os
+ import re
+-import tempfile
+ import unittest
+-from test.support import import_module, unlink, TESTFN
++from test.support import import_module
+ 
+ 
+ class CompleterBase(unittest.TestCase):
+@@ -141,14 +137,21 @@ class CompletionsBase(CompleterBase):
+     cmd = 'int(12)'              # whole python command
+     cmd_tab_index = 2            # where to break it and insert a '\t'
+     result = '12'                # what the actual command yields
+-    tidy_cmd = None
+-    tidy_len = None
++    tidy_cmd = None              # chars to complete a valid python cmd
++    tidy_len = None              # how many lines of output from the tidy_cmd
+     comp = 'in      input(  int(' # what should the answer be
+     comp_regexp = None           # need regexp to really see if it matches
+     comp_idx = 0                 # in which output line
+-    comp_len = 2                 # how much spew to expect
++    comp_len = 2                 # how many lines of output to expect
+     prep_script = []             # cmds to setup for test
+     timeout = 10                 # seconds to wait for completion
++    output_log = []              # record the "output" of the console
++    dbg_log = 0                  # flags for showing logging
++
++    DBG_SETUP_LOG = 0x1
++    DBG_TEST_LOG = 0x2
++    DBG_TEARDOWN_LOG = 0x4
++
+     
+     def setUp(self):
+         super().setUp()
+@@ -160,24 +163,36 @@ class CompletionsBase(CompleterBase):
+             self.tidy_len = 1
+         
+         # get the basics in place
+-        self.tool.run_script(self.global_cmds)
++        output = self.tool.run_script(self.global_cmds)
++        self.output_log += output
+ 
+         # make sure editline is the global completer
+         output = self.tool.cmd('print(str(type(gi)))')
++        self.output_log += output
+         self.assertIn(self.editline_class_pstr, output[0])
+ 
+         # run the prep commands
+         if len(self.prep_script) > 0:
+-            self.tool.run_script(self.prep_script)
++            output = self.tool.run_script(self.prep_script)
++            self.output_log += output
++
++        self.print_log(self.DBG_SETUP_LOG)
+ 
+     def tearDown(self):
+         # we MUST complete the command or the exit support will be borked
+         output = self.tool.cmd(self.tidy_cmd)
++        self.output_log += output
+         output = self.tidy_output(output)
++        self.output_log += output
++
++        self.print_log(self.DBG_TEARDOWN_LOG)
++
+         if len(output) != self.tidy_len:
+             print("DBG:", output)
+         self.assertEqual(len(output), self.tidy_len)
+         if self.tidy_len > 0:
++            #print(os.linesep + "DBG[result]:")
++            #print(output)
+             self.assertIn(self.result, output[0])
+         
+         # mop up
+@@ -198,6 +213,10 @@ class CompletionsBase(CompleterBase):
+             timeout=self.timeout
+         )
+         output = self.tidy_output(output)
++        self.output_log += output
++        
++        self.print_log(self.DBG_TEST_LOG)
++
+         if len(output) != self.comp_len:
+             print("DBG:", output)
+         self.assertEqual(len(output), self.comp_len)
+@@ -212,6 +231,14 @@ class CompletionsBase(CompleterBase):
+         else:
+             self.assertIn(self.comp, output[self.comp_idx])
+ 
++    def print_log(self, stage):
++        if not self.dbg_log & stage:
++            return
++        
++        print("DBUG[{:d}]:".format(stage))
++        for outl in self.output_log:
++            print("    ", outl)
++
+ 
+ class Completions_In_Regexp(CompletionsBase):
+     comp = ''
