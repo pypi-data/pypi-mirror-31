@@ -1,0 +1,14 @@
+ontoma/__init__.py,sha256=gPExscGG3V-85Pol5dV2JgyQWGVZA9yQ1QJzUU16TqY,329
+ontoma/cli.py,sha256=C8klAzrbyI7GwaR0pj5IxZdVu_gU-n4eJDhq6NN3gpM,1222
+ontoma/constants.py,sha256=jr8wfcOg2ql-VA9Jr_s-_sw0AJvt0mcxmFz6i4k8lJ0,963
+ontoma/downloaders.py,sha256=fAaGni-gyELfvFBruMtHjgA2KsDnGVa9tb5XZX6Wmfs,2034
+ontoma/interface.py,sha256=ZDeQqaIKN6j8sF7lAkbd5Mp1yEjN7ncCggt_HRnE-H0,21581
+ontoma/ols.py,sha256=kTL8-UfXbZrZaxIfmR2DiyPW7M3VlHClvvODHeDlcro,8454
+ontoma/oxo.py,sha256=cblMZhkP9GBeud6fxHWsYY6UaWamM_QZi_jD9fMscgw,3559
+ontoma/utils.py,sha256=5us5ziskghdE26HcmaBIQhQzgA8yCMV2DQps1f4oJh8,106
+ontoma/zooma.py,sha256=V2bmzNHJWbNkJqRb3sZn2dFiZbaCIaFt1RFi2dxyI2o,3072
+ontoma-0.0.13.dist-info/METADATA,sha256=nzArUwLRIxByxr6zgzMzKu5oB9B0S54AY6qlmlvDXrE,5728
+ontoma-0.0.13.dist-info/RECORD,,
+ontoma-0.0.13.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+ontoma-0.0.13.dist-info/entry_points.txt,sha256=rNTn1ZCB32ssP2jTuDnHZFitQpTORmLBBFDc7oR-Q8Y,64
+ontoma-0.0.13.dist-info/top_level.txt,sha256=DKW5DiCVpA0l6q3QGIEJ8jfLbOqUO4IjPMmWV4YcYWY,7
