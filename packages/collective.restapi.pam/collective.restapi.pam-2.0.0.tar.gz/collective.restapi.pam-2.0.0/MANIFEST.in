@@ -1,0 +1,12 @@
+graft src/collective
+graft docs
+include *.rst
+global-exclude *.pyc
+include *.txt
+recursive-exclude parts *
+recursive-exclude docs/html *
+recursive-exclude docs/doctrees *
+recursive-exclude local *
+exclude docs/Makefile
+exclude docs/make.bat
+
