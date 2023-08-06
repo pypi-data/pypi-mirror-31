@@ -1,0 +1,12 @@
+[build-system]
+requires = ["flit"]
+build-backend = "flit.buildapi"
+
+[tool.flit.metadata]
+module = "nyptune"
+author = "Kyle Maxwell"
+author-email = "kyle@kylemaxwell.com"
+home-page = "https://github.com/fizx/nyptune"
+
+[tool.flit.scripts]
+nyptune = "nyptune.script:main"
