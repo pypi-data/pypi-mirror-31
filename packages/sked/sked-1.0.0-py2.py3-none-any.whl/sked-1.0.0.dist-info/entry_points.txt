@@ -1,0 +1,3 @@
+[console_scripts]
+sked = sked.cli:main
+
