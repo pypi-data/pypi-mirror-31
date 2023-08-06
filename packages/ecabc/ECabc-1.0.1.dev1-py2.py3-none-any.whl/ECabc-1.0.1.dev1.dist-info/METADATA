@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: ECabc
+Version: 1.0.1.dev1
+Summary: Artificial bee colony for parameters tuning based on fitness scores
+Home-page: https://github.com/hgromer/Artificial-Bee-Colony
+Author: Hernan Gelaf-Romer
+Author-email: Hernan_Gelafromer@student.uml.edu
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: numpy
+
+UNKNOWN
+
+
