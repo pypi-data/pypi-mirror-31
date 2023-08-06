@@ -1,0 +1,10 @@
+#!/bin/bash
+
+source venv/bin/activate
+mkdir -p reports
+
+total_errors=`flake8 --count -qq`
+
+flake8 --statistics | flake8chart --chart-type=BAR --chart-output=reports/flake8.svg --chart-title="Roadies Style Errors"
+
+flake8 --count $@

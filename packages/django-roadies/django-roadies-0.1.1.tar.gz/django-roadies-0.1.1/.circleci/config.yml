@@ -1,0 +1,160 @@
+version: 2
+jobs:
+  install-deps:
+    docker:
+      - image: anthonyalmarza/alpine-pyenv:cable
+    environment:
+      BASH_ENV: ~/.bashrc
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - roadies-{{ .Branch }}-{{ checksum "requirements-dev.txt" }}
+      - run:
+          name: Install dev requirements
+          command: ./bin/install
+      - save_cache:
+          key: roadies-{{ .Branch }}-{{ checksum "requirements-dev.txt" }}
+          paths:
+            - ./venv
+
+  unit-tests:
+    docker:
+      - image: anthonyalmarza/alpine-pyenv:cable
+    environment:
+      BASH_ENV: ~/.bashrc
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - roadies-{{ .Branch }}-{{ checksum "requirements-dev.txt" }}
+      - restore_cache:
+          keys:
+            - roadies-test-{{ .Branch }}-{{ checksum "requirements-test.txt" }}
+      - run:
+          name: Run the tests
+          command: ./bin/test
+          environment:
+            COVERAGE_FILE: unit
+      - save_cache:
+          key: roadies-test-{{ .Branch }}-{{ checksum "requirements-test.txt" }}
+          paths:
+            - ./.tox
+      - persist_to_workspace:
+          root: ./reports
+          paths:
+            - '*.coverage'
+
+  coverage:
+    docker:
+      - image: anthonyalmarza/alpine-pyenv:cable
+    environment:
+      BASH_ENV: ~/.bashrc
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ./reports
+      - restore_cache:
+          keys:
+            - roadies-{{ .Branch }}-{{ checksum "requirements-dev.txt" }}
+      - run:
+          name: Generate the coverage reports
+          command: ./bin/coverage
+      - run:
+          name: Push report to codecov
+          command: |
+            source venv/bin/activate
+            codecov
+      - store_test_results:
+          path: ./reports
+
+  analysis:
+    docker:
+      - image: anthonyalmarza/alpine-pyenv:cable
+    environment:
+      BASH_ENV: ~/.bashrc
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - roadies-{{ .Branch }}-{{ checksum "requirements-dev.txt" }}
+      - run:
+          name: Analyze the code quality
+          command: ./bin/analyze
+      - store_artifacts:
+          path: ./reports
+
+  lint:
+    docker:
+      - image: anthonyalmarza/alpine-pyenv:cable
+    environment:
+      BASH_ENV: ~/.bashrc
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - roadies-{{ .Branch }}-{{ checksum "requirements-dev.txt" }}
+      - run:
+          name: Check the linting is up to scratch
+          command: ./bin/lint
+      - store_artifacts:
+          path: ./reports
+
+  deploy:
+    docker:
+      - image: anthonyalmarza/alpine-pyenv:cable
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - roadies-{{ .Branch }}-{{ checksum "requirements-dev.txt" }}
+      - run:
+          name: Install dev requirements
+          command: ./bin/install
+      - run:
+          name: Deploy
+          command: ./bin/deploy
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - install-deps:
+          filters:
+            tags:
+              only: /.*/
+      - analysis:
+          requires:
+            - install-deps
+          filters:
+            tags:
+              only: /.*/
+      - lint:
+          requires:
+            - install-deps
+          filters:
+            tags:
+              only: /.*/
+      - unit-tests:
+          requires:
+            - install-deps
+          filters:
+            tags:
+              only: /.*/
+      - coverage:
+          requires:
+            - unit-tests
+          filters:
+            tags:
+              only: /.*/
+      - deploy:
+          requires:
+            - coverage
+            - analysis
+            - lint
+          filters:
+            tags:
+              only:
+                - /[0-9](\.[0-9]+)*/
+            branches:
+              ignore: /.*/
