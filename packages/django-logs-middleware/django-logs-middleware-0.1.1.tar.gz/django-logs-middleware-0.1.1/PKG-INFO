@@ -1,0 +1,220 @@
+Metadata-Version: 1.1
+Name: django-logs-middleware
+Version: 0.1.1
+Summary: Logs registry for services
+Home-page: UNKNOWN
+Author: Angel Alfaro
+Author-email: a3herrera@gmail.com
+License: MIT License
+Description: Logger Middleware
+        =========================
+        
+        Permite almacenar en una base de datos de Mongo los eventos que son generados 
+        en los distintos recursos de tipo _REST_ de una aplicación realizada en Django
+        
+        
+        ### Dependencias
+        
+        Tiene dependencia con las librerias:
+        - pymongo >= 3.6.1
+        
+        Requerimientos:
+        
+        - Python 3.6 or higher
+        - MongoDB 3.4 or higher
+        
+        ### Instalación
+        
+        Se puede instalar como una libreria por medio de los siguientes medios:
+        
+        - Comando PIP
+        
+        - Repositorio en Github
+        
+        #### Comando PIP
+        
+        Se puede ejecutar el siguiente comando:
+        
+        ```
+         pip install django-logs-middleware  
+        ```
+        
+        #### Repositorio
+        
+        Dentro del archivo `requirements.txt` se debe de agregar la línea
+        
+        ```
+        git+https://github.com/AirBit-Club/D220180414_logs-middleware
+        ```
+        
+        Esto genera la libreria por medio del código fuenta. 
+        
+        _Nota_:
+        Tener en consideración que este método solicita autenticación por medio de la cuenta de github
+        
+        
+        ### Uso:
+        
+        
+        Dentro del archivo `settings.py` agregar
+        
+        - Agregar a la lista de aplicaciones:
+        
+        ```python
+        
+        INSTALLED_APPS = [
+            ...
+            'logs'
+        ]
+        
+        ```
+        
+        - Variables
+        
+         
+        | Variable | Requerido | Datos | Descripción |
+        | -----| :---------: | :-----: | :----------- |
+        | APP_NAME | Opcional | String | Indica el nombre de la aplicación|
+        | LOGS | Opcional | Dictionary | Es un diccionario con las configuraciones personalizadas de la libreria|
+        
+        
+        ```python
+        
+        INSTALLED_APPS = 'A cool app name'
+        
+        LOGS = [
+            ... ,
+            ...
+        ]
+        
+        ```
+        
+        ### Como funciona:
+        
+        Pone a dispocición una clase para el middleware de la aplicación en Django el cual registra cada uno de los eventos
+        que se generan cuando se solicita algun recurso de la aplicación.
+        
+        La clase que expone es `LogResourceMiddleware` la cual se puede  agregar a la variable `MIDDLEWARE` quedando
+        de la siguiente forma:
+        
+        ```python
+            MIDDLEWARE = [
+                ... ,
+                'logs.middleware.LogResourceMiddleware'
+            ]
+        
+        ```
+        
+        #### Almacenar solamente errores
+        
+        Por medio de la bandera `only_errors` se puede especificar que unicamente sean almacenados los errores que se generen de la aplicación
+        
+        
+        ```python
+        
+        LOGS = [
+            ... ,
+            'only_errors': True
+        ]
+        
+        ```
+        
+        En caso que no se coloque la bandera el valor por defecto es _False_
+        
+        
+        #### Ambientes
+        
+        Por defecto se poseen 2 ambientes preconfigurados en la libreria :
+        - development
+        - testing
+        
+        La configuración para cada uno de ellos es:
+        
+        **Development**
+        ```
+            - Host: localhost
+            - Port: 27017
+            - Database: general
+            - Collection: general
+        ```
+        
+        **testing**
+        ```
+            - Host: 10.232.6.1
+            - Port: 27017
+            - Database: airbit_db
+            - Collection: airbit_db
+        ```
+        
+        Para poder indicar cual de los ambientes se desea utilizar se puede agregar  la llave  environment a la variable logs e indicando el ambiente que se desea
+        
+        ```
+            LOGS = [
+                ... ,
+                'environment': 'development'
+            ]
+        
+        ```
+        
+        ##### Ambientes personalizados y modificaciones de valores
+        
+        Si se desea modificar el valor de algun ambiente predefinido se debe de añadir como llave el nombre del ambiente
+        e indicar en un listado el la llave que se quiere modifiar y el nuevo valor a utilizar como por ejemplo:
+        
+        ```
+            LOGS = [
+                ... ,
+                'environment': 'testing',
+                'testing': {
+                    'PORT': 3300
+                }
+            ]
+        
+        ```
+        
+        Actualmente las llaves que se pueden modificar para los ambientes son:
+        
+        |Llave|Tipo|Descripción|
+        |-----|----|-----------|
+        |HOST|String|Indica la IP o el nombre del host en donde se encuentra la base de datos de Mongo|
+        |PORT|Int| Puerto para la conexión con la base de datos|
+        |USER|String| El usuario para realizar la conexión en la base de datos|
+        |PASSWORD|String| Contraseña para la autenticación en la base de  datos|
+        |DATABASE|String| Nombre de la base de datos en la cual se estará conectado|
+        |COLLECTION|String|Collecion donde se estarán almacenando los registros del log|
+        
+        
+        La librería permite declarar otros ambientes:
+        
+        ```
+            LOGS = [
+                ... ,
+                'production': {
+                    'HOST': <- some cool IP or hostname- >,
+                    'PORT': <- some one Port- >,
+                    'DATABASE': <- DB ->,
+                    'COLLECTION': <- CL ->,
+                    'USER': <-Tipo opcional->,
+                    'PASSWORD': <-Tipo opcional->,
+        
+                }
+            ]
+        
+        ```
+        
+        Si se desea hacer uso del nuevo ambiente declarado se puede indicar el la llave `environment`
+        
+        ```
+            LOGS = [
+                ... ,
+                'environment': 'production',
+            ]
+        ```
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
