@@ -1,0 +1,8 @@
+django_template_update_get-1.1.0.dist-info/METADATA,sha256=C3IT_0fEdxAzy6eDBXa576PjIAxDfOAHVV-b-R6CaKk,370
+django_template_update_get-1.1.0.dist-info/RECORD,,
+django_template_update_get-1.1.0.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+django_template_update_get-1.1.0.dist-info/top_level.txt,sha256=v8xVA_Z_E1UXquSTOAWGwy_SrviUOkMqmqF1RVqfEDE,20
+template_update_get/__init__.py,sha256=b6-WiVk0Li5MaV2rBnHYl104TsouINojSWKqHDas0js,22
+template_update_get/tests.py,sha256=NTVbU3dERtCrkCpOzVbcbkGrzFiMXJmBUbQcu0uHcVI,1976
+template_update_get/templatetags/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+template_update_get/templatetags/template_update_get_tags.py,sha256=jAGUU4LsFKJJuk0U9e7qMGp3anP85Ofwh5BgxGjsjMk,3465
