@@ -1,0 +1,16 @@
+sewer/__init__.py,sha256=a7cujE8cAZRHrhaQwBd0I0o_qHj2gCB0XShIyYWux8w,249
+sewer/__version__.py,sha256=Ga40FuQo8DuxETR3vAKB0Ud3fY7hnQRj_fL9ILaqPfM,235
+sewer/cli.py,sha256=JN9UW6pTCCblCXN3ZYU5ATQ6M6Uk3WJ-Jd8Ep47vAEw,8681
+sewer/client.py,sha256=SjrB9JQfD9uBD-tki7FU5q5jYSHE-fn4jHus6GX5hks,32873
+sewer/dns_providers/__init__.py,sha256=F41bbBiMFXNsR0UMrdIhVe-3W_JMx-6A6hS4zqReryk,187
+sewer/dns_providers/acmedns.py,sha256=YNQBsz4fFswBXDgY50dS9wEfyWcN9alJvRdosS7Nw6c,2603
+sewer/dns_providers/auroradns.py,sha256=ETDbdqEIXCOe7EkV17BR0xyLSgAIPf07idHfOLHC83I,3246
+sewer/dns_providers/cloudflare.py,sha256=vfNhOXdmpvE9HTLx8-d3CxKAjBTediOrtvcaZHD-QPM,6652
+sewer/dns_providers/common.py,sha256=xjWvFsu2ksd_9yBYbN9bnzI_rYsFAQEAkAeNnKzkO_M,3343
+sewer-0.5.3.dist-info/DESCRIPTION.rst,sha256=SyPqqZ62N-G_8296wOV389GZmh38BQ8Oowk6BswlXwg,15244
+sewer-0.5.3.dist-info/METADATA,sha256=gNd8GGLyhL90FUs26DfwSKaN_XOQKHDcYsldy4xZPBQ,16911
+sewer-0.5.3.dist-info/RECORD,,
+sewer-0.5.3.dist-info/WHEEL,sha256=hZvi-8L6mc2COqhOUWREM_h2lvnJbaHycZt8eohtmso,92
+sewer-0.5.3.dist-info/entry_points.txt,sha256=gmWSBJR7MLD4hL-IxWtFdVdlSM9Tsg6Id3CDqXO-Udo,69
+sewer-0.5.3.dist-info/metadata.json,sha256=oAhlWeRCghT8OmSNxNDKgJycRKzknK9Y69k4mCHIuB0,1701
+sewer-0.5.3.dist-info/top_level.txt,sha256=_bh18tG8owKYSVOwUWyNVjj6w1rmh4UZZOK8AXJEg2s,6
