@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: django-plotly-dash
+Version: 0.0.1
+Summary: Django use of plotly dash apps through template tags
+Home-page: https://github.com/GibbsConsulting/django-plotly-dash
+Author: Mark Gibbs
+Author-email: django_plotly_dash@gibbsconsulting.ca
+License: MIT
+Project-URL: Tracker, https://github.com/GibbsConsulting/django-plotly-dash/issues
+Project-URL: Source, https://github.com/GibbsConsulting/django-plotly-dash
+Keywords: django plotly plotly-dash dash dashboard
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3
+Requires-Dist: plotly
+Requires-Dist: dash
+Requires-Dist: dash-core-components
+Requires-Dist: dash-html-components
+Requires-Dist: dash-renderer
+Requires-Dist: Django
+
+UNKNOWN
+
+
