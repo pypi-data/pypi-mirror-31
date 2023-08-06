@@ -1,0 +1,17 @@
+version: 2
+jobs:
+    build:
+        macos:
+            xcode: "9.0"
+        steps:
+            - checkout
+            - run: brew upgrade python
+            - run: brew install shellcheck
+            - run: brew install coreutils
+            - run: python3 -V
+            - run: pip3 install --upgrade setuptools pip
+            - run: pip3 install --user -r requirements-dev.txt
+            - run: pip3 list --format columns
+            - run: /bin/sh --version
+            - run: shellcheck --version
+            - run: PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH" inv check test
