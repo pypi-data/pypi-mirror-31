@@ -1,0 +1,5 @@
+[console_scripts]
+git-gerrit-fetch = git_gerrit.fetch:main
+git-gerrit-log = git_gerrit.log:main
+git-gerrit-query = git_gerrit.query:main
+

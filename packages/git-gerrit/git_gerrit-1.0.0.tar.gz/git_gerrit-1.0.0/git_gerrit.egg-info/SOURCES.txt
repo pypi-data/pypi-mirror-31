@@ -1,0 +1,17 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.py
+git_gerrit/__init__.py
+git_gerrit/cfg.py
+git_gerrit/fetch.py
+git_gerrit/log.py
+git_gerrit/query.py
+git_gerrit/unicode.py
+git_gerrit/version.py
+git_gerrit.egg-info/PKG-INFO
+git_gerrit.egg-info/SOURCES.txt
+git_gerrit.egg-info/dependency_links.txt
+git_gerrit.egg-info/entry_points.txt
+git_gerrit.egg-info/requires.txt
+git_gerrit.egg-info/top_level.txt
