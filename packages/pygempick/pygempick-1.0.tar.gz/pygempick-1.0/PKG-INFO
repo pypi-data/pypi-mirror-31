@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: pygempick
+Version: 1.0
+Summary: Open Source Batch Gold Particle Picking & Procesing for Immunogold Diagnostics
+Home-page: https://github.com/jmarsil/pygempick
+Author: Joseph Marsilla
+Author-email: joseph.marsilla@mail.utoronto.ca
+License: MIT
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Keywords: IGEM immunogold gold picker EM micrograph processing correlation analysis
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries :: Python Modules

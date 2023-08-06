@@ -1,0 +1,11 @@
+MANIFEST.in
+README.rst
+setup.py
+pygempick/__init__.py
+pygempick/core.py
+pygempick.egg-info/PKG-INFO
+pygempick.egg-info/SOURCES.txt
+pygempick.egg-info/dependency_links.txt
+pygempick.egg-info/not-zip-safe
+pygempick.egg-info/requires.txt
+pygempick.egg-info/top_level.txt
