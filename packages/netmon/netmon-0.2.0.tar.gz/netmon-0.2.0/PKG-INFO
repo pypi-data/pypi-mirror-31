@@ -1,0 +1,34 @@
+Metadata-Version: 1.1
+Name: netmon
+Version: 0.2.0
+Summary: network monitor for linux
+Home-page: https://github.com/theden/netmon
+Author: Denis Khshaba
+Author-email: deniskhoshaba@gmail.com
+License: GPL-2.0
+Description: netmon
+        ======
+        
+        Command line network monitor for linux. Written in python and uses
+        curses.
+        
+        `asciicast <https://asciinema.org/a/178907>`__
+        
+        Install
+        -------
+        
+        ``pip install netmon``
+        
+        Run
+        ---
+        
+        ``$ netmon``
+        
+        By default ``netmon`` will try to detect your network device. If it
+        fails, you can specify the network device, e.g., ``netmon wlan1``
+        
+Keywords: network,monitor,linux
+Platform: UNKNOWN
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: System :: Networking :: Monitoring
+Classifier: Programming Language :: Python
