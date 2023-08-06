@@ -1,0 +1,12 @@
+biopython
+matplotlib
+
+[dev]
+pipenv
+neovim
+yapf
+pylint
+twine
+
+[test]
+coverage

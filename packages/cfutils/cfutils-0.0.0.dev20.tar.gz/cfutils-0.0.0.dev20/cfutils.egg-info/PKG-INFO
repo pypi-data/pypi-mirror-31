@@ -1,0 +1,87 @@
+Metadata-Version: 2.1
+Name: cfutils
+Version: 0.0.0.dev20
+Summary: Chromatogram File Utils
+Home-page: https://github.com/pypa/cfutils
+Author: Ye Chang
+Author-email: yech1990@gmail.com
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/pypa/cfutils/issues
+Project-URL: Source, https://github.com/pypa/cfutils/
+Description: # cfutils
+        
+        **Chromatogram File Utils**
+        
+        for sanger sequencing data visualizing, alignment, mutation calling, and trimming etc.
+        
+        ## Demo
+        
+        ![plot chromatogram with mutation](https://raw.githubusercontent.com/yech1990/cfutils/master/data/plot.png)
+        
+        ## How to install?
+        
+        ### form pypi
+        
+        *(use this way ONLY, if you don't know what't going on)*
+        
+        ```bash
+        pip install cfutils
+        ```
+        
+        ```bash
+        $ python
+        Python 3.6.5 (default, Apr 14 2018, 13:17:30)
+        [GCC 7.3.1 20180406] on linux
+        
+        >>>
+        
+        ```
+        
+        ### manipulate the soource code
+        
+        clone from github
+        
+        ```bash
+        git clone git@github.com:yech1990/cfutils.git 
+        ```
+        
+        install dependance
+        
+        ```bash
+        make init
+        ```
+        
+        do unittest
+        
+        ```bash
+        make test
+        ```
+        
+        ## How to use?
+         
+        ```python
+        import cfutils as cf
+        
+        ```
+        
+        ## ChangeLog
+        
+        - build as python package for pypi
+        - fix bug that highlihgting wrong base
+        
+        ## TODO
+        
+        - [ ] call mutation by alignment and plot Chromatogram graphic
+        - [ ] add a doc
+        - [x] change xaxis by peak location
+        
+Keywords: Utils Sanger Chromatogram
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Provides-Extra: test
