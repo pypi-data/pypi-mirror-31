@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: tgx-cli
+Version: 0.0.4
+Summary: Tool that you can use to manage your TravelgateX platform
+Home-page: https://github.com/travelgateX/tgx-cli
+Author: TravelgateX
+Author-email: info@travelgatex.com
+License: UNKNOWN
+Description-Content-Type: text/markdown
+Description: UNKNOWN
+Keywords: travel b2b b2c graphql
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
