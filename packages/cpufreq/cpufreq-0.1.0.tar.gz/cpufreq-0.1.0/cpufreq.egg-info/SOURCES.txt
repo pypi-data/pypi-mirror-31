@@ -1,0 +1,10 @@
+README.rst
+setup.py
+cpufreq/__init__.py
+cpufreq/_common.py
+cpufreq/cpufreq.py
+cpufreq.egg-info/PKG-INFO
+cpufreq.egg-info/SOURCES.txt
+cpufreq.egg-info/dependency_links.txt
+cpufreq.egg-info/not-zip-safe
+cpufreq.egg-info/top_level.txt
