@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pylightdmx
+Version: 1.0.2
+Summary: Enttec DMX USB Pro Mk2 Lighting Controller
+Home-page: https://github.com/ayork02/pylightdmx
+Author: ayork02
+Author-email: ayork02@outlook.com
+License: GPLV3
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: pyserial
+Requires-Dist: Pillow
+
+UNKNOWN
+
+
