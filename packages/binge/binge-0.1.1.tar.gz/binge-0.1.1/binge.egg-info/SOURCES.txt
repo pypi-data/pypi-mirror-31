@@ -1,0 +1,11 @@
+README.rst
+setup.cfg
+setup.py
+binge/__init__.py
+binge/_version.py
+binge/binge.py
+binge/example.py
+binge.egg-info/PKG-INFO
+binge.egg-info/SOURCES.txt
+binge.egg-info/dependency_links.txt
+binge.egg-info/top_level.txt
