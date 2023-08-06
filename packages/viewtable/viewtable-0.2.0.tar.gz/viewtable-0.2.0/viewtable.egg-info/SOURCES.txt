@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+viewtable/__init__.py
+viewtable/cli.py
+viewtable/h5pytools.py
+viewtable.egg-info/PKG-INFO
+viewtable.egg-info/SOURCES.txt
+viewtable.egg-info/dependency_links.txt
+viewtable.egg-info/entry_points.txt
+viewtable.egg-info/not-zip-safe
+viewtable.egg-info/requires.txt
+viewtable.egg-info/top_level.txt
