@@ -1,0 +1,16 @@
+tellopy/__init__.py,sha256=mtkNF2KpnTTaA_O_DV6F5toRFCZz8MNwSMo65u3AE6E,339
+tellopy/_internal/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tellopy/_internal/crc.py,sha256=0kfpU6F7us1qv6O4g9Zp4DXeDibnd_OqaB9d7A3IWuo,4117
+tellopy/_internal/error.py,sha256=FpAtEiLE6CIEz7SVHKl0BoH5xO334BEfNudaZKwSb0I,253
+tellopy/_internal/event.py,sha256=E14geyanWdOphF-Hz2W81zQpELzfaaZd4MphRnw6cJM,314
+tellopy/_internal/logger.py,sha256=xiSCDtVi3K9wIcDxlfAczpqcF5CVoYhCmMG165Uzt0s,1508
+tellopy/_internal/tello.py,sha256=yn0UsKzfUQw3jMP8lB9wAvi374Erd9l9t79P-V6q-tc,19634
+tellopy/_internal/utils.py,sha256=ZebaeS364fn0hxFn5_rw2xpMpcQRzz_oRf4Sc9i4qjY,500
+tellopy/examples/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tellopy/examples/joystick_and_video.py,sha256=kGZYbPSqrUzxpO45Pqgt2c4Y_s4XRpSyDeHiCA90X_g,6566
+tellopy/examples/simple_takeoff.py,sha256=JjKp8gVQ2wEPmhArSU0cb437wck8V_i56YCB8VTHoZM,665
+tellopy-0.1.0.dist-info/LICENSE.txt,sha256=lAKvEQIoBR5KwAAlPt07JtN2GKZnlQOVjwbpK46cir4,847
+tellopy-0.1.0.dist-info/METADATA,sha256=0I6s0h-hXELbo57UiOQGOxjKLnl2nEoi6o2AtWF414c,759
+tellopy-0.1.0.dist-info/RECORD,,
+tellopy-0.1.0.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+tellopy-0.1.0.dist-info/top_level.txt,sha256=YkISMriSb4RLKA9K0uGFyo1r9UVNuNwyPhLIKxRN9yg,8
