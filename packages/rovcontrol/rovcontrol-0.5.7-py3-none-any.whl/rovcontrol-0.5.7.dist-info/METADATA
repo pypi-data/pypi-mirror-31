@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: rovcontrol
+Version: 0.5.7
+Summary: UNKNOWN
+Home-page: https://github.com/ld-cd/rovcontrol/
+Author: Aled Cuda
+Author-email: aledvirgil@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: websockets
+Requires-Dist: RPi.GPIO
+Requires-Dist: adafruit-pca9685
+Requires-Dist: adafruit-mcp3008
+Requires-Dist: adafruit-gpio
+
+I'll document it eventually...
+
+
