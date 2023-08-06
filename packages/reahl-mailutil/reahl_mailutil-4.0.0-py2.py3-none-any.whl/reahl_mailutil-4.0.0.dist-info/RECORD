@@ -1,0 +1,15 @@
+reahl_mailutil-4.0.0-py3.5-nspkg.pth,sha256=hasoBAQgMi3Vg5uhnZcizK1bg7Bcwd-WwqtqhEAksSs,550
+reahl/mailutil/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+reahl/mailutil/mail.py,sha256=lXVFvpZ9roQ7bZyJSgS6gh8hew6AI9aMUHWCMmFf-cw,7436
+reahl/mailutil/reusableconfig.py,sha256=7-KYmtuSjrpV_g1eDgIAfyiYeEM7jFwA9oyxX8J-t6A,2062
+reahl/mailutil/rst.py,sha256=Cav17P995CmUkMeBAAsV2rMw3HCUwxjR-rClBWiKIG4,2438
+reahl/mailutil_dev/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+reahl/mailutil_dev/test_mail.py,sha256=rFd6MMVDplx-XPi0RB_hdFP2dHqYfCwC4osXbwmqDM8,3431
+reahl_mailutil-4.0.0.dist-info/DESCRIPTION.rst,sha256=DlhQ16P1vCkR1-UT_llb2H42DYAbFcoEX00rzDtwM1I,334
+reahl_mailutil-4.0.0.dist-info/METADATA,sha256=V1QoEOlkXJwe_3NpuJv8XPaURlqrSGOMUXanjNDSJBs,695
+reahl_mailutil-4.0.0.dist-info/RECORD,,
+reahl_mailutil-4.0.0.dist-info/WHEEL,sha256=o2k-Qa-RMNIJmUdIc7KU6VWR_ErNRbWNlxDIpl7lm34,110
+reahl_mailutil-4.0.0.dist-info/entry_points.txt,sha256=Zj_yGj6zxk-Rfauq0OS_sYRBgOxeOIG-b62sIJdKlB8,120
+reahl_mailutil-4.0.0.dist-info/metadata.json,sha256=VQaNo673G3CdNfwzgNEq38VJir8-GtRyrSjYpLKGxdM,833
+reahl_mailutil-4.0.0.dist-info/namespace_packages.txt,sha256=8TSvX3zkwjowzR3fni-LjOO6uaec5DR2mI6gKRRQ5tw,6
+reahl_mailutil-4.0.0.dist-info/top_level.txt,sha256=8TSvX3zkwjowzR3fni-LjOO6uaec5DR2mI6gKRRQ5tw,6
