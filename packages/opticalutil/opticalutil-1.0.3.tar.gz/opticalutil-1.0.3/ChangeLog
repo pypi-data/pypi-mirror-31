@@ -1,0 +1,62 @@
+CHANGES
+=======
+
+1.0.3
+-----
+
+* Try re-encrypting the password
+
+1.0.2
+-----
+
+* Try and fix release problem in travis
+
+1.0.1
+-----
+
+* Git ignore generated files (avoiding pypi upload failure)
+
+1.0.0
+-----
+
+* Get rid of "dB" and "dBm" string suffixes
+
+0.1.6
+-----
+
+* Don't pretend to support things we don't (context in ops)
+* Fix \_\_neg\_\_ test and adjust travis config
+* yapf format
+* Switch to PBR and cleanup linting
+* Allow mwatt == '0.00' to work
+
+0.1.5
+-----
+
+* Fix compare of 0 watt (Power(None)) power
+* bump version
+* deal with Power("None")
+
+0.1.3
+-----
+
+* bump bugfix version
+* improve frequency\_to\_wavelength
+
+0.1.2
+-----
+
+* new version
+* better rounding of wavelen\_to\_frequency
+
+0.1.1
+-----
+
+* new release
+* stop rounding to 100GHz in wavelen\_to\_frequency
+* fix badge again
+* try and fix coveralls
+* remove pypy3 for now
+* Fix coveralls badge
+* cause build
+* initial export
