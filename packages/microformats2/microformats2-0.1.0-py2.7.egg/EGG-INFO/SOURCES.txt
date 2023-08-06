@@ -1,0 +1,11 @@
+README.md
+setup.py
+microformats2/__init__.py
+microformats2/discovery.py
+microformats2/schema.py
+microformats2.egg-info/PKG-INFO
+microformats2.egg-info/SOURCES.txt
+microformats2.egg-info/dependency_links.txt
+microformats2.egg-info/not-zip-safe
+microformats2.egg-info/requires.txt
+microformats2.egg-info/top_level.txt

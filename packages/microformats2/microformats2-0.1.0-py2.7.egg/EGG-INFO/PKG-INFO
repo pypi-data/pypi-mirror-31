@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: microformats2
+Version: 0.1.0
+Summary: A package for validating JSON-encoded microformats2 data via JSON Schema.
+Home-page: https://github.com/cleverdevil/microformats2
+Author: Jonathan LaCour
+Author-email: UNKNOWN
+License: UNKNOWN
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
