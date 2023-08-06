@@ -1,0 +1,8 @@
+sqlalchemy
+tabulate
+numpy
+pathlib
+xlsxwriter
+pyexcel
+pyexcel_xlsx
+pyexcel_xls
