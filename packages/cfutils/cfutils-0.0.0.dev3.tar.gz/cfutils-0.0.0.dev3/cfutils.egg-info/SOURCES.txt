@@ -1,0 +1,12 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+cfutils.egg-info/PKG-INFO
+cfutils.egg-info/SOURCES.txt
+cfutils.egg-info/dependency_links.txt
+cfutils.egg-info/entry_points.txt
+cfutils.egg-info/requires.txt
+cfutils.egg-info/top_level.txt
+data/data_file
