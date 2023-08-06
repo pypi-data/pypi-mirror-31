@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: wheelie
+Version: 0.1.1
+Summary: Create a shareable wheel with nbconvert.
+Home-page: https://github.com/deathbeds/wheelie
+Author: deathbeds
+Author-email: tony.fast@gmail.com
+License: BSD-3-Clause
+Description-Content-Type: text/markdown
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: IPython
+Classifier: Framework :: Jupyter
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6
+Requires-Dist: jupyter
+Requires-Dist: wheel
+Requires-Dist: black
+Requires-Dist: nbconvert
+Requires-Dist: pip
+
+## Wheelie
+
+
