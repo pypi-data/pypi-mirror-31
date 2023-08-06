@@ -1,0 +1,11 @@
+pyramid_ldap/__init__.py,sha256=KsMyECcItXJDDmAp_ZeanzEvLnCXeodzi7VIzn-rh04,14572
+pyramid_ldap/tests.py,sha256=U6BdyXYsQpoBkJFAnBBmMjD32FmANUy5QN39_wEyJHY,12240
+pyramid_ldap-0.3.1.post1.dist-info/LICENSE.txt,sha256=IBp9YkQVlUu4i1dgsbFKyAKQJ7dQ51QCGtX5A8SKde0,1719
+pyramid_ldap-0.3.1.post1.dist-info/METADATA,sha256=MQG3I3oVhAR7mrAmOx4vxkcPT1vN3oeqjXJT6jUOObs,3672
+pyramid_ldap-0.3.1.post1.dist-info/RECORD,,
+pyramid_ldap-0.3.1.post1.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+pyramid_ldap-0.3.1.post1.dist-info/entry_points.txt,sha256=uY8eRu-AtbXp6mnWvZ3eqrO_16jPUffaZG-g71Oolh0,73
+pyramid_ldap-0.3.1.post1.dist-info/top_level.txt,sha256=pVui3B3X45Y-_1IvGk5jBEWkM9v0X0J4YL4o35aJwRU,23
+sampleapp/__init__.py,sha256=U1rVvweGcaLY3OWTxmHr3tPER_VPc8p9zyFGGVrpmag,1418
+sampleapp/views.py,sha256=JJWFOzTPnn2OsWtaEYNK12fLqbxMqFFSeS5hefwe7lU,1356
+sampleapp/templates/login.pt,sha256=-TO1RJbmLRQYJRKd4e7YFF5zwXFiruWzPFNv6FwiAVA,426
