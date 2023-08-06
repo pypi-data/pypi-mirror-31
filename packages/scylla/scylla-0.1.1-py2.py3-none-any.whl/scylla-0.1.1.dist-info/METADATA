@@ -1,0 +1,72 @@
+Metadata-Version: 2.0
+Name: scylla
+Version: 0.1.1
+Summary: A powerful proxy IP pool
+Home-page: https://github.com/imWildCat/scylla
+Author: WildCat
+Author-email: wildcat.name@gmail.com
+License: UNKNOWN
+Keywords: proxy,api,scylla
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Python: >=3.6.0
+Requires-Dist: peewee
+Requires-Dist: requests
+Requires-Dist: requests-html
+Requires-Dist: six
+
+
+Scylla |Documentation Status|
+=============================
+
+A minimal proxy ip crawler, only supports Python 3.6.
+
+Get started
+-----------
+
+Install directly via pip
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Use from source
+~~~~~~~~~~~~~~~
+
+.. code:: bash
+
+    git clone https://github.com/imWildCat/scylla.git
+    cd scylla
+    python -m scylla
+
+Usage
+-----
+
+Standalone
+~~~~~~~~~~
+
+For more details, please read the `API
+Documentation <http://scylla.wildcat.io/en/latest/py-modindex.html>`__.
+
+Roadmap
+-------
+
+-  [ ] RESTFul API
+-  [ ] Programmable API
+-  [ ] Geographical distribution map for proxies
+-  [ ] Docker integration
+-  [ ] Smart web proxy server
+-  [ ] More statistical views of proxies
+-  [ ] Quality statistics for different providers
+
+License
+-------
+
+Apache License 2.0. For more details, please read the
+`LICENSE <./LICENSE>`__ file.
+
+.. |Documentation Status| image:: https://readthedocs.org/projects/scylla-py/badge/?version=latest
+   :target: http://scylla.wildcat.io/en/latest/?badge=latest
+
+
