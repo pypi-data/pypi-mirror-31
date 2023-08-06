@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: write
+Version: 1.0.2
+Summary: write(path,content), open.write replacement. python2 and python3 compatible
+Home-page: https://github.com/looking-for-a-job/write.py
+License: UNKNOWN
+Description: ### Install
+        
+        ```bash
+        $ [sudo] pip install write
+        ```
+        
+        ### Usage
+        
+        ```python
+        >>> from write import write
+        
+        >>> write(path,text)
+        ```
+        
+        ### Examples
+        
+        ```python
+        >>> write(path,'string')
+        >>> open(path).read()
+        'string'
+        
+        >>> write(path,None) # touch
+        >>> open(path).read()
+        ''
+        
+        >>> write(path,42) # write integer
+        >>> open(path).read()
+        '42'
+        
+        >>> write(path,dict()) # converted to str
+        >>> open(path).read()
+        '{}'
+        ```
+        
+        ### Sources
+        
+        +   [`write.write(path, content)`](https://github.com/looking-for-a-job/write.py/blob/master/write/__init__.py)
+Keywords: write file
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development
+Description-Content-Type: text/markdown
