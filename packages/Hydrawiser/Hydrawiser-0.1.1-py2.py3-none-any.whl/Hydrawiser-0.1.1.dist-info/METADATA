@@ -1,0 +1,24 @@
+Metadata-Version: 2.0
+Name: Hydrawiser
+Version: 0.1.1
+Summary: A Python library to communicate with Hunter Wi-Fi irrigation controllers (https://www.hunter.com) that support the Hydrawise application (https://www.hydrawise.com).
+Home-page: https://github.com/ptcryan/hydrawiser
+Author: David Ryan
+Author-email: ptcryan@gmail.com
+License: MIT
+Description-Content-Type: UNKNOWN
+Keywords: sprinkler,water,irrigation,Hunter,Hydrawise
+Platform: any
+Classifier: Programming Language :: Python
+Classifier: Development Status :: 4 - Beta
+Classifier: Natural Language :: English
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: requests (>=2.0)
+
+UNKNOWN
+
+
