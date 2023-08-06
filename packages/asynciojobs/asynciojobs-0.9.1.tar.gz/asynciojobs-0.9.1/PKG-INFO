@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: asynciojobs
+Version: 0.9.1
+Summary: A simplistic orchestration engine for asyncio-based jobs
+Home-page: http://asynciojobs.readthedocs.io/
+Author: Thierry Parmentelat
+Author-email: thierry.parmentelat@inria.fr
+License: CC BY-SA 4.0
+Description: See notebook at https://github.com/parmentelat/asynciojobs/blob/master/README.ipynb
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Information Technology
+Classifier: Programming Language :: Python :: 3.5
