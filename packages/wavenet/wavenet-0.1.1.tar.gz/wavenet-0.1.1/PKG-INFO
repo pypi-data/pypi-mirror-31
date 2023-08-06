@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: wavenet
+Version: 0.1.1
+Summary: An implementation of WaveNet for TensorFlow.
+Home-page: https://github.com/unixpickle/wavenet
+Author: Alex Nichol
+Author-email: unixpickle@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Provides-Extra: tf
+Provides-Extra: tf_gpu
