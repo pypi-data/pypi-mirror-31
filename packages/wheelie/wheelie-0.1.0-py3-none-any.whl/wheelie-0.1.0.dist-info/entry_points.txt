@@ -1,0 +1,6 @@
+[console_scripts]
+jupyter-wheelie = wheelie:main
+
+[nbconvert.exporters]
+black = wheelie.exporter:BlackExporter
+
