@@ -1,0 +1,3 @@
+[console_scripts]
+steamlink = steamlink.main:steamlink_command
+
