@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: sheol
+Version: 0.0.1
+Summary: Tools for maintaining pandomics process files.
+Home-page: https://github.com/draperjames/sheol
+Author: James Draper
+Author-email: james.draper@proton.mail.com
+License: BSD license
+Keywords: sheol
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: Click (>=6.0)
+
+=====
+sheol
+=====
+
+
+.. image:: https://img.shields.io/pypi/v/sheol.svg
+        :target: https://pypi.python.org/pypi/sheol
+
+.. image:: https://img.shields.io/travis/draperjames/sheol.svg
+        :target: https://travis-ci.org/draperjames/sheol
+
+.. image:: https://readthedocs.org/projects/sheol/badge/?version=latest
+        :target: https://sheol.readthedocs.io/en/latest/?badge=latest
+        :alt: Documentation Status
+
+
+.. image:: https://pyup.io/repos/github/draperjames/sheol/shield.svg
+     :target: https://pyup.io/repos/github/draperjames/sheol/
+     :alt: Updates
+
+
+
+Tools for maintaining pandomics process files.
+
+
+* Free software: BSD license
+* Documentation: https://sheol.readthedocs.io.
+
+
+Features
+--------
+
+* TODO
+
+
+=======
+History
+=======
+
+0.0.1 (2018-05-11)
+------------------
+
+* First release on PyPI.
+
+

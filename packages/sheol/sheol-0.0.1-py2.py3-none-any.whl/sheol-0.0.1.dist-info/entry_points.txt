@@ -1,0 +1,3 @@
+[console_scripts]
+sheol = sheol.cli:main
+
