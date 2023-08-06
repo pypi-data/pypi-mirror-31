@@ -1,0 +1,30 @@
+Metadata-Version: 1.1
+Name: PyMaSC
+Version: 0.2.4
+Summary: Python implementation to calc mappability-sensitive cross-correlation for fragment length estimation and quality control for ChIP-Seq.
+Home-page: https://github.com/ronin-gw/PyMaSC
+Author: Hayato Anzawa
+Author-email: anzawa@sb.ecei.tohoku.ac.jp
+License: MIT
+Download-URL: https://github.com/ronin-gw/PyMaSC
+Description: To estimate mean fragment length for single-ended sequencing data, cross-correlation between positive- and negative-strand reads is commonly used. One of the problems with this approach is phantom peak, which is the occasionally observed peak corresponding to the read length. In the ChIP-Seq guidelines by ENCODE consortia, cross-correlation at fragment length and read length are used for quality control metrics. Additionally, library length itself is one of the important parameters for analysises. However, estimating correct flagment length is not a easy task because of phantom peak occurrence.
+        P Ramachandran et al. proposed MaSC, mappability-sensitive cross-correlation to remove the bias caused from ununiformity of mappability throughout the genome. This method provides cross-correlation landscape without phantom peak and much accurate mean fragment length estimation.
+        PyMaSC is a tool implemented by python and cython to visualize (mappability-sensitive) cross-correlation and estimate ChIP-Seq quality metrics and mean fragment length with MaSC algorithm.
+Keywords: NGS ChIP-Seq
+Platform: POSIX
+Platform: Mac OS X
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Cython
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
