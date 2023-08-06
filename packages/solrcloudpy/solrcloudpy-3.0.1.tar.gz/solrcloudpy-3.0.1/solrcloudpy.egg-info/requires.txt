@@ -1,0 +1,8 @@
+requests>=2.11.1
+IPython<5.2.0
+semver
+pathlib2
+future
+
+[ip]
+IPython==5.1.0
