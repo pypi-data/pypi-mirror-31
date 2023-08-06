@@ -1,0 +1,9 @@
+mock==2.0.0
+sh==1.12.14
+future==0.16.0
+
+[dev]
+check-manifest
+
+[test]
+coverage
