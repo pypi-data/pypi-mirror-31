@@ -1,0 +1,20 @@
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% if filter.form %}
+<div class="cruds-filter card">
+  <div class="card-body">
+    <h5 class="card-title">{% trans "Filter" %}</h5>
+      {% if filter.form.helper %}
+          {% crispy filter.form %}
+      {% else %}
+        <form action="" method="GET">
+          <fieldset>
+            {{ filter.form|crispy }}
+          </fieldset>
+          <button type="submit" class="btn btn-info">{% trans "submit" %}</button>
+        </form>
+      {% endif %}
+  </div>
+</div>
+{% endif %}
