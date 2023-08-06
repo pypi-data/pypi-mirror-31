@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+VERSION
+requirements.txt
+setup.py
+jinja_gen/__init__.py
+jinja_gen/arguments.py
+jinja_gen/cli.py
+jinja_gen/utils.py
+jinja_gen.egg-info/PKG-INFO
+jinja_gen.egg-info/SOURCES.txt
+jinja_gen.egg-info/dependency_links.txt
+jinja_gen.egg-info/entry_points.txt
+jinja_gen.egg-info/requires.txt
+jinja_gen.egg-info/top_level.txt
