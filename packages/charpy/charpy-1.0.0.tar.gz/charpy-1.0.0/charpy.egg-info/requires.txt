@@ -1,0 +1,13 @@
+flask>=0.12
+flask-sqlalchemy
+SQLAlchemy
+python-dateutil
+pandas
+sqlalchemy
+
+[dev]
+pypandoc
+setuptools
+
+[test]
+coverage==4.1
