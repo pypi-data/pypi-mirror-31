@@ -1,0 +1,11 @@
+include *.rst
+include *.cfg
+include *.txt
+recursive-include docs *
+recursive-include collective *
+
+global-exclude *.pyc
+global-include *.mo
+exclude .installed.cfg
+exclude .mr.developer.cfg
+recursive-exclude eggs *
