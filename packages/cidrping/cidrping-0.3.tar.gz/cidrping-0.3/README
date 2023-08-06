@@ -1,0 +1,20 @@
+CIDRPING
+A simple script for pinging hosts by CIDR-notation.
+Pings are carried out in parallel threads so it runs pretty quick.
+The script returns the IP addresses of any responding hosts in the network.
+
+
+INSTALL
+If you have downloaded the tar.gz package, you can install using the setup.py script.
+$ sudo python setup.py install
+
+The project is submitted to pypi so the easiest way of installation is using pip.
+$ pip install cidrping
+
+
+USAGE GUIDE
+$ cidrping 192.168.1.0/24
+
+
+CREDITS
+Script by Jakob Svanholm - jakob@rymdlego.se

@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: cidrping
+Version: 0.3
+Summary: A simple script for pinging hosts by CIDR-notation.
+Home-page: https://github.com/rymdlego/cidrping
+Author: Jakob Svanholm
+Author-email: jakob@rymdlego.se
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: network ping cidr
+Platform: UNKNOWN
