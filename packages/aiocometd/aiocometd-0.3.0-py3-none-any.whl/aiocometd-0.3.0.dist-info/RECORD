@@ -1,0 +1,17 @@
+aiocometd/__init__.py,sha256=bgS-8PCGtu8x26m3nOcrD5tWhZ-BPVETVZQdx1iE55c,459
+aiocometd/_metadata.py,sha256=8bw0vbNjXaBlwZ4yiPusagjPEMGgy4UkXugGPjstQnA,274
+aiocometd/client.py,sha256=5PLqVvCZK1lS3jCUfMDP31-gr30WCoA8AOtCNAtCfQQ,20984
+aiocometd/constants.py,sha256=e5lX0fK15V1GdS7BBTBZtel-nqFGFkchuUbgGQX2fCo,2566
+aiocometd/exceptions.py,sha256=uH-jL9iH2zMio9gZRTI1q5MsE9CMVXSgALuZhXbsiwU,2446
+aiocometd/extensions.py,sha256=ElPn8NxCHphN4QGrqP7TDd9Kl4OBpfJ_X-NFfEDzOMI,1256
+aiocometd/utils.py,sha256=WMhQ6wTb8ilY86i-LwOmRnv1ycwbRvPeXt7_K80V8VQ,5439
+aiocometd/transports/__init__.py,sha256=uMit1M-MtpdaQ-aP159IgGyEjdjg5p1smR6lM-U2ih0,143
+aiocometd/transports/abc.py,sha256=HKCS_CWaSYxzeaF5JazbEmUs5vwZeb_Ww9TWAMOlw7s,3708
+aiocometd/transports/base.py,sha256=CSKlI_CXu5iqui2b9yUBQQKmAFO9ZHozf0B3ZHDxa2U,25534
+aiocometd/transports/long_polling.py,sha256=x5VbNnzVQqSW9NnuLED_CKxWOpOBBTIq0cwvqnoBtpw,1492
+aiocometd/transports/registry.py,sha256=WHRzcjQzC-J4sVwQXVxb9l_HJMRT0QFHwloxnJ1b7uo,1396
+aiocometd/transports/websocket.py,sha256=jqxl2-_9qwVvoBD_Qr8AAgVQ-Ied61vG0ilrOjZpTkk,8697
+aiocometd-0.3.0.dist-info/METADATA,sha256=ftqb9lYYgEWHJ6WnXahObGi8_BR7QmF0h_fW_b5MTgA,4826
+aiocometd-0.3.0.dist-info/RECORD,,
+aiocometd-0.3.0.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+aiocometd-0.3.0.dist-info/top_level.txt,sha256=weIXzSPvoa8ewOWgypicDt77gcWaYI_TXGGgu7K81nQ,10
