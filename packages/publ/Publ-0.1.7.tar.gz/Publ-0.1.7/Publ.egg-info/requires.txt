@@ -1,0 +1,11 @@
+Flask
+Flask-Caching
+arrow
+peewee
+misaka
+Pillow
+pygments
+watchdog
+
+[dev]
+pylint
