@@ -1,0 +1,25 @@
+Metadata-Version: 1.1
+Name: KernelUpgrader
+Version: 1.14
+Summary: Download, compile and install the latest stable kernel for your Linux system
+Home-page: https://goo.gl/ZJ4zP9
+Author: Javinator9889
+Author-email: javialonso007@hotmail.es
+License: GPL-3.0
+Download-URL: https://github.com/Javinator9889/KernelUpgrader/archive/master.zip
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.1
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
