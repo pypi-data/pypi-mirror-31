@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+tapmap/__init__.py
+tapmap/char_map.py
+tapmap/processing.py
+tapmap.egg-info/PKG-INFO
+tapmap.egg-info/SOURCES.txt
+tapmap.egg-info/dependency_links.txt
+tapmap.egg-info/entry_points.txt
+tapmap.egg-info/requires.txt
+tapmap.egg-info/top_level.txt
+tapmap/images/keyboard.png
