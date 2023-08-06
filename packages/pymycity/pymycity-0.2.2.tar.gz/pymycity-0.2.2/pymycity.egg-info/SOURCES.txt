@@ -1,0 +1,15 @@
+README.rst
+requirements.txt
+setup.cfg
+setup.py
+test_requirements.txt
+pymycity/__init__.py
+pymycity/__main__.py
+pymycity/item.py
+pymycity/misc.py
+pymycity.egg-info/PKG-INFO
+pymycity.egg-info/SOURCES.txt
+pymycity.egg-info/dependency_links.txt
+pymycity.egg-info/entry_points.txt
+pymycity.egg-info/requires.txt
+pymycity.egg-info/top_level.txt
