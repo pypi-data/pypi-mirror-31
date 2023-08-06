@@ -1,0 +1,68 @@
+Metadata-Version: 1.1
+Name: neuroqc
+Version: 0.1.0
+Summary: quality control for neuroscience data, including imaging
+Home-page: https://github.com/raamana/neuroqc
+Author: Pradeep Reddy Raamana
+Author-email: raamana@gmail.com
+License: Apache Software License 2.0
+Description: =======
+        neuroqc
+        =======
+        
+        
+        .. image:: https://img.shields.io/pypi/v/neuroqc.svg
+                :target: https://pypi.python.org/pypi/neuroqc
+        
+        .. image:: https://img.shields.io/travis/raamana/neuroqc.svg
+                :target: https://travis-ci.org/raamana/neuroqc
+        
+        .. image:: https://readthedocs.org/projects/neuroqc/badge/?version=latest
+                :target: https://neuroqc.readthedocs.io/en/latest/?badge=latest
+                :alt: Documentation Status
+        
+        
+        
+        
+        quality control for neuroscience data, including imaging
+        
+        
+        * Free software: Apache Software License 2.0
+        * Documentation: https://neuroqc.readthedocs.io.
+        
+        
+        Features
+        --------
+        
+        * TODO
+        
+        Credits
+        -------
+        
+        This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+        
+        .. _Cookiecutter: https://github.com/audreyr/cookiecutter
+        .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+        
+        
+        =======
+        History
+        =======
+        
+        0.1.0 (2018-05-13)
+        ------------------
+        
+        * First release on PyPI.
+        
+Keywords: neuroqc
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
