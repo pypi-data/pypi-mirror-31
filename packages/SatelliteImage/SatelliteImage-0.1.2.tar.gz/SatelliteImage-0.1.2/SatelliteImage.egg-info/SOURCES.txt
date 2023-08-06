@@ -1,0 +1,15 @@
+README.md
+setup.cfg
+setup.py
+SatelliteImage.egg-info/PKG-INFO
+SatelliteImage.egg-info/SOURCES.txt
+SatelliteImage.egg-info/dependency_links.txt
+SatelliteImage.egg-info/requires.txt
+SatelliteImage.egg-info/top_level.txt
+sat_image/__init__.py
+sat_image/band_map.py
+sat_image/bounds.py
+sat_image/fmask.py
+sat_image/image.py
+sat_image/mtl.py
+sat_image/warped_vrt.py

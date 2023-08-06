@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: SatelliteImage
+Version: 0.1.2
+Summary: Simple API provides a class to process satellite images
+Home-page: https://github.com/dgketchum
+Author: David Ketchum
+Author-email: dgketchum@gmail.com
+License: Apache
+Download-URL: https://github.com/dgketchum/Landsat578/archive/0.1.2.tar.gz
+Description: UNKNOWN
+Keywords: landsat download hydrology remote sensing
+Platform: Posix; MacOS X; Windows
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: GIS
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
