@@ -1,0 +1,15 @@
+python_secrets/__init__.py,sha256=jfyFaamPwi5sEP3tvm86HxhK0Gxv91vGVw3QiCrwph0,168
+python_secrets/groups.py,sha256=3GxMtP3ilVd42ch5UHE7kxn41pQj9TEz5peeUkgp0Kw,1277
+python_secrets/main.py,sha256=P72fF8aesnGeJ64ASOG5ohiw2k9n_ZXcpJpqtO50bE0,10762
+python_secrets/python_secrets.py,sha256=a9bvl6Och_bHlQ91Qoo6YMi5c5HhghV-YjSNsMk21Ok,971
+python_secrets/secrets.py,sha256=pwyhcUK38qU4WVRyDxnc2M2q_rTrByi9YLtIsO1OIeg,6986
+python_secrets/utils.py,sha256=zkSGLb3PofFWCT8uZl4OA25-fmHrgWu7L4Qe8gTeC-I,242
+python_secrets-0.8.0.dist-info/DESCRIPTION.rst,sha256=3AAEcf52PpQYR_X8WGt0TzYucNh7mi5PMr1P8q3MSKs,27332
+python_secrets-0.8.0.dist-info/METADATA,sha256=1HKMuRfvnktUmyPDZOY50JpHLqpvQVkyoJ3543BghcU,28289
+python_secrets-0.8.0.dist-info/RECORD,,
+python_secrets-0.8.0.dist-info/WHEEL,sha256=5wvfB7GvgZAbKBSE9uX9Zbi6LCL-_KgezgHblXhCRnM,113
+python_secrets-0.8.0.dist-info/entry_points.txt,sha256=sVOCDda2UC_DsHGmbEW8kmDdKfZujd3qjMMvqv9QDKY,361
+python_secrets-0.8.0.dist-info/metadata.json,sha256=kcw8Ta1OEqJoLs21mz6lwTztTZfprxFsZ63c0Xgqask,1607
+python_secrets-0.8.0.dist-info/top_level.txt,sha256=wR5Mszu-kHsm45Rk2b7ntCGAxM89A37hlpN9meUp5Dg,21
+tests/__init__.py,sha256=iwhKnzeBJLKxpRVjvzwiRE63_zNpIBfaKLITauVph-0,24
+tests/test_utils.py,sha256=T0hrC47trntIVRhz-EaWB2i1XC3eJgVjxwlJlk5xVQI,928
