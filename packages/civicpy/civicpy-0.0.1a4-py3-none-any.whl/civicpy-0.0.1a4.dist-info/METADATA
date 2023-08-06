@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: civicpy
+Version: 0.0.1a4
+Summary: a python wrapper and tools for the civic API
+Home-page: https://github.com/griffithlab/civicpy
+Author: Alex H. Wagner
+Author-email: awagner24@wustl.edu
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: ~=3.6
+Requires-Dist: pytest
+Requires-Dist: requests
+
+UNKNOWN
+
+
