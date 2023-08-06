@@ -1,0 +1,3 @@
+[console_scripts]
+dtt = deep_teaching_tools.main:main
+
