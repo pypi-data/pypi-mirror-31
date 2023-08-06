@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: ppftps
+Version: 0.2.1
+Summary: Push directories over a secured FTP connection.
+Home-page: https://github.com/studio-b12/ppftps
+Author: Christoph Polcin
+Author-email: c.polcin@studio-b12.de
+License: BSD
+Project-URL: Bug Reports, https://github.com/studio-b12/ppftps/issues
+Project-URL: Source, https://github.com/studio-b12/ppftps
+Keywords: cli ftp ftps keepass push pull sync util
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Internet :: File Transfer Protocol (FTP)
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+Requires-Dist: ftputil
+
+# ppftps
+
+Push Push directories over a secured FTP connection.
+
+For [KeePass] accounts you need to set valid KDBX='/path/to/db.kdbx',
+KDBXPW=\"$(cmd_get_kdbx_master_pw)\" and KDBXUUID='server-uuid' vars
+in your shell environment or wrapper script.
+
+## Install
+
+```sh
+pip install ppftp
+pip install pykeepass # for KeePass support
+```
+
+and create a ftp wrapper script with your settings in your project directory
+
+```sh
+#!/bin/sh
+
+KDBX="${HOME}/.keepass/ftp.kdbx" \
+KDBXPW="$(x11-ssh-askpass "ftp.kdbx master password)" \
+KDBXUUID="KDBX-UUID" \
+ppftps $@
+```
+
+## Usage
+
+```sh
+./ftp push ./local-folder /absolut/path/remote/folder
+```
+
+[KeePass]: https://keepass.info "KeePass Password Safe"
+
+
