@@ -1,0 +1,6 @@
+brewblox-service~=0.9
+aioinflux~=0.3.0
+dpath~=1.4
+
+[dev]
+tox
