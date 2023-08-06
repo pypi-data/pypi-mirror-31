@@ -1,0 +1,8 @@
+six
+PyYAML
+pycrypto
+PyJWT<2.0.0,>=1.4.2
+protobuf>=3.3.0
+requests-factory<1.0.0,>=0.1.0
+paramiko
+dropsonde
