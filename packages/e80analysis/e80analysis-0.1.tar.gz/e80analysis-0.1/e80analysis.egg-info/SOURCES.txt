@@ -1,0 +1,10 @@
+MANIFEST.in
+setup.py
+e80analysis/__init__.py
+e80analysis/e80data.json
+e80analysis.egg-info/PKG-INFO
+e80analysis.egg-info/SOURCES.txt
+e80analysis.egg-info/dependency_links.txt
+e80analysis.egg-info/not-zip-safe
+e80analysis.egg-info/requires.txt
+e80analysis.egg-info/top_level.txt
