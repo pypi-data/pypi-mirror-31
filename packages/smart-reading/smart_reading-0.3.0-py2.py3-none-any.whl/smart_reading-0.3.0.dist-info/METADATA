@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: smart-reading
+Version: 0.3.0
+Summary: An NLTK-based toolkit aimed at increasing the understanding of various texts.
+Home-page: https://github.com/andredelft/smart_reading
+License: UNKNOWN
+Keywords: ebook understanding nltk reading toolkit
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Requires-Python: >=2.7
+Requires-Dist: nltk
+Requires-Dist: networkx
+Requires-Dist: re
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+
+# smart_reading
+
+
