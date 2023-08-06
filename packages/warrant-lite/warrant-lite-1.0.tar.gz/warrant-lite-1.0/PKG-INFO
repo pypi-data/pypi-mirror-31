@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: warrant-lite
+Version: 1.0
+Summary: Small Python library for process SRP requests for AWS Cognito. This library was initially included in the [Warrant](https://www.github.com/capless/warrant) library. We decided to separate it because not all projects and workfows need all of the helper classes and functions in Warrant.
+Home-page: https://github.com/capless/warrant-lite
+Author: Brian Jinwright
+Author-email: opensource@capless.io
+License: Apache License 2.0
+Description: Small Python library for process SRP requests for AWS Cognito. This library was initially included in the [Warrant](https://www.github.com/capless/warrant) library. We decided to separate it because not all projects and workfows need all of the helper classes and functions in Warrant.
+Keywords: aws,cognito,srp,capless
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Environment :: Web Environment
