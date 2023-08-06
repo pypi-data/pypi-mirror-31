@@ -1,0 +1,14 @@
+include *.txt
+include *.rst
+include *.md
+include calysto_scheme/images/*.png
+include calysto_scheme/modules/*.ss
+include Makefile
+recursive-include docs *.rst
+recursive-include docs *.png
+recursive-include docs *.py
+prune .git
+prune docs/build
+prune dist
+prune build
+prune docs
