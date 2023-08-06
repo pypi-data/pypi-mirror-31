@@ -1,0 +1,7 @@
+include README.md LICENSE
+include steamlink/html/static
+include steamlink/html/static/*
+include steamlink/html/templates
+include steamlink/html/templates/*
+exclude *.yaml
+recursive-exclude * *.py[co] __pycache__ *.swp 
