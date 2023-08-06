@@ -1,0 +1,3 @@
+[console_scripts]
+soundcheck-vlc = soundcheck_vlc.cli:run
+
