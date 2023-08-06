@@ -1,0 +1,14 @@
+baipw/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+baipw/exceptions.py,sha256=xMwTo8MxmhPQQN7_TpL_OlcGopNDZiDPmxy76Ms5WdA,101
+baipw/middleware.py,sha256=iu93NL5WIkPFe5qzdIm8EVhu2rdwGxiKEaphWF1b7Rg,2669
+baipw/response.py,sha256=6NPQ2anoqa4WvjOw6amcOyUhmH4BHlV7blPCVGfXUn8,456
+baipw/utils.py,sha256=Wok6Jz37m42uUCYMkBm7jSNzr_IeSZO-75jgJU5UYIs,1202
+baipw/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+baipw/tests/settings.py,sha256=5BqjZ9sC_1wnImv-ItzSKP153HrnQ3Yv4218mKq8h_A,204
+baipw/tests/test_middleware.py,sha256=9UyTTxHE-IXKqvahXKA45BeQ6wsl8q3u9m232T_TYBI,4692
+baipw/tests/test_utils.py,sha256=QYnYITwvewFbHafWngKNycaOSevQOXFWFZ5WTH7BXj0,2827
+baipw/tests/utils.py,sha256=UtJSinfCnq7DJzL3Y_8aJqel2n_JDenHsL4SkHTFydg,37
+django_basic_auth_ip_whitelist-0.1.post2.dist-info/METADATA,sha256=2lSG0WzLI0mTnCozL6eSa7Npy5mVHPlxEWPfNtcVzYU,3457
+django_basic_auth_ip_whitelist-0.1.post2.dist-info/RECORD,,
+django_basic_auth_ip_whitelist-0.1.post2.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+django_basic_auth_ip_whitelist-0.1.post2.dist-info/top_level.txt,sha256=aYxH9Td1BWraeOwCTVipSQQWzX9XfdlbLA7lKTuJlEw,6
