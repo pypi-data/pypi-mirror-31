@@ -1,0 +1,26 @@
+enaml>=0.10
+twisted
+enamlx
+pyqtgraph
+qtconsole
+pyserial>=3.4
+jsonpickle
+lxml
+
+[:python_version < "3.0"]
+future
+faulthandler
+qt4reactor
+
+[:python_version >= "3.0"]
+PyQt5
+qt5reactor
+
+[:sys_platform == "linux"]
+pycups
+
+[:sys_platform == "linux2"]
+pycups
+
+[:sys_platform == "win32"]
+pywin32
