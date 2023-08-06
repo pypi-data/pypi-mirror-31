@@ -1,0 +1,16 @@
+numpy
+scikit-image
+scikit-learn
+scipy
+matplotlib
+h5py
+pandas
+opencv-python
+tensorflow-hub
+
+# Dev/Deployment
+sphinx
+sphinx_rtd_theme
+nose
+coverage
+pypi-publisher
