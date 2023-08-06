@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: streamfig
+Version: 1
+Summary: Small library to draw stream graphs into FIG format
+Home-page: https://github.com/TiphaineV/streamfig
+Author: Tiphaine Viard
+Author-email: tiphaine.viard@riken.jp
+License: UNKNOWN
+Download-URL: https://github.com/TiphaineV/streamfig/archive/1.tar.gz
+Description: UNKNOWN
+Keywords: stream graphs,visualization,temporal networks,xfig
+Platform: UNKNOWN
