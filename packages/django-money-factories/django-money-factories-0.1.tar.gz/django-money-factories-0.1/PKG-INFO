@@ -1,0 +1,28 @@
+Metadata-Version: 1.1
+Name: django-money-factories
+Version: 0.1
+Summary: Factories for Django-Money Models
+Home-page: https://github.com/django-money/django-money-factories
+Author: Anthony Monthe (ZuluPro)
+Author-email: anthony.monthe@gmail.com
+License: BSD License
+Description-Content-Type: UNKNOWN
+Description: ======================
+        django-money-factories
+        ======================
+        
+        Factories for `Django-money`_.
+        
+        .. _`Django-money`: https://github.com/django-money/django-money
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Framework :: Django

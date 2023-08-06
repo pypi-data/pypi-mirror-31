@@ -1,0 +1,10 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+djmoney_factories.py
+setup.py
+django_money_factories.egg-info/PKG-INFO
+django_money_factories.egg-info/SOURCES.txt
+django_money_factories.egg-info/dependency_links.txt
+django_money_factories.egg-info/requires.txt
+django_money_factories.egg-info/top_level.txt
