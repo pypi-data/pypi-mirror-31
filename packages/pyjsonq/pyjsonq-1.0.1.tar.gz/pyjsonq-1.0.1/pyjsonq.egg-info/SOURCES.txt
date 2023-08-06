@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+pyjsonq/__init__.py
+pyjsonq/matcher.py
+pyjsonq/query.py
+pyjsonq.egg-info/PKG-INFO
+pyjsonq.egg-info/SOURCES.txt
+pyjsonq.egg-info/dependency_links.txt
+pyjsonq.egg-info/not-zip-safe
+pyjsonq.egg-info/top_level.txt
