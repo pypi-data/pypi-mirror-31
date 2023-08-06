@@ -1,0 +1,16 @@
+docopt
+pandas
+
+[dev]
+aiohttp
+boto3
+colour
+jinja2
+markdown
+plotly
+pytest
+sanic
+squarify
+twine
+watchdog
+libsass
