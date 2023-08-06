@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+SipHash.cpp
+build_csiphash24.py
+setup.py
+csiphash24/__init__.py
+csiphash24.egg-info/PKG-INFO
+csiphash24.egg-info/SOURCES.txt
+csiphash24.egg-info/dependency_links.txt
+csiphash24.egg-info/requires.txt
+csiphash24.egg-info/top_level.txt
