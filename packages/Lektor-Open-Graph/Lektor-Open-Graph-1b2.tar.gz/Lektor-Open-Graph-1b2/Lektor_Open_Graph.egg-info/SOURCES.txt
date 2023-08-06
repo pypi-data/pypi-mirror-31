@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.rst
+lektor_open_graph.py
+setup.cfg
+setup.py
+Lektor_Open_Graph.egg-info/PKG-INFO
+Lektor_Open_Graph.egg-info/SOURCES.txt
+Lektor_Open_Graph.egg-info/dependency_links.txt
+Lektor_Open_Graph.egg-info/entry_points.txt
+Lektor_Open_Graph.egg-info/top_level.txt
