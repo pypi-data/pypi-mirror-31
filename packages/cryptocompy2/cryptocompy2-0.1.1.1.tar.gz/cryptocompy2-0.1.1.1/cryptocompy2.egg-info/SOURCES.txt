@@ -1,0 +1,15 @@
+README.md
+setup.cfg
+setup.py
+cryptocompy2/__init__.py
+cryptocompy2/coin.py
+cryptocompy2/helper_functions.py
+cryptocompy2/mining.py
+cryptocompy2/price.py
+cryptocompy2/rest.py
+cryptocompy2/top.py
+cryptocompy2.egg-info/PKG-INFO
+cryptocompy2.egg-info/SOURCES.txt
+cryptocompy2.egg-info/dependency_links.txt
+cryptocompy2.egg-info/requires.txt
+cryptocompy2.egg-info/top_level.txt
