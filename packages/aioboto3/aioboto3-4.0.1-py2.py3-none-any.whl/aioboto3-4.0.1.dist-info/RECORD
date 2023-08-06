@@ -1,0 +1,11 @@
+aioboto3/__init__.py,sha256=vgkQg8qq8EwBfkhjczSR-mXjdWI2WGyP6LLgOFZLs8k,2450
+aioboto3/resources.py,sha256=c9QFWRgG4CFr2YRvcYJkF5iUR6ovyLtGFrA9fNMLZI0,9398
+aioboto3/session.py,sha256=7hG24sBygK9re-kc_FrB6bUEELvtffeKGELq1aQQmE4,4567
+aioboto3/dynamodb/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aioboto3/dynamodb/table.py,sha256=8dnbCMHxKhZAK1r9kNMgep-OkaXnSQH1MFaSx8KAHNc,4945
+aioboto3/s3/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aioboto3/s3/inject.py,sha256=BWl_7IWI4ibv2uHsGAAJZnEuqd13wfrwn05KlZtDrec,5035
+aioboto3-4.0.1.dist-info/METADATA,sha256=pGguHWDIFCQjt5amuEVq5cR8vzbXTU3aIhJe4t8VZEQ,5780
+aioboto3-4.0.1.dist-info/RECORD,,
+aioboto3-4.0.1.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+aioboto3-4.0.1.dist-info/top_level.txt,sha256=kgXwa5TIUUH4opHDedMR_Ym1HIokNw7Z6j87ujs0o_Q,9
