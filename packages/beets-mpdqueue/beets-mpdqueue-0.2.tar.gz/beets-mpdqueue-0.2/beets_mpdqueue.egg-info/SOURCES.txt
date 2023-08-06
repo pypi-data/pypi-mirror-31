@@ -1,0 +1,8 @@
+README.md
+setup.py
+beets_mpdqueue.egg-info/PKG-INFO
+beets_mpdqueue.egg-info/SOURCES.txt
+beets_mpdqueue.egg-info/dependency_links.txt
+beets_mpdqueue.egg-info/top_level.txt
+beetsplug/__init__.py
+beetsplug/mpdqueue.py
