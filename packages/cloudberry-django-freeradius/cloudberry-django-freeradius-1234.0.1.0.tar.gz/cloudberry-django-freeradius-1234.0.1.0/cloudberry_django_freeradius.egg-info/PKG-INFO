@@ -1,0 +1,52 @@
+Metadata-Version: 1.1
+Name: cloudberry-django-freeradius
+Version: 1234.0.1.0
+Summary: Django reusable app that provides an admin interface to a freeradius database
+Home-page: https://github.com/innovationgarage/django-freeradius
+Author: Fiorella De Luca
+Author-email: deluca_fiorella@yahoo.it
+License: BSD
+Download-URL: https://github.com/openwisp/django-freeradius/releases
+Description: django-freeradius
+        =================
+        
+        .. image:: https://travis-ci.org/openwisp/django-freeradius.svg
+           :target: https://travis-ci.org/openwisp/django-freeradius
+        
+        .. image:: https://coveralls.io/repos/openwisp/django-freeradius/badge.svg
+          :target: https://coveralls.io/r/openwisp/django-freeradius
+        
+        .. image:: https://requires.io/github/openwisp/django-freeradius/requirements.svg?branch=master
+           :target: https://requires.io/github/openwisp/django-freeradius/requirements/?branch=master
+           :alt: Requirements Status
+        
+        .. image:: https://badge.fury.io/py/django-freeradius.svg
+           :target: http://badge.fury.io/py/django-freeradius
+        
+        ------------
+        
+        Django-freeradius is part of the `OpenWISP project <http://openwisp.org>`_.
+        
+        .. image:: http://netjsonconfig.openwisp.org/en/latest/_images/openwisp.org.svg
+          :target: http://openwisp.org
+        
+        **django-freeradius** is Django reusable app that provides an admin interface to a `freeradius <http://freeradius.org/>`_ database.
+        
+        `Documentation <http://django-freeradius.readthedocs.io/en/latest/>`_ |
+        `Change log <https://github.com/openwisp/django-freeradius/blob/master/CHANGES.rst>`_ |
+        `Support channels <http://openwisp.org/support.html>`_ |
+        `Issue Tracker <https://github.com/openwisp/django-freeradius/issues>`_ |
+        `License <https://github.com/openwisp/django-freeradius/blob/master/LICENSE>`_
+        
+Keywords: django,freeradius,radius,AAA,openwisp
+Platform: Platform Indipendent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Web Environment
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Framework :: Django
+Classifier: Topic :: System :: Networking
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
