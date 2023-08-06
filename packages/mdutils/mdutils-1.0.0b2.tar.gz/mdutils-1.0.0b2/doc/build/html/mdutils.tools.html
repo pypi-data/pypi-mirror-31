@@ -1,0 +1,577 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>mdutils.tools package &mdash; mdutils 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="mdutils.fileutils package" href="mdutils.fileutils.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> mdutils
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">mdutils</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="mdutils.html">mdutils package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="mdutils.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="mdutils.fileutils.html">mdutils.fileutils package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">mdutils.tools package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="mdutils.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mdutils.html#module-mdutils.mdutils">mdutils.mdutils module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mdutils.html#module-mdutils">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">mdutils</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">mdutils</a> &raquo;</li>
+        
+          <li><a href="mdutils.html">mdutils package</a> &raquo;</li>
+        
+      <li>mdutils.tools package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/mdutils.tools.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="mdutils-tools-package">
+<h1>mdutils.tools package<a class="headerlink" href="#mdutils-tools-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-mdutils.tools.tools">
+<span id="mdutils-tools-tools-module"></span><h2>mdutils.tools.tools module<a class="headerlink" href="#module-mdutils.tools.tools" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="mdutils.tools.tools.Header">
+<em class="property">class </em><code class="descclassname">mdutils.tools.tools.</code><code class="descname">Header</code><a class="reference internal" href="_modules/mdutils/tools/tools.html#Header"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mdutils.tools.tools.Header" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Contain the main methods to define Headers on a Markdown file.</p>
+<p><strong>Features available:</strong></p>
+<ul class="simple">
+<li>Create Markdown Titles: _atx_ and _setext_ formats are available.</li>
+<li>Create Header Hanchors.</li>
+<li>Auto generate a table of contents.</li>
+<li>Create Tables.</li>
+<li><strong>Bold</strong>, <em>italics</em>, <code class="docutils literal notranslate"><span class="pre">inline_code</span></code> text converters.</li>
+<li>Align text to center.</li>
+<li>Add color to text.</li>
+</ul>
+<dl class="staticmethod">
+<dt id="mdutils.tools.tools.Header.atx_level_1">
+<em class="property">static </em><code class="descname">atx_level_1</code><span class="sig-paren">(</span><em>title</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mdutils/tools/tools.html#Header.atx_level_1"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mdutils.tools.tools.Header.atx_level_1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="staticmethod">
+<dt id="mdutils.tools.tools.Header.atx_level_2">
+<em class="property">static </em><code class="descname">atx_level_2</code><span class="sig-paren">(</span><em>title</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mdutils/tools/tools.html#Header.atx_level_2"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mdutils.tools.tools.Header.atx_level_2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="staticmethod">
+<dt id="mdutils.tools.tools.Header.atx_level_3">
+<em class="property">static </em><code class="descname">atx_level_3</code><span class="sig-paren">(</span><em>title</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mdutils/tools/tools.html#Header.atx_level_3"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mdutils.tools.tools.Header.atx_level_3" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="staticmethod">
+<dt id="mdutils.tools.tools.Header.atx_level_4">
+<em class="property">static </em><code class="descname">atx_level_4</code><span class="sig-paren">(</span><em>title</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mdutils/tools/tools.html#Header.atx_level_4"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mdutils.tools.tools.Header.atx_level_4" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="staticmethod">
+<dt id="mdutils.tools.tools.Header.atx_level_5">
+<em class="property">static </em><code class="descname">atx_level_5</code><span class="sig-paren">(</span><em>title</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mdutils/tools/tools.html#Header.atx_level_5"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mdutils.tools.tools.Header.atx_level_5" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="staticmethod">
+<dt id="mdutils.tools.tools.Header.atx_level_6">
+<em class="property">static </em><code class="descname">atx_level_6</code><span class="sig-paren">(</span><em>title</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mdutils/tools/tools.html#Header.atx_level_6"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mdutils.tools.tools.Header.atx_level_6" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="mdutils.tools.tools.Header.choose_header">
+<code class="descname">choose_header</code><span class="sig-paren">(</span><em>level</em>, <em>title</em>, <em>style='atx'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mdutils/tools/tools.html#Header.choose_header"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mdutils.tools.tools.Header.choose_header" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method choose the style and the header level.</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Examples:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">mdutils.tools.tools</span> <span class="k">import</span> <span class="n">Header</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">createHeaders</span> <span class="o">=</span> <span class="n">Header</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">createHeaders</span><span class="o">.</span><span class="n">choose_header</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;New Header&#39;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;atx&#39;</span><span class="p">)</span>
+<span class="go">&#39;\n# New Header\n&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">createHeaders</span><span class="o">.</span><span class="n">choose_header</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Another Header 1&#39;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;setext&#39;</span><span class="p">)</span>
+<span class="go">&#39;\nAnother Header 1\n----------------\n&#39;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>level</strong> – Header Level, For Atx-style 1 til 6. For Setext-style 1 and 2 header levels.</li>
+<li><strong>title</strong> – Header Title.</li>
+<li><strong>style</strong> – Header Style atx or setext.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="mdutils.tools.tools.Header.header_anchor">
+<em class="property">static </em><code class="descname">header_anchor</code><span class="sig-paren">(</span><em>text</em>, <em>link=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mdutils/tools/tools.html#Header.header_anchor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mdutils.tools.tools.Header.header_anchor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an internal link of a defined Header level 1 or level 2 in the markdown file.</p>
+<p>Giving a text string an text link you can create an internal link of already existing header. If the <code class="docutils literal notranslate"><span class="pre">link</span></code>
+string does not contain ‘#’, it will creates an automatic link of the type <code class="docutils literal notranslate"><span class="pre">#title-1</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>text</strong> (<em>str</em>) – it is the text that will be displayed.</li>
+<li><strong>link</strong> (<em>str</em>) – it is the internal link.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><code class="docutils literal notranslate"><span class="pre">'[text](#link)'</span></code></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">string</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example:</strong> [Title 1](#title-1)</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="mdutils.tools.tools.Header.setext_level_1">
+<em class="property">static </em><code class="descname">setext_level_1</code><span class="sig-paren">(</span><em>title</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mdutils/tools/tools.html#Header.setext_level_1"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mdutils.tools.tools.Header.setext_level_1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="staticmethod">
+<dt id="mdutils.tools.tools.Header.setext_level_2">
+<em class="property">static </em><code class="descname">setext_level_2</code><span class="sig-paren">(</span><em>title</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mdutils/tools/tools.html#Header.setext_level_2"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mdutils.tools.tools.Header.setext_level_2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="mdutils.tools.tools.Table">
+<em class="property">class </em><code class="descclassname">mdutils.tools.tools.</code><code class="descname">Table</code><a class="reference internal" href="_modules/mdutils/tools/tools.html#Table"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mdutils.tools.tools.Table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="mdutils.tools.tools.Table.create_table">
+<code class="descname">create_table</code><span class="sig-paren">(</span><em>columns</em>, <em>rows</em>, <em>text</em>, <em>text_align='center'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mdutils/tools/tools.html#Table.create_table"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mdutils.tools.tools.Table.create_table" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="mdutils.tools.tools.TableOfContents">
+<em class="property">class </em><code class="descclassname">mdutils.tools.tools.</code><code class="descname">TableOfContents</code><a class="reference internal" href="_modules/mdutils/tools/tools.html#TableOfContents"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mdutils.tools.tools.TableOfContents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="mdutils.tools.tools.TableOfContents.create_table_of_contents">
+<code class="descname">create_table_of_contents</code><span class="sig-paren">(</span><em>array_of_title_contents</em>, <em>depth=1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mdutils/tools/tools.html#TableOfContents.create_table_of_contents"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mdutils.tools.tools.TableOfContents.create_table_of_contents" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method can create a table of contents using an array of the different titles. The deep can be changed.
+Only accepts 1 or 2.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>array_of_title_contents</strong> (<em>list</em>) – a string list with the different headers.</li>
+<li><strong>depth</strong> (<em>int</em>) – allows to include Headers 1 and 2 or only Headers of level 1. Possibly values 1 or 2.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">return a string ready to be written to a Markdown file.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">str</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="mdutils.tools.tools.TextUtils">
+<em class="property">class </em><code class="descclassname">mdutils.tools.tools.</code><code class="descname">TextUtils</code><a class="reference internal" href="_modules/mdutils/tools/tools.html#TextUtils"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mdutils.tools.tools.TextUtils" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class helps to create bold, italics and change color text.</p>
+<dl class="staticmethod">
+<dt id="mdutils.tools.tools.TextUtils.bold">
+<em class="property">static </em><code class="descname">bold</code><span class="sig-paren">(</span><em>text</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mdutils/tools/tools.html#TextUtils.bold"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mdutils.tools.tools.TextUtils.bold" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bold text converter.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>text</strong> (<em>str</em>) – a text string.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a string like this example: <code class="docutils literal notranslate"><span class="pre">'**text**'</span></code></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="mdutils.tools.tools.TextUtils.center_text">
+<em class="property">static </em><code class="descname">center_text</code><span class="sig-paren">(</span><em>text</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mdutils/tools/tools.html#TextUtils.center_text"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mdutils.tools.tools.TextUtils.center_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Place a text string to center.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>text</strong> (<em>str</em>) – a text string.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a string like this exampple: <code class="docutils literal notranslate"><span class="pre">'&lt;center&gt;text&lt;/center&gt;'</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="mdutils.tools.tools.TextUtils.inline_code">
+<em class="property">static </em><code class="descname">inline_code</code><span class="sig-paren">(</span><em>text</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mdutils/tools/tools.html#TextUtils.inline_code"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mdutils.tools.tools.TextUtils.inline_code" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inline code text converter.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>text</strong> (<em>str</em>) – a text string.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a string like this example: <code class="docutils literal notranslate"><span class="pre">'`text`'</span></code></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="mdutils.tools.tools.TextUtils.italics">
+<em class="property">static </em><code class="descname">italics</code><span class="sig-paren">(</span><em>text</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mdutils/tools/tools.html#TextUtils.italics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mdutils.tools.tools.TextUtils.italics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Italics text converter.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>text</strong> (<em>str</em>) – a text string.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a string like this example: <code class="docutils literal notranslate"><span class="pre">'_text_'</span></code></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="mdutils.tools.tools.TextUtils.text_color">
+<em class="property">static </em><code class="descname">text_color</code><span class="sig-paren">(</span><em>text</em>, <em>color='black'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mdutils/tools/tools.html#TextUtils.text_color"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mdutils.tools.tools.TextUtils.text_color" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change text color.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>text</strong> (<em>str</em>) – it is the text that will be changed its color.</li>
+<li><strong>color</strong> (<em>str</em>) – it is the text color: <code class="docutils literal notranslate"><span class="pre">'orange'</span></code>, <code class="docutils literal notranslate"><span class="pre">'blue'</span></code>, <code class="docutils literal notranslate"><span class="pre">'red'</span></code>…
+or a <strong>RGB</strong> color such as <code class="docutils literal notranslate"><span class="pre">'#ffce00'</span></code>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">a string like this one: <code class="docutils literal notranslate"><span class="pre">'&lt;font</span> <span class="pre">color='color'&gt;</span> <span class="pre">'text'</span> <span class="pre">&lt;/font&gt;'</span></code></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">str</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="mdutils.tools.tools.TextUtils.text_external_link">
+<em class="property">static </em><code class="descname">text_external_link</code><span class="sig-paren">(</span><em>text</em>, <em>link=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mdutils/tools/tools.html#TextUtils.text_external_link"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mdutils.tools.tools.TextUtils.text_external_link" title="Permalink to this definition">¶</a></dt>
+<dd><p>Using this method can be created an external link of a file or a web page.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>text</strong> (<em>str</em>) – Text to be displayed.</li>
+<li><strong>link</strong> (<em>str</em>) – External Link.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">return a string like this: <code class="docutils literal notranslate"><span class="pre">'[Text</span> <span class="pre">to</span> <span class="pre">be</span> <span class="pre">shown](https://write.link.com)'</span></code></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">str</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="mdutils.tools.tools.TextUtils.text_format">
+<code class="descname">text_format</code><span class="sig-paren">(</span><em>text</em>, <em>bold_italics_code=''</em>, <em>color='black'</em>, <em>align=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mdutils/tools/tools.html#TextUtils.text_format"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mdutils.tools.tools.TextUtils.text_format" title="Permalink to this definition">¶</a></dt>
+<dd><p>Text format helps to write multiple text format such as bold, italics and color.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>text</strong> (<em>str</em>) – it is a string in which will be added the mew format</li>
+<li><strong>bold_italics_code</strong> (<em>str</em>) – using <cite>‘b’</cite>: <strong>bold</strong>, <cite>‘i’</cite>: _italics_ and <cite>‘c’</cite>: <cite>inline_code</cite>.</li>
+<li><strong>color</strong> (<em>str</em>) – Can change text color. For example: ‘red’, ‘green, ‘orange’…</li>
+<li><strong>align</strong> (<em>str</em>) – Using this parameter you can align text.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">return a string with the new text format.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">str</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">mdutils.tools.tools</span> <span class="k">import</span> <span class="n">TextUtils</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">textUtils</span> <span class="o">=</span> <span class="n">TextUtils</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">textUtils</span><span class="o">.</span><span class="n">text_format</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;Some Text Here&#39;</span><span class="p">,</span> <span class="n">bold_italics_code</span><span class="o">=</span><span class="s1">&#39;bi&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">align</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
+<span class="go">&#39;_**&lt;center&gt;&lt;font color=&quot;red&quot;&gt; Some Text Here &lt;/font&gt;&lt;/center&gt;**_&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-mdutils.tools">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-mdutils.tools" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="mdutils.fileutils.html" class="btn btn-neutral" title="mdutils.fileutils package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Dídac Coll.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+</body>
+</html>

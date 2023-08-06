@@ -1,0 +1,557 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>mdutils.tools.tools &mdash; mdutils 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> mdutils
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">mdutils</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">mdutils</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>mdutils.tools.tools</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for mdutils.tools.tools</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Python</span>
+<span class="c1">#</span>
+<span class="c1"># This module implements a text class that allows to modify and create text on Markdown files.</span>
+<span class="c1">#</span>
+<span class="c1"># This file is part of mdutils. https://github.com/didix21/mdutils</span>
+<span class="c1">#</span>
+<span class="c1"># MIT License: (C) 2018 Dídac Coll</span>
+
+
+<span class="c1"># noinspection SpellCheckingInspection</span>
+<div class="viewcode-block" id="Header"><a class="viewcode-back" href="../../../mdutils.tools.html#mdutils.tools.tools.Header">[docs]</a><span class="k">class</span> <span class="nc">Header</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Contain the main methods to define Headers on a Markdown file.</span>
+
+<span class="sd">    **Features available:**</span>
+
+<span class="sd">    * Create Markdown Titles: _atx_ and _setext_ formats are available.</span>
+<span class="sd">    * Create Header Hanchors.</span>
+<span class="sd">    * Auto generate a table of contents.</span>
+<span class="sd">    * Create Tables.</span>
+<span class="sd">    * **Bold**, *italics*, ``inline_code`` text converters.</span>
+<span class="sd">    * Align text to center.</span>
+<span class="sd">    * Add color to text.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># ********************************************************************</span>
+    <span class="c1"># *                             Atx-Style                            *</span>
+    <span class="c1"># ********************************************************************</span>
+<div class="viewcode-block" id="Header.atx_level_1"><a class="viewcode-back" href="../../../mdutils.tools.html#mdutils.tools.tools.Header.atx_level_1">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">atx_level_1</span><span class="p">(</span><span class="n">title</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1"># &#39;</span> <span class="o">+</span> <span class="n">title</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span></div>
+
+<div class="viewcode-block" id="Header.atx_level_2"><a class="viewcode-back" href="../../../mdutils.tools.html#mdutils.tools.tools.Header.atx_level_2">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">atx_level_2</span><span class="p">(</span><span class="n">title</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">## &#39;</span> <span class="o">+</span> <span class="n">title</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span></div>
+
+<div class="viewcode-block" id="Header.atx_level_3"><a class="viewcode-back" href="../../../mdutils.tools.html#mdutils.tools.tools.Header.atx_level_3">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">atx_level_3</span><span class="p">(</span><span class="n">title</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">### &#39;</span> <span class="o">+</span> <span class="n">title</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span></div>
+
+<div class="viewcode-block" id="Header.atx_level_4"><a class="viewcode-back" href="../../../mdutils.tools.html#mdutils.tools.tools.Header.atx_level_4">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">atx_level_4</span><span class="p">(</span><span class="n">title</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">#### &#39;</span> <span class="o">+</span> <span class="n">title</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span></div>
+
+<div class="viewcode-block" id="Header.atx_level_5"><a class="viewcode-back" href="../../../mdutils.tools.html#mdutils.tools.tools.Header.atx_level_5">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">atx_level_5</span><span class="p">(</span><span class="n">title</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">##### &#39;</span> <span class="o">+</span> <span class="n">title</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span></div>
+
+<div class="viewcode-block" id="Header.atx_level_6"><a class="viewcode-back" href="../../../mdutils.tools.html#mdutils.tools.tools.Header.atx_level_6">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">atx_level_6</span><span class="p">(</span><span class="n">title</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">###### &#39;</span> <span class="o">+</span> <span class="n">title</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span></div>
+
+    <span class="c1"># ********************************************************************</span>
+    <span class="c1"># *                          Setext-Style                            *</span>
+    <span class="c1"># ********************************************************************</span>
+<div class="viewcode-block" id="Header.setext_level_1"><a class="viewcode-back" href="../../../mdutils.tools.html#mdutils.tools.tools.Header.setext_level_1">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">setext_level_1</span><span class="p">(</span><span class="n">title</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="n">title</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s1">&#39;=&#39;</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">title</span><span class="p">])</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span></div>
+
+<div class="viewcode-block" id="Header.setext_level_2"><a class="viewcode-back" href="../../../mdutils.tools.html#mdutils.tools.tools.Header.setext_level_2">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">setext_level_2</span><span class="p">(</span><span class="n">title</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="n">title</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s1">&#39;-&#39;</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">title</span><span class="p">])</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span></div>
+
+<div class="viewcode-block" id="Header.header_anchor"><a class="viewcode-back" href="../../../mdutils.tools.html#mdutils.tools.tools.Header.header_anchor">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">header_anchor</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">link</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Creates an internal link of a defined Header level 1 or level 2 in the markdown file.</span>
+
+<span class="sd">        Giving a text string an text link you can create an internal link of already existing header. If the ``link``</span>
+<span class="sd">        string does not contain &#39;#&#39;, it will creates an automatic link of the type ``#title-1``.</span>
+
+<span class="sd">        :param text: it is the text that will be displayed.</span>
+<span class="sd">        :param link: it is the internal link.</span>
+<span class="sd">        :return: ``&#39;[text](#link)&#39;``</span>
+<span class="sd">        :type text: str</span>
+<span class="sd">        :type link: str</span>
+<span class="sd">        :rtype: string</span>
+
+<span class="sd">        **Example:** [Title 1](#title-1)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">link</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">link</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;#&#39;</span><span class="p">:</span>
+                <span class="n">link</span> <span class="o">=</span> <span class="n">link</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">link</span> <span class="o">=</span> <span class="s1">&#39;#&#39;</span> <span class="o">+</span> <span class="n">link</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">link</span> <span class="o">=</span> <span class="s1">&#39;#&#39;</span> <span class="o">+</span> <span class="n">text</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="s1">&#39;[&#39;</span> <span class="o">+</span> <span class="n">text</span> <span class="o">+</span> <span class="s1">&#39;](&#39;</span> <span class="o">+</span> <span class="n">link</span> <span class="o">+</span> <span class="s1">&#39;)&#39;</span></div>
+
+<div class="viewcode-block" id="Header.choose_header"><a class="viewcode-back" href="../../../mdutils.tools.html#mdutils.tools.tools.Header.choose_header">[docs]</a>    <span class="k">def</span> <span class="nf">choose_header</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;atx&#39;</span><span class="p">):</span>
+        <span class="c1"># noinspection SpellCheckingInspection</span>
+        <span class="sd">&quot;&quot;&quot; This method choose the style and the header level.</span>
+
+<span class="sd">                    :Examples:</span>
+<span class="sd">                    &gt;&gt;&gt; from mdutils.tools.tools import Header</span>
+<span class="sd">                    &gt;&gt;&gt; createHeaders = Header()</span>
+<span class="sd">                    &gt;&gt;&gt; createHeaders.choose_header(level=1, title=&#39;New Header&#39;, style=&#39;atx&#39;)</span>
+<span class="sd">                    &#39;\\n# New Header\\n&#39;</span>
+
+<span class="sd">                    &gt;&gt;&gt; createHeaders.choose_header(level=2, title=&#39;Another Header 1&#39;, style=&#39;setext&#39;)</span>
+<span class="sd">                    &#39;\\nAnother Header 1\\n----------------\\n&#39;</span>
+
+<span class="sd">                :param level: Header Level, For Atx-style 1 til 6. For Setext-style 1 and 2 header levels.</span>
+<span class="sd">                :param title: Header Title.</span>
+<span class="sd">                :param style: Header Style atx or setext.</span>
+<span class="sd">                :return:</span>
+<span class="sd">                &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">style</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;atx&#39;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">level</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">atx_level_1</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">level</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">atx_level_2</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">level</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">atx_level_3</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">level</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">atx_level_4</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">level</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">atx_level_5</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">level</span> <span class="o">==</span> <span class="mi">6</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">atx_level_6</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">style</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;setext&#39;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">level</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">setext_level_1</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">level</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">setext_level_2</span><span class="p">(</span><span class="n">title</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="TableOfContents"><a class="viewcode-back" href="../../../mdutils.tools.html#mdutils.tools.tools.TableOfContents">[docs]</a><span class="k">class</span> <span class="nc">TableOfContents</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">_loop_through</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">elements</span><span class="p">,</span> <span class="n">tab</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">depth</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Method that go through a list of elements that contain strings and other list and return a string.</span>
+
+<span class="sd">        The returned string is ready to be written inside a markdown file in order to create a table of contents.</span>
+
+<span class="sd">        :param elements: contain all the headers defined on the main class.</span>
+<span class="sd">        :param tab: Inserts tabulations.</span>
+<span class="sd">        :param depth: allows to include Headers 1 and 2 or only Headers of level 1. Possibly values 1 or 2.</span>
+<span class="sd">        :type elements: list</span>
+<span class="sd">        :type tab: str</span>
+<span class="sd">        :type depth: int</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">elements_to_string</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">elements</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">item</span> <span class="ow">and</span> <span class="n">depth</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">tab</span> <span class="o">==</span> <span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">:</span>
+                        <span class="n">elements_to_string</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_loop_through</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">tab</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t\t</span><span class="s1">&#39;</span><span class="p">)</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">elements_to_string</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_loop_through</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">tab</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">elements_to_string</span> <span class="o">+=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="n">tab</span> <span class="o">+</span> <span class="s1">&#39;* [&#39;</span> <span class="o">+</span> <span class="n">item</span> <span class="o">+</span> <span class="s1">&#39;](#&#39;</span> <span class="o">+</span> <span class="n">item</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;)&#39;</span>
+
+        <span class="k">return</span> <span class="n">elements_to_string</span>
+
+<div class="viewcode-block" id="TableOfContents.create_table_of_contents"><a class="viewcode-back" href="../../../mdutils.tools.html#mdutils.tools.tools.TableOfContents.create_table_of_contents">[docs]</a>    <span class="k">def</span> <span class="nf">create_table_of_contents</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">array_of_title_contents</span><span class="p">,</span> <span class="n">depth</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method can create a table of contents using an array of the different titles. The deep can be changed.</span>
+<span class="sd">        Only accepts 1 or 2.</span>
+
+<span class="sd">        :param array_of_title_contents: a string list with the different headers.</span>
+<span class="sd">        :type array_of_title_contents: list</span>
+<span class="sd">        :param depth: allows to include Headers 1 and 2 or only Headers of level 1. Possibly values 1 or 2.</span>
+<span class="sd">        :type depth: int</span>
+<span class="sd">        :return: return a string ready to be written to a Markdown file.</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">table_of_contents</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="n">table_of_contents</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_loop_through</span><span class="p">(</span><span class="n">array_of_title_contents</span><span class="p">,</span> <span class="n">depth</span><span class="o">=</span><span class="n">depth</span><span class="p">)</span>
+        <span class="n">table_of_contents</span> <span class="o">+=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
+
+        <span class="k">return</span> <span class="n">table_of_contents</span></div></div>
+
+
+<div class="viewcode-block" id="Table"><a class="viewcode-back" href="../../../mdutils.tools.html#mdutils.tools.tools.Table">[docs]</a><span class="k">class</span> <span class="nc">Table</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rows</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_align</span><span class="p">(</span><span class="n">columns</span><span class="p">,</span> <span class="n">text_align</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; This private method it is in charfe of aligning text of a table.</span>
+
+<span class="sd">        - notes: more information about `text_align`</span>
+
+<span class="sd">        :param columns: it is the number of columns.</span>
+<span class="sd">        :param text_align: it is a string giving information about the alignment that is wanted.  text_align can take</span>
+<span class="sd">                           the following parameters: ``&#39;center&#39;``, ``&#39;right&#39;`` and ``&#39;left&#39;``.</span>
+<span class="sd">        :return: returns a string of type ``&#39;| :---: | :---: | :---: |&#39;``.</span>
+<span class="sd">        :type columns: int</span>
+<span class="sd">        :type text_align: str</span>
+<span class="sd">        :rtype: str</span>
+
+<span class="sd">        .. note:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">column_align_string</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+
+        <span class="k">if</span> <span class="n">text_align</span> <span class="o">==</span> <span class="s1">&#39;center&#39;</span><span class="p">:</span>
+
+            <span class="n">column_align_string</span> <span class="o">=</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s1">&#39; :---: |&#39;</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">columns</span><span class="p">)])</span>
+
+        <span class="k">elif</span> <span class="n">text_align</span> <span class="o">==</span> <span class="s1">&#39;left&#39;</span><span class="p">:</span>
+
+            <span class="n">column_align_string</span> <span class="o">=</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s1">&#39; :--- |&#39;</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">columns</span><span class="p">)])</span>
+
+        <span class="k">elif</span> <span class="n">text_align</span> <span class="o">==</span> <span class="s1">&#39;right&#39;</span><span class="p">:</span>
+
+            <span class="n">column_align_string</span> <span class="o">=</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s1">&#39; ---: |&#39;</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">columns</span><span class="p">)])</span>
+
+        <span class="k">return</span> <span class="n">column_align_string</span>
+
+<div class="viewcode-block" id="Table.create_table"><a class="viewcode-back" href="../../../mdutils.tools.html#mdutils.tools.tools.Table.create_table">[docs]</a>    <span class="k">def</span> <span class="nf">create_table</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">columns</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">text_align</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">columns</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rows</span> <span class="o">=</span> <span class="n">rows</span>
+        <span class="n">table</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="n">column_align_string</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_align</span><span class="p">(</span><span class="n">columns</span><span class="p">,</span> <span class="n">text_align</span><span class="p">)</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">rows</span> <span class="o">+</span> <span class="mi">2</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">r</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">table</span> <span class="o">+=</span> <span class="n">column_align_string</span>                    <span class="c1"># Row align, Example: &#39;| :---: | :---: | ... | \n&#39;</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">table</span> <span class="o">+=</span> <span class="s1">&#39;|&#39;</span>
+                <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">columns</span><span class="p">):</span>
+                    <span class="n">table</span> <span class="o">+=</span> <span class="n">text</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span>
+                    <span class="n">index</span> <span class="o">+=</span> <span class="mi">1</span>
+
+            <span class="n">table</span> <span class="o">+=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
+
+        <span class="k">return</span> <span class="n">table</span></div></div>
+
+
+<div class="viewcode-block" id="TextUtils"><a class="viewcode-back" href="../../../mdutils.tools.html#mdutils.tools.tools.TextUtils">[docs]</a><span class="k">class</span> <span class="nc">TextUtils</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This class helps to create bold, italics and change color text.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="TextUtils.bold"><a class="viewcode-back" href="../../../mdutils.tools.html#mdutils.tools.tools.TextUtils.bold">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">bold</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Bold text converter.</span>
+
+<span class="sd">        :param text: a text string.</span>
+<span class="sd">        :type text: str</span>
+<span class="sd">        :return: a string like this example: ``&#39;**text**&#39;``</span>
+<span class="sd">        :rtype: str&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="s1">&#39;**&#39;</span> <span class="o">+</span> <span class="n">text</span> <span class="o">+</span> <span class="s1">&#39;**&#39;</span></div>
+
+<div class="viewcode-block" id="TextUtils.italics"><a class="viewcode-back" href="../../../mdutils.tools.html#mdutils.tools.tools.TextUtils.italics">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">italics</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Italics text converter.</span>
+
+<span class="sd">        :param text: a text string.</span>
+<span class="sd">        :type text: str</span>
+<span class="sd">        :return: a string like this example: ``&#39;_text_&#39;``</span>
+<span class="sd">        :rtype: str&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="n">text</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span></div>
+
+<div class="viewcode-block" id="TextUtils.inline_code"><a class="viewcode-back" href="../../../mdutils.tools.html#mdutils.tools.tools.TextUtils.inline_code">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">inline_code</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Inline code text converter.</span>
+
+<span class="sd">        :param text: a text string.</span>
+<span class="sd">        :type text: str</span>
+<span class="sd">        :return: a string like this example: ``&#39;`text`&#39;``</span>
+<span class="sd">        :rtype: str&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="s1">&#39;`&#39;</span> <span class="o">+</span> <span class="n">text</span> <span class="o">+</span> <span class="s1">&#39;`&#39;</span></div>
+
+<div class="viewcode-block" id="TextUtils.center_text"><a class="viewcode-back" href="../../../mdutils.tools.html#mdutils.tools.tools.TextUtils.center_text">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">center_text</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Place a text string to center.</span>
+
+<span class="sd">        :param text: a text string.</span>
+<span class="sd">        :type text: str</span>
+<span class="sd">        :return: a string like this exampple: ``&#39;&lt;center&gt;text&lt;/center&gt;&#39;``</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="s1">&#39;&lt;center&gt;&#39;</span> <span class="o">+</span> <span class="n">text</span> <span class="o">+</span> <span class="s1">&#39;&lt;/center&gt;&#39;</span></div>
+
+<div class="viewcode-block" id="TextUtils.text_color"><a class="viewcode-back" href="../../../mdutils.tools.html#mdutils.tools.tools.TextUtils.text_color">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">text_color</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Change text color.</span>
+
+<span class="sd">        :param text: it is the text that will be changed its color.</span>
+<span class="sd">        :param color: it is the text color: ``&#39;orange&#39;``, ``&#39;blue&#39;``, ``&#39;red&#39;``...</span>
+<span class="sd">                      or a **RGB** color such as ``&#39;#ffce00&#39;``.</span>
+<span class="sd">        :return: a string like this one: ``&#39;&lt;font color=&#39;color&#39;&gt; &#39;text&#39; &lt;/font&gt;&#39;``</span>
+<span class="sd">        :type text: str</span>
+<span class="sd">        :type color: str</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="s1">&#39;&lt;font color=&quot;&#39;</span> <span class="o">+</span> <span class="n">color</span> <span class="o">+</span> <span class="s1">&#39;&quot;&gt; &#39;</span> <span class="o">+</span> <span class="n">text</span> <span class="o">+</span> <span class="s1">&#39; &lt;/font&gt;&#39;</span></div>
+
+<div class="viewcode-block" id="TextUtils.text_external_link"><a class="viewcode-back" href="../../../mdutils.tools.html#mdutils.tools.tools.TextUtils.text_external_link">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">text_external_link</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">link</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Using this method can be created an external link of a file or a web page.</span>
+
+<span class="sd">        :param text: Text to be displayed.</span>
+<span class="sd">        :type text: str</span>
+<span class="sd">        :param link: External Link.</span>
+<span class="sd">        :type link: str</span>
+<span class="sd">        :return: return a string like this: ``&#39;[Text to be shown](https://write.link.com)&#39;``</span>
+<span class="sd">        :rtype: str&quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="s1">&#39;[&#39;</span> <span class="o">+</span> <span class="n">text</span> <span class="o">+</span> <span class="s1">&#39;](&#39;</span> <span class="o">+</span> <span class="n">link</span> <span class="o">+</span> <span class="s1">&#39;)&#39;</span></div>
+
+<div class="viewcode-block" id="TextUtils.text_format"><a class="viewcode-back" href="../../../mdutils.tools.html#mdutils.tools.tools.TextUtils.text_format">[docs]</a>    <span class="k">def</span> <span class="nf">text_format</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">bold_italics_code</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">align</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Text format helps to write multiple text format such as bold, italics and color.</span>
+
+<span class="sd">        :param text: it is a string in which will be added the mew format</span>
+<span class="sd">        :param bold_italics_code: using `&#39;b&#39;`: **bold**, `&#39;i&#39;`: _italics_ and `&#39;c&#39;`: `inline_code`.</span>
+<span class="sd">        :param color: Can change text color. For example: &#39;red&#39;, &#39;green, &#39;orange&#39;...</span>
+<span class="sd">        :param align: Using this parameter you can align text.</span>
+<span class="sd">        :return: return a string with the new text format.</span>
+<span class="sd">        :type text: str</span>
+<span class="sd">        :type bold_italics_code: str</span>
+<span class="sd">        :type color: str</span>
+<span class="sd">        :type align: str</span>
+<span class="sd">        :rtype: str</span>
+
+<span class="sd">        :Example:</span>
+
+<span class="sd">        &gt;&gt;&gt; from mdutils.tools.tools import TextUtils</span>
+<span class="sd">        &gt;&gt;&gt; textUtils = TextUtils()</span>
+<span class="sd">        &gt;&gt;&gt; textUtils.text_format(text=&#39;Some Text Here&#39;, bold_italics_code=&#39;bi&#39;, color=&#39;red&#39;, align=&#39;center&#39;)</span>
+<span class="sd">        &#39;_**&lt;center&gt;&lt;font color=&quot;red&quot;&gt; Some Text Here &lt;/font&gt;&lt;/center&gt;**_&#39;</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">color</span> <span class="o">!=</span> <span class="s1">&#39;black&#39;</span><span class="p">:</span>
+            <span class="n">new_text_format</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">text_color</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">new_text_format</span> <span class="o">=</span> <span class="n">text</span>
+
+        <span class="k">if</span> <span class="n">align</span> <span class="o">==</span> <span class="s1">&#39;center&#39;</span><span class="p">:</span>
+            <span class="n">new_text_format</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">center_text</span><span class="p">(</span><span class="n">new_text_format</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">bold_italics_code</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">bold_italics_code</span><span class="p">)):</span>
+                <span class="n">char</span> <span class="o">=</span> <span class="n">bold_italics_code</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+                <span class="k">if</span> <span class="n">char</span> <span class="o">==</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span>
+                    <span class="n">new_text_format</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bold</span><span class="p">(</span><span class="n">new_text_format</span><span class="p">)</span>
+                <span class="k">elif</span> <span class="n">char</span> <span class="o">==</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span>
+                    <span class="n">new_text_format</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inline_code</span><span class="p">(</span><span class="n">new_text_format</span><span class="p">)</span>
+                <span class="k">elif</span> <span class="n">char</span> <span class="o">==</span> <span class="s1">&#39;i&#39;</span><span class="p">:</span>
+                    <span class="n">new_text_format</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">italics</span><span class="p">(</span><span class="n">new_text_format</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">new_text_format</span></div>
+
+    <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+        <span class="kn">import</span> <span class="nn">doctest</span>
+        <span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">()</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Dídac Coll.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'1.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+</body>
+</html>

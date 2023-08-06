@@ -1,0 +1,447 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>mdutils.mdutils &mdash; mdutils 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> mdutils
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modules.html">mdutils</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">mdutils</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>mdutils.mdutils</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for mdutils.mdutils</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Python</span>
+<span class="c1">#</span>
+<span class="c1"># This module implements the Main Markdown class.</span>
+<span class="c1">#</span>
+<span class="c1"># This file is part of mdutils. https://github.com/didix21/mdutils</span>
+<span class="c1">#</span>
+<span class="c1"># MIT License: (C) 2018 Dídac Coll</span>
+
+<span class="sd">&quot;&quot;&quot;Module **mdutils**</span>
+
+<span class="sd">The available features are:</span>
+<span class="sd">    * Create Headers, Til 6 sub-levels.</span>
+<span class="sd">    * Auto generate a table of contents.</span>
+<span class="sd">    * Create List and sub-list.</span>
+<span class="sd">    * Create paragraph.</span>
+<span class="sd">    * Generate tables of different sizes.</span>
+<span class="sd">    * Insert Links.</span>
+<span class="sd">    * Insert Code.</span>
+<span class="sd">    * Place text anywhere using a marker.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">mdutils.fileutils.fileutils</span> <span class="k">import</span> <span class="n">MarkDownFile</span>
+<span class="kn">from</span> <span class="nn">mdutils.tools</span> <span class="k">import</span> <span class="n">tools</span>
+
+
+<div class="viewcode-block" id="MdUtils"><a class="viewcode-back" href="../../mdutils.html#mdutils.mdutils.MdUtils">[docs]</a><span class="k">class</span> <span class="nc">MdUtils</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;This class give some basic methods that helps the creation of Markdown files while you are executing a python</span>
+<span class="sd">    code.</span>
+
+<span class="sd">    The ``__init__`` variables are:</span>
+
+<span class="sd">    - **file_name:** it is the name of the Markdown file.</span>
+<span class="sd">    - **author:** it is the author fo the Markdown file.</span>
+<span class="sd">    - **header:** it is an instance of Header Class.</span>
+<span class="sd">    - **textUtils:** it is an instance of TextUtils Class.</span>
+<span class="sd">    - **title:** it is the title of the Markdown file. It is written with Setext-style.</span>
+<span class="sd">    - **table_of_contents:** it is the table of contents, it can be optionally created.</span>
+<span class="sd">    - **file_data_text:** contains all the file data that will be written on the markdown file.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_name</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">author</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        :param file_name: it is the name of the Markdown file.</span>
+<span class="sd">        :type file_name: str</span>
+<span class="sd">        :param title: it is the title of the Markdown file. It is written with Setext-style.</span>
+<span class="sd">        :type title: str</span>
+<span class="sd">        :param author: it is the author fo the Markdown file.</span>
+<span class="sd">        :type author: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">file_name</span> <span class="o">=</span> <span class="n">file_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">author</span> <span class="o">=</span> <span class="n">author</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">header</span> <span class="o">=</span> <span class="n">tools</span><span class="o">.</span><span class="n">Header</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">textUtils</span> <span class="o">=</span> <span class="n">tools</span><span class="o">.</span><span class="n">TextUtils</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">choose_header</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;setext&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">table_of_contents</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">file_data_text</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_table_titles</span> <span class="o">=</span> <span class="p">[]</span>
+
+<div class="viewcode-block" id="MdUtils.create_md_file"><a class="viewcode-back" href="../../mdutils.html#mdutils.mdutils.MdUtils.create_md_file">[docs]</a>    <span class="k">def</span> <span class="nf">create_md_file</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;It creates a new Markdown file.</span>
+<span class="sd">        :return: return an instance of a MarkDownFile.&quot;&quot;&quot;</span>
+        <span class="n">md_file</span> <span class="o">=</span> <span class="n">MarkDownFile</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">file_name</span><span class="p">)</span>
+        <span class="n">md_file</span><span class="o">.</span><span class="n">rewrite_all_file</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">table_of_contents</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">file_data_text</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">md_file</span></div>
+
+<div class="viewcode-block" id="MdUtils.read_md_file"><a class="viewcode-back" href="../../mdutils.html#mdutils.mdutils.MdUtils.read_md_file">[docs]</a>    <span class="k">def</span> <span class="nf">read_md_file</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_name</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Reads a Markdown file and save it to global class `file_data_text`.</span>
+
+<span class="sd">        :param file_name: Markdown file&#39;s name that has to be read.</span>
+<span class="sd">        :type file_name: str</span>
+<span class="sd">        :return: optionally returns the file data content.</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">file_data</span> <span class="o">=</span> <span class="n">MarkDownFile</span><span class="p">()</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">file_name</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">file_data_text</span> <span class="o">+=</span> <span class="n">file_data</span>
+
+        <span class="k">return</span> <span class="n">file_data</span></div>
+
+<div class="viewcode-block" id="MdUtils.new_header"><a class="viewcode-back" href="../../mdutils.html#mdutils.mdutils.MdUtils.new_header">[docs]</a>    <span class="k">def</span> <span class="nf">new_header</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;atx&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Add a new header to the Markdown file.</span>
+<span class="sd">            **Examples:**</span>
+<span class="sd">            ``new_header(level=2, title=&#39;Header Title&#39;, style=&#39;atx&#39;)``</span>
+<span class="sd">            This will write a new level 2 Atx-style header on file_name.md:</span>
+<span class="sd">                * ``\\n&#39;## Header Title\\n&#39;``</span>
+<span class="sd">            ``new_header(level=2, title=&#39;Header Title&#39;, style=&#39;setext&#39;)``</span>
+<span class="sd">            This will write a new level 2 Setext-style header on file_name.md:</span>
+<span class="sd">               * ``\\n&#39;Header Title\\n``</span>
+<span class="sd">                 ``-------------\\n&#39;``</span>
+
+<span class="sd">        :param level: Header level. *atx* style can take values 1 til 6 and *setext* style take values 1 and 2.</span>
+<span class="sd">        :type level: int</span>
+<span class="sd">        :param title: Header title.</span>
+<span class="sd">        :type title: str</span>
+<span class="sd">        :param style: Header style, can be ``&#39;atx&#39;`` or ``&#39;setext&#39;``. By default ``&#39;atx&#39;`` style is chosen.</span>
+<span class="sd">        :type style: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_add_new_item_table_of_content</span><span class="p">(</span><span class="n">level</span><span class="p">,</span> <span class="n">title</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">file_data_text</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">choose_header</span><span class="p">(</span><span class="n">level</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">style</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">choose_header</span><span class="p">(</span><span class="n">level</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">style</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">_add_new_item_table_of_content</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">level</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_table_titles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_table_titles</span><span class="o">.</span><span class="n">append</span><span class="p">([])</span>
+        <span class="k">elif</span> <span class="n">level</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_table_titles</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_table_titles</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">([])</span>
+
+<div class="viewcode-block" id="MdUtils.new_table_of_contents"><a class="viewcode-back" href="../../mdutils.html#mdutils.mdutils.MdUtils.new_table_of_contents">[docs]</a>    <span class="k">def</span> <span class="nf">new_table_of_contents</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table_title</span><span class="o">=</span><span class="s2">&quot;Table of contents&quot;</span><span class="p">,</span> <span class="n">depth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Table of contents can be created if Headers of &#39;atx&#39; style have been defined.</span>
+
+<span class="sd">        This method allows to create a table of contents and define a title for it. Moreover, `depth` allows user to</span>
+<span class="sd">        define if headers of level 1 and 2 or only level 1 have to be placed on the table of contents.</span>
+<span class="sd">        If no marker is defined, the table of contents will be placed automatically after the file&#39;s title.</span>
+
+<span class="sd">        :param table_title: The table content&#39;s title, by default &quot;Table of contents&quot;</span>
+<span class="sd">        :type table_title: str</span>
+<span class="sd">        :param depth: allows to include Headers 1 and 2 or only Headers of level 1. Possible values 1 or 2.</span>
+<span class="sd">        :type depth: int</span>
+<span class="sd">        :param marker: allows to place the table of contents using a marker.</span>
+<span class="sd">        :type marker: str</span>
+<span class="sd">        :return: a string with the data is returned.</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">marker</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">table_of_contents</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+            <span class="n">marker_table_of_contents</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">choose_header</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">table_title</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;setext&#39;</span><span class="p">)</span>
+            <span class="n">marker_table_of_contents</span> <span class="o">+=</span> <span class="n">tools</span><span class="o">.</span><span class="n">TableOfContents</span><span class="p">()</span><span class="o">.</span><span class="n">create_table_of_contents</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_table_titles</span><span class="p">,</span> <span class="n">depth</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">file_data_text</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">place_text_using_marker</span><span class="p">(</span><span class="n">marker_table_of_contents</span><span class="p">,</span> <span class="n">marker</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">marker_table_of_contents</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">table_of_contents</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">choose_header</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">table_title</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;setext&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">table_of_contents</span> <span class="o">+=</span> <span class="n">tools</span><span class="o">.</span><span class="n">TableOfContents</span><span class="p">()</span><span class="o">.</span><span class="n">create_table_of_contents</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_table_titles</span><span class="p">,</span> <span class="n">depth</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">table_of_contents</span> <span class="o">+</span> <span class="n">marker_table_of_contents</span></div>
+
+<div class="viewcode-block" id="MdUtils.create_table"><a class="viewcode-back" href="../../mdutils.html#mdutils.mdutils.MdUtils.create_table">[docs]</a>    <span class="k">def</span> <span class="nf">create_table</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">columns</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">text_align</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This method helps to create a table.</span>
+
+<span class="sd">        :param columns: this variable defines how many columns will have the table.</span>
+<span class="sd">        :type columns: int</span>
+<span class="sd">        :param rows: this variable defines how many rows will have the table.</span>
+<span class="sd">        :type rows: int</span>
+<span class="sd">        :param text: it is a list containing all the strings which will be placed in the table.</span>
+<span class="sd">        :type text: list</span>
+<span class="sd">        :param text_align: allows to align all the cells to the ``&#39;right&#39;``, ``&#39;left&#39;`` or ``&#39;center&#39;``.</span>
+<span class="sd">                            By default: ``&#39;center&#39;``.</span>
+<span class="sd">        :type text_align: str</span>
+<span class="sd">        :param marker: using ``create_marker`` method can place the table anywhere of the markdown file.</span>
+<span class="sd">        :type marker: str</span>
+<span class="sd">        :return: can return the table created as a string.</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">new_table</span> <span class="o">=</span> <span class="n">tools</span><span class="o">.</span><span class="n">Table</span><span class="p">()</span>
+        <span class="n">text_table</span> <span class="o">=</span> <span class="n">new_table</span><span class="o">.</span><span class="n">create_table</span><span class="p">(</span><span class="n">columns</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">text_align</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">marker</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">file_data_text</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">place_text_using_marker</span><span class="p">(</span><span class="n">text_table</span><span class="p">,</span> <span class="n">marker</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">file_data_text</span> <span class="o">+=</span> <span class="n">text_table</span>
+
+        <span class="k">return</span> <span class="n">text_table</span></div>
+
+<div class="viewcode-block" id="MdUtils.add_new_paragraph"><a class="viewcode-back" href="../../mdutils.html#mdutils.mdutils.MdUtils.add_new_paragraph">[docs]</a>    <span class="k">def</span> <span class="nf">add_new_paragraph</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">bold_italics_code</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">align</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Add a new paragraph to Markdown file. The text is saved to the global variable file_data_text.</span>
+
+<span class="sd">        :param text: is a string containing the paragraph text. Optionally, the paragraph text is returned.</span>
+<span class="sd">        :type text: str</span>
+<span class="sd">        :param bold_italics_code: bold_italics_code: using `&#39;b&#39;`: **bold**, `&#39;i&#39;`: _italics_ and `&#39;c&#39;`: `inline_code`.</span>
+<span class="sd">        :type bold_italics_code: str</span>
+<span class="sd">        :param color: Can change text color. For example: &#39;red&#39;, &#39;green, &#39;orange&#39;...</span>
+<span class="sd">        :type color: str</span>
+<span class="sd">        :param align: Using this parameter you can align text.</span>
+<span class="sd">        :type align: str</span>
+<span class="sd">        :return: return a string &#39;\n&#39; + text + &#39;\n&#39;. Not necessary to take it, if only has to be written to the file.</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">bold_italics_code</span> <span class="ow">or</span> <span class="n">color</span> <span class="o">!=</span> <span class="s1">&#39;black&#39;</span> <span class="ow">or</span> <span class="n">align</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">file_data_text</span> <span class="o">+=</span> <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">textUtils</span><span class="o">.</span><span class="n">text_format</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">bold_italics_code</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">align</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">file_data_text</span> <span class="o">+=</span> <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="n">text</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">file_data_text</span></div>
+
+<div class="viewcode-block" id="MdUtils.new_line"><a class="viewcode-back" href="../../mdutils.html#mdutils.mdutils.MdUtils.new_line">[docs]</a>    <span class="k">def</span> <span class="nf">new_line</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">bold_italics_code</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">align</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Add a new line to Markdown file. The text is saved to the global variable file_data_text.</span>
+
+<span class="sd">        :param text: is a string containing the paragraph text. Optionally, the paragraph text is returned.</span>
+<span class="sd">        :type text: str</span>
+<span class="sd">        :param bold_italics_code: bold_italics_code: using `&#39;b&#39;`: **bold**, `&#39;i&#39;`: _italics_ and `&#39;c&#39;`: `inline_code`.</span>
+<span class="sd">        :type bold_italics_code: str</span>
+<span class="sd">        :param color: Can change text color. For example: &#39;red&#39;, &#39;green, &#39;orange&#39;...</span>
+<span class="sd">        :type color: str</span>
+<span class="sd">        :param align: Using this parameter you can align text.</span>
+<span class="sd">        :type align: str</span>
+<span class="sd">        :return: return a string &#39;\n&#39; + text + &#39;\n&#39;. Not necessary to take it, if only has to be written to the file.</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">bold_italics_code</span> <span class="ow">or</span> <span class="n">color</span> <span class="o">!=</span> <span class="s1">&#39;black&#39;</span> <span class="ow">or</span> <span class="n">align</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">file_data_text</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">textUtils</span><span class="o">.</span><span class="n">text_format</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">bold_italics_code</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">align</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;  </span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">file_data_text</span> <span class="o">+=</span> <span class="n">text</span> <span class="o">+</span> <span class="s1">&#39;  </span><span class="se">\n</span><span class="s1">&#39;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">file_data_text</span></div>
+
+<div class="viewcode-block" id="MdUtils.write"><a class="viewcode-back" href="../../mdutils.html#mdutils.mdutils.MdUtils.write">[docs]</a>    <span class="k">def</span> <span class="nf">write</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">file_data_text</span> <span class="o">+=</span> <span class="n">text</span></div>
+
+<div class="viewcode-block" id="MdUtils.create_marker"><a class="viewcode-back" href="../../mdutils.html#mdutils.mdutils.MdUtils.create_marker">[docs]</a>    <span class="k">def</span> <span class="nf">create_marker</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text_marker</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This will add a marker to file_data_text in order to add after some text.</span>
+
+<span class="sd">        :param text_marker: marker name.</span>
+<span class="sd">        :type text_marker: str</span>
+<span class="sd">        :return return the marker.</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">new_marker</span> <span class="o">=</span> <span class="s1">&#39;##--[&#39;</span> <span class="o">+</span> <span class="n">text_marker</span> <span class="o">+</span> <span class="s1">&#39;]--##&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">file_data_text</span> <span class="o">+=</span> <span class="n">new_marker</span>
+        <span class="k">return</span> <span class="n">new_marker</span></div>
+
+<div class="viewcode-block" id="MdUtils.place_text_using_marker"><a class="viewcode-back" href="../../mdutils.html#mdutils.mdutils.MdUtils.place_text_using_marker">[docs]</a>    <span class="k">def</span> <span class="nf">place_text_using_marker</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">marker</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;It replace a previous marker created with ``create_marker`` with a text string.</span>
+
+<span class="sd">        :param text: the new string that will replace the marker.</span>
+<span class="sd">        :type text: str</span>
+<span class="sd">        :param marker: the marker that has to be replaced.</span>
+<span class="sd">        :type marker: str</span>
+<span class="sd">        :return: return a new file_data_text with the replace marker.</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">file_data_text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">marker</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span></div></div>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">header</span> <span class="o">=</span> <span class="n">tools</span><span class="o">.</span><span class="n">Header</span><span class="p">()</span>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Dídac Coll.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+</body>
+</html>
