@@ -1,0 +1,8 @@
+Werkzeug>=0.11.10
+click>=6.6
+ethereum<2.0.0,>=1.6.1
+json-rpc>=1.10.3
+rlp<=0.6.0,>=0.4.7
+
+[gevent]
+gevent<1.2.0,>=1.1.1
