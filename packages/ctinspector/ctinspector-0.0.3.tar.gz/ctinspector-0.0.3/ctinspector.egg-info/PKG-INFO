@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: ctinspector
+Version: 0.0.3
+Summary: Show detailed information for docker images
+Home-page: https://github.com/joaompinto/ctinspector
+Author: João Pinto
+Author-email: lamego.pinto@gmail.com
+License: UNKNOWN
+Description: Shows detailed information for docker images
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: License :: Freely Distributable
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4

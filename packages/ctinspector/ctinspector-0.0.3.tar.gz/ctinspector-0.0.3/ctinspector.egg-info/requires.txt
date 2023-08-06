@@ -1,0 +1,6 @@
+six
+docopt
+termcolor
+colorama
+docker
+backports.shutil_get_terminal_size
