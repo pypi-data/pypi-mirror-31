@@ -1,0 +1,15 @@
+.gitattributes
+.gitignore
+.travis.yml
+LICENSE
+MANIFEST.in
+README.md
+java.py
+setup.py
+tox.ini
+import_java.egg-info/PKG-INFO
+import_java.egg-info/SOURCES.txt
+import_java.egg-info/dependency_links.txt
+import_java.egg-info/requires.txt
+import_java.egg-info/top_level.txt
+import_java.egg-info/zip-safe
