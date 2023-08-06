@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: cognises
+Version: 0.3
+Summary: Implement application and cloud resource level authorization based on user groups.
+Home-page: https://github.com/plotlabs/cognises.git
+Author: Shalini Aggarwal
+Author-email: aggarwalshalini1993@gmail.com
+License: LICENSE.txt
+Description: UNKNOWN
+Keywords: aws,cognito,security,authorization,flask login,flask
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
