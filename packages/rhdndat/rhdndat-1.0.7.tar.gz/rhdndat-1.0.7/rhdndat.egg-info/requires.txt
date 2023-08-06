@@ -1,0 +1,7 @@
+beautifulsoup4
+
+[dev]
+check-manifest
+
+[test]
+coverage
