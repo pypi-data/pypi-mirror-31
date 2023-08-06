@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: azure-iot-starterkit-cli
+Version: 1.0.0
+Summary: Microsoft Azure IoT Starter Kit Companion CLI
+Home-page: https://github.com/Azure-Samples/azure-iot-starterkit-cli
+Author: Azure CAT E2E
+Author-email: azcate2esupport@microsoft.com
+License: MIT
+Download-URL: https://github.com/Azure-Samples/azure-iot-starterkit-cli/archive/1.0.0.tar.gz
+Keywords: Azure,IoT,Microsoft,StarterKit,CLI,teXXmo,grove
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: click
+Requires-Dist: requests
+Requires-Dist: paramiko
+Requires-Dist: scp
+
+Companion CLI for the Azure IoT Device Starter Kits
+
+

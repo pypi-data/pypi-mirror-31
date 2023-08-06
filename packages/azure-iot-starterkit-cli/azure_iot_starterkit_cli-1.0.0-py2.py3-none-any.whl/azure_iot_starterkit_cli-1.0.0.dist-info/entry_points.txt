@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        iot=iot:cli
+    
