@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: Da-Ponz
+Version: 4.0.4
+Summary: Da_Ponz crytocurrency trader
+Home-page: http://www.daponz.com
+Author: Eric Hanson
+Author-email: eric.b.hanson@gmail.com
+License: GNU General Public License
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: ccxt (==1.10.1270)
+Requires-Dist: Keras (==2.1.5)
+Requires-Dist: mysql-connector-python (==8.0.11)
+Requires-Dist: numpy (==1.14.1)
+Requires-Dist: pandas (==0.22)
+Requires-Dist: pytz (==2018.3)
+Requires-Dist: PyYAML (==3.12)
+Requires-Dist: scikit-learn (==0.19.1)
+Requires-Dist: SQLAlchemy (==1.2.4)
+Requires-Dist: statsmodels (==0.8)
+Requires-Dist: tendo (==0.2.8)
+Requires-Dist: tensorflow (==1.7)
+
+UNKNOWN
+
+
