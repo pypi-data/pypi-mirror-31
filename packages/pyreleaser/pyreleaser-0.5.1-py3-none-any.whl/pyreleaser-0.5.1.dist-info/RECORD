@@ -1,0 +1,10 @@
+pyreleaser/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyreleaser/cli.py,sha256=tPT-ZnBVQOVKPLFDtwoKzCIP0cAYzdnP-zA2sOetFzg,4235
+pyreleaser-0.5.1.dist-info/LICENSE.txt,sha256=LeDJp2jYuff1ds-0jqGeoLdCU7RG5k5zTJ8qEO0_IiE,1069
+pyreleaser-0.5.1.dist-info/METADATA,sha256=TrbZ0LoMSjOJ-SookbAUuBYXxXf1llKwk5s7bagCTZo,587
+pyreleaser-0.5.1.dist-info/RECORD,,
+pyreleaser-0.5.1.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+pyreleaser-0.5.1.dist-info/entry_points.txt,sha256=D7TQ2RMucc0lmajK2zQddp4nNoeCEr_fnKPAcS1FA8Y,52
+pyreleaser-0.5.1.dist-info/top_level.txt,sha256=n5RUSw8RmcUN35ucLLSAgMw3vaJV33FFs_GmPz6IOFU,17
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_integration.py,sha256=8nlxbavAZ5gmh0Kr0f6l6nJ7i8Uo5qiJAGWrJumO8rY,3050
