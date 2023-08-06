@@ -1,0 +1,11 @@
+README.md
+setup.py
+BatchAdapt.egg-info/PKG-INFO
+BatchAdapt.egg-info/SOURCES.txt
+BatchAdapt.egg-info/dependency_links.txt
+BatchAdapt.egg-info/entry_points.txt
+BatchAdapt.egg-info/requires.txt
+BatchAdapt.egg-info/top_level.txt
+batchadapt/__init__.py
+batchadapt/__main__.py
+batchadapt/batchadapt.py

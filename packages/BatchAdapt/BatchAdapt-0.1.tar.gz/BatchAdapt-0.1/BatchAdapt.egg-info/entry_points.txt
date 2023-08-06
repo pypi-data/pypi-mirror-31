@@ -1,0 +1,3 @@
+[console_scripts]
+batchadapt = batchadapt.batchadapt:main
+
