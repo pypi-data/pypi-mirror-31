@@ -1,0 +1,13 @@
+opalalgorithms/__init__.py,sha256=cGB-D6bFKiPQJ48SXab8eVCm5lwcBQnnxWLD6cBInJo,35
+opalalgorithms/core/__init__.py,sha256=_NKv7_41NvyFYbTUz2o6mCn3A3rbCfxiDMZgF5DdAXY,81
+opalalgorithms/core/base.py,sha256=Wtu7L3FZgn-hbYXVDw8EcN9a4360-E6z3v6FyUgxARI,955
+opalalgorithms/utils/__init__.py,sha256=HGzdB2GU_L_nvrVXOMjjZEQc58rs85a-zXMQCrWXiGM,276
+opalalgorithms/utils/algorithmrunner.py,sha256=XhfwuQxrcpMHEQbxRMPVQSPscPCaJqp9WR_QM4sklso,10889
+opalalgorithms/utils/bandicoot_format.py,sha256=tBbEHksrnF1UbeK0_PG6zlwyVNsIsAHNoJLqMt9e7us,342
+opalalgorithms/utils/datagenerator.py,sha256=Rj_5vaC7yKvBI2OVwudG431wpizS6tOuGWhJ-yMNCFY,4704
+opalalgorithms/utils/date_helper.py,sha256=Zjoz_6PqnVE0qB6gHNM7GMbKqHEiE9BGKBLFJEVB7Sw,1290
+opalalgorithms-0.1.4.dist-info/METADATA,sha256=qMPDpj9sqi8ksXCQlp9WcW2NhgBiYLx9oZAI7VnyGDY,806
+opalalgorithms-0.1.4.dist-info/RECORD,,
+opalalgorithms-0.1.4.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+opalalgorithms-0.1.4.dist-info/dependency_links.txt,sha256=9uV5SpDH6d2WzPVEVzpAhVzNjAQl9jvyx6GzS9UjE18,125
+opalalgorithms-0.1.4.dist-info/top_level.txt,sha256=ZN5n-F5x-JztyFUtmzzfSBHfaBVzdQZZMpuoQ4HFFNs,15
