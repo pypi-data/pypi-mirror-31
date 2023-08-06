@@ -1,0 +1,13 @@
+pointpats/__init__.py,sha256=UrI2D6fkrnqnD9WzD_ByJBdmKsXKU7_WQrcBbFtWQxg,319
+pointpats/api.py,sha256=z1T9ll3k5ebXSvJQR-imKgbo1dgU-xulzYZC4ZDCsSU,447
+pointpats/centrography.py,sha256=nV2WCqjHXoGMPLF7YQdgT1bfUuFuR6jvi1ITrxk7asE,9065
+pointpats/distance_statistics.py,sha256=GtHHeGTpDE_kwGdUP41ZSyKeIcw38tlj5GibjLmftIA,34547
+pointpats/pointpattern.py,sha256=k9ariQlc-gb-ggcmblFhiFU-Fr_ZspdFsFxxb32BScM,15155
+pointpats/process.py,sha256=puQRti0IMEKuWih-mV8ZMCrW9rn-xSveiCJ1BWrJMwo,15825
+pointpats/quadrat_statistics.py,sha256=1xXj84y9nvFKWpWMG6RolJ_K9lamYhQXZwF9-AqHbQU,17978
+pointpats/util.py,sha256=9i6EI1ay-6vVg-0JUo8dYLB6FOxF45GPJ3Gg2AU1wdo,494
+pointpats/window.py,sha256=VC4_9PUfxwUGe6CyEO6zXpWWm3H04ObCYlOnFzVTSXI,1411
+pointpats-1.0.1.dist-info/METADATA,sha256=SBolxJ1Lk84dOJd3xgTh3tB0a1C13_R33nCPdt4HEeg,1168
+pointpats-1.0.1.dist-info/RECORD,,
+pointpats-1.0.1.dist-info/WHEEL,sha256=saUSQBLOUjf5ACZdNkhQ0lB6XrHU-l4vpzxq_W1n_AY,116
+pointpats-1.0.1.dist-info/top_level.txt,sha256=6cMNwAWO-44LnlgMnjasJVv5TkkKfQtWJnQWMrc2WDQ,10
