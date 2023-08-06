@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: rstvalidator
+Version: 1.0.2
+Summary: .rst (reStructuredText) validator
+Home-page: https://github.com/looking-for-a-job/rstvalidator.py
+License: UNKNOWN
+Description: ### Install
+        
+        ```bash
+        $ [sudo] pip install rstvalidator
+        ```
+        
+        ### Usage
+        
+        ```bash
+        usage: python -m rstvalidator path ...
+        ```
+        
+        ### Examples
+        
+        ```bash
+        $ python -m rstvalidator README.rst
+        ```
+        
+        ### Sources
+        
+        +   [`rstvalidator.rst2html(value)`](https://github.com/looking-for-a-job/rstvalidator.py/blob/master/rstvalidator.py)
+        +   [`rstvalidator.rstvalidator(path)`](https://github.com/looking-for-a-job/rstvalidator.py/blob/master/rstvalidator.py)
+        +   [`rstvalidator.system_message(self, level, message, *children, **kwargs)`](https://github.com/looking-for-a-job/rstvalidator.py/blob/master/rstvalidator.py)
+Keywords: rst reStructuredText validator
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Quality Assurance
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: Text Processing :: Markup
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
