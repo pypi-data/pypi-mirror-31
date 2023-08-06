@@ -1,0 +1,11 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+apa102_gpiod/__init__.py
+apa102_gpiod/apa102.py
+apa102_gpiod.egg-info/PKG-INFO
+apa102_gpiod.egg-info/SOURCES.txt
+apa102_gpiod.egg-info/dependency_links.txt
+apa102_gpiod.egg-info/not-zip-safe
+apa102_gpiod.egg-info/top_level.txt
