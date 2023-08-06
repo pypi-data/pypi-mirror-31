@@ -1,0 +1,11 @@
+DepyTG-3.6.1.dist-info/METADATA,sha256=7LuXjupMyymUsv3wMdJl61BD_p7-qiY-U3ZNnYM0qDg,5304
+DepyTG-3.6.1.dist-info/RECORD,,
+DepyTG-3.6.1.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+DepyTG-3.6.1.dist-info/top_level.txt,sha256=ddHCj7Twe5LINfDnCQZFnyyQY11d13PbJ0qMKSOYmeo,7
+depytg/__init__.py,sha256=McP_QxGn7rjRjhK0uD6w0RC7tn4EE4V2XOPhB9NVvJU,137
+depytg/depyfier.py,sha256=ygP3WmwEhZjXN6pwXD-EDOCqAfG9Va9-e2n8m_CGVXw,6433
+depytg/errors.py,sha256=w7NT62paD0Di3QTYdUph1MKdVmfog4uVPdnXLbQJKAA,275
+depytg/internals.py,sha256=q0w-tXbZUQLacuDTBhqyrlzfRSDCVbNLOhasScXbuBA,10739
+depytg/methods.py,sha256=g7ecgaAAFr2VLatBCgELtzvapmr086tRa3lNMemaU4s,77255
+depytg/types.py,sha256=VjOkyy9ijAJ9p4HqaEnH9mS4PAAIwznNuSkiVQiF8Io,97863
+depytg/utils.py,sha256=nggA0LBm7fp_zuTJK0wobBjSohjmeSW0PUC8XlWcXak,961
