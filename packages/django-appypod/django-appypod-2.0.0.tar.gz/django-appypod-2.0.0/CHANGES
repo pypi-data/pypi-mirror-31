@@ -1,0 +1,27 @@
+=========
+CHANGELOG
+=========
+
+2.0.0 (2018-05-07)
+------------------
+
+- Move to Python 3
+
+
+1.0.0 (2017-01-14)
+------------------
+
+- Upgrade to Django 1.8
+
+
+0.0.2 (2013-10-08)
+------------------
+
+* Safety check before deleting document
+* Add Django and Appy in dependencies
+
+
+0.0.1 (2012-09-11)
+------------------
+
+- Initial working version.
