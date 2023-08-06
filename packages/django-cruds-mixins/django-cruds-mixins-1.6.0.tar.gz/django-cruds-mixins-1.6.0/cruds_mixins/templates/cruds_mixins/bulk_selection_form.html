@@ -1,0 +1,17 @@
+{% extends "cruds_mixins/base.html" %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block main %}
+
+<div class="cruds-bulk-selection-form">
+  <h1 class="page-header">{{ title|capfirst }}</h1>
+
+  <form method="POST" action="">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <button name="submit" type="submit" class="btn btn-light">{% trans "Submit" %}</button>
+  </form>
+</div>
+
+{% endblock %}
