@@ -1,0 +1,4 @@
+[console_scripts]
+kelner = kelner.cli:kelner
+kelnerd = kelner.cli:kelnerd
+
