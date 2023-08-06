@@ -1,0 +1,15 @@
+do_latency/__init__.py,sha256=-o_-h2gpDnrgunVPGM9TX7tSdL0RyrLDxigA2x5lGR0,47
+do_latency/__main__.py,sha256=GFw2y3X1Ub9Q0i7y97KOz64V31VkPdZaXrhh8WUehB4,131
+do_latency/do_latency.py,sha256=cYMYVacim4GrIWWOUlHlqVl7zLrnXzQNRKsQnUWo_Ow,2938
+do_latency/download.py,sha256=YyN4MQ_1t9E3mjzr0xERFykleBBJKPfY1A9dU5vcniE,1184
+do_latency/ping.py,sha256=8JkHXKi3pfsMcKXL66-xFlK3SRBSXsRoj1i9_aVq1cM,345
+do_latency/pyping.py,sha256=1WiVcVDzBe9SDZ3FEdrXXItGROU7Vay01y6yYBsWyJ8,2619
+do_latency-0.4.0.data/data/LICENSE,sha256=hSvMAzpGxi-Z-1_9Q7MkG6LAxEDGA0qiEUUF8sTwPEo,1067
+do_latency-0.4.0.data/data/README.rst,sha256=wQ1SnS2MjMw_uP2cUQ9fz89hvryzl4nwItIVaoQTgsw,778
+do_latency-0.4.0.dist-info/DESCRIPTION.rst,sha256=gR5bkeu6WUsL-cvHWswotRFQmw-MTRoU34oFa3r38tk,780
+do_latency-0.4.0.dist-info/METADATA,sha256=IGGY9x4plIFRRgG0nkDjUpox8fLwzRVqyVFIvUCWAl8,1626
+do_latency-0.4.0.dist-info/RECORD,,
+do_latency-0.4.0.dist-info/WHEEL,sha256=o2k-Qa-RMNIJmUdIc7KU6VWR_ErNRbWNlxDIpl7lm34,110
+do_latency-0.4.0.dist-info/entry_points.txt,sha256=0oGQe1c0Gn9iWirzm_bDGFpf8M4tqlHgaf2rXRXwZXk,59
+do_latency-0.4.0.dist-info/metadata.json,sha256=v_xE390GrqU4_MN9kS6da2Gy26Cn4LRVtz-lnjU7E8A,1196
+do_latency-0.4.0.dist-info/top_level.txt,sha256=7a3p1BEucE6-9xQQjjvsoYspKLznJEeIpQuYY8zNCvQ,11
