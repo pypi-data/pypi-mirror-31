@@ -1,0 +1,9 @@
+spiro_deploy-0.2.dist-info/METADATA,sha256=DGU1NNmVYG7FK6NtkqtwkTPvkyQmaMKugj6JqP73gMo,948
+spiro_deploy-0.2.dist-info/RECORD,,
+spiro_deploy-0.2.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+spiro_deploy-0.2.dist-info/entry_points.txt,sha256=hEqzLwRw3N1mijAPQxu9Y0o6niVX46jFzVwi1D4q7Kw,55
+spiro_deploy-0.2.dist-info/top_level.txt,sha256=l35RUHNr4iWASjo7i2PlAfkC7Vo_XDDwjojVnWSgyHE,12
+spirodeploy/__main__.py,sha256=0Y1W-b49I90JAcskNM6zOQ11kEQiAz0z3LZ9IvdZgjo,51
+spirodeploy/builder.py,sha256=BkswTzJV8kl4ZPhd5n8raxC6l4rvVliGwnCrREjKPJw,1794
+spirodeploy/cli.py,sha256=MfdtvaAfYoo0tnWnikg6Y63ClE5ErYS2jTykp_7kaMo,3061
+spirodeploy/client.py,sha256=f9IN3VsB4IkmHolpaBdJsR2jJ7Y4rVXmOQ5_zBkIbS4,2148
