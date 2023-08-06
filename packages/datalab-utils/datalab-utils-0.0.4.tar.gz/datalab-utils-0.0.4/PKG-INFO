@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: datalab-utils
+Version: 0.0.4
+Summary: Datalab Utils is a module with some convenient utilities to work with GCP datalabs.
+Home-page: https://github.com/pmerienne/datalab-utils
+Author: Pierre Merienne
+Author-email: UNKNOWN
+License: BSD
+Download-URL: https://github.com/pmerienne/datalab-utils/archive/0.0.4.tar.gz
+Description: Datalab Utils
+        =============
+        
+        Datalab Utils is a collection of small Python functions and classes
+        which simplify usage of GCP datalab.
+        
+Keywords: google datalab,bigquery,utils
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
