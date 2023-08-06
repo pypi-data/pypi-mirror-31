@@ -1,0 +1,11 @@
+aiohttp>=3.1
+distlib
+packaging
+pip>=9.0
+setuptools>=39.0
+six
+virtualenv
+
+[test]
+pytest
+pytest-asyncio
