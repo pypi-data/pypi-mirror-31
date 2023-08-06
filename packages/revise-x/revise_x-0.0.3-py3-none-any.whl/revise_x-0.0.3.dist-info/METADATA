@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: revise-x
+Version: 0.0.3
+Summary: An exporter for trained neural networks built with keras to work with revise projects
+Home-page: https://github.com/noheltcj/revise-x
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/noheltcj/revise-x/issues
+Project-URL: Source, https://github.com/noheltcj/revise-x
+Keywords: revise machine_learning exporter keras
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+
+# revise-x
+Use this python package to export models trained with [keras](https://github.com/keras-team/keras "keras") into a format that can be consumed by [revise](https://github.com/noheltcj/revise "revise") for use in other platforms.
+
+## Documentation
+Currently revise does not support all neural architectures, optimizers, or activation functions.
+
+For a list of supported functions, see the [revise documentation](https://github.com/noheltcj/revise "revise documentation").
+
+### Keras
+```
+from revise import keras as exporter
+exporter.export()
+```
+
+## Contributing
+We still haven't setup ground rules for contribution. For now, open up a pull request if you would like to contribute, and we will go from there.
+
+
