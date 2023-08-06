@@ -1,0 +1,12 @@
+README.rst
+setup.py
+simple_geoip/__init__.py
+simple_geoip/exceptions.py
+simple_geoip/geoip.py
+simple_geoip/settings.py
+simple_geoip.egg-info/PKG-INFO
+simple_geoip.egg-info/SOURCES.txt
+simple_geoip.egg-info/dependency_links.txt
+simple_geoip.egg-info/not-zip-safe
+simple_geoip.egg-info/requires.txt
+simple_geoip.egg-info/top_level.txt
