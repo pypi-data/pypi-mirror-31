@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+bimeta/__init__.py
+bimeta/bimeta.py
+bimeta.egg-info/PKG-INFO
+bimeta.egg-info/SOURCES.txt
+bimeta.egg-info/dependency_links.txt
+bimeta.egg-info/entry_points.txt
+bimeta.egg-info/not-zip-safe
+bimeta.egg-info/requires.txt
+bimeta.egg-info/top_level.txt
