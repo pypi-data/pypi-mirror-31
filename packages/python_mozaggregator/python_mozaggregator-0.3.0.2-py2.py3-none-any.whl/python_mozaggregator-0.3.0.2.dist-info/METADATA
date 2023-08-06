@@ -1,0 +1,31 @@
+Metadata-Version: 2.0
+Name: python-mozaggregator
+Version: 0.3.0.2
+Summary: Telemetry aggregation job
+Home-page: https://github.com/vitillo/python_mozaggregator
+Author: Roberto Agostino Vitillo
+Author-email: rvitillo@mozilla.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: Flask
+Requires-Dist: Flask-Cache
+Requires-Dist: Flask-Cors
+Requires-Dist: Flask-SSLify
+Requires-Dist: awscli
+Requires-Dist: boto3
+Requires-Dist: dockerflow
+Requires-Dist: gevent
+Requires-Dist: gunicorn
+Requires-Dist: joblib
+Requires-Dist: matplotlib
+Requires-Dist: pandas
+Requires-Dist: psycogreen
+Requires-Dist: psycopg2-binary
+Requires-Dist: pyspark
+Requires-Dist: python-moztelemetry
+Requires-Dist: scipy
+Requires-Dist: ujson
+
+UNKNOWN
+
+
