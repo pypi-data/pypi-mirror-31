@@ -1,0 +1,15 @@
+xbox-webapi
+construct==2.9.45
+cryptography
+appdirs
+gevent
+urwid
+dpkt
+
+[dev]
+bumpversion
+watchdog
+coverage
+Sphinx
+wheel
+twine
