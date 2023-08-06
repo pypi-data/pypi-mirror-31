@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: semaphore
+Version: 0.0
+Summary: A bridge to the sentry semaphore
+Home-page: http://github.com/getsentry/semaphore
+Author: Armin Ronacher
+Author-email: armin.ronacher@active-4.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
