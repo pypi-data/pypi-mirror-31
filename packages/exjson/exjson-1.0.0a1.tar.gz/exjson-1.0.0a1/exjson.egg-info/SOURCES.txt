@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+exjson.py
+setup.cfg
+setup.py
+exjson.egg-info/PKG-INFO
+exjson.egg-info/SOURCES.txt
+exjson.egg-info/dependency_links.txt
+exjson.egg-info/top_level.txt

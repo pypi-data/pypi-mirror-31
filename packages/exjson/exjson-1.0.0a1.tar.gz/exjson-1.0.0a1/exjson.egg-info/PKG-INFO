@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: exjson
+Version: 1.0.0a1
+Summary: Extended JSON Parser Library for Python
+Home-page: https://github.com/prods/exjson
+Author: Pedro Rodriguez
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/prods/exjson/issues
+Project-URL: Source, https://github.com/prods/exjson
+Description: exjson is an extended JSON Parser which implements functionality not supported by 
+            the Python JSON parser standard library while trying to keep compliant with the JSON standard as much as possible. 
+Keywords: json serialization decoder encoder configuration
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
