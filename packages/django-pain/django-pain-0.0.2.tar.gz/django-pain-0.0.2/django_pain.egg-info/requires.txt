@@ -1,0 +1,8 @@
+Django>=2.0
+django-money
+
+[quality]
+isort
+flake8
+pydocstyle
+polint
