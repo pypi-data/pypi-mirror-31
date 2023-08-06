@@ -1,0 +1,16 @@
+Metadata-Version: 1.0
+Name: grew
+Version: 0.1.5
+Summary: UNKNOWN
+Home-page: http://pypi.python.org/pypi/grew
+Author: bguil
+Author-email: Bruno.Guillaume@loria.fr
+License: LICENSE/Licence_CeCILL_V2-en.txt
+Description: # Python binding for Grew
+        
+        ## prerequisites
+         * add the subdir `src_python` to the `PYTHONPATH` environment variable
+         * add the subdir `bin` to the `PATH` environment variable
+         
+        
+Platform: UNKNOWN
