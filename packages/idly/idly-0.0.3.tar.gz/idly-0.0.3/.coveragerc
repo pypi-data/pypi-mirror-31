@@ -1,0 +1,2 @@
+[report]
+omit = idly/__main__.py
