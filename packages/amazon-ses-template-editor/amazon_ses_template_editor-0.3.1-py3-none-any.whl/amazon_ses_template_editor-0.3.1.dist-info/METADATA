@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: amazon-ses-template-editor
+Version: 0.3.1
+Summary: A tool for editing, uploading and testing Amazon SES email templates
+Home-page: UNKNOWN
+Author: Andrii Kostenko
+Author-email: andrii@short.cm
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: boto3
+Requires-Dist: toml
+Requires-Dist: wheel
+
+# amazon-ses-template-editor
+Web UI to edit amazon SES templates
+
+# Usage
+
+    pip install amazon-ses-template-editor
+
+
