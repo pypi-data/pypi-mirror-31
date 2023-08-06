@@ -1,0 +1,3 @@
+[console_scripts]
+h5glance=h5glance.cli:main
+
