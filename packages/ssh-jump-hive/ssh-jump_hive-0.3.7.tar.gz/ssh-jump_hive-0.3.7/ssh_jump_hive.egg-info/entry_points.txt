@@ -1,0 +1,4 @@
+[console_scripts]
+jumpgui = jumps.jump_gui:main
+jumps = jumps.jump_terminal:main
+
