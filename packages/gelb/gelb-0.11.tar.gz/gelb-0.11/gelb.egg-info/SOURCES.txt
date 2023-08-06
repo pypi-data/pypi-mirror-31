@@ -1,0 +1,12 @@
+MANIFEST.in
+README.rst
+setup.py
+gelb/__init__.py
+gelb/gelbc.py
+gelb/text.py
+gelb.egg-info/PKG-INFO
+gelb.egg-info/SOURCES.txt
+gelb.egg-info/dependency_links.txt
+gelb.egg-info/entry_points.txt
+gelb.egg-info/not-zip-safe
+gelb.egg-info/top_level.txt
