@@ -1,0 +1,306 @@
+#!/usr/bin/env python3
+
+# Terminology:
+#
+#   source: A 'source' is a set of github repositories, this may be a remote *nix
+#   box, a local directory, or some cloud service like gitlab.
+#  
+#   source spec: A string corresponding to one or more git sources.
+#
+#   repo spec: A string of the form <source>/<repo pattern> corresponding
+#   to one or more git repositories.
+
+import configparser
+import os
+import sys
+import multiprocessing
+import subprocess
+import inspect
+from threading import Thread
+import gt.sources
+
+def die(*args, **kwargs):
+    print("ERROR:", *args, **kwargs, file=sys.stderr)
+    sys.exit(-1)
+
+GITCMD = [ f
+           for f in os.environ['PATH'].split(":")
+           if os.path.exists(os.path.join(f, "git")) ][0]
+
+GITCMD = os.path.join(GITCMD, "git")
+CFG_FILE = os.path.join(os.environ['HOME'], '.gtrc')
+
+class Repo():
+    def __init__(self, name, source):
+        self.name = name
+        self.source = source
+
+    def location(self):
+        if not hasattr(self, "_location"):
+            self._location = self.source.location(self.name)
+
+        return self._location
+
+    def fullname(self):
+        return self.source.name + "/" + self.name
+
+    def delete(self):
+        self.source.delete(self.name)
+
+    @property
+    def _srclst(self):
+        if not hasattr(self, '_srclstd'):
+            self._srclstd = dict(self.source.list())
+        return self._srclstd
+
+    def public(self):
+        return not self._srclst[self.name]
+
+    def exists(self):
+        return self.name in self._srclst.keys()
+
+def parse_repospec(srcmap, spec):
+    #TODO support wildcards (maybe)
+    try:
+        sourceName, projectName = spec.split("/", maxsplit=1)
+    except:
+        die("{0} is not a valid repo spec.".format(spec))
+
+    source = srcmap.get(sourceName)
+
+    if not source:
+        die("{0} does not correspond to a valid git source. Valid sources:".format(sourceName) +\
+            "\n\n" + "\n".join(srcmap.keys()))
+
+    return [Repo(projectName, source)]
+
+def parse_sourcespec(srcmap, spec):
+    valid_sources_str = "\n\nValid Sources:\n\t" + \
+                        "\n\t".join(srcmap.keys())
+
+    if spec.endswith('*'):
+        prefix = spec[:-1]
+        sources = { n: s
+                    for n,s in srcmap.items()
+                    if n.startswith(prefix) }
+        if not sources:
+            die("{0}* does not match any git sources.".format(prefix) + \
+                valid_sources_str)
+        return sources
+
+    source = srcmap.get(spec)
+    if not source:
+        die("{0} is not a valid git source:".format(spec) + valid_sources_str)
+    return {spec: source}
+
+def ls(srcmap, args):
+    usage = "Usage: {0} ls [ <git source> | -a (list all sources) ]"\
+            .format(sys.argv[0])
+    if len(args) == 0:
+        die("One or more git sources must be supplied to ls.\n\n" + usage)
+
+    if args[0] == '-a':
+        args[0] = '*'
+        
+    sources = {}
+    for arg in args:
+        sources.update(parse_sourcespec(srcmap, arg))
+
+    repos = []
+    workers = []
+    for name,src in sources.items():
+        def _(name, src):
+            repos.extend( [ (name + "/" + repo[0], repo[1])
+                            for repo in src.list() ])
+        t = Thread(target=_, args=(name, src))
+        t.start()
+        workers.append(t)
+
+    for w in workers: w.join()
+
+    longest = len(max(repos, key=lambda x: len(x[0]))[0])
+    for repo in repos:
+        name = repo[0]
+        is_private = repo[1]
+        print("{0:<{width}} {1}".format(name,
+                                       "Public" if not is_private else "",
+                                       width=longest))
+
+def create(srcmap, args, init=False):
+    usage = "Usage {0} [--public | -p] [--add | -a <remote name>] {1}  <source>/<repo name>"\
+            .format(sys.argv[0], "init" if init else "create")
+
+    is_private=True
+    if args[0] == "--public" or args[0] == "-p":
+        is_private=False
+        args.pop(0)
+
+    remote = None
+    if args[0] == '-a':
+        args.pop(0)
+        remote = args.pop(0)
+        if not init and not os.path.exists('.git'):
+            die("Must be inside a git repository to use create -a.")
+            
+    if len(args) < 1 or "/" not in args[0]:
+        die(usage)
+
+    if init and os.path.exists('.git'):
+        die("Already in a git repository, refusing to initialize."\
+            "\n(try the create command instead).")
+
+
+    repos = [ repo
+              for spec in args
+              for repo in parse_repospec(srcmap, spec) ]
+
+    if init and len(repos) != 1:
+            die("init must be called with a single repo")
+    if remote and len(repos) != 1:
+            die("The -a flag can only be used with a single repo.")
+
+    for repo in repos:
+        try:
+            print("Attempting to create {0} in {1}".format(repo.name,
+                                                           repo.source.name))
+            repo.source.create(repo.name, is_private=is_private)
+            print("Successfully created {0} in {1}".format(repo.name,
+                                                           repo.source.name))
+            print("Remote url is {0}".format(repo.location()))
+
+        except Exception as e:
+            errmsg = "Failed to create {0}: {1}"\
+                     .format(repo.fullname(), e)
+            if init or remote:
+                die(errmsg)
+            else:
+                print("ERROR:", errmsg, file=sys.stderr)
+
+
+    if init:
+        print("Initializing git repo...")
+        subprocess.check_call([GITCMD, "init"])
+        os.execl(GITCMD, GITCMD, "remote", "add", "origin", repos[0].location())
+
+    if remote:
+        print("Setting {0} to {1}".format(remote, repos[0].location()))
+        os.execl(GITCMD, GITCMD, "remote", "add", remote, repos[0].location())
+        
+
+def rm(srcmap, args):
+    if len(args) < 1:
+        die("Usage {0} rm <source>/<repo name>".format(sys.argv[0]))
+
+    repos = [ repo
+              for arg in args
+              for repo in parse_repospec(srcmap, arg) ]
+
+    for repo in repos:
+        print(repo.fullname())
+
+    r = input("The repos listed above will be PERMANENTLY deleted\n"
+              "type YES to proceed: ")
+    if r != "YES":
+        die("Aborting...")
+
+    for repo in repos:
+        print("Deleting {0}".format(repo.fullname()))
+        try:
+            repo.delete()
+        except Exception as e:
+            print("ERROR: Failed to delete {0}:\n {1}"\
+                  .format(repo.fullname(), e),
+                  file=sys.stderr)
+
+def info(srcmap, args):
+    usage = "Usage: {0} info <git source>"\
+            .format(sys.argv[0])
+
+    if len(args) != 1:
+        die(usage)
+
+    repospec = args[0]
+    (repo,) = parse_repospec(srcmap, repospec)
+
+    if not repo.exists():
+        die("{0} does not exist".format(repospec))
+
+    #Some of these operations block, so we 
+    #build a string to aggregate the dealys
+    #for printing.
+
+    r = "Project Name: " + repo.name + "\n"
+    r += "Source: " + repo.source.name + "\n"
+    r += "Location: " + repo.location() + "\n"
+    r += "Public: " + str(repo.public())
+    print(r)
+
+def clone(srcmap, args):
+    (repo,) = parse_repospec(srcmap, args[0])
+    os.execl(GITCMD, GITCMD, 'clone', repo.location())
+
+
+#All config section parameters get fed into (as keyword args)the class
+#constructor of the class matching the 'type property'. New source
+#types can easily be defined simply creating a new class which
+#implements gt.sources.base in gt.sources.
+
+def parse_cfg():
+    #Parse config file section and transform it into a source instance.
+    def parse_section(name, section):
+        if not section.get('type'):
+            die("Invalid {0}: Source {1} must have a type.".format(CFG_FILE, name))
+
+        sourcecls = gt.sources.source_map[section['type'].lower()]
+        args = inspect.getargspec(sourcecls.__init__).args[1:]
+
+        params = section
+        params.pop('type')
+        params['name'] = name
+
+        missing = set(args) - params.keys()
+        excess = params.keys() - set(args)
+        if missing:
+            die("The following required parameters are missing in {0} {1}: {2}"
+                .format(CFG_FILE, name, missing))
+
+        if excess:
+            die("The following extraneous parameters were found in {0} for source {1}: {2}"\
+                .format(CFG_FILE, name, excess))
+
+        return sourcecls(**params)
+
+    parser = configparser.ConfigParser()
+    parser.read(CFG_FILE)
+
+    sources = { name: parse_section(name, dict(parser.items(name)))
+                for name in parser.sections() }
+
+    return sources
+
+#Main
+
+usage = "Usage: {0} < ls | init | create | rm | clone | info > [args]"\
+        .format(sys.argv[0])
+
+if len(sys.argv) < 2:
+    die(usage)
+    
+cmd = sys.argv[1]
+args = sys.argv[2:]
+
+sources = parse_cfg()
+if cmd in ['ls', '-l', '--list']:
+    ls(sources, args)
+elif cmd in ['create', '-c', '--create']:
+    create(sources, args)
+elif cmd in ['init']:
+    create(sources, args, init=True)
+elif cmd in ['rm', 'delete', '--remove']:
+    rm(sources, args)
+elif cmd in ['clone', '-cl', '--clone']:
+    clone(sources, args)
+elif cmd in ['info', '-i', '--info']:
+    info(sources, args)
+else:
+    die(usage)
