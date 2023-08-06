@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: lektor-make
+Version: 0.2
+Summary: Run `make lektor` for custom build systems.
+Home-page: http://github.com/BarnabyShearer/lektor-make
+Author: Barnaby Shearer
+Author-email: b@zi.is
+License: MIT
+Description: # lektor-make
+        Lektor plugin to run `make lektor` for custom build systems.
+        
+Platform: UNKNOWN
+Classifier: Framework :: Lektor
+Classifier: Environment :: Plugins
+Description-Content-Type: text/markdown
