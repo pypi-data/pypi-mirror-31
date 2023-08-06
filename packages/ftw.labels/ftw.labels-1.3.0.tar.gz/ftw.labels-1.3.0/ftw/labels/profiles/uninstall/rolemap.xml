@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<rolemap>
+    <permissions>
+
+        <permission name="ftw.labels: Manage Labels Jar" acquire="True">
+        </permission>
+
+        <permission name="ftw.labels: Change Labels" acquire="True">
+        </permission>
+
+        <permission name="ftw.labels: Change Personal Labels" acquire="True">
+        </permission>
+
+    </permissions>
+</rolemap>
