@@ -1,0 +1,3 @@
+[console_scripts]
+ytdownloader = ytdownloader.command_line:main
+
