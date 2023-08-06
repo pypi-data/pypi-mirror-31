@@ -1,0 +1,5 @@
+Django==1.11.7
+django-simple-menu==1.2.1
+core-explore-common-app==1.0.0-beta1
+core-explore-example-app==1.0.0-beta1
+core-main-app==1.0.0-beta1
