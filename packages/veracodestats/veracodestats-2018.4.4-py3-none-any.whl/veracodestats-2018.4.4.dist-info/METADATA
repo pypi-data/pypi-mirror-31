@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: veracodestats
+Version: 2018.4.4
+Summary: Generate interesting statistics for a Veracode account
+Home-page: https://github.com/ctcampbell/veracode-stats
+Author: ctcampbell
+Author-email: chris@ctcampbell.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: requests (>=2.18.4)
+Requires-Dist: pytz (>=2018.4)
+
+UNKNOWN
+
+

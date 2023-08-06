@@ -1,0 +1,17 @@
+veracodestats/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+veracodestats/api.py,sha256=8kWkQygKB7VPtd18IYxBMDtwXIcePDgNORR2hS1p-zM,3891
+veracodestats/api_hmac.py,sha256=cTSQmlrDlXJp41GoG5R3Rb34QOFld1RxnV3RgBVX9io,2457
+veracodestats/data_manager.py,sha256=GcTyTSXMebuQHl3uLkvPTmLUVcjugB44v4fXd5nsRwM,2329
+veracodestats/main.py,sha256=f6e2FMnMXRDrQyC973oY1Q3n9FkrQZhgjIGmoP4hUI4,3221
+veracodestats/reports_manager.py,sha256=KaZ2NGloxyir51uPJZRcFF3tea-jVLwgTppQkbvDwd4,2150
+veracodestats/stats_manager.py,sha256=WA2XLrRywzi3VcnTaDftK13M67BhHYT7Vzev5jS4a7k,3139
+veracodestats/model/__init__.py,sha256=2cdPgXnP5nxlWG35e1QlEgd7ZvpqdDtKuyNnxiyKbiw,116
+veracodestats/model/app.py,sha256=PfH6ScxlPL2mpfMHBC1Q2IJG91l9JmsyyVSyNux4HY8,493
+veracodestats/model/build.py,sha256=Ht_-gQVoDKNRAWOLeRg8O0lhEJV0CTBo_MTbVwLH35c,1895
+veracodestats/model/policy.py,sha256=6PuvSRuuiCIv6FJxZq6yMrqbZbeAP0zNmWV3weFzQ1s,357
+veracodestats/model/sandbox.py,sha256=-DnMk-20-f9EImRsVT2FEg_YEcWjjSbYIjLIWAKT2po,336
+veracodestats-2018.4.4.dist-info/METADATA,sha256=onDrfOy-azBlk2DuZMleFVFhnF1SDnjgNFxzaEGjZF4,342
+veracodestats-2018.4.4.dist-info/RECORD,,
+veracodestats-2018.4.4.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+veracodestats-2018.4.4.dist-info/entry_points.txt,sha256=-6CeEn9tnYjQaJHJcMzGedqEY_eDFnFkIXs5nlru0oU,60
+veracodestats-2018.4.4.dist-info/top_level.txt,sha256=bHT5ezUlGYscoByp_rUGuloGwkRmph92z80Ehu_MYUs,14
