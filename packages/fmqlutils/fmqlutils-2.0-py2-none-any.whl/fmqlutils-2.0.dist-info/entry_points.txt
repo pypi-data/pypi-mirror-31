@@ -1,0 +1,3 @@
+[console_scripts]
+cacher = fmqlutils.cacher.cacher:main
+
