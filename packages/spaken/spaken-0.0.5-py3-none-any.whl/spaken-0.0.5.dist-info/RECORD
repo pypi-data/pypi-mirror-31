@@ -1,0 +1,11 @@
+spaken.py,sha256=v_lAELTzvaA2W8y_4PetHMlIadiaWiP5q6Syem5aY1o,5093
+spaken/__init__.py,sha256=eB5tEg_BNHHsJgQexgmpZJr4c2VbfooQZMXAWuDHoIg,22
+spaken/finder.py,sha256=xx-cLml-wWSNZfY6P0WIQk5hqJWZKl4Rm3Gh6qJKgVo,1673
+spaken/helpers.py,sha256=w0yY3tnSYBfZhRkpP00j1K2jaayzHwReXm8jybHcXyA,1273
+spaken/main.py,sha256=t6JLvoDJFngwpeSQRhsDrivZwDPHD8iNL07fxL_BDyg,3300
+spaken/s3.py,sha256=C-gvJGlrNvNX5f-IqqYGux3HvcrtGh2B81xpJub-lRE,1041
+spaken-0.0.5.dist-info/METADATA,sha256=atu6Hsw8TAOj5-3prnRHRc1anjhVSrbkEWmJ8on3mrQ,431
+spaken-0.0.5.dist-info/RECORD,,
+spaken-0.0.5.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+spaken-0.0.5.dist-info/entry_points.txt,sha256=V32o_qfJKw_i3GO7NiuCe5HKygbVSoCnPTjhk84nTp4,45
+spaken-0.0.5.dist-info/top_level.txt,sha256=h18TRT5g8iWrBsn7bMr5LvaMFDxK4J9_NXbPq3tyXo8,7
