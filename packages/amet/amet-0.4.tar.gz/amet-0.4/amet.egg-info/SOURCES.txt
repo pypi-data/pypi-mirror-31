@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+amet/__init__.py
+amet/amet.py
+amet/tests.py
+amet.egg-info/PKG-INFO
+amet.egg-info/SOURCES.txt
+amet.egg-info/dependency_links.txt
+amet.egg-info/top_level.txt
