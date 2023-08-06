@@ -1,0 +1,12 @@
+numpy>=1.14
+tensorflow>=1.5
+Pillow>=5.1
+
+[plot]
+matplotlib>=2.1.2
+
+[tf]
+tensorflow>=1.5
+
+[tfgpu]
+tensorflow-gpu>1.5
