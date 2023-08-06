@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: banregio-api
+Version: 0.1.1
+Summary: wrapper to api banregio
+Home-page: https://github.com/banregiolabs/api-sdk-python
+Author: Adrian Meza Maldonado, Daniel Martinez Torres
+Author-email: adrian.meza@banregiolabs.com, daniel.martinez@banregiolabs.com
+License: MIT
+Keywords: apibanregio python sdk setuptools development
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Provides-Extra: dev
+Provides-Extra: test
+Requires-Dist: rauth
+Requires-Dist: requests
+Provides-Extra: dev
+Requires-Dist: check-manifest; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: coverage; extra == 'test'
+
+UNKNOWN
+
+
