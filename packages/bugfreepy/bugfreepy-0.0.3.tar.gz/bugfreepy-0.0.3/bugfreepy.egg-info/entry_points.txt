@@ -1,0 +1,3 @@
+[console_scripts]
+bfp = bugfreepy.main:main
+

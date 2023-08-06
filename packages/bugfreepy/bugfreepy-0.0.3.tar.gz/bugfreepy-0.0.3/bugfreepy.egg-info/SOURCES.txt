@@ -1,0 +1,11 @@
+README.md
+setup.py
+bugfreepy/CommentWrite.py
+bugfreepy/__init__.py
+bugfreepy/main.py
+bugfreepy.egg-info/PKG-INFO
+bugfreepy.egg-info/SOURCES.txt
+bugfreepy.egg-info/dependency_links.txt
+bugfreepy.egg-info/entry_points.txt
+bugfreepy.egg-info/top_level.txt
+text_pictures/__init__.py
