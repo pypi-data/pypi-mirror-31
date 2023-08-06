@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: nionswift-instrumentation
+Version: 0.13.0
+Summary: A Nion Swift library for STEM instrumentation (Camera, Scan, Video, Microscope).
+Home-page: https://github.com/nion-software/nionswift-instrumentation-kit
+Author: Nion Software
+Author-email: swift@nion.com
+License: GPLv3
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python :: 3.5
+Requires-Python: ~=3.5
+
+UNKNOWN
+
+
