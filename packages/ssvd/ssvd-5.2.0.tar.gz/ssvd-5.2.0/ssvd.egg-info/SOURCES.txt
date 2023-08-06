@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+ssvd/__init__.py
+ssvd/__version__.py
+ssvd/core.py
+ssvd.egg-info/PKG-INFO
+ssvd.egg-info/SOURCES.txt
+ssvd.egg-info/dependency_links.txt
+ssvd.egg-info/top_level.txt
