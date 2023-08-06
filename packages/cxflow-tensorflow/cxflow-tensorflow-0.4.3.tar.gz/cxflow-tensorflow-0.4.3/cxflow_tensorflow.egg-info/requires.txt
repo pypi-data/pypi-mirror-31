@@ -1,0 +1,4 @@
+numpy
+tensorflow>=1.5
+cxflow>=0.12
+tensorflow-tensorboard>=0.1.4
