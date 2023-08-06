@@ -1,0 +1,6 @@
+click<6.8,>=6.7
+selenium<3.12,>=3.11
+
+[test]
+pytest<3.6,>=3.5
+pytest-flake8<1.1,>=1.0
