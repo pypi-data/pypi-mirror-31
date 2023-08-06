@@ -1,0 +1,10 @@
+setup.cfg
+setup.py
+bin/yarn_unreg_nodes
+yarn_unreg_nodes/__init__.py
+yarn_unreg_nodes.egg-info/PKG-INFO
+yarn_unreg_nodes.egg-info/SOURCES.txt
+yarn_unreg_nodes.egg-info/dependency_links.txt
+yarn_unreg_nodes.egg-info/not-zip-safe
+yarn_unreg_nodes.egg-info/requires.txt
+yarn_unreg_nodes.egg-info/top_level.txt

@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: yarn-unreg-nodes
+Version: 1.0.1
+Summary: List EC2 asg nodes that failed to reg with YARN cluster
+Home-page: http://github.com/seeker815/hadoop-yarn-unreg-nodes
+Author: Sai Kothapalle
+Author-email: ephemeral927@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
