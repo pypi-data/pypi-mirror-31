@@ -1,0 +1,3 @@
+[console_scripts]
+solarcheck_ardexa = solarcheck_ardexa:cli
+

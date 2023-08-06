@@ -1,0 +1,12 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+solarcheck_ardexa.py
+solarcheck_ardexa.egg-info/PKG-INFO
+solarcheck_ardexa.egg-info/SOURCES.txt
+solarcheck_ardexa.egg-info/dependency_links.txt
+solarcheck_ardexa.egg-info/entry_points.txt
+solarcheck_ardexa.egg-info/requires.txt
+solarcheck_ardexa.egg-info/top_level.txt
