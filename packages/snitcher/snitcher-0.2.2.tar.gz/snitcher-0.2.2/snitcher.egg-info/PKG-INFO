@@ -1,0 +1,213 @@
+Metadata-Version: 1.1
+Name: snitcher
+Version: 0.2.2
+Summary: Provides a simple listener/observer library.
+Home-page: http://bitbucket.org/arcanefoam/snitcher
+Author: Horacio Hoyos Rodriguez
+Author-email: arcanefoam@gmail.com
+License: UNKNOWN
+Description: Snitcher
+        ========
+        
+        .. image:: https://circleci.com/bb/arcanefoam/snitcher/tree/master.svg?style=shield
+            :target: https://circleci.com/bb/arcanefoam/snitcher/tree/master
+        
+        .. image:: https://coveralls.io/repos/bitbucket/arcanefoam/snitcher/badge.svg?branch=master
+             :target: https://coveralls.io/bitbucket/arcanefoam/snitcher?branch=master
+        
+        .. image:: https://readthedocs.org/projects/snitcher/badge/?version=latest
+            :target: http://snitcher.readthedocs.io/en/latest/?badge=latest
+            :alt: Documentation Status
+        
+        Snitcher provides a simple, reusable notification mechanism based on the subscriber pattern. Agents interested in
+        receiving scoops from a Snitcher register with it. Invocation of the *s_inform* method on the Snitcher will cause all
+        registered agents to receive a notification (via the Agent's *notify* method).
+        
+        QuickStart
+        ----------
+        
+        Installation
+        ~~~~~~~~~~~~
+        
+        Currently you can only install from source. Clone or download and extract the repository and navigate to the folder
+        where the sources are::
+        
+            python3 setup.py install
+        
+        Adjust for the specific python command available in your environment (but it has to be Python 3.5+)
+        
+        Using Snitchers
+        ---------------
+        
+        The Snitcher class is intended to be inherited by other classes that want to provide a subscriber notification
+        mechanism. Snitcher methods are prefixed with "s\_" so that they are less likely to clash with existing or
+        inherited API.
+        
+        Agents interested in being informed by the Snitcher are registered using the *s\_register\_agent* method. Agents
+        must have a method with signature *notify(self, \*args, \*\*kwargs)*. When the *s\_inform* method is invoked in the
+        Snitcher, all registered Agents are informed. Any parameters passed to the *s\_inform* method are forwarded to the
+        Agents::
+        
+            >>> from snitcher import Snitcher
+            >>> class Worker(Snitcher):
+            ...     def do_work(self, work):
+            ...         for w in work:
+            ...             print("working on {}".format(w))
+            ...         self.s_inform()    # Let agents know work is done
+            ...
+            >>> class Supervisor:
+            ...     def notify(self, *args, **kwargs):
+            ...         print("Worker done")
+            ...
+            >>> w1 = Worker()
+            >>> work = ["loadA", "loadB"]
+            >>> boss = Supervisor()
+            >>> w1.s_register_agent(boss)
+            >>> w1.do_work(work)
+            working on loadA
+            working on loadB
+            Worker done
+        
+        The Scoop class provides a convenient container for passing information from the Snitcher to the agents. The Scoop
+        class provides a single attribute to indicate the type of Scoop (this should be enough for simple notifications).
+        To facilitate batch notifications the Scoop class provides a simple nesting mechanisms in which Scoops can be added
+        to other Scoops (via the *s\_add* method). Scoops are iterable, allowing all nested scoops to be easily visited.
+        The *s\_add* method correctly builds the scoop chain so all nested scoops can be added to a single head scoop and in
+        more chaotic environments to any scoop in the chain. The Scoop class can be extended to add more fields in order to
+        tailor the information packet to the specific application::
+        
+            >>> from datetime import datetime
+            >>> from snithcer import Scoop
+            >>> import time
+            >>> class WorkerScoop(Scoop):
+            ...     def __init__(self, type, started, finished):
+            ...         super().__init__(type)
+            ...         self.started = started
+            ...         self.finished = finished
+            ...
+            >>> class Worker(Snitcher):
+            ...     def do_work(self, work):
+            ...         scoop = None
+            ...         for w in work:
+            ...             start = datetime.now()
+            ...             print("working on {}".format(w))
+            ...             time.sleep(2)
+            ...             s = WorkerScoop(type="Work", started=start, finished=datetime.now())
+            ...             if scoop is None:
+            ...                 scoop = s
+            ...             else:
+            ...                 scoop.s_add(s)
+            ...         self.s_inform(scoop)
+            >>> class Supervisor:
+            ...     def notify(self, scoop):
+            ...         info = [(str(s.starter),str(s.finished)) for s in scoop]
+            ...         print("Worker done with: {}, details: {}".format(scoop.type, info))
+            >>> w1 = Worker()
+            >>> work = ["loadA","loadB"]
+            >>> boss = Supervisor()
+            >>> w1.s_add_agent(boss)
+            >>> w1.do_work(work)
+            working on loadA
+            working on loadB
+            Worker done with: Work, details: [('2017-09-30 22:44:09.576904', '2017-09-30 22:44:11.577410'), ('2017-09-30 22:44:11.577410', '2017-09-30 22:44:13.577559')]
+        
+        
+        To support existing APIs the agent can specify an alternative method to receive the notifications when being registered
+        with the Snitcher. The supplied method should be queried from the agent instance (i.e. not from the agent class).
+        Finally, the Snitcher has a flag (*s\_chatty*) that controls whether agents are informed during the invocation of the
+        inform method::
+        
+            >>> class Worker(Snitcher):
+            ...     def do_work(self, work):
+            ...         scoop = None
+            ...         for w in work:
+            ...             start = datetime.now()
+            ...             print("working on {}".format(w))
+            ...             time.sleep(2)
+            ...             s = WorkerScoop(type="Work", started=start, finished=datetime.now())
+            ...             if scoop is None:
+            ...                 scoop = s
+            ...             else:
+            ...                 scoop.s_add(s)
+            ...         self.s_inform(scoop)
+            ...
+            ...     def do_break(self, duration):
+            ...         start = datetime.now()
+            ...         time.sleep(duration)
+            ...         s = WorkerScoop(type="Break", started=start, finished=datetime.now())
+            ...         self.s_inform(s)
+        
+            >>> class Supervisor:
+            ...     def supervise(self, scoop):
+            ...         info = [(str(s.started), str(s.finished)) for s in scoop]
+            ...         print("Worker done with: {}, details: {}".format(scoop.type, info))
+        
+            >>> w1 = Worker()
+            >>> work = ["loadA", "loadB"]
+            >>> boss = Supervisor()
+            >>> w1.s_register_agent(boss, boss.supervise)   # Provide the preferred notification method
+            >>> w1.do_work(work)
+            working on loadA
+            working on loadB
+            Worker done with: Work, details: [('2017-10-03 19:39:43.534965', '2017-10-03 19:39:45.535265'), ('2017-10-03 19:39:45.535265', '2017-10-03 19:39:47.536316')]
+            >>> w1.do_break(2)
+            Worker done with: Break, details: [('2017-10-03 19:39:47.536316', '2017-10-03 19:39:49.536355')]
+            >>> w1.s_chatty = False     # Don't monitor breaks
+            >>> w1.do_break(2)
+            >>> w1.s_chatty = True      # Monitor back
+            >>> work = ["loadE", "loadF"]
+            >>> w1.do_work(work)
+            working on loadE
+            working on loadF
+            Worker done with: Work, details: [('2017-10-03 19:39:55.537225', '2017-10-03 19:39:57.537791'), ('2017-10-03 19:39:57.537791', '2017-10-03 19:39:59.538375')]
+        
+        
+        Logging
+        -------
+        
+        The Snitcher logs agent register/unregister events at the *info* level. Errors that result from problems accessing the
+        agents's notification method
+        
+        
+        Changelog
+        =========
+        All notable changes to this project will be documented in this file.
+        
+        The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
+        and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
+        
+        [Unreleased]
+        ------------
+        
+        
+        [0.2.1] - 2018-04-23
+        --------------------
+        
+        Added
+        ~~~~~
+        - Add tests to improve coverage.
+        - Completed the README, added example.
+        - Added *args and **kwargs to Snitcher init to improve inheritance support.
+        - Improved logging messages
+        
+        [0.1.6] - 2017-08-27
+        --------------------
+        Initial release. Includes the first API implementation, tests and documentation.
+        
+        .. Added
+           ~~~~~
+           Changed
+           ~~~~~~~
+           Fixed
+           ~~~~~
+           Removed
+           ~~~~~~~
+        
+Platform: any
+Classifier: Programming Language :: Python
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Natural Language :: English
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules

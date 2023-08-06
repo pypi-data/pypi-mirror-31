@@ -1,0 +1,14 @@
+CHANGELOG.rst
+CONTRIB.rst
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+snitcher/__init__.py
+snitcher/__version.py
+snitcher/snitcher.py
+snitcher.egg-info/PKG-INFO
+snitcher.egg-info/SOURCES.txt
+snitcher.egg-info/dependency_links.txt
+snitcher.egg-info/top_level.txt
+test/test_snitcher.py
