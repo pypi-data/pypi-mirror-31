@@ -1,0 +1,16 @@
+sidewalkify/__init__.py,sha256=_QnT0Q4cYLqhvUoazHuSa-baxx6_f5IK5Gie-PNOzAY,50
+sidewalkify/__main__.py,sha256=gArvgOjogqeMxNPeZPv_CLD8WrqD38enwPHTLLmTqlY,549
+sidewalkify/draw/__init__.py,sha256=onzXDgysDEz2qYddzfgFO0JD-zW_m7_edy9i3PcmWO8,33
+sidewalkify/draw/draw.py,sha256=_JOe6dNSuPZU7FTFTZGTqW8aVDV2Qq6tEhrNBFbpr0M,1805
+sidewalkify/draw/trim.py,sha256=h-cWxk8OVOQfOPhPOMa34CfkYIbLQ6jHiq8yMnR5L6I,2263
+sidewalkify/draw/utils.py,sha256=YWLWCO88OIG3ueFcMJqWKuLBv4_OeV3qFBa2nBoUdeI,659
+sidewalkify/graph/__init__.py,sha256=O7WWrVlZYur33KBgFfz6A3DMITlryvHLQ5XJ80iJyzY,78
+sidewalkify/graph/graph.py,sha256=LC_j5AobCljyzdSHrj14mvLfyTipDMJLGe4yUtVxcsI,4301
+sidewalkify/graph/utils.py,sha256=R3d7WdI_QgtzaVcvRC2jbEa4QE-RjarACrKsUg0WOOU,2225
+sidewalkify-0.2.0.dist-info/DESCRIPTION.rst,sha256=PVeYPGmQg2Mm7GS0Q0F82lKqhS5b5Tl7jurSJ_9E3Bw,70
+sidewalkify-0.2.0.dist-info/METADATA,sha256=RUE6c_Suc669UtPsy0HkuZYYidY48fSFEYGOqxIfaHI,744
+sidewalkify-0.2.0.dist-info/RECORD,,
+sidewalkify-0.2.0.dist-info/WHEEL,sha256=rNo05PbNqwnXiIHFsYm0m22u4Zm6YJtugFG2THx4w3g,92
+sidewalkify-0.2.0.dist-info/entry_points.txt,sha256=l_PBq6_0fflVXfE8ThLrOaDEHLkWqbrzWThMXqNVgzQ,84
+sidewalkify-0.2.0.dist-info/metadata.json,sha256=EZ12vCvbv32mIup_Ho9SYIUtX_v8qeoTVbEx9FsKClQ,957
+sidewalkify-0.2.0.dist-info/top_level.txt,sha256=4vLii_A2cpMXRdHbU2tZSXXmkHzAoHZB-uwp-Bmbx-A,12
