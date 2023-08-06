@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+lol/__init__.py
+lol/lol.py
+lolP.egg-info/PKG-INFO
+lolP.egg-info/SOURCES.txt
+lolP.egg-info/dependency_links.txt
+lolP.egg-info/requires.txt
+lolP.egg-info/top_level.txt
+lolp.egg-info/PKG-INFO
+lolp.egg-info/SOURCES.txt
+lolp.egg-info/dependency_links.txt
+lolp.egg-info/requires.txt
+lolp.egg-info/top_level.txt
