@@ -1,0 +1,223 @@
+#!/usr/bin/python
+from docopt import docopt
+import json
+import os
+import sys
+import sys
+import collections
+import yaml
+from sh import pfctl, echo, ifconfig
+
+ROOT_CONFIG_FILE = os.path.expanduser("~/.dottest-config")
+SPECIFIC_CONFIG_FILE = os.path.join(os.getcwd(), ".dottest-config")
+RULES_FILE = os.path.expanduser("~/.dottest-rules")
+
+
+def eprint(*args, **kwargs):
+    """Print to stderr."""
+    print(*args, file=sys.stderr, **kwargs)
+
+
+def require_sudo():
+    """If we are not running as root, re-run as root."""
+    if os.geteuid() != 0:
+        os.execvp("sudo", ["sudo"] + sys.argv)
+
+
+def dottest_discoverer(path, config):
+    dottest_path = os.path.join(path, ".dottest")
+
+    if os.path.isfile(dottest_path):
+        with open(dottest_path, "r") as o:
+            values = [l.strip().split("=") for l in o]
+            return {v[0].strip(): int(v[1].strip()) for v in values}
+
+    return {}
+
+
+def spring_discoverer(path, config):
+    resources_path = os.path.join(path, "src/main/resources")
+    dev_application_properties_path = os.path.join(resources_path, "application-dev.properties")
+    application_properties_path = os.path.join(resources_path, "application.properties")
+    directory_module_name = os.path.split(path)[1]
+    domain = directory_module_name + config["domain_suffix"]
+
+    if os.path.isfile(dev_application_properties_path):
+        with open(dev_application_properties_path, "r") as o:
+            values = [l.strip().split("=") for l in o]
+            kv = {v[0].strip(): v[1].strip() for v in values}
+            if "server.port" in kv:
+                port = int(kv["server.port"])
+                return {domain: port}
+
+    if os.path.isfile(application_properties_path):
+        with open(application_properties_path, "r") as o:
+            values = [l.strip().split("=") for l in o]
+            kv = {v[0].strip(): v[1].strip() for v in values}
+            if "server.port" in kv:
+                port = int(kv["server.port"])
+                return {domain: port}
+
+    return {}
+
+
+DISCOVERERS = {
+    "dottest": dottest_discoverer,
+    "spring": spring_discoverer
+}
+
+
+class DotTest:
+
+    def __init__(self):
+        self.read_config()
+        self.read_rules()
+
+    def read_config(self):
+        self._config = {
+            "domain_suffix": ".test",
+            "address_prefix": "127.0.0.",
+            "discovery": ["dottest"]
+        }
+        if os.path.exists(ROOT_CONFIG_FILE):
+            with open(ROOT_CONFIG_FILE, "r") as i:
+                print(self._config, yaml.load(i))
+                self._config.update(yaml.load(i))
+        if os.path.exists(SPECIFIC_CONFIG_FILE):
+            with open(SPECIFIC_CONFIG_FILE, "r") as i:
+                self._config.update(yaml.load(i))
+
+        if not self._config["address_prefix"].endswith(".") or not self._config["address_prefix"].count(".") == 3:
+            eprint("Error: Invalid address prefix %s" % self._config["address_prefix"])
+            sys.exit(1)
+
+        for discoverer in self._config["discovery"]:
+            if discoverer not in DISCOVERERS:
+                eprint("Error: No discovery mechanism named '%s'" % discoverer)
+                sys.exit(1)
+
+    def read_rules(self):
+        self._rules = collections.OrderedDict()
+        if os.path.exists(RULES_FILE):
+            with open(RULES_FILE, "r") as i:
+                self._rules.update(collections.OrderedDict(l.strip().split("=", 1) for l in i.readlines() if not l.strip() == ""))
+
+    def write_rules(self):
+        with open(RULES_FILE, "w") as o:
+            for domain, port in self._rules.items():
+                o.write("%s=%s\n" % (domain, port))
+
+    def refresh_system(self):
+        print("Total %s configured rules." % len(self._rules.keys()))
+        self._refresh_hosts()
+        self._refresh_ifconfig()
+        self._refresh_ports()
+
+    def _refresh_hosts(self):
+        with open("/etc/hosts", "r") as o:
+            lines = o.readlines()
+
+        # First strip out all existing ones with our prefix
+        lines = [l for l in lines if not l.startswith(self._config["address_prefix"]) or l.startswith(self._config["address_prefix"] + "1")]
+
+        n = 2
+        for domain, port in self._rules.items():
+            lines.append("%s%s\t%s\n" % (self._config["address_prefix"], n, domain))
+            n += 1
+
+        with open("/etc/hosts", "w") as o:
+            for line in lines:
+                o.write(line)
+
+    def _refresh_ifconfig(self):
+        n = 2
+        for domain, port in self._rules.items():
+            ifconfig("lo0", "alias", "%s%s" % (self._config["address_prefix"], n))
+            n += 1
+
+    def _refresh_ports(self):
+        rules = pfctl("-s", "all")
+        if "TRANSLATION RULES" in rules:
+            rules = [l.strip() for l in rules.split("TRANSLATION RULES:", 1)[1].split("FILTER", 1)[0].split("\n") if l.strip() != ""]
+            rules = [l for l in rules if self._config["address_prefix"] not in l]
+        else:
+            rules = []
+
+        n = 2
+        for domain, port in self._rules.items():
+            rules.append("rdr pass on lo0 inet proto tcp from any to %s%s port 80 -> 127.0.0.1 port %s" % (self._config["address_prefix"], n, port))
+            n += 1
+
+        try:
+            pfctl("-ef", "-", _in=echo("\n".join(current_rules)))
+        except:
+            # It always throws because of a warning. Ignore it
+            pass
+
+    def add(self, domain, port):
+        if not domain.endswith(self._config["domain_suffix"]):
+            eprint("Error '%s' does not end with %s" % (domain, self._config["domain_suffix"]))
+            sys.exit(1)
+        self._rules[domain] = port
+
+    def remove(self, domain):
+        if domain not in self._rules:
+            eprint("Domain %s not configured" % domain)
+            sys.exit(1)
+        del self._rules[domain]
+
+    def list(self):
+        for domain, port in self._rules.items():
+            print("%s points to localhost:%s" % (domain, port))
+
+    def clear(self):
+        self._rules = {}
+
+    def get_dottest_rules(self, path):
+        rules = collections.OrderedDict()
+
+        for discoverer in self._config["discovery"]:
+            rules.update(DISCOVERERS[discoverer](path, self._config))
+
+        return rules
+
+    def auto(self, path):
+        dottest_rules = self.get_dottest_rules(path)
+        for domain, port in dottest_rules.items():
+            self.add(domain, port)
+
+        for f in os.listdir(path):
+            subdir = os.path.join(path, f)
+            if os.path.isdir(subdir):
+                self.auto(subdir)
+
+
+__doc__ = """dotTest - Local .test domains
+Usage:
+dottest add <domain> <port>
+dottest remove <domain>
+dottest list
+dottest clear
+dottest init
+dottest auto [path]
+"""
+
+arguments = docopt(__doc__, version="dotTest 0.1")
+
+require_sudo()
+dottest = DotTest()
+if arguments["list"]:
+    dottest.list()
+    sys.exit(0)
+elif arguments["add"]:
+    dottest.add(arguments["<domain>"], int(arguments["<port>"]))
+elif arguments["remove"]:
+    dottest.remove(arguments["<domain>"])
+elif arguments["auto"]:
+    path = os.getcwd() if not arguments["path"] else arguments["path"]
+    dottest.auto(path)
+elif arguments["clear"]:
+    dottest.clear()
+
+dottest.write_rules()
+dottest.refresh_system()
