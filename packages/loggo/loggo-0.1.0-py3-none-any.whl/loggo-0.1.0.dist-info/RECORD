@@ -1,0 +1,13 @@
+loggo/__init__.py,sha256=_jd34_4VtqbCw-jlfao7psw1ggTwTi_3AGyTS1hXsww,90
+loggo/class_decorator.py,sha256=dzvBBXR1U0g3q0xtlw0Ttr2yA5pmyomKDexGdktLTUA,1390
+loggo/config.py,sha256=IzZcDqKjPS0GMEvDY5sxNcwyTGUv-uJj3CccYFvqMCc,489
+loggo/decorator.py,sha256=r5r-loD0sC2p2AuzCFRBjcE1YMwh3W97-VWaGzezV3A,4015
+loggo/exception.py,sha256=D2dzdKOZ6Uk42Ta9r83DajhOYoSQ_WoNUeaA3JXVYYw,553
+loggo/loggo.py,sha256=S66VpfMhYVw3tr1ixpzZg3dlwd6gOYrJZoA7tBMdsSk,18117
+loggo-0.1.0.dist-info/DESCRIPTION.rst,sha256=t08eO9ZOPj-eYAU2Yi88KhSubeeRtfw9Hlob9RzlJSo,5485
+loggo-0.1.0.dist-info/METADATA,sha256=gEyE9p1nSiBDzabbCYKMMX237vHDth0gOtdEDPjal1o,5869
+loggo-0.1.0.dist-info/RECORD,,
+loggo-0.1.0.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+loggo-0.1.0.dist-info/metadata.json,sha256=qZrORpkA1sjvdpiTilej9Z9EkDlfbj9w06tMfDhB6FQ,549
+loggo-0.1.0.dist-info/top_level.txt,sha256=MW2OpgQ1XVuNvK1Uw1ssxqk3jzuYXFuYGQM9BrTvcQY,12
+tests/tests.py,sha256=fv_NpzHynSONXpPGJNVvAiywrwQgiIPSTBEkUtPLJ2k,10969
