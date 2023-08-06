@@ -1,0 +1,314 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>sconce.trainers package &mdash; Pytorch-Sconce master documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" type="text/css" />
+  <link rel="stylesheet" href="_static/css/pytorch_theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Pytorch-Sconce
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                master (0.6.0 )
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Class Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="data_generator.html">Data Generators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="data_generator.html#datagenerator"><span class="hidden-section">DataGenerator</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_generator.html#imagedatagenerator"><span class="hidden-section">ImageDataGenerator</span></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rate_controllers.html">Rate Controllers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rate_controllers.html#constantratecontroller"><span class="hidden-section">ConstantRateController</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="rate_controllers.html#cosineratecontroller"><span class="hidden-section">CosineRateController</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="rate_controllers.html#exponentialratecontroller"><span class="hidden-section">ExponentialRateController</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="rate_controllers.html#linearratecontroller"><span class="hidden-section">LinearRateController</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="rate_controllers.html#stepratecontroller"><span class="hidden-section">StepRateController</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="rate_controllers.html#triangleratecontroller"><span class="hidden-section">TriangleRateController</span></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="monitors.html">Monitors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="monitors.html#monitor"><span class="hidden-section">Monitor</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="monitors.html#compositemonitor"><span class="hidden-section">CompositeMonitor</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="monitors.html#dataframemonitor"><span class="hidden-section">DataframeMonitor</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="monitors.html#losswisemonitor"><span class="hidden-section">LosswiseMonitor</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="monitors.html#ringbuffermonitor"><span class="hidden-section">RingbufferMonitor</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="monitors.html#stdoutmonitor"><span class="hidden-section">StdoutMonitor</span></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="models.html#basicautoencoder"><span class="hidden-section">BasicAutoencoder</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="models.html#basicclassifer"><span class="hidden-section">BasicClassifer</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="models.html#multilayerperceptron"><span class="hidden-section">MultilayerPerceptron</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="models.html#wideresnetimageclassifier"><span class="hidden-section">WideResnetImageClassifier</span></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="trainers.html">Trainers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="trainers.html#basic-trainer"><span class="hidden-section">Basic Trainer</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="trainers.html#autoencodertrainer"><span class="hidden-section">AutoencoderTrainer</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="trainers.html#classifiertrainer"><span class="hidden-section">ClassifierTrainer</span></a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Pytorch-Sconce</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>sconce.trainers package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/sconce.trainers.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sconce-trainers-package">
+<h1>sconce.trainers package<a class="headerlink" href="#sconce-trainers-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-sconce.trainers.autoencoder_trainer">
+<span id="sconce-trainers-autoencoder-trainer-module"></span><h2>sconce.trainers.autoencoder_trainer module<a class="headerlink" href="#module-sconce.trainers.autoencoder_trainer" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="sconce.trainers.autoencoder_trainer.AutoencoderMixin">
+<em class="property">class </em><code class="descclassname">sconce.trainers.autoencoder_trainer.</code><code class="descname">AutoencoderMixin</code><a class="reference internal" href="_modules/sconce/trainers/autoencoder_trainer.html#AutoencoderMixin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sconce.trainers.autoencoder_trainer.AutoencoderMixin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/abc.html#abc.ABC" title="(in Python v3.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></a></p>
+<dl class="method">
+<dt id="sconce.trainers.autoencoder_trainer.AutoencoderMixin.plot_input_output_pairs">
+<code class="descname">plot_input_output_pairs</code><span class="sig-paren">(</span><em>title='A Sampling of Autoencoder Results'</em>, <em>num_cols=10</em>, <em>figsize=(15</em>, <em>3.2)</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sconce/trainers/autoencoder_trainer.html#AutoencoderMixin.plot_input_output_pairs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sconce.trainers.autoencoder_trainer.AutoencoderMixin.plot_input_output_pairs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sconce.trainers.autoencoder_trainer.AutoencoderMixin.plot_latent_space">
+<code class="descname">plot_latent_space</code><span class="sig-paren">(</span><em>title='Latent Representation'</em>, <em>figsize=(8</em>, <em>8)</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sconce/trainers/autoencoder_trainer.html#AutoencoderMixin.plot_latent_space"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sconce.trainers.autoencoder_trainer.AutoencoderMixin.plot_latent_space" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sconce.trainers.autoencoder_trainer.AutoencoderTrainer">
+<em class="property">class </em><code class="descclassname">sconce.trainers.autoencoder_trainer.</code><code class="descname">AutoencoderTrainer</code><span class="sig-paren">(</span><em>*</em>, <em>model</em>, <em>training_data_generator</em>, <em>test_data_generator</em>, <em>optimizer</em>, <em>monitor=None</em>, <em>rate_controller=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sconce/trainers/autoencoder_trainer.html#AutoencoderTrainer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sconce.trainers.autoencoder_trainer.AutoencoderTrainer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="trainers.html#sconce.trainer.Trainer" title="sconce.trainer.Trainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">sconce.trainer.Trainer</span></code></a>, <a class="reference internal" href="#sconce.trainers.autoencoder_trainer.AutoencoderMixin" title="sconce.trainers.autoencoder_trainer.AutoencoderMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">sconce.trainers.autoencoder_trainer.AutoencoderMixin</span></code></a></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-sconce.trainers.classifier_trainer">
+<span id="sconce-trainers-classifier-trainer-module"></span><h2>sconce.trainers.classifier_trainer module<a class="headerlink" href="#module-sconce.trainers.classifier_trainer" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="sconce.trainers.classifier_trainer.ClassifierMixin">
+<em class="property">class </em><code class="descclassname">sconce.trainers.classifier_trainer.</code><code class="descname">ClassifierMixin</code><a class="reference internal" href="_modules/sconce/trainers/classifier_trainer.html#ClassifierMixin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sconce.trainers.classifier_trainer.ClassifierMixin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/abc.html#abc.ABC" title="(in Python v3.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></a></p>
+<dl class="method">
+<dt id="sconce.trainers.classifier_trainer.ClassifierMixin.get_classification_accuracy">
+<code class="descname">get_classification_accuracy</code><span class="sig-paren">(</span><em>data_generator=None</em>, <em>cache_results=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sconce/trainers/classifier_trainer.html#ClassifierMixin.get_classification_accuracy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sconce.trainers.classifier_trainer.ClassifierMixin.get_classification_accuracy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sconce.trainers.classifier_trainer.ClassifierMixin.get_confusion_matrix">
+<code class="descname">get_confusion_matrix</code><span class="sig-paren">(</span><em>data_generator=None</em>, <em>cache_results=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sconce/trainers/classifier_trainer.html#ClassifierMixin.get_confusion_matrix"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sconce.trainers.classifier_trainer.ClassifierMixin.get_confusion_matrix" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sconce.trainers.classifier_trainer.ClassifierMixin.plot_confusion_matrix">
+<code class="descname">plot_confusion_matrix</code><span class="sig-paren">(</span><em>data_generator=None</em>, <em>**heatmap_kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sconce/trainers/classifier_trainer.html#ClassifierMixin.plot_confusion_matrix"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sconce.trainers.classifier_trainer.ClassifierMixin.plot_confusion_matrix" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sconce.trainers.classifier_trainer.ClassifierMixin.plot_samples">
+<code class="descname">plot_samples</code><span class="sig-paren">(</span><em>predicted_label</em>, <em>true_label=None</em>, <em>data_generator=None</em>, <em>sort_by='rising predicted label score'</em>, <em>num_samples=7</em>, <em>num_cols=7</em>, <em>figure_width=15</em>, <em>image_height=3</em>, <em>cache_results=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sconce/trainers/classifier_trainer.html#ClassifierMixin.plot_samples"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sconce.trainers.classifier_trainer.ClassifierMixin.plot_samples" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sconce.trainers.classifier_trainer.ClassifierTrainer">
+<em class="property">class </em><code class="descclassname">sconce.trainers.classifier_trainer.</code><code class="descname">ClassifierTrainer</code><span class="sig-paren">(</span><em>*</em>, <em>model</em>, <em>training_data_generator</em>, <em>test_data_generator</em>, <em>optimizer</em>, <em>monitor=None</em>, <em>rate_controller=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sconce/trainers/classifier_trainer.html#ClassifierTrainer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sconce.trainers.classifier_trainer.ClassifierTrainer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="trainers.html#sconce.trainer.Trainer" title="sconce.trainer.Trainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">sconce.trainer.Trainer</span></code></a>, <a class="reference internal" href="#sconce.trainers.classifier_trainer.ClassifierMixin" title="sconce.trainers.classifier_trainer.ClassifierMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">sconce.trainers.classifier_trainer.ClassifierMixin</span></code></a></p>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Pytorch-Sconce Contributors.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'master',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+</body>
+</html>
