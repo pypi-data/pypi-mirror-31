@@ -1,0 +1,62 @@
+Metadata-Version: 2.0
+Name: rosey
+Version: 0.15052018
+Summary: Data science utilities for statistics and machine learning.
+Home-page: https://github.com/arose13/rosey
+Author: Stephen Anthony Rose
+Author-email: anthony@stephenro.se
+License: BSD
+Download-URL: https://github.com/arose13/rosey/tarball/0.15052018
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: sphinx
+Requires-Dist: sphinx-rtd-theme
+Requires-Dist: nose
+Requires-Dist: coverage
+Requires-Dist: numpy (>=1.13.0)
+Requires-Dist: scipy (>=1.0.0)
+Requires-Dist: pandas (>=0.20.0)
+Requires-Dist: arrow (>=0.12.0)
+Requires-Dist: seaborn (>=0.8.1)
+Requires-Dist: matplotlib (>=2.1.0)
+Requires-Dist: tensorflow (>=1.6.0)
+Requires-Dist: keras (>=2.0.4)
+Requires-Dist: scikit-learn (>=0.19.1)
+Requires-Dist: glmnet (>=2.0.0)
+
+Rosey
+===============================
+
+version number: 0.15052018
+author: Stephen Anthony Rose
+
+Overview
+--------
+
+Data Science Utilities for statistics and machine learning.
+
+Installation / Usage
+--------------------
+
+To install use pip:
+
+    $ pip install rosey
+
+
+Or clone the repo:
+
+    $ git clone https://github.com/arose13/rosey.git
+    $ python setup.py install
+
+Contributing
+------------
+
+Me (Stephen Anthony Rose)
+
+Example
+-------
+
+TBD
+
