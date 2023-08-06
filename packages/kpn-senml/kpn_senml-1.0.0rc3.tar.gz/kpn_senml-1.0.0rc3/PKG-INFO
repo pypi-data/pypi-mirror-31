@@ -1,0 +1,12 @@
+Metadata-Version: 1.0
+Name: kpn_senml
+Version: 1.0.0rc3
+Summary: generate and parse senml json and cbor data
+Home-page: https://github.com/jan-bogaerts/slate
+Author: Jan Bogaerts
+Author-email: jb@elastetic.com
+License: APACHE
+Description-Content-Type: UNKNOWN
+Description: With this library you can generate senml packs containing sensor data in both json and cbor format.  It can also parse senml data in both json and cbor format in order to support actuators.
+Keywords: senml kpn cbor json
+Platform: UNKNOWN
