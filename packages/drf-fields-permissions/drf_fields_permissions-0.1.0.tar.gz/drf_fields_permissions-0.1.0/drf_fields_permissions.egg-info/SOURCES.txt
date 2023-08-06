@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+drf_fields_permissions.egg-info/PKG-INFO
+drf_fields_permissions.egg-info/SOURCES.txt
+drf_fields_permissions.egg-info/dependency_links.txt
+drf_fields_permissions.egg-info/requires.txt
+drf_fields_permissions.egg-info/top_level.txt
+fields_permissions/__init__.py
+fields_permissions/mixins.py
