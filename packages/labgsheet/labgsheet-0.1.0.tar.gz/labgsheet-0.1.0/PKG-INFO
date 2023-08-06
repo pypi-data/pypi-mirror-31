@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: labgsheet
+Version: 0.1.0
+Summary: A python library to note ml experiments on google sheet
+Home-page: https://github.com/shotarok/labgsheet
+Author: Shotaro Kohama
+Author-email: khmshtr28@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: Implementation :: PyPy
