@@ -1,0 +1,78 @@
+Metadata-Version: 2.1
+Name: spectacle
+Version: 0.2.0
+Summary: Spectroscopic analysis package for simulated or observed spectra
+Home-page: https://github.com/MISTY-pipeline/spectacle
+Author: Nicholas Earl
+Author-email: nearl@stsci.edu
+License: MIT license
+Keywords: spectacle
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: numpy
+Requires-Dist: astropy
+Requires-Dist: peakutils
+Requires-Dist: emcee
+
+=========
+Spectacle
+=========
+
+
+.. image:: https://img.shields.io/pypi/v/spectacle.svg
+        :target: https://pypi.python.org/pypi/spectacle
+
+.. image:: https://img.shields.io/travis/MISTY-pipeline/spectacle.svg
+        :target: https://travis-ci.org/MISTY-pipeline/spectacle
+
+.. image:: https://readthedocs.org/projects/spectacle-py/badge/?version=latest
+        :target: https://spectacle-py.readthedocs.io/en/latest/?badge=latest
+        :alt: Documentation Status
+
+.. image:: https://pyup.io/repos/github/MISTY-pipeline/spectacle/shield.svg
+     :target: https://pyup.io/repos/github/MISTY-pipeline/spectacle/
+     :alt: Updates
+
+
+Spectroscopic analysis package for simulated or observed spectra.
+
+
+* Free software: MIT license
+* Documentation: https://spectacle-py.readthedocs.io.
+
+
+Features
+--------
+
+* Analytic spectrum generation
+* Automatic line detection
+* Simultaneous line fitting
+* Multi-component modeling
+* Integrated analysis techniques
+
+Credits
+---------
+
+This is built with the support of Hubble grants HST-AR-13919, HST-GO-14268, 
+and HST-AR-14560
+
+
+=======
+History
+=======
+
+0.1.0 (2017-12-07)
+------------------
+
+* First release on PyPI.
+
+
