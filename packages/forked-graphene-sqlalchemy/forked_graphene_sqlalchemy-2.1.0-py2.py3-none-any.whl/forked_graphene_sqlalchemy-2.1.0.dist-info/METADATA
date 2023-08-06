@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: forked-graphene-sqlalchemy
+Version: 2.1.0
+Summary: Graphene SQLAlchemy integration
+Home-page: https://github.com/graphql-python/graphene-sqlalchemy
+Author: Syrus Akbary
+Author-email: me@syrusakbary.com
+License: MIT
+Description-Content-Type: UNKNOWN
+Keywords: api graphql protocol rest relay graphene
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Dist: six (>=1.10.0)
+Requires-Dist: graphene (>=2.0)
+Requires-Dist: SQLAlchemy
+Requires-Dist: singledispatch (>=3.4.0.3)
+Requires-Dist: iso8601
+
+Forked version of ``graphene-sqlalchemy`` for personal use.
+
+The original project is at https://pypi.org/project/graphene-sqlalchemy/
+
+
