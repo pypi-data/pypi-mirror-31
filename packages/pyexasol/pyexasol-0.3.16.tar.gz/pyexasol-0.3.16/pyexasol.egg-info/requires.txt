@@ -1,0 +1,8 @@
+websocket-client>=0.47.0
+rsa
+
+[encrypt]
+pyopenssl>=17.5.0
+
+[pandas]
+pandas>=0.22
