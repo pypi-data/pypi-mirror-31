@@ -1,0 +1,18 @@
+Metadata-Version: 2.0
+Name: arramooz-pysqlite
+Version: 0.1
+Summary: Arramooz: Arabic Dictionary for Morphological analysis - python + sqlite
+Home-page: http://arramooz-pysqlite.sourceforge.net/
+Author: Taha Zerrouki
+Author-email: taha.zerrouki@gmail.com
+License: GPL
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Requires-Dist: pyarabic (>=0.6.2)
+
+UNKNOWN
+
+
