@@ -1,0 +1,90 @@
+Metadata-Version: 2.1
+Name: mkvstrip
+Version: 1.0.2
+Summary: Python script, that acts as a front end for mkvtoolnix to removeexcess audio and subtitle streams from mkv files.
+Home-page: https://github.com/willforde/mkvstrip
+Author: William Forde
+Author-email: willforde@gmail.com
+License: UNKNOWN
+Keywords: mkv mkvmerge mkvtoolnix
+Platform: OS Independent
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: Console
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Multimedia :: Sound/Audio
+Classifier: Topic :: Multimedia :: Video
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Requires-Python: >=3.4.0
+
+
+.. image:: https://badge.fury.io/py/mkvstrip.svg
+    :target: https://pypi.org/project/mkvstrip/
+
+.. image:: https://travis-ci.org/willforde/mkvstrip.svg?branch=master
+    :target: https://travis-ci.org/willforde/mkvstrip
+
+.. image:: https://coveralls.io/repos/github/willforde/mkvstrip/badge.svg?branch=master
+    :target: https://coveralls.io/github/willforde/mkvstrip?branch=master
+
+.. image:: https://api.codacy.com/project/badge/Grade/181ade83b7c84a738ee74d913bbe9eeb
+    :target: https://www.codacy.com/app/willforde/mkvstrip?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=willforde/mkvstrip&amp;utm_campaign=Badge_Grade
+
+
+MKVStrip
+--------
+
+Python script, that acts as a front end for mkvtoolnix to remove
+excess audio and subtitle streams from mkv files. Also correcting
+title information if needed. The intention is to allow someone
+to setup a cronjob, to run this script at regular intervals
+(for example, every night). Keeping your Movie collection
+from collecting excessive tracks.
+
+Requirements:
+
+1.  MKVToolNix
+2.  Python3
+
+Install
+-------
+::
+
+    pip install mkvstrip
+
+Usage
+-----
+Posix::
+
+    mkvstrip -b /usr/bin/mkvmerge -l eng,fre /mnt/movies
+
+Windows::
+
+    mkvstrip -b C:\\Program/ Files\MKVToolNix\mkvmerge.exe -l eng,fre \\nas\movies
+
+
+CLI Arguments
+-------------
+::
+
+    mkvstrip.py [-h] [-t] -b path -l lang path
+
+    positional arguments:
+      path                         Where your MKV files are stored. Can be a directory or a file.
+
+    optional arguments:
+      -h, --help                    show this help message and exit
+      -t, --dry-run                 Enable mkvmerge dry run for testing.
+      -b path, --mkvmerge-bin path  The path to the MKVMerge executable.
+      -l lang, --language lang      3-character language code (e.g. eng). To retain
+                                    multiple, separate languages with a comma (e.g.
+                                    eng,spa).
+
+
+
