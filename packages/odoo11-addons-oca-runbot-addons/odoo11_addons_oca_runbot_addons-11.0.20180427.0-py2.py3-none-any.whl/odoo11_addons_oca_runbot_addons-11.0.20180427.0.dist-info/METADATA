@@ -1,0 +1,19 @@
+Metadata-Version: 2.0
+Name: odoo11-addons-oca-runbot-addons
+Version: 11.0.20180427.0
+Summary: Meta package for oca-runbot-addons Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo11-addon-runbot-gitlab
+Requires-Dist: odoo11-addon-runbot-send-email
+Requires-Dist: odoo11-addon-runbot-subject-skip
+Requires-Dist: odoo11-addon-runbot-travis2docker
+
+UNKNOWN
+
+
