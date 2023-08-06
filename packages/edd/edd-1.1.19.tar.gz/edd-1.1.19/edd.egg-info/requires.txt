@@ -1,0 +1,9 @@
+Logbook
+pybedtools
+statsmodels
+patsy
+pandas
+python-dateutil
+scipy
+numpy
+pysam<0.12,>=0.10
