@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: AoikConsulWatcher
+Version: 0.0.1
+Summary: Watch changes of Consul services and call a handler.
+Home-page: https://github.com/AoiKuiyuyou/AoikConsulWatcher
+Author: Aoi.Kuiyuyou
+Author-email: aoi.kuiyuyou@google.com
+License: MIT
+Keywords: consul watcher
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=2.7
+Requires-Dist: python-consul (==0.7.2)
+
+`Documentation on Github
+<https://github.com/AoiKuiyuyou/AoikConsulWatcher>`_
+

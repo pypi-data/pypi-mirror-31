@@ -1,0 +1,3 @@
+[console_scripts]
+aoikconsulwatcher = aoikconsulwatcher.__main__:main
+

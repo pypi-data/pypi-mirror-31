@@ -1,0 +1,11 @@
+AoikConsulWatcher-0.0.1.dist-info/METADATA,sha256=7HhyXeYKxcAGx9j8TEktMheg6TPrWnSATWRdZZ-c4BU,822
+AoikConsulWatcher-0.0.1.dist-info/RECORD,,
+AoikConsulWatcher-0.0.1.dist-info/WHEEL,sha256=saUSQBLOUjf5ACZdNkhQ0lB6XrHU-l4vpzxq_W1n_AY,116
+AoikConsulWatcher-0.0.1.dist-info/entry_points.txt,sha256=HOtdrfQTSLT3AWRyzFQgaRLcAjrSYtczymYJpmomvGY,71
+AoikConsulWatcher-0.0.1.dist-info/top_level.txt,sha256=C4S1OM8OI0fUP7a7ynOx3RSLV3JIQdHEioZiDkILVpo,39
+aoikconsulwatcher/__init__.py,sha256=kS7ft0LBLZTEpr27BA725WaifJr4nMPYwInItc9vzC0,79
+aoikconsulwatcher/__main__.py,sha256=4AFILLBgEqyn-JqIvxjHOFanMCYcvy4DybteKfLMGbQ,2282
+aoikconsulwatcher/config.py,sha256=uhyd-YUuUAAjTcEyZZv_KUsVH89FuIfeluwMIoZf9BA,617
+aoikconsulwatcher/watcher.py,sha256=SHc_aJTVmLotZZ62YHll91eD7fX8eXiBnH76wxCW6a4,2983
+aoikconsulwatcherdep/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aoikconsulwatcherdep/aoikimportutil.py,sha256=ivqUdRYoDL_8TAaX1saAIB3C_1_oxwwTNwpdt4M4k8o,6514
