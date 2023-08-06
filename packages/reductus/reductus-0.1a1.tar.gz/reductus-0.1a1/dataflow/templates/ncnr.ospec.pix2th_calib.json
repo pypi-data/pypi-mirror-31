@@ -1,0 +1,124 @@
+{
+  "modules": [
+    {
+      "y": 100,
+      "x": 100,
+      "module": "ncnr.ospec.LoadMAGIKPSDMany",
+      "title": "load calib"
+    },
+    {
+      "y": 100,
+      "x": 240,
+      "module": "ncnr.ospec.fitPSDCalibration",
+      "title": "fit calib"
+    },
+    {
+      "y": 60,
+      "x": 100,
+      "module": "ncnr.ospec.LoadMAGIKPSDMany",
+      "title": "load PSD"
+    },
+    {
+      "y": 60,
+      "x": 240,
+      "module": "ncnr.ospec.coordinateOffset",
+      "title": "offset"
+    },
+    {
+      "y": 65,
+      "x": 395,
+      "module": "ncnr.ospec.pixelsToTwotheta",
+      "title": "pixels->2th"
+    },
+    {
+      "y": 60,
+      "x": 545,
+      "module": "ncnr.ospec.thetaTwothetaToQxQz",
+      "title": "th2th->QxQz"
+    },
+    {
+      "module": "ncnr.ospec.sliceData",
+      "title": "Slicedata",
+      "x": 770,
+      "y": 65
+    },
+    {
+      "module": "ncnr.ospec.normalizeToMonitor",
+      "title": "Normalizetomonitor",
+      "x": 655,
+      "y": 105
+    }
+  ],
+  "wires": [
+    {
+      "source": [
+        0,
+        "output"
+      ],
+      "target": [
+        1,
+        "calibration"
+      ]
+    },
+    {
+      "source": [
+        2,
+        "output"
+      ],
+      "target": [
+        3,
+        "data"
+      ]
+    },
+    {
+      "source": [
+        3,
+        "output"
+      ],
+      "target": [
+        4,
+        "data"
+      ]
+    },
+    {
+      "source": [
+        1,
+        "output"
+      ],
+      "target": [
+        4,
+        "params"
+      ]
+    },
+    {
+      "source": [
+        4,
+        "output"
+      ],
+      "target": [
+        5,
+        "data"
+      ]
+    },
+    {
+      "source": [
+        5,
+        "output"
+      ],
+      "target": [
+        7,
+        "data"
+      ]
+    },
+    {
+      "source": [
+        7,
+        "output"
+      ],
+      "target": [
+        6,
+        "data"
+      ]
+    }
+  ]
+}
