@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: tomo
+Version: 0.0.1a0
+Summary: Algebraic Tomographic Reconstruction Tools
+Home-page: https://github.com/jam31118/tomo
+Author: sahn
+Author-email: jam31118@gmail.com
+License: GPLv3
+Description: # tomo : Tomographic Reconstruction Tool
+        Algebraic Tomographcis Reconstruction (ART) Methods from projections of aribturary 3D object.
+        
+        
+        
+Keywords: visualization,tomography
+Platform: UNKNOWN
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
