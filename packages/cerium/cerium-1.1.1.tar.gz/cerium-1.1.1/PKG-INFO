@@ -1,0 +1,18 @@
+Metadata-Version: 1.2
+Name: cerium
+Version: 1.1.1
+Summary: A Android automation framework.
+Home-page: https://github.com/fjwCode/cerium
+Author: White Turing
+Author-email: fujiawei@stu.hznu.edu.cn
+License: Apache 2.0
+Description: This project is mainly targeted to users that need to communicate with Android devices in an automated fashion, such as in automated testing.
+Keywords: android,adb,automation,testing
+Platform: Windows
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.6
