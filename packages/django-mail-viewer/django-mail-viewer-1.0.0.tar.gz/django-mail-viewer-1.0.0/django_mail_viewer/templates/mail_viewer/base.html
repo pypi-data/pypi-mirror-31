@@ -1,0 +1,81 @@
+{% load mail_viewer_tags %}
+<html>
+	<head>
+		<title>{% block 'title' %}Django Mail Viewer - Email List{% endblock 'title' %}</title>
+		<style>
+			html { height: 100%; }
+			body {
+				height: 100%;
+				margin: 0 10px 0;
+				padding: 0;
+			}
+			h3 {
+				margin: 0;
+			}
+			.email_list {
+				float: left;
+				width: 20%;
+				padding: 0 0 0;
+				height: 100%;
+				border-top: 1px solid black;
+			  border-left: 1px solid black;
+				border-bottom: 1px solid black;
+				margin: 0;
+				overflow: auto;
+			}
+			.email_list > ul {
+				margin: 0;
+				list-style: none;
+				width: 100%;
+				padding: 0;
+			}
+			.email_list--list_item {
+				border-top: none;
+				border-bottom: 1px solid black;
+				margin: 0 0 2px;
+				padding: 10px 5px;
+				width: 100%:
+			}
+			#main {
+				float: left;
+				width: 70%;
+				height: 100%;
+				padding: 0;
+				border: 1px solid black;
+			}
+		</style>
+		{% block 'css' %}{% endblock 'css' %}
+  </head>
+	<body>
+		{% block 'body' %}
+			{% block 'email_list' %}
+				<div class="email_list">
+					<ul>
+						{% for message  in outbox %}
+							{% message_lookup_id message as lookup_id %}
+							{% message_attribute message 'subject' as subject %}
+							{% message_attribute message 'from' as sender %}
+							{% message_attribute message 'to' as recipient %}
+							{% message_attribute message 'date' as sent_date %}
+							<li>
+								<a href="{% url 'mail_viewer_detail' lookup_id %}">
+									<div class="email_list--list_item">
+										{{ subject }}<br>
+										From: {{ sender }}<br>
+										To: {{ recipient }}<br>
+										Sent: {{ sent_date }}
+									</div>
+								</a>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			{% endblock 'email_list' %}
+			{% block 'main' %}
+				<div id="main">
+					{% block 'main_content' %}{% endblock 'main_content' %}
+				</div>
+			{% endblock 'main' %}
+		{% endblock 'body' %}
+	</body>
+</html>
