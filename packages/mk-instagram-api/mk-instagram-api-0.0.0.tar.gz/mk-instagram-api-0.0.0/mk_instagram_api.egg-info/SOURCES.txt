@@ -1,0 +1,8 @@
+MANIFEST.in
+VERSION
+setup.py
+mk_instagram_api/__init__.py
+mk_instagram_api.egg-info/PKG-INFO
+mk_instagram_api.egg-info/SOURCES.txt
+mk_instagram_api.egg-info/dependency_links.txt
+mk_instagram_api.egg-info/top_level.txt
