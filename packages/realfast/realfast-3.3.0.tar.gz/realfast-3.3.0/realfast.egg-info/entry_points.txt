@@ -1,0 +1,3 @@
+
+        [console_scripts]
+        realfast=realfast.cli:cli
