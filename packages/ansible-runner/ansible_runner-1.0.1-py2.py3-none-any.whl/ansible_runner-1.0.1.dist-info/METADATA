@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: ansible-runner
+Version: 1.0.1
+Summary: UNKNOWN
+Home-page: https://github.com/ansible/ansible-runner
+Author: Red Hat Ansible
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: psutil
+Requires-Dist: pexpect
+Requires-Dist: python-daemon
+Requires-Dist: PyYAML
+
+UNKNOWN
+
+
