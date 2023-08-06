@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: pythainlp
+Version: 1.6.0.5
+Summary: Thai natural language processing in Python package.
+Home-page: https://github.com/PyThaiNLP/pythainlp
+Author: PyThaiNLP
+Author-email: wannaphong@kkumail.com
+License: Apache Software License 2.0
+Requires-Dist: nltk (>=3.2.2)
+Requires-Dist: future (>=0.16.0)
+Requires-Dist: six
+Requires-Dist: marisa-trie
+Requires-Dist: requests
+Requires-Dist: dill
+Requires-Dist: pytz
+
+================
+
+
