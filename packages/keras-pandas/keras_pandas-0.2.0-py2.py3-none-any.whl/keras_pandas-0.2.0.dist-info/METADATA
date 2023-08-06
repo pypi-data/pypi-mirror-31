@@ -1,0 +1,31 @@
+Metadata-Version: 2.0
+Name: keras-pandas
+Version: 0.2.0
+Summary: test
+Home-page: https://github.com/bjherger/keras-pandas
+Author: Brendan Herger
+Author-email: 13herger@gmail.com
+License: MIT
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: attrs (==17.4.0)
+Requires-Dist: certifi (==2018.4.16)
+Requires-Dist: funcsigs (==1.0.2)
+Requires-Dist: Keras (==2.1.5)
+Requires-Dist: more-itertools (==4.1.0)
+Requires-Dist: numpy (==1.14.2)
+Requires-Dist: pandas (==0.22.0)
+Requires-Dist: pluggy (==0.6.0)
+Requires-Dist: py (==1.5.3)
+Requires-Dist: python-dateutil (==2.7.2)
+Requires-Dist: pytz (==2018.4)
+Requires-Dist: PyYAML (==3.12)
+Requires-Dist: scikit-learn (==0.19.1)
+Requires-Dist: scipy (==1.0.1)
+Requires-Dist: six (==1.11.0)
+Requires-Dist: sklearn (==0.0)
+Requires-Dist: sklearn-pandas (==1.6.0)
+
+UNKNOWN
+
+
