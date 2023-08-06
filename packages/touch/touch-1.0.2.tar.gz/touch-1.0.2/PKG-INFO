@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: touch
+Version: 1.0.2
+Summary: touch(path) - touch python implementation
+Home-page: https://github.com/looking-for-a-job/touch.py
+License: UNKNOWN
+Description: ### Install
+        
+        ```bash
+        $ [sudo] pip install touch
+        ```
+        
+        ### Usage
+        
+        ```python
+        >>> from touch import touch
+        
+        >>> touch(path)
+        ```
+        
+        ### Sources
+        
+        +   [`touch.touch(path)`](https://github.com/looking-for-a-job/touch.py/blob/master/touch/__init__.py)
+Keywords: touch file
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: System :: Filesystems
+Description-Content-Type: text/markdown
