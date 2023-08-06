@@ -1,0 +1,3 @@
+[console_scripts]
+solaris_ssh = solaris_ssh:main
+
