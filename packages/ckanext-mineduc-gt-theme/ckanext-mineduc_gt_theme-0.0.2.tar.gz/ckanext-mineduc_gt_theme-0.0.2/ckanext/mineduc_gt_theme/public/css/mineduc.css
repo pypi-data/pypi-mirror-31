@@ -1,0 +1,280 @@
+body {
+    background: white;
+    
+    
+}
+
+a, a:hover {
+    color: #ffffff;
+}
+
+.flex-wrapper {
+    flex-direction: 1;
+    display: flex;
+}
+
+
+/**************************************************
+top navbar
+**************************************************/
+
+.mainbar {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-content: stretch;
+}
+
+.mainbar > .tabs {
+    align-self: flex-end;
+    display: flex;
+}
+
+.tabs a  {
+    flex: 1;
+    box-sizing: border-box;
+    background: #454270;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 25px 25px 0px 0px;
+    box-shadow: 5px 0px 4px #ccc;
+    border: #dbdbdb solid 2px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/**************************************************
+banner
+**************************************************/
+
+.header-banner {
+    align-self: stretch;
+    background: url('/img/background.png') no-repeat 100% 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    
+}
+
+h1.title {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+h2.title {
+    color: #acbfd3;
+    font-weight: 400;
+    font-size: 1.3em;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    align-self: center;
+    max-width: 80%;
+    width: 500px;
+    background: #e2e3e4;
+    border-radius: 50px;
+    box-shadow: 5px #ffffff;
+    border: #dbdbdb solid 1px;
+    box-shadow: -2px -3px 0px #333;
+    margin-top: 15px;
+}
+
+.search-bar input {
+    flex: 1;
+    border: 0px solid;
+    background: transparent;
+    box-shadow: none;
+    margin: 0;
+    padding-left: 25px;
+}
+
+.search-bar input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.search-bar button {
+    border: 0px solid;
+    background: transparent;
+    box-shadow: none;
+    margin: 0;
+    padding-right: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+
+/**************************************************
+Links
+**************************************************/
+
+.purple-links {
+    display: flex;
+    background: #44426e;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+@media(max-width: 800px) {
+    .purple-links {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+a.purple-link {
+    flex: 1;
+    border: #000000 solid 1px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+}
+
+a.purple-link img {
+    width: auto;
+    height: 75px;
+    margin: 20px;
+}
+
+.floating-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 70px 15%;
+    background: #ededed;
+}
+
+.floating-button {
+    border-radius: 25px;
+    border: #ffffff solid 2px;
+    box-shadow: 3px 3px 5px #b4b5bf;
+    flex: 1;
+    margin: 0 15px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+
+}
+
+@media(max-width: 800px) {
+    .floating-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .floating-button {
+        margin: 15px;
+    }
+}
+
+
+.floating-button img {
+    height: 120px;
+    width: auto;
+    padding: 15px;
+}
+
+.floating-button-1 {
+    background: #fcb816;
+}
+
+.floating-button-2 {
+    background: #15c2d2;
+}
+
+.floating-button-3 {
+    background: #3f4167;
+}
+
+
+/**************************************************
+Logos
+**************************************************/
+.scalated {
+    color: #ffffff;
+    font-size: 30px;
+}
+.scalated img {
+    width: 70%;
+    max-width: auto;
+    height: auto;
+}
+
+.header-image {
+    display: inline;
+}
+
+.header-image img {
+    padding: 8px;
+}
+
+.header-image .small img, 
+.red img {
+    max-width: 100px;
+}
+
+
+/**************************************************
+footer
+**************************************************/
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    background: #44426e;
+}
+
+.footer-column {
+    flex: 4;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column h1 {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.contact-info i {
+    padding: 10px;
+}
+
+.footer-column a {
+    color: #ffffff;
+}
+
+.footer-social {
+    flex: 3,
+}
+
+.social-link i {
+    width: 1.5em;
+    height: 1.5em;
+    color: #ffffff;
+}
+
+.social-link {
+    padding: 10px;
+}

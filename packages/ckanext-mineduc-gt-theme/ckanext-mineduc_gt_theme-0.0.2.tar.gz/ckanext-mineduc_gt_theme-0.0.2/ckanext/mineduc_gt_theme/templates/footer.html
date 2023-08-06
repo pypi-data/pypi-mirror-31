@@ -1,0 +1,21 @@
+<div class="footer-container">
+  {% block footer_content %}
+  <div class="footer-column">
+    <h1>Contáctanos</h1>
+    <span class="contact-info"><i class="fas fa-map-marker-alt"></i>Dirección 6a calle 1-10 zona 10 Guatemala</span>
+    <span class="contact-info"><i class="fas fa-phone"></i>PBX: +(502) 2411-9595</span>
+    <span class="contact-info"><i class="fas fa-envelope-open"></i>Correo electrónico: info@mineduc.gob.gt</span>
+  </div>
+  <div class="footer-column">
+    <a href="http://mineduc.gob.gt">mineduc.gob.gt</a>
+    <a href="#">Portal de datos abiertos</a>
+  </div>
+  <div class="footer-column footer-social">
+    <h1>Síguenos en:</h1>
+    <a href="#" class="social-link"><i class="fab fa-facebook-f" ></i>Facebook</a>
+    <a href="#" class="social-link"><i class="fab fa-twitter"></i>Twitter</a>
+  </div>
+  {% endblock %}
+</div>
+
+{%- block footer_debug %} {% if g.debug %} {% include 'snippets/debug.html' %} {% endif %} {% endblock -%}
