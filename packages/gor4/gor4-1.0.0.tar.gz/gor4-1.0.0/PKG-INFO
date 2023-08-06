@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: gor4
+Version: 1.0.0
+Summary: Python class providing an interface to GOR4 amino acid structure prediction C code.
+Home-page: https://github.com/acorg/gor4
+Author: Terry Jones
+Author-email: tcj25@cam.ac.uk
+License: MIT
+Download-URL: https://github.com/acorg/gor4
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Keywords: GOR4 amino acid structure prediction
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
