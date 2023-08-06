@@ -1,0 +1,4 @@
+pytest
+pyyaml
+Sphinx
+sphinx_bootstrap_theme>=0.6.2
