@@ -1,0 +1,11 @@
+README.md
+setup.py
+caffe_converter/__init__.py
+caffe_converter/caffe2daq.py
+dnntools.egg-info/PKG-INFO
+dnntools.egg-info/SOURCES.txt
+dnntools.egg-info/dependency_links.txt
+dnntools.egg-info/requires.txt
+dnntools.egg-info/top_level.txt
+model_writer/__init__.py
+model_writer/model_writer.py
