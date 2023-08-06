@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: peewee-migrator
+Version: 1.0.0
+Summary: Basic migrations support for peewee ORM
+Home-page: https://github.com/suguby/peewee-migrator
+Author: Suguby
+Author-email: suguby@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: peewee migrations orm
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
