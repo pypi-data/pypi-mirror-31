@@ -1,0 +1,14 @@
+README.md
+setup.py
+oversee/__init__.py
+oversee/config.py
+oversee/extensions.py
+oversee/jetbrains.py
+oversee/main.py
+oversee/terminal.py
+oversee.egg-info/PKG-INFO
+oversee.egg-info/SOURCES.txt
+oversee.egg-info/dependency_links.txt
+oversee.egg-info/entry_points.txt
+oversee.egg-info/requires.txt
+oversee.egg-info/top_level.txt
