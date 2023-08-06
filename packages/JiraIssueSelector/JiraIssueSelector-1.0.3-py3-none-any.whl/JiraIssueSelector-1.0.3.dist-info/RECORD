@@ -1,0 +1,12 @@
+JiraIssueSelector-1.0.3.data/scripts/git-jira,sha256=Lx2GL1cgJpZ-rs649Lonx_mQabFYxkEsBYLn7Cx-Qts,2303
+JiraIssueSelector-1.0.3.dist-info/LICENSE.txt,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+JiraIssueSelector-1.0.3.dist-info/METADATA,sha256=tv8FK0M34IgUf_8BA_6f3GDdLZw-qv_QIYWNShzQ9mM,4254
+JiraIssueSelector-1.0.3.dist-info/RECORD,,
+JiraIssueSelector-1.0.3.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+JiraIssueSelector-1.0.3.dist-info/top_level.txt,sha256=-jo0VtJJ_8smac1AOCzU6X0rsQfykgHcRk5wFp3ZCVo,20
+jira_issue_selector/__init__.py,sha256=H7jUBFW3H1P84fs6HN1L0DiB__rq0BdMjpAHYtr2op0,87
+jira_issue_selector/__main__.py,sha256=FAPVnuRhsXK3aJGlKdZLKmeU8joN8wFvQELIwBM9teg,83
+jira_issue_selector/issue_selector.py,sha256=gW0qHYszRyf5xWLBAP4KJQqlara3FZfFVh1IWf1HPcw,20376
+jira_issue_selector/jira_issue.py,sha256=YaYc_CCLuS1jab4SkuomGeIAa-RcL3fPrQ7YJkS0wLc,3452
+jira_issue_selector/data/global.conf.example,sha256=Wcjvctce0VpNdWG6jPZSP_AiDSE-e9KVm-hAuN0X3Fc,1032
+jira_issue_selector/data/local.conf.example,sha256=NbdNcnknCJSiTlNCwj6Xl-flyMcch9mkeZsAVlfK3Ac,933
