@@ -1,0 +1,6 @@
+MANIFEST.in
+setup.py
+aws_encrytpion_sdk.egg-info/PKG-INFO
+aws_encrytpion_sdk.egg-info/SOURCES.txt
+aws_encrytpion_sdk.egg-info/dependency_links.txt
+aws_encrytpion_sdk.egg-info/top_level.txt
