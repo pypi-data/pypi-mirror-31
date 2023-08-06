@@ -1,0 +1,51 @@
+Metadata-Version: 1.0
+Name: callrate
+Version: 2018.4
+Summary: Package to manage functions call rate
+Home-page: https://gitlab.com/goblenus/requestslimitrate
+Author: Anton Bautkin
+Author-email: antonbautkin@gmail.com
+License: MIT
+Description: # Install
+        
+        ```
+        python3 setup.py install
+        ```
+        
+        # Usage
+        
+        ``` python
+        import threading
+        from callrate import call_rate
+        import time
+        
+        
+        @call_rate(7, 10, False)
+        def test_print(i):
+            print("Thread -> {}".format(i))
+        
+        
+        def test_thread(i):
+            while True:
+                try:
+                    test_print(i)
+                except:
+                    pass
+        
+        
+        def main():
+            threads = []
+            for i in range(10):
+                threads.append(threading.Thread(target=test_thread, args=(i, )))
+                threads[-1].start()
+        
+            for thread in threads:
+                thread.join()
+        
+        if __name__ == "__main__":
+            main()
+        ```
+        
+        # Warning
+        Note that the `call_rate` and `CallRate` is thread safe (not process safe)
+Platform: UNKNOWN
