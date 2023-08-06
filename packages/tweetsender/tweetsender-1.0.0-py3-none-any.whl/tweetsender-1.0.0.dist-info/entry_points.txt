@@ -1,0 +1,8 @@
+[console_scripts]
+tweet = tweetsender.main:main
+
+[tweet.command]
+config = tweetsender.tweet:Config
+s = tweetsender.tweet:Tweet
+send = tweetsender.tweet:Tweet
+
