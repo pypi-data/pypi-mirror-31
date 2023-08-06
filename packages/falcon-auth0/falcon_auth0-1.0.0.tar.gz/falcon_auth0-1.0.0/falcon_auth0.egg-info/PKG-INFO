@@ -1,0 +1,28 @@
+Metadata-Version: 1.2
+Name: falcon-auth0
+Version: 1.0.0
+Summary: Auth0 Authorization Middleware for The Falcon Web Framework
+Home-page: https://github.com/mcculloh213/alchemist-stack
+Author: H.D. "Chip" McCullough IV
+Author-email: hdmccullough.work@gmail.com
+License: MIT
+Project-URL: Documentation, https://github.com/mcculloh213/falcon-auth0
+Project-URL: Source, https://github.com/mcculloh213/falcon-auth0
+Project-URL: Issue Tracker, https://github.com/mcculloh213/falcon-auth0/issues
+Description-Content-Type: text/markdown
+Description: # falcon-auth0
+        Auth0 Authorization Middleware for Falcon
+        
+Keywords: falcon authorization auth0
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Plugins
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Middleware
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3
