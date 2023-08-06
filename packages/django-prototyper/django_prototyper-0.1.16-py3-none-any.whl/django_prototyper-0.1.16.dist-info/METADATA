@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: django-prototyper
+Version: 0.1.16
+Summary: Django prototyping tool
+Home-page: https://github.com/vitalik/django-prototyper
+Author: Vitaliy Kucheryaviy
+Author-email: p.p.r.vitaly@gmail.com
+License: UNKNOWN
+Keywords: django prototype boilerplate development uml diagrams
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: django
+
+django-prototyper
+===============
+
+Installation
+-----------------
+
+
