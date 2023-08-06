@@ -1,0 +1,9 @@
+README.md
+setup.py
+fipy/__init__.py
+fipy/core.py
+fipy_tools.egg-info/PKG-INFO
+fipy_tools.egg-info/SOURCES.txt
+fipy_tools.egg-info/dependency_links.txt
+fipy_tools.egg-info/not-zip-safe
+fipy_tools.egg-info/top_level.txt
