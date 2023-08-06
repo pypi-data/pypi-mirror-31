@@ -1,0 +1,10 @@
+Django
+wagtail
+
+django-timezone-field
+inflect
+holidays
+python-dateutil
+
+django-beautifulsoup-test
+coverage
