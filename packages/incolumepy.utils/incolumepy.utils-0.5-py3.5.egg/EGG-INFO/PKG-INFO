@@ -1,0 +1,33 @@
+Metadata-Version: 1.1
+Name: incolumepy.utils
+Version: 0.5
+Summary: package incolumepy utils
+Home-page: http://www.incolume.com.br
+Author: @britodfbr
+Author-email: contato@incolume.com.br
+License: BSD
+Description: #Projeto desenvolvido por incolume.com.br
+        
+        ## Gerar pacotes para instalação
+        python setup.py bdist_egg bdist_wheel
+        History
+        =======
+        
+        
+        Contributors
+        ============
+        
+        @britodfbr
+        Changes
+        =======
+        
+        0.1 = :D
+        0.2 = New implementation for def namespace
+        
+Keywords: python utils incolumepy
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: Portuguese
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
