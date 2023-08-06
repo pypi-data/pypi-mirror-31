@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: animu-cf
+Version: 0.1.0
+Summary: An Python API Wrapper for CF's API.
+Home-page: https://github.com/CFCorp/animu.py
+Author: August (Chris)
+Author-email: UNKNOWN
+License: UNKNOWN
+Requires-Dist: aiohttp
+
+# animu.py
+
+
