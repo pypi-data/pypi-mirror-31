@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: magi
+Version: 0.0.6
+Summary: parallelized univariate time series forecasting library for python
+Home-page: http://github.com/DavisTownsend/forecast
+Author: Davis Townsend
+Author-email: dtownsend@ea.com
+License: MIT
+Description: This package is provides a python wrapper around other time series analysis libraries such as the forecast package in R and the Prophet library. This new layer of abstraction makes it very simple to put many different types of univariate time series models into production by using Dask as the parallelization layer
+Keywords: time series analysis forecast forecasting predict model parallel
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: ~=3.5
