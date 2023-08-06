@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+ImageProcessUtils.egg-info/PKG-INFO
+ImageProcessUtils.egg-info/SOURCES.txt
+ImageProcessUtils.egg-info/dependency_links.txt
+ImageProcessUtils.egg-info/entry_points.txt
+ImageProcessUtils.egg-info/requires.txt
+ImageProcessUtils.egg-info/top_level.txt
+ImageUtils/__init__.py
+ImageUtils/utils.py
