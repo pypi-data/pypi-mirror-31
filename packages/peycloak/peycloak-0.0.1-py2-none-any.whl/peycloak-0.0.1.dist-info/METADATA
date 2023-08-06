@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: peycloak
+Version: 0.0.1
+Summary: Python keycloak client
+Home-page: https://github.com/wangKuma/peycloak
+Author: Byron wang
+Author-email: altair96wby@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: requests (>=2.18.4)
+
+UNKNOWN
+
+
