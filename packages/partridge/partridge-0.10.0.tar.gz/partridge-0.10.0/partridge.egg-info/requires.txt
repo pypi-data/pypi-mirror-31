@@ -1,0 +1,6 @@
+chardet
+networkx>=2.0
+pandas
+
+[:python_version < "3"]
+functools32
