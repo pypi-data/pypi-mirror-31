@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+corella_lib/__init__.py
+corella_lib/serial.py
+corella_lib.egg-info/PKG-INFO
+corella_lib.egg-info/SOURCES.txt
+corella_lib.egg-info/dependency_links.txt
+corella_lib.egg-info/requires.txt
+corella_lib.egg-info/top_level.txt
+requirements/base.txt
+requirements/development.txt
