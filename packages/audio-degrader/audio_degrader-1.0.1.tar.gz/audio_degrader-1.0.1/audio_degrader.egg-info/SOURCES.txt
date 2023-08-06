@@ -1,0 +1,12 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+audio_degrader/__init__.py
+audio_degrader/audio_degrader.py
+audio_degrader.egg-info/PKG-INFO
+audio_degrader.egg-info/SOURCES.txt
+audio_degrader.egg-info/dependency_links.txt
+audio_degrader.egg-info/requires.txt
+audio_degrader.egg-info/top_level.txt
