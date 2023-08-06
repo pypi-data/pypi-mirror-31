@@ -1,0 +1,3 @@
+[console_scripts]
+baseq-Drop = baseq.drops:cli
+
