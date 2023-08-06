@@ -1,0 +1,12 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+people/__init__.py
+people/regex.py
+people.egg-info/PKG-INFO
+people.egg-info/SOURCES.txt
+people.egg-info/dependency_links.txt
+people.egg-info/requires.txt
+people.egg-info/top_level.txt
