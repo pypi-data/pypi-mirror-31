@@ -1,0 +1,10 @@
+CHANGES.txt
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+pluckit/__init__.py
+pluckit.egg-info/PKG-INFO
+pluckit.egg-info/SOURCES.txt
+pluckit.egg-info/dependency_links.txt
+pluckit.egg-info/top_level.txt
