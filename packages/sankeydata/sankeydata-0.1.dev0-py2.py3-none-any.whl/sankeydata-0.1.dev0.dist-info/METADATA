@@ -1,0 +1,46 @@
+Metadata-Version: 2.0
+Name: sankeydata
+Version: 0.1.dev0
+Summary: Data structure for Sankey diagrams.
+Home-page: https://github.com/ricklupton/sankeydata
+Author: Rick Lupton
+Author-email: mail@ricklupton.name
+License: UNKNOWN
+Keywords: Sankey diagram flow data format JSON
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: attrs
+Provides-Extra: dev
+Provides-Extra: test
+Requires-Dist: pytest; extra == 'test'
+
+# sankeydata
+
+This repo is part of the [floWeaver
+project](https://github.com/ricklupton/floweaver), aiming to define a common
+data format for storing and exchanging Sankey diagram data. It aims to cover
+both the logical structure (without exact coordinates and geometry) and the
+detailed layout of a diagram.
+
+There are two parts to this repo:
+
+1. A [JSON schema document](./src/json-sankey-schema.json), formally describing
+   the file format.
+
+2. A Python package `sankeydata` providing Python data structures and
+   serialisation to the JSON format.
+
+## Contributing
+
+Contributions are welcome: we want to make sure this format is useful to a range
+of users and compatible with different tools. For now, see the roadmap and
+contribution guide in the [floWeaver
+repository](https://github.com/ricklupton/floweaver).
+
+
