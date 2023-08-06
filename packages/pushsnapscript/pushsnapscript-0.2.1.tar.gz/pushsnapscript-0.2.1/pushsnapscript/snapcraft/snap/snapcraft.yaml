@@ -1,0 +1,103 @@
+name: snapcraft
+version: git
+summary: easily create snaps
+description: |
+    Snapcraft aims to make upstream developers' lives easier and as such is not
+    a single toolset, but instead is a collection of tools that enable the
+    natural workflow of an upstream to be extended with a simple release step
+    into Snappy.
+
+grade: stable
+confinement: classic
+
+apps:
+  snapcraft:
+    command: bin/snapcraft
+    completer: snapcraft-completion
+
+parts:
+  patches:
+    source: patches
+    plugin: dump
+    prime:
+        - -*.diff
+  bash-completion:
+    source: debian
+    plugin: dump
+    stage:
+      - snapcraft-completion
+  snapcraft:
+    source: .
+    plugin: python
+    requirements: requirements.txt
+    build-packages:
+        - build-essential
+        - libffi-dev
+        - libsodium-dev
+        - liblzma-dev
+        - patch
+    stage-packages:
+        - binutils
+        - execstack
+        - gpgv
+        - libffi6
+        - libsodium18
+        - patchelf
+        - squashfs-tools
+        - xdelta3
+    override-build: |
+        snapcraftctl build
+        TRIPLET_PATH="$SNAPCRAFT_PART_INSTALL/usr/lib/$(gcc -print-multiarch)"
+        LIBSODIUM=$(readlink -n $TRIPLET_PATH/libsodium.so.18)
+        ln -s $LIBSODIUM $TRIPLET_PATH/libsodium.so
+        patch -d $SNAPCRAFT_PART_INSTALL/lib/python3.5/site-packages -p1 < $SNAPCRAFT_STAGE/pyyaml-support-high-codepoints.diff
+        patch $SNAPCRAFT_PART_INSTALL/usr/lib/python3.5/ctypes/__init__.py $SNAPCRAFT_STAGE/ctypes_init.diff
+    override-prime: |
+        # This is the last step, let's now compile all our pyc files.
+        snapcraftctl prime
+        ./usr/bin/python3 -m compileall .
+    after: [patches, apt]
+  apt:
+      source: https://github.com/Debian/apt
+      source-type: git
+      source-tag: 1.2.19
+      source-depth: 1
+      plugin: autotools
+      override-build: |
+          make startup
+          mkdir apt-build
+          cd apt-build
+          ../configure
+          make
+          install -d $SNAPCRAFT_PART_INSTALL/apt
+          cp -r bin/methods/* $SNAPCRAFT_PART_INSTALL/apt/
+          cp -r bin/methods/* $SNAPCRAFT_PART_INSTALL/apt/
+          install bin/apt-key $SNAPCRAFT_PART_INSTALL/apt/
+          install bin/apt-mark $SNAPCRAFT_PART_INSTALL/apt/
+          install bin/apt-internal-solver $SNAPCRAFT_PART_INSTALL/apt/
+          install bin/apt-helper $SNAPCRAFT_PART_INSTALL/apt/
+          install -d $SNAPCRAFT_PART_INSTALL/usr/lib
+          install bin/libapt-inst.so.2.0.0 $SNAPCRAFT_PART_INSTALL/usr/lib/
+          install bin/libapt-pkg.so $SNAPCRAFT_PART_INSTALL/usr/lib/
+          install bin/libapt-pkg-5.0-0.symver $SNAPCRAFT_PART_INSTALL/usr/lib/
+          install bin/libapt-private.so $SNAPCRAFT_PART_INSTALL/usr/lib/
+          install bin/libapt-private-0.0-0.symver $SNAPCRAFT_PART_INSTALL/usr/lib/
+          install bin/libapt-private.so.0.0.0 $SNAPCRAFT_PART_INSTALL/usr/lib/
+          install bin/libapt-inst.so.2.0 $SNAPCRAFT_PART_INSTALL/usr/lib/
+          install bin/libapt-inst.so $SNAPCRAFT_PART_INSTALL/usr/lib/
+          install bin/libapt-pkg.so.5.0 $SNAPCRAFT_PART_INSTALL/usr/lib/
+          install bin/libapt-inst-2.0-0.symver $SNAPCRAFT_PART_INSTALL/usr/lib/
+          install bin/libapt-pkg.so.5.0.0 $SNAPCRAFT_PART_INSTALL/usr/lib/
+          install bin/libapt-private.so.0.0 $SNAPCRAFT_PART_INSTALL/usr/lib/
+          install -d $SNAPCRAFT_PART_INSTALL/usr/include
+          cp -r include/* $SNAPCRAFT_PART_INSTALL/usr/include/
+      prime:
+          - -usr/include
+      build-packages:
+          - gettext
+          - libbz2-dev
+          - libcurl4-gnutls-dev
+          - libdb-dev
+          - liblz4-dev
+          - liblzma-dev
+          - zlib1g-dev

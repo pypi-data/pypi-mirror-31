@@ -1,0 +1,3 @@
+include libraries/*
+include schema/*
+include debian/changelog
