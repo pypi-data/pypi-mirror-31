@@ -1,0 +1,36 @@
+Metadata-Version: 1.1
+Name: pytest-forcefail
+Version: 0.0.0.2
+Summary: py.test plugin to make the test failing regardless of pytest.makr.xfail
+Home-page: https://github.com/cielavenir/pytest-forcefail
+Author: cielavenir
+Author-email: cielartisan@gmail.com
+License: BSD
+Description: # pytest-forcefail
+        
+        pytest-forcefail is a plugin providing
+        
+        - the method `pytest_forcefail.forcefail`
+        - the exception class `pytest_forcefail.ForceFailed`
+        
+        These two will make the test failing **regardless of pytest.mark.xfail**.
+        
+        See test\_forcefail.py for example.
+        
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Utilities
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: PyPy
