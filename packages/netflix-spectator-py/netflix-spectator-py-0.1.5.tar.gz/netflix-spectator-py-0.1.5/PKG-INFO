@@ -1,0 +1,29 @@
+Metadata-Version: 1.1
+Name: netflix-spectator-py
+Version: 0.1.5
+Summary: Python library for reporting metrics to Atlas.
+Home-page: https://github.com/netflix/spectator-py/
+Author: Brian Harrington
+Author-email: netflix-atlas@googlegroups.com
+License: Apache 2.0
+Description-Content-Type: UNKNOWN
+Description: 
+        # Spectator for Python
+        
+        > :warning: Experimental
+        
+        This is a Python port of the [Spectator] library for Java. Currently this is an experiment
+        to help determine the level of effort to support another language.
+        
+        [Spectator]: https://github.com/Netflix/spectator/
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
