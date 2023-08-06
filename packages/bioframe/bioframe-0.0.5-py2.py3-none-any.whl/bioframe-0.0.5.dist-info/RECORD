@@ -1,0 +1,16 @@
+bioframe/__init__.py,sha256=DjHhAdYuBk09dZwXKqw7nNhF8HAw7wz94W7ZvlrfyVk,245
+bioframe/_version.py,sha256=eB5tEg_BNHHsJgQexgmpZJr4c2VbfooQZMXAWuDHoIg,22
+bioframe/core.py,sha256=JAIK2pPhtmVF4SPFp-ppZ-os89REzPNWNQRmiP0Foqo,8692
+bioframe/dask.py,sha256=cFz_G6fvd0OvEFauYB_P-q_BSAVCbLn8EFvcFSxW40w,6179
+bioframe/schemas.py,sha256=2VqlbvkGaNqRVu4GPWb9M5_APZnPKYzXYJn05XQd7Z4,4100
+bioframe/tools.py,sha256=QFq0pvG7v_q9eMLqShJVpHvKxGhhxgvPo7wd2ZQ1cpE,13752
+bioframe/io/__init__.py,sha256=nbxS5B9QWLQFxfquZM_wD0km6sQpWM4K-qLviqjeRoY,139
+bioframe/io/formats.py,sha256=RcMuY_otQ7y3z3Chn4miyZZzpmQfxqQJiq-NVQqmBoI,15658
+bioframe/io/process.py,sha256=5YYz_sbW4MR_KGdh_CwmIgYOKfTqL0vWc-ePrBUyIlE,1747
+bioframe/io/resources.py,sha256=6gKxi69pufGZ3kXGOkPR8fYcLiqtJM72DUHd7snXk4M,739
+bioframe-0.0.5.dist-info/DESCRIPTION.rst,sha256=2kFsaVnsPNESp4CFDH3ABn__xKBedXbvJLsLwPm0VNk,78
+bioframe-0.0.5.dist-info/METADATA,sha256=J8Frn9HfWKMwri_qT7bwWkQU8fENIfuN__IvPkQOCIY,1059
+bioframe-0.0.5.dist-info/RECORD,,
+bioframe-0.0.5.dist-info/WHEEL,sha256=o2k-Qa-RMNIJmUdIc7KU6VWR_ErNRbWNlxDIpl7lm34,110
+bioframe-0.0.5.dist-info/metadata.json,sha256=oI-WkvBb7LwROFmgHeccgiagy6yiepxrQ8cl449hGhI,1094
+bioframe-0.0.5.dist-info/top_level.txt,sha256=JLQSYZockB8S-gTFKBnVAWPYXQoC9vYfdooMEFx_s38,9
