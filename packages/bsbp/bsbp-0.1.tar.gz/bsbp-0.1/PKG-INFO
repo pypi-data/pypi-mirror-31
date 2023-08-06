@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: bsbp
+Version: 0.1
+Summary: Implementation of the best subset maximum score binary prediction method proposed by Chen and Lee (2017).
+Home-page: https://github.com/LeyuChen/Best-Subset-Binary-Prediction
+Author: Thu Pham
+Author-email: thp2107@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/LeyuChen/Best-Subset-Binary-Prediction
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
