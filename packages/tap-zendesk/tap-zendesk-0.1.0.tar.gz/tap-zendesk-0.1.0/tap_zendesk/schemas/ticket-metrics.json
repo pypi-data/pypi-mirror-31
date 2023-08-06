@@ -1,0 +1,64 @@
+{
+  "properties": {
+    "metric": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "id": {
+      "type": [
+        "null",
+        "integer"
+      ]
+    },
+    "time": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "instance_id": {
+      "type": [
+        "null",
+        "integer"
+      ]
+    },
+    "ticket_id": {
+      "type": [
+        "null",
+        "integer"
+      ]
+    },
+    "status": {
+      "properties": {
+        "calendar": {
+          "type": [
+            "null",
+            "integer"
+          ]
+        },
+        "business": {
+          "type": [
+            "null",
+            "integer"
+          ]
+        }
+      },
+      "type": [
+        "null",
+        "object"
+      ]
+    },
+    "type": {
+      "type": [
+        "null",
+        "string"
+      ]
+    }
+  },
+  "type": [
+    "null",
+    "object"
+  ]
+}
