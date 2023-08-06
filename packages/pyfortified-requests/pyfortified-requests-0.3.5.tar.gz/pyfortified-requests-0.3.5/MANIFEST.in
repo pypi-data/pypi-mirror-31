@@ -1,0 +1,6 @@
+include setup.py
+include README.rst
+include LICENSE
+include AUTHORS.rst
+include requirements.txt
+recursive-include pyfortified_requests *.py
