@@ -1,0 +1,27 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+C:/Program Files/MeCab/bin/libmecab.dll
+eunjeon/MeCab_wrap.cxx
+eunjeon/__init__.py
+eunjeon/_mecab.py
+eunjeon/constants.py
+eunjeon/mecab.py
+eunjeon/utils.py
+eunjeon.egg-info/PKG-INFO
+eunjeon.egg-info/SOURCES.txt
+eunjeon.egg-info/dependency_links.txt
+eunjeon.egg-info/entry_points.txt
+eunjeon.egg-info/top_level.txt
+eunjeon/mecab-ko-dic/char.bin
+eunjeon/mecab-ko-dic/dicrc
+eunjeon/mecab-ko-dic/left-id.def
+eunjeon/mecab-ko-dic/matrix.bin
+eunjeon/mecab-ko-dic/model.bin
+eunjeon/mecab-ko-dic/pos-id.def
+eunjeon/mecab-ko-dic/rewrite.def
+eunjeon/mecab-ko-dic/right-id.def
+eunjeon/mecab-ko-dic/sys.dic
+eunjeon/mecab-ko-dic/unk.dic
