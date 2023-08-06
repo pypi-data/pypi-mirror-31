@@ -1,0 +1,87 @@
+Metadata-Version: 2.1
+Name: anaflow
+Version: 0.2.4
+Summary: UNKNOWN
+Home-page: https://github.com/MuellerSeb/AnaFlow
+Author: Sebastian Mueller
+Author-email: sebastian.mueller@ufz.de
+Maintainer: Sebastian Mueller
+Maintainer-email: sebastian.mueller@ufz.de
+License: LGPL -  see LICENSE
+Platform: Windows
+Platform: Linux
+Platform: Solaris
+Platform: Mac OS-X
+Platform: Unix
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities
+Requires-Dist: numpy (>=1.10.0)
+Requires-Dist: scipy (>=0.19.0)
+
+
+AnaFlow: A python-package containing analytical solutions for the groundwater flow equation
+===========================================================================================
+[![DOI](https://zenodo.org/badge/116264578.svg)](https://zenodo.org/badge/latestdoi/116264578)
+
+You can find the documentation under: http://anaflow.readthedocs.io
+
+Contents
+--------
+Anaflow provides several analytical and semi-analytical solutions for the
+groundwater-flow-equation.
+
+Functions
+---------
+The following functions are provided directly
+
+ - `thiem      ` -- Thiem solution for steady state pumping
+ - `theis      ` -- Theis solution for transient pumping
+ - `ext_thiem2D` -- extended Thiem solution in 2D
+ - `ext_theis2D` -- extended Theis solution in 2D
+ - `ext_thiem3D` -- extended Thiem solution in 3D
+ - `ext_theis3D` -- extended Theis solution in 3D
+ - `diskmodel  ` -- Solution for a diskmodel
+ - `stehfest   ` -- Stehfest algorithm for laplace inversion
+
+Subpackages
+-----------
+Using any of these subpackages requires an explicit import.
+For example: ``import anaflow.helper``
+
+ - `gwsolutions` -- Solutions for the groundwater flow equation
+ - `laplace    ` -- Functions concerning the laplace-transform
+ - `helper     ` -- Several helper-functions
+
+Installation
+------------
+Just download the code an run the following command from the
+source code directory:
+
+    pip install -U .
+
+It is highly recomended to install the scipy-scikit `umfpack` to get a solver
+for sparse linear systems:
+
+    pip install -U scikit-umfpack
+
+Have a look at: https://pypi.python.org/pypi/scikit-umfpack
+
+Created December 2017, Copyright Sebastian Mueller 2017
+
+
