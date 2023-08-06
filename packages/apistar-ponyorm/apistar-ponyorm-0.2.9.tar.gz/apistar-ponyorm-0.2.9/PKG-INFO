@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: apistar-ponyorm
+Version: 0.2.9
+Summary: 
+Home-page: None
+Author: jgirardet
+Author-email: ijkl@netc.fr
+Requires-Python: >= 3.5.0.0, < 4.0.0.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: apistar (>=0.5.10.0,<0.6.0.0)
+Requires-Dist: pony (>=0.7.3.0,<0.8.0.0)

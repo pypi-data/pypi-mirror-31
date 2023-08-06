@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "apistar-ponyorm"
+version = "0.2.9"
+description = ""
+authors = ["jgirardet <ijkl@netc.fr>"]
+
+[tool.poetry.dependencies]
+python = "^3.5"
+apistar = "^0.5.10"
+pony = "^0.7.3"
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.5"
+flake8 = "*"
+yapf = "*"
+ipython = "*"
+pytest-cov = "*"
+pytest-pythonpath = "*"
+isort = "^4.3"
