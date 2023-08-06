@@ -1,0 +1,12 @@
+README.rst
+setup.py
+tdata/__init__.py
+tdata/consts.py
+tdata/local.py
+tdata/remote.py
+tdata/remote_service.py
+tdata/util.py
+tdata.egg-info/PKG-INFO
+tdata.egg-info/SOURCES.txt
+tdata.egg-info/dependency_links.txt
+tdata.egg-info/top_level.txt
