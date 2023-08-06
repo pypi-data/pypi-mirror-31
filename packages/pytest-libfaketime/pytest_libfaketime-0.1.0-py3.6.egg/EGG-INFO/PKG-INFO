@@ -1,0 +1,31 @@
+Metadata-Version: 1.1
+Name: pytest-libfaketime
+Version: 0.1.0
+Summary: A python-libfaketime plugin for pytest.
+Home-page: https://github.com/azmeuk/pytest-libfaketime
+Author: Éloi Rivard
+Author-email: eloi@yaal.fr
+License: MIT
+Description-Content-Type: UNKNOWN
+Description: # pytest-libfaketime [![Build Status](https://travis-ci.org/azmeuk/pytest-libfaketime.svg?branch=master)](https://travis-ci.org/azmeuk/pytest-libfaketime) [![Latest Version](https://img.shields.io/pypi/v/pytest-libfaketime.svg)](https://pypi.python.org/pypi/pytest-libfaketime)
+        [python-libfaketime](https://github.com/simon-weber/python-libfaketime) plugin for pytest, with support for [pytest-xdist](https://github.com/pytest-dev/pytest-xdist).
+        
+        # Installation
+        ```pip install pytest-libfaketime```
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: Pytest
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Testing
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
