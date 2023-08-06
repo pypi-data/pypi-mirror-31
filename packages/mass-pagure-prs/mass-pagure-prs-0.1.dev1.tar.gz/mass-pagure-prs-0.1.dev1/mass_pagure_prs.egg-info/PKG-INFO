@@ -1,0 +1,82 @@
+Metadata-Version: 1.1
+Name: mass-pagure-prs
+Version: 0.1.dev1
+Summary: A library to do mass Pagure pull requests.
+Home-page: UNKNOWN
+Author: Iryna Shcherbina
+Author-email: shcherbina.iryna@gmail.com
+License: MIT
+Description-Content-Type: UNKNOWN
+Description: Mass Pagure Pull Requests tool
+        ==============================
+        
+        This library provides tools to to do mass changes within
+        Fedora packages' spec files and create Pagure pull requests
+        for them.
+        
+        Example Usage
+        -------------
+        
+        .. code-block:: python
+        
+            from mass_pagure_prs import BasePRsGenerator
+        
+        
+            class PagurePRsGenerator(BasePRsGenerator):
+        
+                def modify_spec(self, specfile):
+                    """Modify a spec file and return a modified version.
+        
+                    Args:
+                        specfile (str): A spec file as a string.
+                    
+                    Return:
+                        (str) A modified spec file.
+                    """
+                    # Do things with a spec file and return a
+                    # modified spec file as a string.
+        
+                def check_mock_build_results(self, output):
+                    """Given the output of the mock build check the result."""
+                    # Optional, can be skipped. Enables checking mock build
+                    # results/logs/created rpms if mock build is ran for packages.
+        
+                def check_koji_scratch_build_results(self, output):
+                    """Given the output of the Koji scratch build check the result."""
+                    # Optional, can be skipped. Enables checking Koji scratch build
+                    # results if Koji scratch build is ran for packages.
+        
+        
+            def main():
+                prs_generator = PagurePRsGenerator(
+                    packages_filename='packages.txt',
+                    output_dirname='/tmp/pagure_prs',
+                    dry_run=False,
+                    pagure_token='pagure_token',
+                    pagure_user='pagure_user',
+                    fas_user='fas_user',  # will not be needed with Pagure 4.0.0
+                    fas_password='fas_password',  # will not be needed with Pagure 4.0.0
+                )
+        
+                # Set branch name and texts for commit messages, PR description etc.
+                prs_generator.configure(
+                    git_branch='sample_branch',
+                    changelog_entry='sample message',
+                    commit_message='sample message',
+                    pr_title='sample message',
+                    pr_description='sample message'
+                )
+        
+                # Open PRs.
+                # Receive the list of links to opened PRs if not in dry run.
+                prs = prs_generator.run(do_mock_build=True, do_koji_scratch_build=False)
+        
+Keywords: pagure mass pr
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries

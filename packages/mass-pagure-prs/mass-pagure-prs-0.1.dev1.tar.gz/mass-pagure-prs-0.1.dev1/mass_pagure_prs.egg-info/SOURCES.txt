@@ -1,0 +1,13 @@
+README.rst
+setup.py
+mass_pagure_prs/__init__.py
+mass_pagure_prs/local_repo.py
+mass_pagure_prs/pagure_fork.py
+mass_pagure_prs/prs_generator.py
+mass_pagure_prs/selenium_pagure_pr.py
+mass_pagure_prs.egg-info/PKG-INFO
+mass_pagure_prs.egg-info/SOURCES.txt
+mass_pagure_prs.egg-info/dependency_links.txt
+mass_pagure_prs.egg-info/requires.txt
+mass_pagure_prs.egg-info/top_level.txt
+test/__init__.py
