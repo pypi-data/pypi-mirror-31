@@ -1,0 +1,5 @@
+future
+httplib2>=0.9
+lxml<=4,>=3.4
+oauth2<2,>=1.9
+requests<3,>=2.7
