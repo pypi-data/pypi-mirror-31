@@ -1,0 +1,4 @@
+[console_scripts]
+awsterminate = anti_forgetful.terminate:main
+rememberlaunch = anti_forgetful.launch:main
+
