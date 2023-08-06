@@ -1,0 +1,15 @@
+README.md
+setup.py
+NKPy.egg-info/PKG-INFO
+NKPy.egg-info/SOURCES.txt
+NKPy.egg-info/dependency_links.txt
+NKPy.egg-info/not-zip-safe
+NKPy.egg-info/top_level.txt
+bin/nkpy
+bin/py2nkpy
+nkpy/__init__.py
+nkpy/__main__.py
+nkpy/utils.py
+nkpy/vars.py
+py2nkpy/__init__.py
+py2nkpy/__main__.py
