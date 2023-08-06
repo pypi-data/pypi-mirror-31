@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: flaskbb-plugin-polls
+Version: 0.1.0
+Summary: Poll functionality for flaskBB.
+Home-page: UNKNOWN
+Author: Михаил Лебедев
+Author-email: micha030201@gmail.com
+License: BSD License
+Keywords: flaskbb plugin
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Web Environment
+Classifier: Environment :: Plugins
+Classifier: Framework :: Flask
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: pytimeparse
+Requires-Dist: FlaskBB
+
+
+polls
+~~~~~
+
+Poll functionality for flaskBB.
+
+:copyright: (c) 2018 by Михаил Лебедев.
+:license: BSD License, see LICENSE for more details.
+
+
