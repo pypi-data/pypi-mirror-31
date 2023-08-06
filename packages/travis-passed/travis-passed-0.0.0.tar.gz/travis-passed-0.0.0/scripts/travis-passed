@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+{ set +x; } 2>/dev/null
+
+IFS=
+usage="usage: ${BASH_SOURCE[0]}"
+
+[[ $# != 0 ]] || [[ $1 == "--help" ]] && {
+    echo "$usage"
+    [[ $1 == "--help" ]]; exit # exit 0 if --help
+}
+
+
+# exit with 0 status if all tests passed
+! [ -e .travis.yml ] && echo "ERROR: $PWD/.travis.yml NOT EXISTS" && exit 1
+
+
+fullname="$(github-fullname)" || exit
+status="$( set -x; travis status --skip-completion-check --skip-version-check --org -r "$fullname" )" || exit
+[[ "$status" != *"passed"* ]] && echo "$status" && exit 1;:
+
+# build #42 started
+# build #42 passed
+# failed
+# repository not known to https://api.travis-ci.org/: owner/repo
+# no build yet for owner/repo
+# not logged in, please run travis login --pro

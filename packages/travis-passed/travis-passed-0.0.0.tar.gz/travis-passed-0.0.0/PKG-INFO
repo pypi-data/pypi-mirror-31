@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: travis-passed
+Version: 0.0.0
+Summary: check for travis tests are passed
+Home-page: https://github.com/looking-for-a-job/travis-passed
+License: UNKNOWN
+Description: ### Requirements
+        
+        [Travis CI Client](https://github.com/travis-ci/travis.rb#installation) required
+        
+        ### Install
+        
+        ```bash
+        $ [sudo] pip install travis-passed
+        ```
+        
+        ### Features
+        
+        +   detect github fullname
+        +   `exit 0` if tests passed, `exit 1` otherwise and output status
+        
+        ### Usage
+        
+        ```bash
+        usage: travis-passed
+        ```
+        
+        ### Examples
+        
+        ```bash
+        $ cd path/to/repo
+        $ travis-passed && echo "tests passed" || "tests failed"
+        ```
+Keywords: travis tests
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Unix Shell
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
