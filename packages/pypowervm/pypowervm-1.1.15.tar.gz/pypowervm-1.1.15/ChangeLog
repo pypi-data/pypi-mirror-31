@@ -1,0 +1,4 @@
+CHANGES
+=======
+
+* Use oslo_utils.is_uuid_like for id_or_uuid
