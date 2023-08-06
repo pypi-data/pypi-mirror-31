@@ -1,0 +1,14 @@
+attrs
+redis
+simplejson
+sqlalchemy
+
+[:python_version < "3"]
+typing
+
+[:python_version < "3.4"]
+enum34
+
+[:python_version > "3.3"]
+aioredis
+async-timeout
