@@ -1,0 +1,13 @@
+README.rst
+setup.py
+inferi/__init__.py
+inferi/combinatorics.py
+inferi/datasets.py
+inferi/exceptions.py
+inferi/probability.py
+inferi/variables.py
+inferi.egg-info/PKG-INFO
+inferi.egg-info/SOURCES.txt
+inferi.egg-info/dependency_links.txt
+inferi.egg-info/requires.txt
+inferi.egg-info/top_level.txt
