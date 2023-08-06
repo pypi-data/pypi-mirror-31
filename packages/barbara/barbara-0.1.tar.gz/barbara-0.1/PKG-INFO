@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: barbara
+Version: 0.1
+Summary: Environment variable management
+Home-page: http://github.com/mverteuil/barbara
+Author: Matthew de Verteuil
+Author-email: mverteuil@github.com
+License: GNU General Public License v3.0
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development
+Classifier: Topic :: System
+Classifier: Topic :: Terminals
