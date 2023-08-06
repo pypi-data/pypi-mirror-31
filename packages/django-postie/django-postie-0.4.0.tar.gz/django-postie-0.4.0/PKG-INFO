@@ -1,0 +1,56 @@
+Metadata-Version: 1.1
+Name: django-postie
+Version: 0.4.0
+Summary: Django mailing through admin
+Home-page: https://gitlab.com/cyberbudy/django-postie
+Author: cyberbudy
+Author-email: cyberbudy@gmail.com
+License: MIT
+Description: # django-postie
+        
+        This project allows you to send emails and manage them in the admin panel.
+        
+        Basic example to use:
+        
+        
+        ```python
+        # your_module.py
+        
+        from postie.shortcuts import send_mail
+        
+        send_mail(
+            event='MAIL_EVENT',
+            recipients=['email@email.com', 'email1@email1.com'],
+            context={
+                'var1': 'variable context',
+                'var2': 'another value'
+            },
+            from_email='noreply@email.com',
+            attachments=[{
+                'file_name': open('path-to-the-file')
+            }]
+        ) 
+        ```
+        
+        
+        ### Available settings
+        
+        `POSTIE_TEMPLATE_CHOICES` - Tuple of tuples. Where the first value is the 
+        value to use in code and second is stored in DB. 
+        
+        `POSTIE_TEMPLATE_CONTEXTS` - dictionary with template choices as keys and 
+        dictionaries as values
+        
+        `POSTIE_INSTANT_SEND` - whether to send letters instantly or to use celery 
+        task. If `False` `celery` is required.
+        
+        TODO:
+        
+        * Multilanguage letter sending
+        * Send letter admin action
+        * etc
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
