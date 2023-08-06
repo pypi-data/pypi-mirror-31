@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: xevan_hash
+Version: 0.2.2
+Summary: Binding for xevan proof of work hashing.
+Home-page: https://github.com/ddude1/Xevan_in_Python.git
+License: UNKNOWN
+Download-URL: https://github.com/ddude1/Xevan_in_Python/archive/0.2.tar.gz
+Description: # xevan_in_Python
+        python implementation of xevan hashing algo.
+        It is not pure python, it is c extented python due to performance.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python
+Description-Content-Type: text/markdown
