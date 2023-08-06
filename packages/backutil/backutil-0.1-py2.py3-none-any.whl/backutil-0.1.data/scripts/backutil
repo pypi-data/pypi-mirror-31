@@ -1,0 +1,57 @@
+#!python
+import os
+import sys
+import logging
+import argparse
+
+import tarfile
+
+## argparse arguments
+parser = argparse.ArgumentParser(description="Python backup utility")
+
+## Backup subparser
+parser.add_argument('--path', help='path(s) to backup', metavar='PATH', nargs='+', required='True')
+parser.add_argument('--dest', help='destination of backup', metavar='DEST', required='True')
+parser.add_argument('-z', '--zip', help='use gzip to compress the backup file', action="store_true")
+parser.add_argument('-q', '--quiet', help='suppress output', action="store_true")
+
+args = parser.parse_args()
+
+log = logging.getLogger(__name__)
+
+
+def check_dest(dest):
+    dir = os.path.dirname(dest)
+    if not os.path.isdir(dir):
+        log.error('Invalid dest: ' + dest)
+        sys.exit(1)
+
+def backup(paths, dest):
+    if args.zip:
+        tar = tarfile.open(name=dest, mode='w:gz')
+    else:
+        tar = tarfile.open(name=dest, mode='w')
+    for path in paths:
+        if os.path.isfile(path):
+            path_status = 'True'
+        elif os.path.isdir(path):
+            path_status = 'True'
+        else:
+            log.error('Invalid path. Skipping: ' + path)
+            path_status = 'False'
+        if path_status == 'True':
+            tar.add(path)
+    tar.close()
+
+def main():
+    check_dest(args.dest)
+    dest = args.dest
+    if not '.tar' in dest:
+        dest = str(dest) + '.tar'
+    if args.zip:
+        if not '.gz' in dest:
+            dest = str(dest) + '.gz'
+    backup(args.path, dest)
+
+if __name__ == '__main__':
+    main()
