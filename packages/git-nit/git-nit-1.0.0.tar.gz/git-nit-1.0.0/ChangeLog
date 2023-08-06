@@ -1,0 +1,19 @@
+CHANGES
+=======
+
+1.0.0
+-----
+
+* expand on instructions
+* fix bug tracker and home page URLs
+* check for the output directory before trying to run any commands
+* clean up flake8 errors and restore python 2 support
+* fix reference to option that isn't used in the example
+* fix a few command lines
+* replace --project-dir argument with --short-name arg
+* first draft of cloning
+* set up venv with usedevelop=true for easier testing
+* parse URLs to find the review and patchset
+* add argparse with --version option
+* switch to stestr; fix tox.ini
+* initial commit with project structure
