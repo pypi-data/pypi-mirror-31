@@ -1,0 +1,15 @@
+spm2olca/__init__.py,sha256=jvObJTK4wOQ9JkhrrxPUid8VDvOln-qNvs7NygvgEWY,2329
+spm2olca/mappings.py,sha256=7ZxDwHzvBxgJNnCYZON-AQagSfWu_ns9C7eDxtOvv1M,3233
+spm2olca/model.py,sha256=FuHV_gHPaK7zoysZX7EPI3o7Yj8ctHmqwimUn9K-C0E,3647
+spm2olca/pack.py,sha256=lPOhwa094QcJgJMrcjAlWtAhf5CcO3TbiCBWb8DOfnk,7136
+spm2olca/parser.py,sha256=FyP1fxHgxovktJkYst2D5VS_LEm-B7K3lF9emMWU4Dk,3349
+spm2olca/util.py,sha256=QiMbO7lL8XgbKoPaoNp5XaEiZWEOEcvVU1F29FBK-CI,461
+spm2olca/data/__init__.py,sha256=VHduQNPWwZCSs2ch0tMwNSiUQHoXNajpNaO1gRzsylA,68
+spm2olca/data/units.csv,sha256=cGFXpxr-7jTXEShpeXPt2IMDTQ-w5ByV6fvx7N78AbA,17820
+spm2olca-1.1.0.dist-info/DESCRIPTION.rst,sha256=RPQk3KA568P8-DQHn6o5ZK3Bzyihm5RtS7sPs2QPBIc,6505
+spm2olca-1.1.0.dist-info/METADATA,sha256=qmKlXOgpxtSVrOaPI_VD80lrM3kh2xNmJj4jHr6V5-U,7108
+spm2olca-1.1.0.dist-info/RECORD,,
+spm2olca-1.1.0.dist-info/WHEEL,sha256=Vlaj2XNMTTJ893zWX-JvKeZUIs7q5E7d7Gise2Vouzc,97
+spm2olca-1.1.0.dist-info/entry_points.txt,sha256=gOCr4l40tm1QEobyAW_PoDJNQuGpfVQSrPF7ixSj6dU,44
+spm2olca-1.1.0.dist-info/metadata.json,sha256=YPho_GwWFM-dvz6jOpWYSEO2vLPPcavO9HOaG4ueTVs,905
+spm2olca-1.1.0.dist-info/top_level.txt,sha256=PxQlFmWvA2VpjpUdsZvsnNJRgjPtrOJxiCzXXHoobRk,9
