@@ -1,0 +1,16 @@
+arramooz/__init__.py,sha256=QjwxkX6yJoC2lxsMqaApNj8Kv_Mphj_jG5JUeYLD078,558
+arramooz/arabicdictionary.py,sha256=t_cnAQET4J8bDr1szwI9TR2OoOjEkpFIx0dV9AH0uCc,14255
+arramooz/stopwordsdictionaryclass.py,sha256=3tN5KJzFwf814XKeT5G2-LJ0QkoY1zv6lGtWHnzh_Rs,13056
+arramooz/wordfreqdictionaryclass.py,sha256=li2P4aeVBP8vL_vm4dGR8LDLd6UjtSANFf0y3X5Ur2A,15768
+arramooz/data/arabicdictionary.sqlite,sha256=YY0gl8lMXux6ydnGBNU61MPqNg7Q_j_tU8O0Y-tBjBg,26378240
+arramooz/data/nouns_sqliteStructure.sql,sha256=oszLpDujoSk1hWzohGhj4wo0hu1vjGKO-_l4pu4uAaA,915
+arramooz/data/stopwords.sqlite,sha256=D0EeK3JMKKnlQhPmeKaQ13sI7hfC6mRAIuQQiIqmUHA,6553600
+arramooz/data/verbs.dict.sqliteStructure.sql,sha256=5WqmMECh2Yu8bmoqgTQkJiY1XXX7ZjR0Fv-XsReqsTQ,857
+arramooz/data/wordfreq.sqlite,sha256=UG7scDcMKubHCEqVF2jitnE-ZUmV8EApjBQ3Bc4aYeM,5079040
+arramooz/data/wordfreq.sqliteStructure.sql,sha256=mS2zKHSynECNgqarbJQMK8LQ0BTt-gvDzKkNcw55n5E,262
+arramooz_pysqlite-0.1.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+arramooz_pysqlite-0.1.dist-info/METADATA,sha256=wdRDNlE_3fHiw1v436n51Yf6adrBWfGrrE9TsDzbWAA,527
+arramooz_pysqlite-0.1.dist-info/RECORD,,
+arramooz_pysqlite-0.1.dist-info/WHEEL,sha256=hZvi-8L6mc2COqhOUWREM_h2lvnJbaHycZt8eohtmso,92
+arramooz_pysqlite-0.1.dist-info/metadata.json,sha256=gD_oWfQ_MnO3s40r5WFk1eObAa0QQNttT9jZnDb4sTk,720
+arramooz_pysqlite-0.1.dist-info/top_level.txt,sha256=8M2EU3rdk2U0LlHInWWk3oEYZxG46QZwgfyI4-eIGKY,9
