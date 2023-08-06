@@ -1,0 +1,3 @@
+[console_scripts]
+pmaker = pmaker.enter:main
+
