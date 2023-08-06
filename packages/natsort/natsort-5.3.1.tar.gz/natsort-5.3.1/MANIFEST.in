@@ -1,0 +1,15 @@
+include README.rst
+include LICENSE
+include *.md
+include Pipfile
+include setup.py
+include setup.cfg
+include tox.ini
+include .travis.yml
+include .coveragerc
+include .gitignore
+include .bumpversion.cfg
+graft docs
+graft src
+graft test_natsort
+global-exclude *.py[cod] __pycache__ *.so
