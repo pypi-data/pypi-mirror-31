@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: compare-images
+Version: 1.0.3
+Summary: compare images
+Home-page: https://github.com/looking-for-a-job/compare-images
+License: UNKNOWN
+Description: ### Install
+        
+        ```bash
+        $ [sudo] pip install compare-images
+        ```
+Keywords: image
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: PHP
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
