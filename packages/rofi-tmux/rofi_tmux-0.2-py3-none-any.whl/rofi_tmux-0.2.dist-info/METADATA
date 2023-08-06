@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: rofi-tmux
+Version: 0.2
+Summary: Quickly manages tmux sessions, windows and tmuxinator projects on Rofi
+Home-page: http://github.com/viniciusarcanjo/rofi-tmux
+Author: Vinicius Arcanjo
+Author-email: viniciusarcanjov@gmail.com
+License: MIT
+Keywords: rofi tmux tmuxinator i3 manage switch
+Platform: UNKNOWN
+Requires-Dist: python-rofi (==1.0.1)
+Requires-Dist: libtmux
+Requires-Dist: i3ipc
+Requires-Dist: click
+
+UNKNOWN
+
+
