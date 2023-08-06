@@ -1,0 +1,3 @@
+[console_scripts]
+k8s-build-maps = k8s_build_maps.__main__:main
+
