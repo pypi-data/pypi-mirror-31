@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: slappy
+Version: 0.2.0
+Summary: Slack bot framework
+Home-page: https://github.com/berekuk/slappy
+Author: Vyacheslav Matyukhin
+Author-email: me@berekuk.ru
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
