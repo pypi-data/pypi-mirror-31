@@ -1,0 +1,12 @@
+Metadata-Version: 1.0
+Name: pyauto.vault
+Version: 0.0.2
+Summary: A tool for accessing paths and keys from Vault
+Home-page: https://github.com/adamjaso/pyauto/tree/master/vault
+Author: Adam Jaso
+Author-email: UNKNOWN
+License: GNU General Public License V2
+Description: # PyAuto Vault Plugin
+        
+        A tool for accessing paths and keys from Vault
+Platform: UNKNOWN
