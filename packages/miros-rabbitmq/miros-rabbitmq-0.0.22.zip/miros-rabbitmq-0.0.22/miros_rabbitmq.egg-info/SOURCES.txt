@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+miros_rabbitmq/__init__.py
+miros_rabbitmq/network.py
+miros_rabbitmq.egg-info/PKG-INFO
+miros_rabbitmq.egg-info/SOURCES.txt
+miros_rabbitmq.egg-info/dependency_links.txt
+miros_rabbitmq.egg-info/requires.txt
+miros_rabbitmq.egg-info/top_level.txt
