@@ -1,0 +1,6 @@
+[console_scripts]
+atlas = atlas.cli:main
+atlas-check = atlas.cli:check
+atlas-client = atlas.cli:client
+atlas-web = atlas.cli:web
+
