@@ -1,0 +1,11 @@
+README.md
+setup.py
+bayesfit/__init__.py
+bayesfit/core.py
+bayesfit/fit.py
+bayesfit/plot.py
+bayesfit_ap.egg-info/PKG-INFO
+bayesfit_ap.egg-info/SOURCES.txt
+bayesfit_ap.egg-info/dependency_links.txt
+bayesfit_ap.egg-info/requires.txt
+bayesfit_ap.egg-info/top_level.txt
