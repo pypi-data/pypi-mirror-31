@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: sequence-tagging
+Version: 0.1.5
+Summary: Sequence Tagging powered by the Averaged Perceptron.
+Home-page: https://github.com/blester125/sequence_tagging
+Author: blester125
+Author-email: blester125@gmail.com
+License: MIT
+Download-URL: https://github.com/blester125/sequence_tagging/archive/0.1.5.tar.gz
+Description: # Part of Speech Tagging
+        ##
+        
+        A Part of Speech tagger using the Average Perceptron.
+        
+        Based on the tagger from [here](https://explosion.ai/blog/part-of-speech-pos-tagger-in-python)
+        
+        This uses the following features:
+        
+         * The Suffix (last 3 characters) of the current word (unnormalized).
+         * The Prefix (first character) of the current word (unnormalized).
+         * The current word.
+         * The previous Part of Speech tag and the current word.
+         * The Previous Part of Speech tag.
+         * The Part of Speech tag from the word before last.
+         * Both of the previous Part of Speech tags.
+         * The previous word.
+         * The previous word suffix.
+         * The word from 2 steps back.
+         * The next word.
+         * The next word suffix.
+         * The word after next.
+         * A Bias
+         
+         Incudles the following Pretrained models.
+         
+          * POS Tagger, Trained on the CoNLL 2000 Chunking data
+          * Chunker, Trained on the CoNLL 2000 Chunking data
+          * Slot filler, Trained on ATIS data
+        
+Keywords: NLP,sequence tagging,ML
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
