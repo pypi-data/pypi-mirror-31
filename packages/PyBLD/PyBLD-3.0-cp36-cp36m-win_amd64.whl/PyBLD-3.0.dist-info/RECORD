@@ -1,0 +1,16 @@
+PyBLD-3.0.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+PyBLD-3.0.dist-info/METADATA,sha256=h52vwFxpgG5-CFxWnCleIGHBSkHDJbVuZnRkre3kJrw,319
+PyBLD-3.0.dist-info/RECORD,,
+PyBLD-3.0.dist-info/WHEEL,sha256=4fkP9V5fUlnPlEu2h0nt7u0cPpJipYsJO32nXNevnFk,106
+PyBLD-3.0.dist-info/metadata.json,sha256=aM2Ba-mkIeetrUILZrMIpbwTyIdxtnLRnwpC8B6XcpI,500
+PyBLD-3.0.dist-info/top_level.txt,sha256=DfeyDAmpqIjTPwC6YFXHWwWxtxTaM6u3h9CO_TWa46c,26
+pybld/__init__.py,sha256=vmKePtcKbDUWsjZo1ce4VYuY8kxCvxQ91n-Vjdyi_-Q,29604
+pybld/_bldanaimgc.cp36-win_amd64.pyd,sha256=Ia21PcMhdc5MAQaPrH_IQzN7Rbryw9KqoJ8RM4R3j94,37888
+pybld/_pybldc.cp36-win_amd64.pyd,sha256=CBWrUCzJ4F3nkR2ZX9VESfwxZCF2DGJGRFeySVGvAxM,106496
+pybld/bldanaimg.py,sha256=HCOUYbZtWAsulNLOaI3rshfsgx0yWuudShN6YNEBDEo,39336
+pybld/bldanaimgc.py,sha256=S3d0bNR95H7Pk6s8KM3Fp2RUhaG6XLxM3IhFYIMjEPU,2687
+pybld/datafile.py,sha256=3_knacxh1wACzf6wXmfwmMh2eTzZs91vubTfjD-Brf8,10173
+pybld/grace_np.py,sha256=HvBIidgf0odzOORoBjNQnWEOJItHQdkFSzB2qBKb_Zs,12038
+pybld/numpyio.py,sha256=8pEok_jT28wdvvE2AN2PNlyujwzHFNOXCNZ23XqXKWI,525
+pybld/pybldc.py,sha256=niukolT95C_PKXo9rzqy6U-dvI92ve_9a04eQ82Ic4w,3945
+pybld/qconv.py,sha256=AU7varxUpUjXrzTE4ssgMN4fM8iD1RfRYafR--oz-o8,1978
