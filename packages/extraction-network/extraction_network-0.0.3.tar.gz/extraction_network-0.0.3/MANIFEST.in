@@ -1,0 +1,9 @@
+# Include the README
+include *.md
+
+# Include the license file
+include LICENSE
+
+# Include sample configuration and data files
+include *.ini
+include *.csv
