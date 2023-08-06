@@ -1,0 +1,3 @@
+[console_scripts]
+vsn800_ardexa = vsn800_ardexa:cli
+
