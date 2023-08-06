@@ -1,0 +1,72 @@
+;@ ins k k
+;@ outs k
+opcode ClkDiv, 0, kk
+  kDiv, kType, kclk,kres,kout xin
+  kClk zkr kclk
+  kRes zkr kres
+  kCount init 0
+  kGate init 0
+  kDiv += 1 ; 0-127 -> 1-128
+
+  if kType != 1 goto GateMode
+    kTrig trigger kClk,0.5,2
+    if kTrig != 1 goto Over
+      if kRes != 0 goto Reset
+        kCount += 1
+        kCount = kCount%(kDiv*2)
+        kGate = (kCount <= kDiv ? 1:0)
+        goto Over
+
+GateMode:
+  kTrig trigger kClk,0.5,0
+  if kTrig != 1 goto Over
+    if kRes != 0 goto Reset
+    kCount += 1
+    kCount = kCount%kDiv
+      kGate = (kCount == 1 ? 1:0)
+      goto Over
+
+  Reset:
+  kGate = 0
+  kCount = 0
+  Over:
+  zkw kClk * kGate, kout
+endop
+
+;@ ins a a
+;@ outs a
+opcode ClkDiv, 0, kk
+  kDiv, kType, kclk,kres,kout xin
+  setksmps 1
+  aClk zar kclk
+  aRes zar kres
+  kClk = k(aClk)
+  kRes = k(aRes)
+  kCount init 0
+  kGate init 0
+  kDiv += 1 ; 0-127 -> 1-128
+
+  if kType != 1 goto GateMode
+    kTrig trigger kClk,0.5,2
+    if kTrig != 1 goto Over
+      if kRes != 0 goto Reset
+        kCount += 1
+        kCount = kCount%(kDiv*2)
+        kGate = (kCount <= kDiv ? 1:0)
+        goto Over
+
+GateMode:
+  kTrig trigger kClk,0.5,0
+  if kTrig != 1 goto Over
+    if kRes != 0 goto Reset
+    kCount += 1
+    kCount = kCount%kDiv
+      kGate = (kCount == 1 ? 1:0)
+      goto Over
+
+  Reset:
+  kGate = 0
+  kCount = 0
+  Over:
+  zaw a(kClk) * kGate, kout
+endop
