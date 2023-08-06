@@ -1,0 +1,8 @@
+numpy
+datetime
+opencv-python==3.2.0.6
+piexif
+geojson
+spiceypy
+pvl
+planetaryimage
