@@ -1,0 +1,12 @@
+README.md
+setup.py
+opticalmaterialspy/__init__.py
+opticalmaterialspy/_material_base.py
+opticalmaterialspy/material.py
+opticalmaterialspy/material_ani.py
+opticalmaterialspy.egg-info/PKG-INFO
+opticalmaterialspy.egg-info/SOURCES.txt
+opticalmaterialspy.egg-info/dependency_links.txt
+opticalmaterialspy.egg-info/not-zip-safe
+opticalmaterialspy.egg-info/requires.txt
+opticalmaterialspy.egg-info/top_level.txt
