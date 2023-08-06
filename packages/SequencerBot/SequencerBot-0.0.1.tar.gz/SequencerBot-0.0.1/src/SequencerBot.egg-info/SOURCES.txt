@@ -1,0 +1,14 @@
+MANIFEST.in
+setup.cfg
+setup.py
+versioneer.py
+src/SequencerBot.egg-info/PKG-INFO
+src/SequencerBot.egg-info/SOURCES.txt
+src/SequencerBot.egg-info/dependency_links.txt
+src/SequencerBot.egg-info/entry_points.txt
+src/SequencerBot.egg-info/not-zip-safe
+src/SequencerBot.egg-info/requires.txt
+src/SequencerBot.egg-info/top_level.txt
+src/sequence_bot/__init__.py
+src/sequence_bot/_version.py
+src/sequence_bot/sequencer.py
