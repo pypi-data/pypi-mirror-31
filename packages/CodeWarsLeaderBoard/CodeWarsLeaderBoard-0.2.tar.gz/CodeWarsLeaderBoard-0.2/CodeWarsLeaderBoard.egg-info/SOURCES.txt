@@ -1,0 +1,10 @@
+README.rst
+setup.py
+CodeWarsLeaderBoard/__init__.py
+CodeWarsLeaderBoard/codewars_leaderboard.py
+CodeWarsLeaderBoard.egg-info/PKG-INFO
+CodeWarsLeaderBoard.egg-info/SOURCES.txt
+CodeWarsLeaderBoard.egg-info/dependency_links.txt
+CodeWarsLeaderBoard.egg-info/entry_points.txt
+CodeWarsLeaderBoard.egg-info/requires.txt
+CodeWarsLeaderBoard.egg-info/top_level.txt
