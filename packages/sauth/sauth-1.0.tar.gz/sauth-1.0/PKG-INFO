@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: sauth
+Version: 1.0
+Summary: Simple Auth Server SSL
+Home-page: https://github.com/granitosaurus/sauth/
+Author: Bernardas Ališauskas
+Author-email: tinarg@protonmail.com
+License: GNU General Public License v3
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.3
