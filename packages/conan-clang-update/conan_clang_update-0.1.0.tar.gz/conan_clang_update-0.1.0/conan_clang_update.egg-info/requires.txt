@@ -1,0 +1,5 @@
+GitPython==2.1.9
+
+[test]
+pytest>=3.5.1
+pytest_cov>=2.5.1
