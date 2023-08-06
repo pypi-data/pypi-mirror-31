@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+p2pnet/__init__.py
+p2pnet/crypto.py
+p2pnet/discovery.py
+p2pnet/send_ping.py
+p2pnet.egg-info/PKG-INFO
+p2pnet.egg-info/SOURCES.txt
+p2pnet.egg-info/dependency_links.txt
+p2pnet.egg-info/requires.txt
+p2pnet.egg-info/top_level.txt

@@ -1,0 +1,57 @@
+# p2p-net
+
+RLP-encoded signatures used in networking demonstrating ping. This code can query to determine whether there is a connection to it.
+
+## Getting Started
+
+Clone the repository
+
+```
+$ git clone https://github.com/rosendin/p2p-net
+Cloning into `p2p-net`...
+remote: Counting objects: 10, done.
+remote: Compressing objects: 100% (8/8), done.
+remove: Total 10 (delta 1), reused 10 (delta 1)
+Unpacking objects: 100% (10/10), done.
+```
+
+Create and activate the virtual environment
+
+```
+$ virtualenv p2pnet
+New python executable in pyeth/bin/python2.7
+Also creating executable in pyeth/bin/python
+Installing setuptools, pip...done.
+
+$ source venv/bin/activate
+```
+
+Install cookiecutter with pip: `pip install cookiecutter` then download the [project skeleton](https://github.com/wdm0006/cookiecutter-pipproject) with `cookiecutter gh:wdm0006/cookiecutter-pipproject`.
+
+Run `pip install -r requirements.txt` or install individually (see below).
+
+Install nose: `pip install nose`
+RLP encoding: `pip install rlp`
+Elliptic curve encryption: `pip install secp256k1`
+For the `keccack256` algo: `pip install pysha3`
+IP addresses to binary format: `pip install ipaddress`
+
+Generating a private key:
+```
+(venv) $ python
+>>> from secp256k1 import PrivateKey
+>>> k = PrivateKey(None)
+>>> f = open("priv_key", 'w')
+>>> f.write(k.serialize())
+>>> f.close()
+```
+
+Command to run unit tests: `nosetests`
+
+## To-do
+
+- Use BLS signatures
+
+## References
+- [Ocalog Posts on Ethereum](https://ocalog.com/)
+- [Recursive Length Prefix Encoding (Ethereum)](https://github.com/ethereum/wiki/wiki/RLP)
