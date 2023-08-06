@@ -1,0 +1,17 @@
+CHANGES.rst
+LICENSE.txt
+MANIFEST.in
+README.rst
+requirements.txt
+setup.py
+bin/rdiff_trimmer
+docs/__init__.py
+docs/__init__.pyc
+src/rdiff_trimmer/__init__.py
+src/rdiff_trimmer/rdiff_api.py
+src/rdiff_trimmer/trimmer.py
+src/rdiff_trimmer.egg-info/PKG-INFO
+src/rdiff_trimmer.egg-info/SOURCES.txt
+src/rdiff_trimmer.egg-info/dependency_links.txt
+src/rdiff_trimmer.egg-info/requires.txt
+src/rdiff_trimmer.egg-info/top_level.txt
