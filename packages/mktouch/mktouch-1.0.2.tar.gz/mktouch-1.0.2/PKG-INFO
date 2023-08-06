@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: mktouch
+Version: 1.0.2
+Summary: mkdir and touch
+Home-page: https://github.com/looking-for-a-job/mktouch
+License: UNKNOWN
+Description: ### Install
+        
+        ```bash
+        $ [sudo] pip install mktouch
+        ```
+        
+        ### Usage
+        
+        ```bash
+        usage: mktouch path ...
+        ```
+        
+        ### Examples
+        
+        ```bash
+        $ mktouch /tmp/dir1/dir2/dir3/file
+        + mkdir -p /tmp/dir1/dir2/dir3
+        + touch /tmp/dir1/dir2/dir3/file
+        ```
+Keywords: mkdir touch
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Unix Shell
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
