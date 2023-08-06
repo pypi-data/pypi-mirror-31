@@ -1,0 +1,134 @@
+Metadata-Version: 1.1
+Name: simple_tools
+Version: 0.2.0.post1
+Summary: A collection of various snippets that come up regularly
+Home-page: https://www.github.com/afriemann/simple_tools.git
+Author: Aljosha Friemann
+Author-email: a.friemann@automate.wtf
+License: Copyright 2018 Aljosha Friemann
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Download-URL: https://github.com/afriemann/simple_tools/archive/0.2.0.post1.tar.gz
+Description: Simple Tools
+        ============
+        
+        .. image:: https://travis-ci.org/AFriemann/simple_tools.svg?branch=master
+            :target: https://travis-ci.org/AFriemann/simple_tools
+        .. image:: https://badge.fury.io/py/simple_tools.svg
+            :target: https://badge.fury.io/py/simple_tools
+        
+        
+        A collection of various snippets and tools that come up regularly.
+        
+        .. code:: python
+        
+            >>> from mock import Mock
+        
+        decorators
+        ----------
+        
+        timeout
+        ~~~~~~~
+        
+        .. code:: python
+        
+            >>> import time
+            >>> from simple_tools.decorators.time import timeout
+            >>> from simple_tools.exceptions import TimeoutException
+        
+            >>> @timeout(3)
+            ... def long_running_task():
+            ...     time.sleep(5)
+        
+            >>> long_running_task() # doctest: +ELLIPSIS +IGNORE_EXCEPTION_DETAIL
+            Traceback (most recent call last):
+                ...
+            TimeoutException: execution of <function long_running_task at ...> timed out after 3s
+        
+        errors
+        ~~~~~~
+        
+        .. code:: python
+        
+            >>> from simple_tools.decorators.errors import not_implemented
+        
+            >>> @not_implemented
+            ... def some_method():
+            ...     pass
+        
+            >>> some_method() # doctest: +ELLIPSIS +IGNORE_EXCEPTION_DETAIL
+            Traceback (most recent call last):
+                ...
+            NotImplementedError
+        
+        regular expressions
+        -------------------
+        
+        .. code:: python
+        
+            >>> from simple_tools.regex import true
+        
+            >>> for value in ('y', 'yE', 'tru', 'True', '1'):
+            ...     assert true.match(value)
+        
+        lists
+        -----
+        
+        .. code:: python
+        
+            >>> from simple_tools.lists import find
+        
+            >>> l = [Mock(a=1, b=1), Mock(a=2), Mock(a=1, b=2)]
+        
+            >>> find(lambda e: e.a == 1, l).b == 1
+            True
+        
+        strings
+        -------
+        
+        .. code:: python
+        
+            >>> from simple_tools.strings import compact
+        
+            >>> s = "a multiline string\n \n   \nwith serveral\nunnecessary\n\n linebreaks"
+        
+            >>> print(compact(s))
+            a multiline string
+            with serveral
+            unnecessary
+             linebreaks
+        
+        www
+        ---
+        
+        .. code:: python
+        
+            >>> from simple_tools.www import url
+        
+            >>> url.join('http://example.org', 'foo', 'bar', baz='bam')
+            'http://example.org/foo/bar?baz=bam'
+        
+        files
+        -----
+        
+        .. code:: python
+        
+          >>> from simple_tools.files import walk_up
+        
+          >>> for root, parent, files in walk_up('/tmp'):
+          ...   print('%s -> %s' % (root, parent))
+          /tmp -> /
+          / -> /
+        
+        
+Keywords: snippets
+Platform: linux
