@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pixelhosting
+Version: 0.1.1
+Summary: Python package for PixelHosting.
+Home-page: https://github.com/amosbastian/pixelhosting-python-sdk
+Author: Amos Bastian
+Author-email: amosbastian@googlemail.com
+License: MIT
+Keywords: pixelhosting wehmoen
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: requests
+
+UNKNOWN
+
+
