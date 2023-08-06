@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: football
+Version: 0.1.1
+Summary: A Python wrapper around the football-data API.
+Home-page: https://github.com/amosbastian/football
+Author: Amos Bastian
+Author-email: amosbastian@googlemail.com
+License: AGPL-3.0
+Description: UNKNOWN
+Keywords: football football-data api
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6

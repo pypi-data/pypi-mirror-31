@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+football/__init__.py
+football/football.py
+football/test.py
+football.egg-info/PKG-INFO
+football.egg-info/SOURCES.txt
+football.egg-info/dependency_links.txt
+football.egg-info/requires.txt
+football.egg-info/top_level.txt
