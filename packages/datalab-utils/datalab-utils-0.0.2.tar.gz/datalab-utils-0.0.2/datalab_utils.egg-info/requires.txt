@@ -1,0 +1,4 @@
+datalab>=1.1.2
+pandas>=0.22.0
+requests>=2.18.4
+tqdm>=4.23.2
