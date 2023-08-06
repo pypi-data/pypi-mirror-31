@@ -1,0 +1,11 @@
+README.md
+setup.py
+TradeInterface/HistoryTrading.py
+TradeInterface/RealTimeTrading.py
+TradeInterface/TestEngine.py
+TradeInterface/TradeInterface.py
+TradeInterface/__init__.py
+TradeInterface.egg-info/PKG-INFO
+TradeInterface.egg-info/SOURCES.txt
+TradeInterface.egg-info/dependency_links.txt
+TradeInterface.egg-info/top_level.txt
