@@ -1,0 +1,11 @@
+pprint
+dpath
+aiohttp
+aiodns
+cchardet
+aiohttp-cors
+aiohttp-swagger
+aioamqp
+
+[dev]
+tox
