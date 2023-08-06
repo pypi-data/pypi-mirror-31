@@ -1,0 +1,13 @@
+setup.cfg
+setup.py
+fandogh_cli/__init__.py
+fandogh_cli/config.py
+fandogh_cli/fandogh.py
+fandogh_cli/workspace.py
+fandogh_cli.egg-info/PKG-INFO
+fandogh_cli.egg-info/SOURCES.txt
+fandogh_cli.egg-info/dependency_links.txt
+fandogh_cli.egg-info/entry_points.txt
+fandogh_cli.egg-info/requires.txt
+fandogh_cli.egg-info/top_level.txt
+fandogh_cli/fandogh_client/__init__.py
