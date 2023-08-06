@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: pyfortified-cache
+Version: 0.1.2
+Summary: Extension to Python `datetime` functionality.
+Home-page: https://github.com/jeff00seattle/pyfortified-cache
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: MIT License
+Download-URL: https://github.com/jeff00seattle/pyfortified-cache/archive/v0.1.2.tar.gz
+Keywords: pyfortified cache
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: pprintpp
+Requires-Dist: pymemcache-client (>=0.3.2)
+Requires-Dist: pymemcache (>=1.4.4)
+Requires-Dist: ujson
+Requires-Dist: wheel (>=0.30.0)
+
+.. -*- mode: rst -*-
+
+pyfortified-cache
+-----------------
+
+Python caching factory with functionality for creating cache keys and cache value encryption/decryption.
+
+Important Note
+^^^^^^^^^^^^^^
+
+Work In Progress
+^^^^^^^^^^^^^^^^
+
+Badges
+------
+
+
+Install
+-------
+
+.. code-block:: bash
+
+    pip install pyfortified-cache
+
+
+Functions
+---------
+
+
