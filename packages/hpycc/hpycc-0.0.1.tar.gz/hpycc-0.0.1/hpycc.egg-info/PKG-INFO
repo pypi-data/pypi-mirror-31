@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: hpycc
+Version: 0.0.1
+Summary: Download THOR files, run ECL scripts and download their results.
+Home-page: https://github.com/OdinProAgrica/hpycc
+Author: Rob Mansfield
+Author-email: rob.mansfield@proagrica.com
+License: GNU GPLv3
+Description: UNKNOWN
+Keywords: HPCC ECL data access distributed ROXIE THOR
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: System :: Distributed Computing
+Classifier: Topic :: Utilities
