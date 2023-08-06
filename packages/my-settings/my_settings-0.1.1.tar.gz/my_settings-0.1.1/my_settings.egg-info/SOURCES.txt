@@ -1,0 +1,15 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+my_settings/__init__.py
+my_settings/settings.py
+my_settings.egg-info/PKG-INFO
+my_settings.egg-info/SOURCES.txt
+my_settings.egg-info/dependency_links.txt
+my_settings.egg-info/not-zip-safe
+my_settings.egg-info/requires.txt
+my_settings.egg-info/top_level.txt
+my_settings/tests/__init__.py
+my_settings/tests/test_common.py
