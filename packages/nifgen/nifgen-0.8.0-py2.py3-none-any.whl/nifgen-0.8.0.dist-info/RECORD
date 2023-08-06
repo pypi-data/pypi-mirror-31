@@ -1,0 +1,14 @@
+nifgen/__init__.py,sha256=KAzed11ckJsrmOFPM1mm-RAGoF_ggv1xdLcLuWctozo,266
+nifgen/_attributes.py,sha256=qDR_IyRdFN6tA41RXeaotp7rj8cM-sa-xDmLcMzNhAM,3829
+nifgen/_converters.py,sha256=PxNRZmGNO7WdLNhlt1a_jB_gJtUuju9oe8usciP54cM,22580
+nifgen/_library.py,sha256=yOZllvv6fuPFhR1nvPc3Q4XFVtX0jIlCU2dQZLN1z8o,49214
+nifgen/_library_singleton.py,sha256=KjOvFAjfSWwkNo0W8jwJTY5D0skEHqa4R8hqsPQfbUE,1554
+nifgen/_visatype.py,sha256=glbyIBEBPpXK9QJ_JSUTzpZitHf1Vl9mbS_zJ1pL4Eo,624
+nifgen/enums.py,sha256=GS5UlmcAT9GWraxfhbOsGoST0ZsQ_VxDas3T8v8ZmwU,19927
+nifgen/errors.py,sha256=UvcFlZqk11_IWRF3C4nYyvFLBXLNq-HKB6ztPRyrZUo,3338
+nifgen/session.py,sha256=-VT8puQCO4UeIJdJ2IDWU7Wyh5tLwnQ_paxdska6le0,290128
+nifgen-0.8.0.dist-info/METADATA,sha256=d1keDgbye2D4guG0Wg9xXZ3XrKz6gnMzbsRsyV_cmLE,9188
+nifgen-0.8.0.dist-info/RECORD,,
+nifgen-0.8.0.dist-info/WHEEL,sha256=saUSQBLOUjf5ACZdNkhQ0lB6XrHU-l4vpzxq_W1n_AY,116
+nifgen-0.8.0.dist-info/top_level.txt,sha256=HM6NJprBbZEqTYJnOQdESRBbcSzyz2FahKFMroxf1Pc,7
+nifgen-0.8.0.dist-info/zip-safe,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
