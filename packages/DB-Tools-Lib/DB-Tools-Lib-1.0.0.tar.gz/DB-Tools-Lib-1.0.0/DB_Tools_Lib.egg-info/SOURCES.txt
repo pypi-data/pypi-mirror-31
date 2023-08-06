@@ -1,0 +1,8 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+DB_Tools_Lib.egg-info/PKG-INFO
+DB_Tools_Lib.egg-info/SOURCES.txt
+DB_Tools_Lib.egg-info/dependency_links.txt
+DB_Tools_Lib.egg-info/top_level.txt
