@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+metallum.py
+setup.cfg
+setup.py
+python_metallum.egg-info/PKG-INFO
+python_metallum.egg-info/SOURCES.txt
+python_metallum.egg-info/dependency_links.txt
+python_metallum.egg-info/requires.txt
+python_metallum.egg-info/top_level.txt
