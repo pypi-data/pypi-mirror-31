@@ -1,0 +1,60 @@
+Metadata-Version: 1.2
+Name: TiMemory
+Version: 2.0.0
+Summary: Lightweight python profiling: timing (wall, system, user, cpu, %cpu) + RSS memory (current, peak) measurement manager. Written in high-perf C++ and made available to Python via PyBind11.
+Home-page: https://github.com/jrmadsen/TiMemory.git
+Author: Jonathan R. Madsen
+Author-email: jonrobm.programming@gmail.com
+Maintainer: Jonathan R. Madsen
+Maintainer-email: jonrobm.programming@gmail.com
+License: MIT
+Description: TiMemory
+        ========
+        
+        C++ and Python Timing + Memory Utilities including auto-timers and
+        temporary memory calculation
+        
+        `TiMemory on GitHub (Source
+        code) <https://github.com/jrmadsen/TiMemory>`__
+        
+        `TiMemory General Documentation (GitHub
+        Pages) <https://jrmadsen.github.io/TiMemory>`__
+        
+        `TiMemory Source Code Documentation
+        (Doxygen) <https://jrmadsen.github.io/TiMemory/doxy/index.html>`__
+        
+        `TiMemory Testing Dashboard
+        (CDash) <http://jonathan-madsen.info/cdash/public/index.php?project=TiMemory>`__
+        
+Keywords: timing,memory,auto-timers,signal,c++,cxx,rss,resident set size,cpu time,cpu utilization,wall clock,system clock,user clock,pybind11,profiling
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Software Development :: Bug Tracking
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: Software Development :: Quality Assurance
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Logging
+Classifier: Topic :: System :: Monitoring
+Classifier: Topic :: Utilities
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: POSIX :: BSD
+Classifier: Programming Language :: C++
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.1
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=2.6
