@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.py
+docs/regress.py
+docs/time_it.py
+lpfgopt/VERSION.txt
+lpfgopt/__init__.py
+lpfgopt/opt.py
+lpfgopt/opt_benchmark.py
+lpfgopt/unit_test.py
+lpfgopt.egg-info/PKG-INFO
+lpfgopt.egg-info/SOURCES.txt
+lpfgopt.egg-info/dependency_links.txt
+lpfgopt.egg-info/requires.txt
+lpfgopt.egg-info/top_level.txt
+tests/__init__.py
