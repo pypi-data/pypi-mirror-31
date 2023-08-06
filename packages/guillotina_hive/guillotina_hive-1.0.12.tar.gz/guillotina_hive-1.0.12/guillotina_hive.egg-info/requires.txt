@@ -1,0 +1,15 @@
+setuptools
+guillotina>=2.1.0
+async_timeout
+aioclustermanager
+psycopg2
+
+[test]
+pytest
+docker
+backoff
+pytest-asyncio
+pytest-aiohttp
+pytest-cov
+pytest-docker-fixtures
+guillotina_elasticsearch
