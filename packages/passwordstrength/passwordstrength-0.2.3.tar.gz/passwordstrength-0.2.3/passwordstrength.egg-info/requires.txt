@@ -1,0 +1,9 @@
+PyYAML
+
+[analysis]
+randomsentence
+pronounceable
+memorable_password
+
+[tests]
+pytest
