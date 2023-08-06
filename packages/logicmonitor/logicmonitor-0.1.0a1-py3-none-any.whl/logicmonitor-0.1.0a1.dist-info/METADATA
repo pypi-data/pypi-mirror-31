@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: logicmonitor
+Version: 0.1.0a1
+Summary: A LogicMonitor API client
+Home-page: https://github.com/davidnmbond/logicmonitor-api-python
+Author: David Bond
+Author-email: david@davidbond.net
+License: UNKNOWN
+Download-URL: https://github.com/davidnmbond/logicmonitor-api-python/archive/0.1.0.tar.gz
+Keywords: logicmonitor,api
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+
+UNKNOWN
+
+
