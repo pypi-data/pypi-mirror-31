@@ -1,0 +1,15 @@
+LICENSE.txt,sha256=6-sZgDDm5CuzILMNfNTe7H7S9-o2SqE4A7nnI4qmrIE,1089
+MANIFEST,sha256=lkp-E3P8GK8XYxt5X4CCf-yge016XIiX4VP3rdR-2Z0,155
+README.md,sha256=Zd49XnFcHbVKBxXpLMA0t4mHLF1Gr1AS1tJEvRT0TfY,4034
+tdigest/__init__.py,sha256=KjsU4q2i9FptVGf-_d1r7iAs847ad9AMitdnImzPE3Q,53
+tdigest/__init__.pyc,sha256=ZhlRI8XVlWX8DtX-mIKfrfNjJgDUs1DlcZPFTfS2-gU,248
+tdigest/tdigest.py,sha256=b_FIKyxAfU2pNo4DFhTEZZpFx1UWKCm7KjgbTrtGYN0,10342
+tdigest/tdigest.pyc,sha256=xjZXxDS2Bk9CSuIS8jPj6k3GOyM2zWXLxyEhukNlkzc,13056
+tdigest/test_convergence_of_ks_statistic_over_adding.py,sha256=V4PvBK5NUCQSnI9ml6ucPPoUyhZY6M1Xq0MWYXm8y_U,861
+tdigest/__pycache__/test_convergence_of_ks_statistic_over_adding.cpython-27-PYTEST.pyc,sha256=Ubc5SfbV3fvjhoJdeEOPl9cKLRSb9eAkG3lE4ktRVWU,1827
+tdigest-0.5.2.1.dist-info/DESCRIPTION.rst,sha256=Jj-khB4CjwCrbOPc8K0SkFMtiI0wsl0SOyelynsYPt4,4035
+tdigest-0.5.2.1.dist-info/METADATA,sha256=nOIZzH1mQKrKLxrbmYJKxxCCV8NK0jDFQ8Lybv2PKBk,4907
+tdigest-0.5.2.1.dist-info/RECORD,,
+tdigest-0.5.2.1.dist-info/WHEEL,sha256=o2k-Qa-RMNIJmUdIc7KU6VWR_ErNRbWNlxDIpl7lm34,110
+tdigest-0.5.2.1.dist-info/metadata.json,sha256=LaycAP4zsMmS33CRSFMrzoVnvaNLZ4ARZ5uq_iajebE,995
+tdigest-0.5.2.1.dist-info/top_level.txt,sha256=8deazLc-0TbOUFa4NYulKDtkGdCX2ExAXXKNwib2mxM,8
