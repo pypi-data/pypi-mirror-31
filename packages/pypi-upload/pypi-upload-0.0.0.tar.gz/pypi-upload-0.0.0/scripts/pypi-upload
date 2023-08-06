@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+{ set +x; } 2>/dev/null
+
+usage="usage: ${BASH_SOURCE[0]} format ... repository_url"
+[[ $# -lt 2 ]] && echo "$usage" && exit 1
+
+! [ -e setup.py ] && echo "ERROR: setup.py NOT EXISTS" && exit 1
+dist_dir=/tmp/$$
+
+repository_url="${!#}"
+# https://upload.pypi.org/legacy/
+# https://test.pypi.org/legacy/
+
+set -- "${@:1:$(($#-1))}"
+args="$(while [[ $# != 0 ]]; do
+    echo $1; echo --dist-dir="$dist_dir"; shift;
+done)"
+IFS=$'\n';set $args
+( set -x; python -B setup.py -q "$@" ) || exit
+#python -B setup.py -q sdist --dist-dir="$dist_dir" bdist_wheel --dist-dir="$dist_dir"
+find="$(find "$dist_dir" -type f -mindepth 1 -maxdepth 1)" || exit
+[[ -z "$find" ]] && echo "ERROR: $dist_dir EMPTY" && exit 1
+IFS=$'\n';set $find
+
+# https://pypi.python.org/pypi/twine
+# --skip-existing - pypi.org only
+set -- --skip-existing -r "$repository_url" --config-file=~/.pypirc "$@"
+( set -x; twine upload "$@" ) || exit
+( set -x; rm -fr "$dist_dir" )
