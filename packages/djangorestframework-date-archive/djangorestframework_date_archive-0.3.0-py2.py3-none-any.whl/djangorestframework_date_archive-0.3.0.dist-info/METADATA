@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: djangorestframework-date-archive
+Version: 0.3.0
+Summary: Django date view archive for rest framework
+Home-page: https://github.com/PJCampi/django-rest-framework-date-archive
+Author: Pierre-Jean Campigotto
+Author-email: pierrejean.campigotto@gmail.com
+License: BSD
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Topic :: Internet :: WWW/HTTP
+Requires-Dist: djangorestframework (>=3.8.0)
+
+UNKNOWN
+
+
