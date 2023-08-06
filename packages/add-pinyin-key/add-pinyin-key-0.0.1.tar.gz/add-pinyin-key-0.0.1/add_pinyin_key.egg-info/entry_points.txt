@@ -1,0 +1,3 @@
+[console_scripts]
+add_pinyin_key = add_pinyin_key.__main__:main
+
