@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: pymojihash
+Version: 0.3.0
+Summary: Python 3 package for hashing strings to emojis.
+Home-page: UNKNOWN
+Author: Lily FYI
+Author-email: hello@lily.fyi
+License: UNKNOWN
+Platform: UNKNOWN
+
+Hash (unicode) strings to emoji(s). You can set the length.
+
+Importing is as easy as `from pymojihash import hash_to_emoji`!
+`hash_to_emoji()` is the wonderful hashing function.
+
+In this example a string is hashed to a single emoji:
+    >>> hash_to_emoji('lol')
+    '🇫🇲'
+
+There is a limited number of emojis outputs (see: `emojis.json` in this package) so if you increase the `hash_length` the less likely youa re to encounter different values which produce the same output/hash/emoji(s):
+    >>> hash_to_emoji('lol', 4)
+    '◼️🍕🍐🇫🇲'
+    >>> hash_to_emoji('lol', 2)
+    '🍐🇫🇲'
+    >>> hash_to_emoji('heck', 2)
+    '♠️🇨🇦'
+
