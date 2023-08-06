@@ -1,0 +1,28 @@
+Metadata-Version: 1.2
+Name: izunadsp
+Version: 0.1.1
+Summary: UNKNOWN
+Home-page: https://github.com/IzunaDevs/IzunaDSP
+Author: izunadevs
+Author-email: izunadevs@martmists.com
+Maintainer: martmists
+Maintainer-email: mail@martmists.com
+License: MIT
+Description: IzunaDSP
+        ========
+        
+        A Digital Signal Processing library based on MTG/essentia
+        
+Keywords: audio,audio processing,DSP
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Multimedia :: Sound/Audio
+Classifier: Topic :: Multimedia :: Sound/Audio :: Analysis
+Classifier: Topic :: Multimedia :: Sound/Audio :: Sound Synthesis
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.0
