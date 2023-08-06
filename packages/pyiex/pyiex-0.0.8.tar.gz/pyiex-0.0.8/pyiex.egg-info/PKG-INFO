@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: pyiex
+Version: 0.0.8
+Summary: Python wrapper for IEX financial API
+Home-page: https://github.com/wugui2020/pyIEX
+Author: Wentao Lu
+Author-email: wentao@wentaolu.com
+License: LICENSE.txt
+Description: # pyIEX
+        
+        # Attribution
+        ## If you redistribute our API data:
+        
+        - Cite IEX using the following text and link: “Data provided for free by IEX.”
+        - Provide a link to https://iextrading.com/api-exhibit-a in your terms of service.
+        - Additionally, if you display our TOPS price data, cite “IEX Real-Time Price” near the price.
+        
+Keywords: python IEX
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Office/Business :: Financial
+Classifier: Programming Language :: Python :: 2.7
+Provides-Extra: test
+Provides-Extra: dev
