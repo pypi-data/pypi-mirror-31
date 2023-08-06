@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: mv_tractus
+Version: 1.0.0
+Summary: A simple tool for extracting motion vectors from MPEG videos
+Home-page: https://github.com/jishnujayakumar/MV-Tractus
+Author: Jishnu Jaykumar P
+Author-email: jishnu.jayakumar182@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: motion-vectors,video compression,opticalflow,computer vision
+Platform: UNKNOWN
