@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: bitbucket-jenkins-build-reporter
+Version: 0.0.2
+Summary: Post build statuses from Jenkins jobs to Bitbucket Cloud
+Home-page: https://github.com/danielwhatmuff/bb-build-reporter
+Author: Daniel Whatmuff
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: A CLI to update build status for commits in Bitbucket Cloud from Jenkins
+Keywords: bitbucket git jenkins build statue
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
