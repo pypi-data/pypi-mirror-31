@@ -1,0 +1,3 @@
+[console_scripts]
+lazydog = lazydog.lazydog:main
+

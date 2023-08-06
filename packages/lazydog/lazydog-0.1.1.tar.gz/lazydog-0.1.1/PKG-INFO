@@ -1,0 +1,25 @@
+Metadata-Version: 1.1
+Name: lazydog
+Version: 0.1.1
+Summary: User-level filesystem event observer
+Home-page: http://github.com/warniiiz/lazydog/
+Author: Clément Warneys
+Author-email: clement.warneys@gmail.com
+License: Apache Software License
+Description: Python module monitoring high-level file system events like Creation, Modification, Move, Copy, and Deletion of files and folders. Lazydog tries to aggregate low-level events between them in order to emit a minimum number of high-level events (actualy one event per user action). Lazydog uses python Watchdog module to detect low-level events.
+Keywords: python watchdog inotify monitoring watcher observer file filesystem filesystem-events copy move create delete modify detect
+Platform: any
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 4 - Beta
+Classifier: Natural Language :: English
+Classifier: Environment :: No Input/Output (Daemon)
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: System :: Monitoring
+Classifier: Topic :: System :: Filesystems
+Classifier: Topic :: Desktop Environment :: File Managers
+Classifier: Topic :: Security
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
