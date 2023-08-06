@@ -1,0 +1,4 @@
+pbr>=2.0
+acme[dev]
+certbot[dev]
+openstacksdk
