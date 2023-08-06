@@ -1,0 +1,24 @@
+Metadata-Version: 1.2
+Name: XStatic-Angular-Vis
+Version: 4.16.0.0
+Summary: Angular-Vis 4.16.0 (XStatic packaging standard)
+Home-page: https://github.com/visjs/angular-visjs
+Maintainer: xinni.ge
+Maintainer-email: xinni.ge@ntt.com
+License: MIT
+Description: XStatic-Angular-Vis
+        --------------
+        
+        Angular-Vis JavaScript library packaged for setuptools (easy_install) / pip.
+        
+        This package is intended to be used by **any** project that needs these files.
+        
+        It intentionally does **not** provide any extra code except some metadata
+        **nor** has any extra requirements. You MAY use some minimal support code from
+        the XStatic base package, if you like.
+        
+        You can find more info about the xstatic packaging way in the package `XStatic`.
+        
+        
+Keywords: angular_vis xstatic
+Platform: any
