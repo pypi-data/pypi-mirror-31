@@ -1,0 +1,32 @@
+Metadata-Version: 2.0
+Name: dkamotsky.conctx
+Version: 1.0.2
+Summary: Conversational Context
+Home-page: https://github.com/dkamotsky/wheels/conctx/
+Author: Denis Kamotsky
+Author-email: denis.kamotsky@macys.com
+Maintainer: Denis Kamotsky
+Maintainer-email: denis.kamotsky@macys.com
+License: PROPRIETARY SOFTWARE, No License Granted
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: frozendict
+Requires-Dist: enum34
+Requires-Dist: Flask
+
+# wheels
+
+
