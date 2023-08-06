@@ -1,0 +1,9 @@
+stages:
+  - test
+
+build_and_test:
+  stage: test
+  image: python:3.6
+  script:
+    - sh ./sh_scripts/install.sh
+    - pytest -v
