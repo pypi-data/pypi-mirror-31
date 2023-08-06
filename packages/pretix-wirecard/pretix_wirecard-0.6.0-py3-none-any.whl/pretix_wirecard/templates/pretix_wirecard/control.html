@@ -1,0 +1,68 @@
+{% load i18n %}
+
+{% if payment_info %}
+    {% if order.status == "p" %}
+        <p>{% blocktrans trimmed %}
+            This order has been paid with {{ provname }}.
+        {% endblocktrans %}</p>
+    {% elif order.status == "r" %}
+        <p>{% blocktrans trimmed %}
+            This order has been planned to be paid with {{ provname }} and has been marked as refunded.
+        {% endblocktrans %}</p>
+    {% else %}
+        <p>{% blocktrans trimmed %}
+            This order has been planned to be paid with {{ provname }}, but the payment has not yet been completed.
+        {% endblocktrans %}</p>
+    {% endif %}
+    <dl class="dl-horizontal">
+        {% if payment_info.paymentType %}
+            <dt>{% trans "Payment type" %}</dt>
+            <dd>{{ payment_info.paymentType }}</dd>
+        {% endif %}
+        {% if payment_info.orderNumber %}
+            <dt>{% trans "Order number" %}</dt>
+            <dd>{{ payment_info.orderNumber }}</dd>
+        {% endif %}
+        <dt>{% trans "Payment state" %}</dt>
+        <dd>{{ payment_info.paymentState }}</dd>
+        {% if payment_info.amount %}
+            <dt>{% trans "Amount" %}</dt>
+            <dd>{{ payment_info.amount }} {{ payment_info.currency }}</dd>
+        {% endif %}
+        {% if payment_info.message %}
+            <dt>{% trans "Message" %}</dt>
+            <dd>{{ payment_info.message }}</dd>
+        {% endif %}
+        {% if payment_info.financialInstitution %}
+            <dt>{% trans "Financial Institution" %}</dt>
+            <dd>{{ payment_info.financialInstitution }}</dd>
+        {% endif %}
+        {% if payment_info.maskedPan %}
+            <dt>{% trans "Card number" %}</dt>
+            <dd>{{ payment_info.maskedPan }}</dd>
+        {% elif payment_info.anonymousPan %}
+            <dt>{% trans "Card number" %}</dt>
+            <dd>****{{ payment_info.anonymousPan }}</dd>
+        {% endif %}
+        {% if payment_info.cardholder %}
+            <dt>{% trans "Card holder" %}</dt>
+            <dd>{{ payment_info.cardholder }}</dd>
+        {% endif %}
+        {% if payment_info.paypalPayerEmail %}
+            <dt>{% trans "Payer" %}</dt>
+            <dd>{{ payment_info.paypalPayerEmail }} ({{ payment_info.paypalPayerID }})</dd>
+        {% endif %}
+        {% if payment_info.mandateId %}
+            <dt>{% trans "Mandate ID" %}</dt>
+            <dd>{{ payment_info.mandateId }}</dd>
+        {% endif %}
+        {% if payment_info.dueDate %}
+            <dt>{% trans "Due date" %}</dt>
+            <dd>{{ payment_info.dueDate }}</dd>
+        {% endif %}
+    </dl>
+{% else %}
+    <p>{% blocktrans trimmed %}
+        This order has been planned to be paid with {{ provname }}, but the payment has not yet been completed.
+    {% endblocktrans %}</p>
+{% endif %}
