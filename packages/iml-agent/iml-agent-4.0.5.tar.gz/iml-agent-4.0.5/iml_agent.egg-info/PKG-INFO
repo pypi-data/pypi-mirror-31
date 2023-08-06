@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: iml-agent
+Version: 4.0.5
+Summary: The IML software Monitoring and Administration Interface Agent
+Home-page: https://pypi.python.org/pypi/iml-agent
+Author: Intel Corporation
+Author-email: iml@intel.com
+License: MIT
+Description: A Python package that contains the agent for the IML project
+        ====================================================================
+        
+        This package provides the IML agent for the IML project.
+        
+Keywords: IML lustre high-availability
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
