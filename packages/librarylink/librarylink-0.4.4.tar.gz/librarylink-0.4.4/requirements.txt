@@ -1,0 +1,14 @@
+amara3-iri
+
+requests
+rdflib
+pytest
+versa
+html5lib
+
+#From Versa pyreqs.txt
+amara3-xml
+
+#Optional bits
+#CacheControl[filecache]
+#rdflib-jsonld
