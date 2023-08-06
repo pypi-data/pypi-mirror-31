@@ -1,0 +1,5 @@
+[console_scripts]
+AccessPDB = AccessPDB:main
+OligoState = OligoState:main
+OligoSum = OligoSum:main
+
