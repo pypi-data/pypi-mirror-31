@@ -1,0 +1,3 @@
+[console_scripts]
+check_certs = check_certs.check_certs:main
+
