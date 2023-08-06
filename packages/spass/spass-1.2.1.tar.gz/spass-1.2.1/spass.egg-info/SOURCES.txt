@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.py
+./__init__.py
+./exceptions.py
+./generators.py
+./mapper.py
+object/word_map.pickle
+spass.egg-info/PKG-INFO
+spass.egg-info/SOURCES.txt
+spass.egg-info/dependency_links.txt
+spass.egg-info/not-zip-safe
+spass.egg-info/top_level.txt
+tests/__init__.py
+tests/tests.py
