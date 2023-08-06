@@ -1,0 +1,11 @@
+certbot_dns_openstack/__init__.py,sha256=1KmWBoA0P587xcL85F0Uy-L67VPEh3s7_-drIMKZK-k,677
+certbot_dns_openstack/dns_openstack.py,sha256=NXGdm4UJq_CplMdYHJIl2-Ls8uTI55oIXlucGH9HssI,2410
+certbot_dns_openstack/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+certbot_dns_openstack/tests/base.py,sha256=pgyHZ0FqhTANZcVw8CLiu2p0cBuRgPbB3ByyBavDu8c,794
+certbot_dns_openstack/tests/test_certbot_dns_openstack.py,sha256=tZQzF0KB9NCWX3YQqvIw4nCLdfyTYGrACOXEF64zHYk,824
+certbot_dns_openstack-0.0.1.dist-info/METADATA,sha256=UaH3VXFY0xQ6BjLmEgNbVhF1tV5xUaqxOxGqefD-jPA,1364
+certbot_dns_openstack-0.0.1.dist-info/RECORD,,
+certbot_dns_openstack-0.0.1.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+certbot_dns_openstack-0.0.1.dist-info/entry_points.txt,sha256=pNVvCTL3oMX7XTAAHu9_L0nWBItslX8i0qJknokxQAo,85
+certbot_dns_openstack-0.0.1.dist-info/pbr.json,sha256=ITlKoceyd_uFzkrWqXDl-lk6ye5M1YYmdYDfLdoPc2E,46
+certbot_dns_openstack-0.0.1.dist-info/top_level.txt,sha256=T8Csuw9-HwXxIQW01R69I1nrazrq0rRLZqsfIN867Tw,22

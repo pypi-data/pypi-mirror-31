@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: certbot-dns-openstack
+Version: 0.0.1
+Summary: OpenStack DNS Authenticator plugin for Certbot
+Home-page: http://www.openstack.org/
+Author: OpenStack
+Author-email: openstack-dev@lists.openstack.org
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Environment :: OpenStack
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Requires-Dist: pbr (>=2.0)
+Requires-Dist: acme[dev]
+Requires-Dist: certbot[dev]
+Requires-Dist: openstacksdk
+
+===============================
+certbot-dns-openstack
+===============================
+
+OpenStack DNS Authenticator plugin for Certbot
+
+Please fill here a long description which must be at least 3 lines wrapped on
+80 cols, so that distribution package maintainers can use it in their packages.
+Note that this is a hard requirement.
+
+* Free software: Apache license
+* Documentation: https://docs.openstack.org/certbot-dns-openstack/latest
+* Source: https://git.openstack.org/cgit/openstack/certbot-dns-openstack
+* Bugs: https://bugs.launchpad.net/certbot-dns-openstack
+
+Features
+--------
+
+* TODO
+
+
+

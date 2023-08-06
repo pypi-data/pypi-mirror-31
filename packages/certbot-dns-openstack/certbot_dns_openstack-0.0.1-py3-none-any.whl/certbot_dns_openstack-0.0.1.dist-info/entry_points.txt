@@ -1,0 +1,3 @@
+[certbot.plugins]
+dns-openstack = certbot_dns_openstack.dns_openstack:Authenticator
+
