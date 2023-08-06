@@ -1,0 +1,175 @@
+Metadata-Version: 2.1
+Name: vidhub-control
+Version: 0.0.3
+Summary: Control Smart Videohub Devices
+Home-page: https://github.com/nocarryr/vidhub-control
+Author: Matthew Reid
+Author-email: matt@nomadic-recording.com
+License: UNKNOWN
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Framework :: AsyncIO
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Topic :: Multimedia
+Classifier: Topic :: Multimedia :: Graphics
+Classifier: Topic :: Multimedia :: Video
+Requires-Python: >=3.5
+Provides-Extra: kivy
+Requires-Dist: python-dispatch (>=0.0.8)
+Requires-Dist: json-object-factory
+Requires-Dist: zeroconf
+Requires-Dist: python-osc
+Requires-Dist: pid
+Provides-Extra: kivy
+Requires-Dist: kivy (>=1.10.0); extra == 'kivy'
+
+
+
+.. image:: https://travis-ci.org/nocarryr/vidhub-control.svg?branch=master
+   :target: https://travis-ci.org/nocarryr/vidhub-control
+   :alt: Build Status
+
+.. image:: https://coveralls.io/repos/github/nocarryr/vidhub-control/badge.svg?branch=master
+   :target: https://coveralls.io/github/nocarryr/vidhub-control?branch=master
+   :alt: Coverage Status
+
+
+vidhub-control
+==============
+
+Overview
+--------
+
+Interface with Videohub SDI Matrix Switchers and SmartView Monitors by
+`Blackmagic Design <https://www.blackmagicdesign.com/>`_.
+
+The primary purpose is for use as a library in other applications, but a GUI
+application is included (requires installation of the `Kivy framework <#install-kivy>`_\ )
+
+Since neither the devices nor the software for them support presets or macros,
+a need arose for instantaneous multiple routing changes.  This, as well as
+setting the names for inputs and outputs within a single application can be
+accomplished using this project.
+
+Links
+-----
+
+
+* Releases:
+    https://pypi.org/project/vidhub-control/
+* Source code:
+    https://github.com/nocarryr/vidhub-control
+* Documentation:
+    https://nocarryr.github.io/vidhub-control/
+
+Dependencies
+------------
+
+This project relies heavily on ``asyncio`` and other features available in
+**Python v3.5** or later.
+
+
+* Core
+
+  * `python-dispatch <https://pypi.org/project/python-dispatch/>`_
+  * `json-object-factory <https://pypi.org/project/json-object-factory/>`_
+  * `zeroconf <https://pypi.org/project/zeroconf/>`_
+  * `python-osc <https://pypi.org/project/python-osc/>`_
+  * `pid <https://pypi.org/project/pid/>`_
+
+* User interface (optional)
+
+  * `Kivy <http://kivy.org/>`_
+
+Installation
+------------
+
+Download
+^^^^^^^^
+
+For basic installation, clone or download the source code:
+
+.. code-block:: bash
+
+   git clone https://github.com/nocarryr/vidhub-control
+   cd vidhub-control
+
+Create virtual environment (optional, but recommended)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Linux/MacOS
+~~~~~~~~~~~
+
+.. code-block:: bash
+
+   virtualenv --python=python3 venv
+   source venv/bin/activate
+
+Windows
+~~~~~~~
+
+.. code-block:: bash
+
+   virtualenv --python=python3 venv
+   venv/Scripts/activate
+
+Install vidhub-control
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: bash
+
+   python setup.py install
+
+Install Kivy
+^^^^^^^^^^^^
+
+*optional*
+
+Ensure all dependencies are met for your platform. Instructions can be found
+on the `kivy download page <https://kivy.org/#download>`_
+
+Linux (Ubuntu)
+~~~~~~~~~~~~~~
+
+Follow the instructions for `"Installation in a Virtual Environment" <https://kivy.org/docs/installation/installation-linux.html#installation-in-a-virtual-environment>`_.
+
+Windows
+~~~~~~~
+
+.. code-block:: bash
+
+   pip install docutils pygments pypiwin32 kivy.deps.sdl2 kivy.deps.glew
+   pip install kivy.deps.sdl2
+   pip install kivy
+
+MacOS
+~~~~~
+
+Follow the instructions for `homebrew <https://kivy.org/docs/installation/installation-osx.html#using-homebrew-with-pip>`_ or `MacPorts <https://kivy.org/docs/installation/installation-osx.html#using-macports-with-pip>`_.
+
+Usage
+-----
+
+To launch the user interface (Kivy required):
+
+.. code-block:: bash
+
+   vidhubcontrol-ui
+
+Note for Windows
+^^^^^^^^^^^^^^^^
+
+The ``vidhubcontrol-ui`` script may not work. If this is the case, it can be
+launched by:
+
+.. code-block:: bash
+
+   python vidhubcontrol/kivyui/main.py
+
+
