@@ -1,0 +1,102 @@
+
+__importnb__ supports the ability to use Jupyter notebooks as python source.
+
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/deathbeds/importnb/master?urlpath=lab/tree/readme.ipynb)[![Build Status](https://travis-ci.org/deathbeds/importnb.svg?branch=master)](https://travis-ci.org/deathbeds/importnb)
+
+    pip install importnb
+
+## Jupyter Extension
+
+
+```python
+    %reload_ext importnb
+    foo = 42
+    import readme
+    assert readme.foo is 42
+    assert readme.__file__.endswith('.ipynb')
+```
+
+Notebooks maybe reloaded with the standard Python Import machinery.
+
+
+```python
+    from importnb import Notebook, reload
+
+    if __name__ == '__main__':
+        %reload_ext importnb
+        reload(readme)
+```
+
+
+```python
+    %%capture
+    %unload_ext importnb
+```
+
+## Context Manager
+
+
+```python
+    try:  
+        reload(readme)
+        assert False, """Reload will not work without the extension."""
+    except: ...
+    with Notebook(): 
+        reload(readme)
+```
+
+## Developer
+
+
+```python
+    if __name__ == '__main__':
+        from pathlib import Path
+        import black
+        from nbconvert.exporters.markdown import MarkdownExporter
+        from importnb.compiler_python import ScriptExporter
+        for path in Path('importnb').glob('*.ipynb'):
+            path.with_suffix('.py').write_text(
+                black.format_str(ScriptExporter().from_filename(path)[0], 100))
+        for path in map(Path, ('readme.ipynb', 'changelog.ipynb')):
+            path.with_suffix('.md').write_text(MarkdownExporter().from_filename(path)[0])
+        __import__('unittest').main(module='tests', argv="discover".split(), exit=False)
+```
+
+    ..xx....
+    ----------------------------------------------------------------------
+    Ran 8 tests in 2.071s
+
+    OK (expected failures=2)
+
+
+
+
+## CHANGELOG
+
+# 0.2.1
+
+* `importnb` supports notebook inputs from pure python environments.  Two compatible compiler were created from IPython and Python
+* `importnb.Partial` works appropriately by improving exceptions.
+* All of the IPython magic syntaxes were removed to support Pure Python.
+* The generated Python files are formatted with black.
+* Tests were added to:
+
+    * Validate the line number in tracebacks
+    * Test someone elses notebooks
+
+### 0.1.4
+- Pypi supports markdown long_description with the proper mimetype in long_description_content_type.
+
+### 0.1.3
+- Include the RST files in the `MANIFEST.in`.
+
+### 0.1.2 (Unreleased)
+- Use RST files to improve the literacy of the pypi description.
+
+### 0.1.1
+- Released on PyPi 
+
+### 0.0.2
+- Initial Testing Release
+
+
