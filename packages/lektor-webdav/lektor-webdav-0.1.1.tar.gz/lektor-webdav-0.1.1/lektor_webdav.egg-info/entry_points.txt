@@ -1,0 +1,3 @@
+[lektor.plugins]
+webdav = lektor_webdav:WebdavPlugin
+
