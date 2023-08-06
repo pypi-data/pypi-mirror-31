@@ -1,0 +1,6 @@
+[numina.pipeline.1]
+MEGARA = megaradrp.loader:load_drp
+
+[numinadb.extra.1]
+MEGARA = megaradrp.db [db]
+
