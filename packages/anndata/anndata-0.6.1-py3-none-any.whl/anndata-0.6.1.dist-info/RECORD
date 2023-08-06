@@ -1,0 +1,15 @@
+anndata/__init__.py,sha256=lA1VeMwGRoYTwR0_03yVkzcmaXK1k66CGlljRncXC4Q,1334
+anndata/_version.py,sha256=dE5BkBnw6NxwWwXy-7st6_8cUWFSPv-TCUBkFImGG_g,518
+anndata/base.py,sha256=DKJamP3X-oMXuDYN4qiyONNV2QXTaOHE6Al-e_xXigA,77020
+anndata/logging.py,sha256=cEV6qqD3FYScZdWgoQQ7MDGgsftmG-Tj9khXczKrYXg,976
+anndata/utils.py,sha256=HWJBhBdQhEzf34dz4qAnkEMWeCTpypyMndOw997gfp4,4288
+anndata/h5py/__init__.py,sha256=aGfLm5fyYT6Oi_7-TDwqUsQNBqinMRHK4YS4zNWKzOU,1174
+anndata/h5py/h5sparse.py,sha256=Kf3bYVXekwab9tEsK_emCm1KXDFPSesKORxXQyJtTws,10305
+anndata/readwrite/__init__.py,sha256=BuC16rOpfgR6pyGQZDBSkpB3T3nTDxMY8Ag7dJH2faY,45
+anndata/readwrite/read.py,sha256=HPmiPnubRfgWVm_p4kOHp153JWeM6UPsqMWJSgReUc8,15980
+anndata/readwrite/utils.py,sha256=2pv5EKPGIvKFcABXPgkXKU60axzIQsQGljZexsfo8fY,1254
+anndata/readwrite/write.py,sha256=HYw0wsijG3T7Yms__1TVT2vGnxql9TYDY14qvbJixRY,7055
+anndata-0.6.1.dist-info/METADATA,sha256=9rZqzk6ho63OFK9dSXrUxPJ5UAMo6K6EGUgkmIli3uE,1935
+anndata-0.6.1.dist-info/RECORD,,
+anndata-0.6.1.dist-info/WHEEL,sha256=pZyAqgNAylOf0KG_hPHMtuuY08rV3WzWwZu2OTsNnnw,97
+anndata-0.6.1.dist-info/top_level.txt,sha256=9zWM5jZakc5_0km6l3Vjje7G8zcU8oPWwtCiT8zBHYA,8
