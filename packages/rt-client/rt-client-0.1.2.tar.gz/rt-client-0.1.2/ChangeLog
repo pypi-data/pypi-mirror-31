@@ -1,0 +1,15 @@
+CHANGES
+=======
+
+0.1.2
+-----
+
+* Updates for attachment code
+
+0.1.1
+-----
+
+* Added new methods for attachments and transactions
+* Add pbr support and setup files
+* Fix for pagination: page & per\_page params added where missing
+* Initial commit
