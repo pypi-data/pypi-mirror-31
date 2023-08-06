@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: django-url-renditions
+Version: 0.1
+Summary: Create custom renditions from django url fields
+Home-page: https://vied12.github.io
+Author: Edouard Richard
+Author-email: edou4rd@gmail.com
+License: BSD License
+Description: # django-url-renditions
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 1.11
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
