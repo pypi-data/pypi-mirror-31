@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: distributed_containers
+Version: 0.42
+Summary: Conceptual library written for pypy-stm that target is to get more from multithreading possibilities of pypy-stm.
+Home-page: https://github.com/Surrerstry/distributed_containers
+Author: Damian Medrala
+Author-email: surrerstry@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/Surrerstry/distributed_containers/archive/master.zip
+Description: UNKNOWN
+Keywords: pypy-stm,threading
+Platform: UNKNOWN
