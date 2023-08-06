@@ -1,0 +1,16 @@
+MANIFEST.in
+README.txt
+setup.cfg
+setup.py
+XStatic_Angular_Notify.egg-info/PKG-INFO
+XStatic_Angular_Notify.egg-info/SOURCES.txt
+XStatic_Angular_Notify.egg-info/dependency_links.txt
+XStatic_Angular_Notify.egg-info/namespace_packages.txt
+XStatic_Angular_Notify.egg-info/not-zip-safe
+XStatic_Angular_Notify.egg-info/top_level.txt
+xstatic/__init__.py
+xstatic/pkg/__init__.py
+xstatic/pkg/angular_notify/__init__.py
+xstatic/pkg/angular_notify/data/angular-notify.css
+xstatic/pkg/angular_notify/data/angular-notify.html
+xstatic/pkg/angular_notify/data/angular-notify.js
