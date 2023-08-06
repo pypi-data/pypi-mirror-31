@@ -1,0 +1,11 @@
+jupyterlab_discovery/__init__.py,sha256=VpNPTr6YgLT--WBCva5-_CRStEIga9vAVuI3_TlQClE,63
+jupyterlab_discovery/_version.py,sha256=4cLf9IcsqhTcYgo9XHfJcrivB6w2WaXYT6zfzaSBIYo,74
+jupyterlab_discovery/handlers.py,sha256=rB2YmxdW5KBfCRok2Z7tSR24wL16qLDQTFUtVlovVQU,11724
+jupyterlab_discovery/server_extension.py,sha256=muwEZk-GEpb3Aye8MpZPzWVqSjqdyezzTXHuJRgg7mw,972
+jupyterlab_discovery-5.1.1.data/data/etc/jupyter/jupyter_notebook_config.d/jupyterlab-discovery.json,sha256=k_pM9dWEZ2xkOV-5gRHm9lfYbnoOkWqq1DgWsaaH1Cw,102
+jupyterlab_discovery-5.1.1.data/data/share/jupyter/lab/extensions/jupyterlab_discovery-5.1.2.tgz,sha256=tZzp8zwAZKe3YO_JKBT6TjHZ5VCOrKcwepfRcOKJb5c,26903
+jupyterlab_discovery-5.1.1.dist-info/METADATA,sha256=rLUYYLBkHPKG2xsni12092aQPpFyB5F4dAdiJLzxHJU,1039
+jupyterlab_discovery-5.1.1.dist-info/RECORD,,
+jupyterlab_discovery-5.1.1.dist-info/WHEEL,sha256=saUSQBLOUjf5ACZdNkhQ0lB6XrHU-l4vpzxq_W1n_AY,116
+jupyterlab_discovery-5.1.1.dist-info/entry_points.txt,sha256=eqGnTHtEVMYwfXVk1Z9MhC8O2N8wuqAbr0lisLmrkxs,20
+jupyterlab_discovery-5.1.1.dist-info/top_level.txt,sha256=KWyAHpSU2IVozmVa_M_eauYA3m6Q5cn1vt2192bpawE,21
