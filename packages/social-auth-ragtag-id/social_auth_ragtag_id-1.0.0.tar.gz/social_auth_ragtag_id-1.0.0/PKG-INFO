@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: social_auth_ragtag_id
+Version: 1.0.0
+Summary: An OAuth2 backend for social-auth-core
+Home-page: https://github.com/RagtagOpen/python-social-auth-ragtag-id
+Author: Ragtag
+Author-email: opensource@ragtag.org
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/RagtagOpen/python-social-auth-ragtag-id/issues
+Project-URL: Source, https://github.com/RagtagOpen/python-social-auth-ragtag-id
+Description: long_description
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
