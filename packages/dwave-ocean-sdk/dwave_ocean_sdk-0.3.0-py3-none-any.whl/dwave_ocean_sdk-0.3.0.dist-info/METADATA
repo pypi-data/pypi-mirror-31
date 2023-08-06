@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: dwave-ocean-sdk
+Version: 0.3.0
+Summary: Software development kit for open source D-Wave tools
+Home-page: https://github.com/dwavesystems/dwave-ocean-sdk
+Author: D-Wave Systems Inc.
+Author-email: tools@dwavesys.com
+License: Apache 2.0
+Platform: UNKNOWN
+Requires-Dist: dwavebinarycsp (<0.1.0,>=0.0.2)
+Requires-Dist: dwave-networkx (<0.7.0,>=0.6.1)
+Requires-Dist: dwave-system (<0.4.0,>=0.3.0)
+Requires-Dist: dwave-qbsolv (<0.3.0,>=0.2.7)
+
+UNKNOWN
+
+
