@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: hashdial
+Version: 1.0.1
+Summary: A module implementing hash based decision making
+Home-page: https://github.com/scode/py-hashdial
+Author: Peter Schuller
+Author-email: peter.schuller@infidyne.com
+License: UNKNOWN
+Project-URL: Documentation, http://py-hashdial.readthedocs.io/en/latest/
+Project-URL: Source, https://github.com/scode/py-hashdial
+Description: Implements, through hashing, decision making that is deterministic on input, but probabilistic across a set of inputs.
+        
+        For example, suppose a set of components in a distributed system wish to emit a log entry for 1% of requests - but each
+        component should log the *same* 1% of requests, they could do so as such::
+        
+            if hashdial.decide(request.id, 0.01):
+                log_request(request)
+        
+        Take a look at `the documentation <http://py-hashdial.readthedocs.io/en/latest/>`__ for more.
+        
+Keywords: hashdial hashing decision
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >3.4
+Description-Content-Type: text/x-rst
