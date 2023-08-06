@@ -1,0 +1,4 @@
+license_expression: gpl-2.0 OR linux-openib
+relevance: 80
+minimum_coverage: 95
+notes: found in the kernal 4.13. There are MANY typos in this notice, hence the low relevance
