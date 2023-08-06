@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: requestspool
+Version: 1.0.0
+Summary: Multiprocessing pool providing a unique request session per process.
+Home-page: https://github.com/ccc032/requestspool
+Author: ccc032
+Author-email: ym96@protonmail.ch
+License: GPLv3
+Keywords: multiprocessing pool parallel requests session
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Internet :: WWW/HTTP :: Session
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+
+UNKNOWN
+
+
