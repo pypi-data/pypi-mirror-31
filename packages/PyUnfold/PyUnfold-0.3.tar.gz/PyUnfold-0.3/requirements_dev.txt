@@ -1,0 +1,15 @@
+# Documentation
+sphinx
+numpydoc
+sphinx_rtd_theme
+nbsphinx
+pandoc
+jupyter
+matplotlib
+seaborn
+# Testing
+pytest
+pytest-cov
+flake8
+tables
+twine
