@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: django-hybrid
+Version: 0.2.0a2
+Summary: Provide a way to share logic across Django annotations, and Python
+Home-page: UNKNOWN
+Author: Anthony King
+Author-email: anthonydking@gmail.com
+License: Apache-2.0
+Project-URL: Source Code, https://github.com/cybojenix/django-hybrid
+Project-URL: Bug Tracker, https://github.com/cybojenix/django-hybrid/issues
+Platform: UNKNOWN
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Provides-Extra: test
+Requires-Dist: Django (>=1.11)
+Requires-Dist: typing
+Requires-Dist: typing-extensions
+Provides-Extra: test
+Requires-Dist: pytest; extra == 'test'
+Requires-Dist: pytest-cov; extra == 'test'
+Requires-Dist: pytest-django; extra == 'test'
+Requires-Dist: pytest-factoryboy; extra == 'test'
+Requires-Dist: pytest-mock; extra == 'test'
+
+# Django Hybrid
+
+Hybrid model properties for Django
+
+
+### What is this?
+\# TODO
+
+
+### Install
+\# TODO
+
+
+### Usage
+\# TODO
+
+
+### Bugs?
+\# TODO
+
+
+### Contributing
+\# TODO
+
+
