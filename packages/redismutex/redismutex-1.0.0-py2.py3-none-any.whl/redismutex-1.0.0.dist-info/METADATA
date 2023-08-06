@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: redismutex
+Version: 1.0.0
+Summary: Python implementation of mutex using redis
+Home-page: https://github.com/esquarer/py-redismutex
+Author: Abeer Upadhyay
+Author-email: ab.esquarer@gmail.com
+License: MIT
+Project-URL: Source, https://github.com/esquarer/py-redismutex/
+Project-URL: Documentation, http://py-redismutex.readthedocs.io/en/latest/
+Project-URL: Tracker, https://github.com/esquarer/py-redismutex/issues/
+Keywords: python redis mutex
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: future (==0.16.0)
+Requires-Dist: redis (==2.10.6)
+
+UNKNOWN
+
+
