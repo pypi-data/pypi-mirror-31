@@ -1,0 +1,109 @@
+# Pulp server configuration
+#
+# Values shown are the default values used, unless otherwise indicated.
+
+# Django Settings
+#
+# `allowed_hosts`: A list of strings representing the host/domain names that
+# Pulp can serve. This is a security measure to prevent HTTP Host header
+# attacks. A value beginning with a period can be used as a sub-domain wildcard.
+# The default is the host's FQDN.
+#
+# allowed_hosts:
+#   - pulp.example.com
+
+# `databases`: An associative array (dictionary) of databases to use. For the
+# full list of configuration options, refer to the Django database documentation
+# shipped with your version of Django, or online at
+# https://docs.djangoproject.com/en/1.11/ref/settings/#databases
+#
+# By default, Pulp will use a sqlite3 database. If your environment is used in production
+# consider configuring Postgresql or another Django supported database.
+#
+databases:
+  default:
+    CONN_MAX_AGE: 0
+    ENGINE: django.db.backends.sqlite3
+    NAME: /var/lib/pulp/sqlite3.db
+    OPTIONS:
+      timeout: 300
+#     USER:
+#     PASSWORD:
+#     HOST:
+#     PORT:
+
+# `SECRET_KEY`: A secret key for a particular Django installation. This is used to provide
+# cryptographic signing, and should be set to a unique, unpredictable value.
+# Pulp does not provide a default secret key. This must be user provided in order for the
+# Pulp Django Application to run.
+# SECURITY WARNING: keep the secret key used in production secret!
+#
+# SECRET_KEY:
+
+# `MEDIA_ROOT`: Location where Pulp stores files (Artifacts, published metadata, etc)
+#
+# MEDIA_ROOT: /var/lib/pulp/
+
+# Logging configuration
+#
+# `logging`: Logging configuration for Pulp. By default, Pulp logs to syslog. Pulp also support
+# a console logger, this can be set by changing logger handlers to "console". It is possible to
+# use additional loggers handler by providing a logging dictConfig. For more information,
+# see Django's logging documentation.
+#
+# logging:
+#   formatters:
+#     simple:
+#       format: "pulp: %(name)s:%(levelname)s: %(message)s"
+#   handlers:
+#     console:
+#       class: logging.StreamHandler
+#       formatter: simple
+#     syslog:
+#       address: /dev/log
+#       class: logging.handlers.SysLogHandler
+#       formatter: simple
+#   loggers:
+#     '':
+#       handlers: ["syslog"]
+#       level: INFO
+
+# Broker configuration
+#
+# `broker`: Broker configuration for Pulp. By default, Pulp uses the RabbitMQ
+# broker without SSL. It is possible to change this by providing a different
+# broker string. The remaining options are used to configure SSL settings.
+#
+# broker:
+#   url: amqp://localhost/
+#   celery_require_ssl: False
+#   ssl_ca_certificate: /etc/pki/pulp/broker/ca.crt
+#   ssl_client_key: /etc/pki/pulp/broker/client.crt
+#   ssl_client_certificate: /etc/pki/pulp/broker/client.crt
+#   login_method:
+
+# Server configuration
+#
+# `server`: Server behavior configuration of pulp.
+#   `working_directory`: Path for pulp workers to create temporary directories
+#                        for completion of tasks
+#
+# server:
+#   working_directory: /var/lib/pulp/tmp
+
+# Content Application
+#
+# `content`: The content serving application.
+#   `web_server`: The type of web server.  Must be: (django|apache|nginx).
+#                 When set to 'apache', the X-SENDFILE header is injected which delegates
+#                 streaming the content to Apache.  Requires: mod_xsendfile to be installed.
+#                 When set to 'nginx', the X-Accel-Redirect header is injected which delegates
+#                 streaming the content to NGINX.
+#   `host`: The host name or IP and an optional port number for the Content App. (e.g.
+#           example.com:8000) This value should be specified only if the Content App is served on
+#           a host that's different from the REST API. The default value is the same as the host
+#           used to serve the REST API.
+#
+# content:
+#   web_server: django
+#   host: pulp.example.com

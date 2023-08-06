@@ -1,0 +1,11 @@
+celery>=4
+coreapi
+Django>=1.11
+django-filter
+djangorestframework
+drf-nested-routers
+drf-yasg
+psycopg2-binary
+PyYAML
+setuptools
+pulpcore-common
