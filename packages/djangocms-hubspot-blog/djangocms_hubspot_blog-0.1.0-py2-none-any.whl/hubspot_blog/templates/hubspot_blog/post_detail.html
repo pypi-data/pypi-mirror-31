@@ -1,0 +1,5 @@
+{% load cms_tags %}
+
+{% render_model_block post %}
+    {{ post.content_html|safe|default_if_none:'' }}
+{% endrender_model_block %}
