@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: chianti-pearl
+Version: 1.0.5
+Summary: A module that can parse Korean movie theater data, including CGV, Lotte Cinema, and Megabox.
+Home-page: https://github.com/chiantishiina/pearl
+Author: Chianti Shiina
+Author-email: chianti.shiina@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: colorama
+
+UNKNOWN
+
+
