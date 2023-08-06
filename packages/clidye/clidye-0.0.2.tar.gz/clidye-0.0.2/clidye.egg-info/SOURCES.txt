@@ -1,0 +1,12 @@
+.gitignore
+LICENSE
+README.md
+setup.py
+bin/clidye
+clidye/__init__.py
+clidye/formatters.py
+clidye/main.py
+clidye.egg-info/PKG-INFO
+clidye.egg-info/SOURCES.txt
+clidye.egg-info/dependency_links.txt
+clidye.egg-info/top_level.txt
