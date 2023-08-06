@@ -1,0 +1,25 @@
+Metadata-Version: 1.1
+Name: skeppa
+Version: 2.0.2
+Summary: A docker deployment tool based on fabric and docker-compose
+Home-page: https://github.com/marteinn/skeppa
+Author: Marteinn
+Author-email: martin@marteinn.se
+License: MIT
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: System :: Software Distribution
+Classifier: Topic :: System :: Systems Administration
