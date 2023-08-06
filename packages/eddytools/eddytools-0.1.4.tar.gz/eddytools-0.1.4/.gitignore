@@ -1,0 +1,8 @@
+.ipynb_checkpoints
+.idea/
+.pytest_cache/
+__pycache__
+.eggs
+.coverage
+*.swp
+data/sample.slexmm
