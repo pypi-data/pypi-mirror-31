@@ -1,0 +1,10 @@
+README.md
+setup.py
+envaws/__init__.py
+envaws/envaws.py
+envaws.egg-info/PKG-INFO
+envaws.egg-info/SOURCES.txt
+envaws.egg-info/dependency_links.txt
+envaws.egg-info/entry_points.txt
+envaws.egg-info/requires.txt
+envaws.egg-info/top_level.txt
