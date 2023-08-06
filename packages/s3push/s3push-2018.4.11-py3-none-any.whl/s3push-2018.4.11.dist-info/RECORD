@@ -1,0 +1,10 @@
+s3push/__init__.py,sha256=CJ-0cY7xRbi-8Rmmka6jwmScewdNeb8obLzgMVQgIZI,1954
+s3push/connector.py,sha256=zGS70-Rv511uaNhUm76PoZv30VDqo50nlzzI0rr4jQg,763
+s3push/eraser.py,sha256=VoIsL4f_rW5tC1DMocA9zjuTRuJ5nt26AJyk6wlAnjo,130
+s3push/progress.py,sha256=iLIiyfzevCHvKkFs8eZPUZ1afaIkFmXnT2zrItCphaY,691
+s3push/uploader.py,sha256=zmvH4j5vfnB-udb2pM1ROrAkaviQA_zl5sEKYAzO1D4,2019
+s3push-2018.4.11.dist-info/METADATA,sha256=MPL6-aeCB0bNrZzqgpqCeIRcs3cekjw052oEP0llN-Y,4623
+s3push-2018.4.11.dist-info/RECORD,,
+s3push-2018.4.11.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+s3push-2018.4.11.dist-info/entry_points.txt,sha256=-yJVjytDm1B5kK8aebz-K3TH9phvu7_xAjhnnhELjjk,40
+s3push-2018.4.11.dist-info/top_level.txt,sha256=UAnM_VF5qhbriMUIF_NsiOgeHn67GfBhWzk05VAi4nE,7
