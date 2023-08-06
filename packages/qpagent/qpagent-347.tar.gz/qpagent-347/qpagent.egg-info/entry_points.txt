@@ -1,0 +1,5 @@
+[console_scripts]
+crawl = agent.cmds.crawl:crawl
+serve = agent.cmds.serve:serve
+user = agent.cmds.user:reset_user
+
