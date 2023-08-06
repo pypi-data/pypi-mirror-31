@@ -1,0 +1,215 @@
+Metadata-Version: 2.0
+Name: ldap-tools
+Version: 0.7.11
+Summary: A set of tools to make managing LDAP users, groups, and keys easier
+Home-page: https://github.com/carta/ldap_tools
+Author: Ali Tayarani
+Author-email: ali.tayarani@carta.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Topic :: System :: Systems Administration :: Authentication/Directory :: LDAP
+Classifier: Topic :: Utilities
+Requires-Dist: click
+Requires-Dist: ldap3
+Requires-Dist: pyyaml
+Requires-Dist: sshpubkeys
+
+LDAP Tools
+==========
+
+This LDAP tools gem is designed as a wrapper around `ldap3` to make
+interacting with LDAP easier. No knowledge of LDIF required.
+
+
++ Requirements_
++ Installation_
+
+  * `Installation from pypi`_
+  * `Installation from source`_
+
++ Configuration_
+
+  * ldap_info.yaml_
+  * ldap.secret_
+
++ Commands_
+
+  * ldaptools_
+
+    - `Currently supported subcommands`_
+
+Requirements
+------------
+
+Use `pyenv` to install python 3.5.3 (or 3.6.4)
+
+The following items are installed automatically as part of the pip install:
+- ldap3
+- click
+- sshpubkeys
+- pyyaml
+
+Installation
+------------
+
+Installation from pypi
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+::
+
+    pip install ldap_tools
+
+Installation from source
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+::
+
+    pip install git+https://github.com/carta/ldap_tools#egg=ldap_tools
+
+Configuration
+-------------
+
+There are two files used by this application. The default location is
+`$HOME/.ldap`; however, this can be overridden using the `LDAP_CONFIG_DIR`
+environment variable
+
+ldap_info.yaml
+~~~~~~~~~~~~~~
+
+This config file provides basic information about your LDAP server
+setup.
+
+.. code:: yaml
+
+    ---
+    server: # LDAP server
+    user_dn: # DN of user to interact with LDAP
+    port: # LDAP port
+    basedn: #LDAP Base DN
+    mail_domain: # Domain to be used for user email addresses
+    service_ou: # Organization Unit (OU) for service accounts
+
+Note: DN of a user is the unique name used to identify that user
+
+
+ldap.secret
+~~~~~~~~~~~
+
+This is a base64-encoded file with the LDAP root password.
+
+Commands
+--------
+
+ldaptools
+~~~~~~~~~
+
+This is the base command from which all other commands are launched
+
+::
+
+    Usage: ldaptools [OPTIONS] COMMAND [ARGS]...
+
+    Enter the application here.
+
+    Options:
+      --help  Show this message and exit.
+
+    Commands:
+      audit    Display LDAP group membership by user, by...
+      group    LDAP Group Management Commands.
+      key      Manage LDAP user SSH public keys.
+      user     LDAP User Management Commands.
+      version  LDAP Group Management Commands.
+
+Help is available for all subcommands in a similar fashion.
+
+Currently supported subcommands
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+-  user create
+-  user delete
+-  group create
+-  group delete
+-  group add_user
+-  group remove_user
+-  key add
+-  key remove
+-  key install
+-  audit by_user
+-  audit by_group
+-  audit raw
+
+Changelog
+=========
+
+(unreleased)
+------------
+- Merge pull request #5 from carta/feature/refactor. [Gregory White]
+
+  bugfixes
+- Bugfixes. [Ali Tayarani]
+- Merge pull request #1 from carta/feature/first_commit. [Gregory White]
+
+  First commit of ldap_tools
+- Merge pull request #4 from carta/feature/refactor. [Gregory White]
+
+  Feature/refactor
+- Merge pull request #3 from carta/feature/tests. [Gregory White]
+
+  Feature/tests
+- Merge branch 'feature/refactor' into feature/tests. [Ali Tayarani]
+- Bug fix group creation. [Ali Tayarani]
+- Revert config dir change. [Ali Tayarani]
+- Create install method. [Ali Tayarani]
+- Fixes in preparation for install method. [Ali Tayarani]
+- Change config dir to /etc. [Ali Tayarani]
+- Bump version and bug fix key. [Ali Tayarani]
+- Speed up tests. [Ali Tayarani]
+- API Documentation. [Ali Tayarani]
+- First pass at client tests. [Ali Tayarani]
+- First pass at audit tests. [Ali Tayarani]
+- First pass at key tests. [Ali Tayarani]
+- First pass at group test. [Ali Tayarani]
+- Test_user: share runner. [Ali Tayarani]
+- Update documentation. [Ali Tayarani]
+- Use rst instead of md. [Ali Tayarani]
+- Create User tests and do necessary refactor in support. [Ali Tayarani]
+- First attempt at pytest specs. [Ali Tayarani]
+- Replace python-ldap with ldap3 so we can test python3.5 properly. [Ali
+  Tayarani]
+- Fix imports to satisfy isort. [Ali Tayarani]
+- Fix Flake8 complaint. [Ali Tayarani]
+- Scaffolding around testing. [Ali Tayarani]
+- Add tests. [Ali Tayarani]
+- Add manifest.in. [Ali Tayarani]
+- Reduce reliance on class methods and clean up imports. [Ali Tayarani]
+- First refactor commit. [Ali Tayarani]
+- Add tentative license. [Ali Tayarani]
+- Completed package development. [Ali Tayarani]
+- Complete audit flow. [Ali Tayarani]
+- Completed user flow and config loading. [Ali Tayarani]
+- Complete group flow. [Ali Tayarani]
+- Add user delete functionality. [Ali Tayarani]
+- First commit of ldap_tools. [Ali Tayarani]
+- Merge pull request #2 from carta/feature/refactor. [Gregory White]
+
+  Feature/refactor
+- Add manifest.in. [Ali Tayarani]
+- Reduce reliance on class methods and clean up imports. [Ali Tayarani]
+- First refactor commit. [Ali Tayarani]
+- Complete audit flow. [Ali Tayarani]
+- First commit of ldap_tools. [Ali Tayarani]
+- Add gitignore. [Ali Tayarani]
+- Initial commit. [Ali Tayarani]
+
+
