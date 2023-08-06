@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: webloc
+Version: 1.0.2
+Summary: get/set webloc url (OS X)
+Home-page: https://github.com/looking-for-a-job/webloc
+License: UNKNOWN
+Description: ### Install
+        
+        ```bash
+        $ [sudo] pip install webloc
+        ```
+        
+        ### Usage
+        
+        ```bash
+        usage: webloc path [url]
+        ```
+        
+        ### Examples
+        
+        ```bash
+        $ webloc "$path" # get
+        $ webloc "$path" "$url" # set
+        ```
+Keywords: webloc
+Platform: OS X
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Environment :: MacOS X
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: Unix Shell
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
