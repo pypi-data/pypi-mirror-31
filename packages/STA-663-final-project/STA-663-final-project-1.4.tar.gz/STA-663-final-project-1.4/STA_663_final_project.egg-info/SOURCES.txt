@@ -1,0 +1,17 @@
+Final project.html
+Final project.ipynb
+LICENSE.txt
+MANIFEST.in
+README.md
+STA-663-final-project.py
+run_STA-663-final-project.py
+setup.py
+STA_663_final_project.egg-info/PKG-INFO
+STA_663_final_project.egg-info/SOURCES.txt
+STA_663_final_project.egg-info/dependency_links.txt
+STA_663_final_project.egg-info/top_level.txt
+biclustering/__init__.py
+biclustering/functions.py
+data/BreastCancerData.txt
+data/BreastCancerLabels.txt
+data/LungCancerData.txt
