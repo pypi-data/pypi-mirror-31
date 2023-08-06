@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+aiobaidu/__init__.py
+aiobaidu/bceutil.py
+aiobaidu/face.py
+aiobaidu.egg-info/PKG-INFO
+aiobaidu.egg-info/SOURCES.txt
+aiobaidu.egg-info/dependency_links.txt
+aiobaidu.egg-info/requires.txt
+aiobaidu.egg-info/top_level.txt
