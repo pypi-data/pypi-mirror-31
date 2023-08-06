@@ -1,0 +1,15 @@
+CONTRIBUTING.rst
+HISTORY.rst
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+ytdownloader/__init__.py
+ytdownloader/command_line.py
+ytdownloader.egg-info/PKG-INFO
+ytdownloader.egg-info/SOURCES.txt
+ytdownloader.egg-info/dependency_links.txt
+ytdownloader.egg-info/entry_points.txt
+ytdownloader.egg-info/requires.txt
+ytdownloader.egg-info/top_level.txt
