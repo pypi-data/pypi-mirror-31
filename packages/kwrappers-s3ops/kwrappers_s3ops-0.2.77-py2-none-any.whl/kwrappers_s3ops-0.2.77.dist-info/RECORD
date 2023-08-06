@@ -1,0 +1,12 @@
+kwrappers_s3ops-0.2.77-py2.7-nspkg.pth,sha256=crMXDQWmOlp9mQ9Pu3N-N4_u0LilJdJyHxEkKsvGsFE,554
+kwrappers/s3ops/__init__.py,sha256=aZrQvzdFyZd39mRpPnQTD2z4pmKZwwFv4HQIQ0MGUO0,134
+kwrappers/s3ops/general.py,sha256=XJq0UJHWUvgAStiQVCvW7Uzte38QRemmLMoGZI94NDg,5286
+kwrappers/s3ops/s3.py,sha256=WkVNqf6vs9yeFORaT1ivPSNH18B0SSAMkx1T7NY9gQ4,802
+kwrappers/s3ops/s3tasks.py,sha256=Eakgy5EK0yWSvITNFAU88O2DKI5QlS0ckz1x8EYGh7o,3292
+kwrappers_s3ops-0.2.77.data/data/requirements.txt,sha256=T5cl4O1RE5YGKR8yzhnQraXgQtRYIpT5_QwkJToazYA,13
+kwrappers_s3ops-0.2.77.data/data/version.txt,sha256=-soezv0eGPH-H7Kk0GoaGQHbpSM6pJg-Ph2UFfGf5N0,7
+kwrappers_s3ops-0.2.77.dist-info/METADATA,sha256=gVuDc6KSQmgVeJdKsFiaqXO0O93P-Cp4iYQ5us8N1Q0,275
+kwrappers_s3ops-0.2.77.dist-info/RECORD,,
+kwrappers_s3ops-0.2.77.dist-info/WHEEL,sha256=9xUnOISuCvrSyfu9GlFZT4i2TZ_2OLkwLNqcDvIo3zM,92
+kwrappers_s3ops-0.2.77.dist-info/namespace_packages.txt,sha256=q4xPgGWK3dFG0KDTr2LUl8dnDQit8n41hYzQuKPTkpM,10
+kwrappers_s3ops-0.2.77.dist-info/top_level.txt,sha256=q4xPgGWK3dFG0KDTr2LUl8dnDQit8n41hYzQuKPTkpM,10
