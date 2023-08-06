@@ -1,0 +1,14 @@
+# dont forget to update setup.py
+pytest
+pytest-regtest
+coverage
+sqlalchemy
+psycopg2
+Click
+ruamel.yaml
+psutil
+watchdog
+flake8
+tox
+pandas
+alembic

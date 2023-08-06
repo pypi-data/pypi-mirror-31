@@ -1,0 +1,287 @@
+
+> this is datapool version 0.4.2
+> init-config
+- guess settings
+- created config files at <tmpdir_from_fixture>/datapool
+  please edit these files and adapt the data base configuration to your setup
+
+> this is datapool version 0.4.2
+> init-db
++ intialized db
+
+> this is datapool version 0.4.2
+> check-config
+- check settings in config file <tmpdir_from_fixture>/datapool/datapool.ini
+  ERROR - R: interpreter startup or code execution failed
+  ERROR - R: this is the recorded output:
+  ERROR - R:    ERROR: unknown option `--vanilla`
+- check landing zone '<tmpdir_from_fixture>/landing_zone'
+- try to connect to db
+  - connected to db
+- check R configuration + code execution
+- R interpreter works
+- check python configuration + code execution
+- python interpreter works
+- check matlab configuration + code execution
+- matlab interpreter works
+- check julia configuration + code execution
+- julia interpreter works
+- checked julia version.
++ all checks passed
+
+> this is datapool version 0.4.2
+> create-example
+- setup example landing zone
++ example landing zone created
+
+> this is datapool version <TIME><TIME>
+> check
+- check names and places of changed files at landing zone /private/var/folders/k<TIME>/zfp<TIME>dvcs<TIME>m<TIME>gz<TIME>brql<TIME>tv<TIME>gn/T/pytest-of-uweschmitt/pytest-<TIME>/test_all<TIME>/dlz
+- file names and their places are ok
+- check yaml files in landing zone at /private/var/folders/k<TIME>/zfp<TIME>dvcs<TIME>m<TIME>gz<TIME>brql<TIME>tv<TIME>gn/T/pytest-of-uweschmitt/pytest-<TIME>/test_all<TIME>/dlz
+- copy meta data from productive db
+  - copy table comment
+  - copy table parameter
+  - copy table parameter_averaging
+  - copy table picture
+  - copy table project
+  - copy table quality
+  - copy table signal_quality
+  - copy table signals_comments_association
+  - copy table signals_signal_quality_association
+  - copy table site
+  - copy table source
+  - copy table source_type
+  - copy table special_value_definition
+- check folder structure
+  - sites is ok
+  - data is ok
+  - data/sensor_from_company_xyz/sensor_instance_python/raw_data is ok
+  - data/sensor_from_company_xyz/sensor_instance_r/raw_data is ok
+  - data/sensor_from_company_xyz/sensor_instance_matlab/raw_data is ok
+  - data/sensor_from_company_xyz/sensor_instance_julia/raw_data is ok
+- detected <TIME> yaml files:
+  - /private/var/folders/k<TIME>/zfp<TIME>dvcs<TIME>m<TIME>gz<TIME>brql<TIME>tv<TIME>gn/T/pytest-of-uweschmitt/pytest-<TIME>/test_all<TIME>/dlz/data/parameters.yaml
+  - /private/var/folders/k<TIME>/zfp<TIME>dvcs<TIME>m<TIME>gz<TIME>brql<TIME>tv<TIME>gn/T/pytest-of-uweschmitt/pytest-<TIME>/test_all<TIME>/dlz/data/sensor_from_company_xyz/source_type.yaml
+  - /private/var/folders/k<TIME>/zfp<TIME>dvcs<TIME>m<TIME>gz<TIME>brql<TIME>tv<TIME>gn/T/pytest-of-uweschmitt/pytest-<TIME>/test_all<TIME>/dlz/data/sensor_from_company_xyz/sensor_instance_julia/source.yaml
+  - /private/var/folders/k<TIME>/zfp<TIME>dvcs<TIME>m<TIME>gz<TIME>brql<TIME>tv<TIME>gn/T/pytest-of-uweschmitt/pytest-<TIME>/test_all<TIME>/dlz/data/sensor_from_company_xyz/sensor_instance_matlab/source.yaml
+  - /private/var/folders/k<TIME>/zfp<TIME>dvcs<TIME>m<TIME>gz<TIME>brql<TIME>tv<TIME>gn/T/pytest-of-uweschmitt/pytest-<TIME>/test_all<TIME>/dlz/data/sensor_from_company_xyz/sensor_instance_python/source.yaml
+  - /private/var/folders/k<TIME>/zfp<TIME>dvcs<TIME>m<TIME>gz<TIME>brql<TIME>tv<TIME>gn/T/pytest-of-uweschmitt/pytest-<TIME>/test_all<TIME>/dlz/data/sensor_from_company_xyz/sensor_instance_r/source.yaml
+  - /private/var/folders/k<TIME>/zfp<TIME>dvcs<TIME>m<TIME>gz<TIME>brql<TIME>tv<TIME>gn/T/pytest-of-uweschmitt/pytest-<TIME>/test_all<TIME>/dlz/sites/example_site/site.yaml
+- check yaml files
+- all yaml files checked
+- check scripts landing zone at /private/var/folders/k<TIME>/zfp<TIME>dvcs<TIME>m<TIME>gz<TIME>brql<TIME>tv<TIME>gn/T/pytest-of-uweschmitt/pytest-<TIME>/test_all<TIME>/dlz
+- check data/sensor_from_company_xyz/sensor_instance_julia/conversion.jl on data/sensor_from_company_xyz/sensor_instance_julia/raw_data/data-<TIME>.raw
+  - wrote conversion result as csv to /var/folders/k<TIME>/zfp<TIME>dvcs<TIME>m<TIME>gz<TIME>brql<TIME>tv<TIME>gn/T/tmppceyxkra/sensor_instance_julia_<TIME>.csv
+  - wrote conversion result as txt to /var/folders/k<TIME>/zfp<TIME>dvcs<TIME>m<TIME>gz<TIME>brql<TIME>tv<TIME>gn/T/tmppceyxkra/sensor_instance_julia_<TIME>.txt
+  - first conversion needed <TIME> msec
+  - second conversion needed <TIME> msec
+- check data/sensor_from_company_xyz/sensor_instance_matlab/conversion.m on data/sensor_from_company_xyz/sensor_instance_matlab/raw_data/data-<TIME>.raw
+  - wrote conversion result as csv to /var/folders/k<TIME>/zfp<TIME>dvcs<TIME>m<TIME>gz<TIME>brql<TIME>tv<TIME>gn/T/tmppceyxkra/sensor_instance_matlab_<TIME>.csv
+  - wrote conversion result as txt to /var/folders/k<TIME>/zfp<TIME>dvcs<TIME>m<TIME>gz<TIME>brql<TIME>tv<TIME>gn/T/tmppceyxkra/sensor_instance_matlab_<TIME>.txt
+  - first conversion needed <TIME> msec
+  - second conversion needed <TIME> msec
+- check data/sensor_from_company_xyz/sensor_instance_python/conversion.py on data/sensor_from_company_xyz/sensor_instance_python/raw_data/data-<TIME>.raw
+  - wrote conversion result as csv to /var/folders/k<TIME>/zfp<TIME>dvcs<TIME>m<TIME>gz<TIME>brql<TIME>tv<TIME>gn/T/tmppceyxkra/sensor_instance_python_<TIME>.csv
+  - wrote conversion result as txt to /var/folders/k<TIME>/zfp<TIME>dvcs<TIME>m<TIME>gz<TIME>brql<TIME>tv<TIME>gn/T/tmppceyxkra/sensor_instance_python_<TIME>.txt
+  - first conversion needed <TIME> msec
+  - second conversion needed <TIME> msec
+- check data/sensor_from_company_xyz/sensor_instance_r/conversion.r on data/sensor_from_company_xyz/sensor_instance_r/raw_data/data-<TIME>.raw
+  - wrote conversion result as csv to /var/folders/k<TIME>/zfp<TIME>dvcs<TIME>m<TIME>gz<TIME>brql<TIME>tv<TIME>gn/T/tmppceyxkra/sensor_instance_r_<TIME>.csv
+  - wrote conversion result as txt to /var/folders/k<TIME>/zfp<TIME>dvcs<TIME>m<TIME>gz<TIME>brql<TIME>tv<TIME>gn/T/tmppceyxkra/sensor_instance_r_<TIME>.txt
+  - first conversion needed <TIME> msec
+  - second conversion needed <TIME> msec
+- check signals integrity
+- check signals against db
+- all scripts checked
++ congratulations: all checks succeeded.
+
+> this is datapool version <TIME><TIME>
+> update-operational
+- datapool server is running.
+- development landing zone seems to be sane.
+- check names and places of changed files at landing zone /private/var/folders/k<TIME>/zfp<TIME>dvcs<TIME>m<TIME>gz<TIME>brql<TIME>tv<TIME>gn/T/pytest-of-uweschmitt/pytest-<TIME>/test_all<TIME>/dlz
+- file names and their places are ok
+- check yaml files in landing zone at /private/var/folders/k<TIME>/zfp<TIME>dvcs<TIME>m<TIME>gz<TIME>brql<TIME>tv<TIME>gn/T/pytest-of-uweschmitt/pytest-<TIME>/test_all<TIME>/dlz
+- copy meta data from productive db
+  - copy table comment
+  - copy table parameter
+  - copy table parameter_averaging
+  - copy table picture
+  - copy table project
+  - copy table quality
+  - copy table signal_quality
+  - copy table signals_comments_association
+  - copy table signals_signal_quality_association
+  - copy table site
+  - copy table source
+  - copy table source_type
+  - copy table special_value_definition
+- check folder structure
+  - sites is ok
+  - data is ok
+  - data/sensor_from_company_xyz/sensor_instance_python/raw_data is ok
+  - data/sensor_from_company_xyz/sensor_instance_r/raw_data is ok
+  - data/sensor_from_company_xyz/sensor_instance_matlab/raw_data is ok
+  - data/sensor_from_company_xyz/sensor_instance_julia/raw_data is ok
+- detected <TIME> yaml files:
+  - /private/var/folders/k<TIME>/zfp<TIME>dvcs<TIME>m<TIME>gz<TIME>brql<TIME>tv<TIME>gn/T/pytest-of-uweschmitt/pytest-<TIME>/test_all<TIME>/dlz/data/parameters.yaml
+  - /private/var/folders/k<TIME>/zfp<TIME>dvcs<TIME>m<TIME>gz<TIME>brql<TIME>tv<TIME>gn/T/pytest-of-uweschmitt/pytest-<TIME>/test_all<TIME>/dlz/data/sensor_from_company_xyz/source_type.yaml
+  - /private/var/folders/k<TIME>/zfp<TIME>dvcs<TIME>m<TIME>gz<TIME>brql<TIME>tv<TIME>gn/T/pytest-of-uweschmitt/pytest-<TIME>/test_all<TIME>/dlz/data/sensor_from_company_xyz/sensor_instance_julia/source.yaml
+  - /private/var/folders/k<TIME>/zfp<TIME>dvcs<TIME>m<TIME>gz<TIME>brql<TIME>tv<TIME>gn/T/pytest-of-uweschmitt/pytest-<TIME>/test_all<TIME>/dlz/data/sensor_from_company_xyz/sensor_instance_matlab/source.yaml
+  - /private/var/folders/k<TIME>/zfp<TIME>dvcs<TIME>m<TIME>gz<TIME>brql<TIME>tv<TIME>gn/T/pytest-of-uweschmitt/pytest-<TIME>/test_all<TIME>/dlz/data/sensor_from_company_xyz/sensor_instance_python/source.yaml
+  - /private/var/folders/k<TIME>/zfp<TIME>dvcs<TIME>m<TIME>gz<TIME>brql<TIME>tv<TIME>gn/T/pytest-of-uweschmitt/pytest-<TIME>/test_all<TIME>/dlz/data/sensor_from_company_xyz/sensor_instance_r/source.yaml
+  - /private/var/folders/k<TIME>/zfp<TIME>dvcs<TIME>m<TIME>gz<TIME>brql<TIME>tv<TIME>gn/T/pytest-of-uweschmitt/pytest-<TIME>/test_all<TIME>/dlz/sites/example_site/site.yaml
+- check yaml files
+- all yaml files checked
+- check scripts landing zone at /private/var/folders/k<TIME>/zfp<TIME>dvcs<TIME>m<TIME>gz<TIME>brql<TIME>tv<TIME>gn/T/pytest-of-uweschmitt/pytest-<TIME>/test_all<TIME>/dlz
+- check data/sensor_from_company_xyz/sensor_instance_julia/conversion.jl on data/sensor_from_company_xyz/sensor_instance_julia/raw_data/data-<TIME>.raw
+  - wrote conversion result as csv to /var/folders/k<TIME>/zfp<TIME>dvcs<TIME>m<TIME>gz<TIME>brql<TIME>tv<TIME>gn/T/tmpnt<TIME>op<TIME>u<TIME>/sensor_instance_julia_<TIME>.csv
+  - wrote conversion result as txt to /var/folders/k<TIME>/zfp<TIME>dvcs<TIME>m<TIME>gz<TIME>brql<TIME>tv<TIME>gn/T/tmpnt<TIME>op<TIME>u<TIME>/sensor_instance_julia_<TIME>.txt
+  - first conversion needed <TIME> msec
+- check data/sensor_from_company_xyz/sensor_instance_matlab/conversion.m on data/sensor_from_company_xyz/sensor_instance_matlab/raw_data/data-<TIME>.raw
+  - wrote conversion result as csv to /var/folders/k<TIME>/zfp<TIME>dvcs<TIME>m<TIME>gz<TIME>brql<TIME>tv<TIME>gn/T/tmpnt<TIME>op<TIME>u<TIME>/sensor_instance_matlab_<TIME>.csv
+  - wrote conversion result as txt to /var/folders/k<TIME>/zfp<TIME>dvcs<TIME>m<TIME>gz<TIME>brql<TIME>tv<TIME>gn/T/tmpnt<TIME>op<TIME>u<TIME>/sensor_instance_matlab_<TIME>.txt
+  - first conversion needed <TIME> msec
+- check data/sensor_from_company_xyz/sensor_instance_python/conversion.py on data/sensor_from_company_xyz/sensor_instance_python/raw_data/data-<TIME>.raw
+  - wrote conversion result as csv to /var/folders/k<TIME>/zfp<TIME>dvcs<TIME>m<TIME>gz<TIME>brql<TIME>tv<TIME>gn/T/tmpnt<TIME>op<TIME>u<TIME>/sensor_instance_python_<TIME>.csv
+  - wrote conversion result as txt to /var/folders/k<TIME>/zfp<TIME>dvcs<TIME>m<TIME>gz<TIME>brql<TIME>tv<TIME>gn/T/tmpnt<TIME>op<TIME>u<TIME>/sensor_instance_python_<TIME>.txt
+  - first conversion needed <TIME> msec
+- check data/sensor_from_company_xyz/sensor_instance_r/conversion.r on data/sensor_from_company_xyz/sensor_instance_r/raw_data/data-<TIME>.raw
+  - wrote conversion result as csv to /var/folders/k<TIME>/zfp<TIME>dvcs<TIME>m<TIME>gz<TIME>brql<TIME>tv<TIME>gn/T/tmpnt<TIME>op<TIME>u<TIME>/sensor_instance_r_<TIME>.csv
+  - wrote conversion result as txt to /var/folders/k<TIME>/zfp<TIME>dvcs<TIME>m<TIME>gz<TIME>brql<TIME>tv<TIME>gn/T/tmpnt<TIME>op<TIME>u<TIME>/sensor_instance_r_<TIME>.txt
+  - first conversion needed <TIME> msec
+- check signals integrity
+- check signals against db
+- all scripts checked
++ congratulations: all checks succeeded.
+- created folder sites
+- created folder sites/example_site
+- created folder sites/example_site/images
+- copied file sites/example_site/images/<TIME>G<TIME>_regenwetter.jpg
+- copied file sites/example_site/images/IMG_<TIME>.JPG
+- copied file sites/example_site/images/IMG_<TIME>.JPG
+- copied file sites/example_site/site.yaml
+- copied file data/parameters.yaml
+- copied file data/sensor_from_company_xyz/source_type.yaml
+- copied file data/sensor_from_company_xyz/sensor_instance_julia/source.yaml
+- copied file data/sensor_from_company_xyz/sensor_instance_matlab/source.yaml
+- copied file data/sensor_from_company_xyz/sensor_instance_python/source.yaml
+- copied file data/sensor_from_company_xyz/sensor_instance_r/source.yaml
+- copied file data/sensor_from_company_xyz/sensor_instance_julia/conversion.jl
+- created folder data/sensor_from_company_xyz/sensor_instance_julia/raw_data
+- copied file data/sensor_from_company_xyz/sensor_instance_matlab/conversion.m
+- created folder data/sensor_from_company_xyz/sensor_instance_matlab/raw_data
+- copied file data/sensor_from_company_xyz/sensor_instance_python/conversion.py
+- created folder data/sensor_from_company_xyz/sensor_instance_python/raw_data
+- copied file data/sensor_from_company_xyz/sensor_instance_r/conversion.r
+- created folder data/sensor_from_company_xyz/sensor_instance_r/raw_data
++ copied/created <TIME> files/folders to/in /private/var/folders/k<TIME>/zfp<TIME>dvcs<TIME>m<TIME>gz<TIME>brql<TIME>tv<TIME>gn/T/pytest-of-uweschmitt/pytest-<TIME>/test_all<TIME>/landing_zone
+
+> this is datapool version 0.4.2
+> delete-signals
+- deletion affects 1451 signals
+
+  id    timestamp            value  parameter  source                  site  x       y       z  
+  ----  -------------------  -----  ---------  ----------------------  ----  ------  ------  -  
+  2903  2013-11-13 10:06:00  39.21  Flow       sensor_instance_matlab        682558  239404     
+  2904  2013-11-13 10:08:00  37.6   Flow       sensor_instance_matlab        682558  239404     
+  2905  2013-11-13 10:10:00  35.09  Flow       sensor_instance_matlab        682558  239404     
+  2906  2013-11-13 10:12:00  36.79  Flow       sensor_instance_matlab        682558  239404     
+  2907  2013-11-13 10:14:00  40.63  Flow       sensor_instance_matlab        682558  239404     
+  ... skipped 1442 signals ...
+  2909  2013-11-13 10:18:00  37.71  Flow       sensor_instance_matlab        682558  239404     
+  2910  2013-11-13 10:20:00  37.3   Flow       sensor_instance_matlab        682558  239404     
+  2911  2013-11-13 10:22:00  34.94  Flow       sensor_instance_matlab        682558  239404     
+  2912  2013-11-13 10:24:00  33.04  Flow       sensor_instance_matlab        682558  239404
+
+> this is datapool version 0.4.2
+> delete-signals
+- deletion affects 1451 signals
+
+  id    timestamp            value  parameter  source                  site  x       y       z  
+  ----  -------------------  -----  ---------  ----------------------  ----  ------  ------  -  
+  2903  2013-11-13 10:06:00  39.21  Flow       sensor_instance_matlab        682558  239404     
+  2904  2013-11-13 10:08:00  37.6   Flow       sensor_instance_matlab        682558  239404     
+  2905  2013-11-13 10:10:00  35.09  Flow       sensor_instance_matlab        682558  239404     
+  2906  2013-11-13 10:12:00  36.79  Flow       sensor_instance_matlab        682558  239404     
+  2907  2013-11-13 10:14:00  40.63  Flow       sensor_instance_matlab        682558  239404     
+  ... skipped 1442 signals ...
+  2909  2013-11-13 10:18:00  37.71  Flow       sensor_instance_matlab        682558  239404     
+  2910  2013-11-13 10:20:00  37.3   Flow       sensor_instance_matlab        682558  239404     
+  2911  2013-11-13 10:22:00  34.94  Flow       sensor_instance_matlab        682558  239404     
+  2912  2013-11-13 10:24:00  33.04  Flow       sensor_instance_matlab        682558  239404     
+  
+
+- deleted 1451 rows
+
+> this is datapool version 0.4.2
+> delete-entity
+- following site found in database:
+  SiteDbo test_site:
+      street      : 'Teststrasse 1'
+      city        : '8048 Zurich, Switzerland'
+      x, y, z     : '580000', '255300', '455.3'
+      description : All the details of the site.All the details the site.All the details of the site.All the details of the site.All the details of the site.All the details of the site.All the details of the site.
+      PictureDbo:
+          filename    : 'IMG_0312.JPG'
+          timestamp   : datetime.datetime(2016, 2, 1, 12, 0)
+          filesize    : 356
+          description : 'outside'
+      PictureDbo:
+          filename    : 'IMG_0732.JPG'
+          timestamp   : None
+          filesize    : 356
+          description : 'manholeD1'
+
+- deletion affects 0 signals
+- the following files and folders will be deleted in this order:
+  <tmpdir_from_fixture>/landing_zone/sites/example_site/images/24G35_regenwetter.jpg
+  <tmpdir_from_fixture>/landing_zone/sites/example_site/images/IMG_0312.JPG
+  <tmpdir_from_fixture>/landing_zone/sites/example_site/images/IMG_0732.JPG
+  <tmpdir_from_fixture>/landing_zone/sites/example_site/site.yaml
+  <tmpdir_from_fixture>/landing_zone/sites/example_site/images/
+  <tmpdir_from_fixture>/landing_zone/sites/example_site/
+- this operation deleted 0 signals
+
+> this is datapool version 0.4.2
+> delete-entity
+- following site found in database:
+  SiteDbo test_site:
+      street      : 'Teststrasse 1'
+      city        : '8048 Zurich, Switzerland'
+      x, y, z     : '580000', '255300', '455.3'
+      description : All the details of the site.All the details the site.All the details of the site.All the details of the site.All the details of the site.All the details of the site.All the details of the site.
+      PictureDbo:
+          filename    : 'IMG_0312.JPG'
+          timestamp   : datetime.datetime(2016, 2, 1, 12, 0)
+          filesize    : 356
+          description : 'outside'
+      PictureDbo:
+          filename    : 'IMG_0732.JPG'
+          timestamp   : None
+          filesize    : 356
+          description : 'manholeD1'
+
+- deletion affects 0 signals
+- the following files and folders will be deleted in this order:
+  <tmpdir_from_fixture>/landing_zone/sites/example_site/images/24G35_regenwetter.jpg
+  <tmpdir_from_fixture>/landing_zone/sites/example_site/images/IMG_0312.JPG
+  <tmpdir_from_fixture>/landing_zone/sites/example_site/images/IMG_0732.JPG
+  <tmpdir_from_fixture>/landing_zone/sites/example_site/site.yaml
+  <tmpdir_from_fixture>/landing_zone/sites/example_site/images/
+  <tmpdir_from_fixture>/landing_zone/sites/example_site/
+- deleted 0 rows from table 'signal'
+- deleted 1 rows from table 'site'
+- removed <tmpdir_from_fixture>/landing_zone/sites/example_site/images/24G35_regenwetter.jpg
+- removed <tmpdir_from_fixture>/landing_zone/sites/example_site/images/IMG_0312.JPG
+- removed <tmpdir_from_fixture>/landing_zone/sites/example_site/images/IMG_0732.JPG
+- removed <tmpdir_from_fixture>/landing_zone/sites/example_site/site.yaml
+- removed <tmpdir_from_fixture>/landing_zone/sites/example_site/images
+- removed <tmpdir_from_fixture>/landing_zone/sites/example_site
+- this operation deleted 0 signals
+
+> this is datapool version 0.4.2
+> update-operational
+- datapool server is running.
+- development landing zone invalid: <tmpdir_from_fixture>/dlz/.start_state contains files which are not in <tmpdir_from_fixture>/landing_zone
