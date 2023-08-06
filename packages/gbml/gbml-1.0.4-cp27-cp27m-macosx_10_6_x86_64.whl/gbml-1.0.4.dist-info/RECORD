@@ -1,0 +1,10 @@
+gbml/__init__.py,sha256=5UYaTpY7PEZcZZll_CsMuw8uCHa2PpeVe9HzJV4ED2w,205
+gbml/core.so,sha256=6-h1jPN9lKgb69n2dNwKn1PaOe94Uj5R23a_dtuGGo4,357396
+gbml/elasticity.py,sha256=fudDR1cy-PVwr7meFhrIoYMzlUE9a9-X-mxZ0l6spfc,11254
+gbml/data/element_aiab_energy.json,sha256=L2qC0g-yQ2ZRjZZ2JDFjJAy76GrwZRcMw7RokUEFZAU,8688
+gbml/data/gbml-G-v1.00.data,sha256=FIY_GwOxsxcYchy1qAVIV1zAiPGRUzwj51musVhh37E,1173916
+gbml/data/gbml-K-v1.00.data,sha256=KBMOc15QJd40gJbbT8sad5dlHKjuJmoG3TG71adBvFA,1327356
+gbml-1.0.4.dist-info/METADATA,sha256=7lweAKrpaow_yxXzq_zRsrhHlJ4Ag-WJZY4lqSD5PxQ,424
+gbml-1.0.4.dist-info/RECORD,,
+gbml-1.0.4.dist-info/WHEEL,sha256=JlG97noRU6VjFm0Y40CcC3kcfZ4rTaGtg97j3zrUIKo,110
+gbml-1.0.4.dist-info/top_level.txt,sha256=332Gur5mEfsrVF3RvFmC7kQa6MWC8w0b4Kzvus9udUg,5
