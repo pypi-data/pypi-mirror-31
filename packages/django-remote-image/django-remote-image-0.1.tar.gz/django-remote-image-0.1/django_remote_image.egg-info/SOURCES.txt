@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+django_remote_image.egg-info/PKG-INFO
+django_remote_image.egg-info/SOURCES.txt
+django_remote_image.egg-info/dependency_links.txt
+django_remote_image.egg-info/top_level.txt
+remote_image/__init__.py
+remote_image/admin.py
+remote_image/apps.py
+remote_image/example_forms.py
+remote_image/fields.py
+remote_image/tests.py
+remote_image/migrations/__init__.py
