@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: spark_lean
+Version: 0.3.3
+Summary: An interactive PySpark-based Data Cleaning Library
+Home-page: https://github.com/allenlsj/Spark-lean
+Author: Shuaiji Li, Yicheng Pu, Qingtai Liu
+Author-email: sl6486@nyu.edu, yp653@nyu.edu, ql819@nyu.edu
+License: MIT
+Download-URL: https://github.com/allenlsj/Spark_lean/archive/0.3.3.tar.gz
+Description: UNKNOWN
+Keywords: PySpark,Data Cleaning,Interactive
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
