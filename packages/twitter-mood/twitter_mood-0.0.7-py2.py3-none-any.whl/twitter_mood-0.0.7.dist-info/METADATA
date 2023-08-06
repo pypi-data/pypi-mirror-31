@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: twitter-mood
+Version: 0.0.7
+Summary: Add a short description here!
+Home-page: http://...
+Author: John Hossler
+Author-email: john.m.hossler@gmail.com
+License: mit
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Requires-Dist: textblob
+
+UNKNOWN
+
+
