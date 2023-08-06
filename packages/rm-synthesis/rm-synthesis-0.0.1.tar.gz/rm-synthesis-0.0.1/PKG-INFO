@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: rm-synthesis
+Version: 0.0.1
+Summary: Rotation Measurement Synthesis and Cleaning Tool
+Home-page: https://github.com/Sebokolodi/RMSYNTHESIS/
+Author: Lerato Sebokolodi
+Author-email: mll.sebokolodi@gmail.com
+License: GPL2
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires: numpy
+Requires: astropy
+Requires: multiprocessing
