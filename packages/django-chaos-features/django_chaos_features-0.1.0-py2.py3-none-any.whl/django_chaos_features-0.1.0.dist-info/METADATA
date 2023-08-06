@@ -1,0 +1,112 @@
+Metadata-Version: 2.0
+Name: django-chaos-features
+Version: 0.1.0
+Summary: Features
+Home-page: https://github.com/george-silva/django-chaos-features
+Author: George Silva
+Author-email: georger.silva@gmail.com
+License: MIT
+Keywords: django-chaos-features
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Django :: 1.11
+Classifier: Framework :: Django :: 2.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+
+=============================
+Django Chaos Features
+=============================
+
+.. image:: https://badge.fury.io/py/django-chaos-features.svg
+    :target: https://badge.fury.io/py/django-chaos-features
+
+.. image:: https://travis-ci.org/george-silva/django-chaos-features.svg?branch=master
+    :target: https://travis-ci.org/george-silva/django-chaos-features
+
+.. image:: https://codecov.io/gh/george-silva/django-chaos-features/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/george-silva/django-chaos-features
+
+Features
+
+Documentation
+-------------
+
+The full documentation is at https://django-chaos-features.readthedocs.io.
+
+Quickstart
+----------
+
+Install Django Chaos Features::
+
+    pip install django-chaos-features
+
+Add it to your `INSTALLED_APPS`:
+
+.. code-block:: python
+
+    INSTALLED_APPS = (
+        ...
+        'chaos_features.apps.ChaosFeaturesConfig',
+        ...
+    )
+
+Add Django Chaos Features's URL patterns:
+
+.. code-block:: python
+
+    from chaos_features import urls as chaos_features_urls
+
+
+    urlpatterns = [
+        ...
+        url(r'^', include(chaos_features_urls)),
+        ...
+    ]
+
+Features
+--------
+
+* TODO
+
+Running Tests
+-------------
+
+Does the code actually work?
+
+::
+
+    source <YOURVIRTUALENV>/bin/activate
+    (myenv) $ pip install tox
+    (myenv) $ tox
+
+Credits
+-------
+
+Tools used in rendering this package:
+
+*  Cookiecutter_
+*  `cookiecutter-djangopackage`_
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`cookiecutter-djangopackage`: https://github.com/pydanny/cookiecutter-djangopackage
+
+
+
+
+History
+-------
+
+0.1.0 (2018-05-15)
+++++++++++++++++++
+
+* First release on PyPI.
+
+
