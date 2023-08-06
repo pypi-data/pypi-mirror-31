@@ -1,0 +1,8 @@
+requests
+trytond_party<4.9,>=4.8
+trytond_product<4.9,>=4.8
+trytond_stock<4.9,>=4.8
+trytond_stock_shipment_measurements<4.9,>=4.8
+trytond_stock_package<4.9,>=4.8
+trytond_stock_package_shipping<4.9,>=4.8
+trytond<4.9,>=4.8
