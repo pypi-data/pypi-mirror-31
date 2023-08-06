@@ -1,0 +1,35 @@
+Metadata-Version: 2.0
+Name: mmtfPyspark
+Version: 0.2.4
+Summary: Methods for parallel and distributed analysis and mining of the Protein Data Bank using MMTF and Apache Spark
+Home-page: https://github.com/sbl-sdsc/mmtf-pyspark
+Author: Mars Huang (Shih-Cheng)
+Author-email: marshuang80@gmail.com
+License: Apache License 2.0
+Keywords: mmtf spark pyspark protein PDB
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6
+Requires-Dist: pyspark (>=2.3.0)
+Requires-Dist: Biopython (>=1.7.1)
+Requires-Dist: msgpack-python (>=0.5.6)
+Requires-Dist: numpy (>=1.14.2)
+Requires-Dist: ipywidgets (>=7.2.1)
+Requires-Dist: mmtf-python (==1.1.1)
+Requires-Dist: sympy (==1.1.1)
+Requires-Dist: requests (>=0.8.0)
+Requires-Dist: matplotlib (>=2.2.0)
+Requires-Dist: seaborn (>=0.7.1)
+Requires-Dist: py3Dmol (>=0.6.3)
+Requires-Dist: scipy (>=1.0.0)
+Requires-Dist: scikit-learn (>=0.13.0)
+Requires-Dist: py4j (>=0.10.6)
+
+
+**mmtfPyspark** is a python package that provides APIs and sample applications for distributed analysis and scalable mining of 3D biomacromolecular structures, such as the Protein Data Bank (PDB) archive. mmtfPyspark uses Big Data technologies to enable high-performance parallel processing of macromolecular structures.
+
+
