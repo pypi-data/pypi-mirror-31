@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: cbsyst
+Version: 0.3.6
+Summary: Tools for calculating ocean C and B chemistry.
+Home-page: https://github.com/oscarbranson/cbsyst
+Author: Oscar Branson
+Author-email: oscarbranson@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: science,chemistry,oceanography,carbon
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3 :: Only
