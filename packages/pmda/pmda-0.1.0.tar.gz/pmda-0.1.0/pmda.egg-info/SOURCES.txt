@@ -1,0 +1,11 @@
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+versioneer.py
+pmda/_version.py
+pmda.egg-info/PKG-INFO
+pmda.egg-info/SOURCES.txt
+pmda.egg-info/dependency_links.txt
+pmda.egg-info/requires.txt
+pmda.egg-info/top_level.txt
