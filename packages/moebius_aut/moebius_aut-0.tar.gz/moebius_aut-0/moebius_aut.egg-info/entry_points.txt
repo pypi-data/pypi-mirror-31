@@ -1,0 +1,3 @@
+[console_scripts]
+run-moebius_aut = moebius_aut.__main__:main
+

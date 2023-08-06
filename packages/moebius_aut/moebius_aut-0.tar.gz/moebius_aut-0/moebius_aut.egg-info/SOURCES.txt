@@ -1,0 +1,15 @@
+setup.py
+moebius_aut.egg-info/PKG-INFO
+moebius_aut.egg-info/SOURCES.txt
+moebius_aut.egg-info/dependency_links.txt
+moebius_aut.egg-info/entry_points.txt
+moebius_aut.egg-info/not-zip-safe
+moebius_aut.egg-info/top_level.txt
+src/moebius_aut/__init__.py
+src/moebius_aut/__main__.py
+src/moebius_aut/class_dsegre.py
+src/moebius_aut/class_ma_ring.py
+src/moebius_aut/class_ma_tools.py
+src/moebius_aut/class_veronese.py
+src/moebius_aut/ma_tools.sobj
+src/moebius_aut/sage_interface.py
