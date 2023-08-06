@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: shebang
+Version: 1.0.2
+Summary: shebang(path) - get script shebang
+Home-page: https://github.com/looking-for-a-job/shebang.py
+License: UNKNOWN
+Description: ### Install
+        
+        ```bash
+        $ [sudo] pip install shebang
+        ```
+        
+        ### Usage
+        
+        ```python
+        >>> from shebang import shebang
+        
+        >>> shebang(path)
+        ```
+        
+        ### Examples
+        
+        ```python
+        >>> shebang("path/to/file.py")
+        '/usr/bin/env python'
+        
+        >>> shebang("path/to/file.txt")
+        None
+        
+        shebang("/bin/test")
+        None
+        ```
+        
+        ### Sources
+        
+        +   [`shebang.shebang(path)`](https://github.com/looking-for-a-job/shebang.py/blob/master/shebang/__init__.py)
+Keywords: shebang
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development
+Description-Content-Type: text/markdown
