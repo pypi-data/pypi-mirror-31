@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: congee
+Version: 0.0.1.dev1
+Summary: Save favorite bash commands and recipes
+Home-page: https://github.com/sup/congee
+Author: Charles Lai
+Author-email: charlesjianlai@gmail.com
+License: UNKNOWN
+Description: # congee
+        :rice: Store favorites and recipes  
+        
+Keywords: bash history favorites cli
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
