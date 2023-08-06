@@ -1,0 +1,4 @@
+[console_scripts]
+md2tex = md2tex:main
+nb2md = md2tex:nb2md_all
+
