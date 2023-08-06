@@ -1,0 +1,313 @@
+{
+  "src/components/ExampleComponent.react.js": {
+    "description": "ExampleComponent is an example component.\r\nIt takes a property, `label`, and\r\ndisplays it.\r\nIt renders an input with the property `value`\r\nwhich is editable by the user.",
+    "displayName": "ExampleComponent",
+    "methods": [],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID used to identify this compnent in Dash callbacks"
+      },
+      "label": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "A label that will be printed when this component is rendered."
+      },
+      "value": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The value displayed in the input"
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Dash-assigned callback that should be called whenever any of the\r\nproperties change"
+      }
+    }
+  },
+  "src/components/Wordcloud.react.js": {
+    "description": "",
+    "displayName": "Wordcloud",
+    "methods": [
+      {
+        "name": "newLabel",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "el",
+            "type": null
+          }
+        ],
+        "returns": null
+      }
+    ],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID used to identify this compnent in Dash callbacks"
+      },
+      "list": {
+        "type": {
+          "name": "any"
+        },
+        "required": false,
+        "description": "List of words/text to paint on the canvas in a 2-d array, \r\nin the form of [word, size], e.g. [['foo', 12], ['bar', 6]].",
+        "defaultValue": {
+          "value": "[\r\n    ['Les Misérables', 30], ['Victor Hugo', 20], ['Jean Valjean', 15],\r\n    ['Javert', 15], ['Fantine', 15], ['Cosette', 15],\r\n    ['Éponine', 12], ['Marius', 12], ['Enjolras', 12],\r\n    ['Thénardiers', 10], ['Gavroche', 10], ['Bishop Myriel', 10],\r\n    ['Patron-Minette', 10], ['God', 10], ['ABC Café', 10],\r\n    ['paris', 8], ['Digne', 8], ['Elephant of the Bastille', 8],\r\n    ['silverware', 5], ['Bagne of Toulon', 5], ['loaf of bread', 5],\r\n    ['Rue Plumet', 5], ['revolution', 5], ['barricade', 5],\r\n    ['sewers', 4], ['Fex urbis lex orbis', 4]\r\n]",
+          "computed": false
+        }
+      },
+      "fontFamily": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Font to use.",
+        "defaultValue": {
+          "value": "'Segoe UI'",
+          "computed": false
+        }
+      },
+      "fontWeight": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "font weight to use, can be, as an example, normal, bold or 600 or \r\na callback(word, weight, fontSize specifies different font-weight \r\nfor each item in the list.",
+        "defaultValue": {
+          "value": "'bold'",
+          "computed": false
+        }
+      },
+      "color": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "color of the text, can be any CSS color, or\r\n a callback(word, weight, fontSize, distance, theta) \r\nspecifies different color for each item in the list. \r\nYou may also specify colors with built-in keywords: \r\nrandom-dark and random-light. If this is a DOM cloud,\r\n color can also be null to disable hardcoding of \r\ncolor into span elements \r\n(allowing you to customize at the class level).",
+        "defaultValue": {
+          "value": "'random-dark'",
+          "computed": false
+        }
+      },
+      "minSize": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "minimum font size to draw on the canvas.",
+        "defaultValue": {
+          "value": "0",
+          "computed": false
+        }
+      },
+      "weightFactor": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "function to call or number to multiply for size of each word in the list."
+      },
+      "clearCanvas": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "paint the entire canvas with background color and \r\nconsider it empty before start."
+      },
+      "backgroundColor": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "color of the background.",
+        "defaultValue": {
+          "value": "'white'",
+          "computed": false
+        }
+      },
+      "gridSize": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "size of the grid in pixels for marking the availability of the canvas —\r\n the larger the grid size, the bigger the gap between words.",
+        "defaultValue": {
+          "value": "0",
+          "computed": false
+        }
+      },
+      "drawOutOfBound": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "set to true to allow word being draw partly outside of the canvas. \r\nAllow word bigger than the size of the canvas to be drawn."
+      },
+      "origin": {
+        "type": {
+          "name": "any"
+        },
+        "required": false,
+        "description": "origin of the \"cloud\" in [x, y]."
+      },
+      "drawMask": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "visualize the grid by draw squares to mask the drawn areas."
+      },
+      "maskColor": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "color of the mask squares."
+      },
+      "maskGapWidth": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "width of the gaps between mask squares."
+      },
+      "wait": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Wait for x milliseconds before start drawn the next item \r\nusing setTimeout."
+      },
+      "abortThreshold": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "If the call with in the loop takes more than x milliseconds \r\n(and blocks the browser), abort immediately."
+      },
+      "abort": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "callback function to call when abort."
+      },
+      "minRotation": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "If the word should rotate, \r\nthe minimum rotation (in rad) the text should rotate.",
+        "defaultValue": {
+          "value": "-Math.PI/4",
+          "computed": false
+        }
+      },
+      "maxRotation": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "If the word should rotate, \r\nthe maximum rotation (in rad) the text should rotate. \r\nSet the two value equal to keep all text in one angle.",
+        "defaultValue": {
+          "value": "Math.PI/4",
+          "computed": false
+        }
+      },
+      "rotationSteps": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Force the use of a defined number of angles. \r\nSet the value equal to 2 in a -90 degree/90 degree range means\r\n just -90, 0 or 90 will be used."
+      },
+      "shuffle": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Shuffle the points to draw so the result will be \r\ndifferent each time for the same list and settings.",
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        }
+      },
+      "rotateRatio": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Probability for the word to rotate. \r\nSet the number to 1 to always rotate.",
+        "defaultValue": {
+          "value": "0.4",
+          "computed": false
+        }
+      },
+      "shape": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The shape of the \"cloud\" to draw. \r\nCan be any polar equation represented as a callback function,\r\n or a keyword present. \r\nAvailable presents are circle (default), \r\ncardioid (apple or heart shape curve, \r\nthe most known polar equation), diamond, square,\r\n triangle-forward, triangle, \r\n(alias of triangle-upright, pentagon, and star.",
+        "defaultValue": {
+          "value": "'circle'",
+          "computed": false
+        }
+      },
+      "ellipticity": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "degree of \"flatness\" of the shape wordcloud2.js should draw.",
+        "defaultValue": {
+          "value": "0.65",
+          "computed": false
+        }
+      },
+      "classes": {
+        "type": {
+          "name": "any"
+        },
+        "required": false,
+        "description": "for DOM clouds, allows the user to define the class of the span elements.\r\nCan be a normal class string, applying the same class to every span or\r\na callback(word, weight, fontSize, distance, theta) for per-span class\r\n definition. \r\nIn canvas clouds or if equals null, this option has no effect."
+      },
+      "hover": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "callback to call when the cursor enters or \r\nleaves a region occupied by a word.\r\n The callback will take arguments callback(item, dimension, event),\r\n where event is the original mousemove event.",
+        "defaultValue": {
+          "value": "function(item, dimension, event) {\r\n    var el = document.getElementById('wcLabel');\r\n    if (!item) {\r\n      el.setAttribute('hidden', true);\r\n  \r\n      return;\r\n    }\r\n  \r\n    el.removeAttribute('hidden');\r\n  \r\n    el.style.left = dimension.x + event.srcElement.offsetLeft + 'px';\r\n    el.style.top = dimension.y + event.srcElement.offsetTop + 'px';\r\n    el.style.width = dimension.w + 'px';\r\n    el.style.height = dimension.h + 'px';\r\n  \r\n    this.hoverDimension = dimension;\r\n  \r\n    document.getElementById('wcSpan').setAttribute(\r\n      'data-l10n-args', JSON.stringify({ word: item[0], count: item[1] }));\r\n    document.getElementById('wcSpan').innerHTML =item[0]+':' + item[1];\r\n  \r\n  }",
+          "computed": false
+        }
+      },
+      "click": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "callback to call when the user clicks on a word.\r\n The callback will take arguments callback(item, dimension, event),\r\n where event is the original click event.",
+        "defaultValue": {
+          "value": "null",
+          "computed": false
+        }
+      }
+    }
+  }
+}
