@@ -1,0 +1,3 @@
+[console_scripts]
+tinyshar = tinyshar._cli:main
+
