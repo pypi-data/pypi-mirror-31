@@ -1,0 +1,3 @@
+[console_scripts]
+box_archive = box_archive.cli:main
+
