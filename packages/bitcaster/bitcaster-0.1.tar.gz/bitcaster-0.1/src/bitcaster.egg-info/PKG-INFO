@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: bitcaster
+Version: 0.1
+Summary: A short description of the project.
+Home-page: https://github.com/bitcaster-io/bitcaster
+Author: Stefano Apostolico
+Author-email: s.apostolico@gmail.com
+License: MIT
+Description-Content-Type: UNKNOWN
+Description: =========
+        Bitcaster
+        =========
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Django
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6

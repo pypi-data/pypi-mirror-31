@@ -1,0 +1,3 @@
+[console_scripts]
+bitcaster = bitcaster.cli:main
+

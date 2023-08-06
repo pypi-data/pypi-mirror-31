@@ -1,0 +1,47 @@
+include README.rst
+include CONTRIBUTING.rst
+include CHANGES
+include MANIFEST.in
+include LICENSE
+include package.json
+include package-lock.json
+include webpack.config.js
+include *.py
+include tox.ini
+include pytest.ini
+include src/bitcaster/_plugin_template/bitcaster-{{cookiecutter.name}}/tests/.env
+
+recursive-exclude docs *
+recursive-exclude src/bitcaster *
+recursive-exclude src/requirements *.pip
+recursive-exclude tests *
+
+exclude Dockerfile*
+exclude docker-compose.yml
+exclude .dockerignore
+exclude .flake8
+exclude .isort.cfg
+exclude .tx
+exclude ~*
+exclude docker
+
+exclude hooks
+exclude extras
+exclude plugins
+exclude src/requirements/*.in
+exclude .pytest_cache
+exclude .demo
+exclude .env
+exclude .demo-sax
+exclude .DS_Store
+excude src/bitcaster/config/settings/~dev.py
+
+recursive-exclude docker *
+recursive-exclude . ~*
+recursive-exclude .tx *
+recursive-exclude extras *
+recursive-exclude plugins *
+recursive-exclude hooks *
+recursive-exclude . *.pyc
+recursive-exclude **/__pycache__ *
+recursive-exclude .pytest_cache *
