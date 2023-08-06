@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: bugswarm-client
+Version: 0.0.2
+Summary: The BugSwarm CLI
+Home-page: https://github.com/BugSwarm/client
+Author: BugSwarm
+Author-email: dev.bugswarm@gmail.com
+License: UNKNOWN
+Description: The BugSwarm CLI
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
