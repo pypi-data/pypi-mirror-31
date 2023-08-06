@@ -1,0 +1,19 @@
+Metadata-Version: 2.0
+Name: ecs-ssh
+Version: 1.0.3
+Summary: ECS ssh tool
+Home-page: https://github.com/mrpink/ecs-ssh
+Author: Will Pink
+Author-email: will.pink@gmail.com
+License: UNKNOWN
+Keywords: aws ecs ssh containers
+Platform: UNKNOWN
+Requires-Dist: boto3
+Provides-Extra: dev
+Requires-Dist: check-manifest; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: coverage; extra == 'test'
+
+quickly and easily ssh to ECS cluster instances
+
+
