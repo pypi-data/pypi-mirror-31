@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: pynvvl-cuda91
+Version: 0.0.2a1
+Summary: UNKNOWN
+Home-page: https://github.com/mitmul/pynvvl
+Author: Shunta Saito
+Author-email: shunta.saito@gmail.com
+License: MIT License
+Platform: UNKNOWN
+Requires-Dist: cupy-cuda91 (>=4.0.0)
+
+UNKNOWN
+
+
