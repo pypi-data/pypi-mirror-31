@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: ml-study
+Version: 0.0.1
+Summary: python machine learning structure architecture
+Home-page: https://github.com/LucianoPC/ml-study
+Author: Luciano Prestes Cavalcanti
+Author-email: lucianopcbr@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3
+Requires-Dist: click
+Requires-Dist: jupyter
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: openpyxl
+Requires-Dist: pandas
+Requires-Dist: pytest
+Requires-Dist: requests
+Requires-Dist: scikit-learn
+Requires-Dist: scipy
+Requires-Dist: seaborn
+Requires-Dist: watermark
+
+UNKNOWN
+
+
