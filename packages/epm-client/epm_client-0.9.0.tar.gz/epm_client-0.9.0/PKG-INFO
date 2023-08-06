@@ -1,0 +1,12 @@
+Metadata-Version: 1.0
+Name: epm_client
+Version: 0.9.0
+Summary: EPM REST API
+Home-page: https://github.com/mpauls/epm-client-python
+Author: UNKNOWN
+Author-email: michael.pauls@tu-berlin.de
+License: UNKNOWN
+Description:     Python RESTful client of the ElasTest Platform Manager (EPM) Module.
+            
+Keywords: Swagger,Python,EPM REST Client
+Platform: UNKNOWN
