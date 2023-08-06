@@ -1,0 +1,3 @@
+[console_scripts]
+skijumpdesign = skijumpdesignapp:app.run_server
+
