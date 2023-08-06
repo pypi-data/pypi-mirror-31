@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: osascript
+Version: 1.0.2
+Summary: osascript(applescript, flags=None) function - osascript (AppleScript) python implementation (OS X)
+Home-page: https://github.com/looking-for-a-job/osascript.py
+License: UNKNOWN
+Description: ### Install
+        
+        ```bash
+        $ [sudo] pip install osascript
+        ```
+        
+        ### Usage
+        
+        ```python
+        >>> from osascript import osascript
+        
+        >>> returncode,stdout,stderr = osascript(code)
+        ```
+        
+        ### Examples
+        
+        ```python
+        >>> returncode,stdout,stderr = osascript('display dialog "42"')
+        ```
+        
+        ### Sources
+        
+        +   [`osascript.osascript(applescript, flags=None)`](https://github.com/looking-for-a-job/osascript.py/blob/master/osascript/__init__.py)
+        
+        ### Links
+        
+        + [osascript(1) Mac OS X Manual Page](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/osascript.1.html)
+Keywords: osascript applescript osx
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Environment :: MacOS X
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development
+Description-Content-Type: text/markdown
