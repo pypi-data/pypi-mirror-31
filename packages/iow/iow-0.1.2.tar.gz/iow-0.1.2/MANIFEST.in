@@ -1,0 +1,14 @@
+include README.md
+include LICENSE
+include ChangeLog.md
+include Makefile
+
+graft bp
+graft BitArray
+
+global-exclude *.pyc
+global-exclude *.pyo
+global-exclude .git
+global-exclude *.so
+global-exclude *.a
+global-exclude *.o
