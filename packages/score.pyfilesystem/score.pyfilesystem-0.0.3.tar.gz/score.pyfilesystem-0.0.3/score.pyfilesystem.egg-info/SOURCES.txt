@@ -1,0 +1,10 @@
+README.rst
+setup.py
+score.pyfilesystem.egg-info/PKG-INFO
+score.pyfilesystem.egg-info/SOURCES.txt
+score.pyfilesystem.egg-info/dependency_links.txt
+score.pyfilesystem.egg-info/not-zip-safe
+score.pyfilesystem.egg-info/requires.txt
+score.pyfilesystem.egg-info/top_level.txt
+score/pyfilesystem/__init__.py
+score/pyfilesystem/_init.py
