@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: datahunters
+Version: 0.0.8
+Summary: library for collecting data
+Home-page: https://github.com/perceptance/datahunters
+Author: Jie Feng
+Author-email: jiefengdev@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: attrs (==18.1.0)
+Requires-Dist: boto3 (==1.7.14)
+Requires-Dist: botocore (==1.10.14)
+Requires-Dist: certifi (==2018.4.16)
+Requires-Dist: chardet (==3.0.4)
+Requires-Dist: click (==6.7)
+Requires-Dist: deepimage (==0.0.4)
+Requires-Dist: docutils (==0.14)
+Requires-Dist: Flask (==1.0.2)
+Requires-Dist: Flask-Cors (==3.0.4)
+Requires-Dist: idna (==2.6)
+Requires-Dist: itsdangerous (==0.24)
+Requires-Dist: Jinja2 (==2.10)
+Requires-Dist: jmespath (==0.9.3)
+Requires-Dist: MarkupSafe (==1.0)
+Requires-Dist: more-itertools (==4.1.0)
+Requires-Dist: numpy (==1.14.3)
+Requires-Dist: objectpath (==0.5)
+Requires-Dist: opencv-python (==3.4.0.12)
+Requires-Dist: Pillow (==5.1.0)
+Requires-Dist: pluggy (==0.6.0)
+Requires-Dist: projectowl (==0.3.13)
+Requires-Dist: py (==1.5.3)
+Requires-Dist: pymongo (==3.6.1)
+Requires-Dist: pytest (==3.5.1)
+Requires-Dist: python-dateutil (==2.7.2)
+Requires-Dist: requests (==2.18.4)
+Requires-Dist: s3transfer (==0.1.13)
+Requires-Dist: selenium (==3.12.0)
+Requires-Dist: six (==1.11.0)
+Requires-Dist: tornado (==5.0.2)
+Requires-Dist: urllib3 (==1.22)
+Requires-Dist: Werkzeug (==0.14.1)
+
+UNKNOWN
+
+
