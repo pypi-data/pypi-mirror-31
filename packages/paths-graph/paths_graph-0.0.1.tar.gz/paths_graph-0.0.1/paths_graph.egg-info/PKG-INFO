@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: paths-graph
+Version: 0.0.1
+Summary: Algorithm for analyzing paths in directed graphs.
+Home-page: https://github.com/johnbachman/paths_graph
+Author: John A. Bachman
+Author-email: john_bachman@hms.harvard.edu
+License: UNKNOWN
+Description: The Paths Graph is a data structure derived from a directed graph that can be used to represent and analyze ensembles of directed (and possibly signed) paths.
+Keywords: graph,network,path,pathway,sampling,ensemble
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
