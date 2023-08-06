@@ -1,0 +1,13 @@
+unicodeutil/CaseFolding.txt,sha256=l7Q-0_S4BXLCEUIA5eQ6a5I9mEx0psqvJ95bhGLATLA,78161
+unicodeutil/HangulSyllableType.txt,sha256=mDgQxzm1a5_w_LXbAYxn1YTuUV6KX02TSMee6FFn7Dc,51346
+unicodeutil/Jamo.txt,sha256=yO1Sb3BENTXKa3BZgKCMd0AX_xfpISAty3txrlVAR7Y,3237
+unicodeutil/UnicodeData.txt,sha256=UkI-TXSSFnti9Rj2jVTbiJMKu7_38R7fyuyPcmSYyrE,1735010
+unicodeutil/__init__.py,sha256=bTFrQ2HoRk6QdkBxbYu_IO1iij2DKNuLwaw-AGFW1dk,733
+unicodeutil/hangulutil.py,sha256=VIQ32Us_qT3aJ5kmz9LVQm_ZdvQm873QkxrA1vWeFWg,10286
+unicodeutil/unicodeutil.py,sha256=uwPkMwTCw5sRQHABfNbDKLnRX0HgBUCPjGfm6kkxH3s,20785
+unicodeutil-0.1.dev7.dist-info/DESCRIPTION.rst,sha256=FXK1Ia3kkWQJHWvNHNoEUIU0R2kP-LcoWcmO25Cpam8,9716
+unicodeutil-0.1.dev7.dist-info/METADATA,sha256=CiWLplijQixVRvrQLxDtyRhUa3maVJrQ3WygxF4sis4,10648
+unicodeutil-0.1.dev7.dist-info/RECORD,,
+unicodeutil-0.1.dev7.dist-info/WHEEL,sha256=kdsN-5OJAZIiHN-iO4Rhl82KyS0bDWf4uBwMbkNafr8,110
+unicodeutil-0.1.dev7.dist-info/metadata.json,sha256=eNStXIqCT_YeFcbjE7WSpcHiDneDeHjSID4i7GGU-xM,1068
+unicodeutil-0.1.dev7.dist-info/top_level.txt,sha256=-DPxV5lh6mYAB2kjIctvjyqDMaH-McWEV_HjXyBl2EY,12
