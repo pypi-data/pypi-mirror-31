@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: mindsight-django-hotpath
+Version: 0.1
+Summary: Mindsight HotPath Sampler for Python/Django
+Home-page: https://github.com/MindsightCo/mindsight-django-hotpath
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: Apache 2.0
+Platform: UNKNOWN
+Requires-Dist: requests
+Requires-Dist: django
+
+UNKNOWN
+
+
