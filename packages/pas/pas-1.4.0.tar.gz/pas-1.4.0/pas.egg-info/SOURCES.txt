@@ -1,0 +1,13 @@
+setup.py
+pas/__init__.py
+pas/cli.py
+pas/gnupg.py
+pas/manager.py
+pas/pyperclip.py
+pas/utils.py
+pas.egg-info/PKG-INFO
+pas.egg-info/SOURCES.txt
+pas.egg-info/dependency_links.txt
+pas.egg-info/entry_points.txt
+pas.egg-info/requires.txt
+pas.egg-info/top_level.txt
