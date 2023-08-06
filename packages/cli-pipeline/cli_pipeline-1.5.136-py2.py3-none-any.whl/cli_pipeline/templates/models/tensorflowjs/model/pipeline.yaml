@@ -1,0 +1,51 @@
+- package: {{ PIPELINE_MODEL_NAME }}
+  version: {{ PIPELINE_MODEL_TAG }}
+  author-email:
+  tags: [{{ PIPELINE_MODEL_NAME }}, {{ PIPELINE_MODEL_TAG }}, tensorflowjs]
+
+# -------------------------------------------------------------------
+# base (shared config)
+# -------------------------------------------------------------------
+
+- config: base
+  operations:
+    train:
+      description: 'Train'
+      cmd: 'pipeline_train'
+      flags:
+        batch-size:
+          description: Number of images to include in a training batch
+          default: 1
+        data-dir:
+          description: Training dataset
+          default: ../input/training
+        model-dir:
+          description: Output directory
+          default: ./checkpoint
+        train-steps:
+          description: Training steps
+          default: 1
+    evaluate:
+      description: 'Evaluate'
+      cmd: 'pipeline_train'
+      requires:
+        - trained-model
+  resources:
+    trained-model:
+      private: yes
+      sources:
+        - operation: train
+          select:
+            - model.ckpt.*
+            - checkpoint
+
+- model: {{ PIPELINE_MODEL_NAME }}
+  extends: base
+  params:
+    model_desc: {{ PIPELINE_MODEL_NAME }}
+    train_cmd: pipeline_train
+    model_name: {{ PIPELINE_MODEL_NAME }}
+    model_tag: {{ PIPELINE_MODEL_TAG }}
+    model_type: {{ PIEPLINE_MODEL_TYPE }}
+    model_runtime: {{ PIPELINE_MODEL_RUNTIME }}
+    model_chip: {{ PIPELNIE_MODEL_CHIP }}
