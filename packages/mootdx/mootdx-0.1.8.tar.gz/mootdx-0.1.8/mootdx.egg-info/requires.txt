@@ -1,0 +1,5 @@
+pytdx==1.67
+click
+prettytable
+coloredlogs
+pytest
