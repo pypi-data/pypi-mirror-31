@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block breadcrumb %}
+{% include 'crudlfap/_breadcrumb_object.html' %}
+{% endblock %}
+
+{% block content %}
+{% include 'crudlfap/_list.html' %}
+{% endblock %}
+
+{% block after_container %}
+{% with menu=view.menu_views %}
+{% include 'crudlfap/_fixed_actions.html' %}
+{% endwith %}
+{% endblock %}
