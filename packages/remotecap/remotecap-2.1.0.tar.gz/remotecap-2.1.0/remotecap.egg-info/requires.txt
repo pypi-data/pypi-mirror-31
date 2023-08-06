@@ -1,0 +1,9 @@
+py-term
+asyncssh
+aiofiles
+
+[recommends]
+libnacl
+bcrypt
+gssapi
+pyOpenSSL
