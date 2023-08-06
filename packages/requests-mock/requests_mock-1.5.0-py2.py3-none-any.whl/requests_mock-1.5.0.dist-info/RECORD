@@ -1,0 +1,17 @@
+requests_mock/__init__.py,sha256=4nwrHrtQIzrI-AI-97kA1N9VWKOEyCYuwt4GpnP2gmo,1226
+requests_mock/adapter.py,sha256=_ijCSMLShOMrSao99LqQHTMcsCJQG_hLSoCil1q4PRs,9648
+requests_mock/compat.py,sha256=UkHvDHqvtx-I15v38Mr6D13Z4L9jm92leKisZH3GHfs,1694
+requests_mock/exceptions.py,sha256=4hQ8FH_DotSN2w5FBKasZyjTOoR3gAdwrng9pFJK0x8,1013
+requests_mock/mocker.py,sha256=Wg0dHW1sFKAu5YVfnV4LhA9fjEbNBne2qAoX-ZRQa-g,7986
+requests_mock/request.py,sha256=F9096UvRkBggTMV1Ujqwk9IVi91yzBufwBua0f2GWK0,4304
+requests_mock/response.py,sha256=G1XJkytjoX1WtJHWmR00ZicbBSOtrKzCp0qdpyCKY6U,10004
+requests_mock/contrib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+requests_mock/contrib/_pytest_plugin.py,sha256=QrG2fOcR9_V3US8xaYhjdcPw4z_XyNJZQb9NXes-ajo,502
+requests_mock/contrib/fixture.py,sha256=ZB4uiOpBCakUUXGjTzzqUYFjO0cJGaQUa_6I1we8EQY,892
+requests_mock-1.5.0.dist-info/LICENSE.txt,sha256=Z0lg6f0-ZBKZemlHLGMojrtdb5ZetKAKO6Tml4zeP3g,10200
+requests_mock-1.5.0.dist-info/METADATA,sha256=UQp3s2OdlpIGljRn2OzdQQuEIedbJgPEIzBVyFNM8dU,4071
+requests_mock-1.5.0.dist-info/RECORD,,
+requests_mock-1.5.0.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+requests_mock-1.5.0.dist-info/entry_points.txt,sha256=puCTCMopGsh0ocpFUDL-9QsEwABq7gKSBncFGmYERaM,65
+requests_mock-1.5.0.dist-info/pbr.json,sha256=Ndpc-MGZm4jws2loWf8AhCwte0x9G7SaN_AOWFNfj-E,46
+requests_mock-1.5.0.dist-info/top_level.txt,sha256=DuM8j2e2K-OBCP3HnIy7qbpq7dtu1jbADBQtwhqdfOo,14
