@@ -1,0 +1,10 @@
+elevate>=0.1.1
+
+[dev]
+coverage
+flake8>=3.0
+pypandoc
+
+[test]
+coverage
+flake8>=3.0
