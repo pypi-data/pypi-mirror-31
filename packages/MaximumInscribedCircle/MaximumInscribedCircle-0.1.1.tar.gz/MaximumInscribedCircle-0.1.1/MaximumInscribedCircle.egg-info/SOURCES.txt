@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+MaximumInscribedCircle/MaximumInscribedCircle.py
+MaximumInscribedCircle/__init__.py
+MaximumInscribedCircle.egg-info/PKG-INFO
+MaximumInscribedCircle.egg-info/SOURCES.txt
+MaximumInscribedCircle.egg-info/dependency_links.txt
+MaximumInscribedCircle.egg-info/entry_points.txt
+MaximumInscribedCircle.egg-info/requires.txt
+MaximumInscribedCircle.egg-info/top_level.txt
