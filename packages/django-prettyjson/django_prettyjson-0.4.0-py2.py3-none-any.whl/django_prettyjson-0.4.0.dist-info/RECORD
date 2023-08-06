@@ -1,0 +1,14 @@
+django_prettyjson-0.4.0.dist-info/DESCRIPTION.rst,sha256=oYa6-nOEQr0gNpl7etq4irG2qScCPhMPsRwParUzT1Y,4453
+django_prettyjson-0.4.0.dist-info/METADATA,sha256=cLBoCUDkOZ46Gl2QRbqjFsWFLRXlOrXkm9IutFNd8FI,5394
+django_prettyjson-0.4.0.dist-info/RECORD,,
+django_prettyjson-0.4.0.dist-info/WHEEL,sha256=kdsN-5OJAZIiHN-iO4Rhl82KyS0bDWf4uBwMbkNafr8,110
+django_prettyjson-0.4.0.dist-info/metadata.json,sha256=kHwYTlsFfbUv4wahAaW4K-cb6KBNSmRMxQBz1aXGJL0,1055
+django_prettyjson-0.4.0.dist-info/top_level.txt,sha256=i08jVmvC0HdXXn6ba8OxF7vfOEFdEZ-h5mvXQVGd-uk,11
+prettyjson/__init__.py,sha256=t8H9A6goTKHqpUQ4rfIMTcMqzVdP0fFJEbCreU8a08w,61
+prettyjson/models.py,sha256=iwhKnzeBJLKxpRVjvzwiRE63_zNpIBfaKLITauVph-0,24
+prettyjson/widgets.py,sha256=krd9V4rqdsEWfdNMaZ2SfGwY7nXi6Ej2fyOclDGPSoM,1290
+prettyjson/static/prettyjson/prettyjson.css,sha256=ATn7S5AOVJ2Yi2cfm5u1_qiAN2XjrDLFU3ke1GzVXAI,974
+prettyjson/static/prettyjson/prettyjson.js,sha256=JV0P1nCxgo48Dqmi_qOWV_1yYazsTbsTYR_GGYiNpF0,5902
+prettyjson/templates/prettyjson/base.html,sha256=zzaUPjEgvwxg-Gn2rZ6gIMWphucmEGvAU_skUXJIcDA,661
+prettyjson/templatetags/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+prettyjson/templatetags/prettyjson.py,sha256=CrBDXuZr6BrzDBMytrzNzeIE48OtNX3ShIvDvVMNtSA,815
