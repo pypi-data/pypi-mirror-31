@@ -1,0 +1,11 @@
+silverweasel/__init__.py,sha256=HnmFvC7pR5bxJrXqgY5LGgmCDyDXmZElp2O9WG8vkB8,49
+silverweasel/client.py,sha256=O_t1YF80-ZxitAG4IvZFlbJmhR5k8PqM-WpbDAQFejs,7358
+silverweasel/sftp.py,sha256=xGzULDa128orhOmW1wS6E7SVciKd1OrcIBqNj3K82gs,3833
+silverweasel/data/ListMgmt-UserActions.xsd,sha256=QC5S0t4TPV9N9G_3L94P8HSg-82qZmfwBdJ00Nt_Svs,31388
+silverweasel/data/Reporting1.xsd,sha256=Eso6aZoQEgJqsWR3cCH5yeAURNyT0_dwc3zh-qY4w2I,33196
+silverweasel/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+silverweasel/tests/test_linting.py,sha256=LmrQSKfkZiO_yhg5moopLGwQkZv_ebxuWP1Q-72VH-A,695
+silverweasel-0.0.2.dist-info/METADATA,sha256=P_-9M9svfTdOcAtSUx8fDTiGmc9xZuxstV0t1LR3sYc,397
+silverweasel-0.0.2.dist-info/RECORD,,
+silverweasel-0.0.2.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+silverweasel-0.0.2.dist-info/top_level.txt,sha256=Ye7w3zWRvWKbJAaP6YxtqHDqbse5HAhEWGjUPWv2Of0,13
