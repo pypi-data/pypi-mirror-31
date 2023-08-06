@@ -1,0 +1,6 @@
+docopt_subcommands
+
+[test]
+hypothesis
+pytest
+tox
