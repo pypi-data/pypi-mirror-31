@@ -1,0 +1,17 @@
+CONTRIBUTING.rst
+LICENSE
+MANIFEST.in
+README.rst
+changelog.rst
+setup.cfg
+setup.py
+ppjson/__init__.py
+ppjson/ppjson.py
+ppjson.egg-info/PKG-INFO
+ppjson.egg-info/SOURCES.txt
+ppjson.egg-info/dependency_links.txt
+ppjson.egg-info/not-zip-safe
+ppjson.egg-info/requires.txt
+ppjson.egg-info/top_level.txt
+tests/__init__.py
+tests/test_ppjson.py
