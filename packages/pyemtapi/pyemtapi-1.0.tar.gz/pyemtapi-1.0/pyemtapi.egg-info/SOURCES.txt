@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+pyemtapi/__init__.py
+pyemtapi/data.py
+pyemtapi/main.py
+pyemtapi.egg-info/PKG-INFO
+pyemtapi.egg-info/SOURCES.txt
+pyemtapi.egg-info/dependency_links.txt
+pyemtapi.egg-info/requires.txt
+pyemtapi.egg-info/top_level.txt
