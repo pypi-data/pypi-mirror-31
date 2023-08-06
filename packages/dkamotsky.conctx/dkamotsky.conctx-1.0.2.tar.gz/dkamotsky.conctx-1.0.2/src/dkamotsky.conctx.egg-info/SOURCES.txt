@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+src/conctx/__init__.py
+src/conctx/conctx.py
+src/dkamotsky.conctx.egg-info/PKG-INFO
+src/dkamotsky.conctx.egg-info/SOURCES.txt
+src/dkamotsky.conctx.egg-info/dependency_links.txt
+src/dkamotsky.conctx.egg-info/not-zip-safe
+src/dkamotsky.conctx.egg-info/requires.txt
+src/dkamotsky.conctx.egg-info/top_level.txt
+tests/conctx_tests.py
