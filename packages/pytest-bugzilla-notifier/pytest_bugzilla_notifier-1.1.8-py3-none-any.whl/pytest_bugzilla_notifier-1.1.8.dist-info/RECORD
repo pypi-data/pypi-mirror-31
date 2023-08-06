@@ -1,0 +1,11 @@
+pytest_bugzilla_notifier/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_bugzilla_notifier/bugzilla_rest_client.py,sha256=ffXyiD5IW3e8e7pOdD6QZFB3jMIQnbLlMC17LDCT5GI,3554
+pytest_bugzilla_notifier/conftest.py,sha256=iOFJ6Lpey5BqiM7DXJJb5-h_IPI05EPLLjt5o0-dT4k,1531
+pytest_bugzilla_notifier/plugin.py,sha256=PpGLwzyuuxNuXeypx2M7WC_M1LnBufP8GQ26AJkaHCc,1913
+pytest_bugzilla_notifier-1.1.8.dist-info/DESCRIPTION.rst,sha256=UyIwQdSE6FeBlFuwA7AABCdwTb1nQWVCwqz9-pPrZsg,3590
+pytest_bugzilla_notifier-1.1.8.dist-info/METADATA,sha256=GOyWV1YsubVPp8TKVoM4L4gcNZ1m_ean4_KmAVevKHM,4688
+pytest_bugzilla_notifier-1.1.8.dist-info/RECORD,,
+pytest_bugzilla_notifier-1.1.8.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+pytest_bugzilla_notifier-1.1.8.dist-info/entry_points.txt,sha256=GAe3WZDpEcUeQ5qSKhUoY7WuXVJMY-NuadDRAoRZHsE,73
+pytest_bugzilla_notifier-1.1.8.dist-info/metadata.json,sha256=ziWg973sfQhtxJM3R4fF8ilBbKMTzetISb7wsg9ObKo,1300
+pytest_bugzilla_notifier-1.1.8.dist-info/top_level.txt,sha256=xfIqYWAIZnfJ-0PWLHZxCKGtNd3RJtJK8xKtMgVVqKM,25
