@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+pipTestPackage.egg-info/PKG-INFO
+pipTestPackage.egg-info/SOURCES.txt
+pipTestPackage.egg-info/dependency_links.txt
+pipTestPackage.egg-info/not-zip-safe
+pipTestPackage.egg-info/requires.txt
+pipTestPackage.egg-info/top_level.txt
+test/__init__.py
