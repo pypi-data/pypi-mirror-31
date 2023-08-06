@@ -1,0 +1,116 @@
+Metadata-Version: 2.1
+Name: CDS
+Version: 1.0.1
+Summary: Access articles, reports and multimedia content in HEP
+Home-page: http://cds.cern.ch/
+Author: CERN
+Author-email: cds.support@cern.ch
+License: GPLv3
+Description: ===
+        CDS
+        ===
+        
+        .. image:: https://travis-ci.org/CERNDocumentServer/cds-videos.svg?branch=cdslabs
+            :target: https://travis-ci.org/CERNDocumentServer/cds-videos
+        
+        .. image:: https://coveralls.io/repos/CERNDocumentServer/cds-videos/badge.svg?branch=cdslabs&service=github
+            :target: https://coveralls.io/github/CERNDocumentServer/cds-videos?branch=cdslabs
+        
+        This is the CERN Document Server source code overlay.
+        
+        Powered by Invenio
+        ===================
+        CDS is a small layer on top of `Invenio <http://invenio-software.org>`, a ​free software suite enabling you to run your own ​digital library or document repository on the web.
+        
+        Installation
+        ============
+        See INSTALL.rst
+        
+        Testing
+        =======
+        Running the tests are as simple as: ::
+        
+            python setup.py test
+        
+        or (to also show test coverage) ::
+        
+            source run-tests.sh
+        
+        License
+        =======
+        
+        Copyright (C) 2013-2016 CERN.
+        
+        CDS is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+        
+        CDS is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+        
+        You should have received a copy of the GNU General Public License along with CDS; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307, USA.
+        
+        In applying this licence, CERN does not waive the privileges and immunities granted to it by virtue of its status as an Intergovernmental Organization or submit itself to any jurisdiction.
+        
+        
+        
+        ..
+            This file is part of CDS.
+            Copyright (C) 2015, 2018 CERN.
+        
+            CDS is free software; you can redistribute it
+            and/or modify it under the terms of the GNU General Public License as
+            published by the Free Software Foundation; either version 2 of the
+            License, or (at your option) any later version.
+        
+            CDS is distributed in the hope that it will be
+            useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+            MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+            General Public License for more details.
+        
+            You should have received a copy of the GNU General Public License
+            along with CDS; if not, write to the
+            Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston,
+            MA 02111-1307, USA.
+        
+            In applying this license, CERN does not
+            waive the privileges and immunities granted to it by virtue of its status
+            as an Intergovernmental Organization or submit itself to any jurisdiction.
+        
+        
+        Changes
+        =======
+        
+        Version 1.0.1 (2018-05-14)
+        
+        - deposit:
+          - remove SSE related code completely.
+          - fixed deposit video player.
+        - records:
+          - download box reorganization.
+          - added no index for robots for projects.
+          - added "Press" field until general community solution is put in place.
+        - security:
+          - fixed file ACL check.
+          - filter videos inside project according to current user provides.
+        
+        (No release information until 2018-04-11)
+        
+        Version 1.0.0 (2017-12-14)
+        
+        - Initial release
+        
+Platform: any
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Development Status :: 2 - Pre-Alpha
+Provides-Extra: all
+Provides-Extra: docs
+Provides-Extra: xrootd
+Provides-Extra: tests

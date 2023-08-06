@@ -1,0 +1,92 @@
+[console_scripts]
+cds = cds.cli:cli
+
+[flask.commands]
+subformats = cds.modules.maintenance.cli:subformats
+
+[invenio_admin.views]
+cds_admin = cds.modules.announcements.admin:announcements_adminview
+
+[invenio_assets.bundles]
+cds_deposit_common_js = cds.modules.deposit.bundles:js_deposit_common
+cds_deposit_jquery_js = cds.modules.deposit.bundles:js_jquery
+cds_deposit_js = cds.modules.deposit.bundles:js_deposit
+cds_previewer_video_css = cds.modules.previewer.bundles:video_css
+cds_record_js = cds.modules.records.bundles:js
+cds_record_stats_css = cds.modules.records.bundles:stats_css
+cds_record_stats_js = cds.modules.records.bundles:stats_js
+cds_search_ui_js = cds.modules.search_ui.bundles:js
+cds_theme_css = cds.modules.theme.bundles:css
+cds_theme_js = cds.modules.theme.bundles:js
+
+[invenio_base.api_apps]
+cds_deposit = cds.modules.deposit.ext:CDSDepositApp
+cds_files_rest = cds.modules.files.ext:CDSFilesRestApp
+cds_iiif = cds.modules.cds_iiif:CDSIIIF
+cds_xrootd = cds.modules.xrootd:CDSXRootD
+
+[invenio_base.api_blueprints]
+cds_announcements = cds.modules.announcements.views:api_blueprint
+cds_records = cds.modules.records.views:blueprint
+cds_redirector = cds.modules.redirector.views:api_blueprint
+cds_stats = cds.modules.stats.views:blueprint
+
+[invenio_base.apps]
+cds_deposit = cds.modules.deposit.ext:CDSDepositApp
+cds_iiif = cds.modules.cds_iiif:CDSIIIF
+cds_main_fixtures = cds.modules.fixtures:CDSFixtures
+cds_xrootd = cds.modules.xrootd:CDSXRootD
+flask_debugtoolbar = flask_debugtoolbar:DebugToolbarExtension
+invenio_webhooks = invenio_webhooks:InvenioWebhooks
+
+[invenio_base.blueprints]
+cds_deposit = cds.modules.deposit.views:blueprint
+cds_home = cds.modules.home.views:blueprint
+cds_previewer = cds.modules.previewer.views:blueprint
+cds_records = cds.modules.records.views:blueprint
+cds_redirector = cds.modules.redirector.views:blueprint
+cds_search_ui = cds.modules.search_ui.views:blueprint
+cds_theme = cds.modules.theme.views:blueprint
+cds_webhooks = cds.modules.webhooks.views:blueprint
+
+[invenio_celery.tasks]
+cds_celery_tasks = cds.modules.webhooks.tasks
+cds_maintenance_tasks = cds.modules.maintenance.tasks
+cds_migration_tasks = cds.modules.migrator.tasks
+
+[invenio_db.alembic]
+cds_announcements = cds.modules.announcements:alembic
+
+[invenio_pidstore.fetchers]
+cds_catid = cds.modules.records.fetchers:catid_fetcher
+cds_kwid = cds.modules.records.fetchers:kwid_fetcher
+cds_recid = cds.modules.records.fetchers:recid_fetcher
+
+[invenio_pidstore.minters]
+cds_catid = cds.modules.records.minters:catid_minter
+cds_kwid = cds.modules.records.minters:kwid_minter
+cds_recid = cds.modules.records.minters:cds_record_minter
+cds_report_number = cds.modules.records.minters:report_number_minter
+
+[invenio_previewer.previewers]
+cds_default = cds.modules.previewer.extensions.default
+cds_deposit_video = cds.modules.previewer.extensions.video:deposit_video
+cds_embed_video = cds.modules.previewer.extensions.video:embed_video
+cds_video = cds.modules.previewer.extensions.video:video
+
+[invenio_records.jsonresolver]
+deposits = cds.modules.deposit.jsonresolver
+keywords = cds.modules.records.jsonresolver.keywords
+records = cds.modules.records.jsonresolver.records
+schemas = cds.modules.records.jsonresolver.schemas
+
+[invenio_search.mappings]
+categories = cds.modules.records.mappings
+deposits = cds.modules.deposit.mappings
+keywords = cds.modules.records.mappings
+records = cds.modules.records.mappings
+
+[invenio_webhooks.receivers]
+avc = cds.modules.webhooks.receivers:AVCWorkflow
+downloader = cds.modules.webhooks.receivers:Downloader
+

@@ -1,0 +1,39 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'PT Sans', sans-serif;
+}
+
+.video-js,
+video {
+  width: 100%!important;
+  height: 100%!important;
+}
+
+.cds-previewer-video-player {
+  width: 100%!important;
+  height: 100%!important;
+}
+
+/* Video overlay title */
+#cds-video-overlay-title {
+  position: absolute;
+  width: 80%;
+  padding: 5px;
+  text-shadow: 2px 2px #333;
+  color: #fff;
+  z-index: 99999;
+  top: 0;
+}
+
+/* Override default yellow color for player */
+.theo-primary-color, .vjs-selected {
+  color: #ffffff !important;
+}
+
+.theo-primary-background {
+  background-color: #d9d9d9 !important;
+}

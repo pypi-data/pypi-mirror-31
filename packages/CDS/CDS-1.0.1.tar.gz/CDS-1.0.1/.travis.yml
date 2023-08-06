@@ -1,0 +1,58 @@
+addons:
+  postgresql: 9.4
+  apt:
+    packages:
+    - nodejs
+    - libfreetype6-dev
+notifications:
+  email: false
+sudo: false
+language: python
+cache:
+  directories:
+  - "$HOME/.cache/pip"
+  - "$HOME/.nvm"
+services:
+- postgresql
+- redis
+- rabbitmq
+matrix:
+  fast_finish: true
+env:
+- REQUIREMENTS=prod E2E="no" SQLALCHEMY_DATABASE_URI="postgresql+psycopg2://postgres@localhost:5432/cds" ES_VERSION=2.2.0 ES_HOST=127.0.0.1
+# - REQUIREMENTS=prod E2E="yes" SQLALCHEMY_DATABASE_URI="postgresql+psycopg2://postgres@localhost:5432/cds" ES_VERSION=2.2.0 ES_HOST=127.0.0.1
+- REQUIREMENTS=qa E2E="no" SQLALCHEMY_DATABASE_URI="postgresql+psycopg2://postgres@localhost:5432/cds" ES_VERSION=2.2.0 ES_HOST=127.0.0.1
+# - REQUIREMENTS=qa E2E="yes" SQLALCHEMY_DATABASE_URI="postgresql+psycopg2://postgres@localhost:5432/cds" ES_VERSION=2.2.0 ES_HOST=127.0.0.1
+- REQUIREMENTS=devel E2E="no" SQLALCHEMY_DATABASE_URI="postgresql+psycopg2://postgres@localhost:5432/cds" ES_VERSION=2.2.0 ES_HOST=127.0.0.1
+# - REQUIREMENTS=devel E2E="yes" SQLALCHEMY_DATABASE_URI="postgresql+psycopg2://postgres@localhost:5432/cds" ES_VERSION=2.2.0 ES_HOST=127.0.0.1
+python:
+  - '2.7'
+  - '3.5'
+before_install:
+  - ./.travis-extra-install.sh ${ES_VERSION}
+  - export PATH=$PATH:/tmp/ffmpeg
+  - "./scripts/setup-npm.sh"
+  - ./.travis-requirements-build.sh
+install:
+  - travis_retry pip install -r .travis-${REQUIREMENTS}-requirements.txt
+  - travis_retry pip install -e .[all]
+  - "./scripts/setup-assets.sh"
+before_script:
+  - if [ ${E2E} == 'yes' ]; then export DISPLAY=:99.0; sh -e /etc/init.d/xvfb start;
+    export E2E_WEBDRIVER_BROWSERS='Firefox'; fi
+  - if [ ${E2E} == 'yes' ]; then cds index init; fi
+  - sleep 15
+script:
+  - if [ ${E2E} == 'yes' ]; then py.test tests/e2e/; else ./run-tests.sh; fi
+after_success:
+  - coveralls
+deploy:
+  provider: pypi
+  user: egabancho
+  password:
+    secure: b7/R6MCzZGQXbJq0si2epfaYmKMDnYRgbAQtkxNa1rcjqAh1coFVFomgZ25A2HFQyKmqClLfTfmbkb0oa4O+veLkS+W26d4awsYBcZeLt5YS4kdQAsuNtMiVCOlmCNLpnpfFSY4hisgIPi6WIiUNLAOamK607F6MElgriKLPPDo=
+  on:
+    tags: true
+    distributions: sdist bdist_wheel
+    repo: CERNDocumentServer/cds-videos
+    branch: cdslabs

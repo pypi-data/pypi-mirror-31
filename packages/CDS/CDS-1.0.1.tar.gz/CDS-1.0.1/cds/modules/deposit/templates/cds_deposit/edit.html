@@ -1,0 +1,66 @@
+{%- extends "cds_theme/page.html" %}
+{%- set title_prefix = record.get('title', {}).get('title', 'Project') -%}
+{%- set container_class = '{{container_class}} cds-max-fluid-width' -%}
+
+{%- block css %}
+    {% assets "invenio_deposit_css" %}<link href="{{ ASSET_URL }}" rel="stylesheet">{% endassets %}
+    {{ super() }}
+    <style>
+      body {
+        background-color: #eee;
+      }
+    </style>
+{%- endblock css %}
+
+{%- block javascript %}
+  {{ super() }}
+  <script type="text/javascript" src="//www.dropbox.com/static/api/2/dropins.js"></script>
+  <script type="text/javascript">
+    // CKEDITOR static location
+    window.CKEDITOR_BASEPATH = '{{url_for("static", filename="node_modules/ckeditor/", _external=True)}}';
+  </script>
+  {% assets "cds_deposit_jquery_js" %}<script src="{{ ASSET_URL }}"></script>{% endassets %}
+  {% assets "cds_deposit_js" %}<script src="{{ ASSET_URL }}"></script>{% endassets %}
+
+  <script type="text/javascript">
+    angular.element(document).ready(function() {
+      angular.bootstrap(
+        document.getElementById('cds-deposit'), ['cds', 'cdsDeposit', 'ngModal']
+      );
+    });
+  $(document).ready(function() {
+    $('.dropdown-toggle').dropdown();
+  });
+  </script>
+{%- endblock javascript %}
+
+{%- block page_header %}
+  {%- set suggest_app = false -%}
+  {% include "cds_home/header.html" %}
+{%- endblock page_header %}
+
+{%- block page_body %}
+<div id="cds-deposit" class="flex-item">
+  <cds-deposits
+      {% if pid %}
+        master-links='{{pid|tolinksjs(record, dep_type=record_type)|tojson}}'
+      {% else %}
+        master-init="/api/deposits/project/"
+      {% endif %}
+      video-extensions=".mp4,.mkv,.mov,.m4v"
+      master-schema="{{ url_for('invenio_jsonschemas.get_schema', schema_path=config.DEPOSIT_JSONSCHEMA.project, _external=True) }}"
+      master-form="{{ url_for('static', filename=config.DEPOSIT_DEFAULT_SCHEMAFORM) }}"
+      dropbox-app-key="{{ config.DEPOSIT_DROPBOX_APP_KEY }}"
+      children-init="/api/deposits/video/"
+      children-schema="{{ url_for('invenio_jsonschemas.get_schema', schema_path=config.DEPOSIT_JSONSCHEMA.video, _external=True) }}"
+      children-form="{{ url_for('static', filename='json/cds_deposit/forms/video.json') }}"
+      template="{{ url_for('static', filename='templates/cds_deposit/deposits.html') }}"
+      form-templates='{{ config.DEPOSIT_FORM_TEMPLATES | tojson }}'
+      form-templates-base="{{ url_for('static', filename=config.DEPOSIT_FORM_TEMPLATES_BASE) }}"
+      show-avc-restricted-fields="{{ record | check_avc_permissions | lower }}"
+      show-admin-interface="{{ record | check_if_super_admin | lower }}"
+  >
+  </cds-deposits>
+  {{ jwt() }}
+</div>
+{%- endblock %}
