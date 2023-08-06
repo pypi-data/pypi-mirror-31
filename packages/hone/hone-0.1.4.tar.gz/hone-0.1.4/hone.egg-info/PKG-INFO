@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: hone
+Version: 0.1.4
+Summary: Convert CSV to automatically nested JSON.
+Home-page: https://github.com/chamkank/hone
+Author: Chamantha Kankanamge
+Author-email: chamkdev@gmail.com
+License: MIT
+Project-URL: Source Code, https://github.com/chamkank/hone
+Description: Convert CSV to automatically nested JSON.
+        
+        Documentation: https://github.com/chamkank/hone
+Keywords: convert csv auto nested json
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
