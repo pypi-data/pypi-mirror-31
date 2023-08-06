@@ -1,0 +1,49 @@
+Metadata-Version: 1.0
+Name: gluoncv
+Version: 0.1.0
+Summary: MXNet Gluon CV Toolkit
+Home-page: https://github.com/dmlc/gluon-cv
+Author: Gluon CV Toolkit Contributors
+Author-email: UNKNOWN
+License: Apache-2.0
+Description: Gluon CV Toolkit
+        ================
+        
+        |Build Status| |GitHub license|
+        
+        | `Installation <http://gluon-cv.mxnet.io>`__ \|
+          `Documentation <http://gluon-cv.mxnet.io>`__ \|
+          `Tutorials <http://gluon-cv.mxnet.io>`__ \|
+        
+        GluonCV provides implementations of the sate-of-the-art (SOTA) deep
+        learning models in computer vision.
+        
+        It is designed for engineers, researchers, and students to fast
+        prototype products and research ideas based on these models. This
+        toolkit offers four main features:
+        
+        1. Training scripts to reproduce SOTA results reported in research
+           papers
+        2. A large number of pre-trained models
+        3. Carefully designed APIs that greatly reduce the implementation
+           complexity
+        4. Community supports
+        
+        Examples
+        --------
+        
+        -  `Image
+           Classification <http://gluon-cv.mxnet.io/build/examples_classification/index.html>`__
+        
+        -  `Object
+           Detection <http://gluon-cv.mxnet.io/build/examples_detection/index.html>`__
+        
+        -  `Semantic
+           Segmentation <http://gluon-cv.mxnet.io/build/examples_segmentation/index.html>`__
+        
+        .. |Build Status| image:: http://ci.mxnet.io/job/gluon-vision/job/master/badge/icon
+           :target: http://ci.mxnet.io/job/gluon-vision/job/master/
+        .. |GitHub license| image:: http://dmlc.github.io/img/apache2.svg
+           :target: ./LICENSE
+        
+Platform: UNKNOWN
