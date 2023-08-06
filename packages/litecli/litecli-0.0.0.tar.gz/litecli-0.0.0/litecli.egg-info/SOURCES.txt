@@ -1,0 +1,8 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+litecli.egg-info/PKG-INFO
+litecli.egg-info/SOURCES.txt
+litecli.egg-info/dependency_links.txt
+litecli.egg-info/top_level.txt
