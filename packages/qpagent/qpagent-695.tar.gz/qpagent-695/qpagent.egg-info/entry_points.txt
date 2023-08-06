@@ -1,0 +1,3 @@
+[console_scripts]
+serve = agent.cmds.serve:serve
+
