@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: manticore
+Version: 0.1.8
+Summary: Manticore is a symbolic execution tool for analysis of binaries and smart contracts.
+Home-page: https://github.com/trailofbits/manticore
+Author: Trail of Bits
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Provides-Extra: redis
+Provides-Extra: dev
