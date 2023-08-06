@@ -1,0 +1,6 @@
+Click>=6.0
+tabulate>=0.8.2
+numpy
+requests
+beautifulsoup4
+spacy
