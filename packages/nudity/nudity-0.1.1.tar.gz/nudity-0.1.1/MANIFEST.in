@@ -1,0 +1,4 @@
+include README.rst
+include MANIFEST.in
+include setup.py
+include files/*.pb
