@@ -1,0 +1,12 @@
+snakemake
+pyyaml
+six
+numpy
+biopython
+pandas
+argparse
+interlap
+pysam
+pyfaidx
+distance
+umi_tools
