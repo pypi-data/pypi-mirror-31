@@ -1,0 +1,3 @@
+[console_scripts]
+kunci = kunci.kunci:run
+
