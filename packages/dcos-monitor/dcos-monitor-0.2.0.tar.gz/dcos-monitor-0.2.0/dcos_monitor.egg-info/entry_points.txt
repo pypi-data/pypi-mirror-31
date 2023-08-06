@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        dcos_monitor=dcos_monitor.cli:cli
+    
