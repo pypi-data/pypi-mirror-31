@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: rm
+Version: 1.0.2
+Summary: rm(path) function - rm file/dir
+Home-page: https://github.com/looking-for-a-job/rm.py
+License: UNKNOWN
+Description: ### Install
+        
+        ```bash
+        $ [sudo] pip install rm
+        ```
+        
+        ### Features
+        
+        - **dirs** and **files** supported
+        - **~**, **..**, **.** expand
+        - **no exception** if path not exists
+        
+        ### Usage
+        
+        ```python
+        >>> from rm import rm
+        
+        >>> rm(path)
+        ```
+        
+        ### Examples
+        
+        ```python
+        >>> rm("path/to/file")
+        >>> rm("path/to/dir")
+        >>> rm("not-existing") # no exception
+        ```
+        
+        ### Sources
+        
+        +   [`rm.rm(path)`](https://github.com/looking-for-a-job/rm.py/blob/master/rm/__init__.py)
+Keywords: rm delete
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development
+Description-Content-Type: text/markdown
