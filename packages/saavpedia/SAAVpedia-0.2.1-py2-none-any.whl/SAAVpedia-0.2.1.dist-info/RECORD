@@ -1,0 +1,17 @@
+SAAVpedia/ClassSAAVinterpreter.py,sha256=-idvhkNCL5zzIbIq0JJaHrX0TYxGTAJqkEcB_AszZLw,1128
+SAAVpedia/ClassSAAVpedia.py,sha256=S1j-kaROsWUxlBTJnAiEUFPFi0EOeZ8ml7kOtThErbo,5483
+SAAVpedia/__init__.py,sha256=98E7crL0yD8oBmr-aBV10qnZsB_vr9GMJgd5XuqCVGM,823
+SAAVpedia/db/ClassLocalDB.py,sha256=SL7Zky49gA_ZX95IaEi0OxhZGvBLwdyAmSi417yuo_8,2946
+SAAVpedia/db/ClassOnlineDB-2.py,sha256=fcs0-pF5SWZlf0aHMIDJ74ldJ_tr7QqGm_8KMBxtQOg,5759
+SAAVpedia/db/ClassOnlineDB.py,sha256=inmdhOfVrW28iiPSMKjaGZVreykRm7N1WETVBIM0Mao,4346
+SAAVpedia/db/ClassSAAVpediaInputParser.py,sha256=C09oZu6zdrrUf2lMn1BusnRSSjBKB5WK4xYu7fULP70,19196
+SAAVpedia/db/ClassSQLite3.py,sha256=83sswEL6h-fs9rGfC8AYLB027BcZNA3gpKYBH0tequY,2103
+SAAVpedia/db/__init__.py,sha256=CHIu9Aj4A46_RdGg84B6wsDiejGKHpbOmuPA_j-wG9k,918
+SAAVpedia/dta/ClassDTASelectFilter.py,sha256=Q_etCu3sfC3CKr4hz_v6xdGWyYT4XPx_fr0_-Vf9-x8,955
+SAAVpedia/dta/__init__.py,sha256=98E7crL0yD8oBmr-aBV10qnZsB_vr9GMJgd5XuqCVGM,823
+SAAVpedia-0.2.1.dist-info/DESCRIPTION.rst,sha256=PLAe4rbwvDrD-yLzCkKBFP6ap5S2nJkxruXKrHX0Hfw,68
+SAAVpedia-0.2.1.dist-info/METADATA,sha256=JjRScsDx02KzJPhssPQTfr2GEN8CIY6i2HbC3FgUoUA,332
+SAAVpedia-0.2.1.dist-info/RECORD,,
+SAAVpedia-0.2.1.dist-info/WHEEL,sha256=bee59qcPjkyXfMaxNWjl2CGotqfumWx9pC1hlVLr2mM,92
+SAAVpedia-0.2.1.dist-info/metadata.json,sha256=jMRyr3R58u-qflOs6BjufgWQOXBBtU0D-9MV4bWDLUg,455
+SAAVpedia-0.2.1.dist-info/top_level.txt,sha256=HaDnseyAdIU5vNJCO5GPr0rNWj39A6Cte9OhQyyKvvc,10
