@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: sequence2hash
+Version: 1.0.1
+Summary: 将 序列值 转为 哈希值，并展示出值在序列中对应的路径
+Home-page: https://github.com/Cuile/sequence2hash
+Author: cuile
+Author-email: i@cuile.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: hash dict list key/value
+Platform: UNKNOWN
