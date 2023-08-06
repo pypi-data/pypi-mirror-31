@@ -1,0 +1,73 @@
+Metadata-Version: 1.1
+Name: pyfortified-cache
+Version: 0.1.0
+Summary: Extension to Python `datetime` functionality.
+Home-page: https://github.com/jeff00seattle/pyfortified-cache
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: MIT License
+Download-URL: https://github.com/jeff00seattle/pyfortified-cache/archive/v0.1.0.tar.gz
+Description: .. -*- mode: rst -*-
+        
+        pyfortified-cache
+        -----------------
+        
+        Important Note
+        ^^^^^^^^^^^^^^
+        
+        Work In Progress
+        ^^^^^^^^^^^^^^^^
+        
+        Badges
+        ------
+        
+        .. start-badges
+        
+        .. list-table::
+            :stub-columns: 1
+        
+            * - docs
+              - |docs| |license|
+            * - package
+              - |version| |supported-versions|
+        
+        .. |license| image:: https://img.shields.io/badge/License-MIT-yellow.svg
+            :alt: License Status
+            :target: https://opensource.org/licenses/MIT
+        
+        .. |version| image:: https://img.shields.io/pypi/v/pyfortified_cache.svg?style=flat
+            :alt: PyPI Package latest release
+            :target: https://pypi.python.org/pypi/pyfortified_cache
+        
+        .. |supported-versions| image:: https://img.shields.io/pypi/pyversions/logging-fortified.svg?style=flat
+            :alt: Supported versions
+            :target: https://pypi.python.org/pypi/logging-fortified
+        
+        .. end-badges
+        
+        
+        Install
+        -------
+        
+        .. code-block:: bash
+        
+            pip install pyfortified-cache
+        
+        
+        Functions
+        ---------
+        
+Keywords: pyfortified cache
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
