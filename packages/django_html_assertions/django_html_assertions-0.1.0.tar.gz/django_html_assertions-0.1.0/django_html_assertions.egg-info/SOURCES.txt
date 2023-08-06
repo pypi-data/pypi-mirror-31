@@ -1,0 +1,11 @@
+README.rst
+setup.cfg
+setup.py
+django_html_assertions/__init__.py
+django_html_assertions/mixins.py
+django_html_assertions.egg-info/PKG-INFO
+django_html_assertions.egg-info/SOURCES.txt
+django_html_assertions.egg-info/dependency_links.txt
+django_html_assertions.egg-info/top_level.txt
+django_html_assertions/tests/__init__.py
+django_html_assertions/tests/test_mixins.py

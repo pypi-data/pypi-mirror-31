@@ -1,0 +1,148 @@
+Metadata-Version: 1.1
+Name: django_html_assertions
+Version: 0.1.0
+Summary: A simple Django app to add html related assertions to djangos testing classes.
+Home-page: https://github.com/omni-digital/django_html_assertions/
+Author: Omni Digital
+Author-email: dev@omni-digital.co.uk
+License: MIT
+Download-URL: https://github.com/omni-digital/django_html_assertions/tarball/0.1.0
+Description: Html assertions
+        ===============
+        
+        Html assertions is a simple django testing mixin that makes it possible to assert that a given block of html contains a tag (optionally with a given class) that also contains the specified textual content.
+        
+        ``pip install django_html_assertions``
+        
+        Usage
+        -----
+        
+        To use the new test assertion methods all you need to do is mix the mixin into your test suite.  You're then ready to go.
+        
+        ::
+        
+            from django.test import TestCase
+        
+            from django_html_assertions.mixins import HTMLContainsMixin
+        
+        
+            TEST_HTML = """
+            <html>
+                <body>
+                    <p class="odd">Item 1</p>
+                    <p class="even">Item 2</p>
+                    <p class="odd">Item 3</p>
+                </body>
+            </html>
+            """
+        
+        
+            class HTMLContainsMixinTestCase(HTMLContainsMixin, TestCase):
+                """
+                Tests the test class mixin
+                """
+                def test_assert_html_tag_contains_valid(self):
+                    """
+                    The method should not raise an exception
+                    """
+                    self.assertHTMLTagContains(
+                        TEST_HTML,
+                        'Item 1',
+                        'p'
+                    )
+        
+                def test_assert_html_tag_contains_valid_with_class(self):
+                    """
+                    The method should not raise an exception
+                    """
+                    self.assertHTMLTagContains(
+                        TEST_HTML,
+                        'Item 1',
+                        'p',
+                        tag_class='odd'
+                    )
+        
+                def test_assert_html_tag_contains_invalid(self):
+                    """
+                    The method should raise an exception
+                    """
+                    with self.assertRaises(AssertionError):
+                        self.assertHTMLTagContains(
+                            TEST_HTML,
+                            'Item 10',
+                            'p'
+                        )
+        
+                def test_assert_html_tag_contains_invalid_with_class(self):
+                    """
+                    The method should not raise an exception
+                    """
+                    with self.assertRaises(AssertionError):
+                        self.assertHTMLTagContains(
+                            TEST_HTML,
+                            'Item 1',
+                            'p',
+                            tag_class='even'
+                        )
+        
+                def test_assert_html_tag_not_contains_valid(self):
+                    """
+                    The method should not raise an exception
+                    """
+                    self.assertHTMLTagNotContains(
+                        TEST_HTML,
+                        'Item 10',
+                        'p'
+                    )
+        
+                def test_assert_html_tag_not_contains_valid_with_class(self):
+                    """
+                    The method should not raise an exception
+                    """
+                    self.assertHTMLTagNotContains(
+                        TEST_HTML,
+                        'Item 1',
+                        'p',
+                        tag_class='even'
+                    )
+        
+                def test_assert_html_tag_not_contains_invalid(self):
+                    """
+                    The method should raise an exception
+                    """
+                    with self.assertRaises(AssertionError):
+                        self.assertHTMLTagNotContains(
+                            TEST_HTML,
+                            'Item 1',
+                            'p'
+                        )
+        
+                def test_assert_html_tag_not_contains_invalid_with_class(self):
+                    """
+                    The method should not raise an exception
+                    """
+                    with self.assertRaises(AssertionError):
+                        self.assertHTMLTagNotContains(
+                            TEST_HTML,
+                            'Item 1',
+                            'p',
+                            tag_class='odd'
+                        )
+        
+Keywords: django,test,tests,testing,html,assert,assertion,assertions
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 1.11
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
