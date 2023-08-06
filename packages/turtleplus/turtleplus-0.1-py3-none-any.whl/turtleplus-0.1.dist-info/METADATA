@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: turtleplus
+Version: 0.1
+Summary: An upgraded version of the 'turtle'
+Home-page: https://github.com/vaporzfy/turtleplus
+Author: vaporzfy
+Author-email: vaporzfy@sina.com
+License: GPL3
+Platform: UNKNOWN
+Requires-Dist: pillow
+Requires-Dist: canvasvg
+Requires-Dist: cairosvg
+
+UNKNOWN
+
+
