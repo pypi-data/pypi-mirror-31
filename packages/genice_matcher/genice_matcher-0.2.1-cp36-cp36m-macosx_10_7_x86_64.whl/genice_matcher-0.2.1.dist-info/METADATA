@@ -1,0 +1,21 @@
+Metadata-Version: 2.0
+Name: genice-matcher
+Version: 0.2.1
+Summary: Match atomic environments.
+Home-page: https://github.com/vitroid/matcher/
+Author: Masakazu Matsumoto
+Author-email: vitroid@gmail.com
+License: MIT
+Description-Content-Type: UNKNOWN
+Keywords: matcher
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Requires-Dist: numpy
+Requires-Dist: yaplotlib
+
+UNKNOWN
+
+
