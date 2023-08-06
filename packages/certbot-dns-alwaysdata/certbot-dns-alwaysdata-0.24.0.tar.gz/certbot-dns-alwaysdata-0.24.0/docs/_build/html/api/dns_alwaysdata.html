@@ -1,0 +1,335 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>certbot_dns_alwaysdata.dns_alwaysdata &mdash; certbot-dns-alwaysdata 0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="certbot-dns-alwaysdata 0 documentation" href="../index.html"/>
+        <link rel="up" title="API Documentation" href="../api.html"/>
+        <link rel="prev" title="API Documentation" href="../api.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> certbot-dns-alwaysdata
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">API Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#"><code class="docutils literal"><span class="pre">certbot_dns_alwaysdata.dns_alwaysdata</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">certbot-dns-alwaysdata</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../api.html">API Documentation</a> &raquo;</li>
+        
+      <li><code class="docutils literal"><span class="pre">certbot_dns_alwaysdata.dns_alwaysdata</span></code></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/dns_alwaysdata.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="certbot-dns-alwaysdata-dns-alwaysdata">
+<h1><a class="reference internal" href="#module-certbot_dns_alwaysdata.dns_alwaysdata" title="certbot_dns_alwaysdata.dns_alwaysdata"><code class="xref py py-mod docutils literal"><span class="pre">certbot_dns_alwaysdata.dns_alwaysdata</span></code></a><a class="headerlink" href="#certbot-dns-alwaysdata-dns-alwaysdata" title="Permalink to this headline">¶</a></h1>
+<span class="target" id="module-certbot_dns_alwaysdata.dns_alwaysdata"></span><p>DNS Authenticator for Alwaysdata.</p>
+<dl class="class">
+<dt id="certbot_dns_alwaysdata.dns_alwaysdata.Authenticator">
+<em class="property">class </em><code class="descclassname">certbot_dns_alwaysdata.dns_alwaysdata.</code><code class="descname">Authenticator</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/certbot_dns_alwaysdata/dns_alwaysdata.html#Authenticator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#certbot_dns_alwaysdata.dns_alwaysdata.Authenticator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://certbot.eff.org/docs/api/plugins/dns_common.html#certbot.plugins.dns_common.DNSAuthenticator" title="(in Certbot v0.23)"><code class="xref py py-class docutils literal"><span class="pre">certbot.plugins.dns_common.DNSAuthenticator</span></code></a></p>
+<p>DNS Authenticator for Alwaysdata</p>
+<p>This Authenticator uses the Alwaysdata API to fulfill a dns-01 challenge.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="certbot_dns_alwaysdata.dns_alwaysdata._AlwaysdataClient">
+<em class="property">class </em><code class="descclassname">certbot_dns_alwaysdata.dns_alwaysdata.</code><code class="descname">_AlwaysdataClient</code><span class="sig-paren">(</span><em>api_key</em>, <em>account</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/certbot_dns_alwaysdata/dns_alwaysdata.html#_AlwaysdataClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#certbot_dns_alwaysdata.dns_alwaysdata._AlwaysdataClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.6)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<p>Encapsulates all communication with Alwaysdata API.</p>
+<dl class="classmethod">
+<dt id="certbot_dns_alwaysdata.dns_alwaysdata._AlwaysdataClient.canonical_record_name">
+<em class="property">classmethod </em><code class="descname">canonical_record_name</code><span class="sig-paren">(</span><em>record_name</em>, <em>domain_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/certbot_dns_alwaysdata/dns_alwaysdata.html#_AlwaysdataClient.canonical_record_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#certbot_dns_alwaysdata.dns_alwaysdata._AlwaysdataClient.canonical_record_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Strip the domain name from the record name, as Alwaysdata expects name <code class="docutils literal"><span class="pre">foo.bar</span></code> when
+adding the <code class="docutils literal"><span class="pre">foo.bar.domain.com</span></code> record.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>record_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; the full record name</li>
+<li><strong>domain_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; the domain name managing the DNS record</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="certbot_dns_alwaysdata.dns_alwaysdata._AlwaysdataClient.add_txt_record">
+<code class="descname">add_txt_record</code><span class="sig-paren">(</span><em>domain</em>, <em>record_name</em>, <em>record_content</em>, <em>record_ttl</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/certbot_dns_alwaysdata/dns_alwaysdata.html#_AlwaysdataClient.add_txt_record"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#certbot_dns_alwaysdata.dns_alwaysdata._AlwaysdataClient.add_txt_record" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a TXT record using the supplied information.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>domain</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; The domain to use to look up the managed zone.</li>
+<li><strong>record_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; The record name (typically beginning with &#8216;_acme-challenge.&#8217;).</li>
+<li><strong>record_content</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; The record content (typically the challenge validation).</li>
+<li><strong>record_ttl</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.6)"><em>int</em></a>) &#8211; The record TTL (number of seconds that the record may be cached).</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://certbot.eff.org/docs/api/errors.html#certbot.errors.PluginError" title="(in Certbot v0.23)"><strong>certbot.errors.PluginError</strong></a> &#8211; if an error occurs communicating with the API</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="certbot_dns_alwaysdata.dns_alwaysdata._AlwaysdataClient.del_txt_record">
+<code class="descname">del_txt_record</code><span class="sig-paren">(</span><em>domain</em>, <em>record_name</em>, <em>record_content</em>, <em>record_ttl</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/certbot_dns_alwaysdata/dns_alwaysdata.html#_AlwaysdataClient.del_txt_record"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#certbot_dns_alwaysdata.dns_alwaysdata._AlwaysdataClient.del_txt_record" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete a TXT record using the supplied information.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>domain</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; The domain to use to look up the managed zone.</li>
+<li><strong>record_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; The record name (typically beginning with &#8216;_acme-challenge.&#8217;).</li>
+<li><strong>record_content</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; The record content (typically the challenge validation).</li>
+<li><strong>record_ttl</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.6)"><em>int</em></a>) &#8211; The record TTL (number of seconds that the record may be cached).</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="certbot_dns_alwaysdata.dns_alwaysdata._AlwaysdataClient._find_alwaysdata_domain">
+<code class="descname">_find_alwaysdata_domain</code><span class="sig-paren">(</span><em>domain_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/certbot_dns_alwaysdata/dns_alwaysdata.html#_AlwaysdataClient._find_alwaysdata_domain"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#certbot_dns_alwaysdata.dns_alwaysdata._AlwaysdataClient._find_alwaysdata_domain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find the Alwaysdata domain for a given domain name.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>domain_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; The domain name for which to find the Alwaysdata domain.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The domain name and domain ID, if found.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.6)">tuple</a>(<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)">str</a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.6)">str</a>)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference external" href="https://certbot.eff.org/docs/api/errors.html#certbot.errors.PluginError" title="(in Certbot v0.23)"><strong>certbot.errors.PluginError</strong></a> &#8211; if the domain cannot be found.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../api.html" class="btn btn-neutral" title="API Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Certbot Project.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,246 @@
+.\" Man page generated from reStructuredText.
+.
+.TH "CERTBOT-DNS-ALWAYSDATA" "1" "May 03, 2018" "0" "certbot-dns-alwaysdata"
+.SH NAME
+certbot-dns-alwaysdata \- certbot-dns-alwaysdata Documentation
+.
+.nr rst2man-indent-level 0
+.
+.de1 rstReportMargin
+\\$1 \\n[an-margin]
+level \\n[rst2man-indent-level]
+level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
+-
+\\n[rst2man-indent0]
+\\n[rst2man-indent1]
+\\n[rst2man-indent2]
+..
+.de1 INDENT
+.\" .rstReportMargin pre:
+. RS \\$1
+. nr rst2man-indent\\n[rst2man-indent-level] \\n[an-margin]
+. nr rst2man-indent-level +1
+.\" .rstReportMargin post:
+..
+.de UNINDENT
+. RE
+.\" indent \\n[an-margin]
+.\" old: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.nr rst2man-indent-level -1
+.\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.in \\n[rst2man-indent\\n[rst2man-indent-level]]u
+..
+.sp
+The \fBdns_alwaysdata\fP plugin automates the process of
+completing a \fBdns\-01\fP challenge (\fI\%DNS01\fP) by creating, and
+subsequently removing, TXT records using the Alwaysdata API.
+.SH NAMED ARGUMENTS
+.TS
+center;
+|l|l|.
+_
+T{
+\fB\-\-dns\-alwaysdata\-credentials\fP
+T}	T{
+Alwaysdata \fI\%credentials\fP INI file.
+(Required)
+T}
+_
+.TE
+.SH CREDENTIALS
+.sp
+Use of this plugin requires a configuration file containing Alwaysdata API key,
+obtained from your Alwaysdata
+\fI\%profile page\fP, and Alwaysdata
+account name, obtained from your Alwaysdata
+\fI\%account page\fP\&. You must use the
+account owning the domain for which you are requesting the certificates.
+Example credentials file:.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+# Alwaysdata API credentials used by Certbot
+dns_alwaysdata_api_key = 1234567890abcdef
+dns_alwaysdata_account = example
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+The path to this file can be provided interactively or using the
+\fB\-\-dns\-alwaysdata\-credentials\fP command\-line argument. Certbot records the path
+to this file for use during renewal, but does not store the file\(aqs contents.
+.sp
+\fBCAUTION:\fP
+.INDENT 0.0
+.INDENT 3.5
+You should protect the API key as you would the password to your Alwaysdata
+account. Users who can read this file can use these credentials to issue
+arbitrary API calls on your behalf. Users who can cause Certbot to run using
+these credentials can complete a \fBdns\-01\fP challenge to acquire new
+certificates or revoke existing certificates for associated domains, even if
+those domains aren\(aqt being managed by this server.
+.UNINDENT
+.UNINDENT
+.sp
+Certbot will emit a warning if it detects that the credentials file can be
+accessed by other users on your system. The warning reads "Unsafe permissions
+on credentials configuration file", followed by the path to the credentials
+file. This warning will be emitted each time Certbot uses the credentials file,
+including for renewal, and cannot be silenced except by addressing the issue
+(e.g., by using a command like \fBchmod 600\fP to restrict access to the file).
+.SH EXAMPLES
+To acquire a certificate for \fBexample.com\fP.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+certbot certonly \e
+  \-\-dns\-alwaysdata \e
+  \-\-dns\-alwaysdata\-credentials ~/.secrets/certbot/alwaysdata.ini \e
+  \-d example.com
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+To acquire a single certificate for both \fBexample.com\fP and
+\fBwww.example.com\fP.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+certbot certonly \e
+  \-\-dns\-alwaysdata \e
+  \-\-dns\-alwaysdata\-credentials ~/.secrets/certbot/alwaysdata.ini \e
+  \-d example.com \e
+  \-d www.example.com
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+To acquire a certificate for \fBexample.com\fP, waiting 60 seconds
+for DNS propagation.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+certbot certonly \e
+  \-\-dns\-alwaysdata \e
+  \-\-dns\-alwaysdata\-credentials ~/.secrets/certbot/alwaysdata.ini \e
+  \-\-dns\-alwaysdata\-propagation\-seconds 60 \e
+  \-d example.com
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.SH API DOCUMENTATION
+.SS \fI\%certbot_dns_alwaysdata.dns_alwaysdata\fP
+.sp
+DNS Authenticator for Alwaysdata.
+.INDENT 0.0
+.TP
+.B class certbot_dns_alwaysdata.dns_alwaysdata.Authenticator(*args, **kwargs)
+Bases: \fI\%certbot.plugins.dns_common.DNSAuthenticator\fP
+.sp
+DNS Authenticator for Alwaysdata
+.sp
+This Authenticator uses the Alwaysdata API to fulfill a dns\-01 challenge.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B class certbot_dns_alwaysdata.dns_alwaysdata._AlwaysdataClient(api_key, account)
+Bases: \fI\%object\fP
+.sp
+Encapsulates all communication with Alwaysdata API.
+.INDENT 7.0
+.TP
+.B classmethod canonical_record_name(record_name, domain_name)
+Strip the domain name from the record name, as Alwaysdata expects name \fBfoo.bar\fP when
+adding the \fBfoo.bar.domain.com\fP record.
+.INDENT 7.0
+.TP
+.B Parameters
+.INDENT 7.0
+.IP \(bu 2
+\fBrecord_name\fP (\fI\%str\fP) \-\- the full record name
+.IP \(bu 2
+\fBdomain_name\fP (\fI\%str\fP) \-\- the domain name managing the DNS record
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.INDENT 7.0
+.TP
+.B add_txt_record(domain, record_name, record_content, record_ttl)
+Add a TXT record using the supplied information.
+.INDENT 7.0
+.TP
+.B Parameters
+.INDENT 7.0
+.IP \(bu 2
+\fBdomain\fP (\fI\%str\fP) \-\- The domain to use to look up the managed zone.
+.IP \(bu 2
+\fBrecord_name\fP (\fI\%str\fP) \-\- The record name (typically beginning with \(aq_acme\-challenge.\(aq).
+.IP \(bu 2
+\fBrecord_content\fP (\fI\%str\fP) \-\- The record content (typically the challenge validation).
+.IP \(bu 2
+\fBrecord_ttl\fP (\fI\%int\fP) \-\- The record TTL (number of seconds that the record may be cached).
+.UNINDENT
+.TP
+.B Raises
+\fI\%certbot.errors.PluginError\fP \-\- if an error occurs communicating with the API
+.UNINDENT
+.UNINDENT
+.INDENT 7.0
+.TP
+.B del_txt_record(domain, record_name, record_content, record_ttl)
+Delete a TXT record using the supplied information.
+.INDENT 7.0
+.TP
+.B Parameters
+.INDENT 7.0
+.IP \(bu 2
+\fBdomain\fP (\fI\%str\fP) \-\- The domain to use to look up the managed zone.
+.IP \(bu 2
+\fBrecord_name\fP (\fI\%str\fP) \-\- The record name (typically beginning with \(aq_acme\-challenge.\(aq).
+.IP \(bu 2
+\fBrecord_content\fP (\fI\%str\fP) \-\- The record content (typically the challenge validation).
+.IP \(bu 2
+\fBrecord_ttl\fP (\fI\%int\fP) \-\- The record TTL (number of seconds that the record may be cached).
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.INDENT 7.0
+.TP
+.B _find_alwaysdata_domain(domain_name)
+Find the Alwaysdata domain for a given domain name.
+.INDENT 7.0
+.TP
+.B Parameters
+\fBdomain_name\fP (\fI\%str\fP) \-\- The domain name for which to find the Alwaysdata domain.
+.TP
+.B Returns
+The domain name and domain ID, if found.
+.TP
+.B Return type
+\fI\%tuple\fP(\fI\%str\fP, \fI\%str\fP)
+.TP
+.B Raises
+\fI\%certbot.errors.PluginError\fP \-\- if the domain cannot be found.
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.IP \(bu 2
+genindex
+.IP \(bu 2
+modindex
+.IP \(bu 2
+search
+.UNINDENT
+.SH AUTHOR
+Certbot Project
+.SH COPYRIGHT
+2018, Certbot Project
+.\" Generated by docutils manpage writer.
+.

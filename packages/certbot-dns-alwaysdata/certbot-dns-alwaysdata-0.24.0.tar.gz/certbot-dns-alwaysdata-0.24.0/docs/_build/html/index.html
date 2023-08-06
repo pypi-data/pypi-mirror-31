@@ -1,0 +1,333 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Welcome to certbot-dns-alwaysdata’s documentation! &mdash; certbot-dns-alwaysdata 0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="certbot-dns-alwaysdata 0 documentation" href="#"/>
+        <link rel="next" title="API Documentation" href="api.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="#" class="icon icon-home"> certbot-dns-alwaysdata
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">certbot-dns-alwaysdata</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li>Welcome to certbot-dns-alwaysdata&#8217;s documentation!</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="welcome-to-certbot-dns-alwaysdata-s-documentation">
+<h1>Welcome to certbot-dns-alwaysdata&#8217;s documentation!<a class="headerlink" href="#welcome-to-certbot-dns-alwaysdata-s-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<span class="target" id="module-certbot_dns_alwaysdata"></span><p>The <a class="reference internal" href="api/dns_alwaysdata.html#module-certbot_dns_alwaysdata.dns_alwaysdata" title="certbot_dns_alwaysdata.dns_alwaysdata"><code class="xref py py-obj docutils literal"><span class="pre">dns_alwaysdata</span></code></a> plugin automates the process of
+completing a <code class="docutils literal"><span class="pre">dns-01</span></code> challenge (<a class="reference external" href="https://acme-python.readthedocs.io/en/latest/api/challenges.html#acme.challenges.DNS01" title="(in acme-python v0)"><code class="xref py py-obj docutils literal"><span class="pre">DNS01</span></code></a>) by creating, and
+subsequently removing, TXT records using the Alwaysdata API.</p>
+<div class="section" id="named-arguments">
+<h2>Named Arguments<a class="headerlink" href="#named-arguments" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="52%" />
+<col width="48%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">--dns-alwaysdata-credentials</span></code></td>
+<td>Alwaysdata <a class="reference internal" href="#credentials">credentials</a> INI file.
+(Required)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="credentials">
+<h2>Credentials<a class="headerlink" href="#credentials" title="Permalink to this headline">¶</a></h2>
+<p>Use of this plugin requires a configuration file containing Alwaysdata API key,
+obtained from your Alwaysdata
+<a class="reference external" href="https://admin.alwaysdata.com/admin/details/">profile page</a>, and Alwaysdata
+account name, obtained from your Alwaysdata
+<a class="reference external" href="https://admin.alwaysdata.com/admin/account">account page</a>. You must use the
+account owning the domain for which you are requesting the certificates.</p>
+<div class="literal-block-wrapper docutils container" id="credentials-ini">
+<div class="code-block-caption"><span class="caption-text">Example credentials file:</span><a class="headerlink" href="#credentials-ini" title="Permalink to this code">¶</a></div>
+<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="c1"># Alwaysdata API credentials used by Certbot</span>
+<span class="na">dns_alwaysdata_api_key</span> <span class="o">=</span> <span class="s">1234567890abcdef</span>
+<span class="na">dns_alwaysdata_account</span> <span class="o">=</span> <span class="s">example</span>
+</pre></div>
+</div>
+</div>
+<p>The path to this file can be provided interactively or using the
+<code class="docutils literal"><span class="pre">--dns-alwaysdata-credentials</span></code> command-line argument. Certbot records the path
+to this file for use during renewal, but does not store the file&#8217;s contents.</p>
+<div class="admonition caution">
+<p class="first admonition-title">Caution</p>
+<p class="last">You should protect the API key as you would the password to your Alwaysdata
+account. Users who can read this file can use these credentials to issue
+arbitrary API calls on your behalf. Users who can cause Certbot to run using
+these credentials can complete a <code class="docutils literal"><span class="pre">dns-01</span></code> challenge to acquire new
+certificates or revoke existing certificates for associated domains, even if
+those domains aren&#8217;t being managed by this server.</p>
+</div>
+<p>Certbot will emit a warning if it detects that the credentials file can be
+accessed by other users on your system. The warning reads &#8220;Unsafe permissions
+on credentials configuration file&#8221;, followed by the path to the credentials
+file. This warning will be emitted each time Certbot uses the credentials file,
+including for renewal, and cannot be silenced except by addressing the issue
+(e.g., by using a command like <code class="docutils literal"><span class="pre">chmod</span> <span class="pre">600</span></code> to restrict access to the file).</p>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">To acquire a certificate for <code class="docutils literal"><span class="pre">example.com</span></code></span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>certbot certonly <span class="se">\</span>
+  --dns-alwaysdata <span class="se">\</span>
+  --dns-alwaysdata-credentials ~/.secrets/certbot/alwaysdata.ini <span class="se">\</span>
+  -d example.com
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">To acquire a single certificate for both <code class="docutils literal"><span class="pre">example.com</span></code> and
+<code class="docutils literal"><span class="pre">www.example.com</span></code></span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>certbot certonly <span class="se">\</span>
+  --dns-alwaysdata <span class="se">\</span>
+  --dns-alwaysdata-credentials ~/.secrets/certbot/alwaysdata.ini <span class="se">\</span>
+  -d example.com <span class="se">\</span>
+  -d www.example.com
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">To acquire a certificate for <code class="docutils literal"><span class="pre">example.com</span></code>, waiting 60 seconds
+for DNS propagation</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>certbot certonly <span class="se">\</span>
+  --dns-alwaysdata <span class="se">\</span>
+  --dns-alwaysdata-credentials ~/.secrets/certbot/alwaysdata.ini <span class="se">\</span>
+  --dns-alwaysdata-propagation-seconds <span class="m">60</span> <span class="se">\</span>
+  -d example.com
+</pre></div>
+</div>
+</div>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Documentation</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
+<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
+<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
+</ul>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="api.html" class="btn btn-neutral float-right" title="API Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Certbot Project.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
