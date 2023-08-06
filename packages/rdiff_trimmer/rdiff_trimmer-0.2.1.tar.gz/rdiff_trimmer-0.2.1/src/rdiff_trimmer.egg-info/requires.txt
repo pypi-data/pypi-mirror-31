@@ -1,0 +1,9 @@
+sh
+
+[docs]
+sphinx
+sphinxcontrib-napoleon
+
+[test]
+pytest
+pytest-cov
