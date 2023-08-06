@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: glyxtoolms
+Version: 0.1.3
+Summary: glyxtoolms - python tools for glycopeptide analysis with OpenMS
+Home-page: UNKNOWN
+Author: Markus Pioch
+Author-email: pioch@mpi-magdeburg.mpg.de
+License: GPL-3.0
+Keywords: glycan glycopeptide glycoproteomics openms analysis
+Platform: UNKNOWN
+Requires-Python: >=2.6, <3
+Requires-Dist: numpy
+Requires-Dist: pyopenms
+Requires-Dist: lxml
+Requires-Dist: canvasvg
+Requires-Dist: configparser
+Requires-Dist: pyperclip
+Requires-Dist: xlwt
+
+glyXtoolMS provides a) scripts for glycopeptide analysis 
+within the OpenMS proteomics framework (using the TOPPAS pipeline 
+engine) and a visulization / evaluation tool for further manual analysis of the results. 
+Source code available under https://github.com/glyXera/glyXtoolMS
+
