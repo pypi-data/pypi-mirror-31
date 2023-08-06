@@ -1,0 +1,2 @@
+include versioneer.py
+include xtopo/_version.py
