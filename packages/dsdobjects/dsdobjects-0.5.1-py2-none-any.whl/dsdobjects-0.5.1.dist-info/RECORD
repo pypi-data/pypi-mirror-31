@@ -1,0 +1,12 @@
+dsdobjects/__init__.py,sha256=S0eozV6jFl_juJNODaqSRKhEuGMbh6Enbu7W5ltWcwc,396
+dsdobjects/base_classes.py,sha256=XR6iYDrsX-PrNZs6KLaWrMGdPzIDfcA_IKAMj1BnMUY,38264
+dsdobjects/utils.py,sha256=thKG05qKrGnenY-S6ijZ7POAfdD0FTOhvdEn4Xw9ykc,6520
+dsdobjects/parser/__init__.py,sha256=if8oFIqHSxG6BhLqk8G3updfBEQ7Y3vao_0EPW8XTOE,332
+dsdobjects/parser/pil_extended_format.py,sha256=mrf_xZOX8S40W2qyTHDNlg-4QY0T59j-LpqhYcGuMIE,4309
+dsdobjects/parser/pil_kernel_format.py,sha256=JiUSZlyx1NqfSqafIcus3J29DhQjrSO3MDwwCngehik,2950
+dsdobjects-0.5.1.dist-info/DESCRIPTION.rst,sha256=q9BX5fMZoBneTnq2UyiWg1cSfxqZi0Bdcobw4Q0Ain0,199
+dsdobjects-0.5.1.dist-info/METADATA,sha256=hIZVJlnQWzR7u4fEdspVBd_XkssPzlIbX1AXiyKs8lE,404
+dsdobjects-0.5.1.dist-info/RECORD,,
+dsdobjects-0.5.1.dist-info/WHEEL,sha256=bee59qcPjkyXfMaxNWjl2CGotqfumWx9pC1hlVLr2mM,92
+dsdobjects-0.5.1.dist-info/metadata.json,sha256=SQ3_vnq_mxXWts5Pe5yMpwNOE6nLJqYJQJpxQmv9Zs8,354
+dsdobjects-0.5.1.dist-info/top_level.txt,sha256=tVCRQeD5roce3iYHG6wWSQTqhmO84m5nm1J9Y7riJvs,11

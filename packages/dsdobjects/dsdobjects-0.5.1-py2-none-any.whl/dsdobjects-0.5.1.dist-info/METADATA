@@ -1,0 +1,20 @@
+Metadata-Version: 2.0
+Name: dsdobjects
+Version: 0.5.1
+Summary: base classes for DSD design
+Home-page: UNKNOWN
+Author: Stefan Badelt
+Author-email: badelt@caltech.edu
+License: MIT License
+Platform: UNKNOWN
+
+This module provides Python parent classes for 
+domain-level strand displacement programming:
+  - SequenceConstraint
+  - DL_Domain
+  - SL_Domain
+  - DSD_Complex
+  - DSD_Reaction
+  - DSD_RestingSet
+
+
