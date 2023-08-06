@@ -1,0 +1,10 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+codemetrics.py
+setup.py
+codemetrics.egg-info/PKG-INFO
+codemetrics.egg-info/SOURCES.txt
+codemetrics.egg-info/dependency_links.txt
+codemetrics.egg-info/entry_points.txt
+codemetrics.egg-info/top_level.txt
