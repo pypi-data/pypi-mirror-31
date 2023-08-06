@@ -1,0 +1,7 @@
+py-buzz
+flask
+
+[dev]
+flake8
+pytest
+sphinx
