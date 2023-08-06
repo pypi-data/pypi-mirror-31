@@ -1,0 +1,3 @@
+[console_scripts]
+damster = damster.cli:cli
+
