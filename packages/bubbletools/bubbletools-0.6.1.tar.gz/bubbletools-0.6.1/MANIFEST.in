@@ -1,0 +1,4 @@
+include LICENSE MANIFEST.in requirements.txt README.md
+prune bubbles
+prune output
+exclude Makefile
