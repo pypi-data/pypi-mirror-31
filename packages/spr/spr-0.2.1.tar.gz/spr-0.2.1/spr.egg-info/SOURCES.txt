@@ -1,0 +1,10 @@
+README.md
+requirements-dev.txt
+requirements.txt
+setup.py
+spr/__init__.py
+spr.egg-info/PKG-INFO
+spr.egg-info/SOURCES.txt
+spr.egg-info/dependency_links.txt
+spr.egg-info/requires.txt
+spr.egg-info/top_level.txt
