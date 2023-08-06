@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: FTPwalker
+Version: 0.4.5
+Summary: Optimally traversing extremely large FTP directory trees.
+Home-page: https://github.com/Bohdan-Khomtchouk/FTPwalker
+Author: Bohdan Khomtchouk and Kasra Vand
+Author-email: khomtchoukmed@gmail.com, kasraavand@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/Bohdan-Khomtchouk/FTPwalker/tarball/0.1
+Description: > **Warning**
+        
+        > This package is depricated. Instead use https://pypi.org/project/FTPflow/
+Keywords: FTP,traverse,directory tree,optimized
+Platform: UNKNOWN
