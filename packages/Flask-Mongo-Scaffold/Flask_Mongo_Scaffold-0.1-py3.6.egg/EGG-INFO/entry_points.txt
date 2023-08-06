@@ -1,0 +1,3 @@
+[console_scripts]
+flaask = flask_scaffold:main
+

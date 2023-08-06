@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: Flask-Mongo-Scaffold
+Version: 0.1
+Summary: A tool to generate a simple flask app using MongoDB
+Home-page: https://github.com/richin13/flask-scaffold
+Author: Ricardo Madriz
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/richin13/flask-scaffold/issues
+Project-URL: Source, https://github.com/richin13/flask-scaffold/issues
+Description: # Flask-Scaffold
+        
+        Simple tool to generate a brand new Flask application using MongoDB as data backend
+        
+        ## Installation
+        
+        Simply run:
+        
+        ```
+        $ pip install flask-mongo-scaffold
+        ```
+        
+        ## Usage
+        
+        To create a new app called blog do:
+        
+        ```
+        $ flaask new blog
+        ```
+        
+        ## Resulting app
+        
+        The resulting app is a simple Flask application that comes with:
+        
+         - MongoEngine to connect with a MongoDB database backend
+         - SemanticUI and JQuery
+        
+        Additionally, it creates a divisional structure using Flask's blueprints to separate the
+        front-end part of the application from the backend. It ships with the necessary files
+        to setup a simple API.
+        
+        ## License
+        
+        See LICENSE
+        
+        
+Keywords: flask scaffold mongodb development
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Framework :: Flask
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Code Generators
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
