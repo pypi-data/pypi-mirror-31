@@ -1,0 +1,1863 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>API Reference &mdash; alchemist_lib 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="alchemist_lib 0.1 documentation" href="index.html"/>
+        <link rel="next" title="License" href="license.html"/>
+        <link rel="prev" title="ExecutedOrder" href="database/executed_order.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> alchemist_lib
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install.html">Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Beginner Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="database/index.html">Database</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#trading-system">Trading system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#factor">Factor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#datafeed">Datafeed</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-alchemist_lib.datafeed">__init__</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ohlcv">ohlcv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#poloniexdatafeed">poloniexdatafeed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bittrexdatafeed">bittrexdatafeed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#broker">Broker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">broker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#poloniexbroker">poloniexbroker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bittrexbroker">bittrexbroker</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#portfolio">Portfolio</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">portfolio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#longsonly">longsonly</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#exchange">Exchange</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">exchange</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">__init__</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#poloniexexchange">poloniexexchange</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bittrexexchange">bittrexexchange</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#populate">Populate</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#saver">saver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">populate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">__init__</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#poloniexpopulate">poloniexpopulate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bittrexpopulate">bittrexpopulate</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">alchemist_lib</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>API Reference</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/api.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="api-reference">
+<h1>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="trading-system">
+<h2>Trading system<a class="headerlink" href="#trading-system" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="alchemist_lib.tradingsystem.TradingSystem">
+<em class="property">class </em><code class="descclassname">alchemist_lib.tradingsystem.</code><code class="descname">TradingSystem</code><span class="sig-paren">(</span><em>name</em>, <em>portfolio</em>, <em>set_weights</em>, <em>select_universe</em>, <em>handle_data</em>, <em>broker</em>, <em>paper_trading=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/tradingsystem.html#TradingSystem"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.tradingsystem.TradingSystem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Basic class for every trading system.
+The run method will start the live-trading.</p>
+<dl class="attribute">
+<dt id="TradingSystem.name">
+<code class="descname">name</code><a class="headerlink" href="#TradingSystem.name" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>str</em> &#8211; The name of the trading system.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="TradingSystem.portfolio">
+<code class="descname">portfolio</code><a class="headerlink" href="#TradingSystem.portfolio" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>alchemist_lib.portfolio.*</em> &#8211; An istance of a portfolio class.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="TradingSystem.broker">
+<code class="descname">broker</code><a class="headerlink" href="#TradingSystem.broker" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>alchemist_lib.broker.*</em> &#8211; An instance of a module in alchemist_lib.broker package.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="TradingSystem._set_weights">
+<code class="descname">_set_weights</code><a class="headerlink" href="#TradingSystem._set_weights" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>callable</em> &#8211; The function to set the weights of every asset in the portfolio.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="TradingSystem._select_universe">
+<code class="descname">_select_universe</code><a class="headerlink" href="#TradingSystem._select_universe" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>callable</em> &#8211; The function to select the universe of asset.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="TradingSystem._handle_data">
+<code class="descname">_handle_data</code><a class="headerlink" href="#TradingSystem._handle_data" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>callable</em> &#8211; The function to manage the trading logic.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="TradingSystem.paper_trading">
+<code class="descname">paper_trading</code><a class="headerlink" href="#TradingSystem.paper_trading" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>boolean</em> &#8211; If this arg is True no orders will be executed, they will be just printed and saved.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="TradingSystem.rebalance_time">
+<code class="descname">rebalance_time</code><a class="headerlink" href="#TradingSystem.rebalance_time" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>int</em> &#8211; Autoincrement number, used to manage the frequency of rebalancing.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="TradingSystem.session">
+<code class="descname">session</code><a class="headerlink" href="#TradingSystem.session" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>sqlalchemy.orm.session.Session</em> &#8211; Connection to the database.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.tradingsystem.TradingSystem.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>name</em>, <em>portfolio</em>, <em>set_weights</em>, <em>select_universe</em>, <em>handle_data</em>, <em>broker</em>, <em>paper_trading=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/tradingsystem.html#TradingSystem.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.tradingsystem.TradingSystem.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Costructor method.
+After setting the attributes it will register the trading system in the database.
+If an sqlalchemy.exc.IntegrityError is raised It will update all data mantaining the name (primary key).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; Name of the trading system.</li>
+<li><strong>portfolio</strong> (<em>alchemist_lib.portfolio.*</em>) &#8211; An istance of a portfolio class.</li>
+<li><strong>broker</strong> (<em>alchemist_lib.broker.*</em>) &#8211; An instance of a module in alchemist_lib.broker package.</li>
+<li><strong>set_weights</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#callable" title="(in Python v3.6)"><em>callable</em></a>) &#8211; The function to set the weights of every asset in the portfolio.</li>
+<li><strong>select_universe</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#callable" title="(in Python v3.6)"><em>callable</em></a>) &#8211; The function to select the universe of asset.</li>
+<li><strong>handle_data</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#callable" title="(in Python v3.6)"><em>callable</em></a>) &#8211; The function to manage the trading logic.</li>
+<li><strong>paper_trading</strong> (<em>boolean, optional</em>) &#8211; Specify if the trading system has to execute orders or just simulate.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.tradingsystem.TradingSystem.handle_data">
+<code class="descname">handle_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/tradingsystem.html#TradingSystem.handle_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.tradingsystem.TradingSystem.handle_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call the _handle_data callable attribute if it&#8217;s not None.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Return a dataframe with an alpha value for every asset. Empty if _handle_data is None.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">data (pandas.DataFrame)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.tradingsystem.TradingSystem.on_market_open">
+<code class="descname">on_market_open</code><span class="sig-paren">(</span><em>timeframe</em>, <em>frequency</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/tradingsystem.html#TradingSystem.on_market_open"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.tradingsystem.TradingSystem.on_market_open" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save new data and call the rebalance function.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>timeframe</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; The timeframe we want to collect informations about for every asset in the universe.</li>
+<li><strong>frequency</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#int" title="(in Python v3.6)"><em>int</em></a>) &#8211; Frequency of rebalancing.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.tradingsystem.TradingSystem.rebalance">
+<code class="descname">rebalance</code><span class="sig-paren">(</span><em>alphas</em>, <em>orders_type</em>, <em>frequency</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/tradingsystem.html#TradingSystem.rebalance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.tradingsystem.TradingSystem.rebalance" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method rebalance the portfolio based on the alphas parameters. It also update the current AUM value on the database.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>alphas</strong> (<em>pandas.DataFrame</em>) &#8211; A dataframe with the following columns:
+* asset (alchemist_lib.database.asset.Asset): Must be the index.
+* alpha (decimal.Decimal): The value that will be used to calculate the weight of the asset within the portfolio.</li>
+<li><strong>orders_type</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; Order type identifier.</li>
+<li><strong>frequency</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#int" title="(in Python v3.6)"><em>int</em></a>) &#8211; Frequency of rebalancing.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.tradingsystem.TradingSystem.run">
+<code class="descname">run</code><span class="sig-paren">(</span><em>delay</em>, <em>frequency</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/tradingsystem.html#TradingSystem.run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.tradingsystem.TradingSystem.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method manages the &#8220;event-driven&#8221; interface. Start every method at the right time.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>delay</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; Timeframe identifier. Every delay time the on_market_open is executed.</li>
+<li><strong>frequency</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#int" title="(in Python v3.6)"><em>int</em></a>) &#8211; Frequency of rebalancing.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.tradingsystem.TradingSystem.select_universe">
+<code class="descname">select_universe</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/tradingsystem.html#TradingSystem.select_universe"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.tradingsystem.TradingSystem.select_universe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call the _select_universe callable attribute if it&#8217;s not None.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Return a list of assets.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">universe (list[alchemist_lib.database.Asset.asset])</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.tradingsystem.TradingSystem.set_weights">
+<code class="descname">set_weights</code><span class="sig-paren">(</span><em>df</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/tradingsystem.html#TradingSystem.set_weights"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.tradingsystem.TradingSystem.set_weights" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call the _set_weights callable attribute if it&#8217;s not None.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>df</strong> (<em>pandas.DataFrame</em>) &#8211; The alpha dataframe setted in handle_data().</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Return a dataframe with a weight for every asset. Empty if _set_weights is None.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">weights (pandas.DataFrame)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="factor">
+<h2>Factor<a class="headerlink" href="#factor" title="Permalink to this headline">¶</a></h2>
+<p>Factor autoclass</p>
+</div>
+<div class="section" id="datafeed">
+<h2>Datafeed<a class="headerlink" href="#datafeed" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-alchemist_lib.datafeed">
+<span id="init"></span><h3>__init__<a class="headerlink" href="#module-alchemist_lib.datafeed" title="Permalink to this headline">¶</a></h3>
+<dl class="function">
+<dt id="alchemist_lib.datafeed.get_data_sources_dict">
+<code class="descclassname">alchemist_lib.datafeed.</code><code class="descname">get_data_sources_dict</code><span class="sig-paren">(</span><em>session</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/datafeed.html#get_data_sources_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.datafeed.get_data_sources_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remember to change this method every time you add a module.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>session</strong> (<em>sqlalchemy.orm.session.Session</em>) &#8211; Connection to the database.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Return a dictionary. The key must be the name of the data source in the database and the value must be an instance of the module charged to collect data.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">dsd (dict)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="alchemist_lib.datafeed.get_last_price">
+<code class="descclassname">alchemist_lib.datafeed.</code><code class="descname">get_last_price</code><span class="sig-paren">(</span><em>assets</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/datafeed.html#get_last_price"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.datafeed.get_last_price" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the last trade price for every asset.
+The last price is retrived based on <code class="docutils literal"><span class="pre">alchemist_lib.datafeed.get_data_sources_dict()</span></code> method.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>assets</strong> (<em>alchemist_lib.database.asset.Asset, list[Asset]</em>) &#8211; List of assets which we want last traded price of.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="docutils">
+<dt>A dataframe with the following columns:</dt>
+<dd><ul class="first last simple">
+<li>asset (alchemist_lib.database.asset.Asset): Must be the index.</li>
+<li>last_price (decimal.Decimal): The last price of the associated asset.</li>
+</ul>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">df (pandas.DataFrame)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="alchemist_lib.datafeed.save_ohlcv">
+<code class="descclassname">alchemist_lib.datafeed.</code><code class="descname">save_ohlcv</code><span class="sig-paren">(</span><em>session</em>, <em>assets</em>, <em>start_date</em>, <em>timeframe</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/datafeed.html#save_ohlcv"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.datafeed.save_ohlcv" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method collects and saves OHLCV data from the specified data source.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>session</strong> (<em>sqlalchemy.orm.session.Session</em>) &#8211; Database connection.</li>
+<li><strong>assets</strong> (<em>alchemist_lib.database.asset.Asset, list[Asset]</em>) &#8211; List of assets which we want informations of.</li>
+<li><strong>start_date</strong> (<a class="reference external" href="https://docs.python.org/library/datetime.html#datetime.datetime" title="(in Python v3.6)"><em>datetime.datetime</em></a>) &#8211; Datetime to start collecting data from.</li>
+<li><strong>timeframe</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; Timeframe identifier.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="alchemist_lib.datafeed.save_last_ohlcv">
+<code class="descclassname">alchemist_lib.datafeed.</code><code class="descname">save_last_ohlcv</code><span class="sig-paren">(</span><em>session</em>, <em>assets</em>, <em>timeframe</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/datafeed.html#save_last_ohlcv"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.datafeed.save_last_ohlcv" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method collects and saves the last OHLCV candle from the specified data source.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>assets</strong> (<em>alchemist_lib.database.asset.Asset, list[Asset]</em>) &#8211; List of assets which we want informations of.</li>
+<li><strong>timeframe</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; Timeframe identifier.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="ohlcv">
+<h3>ohlcv<a class="headerlink" href="#ohlcv" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="alchemist_lib.datafeed.ohlcv.OhlcvBaseClass">
+<em class="property">class </em><code class="descclassname">alchemist_lib.datafeed.ohlcv.</code><code class="descname">OhlcvBaseClass</code><span class="sig-paren">(</span><em>session</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/datafeed/ohlcv.html#OhlcvBaseClass"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.datafeed.ohlcv.OhlcvBaseClass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Abstract class used by modules that manage OHLCV data.</p>
+<dl class="docutils">
+<dt>Abstract methods:</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>get_last_price(assets): It has to return a dataframe (pandas.DataFrame) with the following columns:</dt>
+<dd><ul class="first last simple">
+<li>asset (alchemist_lib.database.asset.Asset): Must be the index.</li>
+<li>last_price (decimal.Decimal): The last price of the associated asset.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">get_ohlcv(assets, start_date, end_date, timeframe): It has to return a list of Ohlcv (alchemist_lib.database.ohlcv.Ohlcv).</p>
+</li>
+</ul>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="alchemist_lib.datafeed.OhlcvBaseClass.session">
+<code class="descname">session</code><a class="headerlink" href="#alchemist_lib.datafeed.OhlcvBaseClass.session" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>sqlalchemy.orm.session.Session</em> &#8211; Database connection.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.datafeed.ohlcv.OhlcvBaseClass.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>session</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/datafeed/ohlcv.html#OhlcvBaseClass.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.datafeed.ohlcv.OhlcvBaseClass.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Costructor method.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>session</strong> (<em>sqlalchemy.orm.session.Session</em>) &#8211; Connection to the database.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.datafeed.ohlcv.OhlcvBaseClass._save">
+<code class="descname">_save</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/datafeed/ohlcv.html#OhlcvBaseClass._save"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.datafeed.ohlcv.OhlcvBaseClass._save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save records in the database.</p>
+<p>This method doesn&#8217;t use <code class="docutils literal"><span class="pre">self.session.add_all(data)</span></code> because some objects
+could raise sqlalchemy.exc.IntegrityError and so nothing will be saved.
+Save an object per time allow us to pass away IntegrityError.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> (<em>list[obj]</em>) &#8211; List of map class instances.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.datafeed.ohlcv.OhlcvBaseClass.get_last_ohlcv">
+<code class="descname">get_last_ohlcv</code><span class="sig-paren">(</span><em>assets</em>, <em>timeframe</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/datafeed/ohlcv.html#OhlcvBaseClass.get_last_ohlcv"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.datafeed.ohlcv.OhlcvBaseClass.get_last_ohlcv" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method collects the last OHLCV candle from the data source.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>assets</strong> (<em>alchemist_lib.database.asset.Asset, list[Asset]</em>) &#8211; List of assets which we want informations of.</li>
+<li><strong>timeframe</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; Timeframe identifier.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">List of ohlcv data.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">candles (list[alchemist_lib.database.ohlcv.Ohlcv])</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.datafeed.ohlcv.OhlcvBaseClass.save_last_ohlcv">
+<code class="descname">save_last_ohlcv</code><span class="sig-paren">(</span><em>assets</em>, <em>timeframe</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/datafeed/ohlcv.html#OhlcvBaseClass.save_last_ohlcv"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.datafeed.ohlcv.OhlcvBaseClass.save_last_ohlcv" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method collects and saves last OHLCV candle from the data source.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>assets</strong> (<em>alchemist_lib.database.asset.Asset, list[Asset]</em>) &#8211; List of assets which we want informations of.</li>
+<li><strong>timeframe</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; Timeframe identifier.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.datafeed.ohlcv.OhlcvBaseClass.save_ohlcv">
+<code class="descname">save_ohlcv</code><span class="sig-paren">(</span><em>assets</em>, <em>start_date</em>, <em>timeframe</em>, <em>end_date=datetime.datetime(2018</em>, <em>4</em>, <em>12</em>, <em>17</em>, <em>34</em>, <em>9</em>, <em>81402)</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/datafeed/ohlcv.html#OhlcvBaseClass.save_ohlcv"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.datafeed.ohlcv.OhlcvBaseClass.save_ohlcv" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method collects and saves OHLCV data from the data source.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>assets</strong> (<em>alchemist_lib.database.asset.Asset, list[Asset]</em>) &#8211; List of assets which we want informations of.</li>
+<li><strong>start_date</strong> (<a class="reference external" href="https://docs.python.org/library/datetime.html#datetime.datetime" title="(in Python v3.6)"><em>datetime.datetime</em></a>) &#8211; Datetime to start collecting data from.</li>
+<li><strong>end_date</strong> (<em>datetime.datetime, optional</em>) &#8211; Datetime to end collecting data from. Default is utcnow().</li>
+<li><strong>timeframe</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; Timeframe identifier.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="poloniexdatafeed">
+<h3>poloniexdatafeed<a class="headerlink" href="#poloniexdatafeed" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="alchemist_lib.datafeed.poloniexdatafeed.PoloniexDataFeed">
+<em class="property">class </em><code class="descclassname">alchemist_lib.datafeed.poloniexdatafeed.</code><code class="descname">PoloniexDataFeed</code><span class="sig-paren">(</span><em>session</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/datafeed/poloniexdatafeed.html#PoloniexDataFeed"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.datafeed.poloniexdatafeed.PoloniexDataFeed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class that manages data collecting from Poloniex.
+Inherits from alchemist_lib.datafeed.ohlcv.OhlcvBaseClass.</p>
+<p>Website: <a class="reference external" href="https://poloniex.com/">https://poloniex.com/</a></p>
+<p>Api documentation: <a class="reference external" href="https://poloniex.com/support/api/">https://poloniex.com/support/api/</a></p>
+<p>Api wrapper: <a class="reference external" href="https://github.com/s4w3d0ff/python-poloniex">https://github.com/s4w3d0ff/python-poloniex</a></p>
+<dl class="attribute">
+<dt id="alchemist_lib.datafeed.PoloniexDataFeed.session">
+<code class="descname">session</code><a class="headerlink" href="#alchemist_lib.datafeed.PoloniexDataFeed.session" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>sqlalchemy.orm.session.Session</em> &#8211; Database connection.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="alchemist_lib.datafeed.PoloniexDataFeed.polo">
+<code class="descname">polo</code><a class="headerlink" href="#alchemist_lib.datafeed.PoloniexDataFeed.polo" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>poloniex.Poloniex</em> &#8211; Communication object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.datafeed.poloniexdatafeed.PoloniexDataFeed.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>session</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/datafeed/poloniexdatafeed.html#PoloniexDataFeed.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.datafeed.poloniexdatafeed.PoloniexDataFeed.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Costructor method.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>session</strong> (<em>sqlalchemy.orm.session.Session</em>) &#8211; Connection to the database.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.datafeed.poloniexdatafeed.PoloniexDataFeed.get_assets">
+<code class="descname">get_assets</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/datafeed/poloniexdatafeed.html#PoloniexDataFeed.get_assets"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.datafeed.poloniexdatafeed.PoloniexDataFeed.get_assets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the list of asset traded.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">List of assets.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">assets (list[alchemist_lib.database.asset.Asset])</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Return only pairs with bitcoin as base currency.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.datafeed.poloniexdatafeed.PoloniexDataFeed.get_last_price">
+<code class="descname">get_last_price</code><span class="sig-paren">(</span><em>assets</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/datafeed/poloniexdatafeed.html#PoloniexDataFeed.get_last_price"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.datafeed.poloniexdatafeed.PoloniexDataFeed.get_last_price" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve last price of the list of assets.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>assets</strong> (<em>alchemist_lib.database.asset.Asset, list[Asset]</em>) &#8211; List of assets which we want the last trade price of.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="docutils">
+<dt>A dataframe with the following columns:</dt>
+<dd><ul class="first last simple">
+<li>asset (alchemist_lib.database.asset.Asset): Must be the index.</li>
+<li>last_price (decimal.Decimal): The last price of the associated asset.</li>
+</ul>
+</dd>
+</dl>
+<p>If some prices are not retrieved the last_price attribute will be 0.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">df (pandas.DataFrame)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.datafeed.poloniexdatafeed.PoloniexDataFeed.get_ohlcv">
+<code class="descname">get_ohlcv</code><span class="sig-paren">(</span><em>assets</em>, <em>start_date</em>, <em>timeframe</em>, <em>end_date=datetime.datetime(2018</em>, <em>4</em>, <em>12</em>, <em>17</em>, <em>34</em>, <em>25</em>, <em>251506)</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/datafeed/poloniexdatafeed.html#PoloniexDataFeed.get_ohlcv"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.datafeed.poloniexdatafeed.PoloniexDataFeed.get_ohlcv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Collect ohlcv data from start_date to end_date for every asset.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>assets</strong> (<em>list[alchemist_lib.database.asset.Asset]</em>) &#8211; List of assets.</li>
+<li><strong>start_date</strong> (<a class="reference external" href="https://docs.python.org/library/datetime.html#datetime.datetime" title="(in Python v3.6)"><em>datetime.datetime</em></a>) &#8211; Datetime to start collecting data from.</li>
+<li><strong>end_date</strong> (<em>datetime.datetime, optional</em>) &#8211; Datetime to end collecting data from. Default is utcnow().</li>
+<li><strong>timeframe</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; Timeframe identifier.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">List of ohlcv data.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">candles (list[alchemist_lib.database.ohlcv.Ohlcv])</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="bittrexdatafeed">
+<h3>bittrexdatafeed<a class="headerlink" href="#bittrexdatafeed" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="alchemist_lib.datafeed.bittrexdatafeed.BittrexDataFeed">
+<em class="property">class </em><code class="descclassname">alchemist_lib.datafeed.bittrexdatafeed.</code><code class="descname">BittrexDataFeed</code><span class="sig-paren">(</span><em>session</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/datafeed/bittrexdatafeed.html#BittrexDataFeed"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.datafeed.bittrexdatafeed.BittrexDataFeed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class that manages data collecting from Bittrex.
+Inherits from alchemist_lib.datafeed.ohlcv.OhlcvBaseClass.</p>
+<p>Website: <a class="reference external" href="https://bittrex.com/">https://bittrex.com/</a></p>
+<p>Api documentation: <a class="reference external" href="https://bittrex.com/Home/Api">https://bittrex.com/Home/Api</a></p>
+<p>Api wrapper: <a class="reference external" href="https://github.com/ericsomdahl/python-bittrex">https://github.com/ericsomdahl/python-bittrex</a></p>
+<dl class="attribute">
+<dt id="alchemist_lib.datafeed.BittrexDataFeed.session">
+<code class="descname">session</code><a class="headerlink" href="#alchemist_lib.datafeed.BittrexDataFeed.session" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>sqlalchemy.orm.session.Session</em> &#8211; Database connection.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="alchemist_lib.datafeed.BittrexDataFeed.bittrex">
+<code class="descname">bittrex</code><a class="headerlink" href="#alchemist_lib.datafeed.BittrexDataFeed.bittrex" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>bittrex.bittrex.Bittrex</em> &#8211; Communication object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.datafeed.bittrexdatafeed.BittrexDataFeed.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>session</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/datafeed/bittrexdatafeed.html#BittrexDataFeed.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.datafeed.bittrexdatafeed.BittrexDataFeed.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Costructor method.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>session</strong> (<em>sqlalchemy.orm.session.Session</em>) &#8211; Connection to the database.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.datafeed.bittrexdatafeed.BittrexDataFeed.get_assets">
+<code class="descname">get_assets</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/datafeed/bittrexdatafeed.html#BittrexDataFeed.get_assets"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.datafeed.bittrexdatafeed.BittrexDataFeed.get_assets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the list of asset traded.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">List of assets.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">assets (list[alchemist_lib.database.asset.Asset])</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Return only pairs with bitcoin as base currency.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.datafeed.bittrexdatafeed.BittrexDataFeed.get_last_price">
+<code class="descname">get_last_price</code><span class="sig-paren">(</span><em>assets</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/datafeed/bittrexdatafeed.html#BittrexDataFeed.get_last_price"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.datafeed.bittrexdatafeed.BittrexDataFeed.get_last_price" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve last price of the list of assets passed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>assets</strong> (<em>alchemist_lib.database.asset.Asset, list[Asset]</em>) &#8211; List of assets which we want the last trade price of.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="docutils">
+<dt>A dataframe with the following columns:</dt>
+<dd><ul class="first last simple">
+<li>asset (alchemist_lib.database.asset.Asset): Must be the index.</li>
+<li>last_price (decimal.Decimal): The last price of the associated asset.</li>
+</ul>
+</dd>
+</dl>
+<p>If some prices are not retrieved the last_price attribute will be 0.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">df (pandas.DataFrame)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.datafeed.bittrexdatafeed.BittrexDataFeed.get_ohlcv">
+<code class="descname">get_ohlcv</code><span class="sig-paren">(</span><em>assets</em>, <em>start_date</em>, <em>timeframe</em>, <em>end_date=datetime.datetime(2018</em>, <em>4</em>, <em>12</em>, <em>17</em>, <em>34</em>, <em>26</em>, <em>176169)</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/datafeed/bittrexdatafeed.html#BittrexDataFeed.get_ohlcv"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.datafeed.bittrexdatafeed.BittrexDataFeed.get_ohlcv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Collect ohlcv data from start_date to end_date for every asset.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>assets</strong> (<em>list[alchemist_lib.database.asset.Asset]</em>) &#8211; List of assets.</li>
+<li><strong>start_date</strong> (<a class="reference external" href="https://docs.python.org/library/datetime.html#datetime.datetime" title="(in Python v3.6)"><em>datetime.datetime</em></a>) &#8211; Datetime to start collecting data from.</li>
+<li><strong>end_date</strong> (<em>datetime.datetime, optional</em>) &#8211; Datetime to end collecting data from. Default is utcnow().</li>
+<li><strong>timeframe</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; Timeframe identifier.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">List of ohlcv data.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">candles (list[alchemist_lib.database.ohlcv.Ohlcv])</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="broker">
+<h2>Broker<a class="headerlink" href="#broker" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>broker<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="alchemist_lib.broker.broker.BrokerBaseClass">
+<em class="property">class </em><code class="descclassname">alchemist_lib.broker.broker.</code><code class="descname">BrokerBaseClass</code><a class="reference internal" href="_modules/alchemist_lib/broker/broker.html#BrokerBaseClass"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.broker.broker.BrokerBaseClass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Abstract class used by broker modules.</p>
+<dl class="docutils">
+<dt>Abstract methods:</dt>
+<dd><ul class="first last simple">
+<li>place_order(allocs, amount, operation, order_type): It has to place an order based on the parameters.</li>
+</ul>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="alchemist_lib.datafeed.BrokerBaseClass.session">
+<code class="descname">session</code><a class="headerlink" href="#alchemist_lib.datafeed.BrokerBaseClass.session" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>sqlalchemy.orm.session.Session</em> &#8211; Database connection. Default is None.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.broker.broker.BrokerBaseClass.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/broker/broker.html#BrokerBaseClass.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.broker.broker.BrokerBaseClass.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Costructor method.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.broker.broker.BrokerBaseClass.execute">
+<code class="descname">execute</code><span class="sig-paren">(</span><em>allocs</em>, <em>ts_name</em>, <em>curr_ptf</em>, <em>orders_type='MKT'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/broker/broker.html#BrokerBaseClass.execute"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.broker.broker.BrokerBaseClass.execute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to execute orders for all portfolio. Before the SELL orders and after the BUY orders in order to have enought liquidity.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>allocs</strong> (<em>list[alchemist_lib.database.ptf_allocation.PtfAllocation]</em>) &#8211; List of allocations to execute on the market.</li>
+<li><strong>orders_type</strong> (<em>str, optional</em>) &#8211; Type of order. Default is MKT.</li>
+<li><strong>ts_name</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; Name of the trading system.</li>
+<li><strong>curr_ptf</strong> (<em>list[alchemist_lib.database.ptf_allocation.PtfAllocation]</em>) &#8211; List of allocations currently in the portfolio.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.broker.broker.BrokerBaseClass.set_session">
+<code class="descname">set_session</code><span class="sig-paren">(</span><em>session</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/broker/broker.html#BrokerBaseClass.set_session"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.broker.broker.BrokerBaseClass.set_session" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setter method.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>session</strong> (<em>sqlalchemy.orm.session.Session</em>) &#8211; Database connection.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="poloniexbroker">
+<h3>poloniexbroker<a class="headerlink" href="#poloniexbroker" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="alchemist_lib.broker.poloniexbroker.PoloniexBroker">
+<em class="property">class </em><code class="descclassname">alchemist_lib.broker.poloniexbroker.</code><code class="descname">PoloniexBroker</code><span class="sig-paren">(</span><em>api_key=None</em>, <em>secret_key=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/broker/poloniexbroker.html#PoloniexBroker"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.broker.poloniexbroker.PoloniexBroker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inherits from alchemist_lib.broker.broker.BrokerBaseClass.</p>
+<p>Website: <a class="reference external" href="https://poloniex.com/">https://poloniex.com/</a></p>
+<p>Api documentation: <a class="reference external" href="https://poloniex.com/support/api/">https://poloniex.com/support/api/</a></p>
+<p>Api wrapper: <a class="reference external" href="https://github.com/s4w3d0ff/python-poloniex">https://github.com/s4w3d0ff/python-poloniex</a></p>
+<dl class="attribute">
+<dt id="alchemist_lib.datafeed.PoloniexBroker.session">
+<code class="descname">session</code><a class="headerlink" href="#alchemist_lib.datafeed.PoloniexBroker.session" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>sqlalchemy.orm.session.Session</em> &#8211; Database connection.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="alchemist_lib.datafeed.PoloniexBroker.polo">
+<code class="descname">polo</code><a class="headerlink" href="#alchemist_lib.datafeed.PoloniexBroker.polo" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>poloniex.Poloniex</em> &#8211; Communication object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.broker.poloniexbroker.PoloniexBroker.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>api_key=None</em>, <em>secret_key=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/broker/poloniexbroker.html#PoloniexBroker.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.broker.poloniexbroker.PoloniexBroker.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Costructor method.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>api_key</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; The api key provided by Poloniex.</li>
+<li><strong>secret_key</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; The secret key provided by Poloniex.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><a class="reference external" href="https://poloniex.com/apiKeys">https://poloniex.com/apiKeys</a>
+<a class="reference external" href="https://cryptocatbot.com/api-key-activation-exchanges/">https://cryptocatbot.com/api-key-activation-exchanges/</a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.broker.poloniexbroker.PoloniexBroker.place_order">
+<code class="descname">place_order</code><span class="sig-paren">(</span><em>asset</em>, <em>amount</em>, <em>order_type</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/broker/poloniexbroker.html#PoloniexBroker.place_order"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.broker.poloniexbroker.PoloniexBroker.place_order" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to place an order.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>asset</strong> (<em>alchemist_lib.database.asset.Asset</em>) &#8211; The asset we want exchange for BTC.</li>
+<li><strong>amount</strong> (<a class="reference external" href="https://docs.python.org/library/decimal.html#decimal.Decimal" title="(in Python v3.6)"><em>decimal.Decimal</em></a>) &#8211; The amount we want to exchange.</li>
+<li><strong>order_type</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; Type of order.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The order identifier, if some error occurs returns -1.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">order_id (int)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="bittrexbroker">
+<h3>bittrexbroker<a class="headerlink" href="#bittrexbroker" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="alchemist_lib.broker.bittrexbroker.BittrexBroker">
+<em class="property">class </em><code class="descclassname">alchemist_lib.broker.bittrexbroker.</code><code class="descname">BittrexBroker</code><span class="sig-paren">(</span><em>api_key=None</em>, <em>secret_key=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/broker/bittrexbroker.html#BittrexBroker"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.broker.bittrexbroker.BittrexBroker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inherits from alchemist_lib.broker.broker.BrokerBaseClass.</p>
+<p>Website: <a class="reference external" href="https://bittrex.com/">https://bittrex.com/</a></p>
+<p>Api documentation: <a class="reference external" href="https://bittrex.com/Home/Api">https://bittrex.com/Home/Api</a></p>
+<p>Api wrapper: <a class="reference external" href="https://github.com/ericsomdahl/python-bittrex">https://github.com/ericsomdahl/python-bittrex</a></p>
+<dl class="attribute">
+<dt id="alchemist_lib.datafeed.BittrexBroker.session">
+<code class="descname">session</code><a class="headerlink" href="#alchemist_lib.datafeed.BittrexBroker.session" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>sqlalchemy.orm.session.Session</em> &#8211; Database connection.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="alchemist_lib.datafeed.BittrexBroker.bittrex">
+<code class="descname">bittrex</code><a class="headerlink" href="#alchemist_lib.datafeed.BittrexBroker.bittrex" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>bittrex.bittrex.Bittrex</em> &#8211; Communication object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.broker.bittrexbroker.BittrexBroker.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>api_key=None</em>, <em>secret_key=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/broker/bittrexbroker.html#BittrexBroker.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.broker.bittrexbroker.BittrexBroker.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Costructor method.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>api_key</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; The api key provided by Bittrex.</li>
+<li><strong>secret_key</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; The secret key provided by Bittrex.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><a class="reference external" href="https://bittrex.com/Manage#sectionApi">https://bittrex.com/Manage#sectionApi</a>
+<a class="reference external" href="https://cryptocatbot.com/api-key-activation-exchanges/">https://cryptocatbot.com/api-key-activation-exchanges/</a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.broker.bittrexbroker.BittrexBroker.place_order">
+<code class="descname">place_order</code><span class="sig-paren">(</span><em>asset</em>, <em>amount</em>, <em>order_type</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/broker/bittrexbroker.html#BittrexBroker.place_order"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.broker.bittrexbroker.BittrexBroker.place_order" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to place an order.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>asset</strong> (<em>alchemist_lib.database.asset.Asset</em>) &#8211; The asset we want exchange for BTC.</li>
+<li><strong>amount</strong> (<a class="reference external" href="https://docs.python.org/library/decimal.html#decimal.Decimal" title="(in Python v3.6)"><em>decimal.Decimal</em></a>) &#8211; The amount we want to exchange.</li>
+<li><strong>order_type</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; Type of order.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The order identifier, if some error occurs returns int(-1).</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">order_id (str, int)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="portfolio">
+<h2>Portfolio<a class="headerlink" href="#portfolio" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>portfolio<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="alchemist_lib.portfolio.portfolio.PortfolioBaseClass">
+<em class="property">class </em><code class="descclassname">alchemist_lib.portfolio.portfolio.</code><code class="descname">PortfolioBaseClass</code><span class="sig-paren">(</span><em>capital</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/portfolio/portfolio.html#PortfolioBaseClass"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.portfolio.portfolio.PortfolioBaseClass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Abstract class used by modules that manage the portfolio costructor.</p>
+<dl class="docutils">
+<dt>Abstract methods:</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>normalize_weights(df): It has to return a dataframe (pandas.DataFrame) with the following columns:</dt>
+<dd><ul class="first last simple">
+<li>asset (alchemist_lib.database.asset.Asset): Must be the index.</li>
+<li>weight (decimal.Decimal): The weight of the specified asset in the portfolio. The sum of all weights in the dataframe must be near 100 (or 1).</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">set_allocation(session, name, df): It has to return a list of allocations (alchemist_lib.database.ptf_allocation.PtfAllocation) based on the type of portfolio you want.</p>
+</li>
+</ul>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="alchemist_lib.datafeed.PortfolioBaseClass.capital">
+<code class="descname">capital</code><a class="headerlink" href="#alchemist_lib.datafeed.PortfolioBaseClass.capital" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>decimal.Decimal</em> &#8211; Capital allocated for the portfolio.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.portfolio.portfolio.PortfolioBaseClass.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>capital</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/portfolio/portfolio.html#PortfolioBaseClass.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.portfolio.portfolio.PortfolioBaseClass.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Costructor method.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>capital</strong> (<em>int, float, str, decimal.Decimal</em>) &#8211; Capital allocated for the portfolio.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.portfolio.portfolio.PortfolioBaseClass.load_ptf">
+<code class="descname">load_ptf</code><span class="sig-paren">(</span><em>session</em>, <em>name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/portfolio/portfolio.html#PortfolioBaseClass.load_ptf"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.portfolio.portfolio.PortfolioBaseClass.load_ptf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load the current portfolio from the database.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>session</strong> (<em>sqlalchemy.orm.session.Session</em>) &#8211; Database connection.</li>
+<li><strong>name</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; Name of the trading system which manages the portfolio.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">List of allocations of the specified trading system.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">allocs (list[PtfAllocation])</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.portfolio.portfolio.PortfolioBaseClass.rebalance">
+<code class="descname">rebalance</code><span class="sig-paren">(</span><em>curr_ptf</em>, <em>target_ptf</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/portfolio/portfolio.html#PortfolioBaseClass.rebalance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.portfolio.portfolio.PortfolioBaseClass.rebalance" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns a list of PtfAllocation (alchemist_lib.database.ptf_allocation.PtfAllocation) that will be executed in order to mantain the portfolio rebalanced.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>curr_ptf</strong> (<em>alchemist_lib.database.ptf_allocation.PtfAllocation, list[PtfAllocation]</em>) &#8211; Current portfolio, loaded from the database.</li>
+<li><strong>target_ptf</strong> (<em>alchemist_lib.database.ptf_allocation.PtfAllocation, list[PtfAllocation]</em>) &#8211; Ideal portfolio.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">List of PtfAllocation to execute in order to get the ideal portfolio.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">new_ptf (list[alchemist_lib.database.ptf_allocation.PtfAllocation])</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="longsonly">
+<h3>longsonly<a class="headerlink" href="#longsonly" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="alchemist_lib.portfolio.longsonly.LongsOnlyPortfolio">
+<em class="property">class </em><code class="descclassname">alchemist_lib.portfolio.longsonly.</code><code class="descname">LongsOnlyPortfolio</code><span class="sig-paren">(</span><em>capital</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/portfolio/longsonly.html#LongsOnlyPortfolio"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.portfolio.longsonly.LongsOnlyPortfolio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class that manages the creation of a portfolio of longs-only positions.
+Inherits from alchemist_lib.portfolio.portfolio.PortfolioBaseClass.</p>
+<dl class="attribute">
+<dt id="alchemist_lib.datafeed.LongsOnlyPortfolio.capital">
+<code class="descname">capital</code><a class="headerlink" href="#alchemist_lib.datafeed.LongsOnlyPortfolio.capital" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>decimal.Decimal</em> &#8211; Capital allocated for the portfolio.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.portfolio.longsonly.LongsOnlyPortfolio.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>capital</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/portfolio/longsonly.html#LongsOnlyPortfolio.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.portfolio.longsonly.LongsOnlyPortfolio.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Costructor method.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>capital</strong> (<em>int, float, str, decimal.Decimal</em>) &#8211; Capital allocated for the portfolio.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.portfolio.longsonly.LongsOnlyPortfolio.set_allocation">
+<code class="descname">set_allocation</code><span class="sig-paren">(</span><em>session</em>, <em>name</em>, <em>df</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/portfolio/longsonly.html#LongsOnlyPortfolio.set_allocation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.portfolio.longsonly.LongsOnlyPortfolio.set_allocation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list of allocations (alchemist_lib.database.ptf_allocation.PtfAllocation) based on the weight of every asset.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>session</strong> (<em>sqlalchemy.orm.session.Session</em>) &#8211; Connection to the database.</li>
+<li><strong>name</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; Name of the trading system.</li>
+<li><strong>df</strong> (<em>pandas.DataFrame</em>) &#8211; A dataframe with the following columns:
+* asset (alchemist_lib.database.asset.Asset): Must be the index.
+* weight (decimal.Decimal): The weight of the specified asset in the portfolio. The sum of all weights in the dataframe must be near 1.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">List of allocations (ideal portfolio).</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">allocs (list[PtfAllocation])</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="exchange">
+<h2>Exchange<a class="headerlink" href="#exchange" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h3>exchange<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="alchemist_lib.exchange.exchange.ExchangeBaseClass">
+<em class="property">class </em><code class="descclassname">alchemist_lib.exchange.exchange.</code><code class="descname">ExchangeBaseClass</code><a class="reference internal" href="_modules/alchemist_lib/exchange/exchange.html#ExchangeBaseClass"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.exchange.exchange.ExchangeBaseClass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Abstract class for every exchange class.</p>
+<dl class="docutils">
+<dt>Abstract methods:</dt>
+<dd><ul class="first last simple">
+<li>are_tradable(assets): It has to filter the args and returns just assets that are tradable.</li>
+<li>get_min_trade_size(asset): It has to returns the minimum order size based on the specified market.</li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="alchemist_lib.exchange.exchange.ExchangeBaseClass.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/exchange/exchange.html#ExchangeBaseClass.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.exchange.exchange.ExchangeBaseClass.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Costructor method. (no attributes, no args)</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="id4">
+<h3>__init__<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<span class="target" id="module-alchemist_lib.exchange"></span><dl class="function">
+<dt id="alchemist_lib.exchange.get_exchanges_dict">
+<code class="descclassname">alchemist_lib.exchange.</code><code class="descname">get_exchanges_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/exchange.html#get_exchanges_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.exchange.get_exchanges_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remember to change this method every time you add a module.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Return a dictionary. The key must be the name of the exchange in the database and the value must be an instance of the module charged to collect data.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dsd (dict)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="alchemist_lib.exchange.are_tradable">
+<code class="descclassname">alchemist_lib.exchange.</code><code class="descname">are_tradable</code><span class="sig-paren">(</span><em>assets</em>, <em>exchange_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/exchange.html#are_tradable"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.exchange.are_tradable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove not tradable asset from the list passed as argument.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>assets</strong> (<em>alchemist_lib.database.asset.Asset, list[Asset]</em>) &#8211; List of assets to filter.</li>
+<li><strong>exchange_name</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; The name of the exchange as is saved in the database.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Return the same list of assets passed without not tradable assets. If exchange_name is not correct the return is an empty string.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">universe (list[Asset])</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="alchemist_lib.exchange.get_assets">
+<code class="descclassname">alchemist_lib.exchange.</code><code class="descname">get_assets</code><span class="sig-paren">(</span><em>session</em>, <em>exchange_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/exchange.html#get_assets"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.exchange.get_assets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all assets traded in a specified exchange.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>session</strong> (<em>sqlalchemy.orm.session.Session</em>) &#8211; Database connection.</li>
+<li><strong>exchange_name</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; Name of the exchange.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">List of Asset instances.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">universe (list[alchemist_lib.database.asset.Asset])</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="poloniexexchange">
+<h3>poloniexexchange<a class="headerlink" href="#poloniexexchange" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="alchemist_lib.exchange.poloniexexchange.PoloniexExchange">
+<em class="property">class </em><code class="descclassname">alchemist_lib.exchange.poloniexexchange.</code><code class="descname">PoloniexExchange</code><a class="reference internal" href="_modules/alchemist_lib/exchange/poloniexexchange.html#PoloniexExchange"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.exchange.poloniexexchange.PoloniexExchange" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class that manages Poloniex metadata.
+Inherits from alchemist_lib.exchange.exchange.ExchangeBaseClass.</p>
+<p>Website: <a class="reference external" href="https://poloniex.com/">https://poloniex.com/</a></p>
+<p>Api documentation: <a class="reference external" href="https://poloniex.com/support/api/">https://poloniex.com/support/api/</a></p>
+<p>Api wrapper: <a class="reference external" href="https://github.com/s4w3d0ff/python-poloniex">https://github.com/s4w3d0ff/python-poloniex</a></p>
+<dl class="attribute">
+<dt id="alchemist_lib.exchange.PoloniexExchange.polo">
+<code class="descname">polo</code><a class="headerlink" href="#alchemist_lib.exchange.PoloniexExchange.polo" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>poloniex.Poloniex</em> &#8211; Communication object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.exchange.poloniexexchange.PoloniexExchange.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/exchange/poloniexexchange.html#PoloniexExchange.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.exchange.poloniexexchange.PoloniexExchange.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Costructor method.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.exchange.poloniexexchange.PoloniexExchange.are_tradable">
+<code class="descname">are_tradable</code><span class="sig-paren">(</span><em>assets</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/exchange/poloniexexchange.html#PoloniexExchange.are_tradable"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.exchange.poloniexexchange.PoloniexExchange.are_tradable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Filter tradable assets.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>assets</strong> (<em>alchemist_lib.database.asset.Asset, list[Asset]</em>) &#8211; List of assets to check.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Return all tradable asset (remove not tradable assets from the arg).</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">tradable (list[Asset])</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Check just pairs with BTC as base currency.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.exchange.poloniexexchange.PoloniexExchange.get_min_order_size">
+<code class="descname">get_min_order_size</code><span class="sig-paren">(</span><em>asset</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/exchange/poloniexexchange.html#PoloniexExchange.get_min_order_size"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.exchange.poloniexexchange.PoloniexExchange.get_min_order_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method would return the minimum order size for a specific market, but It&#8217;s not specified in the Poloniex documentation.
+<a class="reference external" href="https://poloniex.com/support/api/">https://poloniex.com/support/api/</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>asset</strong> (<em>alchemist_lib.database.asset.Asset</em>) &#8211; The asset traded again BTC.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Minimum order size. Default is 0.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">size (decimal.Decimal)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="bittrexexchange">
+<h3>bittrexexchange<a class="headerlink" href="#bittrexexchange" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="alchemist_lib.exchange.bittrexexchange.BittrexExchange">
+<em class="property">class </em><code class="descclassname">alchemist_lib.exchange.bittrexexchange.</code><code class="descname">BittrexExchange</code><a class="reference internal" href="_modules/alchemist_lib/exchange/bittrexexchange.html#BittrexExchange"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.exchange.bittrexexchange.BittrexExchange" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class that manages Bittrex metadata.
+Inherits from alchemist_lib.exchange.exchange.ExchangeBaseClass.</p>
+<p>Website: <a class="reference external" href="https://bittrex.com/">https://bittrex.com/</a></p>
+<p>Api documentation: <a class="reference external" href="https://bittrex.com/Home/Api">https://bittrex.com/Home/Api</a></p>
+<p>Api wrapper: <a class="reference external" href="https://github.com/ericsomdahl/python-bittrex">https://github.com/ericsomdahl/python-bittrex</a></p>
+<dl class="attribute">
+<dt id="alchemist_lib.exchange.BittrexExchange.bittrex">
+<code class="descname">bittrex</code><a class="headerlink" href="#alchemist_lib.exchange.BittrexExchange.bittrex" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>bittrex.bittrex.Bittrex</em> &#8211; Communication object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.exchange.bittrexexchange.BittrexExchange.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/exchange/bittrexexchange.html#BittrexExchange.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.exchange.bittrexexchange.BittrexExchange.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Costructor method.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.exchange.bittrexexchange.BittrexExchange.are_tradable">
+<code class="descname">are_tradable</code><span class="sig-paren">(</span><em>assets</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/exchange/bittrexexchange.html#BittrexExchange.are_tradable"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.exchange.bittrexexchange.BittrexExchange.are_tradable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Filter tradable assets.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>assets</strong> (<em>alchemist_lib.database.asset.Asset, list[Asset]</em>) &#8211; List of assets to check.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Return all tradable asset (remove not tradable assets from the arg).</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">tradable (list[Asset])</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Check just pairs with BTC as base currency.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.exchange.bittrexexchange.BittrexExchange.get_min_order_size">
+<code class="descname">get_min_order_size</code><span class="sig-paren">(</span><em>asset</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/exchange/bittrexexchange.html#BittrexExchange.get_min_order_size"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.exchange.bittrexexchange.BittrexExchange.get_min_order_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns the minimum order size for a specific market.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>asset</strong> (<em>alchemist_lib.database.asset.Asset</em>) &#8211; The asset traded again BTC.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Minimum order size. Default is 0.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">size (decimal.Decimal)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="populate">
+<h2>Populate<a class="headerlink" href="#populate" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="saver">
+<h3>saver<a class="headerlink" href="#saver" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="alchemist_lib.populate.saver.Saver">
+<em class="property">class </em><code class="descclassname">alchemist_lib.populate.saver.</code><code class="descname">Saver</code><span class="sig-paren">(</span><em>session</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/populate/saver.html#Saver"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.populate.saver.Saver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class that saves data on the database.</p>
+<dl class="attribute">
+<dt id="alchemist_lib.exchange.Saver.session">
+<code class="descname">session</code><a class="headerlink" href="#alchemist_lib.exchange.Saver.session" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>sqlalchemy.orm.session.Session</em> &#8211; Database connection.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.populate.saver.Saver.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>session</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/populate/saver.html#Saver.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.populate.saver.Saver.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Costructor method.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>session</strong> (<em>sqlalchemy.orm.session.Session</em>) &#8211; Database connection.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.populate.saver.Saver._save">
+<code class="descname">_save</code><span class="sig-paren">(</span><em>obj</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/populate/saver.html#Saver._save"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.populate.saver.Saver._save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save an instance of a map class.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>obj</strong> (<em>obj</em>) &#8211; Instance to save.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.populate.saver.Saver.asset">
+<code class="descname">asset</code><span class="sig-paren">(</span><em>ticker</em>, <em>instrument_id</em>, <em>name</em>, <em>exchanges</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/populate/saver.html#Saver.asset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.populate.saver.Saver.asset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save an asset on the db.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>ticker</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; Ticker code of the asset.</li>
+<li><strong>instrument_id</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#int" title="(in Python v3.6)"><em>int</em></a>) &#8211; Financial instrument identifier.</li>
+<li><strong>name</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; Long name of the asset.</li>
+<li><strong>exchanges</strong> (<em>list[alchemist_lib.database.asset.Asset]</em>) &#8211; Exchanges where this asset is tradable.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Map class instance.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">tt (alchemist_lib.database.asset.Asset)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.populate.saver.Saver.broker">
+<code class="descname">broker</code><span class="sig-paren">(</span><em>name</em>, <em>site</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/populate/saver.html#Saver.broker"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.populate.saver.Saver.broker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save a broker on the db.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>name</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; Name of the broker.</li>
+<li><strong>site</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; Website of the broker.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Map class instance.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">broker (alchemist_lib.database.broker.Broker)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.populate.saver.Saver.data_source">
+<code class="descname">data_source</code><span class="sig-paren">(</span><em>name</em>, <em>site</em>, <em>timeframes</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/populate/saver.html#Saver.data_source"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.populate.saver.Saver.data_source" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save a data_source on the db.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>name</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; Name of the data source.</li>
+<li><strong>site</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; Website of the data source.</li>
+<li><strong>timeframes</strong> (<em>list[alchemist_lib.database.timeframe.Timeframe]</em>) &#8211; List of supported timeframes.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Map class instance.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">ds (alchemist_lib.database.price_data_source.PriceDataSource)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.populate.saver.Saver.exchange">
+<code class="descname">exchange</code><span class="sig-paren">(</span><em>name</em>, <em>website</em>, <em>data_source</em>, <em>timetable</em>, <em>brokers</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/populate/saver.html#Saver.exchange"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.populate.saver.Saver.exchange" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save an exchange on the db.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>name</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; Name of the exchange.</li>
+<li><strong>website</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; Website of the exchange.</li>
+<li><strong>data_source</strong> (<em>alchemist_lib.database.price_data_source.PriceDataSource</em>) &#8211; PriceDataSource instance associated with this exchange. Specify how to get price informations.</li>
+<li><strong>timetable</strong> (<em>alchemist_lib.database.timetable.Timetable</em>) &#8211; Timetable of this exchange.</li>
+<li><strong>brokers</strong> (<em>list[alchemist_lib.database.broker.Broker]</em>) &#8211; Brokers that allow trading on this exchange.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Map class instance.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">exchange (alchemist_lib.database.exchange.Exchange)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.populate.saver.Saver.instrument">
+<code class="descname">instrument</code><span class="sig-paren">(</span><em>kind</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/populate/saver.html#Saver.instrument"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.populate.saver.Saver.instrument" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save an instrument on the db.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>kind</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; Kind of instrument to save. (instrument_type)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Map class instance.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">instrument (alchemist_lib.database.instrument.Instrument)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.populate.saver.Saver.timeframe">
+<code class="descname">timeframe</code><span class="sig-paren">(</span><em>id</em>, <em>description</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/populate/saver.html#Saver.timeframe"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.populate.saver.Saver.timeframe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save a timeframe on the db.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>if</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; Timeframe identifier. (15M as example).</li>
+<li><strong>description</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; The definition of the timeframe in english words. (fifteen minutes as example).</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Map class instance.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">tf (alchemist_lib.database.timeframe.Timeframe)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.populate.saver.Saver.timetable">
+<code class="descname">timetable</code><span class="sig-paren">(</span><em>open_hour</em>, <em>open_minute</em>, <em>close_hour</em>, <em>close_minute</em>, <em>timezone</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/populate/saver.html#Saver.timetable"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.populate.saver.Saver.timetable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save a timetable on the db.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>open_hour</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#int" title="(in Python v3.6)"><em>int</em></a>) &#8211; Hour the market opens.</li>
+<li><strong>open_minute</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#int" title="(in Python v3.6)"><em>int</em></a>) &#8211; Minute the market opens.</li>
+<li><strong>close_hour</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#int" title="(in Python v3.6)"><em>int</em></a>) &#8211; Hour the market closes.</li>
+<li><strong>close_minute</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#int" title="(in Python v3.6)"><em>int</em></a>) &#8211; Minute the market closes.</li>
+<li><strong>timezone</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; Timezone name.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Map class instance.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">tt (alchemist_lib.database.timetable.Timetable)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="id5">
+<h3>populate<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="alchemist_lib.populate.populate.PopulateBaseClass">
+<em class="property">class </em><code class="descclassname">alchemist_lib.populate.populate.</code><code class="descname">PopulateBaseClass</code><span class="sig-paren">(</span><em>saver</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/populate/populate.html#PopulateBaseClass"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.populate.populate.PopulateBaseClass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Abstract class for every populate class.</p>
+<dl class="docutils">
+<dt>Abstract methods:</dt>
+<dd><ul class="first last simple">
+<li>get_exchange_instance(): Save all data associated with an exchange and returns an instance of alchemist_lib.database.exchange.Exchange.</li>
+<li>populate(): Save all assets traded in a specific exchange.</li>
+<li>update_asset_list(): Update the list of assets tradable in an exchange, remove delisted assets and add new assets.</li>
+</ul>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="alchemist_lib.exchange.PopulateBaseClass.saver">
+<code class="descname">saver</code><a class="headerlink" href="#alchemist_lib.exchange.PopulateBaseClass.saver" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>alchemist_lib.populate.saver.Saver</em> &#8211; Instance of the saver class.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="id6">
+<h3>__init__<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<dl class="attribute">
+<dt id="alchemist_lib.populate">
+<code class="descclassname">alchemist_lib.</code><code class="descname">populate</code><a class="headerlink" href="#alchemist_lib.populate" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#alchemist_lib.populate" title="alchemist_lib.populate"><code class="xref py py-class docutils literal"><span class="pre">alchemist_lib.populate</span></code></a></p>
+</dd></dl>
+
+</div>
+<div class="section" id="poloniexpopulate">
+<h3>poloniexpopulate<a class="headerlink" href="#poloniexpopulate" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="alchemist_lib.populate.poloniexpopulate.PoloniexPopulate">
+<em class="property">class </em><code class="descclassname">alchemist_lib.populate.poloniexpopulate.</code><code class="descname">PoloniexPopulate</code><span class="sig-paren">(</span><em>saver</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/populate/poloniexpopulate.html#PoloniexPopulate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.populate.poloniexpopulate.PoloniexPopulate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class that manages the population of the database with data from Poloniex.
+Inherits from alchemist_lib.populate.populate.PopulateBaseClass.</p>
+<dl class="attribute">
+<dt id="alchemist_lib.exchange.PoloniexPopulate.saver">
+<code class="descname">saver</code><a class="headerlink" href="#alchemist_lib.exchange.PoloniexPopulate.saver" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>alchemist_lib.populate.saver.Saver</em> &#8211; Saver class instance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.populate.poloniexpopulate.PoloniexPopulate.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>saver</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/populate/poloniexpopulate.html#PoloniexPopulate.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.populate.poloniexpopulate.PoloniexPopulate.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Costructor method.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>saver</strong> (<a class="reference internal" href="#alchemist_lib.populate.saver.Saver" title="alchemist_lib.populate.saver.Saver"><em>alchemist_lib.populate.saver.Saver</em></a>) &#8211; Saver class instance.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.populate.poloniexpopulate.PoloniexPopulate.get_exchange_instance">
+<code class="descname">get_exchange_instance</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/populate/poloniexpopulate.html#PoloniexPopulate.get_exchange_instance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.populate.poloniexpopulate.PoloniexPopulate.get_exchange_instance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save all informations about Poloniex and returns an Exchange instance.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Exchange instance.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">exchange (alchemist_lib.database.exchange.Exchange)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.populate.poloniexpopulate.PoloniexPopulate.populate">
+<code class="descname">populate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/populate/poloniexpopulate.html#PoloniexPopulate.populate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.populate.poloniexpopulate.PoloniexPopulate.populate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Populate the database with all tradable assets on Poloniex.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.populate.poloniexpopulate.PoloniexPopulate.update_asset_list">
+<code class="descname">update_asset_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/populate/poloniexpopulate.html#PoloniexPopulate.update_asset_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.populate.poloniexpopulate.PoloniexPopulate.update_asset_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the list of assets traded on Poloniex.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="bittrexpopulate">
+<h3>bittrexpopulate<a class="headerlink" href="#bittrexpopulate" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="alchemist_lib.populate.bittrexpopulate.BittrexPopulate">
+<em class="property">class </em><code class="descclassname">alchemist_lib.populate.bittrexpopulate.</code><code class="descname">BittrexPopulate</code><span class="sig-paren">(</span><em>saver</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/populate/bittrexpopulate.html#BittrexPopulate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.populate.bittrexpopulate.BittrexPopulate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class that manages the population of the database with data from Bittrex.
+Inherits from alchemist_lib.populate.populate.PopulateBaseClass.</p>
+<dl class="attribute">
+<dt id="alchemist_lib.exchange.BittrexPopulate.saver">
+<code class="descname">saver</code><a class="headerlink" href="#alchemist_lib.exchange.BittrexPopulate.saver" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>alchemist_lib.populate.saver.Saver</em> &#8211; Saver class instance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.populate.bittrexpopulate.BittrexPopulate.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>saver</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/populate/bittrexpopulate.html#BittrexPopulate.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.populate.bittrexpopulate.BittrexPopulate.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Costructor method.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>saver</strong> (<a class="reference internal" href="#alchemist_lib.populate.saver.Saver" title="alchemist_lib.populate.saver.Saver"><em>alchemist_lib.populate.saver.Saver</em></a>) &#8211; Saver class instance.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.populate.bittrexpopulate.BittrexPopulate.get_exchange_instance">
+<code class="descname">get_exchange_instance</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/populate/bittrexpopulate.html#BittrexPopulate.get_exchange_instance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.populate.bittrexpopulate.BittrexPopulate.get_exchange_instance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save all informations about Bittrex and returns an Exchange instance.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Exchange instance.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">exchange (alchemist_lib.database.exchange.Exchange)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.populate.bittrexpopulate.BittrexPopulate.populate">
+<code class="descname">populate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/populate/bittrexpopulate.html#BittrexPopulate.populate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.populate.bittrexpopulate.BittrexPopulate.populate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Populate the database with all tradable assets on Bittrex.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="alchemist_lib.populate.bittrexpopulate.BittrexPopulate.update_asset_list">
+<code class="descname">update_asset_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/alchemist_lib/populate/bittrexpopulate.html#BittrexPopulate.update_asset_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#alchemist_lib.populate.bittrexpopulate.BittrexPopulate.update_asset_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the list of assets traded on Bittrex.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="license.html" class="btn btn-neutral float-right" title="License" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="database/executed_order.html" class="btn btn-neutral" title="ExecutedOrder" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Carniel Giorgio.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: ''
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

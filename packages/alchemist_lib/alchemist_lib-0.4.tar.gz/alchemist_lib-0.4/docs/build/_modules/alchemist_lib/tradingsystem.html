@@ -1,0 +1,587 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>alchemist_lib.tradingsystem &mdash; alchemist_lib 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="alchemist_lib 0.1 documentation" href="../../index.html"/>
+        <link rel="up" title="Module code" href="../index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> alchemist_lib
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../install.html">Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial.html">Beginner Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../database/index.html">Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">License</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">alchemist_lib</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>alchemist_lib.tradingsystem</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for alchemist_lib.tradingsystem</h1><div class="highlight"><pre>
+<span class="kn">from</span> <span class="nn">abc</span> <span class="kn">import</span> <span class="n">ABC</span><span class="p">,</span> <span class="n">abstractmethod</span>
+
+<span class="kn">import</span> <span class="nn">datetime</span> <span class="kn">as</span> <span class="nn">dt</span>
+
+<span class="kn">import</span> <span class="nn">logging</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+
+<span class="kn">from</span> <span class="nn">decimal</span> <span class="kn">import</span> <span class="n">Decimal</span>
+
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="kn">from</span> <span class="nn">apscheduler.schedulers.blocking</span> <span class="kn">import</span>  <span class="n">BlockingScheduler</span>
+
+<span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">exc</span>
+
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">datafeed</span>
+
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">utils</span>
+
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">order</span>
+
+<span class="kn">from</span> <span class="nn">.database</span> <span class="kn">import</span> <span class="n">Session</span>
+<span class="kn">from</span> <span class="nn">.database.asset</span> <span class="kn">import</span> <span class="n">Asset</span>
+<span class="kn">from</span> <span class="nn">.database.instrument</span> <span class="kn">import</span> <span class="n">Instrument</span>
+<span class="kn">from</span> <span class="nn">.database.timetable</span> <span class="kn">import</span> <span class="n">Timetable</span>
+<span class="kn">from</span> <span class="nn">.database.broker</span> <span class="kn">import</span> <span class="n">Broker</span>
+<span class="kn">from</span> <span class="nn">.database.ts</span> <span class="kn">import</span> <span class="n">Ts</span>
+<span class="kn">from</span> <span class="nn">.database.ptf_allocation</span> <span class="kn">import</span> <span class="n">PtfAllocation</span>
+
+
+
+<div class="viewcode-block" id="TradingSystem"><a class="viewcode-back" href="../../api.html#alchemist_lib.tradingsystem.TradingSystem">[docs]</a><span class="k">class</span> <span class="nc">TradingSystem</span><span class="p">():</span>
+
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Basic class for every trading system.</span>
+<span class="sd">    The run method will start the live-trading.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        name (str): The name of the trading system.</span>
+<span class="sd">        portfolio (alchemist_lib.portfolio.*): An istance of a portfolio class.</span>
+<span class="sd">        broker (alchemist_lib.broker.*): An instance of a module in alchemist_lib.broker package.</span>
+<span class="sd">        _set_weights (callable): The function to set the weights of every asset in the portfolio.</span>
+<span class="sd">        _select_universe (callable): The function to select the universe of asset.</span>
+<span class="sd">        _handle_data (callable): The function to manage the trading logic.</span>
+<span class="sd">        paper_trading (boolean): If this arg is True no orders will be executed, they will be just printed and saved.</span>
+<span class="sd">        rebalance_time (int): Autoincrement number, used to manage the frequency of rebalancing.</span>
+<span class="sd">        session (sqlalchemy.orm.session.Session): Connection to the database.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+<div class="viewcode-block" id="TradingSystem.__init__"><a class="viewcode-back" href="../../api.html#alchemist_lib.tradingsystem.TradingSystem.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">portfolio</span><span class="p">,</span> <span class="n">set_weights</span><span class="p">,</span> <span class="n">select_universe</span><span class="p">,</span> <span class="n">handle_data</span><span class="p">,</span> <span class="n">broker</span><span class="p">,</span> <span class="n">paper_trading</span> <span class="o">=</span> <span class="bp">False</span><span class="p">):</span>
+
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Costructor method.</span>
+<span class="sd">        After setting the attributes it will register the trading system in the database.</span>
+<span class="sd">        If an sqlalchemy.exc.IntegrityError is raised It will update all data mantaining the name (primary key).</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            name (str): Name of the trading system.</span>
+<span class="sd">            portfolio (alchemist_lib.portfolio.*): An istance of a portfolio class.</span>
+<span class="sd">            broker (alchemist_lib.broker.*): An instance of a module in alchemist_lib.broker package.</span>
+<span class="sd">            set_weights (callable): The function to set the weights of every asset in the portfolio.</span>
+<span class="sd">            select_universe (callable): The function to select the universe of asset.</span>
+<span class="sd">            handle_data (callable): The function to manage the trading logic.</span>
+<span class="sd">            paper_trading (boolean, optional): Specify if the trading system has to execute orders or just simulate.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="nb">str</span><span class="p">),</span> <span class="s2">&quot;The name of the trading system must be a string (str).&quot;</span>
+
+        <span class="c1">#https://docs.python.org/3/library/logging.handlers.html</span>
+        <span class="n">file_handler</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">FileHandler</span><span class="p">(</span><span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;{}.log&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">),</span> <span class="n">mode</span> <span class="o">=</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
+        <span class="n">console_handler</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">StreamHandler</span><span class="p">()</span>
+        <span class="n">console_handler</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">level</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
+        <span class="n">console_handler</span><span class="o">.</span><span class="n">setFormatter</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">Formatter</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%(asctime)s</span><span class="s1"> : </span><span class="si">%(message)s</span><span class="s1">&#39;</span><span class="p">))</span>
+        
+        <span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">handlers</span> <span class="o">=</span> <span class="p">[</span>
+                                <span class="n">file_handler</span><span class="p">,</span>
+                                <span class="n">console_handler</span><span class="p">,</span>
+                            <span class="p">],</span>
+                            <span class="n">level</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">,</span>
+                            <span class="n">format</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%(asctime)s</span><span class="s1"> - </span><span class="si">%(name)s</span><span class="s1"> - </span><span class="si">%(levelname)s</span><span class="s1"> : </span><span class="si">%(message)s</span><span class="s1">&#39;</span><span class="p">,</span>
+                            <span class="n">datefmt</span> <span class="o">=</span> <span class="s1">&#39;%m/</span><span class="si">%d</span><span class="s1">/%Y %I:%M:%S&#39;</span><span class="p">)</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">Formatter</span><span class="o">.</span><span class="n">converter</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">gmtime</span>
+
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Start datetime: {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()))</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">portfolio</span> <span class="o">=</span> <span class="n">portfolio</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">broker</span> <span class="o">=</span> <span class="n">broker</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_set_weights</span> <span class="o">=</span> <span class="n">set_weights</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_select_universe</span> <span class="o">=</span> <span class="n">select_universe</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_handle_data</span> <span class="o">=</span> <span class="n">handle_data</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">paper_trading</span> <span class="o">=</span> <span class="n">paper_trading</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">rebalance_time</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">session</span> <span class="o">=</span> <span class="n">Session</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">broker</span><span class="o">.</span><span class="n">set_session</span><span class="p">(</span><span class="n">session</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="p">)</span>
+        
+        <span class="n">ts</span> <span class="o">=</span> <span class="n">Ts</span><span class="p">(</span><span class="n">ts_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+                <span class="n">datetime_added</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">(),</span>
+                <span class="n">aum</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">portfolio</span><span class="o">.</span><span class="n">capital</span><span class="p">,</span>
+                <span class="n">ptf_type</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">portfolio</span><span class="p">)</span><span class="o">.</span><span class="n">__name__</span>
+                <span class="p">)</span>
+
+        <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Saving the trading system {}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">))</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">ts</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="k">except</span> <span class="n">exc</span><span class="o">.</span><span class="n">IntegrityError</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span>
+
+            <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Trading system already present. Updating infos.&quot;</span><span class="p">)</span>
+            
+            <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Ts</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">Ts</span><span class="o">.</span><span class="n">ts_name</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;datetime_added&quot;</span> <span class="p">:</span> <span class="n">ts</span><span class="o">.</span><span class="n">datetime_added</span><span class="p">,</span>
+                                                                           <span class="s2">&quot;aum&quot;</span> <span class="p">:</span> <span class="n">ts</span><span class="o">.</span><span class="n">aum</span><span class="p">,</span>
+                                                                           <span class="s2">&quot;ptf_type&quot;</span> <span class="p">:</span> <span class="n">ts</span><span class="o">.</span><span class="n">ptf_type</span>
+                                                                           <span class="p">})</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="TradingSystem.set_weights"><a class="viewcode-back" href="../../api.html#alchemist_lib.tradingsystem.TradingSystem.set_weights">[docs]</a>    <span class="k">def</span> <span class="nf">set_weights</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df</span><span class="p">):</span>
+
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Call the _set_weights callable attribute if it&#39;s not None.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            df (pandas.DataFrame): The alpha dataframe setted in handle_data().</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            weights (pandas.DataFrame): Return a dataframe with a weight for every asset. Empty if _set_weights is None.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_set_weights</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">loggin</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;_set_weights is None.&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;asset&quot;</span><span class="p">,</span> <span class="s2">&quot;alpha&quot;</span><span class="p">,</span> <span class="s2">&quot;weight&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;asset&quot;</span><span class="p">)</span>
+        
+        <span class="n">weights</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_set_weights</span><span class="p">(</span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">weights</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">)</span> <span class="o">==</span> <span class="bp">False</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;The set_weight function must return a pandas.DataFrame!&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="s2">&quot;weight&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">weights</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;The set_weight function must have a column called &#39;weight&#39;!&quot;</span><span class="p">)</span>
+
+        <span class="n">weights_sum</span> <span class="o">=</span> <span class="n">weights</span><span class="p">[</span><span class="s2">&quot;weight&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">weights_sum</span> <span class="o">&lt;</span> <span class="mf">0.9</span> <span class="ow">or</span> <span class="n">weights_sum</span> <span class="o">&gt;</span> <span class="mf">1.1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;The sum of the weights returned by the set_weights function must be near 1.0!&quot;</span><span class="p">)</span>
+        
+        <span class="k">return</span> <span class="n">weights</span></div>
+
+    
+<div class="viewcode-block" id="TradingSystem.on_market_open"><a class="viewcode-back" href="../../api.html#alchemist_lib.tradingsystem.TradingSystem.on_market_open">[docs]</a>    <span class="k">def</span> <span class="nf">on_market_open</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timeframe</span><span class="p">,</span> <span class="n">frequency</span><span class="p">):</span>
+
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Save new data and call the rebalance function.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            timeframe (str): The timeframe we want to collect informations about for every asset in the universe.</span>
+<span class="sd">            frequency (int): Frequency of rebalancing.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="n">datafeed</span><span class="o">.</span><span class="n">save_last_ohlcv</span><span class="p">(</span><span class="n">session</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="p">,</span> <span class="n">assets</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">select_universe</span><span class="p">(),</span> <span class="n">timeframe</span> <span class="o">=</span> <span class="n">timeframe</span><span class="p">)</span>
+        <span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Last OHLCV data retrived in {} seconds.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">))</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">rebalance</span><span class="p">(</span><span class="n">alphas</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">handle_data</span><span class="p">(),</span> <span class="n">orders_type</span> <span class="o">=</span> <span class="n">order</span><span class="o">.</span><span class="n">MARKET</span><span class="p">,</span> <span class="n">frequency</span> <span class="o">=</span> <span class="n">frequency</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="TradingSystem.select_universe"><a class="viewcode-back" href="../../api.html#alchemist_lib.tradingsystem.TradingSystem.select_universe">[docs]</a>    <span class="k">def</span> <span class="nf">select_universe</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Call the _select_universe callable attribute if it&#39;s not None.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            universe (list[alchemist_lib.database.Asset.asset]): Return a list of assets.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_select_universe</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;_select_universe is None.&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="p">[]</span>
+        
+        <span class="n">universe</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_select_universe</span><span class="p">(</span><span class="n">session</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">universe</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span> <span class="o">==</span> <span class="bp">False</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;The select_universe function must returns a list!&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">universe</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;The select_universe must not returns an empty list!&quot;</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">asset</span> <span class="ow">in</span> <span class="n">universe</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">asset</span><span class="p">,</span> <span class="n">Asset</span><span class="p">)</span> <span class="o">==</span> <span class="bp">False</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;The select_universe function has returned a list composed by somthing that is not an Asset!&quot;</span><span class="p">)</span>
+            
+        <span class="k">return</span> <span class="n">utils</span><span class="o">.</span><span class="n">to_list</span><span class="p">(</span><span class="n">universe</span><span class="p">)</span></div>
+    
+
+<div class="viewcode-block" id="TradingSystem.handle_data"><a class="viewcode-back" href="../../api.html#alchemist_lib.tradingsystem.TradingSystem.handle_data">[docs]</a>    <span class="k">def</span> <span class="nf">handle_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Call the _handle_data callable attribute if it&#39;s not None.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            data (pandas.DataFrame): Return a dataframe with an alpha value for every asset. Empty if _handle_data is None.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_handle_data</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;_handle_data is None.&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;asset&quot;</span><span class="p">,</span> <span class="s2">&quot;alpha&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;alpha&quot;</span><span class="p">)</span>
+        
+        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_handle_data</span><span class="p">(</span><span class="n">session</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="p">,</span> <span class="n">universe</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">select_universe</span><span class="p">())</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">)</span> <span class="o">==</span> <span class="bp">False</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;The handle_data function must return a pandas.DataFrame!&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="s2">&quot;asset&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">names</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;The set_weight function must have the index called &#39;asset&#39;!&quot;</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="s2">&quot;alpha&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;The set_weight function must have a column called &#39;alpha&#39;!&quot;</span><span class="p">)</span>
+
+        <span class="n">data</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">inplace</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+        
+        <span class="k">return</span> <span class="n">data</span></div>
+
+
+<div class="viewcode-block" id="TradingSystem.rebalance"><a class="viewcode-back" href="../../api.html#alchemist_lib.tradingsystem.TradingSystem.rebalance">[docs]</a>    <span class="k">def</span> <span class="nf">rebalance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">alphas</span><span class="p">,</span> <span class="n">orders_type</span><span class="p">,</span> <span class="n">frequency</span><span class="p">):</span>
+
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method rebalance the portfolio based on the alphas parameters. It also update the current AUM value on the database.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            alphas (pandas.DataFrame): A dataframe with the following columns:</span>
+<span class="sd">                * asset (alchemist_lib.database.asset.Asset): Must be the index.</span>
+<span class="sd">                * alpha (decimal.Decimal): The value that will be used to calculate the weight of the asset within the portfolio.</span>
+<span class="sd">            orders_type (str): Order type identifier.</span>
+<span class="sd">            frequency (int): Frequency of rebalancing.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Rebalance start datetime: {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()))</span>
+        
+        <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        
+        <span class="n">curr_ptf</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">portfolio</span><span class="o">.</span><span class="n">load_ptf</span><span class="p">(</span><span class="n">session</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">curr_ptf</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">cryptocurrency_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Instrument</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">Instrument</span><span class="o">.</span><span class="n">instrument_type</span> <span class="o">==</span> <span class="s2">&quot;cryptocurrency&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">one</span><span class="p">()</span><span class="o">.</span><span class="n">instrument_id</span>
+            <span class="n">curr_ptf</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">PtfAllocation</span><span class="p">(</span><span class="n">ticker</span> <span class="o">=</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
+                                          <span class="n">instrument_id</span> <span class="o">=</span> <span class="n">cryptocurrency_id</span><span class="p">,</span>
+                                          <span class="n">amount</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">portfolio</span><span class="o">.</span><span class="n">capital</span><span class="p">,</span>
+                                          <span class="n">base_currency_amount</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">portfolio</span><span class="o">.</span><span class="n">capital</span><span class="p">,</span>
+                                          <span class="n">ts_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">))</span>
+        
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Current portfolio: {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">utils</span><span class="o">.</span><span class="n">print_list</span><span class="p">(</span><span class="n">curr_ptf</span><span class="p">)))</span>
+        
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">rebalance_time</span> <span class="o">%</span> <span class="n">frequency</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;It&#39;s rebalance time.&quot;</span><span class="p">)</span>
+            
+            <span class="n">aum</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Ts</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">Ts</span><span class="o">.</span><span class="n">ts_name</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">one</span><span class="p">()</span><span class="o">.</span><span class="n">aum</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">portfolio</span><span class="o">.</span><span class="n">capital</span> <span class="o">=</span> <span class="n">aum</span>
+
+            <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;The aum is {}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">aum</span><span class="p">))</span>
+
+            <span class="n">target_ptf_df</span>  <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">set_weights</span><span class="p">(</span><span class="n">df</span> <span class="o">=</span> <span class="n">alphas</span><span class="p">)</span>
+            <span class="n">target_ptf</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">portfolio</span><span class="o">.</span><span class="n">set_allocation</span><span class="p">(</span><span class="n">session</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">df</span> <span class="o">=</span> <span class="n">target_ptf_df</span><span class="p">)</span>
+
+            <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Target portfolio: {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">utils</span><span class="o">.</span><span class="n">print_list</span><span class="p">(</span><span class="n">target_ptf</span><span class="p">)))</span>
+            
+            <span class="n">orders_allocs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">portfolio</span><span class="o">.</span><span class="n">rebalance</span><span class="p">(</span><span class="n">curr_ptf</span> <span class="o">=</span> <span class="n">curr_ptf</span><span class="p">,</span> <span class="n">target_ptf</span> <span class="o">=</span> <span class="n">target_ptf</span><span class="p">)</span>
+
+            <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Orders to execute to get the ideal portfolio: {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">utils</span><span class="o">.</span><span class="n">print_list</span><span class="p">(</span><span class="n">orders_allocs</span><span class="p">)))</span>
+
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">paper_trading</span><span class="p">:</span>
+                <span class="n">new_target_ptf</span> <span class="o">=</span> <span class="n">target_ptf</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">new_target_ptf</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">broker</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">allocs</span> <span class="o">=</span> <span class="n">orders_allocs</span><span class="p">,</span> <span class="n">orders_type</span> <span class="o">=</span> <span class="n">orders_type</span><span class="p">,</span> <span class="n">ts_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">curr_ptf</span> <span class="o">=</span> <span class="n">curr_ptf</span><span class="p">)</span>
+                <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Result of orders execution: {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">utils</span><span class="o">.</span><span class="n">print_list</span><span class="p">(</span><span class="n">new_target_ptf</span><span class="p">)))</span>
+            
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">PtfAllocation</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">PtfAllocation</span><span class="o">.</span><span class="n">ts_name</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">add_all</span><span class="p">(</span><span class="n">new_target_ptf</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+            <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span>
+                <span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;An exception occurs on the transaction on the rebalance function.&quot;</span><span class="p">)</span>
+                <span class="n">logging</span><span class="o">.</span><span class="n">exception</span><span class="p">(</span><span class="s2">&quot;Exception: {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
+                <span class="k">raise</span>
+            
+            <span class="n">curr_ptf</span> <span class="o">=</span> <span class="n">new_target_ptf</span>
+
+
+        <span class="n">last_price</span> <span class="o">=</span> <span class="n">datafeed</span><span class="o">.</span><span class="n">get_last_price</span><span class="p">(</span><span class="n">assets</span> <span class="o">=</span> <span class="p">[</span><span class="n">alloc</span><span class="o">.</span><span class="n">asset</span> <span class="k">for</span> <span class="n">alloc</span> <span class="ow">in</span> <span class="n">curr_ptf</span><span class="p">])</span>
+        <span class="n">new_aum</span> <span class="o">=</span> <span class="n">Decimal</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">alloc</span> <span class="ow">in</span> <span class="n">curr_ptf</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">alloc</span><span class="o">.</span><span class="n">ticker</span> <span class="o">==</span> <span class="s2">&quot;BTC&quot;</span><span class="p">:</span>
+                <span class="n">new_aum</span> <span class="o">+=</span> <span class="n">alloc</span><span class="o">.</span><span class="n">amount</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">new_aum</span> <span class="o">+=</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">alloc</span><span class="o">.</span><span class="n">amount</span><span class="p">)</span> <span class="o">*</span> <span class="n">last_price</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">alloc</span><span class="o">.</span><span class="n">asset</span><span class="p">,</span> <span class="s2">&quot;last_price&quot;</span><span class="p">])</span>
+
+        <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;The new aum is {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">new_aum</span><span class="p">))</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Ts</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">Ts</span><span class="o">.</span><span class="n">ts_name</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;aum&quot;</span> <span class="p">:</span> <span class="n">new_aum</span><span class="p">})</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">rebalance_time</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;The rebalance function was executed in {} seconds.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="TradingSystem.run"><a class="viewcode-back" href="../../api.html#alchemist_lib.tradingsystem.TradingSystem.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">delay</span><span class="p">,</span> <span class="n">frequency</span><span class="p">):</span>
+        
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method manages the &quot;event-driven&quot; interface. Start every method at the right time.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            delay (str): Timeframe identifier. Every delay time the on_market_open is executed.</span>
+<span class="sd">            frequency (int): Frequency of rebalancing.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="k">assert</span> <span class="n">frequency</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;The frequency must be &gt; 0.&quot;</span>
+
+        
+        <span class="n">instrument_timetable</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">asset</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">select_universe</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">asset</span><span class="o">.</span><span class="n">instrument</span> <span class="ow">not</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">instrument_timetable</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span>
+                <span class="n">instrument_timetable</span><span class="p">[</span><span class="n">asset</span><span class="o">.</span><span class="n">instrument</span><span class="p">]</span> <span class="o">=</span> <span class="n">asset</span><span class="o">.</span><span class="n">exchanges</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">timetable</span>
+        
+        <span class="n">blocking_sched</span> <span class="o">=</span> <span class="n">BlockingScheduler</span><span class="p">()</span>
+        
+        <span class="k">for</span> <span class="n">instrument</span><span class="p">,</span> <span class="n">timetable</span> <span class="ow">in</span> <span class="n">instrument_timetable</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">timetable</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="n">time_expression</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">execution_time_str</span><span class="p">(</span><span class="n">timetable</span> <span class="o">=</span> <span class="n">timetable</span><span class="p">,</span> <span class="n">delay</span> <span class="o">=</span> <span class="n">delay</span><span class="p">)</span>
+                <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Time expressione for add_job(): {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time_expression</span><span class="p">))</span>
+                <span class="n">blocking_sched</span><span class="o">.</span><span class="n">add_job</span><span class="p">(</span><span class="n">func</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">on_market_open</span><span class="p">,</span> <span class="n">kwargs</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;timeframe&quot;</span> <span class="p">:</span> <span class="n">delay</span><span class="p">,</span> <span class="s2">&quot;frequency&quot;</span> <span class="p">:</span> <span class="n">frequency</span><span class="p">},</span> <span class="n">max_instances</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="o">**</span><span class="n">time_expression</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">logging</span><span class="o">.</span><span class="n">critical</span><span class="p">(</span><span class="s2">&quot;Timetable is not None. NotImplemented raised.&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="bp">NotImplemented</span>
+        <span class="n">blocking_sched</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+        
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        self.on_market_open(timeframe = delay, frequency = frequency)</span>
+<span class="sd">        print(&quot;######################################################&quot;)</span>
+<span class="sd">        self.on_market_open(timeframe = delay, frequency = frequency)</span>
+<span class="sd">        &quot;&quot;&quot;</span></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+</pre></div>
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Carniel Giorgio.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: ''
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
