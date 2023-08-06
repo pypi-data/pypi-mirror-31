@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: easy_init
+Version: 1.0.0
+Summary: easy-to-use decorator for automatically generating the __init__ method
+Home-page: https://github.com/ebrush/easy_init
+Author: Samuel Brush
+Author-email: s.e.brush1@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: metaprogramming decorators class method
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
