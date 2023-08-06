@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: sphinxcontrib-lookup-yaml
+Version: 0.0.1
+Summary: Sphinx extension to lookup YAML values
+Home-page: https://github.com/Jakski/sphinxcontrib-lookup-yaml
+Author: Jakub Pieńkowski
+Author-email: jakski@sealcode.org
+License: MIT
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Sphinx :: Extension
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Documentation
+Requires-Dist: sphinx
+Requires-Dist: pyyaml
+
+UNKNOWN
+
+
