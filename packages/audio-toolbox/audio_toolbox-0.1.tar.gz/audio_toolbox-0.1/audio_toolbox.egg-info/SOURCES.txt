@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+audio_toolbox/__init__.py
+audio_toolbox/common.py
+audio_toolbox/ffmpeg.py
+audio_toolbox/sox.py
+audio_toolbox.egg-info/PKG-INFO
+audio_toolbox.egg-info/SOURCES.txt
+audio_toolbox.egg-info/dependency_links.txt
+audio_toolbox.egg-info/top_level.txt
