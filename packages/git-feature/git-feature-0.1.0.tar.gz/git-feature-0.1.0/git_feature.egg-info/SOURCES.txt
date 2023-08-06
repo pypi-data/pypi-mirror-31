@@ -1,0 +1,10 @@
+README.md
+setup.py
+git_feature.egg-info/PKG-INFO
+git_feature.egg-info/SOURCES.txt
+git_feature.egg-info/dependency_links.txt
+git_feature.egg-info/entry_points.txt
+git_feature.egg-info/requires.txt
+git_feature.egg-info/top_level.txt
+onnx_git_feature/__init__.py
+onnx_git_feature/__main__.py

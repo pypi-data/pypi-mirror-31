@@ -1,0 +1,3 @@
+[console_scripts]
+git-feature = onnx_git_feature.__main__:main
+
