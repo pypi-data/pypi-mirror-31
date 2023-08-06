@@ -1,0 +1,27 @@
+Metadata-Version: 1.2
+Name: my-settings
+Version: 0.1.0
+Summary: Convenient and simple settings for any project
+Home-page: https://github.com/GregEremeev/my_settings
+Author: Greg Eremeev
+Author-email: gregory.eremeev@gmail.com
+License: MIT
+Description: 
+        my_settings can load your settings from python module, 
+        env variable and file path which has to lead to python module.
+        You can have three types of settings files:
+        1) primary(usually plays role of base settings file which is included in a project) 
+        2) custom(your custom settings file for certain deployment case)
+        3) test(your settings file for tests)
+        
+        all settings files overlap each other in this sequence: test -> custom -> primary
+        
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.3
