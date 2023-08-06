@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: octopart
+Version: 0.0.24
+Summary: Python client for Octopart API v3
+Home-page: https://tempoautomation.github.io/octopart/
+Author: Sean Adler
+Author-email: sean@tempoautomation.com
+License: MIT
+Description-Content-Type: UNKNOWN
+Description: Python client for Octopart API v3
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development
