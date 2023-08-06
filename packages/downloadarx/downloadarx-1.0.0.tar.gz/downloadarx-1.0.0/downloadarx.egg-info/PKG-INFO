@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: downloadarx
+Version: 1.0.0
+Summary: Download DLI Telugu catalog
+Home-page: https://github.com/arjunaraoc/downloadarx
+Author: Arjuna Rao Chavala 
+Author-email: arjunaraoc@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/arjunaraoc/downloadarx
+Description-Content-Type: UNKNOWN
+Description: to download Telugu DLI books catalog from collection Digitallibraryindia
+        
+Keywords: catalog,archive.org,DLI
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Other Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
