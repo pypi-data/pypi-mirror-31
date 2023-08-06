@@ -1,0 +1,10 @@
+README.md
+gen-cisco.py
+setup.py
+gen_cisco.egg-info/PKG-INFO
+gen_cisco.egg-info/SOURCES.txt
+gen_cisco.egg-info/dependency_links.txt
+gen_cisco.egg-info/requires.txt
+gen_cisco.egg-info/top_level.txt
+src/__init__.py
+src/scripter.py
