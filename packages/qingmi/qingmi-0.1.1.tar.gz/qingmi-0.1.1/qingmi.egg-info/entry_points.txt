@@ -1,0 +1,3 @@
+[console_scripts]
+qingmi = qingmi.cli:main
+

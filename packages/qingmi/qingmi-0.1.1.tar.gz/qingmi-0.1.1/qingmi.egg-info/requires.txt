@@ -1,0 +1,8 @@
+Flask
+click
+
+[bcrypt]
+bcrypt
+
+[testing]
+pytest
