@@ -1,0 +1,15 @@
+README.md
+setup.py
+TASMANIAN_DEVIL/TASMANIAN_DEVIL.py
+TASMANIAN_DEVIL/__init__.py
+TASMANIAN_DEVIL/_version.py
+TASMANIAN_DEVIL/flux.py
+TASMANIAN_DEVIL/gene.py
+TASMANIAN_DEVIL/model.py
+TASMANIAN_DEVIL/visualization.py
+TASMANIAN_DEVIL.egg-info/PKG-INFO
+TASMANIAN_DEVIL.egg-info/SOURCES.txt
+TASMANIAN_DEVIL.egg-info/dependency_links.txt
+TASMANIAN_DEVIL.egg-info/entry_points.txt
+TASMANIAN_DEVIL.egg-info/requires.txt
+TASMANIAN_DEVIL.egg-info/top_level.txt

@@ -1,0 +1,8 @@
+numpy
+scipy<1.0
+pandas
+pycrypto
+argparse
+cobra==0.8.2
+sympy
+python-libsbml
