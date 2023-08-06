@@ -1,0 +1,3 @@
+[console_scripts]
+destined = destined.cli:main
+

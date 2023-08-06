@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+destined/__init__.py
+destined/cli.py
+destined/distribution.py
+destined/generators.py
+destined.egg-info/PKG-INFO
+destined.egg-info/SOURCES.txt
+destined.egg-info/dependency_links.txt
+destined.egg-info/entry_points.txt
+destined.egg-info/not-zip-safe
+destined.egg-info/requires.txt
+destined.egg-info/top_level.txt
