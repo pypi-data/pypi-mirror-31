@@ -1,0 +1,18 @@
+Metadata-Version: 2.0
+Name: OpenstackMonitoringAPI
+Version: 0.1.0.dev7
+Summary: Thrift API for the de.NBI Openstack monitoring project
+Home-page: UNKNOWN
+Author: Marius Dieckmann
+Author-email: UNKNOWN
+License: UNKNOWN
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: thrift
+
+UNKNOWN
+
+
