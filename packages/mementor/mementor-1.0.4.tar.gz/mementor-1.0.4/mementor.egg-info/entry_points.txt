@@ -1,0 +1,3 @@
+[console_scripts]
+memento = mementor.memento:start
+
