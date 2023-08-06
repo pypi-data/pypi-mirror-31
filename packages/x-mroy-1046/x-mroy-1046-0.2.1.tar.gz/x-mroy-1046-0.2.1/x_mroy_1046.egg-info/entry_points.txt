@@ -1,0 +1,5 @@
+[console_scripts]
+x-bak = package.services:main_start_bak
+x-control = clients.controll:main
+x-relay = package.services:main
+
