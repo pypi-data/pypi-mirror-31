@@ -1,0 +1,23 @@
+Metadata-Version: 1.2
+Name: planeGeometry
+Version: 0.1.4
+Summary: 2d geometry utils
+Home-page: https://github.com/markalos/geometry
+Author: markalos
+Author-email: bethouself@163.com
+License: UNKNOWN
+Project-URL: Funding, https://donate.pypi.org
+Description-Content-Type: UNKNOWN
+Description: # MaximumInscribedCircle
+        find smallest covering circle
+        
+Keywords: image edge segmentation sharpening
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
