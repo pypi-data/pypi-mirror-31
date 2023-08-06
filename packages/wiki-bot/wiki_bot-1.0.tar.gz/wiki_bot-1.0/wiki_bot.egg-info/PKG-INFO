@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: wiki-bot
+Version: 1.0
+Summary: A random wikipedia page generator.
+Home-page: https://github.com/ddxtanx/wikiBot
+Author: Garrett Credi
+Author-email: gcc@ameritech.net
+License: MIT
+Download-URL: https://github.com/ddxtanx/wikiBot/archive/0.2.tar.gz
+Description: A bot that uses the Wikipedia API to enumerate subcategories and subpages to generate a random page that is a member of a given supercategory.
+Keywords: wikipedia,random,generator,command_line,api
+Platform: UNKNOWN
