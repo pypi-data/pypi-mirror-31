@@ -1,0 +1,12 @@
+Metadata-Version: 1.0
+Name: digital-stopwatch
+Version: 0.1.0
+Summary: A digital stopwatch made using Tk and a multithreading library
+Home-page: UNKNOWN
+Author: Alexei Ciobanu
+Author-email: alexei.ciobanu95@gmail.com
+License: UNKNOWN
+Description: This was created to learn the groundwork required to make a GUI application 
+        that controls a background process (a simple counter in this case) without 
+        blocking it.
+Platform: UNKNOWN

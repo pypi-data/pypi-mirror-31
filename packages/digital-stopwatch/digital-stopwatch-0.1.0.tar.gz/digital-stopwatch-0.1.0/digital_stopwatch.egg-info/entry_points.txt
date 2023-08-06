@@ -1,0 +1,3 @@
+[console_scripts]
+digital_stopwatch = digital_stopwatch.digital_stopwatch:main
+
