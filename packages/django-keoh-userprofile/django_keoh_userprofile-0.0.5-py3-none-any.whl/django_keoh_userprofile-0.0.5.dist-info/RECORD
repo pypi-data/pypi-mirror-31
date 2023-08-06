@@ -1,0 +1,15 @@
+django_keoh_userprofile-0.0.5.dist-info/METADATA,sha256=i_CrKMlb5-2RbdVJ9oumpLJbbQ8kxuBLwQIMOiUpqBU,2117
+django_keoh_userprofile-0.0.5.dist-info/RECORD,,
+django_keoh_userprofile-0.0.5.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+django_keoh_userprofile-0.0.5.dist-info/top_level.txt,sha256=LY8FIrRwucbUwo6uFFYgnXauuHbU8wCPwKnFdO0AZ0g,19
+tests/unit/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/unit/test_import.py,sha256=-m8rEp_sndFCEzD3Eld67WNHrr5lBRGbiF_qQNubFcU,200
+user_profile/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+user_profile/admin.py,sha256=3420TQKHe9ewGOZNyHuVVPcWVqM5XHY67oIBp4bWwr0,665
+user_profile/models.py,sha256=Eq4_sZFhRz_dLoaMBh5RFO48ZlGLljr_ia3gp8MpY0k,833
+user_profile/migrations/0001_initial.py,sha256=s8usLBwBIENAFQfJzn37eYZcZ-8w70VnyYS7aFINWFQ,3155
+user_profile/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+user_profile/static/empty,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+user_profile/static/css/userprofile.css,sha256=l-tT365FODEvgRNusvHjtzMNboNUkoLShtPHr6uk_ak,1517
+user_profile/static/img/default.png,sha256=Fhw0gWLDi3nvwK3Z1EBjgdtbwrPQgYMTs4OSxka1WOc,17207
+user_profile/static/js/awesome-forms.js,sha256=nuBwB8MCBkHZbYE-fK9JeyF-asb-NLshHv2skKqIovY,246
