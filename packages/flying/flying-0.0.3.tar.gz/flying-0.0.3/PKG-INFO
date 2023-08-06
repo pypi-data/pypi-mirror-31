@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: flying
+Version: 0.0.3
+Summary: Flying : cli tools for manage releases
+Home-page: https://github.com/joway/flying
+Author: joway
+Author-email: joway.w@gmail.com
+License: MIT License
+Description: UNKNOWN
+Keywords: release,cli,docker,git,npm
+Platform: any
