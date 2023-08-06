@@ -1,0 +1,1900 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Using NEOS package &mdash; poliastro 0.9.dev0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="author" title="About these documents"
+              href="../about.html"/>
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="poliastro 0.9.dev0 documentation" href="../index.html"/>
+        <link rel="up" title="Jupyter notebooks" href="../jupyter.html"/>
+        <link rel="next" title="Visualizing the SpaceX Tesla Roadster trip to Mars" href="Visualizing the SpaceX Tesla Roadster trip to Mars.html"/>
+        <link rel="prev" title="Studying Hohmann transfers" href="Studying Hohmann transfers.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> poliastro
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.9
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About poliastro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide.html">User guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../jupyter.html">Jupyter notebooks</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Catch that asteroid!.html">Catch that asteroid!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Comparing Hohmann and bielliptic transfers.html">Comparing Hohmann and bielliptic transfers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Exploring the New Horizons launch.html">New Horizons launch and trajectory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Going to Mars with Python using poliastro.html">Going to Mars with Python using poliastro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Going to Jupiter with Python using Jupyter and poliastro.html">Going to Jupiter with Python using Jupyter and poliastro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Plotting in 3D.html">Plotting in 3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Propagation using Cowell's formulation.html">Cowell’s formulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Revisiting Lambert's problem in Python.html">Revisiting Lambert’s problem in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Studying Hohmann transfers.html">Studying Hohmann transfers</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Using NEOS package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#What-are-NEOs?">What are NEOs?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#NeoWS-module">NeoWS module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#DASTCOM5-module">DASTCOM5 module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Visualizing the SpaceX Tesla Roadster trip to Mars.html">Visualizing the SpaceX Tesla Roadster trip to Mars</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">What&#8217;s new</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">poliastro</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../jupyter.html">Jupyter notebooks</a> &raquo;</li>
+        
+      <li>Using NEOS package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/examples/Using NEOS package.ipynb.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput,
+div.nbinput div.prompt,
+div.nbinput div.input_area,
+div.nbinput div[class*=highlight],
+div.nbinput div[class*=highlight] pre,
+div.nboutput,
+div.nbinput div.prompt,
+div.nbinput div.output_area,
+div.nboutput div[class*=highlight],
+div.nboutput div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput,
+div.nboutput {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput,
+    div.nboutput {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput div.prompt pre {
+    color: #303F9F;
+}
+
+/* output prompt */
+div.nboutput div.prompt pre {
+    color: #D84315;
+}
+
+/* all prompts */
+div.nbinput div.prompt,
+div.nboutput div.prompt {
+    min-width: 8ex;
+    padding-top: 0.4em;
+    padding-right: 0.4em;
+    text-align: right;
+    flex: 0;
+}
+@media (max-width: 540px) {
+    div.nbinput div.prompt,
+    div.nboutput div.prompt {
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput div.prompt.empty {
+        padding: 0;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput div.prompt pre,
+div.nboutput div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput div.input_area,
+div.nboutput div.output_area {
+    padding: 0.4em;
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput div.input_area,
+    div.nboutput div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput div.input_area {
+    border: 1px solid #cfcfcf;
+    border-radius: 2px;
+    background: #f7f7f7;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.pngmath center alignment in output cells */
+div.nboutput div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast,
+.nboutput.nblast {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast + .nbinput {
+    margin-top: -19px;
+}
+
+/* nice headers on first paragraph of info/warning boxes */
+.admonition .first {
+    margin: -12px;
+    padding: 6px 12px;
+    margin-bottom: 12px;
+    color: #fff;
+    line-height: 1;
+    display: block;
+}
+.admonition.warning .first {
+    background: #f0b37e;
+}
+.admonition.note .first {
+    background: #6ab0de;
+}
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+</style>
+<div class="section" id="Using-NEOS-package">
+<h1>Using NEOS package<a class="headerlink" href="#Using-NEOS-package" title="Permalink to this headline">¶</a></h1>
+<p>With the new <code class="docutils literal"><span class="pre">poliastro</span></code> version (0.7.0), a new package is included:
+<a class="reference external" href="file:///C:/Users/Antonio/Desktop/Proyectos/poliastro/docs/source/html_output/api.html#module-poliastro.neos">NEOs
+package</a>.</p>
+<p>The docstrings of this package states the following:</p>
+<blockquote>
+<div>Functions related to NEOs and different NASA APIs. All of them are
+coded as part of SOCIS 2017 proposal.</div></blockquote>
+<p>So, first of all, an important question:</p>
+<div class="section" id="What-are-NEOs?">
+<h2>What are NEOs?<a class="headerlink" href="#What-are-NEOs?" title="Permalink to this headline">¶</a></h2>
+<p>NEO stands for near-Earth object. The Center for NEO Studies
+(<a class="reference external" href="http://cneos.jpl.nasa.gov/">CNEOS</a>) defines NEOs as comets and
+asteroids that have been nudged by the gravitational attraction of
+nearby planets into orbits that allow them to enter the Earth’s
+neighborhood.</p>
+<p>And what does “near” exactly mean? In terms of orbital elements,
+asteroids and comets can be considered NEOs if their perihelion (orbit
+point which is nearest to the Sun) is less than 1.3 au = 1.945 * 108 km
+from the Sun.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ion</span><span class="p">()</span>
+
+<span class="kn">from</span> <span class="nn">astropy</span> <span class="kn">import</span> <span class="n">time</span>
+
+<span class="kn">from</span> <span class="nn">poliastro.twobody.orbit</span> <span class="kn">import</span> <span class="n">Orbit</span>
+<span class="kn">from</span> <span class="nn">poliastro.bodies</span> <span class="kn">import</span> <span class="n">Earth</span>
+<span class="kn">from</span> <span class="nn">poliastro.plotting</span> <span class="kn">import</span> <span class="n">OrbitPlotter</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="NeoWS-module">
+<h2>NeoWS module<a class="headerlink" href="#NeoWS-module" title="Permalink to this headline">¶</a></h2>
+<p>This module make requests to <a class="reference external" href="https://api.nasa.gov/api.html#NeoWS">NASA NEO
+Webservice</a>, so you’ll need an
+internet connection to run the next examples.</p>
+<p>The simplest <code class="docutils literal"><span class="pre">neows</span></code> function is <code class="docutils literal"><span class="pre">orbit_from_name()</span></code>, which return
+an Orbit object given a name:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">poliastro.neos</span> <span class="kn">import</span> <span class="n">neows</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">eros</span> <span class="o">=</span> <span class="n">neows</span><span class="o">.</span><span class="n">orbit_from_name</span><span class="p">(</span><span class="s1">&#39;Eros&#39;</span><span class="p">)</span>
+
+<span class="n">frame</span> <span class="o">=</span> <span class="n">OrbitPlotter</span><span class="p">()</span>
+<span class="n">frame</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">eros</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Eros&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/examples_Using_NEOS_package_5_0.png" src="../_images/examples_Using_NEOS_package_5_0.png" />
+</div>
+</div>
+<p>You can also search by IAU number or SPK-ID (there is a faster
+<code class="docutils literal"><span class="pre">neows.orbit_from_spk_id()</span></code> function in that case, although):</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">ganymed</span> <span class="o">=</span> <span class="n">neows</span><span class="o">.</span><span class="n">orbit_from_name</span><span class="p">(</span><span class="s1">&#39;1036&#39;</span><span class="p">)</span> <span class="c1"># Ganymed IAU number</span>
+<span class="n">amor</span> <span class="o">=</span> <span class="n">neows</span><span class="o">.</span><span class="n">orbit_from_name</span><span class="p">(</span><span class="s1">&#39;2001221&#39;</span><span class="p">)</span> <span class="c1"># Amor SPK-ID</span>
+<span class="n">eros</span> <span class="o">=</span> <span class="n">neows</span><span class="o">.</span><span class="n">orbit_from_spk_id</span><span class="p">(</span><span class="s1">&#39;2000433&#39;</span><span class="p">)</span> <span class="c1"># Eros SPK-ID</span>
+
+<span class="n">frame</span> <span class="o">=</span> <span class="n">OrbitPlotter</span><span class="p">()</span>
+<span class="n">frame</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ganymed</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Ganymed&#39;</span><span class="p">)</span>
+<span class="n">frame</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">amor</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Amor&#39;</span><span class="p">)</span>
+<span class="n">frame</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">eros</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Eros&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/examples_Using_NEOS_package_7_0.png" src="../_images/examples_Using_NEOS_package_7_0.png" />
+</div>
+</div>
+<p>Since <code class="docutils literal"><span class="pre">neows</span></code> relies on <a class="reference external" href="https://ssd.jpl.nasa.gov/sbdb.cgi">Small-Body Database
+browser</a> to get the SPK-ID given a
+body name, you can use the wildcards from that browser: <code class="docutils literal"><span class="pre">*</span></code> and <code class="docutils literal"><span class="pre">?</span></code>.</p>
+<div class="admonition note">
+Keep it in mind that <code class="docutils literal"><span class="pre">orbit_from_name()</span></code> can only return one Orbit, so
+if several objects are found with that name, it will raise an error with
+the different bodies.</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">neows</span><span class="o">.</span><span class="n">orbit_from_name</span><span class="p">(</span><span class="s1">&#39;*alley&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-5-8e1358d8245f&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>neows<span class="ansi-blue-fg">.</span>orbit_from_name<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;*alley&#39;</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">~/Development/poliastro/poliastro-library/src/poliastro/neos/neows.py</span> in <span class="ansi-cyan-fg">orbit_from_name</span><span class="ansi-blue-fg">(name, api_key)</span>
+<span class="ansi-green-intense-fg ansi-bold">    126</span>
+<span class="ansi-green-intense-fg ansi-bold">    127</span>     &#34;&#34;&#34;
+<span class="ansi-green-fg">--&gt; 128</span><span class="ansi-red-fg">     </span>spk_id <span class="ansi-blue-fg">=</span> spk_id_from_name<span class="ansi-blue-fg">(</span>name<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    129</span>     <span class="ansi-green-fg">if</span> spk_id <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">not</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    130</span>         <span class="ansi-green-fg">return</span> orbit_from_spk_id<span class="ansi-blue-fg">(</span>spk_id<span class="ansi-blue-fg">,</span> api_key<span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">~/Development/poliastro/poliastro-library/src/poliastro/neos/neows.py</span> in <span class="ansi-cyan-fg">spk_id_from_name</span><span class="ansi-blue-fg">(name)</span>
+<span class="ansi-green-intense-fg ansi-bold">    101</span>         <span class="ansi-green-fg">for</span> body <span class="ansi-green-fg">in</span> object_list<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">:</span>obj_num<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    102</span>             bodies <span class="ansi-blue-fg">+=</span> body<span class="ansi-blue-fg">.</span>string <span class="ansi-blue-fg">+</span> <span class="ansi-blue-fg">&#39;\n&#39;</span>
+<span class="ansi-green-fg">--&gt; 103</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">raise</span> ValueError<span class="ansi-blue-fg">(</span>str<span class="ansi-blue-fg">(</span>len<span class="ansi-blue-fg">(</span>object_list<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">+</span> <span class="ansi-blue-fg">&#39; different bodies found:\n&#39;</span> <span class="ansi-blue-fg">+</span> bodies<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    104</span>     <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    105</span>         raise ValueError(&#39;Object could not be found. You can visit: &#39; +
+
+<span class="ansi-red-fg">ValueError</span>: 6 different bodies found:
+903 Nealley (1918 EM)
+2688 Halley (1982 HG1)
+14182 Alley (1998 WG12)
+
+</pre></div></div>
+</div>
+<div class="admonition note">
+Note that epoch is provided by the Web Service itself, so if you need
+orbit on another epoch, you have to propagate it:</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">eros</span><span class="o">.</span><span class="n">epoch</span><span class="o">.</span><span class="n">iso</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>Out[6]:
+</pre></div>
+</div>
+<div class="output_area highlight-none"><div class="highlight"><pre>
+<span></span>&#39;2018-03-23 00:00&#39;
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">epoch</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">Time</span><span class="p">(</span><span class="mf">2458000.0</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="s1">&#39;tdb&#39;</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="s1">&#39;jd&#39;</span><span class="p">)</span>
+<span class="n">eros_november</span> <span class="o">=</span> <span class="n">eros</span><span class="o">.</span><span class="n">propagate</span><span class="p">(</span><span class="n">epoch</span><span class="p">)</span>
+<span class="n">eros_november</span><span class="o">.</span><span class="n">epoch</span><span class="o">.</span><span class="n">iso</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>Out[7]:
+</pre></div>
+</div>
+<div class="output_area highlight-none"><div class="highlight"><pre>
+<span></span>&#39;2017-09-03 12:00&#39;
+</pre></div>
+</div>
+</div>
+<p>Given that we are using NASA APIs, there is a maximum number of
+requests. If you want to make many requests, it is recommended getting a
+<a class="reference external" href="https://api.nasa.gov/index.html#apply-for-an-api-key">NASA API key</a>.
+You can use your API key adding the <code class="docutils literal"><span class="pre">api_key</span></code> parameter to the
+function:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">neows</span><span class="o">.</span><span class="n">orbit_from_name</span><span class="p">(</span><span class="s1">&#39;Toutatis&#39;</span><span class="p">,</span> <span class="n">api_key</span><span class="o">=</span><span class="s1">&#39;DEMO_KEY&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>Out[8]:
+</pre></div>
+</div>
+<div class="output_area highlight-none"><div class="highlight"><pre>
+<span></span>1 x 4 AU x 0.4 deg orbit around Sun (☉)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="DASTCOM5-module">
+<h2>DASTCOM5 module<a class="headerlink" href="#DASTCOM5-module" title="Permalink to this headline">¶</a></h2>
+<p>This module can also be used to get NEOs orbit, in the same way that
+<code class="docutils literal"><span class="pre">neows</span></code>, but it have some advantages (and some disadvantages).</p>
+<p>It relies on DASTCOM5 database, a NASA/JPL maintained asteroid and comet
+database. This database has to be downloaded at least once in order to
+use this module. According to its README, it is updated typically a
+couple times per day, but potentially as frequently as once per hour, so
+you can download it whenever you want the more recently discovered
+bodies. This also means that, after downloading the file, you can use
+the database offline.</p>
+<p>The file is a ~230 MB zip that you can manually
+<a class="reference external" href="ftp://ssd.jpl.nasa.gov/pub/ssd/dastcom5.zip">download</a> and unzip in
+<code class="docutils literal"><span class="pre">~/.poliastro</span></code> or, more easily, you can use</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">dastcom5</span><span class="o">.</span><span class="n">download_dastcom5</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>The main DASTCOM5 advantage over NeoWs is that you can use it to search
+not only NEOs, but any asteroid or comet. The easiest function is
+<code class="docutils literal"><span class="pre">orbit_from_name()</span></code>:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">poliastro.neos</span> <span class="kn">import</span> <span class="n">dastcom5</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">atira</span> <span class="o">=</span> <span class="n">dastcom5</span><span class="o">.</span><span class="n">orbit_from_name</span><span class="p">(</span><span class="s1">&#39;atira&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># NEO</span>
+<span class="n">wikipedia</span> <span class="o">=</span> <span class="n">dastcom5</span><span class="o">.</span><span class="n">orbit_from_name</span><span class="p">(</span><span class="s1">&#39;wikipedia&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># Asteroid, but not NEO.</span>
+<span class="n">frame</span> <span class="o">=</span> <span class="n">OrbitPlotter</span><span class="p">()</span>
+<span class="n">frame</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">atira</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Atira (NEO)&#39;</span><span class="p">)</span>
+<span class="n">frame</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">wikipedia</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Wikipedia (asteroid)&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/examples_Using_NEOS_package_19_0.png" src="../_images/examples_Using_NEOS_package_19_0.png" />
+</div>
+</div>
+<p>Keep in mind that this function returns a list of orbits matching your
+string. This is made on purpose given that there are comets which have
+several records in the database (one for each orbit determination in
+history) what allow plots like this one:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">halleys</span> <span class="o">=</span> <span class="n">dastcom5</span><span class="o">.</span><span class="n">orbit_from_name</span><span class="p">(</span><span class="s1">&#39;1P&#39;</span><span class="p">)</span>
+
+<span class="n">frame</span> <span class="o">=</span> <span class="n">OrbitPlotter</span><span class="p">()</span>
+<span class="n">frame</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">halleys</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Halley&#39;</span><span class="p">)</span>
+<span class="n">frame</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">halleys</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Halley&#39;</span><span class="p">)</span>
+<span class="n">frame</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">halleys</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Halley&#39;</span><span class="p">)</span>
+<span class="n">frame</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">halleys</span><span class="p">[</span><span class="mi">20</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Halley&#39;</span><span class="p">)</span>
+<span class="n">frame</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">halleys</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Halley&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/examples_Using_NEOS_package_21_0.png" src="../_images/examples_Using_NEOS_package_21_0.png" />
+</div>
+</div>
+<p>While <code class="docutils literal"><span class="pre">neows</span></code> can only be used to get Orbit objects, <code class="docutils literal"><span class="pre">dastcom5</span></code> can
+also provide asteroid and comet complete database. Once you have this,
+you can get specific data about one or more bodies. The complete
+databases are <code class="docutils literal"><span class="pre">ndarrays</span></code>, so if you want to know the entire list of
+available parameters, you can look at the <code class="docutils literal"><span class="pre">dtype</span></code>, and they are also
+explained in <a class="reference external" href="http://docs.poliastro.space/en/latest/dastcom5%20parameters.html">documentation API
+Reference</a>:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [12]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">ast_db</span> <span class="o">=</span> <span class="n">dastcom5</span><span class="o">.</span><span class="n">asteroid_db</span><span class="p">()</span>
+<span class="n">comet_db</span> <span class="o">=</span> <span class="n">dastcom5</span><span class="o">.</span><span class="n">comet_db</span><span class="p">()</span>
+<span class="n">ast_db</span><span class="o">.</span><span class="n">dtype</span><span class="o">.</span><span class="n">names</span><span class="p">[:</span><span class="mi">20</span><span class="p">]</span> <span class="c1"># They are more than 100, but that would be too much lines in this notebook :P</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>Out[12]:
+</pre></div>
+</div>
+<div class="output_area highlight-none"><div class="highlight"><pre>
+<span></span>(&#39;NO&#39;,
+ &#39;NOBS&#39;,
+ &#39;OBSFRST&#39;,
+ &#39;OBSLAST&#39;,
+ &#39;EPOCH&#39;,
+ &#39;CALEPO&#39;,
+ &#39;MA&#39;,
+ &#39;W&#39;,
+ &#39;OM&#39;,
+ &#39;IN&#39;,
+ &#39;EC&#39;,
+ &#39;A&#39;,
+ &#39;QR&#39;,
+ &#39;TP&#39;,
+ &#39;TPCAL&#39;,
+ &#39;TPFRAC&#39;,
+ &#39;SOLDAT&#39;,
+ &#39;SRC1&#39;,
+ &#39;SRC2&#39;,
+ &#39;SRC3&#39;)
+</pre></div>
+</div>
+</div>
+<div class="admonition note">
+Asteroid and comet parameters are not exactly the same (although they
+are very close):</div>
+<p>With these <code class="docutils literal"><span class="pre">ndarrays</span></code> you can classify asteroids and comets, sort
+them, get all their parameters, and whatever comes to your mind.</p>
+<p>For example, NEOs can be grouped in several ways. One of the NEOs group
+is called <code class="docutils literal"><span class="pre">Atiras</span></code>, and is formed by NEOs whose orbits are contained
+entirely with the orbit of the Earth. They are a really little group,
+and we can try to plot all of these NEOs using <code class="docutils literal"><span class="pre">asteroid_db()</span></code>:</p>
+<p>Talking in orbital terms, <code class="docutils literal"><span class="pre">Atiras</span></code> have an aphelion distance,
+<code class="docutils literal"><span class="pre">Q</span> <span class="pre">&lt;</span> <span class="pre">0.983</span> <span class="pre">au</span></code> and a semi-major axis, <code class="docutils literal"><span class="pre">a</span> <span class="pre">&lt;</span> <span class="pre">1.0</span> <span class="pre">au</span></code>. Visiting
+<a class="reference external" href="http://docs.poliastro.space/en/latest/dastcom5%20parameters.html">documentation API
+Reference</a>,
+you can see that DASTCOM5 provides semi-major axis, but doesn’t provide
+aphelion distance. You can get aphelion distance easily knowing
+perihelion distance (q, QR in DASTCOM5) and semi-major axis
+<code class="docutils literal"><span class="pre">Q</span> <span class="pre">=</span> <span class="pre">2*a</span> <span class="pre">-</span> <span class="pre">q</span></code>, but there are probably many other ways.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [13]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">aphelion_condition</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">ast_db</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">ast_db</span><span class="p">[</span><span class="s1">&#39;QR&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mf">0.983</span>
+<span class="n">axis_condition</span> <span class="o">=</span> <span class="n">ast_db</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mf">1.3</span>
+<span class="n">atiras</span> <span class="o">=</span> <span class="n">ast_db</span><span class="p">[</span><span class="n">aphelion_condition</span> <span class="o">&amp;</span> <span class="n">axis_condition</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<p>The number of <code class="docutils literal"><span class="pre">Atira</span> <span class="pre">NEOs</span></code> we use using this method is:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [14]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="nb">len</span><span class="p">(</span><span class="n">atiras</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>Out[14]:
+</pre></div>
+</div>
+<div class="output_area highlight-none"><div class="highlight"><pre>
+<span></span>16
+</pre></div>
+</div>
+</div>
+<p>Which is consistent with the <a class="reference external" href="https://cneos.jpl.nasa.gov/stats/totals.html">stats published by
+CNEOS</a></p>
+<p>Now we’re gonna plot all of their orbits, with corresponding labels,
+just because we love plots :)</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [15]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">poliastro.twobody.orbit</span> <span class="kn">import</span> <span class="n">Orbit</span>
+<span class="kn">from</span> <span class="nn">poliastro.bodies</span> <span class="kn">import</span> <span class="n">Earth</span>
+
+<span class="n">earth</span> <span class="o">=</span> <span class="n">Orbit</span><span class="o">.</span><span class="n">from_body_ephem</span><span class="p">(</span><span class="n">Earth</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>We only need to get the 16 orbits from these 16 <code class="docutils literal"><span class="pre">ndarrays</span></code>.</p>
+<p>There are two ways:</p>
+<ul class="simple">
+<li>Gather all their orbital elements manually and use the
+<code class="docutils literal"><span class="pre">Orbit.from_classical()</span></code> function.</li>
+<li>Use the <code class="docutils literal"><span class="pre">NO</span></code> property (logical record number in DASTCOM5 database)
+and the <code class="docutils literal"><span class="pre">dastcom5.orbit_from_record()</span></code> function.</li>
+</ul>
+<p>The second one seems easier and it is related to the current notebook,
+so we are going to use that one:</p>
+<p>We are going to use <code class="docutils literal"><span class="pre">ASTNAM</span></code> property of DASTCOM5 database:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [16]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">frame</span> <span class="o">=</span> <span class="n">OrbitPlotter</span><span class="p">()</span>
+
+<span class="n">frame</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">earth</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Earth&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="n">atiras</span><span class="p">[</span><span class="s1">&#39;NO&#39;</span><span class="p">]:</span>
+    <span class="n">ss</span> <span class="o">=</span> <span class="n">dastcom5</span><span class="o">.</span><span class="n">orbit_from_record</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
+    <span class="n">frame</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ss</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#666666&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/examples_Using_NEOS_package_35_0.png" src="../_images/examples_Using_NEOS_package_35_0.png" />
+</div>
+</div>
+<div class="admonition warning">
+This slightly incorrect, given that Earth coordinates are in a different
+frame from asteroids. However, for the purpose of this notebook, the
+effect is barely noticeable.</div>
+<p>If we needed also the names of each asteroid, we could do:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [17]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">frame</span> <span class="o">=</span> <span class="n">OrbitPlotter</span><span class="p">()</span>
+
+<span class="n">frame</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">earth</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Earth&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">atiras</span><span class="p">)):</span>
+    <span class="n">record</span> <span class="o">=</span> <span class="n">atiras</span><span class="p">[</span><span class="s1">&#39;NO&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">label</span> <span class="o">=</span> <span class="n">atiras</span><span class="p">[</span><span class="s1">&#39;ASTNAM&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="c1"># DASTCOM5 strings are binary</span>
+    <span class="n">ss</span> <span class="o">=</span> <span class="n">dastcom5</span><span class="o">.</span><span class="n">orbit_from_record</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
+    <span class="n">frame</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ss</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">label</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/examples_Using_NEOS_package_38_0.png" src="../_images/examples_Using_NEOS_package_38_0.png" />
+</div>
+</div>
+<div class="admonition note">
+We knew beforehand that there are no <code class="docutils literal"><span class="pre">Atira</span></code> comets, only asteroids
+(comet orbits are usually more eccentric), but we could use the same
+method with <code class="docutils literal"><span class="pre">com_db</span></code> if we wanted.</div>
+<p>Finally, another interesting function in <code class="docutils literal"><span class="pre">dastcom5</span></code> is
+<code class="docutils literal"><span class="pre">entire_db()</span></code>, which is really similar to <code class="docutils literal"><span class="pre">ast_db</span></code> and <code class="docutils literal"><span class="pre">com_db</span></code>,
+but it returns a <code class="docutils literal"><span class="pre">Pandas</span> <span class="pre">dataframe</span></code> instead of a <code class="docutils literal"><span class="pre">numpy</span> <span class="pre">ndarray</span></code>.
+The dataframe has asteroids and comets in it, but in order to achieve
+that (and a more manageable dataframe), a lot of parameters were
+removed, and others were renamed:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [18]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">db</span> <span class="o">=</span> <span class="n">dastcom5</span><span class="o">.</span><span class="n">entire_db</span><span class="p">()</span>
+<span class="n">db</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>Out[18]:
+</pre></div>
+</div>
+<div class="output_area highlight-none"><div class="highlight"><pre>
+<span></span>Index([&#39;NUMBER&#39;, &#39;NOBS&#39;, &#39;OBSFRST&#39;, &#39;OBSLAST&#39;, &#39;EPOCH&#39;, &#39;CALEPOCH&#39;, &#39;MA&#39;, &#39;W&#39;,
+       &#39;OM&#39;, &#39;IN&#39;, &#39;EC&#39;, &#39;A&#39;, &#39;QR&#39;, &#39;TP&#39;, &#39;TPCAL&#39;, &#39;TPFRAC&#39;, &#39;SOLDAT&#39;, &#39;DESIG&#39;,
+       &#39;IREF&#39;, &#39;NAME&#39;],
+      dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
+<p>Also, in this function, DASTCOM5 data (specially strings) is ready to
+use (decoded and improved strings, etc):</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [19]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">db</span><span class="p">[</span><span class="n">db</span><span class="o">.</span><span class="n">NAME</span> <span class="o">==</span> <span class="s1">&#39;Halley&#39;</span><span class="p">]</span> <span class="c1"># As you can see, Halley is the name of an asteroid too, did you know that?</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>Out[19]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>NUMBER</th>
+      <th>NOBS</th>
+      <th>OBSFRST</th>
+      <th>OBSLAST</th>
+      <th>EPOCH</th>
+      <th>CALEPOCH</th>
+      <th>MA</th>
+      <th>W</th>
+      <th>OM</th>
+      <th>IN</th>
+      <th>EC</th>
+      <th>A</th>
+      <th>QR</th>
+      <th>TP</th>
+      <th>TPCAL</th>
+      <th>TPFRAC</th>
+      <th>SOLDAT</th>
+      <th>DESIG</th>
+      <th>IREF</th>
+      <th>NAME</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2687</th>
+      <td>2688</td>
+      <td>1732</td>
+      <td>19500814</td>
+      <td>20160827</td>
+      <td>2455701.5</td>
+      <td>20110520.0</td>
+      <td>22.786977</td>
+      <td>183.484408</td>
+      <td>95.422520</td>
+      <td>3.454589</td>
+      <td>0.143215</td>
+      <td>3.165183</td>
+      <td>2.711882</td>
+      <td>2.455571e+06</td>
+      <td>2.011011e+07</td>
+      <td>0.309024</td>
+      <td>2.457850e+06</td>
+      <td>1982 HG1</td>
+      <td>23</td>
+      <td>Halley</td>
+    </tr>
+    <tr>
+      <th>739644</th>
+      <td>900001</td>
+      <td>161</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1633920.5</td>
+      <td>-2390607.0</td>
+      <td>0.165294</td>
+      <td>88.110000</td>
+      <td>30.810000</td>
+      <td>163.470000</td>
+      <td>0.967600</td>
+      <td>18.067901</td>
+      <td>0.585400</td>
+      <td>1.633908e+06</td>
+      <td>-2.390525e+06</td>
+      <td>0.620000</td>
+      <td>0.000000e+00</td>
+      <td>1P</td>
+      <td>SAO/-239</td>
+      <td>Halley</td>
+    </tr>
+    <tr>
+      <th>739645</th>
+      <td>900002</td>
+      <td>161</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1661840.5</td>
+      <td>-1631115.0</td>
+      <td>0.031113</td>
+      <td>89.110000</td>
+      <td>32.060000</td>
+      <td>163.700000</td>
+      <td>0.967700</td>
+      <td>18.095975</td>
+      <td>0.584500</td>
+      <td>1.661838e+06</td>
+      <td>-1.631113e+06</td>
+      <td>0.070000</td>
+      <td>0.000000e+00</td>
+      <td>1P</td>
+      <td>SAO/-163</td>
+      <td>Halley</td>
+    </tr>
+    <tr>
+      <th>739646</th>
+      <td>900003</td>
+      <td>161</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1689880.5</td>
+      <td>-860823.0</td>
+      <td>0.211345</td>
+      <td>90.778000</td>
+      <td>34.018000</td>
+      <td>163.340000</td>
+      <td>0.967680</td>
+      <td>18.118812</td>
+      <td>0.585600</td>
+      <td>1.689864e+06</td>
+      <td>-8.608065e+05</td>
+      <td>0.962000</td>
+      <td>0.000000e+00</td>
+      <td>1P</td>
+      <td>SAO/-86</td>
+      <td>Halley</td>
+    </tr>
+    <tr>
+      <th>739647</th>
+      <td>900004</td>
+      <td>161</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1717320.5</td>
+      <td>-111008.0</td>
+      <td>359.963217</td>
+      <td>92.559000</td>
+      <td>35.904000</td>
+      <td>163.589000</td>
+      <td>0.967370</td>
+      <td>17.995709</td>
+      <td>0.587200</td>
+      <td>1.717323e+06</td>
+      <td>-1.110108e+05</td>
+      <td>0.349000</td>
+      <td>0.000000e+00</td>
+      <td>1P</td>
+      <td>SAO/-11</td>
+      <td>Halley</td>
+    </tr>
+    <tr>
+      <th>739648</th>
+      <td>900005</td>
+      <td>161</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1745200.5</td>
+      <td>660206.0</td>
+      <td>0.142118</td>
+      <td>92.652000</td>
+      <td>36.129000</td>
+      <td>163.577000</td>
+      <td>0.967550</td>
+      <td>18.030817</td>
+      <td>0.585100</td>
+      <td>1.745189e+06</td>
+      <td>6.601260e+05</td>
+      <td>0.460000</td>
+      <td>0.000000e+00</td>
+      <td>1P</td>
+      <td>SAO/66</td>
+      <td>Halley</td>
+    </tr>
+    <tr>
+      <th>739649</th>
+      <td>900006</td>
+      <td>161</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1772640.5</td>
+      <td>1410324.0</td>
+      <td>0.019990</td>
+      <td>93.694000</td>
+      <td>37.219000</td>
+      <td>163.437000</td>
+      <td>0.967840</td>
+      <td>18.132463</td>
+      <td>0.583140</td>
+      <td>1.772639e+06</td>
+      <td>1.410322e+06</td>
+      <td>0.934000</td>
+      <td>0.000000e+00</td>
+      <td>1P</td>
+      <td>SAO/141</td>
+      <td>Halley</td>
+    </tr>
+    <tr>
+      <th>739650</th>
+      <td>900007</td>
+      <td>161</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1800800.5</td>
+      <td>2180429.0</td>
+      <td>359.761537</td>
+      <td>94.147000</td>
+      <td>37.908000</td>
+      <td>163.574000</td>
+      <td>0.967980</td>
+      <td>18.159588</td>
+      <td>0.581470</td>
+      <td>1.800819e+06</td>
+      <td>2.180518e+06</td>
+      <td>0.223000</td>
+      <td>0.000000e+00</td>
+      <td>1P</td>
+      <td>SAO/218</td>
+      <td>Halley</td>
+    </tr>
+    <tr>
+      <th>739651</th>
+      <td>900008</td>
+      <td>161</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1828920.5</td>
+      <td>2950425.0</td>
+      <td>0.057332</td>
+      <td>95.241000</td>
+      <td>39.111000</td>
+      <td>163.367000</td>
+      <td>0.968750</td>
+      <td>18.429120</td>
+      <td>0.575910</td>
+      <td>1.828916e+06</td>
+      <td>2.950420e+06</td>
+      <td>0.898000</td>
+      <td>0.000000e+00</td>
+      <td>1P</td>
+      <td>SAO/295</td>
+      <td>Halley</td>
+    </tr>
+    <tr>
+      <th>739652</th>
+      <td>900009</td>
+      <td>161</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1857720.5</td>
+      <td>3740301.0</td>
+      <td>0.158377</td>
+      <td>96.510000</td>
+      <td>40.579000</td>
+      <td>163.542000</td>
+      <td>0.968590</td>
+      <td>18.375995</td>
+      <td>0.577190</td>
+      <td>1.857708e+06</td>
+      <td>3.740216e+06</td>
+      <td>0.842000</td>
+      <td>0.000000e+00</td>
+      <td>1P</td>
+      <td>SAO/374</td>
+      <td>Halley</td>
+    </tr>
+    <tr>
+      <th>739653</th>
+      <td>900010</td>
+      <td>161</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1885960.5</td>
+      <td>4510625.0</td>
+      <td>359.959606</td>
+      <td>97.028000</td>
+      <td>41.210000</td>
+      <td>163.479000</td>
+      <td>0.968910</td>
+      <td>18.454165</td>
+      <td>0.573740</td>
+      <td>1.885964e+06</td>
+      <td>4.510628e+06</td>
+      <td>0.749000</td>
+      <td>0.000000e+00</td>
+      <td>1P</td>
+      <td>SAO/451</td>
+      <td>Halley</td>
+    </tr>
+    <tr>
+      <th>739654</th>
+      <td>900011</td>
+      <td>161</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1914920.5</td>
+      <td>5301008.0</td>
+      <td>0.135791</td>
+      <td>97.582000</td>
+      <td>41.974000</td>
+      <td>163.394000</td>
+      <td>0.968710</td>
+      <td>18.395334</td>
+      <td>0.575590</td>
+      <td>1.914910e+06</td>
+      <td>5.300927e+06</td>
+      <td>0.630000</td>
+      <td>0.000000e+00</td>
+      <td>1P</td>
+      <td>SAO/530</td>
+      <td>Halley</td>
+    </tr>
+    <tr>
+      <th>739655</th>
+      <td>900012</td>
+      <td>161</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1942840.5</td>
+      <td>6070318.0</td>
+      <td>0.032109</td>
+      <td>98.799000</td>
+      <td>43.261000</td>
+      <td>163.476000</td>
+      <td>0.968040</td>
+      <td>18.173655</td>
+      <td>0.580830</td>
+      <td>1.942838e+06</td>
+      <td>6.070315e+06</td>
+      <td>0.976000</td>
+      <td>0.000000e+00</td>
+      <td>1P</td>
+      <td>SAO/607</td>
+      <td>Halley</td>
+    </tr>
+    <tr>
+      <th>739656</th>
+      <td>900013</td>
+      <td>161</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1971160.5</td>
+      <td>6840929.0</td>
+      <td>359.952171</td>
+      <td>99.149000</td>
+      <td>43.800000</td>
+      <td>163.418000</td>
+      <td>0.968150</td>
+      <td>18.197174</td>
+      <td>0.579580</td>
+      <td>1.971164e+06</td>
+      <td>6.841003e+06</td>
+      <td>0.267000</td>
+      <td>0.000000e+00</td>
+      <td>1P</td>
+      <td>SAO/684</td>
+      <td>Halley</td>
+    </tr>
+    <tr>
+      <th>739657</th>
+      <td>900014</td>
+      <td>161</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1998800.5</td>
+      <td>7600602.0</td>
+      <td>0.157833</td>
+      <td>99.997000</td>
+      <td>44.687000</td>
+      <td>163.443000</td>
+      <td>0.967850</td>
+      <td>18.097667</td>
+      <td>0.581840</td>
+      <td>1.998788e+06</td>
+      <td>7.600521e+06</td>
+      <td>0.171000</td>
+      <td>0.000000e+00</td>
+      <td>1P</td>
+      <td>SAO/760</td>
+      <td>Halley</td>
+    </tr>
+    <tr>
+      <th>739658</th>
+      <td>900015</td>
+      <td>161</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2026840.5</td>
+      <td>8370310.0</td>
+      <td>0.124640</td>
+      <td>100.101000</td>
+      <td>44.930000</td>
+      <td>163.447000</td>
+      <td>0.967810</td>
+      <td>18.090090</td>
+      <td>0.582320</td>
+      <td>2.026831e+06</td>
+      <td>8.370228e+06</td>
+      <td>0.770000</td>
+      <td>0.000000e+00</td>
+      <td>1P</td>
+      <td>SAO/837</td>
+      <td>Halley</td>
+    </tr>
+    <tr>
+      <th>739659</th>
+      <td>900016</td>
+      <td>161</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2054360.5</td>
+      <td>9120714.0</td>
+      <td>359.940520</td>
+      <td>100.777000</td>
+      <td>45.646000</td>
+      <td>163.311000</td>
+      <td>0.968070</td>
+      <td>18.169746</td>
+      <td>0.580160</td>
+      <td>2.054365e+06</td>
+      <td>9.120719e+06</td>
+      <td>0.174000</td>
+      <td>0.000000e+00</td>
+      <td>1P</td>
+      <td>SAO/912</td>
+      <td>Halley</td>
+    </tr>
+    <tr>
+      <th>739660</th>
+      <td>900017</td>
+      <td>161</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2082520.5</td>
+      <td>9890819.0</td>
+      <td>359.774025</td>
+      <td>101.484000</td>
+      <td>46.561000</td>
+      <td>163.399000</td>
+      <td>0.967890</td>
+      <td>18.122392</td>
+      <td>0.581910</td>
+      <td>2.082538e+06</td>
+      <td>9.890906e+06</td>
+      <td>0.188000</td>
+      <td>0.000000e+00</td>
+      <td>1P</td>
+      <td>SAO/989</td>
+      <td>Halley</td>
+    </tr>
+    <tr>
+      <th>739661</th>
+      <td>900018</td>
+      <td>161</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2110480.5</td>
+      <td>10660308.0</td>
+      <td>359.839206</td>
+      <td>102.473000</td>
+      <td>47.624000</td>
+      <td>163.112000</td>
+      <td>0.968870</td>
+      <td>18.454867</td>
+      <td>0.574500</td>
+      <td>2.110493e+06</td>
+      <td>1.066032e+07</td>
+      <td>0.434000</td>
+      <td>0.000000e+00</td>
+      <td>1P</td>
+      <td>SAO/1066</td>
+      <td>Halley</td>
+    </tr>
+    <tr>
+      <th>739662</th>
+      <td>900019</td>
+      <td>161</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2139360.5</td>
+      <td>11450402.0</td>
+      <td>359.793477</td>
+      <td>103.704000</td>
+      <td>49.054000</td>
+      <td>163.224000</td>
+      <td>0.968790</td>
+      <td>18.416854</td>
+      <td>0.574790</td>
+      <td>2.139377e+06</td>
+      <td>1.145042e+07</td>
+      <td>0.061000</td>
+      <td>0.000000e+00</td>
+      <td>1P</td>
+      <td>SAO/1145</td>
+      <td>Halley</td>
+    </tr>
+    <tr>
+      <th>739663</th>
+      <td>900020</td>
+      <td>161</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2167680.5</td>
+      <td>12221015.0</td>
+      <td>0.201554</td>
+      <td>103.849000</td>
+      <td>49.304000</td>
+      <td>163.192000</td>
+      <td>0.968840</td>
+      <td>18.427792</td>
+      <td>0.574210</td>
+      <td>2.167664e+06</td>
+      <td>1.222093e+07</td>
+      <td>0.323000</td>
+      <td>0.000000e+00</td>
+      <td>1P</td>
+      <td>SAO/1222</td>
+      <td>Halley</td>
+    </tr>
+    <tr>
+      <th>739664</th>
+      <td>900021</td>
+      <td>161</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2196560.5</td>
+      <td>13011109.0</td>
+      <td>0.179564</td>
+      <td>104.500000</td>
+      <td>50.152000</td>
+      <td>163.076000</td>
+      <td>0.968930</td>
+      <td>18.432893</td>
+      <td>0.572710</td>
+      <td>2.196546e+06</td>
+      <td>1.301103e+07</td>
+      <td>0.082000</td>
+      <td>0.000000e+00</td>
+      <td>1P</td>
+      <td>SAO/1301</td>
+      <td>Halley</td>
+    </tr>
+    <tr>
+      <th>739665</th>
+      <td>900022</td>
+      <td>161</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2224680.5</td>
+      <td>13781105.0</td>
+      <td>359.927910</td>
+      <td>105.295000</td>
+      <td>51.020000</td>
+      <td>163.113000</td>
+      <td>0.968370</td>
+      <td>18.216883</td>
+      <td>0.576200</td>
+      <td>2.224686e+06</td>
+      <td>1.378111e+07</td>
+      <td>0.187000</td>
+      <td>0.000000e+00</td>
+      <td>1P</td>
+      <td>SAO/1378</td>
+      <td>Halley</td>
+    </tr>
+    <tr>
+      <th>739666</th>
+      <td>900023</td>
+      <td>161</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2253040.5</td>
+      <td>14560628.0</td>
+      <td>0.234781</td>
+      <td>105.835000</td>
+      <td>51.866000</td>
+      <td>162.890000</td>
+      <td>0.968000</td>
+      <td>18.115625</td>
+      <td>0.579700</td>
+      <td>2.253022e+06</td>
+      <td>1.456061e+07</td>
+      <td>0.133000</td>
+      <td>0.000000e+00</td>
+      <td>1P</td>
+      <td>SAO/1456</td>
+      <td>Halley</td>
+    </tr>
+    <tr>
+      <th>739667</th>
+      <td>900024</td>
+      <td>161</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2280480.5</td>
+      <td>15310814.0</td>
+      <td>359.842327</td>
+      <td>106.976000</td>
+      <td>53.057000</td>
+      <td>162.917000</td>
+      <td>0.967750</td>
+      <td>18.021705</td>
+      <td>0.581200</td>
+      <td>2.280493e+06</td>
+      <td>1.531083e+07</td>
+      <td>0.739000</td>
+      <td>0.000000e+00</td>
+      <td>1P</td>
+      <td>SAO/1531</td>
+      <td>Halley</td>
+    </tr>
+    <tr>
+      <th>739668</th>
+      <td>900025</td>
+      <td>161</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2308300.5</td>
+      <td>16071024.0</td>
+      <td>359.954121</td>
+      <td>107.550300</td>
+      <td>53.770100</td>
+      <td>162.905500</td>
+      <td>0.967490</td>
+      <td>17.951861</td>
+      <td>0.583615</td>
+      <td>2.308304e+06</td>
+      <td>1.607103e+07</td>
+      <td>0.040600</td>
+      <td>0.000000e+00</td>
+      <td>1P</td>
+      <td>H593/0</td>
+      <td>Halley</td>
+    </tr>
+    <tr>
+      <th>739669</th>
+      <td>900026</td>
+      <td>161</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2308300.5</td>
+      <td>16071024.0</td>
+      <td>359.954121</td>
+      <td>107.550300</td>
+      <td>53.770100</td>
+      <td>162.905500</td>
+      <td>0.967490</td>
+      <td>17.951861</td>
+      <td>0.583615</td>
+      <td>2.308304e+06</td>
+      <td>1.607103e+07</td>
+      <td>0.040600</td>
+      <td>0.000000e+00</td>
+      <td>1P</td>
+      <td>SAO/1607</td>
+      <td>Halley</td>
+    </tr>
+    <tr>
+      <th>739670</th>
+      <td>900027</td>
+      <td>278</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2335640.5</td>
+      <td>16820831.0</td>
+      <td>359.805545</td>
+      <td>109.221400</td>
+      <td>55.566900</td>
+      <td>162.264900</td>
+      <td>0.967933</td>
+      <td>18.168865</td>
+      <td>0.582621</td>
+      <td>2.335656e+06</td>
+      <td>1.682092e+07</td>
+      <td>0.779400</td>
+      <td>0.000000e+00</td>
+      <td>1P</td>
+      <td>I353/0</td>
+      <td>Halley</td>
+    </tr>
+    <tr>
+      <th>739671</th>
+      <td>900028</td>
+      <td>278</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2335640.5</td>
+      <td>16820831.0</td>
+      <td>359.805545</td>
+      <td>109.221400</td>
+      <td>55.566900</td>
+      <td>162.264900</td>
+      <td>0.967933</td>
+      <td>18.168865</td>
+      <td>0.582621</td>
+      <td>2.335656e+06</td>
+      <td>1.682092e+07</td>
+      <td>0.779400</td>
+      <td>0.000000e+00</td>
+      <td>1P</td>
+      <td>SAO/1682</td>
+      <td>Halley</td>
+    </tr>
+    <tr>
+      <th>739672</th>
+      <td>900029</td>
+      <td>718</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2363600.5</td>
+      <td>17590321.0</td>
+      <td>0.101706</td>
+      <td>110.709300</td>
+      <td>57.245800</td>
+      <td>162.372500</td>
+      <td>0.967686</td>
+      <td>18.087083</td>
+      <td>0.584466</td>
+      <td>2.363593e+06</td>
+      <td>1.759031e+07</td>
+      <td>0.562300</td>
+      <td>0.000000e+00</td>
+      <td>1P</td>
+      <td>J103/0</td>
+      <td>Halley</td>
+    </tr>
+    <tr>
+      <th>739673</th>
+      <td>900030</td>
+      <td>718</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2363600.5</td>
+      <td>17590321.0</td>
+      <td>0.101706</td>
+      <td>110.709300</td>
+      <td>57.245800</td>
+      <td>162.372500</td>
+      <td>0.967686</td>
+      <td>18.087083</td>
+      <td>0.584466</td>
+      <td>2.363593e+06</td>
+      <td>1.759031e+07</td>
+      <td>0.562300</td>
+      <td>0.000000e+00</td>
+      <td>1P</td>
+      <td>SAO/1759</td>
+      <td>Halley</td>
+    </tr>
+    <tr>
+      <th>739674</th>
+      <td>900031</td>
+      <td>653</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2391600.5</td>
+      <td>18351118.0</td>
+      <td>0.020156</td>
+      <td>110.704300</td>
+      <td>57.518500</td>
+      <td>162.258800</td>
+      <td>0.967394</td>
+      <td>17.989419</td>
+      <td>0.586563</td>
+      <td>2.391599e+06</td>
+      <td>1.835112e+07</td>
+      <td>0.939600</td>
+      <td>0.000000e+00</td>
+      <td>1P</td>
+      <td>SAO/1835</td>
+      <td>Halley</td>
+    </tr>
+    <tr>
+      <th>739675</th>
+      <td>900032</td>
+      <td>653</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2418800.5</td>
+      <td>19100509.0</td>
+      <td>0.243754</td>
+      <td>111.737100</td>
+      <td>58.562900</td>
+      <td>162.218600</td>
+      <td>0.967302</td>
+      <td>17.958530</td>
+      <td>0.587208</td>
+      <td>2.418782e+06</td>
+      <td>1.910042e+07</td>
+      <td>0.678500</td>
+      <td>0.000000e+00</td>
+      <td>1P</td>
+      <td>SAO/1910</td>
+      <td>Halley</td>
+    </tr>
+    <tr>
+      <th>739676</th>
+      <td>900033</td>
+      <td>7428</td>
+      <td>18350821</td>
+      <td>19940111</td>
+      <td>2449400.5</td>
+      <td>19940217.0</td>
+      <td>38.384264</td>
+      <td>111.332485</td>
+      <td>58.420081</td>
+      <td>162.262691</td>
+      <td>0.967143</td>
+      <td>17.834144</td>
+      <td>0.585978</td>
+      <td>2.446467e+06</td>
+      <td>1.986021e+07</td>
+      <td>0.395317</td>
+      <td>2.452124e+06</td>
+      <td>1P</td>
+      <td>J863/77</td>
+      <td>Halley</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<p>Panda offers many functionalities, and can also be used in the same way
+as the <code class="docutils literal"><span class="pre">ast_db</span></code> and <code class="docutils literal"><span class="pre">comet_db</span></code> functions:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [20]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">aphelion_condition</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">db</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">db</span><span class="p">[</span><span class="s1">&#39;QR&#39;</span><span class="p">])</span> <span class="o">&lt;</span> <span class="mf">0.983</span>
+<span class="n">axis_condition</span> <span class="o">=</span> <span class="n">db</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mf">1.3</span>
+<span class="n">atiras</span> <span class="o">=</span> <span class="n">db</span><span class="p">[</span><span class="n">aphelion_condition</span> <span class="o">&amp;</span> <span class="n">axis_condition</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [21]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="nb">len</span><span class="p">(</span><span class="n">atiras</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>Out[21]:
+</pre></div>
+</div>
+<div class="output_area highlight-none"><div class="highlight"><pre>
+<span></span>349
+</pre></div>
+</div>
+</div>
+<p>What? I said they can be used in the same way!</p>
+<p>Dont worry :) If you want to know what’s happening here, the only
+difference is that we are now working with comets too, and some comets
+have a negative semi-major axis!</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [22]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="nb">len</span><span class="p">(</span><span class="n">atiras</span><span class="p">[</span><span class="n">atiras</span><span class="o">.</span><span class="n">A</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>Out[22]:
+</pre></div>
+</div>
+<div class="output_area highlight-none"><div class="highlight"><pre>
+<span></span>333
+</pre></div>
+</div>
+</div>
+<p>So, rewriting our condition:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [23]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">axis_condition</span> <span class="o">=</span> <span class="p">(</span><span class="n">db</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mf">1.3</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">db</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">atiras</span> <span class="o">=</span> <span class="n">db</span><span class="p">[</span><span class="n">aphelion_condition</span> <span class="o">&amp;</span> <span class="n">axis_condition</span><span class="p">]</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">atiras</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>Out[23]:
+</pre></div>
+</div>
+<div class="output_area highlight-none"><div class="highlight"><pre>
+<span></span>16
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Visualizing the SpaceX Tesla Roadster trip to Mars.html" class="btn btn-neutral float-right" title="Visualizing the SpaceX Tesla Roadster trip to Mars" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Studying Hohmann transfers.html" class="btn btn-neutral" title="Studying Hohmann transfers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2013-2017, Juan Luis Cano Rodríguez and the poliastro development team.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.9.dev0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

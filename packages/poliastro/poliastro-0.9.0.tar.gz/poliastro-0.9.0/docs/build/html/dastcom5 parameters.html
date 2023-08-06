@@ -1,0 +1,712 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Dastcom5 parameters &mdash; poliastro 0.9.dev0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="author" title="About these documents"
+              href="about.html"/>
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="poliastro 0.9.dev0 documentation" href="index.html"/>
+        <link rel="up" title="API Reference" href="api.html"/>
+        <link rel="next" title="What’s new" href="changelog.html"/>
+        <link rel="prev" title="API Reference" href="api.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> poliastro
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.9
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="about.html">About poliastro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide.html">User guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jupyter.html">Jupyter notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="api.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-poliastro.twobody">poliastro.twobody package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-poliastro.iod">poliastro.iod package</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="api.html#module-poliastro.neos">poliastro.neos package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="api.html#module-poliastro.neos.dastcom5">poliastro.neos.dastcom5 module</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="api.html#dastcom5-parameters">dastcom5 parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#module-poliastro.neos.neows">poliastro.neos.neows module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-poliastro.bodies">poliastro.bodies module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-poliastro.constants">poliastro.constants module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-poliastro.coordinates">poliastro.coordinates module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-poliastro.cli">poliastro.cli module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-poliastro.examples">poliastro.examples module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-poliastro.frames">poliastro.frames module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-poliastro.hyper">poliastro.hyper module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-poliastro.maneuver">poliastro.maneuver module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-poliastro.patched_conics">poliastro.patched_conics module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-poliastro.plotting">poliastro.plotting module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-poliastro.stumpff">poliastro.stumpff module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-poliastro.util">poliastro.util module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">What&#8217;s new</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">poliastro</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="api.html">API Reference</a> &raquo;</li>
+        
+      <li>Dastcom5 parameters</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/dastcom5 parameters.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast,
+.nboutput.nblast {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast + .nbinput {
+    margin-top: -19px;
+}
+
+/* nice headers on first paragraph of info/warning boxes */
+.admonition .first {
+    margin: -12px;
+    padding: 6px 12px;
+    margin-bottom: 12px;
+    color: #fff;
+    line-height: 1;
+    display: block;
+}
+.admonition.warning .first {
+    background: #f0b37e;
+}
+.admonition.note .first {
+    background: #6ab0de;
+}
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+</style>
+<div class="section" id="dastcom5-parameters">
+<h1>Dastcom5 parameters<a class="headerlink" href="#dastcom5-parameters" title="Permalink to this headline">¶</a></h1>
+<p><strong>avail</strong>:</p>
+<ul class="simple">
+<li><em>a</em> if it is available for asteroids.</li>
+<li><em>c</em> if it is available for comets.</li>
+<li><em>[number]+</em> since which version of DASTCOM5 is available.</li>
+</ul>
+<table border="1" class="docutils">
+<colgroup>
+<col width="8%" />
+<col width="11%" />
+<col width="81%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">avail</th>
+<th class="head">Label</th>
+<th class="head">Definition</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>ac/3+</td>
+<td>EPOCH</td>
+<td>Time of osc. orbital elements solution, JD (CT,TDB)</td>
+</tr>
+<tr class="row-odd"><td>ac/3+</td>
+<td>CALEPO</td>
+<td>Time of osc. orbital elements solution, YYYYDDMM.ffff</td>
+</tr>
+<tr class="row-even"><td>ac/3+</td>
+<td>MA</td>
+<td>Mean anomaly at EPOCH, deg (elliptical &amp; hyperbolic cases
+&#8220;9.999999E99&#8221; if not available)</td>
+</tr>
+<tr class="row-odd"><td>ac/3+</td>
+<td>W</td>
+<td>Argument of periapsis at EPOCH, J2000 ecliptic, deg.</td>
+</tr>
+<tr class="row-even"><td>ac/3+</td>
+<td>OM</td>
+<td>Longitude of ascending node at EPOCH, J2000 ecliptic,deg.</td>
+</tr>
+<tr class="row-odd"><td>ac/3+</td>
+<td>IN</td>
+<td>Inclination angle at EPOCH wrt J2000 ecliptic, deg.</td>
+</tr>
+<tr class="row-even"><td>ac/3+</td>
+<td>EC</td>
+<td>Eccentricity at EPOCH</td>
+</tr>
+<tr class="row-odd"><td>ac/3+</td>
+<td>A</td>
+<td>Semi-major axis at EPOCH, au</td>
+</tr>
+<tr class="row-even"><td>ac/3+</td>
+<td>QR</td>
+<td>Perihelion distance at EPOCH, au</td>
+</tr>
+<tr class="row-odd"><td>ac/3+</td>
+<td>TP</td>
+<td>Perihelion date for QR at EPOCH, JD (CT,TDB)</td>
+</tr>
+<tr class="row-even"><td>ac/3+</td>
+<td>TPCAL</td>
+<td>Perihelion date for QR at EPOCH, format YYYYMMDD.fff</td>
+</tr>
+<tr class="row-odd"><td>ac/5+</td>
+<td>TPFRAC</td>
+<td>Decimal (fractional) part of TP for extended precision</td>
+</tr>
+<tr class="row-even"><td>ac/4+</td>
+<td>SOLDAT</td>
+<td>Date orbit solution was performed, JD (CT,TDB)</td>
+</tr>
+<tr class="row-odd"><td>ac/4+</td>
+<td>SRC(01)</td>
+<td>Square root covariance vector. Vector-stored upper-
+triangular matrix with order {EC,QR,TP,OM,W,IN,{ ESTL }}</td>
+</tr>
+<tr class="row-even"><td>ac/3+</td>
+<td>H</td>
+<td>Absolute visual magnitude (IAU H-G system) (99=unknown)</td>
+</tr>
+<tr class="row-odd"><td>ac/3+</td>
+<td>G</td>
+<td>Mag. slope parm. (IAU H-G)(99=unknown &amp; 0.15 not assumed)</td>
+</tr>
+<tr class="row-even"><td>c/3+</td>
+<td>M1</td>
+<td>Total absolute magnitude, mag.</td>
+</tr>
+<tr class="row-odd"><td>c/3+</td>
+<td>M2</td>
+<td>Nuclear absolute magnitue, mag.</td>
+</tr>
+<tr class="row-even"><td>c/4+</td>
+<td>K1</td>
+<td>Total absolute magnitude scaling factor</td>
+</tr>
+<tr class="row-odd"><td>c/4+</td>
+<td>K2</td>
+<td>Nuclear absolute magnitude scaling factor</td>
+</tr>
+<tr class="row-even"><td>c/4+</td>
+<td>PHCOF</td>
+<td>Phase coefficient for K2= 5</td>
+</tr>
+<tr class="row-odd"><td>ac/3+</td>
+<td>A1</td>
+<td>Non-grav. accel., radial component, [s:10^-8 au/day^2]</td>
+</tr>
+<tr class="row-even"><td>ac/3+</td>
+<td>A2</td>
+<td>Non-grav. accel., transverse component,[s:10^-8 au/day^2</td>
+</tr>
+<tr class="row-odd"><td>ac/4+</td>
+<td>A3</td>
+<td>Non-grav. accel., normal component, [s:10^-8 au/day^2]</td>
+</tr>
+<tr class="row-even"><td>c/4+</td>
+<td>DT</td>
+<td>Non-grav. lag/delay parameter, days</td>
+</tr>
+<tr class="row-odd"><td>ac/5+</td>
+<td>R0</td>
+<td>Non-grav. model constant, normalizing distance, au</td>
+</tr>
+<tr class="row-even"><td>ac/5+</td>
+<td>ALN</td>
+<td>Non-grav. model constant, normalizing factor</td>
+</tr>
+<tr class="row-odd"><td>ac/5+</td>
+<td>NM</td>
+<td>Non-grav. model constant, exponent m</td>
+</tr>
+<tr class="row-even"><td>ac/5+</td>
+<td>NN</td>
+<td>Non-grav. model constant, exponent n</td>
+</tr>
+<tr class="row-odd"><td>ac/5+</td>
+<td>NK</td>
+<td>Non-grav. model constant, exponent k</td>
+</tr>
+<tr class="row-even"><td>c/4+</td>
+<td>S0</td>
+<td>Center-of-light estimated offset at 1 au, km</td>
+</tr>
+<tr class="row-odd"><td>c/5+</td>
+<td>TCL</td>
+<td>Center-of-light start-time offset, d since &#8220;ref.time&#8221;</td>
+</tr>
+<tr class="row-even"><td>a /5+</td>
+<td>LGK</td>
+<td>Surface thermal conductivity log_10(k), (W/m/K)</td>
+</tr>
+<tr class="row-odd"><td>ac/5+</td>
+<td>RHO</td>
+<td>Bulk density, kg/m^3</td>
+</tr>
+<tr class="row-even"><td>ac/5+</td>
+<td>AMRAT</td>
+<td>Solar pressure model, area/mass ratio, m^2/kg</td>
+</tr>
+<tr class="row-odd"><td>c/5+</td>
+<td>AJ1</td>
+<td>Jet 1 acceleration, au/d^2</td>
+</tr>
+<tr class="row-even"><td>c/5+</td>
+<td>AJ2</td>
+<td>Jet 2 acceleration, au/d^2</td>
+</tr>
+<tr class="row-odd"><td>c/5+</td>
+<td>ET1</td>
+<td>Thrust angle, colatitude of jet 1, deg.</td>
+</tr>
+<tr class="row-even"><td>c/5+</td>
+<td>ET2</td>
+<td>Thrust angle, colatitude of jet 2, deg.</td>
+</tr>
+<tr class="row-odd"><td>c/5+</td>
+<td>DTH</td>
+<td>Jet model diurnal lag angle, deg. (delta_theta)</td>
+</tr>
+<tr class="row-even"><td>ac/5+</td>
+<td>ALF</td>
+<td>Spin pole orientation, RA, deg.</td>
+</tr>
+<tr class="row-odd"><td>ac/5+</td>
+<td>DEL</td>
+<td>Spin pole orientation, DEC, deg.</td>
+</tr>
+<tr class="row-even"><td>ac/5+</td>
+<td>SPHLM3</td>
+<td>Earth gravity sph. harm. model limit, Earth radii</td>
+</tr>
+<tr class="row-odd"><td>ac/5+</td>
+<td>SPHLM5</td>
+<td>Jupiter grav. sph. harm. model limit, Jupiter radii</td>
+</tr>
+<tr class="row-even"><td>ac/3+</td>
+<td>RP</td>
+<td>Object rotational period, hrs</td>
+</tr>
+<tr class="row-odd"><td>ac/3+</td>
+<td>GM</td>
+<td>Object mass parameter, km^3/s^2</td>
+</tr>
+<tr class="row-even"><td>ac/3+</td>
+<td>RAD</td>
+<td>Object mean radius, km</td>
+</tr>
+<tr class="row-odd"><td>ac/5+</td>
+<td>EXTNT1</td>
+<td>Triaxial ellipsoid, axis 1/largest equat. extent, km</td>
+</tr>
+<tr class="row-even"><td>ac/5+</td>
+<td>EXTNT2</td>
+<td>Triaxial ellipsoid, axis 2/smallest equat. extent, km</td>
+</tr>
+<tr class="row-odd"><td>ac/5+</td>
+<td>EXTNT3</td>
+<td>Triaxial ellipsoid, axis 3/polar extent, km</td>
+</tr>
+<tr class="row-even"><td>ac/4+</td>
+<td>MOID</td>
+<td>Earth MOID at EPOCH time, au; &#8216;99&#8217; if not computed</td>
+</tr>
+<tr class="row-odd"><td>ac/3+</td>
+<td>ALBEDO</td>
+<td>Geometric visual albedo, 99 if unknown</td>
+</tr>
+<tr class="row-even"><td>a /3+</td>
+<td>BVCI</td>
+<td>B-V color index, mag., 99 if unknown</td>
+</tr>
+<tr class="row-odd"><td>a /5+</td>
+<td>UBCI</td>
+<td>U-B color index, mag., 99 if unknown</td>
+</tr>
+<tr class="row-even"><td>a /5+</td>
+<td>IRCI</td>
+<td>I-R color index, mag., 99 if unknown</td>
+</tr>
+<tr class="row-odd"><td>ac/4+</td>
+<td>RMSW</td>
+<td>RMS of weighted optical residuals, arcsec</td>
+</tr>
+<tr class="row-even"><td>ac/5+</td>
+<td>RMSU</td>
+<td>RMS of unweighted optical residuals, arcsec</td>
+</tr>
+<tr class="row-odd"><td>ac/5+</td>
+<td>RMSN</td>
+<td>RMS of normalized optical residuals</td>
+</tr>
+<tr class="row-even"><td>ac/5+</td>
+<td>RMSNT</td>
+<td>RMS of all normalized residuals</td>
+</tr>
+<tr class="row-odd"><td>a /5+</td>
+<td>RMSH</td>
+<td>RMS of abs. visual magnitude (H) residuals, mag.</td>
+</tr>
+<tr class="row-even"><td>c/5+</td>
+<td>RMSMT</td>
+<td>RMS of MT estimate residuals, mag.</td>
+</tr>
+<tr class="row-odd"><td>c/5+</td>
+<td>RMSMN</td>
+<td>RMS of MN estimate residuals, mag.</td>
+</tr>
+<tr class="row-even"><td>ac/3+</td>
+<td>NO</td>
+<td>Logical record-number of this object in DASTCOM</td>
+</tr>
+<tr class="row-odd"><td>ac/4+</td>
+<td>NOBS</td>
+<td>Number of observations of all types used in orbit soln.</td>
+</tr>
+<tr class="row-even"><td>ac/4+</td>
+<td>OBSFRST</td>
+<td>Start-date of observations used in fit, YYYYMMDD</td>
+</tr>
+<tr class="row-odd"><td>ac/4+</td>
+<td>OBSLAST</td>
+<td>Stop-date of observations used in fit, YYYYMMDD</td>
+</tr>
+<tr class="row-even"><td>ac/5+</td>
+<td>PRELTV</td>
+<td>Planet relativity &#8220;bit-switch&#8221; byte: bits 0-7 are set to
+1 if relativity for corresponding planet was computed,
+0 if not. For example, if Earth &amp; Jupiter, FORTRAN(95)
+statement IBITS(PRELTV,J,1) should return 1 when J=2 or
+J=4, but zero for every other J through 7. No provision
+for supporting Pluto relativity.</td>
+</tr>
+<tr class="row-odd"><td>ac/5+</td>
+<td>SPHMX3</td>
+<td>Earth grav. model max. degree; 0=point-mass, 2= J2 only,
+3= up to J3 zonal, 22= 2x2 field, 33=3x3 field, etc.</td>
+</tr>
+<tr class="row-even"><td>ac/5+</td>
+<td>SPHMX5</td>
+<td>Jupiter grav. max. deg.; 0=point-mass, 2= J2 only,
+3= up to J3 zonal, 22= 2x2 field, 33=3x3 field, etc.</td>
+</tr>
+<tr class="row-odd"><td>ac/5+</td>
+<td>JGSEP</td>
+<td>Galilean satellites used as sep. perturbers; 0=no 1=yes</td>
+</tr>
+<tr class="row-even"><td>ac/5+</td>
+<td>TWOBOD</td>
+<td>Two-body orbit model flag; 0=no 1=yes</td>
+</tr>
+<tr class="row-odd"><td>ac/5+</td>
+<td>NSATS</td>
+<td>Number of satellites; 99 if unknown.</td>
+</tr>
+<tr class="row-even"><td>ac/4+</td>
+<td>UPARM</td>
+<td>Orbit condition code; 99 if not computed</td>
+</tr>
+<tr class="row-odd"><td>ac/4+</td>
+<td>LSRC</td>
+<td>Length of square-root cov. vector SRC (# elements used)</td>
+</tr>
+<tr class="row-even"><td>c/3+</td>
+<td>IPYR</td>
+<td>Perihelion year (i.e., 1976, 2012, 2018, etc.)</td>
+</tr>
+<tr class="row-odd"><td>ac/3+</td>
+<td>NDEL</td>
+<td>Number of radar delay measurements used in orbit soln.</td>
+</tr>
+<tr class="row-even"><td>ac/3+</td>
+<td>NDOP</td>
+<td>Number of radar Doppler measurements used in orbit soln.</td>
+</tr>
+<tr class="row-odd"><td>c/5+</td>
+<td>NOBSMT</td>
+<td>Number of magnitude measurements used in total mag. soln.</td>
+</tr>
+<tr class="row-even"><td>c/5+</td>
+<td>NOBSMN</td>
+<td>Number of magnitude measurements used in nuc. mag. soln.</td>
+</tr>
+<tr class="row-odd"><td>c/3+</td>
+<td>COMNUM</td>
+<td>IAU comet number (parsed from DESIG)</td>
+</tr>
+<tr class="row-even"><td>ac/3+</td>
+<td>EQUNOX</td>
+<td>Equinox of orbital elements (&#8216;1950&#8217; or &#8216;2000&#8217;)</td>
+</tr>
+<tr class="row-odd"><td>ac/4+</td>
+<td>PENAM</td>
+<td>Planetary ephemeris ID/name</td>
+</tr>
+<tr class="row-even"><td>ac/3+</td>
+<td>SBNAM</td>
+<td>Small-body perturber ephemeris ID/name</td>
+</tr>
+<tr class="row-odd"><td>a /3</td>
+<td>SPTYPT</td>
+<td>Tholen spectral type</td>
+</tr>
+<tr class="row-even"><td>a /4+</td>
+<td>SPTYPS</td>
+<td>SMASS-II spectral type</td>
+</tr>
+<tr class="row-odd"><td>ac/3+</td>
+<td>DARC</td>
+<td>Data arc span (year-year, OR integer # of days)</td>
+</tr>
+<tr class="row-even"><td>a /3+</td>
+<td>COMNT1</td>
+<td>Asteroid comment line #1</td>
+</tr>
+<tr class="row-odd"><td>a /3+</td>
+<td>COMNT2</td>
+<td>Asteroid comment line #2</td>
+</tr>
+<tr class="row-even"><td>c/3+</td>
+<td>COMNT3</td>
+<td>Comet comment line #1</td>
+</tr>
+<tr class="row-odd"><td>c/3+</td>
+<td>COMNT4</td>
+<td>Comet comment line #2</td>
+</tr>
+<tr class="row-even"><td>ac/3+</td>
+<td>DESIG</td>
+<td>Object designation</td>
+</tr>
+<tr class="row-odd"><td>ac/4+</td>
+<td>ESTL</td>
+<td>Dynamic parameter estimation list. Last symbol set
+to &#8216;+&#8217; if list is too long for field; check
+object record comments field for full list.</td>
+</tr>
+<tr class="row-even"><td>ac/3+</td>
+<td>IREF</td>
+<td>Solution reference/ID/name</td>
+</tr>
+<tr class="row-odd"><td>ac/3+</td>
+<td>NAME</td>
+<td>Object name</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="changelog.html" class="btn btn-neutral float-right" title="What’s new" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="api.html" class="btn btn-neutral" title="API Reference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2013-2017, Juan Luis Cano Rodríguez and the poliastro development team.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.9.dev0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,860 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Cowell’s formulation &mdash; poliastro 0.9.dev0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="author" title="About these documents"
+              href="../about.html"/>
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="poliastro 0.9.dev0 documentation" href="../index.html"/>
+        <link rel="up" title="Jupyter notebooks" href="../jupyter.html"/>
+        <link rel="next" title="Revisiting Lambert’s problem in Python" href="Revisiting Lambert&#39;s problem in Python.html"/>
+        <link rel="prev" title="Plotting in 3D" href="Plotting in 3D.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> poliastro
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.9
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About poliastro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide.html">User guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../jupyter.html">Jupyter notebooks</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Catch that asteroid!.html">Catch that asteroid!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Comparing Hohmann and bielliptic transfers.html">Comparing Hohmann and bielliptic transfers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Exploring the New Horizons launch.html">New Horizons launch and trajectory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Going to Mars with Python using poliastro.html">Going to Mars with Python using poliastro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Going to Jupiter with Python using Jupyter and poliastro.html">Going to Jupiter with Python using Jupyter and poliastro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Plotting in 3D.html">Plotting in 3D</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Cowell’s formulation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#First-example">First example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Error-checking">Error checking</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Numerical-validation">Numerical validation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#References">References</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Revisiting Lambert's problem in Python.html">Revisiting Lambert’s problem in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Studying Hohmann transfers.html">Studying Hohmann transfers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Using NEOS package.html">Using NEOS package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Visualizing the SpaceX Tesla Roadster trip to Mars.html">Visualizing the SpaceX Tesla Roadster trip to Mars</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">What&#8217;s new</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">poliastro</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../jupyter.html">Jupyter notebooks</a> &raquo;</li>
+        
+      <li>Cowell’s formulation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/examples/Propagation using Cowell&#39;s formulation.ipynb.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput,
+div.nbinput div.prompt,
+div.nbinput div.input_area,
+div.nbinput div[class*=highlight],
+div.nbinput div[class*=highlight] pre,
+div.nboutput,
+div.nbinput div.prompt,
+div.nbinput div.output_area,
+div.nboutput div[class*=highlight],
+div.nboutput div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput,
+div.nboutput {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput,
+    div.nboutput {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput div.prompt pre {
+    color: #303F9F;
+}
+
+/* output prompt */
+div.nboutput div.prompt pre {
+    color: #D84315;
+}
+
+/* all prompts */
+div.nbinput div.prompt,
+div.nboutput div.prompt {
+    min-width: 8ex;
+    padding-top: 0.4em;
+    padding-right: 0.4em;
+    text-align: right;
+    flex: 0;
+}
+@media (max-width: 540px) {
+    div.nbinput div.prompt,
+    div.nboutput div.prompt {
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput div.prompt.empty {
+        padding: 0;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput div.prompt pre,
+div.nboutput div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput div.input_area,
+div.nboutput div.output_area {
+    padding: 0.4em;
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput div.input_area,
+    div.nboutput div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput div.input_area {
+    border: 1px solid #cfcfcf;
+    border-radius: 2px;
+    background: #f7f7f7;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.pngmath center alignment in output cells */
+div.nboutput div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast,
+.nboutput.nblast {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast + .nbinput {
+    margin-top: -19px;
+}
+
+/* nice headers on first paragraph of info/warning boxes */
+.admonition .first {
+    margin: -12px;
+    padding: 6px 12px;
+    margin-bottom: 12px;
+    color: #fff;
+    line-height: 1;
+    display: block;
+}
+.admonition.warning .first {
+    background: #f0b37e;
+}
+.admonition.note .first {
+    background: #6ab0de;
+}
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+</style>
+<div class="section" id="Cowell’s-formulation">
+<h1>Cowell’s formulation<a class="headerlink" href="#Cowell’s-formulation" title="Permalink to this headline">¶</a></h1>
+<p>For cases where we only study the gravitational forces, solving the
+Kepler’s equation is enough to propagate the orbit forward in time.
+However, when we want to take perturbations that deviate from Keplerian
+forces into account, we need a more complex method to solve our initial
+value problem: one of them is <strong>Cowell’s formulation</strong>.</p>
+<p>In this formulation we write the two body differential equation
+separating the Keplerian and the perturbation accelerations:</p>
+<div class="math">
+\[\ddot{\mathbb{r}} = -\frac{\mu}{|\mathbb{r}|^3} \mathbb{r} + \mathbb{a}_d\]</div>
+<div class="admonition note">
+For an in-depth exploration of this topic, still to be integrated in
+poliastro, check out <a class="reference external" href="https://github.com/Juanlu001/pfc-uc3m">https://github.com/Juanlu001/pfc-uc3m</a></div>
+<div class="admonition note">
+An earlier version of this notebook allowed for more flexibility and
+interactivity, but was considerably more complex. Future versions of
+poliastro and plotly might bring back part of that functionality,
+depending on user feedback. You can still download the older version
+here.</div>
+<div class="section" id="First-example">
+<h2>First example<a class="headerlink" href="#First-example" title="Permalink to this headline">¶</a></h2>
+<p>Let’s setup a very simple example with constant acceleration to
+visualize the effects on the orbit.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">astropy</span> <span class="kn">import</span> <span class="n">units</span> <span class="k">as</span> <span class="n">u</span>
+
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ion</span><span class="p">()</span>
+
+<span class="kn">from</span> <span class="nn">poliastro.bodies</span> <span class="kn">import</span> <span class="n">Earth</span>
+<span class="kn">from</span> <span class="nn">poliastro.twobody</span> <span class="kn">import</span> <span class="n">Orbit</span>
+<span class="kn">from</span> <span class="nn">poliastro.examples</span> <span class="kn">import</span> <span class="n">iss</span>
+
+<span class="kn">from</span> <span class="nn">poliastro.twobody.propagation</span> <span class="kn">import</span> <span class="n">cowell</span>
+<span class="kn">from</span> <span class="nn">poliastro.plotting</span> <span class="kn">import</span> <span class="n">OrbitPlotter3D</span>
+<span class="kn">from</span> <span class="nn">poliastro.util</span> <span class="kn">import</span> <span class="n">norm</span>
+
+<span class="kn">from</span> <span class="nn">plotly.offline</span> <span class="kn">import</span> <span class="n">init_notebook_mode</span>
+<span class="n">init_notebook_mode</span><span class="p">(</span><span class="n">connected</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script>requirejs.config({paths: { 'plotly': ['https://cdn.plot.ly/plotly-latest.min']},});if(!window.Plotly) {{require(['plotly'],function(plotly) {window.Plotly=plotly;});}}</script></div>
+</div>
+<p>To provide an acceleration depending on an extra parameter, we can use
+<strong>closures</strong> like this one:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">accel</span> <span class="o">=</span> <span class="mf">2e-5</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">constant_accel_factory</span><span class="p">(</span><span class="n">accel</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">constant_accel</span><span class="p">(</span><span class="n">t0</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+        <span class="n">v</span> <span class="o">=</span> <span class="n">u</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span>
+        <span class="n">norm_v</span> <span class="o">=</span> <span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">v</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">v</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**.</span><span class="mi">5</span>
+        <span class="k">return</span> <span class="n">accel</span> <span class="o">*</span> <span class="n">v</span> <span class="o">/</span> <span class="n">norm_v</span>
+
+    <span class="k">return</span> <span class="n">constant_accel</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">custom_propagator</span><span class="p">(</span><span class="n">orbit</span><span class="p">,</span> <span class="n">tof</span><span class="p">,</span> <span class="n">rtol</span><span class="p">,</span> <span class="n">accel</span><span class="o">=</span><span class="n">accel</span><span class="p">):</span>
+    <span class="c1"># Workaround for https://github.com/poliastro/poliastro/issues/328</span>
+    <span class="k">if</span> <span class="n">tof</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">orbit</span><span class="o">.</span><span class="n">r</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">km</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">orbit</span><span class="o">.</span><span class="n">v</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">km</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># Use our custom perturbation acceleration</span>
+        <span class="k">return</span> <span class="n">cowell</span><span class="p">(</span><span class="n">orbit</span><span class="p">,</span> <span class="n">tof</span><span class="p">,</span> <span class="n">rtol</span><span class="p">,</span> <span class="n">ad</span><span class="o">=</span><span class="n">constant_accel_factory</span><span class="p">(</span><span class="n">accel</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">times</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">iss</span><span class="o">.</span><span class="n">period</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+<span class="n">times</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>Out[5]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="math">
+$[0,~111.36212,~222.72424,~\dots,~55346.973,~55458.335,~55569.697] \; \mathrm{s}$</div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">times</span><span class="p">,</span> <span class="n">positions</span> <span class="o">=</span> <span class="n">iss</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">times</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">custom_propagator</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>And we plot the results:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">frame</span> <span class="o">=</span> <span class="n">OrbitPlotter3D</span><span class="p">()</span>
+
+<span class="n">frame</span><span class="o">.</span><span class="n">set_attractor</span><span class="p">(</span><span class="n">Earth</span><span class="p">)</span>
+<span class="n">frame</span><span class="o">.</span><span class="n">plot_trajectory</span><span class="p">(</span><span class="n">positions</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;ISS&quot;</span><span class="p">)</span>
+
+<span class="n">frame</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div id="9760d2db-26db-4668-801f-47cb2131ad53" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("9760d2db-26db-4668-801f-47cb2131ad53", [{"type": "scatter3d", "x": [859.07256, 1671.2596050580785, 2457.1560205560027, 3204.2975560293753, 3900.84643946885, 4535.782326175036, 5099.080152426889, 5581.871652019624, 5976.587552165744, 6277.077806074132, 6478.707635817676, 6578.427640434852, 6574.816756612956, 6468.097426183101, 6260.122907650097, 5954.337248746702, 5555.708994720627, 5070.640224877789, 4506.852972594726, 3873.255478884618, 3179.791047981135, 2437.2725098662786, 1657.2054480712268, 851.6034233715787, 32.79842058110239, -786.7503258424588, -1594.6461016061119, -2378.7402298189663, -3127.310702240481, -3829.2315317165094, -4474.130689536868, -5052.534755242489, -5555.998670002658, -5977.219242557319, -6310.1313047438725, -6549.985649653041, -6693.408108528696, -6738.439333247193, -6684.55505106611, -6532.666749637503, -6285.1029358671085, -5945.571294889793, -5519.102258172228, -5011.974674728776, -4431.624468548171, -3786.537359117074, -3086.1269203548395, -2340.59945458391, -1560.807359810505, -758.0928663593304, 55.875792239312545, 869.2735355805851, 1670.2905298249048, 2447.3047060094405, 3189.0521055913896, 3884.7924138727158, 4524.467049862222, 5098.847243401121, 5599.669649784163, 6019.757229571375, 6353.123355108251, 6595.057391675917, 6742.190333660015, 6792.539446373778, 6745.531261736004, 6602.00268945883, 6364.180422240709, 6035.639221369185, 5621.240055990896, 5127.049424378436, 4560.241499405926, 3928.9850059552664, 3242.316949978662, 2510.0054748392868, 1742.404219879627, 950.300600755198, 144.76042450017002, -663.0288002826262, -1461.9135900874994, -2240.9271072739634, -2989.436683212155, -3697.284421815375, -4354.919243371597, -4953.5189166959, -5485.100817041908, -5942.620333801895, -6320.056032987587, -6612.480852709071, -6816.118774606515, -6928.386570106168, -6947.920368351506, -6874.586933617809, -6709.479675830556, -6454.89954996847, -6114.321130793063, -5692.344279885782, -5194.631954109064, -4627.834839005103, -3999.503627973658, -3317.9899078021676, -2592.336752499531, -1832.1602684297875, -1047.5234721202664, -248.8040144578258, 553.4426124129195, 1348.6226407091317, 2126.244530515047, 2876.058510006988, 3588.1932123858714, 4253.28746239496, 4862.615293132476, 5408.2023390073355, 5882.931854204403, 6280.6387477736125, 6596.190204738826, 6825.55167441695, 6965.837247911614, 7015.343710862745, 6973.567838219938, 6841.206787680228, 6620.141739631175, 6313.405216117156, 5925.132781997704, 5460.50008115463, 4925.646383499807, 4327.586009772191, 3674.1091574145053, 2973.6737700151966, 2235.290174448526, 1468.4002544846614, 682.7529393087292, -111.72223716916075, -905.0418013761467, -1687.2936001166609, -2448.7591215474818, -3180.0314538167663, -3872.1275799495584, -4516.593836408093, -5105.603495094261, -5632.045561225321, -6089.604010232314, -6472.82681358686, -6777.184225290194, -6999.115916771001, -7136.066658305714, -7186.510349826187, -7149.962304090157, -7026.979781274267, -6819.150867496117, -6529.071881381707, -6160.313583957455, -5717.3765584940575, -5205.636219438847, -4631.278003405478, -4001.223390596391, -3323.047501474424, -2604.8891103074857, -1855.3540130411322, -1083.4127801950792, -298.294014025239, 490.62568934462587, 1273.9338003817752, 2042.2946075561276, 2786.5612841816005, 3497.885869317739, 4167.8257559335325, 4788.445296575018, 5352.411177717105, 5853.080279638823, 6284.578829072842, 6641.871766250688, 6920.821384721606, 7118.234458942526, 7231.897248066388, 7260.597950565535, 7204.136379225192, 7063.320824658567, 6839.95227334242, 6536.7963381514855, 6157.543441275434, 5706.757956898227, 5189.817170765664, 4612.841042852916, 3982.6138657506854, 3306.4989939413936, 2592.347877312484, 1848.4046665486621, 1083.2076693481722, 305.4889265153827, -475.92685213121376, -1252.2227978663445, -2014.68870483966, -2754.817100294911, -3464.395579652288, -4135.594508544882, -4761.049283169292, -5333.936431146803, -5848.042925722126, -6297.828175154178, -6678.478235582675, -6985.951878712698, -7217.018225119568, -7369.285729586345, -7441.22237705756, -7432.167016629474, -7342.331827331108, -7172.795973589001, -6925.49057116842, -6603.1751464240315, -6209.405833655012, -5748.495617574434, -5225.4669907347325, -4645.997459334307, -4016.3583949753893, -3343.347794466174, -2634.2175738808264, -1896.5960861834794, -1138.4066125323825, -367.7826347913324, 407.01925077578267, 1177.707872663025, 1936.046532317237, 2673.9415894718395, 3383.5295959624154, 4057.2619853753226, 4687.986335823739, 5269.023247927729, 5794.237920258025, 6258.105560137009, 6655.769838569763, 6983.093683249301, 7236.701801979366, 7414.014438602928, 7513.271982705462, 7533.5501804529895, 7474.765824327306, 7337.672931484131, 7123.8495509935465, 6835.6754667828, 6476.301182760866, 6049.608687284017, 5560.164593521108, 5013.166338887537, 4414.3821992516605, 3770.0859312366, 3086.986898456852, 2372.1565648484634, 1632.952251072472, 876.939048980988, 111.8107755782492, -654.6891769051491, -1414.8462727504075, -2161.051766893068, -2885.8774112351803, -3582.1472570073147, -4243.005934573486, -4861.9828517061405, -5433.051811808106, -5950.6856139050615, -6409.905255590369, -6806.3234178579305, -7136.18196653734, -7396.383258468768, -7584.515091734691, -7698.869188017588, -7738.453141905346, -7702.995816764835, -7592.946210133298, -7409.465853738025, -7154.414854573722, -6830.331724447128, -6440.407186101478, -5988.452184979387, -5478.8603767490085, -4916.5654021456285, -4306.993302285465, -3656.0104691828765, -2969.867567497273, -2255.139903932954, -1518.6647597835233, -767.4762390042139, -8.738218205618523, 750.3239848248728, 1502.492581963666, 2240.6262629464627, 2957.7284455508916, 3647.014146389517, 4301.9747929954965, 4916.440308651916, 5484.637821236542, 6001.246376516941, 6461.447074774276, 6860.96809710378, 7196.124143802299, 7463.849871032789, 7661.726982649057, 7788.004710328294, 7841.613495750286, 7822.171771983316, 7729.985825817846, 7566.042807124541, 7331.997033561028, 7030.149817818416, 6663.423118542702, 6235.327383829109, 5749.924016845623, 5211.78294562376, 4625.935822986761, 3997.8254174246413, 3333.2517813956356, 2638.3158001878833, 1919.3607322798664, 1182.9123517382077, 435.61829509238964, -315.8127998312657, -1064.671796636077, -1804.3086643083332, -2528.1906724409873, -3229.9587014586696, -3903.4812277368737, -4542.90558130869, -5142.706112565668, -5697.728943398211, -6203.233016936997, -6654.927198168453, -7049.003214722999, -7382.164262949172, -7651.649138836348, -7855.251786299443, -7991.336186990729, -8058.846546020519, -8057.312757093931, -7986.851158646324, -7848.160619785229, -7642.5140215498195, -7371.745225138477, -7038.231644771548, -6644.872568693931, -6195.063397654829, -5692.665996158757, -5141.975377677359, -4547.6829710008005, -3914.836740686609, -3248.7984600090213, -2555.198459694914, -1839.8881996187754, -1108.8910332718362, -368.3515556876638, 375.51605581515673, 1116.4802827050196, 1848.3446499432864, 2564.9998069760113, 3260.4748526070457, 3928.9874508280013, 4564.992289018168, 5163.227439399321, 5718.758199432065, 6227.018006978555, 6683.846051551016, 7085.521233588207, 7428.792159152299, 7710.902897371416, 7929.614271699149, 8083.220503129901, 8170.56107308408, 8191.027724955007, 8144.566575571755, 8031.675360035913, 7853.395884830253, 7611.3018138971975, 7307.481959642369, 6944.519295033669, 6525.465943290634, 6053.814437670039, 5533.46557517962, 4968.693214212079, 4364.106387131936, 3724.609114547116, 3055.3583184461627, 2361.7202368082617, 1649.225742835869, 923.524968041773, 190.3416203974756, -544.5726229485545, -1275.4832837404529, -1996.717464401981, -2702.7071162420807, -3388.0308882847385, -4047.454273682544, -4675.96779430051, -5268.822988129202, -5821.5659883746175, -6330.06850716082, -6790.556060390609, -7199.633293426893, -7554.306289638861, -7852.001765415933, -8090.583076062423, -8268.362976873123, -8384.113102829066, -8437.070148757633, -8426.938749464625, -8353.891076534763, -8218.56318513312, -8022.048160413694, -7765.886129203343, -7452.051218385021, -7082.93555714482, -6661.330435878511, -6190.404750110643, -5673.680873370957, -5115.0081184282935, -4518.53396162585, -3888.6732202250314, -3230.075387406666, -2547.5903438944806, -1846.2326787657273, -1131.1448647312538, -407.5595447996109, 319.23880249263334, 1043.9525434172258, 1761.3096322328322, 2466.102129709779, 3153.2242070294296, 3817.709345105294, 4454.766442069944, 5059.814547181531, 5628.515947789078, 6156.807347334225, 6640.92888662921, 7077.45077772874, 7463.297339561421, 7795.768246820725, 8072.556828246731, 8291.765277089487, 8451.916664796223, 8551.963678531238, 8591.294033587315, 8569.732542559863, 8487.539854055565, 8345.407904128575, 8144.4521531661, 7886.200709284896, 7572.580465929668, 7205.900406030428, 6788.832247533543, 6324.388624990606, 5815.899019124672, 5266.983660740557, 4681.525646827348, 4063.6415153645553, 3417.6505311283836, 2748.042937766092, 2059.447431799382, 1356.5981120894794, 644.3011539057779, -72.59854970394188, -789.2505448127189, -1500.831547197322, -2202.577533179772, -2889.8149895439046, -3557.991134416552, -4202.702934703194, -4819.724759743317, -5405.034525176084, -5954.838195359817, -6465.592526934269, -6934.025950194457, -7357.157498663701, -7732.313710608741, -8057.14343921157, -8329.630520545841, -8548.104260531532, -8711.247713619789, -8818.103737018891, -8868.078815010076, -8860.94465823529, -8796.837592812311, -8676.255763899631, -8500.05418782446, -8269.437696182802, -7985.951824536865, -7651.4717073786915, -7268.189050008791, -6838.59725693362, -6365.474805208803, -5851.866959943114, -5301.0659378945165, -4716.589633606632, -4102.15903092329, -3461.6744308533493, -2799.190634533443, -2118.8912274354348, -1425.0621178503777, -722.0644889182977, -14.307329023847842, 693.7802899419343, 1397.7770132182025, 2093.296906812619, 2776.016886747913], "y": [-4137.20368, -3873.060522436334, -3547.3648544475527, -3165.293608340374, -2732.9188021342684, -2257.1094259134516, -1745.419865938543, -1205.9667147619277, -647.2960825131197, -78.24374978511094, 492.2093235312792, 1055.0835043872264, 1601.5463286597883, 2123.0550179354223, 2611.4930952213135, 3059.2986740909896, 3459.5822050802285, 3806.2317233625085, 4094.003942783069, 4318.599871779095, 4476.723974668324, 4566.126255131835, 4585.62698639709, 4535.124144364651, 4415.583907554241, 4229.014864558121, 3978.4268113950648, 3667.775225177005, 3301.8926663350567, 2886.4084903552325, 2427.6583439315896, 1932.5849831674495, 1408.6319869005856, 863.6319509557347, 305.69074337158514, -256.93061927298527, -815.9349448946983, -1363.107196862936, -1890.4307349238716, -2390.200065468061, -2855.128751223894, -3278.4511846128016, -3654.016987685175, -3976.3768661474105, -4240.8588176754, -4443.63367759473, -4581.769080693996, -4653.271028508722, -4657.112378987188, -4593.247721299965, -4462.61426339181, -4267.118543396437, -4009.6089768437305, -3693.8344672453018, -3324.38953434861, -2906.646647427962, -2446.6766844630747, -1951.1586655470815, -1427.2801231145895, -882.6296655228764, -325.0834570145739, 237.31253012206457, 796.4625417678858, 1344.3413467070727, 1873.1128152333442, 2375.244808561347, 2843.6185027067486, 3271.630399569782, 3653.285444696652, 3983.279869839096, 4257.072601906769, 4470.944320773645, 4622.04349867689, 4708.419006127083, 4729.0391160067265, 4683.796972668861, 4573.5028109280065, 4399.863406848236, 4165.44941524363, 3873.6513962485087, 3528.6254547194226, 3135.229512167578, 2698.951302861698, 2225.8292357292644, 1722.3672943317101, 1195.445161233421, 652.224753453812, 100.05434507930295, -453.6285658994259, -1001.3945147809795, -1535.9183494753427, -2050.073463246036, -2537.022947921942, -2990.306672784938, -3403.923335102176, -3772.406572347517, -4090.894274550864, -4355.190289226435, -4561.817772401909, -4708.063508880967, -4792.012604446905, -4812.573043436196, -4769.489707858136, -4663.347569431045, -4495.563893402739, -4268.369432080602, -3984.7787351306733, -3648.549860800814, -3264.1339343848185, -2836.615164070959, -2371.6420857610947, -1875.3509632285711, -1354.282413499351, -815.2924551490448, -265.45928496409624, 288.01282760874983, 837.8910818141123, 1377.0116485336873, 1898.375663380674, 2395.2422719548035, 2861.2173526287843, 3290.33663346296, 3677.142036143785, 4016.750217371772, 4304.912432682989, 4538.065014360955, 4713.36992914153, 4828.745057728365, 4882.884012346362, 4875.265476214847, 4806.152206596254, 4676.579987779672, 4488.336950094334, 4243.933784128187, 3946.565475321956, 3600.065262741387, 3208.8515879077463, 2777.8688458662177, 2312.5227828515576, 1818.6114043420725, 1302.2522660098844, 769.8070196225046, 227.8040782845768, -317.13974809584306, -858.3978140307614, -1389.411584396943, -1903.7671766426297, -2395.2697362258587, -2858.014909362965, -3286.4567059749384, -3675.471076625906, -4020.4145606680645, -4317.17739960799, -4562.2305505393715, -4752.66608044031, -4886.2304738756275, -4961.350445191645, -4977.150912089563, -4933.464861143102, -4830.83491736087, -4670.506519275464, -4454.412697561775, -4185.150558033509, -3865.9496775527095, -3500.632732271736, -3093.568789488822, -2649.6198049199124, -2174.0809736558904, -1672.6156827914292, -1151.1859038625487, -615.9789412000457, -73.33151563514826, 470.3477903568903, 1008.6566716632555, 1535.2767603318619, 2044.0497537212605, 2529.0509891808447, 2984.6594929781436, 3405.6235982556095, 3787.1213094718732, 4124.814686706607, 4414.89762964623, 4654.136555154467, 4839.9035809481975, 4970.2019482146325, 5043.6835349771345, 5059.6584273052595, 5018.096624523405, 4919.6220558370105, 4765.499177501609, 4557.612501096117, 4298.439473775288, 3991.0171906044493, 3638.903467228008, 3246.1328387908256, 2817.168078882772, 2356.847851228834, 1870.331117972402, 1363.0389326974616, 840.5942450072196, 308.7603374302978, -226.6214942505967, -759.694418771262, -1284.6481215322667, -1795.7798638647814, -2287.553999937883, -2754.659420754202, -3192.0644147808966, -3595.068456083486, -3959.35045377161, -4281.013021361153, -4556.622351904342, -4783.2433148201, -4958.469423872061, -5080.447363152849, -5147.895799632717, -5160.118257251227, -5117.009878707419, -5019.057957268788, -4867.336181686043, -4663.492602518378, -4409.731397033732, -4108.788581708653, -3763.901895015592, -3378.7751475290133, -2957.5374099120127, -2504.6974805642417, -2025.0941420148147, -1523.8427768442107, -1006.2789685180073, -477.8997584227492, 55.69673357816026, 588.8725927951954, 1116.0115521064374, 1631.5798467802385, 2130.1857469453053, 2606.6370567251315, 3055.9959044441352, 3473.630194520607, 3855.2611474062537, 4197.006417866241, 4495.418352385563, 4747.517021786491, 4950.817743567105, 5103.352888078729, 5203.687842007462, 5250.931079853085, 5244.738368095063, 5185.311196083826, 5073.38959157769, 4910.2395364924405, 4697.635249330095, 4437.836644764543, 4133.562317787966, 3787.958430038149, 3404.563899502955, 2987.272312430586, 2540.290988306496, 2068.0976359124015, 1575.3950413732841, 1067.0642283036434, 548.116526412725, 23.644978642710612, -501.22449125977545, -1021.3817385922002, -1531.7804837457613, -2027.4854351046656, -2503.7180721390596, -2955.9007254272096, -3379.6986045329218, -3771.05943970081, -4126.250419395201, -4441.892123069332, -4714.989167362938, -4942.957304615534, -5123.646735282794, -5255.3614209373345, -5336.874212206268, -5367.437636391304, -5346.790222851004, -5275.158280350486, -5153.253079612221, -4982.263435857511, -4763.843730045652, -4500.0974532731825, -4193.556405871008, -3847.1557305120095, -3464.20500625373, -3048.35567721235, -2603.5651344387497, -2134.057811770071, -1644.2836949472808, -1138.8746772843997, -622.5992238337249, -100.3158285447189, 423.07423515365207, 942.6743611500576, 1453.6397442062694, 1951.2236957637058, 2430.822650964171, 2888.019396474085, 3318.6240759916764, 3718.7125636489423, 4084.6618342110555, 4413.182002042408, 4701.344747469852, 4946.607898263888, 5146.835984612391, 5300.316637127855, 5405.772748110299, 5462.370365780262, 5469.722338471662, 5427.887770427327, 5337.367392121976, 5199.0949856201305, 5014.4250390986135, 4785.116834024182, 4513.3151937298735, 4201.528143103225, 3852.601746127691, 3469.6924012159375, 3056.2368839130104, 2615.9204330670796, 2152.6431801287013, 1670.4852223972823, 1173.670640006071, 666.5307536111841, 153.46691548038905, -361.08687884408175, -872.7012775725727, -1376.9884848727197, -1869.6385325868853, -2346.454654135948, -2803.387512122068, -3236.5680404259006, -3642.338671364356, -4017.2827288523185, -4358.251779515199, -4662.3907455364315, -4927.160595801593, -5150.358445724697, -5330.134911274718, -5465.0085791479, -5553.877472994894, -5596.027415140986, -5591.1372043488, -5539.280552980277, -5440.924751221272, -5296.9260518777355, -5108.5217963835885, -4877.319330870958, -4605.28179022255, -4294.710857500032, -3948.2266357668577, -3568.744798556715, -3159.4512136673834, -2723.7742621184575, -2265.355099425851, -1788.0161294381633, -1295.7279812816312, -792.5752971124124, -282.7216519773326, 229.62606320249824, 740.253458861657, 1244.9743262185532, 1739.6658438177333, 2220.3029833413534, 2682.991798248757, 3124.001294123937, 3539.7935986410325, 3927.0521712883774, 4282.707818128776, 4603.96230433962, 4888.309386553413, 5133.553117672108, 5337.823308140521, 5499.5880592734475, 5617.663315559687, 5691.219413381743, 5719.784633036609, 5703.245788767826, 5641.845917537761, 5536.179151234215, 5387.182878624794, 5196.1273227108, 4964.602675967415, 4694.503950373179, 4388.013711212523, 4047.58287333692, 3675.9097461939787, 3275.917519511183, 2850.730385237472, 2403.648493497977, 1938.1219409184264, 1457.723989082394, 966.1237091970753, 467.0582464199347, -35.69510603373068, -538.3468368570666, -1037.1229690212965, -1528.2924577380618, -2008.1940624300023, -2473.2625266386494, -2920.0539055689405, -3345.269887043858, -3745.7809579920436, -4118.648275265166, -4461.144106664351, -4770.770715553492, -5045.277570453124, -5282.676769642146, -5481.25658002614, -5639.592999540032, -5756.559263131072, -5831.333223941567, -5863.402553800663, -5852.567720441123, -5798.94271303232, -5702.953502638943, -5565.33423992367, -5387.121208831636, -5169.644571920245, -4914.5179602889275, -4623.6259786064975, -4299.109713231022, -3943.350348728855, -3558.951014977165, -3148.7170031668124, -2715.6345042750672, -2262.8480375945655, -1793.6367495064978, -1311.3897736460497, -819.5808526854878, -321.7424290270957, 178.5605834128428, 677.7571315591601, 1172.2962446207914, 1658.672931697531, 2133.453547060108, 2593.300421338672, 3034.9955657601386, 3455.4632674610775, 3851.791406659677, 4221.251340834884, 4561.316216777751, 4869.677588268383, 5144.26023482881, 5383.2350952686975, 5585.030248381494, 5748.339891715002, 5872.131287772922, 5955.649664984937, 5998.421078034314, 6000.253248617347, 5961.234423163052, 5881.730298331238, 5762.379078247267, 5604.084739216827, 5408.008588131787, 5175.55920996435, 4908.38090751092, 4608.340743098087, 4277.51429726764, 3918.170263545543, 3532.754001461813, 3123.8701720339127, 2694.2645810404993, 2246.8053557737994, 1784.4635805786447, 1310.2935154846139, 827.4125207532006, 338.98080817965797, -151.81886233399496, -641.8014250468692, -1127.7995765071746, -1606.6835596669616, -2075.3805573911286, -2530.893592231366, -2970.3198329416173, -3390.8682119600685, -3789.8762620032267, -4164.826084018305, -4513.359363013282, -4833.291352807382, -5122.623755525043, -5379.556426691769, -5602.497842184323, -5790.074269026792, -5941.137588110433, -6054.7717234490965, -6130.29763951899, -6167.276875572685, -6165.513593633425, -6125.055125075641, -6046.191009293129, -5929.450526944217, -5775.598739530659, -5585.631056606708, -5360.7663616582895, -5102.438737506132], "z": [5295.56871, 5302.409084486281, 5225.088409305827, 5064.846665822647, 4824.244828720855, 4507.12335376205, 4118.539336379703, 3664.6832643858934, 3152.7767104890263, 2590.9527156401173, 1988.1209880869878, 1353.8203718855561, 698.0613102394987, 31.161233271218407, -636.4240705786808, -1294.2699896125878, -1932.1504492272256, -2540.2001219512904, -3109.0686879601076, -3630.0645854344248, -4095.285980100052, -4497.737012296886, -4831.427735201066, -5091.456526278143, -5274.074123756877, -5376.728799803782, -5398.092523186479, -5338.068279232243, -5197.778998818419, -4979.538797956098, -4686.807444099349, -4324.1291453628155, -3897.056906139298, -3412.06381044091, -2876.4426860688704, -2298.195672762289, -1685.9152695993403, -1048.658475139363, -395.8156612344619, 263.0241591248499, 918.2099964461163, 1560.1658005312847, 2179.525943675012, 2767.267591257294, 3314.838291517996, 3814.277138449009, 4258.327897369682, 4640.542535057573, 4955.3736688364, 5198.254544980934, 5365.665279036924, 5455.184241321965, 5465.5236510131335, 5396.5486518622565, 5249.27938005379, 5025.87579720891, 4729.605344251332, 4364.793769016957, 3936.7597845303494, 3451.73451769522, 2916.7670005275972, 2339.617228999999, 1728.63855892144, 1092.651415958054, 440.81046080393924, -217.53253478792442, -872.9677834184233, -1516.1662234674081, -2138.0156268451037, -2729.751889976462, -3283.0834676338723, -3790.3070920116043, -4244.413134768595, -4639.179209699824, -4969.250869642797, -5230.208515032038, -5418.619895253447, -5532.077840764848, -5569.223107857413, -5529.752444312392, -5414.412189659786, -5224.977906145154, -4964.220695019368, -4635.860987458179, -4244.510711472224, -3795.604827217919, -3295.3232955557637, -2750.5046009113535, -2168.55199226932, -1557.3336378409092, -925.0779120859739, -280.26505010315304, 368.48358438270134, 1012.517364316004, 1643.268141595282, 2252.360610895502, 2831.720044953692, 3373.6761624482097, 3871.0619080927513, 4317.305952325621, 4706.5177570105025, 5033.564106079549, 5294.136068024504, 5484.805442423199, 5603.069846575912, 5647.385721678557, 5617.188680782924, 5512.900782427293, 5335.924492535145, 5088.623290513422, 4774.289079862286, 4397.096774855608, 3962.046647878144, 3474.8952314329285, 2942.0757687838804, 2370.609392009627, 1768.0083702680322, 1142.1729094298305, 501.28309260095114, -146.31237368519496, -792.2089028380465, -1428.0585523517013, -2045.6806515053977, -2637.1689207496033, -3194.9935672932434, -3712.096964896472, -4181.981672088981, -4598.789706728987, -4957.372170930719, -5253.348503374538, -5483.154821083109, -5644.080994985918, -5734.296279244911, -5752.863479727458, -5699.741799890075, -5575.778640558168, -5382.690752895283, -5123.035250553216, -4800.171078175311, -4418.211609471087, -3981.969110522665, -3496.891853869568, -2968.994708207335, -2404.7840585195418, -1811.1779340596186, -1195.4222379876173, -565.0039841454011, 72.43754576799574, 709.2008066422121, 1337.6122360931756, 1950.1158231020322, 2539.3610836394137, 3098.288535019506, 3620.211772287402, 4098.895267009957, 4528.627032427515, 4904.285330512997, 5221.398637145408, 5476.198132732151, 5665.662048015586, 5787.551269413864, 5840.435695278226, 5823.710934043906, 5737.60504673309, 5583.175158756555, 5362.293897741516, 5077.6257532284035, 4732.59359784686, 4331.335755101953, 3878.654142815444, 3379.9541601277656, 2841.1771162022715, 2268.7261169396497, 1669.3864289247272, 1050.2414246213118, 418.5852772957162, -218.16638349519985, -852.5666256203556, -1477.2269509898292, -2084.905415385367, -2668.591980043057, -3221.5900113971506, -3737.5929306434227, -4210.75511447655, -4635.7562595764075, -5007.85854272725, -5322.956032853628, -5577.615937344561, -5769.1113902251855, -5895.445611124639, -5955.367379707757, -5948.377878231947, -5874.729054097248, -5735.413743602105, -5532.147877300825, -5267.345156221773, -4944.084647036363, -4566.071793646462, -4137.593383222801, -3663.4670375216133, -3148.98582611071, -2599.858618162473, -2022.1468044425558, -1422.1980321758647, -806.5776031323337, -181.99819038058325, 444.75146798578623, 1066.8782388881843, 1677.6559696547351, 2270.495913168037, 2839.0155521112765, 3377.1051792831, 3878.9916016737275, 4339.2983506056735, 4753.101799367998, 5115.982614193524, 5424.071994910665, 5674.092198686913, 5863.3908846912655, 5989.968869397419, 6052.500942043806, 6050.349457158981, 5983.570495932365, 5852.912469745672, 5659.807126609538, 5406.3530132493215, 5095.291540719483, 4729.975897999336, 4314.333154034901, 3852.8199822655456, 3350.37253052712, 2812.3510415090504, 2244.47990248454, 1652.7838662418064, 1043.5212363262042, 423.11484777359806, -201.91830148034825, -825.0379037746466, -1439.750819718232, -2039.6803403853912, -2618.633425611244, -3170.6651551477667, -3690.139685145063, -4171.787067470218, -4610.755361773428, -5002.6575483053675, -5343.612831092036, -5630.282004574567, -5859.896640251666, -6030.2819317470285, -6139.873115620898, -6187.725459933793, -6173.517882242708, -6097.550322487826, -5960.735053936984, -5764.582166465625, -5511.1795012871835, -5203.167354705398, -4843.708301034944, -4436.452511912772, -3985.4989712477714, -3495.353002755328, -2970.880540750666, -2417.259585449262, -1839.929291739163, -1244.537145905445, -636.8846883999042, -22.872242785760363, 591.5568882743457, 1200.4722996718224, 1798.0119745328152, 2378.4369333523396, 2936.184590505643, 3465.9203732473197, 3962.587166600004, 4421.452158163214, 4838.150670379844, 5208.7265845017155, 5529.668980816597, 5797.944644069221, 6011.026111588168, 6166.914974831413, 6264.160182801836, 6301.871138223147, 6279.725424237536, 6197.97105043792, 6057.423161861627, 5859.455212401021, 5605.9846643741075, 5299.453337615463, 4942.802593582578, 4539.443601386395, 4093.2229922452952, 3608.3842654807404, 3089.5253615516203, 2541.5528648257673, 1969.633339625621, 1379.1423368527005, 775.6116343628926, 164.67529178525604, -447.9848906685472, -1056.6939198121704, -1655.837582453175, -2239.915279575274, -2803.5911821954082, -3341.743201095962, -3849.5093005326253, -4322.330729192227, -4755.991789080081, -5146.655813488202, -5490.897077831099, -5785.728420637201, -6028.624405609733, -6217.539908322982, -6350.924062071262, -6427.7295460016785, -6447.417244220128, -6409.956346882482, -6315.820002793693, -6165.976667813266, -5961.8773242062725, -5705.438773022609, -5399.023224924946, -5045.414434555073, -4647.790640076898, -4209.69458303442, -3735.0008945278564, -3227.881142303865, -2692.7668398536775, -2134.3107234962936, -1557.3466067954687, -966.8481238503593, -367.8866741847489, 234.41111779257267, 834.9061162752774, 1428.4892493135108, 2010.1236367284405, 2574.8859644773847, 3118.0068031559676, 3634.9095732967703, 4121.247866374038, 4572.940838203926, 4986.206400843632, 5357.591950478862, 5684.002382273482, 5962.725158930219, 6191.4522180122985, 6368.298523878233, 6491.817093597939, 6561.010352336255, 6575.337702371205, 6534.719221073959, 6439.535436457484, 6290.623164165795, 6089.2674265039595, 5837.189511917146, 5536.531271734803, 5189.8357893188695, 4800.024594547629, 4370.371633058539, 3904.474234314257, 3406.2213547301462, 2879.759401135891, 2329.455965333257, 1759.861821853684, 1175.67155790975, 581.6832166586341, -17.24265799036675, -616.22418467224, -1210.3991285887794, -1794.9653266966816, -2365.220187008981, -2916.5989118019174, -3444.71111524849, -3945.375530240029, -4414.652526241992, -4848.87418950758, -5244.671748239247, -5599.0001576698405, -5909.159693134952, -6172.814432309118, -6388.007540491411, -6553.173304713952, -6667.145892987523, -6729.164844067983, -6738.877320275952, -6696.337181029727, -6602.000957772032, -6456.720831640172, -6261.734733757574, -6018.653704279759, -5729.446660401104, -5396.422735688805, -5022.211363223188, -4609.740283509957, -4162.211665013633, -3683.0765305972445, -3176.0076874423803, -2644.8713611762323, -2093.6977371885805, -1526.6506136248097, -947.9963713104522, -362.07246609952244, 226.7443511520039, 814.0698825847614, 1395.544196116561, 1966.8630015375857, 2523.808490671353, 3062.279445112282, 3578.3204184594715, 4068.14980410094, 4528.186604507455, 4955.075723875192, 5345.7116128296275, 5697.260101896014, 6007.178269701413, 6273.232202395743, 6493.512512692962, 6666.4475002883, 6790.813850131903, 6865.744781244509, 6890.735576299132, 6865.646440998335, 6790.702662297441, 6666.492055482373, 6493.959711912406, 6274.400081639023, 6009.4464477649035, 5701.0578721811235, 5351.503714778097, 4963.345850109081, 4539.418726504502, 4082.807432389978, 3596.823952821744, 3084.9818157134778, 2550.969341567509, 1998.6217226231688, 1431.892166902159, 854.8223495804754, 271.51241835685164, -313.9091990726817, -897.3159386116542, -1474.6129516092433, -2041.7664287388784, -2594.832168698638, -3129.983175810036, -3643.536083876742, -4131.976218680018, -4591.9811280598005, -5020.442426193762, -5414.485817310674, -5771.4891833030115, -6089.098639178088, -6365.242479869704, -6598.142961283576, -6786.325877306654, -6928.627912807944, -7024.201770059252, -7072.519082454136, -7073.371144842805, -7026.867503967536, -6933.432465528164, -6793.799586209233, -6609.004229495021, -6380.374273464238, -6109.519066915753, -5798.316737178252, -5448.899958991091, -5063.640298846008, -4645.131253293587, -4196.170103101225, -3719.738707722437, -3218.9833665399074, -2697.1938748035586, -2157.781903103795, -1604.2588297710083, -1040.2131557751911, -469.28763152045724, 104.84377550259433, 678.4989439562452, 1248.0105655324694, 1809.7488894564015, 2360.144120124312, 2895.708345227592, 3413.0568738754046, 3908.928866747763, 4380.2071432731755, 4823.937054229256, 5237.344312063907, 5617.851675720629, 5963.094391821547, 6270.934299758309, 6539.472514656408, 6767.060609257555, 6952.310223575426, 7094.101039733535, 7191.5870686288345, 7244.20120500099, 7251.658018095447, 7213.954756263703], "name": "ISS", "line": {"color": null, "width": 5, "dash": "solid"}, "mode": "lines"}, {"type": "surface", "x": [[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], [2070.9775685349646, 1958.7662914956272, 1634.2922933821865, 1132.717366623061, 508.3949372694737, -171.0199720974995, -831.9022138394263, -1402.6349424190162, -1821.3704108639388, -2042.7321338179481, -2042.7321338179484, -1821.3704108639388, -1402.6349424190173, -831.9022138394275, -171.0199720975005, 508.39493726947273, 1132.7173666230603, 1634.2922933821858, 1958.7662914956272, 2070.9775685349646], [3917.5325829912545, 3705.269861917151, 3091.4836581186883, 2142.6872306516607, 961.6973945255617, -323.507276569953, -1573.6549145165156, -2653.272624703365, -3445.3670762369647, -3864.102544681887, -3864.1025446818876, -3445.3670762369647, -2653.2726247033675, -1573.654914516518, -323.50727656995485, 961.69739452556, 2142.687230651659, 3091.483658118687, 3705.269861917151, 3917.5325829912545], [5339.562155299338, 5050.2499496143155, 4213.664799186625, 2920.4636860211895, 1310.7850168122338, -440.9375478934551, -2144.8776874338914, -3616.387048334464, -4696.004758521314, -5266.737487100903, -5266.737487100904, -4696.004758521314, -3616.3870483344667, -2144.877687433894, -440.93754789345763, 1310.7850168122313, 2920.463686021187, 4213.664799186623, 5050.2499496143155, 5339.562155299338], [6182.9673162373765, 5847.957092568811, 4879.229977516816, 3381.7625853471986, 1517.8287436021724, -510.58539405170535, -2483.6696817114025, -4187.60982125184, -5437.757459198403, -6098.63970094033, -6098.639700940331, -5437.757459198403, -4187.609821251843, -2483.669681711406, -510.58539405170836, 1517.8287436021697, 3381.762585347196, 4879.229977516814, 5847.957092568811, 6182.9673162373765], [6356.352029838285, 6011.947344139877, 5016.054878729385, 3476.5950350978, 1560.3921744832594, -524.9033902157762, -2553.317527869653, -4305.040092575342, -5590.2447636708575, -6269.65967303783, -6269.6596730378305, -5590.2447636708575, -4305.040092575346, -2553.3175278696567, -524.9033902157793, 1560.3921744832564, 3476.5950350977973, 5016.054878729383, 6011.947344139877, 6356.352029838285], [5840.927372042378, 5524.449815998859, 4609.31240172086, 3194.6844678654465, 1433.8629012798515, -482.33995933468935, -2346.2738010797148, -3955.95247028867, -5136.9423064147695, -5761.264735768357, -5761.264735768358, -5136.9423064147695, -3955.952470288674, -2346.273801079718, -482.33995933469214, 1433.8629012798488, 3194.684467865444, 4609.312401720858, 5524.449815998859, 5840.927372042378], [4692.547602159432, 4438.292429623361, 3703.07940513492, 2566.580267902913, 1151.9523340474977, -387.50750958408815, -1884.974901753706, -3178.1760149191423, -4126.972442386172, -4628.547369145297, -4628.547369145297, -4126.972442386172, -3178.176014919145, -1884.9749017537085, -387.5075095840904, 1151.9523340474955, 2566.580267902911, 3703.0794051349185, 4438.292429623361, 4692.547602159432], [3035.6574872043448, 2871.1771912954932, 2395.560295805413, 1660.3472713169713, 745.2098570389732, -250.68260837151965, -1219.4097234235148, -2055.994873851206, -2669.7810776496694, -2994.25507576311, -2994.2550757631107, -2669.7810776496694, -2055.9948738512076, -1219.4097234235167, -250.6826083715211, 745.2098570389717, 1660.3472713169701, 2395.560295805412, 2871.1771912954932, 3035.6574872043448], [1049.806780431554, 992.9253533863962, 828.4450574775444, 574.1898849414736, 257.7123288979541, -86.69235680045416, -421.70258046901955, -711.014786154042, -923.2775072281457, -1035.488784267483, -1035.4887842674832, -923.2775072281457, -711.0147861540426, -421.7025804690202, -86.69235680045466, 257.7123288979536, 574.1898849414731, 828.4450574775441, 992.9253533863962, 1049.806780431554], [-1049.8067804315524, -992.9253533863947, -828.4450574775432, -574.1898849414728, -257.71232889795374, 86.69235680045404, 421.7025804690189, 711.0147861540408, 923.2775072281444, 1035.4887842674814, 1035.4887842674816, 923.2775072281444, 711.0147861540415, 421.7025804690195, 86.69235680045453, -257.7123288979532, -574.1898849414723, -828.4450574775428, -992.9253533863947, -1049.8067804315524], [-3035.6574872043434, -2871.177191295492, -2395.560295805412, -1660.3472713169708, -745.2098570389728, 250.68260837151956, 1219.4097234235144, 2055.9948738512053, 2669.7810776496685, 2994.255075763109, 2994.2550757631093, 2669.7810776496685, 2055.994873851207, 1219.4097234235162, 250.682608371521, -745.2098570389714, -1660.3472713169695, -2395.560295805411, -2871.177191295492, -3035.6574872043434], [-4692.547602159429, -4438.292429623359, -3703.079405134917, -2566.580267902911, -1151.9523340474968, 387.50750958408787, 1884.9749017537044, 3178.17601491914, 4126.972442386168, 4628.5473691452935, 4628.547369145294, 4126.972442386168, 3178.1760149191427, 1884.9749017537072, 387.50750958409014, -1151.9523340474948, -2566.580267902909, -3703.0794051349158, -4438.292429623359, -4692.547602159429], [-5840.927372042376, -5524.449815998857, -4609.312401720859, -3194.6844678654456, -1433.862901279851, 482.33995933468924, 2346.2738010797143, 3955.9524702886692, 5136.942306414769, 5761.264735768355, 5761.264735768356, 5136.942306414769, 3955.9524702886724, 2346.2738010797175, 482.339959334692, -1433.8629012798485, -3194.6844678654434, -4609.312401720857, -5524.449815998857, -5840.927372042376], [-6356.352029838285, -6011.947344139877, -5016.054878729385, -3476.5950350978, -1560.3921744832594, 524.9033902157762, 2553.317527869653, 4305.040092575342, 5590.2447636708575, 6269.65967303783, 6269.6596730378305, 5590.2447636708575, 4305.040092575346, 2553.3175278696567, 524.9033902157793, -1560.3921744832564, -3476.5950350977973, -5016.054878729383, -6011.947344139877, -6356.352029838285], [-6182.967316237377, -5847.957092568812, -4879.229977516816, -3381.762585347199, -1517.8287436021726, 510.5853940517054, 2483.669681711403, 4187.60982125184, 5437.757459198404, 6098.639700940331, 6098.639700940332, 5437.757459198404, 4187.609821251844, 2483.6696817114066, 510.5853940517084, -1517.8287436021699, -3381.7625853471964, -4879.229977516815, -5847.957092568812, -6182.967316237377], [-5339.562155299339, -5050.249949614317, -4213.664799186626, -2920.46368602119, -1310.7850168122343, 440.9375478934552, 2144.877687433892, 3616.387048334465, 4696.004758521315, 5266.737487100905, 5266.737487100906, 4696.004758521315, 3616.3870483344676, 2144.877687433895, 440.93754789345775, -1310.7850168122318, -2920.4636860211876, -4213.664799186624, -5050.249949614317, -5339.562155299339], [-3917.532582991256, -3705.2698619171524, -3091.483658118689, -2142.6872306516616, -961.6973945255621, 323.5072765699531, 1573.654914516516, 2653.272624703366, 3445.367076236966, 3864.1025446818885, 3864.102544681889, 3445.367076236966, 2653.2726247033684, 1573.6549145165184, 323.507276569955, -961.6973945255603, -2142.68723065166, -3091.4836581186883, -3705.2698619171524, -3917.532582991256], [-2070.977568534966, -1958.7662914956288, -1634.2922933821878, -1132.7173666230622, -508.39493726947416, 171.01997209749965, 831.902213839427, 1402.6349424190175, 1821.3704108639404, 2042.7321338179497, 2042.7321338179502, 1821.3704108639404, 1402.6349424190187, 831.9022138394282, 171.01997209750064, -508.3949372694732, -1132.7173666230613, -1634.2922933821872, -1958.7662914956288, -2070.977568534966], [-1.5621929143429165e-12, -1.4775489932480931e-12, -1.2327897122000057e-12, -8.544385371317645e-13, -3.8349568858537574e-13, 1.2900486836795326e-13, 6.275257461168375e-13, 1.0580444722087668e-12, 1.373907662485362e-12, 1.5408866391577764e-12, 1.5408866391577766e-12, 1.373907662485362e-12, 1.0580444722087678e-12, 6.275257461168384e-13, 1.2900486836795402e-13, -3.83495688585375e-13, -8.544385371317639e-13, -1.2327897122000053e-12, -1.4775489932480931e-12, -1.5621929143429165e-12]], "y": [[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], [0.0, 672.4453172381089, 1272.020750289313, 1733.7529976111107, 2007.6062056921824, 2063.9041301666034, 1896.5460173652668, 1523.6677156388778, 985.6763747824739, 340.8717043736032, -340.8717043736027, -985.6763747824734, -1523.6677156388766, -1896.5460173652662, -2063.9041301666034, -2007.6062056921826, -1733.752997611111, -1272.0207502893134, -672.4453172381094, -5.072432100824625e-13], [0.0, 1272.0207502893131, 2406.1983148492195, 3279.626955981496, 3797.6571277777143, 3904.152223057449, 3587.5718458054816, 2882.222392147741, 1864.539420012481, 644.8046704088713, -644.8046704088703, -1864.5394200124804, -2882.222392147739, -3587.5718458054803, -3904.152223057449, -3797.657127777715, -3279.6269559814964, -2406.1983148492204, -1272.0207502893138, -9.595187476631407e-13], [0.0, 1733.7529976111107, 3279.6269559814955, 4470.102445015823, 5176.172973346762, 5321.324843416592, 4889.8285978399235, 3928.443550179085, 2541.350687774138, 878.8630452300076, -878.8630452300063, -2541.350687774137, -3928.4435501790817, -4889.828597839922, -5321.324843416592, -5176.172973346763, -4470.102445015824, -3279.6269559814964, -1733.7529976111118, -1.3078155404671353e-12], [0.0, 2007.6062056921824, 3797.657127777714, 5176.172973346762, 5993.770160654701, 6161.849348129235, 5662.196547790195, 4548.95689346632, 2942.767175396611, 1017.6829721352607, -1017.6829721352591, -2942.7671753966097, -4548.9568934663175, -5662.196547790194, -6161.849348129235, -5993.770160654702, -5176.172973346763, -3797.6571277777152, -2007.6062056921837, -1.5143902266125608e-12], [0.0, 2063.9041301666034, 3904.152223057449, 5321.324843416592, 6161.849348129236, 6334.641865028304, 5820.977643755634, 4676.520173007722, 3025.2891778274434, 1046.2211580313447, -1046.221158031343, -3025.289177827442, -4676.520173007719, -5820.977643755632, -6334.641865028304, -6161.849348129237, -5321.324843416593, -3904.1522230574506, -2063.904130166605, -1.5568572335190474e-12], [0.0, 1896.5460173652668, 3587.571845805481, 4889.8285978399235, 5662.196547790195, 5820.977643755633, 5348.9654902458315, 4297.309928116757, 2779.9741556424556, 961.3850476608397, -961.3850476608383, -2779.974155642454, -4297.309928116753, -5348.96549024583, -5820.977643755633, -5662.196547790196, -4889.828597839924, -3587.5718458054826, -1896.5460173652682, -1.430614602044772e-12], [0.0, 1523.667715638878, 2882.222392147741, 3928.4435501790854, 4548.956893466321, 4676.520173007722, 4297.309928116757, 3452.419472880565, 2233.405797950153, 772.3679499502728, -772.3679499502715, -2233.405797950152, -3452.4194728805624, -4297.309928116756, -4676.520173007722, -4548.956893466322, -3928.443550179086, -2882.222392147742, -1523.667715638879, -1.1493426801662274e-12], [0.0, 985.676374782474, 1864.539420012481, 2541.3506877741384, 2942.767175396611, 3025.289177827443, 2779.9741556424556, 2233.405797950153, 1444.8132671883818, 499.65280033904173, -499.652800339041, -1444.8132671883811, -2233.4057979501513, -2779.9741556424547, -3025.289177827443, -2942.7671753966115, -2541.350687774139, -1864.5394200124817, -985.6763747824746, -7.435216450024997e-13], [0.0, 340.8717043736033, 644.8046704088712, 878.8630452300076, 1017.6829721352607, 1046.2211580313447, 961.3850476608397, 772.3679499502726, 499.65280033904173, 172.79251689906815, -172.7925168990679, -499.6528003390415, -772.3679499502721, -961.3850476608395, -1046.2211580313447, -1017.6829721352608, -878.8630452300079, -644.8046704088714, -340.8717043736035, -2.5712850267573817e-13], [0.0, -340.87170437360277, -644.8046704088703, -878.8630452300064, -1017.6829721352591, -1046.221158031343, -961.3850476608383, -772.3679499502715, -499.652800339041, -172.7925168990679, 172.7925168990676, 499.65280033904077, 772.3679499502709, 961.385047660838, 1046.221158031343, 1017.6829721352593, 878.8630452300065, 644.8046704088705, 340.871704373603, 2.5712850267573776e-13], [0.0, -985.6763747824737, -1864.5394200124804, -2541.3506877741374, -2942.76717539661, -3025.289177827442, -2779.9741556424547, -2233.405797950152, -1444.8132671883811, -499.65280033904156, 499.6528003390408, 1444.8132671883807, 2233.4057979501504, 2779.9741556424538, 3025.289177827442, 2942.7671753966106, 2541.350687774138, 1864.539420012481, 985.6763747824742, 7.435216450024994e-13], [0.0, -1523.6677156388769, -2882.222392147739, -3928.443550179082, -4548.9568934663175, -4676.520173007719, -4297.309928116754, -3452.4194728805624, -2233.4057979501513, -772.3679499502722, 772.3679499502709, 2233.4057979501504, 3452.4194728805596, 4297.309928116752, 4676.520173007719, 4548.956893466318, 3928.443550179083, 2882.22239214774, 1523.6677156388778, 1.1493426801662265e-12], [0.0, -1896.5460173652664, -3587.5718458054803, -4889.828597839923, -5662.196547790194, -5820.977643755632, -5348.96549024583, -4297.309928116755, -2779.9741556424547, -961.3850476608395, 961.385047660838, 2779.9741556424538, 4297.309928116752, 5348.965490245829, 5820.977643755632, 5662.196547790195, 4889.8285978399235, 3587.5718458054816, 1896.5460173652677, 1.4306146020447716e-12], [0.0, -2063.9041301666034, -3904.152223057449, -5321.324843416592, -6161.849348129236, -6334.641865028304, -5820.977643755634, -4676.520173007722, -3025.2891778274434, -1046.2211580313447, 1046.221158031343, 3025.289177827442, 4676.520173007719, 5820.977643755632, 6334.641865028304, 6161.849348129237, 5321.324843416593, 3904.1522230574506, 2063.904130166605, 1.5568572335190474e-12], [0.0, -2007.6062056921826, -3797.6571277777143, -5176.172973346763, -5993.770160654702, -6161.849348129236, -5662.196547790196, -4548.956893466321, -2942.7671753966115, -1017.6829721352608, 1017.6829721352592, 2942.76717539661, 4548.9568934663175, 5662.196547790194, 6161.849348129236, 5993.7701606547025, 5176.172973346764, 3797.6571277777157, 2007.606205692184, 1.514390226612561e-12], [0.0, -1733.7529976111111, -3279.6269559814964, -4470.102445015825, -5176.172973346764, -5321.324843416593, -4889.828597839924, -3928.443550179086, -2541.350687774139, -878.8630452300079, 878.8630452300065, 2541.3506877741374, 3928.4435501790826, 4889.8285978399235, 5321.324843416593, 5176.172973346765, 4470.102445015826, 3279.6269559814973, 1733.7529976111123, 1.3078155404671357e-12], [0.0, -1272.0207502893136, -2406.1983148492204, -3279.626955981497, -3797.6571277777157, -3904.1522230574506, -3587.571845805483, -2882.222392147742, -1864.5394200124817, -644.8046704088715, 644.8046704088705, 1864.539420012481, 2882.22239214774, 3587.5718458054816, 3904.1522230574506, 3797.657127777716, 3279.6269559814973, 2406.1983148492213, 1272.0207502893143, 9.595187476631409e-13], [0.0, -672.4453172381095, -1272.020750289314, -1733.752997611112, -2007.606205692184, -2063.9041301666052, -1896.5460173652684, -1523.6677156388791, -985.6763747824748, -340.87170437360356, 340.87170437360305, 985.6763747824743, 1523.6677156388778, 1896.5460173652677, 2063.9041301666052, 2007.6062056921844, 1733.7529976111123, 1272.0207502893145, 672.44531723811, 5.07243210082463e-13], [0.0, -5.072432100824626e-13, -9.595187476631405e-13, -1.3078155404671353e-12, -1.5143902266125608e-12, -1.5568572335190474e-12, -1.430614602044772e-12, -1.1493426801662272e-12, -7.435216450024997e-13, -2.5712850267573817e-13, 2.5712850267573776e-13, 7.435216450024993e-13, 1.1493426801662263e-12, 1.4306146020447714e-12, 1.5568572335190474e-12, 1.514390226612561e-12, 1.3078155404671357e-12, 9.595187476631409e-13, 5.072432100824629e-13, 3.826269104401456e-28]], "z": [[6378.1366, 6378.1366, 6378.1366, 6378.1366, 6378.1366, 6378.1366, 6378.1366, 6378.1366, 6378.1366, 6378.1366, 6378.1366, 6378.1366, 6378.1366, 6378.1366, 6378.1366, 6378.1366, 6378.1366, 6378.1366, 6378.1366, 6378.1366], [6032.551566201864, 6032.551566201864, 6032.551566201864, 6032.551566201864, 6032.551566201864, 6032.551566201864, 6032.551566201864, 6032.551566201864, 6032.551566201864, 6032.551566201864, 6032.551566201864, 6032.551566201864, 6032.551566201864, 6032.551566201864, 6032.551566201864, 6032.551566201864, 6032.551566201864, 6032.551566201864, 6032.551566201864, 6032.551566201864], [5033.245965523782, 5033.245965523782, 5033.245965523782, 5033.245965523782, 5033.245965523782, 5033.245965523782, 5033.245965523782, 5033.245965523782, 5033.245965523782, 5033.245965523782, 5033.245965523782, 5033.245965523782, 5033.245965523782, 5033.245965523782, 5033.245965523782, 5033.245965523782, 5033.245965523782, 5033.245965523782, 5033.245965523782, 5033.245965523782], [3488.510065623239, 3488.510065623239, 3488.510065623239, 3488.510065623239, 3488.510065623239, 3488.510065623239, 3488.510065623239, 3488.510065623239, 3488.510065623239, 3488.510065623239, 3488.510065623239, 3488.510065623239, 3488.510065623239, 3488.510065623239, 3488.510065623239, 3488.510065623239, 3488.510065623239, 3488.510065623239, 3488.510065623239, 3488.510065623239], [1565.739970301561, 1565.739970301561, 1565.739970301561, 1565.739970301561, 1565.739970301561, 1565.739970301561, 1565.739970301561, 1565.739970301561, 1565.739970301561, 1565.739970301561, 1565.739970301561, 1565.739970301561, 1565.739970301561, 1565.739970301561, 1565.739970301561, 1565.739970301561, 1565.739970301561, 1565.739970301561, 1565.739970301561, 1565.739970301561], [-526.7023457611267, -526.7023457611267, -526.7023457611267, -526.7023457611267, -526.7023457611267, -526.7023457611267, -526.7023457611267, -526.7023457611267, -526.7023457611267, -526.7023457611267, -526.7023457611267, -526.7023457611267, -526.7023457611267, -526.7023457611267, -526.7023457611267, -526.7023457611267, -526.7023457611267, -526.7023457611267, -526.7023457611267, -526.7023457611267], [-2562.0682900316456, -2562.0682900316456, -2562.0682900316456, -2562.0682900316456, -2562.0682900316456, -2562.0682900316456, -2562.0682900316456, -2562.0682900316456, -2562.0682900316456, -2562.0682900316456, -2562.0682900316456, -2562.0682900316456, -2562.0682900316456, -2562.0682900316456, -2562.0682900316456, -2562.0682900316456, -2562.0682900316456, -2562.0682900316456, -2562.0682900316456, -2562.0682900316456], [-4319.7943804916595, -4319.7943804916595, -4319.7943804916595, -4319.7943804916595, -4319.7943804916595, -4319.7943804916595, -4319.7943804916595, -4319.7943804916595, -4319.7943804916595, -4319.7943804916595, -4319.7943804916595, -4319.7943804916595, -4319.7943804916595, -4319.7943804916595, -4319.7943804916595, -4319.7943804916595, -4319.7943804916595, -4319.7943804916595, -4319.7943804916595, -4319.7943804916595], [-5609.403721309402, -5609.403721309402, -5609.403721309402, -5609.403721309402, -5609.403721309402, -5609.403721309402, -5609.403721309402, -5609.403721309402, -5609.403721309402, -5609.403721309402, -5609.403721309402, -5609.403721309402, -5609.403721309402, -5609.403721309402, -5609.403721309402, -5609.403721309402, -5609.403721309402, -5609.403721309402, -5609.403721309402, -5609.403721309402], [-6291.147130056607, -6291.147130056607, -6291.147130056607, -6291.147130056607, -6291.147130056607, -6291.147130056607, -6291.147130056607, -6291.147130056607, -6291.147130056607, -6291.147130056607, -6291.147130056607, -6291.147130056607, -6291.147130056607, -6291.147130056607, -6291.147130056607, -6291.147130056607, -6291.147130056607, -6291.147130056607, -6291.147130056607, -6291.147130056607], [-6291.147130056608, -6291.147130056608, -6291.147130056608, -6291.147130056608, -6291.147130056608, -6291.147130056608, -6291.147130056608, -6291.147130056608, -6291.147130056608, -6291.147130056608, -6291.147130056608, -6291.147130056608, -6291.147130056608, -6291.147130056608, -6291.147130056608, -6291.147130056608, -6291.147130056608, -6291.147130056608, -6291.147130056608, -6291.147130056608], [-5609.403721309402, -5609.403721309402, -5609.403721309402, -5609.403721309402, -5609.403721309402, -5609.403721309402, -5609.403721309402, -5609.403721309402, -5609.403721309402, -5609.403721309402, -5609.403721309402, -5609.403721309402, -5609.403721309402, -5609.403721309402, -5609.403721309402, -5609.403721309402, -5609.403721309402, -5609.403721309402, -5609.403721309402, -5609.403721309402], [-4319.794380491663, -4319.794380491663, -4319.794380491663, -4319.794380491663, -4319.794380491663, -4319.794380491663, -4319.794380491663, -4319.794380491663, -4319.794380491663, -4319.794380491663, -4319.794380491663, -4319.794380491663, -4319.794380491663, -4319.794380491663, -4319.794380491663, -4319.794380491663, -4319.794380491663, -4319.794380491663, -4319.794380491663, -4319.794380491663], [-2562.068290031649, -2562.068290031649, -2562.068290031649, -2562.068290031649, -2562.068290031649, -2562.068290031649, -2562.068290031649, -2562.068290031649, -2562.068290031649, -2562.068290031649, -2562.068290031649, -2562.068290031649, -2562.068290031649, -2562.068290031649, -2562.068290031649, -2562.068290031649, -2562.068290031649, -2562.068290031649, -2562.068290031649, -2562.068290031649], [-526.7023457611298, -526.7023457611298, -526.7023457611298, -526.7023457611298, -526.7023457611298, -526.7023457611298, -526.7023457611298, -526.7023457611298, -526.7023457611298, -526.7023457611298, -526.7023457611298, -526.7023457611298, -526.7023457611298, -526.7023457611298, -526.7023457611298, -526.7023457611298, -526.7023457611298, -526.7023457611298, -526.7023457611298, -526.7023457611298], [1565.739970301558, 1565.739970301558, 1565.739970301558, 1565.739970301558, 1565.739970301558, 1565.739970301558, 1565.739970301558, 1565.739970301558, 1565.739970301558, 1565.739970301558, 1565.739970301558, 1565.739970301558, 1565.739970301558, 1565.739970301558, 1565.739970301558, 1565.739970301558, 1565.739970301558, 1565.739970301558, 1565.739970301558, 1565.739970301558], [3488.510065623236, 3488.510065623236, 3488.510065623236, 3488.510065623236, 3488.510065623236, 3488.510065623236, 3488.510065623236, 3488.510065623236, 3488.510065623236, 3488.510065623236, 3488.510065623236, 3488.510065623236, 3488.510065623236, 3488.510065623236, 3488.510065623236, 3488.510065623236, 3488.510065623236, 3488.510065623236, 3488.510065623236, 3488.510065623236], [5033.24596552378, 5033.24596552378, 5033.24596552378, 5033.24596552378, 5033.24596552378, 5033.24596552378, 5033.24596552378, 5033.24596552378, 5033.24596552378, 5033.24596552378, 5033.24596552378, 5033.24596552378, 5033.24596552378, 5033.24596552378, 5033.24596552378, 5033.24596552378, 5033.24596552378, 5033.24596552378, 5033.24596552378, 5033.24596552378], [6032.551566201864, 6032.551566201864, 6032.551566201864, 6032.551566201864, 6032.551566201864, 6032.551566201864, 6032.551566201864, 6032.551566201864, 6032.551566201864, 6032.551566201864, 6032.551566201864, 6032.551566201864, 6032.551566201864, 6032.551566201864, 6032.551566201864, 6032.551566201864, 6032.551566201864, 6032.551566201864, 6032.551566201864, 6032.551566201864], [6378.1366, 6378.1366, 6378.1366, 6378.1366, 6378.1366, 6378.1366, 6378.1366, 6378.1366, 6378.1366, 6378.1366, 6378.1366, 6378.1366, 6378.1366, 6378.1366, 6378.1366, 6378.1366, 6378.1366, 6378.1366, 6378.1366, 6378.1366]], "name": "Earth", "colorscale": [[0, "#204a87"], [1, "#204a87"]], "cauto": false, "cmin": 1, "cmax": 1, "showscale": false}], {"autosize": true, "scene": {"xaxis": {"title": "x (km)"}, "yaxis": {"title": "y (km)"}, "zaxis": {"title": "z (km)"}, "aspectmode": "data"}}, {"showLink": true, "linkText": "Export to plot.ly"})});</script></div>
+</div>
+</div>
+<div class="section" id="Error-checking">
+<h2>Error checking<a class="headerlink" href="#Error-checking" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">state_to_vector</span><span class="p">(</span><span class="n">ss</span><span class="p">):</span>
+    <span class="n">r</span><span class="p">,</span> <span class="n">v</span> <span class="o">=</span> <span class="n">ss</span><span class="o">.</span><span class="n">rv</span><span class="p">()</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">km</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>
+    <span class="n">vx</span><span class="p">,</span> <span class="n">vy</span><span class="p">,</span> <span class="n">vz</span> <span class="o">=</span> <span class="n">v</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">km</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">vx</span><span class="p">,</span> <span class="n">vy</span><span class="p">,</span> <span class="n">vz</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">k</span> <span class="o">=</span> <span class="n">Earth</span><span class="o">.</span><span class="n">k</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">km</span><span class="o">**</span><span class="mi">3</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">rtol</span> <span class="o">=</span> <span class="mf">1e-13</span>
+<span class="n">full_periods</span> <span class="o">=</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">u0</span> <span class="o">=</span> <span class="n">state_to_vector</span><span class="p">(</span><span class="n">iss</span><span class="p">)</span>
+<span class="n">tf</span> <span class="o">=</span> <span class="p">((</span><span class="mi">2</span> <span class="o">*</span> <span class="n">full_periods</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">iss</span><span class="o">.</span><span class="n">period</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>
+
+<span class="n">u0</span><span class="p">,</span> <span class="n">tf</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>Out[11]:
+</pre></div>
+</div>
+<div class="output_area highlight-none"><div class="highlight"><pre>
+<span></span>(array([ 8.59072560e+02, -4.13720368e+03,  5.29556871e+03,  7.37289205e+00,
+         2.08223573e+00,  4.39999794e-01]), 13892.42425290754)
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [12]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">iss_f_kep</span> <span class="o">=</span> <span class="n">iss</span><span class="o">.</span><span class="n">propagate</span><span class="p">(</span><span class="n">tf</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">,</span> <span class="n">rtol</span><span class="o">=</span><span class="mf">1e-18</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [13]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">r</span><span class="p">,</span> <span class="n">v</span> <span class="o">=</span> <span class="n">cowell</span><span class="p">(</span><span class="n">iss</span><span class="p">,</span> <span class="n">tf</span><span class="p">,</span> <span class="n">rtol</span><span class="o">=</span><span class="n">rtol</span><span class="p">)</span>
+
+<span class="n">iss_f_num</span> <span class="o">=</span> <span class="n">Orbit</span><span class="o">.</span><span class="n">from_vectors</span><span class="p">(</span><span class="n">Earth</span><span class="p">,</span> <span class="n">r</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">km</span><span class="p">,</span> <span class="n">v</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">km</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">,</span> <span class="n">iss</span><span class="o">.</span><span class="n">epoch</span> <span class="o">+</span> <span class="n">tf</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [14]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">iss_f_num</span><span class="o">.</span><span class="n">r</span><span class="p">,</span> <span class="n">iss_f_kep</span><span class="o">.</span><span class="n">r</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>Out[14]:
+</pre></div>
+</div>
+<div class="output_area highlight-none"><div class="highlight"><pre>
+<span></span>(&lt;Quantity [ -835.92108005,  4151.60692532, -5303.60427969] km&gt;,
+ &lt;Quantity [ -835.92108005,  4151.60692532, -5303.60427969] km&gt;)
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [15]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">iss_f_num</span><span class="o">.</span><span class="n">r</span><span class="p">,</span> <span class="n">iss_f_kep</span><span class="o">.</span><span class="n">r</span><span class="p">,</span> <span class="n">rtol</span><span class="o">=</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span><span class="o">=</span><span class="mf">1e-08</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">km</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">iss_f_num</span><span class="o">.</span><span class="n">v</span><span class="p">,</span> <span class="n">iss_f_kep</span><span class="o">.</span><span class="n">v</span><span class="p">,</span> <span class="n">rtol</span><span class="o">=</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span><span class="o">=</span><span class="mf">1e-08</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">km</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [16]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">iss_f_num</span><span class="o">.</span><span class="n">a</span><span class="p">,</span> <span class="n">iss_f_kep</span><span class="o">.</span><span class="n">a</span><span class="p">,</span> <span class="n">rtol</span><span class="o">=</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span><span class="o">=</span><span class="mf">1e-08</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">km</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">iss_f_num</span><span class="o">.</span><span class="n">ecc</span><span class="p">,</span> <span class="n">iss_f_kep</span><span class="o">.</span><span class="n">ecc</span><span class="p">,</span> <span class="n">rtol</span><span class="o">=</span><span class="n">rtol</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">iss_f_num</span><span class="o">.</span><span class="n">inc</span><span class="p">,</span> <span class="n">iss_f_kep</span><span class="o">.</span><span class="n">inc</span><span class="p">,</span> <span class="n">rtol</span><span class="o">=</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span><span class="o">=</span><span class="mf">1e-08</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">rad</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">iss_f_num</span><span class="o">.</span><span class="n">raan</span><span class="p">,</span> <span class="n">iss_f_kep</span><span class="o">.</span><span class="n">raan</span><span class="p">,</span> <span class="n">rtol</span><span class="o">=</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span><span class="o">=</span><span class="mf">1e-08</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">rad</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">iss_f_num</span><span class="o">.</span><span class="n">argp</span><span class="p">,</span> <span class="n">iss_f_kep</span><span class="o">.</span><span class="n">argp</span><span class="p">,</span> <span class="n">rtol</span><span class="o">=</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span><span class="o">=</span><span class="mf">1e-08</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">rad</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">iss_f_num</span><span class="o">.</span><span class="n">nu</span><span class="p">,</span> <span class="n">iss_f_kep</span><span class="o">.</span><span class="n">nu</span><span class="p">,</span> <span class="n">rtol</span><span class="o">=</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span><span class="o">=</span><span class="mf">1e-08</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">rad</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Numerical-validation">
+<h2>Numerical validation<a class="headerlink" href="#Numerical-validation" title="Permalink to this headline">¶</a></h2>
+<p>According to [Edelbaum, 1961], a coplanar, semimajor axis change with
+tangent thrust is defined by:</p>
+<div class="math">
+\[\frac{\operatorname{d}\!a}{a_0} = 2 \frac{F}{m V_0}\operatorname{d}\!t, \qquad \frac{\Delta{V}}{V_0} = \frac{1}{2} \frac{\Delta{a}}{a_0}\]</div>
+<p>So let’s create a new circular orbit and perform the necessary checks,
+assuming constant mass and thrust (i.e.&nbsp;constant acceleration):</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [17]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">ss</span> <span class="o">=</span> <span class="n">Orbit</span><span class="o">.</span><span class="n">circular</span><span class="p">(</span><span class="n">Earth</span><span class="p">,</span> <span class="mi">500</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">km</span><span class="p">)</span>
+<span class="n">tof</span> <span class="o">=</span> <span class="mi">20</span> <span class="o">*</span> <span class="n">ss</span><span class="o">.</span><span class="n">period</span>
+
+<span class="n">ad</span> <span class="o">=</span> <span class="n">constant_accel_factory</span><span class="p">(</span><span class="mf">1e-7</span><span class="p">)</span>
+
+<span class="n">r</span><span class="p">,</span> <span class="n">v</span> <span class="o">=</span> <span class="n">cowell</span><span class="p">(</span><span class="n">ss</span><span class="p">,</span> <span class="n">tof</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">ad</span><span class="o">=</span><span class="n">ad</span><span class="p">)</span>
+
+<span class="n">ss_final</span> <span class="o">=</span> <span class="n">Orbit</span><span class="o">.</span><span class="n">from_vectors</span><span class="p">(</span><span class="n">Earth</span><span class="p">,</span> <span class="n">r</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">km</span><span class="p">,</span> <span class="n">v</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">km</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">,</span> <span class="n">ss</span><span class="o">.</span><span class="n">epoch</span> <span class="o">+</span> <span class="n">tof</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [18]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">da_a0</span> <span class="o">=</span> <span class="p">(</span><span class="n">ss_final</span><span class="o">.</span><span class="n">a</span> <span class="o">-</span> <span class="n">ss</span><span class="o">.</span><span class="n">a</span><span class="p">)</span> <span class="o">/</span> <span class="n">ss</span><span class="o">.</span><span class="n">a</span>
+<span class="n">da_a0</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>Out[18]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="math">
+$2.9896209 \times 10^{-6} \; \mathrm{\frac{km}{m}}$</div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [19]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">dv_v0</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">norm</span><span class="p">(</span><span class="n">ss_final</span><span class="o">.</span><span class="n">v</span><span class="p">)</span> <span class="o">-</span> <span class="n">norm</span><span class="p">(</span><span class="n">ss</span><span class="o">.</span><span class="n">v</span><span class="p">))</span> <span class="o">/</span> <span class="n">norm</span><span class="p">(</span><span class="n">ss</span><span class="o">.</span><span class="n">v</span><span class="p">)</span>
+<span class="mi">2</span> <span class="o">*</span> <span class="n">dv_v0</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>Out[19]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="math">
+$0.0029960537 \; \mathrm{}$</div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [20]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">da_a0</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">dv_v0</span><span class="p">,</span> <span class="n">rtol</span><span class="o">=</span><span class="mf">1e-2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>Out[20]:
+</pre></div>
+</div>
+<div class="output_area highlight-none"><div class="highlight"><pre>
+<span></span>True
+</pre></div>
+</div>
+</div>
+<p>This means <strong>we successfully validated the model against an extremely
+simple orbit transfer with approximate analytical solution</strong>. Notice
+that the final eccentricity, as originally noticed by Edelbaum, is
+nonzero:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [21]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">ss_final</span><span class="o">.</span><span class="n">ecc</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>Out[21]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="math">
+$6.6621428 \times 10^{-6} \; \mathrm{}$</div></div>
+</div>
+</div>
+<div class="section" id="References">
+<h2>References<a class="headerlink" href="#References" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>[Edelbaum, 1961] “Propulsion requirements for controllable
+satellites”</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Revisiting Lambert&#39;s problem in Python.html" class="btn btn-neutral float-right" title="Revisiting Lambert’s problem in Python" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Plotting in 3D.html" class="btn btn-neutral" title="Plotting in 3D" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2013-2017, Juan Luis Cano Rodríguez and the poliastro development team.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.9.dev0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,1578 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Catch that asteroid! &mdash; poliastro 0.9.dev0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="author" title="About these documents"
+              href="../about.html"/>
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="poliastro 0.9.dev0 documentation" href="../index.html"/>
+        <link rel="up" title="Jupyter notebooks" href="../jupyter.html"/>
+        <link rel="next" title="Comparing Hohmann and bielliptic transfers" href="Comparing Hohmann and bielliptic transfers.html"/>
+        <link rel="prev" title="Jupyter notebooks" href="../jupyter.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> poliastro
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.9
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About poliastro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide.html">User guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../jupyter.html">Jupyter notebooks</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Catch that asteroid!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Comparing Hohmann and bielliptic transfers.html">Comparing Hohmann and bielliptic transfers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Exploring the New Horizons launch.html">New Horizons launch and trajectory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Going to Mars with Python using poliastro.html">Going to Mars with Python using poliastro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Going to Jupiter with Python using Jupyter and poliastro.html">Going to Jupiter with Python using Jupyter and poliastro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Plotting in 3D.html">Plotting in 3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Propagation using Cowell's formulation.html">Cowell’s formulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Revisiting Lambert's problem in Python.html">Revisiting Lambert’s problem in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Studying Hohmann transfers.html">Studying Hohmann transfers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Using NEOS package.html">Using NEOS package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Visualizing the SpaceX Tesla Roadster trip to Mars.html">Visualizing the SpaceX Tesla Roadster trip to Mars</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">What&#8217;s new</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">poliastro</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../jupyter.html">Jupyter notebooks</a> &raquo;</li>
+        
+      <li>Catch that asteroid!</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/examples/Catch that asteroid!.ipynb.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput,
+div.nbinput div.prompt,
+div.nbinput div.input_area,
+div.nbinput div[class*=highlight],
+div.nbinput div[class*=highlight] pre,
+div.nboutput,
+div.nbinput div.prompt,
+div.nbinput div.output_area,
+div.nboutput div[class*=highlight],
+div.nboutput div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput,
+div.nboutput {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput,
+    div.nboutput {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput div.prompt pre {
+    color: #303F9F;
+}
+
+/* output prompt */
+div.nboutput div.prompt pre {
+    color: #D84315;
+}
+
+/* all prompts */
+div.nbinput div.prompt,
+div.nboutput div.prompt {
+    min-width: 8ex;
+    padding-top: 0.4em;
+    padding-right: 0.4em;
+    text-align: right;
+    flex: 0;
+}
+@media (max-width: 540px) {
+    div.nbinput div.prompt,
+    div.nboutput div.prompt {
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput div.prompt.empty {
+        padding: 0;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput div.prompt pre,
+div.nboutput div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput div.input_area,
+div.nboutput div.output_area {
+    padding: 0.4em;
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput div.input_area,
+    div.nboutput div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput div.input_area {
+    border: 1px solid #cfcfcf;
+    border-radius: 2px;
+    background: #f7f7f7;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.pngmath center alignment in output cells */
+div.nboutput div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast,
+.nboutput.nblast {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast + .nbinput {
+    margin-top: -19px;
+}
+
+/* nice headers on first paragraph of info/warning boxes */
+.admonition .first {
+    margin: -12px;
+    padding: 6px 12px;
+    margin-bottom: 12px;
+    color: #fff;
+    line-height: 1;
+    display: block;
+}
+.admonition.warning .first {
+    background: #f0b37e;
+}
+.admonition.note .first {
+    background: #6ab0de;
+}
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+</style>
+<div class="section" id="Catch-that-asteroid!">
+<h1>Catch that asteroid!<a class="headerlink" href="#Catch-that-asteroid!" title="Permalink to this headline">¶</a></h1>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ion</span><span class="p">()</span>
+
+<span class="kn">from</span> <span class="nn">astropy</span> <span class="kn">import</span> <span class="n">units</span> <span class="k">as</span> <span class="n">u</span>
+<span class="kn">from</span> <span class="nn">astropy.time</span> <span class="kn">import</span> <span class="n">Time</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">astropy.utils.data</span> <span class="kn">import</span> <span class="n">conf</span>
+<span class="n">conf</span><span class="o">.</span><span class="n">dataurl</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>Out[2]:
+</pre></div>
+</div>
+<div class="output_area highlight-none"><div class="highlight"><pre>
+<span></span>&#39;http://data.astropy.org/&#39;
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">conf</span><span class="o">.</span><span class="n">remote_timeout</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>Out[3]:
+</pre></div>
+</div>
+<div class="output_area highlight-none"><div class="highlight"><pre>
+<span></span>10.0
+</pre></div>
+</div>
+</div>
+<p>First, we need to increase the timeout time to allow the download of
+data occur properly</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">conf</span><span class="o">.</span><span class="n">remote_timeout</span> <span class="o">=</span> <span class="mi">10000</span>
+</pre></div>
+</div>
+</div>
+<p>Then, we do the rest of the imports and create our initial orbits.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">astropy.coordinates</span> <span class="kn">import</span> <span class="n">solar_system_ephemeris</span>
+<span class="n">solar_system_ephemeris</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;jpl&quot;</span><span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">poliastro.bodies</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">poliastro.twobody</span> <span class="kn">import</span> <span class="n">Orbit</span>
+<span class="kn">from</span> <span class="nn">poliastro.plotting</span> <span class="kn">import</span> <span class="n">OrbitPlotter</span><span class="p">,</span> <span class="n">plot</span>
+
+<span class="n">EPOCH</span> <span class="o">=</span> <span class="n">Time</span><span class="p">(</span><span class="s2">&quot;2017-09-01 12:05:50&quot;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="s2">&quot;tdb&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">earth</span> <span class="o">=</span> <span class="n">Orbit</span><span class="o">.</span><span class="n">from_body_ephem</span><span class="p">(</span><span class="n">Earth</span><span class="p">,</span> <span class="n">EPOCH</span><span class="p">)</span>
+<span class="n">earth</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>Out[6]:
+</pre></div>
+</div>
+<div class="output_area highlight-none"><div class="highlight"><pre>
+<span></span>1 x 1 AU x 23.4 deg orbit around Sun (☉)
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">plot</span><span class="p">(</span><span class="n">earth</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">Earth</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/examples_Catch_that_asteroid!_9_0.png" src="../_images/examples_Catch_that_asteroid!_9_0.png" />
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">poliastro.neos</span> <span class="kn">import</span> <span class="n">neows</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">florence</span> <span class="o">=</span> <span class="n">neows</span><span class="o">.</span><span class="n">orbit_from_name</span><span class="p">(</span><span class="s2">&quot;Florence&quot;</span><span class="p">)</span>
+<span class="n">florence</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>Out[9]:
+</pre></div>
+</div>
+<div class="output_area highlight-none"><div class="highlight"><pre>
+<span></span>1 x 3 AU x 22.1 deg orbit around Sun (☉)
+</pre></div>
+</div>
+</div>
+<p>Two problems: the epoch is not the one we desire, and the inclination is
+with respect to the ecliptic!</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">florence</span><span class="o">.</span><span class="n">epoch</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>Out[10]:
+</pre></div>
+</div>
+<div class="output_area highlight-none"><div class="highlight"><pre>
+<span></span>&lt;Time object: scale=&#39;tdb&#39; format=&#39;jd&#39; value=2458200.5&gt;
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">florence</span><span class="o">.</span><span class="n">epoch</span><span class="o">.</span><span class="n">iso</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>Out[11]:
+</pre></div>
+</div>
+<div class="output_area highlight-none"><div class="highlight"><pre>
+<span></span>&#39;2018-03-23 00:00:00.000&#39;
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [12]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">florence</span><span class="o">.</span><span class="n">inc</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>Out[12]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="math">
+$22.144811 \; \mathrm{{}^{\circ}}$</div></div>
+</div>
+<p>We first propagate:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [13]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">florence</span> <span class="o">=</span> <span class="n">florence</span><span class="o">.</span><span class="n">propagate</span><span class="p">(</span><span class="n">EPOCH</span><span class="p">)</span>
+<span class="n">florence</span><span class="o">.</span><span class="n">epoch</span><span class="o">.</span><span class="n">tdb</span><span class="o">.</span><span class="n">iso</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>Out[13]:
+</pre></div>
+</div>
+<div class="output_area highlight-none"><div class="highlight"><pre>
+<span></span>&#39;2017-09-01 12:05:50.000&#39;
+</pre></div>
+</div>
+</div>
+<p>And now we have to convert to another reference frame, using
+<a class="reference external" href="http://docs.astropy.org/en/stable/coordinates/">http://docs.astropy.org/en/stable/coordinates/</a>.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [14]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">astropy.coordinates</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">ICRS</span><span class="p">,</span> <span class="n">GCRS</span><span class="p">,</span>
+    <span class="n">CartesianRepresentation</span><span class="p">,</span> <span class="n">CartesianDifferential</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">poliastro.frames</span> <span class="kn">import</span> <span class="n">HeliocentricEclipticJ2000</span>
+</pre></div>
+</div>
+</div>
+<p>The NASA servers give the orbital elements of the asteroids in an
+Heliocentric Ecliptic frame. Fortunately, it is already defined in
+Astropy:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [15]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">florence_heclip</span> <span class="o">=</span> <span class="n">HeliocentricEclipticJ2000</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">florence</span><span class="o">.</span><span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">florence</span><span class="o">.</span><span class="n">r</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">z</span><span class="o">=</span><span class="n">florence</span><span class="o">.</span><span class="n">r</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span>
+    <span class="n">v_x</span><span class="o">=</span><span class="n">florence</span><span class="o">.</span><span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">v_y</span><span class="o">=</span><span class="n">florence</span><span class="o">.</span><span class="n">v</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">v_z</span><span class="o">=</span><span class="n">florence</span><span class="o">.</span><span class="n">v</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span>
+    <span class="n">representation</span><span class="o">=</span><span class="n">CartesianRepresentation</span><span class="p">,</span>
+    <span class="n">differential_type</span><span class="o">=</span><span class="n">CartesianDifferential</span><span class="p">,</span>
+    <span class="n">obstime</span><span class="o">=</span><span class="n">EPOCH</span>
+<span class="p">)</span>
+<span class="n">florence_heclip</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>Out[15]:
+</pre></div>
+</div>
+<div class="output_area highlight-none"><div class="highlight"><pre>
+<span></span>&lt;HeliocentricEclipticJ2000 Coordinate (obstime=2017-09-01 12:05): (x, y, z) in km
+    (1.45898575e+08, -58567565.51292471, 2279107.77284053)
+ (v_x, v_y, v_z) in km / s
+    (7.40829055, 31.11151455, 12.79669447)&gt;
+</pre></div>
+</div>
+</div>
+<p>Now we just have to convert to ICRS, which is the “standard” reference
+in which poliastro works:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [16]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">florence_icrs_trans</span> <span class="o">=</span> <span class="n">florence_heclip</span><span class="o">.</span><span class="n">transform_to</span><span class="p">(</span><span class="n">ICRS</span><span class="p">)</span>
+<span class="n">florence_icrs_trans</span><span class="o">.</span><span class="n">representation</span> <span class="o">=</span> <span class="n">CartesianRepresentation</span>
+<span class="n">florence_icrs_trans</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>Out[16]:
+</pre></div>
+</div>
+<div class="output_area highlight-none"><div class="highlight"><pre>
+<span></span>&lt;ICRS Coordinate: (x, y, z) in km
+    (1.46265478e+08, -53881737.42618975, -20898600.42756944)
+ (v_x, v_y, v_z) in km / s
+    (7.39988214, 23.46299465, 24.12028277)&gt;
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [17]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">florence_icrs</span> <span class="o">=</span> <span class="n">Orbit</span><span class="o">.</span><span class="n">from_vectors</span><span class="p">(</span>
+    <span class="n">Sun</span><span class="p">,</span>
+    <span class="n">r</span><span class="o">=</span><span class="p">[</span><span class="n">florence_icrs_trans</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">florence_icrs_trans</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">florence_icrs_trans</span><span class="o">.</span><span class="n">z</span><span class="p">]</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">km</span><span class="p">,</span>
+    <span class="n">v</span><span class="o">=</span><span class="p">[</span><span class="n">florence_icrs_trans</span><span class="o">.</span><span class="n">v_x</span><span class="p">,</span> <span class="n">florence_icrs_trans</span><span class="o">.</span><span class="n">v_y</span><span class="p">,</span> <span class="n">florence_icrs_trans</span><span class="o">.</span><span class="n">v_z</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">km</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">),</span>
+    <span class="n">epoch</span><span class="o">=</span><span class="n">florence</span><span class="o">.</span><span class="n">epoch</span>
+<span class="p">)</span>
+<span class="n">florence_icrs</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>Out[17]:
+</pre></div>
+</div>
+<div class="output_area highlight-none"><div class="highlight"><pre>
+<span></span>1 x 3 AU x 44.5 deg orbit around Sun (☉)
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [18]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">florence_icrs</span><span class="o">.</span><span class="n">rv</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>Out[18]:
+</pre></div>
+</div>
+<div class="output_area highlight-none"><div class="highlight"><pre>
+<span></span>(&lt;Quantity [ 1.46265478e+08, -5.38817374e+07, -2.08986004e+07] km&gt;,
+ &lt;Quantity [ 7.39988214, 23.46299465, 24.12028277] km / s&gt;)
+</pre></div>
+</div>
+</div>
+<p>Let us compute the distance between Florence and the Earth:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [19]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">poliastro.util</span> <span class="kn">import</span> <span class="n">norm</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [20]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">norm</span><span class="p">(</span><span class="n">florence_icrs</span><span class="o">.</span><span class="n">r</span> <span class="o">-</span> <span class="n">earth</span><span class="o">.</span><span class="n">r</span><span class="p">)</span> <span class="o">-</span> <span class="n">Earth</span><span class="o">.</span><span class="n">R</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>Out[20]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="math">
+$7057830.8 \; \mathrm{km}$</div></div>
+</div>
+<div class="alert alert-success"><p>This value is consistent with what ESA says! <span class="math">\(7\,060\,160\)</span> km</p>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [21]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
+
+<span class="n">HTML</span><span class="p">(</span>
+<span class="sd">&quot;&quot;&quot;&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;es&quot; dir=&quot;ltr&quot;&gt;La &lt;a href=&quot;https://twitter.com/esa_es&quot;&gt;@esa_es&lt;/a&gt; ha preparado un resumen del asteroide &lt;a href=&quot;https://twitter.com/hashtag/Florence?src=hash&quot;&gt;#Florence&lt;/a&gt; 😍 &lt;a href=&quot;https://t.co/Sk1lb7Kz0j&quot;&gt;pic.twitter.com/Sk1lb7Kz0j&lt;/a&gt;&lt;/p&gt;&amp;mdash; AeroPython (@AeroPython) &lt;a href=&quot;https://twitter.com/AeroPython/status/903197147914543105&quot;&gt;August 31, 2017&lt;/a&gt;&lt;/blockquote&gt;</span>
+<span class="sd">&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&quot;&quot;&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>Out[21]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<blockquote class="twitter-tweet" data-lang="en"><p lang="es" dir="ltr">La <a href="https://twitter.com/esa_es">@esa_es</a> ha preparado un resumen del asteroide <a href="https://twitter.com/hashtag/Florence?src=hash">#Florence</a> 😍 <a href="https://t.co/Sk1lb7Kz0j">pic.twitter.com/Sk1lb7Kz0j</a></p>&mdash; AeroPython (@AeroPython) <a href="https://twitter.com/AeroPython/status/903197147914543105">August 31, 2017</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+</div>
+<p>And now we can plot!</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [22]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">frame</span> <span class="o">=</span> <span class="n">OrbitPlotter</span><span class="p">()</span>
+
+<span class="n">frame</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">earth</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Earth&quot;</span><span class="p">)</span>
+
+<span class="n">frame</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Orbit</span><span class="o">.</span><span class="n">from_body_ephem</span><span class="p">(</span><span class="n">Mars</span><span class="p">,</span> <span class="n">EPOCH</span><span class="p">))</span>
+<span class="n">frame</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Orbit</span><span class="o">.</span><span class="n">from_body_ephem</span><span class="p">(</span><span class="n">Venus</span><span class="p">,</span> <span class="n">EPOCH</span><span class="p">))</span>
+<span class="n">frame</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Orbit</span><span class="o">.</span><span class="n">from_body_ephem</span><span class="p">(</span><span class="n">Mercury</span><span class="p">,</span> <span class="n">EPOCH</span><span class="p">))</span>
+
+<span class="n">frame</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">florence_icrs</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Florence&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/examples_Catch_that_asteroid!_32_0.png" src="../_images/examples_Catch_that_asteroid!_32_0.png" />
+</div>
+</div>
+<p>The difference between doing it well and doing it wrong is clearly
+visible:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [23]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">frame</span> <span class="o">=</span> <span class="n">OrbitPlotter</span><span class="p">()</span>
+
+<span class="n">frame</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">earth</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Earth&quot;</span><span class="p">)</span>
+
+<span class="n">frame</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">florence</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Florence (Ecliptic)&quot;</span><span class="p">)</span>
+<span class="n">frame</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">florence_icrs</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Florence (ICRS)&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/examples_Catch_that_asteroid!_34_0.png" src="../_images/examples_Catch_that_asteroid!_34_0.png" />
+</div>
+</div>
+<p>And now let’s do something more complicated: express our orbit with
+respect to the Earth! For that, we will use GCRS, with care of setting
+the correct observation time:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [24]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">florence_gcrs_trans</span> <span class="o">=</span> <span class="n">florence_heclip</span><span class="o">.</span><span class="n">transform_to</span><span class="p">(</span><span class="n">GCRS</span><span class="p">(</span><span class="n">obstime</span><span class="o">=</span><span class="n">EPOCH</span><span class="p">))</span>
+<span class="n">florence_gcrs_trans</span><span class="o">.</span><span class="n">representation</span> <span class="o">=</span> <span class="n">CartesianRepresentation</span>
+<span class="n">florence_gcrs_trans</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>Out[24]:
+</pre></div>
+</div>
+<div class="output_area highlight-none"><div class="highlight"><pre>
+<span></span>&lt;GCRS Coordinate (obstime=2017-09-01 12:05, obsgeoloc=(0., 0., 0.) m, obsgeovel=(0., 0., 0.) m / s): (x, y, z) in km
+    (4960528.39215574, -5020204.25120256, 306195.44251179)
+ (v_x, v_y, v_z) in km / s
+    (-2.76863626, -1.95773245, 13.09966915)&gt;
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [25]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">florence_hyper</span> <span class="o">=</span> <span class="n">Orbit</span><span class="o">.</span><span class="n">from_vectors</span><span class="p">(</span>
+    <span class="n">Earth</span><span class="p">,</span>
+    <span class="n">r</span><span class="o">=</span><span class="p">[</span><span class="n">florence_gcrs_trans</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">florence_gcrs_trans</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">florence_gcrs_trans</span><span class="o">.</span><span class="n">z</span><span class="p">]</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">km</span><span class="p">,</span>
+    <span class="n">v</span><span class="o">=</span><span class="p">[</span><span class="n">florence_gcrs_trans</span><span class="o">.</span><span class="n">v_x</span><span class="p">,</span> <span class="n">florence_gcrs_trans</span><span class="o">.</span><span class="n">v_y</span><span class="p">,</span> <span class="n">florence_gcrs_trans</span><span class="o">.</span><span class="n">v_z</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">km</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">),</span>
+    <span class="n">epoch</span><span class="o">=</span><span class="n">EPOCH</span>
+<span class="p">)</span>
+<span class="n">florence_hyper</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>Out[25]:
+</pre></div>
+</div>
+<div class="output_area highlight-none"><div class="highlight"><pre>
+<span></span>7064205 x -7068561 km x 104.3 deg orbit around Earth (♁)
+</pre></div>
+</div>
+</div>
+<p>Notice that the ephemerides of the Moon is also given in ICRS, and
+therefore yields a weird hyperbolic orbit!</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [26]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">moon</span> <span class="o">=</span> <span class="n">Orbit</span><span class="o">.</span><span class="n">from_body_ephem</span><span class="p">(</span><span class="n">Moon</span><span class="p">,</span> <span class="n">EPOCH</span><span class="p">)</span>
+<span class="n">moon</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>Out[26]:
+</pre></div>
+</div>
+<div class="output_area highlight-none"><div class="highlight"><pre>
+<span></span>151218466 x -151219347 km x 23.3 deg orbit around Earth (♁)
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [27]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">moon</span><span class="o">.</span><span class="n">a</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>Out[27]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="math">
+$-440.42131 \; \mathrm{km}$</div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [28]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">moon</span><span class="o">.</span><span class="n">ecc</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>Out[28]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="math">
+$343350.57 \; \mathrm{}$</div></div>
+</div>
+<p>So we have to convert again.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [29]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">moon_icrs</span> <span class="o">=</span> <span class="n">ICRS</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">moon</span><span class="o">.</span><span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">moon</span><span class="o">.</span><span class="n">r</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">z</span><span class="o">=</span><span class="n">moon</span><span class="o">.</span><span class="n">r</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span>
+    <span class="n">v_x</span><span class="o">=</span><span class="n">moon</span><span class="o">.</span><span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">v_y</span><span class="o">=</span><span class="n">moon</span><span class="o">.</span><span class="n">v</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">v_z</span><span class="o">=</span><span class="n">moon</span><span class="o">.</span><span class="n">v</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span>
+    <span class="n">representation</span><span class="o">=</span><span class="n">CartesianRepresentation</span><span class="p">,</span>
+    <span class="n">differential_type</span><span class="o">=</span><span class="n">CartesianDifferential</span>
+<span class="p">)</span>
+<span class="n">moon_icrs</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>Out[29]:
+</pre></div>
+</div>
+<div class="output_area highlight-none"><div class="highlight"><pre>
+<span></span>&lt;ICRS Coordinate: (x, y, z) in km
+    (1.41399531e+08, -49228391.42507221, -21337616.62766309)
+ (v_x, v_y, v_z) in km / s
+    (11.10890252, 25.6785744, 11.0567569)&gt;
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [30]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">moon_gcrs</span> <span class="o">=</span> <span class="n">moon_icrs</span><span class="o">.</span><span class="n">transform_to</span><span class="p">(</span><span class="n">GCRS</span><span class="p">(</span><span class="n">obstime</span><span class="o">=</span><span class="n">EPOCH</span><span class="p">))</span>
+<span class="n">moon_gcrs</span><span class="o">.</span><span class="n">representation</span> <span class="o">=</span> <span class="n">CartesianRepresentation</span>
+<span class="n">moon_gcrs</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>Out[30]:
+</pre></div>
+</div>
+<div class="output_area highlight-none"><div class="highlight"><pre>
+<span></span>&lt;GCRS Coordinate (obstime=2017-09-01 12:05, obsgeoloc=(0., 0., 0.) m, obsgeovel=(0., 0., 0.) m / s): (x, y, z) in km
+    (94189.90120828, -367278.24304992, -133087.21297573)
+ (v_x, v_y, v_z) in km / s
+    (0.94073662, 0.25786326, 0.03569047)&gt;
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [31]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">moon</span> <span class="o">=</span> <span class="n">Orbit</span><span class="o">.</span><span class="n">from_vectors</span><span class="p">(</span>
+    <span class="n">Earth</span><span class="p">,</span>
+    <span class="p">[</span><span class="n">moon_gcrs</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">moon_gcrs</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">moon_gcrs</span><span class="o">.</span><span class="n">z</span><span class="p">]</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">km</span><span class="p">,</span>
+    <span class="p">[</span><span class="n">moon_gcrs</span><span class="o">.</span><span class="n">v_x</span><span class="p">,</span> <span class="n">moon_gcrs</span><span class="o">.</span><span class="n">v_y</span><span class="p">,</span> <span class="n">moon_gcrs</span><span class="o">.</span><span class="n">v_z</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">km</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">),</span>
+    <span class="n">epoch</span><span class="o">=</span><span class="n">EPOCH</span>
+<span class="p">)</span>
+<span class="n">moon</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>Out[31]:
+</pre></div>
+</div>
+<div class="output_area highlight-none"><div class="highlight"><pre>
+<span></span>367937 x 405209 km x 19.4 deg orbit around Earth (♁)
+</pre></div>
+</div>
+</div>
+<p>And finally, we plot the Moon:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [32]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">plot</span><span class="p">(</span><span class="n">moon</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">Moon</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span><span class="o">.</span><span class="n">autofmt_xdate</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/examples_Catch_that_asteroid!_47_0.png" src="../_images/examples_Catch_that_asteroid!_47_0.png" />
+</div>
+</div>
+<p>And now for the final plot:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [44]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">poliastro.twobody.propagation</span> <span class="kn">import</span> <span class="n">kepler</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [46]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">florence_hyper</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">kepler</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>Out[46]:
+</pre></div>
+</div>
+<div class="output_area highlight-none"><div class="highlight"><pre>
+<span></span>(&lt;Time object: scale=&#39;tdb&#39; format=&#39;iso&#39; value=[&#39;1856-07-27 09:14&#39; &#39;2016-11-20 05:18&#39; &#39;2017-04-11 13:53&#39;
+  &#39;2017-05-29 05:07&#39; &#39;2017-06-22 01:56&#39; &#39;2017-07-06 10:15&#39;
+  &#39;2017-07-16 00:13&#39; &#39;2017-07-22 20:50&#39; &#39;2017-07-28 00:34&#39;
+  &#39;2017-08-01 01:03&#39; &#39;2017-08-04 06:27&#39; &#39;2017-08-06 21:59&#39;
+  &#39;2017-08-09 03:06&#39; &#39;2017-08-11 00:12&#39; &#39;2017-08-12 15:01&#39;
+  &#39;2017-08-14 00:48&#39; &#39;2017-08-15 06:29&#39; &#39;2017-08-16 08:49&#39;
+  &#39;2017-08-17 08:20&#39; &#39;2017-08-18 05:30&#39; &#39;2017-08-19 00:39&#39;
+  &#39;2017-08-19 18:05&#39; &#39;2017-08-20 10:02&#39; &#39;2017-08-21 00:41&#39;
+  &#39;2017-08-21 14:13&#39; &#39;2017-08-22 02:46&#39; &#39;2017-08-22 14:25&#39;
+  &#39;2017-08-23 01:18&#39; &#39;2017-08-23 11:30&#39; &#39;2017-08-23 21:04&#39;
+  &#39;2017-08-24 06:04&#39; &#39;2017-08-24 14:35&#39; &#39;2017-08-24 22:38&#39;
+  &#39;2017-08-25 06:16&#39; &#39;2017-08-25 13:31&#39; &#39;2017-08-25 20:26&#39;
+  &#39;2017-08-26 03:03&#39; &#39;2017-08-26 09:22&#39; &#39;2017-08-26 15:25&#39;
+  &#39;2017-08-26 21:13&#39; &#39;2017-08-27 02:49&#39; &#39;2017-08-27 08:11&#39;
+  &#39;2017-08-27 13:23&#39; &#39;2017-08-27 18:24&#39; &#39;2017-08-27 23:15&#39;
+  &#39;2017-08-28 03:57&#39; &#39;2017-08-28 08:31&#39; &#39;2017-08-28 12:57&#39;
+  &#39;2017-08-28 17:15&#39; &#39;2017-08-28 21:27&#39; &#39;2017-08-29 01:33&#39;
+  &#39;2017-08-29 05:33&#39; &#39;2017-08-29 09:27&#39; &#39;2017-08-29 13:16&#39;
+  &#39;2017-08-29 17:01&#39; &#39;2017-08-29 20:42&#39; &#39;2017-08-30 00:18&#39;
+  &#39;2017-08-30 03:51&#39; &#39;2017-08-30 07:20&#39; &#39;2017-08-30 10:46&#39;
+  &#39;2017-08-30 14:09&#39; &#39;2017-08-30 17:30&#39; &#39;2017-08-30 20:48&#39;
+  &#39;2017-08-31 00:03&#39; &#39;2017-08-31 03:17&#39; &#39;2017-08-31 06:29&#39;
+  &#39;2017-08-31 09:39&#39; &#39;2017-08-31 12:48&#39; &#39;2017-08-31 15:56&#39;
+  &#39;2017-08-31 19:02&#39; &#39;2017-08-31 22:08&#39; &#39;2017-09-01 01:12&#39;
+  &#39;2017-09-01 04:17&#39; &#39;2017-09-01 07:20&#39; &#39;2017-09-01 10:24&#39;
+  &#39;2017-09-01 13:27&#39; &#39;2017-09-01 16:31&#39; &#39;2017-09-01 19:35&#39;
+  &#39;2017-09-01 22:39&#39; &#39;2017-09-02 01:44&#39; &#39;2017-09-02 04:49&#39;
+  &#39;2017-09-02 07:56&#39; &#39;2017-09-02 11:03&#39; &#39;2017-09-02 14:12&#39;
+  &#39;2017-09-02 17:22&#39; &#39;2017-09-02 20:34&#39; &#39;2017-09-02 23:48&#39;
+  &#39;2017-09-03 03:04&#39; &#39;2017-09-03 06:22&#39; &#39;2017-09-03 09:42&#39;
+  &#39;2017-09-03 13:05&#39; &#39;2017-09-03 16:32&#39; &#39;2017-09-03 20:01&#39;
+  &#39;2017-09-03 23:33&#39; &#39;2017-09-04 03:10&#39; &#39;2017-09-04 06:50&#39;
+  &#39;2017-09-04 10:35&#39; &#39;2017-09-04 14:24&#39; &#39;2017-09-04 18:19&#39;
+  &#39;2017-09-04 22:19&#39; &#39;2017-09-05 02:24&#39; &#39;2017-09-05 06:36&#39;
+  &#39;2017-09-05 10:55&#39; &#39;2017-09-05 15:21&#39; &#39;2017-09-05 19:54&#39;
+  &#39;2017-09-06 00:37&#39; &#39;2017-09-06 05:28&#39; &#39;2017-09-06 10:29&#39;
+  &#39;2017-09-06 15:40&#39; &#39;2017-09-06 21:03&#39; &#39;2017-09-07 02:38&#39;
+  &#39;2017-09-07 08:27&#39; &#39;2017-09-07 14:30&#39; &#39;2017-09-07 20:49&#39;
+  &#39;2017-09-08 03:25&#39; &#39;2017-09-08 10:20&#39; &#39;2017-09-08 17:36&#39;
+  &#39;2017-09-09 01:14&#39; &#39;2017-09-09 09:17&#39; &#39;2017-09-09 17:47&#39;
+  &#39;2017-09-10 02:48&#39; &#39;2017-09-10 12:22&#39; &#39;2017-09-10 22:33&#39;
+  &#39;2017-09-11 09:26&#39; &#39;2017-09-11 21:06&#39; &#39;2017-09-12 09:38&#39;
+  &#39;2017-09-12 23:10&#39; &#39;2017-09-13 13:50&#39; &#39;2017-09-14 05:47&#39;
+  &#39;2017-09-14 23:13&#39; &#39;2017-09-15 18:22&#39; &#39;2017-09-16 15:31&#39;
+  &#39;2017-09-17 15:03&#39; &#39;2017-09-18 17:22&#39; &#39;2017-09-19 23:04&#39;
+  &#39;2017-09-21 08:51&#39; &#39;2017-09-22 23:39&#39; &#39;2017-09-24 20:46&#39;
+  &#39;2017-09-27 01:53&#39; &#39;2017-09-29 17:24&#39; &#39;2017-10-02 22:48&#39;
+  &#39;2017-10-06 23:17&#39; &#39;2017-10-12 03:02&#39; &#39;2017-10-18 23:38&#39;
+  &#39;2017-10-28 13:37&#39; &#39;2017-11-11 21:56&#39; &#39;2017-12-05 18:45&#39;
+  &#39;2018-01-22 09:59&#39; &#39;2018-06-13 18:34&#39; &#39;2178-10-07 14:37&#39;]&gt;,
+ &lt;CartesianRepresentation (x, y, z) in km
+     [( 1.40608752e+10,  9.95968511e+09, -6.65760007e+10),
+      ( 7.31133620e+07,  4.32930111e+07, -3.22494731e+08),
+      ( 3.91061697e+07,  1.91842030e+07, -1.61418594e+08),
+      ( 2.77269012e+07,  1.11170869e+07, -1.07520383e+08),
+      ( 2.20252581e+07,  7.07502919e+06, -8.05144352e+07),
+      ( 1.85979768e+07,  4.64534267e+06, -6.42810792e+07),
+      ( 1.63087937e+07,  3.02249210e+06, -5.34383640e+07),
+      ( 1.46702861e+07,  1.86092716e+06, -4.56775952e+07),
+      ( 1.34385933e+07,  9.87766859e+05, -3.98437185e+07),
+      ( 1.24781776e+07,  3.06924048e+05, -3.52947552e+07),
+      ( 1.17076894e+07, -2.39272819e+05, -3.16453897e+07),
+      ( 1.10753467e+07, -6.87533588e+05, -2.86503556e+07),
+      ( 1.05466208e+07, -1.06233691e+06, -2.61461060e+07),
+      ( 1.00976024e+07, -1.38063279e+06, -2.40193941e+07),
+      ( 9.71121073e+06, -1.65453046e+06, -2.21893158e+07),
+      ( 9.37491766e+06, -1.89291145e+06, -2.05965316e+07),
+      ( 9.07932575e+06, -2.10243794e+06, -1.91965300e+07),
+      ( 8.81724754e+06, -2.28820533e+06, -1.79552675e+07),
+      ( 8.58309193e+06, -2.45417736e+06, -1.68462616e+07),
+      ( 8.37244409e+06, -2.60348382e+06, -1.58486014e+07),
+      ( 8.18177153e+06, -2.73862901e+06, -1.49455551e+07),
+      ( 8.00821401e+06, -2.86164064e+06, -1.41235752e+07),
+      ( 7.84943083e+06, -2.97417813e+06, -1.33715748e+07),
+      ( 7.70348783e+06, -3.07761263e+06, -1.26803927e+07),
+      ( 7.56877276e+06, -3.17308711e+06, -1.20423926e+07),
+      ( 7.44393089e+06, -3.26156200e+06, -1.14511577e+07),
+      ( 7.32781547e+06, -3.34385024e+06, -1.09012563e+07),
+      ( 7.21944922e+06, -3.42064467e+06, -1.03880596e+07),
+      ( 7.11799405e+06, -3.49253941e+06, -9.90759803e+06),
+      ( 7.02272707e+06, -3.56004694e+06, -9.45644760e+06),
+      ( 6.93302140e+06, -3.62361167e+06, -9.03163901e+06),
+      ( 6.84833061e+06, -3.68362097e+06, -8.63058421e+06),
+      ( 6.76817622e+06, -3.74041405e+06, -8.25101681e+06),
+      ( 6.69213733e+06, -3.79428928e+06, -7.89094327e+06),
+      ( 6.61984218e+06, -3.84551020e+06, -7.54860274e+06),
+      ( 6.55096110e+06, -3.89431054e+06, -7.22243375e+06),
+      ( 6.48520065e+06, -3.94089829e+06, -6.91104645e+06),
+      ( 6.42229871e+06, -3.98545927e+06, -6.61319937e+06),
+      ( 6.36202037e+06, -4.02816002e+06, -6.32777982e+06),
+      ( 6.30415439e+06, -4.06915027e+06, -6.05378733e+06),
+      ( 6.24851025e+06, -4.10856508e+06, -5.79031951e+06),
+      ( 6.19491561e+06, -4.14652662e+06, -5.53656006e+06),
+      ( 6.14321411e+06, -4.18314573e+06, -5.29176843e+06),
+      ( 6.09326350e+06, -4.21852322e+06, -5.05527093e+06),
+      ( 6.04493403e+06, -4.25275108e+06, -4.82645302e+06),
+      ( 5.99810706e+06, -4.28591341e+06, -4.60475271e+06),
+      ( 5.95267377e+06, -4.31808733e+06, -4.38965473e+06),
+      ( 5.90853417e+06, -4.34934371e+06, -4.18068544e+06),
+      ( 5.86559612e+06, -4.37974787e+06, -3.97740845e+06),
+      ( 5.82377450e+06, -4.40936013e+06, -3.77942068e+06),
+      ( 5.78299052e+06, -4.43823633e+06, -3.58634893e+06),
+      ( 5.74317105e+06, -4.46642831e+06, -3.39784686e+06),
+      ( 5.70424804e+06, -4.49398428e+06, -3.21359226e+06),
+      ( 5.66615806e+06, -4.52094919e+06, -3.03328471e+06),
+      ( 5.62884181e+06, -4.54736507e+06, -2.85664337e+06),
+      ( 5.59224373e+06, -4.57327130e+06, -2.68340512e+06),
+      ( 5.55631163e+06, -4.59870484e+06, -2.51332281e+06),
+      ( 5.52099636e+06, -4.62370052e+06, -2.34616377e+06),
+      ( 5.48625155e+06, -4.64829119e+06, -2.18170833e+06),
+      ( 5.45203329e+06, -4.67250797e+06, -2.01974864e+06),
+      ( 5.41829992e+06, -4.69638034e+06, -1.86008746e+06),
+      ( 5.38501184e+06, -4.71993639e+06, -1.70253717e+06),
+      ( 5.35213121e+06, -4.74320289e+06, -1.54691876e+06),
+      ( 5.31962189e+06, -4.76620545e+06, -1.39306101e+06),
+      ( 5.28744917e+06, -4.78896864e+06, -1.24079963e+06),
+      ( 5.25557965e+06, -4.81151612e+06, -1.08997655e+06),
+      ( 5.22398111e+06, -4.83387069e+06, -9.40439190e+05),
+      ( 5.19262235e+06, -4.85605444e+06, -7.92039847e+05),
+      ( 5.16147306e+06, -4.87808884e+06, -6.44635060e+05),
+      ( 5.13050370e+06, -4.89999477e+06, -4.98085046e+05),
+      ( 5.09968540e+06, -4.92179268e+06, -3.52253150e+05),
+      ( 5.06898985e+06, -4.94350260e+06, -2.07005323e+05),
+      ( 5.03838915e+06, -4.96514426e+06, -6.22096286e+04),
+      ( 5.00785578e+06, -4.98673714e+06,  8.22642523e+04),
+      ( 4.97736243e+06, -5.00830054e+06,  2.26545486e+05),
+      ( 4.94688196e+06, -5.02985367e+06,  3.70762553e+05),
+      ( 4.91638725e+06, -5.05141570e+06,  5.15043705e+05),
+      ( 4.88585116e+06, -5.07300582e+06,  6.59517422e+05),
+      ( 4.85524637e+06, -5.09464334e+06,  8.04312870e+05),
+      ( 4.82454534e+06, -5.11634773e+06,  9.49560367e+05),
+      ( 4.79372018e+06, -5.13813869e+06,  1.09539185e+06),
+      ( 4.76274255e+06, -5.16003626e+06,  1.24194137e+06),
+      ( 4.73158356e+06, -5.18206085e+06,  1.38934557e+06),
+      ( 4.70021366e+06, -5.20423333e+06,  1.53774424e+06),
+      ( 4.66860250e+06, -5.22657514e+06,  1.68728084e+06),
+      ( 4.63671887e+06, -5.24910833e+06,  1.83810307e+06),
+      ( 4.60453049e+06, -5.27185569e+06,  1.99036351e+06),
+      ( 4.57200394e+06, -5.29484083e+06,  2.14422022e+06),
+      ( 4.53910448e+06, -5.31808827e+06,  2.29983750e+06),
+      ( 4.50579589e+06, -5.34162358e+06,  2.45738656e+06),
+      ( 4.47204031e+06, -5.36547349e+06,  2.61704640e+06),
+      ( 4.43779807e+06, -5.38966601e+06,  2.77900465e+06),
+      ( 4.40302745e+06, -5.41423059e+06,  2.94345853e+06),
+      ( 4.36768449e+06, -5.43919825e+06,  3.11061591e+06),
+      ( 4.33172272e+06, -5.46460178e+06,  3.28069643e+06),
+      ( 4.29509292e+06, -5.49047592e+06,  3.45393277e+06),
+      ( 4.25774282e+06, -5.51685757e+06,  3.63057207e+06),
+      ( 4.21961676e+06, -5.54378598e+06,  3.81087746e+06),
+      ( 4.18065533e+06, -5.57130309e+06,  3.99512974e+06),
+      ( 4.14079499e+06, -5.59945373e+06,  4.18362935e+06),
+      ( 4.09996756e+06, -5.62828599e+06,  4.37669849e+06),
+      ( 4.05809979e+06, -5.65785157e+06,  4.57468348e+06),
+      ( 4.01511273e+06, -5.68820615e+06,  4.77795752e+06),
+      ( 3.97092110e+06, -5.71940991e+06,  4.98692368e+06),
+      ( 3.92543258e+06, -5.75152796e+06,  5.20201834e+06),
+      ( 3.87854698e+06, -5.78463099e+06,  5.42371511e+06),
+      ( 3.83015528e+06, -5.81879590e+06,  5.65252927e+06),
+      ( 3.78013859e+06, -5.85410655e+06,  5.88902280e+06),
+      ( 3.72836690e+06, -5.89065467e+06,  6.13381021e+06),
+      ( 3.67469767e+06, -5.92854077e+06,  6.38756516e+06),
+      ( 3.61897425e+06, -5.96787538e+06,  6.65102821e+06),
+      ( 3.56102392e+06, -6.00878032e+06,  6.92501563e+06),
+      ( 3.50065578e+06, -6.05139024e+06,  7.21042977e+06),
+      ( 3.43765816e+06, -6.09585444e+06,  7.50827109e+06),
+      ( 3.37179565e+06, -6.14233896e+06,  7.81965225e+06),
+      ( 3.30280560e+06, -6.19102907e+06,  8.14581469e+06),
+      ( 3.23039395e+06, -6.24213216e+06,  8.48814820e+06),
+      ( 3.15423035e+06, -6.29588125e+06,  8.84821423e+06),
+      ( 3.07394227e+06, -6.35253910e+06,  9.22777359e+06),
+      ( 2.98910792e+06, -6.41240318e+06,  9.62881975e+06),
+      ( 2.89924780e+06, -6.47581171e+06,  1.00536190e+07),
+      ( 2.80381437e+06, -6.54315087e+06,  1.05047595e+07),
+      ( 2.70217941e+06, -6.61486375e+06,  1.09852102e+07),
+      ( 2.59361850e+06, -6.69146129e+06,  1.14983952e+07),
+      ( 2.47729180e+06, -6.77353583e+06,  1.20482838e+07),
+      ( 2.35221996e+06, -6.86177811e+06,  1.26395049e+07),
+      ( 2.21725382e+06, -6.95699864e+06,  1.32774899e+07),
+      ( 2.07103578e+06, -7.06015494e+06,  1.39686554e+07),
+      ( 1.91195018e+06, -7.17238653e+06,  1.47206377e+07),
+      ( 1.73805878e+06, -7.29506045e+06,  1.55425975e+07),
+      ( 1.54701592e+06, -7.42983110e+06,  1.64456215e+07),
+      ( 1.33595532e+06, -7.57872005e+06,  1.74432568e+07),
+      ( 1.10133699e+06, -7.74422406e+06,  1.85522349e+07),
+      ( 8.38736783e+05, -7.92946346e+06,  1.97934659e+07),
+      ( 5.42551737e+05, -8.13839001e+06,  2.11934319e+07),
+      ( 2.05579193e+05, -8.37608372e+06,  2.27861752e+07),
+      (-1.81598233e+05, -8.64918664e+06,  2.46162062e+07),
+      (-6.31535104e+05, -8.96655345e+06,  2.67428628e+07),
+      (-1.16134853e+06, -9.34025680e+06,  2.92470470e+07),
+      (-1.79499832e+06, -9.78719544e+06,  3.22420024e+07),
+      (-2.56708649e+06, -1.03317740e+07,  3.58912716e+07),
+      (-3.52950455e+06, -1.10105915e+07,  4.04401143e+07),
+      (-4.76377460e+06, -1.18811450e+07,  4.62738360e+07),
+      (-6.40572145e+06, -1.30392312e+07,  5.40343978e+07),
+      (-8.69972246e+06, -1.46572085e+07,  6.48768229e+07),
+      (-1.21342332e+07, -1.70795826e+07,  8.11097439e+07),
+      (-1.78479247e+07, -2.11094536e+07,  1.08114966e+08),
+      (-2.92512714e+07, -2.91522152e+07,  1.62011729e+08),
+      (-6.33304865e+07, -5.31881739e+07,  3.23083531e+08),
+      (-1.40807298e+10, -9.93960262e+09,  6.65748057e+10)]&gt;)
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [43]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="o">%</span><span class="k">debug</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&gt; <span class="ansi-green-fg">/home/juanlu/.miniconda36/envs/poliastro36/lib/python3.6/site-packages/scipy/optimize/zeros.py</span>(215)<span class="ansi-cyan-fg">newton</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">    213 </span><span class="ansi-red-fg">            </span>q1 <span class="ansi-blue-fg">=</span> func<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span><span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">(</span>p1<span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">+</span> args<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">    214 </span><span class="ansi-red-fg">    </span>msg <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">&#34;Failed to converge after %d iterations, value is %s&#34;</span> <span class="ansi-blue-fg">%</span> <span class="ansi-blue-fg">(</span>maxiter<span class="ansi-blue-fg">,</span> p<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">--&gt; 215 </span><span class="ansi-red-fg">    </span><span class="ansi-green-fg">raise</span> RuntimeError<span class="ansi-blue-fg">(</span>msg<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">    216 </span>
+<span class="ansi-green-fg">    217 </span>
+
+ipdb&gt; u
+&gt; <span class="ansi-green-fg">/home/juanlu/Development/poliastro/poliastro-library/src/poliastro/twobody/angles.py</span>(160)<span class="ansi-cyan-fg">M_to_F</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">    158 </span><span class="ansi-red-fg">    </span><span class="ansi-green-fg">with</span> u<span class="ansi-blue-fg">.</span>set_enabled_equivalencies<span class="ansi-blue-fg">(</span>u<span class="ansi-blue-fg">.</span>dimensionless_angles<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">    159 </span><span class="ansi-red-fg">        F = optimize.newton(_kepler_equation_hyper, M, _kepler_equation_prime_hyper,
+</span><span class="ansi-green-fg">--&gt; 160 </span><span class="ansi-red-fg">                            args=(M, ecc))
+</span><span class="ansi-green-fg">    161 </span><span class="ansi-red-fg">    </span><span class="ansi-green-fg">return</span> F
+<span class="ansi-green-fg">    162 </span>
+
+ipdb&gt; u
+&gt; <span class="ansi-green-fg">/home/juanlu/Development/poliastro/poliastro-library/src/poliastro/twobody/angles.py</span>(233)<span class="ansi-cyan-fg">M_to_nu</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">    231 </span><span class="ansi-red-fg">    &#34;&#34;&#34;
+</span><span class="ansi-green-fg">    232 </span><span class="ansi-red-fg">    </span><span class="ansi-green-fg">if</span> ecc <span class="ansi-blue-fg">&gt;</span> <span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 233 </span><span class="ansi-red-fg">        </span>F <span class="ansi-blue-fg">=</span> M_to_F<span class="ansi-blue-fg">(</span>M<span class="ansi-blue-fg">,</span> ecc<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">    234 </span><span class="ansi-red-fg">        </span>nu <span class="ansi-blue-fg">=</span> F_to_nu<span class="ansi-blue-fg">(</span>F<span class="ansi-blue-fg">,</span> ecc<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">    235 </span><span class="ansi-red-fg">    </span><span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+
+ipdb&gt; u
+&gt; <span class="ansi-green-fg">/home/juanlu/Development/poliastro/poliastro-library/src/poliastro/twobody/propagation.py</span>(142)<span class="ansi-cyan-fg">mean_motion</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">    140 </span><span class="ansi-red-fg">        </span><span class="ansi-green-fg">with</span> u<span class="ansi-blue-fg">.</span>set_enabled_equivalencies<span class="ansi-blue-fg">(</span>u<span class="ansi-blue-fg">.</span>dimensionless_angles<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">    141 </span><span class="ansi-red-fg">            </span>M <span class="ansi-blue-fg">=</span> M0 <span class="ansi-blue-fg">+</span> tof <span class="ansi-blue-fg">*</span> np<span class="ansi-blue-fg">.</span>sqrt<span class="ansi-blue-fg">(</span>k <span class="ansi-blue-fg">/</span> np<span class="ansi-blue-fg">.</span>abs<span class="ansi-blue-fg">(</span>a <span class="ansi-blue-fg">**</span> <span class="ansi-cyan-fg">3</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> u<span class="ansi-blue-fg">.</span>rad
+<span class="ansi-green-fg">--&gt; 142 </span><span class="ansi-red-fg">            </span>nu <span class="ansi-blue-fg">=</span> M_to_nu<span class="ansi-blue-fg">(</span>M<span class="ansi-blue-fg">,</span> ecc<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">    143 </span>
+<span class="ansi-green-fg">    144 </span><span class="ansi-red-fg">    </span><span class="ansi-red-fg"># parabolic orbit</span>
+
+ipdb&gt; u
+&gt; <span class="ansi-green-fg">/home/juanlu/Development/poliastro/poliastro-library/src/poliastro/twobody/propagation.py</span>(209)<span class="ansi-cyan-fg">propagate</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">    207 </span>
+<span class="ansi-green-fg">    208 </span><span class="ansi-red-fg">    &#34;&#34;&#34;
+</span><span class="ansi-green-fg">--&gt; 209 </span><span class="ansi-red-fg">    </span>r<span class="ansi-blue-fg">,</span> v <span class="ansi-blue-fg">=</span> method<span class="ansi-blue-fg">(</span>orbit<span class="ansi-blue-fg">,</span> time_of_flight<span class="ansi-blue-fg">.</span>to<span class="ansi-blue-fg">(</span>u<span class="ansi-blue-fg">.</span>s<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>value<span class="ansi-blue-fg">,</span> rtol<span class="ansi-blue-fg">=</span>rtol<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">    210 </span><span class="ansi-red-fg">    </span><span class="ansi-green-fg">return</span> orbit<span class="ansi-blue-fg">.</span>from_vectors<span class="ansi-blue-fg">(</span>orbit<span class="ansi-blue-fg">.</span>attractor<span class="ansi-blue-fg">,</span> r <span class="ansi-blue-fg">*</span> u<span class="ansi-blue-fg">.</span>km<span class="ansi-blue-fg">,</span> v <span class="ansi-blue-fg">*</span> u<span class="ansi-blue-fg">.</span>km <span class="ansi-blue-fg">/</span> u<span class="ansi-blue-fg">.</span>s<span class="ansi-blue-fg">,</span> orbit<span class="ansi-blue-fg">.</span>epoch <span class="ansi-blue-fg">+</span> time_of_flight<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">    211 </span>
+
+ipdb&gt; u
+&gt; <span class="ansi-green-fg">/home/juanlu/Development/poliastro/poliastro-library/src/poliastro/twobody/orbit.py</span>(275)<span class="ansi-cyan-fg">propagate</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">    273 </span><span class="ansi-red-fg">                </span>time_of_flight <span class="ansi-blue-fg">=</span> time<span class="ansi-blue-fg">.</span>TimeDelta<span class="ansi-blue-fg">(</span>value<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">    274 </span>
+<span class="ansi-green-fg">--&gt; 275 </span><span class="ansi-red-fg">            </span><span class="ansi-green-fg">return</span> propagate<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> time_of_flight<span class="ansi-blue-fg">,</span> method<span class="ansi-blue-fg">=</span>method<span class="ansi-blue-fg">,</span> rtol<span class="ansi-blue-fg">=</span>rtol<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">    276 </span>
+<span class="ansi-green-fg">    277 </span><span class="ansi-red-fg">    </span><span class="ansi-green-fg">def</span> sample<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> values<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">None</span><span class="ansi-blue-fg">,</span> method<span class="ansi-blue-fg">=</span>mean_motion<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+ipdb&gt; u
+&gt; <span class="ansi-green-fg">/home/juanlu/Development/poliastro/poliastro-library/src/poliastro/twobody/orbit.py</span>(343)<span class="ansi-cyan-fg">_sample</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">    341 </span><span class="ansi-red-fg">        </span>values <span class="ansi-blue-fg">=</span> np<span class="ansi-blue-fg">.</span>zeros<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">(</span>len<span class="ansi-blue-fg">(</span>time_values<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">3</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> self<span class="ansi-blue-fg">.</span>r<span class="ansi-blue-fg">.</span>unit
+<span class="ansi-green-fg">    342 </span><span class="ansi-red-fg">        </span><span class="ansi-green-fg">for</span> ii<span class="ansi-blue-fg">,</span> epoch <span class="ansi-green-fg">in</span> enumerate<span class="ansi-blue-fg">(</span>time_values<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 343 </span><span class="ansi-red-fg">            </span>rr <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>propagate<span class="ansi-blue-fg">(</span>epoch<span class="ansi-blue-fg">,</span> method<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>r
+<span class="ansi-green-fg">    344 </span><span class="ansi-red-fg">            </span>values<span class="ansi-blue-fg">[</span>ii<span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> rr
+<span class="ansi-green-fg">    345 </span>
+
+ipdb&gt; p time_values
+&lt;Time object: scale=&#39;tdb&#39; format=&#39;iso&#39; value=[&#39;1856-07-27 09:14&#39;]&gt;
+ipdb&gt; q
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none"><div class="highlight"><pre>
+<span></span>In [33]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3"><div class="highlight"><pre>
+<span></span><span class="n">frame</span> <span class="o">=</span> <span class="n">OrbitPlotter</span><span class="p">()</span>
+
+<span class="c1"># This first plot sets the frame</span>
+<span class="n">frame</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">florence_hyper</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Florence&quot;</span><span class="p">)</span>
+
+<span class="c1"># And then we add the Moon</span>
+<span class="n">frame</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">moon</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">Moon</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">1000000</span><span class="p">,</span> <span class="mi">8000000</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">5000000</span><span class="p">,</span> <span class="mi">5000000</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span><span class="o">.</span><span class="n">autofmt_xdate</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="stderr output_area docutils container">
+<div class="highlight"><pre>
+/home/juanlu/.miniconda36/envs/poliastro36/lib/python3.6/site-packages/astropy/units/quantity.py:639: RuntimeWarning:
+
+overflow encountered in cosh
+
+/home/juanlu/.miniconda36/envs/poliastro36/lib/python3.6/site-packages/astropy/units/quantity.py:639: RuntimeWarning:
+
+overflow encountered in sinh
+
+/home/juanlu/.miniconda36/envs/poliastro36/lib/python3.6/site-packages/astropy/units/quantity.py:639: RuntimeWarning:
+
+invalid value encountered in true_divide
+
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">RuntimeError</span>                              Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-33-ccd86024eefa&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> <span class="ansi-red-fg"># This first plot sets the frame</span>
+<span class="ansi-green-fg">----&gt; 4</span><span class="ansi-red-fg"> </span>frame<span class="ansi-blue-fg">.</span>plot<span class="ansi-blue-fg">(</span>florence_hyper<span class="ansi-blue-fg">,</span> label<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#34;Florence&#34;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span>
+<span class="ansi-green-intense-fg ansi-bold">      6</span> <span class="ansi-red-fg"># And then we add the Moon</span>
+
+<span class="ansi-green-fg">~/Development/poliastro/poliastro-library/src/poliastro/plotting.py</span> in <span class="ansi-cyan-fg">plot</span><span class="ansi-blue-fg">(self, orbit, label, color)</span>
+<span class="ansi-green-intense-fg ansi-bold">    169</span>         self<span class="ansi-blue-fg">.</span>set_attractor<span class="ansi-blue-fg">(</span>orbit<span class="ansi-blue-fg">.</span>attractor<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    170</span>         self<span class="ansi-blue-fg">.</span>_redraw_attractor<span class="ansi-blue-fg">(</span>orbit<span class="ansi-blue-fg">.</span>r_p <span class="ansi-blue-fg">*</span> <span class="ansi-cyan-fg">0.15</span><span class="ansi-blue-fg">)</span>  <span class="ansi-red-fg"># Arbitrary Threshhold</span>
+<span class="ansi-green-fg">--&gt; 171</span><span class="ansi-red-fg">         </span>_<span class="ansi-blue-fg">,</span> positions <span class="ansi-blue-fg">=</span> orbit<span class="ansi-blue-fg">.</span>sample<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>num_points<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    172</span>
+<span class="ansi-green-intense-fg ansi-bold">    173</span>         x0<span class="ansi-blue-fg">,</span> y0 <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>_project<span class="ansi-blue-fg">(</span>orbit<span class="ansi-blue-fg">.</span>r<span class="ansi-blue-fg">[</span><span class="ansi-green-fg">None</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">~/Development/poliastro/poliastro-library/src/poliastro/twobody/orbit.py</span> in <span class="ansi-cyan-fg">sample</span><span class="ansi-blue-fg">(self, values, method)</span>
+<span class="ansi-green-intense-fg ansi-bold">    331</span>                 nu_values <span class="ansi-blue-fg">=</span> np<span class="ansi-blue-fg">.</span>linspace<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">-</span>nu_limit<span class="ansi-blue-fg">,</span> nu_limit<span class="ansi-blue-fg">,</span> values<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    332</span>
+<span class="ansi-green-fg">--&gt; 333</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>sample<span class="ansi-blue-fg">(</span>nu_values<span class="ansi-blue-fg">,</span> method<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    334</span>
+<span class="ansi-green-intense-fg ansi-bold">    335</span>         <span class="ansi-green-fg">elif</span> hasattr<span class="ansi-blue-fg">(</span>values<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;unit&#34;</span><span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">and</span> values<span class="ansi-blue-fg">.</span>unit <span class="ansi-green-fg">in</span> <span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;rad&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;deg&#39;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">~/Development/poliastro/poliastro-library/src/poliastro/twobody/orbit.py</span> in <span class="ansi-cyan-fg">sample</span><span class="ansi-blue-fg">(self, values, method)</span>
+<span class="ansi-green-intense-fg ansi-bold">    336</span>             values <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>_generate_time_values<span class="ansi-blue-fg">(</span>values<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    337</span>
+<span class="ansi-green-fg">--&gt; 338</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> values<span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">.</span>_sample<span class="ansi-blue-fg">(</span>values<span class="ansi-blue-fg">,</span> method<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    339</span>
+<span class="ansi-green-intense-fg ansi-bold">    340</span>     <span class="ansi-green-fg">def</span> _sample<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> time_values<span class="ansi-blue-fg">,</span> method<span class="ansi-blue-fg">=</span>mean_motion<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">~/Development/poliastro/poliastro-library/src/poliastro/twobody/orbit.py</span> in <span class="ansi-cyan-fg">_sample</span><span class="ansi-blue-fg">(self, time_values, method)</span>
+<span class="ansi-green-intense-fg ansi-bold">    341</span>         values <span class="ansi-blue-fg">=</span> np<span class="ansi-blue-fg">.</span>zeros<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">(</span>len<span class="ansi-blue-fg">(</span>time_values<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">3</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> self<span class="ansi-blue-fg">.</span>r<span class="ansi-blue-fg">.</span>unit
+<span class="ansi-green-intense-fg ansi-bold">    342</span>         <span class="ansi-green-fg">for</span> ii<span class="ansi-blue-fg">,</span> epoch <span class="ansi-green-fg">in</span> enumerate<span class="ansi-blue-fg">(</span>time_values<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 343</span><span class="ansi-red-fg">             </span>rr <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>propagate<span class="ansi-blue-fg">(</span>epoch<span class="ansi-blue-fg">,</span> method<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>r
+<span class="ansi-green-intense-fg ansi-bold">    344</span>             values<span class="ansi-blue-fg">[</span>ii<span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> rr
+<span class="ansi-green-intense-fg ansi-bold">    345</span>
+
+<span class="ansi-green-fg">~/Development/poliastro/poliastro-library/src/poliastro/twobody/orbit.py</span> in <span class="ansi-cyan-fg">propagate</span><span class="ansi-blue-fg">(self, value, method, rtol, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    273</span>                 time_of_flight <span class="ansi-blue-fg">=</span> time<span class="ansi-blue-fg">.</span>TimeDelta<span class="ansi-blue-fg">(</span>value<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    274</span>
+<span class="ansi-green-fg">--&gt; 275</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">return</span> propagate<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> time_of_flight<span class="ansi-blue-fg">,</span> method<span class="ansi-blue-fg">=</span>method<span class="ansi-blue-fg">,</span> rtol<span class="ansi-blue-fg">=</span>rtol<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    276</span>
+<span class="ansi-green-intense-fg ansi-bold">    277</span>     <span class="ansi-green-fg">def</span> sample<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> values<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">None</span><span class="ansi-blue-fg">,</span> method<span class="ansi-blue-fg">=</span>mean_motion<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">~/Development/poliastro/poliastro-library/src/poliastro/twobody/propagation.py</span> in <span class="ansi-cyan-fg">propagate</span><span class="ansi-blue-fg">(orbit, time_of_flight, method, rtol, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    207</span>
+<span class="ansi-green-intense-fg ansi-bold">    208</span>     &#34;&#34;&#34;
+<span class="ansi-green-fg">--&gt; 209</span><span class="ansi-red-fg">     </span>r<span class="ansi-blue-fg">,</span> v <span class="ansi-blue-fg">=</span> method<span class="ansi-blue-fg">(</span>orbit<span class="ansi-blue-fg">,</span> time_of_flight<span class="ansi-blue-fg">.</span>to<span class="ansi-blue-fg">(</span>u<span class="ansi-blue-fg">.</span>s<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>value<span class="ansi-blue-fg">,</span> rtol<span class="ansi-blue-fg">=</span>rtol<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    210</span>     <span class="ansi-green-fg">return</span> orbit<span class="ansi-blue-fg">.</span>from_vectors<span class="ansi-blue-fg">(</span>orbit<span class="ansi-blue-fg">.</span>attractor<span class="ansi-blue-fg">,</span> r <span class="ansi-blue-fg">*</span> u<span class="ansi-blue-fg">.</span>km<span class="ansi-blue-fg">,</span> v <span class="ansi-blue-fg">*</span> u<span class="ansi-blue-fg">.</span>km <span class="ansi-blue-fg">/</span> u<span class="ansi-blue-fg">.</span>s<span class="ansi-blue-fg">,</span> orbit<span class="ansi-blue-fg">.</span>epoch <span class="ansi-blue-fg">+</span> time_of_flight<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    211</span>
+
+<span class="ansi-green-fg">~/Development/poliastro/poliastro-library/src/poliastro/twobody/propagation.py</span> in <span class="ansi-cyan-fg">mean_motion</span><span class="ansi-blue-fg">(orbit, tof, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    140</span>         <span class="ansi-green-fg">with</span> u<span class="ansi-blue-fg">.</span>set_enabled_equivalencies<span class="ansi-blue-fg">(</span>u<span class="ansi-blue-fg">.</span>dimensionless_angles<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    141</span>             M <span class="ansi-blue-fg">=</span> M0 <span class="ansi-blue-fg">+</span> tof <span class="ansi-blue-fg">*</span> np<span class="ansi-blue-fg">.</span>sqrt<span class="ansi-blue-fg">(</span>k <span class="ansi-blue-fg">/</span> np<span class="ansi-blue-fg">.</span>abs<span class="ansi-blue-fg">(</span>a <span class="ansi-blue-fg">**</span> <span class="ansi-cyan-fg">3</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">*</span> u<span class="ansi-blue-fg">.</span>rad
+<span class="ansi-green-fg">--&gt; 142</span><span class="ansi-red-fg">             </span>nu <span class="ansi-blue-fg">=</span> M_to_nu<span class="ansi-blue-fg">(</span>M<span class="ansi-blue-fg">,</span> ecc<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    143</span>
+<span class="ansi-green-intense-fg ansi-bold">    144</span>     <span class="ansi-red-fg"># parabolic orbit</span>
+
+<span class="ansi-green-fg">~/Development/poliastro/poliastro-library/src/poliastro/twobody/angles.py</span> in <span class="ansi-cyan-fg">M_to_nu</span><span class="ansi-blue-fg">(M, ecc)</span>
+<span class="ansi-green-intense-fg ansi-bold">    231</span>     &#34;&#34;&#34;
+<span class="ansi-green-intense-fg ansi-bold">    232</span>     <span class="ansi-green-fg">if</span> ecc <span class="ansi-blue-fg">&gt;</span> <span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 233</span><span class="ansi-red-fg">         </span>F <span class="ansi-blue-fg">=</span> M_to_F<span class="ansi-blue-fg">(</span>M<span class="ansi-blue-fg">,</span> ecc<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    234</span>         nu <span class="ansi-blue-fg">=</span> F_to_nu<span class="ansi-blue-fg">(</span>F<span class="ansi-blue-fg">,</span> ecc<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    235</span>     <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">~/Development/poliastro/poliastro-library/src/poliastro/twobody/angles.py</span> in <span class="ansi-cyan-fg">M_to_F</span><span class="ansi-blue-fg">(M, ecc)</span>
+<span class="ansi-green-intense-fg ansi-bold">    158</span>     <span class="ansi-green-fg">with</span> u<span class="ansi-blue-fg">.</span>set_enabled_equivalencies<span class="ansi-blue-fg">(</span>u<span class="ansi-blue-fg">.</span>dimensionless_angles<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    159</span>         F = optimize.newton(_kepler_equation_hyper, M, _kepler_equation_prime_hyper,
+<span class="ansi-green-fg">--&gt; 160</span><span class="ansi-red-fg">                             args=(M, ecc))
+</span><span class="ansi-green-intense-fg ansi-bold">    161</span>     <span class="ansi-green-fg">return</span> F
+<span class="ansi-green-intense-fg ansi-bold">    162</span>
+
+<span class="ansi-green-fg">~/.miniconda36/envs/poliastro36/lib/python3.6/site-packages/scipy/optimize/zeros.py</span> in <span class="ansi-cyan-fg">newton</span><span class="ansi-blue-fg">(func, x0, fprime, args, tol, maxiter, fprime2)</span>
+<span class="ansi-green-intense-fg ansi-bold">    213</span>             q1 <span class="ansi-blue-fg">=</span> func<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span><span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">(</span>p1<span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">+</span> args<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    214</span>     msg <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">&#34;Failed to converge after %d iterations, value is %s&#34;</span> <span class="ansi-blue-fg">%</span> <span class="ansi-blue-fg">(</span>maxiter<span class="ansi-blue-fg">,</span> p<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">--&gt; 215</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">raise</span> RuntimeError<span class="ansi-blue-fg">(</span>msg<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    216</span>
+<span class="ansi-green-intense-fg ansi-bold">    217</span>
+
+<span class="ansi-red-fg">RuntimeError</span>: Failed to converge after 50 iterations, value is nan rad
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/examples_Catch_that_asteroid!_52_2.png" src="../_images/examples_Catch_that_asteroid!_52_2.png" />
+</div>
+</div>
+<div style="text-align: center; font-size: 3em;"><p>Per Python ad astra!</p>
+</div></div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Comparing Hohmann and bielliptic transfers.html" class="btn btn-neutral float-right" title="Comparing Hohmann and bielliptic transfers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../jupyter.html" class="btn btn-neutral" title="Jupyter notebooks" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2013-2017, Juan Luis Cano Rodríguez and the poliastro development team.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.9.dev0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
