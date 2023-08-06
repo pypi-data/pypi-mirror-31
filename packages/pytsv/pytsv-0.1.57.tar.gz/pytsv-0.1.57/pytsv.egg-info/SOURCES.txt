@@ -1,0 +1,15 @@
+MANIFEST.in
+README.rst
+setup.py
+pytsv/__init__.py
+pytsv/configs.py
+pytsv/core.py
+pytsv.egg-info/PKG-INFO
+pytsv.egg-info/SOURCES.txt
+pytsv.egg-info/dependency_links.txt
+pytsv.egg-info/entry_points.txt
+pytsv.egg-info/requires.txt
+pytsv.egg-info/top_level.txt
+pytsv/endpoints/__init__.py
+pytsv/endpoints/group_default.py
+pytsv/endpoints/main.py

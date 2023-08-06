@@ -1,0 +1,3 @@
+[console_scripts]
+pytsv = pytsv.endpoints.main:main
+
