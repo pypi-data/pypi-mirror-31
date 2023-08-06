@@ -1,0 +1,17 @@
+README.md
+setup.py
+examples/__init__.py
+examples/client.py
+examples/clientGui.py
+examples/server.py
+examples/serverGui.py
+pyRpc/__init__.py
+pyRpc/_version.py
+pyRpc/client.py
+pyRpc/constants.py
+pyRpc/server.py
+pyRpc.egg-info/PKG-INFO
+pyRpc.egg-info/SOURCES.txt
+pyRpc.egg-info/dependency_links.txt
+pyRpc.egg-info/requires.txt
+pyRpc.egg-info/top_level.txt
