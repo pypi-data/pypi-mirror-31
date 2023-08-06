@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: numexpr3
+Version: 3.0.1a0
+Summary: Fast numerical expression evaluator for NumPy
+Home-page: https://github.com/pydata/numexpr
+Author: Robert A. McLeod, David M. Cooke, Francesc Alted, and others
+Author-email: robbmcleod@gmail.com, faltet@gmail.com
+License: BSD
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
