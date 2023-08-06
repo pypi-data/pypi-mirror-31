@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: Flask-WTF-Decorators
+Version: 0.1
+Summary: Decorators for flask-wtf
+Home-page: https://github.com/simpleapples/flask-wtf-decorators/
+Author: Zhiya Zang
+Author-email: zangzhiya@gmail.com
+License: MIT
+Platform: any
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: Flask (>=0.7)
+Requires-Dist: Flask-WTF (>=0.9)
+
+UNKNOWN
+
+
