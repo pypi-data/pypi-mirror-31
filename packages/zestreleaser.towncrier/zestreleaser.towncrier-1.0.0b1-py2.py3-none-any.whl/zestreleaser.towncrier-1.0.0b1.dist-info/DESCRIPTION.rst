@@ -1,0 +1,113 @@
+.. This README is meant for consumption by humans and pypi. Pypi can render rst files so please do not use Sphinx features.
+   If you want to learn more about writing documentation, please check out: http://docs.plone.org/about/documentation_styleguide.html
+   This text does not appear on pypi or github. It is a comment.
+
+zestreleaser.towncrier
+======================
+
+This calls `towncrier <https://github.com/hawkowl/towncrier>`_ when releasing a package with `zest.releaser <http://zestreleaser.readthedocs.io/en/latest/>`_.
+``towncrier`` updates your history file (like ``CHANGES.rst``) based on news snippets.
+This is for example `used by pip <https://pip.pypa.io/en/latest/development/#adding-a-news-entry>`_.
+
+The plugin will call ``towncrier --version <package version> --yes``.
+You can get a preview of the result yourself by calling ``towncrier --version 1.2.3 --draft``.
+
+The ``towncrier`` command should be on your ``PATH``.
+The plugin can also find it when it is in the same directory as the ``fullrelease`` script (or ``prerelease/postrelease``).
+
+
+Installation
+------------
+
+Install ``zestreleaser.towncrier`` with ``pip``::
+
+    $ pip install zestreleaser.towncrier
+
+Then you can run ``fullrelease`` like you would normally do when releasing a package.
+
+
+Contribute
+----------
+
+- Issue Tracker: https://github.com/collective/zestreleaser.towncrier/issues
+- Source Code: https://github.com/collective/zestreleaser.towncrier
+
+
+Support
+-------
+
+If you are having problems, please let us know by filing an `issue <https://github.com/collective/zestreleaser.towncrier/issues>`_.
+
+
+License
+-------
+
+The project is licensed under the GPL.
+
+
+
+``pyproject.toml`` example
+--------------------------
+
+``towncrier`` needs a configured ``pyproject.toml`` file in the root of the package, next to the ``setup.py``.
+For reference, here is the literal ``pyproject.toml`` file from ``zestreleaser.towncrier``::
+
+  [tool.towncrier]
+  # The package name must be importable for now, even when not used.
+  # See these pull requests:
+  # https://github.com/hawkowl/towncrier/pull/107
+  # https://github.com/hawkowl/towncrier/pull/112
+  # Workaround can be: package = "towncrier"
+  package = "zestreleaser.towncrier"
+  issue_format = "`Issue #{issue} <https://github.com/collective/zestreleaser.towncrier/issues/{issue}>`_"
+  filename = "CHANGES.rst"
+  directory = "news/"
+  title_format = "{version} ({project_date})"
+  # First underline is used for version/date header.
+  # Second underline is used for the type names (like 'Bug fixes:').
+  underlines = ["-", ""]
+
+  [[tool.towncrier.type]]
+  directory = "breaking"
+  name = "Breaking changes:"
+  showcontent = true
+
+  [[tool.towncrier.type]]
+  directory = "feature"
+  name = "New features:"
+  showcontent = true
+
+  [[tool.towncrier.type]]
+  directory = "bugfix"
+  name = "Bug fixes:"
+  showcontent = true
+
+
+Contributors
+============
+
+- Maurits van Rees, m.van.rees@zestsoftware.nl
+
+
+Changelog
+=========
+
+.. NOTE: You should *NOT* be adding new change log entries to this file, this
+         file is managed by towncrier. You *may* edit previous change logs to
+         fix problems like typo corrections or such.
+
+         To add a new change log entry, please see the notes from the ``pip`` project at
+             https://pip.pypa.io/en/latest/development/#adding-a-news-entry
+
+.. towncrier release notes start
+
+1.0.0b1 (2018-05-15)
+--------------------
+
+New features:
+
+
+- First release. [maurits] (`Issue #1
+  <https://github.com/collective/zestreleaser.towncrier/issues/1>`_)
+
+
