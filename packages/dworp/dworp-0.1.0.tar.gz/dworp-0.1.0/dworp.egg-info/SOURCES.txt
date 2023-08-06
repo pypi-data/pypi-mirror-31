@@ -1,0 +1,16 @@
+README.md
+setup.py
+dworp/__init__.py
+dworp/agent.py
+dworp/environment.py
+dworp/observer.py
+dworp/plot.py
+dworp/scheduling.py
+dworp/simulation.py
+dworp/space.py
+dworp/time.py
+dworp.egg-info/PKG-INFO
+dworp.egg-info/SOURCES.txt
+dworp.egg-info/dependency_links.txt
+dworp.egg-info/requires.txt
+dworp.egg-info/top_level.txt
