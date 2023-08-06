@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: mdf
+Version: 2.2.1
+Summary: MDF - Data Flow Programming Toolkit
+Home-page: UNKNOWN
+License: UNKNOWN
+Description: .. -*-rst-*-
+        
+        MDF - Data Flow Programming Toolkit
+        =======================================
+        
+        
+Platform: UNKNOWN
+Provides-Extra: linux2
+Provides-Extra: win32

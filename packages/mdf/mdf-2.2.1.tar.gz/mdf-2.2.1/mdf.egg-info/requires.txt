@@ -1,0 +1,16 @@
+Cython
+numpy
+pyzmq
+Pyro4==4.14
+decorator
+pandas
+pyparsing
+argparse
+matplotlib
+xlwt
+pydot
+
+[linux2]
+
+[win32]
+pywin32
