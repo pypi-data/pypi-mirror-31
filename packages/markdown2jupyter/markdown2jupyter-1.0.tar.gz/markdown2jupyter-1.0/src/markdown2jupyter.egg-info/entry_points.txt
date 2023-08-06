@@ -1,0 +1,3 @@
+[console_scripts]
+md2jupyter = markdown2jupyter.md2jupyter:cli
+

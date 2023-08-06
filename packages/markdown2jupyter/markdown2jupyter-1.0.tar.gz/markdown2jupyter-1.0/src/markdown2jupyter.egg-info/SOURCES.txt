@@ -1,0 +1,9 @@
+README.md
+setup.py
+src/markdown2jupyter/__init__.py
+src/markdown2jupyter/md2jupyter.py
+src/markdown2jupyter.egg-info/PKG-INFO
+src/markdown2jupyter.egg-info/SOURCES.txt
+src/markdown2jupyter.egg-info/dependency_links.txt
+src/markdown2jupyter.egg-info/entry_points.txt
+src/markdown2jupyter.egg-info/top_level.txt
