@@ -1,0 +1,6 @@
+tblib
+six
+pyzmq
+pyzmp>=0.0.17
+pyros_config>=0.1.4
+mock>=1.0.1
