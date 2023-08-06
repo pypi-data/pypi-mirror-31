@@ -1,0 +1,100 @@
+#!/usr/bin/env python3
+
+# include standard modules
+import argparse
+
+def main():
+    # Parsing the option flags
+    args = flags()
+    
+    # Version
+    try:
+        if args.version:
+            parser.parse_args(['--version'])
+    except:
+        pass
+    
+    # Message to work with:
+    if args.message:
+        # Given as command parameter...
+        minput = args.message.lower()
+    elif args.input:    
+        with open(args.input, 'r') as myfile:
+            minput = myfile.read().lower()
+    else:
+        # ...or as a user input later on.
+        minput = input('Enter your message:\n').lower()
+    
+    # Key, default 3
+    key = -args.key * (-1)**args.decrypt
+    
+    # Output message, encrypted or decrypted according to -d flag
+    output = getoutput(minput, key)
+    if args.output:
+        if args.append:
+            with open(args.output, 'a') as myfile:
+                myfile.write('\n' + output)
+        else:
+            with open(args.output, 'w') as myfile:
+                myfile.write(output)
+    else:
+        print(output)
+
+#===============================================================================
+# Program options
+def flags():
+    __version__ = "1.0"
+    cesardoes = 'Cesar (de)ciphers a given text with Caesar Cipher. The default key shift (3, left rotation) can be modified by the user.'
+    parser = argparse.ArgumentParser(prog='Cesar', description=cesardoes)
+    parser.add_argument("-d", dest="decrypt", help="decrypt instead of encrypt", action="store_true")
+    parser.add_argument("-i", dest="input", help="get input message from file")
+    parser.add_argument("-k", dest="key", help="choose key shift", type=int, default=3)
+    parser.add_argument("-m", dest="message", help="string to (de)cipher")
+    parser.add_argument("-o", dest="output", help="write output message to file")
+    parser.add_argument("-a", dest="append", help="modifies -o to append to existing file", action="store_true")
+    parser.add_argument("--version", dest="version", action='version', version='%(prog)s ' + __version__)
+    args = parser.parse_args()
+    return args
+#===============================================================================
+
+#===============================================================================
+# The actual cypher    
+def getoutput(minput, key):
+    # Convert into ASCII
+    numberlist = getnumbers(minput)
+    
+    # Apply key shift
+    newnumberlist = doshift(numberlist, key)
+    
+    # Convert back into string
+    output = getstring(newnumberlist)
+    
+    # Parse output into legible form
+    return ''.join(output)
+    
+def getnumbers(string):
+    numberlist = [ord(i) for i in string]
+    #numberlist = [letter.find(i) for i in string]
+    return numberlist
+
+def getstring(numbers):
+    string = [chr(i) for i in numbers]
+    return string
+    
+def doshift(numbers, shift):
+    numbers2 = []
+    for i in numbers:
+        # If it is a (lowercase) letter we shift
+        if i > 96 and i < 123:
+            j = i + shift               # Apply shift
+            j = (j - ord('a')) % 26     # Go around mod 26
+            j = j + ord('a')            # And back to the ASCII position
+        # If it isn't a letter we don't shift
+        else:
+            j = i
+        numbers2.append(j)
+    return numbers2
+#===============================================================================
+
+if __name__ == "__main__":
+    main()

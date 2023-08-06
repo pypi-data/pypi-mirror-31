@@ -1,0 +1,12 @@
+CHANGES.txt
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+cesar/cesar
+cesar.egg-info/PKG-INFO
+cesar.egg-info/SOURCES.txt
+cesar.egg-info/dependency_links.txt
+cesar.egg-info/requires.txt
+cesar.egg-info/top_level.txt

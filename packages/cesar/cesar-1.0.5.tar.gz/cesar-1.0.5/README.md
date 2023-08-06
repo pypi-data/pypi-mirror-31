@@ -1,0 +1,44 @@
+# cesar
+Cesar (de)ciphers a given text with Caesar Cipher.
+
+## Calling cesar
+As a Python script, it can be called with:
+`python cesar.py [options]`
+
+Alternatively, it can be used as a system command:
+`./cesar.py [options]`
+
+One could copy the file to a location in $PATH and remove the extension.
+That way you could just call it from anywhere as:
+`cesar [options]`
+
+## Usage
+Cesar is written so it behaves as any other GNU/Linux console command.
+
+Admits the input message in three different ways:
+- Direct input after calling the command (default).
+- Add input to the command (-m option).
+- Read input from file (-i option).
+
+The input can either be:
+- A plain message to cipher (default).
+- A ciphered message to decipher (-d option).
+
+The ouput will be either:
+- Shown in the console (default).
+- Written to a file (-o option, overwrites, add -a to append).
+
+Help can be seen using -h, --help option.
+
+Version can be seen using --version option.
+
+## Notes
+Due to the cyclical nature of this cipher, there is no actual difference between
+encryption and decryption but the key used.
+
+For example, a shift of 3 to the left is equivalent to a shift of 23 to the right.
+
+## Warning
+This cipher is not secure AT ALL. It is provided for its historical significance (and also for fun!).
+
+DO NOT USE IT TO CIPHER ANY INFORMATION YOU WOULD LIKE TO REMAIN SECURE.

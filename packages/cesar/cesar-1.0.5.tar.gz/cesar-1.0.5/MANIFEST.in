@@ -1,0 +1,4 @@
+include README.md LICENSE
+include cesar/cesar
+include *.txt
+recursive-include docs *.txt
