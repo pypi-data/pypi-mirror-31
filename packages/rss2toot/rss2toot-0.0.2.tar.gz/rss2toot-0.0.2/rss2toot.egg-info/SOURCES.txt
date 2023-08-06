@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+rss2toot/__init__.py
+rss2toot/rss2toot.py
+rss2toot.egg-info/PKG-INFO
+rss2toot.egg-info/SOURCES.txt
+rss2toot.egg-info/dependency_links.txt
+rss2toot.egg-info/requires.txt
+rss2toot.egg-info/top_level.txt
