@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block app_title %}BIBCAT Publisher{% endblock %}</title>
+
+    <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="{{ url_for('static', filename='css/default.css') }}?v=0.1">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+
+
+    {% block more_css %}{% endblock %}
+  </head>
+  <body class="container">
+  {% block header %}
+    {% include 'header.html' %}
+  {% endblock %}
+  {% block nav %}
+    {% include 'navbar.html' %}
+  {% endblock %}
+  {% block search %}
+    {% include 'search.html' %}
+  {% endblock %}
+  {% block main %}
+    <h1>BIBCAT Publisher</h1>
+  {% endblock %}
+  {% block footer %}
+    {% include 'footer.html' %}
+  {% endblock %}
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/typeahead.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/fontawesome-all.js') }}"></script>
+    {% block more_js %}{% endblock %}
+  </body>
+</html>

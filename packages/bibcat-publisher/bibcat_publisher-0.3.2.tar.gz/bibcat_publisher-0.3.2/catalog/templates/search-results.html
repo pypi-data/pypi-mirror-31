@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<div class="row">
+    <div class="col-1">
+        <div class="mt-5">
+            <a href="{{ url_for('catalog.search_data',
+                                query=query_phrase,
+                                offset=offset|int-4) }}"
+                                
+                class="btn btn-default btn-block
+                {% if offset|int == 0 %}disabled{% endif %}"> 
+                <i class="fas fa-angle-left fa-3x"></i>
+            </a>
+        </div>
+    </div>
+    <div class="col-9 mx-auto">
+            <ul class="nav">
+                <li class="nav-item">
+                    Filter by Institution
+
+                </li>
+            </ul>
+            <div class="card-deck">
+            {% for hit in results %}
+                <div id="{{ hit.id }}" 
+                     class="card">
+                    <div class = "img-container" align="center">
+                        <img class="result-img" 
+                        src="{% if hit.bf_hasInstance[0].bf_coverArt %}{{ hit.bf_hasInstance[0].bf_coverArt.value }}{% endif %}" 
+                         alt="{% if hit.bf_hasInstance[0].bf_coverArt %}{{ hit.bf_hasInstance[0].bf_coverArt.value }} {% endif %}"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ hit.value }}</h5>
+                        <p class="card-text">
+                        {% if hit.bf_contribution %}
+                        {% for contributor in hit.bf_contribution %}
+                            {{ contributor[0].value }}                       
+                        {% endfor %}
+                        {% endif %}</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">{{ "{:,}".format(offset|int + loop.index) }} of {{ "{:,}".format(results.hits.total) }}</small> 
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+   </div>
+   <div class="col-1">
+        <a href="{{ url_for('catalog.search_data',
+                                query=query_phrase,
+                                offset=offset|int+4) }}">
+            <i class="fas fa-angle-right fa-3x"></i>
+        </a>
+    </div>
+</div>
+{% endblock %}
+
+{% block more_js %}
+<script>
+
+    var workSuggest = new Bloodhound({
+        datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
+        queryTokenizer: Bloodhound.tokenizers.whitespace,
+        remote: {
+            url: "{{ url_for('catalog.suggest', name='work') }}?q=%QUERY",
+            wildcard: '%QUERY'
+        }
+    });
+
+    $("#suggest-query .typeahead").typeahead({
+        highlight: true
+    },
+    {
+        name: 'work-access',
+        display: 'label',
+        id: 'id',
+        source: workSuggest.ttAdapter(),
+        templates: {
+            empty: [
+                '<div style="padding: 1em 2m">',
+                'Failed to match',
+                '</div>'
+            ].join("\n"),
+            header: '<h3>Works</h3>',
+            suggestion: function(data) {
+                //console.log("data html is " + data);
+                return data;
+            }
+        }
+    }).on('typeahead:select', function(obj, datum) {
+            $.post({
+                url: "{{ url_for('catalog.search_data') }}",
+                data: datum.label
+            });
+    });
+       
+</script>
+{% endblock %}
