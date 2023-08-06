@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: pyalgotrade-python3
+Version: 0.1
+Summary: Adaptation of Python Algorithmic Trading to python3 for pip
+Home-page: http://gbeced.github.io/pyalgotrade/
+Author: Mikhail Berlinkov
+Author-email: mberl_upwork@mail.ru
+License: UNKNOWN
+Download-URL: https://github.com/berlm/pyalgotrade
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.3
+Provides-Extra: Bitstamp
+Provides-Extra: Scipy
+Provides-Extra: Twitter
+Provides-Extra: TALib
+Provides-Extra: Plotting
+Requires-Dist: numpy
+Requires-Dist: pytz
+Requires-Dist: python-dateutil
+Requires-Dist: requests
+Provides-Extra: Bitstamp
+Requires-Dist: ws4py (>=0.3.4); extra == 'Bitstamp'
+Requires-Dist: tornado; extra == 'Bitstamp'
+Provides-Extra: Plotting
+Requires-Dist: matplotlib; extra == 'Plotting'
+Provides-Extra: Scipy
+Requires-Dist: scipy; extra == 'Scipy'
+Provides-Extra: TALib
+Requires-Dist: Cython; extra == 'TALib'
+Requires-Dist: TA-Lib; extra == 'TALib'
+Provides-Extra: Twitter
+Requires-Dist: tweepy; extra == 'Twitter'
+
+Adaptation of Python Algorithmic Trading by Gabriel Martin Becedillas Ruiz to python3 for pip.
+
+
