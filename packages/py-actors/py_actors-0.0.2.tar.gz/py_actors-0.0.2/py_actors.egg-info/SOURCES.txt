@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+py_actors/__init__.py
+py_actors/actors.py
+py_actors/control.py
+py_actors/log_config.py
+py_actors/micro_kernel.py
+py_actors.egg-info/PKG-INFO
+py_actors.egg-info/SOURCES.txt
+py_actors.egg-info/dependency_links.txt
+py_actors.egg-info/top_level.txt
