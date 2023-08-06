@@ -1,0 +1,17 @@
+Metadata-Version: 2.0
+Name: pyrus
+Version: 1.1.1
+Summary: A logrus inspired renderer for structlog
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: MIT
+Description-Content-Type: UNKNOWN
+Keywords: logging structlog colour color
+Platform: UNKNOWN
+Requires-Dist: ansicolors
+Requires-Dist: structlog
+
+UNKNOWN
+
+
