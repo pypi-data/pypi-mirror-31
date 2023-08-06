@@ -1,0 +1,14 @@
+triflow/__init__.py,sha256=TqJwU20-HoJpqJ8D7RVB4giCfKDEKvIM-Sv9T3wgxL8,548
+triflow/core/__init__.py,sha256=krI5WFPNpgbXzGS-01fvO7uaympIRT3WZXmL6Vm56mI,139
+triflow/core/compilers.py,sha256=z_BRvmwt6RXDrjHsLtn9MBS6e37yM4cMZlEP0zyLqh8,11499
+triflow/core/fields.py,sha256=dduCCw84az8sWONu1F1Qdp4qV1tgEftajhdOPnCpq7Y,6845
+triflow/core/model.py,sha256=DFMUTYVsoP5br_mL4Jx8qWGtGBY5sf10HvwgONTa9RU,21872
+triflow/core/routines.py,sha256=tJSVamasxXhcK2zrlQ7LMwFcqocTYC1DplG56xHFdZE,3124
+triflow/core/schemes.py,sha256=to64lMEEtkMqXPa93vNu0AIQeiB3OunMyu-0ZR18-sE,21774
+triflow/core/simulation.py,sha256=3fytsE_7L1E7SfNpY1tHATG9M4ZHsC4N8pWK-NMtqs4,15717
+triflow/plugins/__init__.py,sha256=UI4whAuQuobckQk6OS6Ra4U_WJM7Qo5Gedra4TYmL38,36
+triflow/plugins/container.py,sha256=vOmRp51FJW1I66rxnKFu9XPuUxnzKUQb3V_V_60YpW4,7954
+triflow/plugins/displays.py,sha256=cQIVmYCLWLNkYRQHso-yzUnA1EGDMebEjJF0UMRP-_Y,4680
+triflow-0.5.0.dist-info/WHEEL,sha256=gHFay7IQqWDSApzAuYiigTOMA5xLFgwKfj5ap-opjWs,83
+triflow-0.5.0.dist-info/METADATA,sha256=ih-tgn67NnM3m2XcVB2PHOIyhwHgPu495MjwOzi-1cs,8502
+triflow-0.5.0.dist-info/RECORD,,
