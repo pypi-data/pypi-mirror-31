@@ -1,0 +1,182 @@
+Metadata-Version: 2.0
+Name: cfn-lint
+Version: 0.0.8
+Summary: checks cloudformation for practices and behaviour         that could potentially be improved
+Home-page: https://github.com/awslabs/cfn-python-lint
+Author: kddejong
+Author-email: kddejong@amazon.com
+License: MIT no attribution
+Keywords: aws,lint
+Platform: UNKNOWN
+Requires-Dist: pyyaml
+Requires-Dist: six
+Requires-Dist: requests
+
+CloudFormation Linter
+=====================
+
+|Build Status|
+
+Validate CloudFormation yaml/json templates against the CloudFormation
+spec and additional checks. Includes checking valid values for resource
+properties and best practices.
+
+Warning
+~~~~~~~
+
+This is an attempt to provide validation for CloudFormation templates
+properties and their values. For values things can get pretty
+complicated (mappings, joins, splits, conditions, and nesting those
+functions inside each other) so its a best effort to validate those
+values but the promise is to not fail if we can’t understand or
+translate all the things that could be going on.
+
+Install
+-------
+
+Command line
+~~~~~~~~~~~~
+
+From a command prompt run ``python setup.py clean --all`` then
+``python setup.py install``
+
+Pip Install
+~~~~~~~~~~~
+
+``pip install cfn-lint``. You may need to use sudo.
+
+Uninstall
+---------
+
+If you have pip installed you can uninstall using
+``pip uninstall cfn-lint``. You may need to manually remove the cfn-lint
+binary.
+
+Configuration
+-------------
+
+Parameters
+~~~~~~~~~~
+
++-----------------+-----------------+-----------------+-----------------+
+| Command Line    | Metadata        | Options         | Description     |
++=================+=================+=================+=================+
+| -h, –help       |                 |                 | Get description |
+|                 |                 |                 | of cfn-lint     |
++-----------------+-----------------+-----------------+-----------------+
+| –template       |                 | filename        | Template file   |
+|                 |                 |                 | path to the     |
+|                 |                 |                 | file that needs |
+|                 |                 |                 | to be tested by |
+|                 |                 |                 | cfn-lint        |
++-----------------+-----------------+-----------------+-----------------+
+| –format         | format          | quiet,          | Output format   |
+|                 |                 | parseable, json |                 |
++-----------------+-----------------+-----------------+-----------------+
+| –list-rules     |                 |                 | List all the    |
+|                 |                 |                 | rules           |
++-----------------+-----------------+-----------------+-----------------+
+| –regions        | regions         | [REGIONS        | Test the        |
+|                 |                 | [REGIONS …]]    | template        |
+|                 |                 |                 | against many    |
+|                 |                 |                 | regions.        |
+|                 |                 |                 | `Supported      |
+|                 |                 |                 | regions <https: |
+|                 |                 |                 | //docs.aws.amaz |
+|                 |                 |                 | on.com/AWSCloud |
+|                 |                 |                 | Formation/lates |
+|                 |                 |                 | t/UserGuide/cfn |
+|                 |                 |                 | -resource-speci |
+|                 |                 |                 | fication.html>` |
+|                 |                 |                 | __              |
++-----------------+-----------------+-----------------+-----------------+
+| –ignore-bad-tem | ignore_bad_temp |                 | Ignores bad     |
+| plate           | late            |                 | template errors |
++-----------------+-----------------+-----------------+-----------------+
+| –append-rules   | append_rules    | [RULESDIR       | Specify one or  |
+|                 |                 | [RULESDIR …]]   | more rules      |
+|                 |                 |                 | directories     |
+|                 |                 |                 | using one or    |
+|                 |                 |                 | more            |
+|                 |                 |                 | –append-rules   |
+|                 |                 |                 | arguments.      |
++-----------------+-----------------+-----------------+-----------------+
+| –ignore-checks  | ignore_checks   | [IGNORE_CHECKS  | Only check      |
+|                 |                 | [IGNORE_CHECKS  | rules whose id  |
+|                 |                 | …]]             | do not match    |
+|                 |                 |                 | these values    |
++-----------------+-----------------+-----------------+-----------------+
+| –log-level      | log_level       | {info, debug}   | Log Level       |
++-----------------+-----------------+-----------------+-----------------+
+| –update-specs   |                 |                 | Update the      |
+|                 |                 |                 | CloudFormation  |
+|                 |                 |                 | Specs. You may  |
+|                 |                 |                 | need sudo to    |
+|                 |                 |                 | run this. You   |
+|                 |                 |                 | will need       |
+|                 |                 |                 | internet access |
+|                 |                 |                 | when running    |
+|                 |                 |                 | this command    |
++-----------------+-----------------+-----------------+-----------------+
+| –version        |                 |                 | Version of      |
+|                 |                 |                 | cfn-lint        |
++-----------------+-----------------+-----------------+-----------------+
+
+.. _command-line-1:
+
+Command Line
+~~~~~~~~~~~~
+
+From a command prompt run
+``cfn-lint --template <path to yaml template>``
+
+Metadata
+~~~~~~~~
+
+Inside the root level Metadata key you can configure cfn-lint using the
+supported parameters.
+
+::
+
+    Metadata:
+      cfn-lint:
+        config:
+          regions:
+          - us-east-1
+          - us-east-2
+          ignore_checks:
+          - E2530
+
+Precedence
+~~~~~~~~~~
+
+cfn-lint applies the configuration from the CloudFormation Metadata
+first and then overrides those values with anything specified in the
+CLI.
+
+Examples
+--------
+
+Basic usage
+~~~~~~~~~~~
+
+``cfn-lint --template template.yaml``
+
+Test a template based on multiple regions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+``cfn-lint --regions us-east-1 ap-south-1 --template template.yaml``
+
+    E3001 Invalid Type AWS::Batch::ComputeEnvironment for resource
+    testBatch in ap-south-1
+
+Credit
+------
+
+Will Thames and ansible-lint at
+https://github.com/willthames/ansible-lint
+
+.. |Build Status| image:: https://codebuild.us-east-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoibm1lNzczajZWcGw3UE5JRkhhcTBVZzBWTVRMYUtBU2lNcjdPNDVMK2JFM1RERGNDRjJlY2FQMVIrdFFpamx3M3ZaSDF5UCtrRGxkV1BrYU96YTdGNUE4PSIsIml2UGFyYW1ldGVyU3BlYyI6Im1DZklveUk5dXY0dTBucEsiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master
+   :target: https://github.com/awslabs/cfn-python-lint
+
+
