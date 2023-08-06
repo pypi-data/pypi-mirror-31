@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: pydat
+Version: 0.2.3
+Summary: DoubleArrayTrie(DAT) support prefix search & exact search & multiple pattern match for python implemented by c++
+Home-page: https://github.com/yanwii/DoubleArrayTrie
+Author: yanwii
+Author-email: yanwii@outlook.com
+License: MIT Licence
+Description: UNKNOWN
+Keywords: Double Array Trie,DAT
+Platform: UNKNOWN
