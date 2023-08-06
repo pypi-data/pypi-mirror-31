@@ -1,0 +1,11 @@
+README.md
+setup.py
+shkspr/cli.py
+shkspr/db.py
+shkspr/server.py
+shkspr.egg-info/PKG-INFO
+shkspr.egg-info/SOURCES.txt
+shkspr.egg-info/dependency_links.txt
+shkspr.egg-info/entry_points.txt
+shkspr.egg-info/not-zip-safe
+shkspr.egg-info/top_level.txt

@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: shkspr
+Version: 0
+Summary: Uses Nginx X-Accel to provide auth for microservices
+Home-page: http://github.com/theSage21/shakespeare
+Author: Arjoonn Sharma
+Author-email: arjoonn.94@gmail.com
+License: MIT
+Description: Shakespeare
+        ===========
+        
+            To be or not to be
+        
+        Shakespeare answers that very important question. Using Nginx's
+        [X-Accel](https://www.nginx.com/resources/wiki/start/topics/examples/x-accel/)
+        capabilities it allows you to mount a auth system on top of your existing
+        microservicesc without changing microservice code.
+        
+        
+        Todo
+        ----
+        
+        - [ ] is user logged in
+        - [ ] groups and permissions
+        
+Keywords: shkspr
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
