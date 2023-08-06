@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: persizmq
+Version: 1.0.0
+Summary: provides persistence to zeromq.
+Home-page: https://bitbucket.org/parqueryopen/persizmq
+Author: Dominik Walder and Marko Ristin
+Author-email: marko.ristin@parquery.com
+License: MIT License
+Description: UNKNOWN
+Keywords: persistent zeromq
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
