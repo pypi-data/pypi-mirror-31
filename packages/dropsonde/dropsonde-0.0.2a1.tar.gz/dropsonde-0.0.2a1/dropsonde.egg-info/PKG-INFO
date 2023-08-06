@@ -1,0 +1,28 @@
+Metadata-Version: 1.0
+Name: dropsonde
+Version: 0.0.2a1
+Summary: Compiled python generated from the Cloud Foundry Dropsonde Protobuf definition files
+Home-page: https://github.com/hsdp/python-dropsonde
+Author: Adam Jaso
+Author-email: UNKNOWN
+License: Apache License Version 2.0
+Description: # Cloud Foundry Dropsonde Protocol for Python
+        
+        Compiled python generated from the Cloud Foundry Dropsonde Protobuf definition files.
+        
+        The [Dropsonde Protocol](https://github.com/cloudfoundry/dropsonde-protocol)
+        is defined here, and this repo provides "protoc" compiled Python and Python3
+        modules.
+        
+        ## Example
+        
+        ```python
+        from dropsonde import envelope
+        from dropsonde import error
+        from dropsonde import http
+        from dropsonde import log
+        from dropsonde import metric
+        from dropsonde import uuid
+        ```
+        
+Platform: UNKNOWN
