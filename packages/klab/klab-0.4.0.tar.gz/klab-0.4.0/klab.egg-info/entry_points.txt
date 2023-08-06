@@ -1,0 +1,3 @@
+[console_scripts]
+klab_generate_fragments = klab.bio.fragments.generate_fragments:main
+
