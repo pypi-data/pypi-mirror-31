@@ -1,0 +1,12 @@
+numpy
+pandas
+scipy
+gdal
+plio
+
+[dev]
+
+[test]
+coverage
+pytest-cov
+coveralls
