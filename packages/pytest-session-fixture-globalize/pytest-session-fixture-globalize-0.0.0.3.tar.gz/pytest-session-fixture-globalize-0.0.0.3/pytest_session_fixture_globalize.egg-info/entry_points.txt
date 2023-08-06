@@ -1,0 +1,3 @@
+[pytest11]
+session_fixture_globalize = pytest_session_fixture_globalize
+
