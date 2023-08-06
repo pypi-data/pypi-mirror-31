@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+dash_wordcloud/__init__.py
+dash_wordcloud/bundle.js
+dash_wordcloud/metadata.json
+dash_wordcloud/version.py
+dash_wordcloud.egg-info/PKG-INFO
+dash_wordcloud.egg-info/SOURCES.txt
+dash_wordcloud.egg-info/dependency_links.txt
+dash_wordcloud.egg-info/top_level.txt

@@ -1,0 +1,128 @@
+{
+  "src/components/ExampleComponent.react.js": {
+    "description": "ExampleComponent is an example component.\nIt takes a property, `label`, and\ndisplays it.\nIt renders an input with the property `value`\nwhich is editable by the user.",
+    "displayName": "ExampleComponent",
+    "methods": [],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID used to identify this compnent in Dash callbacks"
+      },
+      "label": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "A label that will be printed when this component is rendered."
+      },
+      "value": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The value displayed in the input"
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Dash-assigned callback that should be called whenever any of the\nproperties change"
+      }
+    }
+  },
+  "src/components/Wordcloud.react.js": {
+    "description": "",
+    "displayName": "Wordcloud",
+    "methods": [
+      {
+        "name": "drawWordcloud",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      }
+    ],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID used to identify this compnent in Dash callbacks"
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "// TODO: comment needs to be updated. \nWidth of the canvas\nDefault: 1024",
+        "defaultValue": {
+          "value": "{}",
+          "computed": false
+        }
+      },
+      "options": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "{}",
+          "computed": false
+        }
+      },
+      "size": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "2",
+          "computed": false
+        }
+      },
+      "list": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "array"
+          }
+        },
+        "required": false,
+        "description": "List of words/text to paint on the canvas in a 2-d array, \nin the form of [word, size], e.g. [['foo', 12], ['bar', 6]].\nDefault: Les Misérables",
+        "defaultValue": {
+          "value": "[\n    ['Les Misérables', 30], ['Victor Hugo', 20], ['Jean Valjean', 15],\n    ['Javert', 15], ['Fantine', 15], ['Cosette', 15],\n    ['Éponine', 12], ['Marius', 12], ['Enjolras', 12],\n    ['Thénardiers', 10], ['Gavroche', 10], ['Bishop Myriel', 10],\n    ['Patron-Minette', 10], ['God', 10], ['ABC Café', 10],\n    ['paris', 8], ['Digne', 8], ['Elephant of the Bastille', 8],\n    ['silverware', 5], ['Bagne of Toulon', 5], ['loaf of bread', 5],\n    ['Rue Plumet', 5], ['revolution', 5], ['barricade', 5],\n    ['sewers', 4], ['Fex urbis lex orbis', 4]\n]",
+          "computed": false
+        }
+      },
+      "hover": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Callback to call when the cursor enters or \nleaves a region occupied by a word.\nThe callback will take arguments callback(item, dimension, event),\nwhere event is the original mousemove event.\nDefault: hover function with text frame and word frequency tooltip",
+        "defaultValue": {
+          "value": "function(item, dimension, event) {\n    var el = document.getElementById('wcLabel');\n    if (!item) {\n      el.setAttribute('hidden', true);\n  \n      return;\n    }\n  \n    el.removeAttribute('hidden');\n  \n    el.style.left = dimension.x + event.srcElement.offsetLeft + 'px';\n    el.style.top = dimension.y + event.srcElement.offsetTop + 'px';\n    el.style.width = dimension.w + 'px';\n    el.style.height = dimension.h + 'px';\n  \n    this.hoverDimension = dimension;\n  \n    document.getElementById('wcSpan').setAttribute(\n      'data-l10n-args', JSON.stringify({ word: item[0], count: item[1] }));\n    document.getElementById('wcSpan').innerHTML =item[0]+':' + item[1];\n  \n  }",
+          "computed": false
+        }
+      },
+      "click": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Callback to call when the user clicks on a word.\nThe callback will take arguments callback(item, dimension, event),\nwhere event is the original click event.\nDefault: null",
+        "defaultValue": {
+          "value": "null",
+          "computed": false
+        }
+      }
+    }
+  }
+}
