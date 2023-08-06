@@ -1,0 +1,124 @@
+Metadata-Version: 2.1
+Name: importnb
+Version: 0.2.1
+Summary: Import .ipynb files as modules in the system path.
+Home-page: https://github.com/deathbeds/importnb
+Author: deathbeds
+Author-email: tony.fast@gmail.com
+License: BSD-3-Clause
+Description: 
+        __importnb__ supports the ability to use Jupyter notebooks as python source.
+        
+        [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/deathbeds/importnb/master?filepath=readme.ipynb)[![Build Status](https://travis-ci.org/deathbeds/importnb.svg?branch=master)](https://travis-ci.org/deathbeds/importnb)
+        
+            pip install importnb
+        
+        ## Jupyter Extension
+        
+        
+        ```python
+            if __name__ == '__main__':
+                %reload_ext importnb
+                import readme
+                assert readme.foo is 42
+                assert readme.__file__.endswith('.ipynb')
+            else: 
+                foo = 42
+                
+        ```
+        
+        Notebooks maybe reloaded with the standard Python Import machinery.
+        
+        
+        ```python
+            if __name__ == '__main__':
+                from importnb import Notebook, reload
+                reload(readme)
+                %unload_ext importnb
+        ```
+        
+        ## Context Manager
+        
+        
+        ```python
+            if __name__ == '__main__':
+                try:  
+                    reload(readme)
+                    assert None, """Reloading should not work when the extension is unloaded"""
+                except AttributeError: 
+                    with Notebook(): reload(readme)
+        ```
+        
+        ## Developer
+        
+        
+        ```python
+            if __name__ == '__main__':
+                from pathlib import Path
+                import black, subprocess, warnings
+                from nbconvert.exporters.markdown import MarkdownExporter
+                from importnb.compiler_python import ScriptExporter
+                for path in Path('importnb').glob('*.ipynb'):
+                    path.with_suffix('.py').write_text(
+                        black.format_str(ScriptExporter().from_filename(str(path))[0], 100))
+                Path('readme.md').write_text(MarkdownExporter().from_filename('readme.ipynb')[0])
+                __import__('unittest').main(module='tests', argv="discover".split(), exit=False)
+        ```
+        
+            ..xx....
+            ----------------------------------------------------------------------
+            Ran 8 tests in 2.087s
+            
+            OK (expected failures=2)
+        
+        
+        
+        
+        ## CHANGELOG
+        
+        # 0.2.1
+        
+        * `importnb` supports notebook inputs from pure python environments.  Two compatible compiler were created from IPython and Python
+        * `importnb.Partial` works appropriately by improving exceptions.
+        * All of the IPython magic syntaxes were removed to support Pure Python.
+        * The generated Python files are formatted with black.
+        * Tests were added to:
+        
+            * Validate the line number in tracebacks
+            * Test someone elses notebooks
+        
+        ### 0.1.4
+        - Pypi supports markdown long_description with the proper mimetype in long_description_content_type.
+        
+        ### 0.1.3
+        - Include the RST files in the `MANIFEST.in`.
+        
+        ### 0.1.2 (Unreleased)
+        - Use RST files to improve the literacy of the pypi description.
+        
+        ### 0.1.1
+        - Released on PyPi 
+        
+        ### 0.0.2
+        - Initial Testing Release
+        
+        
+        ```python
+        !jupyter nbconvert --to markdown changelog.ipynb
+        ```
+        
+            [NbConvertApp] Converting notebook changelog.ipynb to markdown
+            [NbConvertApp] Writing 838 bytes to changelog.md
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: IPython
+Classifier: Framework :: Jupyter
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
