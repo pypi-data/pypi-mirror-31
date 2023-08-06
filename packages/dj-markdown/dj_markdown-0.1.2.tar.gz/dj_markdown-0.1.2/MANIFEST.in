@@ -1,0 +1,6 @@
+include LICENSE.txt
+include README.rst
+recursive-include dj_markdown/locale *
+recursive-include dj_markdown/static *
+recursive-include dj_markdown/templates *
+recursive-exclude * *.pyc
