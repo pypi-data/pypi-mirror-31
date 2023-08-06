@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: crepe
+Version: 0.0.4
+Summary: CREPE pitch tracker
+Home-page: https://github.com/marl/crepe
+Author: Jong Wook Kim
+Author-email: jongwook@nyu.edu
+License: MIT
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Keywords: tfrecord
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Multimedia :: Sound/Audio :: Analysis
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
