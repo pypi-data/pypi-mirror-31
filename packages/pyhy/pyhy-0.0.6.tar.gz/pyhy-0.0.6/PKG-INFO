@@ -1,0 +1,25 @@
+Metadata-Version: 1.2
+Name: pyhy
+Version: 0.0.6
+Summary: bindings for libhydrogen using cffi
+Home-page: https://github.com/someburner/pyhy
+Author: Jeff Hufford
+Author-email: jeffrey92@gmail.com
+Maintainer: Jeff Hufford
+License: BSD
+Description: Python bindings for libhydrogen, a small cryptographic library
+        suited for embedded systems requiring a low footprint. Uses cffi.
+        
+Keywords: cryptography,crypto,embedded,encryption,libhydrogen,hydrogen
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: ISC License (ISCL)
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Security
+Classifier: Topic :: Security :: Cryptography
+Classifier: Topic :: Software Development :: Embedded Systems
+Requires-Python: >=3.4
