@@ -1,0 +1,13 @@
+README.md
+setup.py
+Templer.egg-info/PKG-INFO
+Templer.egg-info/SOURCES.txt
+Templer.egg-info/dependency_links.txt
+Templer.egg-info/entry_points.txt
+Templer.egg-info/not-zip-safe
+Templer.egg-info/requires.txt
+Templer.egg-info/top_level.txt
+templer/__init__.py
+templer/__main__.py
+templer/cli.py
+templer/jinja_filter.py

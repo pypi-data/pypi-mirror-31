@@ -1,0 +1,3 @@
+[console_scripts]
+templer = templer:cli
+
