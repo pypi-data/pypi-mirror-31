@@ -1,0 +1,38 @@
+Metadata-Version: 2.0
+Name: integratethis
+Version: 2018.04.25
+Summary: Integrate programs or scripts into common tools like Windows Explorer context menu
+Home-page: https://github.com/novoid/integratethis
+Author: Karl Voit
+Author-email: tools@Karl-Voit.at
+License: UNKNOWN
+Download-URL: https://github.com/novoid/integratethis/zipball/master
+Description-Content-Type: UNKNOWN
+Keywords: Windows,scripts,context menu,installation,integration
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Operating System :: OS Independent
+
+This program integrates arbitrary commands to various tools.
+For example, you can add a program named "filetags" to the "Send to"
+folder of the context menu of the Windows File explorer via
+    integratethis filetags
+
+The integration method used differs from tool to tool. For the Windows Explorer,
+a batch file is placed within the AppData\Roaming folder in case of additional
+parameters have to be added to the command and a lnk file to it is created in
+the "Send to" folder so that you can use the command from the context menu of
+the Windows Exporer. If no additional parameters are required, a lnk file to the
+command itself is placed in the "Send to" folder. For details, please look at
+the source code or read the help info for the --into parameter.
+
+You can overwrite pre-configured parameters using the command line options.
+
+- Target group: users who are able to use command line tools
+- Hosted and documented on github: https://github.com/novoid/integratethis
+
+
