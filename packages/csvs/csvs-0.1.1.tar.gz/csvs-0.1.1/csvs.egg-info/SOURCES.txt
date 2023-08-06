@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+csvs/__init__.py
+csvs/__version__.py
+csvs/csvs.py
+csvs.egg-info/PKG-INFO
+csvs.egg-info/SOURCES.txt
+csvs.egg-info/dependency_links.txt
+csvs.egg-info/top_level.txt
