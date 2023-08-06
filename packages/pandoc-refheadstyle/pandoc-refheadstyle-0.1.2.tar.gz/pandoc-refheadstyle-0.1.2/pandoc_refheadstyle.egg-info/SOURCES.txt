@@ -1,0 +1,12 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.py
+pandoc_refheadstyle/__init__.py
+pandoc_refheadstyle.egg-info/PKG-INFO
+pandoc_refheadstyle.egg-info/SOURCES.txt
+pandoc_refheadstyle.egg-info/dependency_links.txt
+pandoc_refheadstyle.egg-info/requires.txt
+pandoc_refheadstyle.egg-info/top_level.txt
+pandoc_refheadstyle.egg-info/zip-safe
+scripts/pandoc-refheadstyle
