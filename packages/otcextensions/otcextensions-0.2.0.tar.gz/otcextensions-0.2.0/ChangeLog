@@ -1,0 +1,60 @@
+CHANGES
+=======
+
+0.2.0
+-----
+
+* flake8 fix
+* small update of pip project name
+* fix exception if no nodes in the cluster
+* complete CCE cluster operations
+* fix unit test on fedora27 (some older dep)
+* purge profile support (as OSC does)
+* enable pep8 test in travis
+* pep8 fixes
+* add ignore\_missing=True for show LB resources
+* add possibility to filter LB pools by LB\_id
+* change pip package name
+* change home-page of the package to point to the generated docs
+* pin travis
+
+0.1.0
+-----
+
+* rename cli prefix for the ulb to load balancer
+* enable documentation of the ULB CLI
+* update list of open points
+* add load balancer OSC (SDK native)
+* extend test\_base with cliff formatter "mock"
+* update open\_points before PR merge
+* Update open\_points
+* wait for the next tag to try
+* another try
+* add condition
+* try reenable travis deploy
+* next bunch of CCE (add cluster\_node) APIs
+* correct doc src
+* add cce cluster delete
+* temporarily comment out deploy to pypi - it doesn't work
+* add first cce cluster commands in osc
+* retry travis to release to pypi
+* interim commit (add initial CCE sdk)
+* retry tag release to pypi
+* upload to pip only on tag
+* add open points
+* add kms cli docs
+* add basic kms to osc
+* fix osc clients
+* modify travis to enable env variables for conditional deploy
+* travis deploy to pypi
+* update spec
+* add info to readme about S3 env values
+* add support for ak/sk from S3 Env for legacy
+* enable kms sdk docs and purge remaining prints
+* add open\_points tracking
+* enable kms in sdk
+* sdk kms
+* update spec
+* update install docs
+* change readme and add initial spec (fedora)
+* change project info

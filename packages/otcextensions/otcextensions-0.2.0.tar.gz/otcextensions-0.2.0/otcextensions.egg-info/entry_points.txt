@@ -1,0 +1,114 @@
+[openstack.auto_scaling.v1]
+as_activity_list = otcextensions.osclient.auto_scaling.v1.activity:ListAutoScalingActivityLogs
+as_config_create = otcextensions.osclient.auto_scaling.v1.config:CreateAutoScalingConfig
+as_config_delete = otcextensions.osclient.auto_scaling.v1.config:DeleteAutoScalingConfig
+as_config_list = otcextensions.osclient.auto_scaling.v1.config:ListAutoScalingConfig
+as_config_show = otcextensions.osclient.auto_scaling.v1.config:ShowAutoScalingConfig
+as_group_create = otcextensions.osclient.auto_scaling.v1.group:CreateAutoScalingGroup
+as_group_delete = otcextensions.osclient.auto_scaling.v1.group:DeleteAutoScalingGroup
+as_group_disable = otcextensions.osclient.auto_scaling.v1.group:DisableAutoScalingGroup
+as_group_enable = otcextensions.osclient.auto_scaling.v1.group:EnableAutoScalingGroup
+as_group_list = otcextensions.osclient.auto_scaling.v1.group:ListAutoScalingGroup
+as_group_show = otcextensions.osclient.auto_scaling.v1.group:ShowAutoScalingGroup
+as_group_update = otcextensions.osclient.auto_scaling.v1.group:UpdateAutoScalingGroup
+as_instance_batch = otcextensions.osclient.auto_scaling.v1.instance:BatchActionAutoScalingInstance
+as_instance_list = otcextensions.osclient.auto_scaling.v1.instance:ListAutoScalingInstance
+as_instance_remove = otcextensions.osclient.auto_scaling.v1.instance:RemoveAutoScalingInstance
+as_policy_create = otcextensions.osclient.auto_scaling.v1.policy:CreateAutoScalingPolicy
+as_policy_disable = otcextensions.osclient.auto_scaling.v1.policy:DisableAutoScalingPolicy
+as_policy_enable = otcextensions.osclient.auto_scaling.v1.policy:EnableAutoScalingPolicy
+as_policy_execute = otcextensions.osclient.auto_scaling.v1.policy:ExecuteAutoScalingPolicy
+as_policy_list = otcextensions.osclient.auto_scaling.v1.policy:ListAutoScalingPolicy
+as_policy_show = otcextensions.osclient.auto_scaling.v1.policy:ShowAutoScalingPolicy
+as_policy_update = otcextensions.osclient.auto_scaling.v1.policy:UpdateAutoScalingPolicy
+as_quota_list = otcextensions.osclient.auto_scaling.v1.quota:ListAutoScalingQuota
+
+[openstack.cce.v1]
+cce_cluster_create = otcextensions.osclient.cce.v1.cluster:CreateCCECluster
+cce_cluster_delete = otcextensions.osclient.cce.v1.cluster:DeleteCCECluster
+cce_cluster_list = otcextensions.osclient.cce.v1.cluster:ListCCECluster
+cce_cluster_node_create = otcextensions.osclient.cce.v1.cluster_node:CreateCCEClusterNode
+cce_cluster_node_delete = otcextensions.osclient.cce.v1.cluster_node:DeleteCCEClusterNode
+cce_cluster_node_list = otcextensions.osclient.cce.v1.cluster_node:ListCCEClusterNode
+cce_cluster_node_show = otcextensions.osclient.cce.v1.cluster_node:ShowCCEClusterNode
+cce_cluster_show = otcextensions.osclient.cce.v1.cluster:ShowCCECluster
+
+[openstack.cli.extension]
+auto_scaling = otcextensions.osclient.auto_scaling.client
+cce = otcextensions.osclient.cce.client
+kms = otcextensions.osclient.kms.client
+load_balancer = otcextensions.osclient.load_balancer.client
+obs = otcextensions.osclient.obs.client
+rds = otcextensions.osclient.rds.client
+
+[openstack.kms.v1]
+kms_cmk_cancel_delete = otcextensions.osclient.kms.v1.cmk:CancelDeleteCMK
+kms_cmk_delete = otcextensions.osclient.kms.v1.cmk:DeleteCMK
+kms_cmk_disable = otcextensions.osclient.kms.v1.cmk:DisableCMK
+kms_cmk_enable = otcextensions.osclient.kms.v1.cmk:EnableCMK
+kms_cmk_list = otcextensions.osclient.kms.v1.cmk:ListCMK
+kms_cmk_show = otcextensions.osclient.kms.v1.cmk:ShowCMK
+
+[openstack.load_balancer.v1]
+load_balancer_create = otcextensions.osclient.load_balancer.v1.load_balancer:CreateLoadBalancer
+load_balancer_delete = otcextensions.osclient.load_balancer.v1.load_balancer:DeleteLoadBalancer
+load_balancer_health_monitor_create = otcextensions.osclient.load_balancer.v1.health_monitor:CreateHealthMonitor
+load_balancer_health_monitor_delete = otcextensions.osclient.load_balancer.v1.health_monitor:DeleteHealthMonitor
+load_balancer_health_monitor_list = otcextensions.osclient.load_balancer.v1.health_monitor:ListHealthMonitor
+load_balancer_health_monitor_show = otcextensions.osclient.load_balancer.v1.health_monitor:ShowHealthMonitor
+load_balancer_health_monitor_update = otcextensions.osclient.load_balancer.v1.health_monitor:UpdateHealthMonitor
+load_balancer_list = otcextensions.osclient.load_balancer.v1.load_balancer:ListLoadBalancer
+load_balancer_listener_create = otcextensions.osclient.load_balancer.v1.listener:CreateListener
+load_balancer_listener_delete = otcextensions.osclient.load_balancer.v1.listener:DeleteListener
+load_balancer_listener_list = otcextensions.osclient.load_balancer.v1.listener:ListListener
+load_balancer_listener_show = otcextensions.osclient.load_balancer.v1.listener:ShowListener
+load_balancer_listener_update = otcextensions.osclient.load_balancer.v1.listener:UpdateListener
+load_balancer_pool_create = otcextensions.osclient.load_balancer.v1.pool:CreatePool
+load_balancer_pool_delete = otcextensions.osclient.load_balancer.v1.pool:DeletePool
+load_balancer_pool_list = otcextensions.osclient.load_balancer.v1.pool:ListPool
+load_balancer_pool_member_create = otcextensions.osclient.load_balancer.v1.pool_member:CreatePoolMember
+load_balancer_pool_member_delete = otcextensions.osclient.load_balancer.v1.pool_member:DeletePoolMember
+load_balancer_pool_member_list = otcextensions.osclient.load_balancer.v1.pool_member:ListPoolMember
+load_balancer_pool_member_show = otcextensions.osclient.load_balancer.v1.pool_member:ShowPoolMember
+load_balancer_pool_member_update = otcextensions.osclient.load_balancer.v1.pool_member:UpdatePoolMember
+load_balancer_pool_show = otcextensions.osclient.load_balancer.v1.pool:ShowPool
+load_balancer_pool_update = otcextensions.osclient.load_balancer.v1.pool:UpdatePool
+load_balancer_show = otcextensions.osclient.load_balancer.v1.load_balancer:ShowLoadBalancer
+load_balancer_update = otcextensions.osclient.load_balancer.v1.load_balancer:UpdateLoadBalancer
+
+[openstack.obs.v1]
+obs_container_create = otcextensions.osclient.obs.v1.container:CreateContainer
+obs_container_delete = otcextensions.osclient.obs.v1.container:DeleteContainer
+obs_container_list = otcextensions.osclient.obs.v1.container:ListContainer
+obs_container_show = otcextensions.osclient.obs.v1.container:ShowContainer
+obs_object_create = otcextensions.osclient.obs.v1.object:CreateObject
+obs_object_delete = otcextensions.osclient.obs.v1.object:DeleteObject
+obs_object_list = otcextensions.osclient.obs.v1.object:ListObject
+obs_object_save = otcextensions.osclient.obs.v1.object:SaveObject
+obs_object_show = otcextensions.osclient.obs.v1.object:ShowObject
+
+[openstack.rds.v1]
+rds configuration_parameter_list = otcextensions.osclient.rds.v1.configuration:ListDatabaseConfigurationParameters
+rds configuration_parameter_show = otcextensions.osclient.rds.v1.configuration:ShowDatabaseConfigurationParameter
+rds_configuration_create = otcextensions.osclient.rds.v1.configuration:CreateConfiguration
+rds_configuration_delete = otcextensions.osclient.rds.v1.configuration:DeleteConfiguration
+rds_configuration_list = otcextensions.osclient.rds.v1.configuration:ListConfigurations
+rds_configuration_set = otcextensions.osclient.rds.v1.configuration:SetConfiguration
+rds_configuration_show = otcextensions.osclient.rds.v1.configuration:ShowConfiguration
+rds_datastore_list = otcextensions.osclient.rds.v1.datastore:ListDatastores
+rds_datastore_show = otcextensions.osclient.rds.v1.datastore:ShowDatastore
+rds_datastore_version_list = otcextensions.osclient.rds.v1.datastore:ListDatastoreVersions
+rds_datastore_version_show = otcextensions.osclient.rds.v1.datastore:ShowDatastoreVersion
+rds_flavor_list = otcextensions.osclient.rds.v1.flavor:ListDatabaseFlavors
+rds_flavor_show = otcextensions.osclient.rds.v1.flavor:ShowDatabaseFlavor
+rds_instance_create = otcextensions.osclient.rds.v1.instance:CreateDatabaseInstance
+rds_instance_delete = otcextensions.osclient.rds.v1.instance:DeleteDatabaseInstance
+rds_instance_list = otcextensions.osclient.rds.v1.instance:ListDatabaseInstances
+rds_instance_reset_status = otcextensions.osclient.rds.v1.instance:ResetDatabaseInstanceStatus
+rds_instance_resize_flavor = otcextensions.osclient.rds.v1.instance:ResizeDatabaseInstanceFlavor
+rds_instance_resize_volume = otcextensions.osclient.rds.v1.instance:ResizeDatabaseInstanceVolume
+rds_instance_restart = otcextensions.osclient.rds.v1.instance:RestartDatabaseInstance
+rds_instance_show = otcextensions.osclient.rds.v1.instance:ShowDatabaseInstance
+rds_instance_update = otcextensions.osclient.rds.v1.instance:UpdateDatabaseInstance
+rds_instance_upgrade = otcextensions.osclient.rds.v1.instance:UpgradeDatabaseInstance
+
