@@ -1,0 +1,17 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+configlines/__init__.py
+configlines/parsers.py
+configlines.egg-info/PKG-INFO
+configlines.egg-info/SOURCES.txt
+configlines.egg-info/dependency_links.txt
+configlines.egg-info/requires.txt
+configlines.egg-info/top_level.txt
+configlines/tests/__init__.py
+configlines/tests/data1.cfg
+configlines/tests/data2.cfg
+configlines/tests/data3.cfg
+configlines/tests/parsers.py
