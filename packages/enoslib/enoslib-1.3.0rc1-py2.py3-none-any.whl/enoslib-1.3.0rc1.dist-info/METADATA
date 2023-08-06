@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: enoslib
+Version: 1.3.0rc1
+Summary: UNKNOWN
+Home-page: https://github.com/beyondtheclouds/enoslib
+Author: Matthieu Simonin
+Author-email: matthieu.simonin@inria.fr
+License: UNKNOWN
+Keywords: evaluation,reproducible research,Grid5000
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 2.7
+Provides-Extra: chameleon
+Requires-Dist: ansible (<2.6.0,>=2.5.0)
+Requires-Dist: jsonschema (<2.7,>=2.6.0)
+Requires-Dist: execo (<2.7,>=2.6.2)
+Requires-Dist: requests (<2.19,>=2.18.0)
+Requires-Dist: python-vagrant (>=0.5.15)
+Requires-Dist: netaddr (<0.8,>=0.7)
+Provides-Extra: chameleon
+Requires-Dist: python-openstackclient (<=4.0.0,>=3.0.0); extra == 'chameleon'
+Requires-Dist: python-novaclient (<10); extra == 'chameleon'
+Requires-Dist: python-neutronclient (==6.3.0); extra == 'chameleon'
+Requires-Dist: python-blazarclient (==1.0.1); extra == 'chameleon'
+
+UNKNOWN
+
+
