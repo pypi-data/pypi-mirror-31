@@ -1,0 +1,23 @@
+Metadata-Version: 2.0
+Name: pythia-learn
+Version: 0.2.0
+Summary: Machine learning fingerprints for particle environments
+Home-page: UNKNOWN
+Author: Matthew Spellings
+Author-email: mspells@umich.edu
+License: BSD
+Project-URL: Source, https://bitbucket.org/glotzer/pythia
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires-Python: >=3
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: freud
+
+UNKNOWN
+
+
