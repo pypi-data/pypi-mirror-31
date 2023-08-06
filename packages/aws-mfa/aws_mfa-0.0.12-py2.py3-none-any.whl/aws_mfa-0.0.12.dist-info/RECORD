@@ -1,0 +1,11 @@
+aws_mfa-0.0.12.data/scripts/aws-mfa,sha256=zI5e1EAVxRili6MlnE2SyX2j2gndAd-qus2dd2sBJ0I,70
+aws_mfa-0.0.12.dist-info/DESCRIPTION.rst,sha256=g1C1D-4hWjmJj-UYsvnHdCjh7IbIY1wuNIUP15p0B9M,13193
+aws_mfa-0.0.12.dist-info/METADATA,sha256=66sj1jkDeDgPudkQbHd_qbmyEHk1e_HLskfD7XiMwoA,13443
+aws_mfa-0.0.12.dist-info/RECORD,,
+aws_mfa-0.0.12.dist-info/WHEEL,sha256=GrqQvamwgBV4nLoJe0vhYRSWzWsx7xjlt74FT0SWYfE,110
+aws_mfa-0.0.12.dist-info/entry_points.txt,sha256=hU1M8TOzxE36eiYmZVX8_lgbnGh-hkE86crxORm-6Go,41
+aws_mfa-0.0.12.dist-info/metadata.json,sha256=vaxv2WSdvcgu2kkbZgLPm5SKuJns3X48g5S67pl2pJY,604
+aws_mfa-0.0.12.dist-info/top_level.txt,sha256=sgS1UuCmw0ZqNGeuaCLVCE2IPRvjhDR7yfeoH8K4abs,7
+awsmfa/__init__.py,sha256=3L0DMBXoDv4KjLIsrvg8Vgd6rGJ6Vaj2vUiaL1JVNaQ,15182
+awsmfa/config.py,sha256=YQk_7kobArI79yyckMDg9TIUGnSuELiGV3M96lgI3Gw,1264
+awsmfa/util.py,sha256=s5G8_hxP90eTX0vEdL8A0hi_vi5kYvJqaBkxbTrrc_Q,286
