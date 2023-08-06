@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+tlsx/extractor.py
+tlsx.egg-info/PKG-INFO
+tlsx.egg-info/SOURCES.txt
+tlsx.egg-info/dependency_links.txt
+tlsx.egg-info/entry_points.txt
+tlsx.egg-info/requires.txt
+tlsx.egg-info/top_level.txt
