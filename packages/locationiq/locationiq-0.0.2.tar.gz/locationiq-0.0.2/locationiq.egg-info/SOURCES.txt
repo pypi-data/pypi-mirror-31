@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+locationiq/__init__.py
+locationiq/geocoder.py
+locationiq.egg-info/PKG-INFO
+locationiq.egg-info/SOURCES.txt
+locationiq.egg-info/dependency_links.txt
+locationiq.egg-info/requires.txt
+locationiq.egg-info/top_level.txt
