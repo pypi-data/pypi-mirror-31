@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: sentence_segmenter
+Version: 0.0.2
+Summary: Sentence Segmenter
+Home-page: https://github.com/blester125/sentence_segmenter
+Author: blester125
+Author-email: blester125@gmail.com
+License: MIT
+Download-URL: https://github.com/blester125/sentence_segmenter/archive/0.0.2.tar.gz
+Description: # Sentence Segmenter
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Scientific/Engineering
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Natural Language :: English
+Classifier: Environment :: Console
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
