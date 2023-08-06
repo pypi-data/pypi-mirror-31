@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+src/requirements/install.txt
+src/requirements/test.txt
+src/unicef_djangolib/__init__.py
+src/unicef_djangolib/etag.py
+src/unicef_djangolib.egg-info/PKG-INFO
+src/unicef_djangolib.egg-info/SOURCES.txt
+src/unicef_djangolib.egg-info/dependency_links.txt
+src/unicef_djangolib.egg-info/requires.txt
+src/unicef_djangolib.egg-info/top_level.txt
