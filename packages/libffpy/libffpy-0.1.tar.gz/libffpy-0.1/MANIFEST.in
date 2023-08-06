@@ -1,0 +1,8 @@
+include libffpy/libffpy.pyx
+include libffpy/libffpy.pxd
+include libffpy/libff_wrapper.h
+include libffpy/libff_wrapper.cpp
+include libffpy/libff/build/depends/libzm.a
+recursive-include libffpy/libff/include *
+recursive-include libffpy/libff/lib *
+recursive-include libffpy/libff/depends/ate-pairing/include/ *

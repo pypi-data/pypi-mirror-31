@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: libffpy
+Version: 0.1
+Summary: Cython wrapper for the libff library
+Home-page: https://github.com/VitSalis/libffpy
+Author: Vitalis Salis
+Author-email: vitsalis@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: libff ecc bn128 wrapper
+Platform: UNKNOWN
