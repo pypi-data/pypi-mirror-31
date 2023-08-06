@@ -1,0 +1,6 @@
+[console_scripts]
+grok-dumb-pull = grokmirror.dumb_pull:command
+grok-fsck = grokmirror.fsck:command
+grok-manifest = grokmirror.manifest:command
+grok-pull = grokmirror.pull:command
+
