@@ -1,0 +1,9 @@
+README.rst
+setup.cfg
+setup.py
+tcore
+tcore.egg-info/PKG-INFO
+tcore.egg-info/SOURCES.txt
+tcore.egg-info/dependency_links.txt
+tcore.egg-info/requires.txt
+tcore.egg-info/top_level.txt
