@@ -1,0 +1,13 @@
+gitpython==2.1.9
+dogpile.cache==0.6.4
+requests
+entrypoints>=0.2.3
+cached-property
+
+[docker]
+docker~=3.2.1
+
+[vagrant]
+docker~=3.2.1
+python-vagrant
+fabric3
