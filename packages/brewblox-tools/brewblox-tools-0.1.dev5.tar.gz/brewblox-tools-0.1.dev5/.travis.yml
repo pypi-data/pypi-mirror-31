@@ -1,0 +1,31 @@
+language: python
+python: '3.6'
+
+env:
+  global:
+    - GITHUB_REPO=BrewBlox/brewblox-tools
+
+install: pip install tox
+
+script: tox
+
+deploy:
+
+  # Deploy to PyPi on tagged commits
+  - provider: pypi
+    user: $PYPI_USER
+    password: $PYPI_PASSWORD
+    skip_cleanup: true
+    on:
+      tags: true
+
+  # Deploy dev version to PyPi on any push to an upstream development branch
+  - provider: pypi
+    user: $PYPI_USER
+    password: $PYPI_PASSWORD
+    skip_cleanup: true
+    on:
+      tags: false
+      repo: $GITHUB_REPO
+      all_branches: true
+      condition: $TRAVIS_BRANCH != master

@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: brewblox-tools
+Version: 0.1.dev5
+Summary: UNKNOWN
+Home-page: https://github.com/BrewBlox/brewblox-service
+Author: BrewPi
+Author-email: development@brewpi.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: brewblox devops
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6
+Provides-Extra: dev
