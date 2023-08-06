@@ -1,0 +1,11 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+ircmsgfmt/__init__.py
+ircmsgfmt/formatter.py
+ircmsgfmt/stdout.py
+ircmsgfmt.egg-info/PKG-INFO
+ircmsgfmt.egg-info/SOURCES.txt
+ircmsgfmt.egg-info/dependency_links.txt
+ircmsgfmt.egg-info/top_level.txt
