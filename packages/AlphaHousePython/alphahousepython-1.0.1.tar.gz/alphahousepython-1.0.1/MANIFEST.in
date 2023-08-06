@@ -1,0 +1,16 @@
+
+
+include LICENSE CHANGES README.rst requirements.txt
+recursive-include alphahousepython *.py
+recursive-include alphahousepython *.pyx
+recursive-include alphahousepython *.pxd
+recursive-include alphahousepython *.c
+recursive-include alphahousepython *.cpp
+recursive-include alphahousepython *.h
+recursive-exclude * __pycache__
+recursive-exclude * *.pyc
+recursive-exclude * *.pyo
+recursive-exclude * *.orig
+recursive-exclude * *.so
+global-exclude ^CMakeFiles*
+prune build
