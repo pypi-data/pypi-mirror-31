@@ -1,0 +1,15 @@
+iotile_analytics/__init__.py,sha256=QDJyS5jtJnGFsSuOx43ZvLBCOrHImm8NrZk5f9URWdk,75
+iotile_analytics/offline/__init__.py,sha256=mERtn4kZrgRmKuEoG7pNbi2JdIzuJHtXoWHKI_LPMmU,111
+iotile_analytics/offline/database.py,sha256=ti4GRsZv_plu77Mkq6_MQcSAK4AcrOP60hPizpdMYT4,15922
+iotile_analytics/offline/integration.py,sha256=7HOnCdI0LVgYYheUROvnmTYDiciKJHOzIoGPrayuWxM,876
+iotile_analytics/offline/report.py,sha256=wmjcd_vtT27X0gKrLUAaabrO8w5UnHy3a6-2ms10Q4s,907
+iotile_analytics/offline/table_descriptions/__init__.py,sha256=DJtMwy-8_MpNlZlEfne06Yh3F9sKtdsEpu74dkXwSsw,604
+iotile_analytics/offline/table_descriptions/event_index.py,sha256=flFIx1ndnDMROx1J2NIw3eBBxOa6et2nO1i2BOSsW7Y,206
+iotile_analytics/offline/table_descriptions/info.py,sha256=M-3-YYFVvJZX--QQeKXY1egw8_wRbRqzJgL9ikia6N8,259
+iotile_analytics/offline/table_descriptions/properties.py,sha256=OLUA1-IUta6i6Vcd5bYSV8_2B0xVPwYKOIHDIHJzDGo,354
+iotile_analytics/offline/table_descriptions/stream.py,sha256=fVDIUQxUN8JBIQgrZy9R1ttktdslUNDxJi6zkoLBEkQ,250
+iotile_analytics_offline-0.2.1.dist-info/METADATA,sha256=qhz3SpaJEjBpHVz9s9qJoBYBOLYyk74_CpBN4IlV9aU,1502
+iotile_analytics_offline-0.2.1.dist-info/RECORD,,
+iotile_analytics_offline-0.2.1.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+iotile_analytics_offline-0.2.1.dist-info/entry_points.txt,sha256=e9kYoCqqL7-fFfYC1pkTKoJXv0VmAM7QjH11m7tFT38,282
+iotile_analytics_offline-0.2.1.dist-info/top_level.txt,sha256=BPWX5_wX85wSZDGnqiDqtBH0qiZcBO7sw0tcHCBB8f8,17
