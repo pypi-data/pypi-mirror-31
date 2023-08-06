@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Properties>
+    <lastModified>2018-04-24 10:02:50</lastModified>
+    <localPorts>
+        <rest>9780</rest>
+        <scan>-1</scan>
+        <tcp>NA</tcp>
+        <telnet>9722</telnet>
+    </localPorts>
+</Properties>
