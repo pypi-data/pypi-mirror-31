@@ -1,0 +1,12 @@
+CHANGELOG.md
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+csv_parse/__init__.py
+csv_parse/reader.py
+csvparse.egg-info/PKG-INFO
+csvparse.egg-info/SOURCES.txt
+csvparse.egg-info/dependency_links.txt
+csvparse.egg-info/top_level.txt
