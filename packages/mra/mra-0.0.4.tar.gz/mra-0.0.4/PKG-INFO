@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: mra
+Version: 0.0.4
+Summary: Minimalist RESTful Automation framework. Built for expandability and minimal configuration.
+Home-page: UNKNOWN
+Author: Drex
+Author-email: aeturnum@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6
