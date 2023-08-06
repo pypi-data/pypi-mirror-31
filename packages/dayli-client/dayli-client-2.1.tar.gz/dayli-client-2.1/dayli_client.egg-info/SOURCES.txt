@@ -1,0 +1,15 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+dayli_client.egg-info/PKG-INFO
+dayli_client.egg-info/SOURCES.txt
+dayli_client.egg-info/dependency_links.txt
+dayli_client.egg-info/requires.txt
+dayli_client.egg-info/top_level.txt
+daylifact/__init__.py
+daylifact/entidades.py
+daylifact/generar.py
+daylifact/logica.py
+daylifact/utils.py
