@@ -1,0 +1,3 @@
+[console_scripts]
+asciinemaster = asciinemaster.cli:main
+
