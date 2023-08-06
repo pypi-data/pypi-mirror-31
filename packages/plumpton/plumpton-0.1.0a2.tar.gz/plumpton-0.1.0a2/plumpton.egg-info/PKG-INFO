@@ -1,0 +1,64 @@
+Metadata-Version: 1.2
+Name: plumpton
+Version: 0.1.0a2
+Summary: A Python text-based game library.
+Home-page: https://thomaswoodcock.net/plumpton
+Author: Thomas Woodcock
+Author-email: thomas@thomaswoodcock.net
+License: UNKNOWN
+Project-URL: Source, https://github.com/thomaswoodcock/plumpton
+Description-Content-Type: text/markdown
+Description: # plumpton
+        
+        plumpton is a Python text-based game library that champions simplicity in use and output. Through the use of shapes, layers and levels, plumpton outputs simplistic text graphics that can be animated and interacted with via the keyboard and mouse.
+        
+        ### Getting Started
+        ###### A quick way to jump in and start using plumpton.
+        
+        Once you have downloaded plumpton and imported it into your project, the first step is to define a `Game` object!</p>
+        ```python
+        my_game = plumpton.Game("My First plumpton Game")
+        ```
+        The `Game` object controls the execution and output of your game. Here, we gave our object the name "My First plumpton Game".
+        
+        Once you have created your <code>Game</code> object, you then need to add a `Level` object.
+        ```python
+        my_level = plumpton.Level(20, 20, game = my_game)
+        ```
+        As the name suggests, the `Level` object represents a single level in your game – only one can run at a time!
+        The first two parameters define the `width` and `height` of the level in text characters. This level will be 20 characters wide and 20 characters high.
+        The final parameter – although this can be done at a later stage – adds the level to the `Game` we made earlier.
+        
+        In order to add graphics to our `Level`, we must first create a `Layer` object for the graphics to sit on.
+        ```python
+        my_layer = plumpton.Layer(20, 20, level = my_level)
+        ```
+        Following the same format, here we create a 20 by 20 `Layer` and add it to our `Level`.
+        
+        Now lets finally add some graphics!
+        ```python
+        my_shape = plumpton.Shape(3, 3, "X", layer = my_layer)
+        ```
+        As with the `Level` and `Layer`, the first two parameters dictate the `width` and `height` of the `Shape`.
+        The third parameter – optional at this stage – fills the `Shape` with a text character (in this case, an uppercase 'X'). We then add the `Shape` to our `Layer` with the final parameter.
+        
+        We have now created each of the four main objects in plumpton! But how do we actually see what we have made?
+        ```python
+        my_game.run(my_level)
+        ```
+        Okay, so not the most action-packed game in the world – but its a start! Why not check out the documentation and see if you can make the `Shape` move?
+        
+        For more information visit https://thomaswoodcock.net/plumpton
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Education
+Classifier: Topic :: Games/Entertainment
+Classifier: Topic :: Multimedia :: Graphics
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Libraries :: Tcl Extensions

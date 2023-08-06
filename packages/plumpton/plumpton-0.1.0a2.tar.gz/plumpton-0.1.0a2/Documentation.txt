@@ -1,0 +1,108 @@
+# Introduction
+plumpton is a Python text-based game library that champions simplicity in use and output.
+Through the use of shapes, layers and levels, plumpton outputs simplistic text graphics that can be animated and interacted with via the keyboard and mouse.
+
+The philosophy behind plumpton is to provide an easy-to-use and intuitive process of dealing with objects and events -- especially for beginners -- all the while working towards an interactive (and hopefully fun) outcome.
+
+The five main objects in plumpton are: `Game`, `Level`, `Layer`, `Shape` and `Trigger`. The `Game` object controls the execution and output of the current `Level`, as well as more technical details as the update rate and keyboard and mouse bindings.
+
+The `Level` object dictates the `width` and `height` of the `Game` window. All plumpton games are measured in text characters -- for example, your game may be 20 characters wide and 15 characters tall.
+
+`Layer` objects are assigned to a `Level` and, as the name suggests, represent a single layer of the `Level`. The order of `Layer` objects has a direct influence on the visibility of `Shape` objects in the final output.
+
+The `Shape` object represents a two-dimensional grid of text characters which can be moved around its respective `Layer` through animation or keyboard and mouse input.
+A `Shape` can also detect collision with other `Shape` objects in the `Layer` or with the outer edges of the `Layer`.
+
+The `Trigger` object is arguably the most important ingredient of a plumpton game, as it lets the user know when certain events have happened -- for example, when a `Shape` has collided with the edge of the `Layer`, or when a certain key on the keyboard has been pressed.
+
+These are the five main elements to consider when using plumpton, each of which has many more uses than has been mentioned above.
+Please refer to their sections in the documentation to learn about all of their properties and functions.
+
+### Contact
+plumpton is created by myself, Thomas Woodcock. You can get in touch with me via the following methods:
+
+* You can email me at [thomas@thomaswoodcock.net](mailto:thomas@thomaswoodcock.net)
+* Follow me on Twitter [@ThomasMWoodcock](https://twitter.com/ThomasMWoodcock)
+* Or you can check out my [GitHub](https://github.com/thomaswoodcock) page to access plumpton development builds and any other projects I may have.
+
+# Download
+Because the main philosophy of plumpton is simplicity, I feel it is important to make it as easy to download and install as possible.
+Therefore the entire plumpton package consists of a single Python module file.
+However, you can download the file in three formats: the aforementioned single .py file, a gzip archive, or through the Python Package Index.
+
+### Standalone Python Module
+With the standalone Python module, you can simply drop the .py file into your project folder. Of course, the standalone module does not include any documentation, which is still accessible on the website.
+
+### gzip Archive
+Alternatively, you can download the .tar.gz archive that contains the plumpton module, as well as the documentation, full license and other bits-and-bobs.
+
+### Python Package Index
+Finally, if you have `pip` installed (the latest versions of Python should come with this), you can download plumpton directly from the Python Package Index, by entering `pip install plumpton` into the command line.
+
+**Please refer to the [download page](https://thomaswoodcock.net/plumpton/download.html) on the plumpton website for the latest version.**
+
+# Installation
+If you opted to download either the standalone Python module or the gzip archive, you first need to place the **plumpton.py** file into your project folder.
+
+Once you have dropped in the module, or if you chose to install via the Python Package Index, all you need to do now is insert the following line of code to the top of your own Python module.
+```python
+import plumpton
+```
+
+# Game
+
+## Initialization
+{: #game-initialization}
+
+## Attributes
+{: #game-attributes}
+
+## Methods
+{: #game-methods}
+
+## Triggers
+{: #game-triggers}
+
+# Level
+
+## Initialization
+{: #level-initialization}
+
+## Attributes
+{: #level-attributes}
+
+## Methods
+{: #level-methods}
+
+## Triggers
+{: #level-triggers}
+
+# Layer
+
+## Initialization
+{: #layer-initialization}
+
+## Attributes
+{: #layer-attributes}
+
+## Methods
+{: #layer-methods}
+
+## Triggers
+{: #layer-triggers}
+
+# Shape
+
+## Initialization
+{: #shape-initialization}
+
+## Attributes
+{: #shape-attributes}
+
+## Methods
+{: #shape-methods}
+
+## Triggers
+{: #shape-triggers}
+
+# Debugging
