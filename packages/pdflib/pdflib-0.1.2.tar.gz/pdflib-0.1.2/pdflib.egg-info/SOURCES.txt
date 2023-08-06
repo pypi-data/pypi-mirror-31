@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+pdflib1.pyx
+setup.py
+../../Desktop/poppler/utils/ImageOutputDev.cc
+pdflib/__init__.py
+pdflib/poppler.cpp
+pdflib/utils.py
+pdflib.egg-info/PKG-INFO
+pdflib.egg-info/SOURCES.txt
+pdflib.egg-info/dependency_links.txt
+pdflib.egg-info/not-zip-safe
+pdflib.egg-info/requires.txt
+pdflib.egg-info/top_level.txt
