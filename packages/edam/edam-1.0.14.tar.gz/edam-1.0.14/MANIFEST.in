@@ -1,0 +1,8 @@
+include README.md
+recursive-include edam/resources *
+recursive-include edam/resources/configurations *
+recursive-include edam/resources/flask_related *
+recursive-include edam/resources/inputs *
+recursive-include edam/resources/templates *
+include docs/*
+prune tests*
