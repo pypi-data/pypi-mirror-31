@@ -1,0 +1,15 @@
+guillotina>=3.1.6
+aioelasticsearch
+ujson
+lru-dict
+
+[test]
+pytest
+docker
+backoff
+psycopg2
+pytest-asyncio<=0.5.0
+pytest-cov
+pytest-aiohttp
+pytest-rerunfailures
+pytest-docker-fixtures>=1.2.2
