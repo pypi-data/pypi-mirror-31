@@ -1,0 +1,73 @@
+Metadata-Version: 1.1
+Name: cosmoscope
+Version: 0.1.0
+Summary: Back-end server to handle astronomical operations and pass information to connected clients
+Home-page: https://github.com/nmearl/cosmoscope
+Author: Nicholas Earl
+Author-email: contact@nicholasearl.me
+License: MIT license
+Description-Content-Type: UNKNOWN
+Description: ==========
+        Cosmoscope
+        ==========
+        
+        
+        .. image:: https://img.shields.io/pypi/v/cosmoscope.svg
+                :target: https://pypi.python.org/pypi/cosmoscope
+        
+        .. image:: https://img.shields.io/travis/nmearl/cosmoscope.svg
+                :target: https://travis-ci.org/nmearl/cosmoscope
+        
+        .. image:: https://readthedocs.org/projects/cosmoscope/badge/?version=latest
+                :target: https://cosmoscope.readthedocs.io/en/latest/?badge=latest
+                :alt: Documentation Status
+        
+        
+        .. image:: https://pyup.io/repos/github/nmearl/cosmoscope/shield.svg
+             :target: https://pyup.io/repos/github/nmearl/cosmoscope/
+             :alt: Updates
+        
+        
+        
+        Back-end server to handle astronomical operations and pass information to connected clients
+        
+        
+        * Free software: MIT license
+        * Documentation: https://cosmoscope.readthedocs.io.
+        
+        
+        Features
+        --------
+        
+        * TODO
+        
+        Credits
+        -------
+        
+        This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+        
+        .. _Cookiecutter: https://github.com/audreyr/cookiecutter
+        .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+        
+        
+        =======
+        History
+        =======
+        
+        0.1.0 (2018-05-10)
+        ------------------
+        
+        * First release on PyPI.
+        
+Keywords: cosmoscope
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
