@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: modernremodel
+Version: 0.5.1
+Summary: Modern RethinkDB ODM
+Home-page: https://github.com/seandavidmcgee/modernremodel
+Author: Sean McGee
+Author-email: sean@iluminere.com
+License: MIT
+Description: 
+        modernremodel
+        ----------------
+        
+        Very simple yet powerful and extensible Object Document Mapper for RethinkDB, written in Python.
+        
+        
+Platform: any
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
