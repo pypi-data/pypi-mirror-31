@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: clidye
+Version: 0.0.1
+Summary: Another Python Logging Module. Command line Dye. Pretty Print (and logging) for Python
+Home-page: https://github.com/nerdgilbert/clidye
+Author: Gilbert Montague
+Author-email: gilbert.i.montague@gmail.com
+License: UNKNOWN
+Description-Content-Type: UNKNOWN
+Description: # clidye
+        
+        # Install
+        `sudo python install setup.py`
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
