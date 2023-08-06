@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: Demangler
+Version: 0.2
+Summary: A demangler package for gcc 3.x and gcc 4.x
+Home-page: https://github.com/P4N74/demangler
+Author: Rakholiya Jenish
+Author-email: rakholiyajenish.07@gmail.com
+License: MIT
+Description: .. image:: https://travis-ci.org/P4N74/demangler.svg?branch=master    :target: https://travis-ci.org/P4N74/demangler
+Keywords: demangle gcc
+Platform: UNKNOWN
