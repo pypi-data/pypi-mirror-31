@@ -1,0 +1,113 @@
+CHANGES
+=======
+
+* bugfix pip 10.0.0 issue in nettest dockerfile
+* bugfix: pip 10 can't work
+* update documents
+* Update Pipfile.lock
+* Add nettest ansible module
+* Revert "delete the code which will not included in Fraser"
+* delete the code which will not included in Fraser
+* latency test bugfix
+* bugfix: Unable to locate package python-minimal
+* A initial CI script for network test
+* add nettest client code and some bugfix
+* Change nettest export port to 5000
+* mount a ubuntu 16.04 image into qtip container
+* add nettest user guide documents
+* fix an error in the ci script
+* adjust the execution pipeline for vnf
+* Delete part of code under qtip/legacy
+* run storage test without "-u"
+* Get Ansible to work with bare ubuntu 16.04
+* Add public keys for Taseer
+* generate inventory file and ssh configuration file
+* Add documents template about network test
+* Auto Generated INFO.yaml file
+* bugfix about sut
+* Delete the hardcoding parameter "sut\_type"
+* Add SUT option in CLI
+* support rfc2544 test using spirent virtual test center
+* create VM via heat
+* Adapter "installer\_type" for reporting
+* Use a fixed ubuntu 16.04 image
+* Add missing license header
+* Add QTIP flavor creation/deletion
+* Add the creation/deletion of image in the pipeline
+* update pipfile.lock
+* install "shade" for ansible openstack module
+* change the test suite for experimental job
+* Convert ipynb to rst file
+* Add a judgement to control the proxy jump configuration
+* use 'import\_tasks' and 'include\_tasks' instead of 'include'
+* Fix "qtip command not found" in Docker container
+* fix some bugs about mcp module
+* Fix dependency error
+* Storage QPI Userguide
+* bugfix: error in sed expression
+* Fix broken link
+* Add sphinx build configuration
+* Add missing link for euphrates release notes
+* Use pipenv instead of pip
+* Deprecate qtip/web in favor of AWX
+* distinguish fuel and mcp in ci scripts
+* Add role for heat stack creation
+* Update gpg key for akhil
+* Add public keys for akhil
+* VM-2-VM Network Performance Indicator: A Proposal
+* Add public key for aaron and qdai
+* Fix link error for documents
+* Set \`\`criteria\`\` as PASS for all completed executions
+* Harmonization titles of the doc of the test projects
+* Add support for Mirantis Cloud Platform
+* Add release note for Euphrates
+* Committers please vote +2/-2 for PTL nomination of Zhihui Wu
+* Lookup in enviroment for OPNFV release name
+* Download ramspeed from new url
+* Revert "Enable test result pushing in periodic job"
+* Fix criteria data
+* Enable test result pushing in periodic job
+* Disable tty in CI scripts to remove color in ansible output
+* Update CLI docs for release E
+* Fix bug in \`\`qtip/scripts/quickstart.sh\`\`
+* Freeze requirements for Euphrates
+* Nomination of committer promotion for Taseer Ahmed
+* Nomination of committer promotion for Akhil Batra
+* Remove legacy entrypoints
+* Fix output path of testing results
+* Fix error in compute docker compose file
+* Fix script path error
+* Fix error in CI job
+* Add user and config guide for web portal
+* Fix output path
+* Refactor CI scripts
+* Use minimal output
+* Removed used setting in qtip package configuration
+* Mitigating for missing values in storage QPI
+* Add system info for compute report
+* Keep tests/data consistent with repository structure
+* Add score calculation module for storperf
+* Fix bug that start\_job script exit unexpectedly
+* Add developer guide for QTIP-WEB services
+* Use legacy storperf images instead of master branch
+* Move storage-qpi proposal to devguide
+* Refactor storperf testing scripts into ansible role
+* Skip container and docker image clean up
+* Migrate contents from benchmarks to resources
+* compute-qpi CI scripts
+* Add basic ui
+* bugfix: install the missing package openssh-client
+* Fix permission issue on apex
+* refactor: run storperf scripts in qtip container
+* Optimize Dockerfile
+* Refactor QPI module
+* Fix bug in apex inventory
+* install setuptools's latest version in container
+* Fix bug in running storperf.sh when WORKSPACE is defined
+* Find nova vs. vm mapping relation
+* run storperf test by using these scripts
+* Replace example with test result from zte apex virtual pod
+* revert the usage of qgrid since it is not supported by nbviewer
+* Deprecate library qtip.driver
+* Add section headers to user guide
+* Fix verification failure caused by connexion version
