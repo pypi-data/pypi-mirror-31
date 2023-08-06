@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: sfqlib
+Version: 0.1.2
+Summary: Tools for SFQ research
+Home-page: https://github.com/hannoeichel/sfqlib
+Author: Kangbo Li
+Author-email: kli89@wisc.edu
+License: MIT
+Keywords: SFQ,Control
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: scipy
+
+This package contains tools for simulating qubit control with Single Flux Quantum Pulse(SFQ) Trains. This package is under development. Contributions are welcome.
+
+
