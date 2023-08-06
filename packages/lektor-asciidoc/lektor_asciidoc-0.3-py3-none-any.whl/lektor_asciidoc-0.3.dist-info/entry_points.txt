@@ -1,0 +1,3 @@
+[lektor.plugins]
+asciidoc = lektor_asciidoc:AsciiDocPlugin
+
