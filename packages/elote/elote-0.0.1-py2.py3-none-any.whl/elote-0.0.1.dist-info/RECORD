@@ -1,0 +1,15 @@
+elote/__init__.py,sha256=ePDh_I8X8OAED6pex82O-G5JV04iQZi9InaDKyVRUQY,452
+elote/arenas/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+elote/arenas/base.py,sha256=99ms9vEoLrXDxEAHQ0Z_z88Mw3WcsYEslt8gk-To51c,391
+elote/arenas/lambda_arena.py,sha256=krJaDVrIR4giyEDi7FfgFlW16FsDuVP9_VjpLZ_Spss,2277
+elote/competitors/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+elote/competitors/base.py,sha256=8QR6Hxfy8ihlg9DIsIkUkcAAx_Cbi--nKi-MQTIgD5M,386
+elote/competitors/dwz.py,sha256=m_qrE0oKhk58mdY6u1sAl91qv1iELeJjsWGyM0Ph3Xg,1817
+elote/competitors/ecf.py,sha256=EKzgbi5orP-3JTt8sKwV1EnmtmEmQ3waYBjdNA8w5AQ,2804
+elote/competitors/elo.py,sha256=c_-vSVgb4YnGeOA-Qr7FTTEduP2BRfo_kypt_Uf9gVo,1501
+elote/competitors/ensemble.py,sha256=jhl0zeQnqisEMnAIlOJ4gKjLXAx3oyXwi_vtw0lkO3Q,1807
+elote/competitors/glicko.py,sha256=iNlXc8ddxycxGVxfXDgI34G_YuZ1ex6raGZTlVc5H7U,3085
+elote-0.0.1.dist-info/METADATA,sha256=QIJ-KNgm8AlpwIyN60et503zO39ujNPRi11WWjb8tOA,5466
+elote-0.0.1.dist-info/RECORD,,
+elote-0.0.1.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+elote-0.0.1.dist-info/top_level.txt,sha256=RlSBOOQntKV5e0CXx-jV--YSPGRKVSTxbiHtESzDcEU,6
