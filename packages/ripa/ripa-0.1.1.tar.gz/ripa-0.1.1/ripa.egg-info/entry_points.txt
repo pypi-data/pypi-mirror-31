@@ -1,0 +1,3 @@
+[console_scripts]
+ripa = ripa.cli:main
+
