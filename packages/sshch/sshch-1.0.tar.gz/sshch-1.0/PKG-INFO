@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: sshch
+Version: 1.0
+Summary: Ssh connection and aliases manager
+Home-page: https://github.com/zlaxy/sshch/
+Author: zlaxy
+Author-email: zlaxyi@gmail.com
+License: DWTWL 2.55
+Description: SSH connection and aliases manager with curses and command line interface
+Keywords: sshch ssh aliases manager
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console :: Curses
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: Freeware
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet
+Classifier: Topic :: System :: Networking
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: Utilities
