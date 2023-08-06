@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: uvsc
+Version: 0.1
+Summary: Python binding for uVision Socket interface
+Home-page: https://github.com/MatthiasHertel80/pyUVSC
+Author: Matthias Hertel - Arm
+Author-email: matthias.hertel@arm.com
+License: Apache
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
