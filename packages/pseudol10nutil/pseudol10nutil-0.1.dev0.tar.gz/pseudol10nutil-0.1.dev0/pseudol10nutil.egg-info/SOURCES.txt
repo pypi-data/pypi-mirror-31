@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+pseudol10nutil/__init__.py
+pseudol10nutil/pseudol10nutil.py
+pseudol10nutil/transforms.py
+pseudol10nutil.egg-info/PKG-INFO
+pseudol10nutil.egg-info/SOURCES.txt
+pseudol10nutil.egg-info/dependency_links.txt
+pseudol10nutil.egg-info/not-zip-safe
+pseudol10nutil.egg-info/requires.txt
+pseudol10nutil.egg-info/top_level.txt
