@@ -1,0 +1,12 @@
+README.md
+setup.py
+civic2clinvar/__init__.py
+civic2clinvar/c2c.py
+civic2clinvar/cli.py
+civic2clinvar/definitions.py
+civic2clinvar.egg-info/PKG-INFO
+civic2clinvar.egg-info/SOURCES.txt
+civic2clinvar.egg-info/dependency_links.txt
+civic2clinvar.egg-info/entry_points.txt
+civic2clinvar.egg-info/requires.txt
+civic2clinvar.egg-info/top_level.txt
