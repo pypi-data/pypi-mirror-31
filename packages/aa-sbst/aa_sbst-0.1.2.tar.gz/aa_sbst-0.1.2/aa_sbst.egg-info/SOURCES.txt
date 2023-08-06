@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+aa_sbst.py
+setup.cfg
+setup.py
+aa_sbst.egg-info/PKG-INFO
+aa_sbst.egg-info/SOURCES.txt
+aa_sbst.egg-info/dependency_links.txt
+aa_sbst.egg-info/top_level.txt
+doc/tutorial.md
