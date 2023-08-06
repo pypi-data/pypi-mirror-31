@@ -1,0 +1,6 @@
+    <qresource prefix="/">
+        <file>qml/qmldir</file
+
+        <file>qml/Constants/qmldir</file>
+        <file>qml/Constants/Style.qml</file>
+    </qresource> -->
