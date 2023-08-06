@@ -1,0 +1,10 @@
+setup.py
+fancypipes/__init__.py
+fancypipes/pipeline.py
+fancypipes/scorers.py
+fancypipes.egg-info/PKG-INFO
+fancypipes.egg-info/SOURCES.txt
+fancypipes.egg-info/dependency_links.txt
+fancypipes.egg-info/not-zip-safe
+fancypipes.egg-info/requires.txt
+fancypipes.egg-info/top_level.txt
