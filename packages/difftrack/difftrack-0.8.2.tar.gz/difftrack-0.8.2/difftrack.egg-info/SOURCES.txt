@@ -1,0 +1,15 @@
+MANIFEST.in
+README.rst
+setup.py
+version.txt
+difftrack/__init__.py
+difftrack/compaction.py
+difftrack/dispatchers.py
+difftrack/listeners.py
+difftrack/types.py
+difftrack/utils.py
+difftrack.egg-info/PKG-INFO
+difftrack.egg-info/SOURCES.txt
+difftrack.egg-info/dependency_links.txt
+difftrack.egg-info/requires.txt
+difftrack.egg-info/top_level.txt
