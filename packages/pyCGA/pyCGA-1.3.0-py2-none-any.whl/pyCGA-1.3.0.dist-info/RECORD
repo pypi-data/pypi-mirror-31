@@ -1,0 +1,17 @@
+pyCGA/__init__.py,sha256=fVyG2OzjwfXUc_H8THh8ym1ddqPCQj924KoMD_vY-6o,24
+pyCGA/commons.py,sha256=dgEB931ayVd84Z9VKvRZ9LdXePT90K-tjywqL3EkA_U,12793
+pyCGA/exceptions.py,sha256=QKcjXCjhP4Sz5m0QZjJRRdaVSMkGBJRdp582uKMFfz8,272
+pyCGA/opencgaconfig.py,sha256=eVdtKXOMi6geW7oQjWQR28UVl86dt6HtIJhIi7dPMXI,5362
+pyCGA/opencgarestclients.py,sha256=ZQPv-b3aOZV8sYVq28ycMjmUfukMrxA01htvDgYPbdk,30276
+pyCGA/retry.py,sha256=E435vs-_AqZ3SOUH8N_YER3R4gFFBjlfdbV4UPhVFJk,2292
+pyCGA/tests.py,sha256=248pBc3gMi0EM8qQDAoC5HTZIi0Zq8JpyFFPfymoYhI,6607
+pyCGA/Utils/AvroSchema.py,sha256=vAkf00mo4jb4P-tOIrdp3SpDl3xgkhgy5bAD6m2Ga0I,6450
+pyCGA/Utils/MockOpenCGA.py,sha256=Fw0wyPZTtd81EUFnxRg506Jm2leRhZSWGFJQcOauK9c,2309
+pyCGA/Utils/__init__.py,sha256=fVyG2OzjwfXUc_H8THh8ym1ddqPCQj924KoMD_vY-6o,24
+pyCGA/Utils/decorators.py,sha256=ZbC1OniXA_Lvg8SCIntP4NKAwW70yFGISjK15texA7Q,2337
+pyCGA-1.3.0.dist-info/DESCRIPTION.rst,sha256=dmBoeatKMU55ERSodhErn7Ivk_OKME-AcyiEGHBXWrY,5260
+pyCGA-1.3.0.dist-info/METADATA,sha256=5M19pomFkBwbqBcg0I8DOwzVE2Rx4341J51DeQkZ820,5916
+pyCGA-1.3.0.dist-info/RECORD,,
+pyCGA-1.3.0.dist-info/WHEEL,sha256=bee59qcPjkyXfMaxNWjl2CGotqfumWx9pC1hlVLr2mM,92
+pyCGA-1.3.0.dist-info/metadata.json,sha256=KqAQ_GsXXzd6CBDgqnXf__hTK7xzz_wTpqH63TD-4CQ,837
+pyCGA-1.3.0.dist-info/top_level.txt,sha256=UkE0oZ9C8pxO_JneOPgIoU3QPENgfYe7Fh3WsU1WFcc,6
