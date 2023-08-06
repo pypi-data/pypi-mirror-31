@@ -1,0 +1,32 @@
+Metadata-Version: 1.1
+Name: django-authenticated-signals
+Version: 0.0.1a1
+Summary: The Django-Authenticated-Signals package provides signals with additional `request` parameter
+Home-page: https://github.com/nnseva/django-authenticated-signals
+Author: Vsevolod Novikov
+Author-email: nnseva@gmail.com
+License: LGPL
+Description-Content-Type: UNKNOWN
+Description: Django-Authenticated-Signals
+        ======================
+        
+        The Django-Authenticated-Signals package provides several specialized model save and delete signals
+        with additional `request` parameter.
+        
+        See details at the home page: https://github.com/nnseva/django-authenticated-signals
+        
+Keywords: django signal authenticated request user
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 1.10
+Classifier: Framework :: Django :: 1.11
+Classifier: License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5

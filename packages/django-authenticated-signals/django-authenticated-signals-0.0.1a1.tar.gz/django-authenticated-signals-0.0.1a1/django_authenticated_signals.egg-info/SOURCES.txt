@@ -1,0 +1,15 @@
+README.rst
+setup.cfg
+setup.py
+authenticated_signals/__init__.py
+authenticated_signals/__version__.py
+authenticated_signals/apps.py
+authenticated_signals/middleware.py
+authenticated_signals/models.py
+authenticated_signals/signals.py
+django_authenticated_signals.egg-info/PKG-INFO
+django_authenticated_signals.egg-info/SOURCES.txt
+django_authenticated_signals.egg-info/dependency_links.txt
+django_authenticated_signals.egg-info/not-zip-safe
+django_authenticated_signals.egg-info/requires.txt
+django_authenticated_signals.egg-info/top_level.txt
