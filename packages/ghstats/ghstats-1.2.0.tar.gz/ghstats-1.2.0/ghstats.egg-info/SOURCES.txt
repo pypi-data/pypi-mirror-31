@@ -1,0 +1,11 @@
+README.rst
+setup.cfg
+setup.py
+ghstats/__init__.py
+ghstats/__main__.py
+ghstats/ghstats.py
+ghstats.egg-info/PKG-INFO
+ghstats.egg-info/SOURCES.txt
+ghstats.egg-info/dependency_links.txt
+ghstats.egg-info/entry_points.txt
+ghstats.egg-info/top_level.txt
