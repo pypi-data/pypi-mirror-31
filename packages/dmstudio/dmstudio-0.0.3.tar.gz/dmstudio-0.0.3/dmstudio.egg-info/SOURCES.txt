@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.py
+dmstudio/__init__.py
+dmstudio/dmcommands.py
+dmstudio/dmfiles.py
+dmstudio/initialize.py
+dmstudio/special.py
+dmstudio/version.py
+dmstudio.egg-info/PKG-INFO
+dmstudio.egg-info/SOURCES.txt
+dmstudio.egg-info/dependency_links.txt
+dmstudio.egg-info/not-zip-safe
+dmstudio.egg-info/top_level.txt
+tests/dmstudio_test.py
