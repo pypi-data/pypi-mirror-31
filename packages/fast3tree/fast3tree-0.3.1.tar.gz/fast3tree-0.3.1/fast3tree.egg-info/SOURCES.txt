@@ -1,0 +1,13 @@
+README.md
+setup.py
+fast3tree/__init__.py
+fast3tree/core.py
+fast3tree/fast3tree.c
+fast3tree/fof.py
+fast3tree/make_lib.py
+fast3tree/version.py
+fast3tree.egg-info/PKG-INFO
+fast3tree.egg-info/SOURCES.txt
+fast3tree.egg-info/dependency_links.txt
+fast3tree.egg-info/requires.txt
+fast3tree.egg-info/top_level.txt
