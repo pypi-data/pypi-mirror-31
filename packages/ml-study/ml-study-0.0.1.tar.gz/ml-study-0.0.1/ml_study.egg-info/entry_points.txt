@@ -1,0 +1,3 @@
+[console_scripts]
+ml-study = src.cli:main
+
