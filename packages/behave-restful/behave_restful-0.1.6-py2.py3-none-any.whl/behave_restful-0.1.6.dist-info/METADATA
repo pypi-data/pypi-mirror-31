@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: behave-restful
+Version: 0.1.6
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Isaac Rodriguez
+Author-email: isaac_rodriguez@live.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: behave (>=1.2.5)
+Requires-Dist: jsonpath-rw (>=1.4.0)
+Requires-Dist: jsonschema (>=2.6.0)
+Requires-Dist: requests (>=2.18.4)
+
+UNKNOWN
+
+
