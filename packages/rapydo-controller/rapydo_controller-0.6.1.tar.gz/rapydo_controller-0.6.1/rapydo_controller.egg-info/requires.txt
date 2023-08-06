@@ -1,0 +1,8 @@
+rapydo-utils==0.6.1
+docker-compose==1.19.0
+docker==2.7.0
+dockerfile-parse
+gitpython==2.1.8
+jinja2
+plumbum
+requests==2.18.4
