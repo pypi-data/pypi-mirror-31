@@ -1,0 +1,11 @@
+README.md
+setup.py
+stools.egg-info/PKG-INFO
+stools.egg-info/SOURCES.txt
+stools.egg-info/dependency_links.txt
+stools.egg-info/entry_points.txt
+stools.egg-info/not-zip-safe
+stools.egg-info/requires.txt
+stools.egg-info/top_level.txt
+stools/clair/start-clair
+stools/clair/stop-clair
