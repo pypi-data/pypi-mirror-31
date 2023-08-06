@@ -1,0 +1,3 @@
+[console_scripts]
+chainable = chainable.cli:main
+
