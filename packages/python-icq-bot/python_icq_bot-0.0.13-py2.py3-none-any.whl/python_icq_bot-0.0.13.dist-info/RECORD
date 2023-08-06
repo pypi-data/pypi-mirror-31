@@ -1,0 +1,13 @@
+icq/__init__.py,sha256=jVhqbNK8WojYJ_71Py35QZFBF3ujF1SZ5eUpoDTartE,170
+icq/bot.py,sha256=a_JghOSAVQmmZIc9SN7A9S8FmaGP5yf2llLivGDW8P8,18595
+icq/constant.py,sha256=oAx07W7VqV3PPnb1W1wPG3wo6v8Frj_yYO7_y24GuIc,1309
+icq/dispatcher.py,sha256=vfU06SkGr8quJvn9x5lUG4-sbk2oV_AyPMLrYD3eTaU,1086
+icq/event.py,sha256=34P6PMlRbUe5U6zIOJNkR5Hu3rSglZJGi3h_BQThRjo,814
+icq/filter.py,sha256=YJIsrvFO5Z1goxAffEITFtlgd6_K3YQYkun9f6Yp0H4,5280
+icq/handler.py,sha256=lZc_CGM6rL_0hQ3L4y-8Lpa31VahB9vrPIIKpqex0XY,4603
+icq/util.py,sha256=YdcPvhxUL9tbTK7bRsWMZ6GECVw8kYRvNYlYBktY-e4,1769
+python_icq_bot-0.0.13.dist-info/LICENSE.txt,sha256=Aqaa2BrHJI02e7V2yv5sCDhvoz_NvW6bHnaag19IXYM,1089
+python_icq_bot-0.0.13.dist-info/METADATA,sha256=0NxcPxcbgoYkpyM-pn2EPXmnMY1LzfXFdS822EhmAgk,2924
+python_icq_bot-0.0.13.dist-info/RECORD,,
+python_icq_bot-0.0.13.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+python_icq_bot-0.0.13.dist-info/top_level.txt,sha256=9Gk0g1zBQiUq-soTtUBm2FUOji5rGOgFzdpLBXeZRpQ,4
