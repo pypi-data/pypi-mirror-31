@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: ethexporter
+Version: 0.0.2
+Summary: Ethereum web3 RPC exporter
+Home-page: https://denz1.gitlab.io/devconfig
+Author: Denis Mishchishin
+Author-email: dennz78@gmail.com
+License: MIT
+Description: 
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Utilities
