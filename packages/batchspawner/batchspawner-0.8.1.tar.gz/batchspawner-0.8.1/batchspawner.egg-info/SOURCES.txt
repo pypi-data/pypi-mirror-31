@@ -1,0 +1,12 @@
+CONTRIBUTING.md
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+batchspawner/__init__.py
+batchspawner/batchspawner.py
+batchspawner.egg-info/PKG-INFO
+batchspawner.egg-info/SOURCES.txt
+batchspawner.egg-info/dependency_links.txt
+batchspawner.egg-info/requires.txt
+batchspawner.egg-info/top_level.txt
