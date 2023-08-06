@@ -1,0 +1,4 @@
+[console_scripts]
+byexample = byexample.byexample:main
+huff = byexample.huff:main
+
