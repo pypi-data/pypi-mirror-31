@@ -1,0 +1,10 @@
+README.md
+setup.py
+telemetrise/__init__.py
+telemetrise/telemetrise.py
+telemetrise.egg-info/PKG-INFO
+telemetrise.egg-info/SOURCES.txt
+telemetrise.egg-info/dependency_links.txt
+telemetrise.egg-info/entry_points.txt
+telemetrise.egg-info/requires.txt
+telemetrise.egg-info/top_level.txt
