@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: korv
+Version: 0.1.0
+Summary: SSH API Frameowrk
+Home-page: https://github.com/tryexceptpass/korv
+Author: tryexceptpass
+Author-email: cmedina@tryexceptpass.org
+License: MIT
+Project-URL: Gitter Chat, https://gitter.im/try-except-pass/korv
+Project-URL: Say Thanks!, https://saythanks.io/to/tryexceptpass
+Project-URL: Source, https://github.com/tryexceptpass/korv
+Description: # korv
+        Python API framework using SSH sockets
+        
+Keywords: ssh api framework
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Communications
+Classifier: Topic :: Internet
+Classifier: Framework :: AsyncIO
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Development Status :: 4 - Beta
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
