@@ -1,0 +1,6 @@
+pyyaml
+requests
+cachier
+
+[test]
+pytest
