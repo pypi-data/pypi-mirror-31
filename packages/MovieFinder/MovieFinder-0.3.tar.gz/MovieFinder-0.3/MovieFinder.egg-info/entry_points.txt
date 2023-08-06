@@ -1,0 +1,3 @@
+[console_scripts]
+movie_finder = MovieSearcher.movie_searcher:main
+
