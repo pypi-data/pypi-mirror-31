@@ -1,0 +1,22 @@
+Metadata-Version: 2.0
+Name: trane
+Version: 0.0
+Summary: Trane is a software package for automatically generating prediction problems and generating labels for supervised learning.
+Home-page: https://github.com/HDI-Project/Trane
+Author: MIT Data to AI Lab
+Author-email: dailabmit@gmail.com
+License: MIT License
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+
+UNKNOWN
+
+
