@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.py
+pronounceable/__init__.py
+pronounceable/complexity.py
+pronounceable/components.py
+pronounceable/digraph.py
+pronounceable/dir.py
+pronounceable/main.py
+pronounceable.egg-info/PKG-INFO
+pronounceable.egg-info/SOURCES.txt
+pronounceable.egg-info/dependency_links.txt
+pronounceable.egg-info/requires.txt
+pronounceable.egg-info/top_level.txt
+pronounceable/database/google-10000-english.txt
+pronounceable/database/leetspeak.yaml
