@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+Geometry/__init__.py
+Geometry/demo.py
+Geometry/utils.py
+Segmentation/__init__.py
+Segmentation/waterShed.py
+planeGeometry.egg-info/PKG-INFO
+planeGeometry.egg-info/SOURCES.txt
+planeGeometry.egg-info/dependency_links.txt
+planeGeometry.egg-info/entry_points.txt
+planeGeometry.egg-info/requires.txt
+planeGeometry.egg-info/top_level.txt
