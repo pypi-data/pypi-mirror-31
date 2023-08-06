@@ -1,0 +1,16 @@
+MANIFEST.in
+README.rst
+TITLE.txt
+lh-agpl3-LICENSE.txt
+setup.py
+./bin/bx-bases-bisosCore.py
+bisos/__init__.py
+bisos.coreDist.egg-info/PKG-INFO
+bisos.coreDist.egg-info/SOURCES.txt
+bisos.coreDist.egg-info/dependency_links.txt
+bisos.coreDist.egg-info/namespace_packages.txt
+bisos.coreDist.egg-info/not-zip-safe
+bisos.coreDist.egg-info/requires.txt
+bisos.coreDist.egg-info/top_level.txt
+bisos/coreDist/__init__.py
+bisos/coreDist/thisPkg.py
