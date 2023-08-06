@@ -1,0 +1,48 @@
+#!python
+
+from argparse import ArgumentParser
+from sepia.processor import Processor
+from sepia.template import TemplateSet
+from sepia.variable import VariableSet
+
+from os.path import abspath
+from os.path import expanduser
+from os.path import expandvars
+from os.path import normpath
+
+arg_parser = ArgumentParser(description='.')
+arg_parser.add_argument(
+    '--templates', '-t',
+    required=True,
+    dest='template_paths',
+    action='append',
+    metavar='path/to/templates',
+    help='Path to directory with template files')
+arg_parser.add_argument(
+    '--variables', '-v',
+    required=True,
+    dest='variable_paths',
+    action='append',
+    metavar='path/to/variables',
+    help='Path to directory with variable files')
+arg_parser.add_argument(
+    '--output', '-o',
+    required=True,
+    dest='output_path',
+    action='store',
+    metavar='path/to/output',
+    help='Path to directory with output')
+
+args = arg_parser.parse_args()
+variable_set = VariableSet()
+
+for variable_path in args.variable_paths:
+    variable_set.add_path(abspath(normpath(expandvars(expanduser(variable_path)))))
+
+template_set = TemplateSet()
+
+for template_path in args.template_paths:
+    template_set.add_path(abspath(normpath(expandvars(expanduser(template_path)))))
+
+processor = Processor(template_set, variable_set, abspath(normpath(expandvars(expanduser(args.output_path)))))
+processor.execute()
