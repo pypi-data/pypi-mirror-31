@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: pytrackmate
+Version: 1.1.0
+Summary: Import Trackmate XML files in Python as Pandas dataframe.
+Home-page: https://github.com/hadim/pytrackmate/
+Author: Hadrien Mary
+Author-email: hadrien.mary@gmail.com
+License: UNKNOWN
+Description: # pytrackmate
+        
+        [![PyPI version](https://img.shields.io/pypi/v/pytrackmate.svg?maxAge=2591000)](https://pypi.org/project/pytrackmate/)
+        
+        Import [Trackmate](https://imagej.net/TrackMate) XML files in Python as Pandas dataframe.
+        
+        ## Usage
+        
+        Check the [notebook](Notebooks/Trackmate.ipynb).
+        
+        ## Requirements
+        
+        - Python 3.6 and above
+        
+        ## Install
+        
+        `pip install pytrackmate`
+        
+        Or you can use Anaconda and `conda-forge` :
+        
+        ```
+        conda config --add channels conda-forge
+        conda install pytrackmate
+        ```
+        
+        ## License
+        
+        Under BSD license. See [LICENSE](LICENSE).
+        
+        ## Authors
+        
+        - Hadrien Mary <hadrien.mary@gmail.com>
+        
+        ## How to release a new version
+        
+        - Clean dist: `rm -fr *.egg-info dist/ build/`
+        - Run `python release.py`
+        - Create and upload packages : `twine upload dist/*`
+        - Update `conda-forge` recipe.
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown

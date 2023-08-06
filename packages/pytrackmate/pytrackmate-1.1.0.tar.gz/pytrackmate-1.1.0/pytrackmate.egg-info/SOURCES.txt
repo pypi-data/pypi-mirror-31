@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+release.py
+setup.cfg
+setup.py
+pytrackmate/__init__.py
+pytrackmate/_trackmate.py
+pytrackmate/_version.py
+pytrackmate.egg-info/PKG-INFO
+pytrackmate.egg-info/SOURCES.txt
+pytrackmate.egg-info/dependency_links.txt
+pytrackmate.egg-info/requires.txt
+pytrackmate.egg-info/top_level.txt
