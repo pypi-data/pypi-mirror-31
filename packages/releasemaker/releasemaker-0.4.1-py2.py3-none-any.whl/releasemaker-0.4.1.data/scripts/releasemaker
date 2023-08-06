@@ -1,0 +1,71 @@
+#!python
+# vim: set filetype=python
+
+import argparse
+import subprocess
+import re
+import git
+
+from releasemaker.releasemaker import ReleaseMaker
+
+call_command = lambda args: subprocess.check_output(args.split()).strip()
+
+def ref_checker(value):
+    repo = git.Repo()
+    try:
+        repo.commit(value)
+    except git.exc.BadName as e:
+        message = "{} is not a valid ref.".format(value)
+        raise argparse.ArgumentTypeError(message)
+    else:
+        return value
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(
+        prog='releasemaker',
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""addendum:
+  To add your GitHub Personal Access Token to the OS X keychain, do the following:
+
+      security add-internet-password -a $USERNAME -D "Personal Access Token" -r http -s api.github.com -w $TOKEN
+
+  To restrict usage to within Xcode (e.g., in a build script):
+
+      security add-internet-password -a $USERNAME -D "Personal Access Token" -r http -s api.github.com -w $TOKEN -T /Applications/Xcode.app
+""")
+
+    api_key_default = call_command("security find-internet-password -s api.github.com -w")
+
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument("--api-key", help="Your GitHub API token. If not provided, defaults to value stored on OS X keychain.", default=api_key_default)
+    group.add_argument("--dry-run", help="Print the changelog to standard output.", type=bool, default=False)
+
+    parser.add_argument("--organization", "-o", required=True)
+    parser.add_argument("--repository", "-r", required=True)
+    parser.add_argument("--since-ref", help="The first ref to start pulling notes from. If omitted, releasemaker will iterate through commits until it finds another tag or the root commit, whichever comes first.", type=ref_checker)
+    parser.add_argument("paths", metavar='PATH', type=str, nargs='*', help="An optional file to upload along with the release.")
+
+    api_key = call_command("security find-internet-password -s api.github.com -w")
+
+    args = parser.parse_args()
+    if api_key == "":
+        api_key = args.api_key
+
+    if None in [api_key, args.organization, args.repository]:
+        parser.print_help()
+    else:
+        release_maker = ReleaseMaker(api_key, args.organization, args.repository)
+
+        try:
+            version = call_command("agvtool what-marketing-version -terse1")
+            bundle = call_command("agvtool what-version -terse")
+        except subprocess.CalledProcessError:
+            parser.error("This tool must be run in a directory containing an Xcode project file.")
+        else:
+            success = release_maker.create(version, bundle, args.since_ref, args.paths, args.dry_run)
+            if success:
+                parser.exit()
+            else:
+                parser.exit(message="Release was not created.")
+
