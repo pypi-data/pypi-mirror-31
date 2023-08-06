@@ -1,0 +1,13 @@
+MANIFEST.in
+README.rst
+requirements.txt
+setup.cfg
+setup.py
+Animate/Animate.py
+Animate/Prepare.py
+Animate/__init__.py
+animateimages.egg-info/PKG-INFO
+animateimages.egg-info/SOURCES.txt
+animateimages.egg-info/dependency_links.txt
+animateimages.egg-info/requires.txt
+animateimages.egg-info/top_level.txt
