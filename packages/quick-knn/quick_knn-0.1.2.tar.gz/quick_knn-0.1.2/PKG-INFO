@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: quick_knn
+Version: 0.1.2
+Summary: LSH for Jaccard and Cosine Similarity
+Home-page: https://github.com/blester125/quick_knn
+Author: blester125
+Author-email: blester125@gmail.com
+License: MIT
+Download-URL: https://github.com/blester125/quick_knn/archive/0.1.2.tar.gz
+Description: # Quick Knn
+        
+        Locality Sensitive hash functions
+        
+        Uses MinHash to approximate Jaccard Similarity and Random Hyperplanes to approximate Cosine similarity.
+        
+Keywords: Data Mining
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Topic :: Scientific/Engineering
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
