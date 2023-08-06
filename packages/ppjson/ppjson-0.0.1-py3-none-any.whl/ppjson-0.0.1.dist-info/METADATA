@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: ppjson
+Version: 0.0.1
+Summary: another json str loads
+Home-page: https://github.com/jiamo/ppjson
+Author: jiamo
+Author-email: life.130815@gmail.com
+License: MIT
+Keywords: ppjson
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: sly
+
+=====
+ppjson
+=====
+
+
+.. image:: https://img.shields.io/pypi/v/ppjson.svg
+        :target: https://pypi.org/pypi/ppjson
+
+.. image:: https://img.shields.io/travis/jiamo/ppjson.svg
+        :target: https://travis-ci.org/jiamo/ppjson
+
+.. image:: https://readthedocs.org/projects/ppjson/badge/?version=latest
+        :target: https://ppjson.readthedocs.io/en/latest/?badge=latest
+        :alt: Documentation Status
+
+.. image:: https://pyup.io/repos/github/jiamo/ppjson/shield.svg
+     :target: https://pyup.io/repos/github/jiamo/ppjson/
+     :alt: Updates
+
+
+------
+
+1. rfc: https://tools.ietf.org/html/rfc7159
+2. use: https://github.com/dabeaz/sly
+3. inspire ref: https://github.com/counsellors/jsonparser
+
+
+=======
+History
+=======
+
+0.0.1 (2017-10-20)
+------------------
+
+* First release on PyPI.
+
+
