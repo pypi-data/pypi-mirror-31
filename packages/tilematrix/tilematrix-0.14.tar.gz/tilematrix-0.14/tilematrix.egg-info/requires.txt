@@ -1,0 +1,6 @@
+affine
+click
+geojson
+rasterio>=1.0a3
+shapely
+six
