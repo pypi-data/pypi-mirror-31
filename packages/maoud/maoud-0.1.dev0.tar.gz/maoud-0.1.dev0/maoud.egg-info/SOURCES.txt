@@ -1,0 +1,11 @@
+README.rst
+setup.py
+maoud/__init__.py
+maoud/distributions.py
+maoud/sampling.py
+maoud/utils.py
+maoud.egg-info/PKG-INFO
+maoud.egg-info/SOURCES.txt
+maoud.egg-info/dependency_links.txt
+maoud.egg-info/requires.txt
+maoud.egg-info/top_level.txt
