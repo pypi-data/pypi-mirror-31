@@ -1,0 +1,13 @@
+{% load static %}
+{% load compile_static %}
+
+<script type="text/python">
+import sys
+sys.path.append("{% static '' %}")
+</script>
+
+<script type="text/python" src="{% static "radiant/brython/Lib/site-packages/mdc_attach.py" %}"></script>
+<!--<script type="text/python" src="{% static "radiant/brython-3.5.1/Lib/site-packages/mdc_attach.py" %}"></script>-->
+<!--<script type="text/python" src="{% static "radiant/brython-3.3.4/Lib/site-packages/mdc_attach.py" %}"></script>-->
+
+
