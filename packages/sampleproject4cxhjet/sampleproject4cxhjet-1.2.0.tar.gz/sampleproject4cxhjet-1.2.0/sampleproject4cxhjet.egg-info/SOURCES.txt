@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+data/data_file
+sample/__init__.py
+sample/package_data.dat
+sampleproject4cxhjet.egg-info/PKG-INFO
+sampleproject4cxhjet.egg-info/SOURCES.txt
+sampleproject4cxhjet.egg-info/dependency_links.txt
+sampleproject4cxhjet.egg-info/entry_points.txt
+sampleproject4cxhjet.egg-info/requires.txt
+sampleproject4cxhjet.egg-info/top_level.txt
