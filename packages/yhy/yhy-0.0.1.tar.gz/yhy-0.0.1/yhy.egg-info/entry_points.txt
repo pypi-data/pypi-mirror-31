@@ -1,0 +1,3 @@
+[console_scripts]
+yhy = yhy.__main__:cli
+
