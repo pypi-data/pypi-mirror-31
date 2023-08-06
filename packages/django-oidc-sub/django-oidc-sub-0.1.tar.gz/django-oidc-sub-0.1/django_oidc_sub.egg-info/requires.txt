@@ -1,0 +1,7 @@
+Django>=1.11
+mozilla-django-oidc
+
+[quality]
+flake8
+isort
+pydocstyle

@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+django_oidc_sub/__init__.py
+django_oidc_sub/backends.py
+django_oidc_sub/models.py
+django_oidc_sub.egg-info/PKG-INFO
+django_oidc_sub.egg-info/SOURCES.txt
+django_oidc_sub.egg-info/dependency_links.txt
+django_oidc_sub.egg-info/requires.txt
+django_oidc_sub.egg-info/top_level.txt
+django_oidc_sub/migrations/0001_initial.py
+django_oidc_sub/migrations/__init__.py
+django_oidc_sub/tests/__init__.py
+django_oidc_sub/tests/settings.py
+django_oidc_sub/tests/test_backends.py
