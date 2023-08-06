@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: snipeit-api
+Version: 0.1
+Summary: Python library to access the SnipeIT API. This is still WIP
+Home-page: http://gadiness.com/snipeit
+Author: David Kimaru
+Author-email: kimarudg@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: requests
+Requires-Dist: simplejson
+
+UNKNOWN
+
+
