@@ -1,0 +1,10 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+pylivecoding.egg-info/PKG-INFO
+pylivecoding.egg-info/SOURCES.txt
+pylivecoding.egg-info/dependency_links.txt
+pylivecoding.egg-info/entry_points.txt
+pylivecoding.egg-info/top_level.txt
