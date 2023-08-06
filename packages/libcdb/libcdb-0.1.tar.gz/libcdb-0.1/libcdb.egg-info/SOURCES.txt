@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+libcdb/__init__.py
+libcdb/libcdb.py
+libcdb.egg-info/PKG-INFO
+libcdb.egg-info/SOURCES.txt
+libcdb.egg-info/dependency_links.txt
+libcdb.egg-info/requires.txt
+libcdb.egg-info/top_level.txt

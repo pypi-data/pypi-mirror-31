@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: libcdb
+Version: 0.1
+Summary: A libc search utility based on https://libc.ml/
+Home-page: https://github.com/unamer/libcdb
+Author: nonick
+Author-email: n0nick@protonmail.com
+License: GNU LGPLv3
+Description: 
+            Yet another libc search library based on https://libc.ml/
+        
+            Useful in some pwn challenge which without libc provided.
+        
+            More information at: https://github.com/unamer/libcdb.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
