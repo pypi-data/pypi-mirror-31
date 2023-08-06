@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+anaflow/__init__.py
+anaflow/gwsolutions.py
+anaflow/helper.py
+anaflow/laplace.py
+anaflow.egg-info/PKG-INFO
+anaflow.egg-info/SOURCES.txt
+anaflow.egg-info/dependency_links.txt
+anaflow.egg-info/requires.txt
+anaflow.egg-info/top_level.txt
