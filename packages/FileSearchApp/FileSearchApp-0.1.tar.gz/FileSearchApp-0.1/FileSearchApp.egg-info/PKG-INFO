@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: FileSearchApp
+Version: 0.1
+Summary: Script for checking folder and all of its sub-folders for occurrence of a given string in all of its files.
+Home-page: https://github.com/urosjevremovic/File-Search-App
+Author: Uros Jevremovic
+Author-email: jevremovic.uros91@gmail.com
+License: MIT
+Description: 
+        File search app
+        -------------
+        
+        Script for checking folder and all of its sub-folders
+        for occurrence of a given string in all of its files.
+        
+        You can get it by downloading it directly or by typing:
+        
+            $ pip install FileSearchApp
+        
+        After it is installed you can run it from CLI:
+        
+            $ file_search
+        
+        Output will be printed in a terminal windows, along with total number of
+        occurrences and saved in a .csv file for easier browsing of results.
+        
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown

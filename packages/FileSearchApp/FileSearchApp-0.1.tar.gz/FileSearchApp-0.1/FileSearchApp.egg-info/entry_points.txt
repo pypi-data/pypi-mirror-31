@@ -1,0 +1,3 @@
+[console_scripts]
+file_search = FileSearchApp.file_search_app:main
+
