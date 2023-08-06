@@ -1,0 +1,17 @@
+CnpChargebackSDK-2.1.2.dist-info/DESCRIPTION.rst,sha256=VPk-AJ2rs_TbXOdSQAnVVCRj4CqMOA4m955BFeb29Zo,3482
+CnpChargebackSDK-2.1.2.dist-info/METADATA,sha256=dmzGGZIEnpuQlnSCLLIHK6mfY2Mg9lE2HCrfhdGIAlU,4817
+CnpChargebackSDK-2.1.2.dist-info/RECORD,,
+CnpChargebackSDK-2.1.2.dist-info/WHEEL,sha256=kdsN-5OJAZIiHN-iO4Rhl82KyS0bDWf4uBwMbkNafr8,110
+CnpChargebackSDK-2.1.2.dist-info/entry_points.txt,sha256=YVzsnSW5OIEDpsP9z8YXzQwkLI2aaoI3C9nuR23k7Vo,84
+CnpChargebackSDK-2.1.2.dist-info/metadata.json,sha256=Ae25eXRrLtFB-nKBStRT9GL6CAl4zv_jGSbsL_q733o,1581
+CnpChargebackSDK-2.1.2.dist-info/top_level.txt,sha256=CJ43rU0N-5h0YgL2Een03Uy4c4lMKQUiCef9qiTXCAU,15
+cnpsdk/__init__.py,sha256=cMX1RV3mat4Gu2TqNw-CraWpPi_Ar54PN2SwDXRgF3Q,1250
+cnpsdk/chargeback_document.py,sha256=xPgYpSVeKqbFUOPFJd5XwX-59ZULVgB3AyJKdZ7DErE,2656
+cnpsdk/chargeback_retrieval.py,sha256=YAXcioAuDtxNTJRghxdsCYOX3JJEdtGAdEi_k4lCIy4,2840
+cnpsdk/chargeback_update.py,sha256=JlfgKSMr97u2gnMsge5AO7FWj839XHI9yY9pkSXBGW0,3462
+cnpsdk/communication.py,sha256=BJtE8GeoY1rtKG6PLtvzYr-_DSWqupAnUjH4GxwJCik,8890
+cnpsdk/fields_chargeback.py,sha256=oiSoDk6Jzf30YHYxpEGNGW-tBBiLfJmLVQw2rEvpFjA,169825
+cnpsdk/utils.py,sha256=nMbHPJxGVRkIawHoxJPvTjodyBg0IUk_46uXrGrVl6Q,6472
+cnpsdk/version.py,sha256=XVIOSoDI1-5IrXcUeViHecFlmcREZDMQAh4TP9mer4o,1192
+scripts/__init__.py,sha256=oYb9wibN6kiVF6z6y7YGtnVS0mFCvnU9QMu03Mq-bU4,1141
+scripts/cnp_chargeback_sdk_setup.py,sha256=6XAfCaY0llsRXuauIsy3Rq1XU_oxpN1vVGHGAWWK1W4,7646
