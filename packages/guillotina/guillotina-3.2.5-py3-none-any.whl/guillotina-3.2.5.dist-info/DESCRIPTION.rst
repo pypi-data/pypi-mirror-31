@@ -1,0 +1,314 @@
+Introduction
+============
+
+.. image:: https://img.shields.io/badge/docs-latest-brightgreen.svg?style=flat
+   :target: http://guillotina.readthedocs.io/en/latest/
+
+.. image:: https://travis-ci.org/plone/guillotina.svg?branch=master
+   :target: https://travis-ci.org/plone/guillotina
+
+.. image:: https://codecov.io/gh/plone/guillotina/branch/master/graph/badge.svg
+   :target: https://codecov.io/gh/plone/guillotina/branch/master
+   :alt: Test Coverage
+
+.. image:: https://img.shields.io/pypi/pyversions/guillotina.svg
+   :target: https://pypi.python.org/pypi/guillotina/
+   :alt: Python Versions
+
+.. image:: https://img.shields.io/pypi/v/guillotina.svg
+   :target: https://pypi.python.org/pypi/guillotina
+
+.. image:: https://img.shields.io/pypi/l/guillotina.svg
+   :target: https://pypi.python.org/pypi/guillotina/
+   :alt: License
+
+.. image:: https://badges.gitter.im/plone/guillotina.png
+   :target: https://gitter.im/plone/guillotina
+   :alt: Chat
+
+Please `read the detailed docs <http://guillotina.readthedocs.io/en/latest/>`_
+
+
+This is the working project of the next generation Guillotina server based on asyncio.
+
+
+Dependencies
+------------
+
+* python >= 3.6
+* postgresql >= 9.6
+
+
+Quickstart
+----------
+
+We use pip::
+
+  pip install guillotina
+
+
+Run postgresql
+--------------
+
+If you don't have a postgresql server to play with, you can run one easily
+with docker.
+
+Download and start the docker container by running::
+
+  make run-postgres
+
+
+
+Run the server
+--------------
+
+To run the server::
+
+    g
+
+
+Then...
+
+    curl http://localhost:8080
+
+
+Or, better yet, use postman to start playing with API.
+
+
+Getting started with development
+--------------------------------
+
+Using pip::
+
+  ./bin/pip install requirements.txt
+  ./bin/pip install -e .[test]
+
+
+Run tests
+---------
+
+We're using pytest::
+
+    ./bin/pytest guillotina
+
+and for test coverage::
+
+    ./bin/pytest --cov=guillotina guillotina/
+
+With file watcher...
+
+    ./bin/ptw guillotina --runner=./bin/py.test
+
+
+To run tests with cockroach db::
+
+   USE_COCKROACH=true ./bin/pytest guillotina
+
+Default
+-------
+
+Default root access can be done with AUTHORIZATION header : Basic root:root
+
+
+Docker
+------
+
+You can also run Guillotina with Docker!
+
+
+First, run postgresql::
+
+    docker run --rm \
+        -e POSTGRES_DB=guillotina \
+        -e POSTGRES_USER=guillotina \
+        -p 127.0.0.1:5432:5432 \
+        --name postgres \
+        postgres:9.6
+
+Then, run guillotina::
+
+    docker run --rm -it \
+        --link=postgres -p 127.0.0.1:8080:8080 \
+        guillotina/guillotina:latest \
+        g -c '{"databases": [{"db": {"storage": "postgresql", "dsn": "postgres://guillotina:@postgres/guillotina"}}], "root_user": {"password": "root"}}'
+
+
+This assumes you have a config.yaml in your current working directory
+
+
+Chat
+----
+
+Join us to talk about Guillotina at https://gitter.im/plone/guillotina
+
+
+3.2.5 (2018-05-12)
+------------------
+
+- add IDatabaseManager.exists method to be able to check if db exists
+  [vangheem]
+
+
+3.2.4 (2018-05-11)
+------------------
+
+- Fix dynamic storage urls for cockroach
+  [vangheem]
+
+- deserialize value before validation on patch fields
+  [vangheem]
+
+
+3.2.3 (2018-05-11)
+------------------
+
+- Authenticated users have access to view root just like
+  unauthenticated users
+  [vangheem]
+
+
+3.2.2 (2018-05-11)
+------------------
+
+- Be able to provide comma separated `permissions` param to `@canido`
+  [vangheem]
+
+
+3.2.1 (2018-05-10)
+------------------
+
+- Be able to modify file attributes filename, content_type, md5, extension
+  [vangheem]
+
+
+3.2.0 (2018-05-10)
+------------------
+
+- Provide new IDynamicFields and IDynamicFieldValues behaviors
+  [vangheem]
+
+- Be able to use PatchField with nested schemas
+  [vangheem]
+
+- Change Object field to work with dicts and JSON schema
+  [vangheem]
+
+
+3.1.8 (2018-05-06)
+------------------
+
+- Add `type_name` index
+  [vangheem]
+
+
+3.1.7 (2018-05-04)
+------------------
+
+- Provide check_security argument on
+  `guillotina.content.create_content_in_container`
+  [vangheem]
+
+
+3.1.6 (2018-04-30)
+------------------
+
+- Provide asyncio.Lock on transaction manager
+  [vangheem]
+
+
+3.1.5 (2018-04-30)
+------------------
+
+- `guillotina.utils.get_containers` does not change
+  transaction strategy anymore.
+  [vangheem]
+
+
+3.1.4 (2018-04-30)
+------------------
+
+- Fix getting tid for `dbresolve_readcommitted` txn strategy
+  [vangheem]
+
+
+3.1.3 (2018-04-27)
+------------------
+
+- Use database constraints if supported
+  [vangheem]
+
+- Be able to customize oid generator
+  [vangheem]
+
+3.1.2 (2018-04-26)
+------------------
+
+- Revert DB unique constraint implementation
+  [vangheem]
+
+
+3.1.1 (2018-04-26)
+------------------
+
+- Provide testing annotations
+  [vangheem]
+
+- Handle invalid type on content creation with 412
+  [vangheem]
+
+- Fix DUMMY_FILE loading error
+  [vangheem]
+
+
+3.1.0 (2018-04-18)
+------------------
+
+- Use unique constraint instead of doing lookups on existing content for inserts
+  [vangheem]
+
+3.0.8 (2018-04-06)
+------------------
+
+- Fix security on views were not checked correctly as the configured functions
+  are all the same local class
+  [ramon]
+
+- OPTION method not working due to not beeing registered normally as
+  its a special case for CORS
+  [ramon]
+
+
+3.0.7 (2018-04-04)
+------------------
+
+- Fix `change_transaction_strategy` method AttributeError
+  [vangheem]
+
+
+3.0.6 (2018-04-03)
+------------------
+
+- Fix registration issue when multiple routes are registered against the
+  same service class
+  [vangheem]
+
+- Do not store request object on transaction manager object to prevent
+  situations where the wrong transaction will get retrieved
+  [vangheem]
+
+
+3.0.5 (2018-04-03)
+------------------
+
+- Make sure to clean up manually registered utilities
+  [vangheem]
+
+...
+
+You are seeing a truncated changelog.
+
+You can read the `changelog file <https://github.com/plone/guillotina/blob/master/CHANGELOG.rst>`_
+for a complete list.
+
+
+
