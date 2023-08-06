@@ -1,0 +1,17 @@
+t3/__init__.py,sha256=t1KUuqPjqSgjR2i4FQfTOQvlyFCOh3hgE5RCmZBEWrE,188
+t3/_version.py,sha256=G-wxCYbY5v1MuKB2Fpv2OW2BJHczo0xWqs1EipNOgVo,497
+t3/django/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+t3/django/settings.py,sha256=pw8_qoZ_AtyHfVGtUU-KPV6h_Ex8UANl2zGC5oqCE48,5403
+t3/django/storages.py,sha256=-P25mCcjmreDag98VkCTc-YJash_YnUjRhGZuU0CI6U,403
+t3/django/urls.py,sha256=Cd8r_LfydlBprqFr-rQ31NiDxCdzT6mJ2HQsYIArVrM,748
+t3/django/util.py,sha256=XAYqC7E_LdG5AvyGbscRUxRA_UCjhdr9KgaI4GlY-4s,481
+t3/drf/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+t3/drf/settings.py,sha256=CPfx7U7e-7453Xyf6SGEqKzt_0TRjeBazvSDDlbFG5I,522
+t3_core-0.2.3.dist-info/METADATA,sha256=4-lUEhFVnsgqO_Q1EeaWbWisXExF5LvjwrYIWwdQYl4,1918
+t3_core-0.2.3.dist-info/RECORD,,
+t3_core-0.2.3.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+t3_core-0.2.3.dist-info/top_level.txt,sha256=w2JWMyH9dNCEoVJhyUKr_TGgTChlh3Lsd7h9quuq7XM,9
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_smoke.py,sha256=9uztRSNI_mKMmRt6upV8uypLNKEf10PiQs5zEklJ4JE,95
+tests/django/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/django/test_urls.py,sha256=JLpiQf4wOrak6KsX7nY6ErcShUXIF-mvhXWNoNeJVgw,151
