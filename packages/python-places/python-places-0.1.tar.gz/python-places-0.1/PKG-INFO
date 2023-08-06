@@ -1,0 +1,12 @@
+Metadata-Version: 1.0
+Name: python-places
+Version: 0.1
+Summary: A set of classes used for interacting with the Google Places API
+Home-page: https://github.com/alexbotello/python-places
+Author: Alexander J. Botello
+Author-email: alexander.botello@g.austincc.edu
+License: MIT
+Description: # python-places
+        A set of classes used for interacting with the Google Places API
+        
+Platform: UNKNOWN
