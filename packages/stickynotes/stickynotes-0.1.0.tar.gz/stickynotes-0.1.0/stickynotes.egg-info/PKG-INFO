@@ -1,0 +1,29 @@
+Metadata-Version: 1.1
+Name: stickynotes
+Version: 0.1.0
+Summary: Sticky Notes
+Home-page: http://github.com/veeshalsoni/sticky
+Author: Vishal Soni
+Author-email: vishal3soni@gmail.com
+License: GPLv3
+Description: ============
+        Sticky Notes
+        ============
+        Sticky notes for your desktop
+        
+        Features
+        ========
+        *Colorful Text
+        *Colorful Background
+        *Font Increase/Decrease
+        
+        Usage
+        =====
+        from terminal: initsticky
+        To run in background: initsticky & OR nohup initsticky &
+Keywords: StickyNotes Sticky Notes
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
