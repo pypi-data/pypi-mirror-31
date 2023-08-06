@@ -1,0 +1,3 @@
+[console_scripts]
+telemetrise = telemetrise.telemetrise:run
+
