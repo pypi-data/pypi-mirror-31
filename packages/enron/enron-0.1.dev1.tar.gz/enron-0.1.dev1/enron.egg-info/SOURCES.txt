@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+enron/__init__.py
+enron/enron.py
+enron/exceptions.py
+enron.egg-info/PKG-INFO
+enron.egg-info/SOURCES.txt
+enron.egg-info/dependency_links.txt
+enron.egg-info/not-zip-safe
+enron.egg-info/top_level.txt
