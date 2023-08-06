@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: dativatools
+Version: 2.7
+Summary: Useful tools when building data pipelines
+Home-page: https://github.com/dativa4data/dativatools/tree/master
+Author: The Dativa Team
+Author-email: hello@dativa.com
+License: MIT
+Description: UNKNOWN
+Keywords: dativa
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
