@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="/static/style.css" type="text/css" rel="stylesheet">
+  <title> pmaker &mdash; invokation </title>
+
+  <script>
+    function open_solution_window(sol_id) {
+        location = "/invokation/{{uid}}/compilation/" + sol_id;
+    }
+    function open_cell(sol_id, run_id) {
+        location = "/invokation/{{uid}}/result/" + sol_id + "/" + run_id;
+    }
+  </script>
+</head>
+<body>
+  <table border class="collapsed">
+    <tr>
+      <td>test</td>
+      
+      {% for i in range(len(solutions)) %}
+      <td onclick="open_solution_window({{i}})"> {{ escape(solutions[i]) }} </td>
+      {% endfor %}
+    </tr>
+    
+    {% for i in range(len(test_indices)) %}
+    <tr>
+      <td>
+        {% if prob.get_test_by_index(test_indices[i]).has_group() %}
+          {{ test_indices[i] }} ({{ prob.get_test_by_index(test_indices[i]).get_group()}})
+        {% else %}
+          {{ test_indices[i] }}
+        {% endif %}
+      </td>
+      
+      {% for j in range(len(solutions)) %}
+      {{ render_cell(j, i) }}
+      {% endfor %}
+    </tr>
+    {% endfor %}
+    <tr><td class="center_notice" colspan="{{len(solutions) + 1}}">Group stats</td></tr>
+    <tr>
+      <td> Group </td>
+      {% for i in range(len(solutions)) %}
+      <td onclick="open_solution_window({{i}})"> {{ escape(solutions[i]) }} </td>
+      {% endfor %}
+    </tr>
+
+    {% for (group_name, line) in render_stats() %}
+    <tr>
+      <td rowspan="2">
+        {% if group_name == "" %}
+        <span style="font-style: italic">all</span>
+        {% else %}
+        group {{group_name}}
+        {% endif %}
+      </td>
+      
+      {% for j in range(len(solutions)) %}
+      <td><span class="invokation_stat">
+          {% if InvokationStatus.TL in line[j].verdicts %}
+          <span class="was_tl">inf</span>
+          {% else %}
+          {{ "%.1f" % (line[j].time / 1000) }} sec
+          {% endif %},
+          
+          {{ "%.0f" % (line[j].mem / 1000) }} mb</span></td>
+      {% endfor %}
+    </tr>
+    <tr>
+      {% for j in range(len(solutions)) %}
+      <td>
+        {% for verd in line[j].verdicts %}
+        <span class="iverdict iverdict_inline iverdict_{{verd.name}}">
+          {{verd.name}}
+        </span>
+        {% endfor %}
+      </td>
+      {% endfor %}
+    </tr>
+    {% endfor %}
+  </table>
+</body>

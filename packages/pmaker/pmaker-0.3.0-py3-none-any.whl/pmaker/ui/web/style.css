@@ -1,0 +1,102 @@
+table.collapsed {
+  border-collapse: collapse;
+  padding: 4px;
+}
+
+td {
+    padding: 4px;
+}
+
+table.limited {
+  max-width: 1000px;
+}
+
+td#testview_testno {
+  width: 4%;
+}
+
+td#testview_input, td#testview_output {
+  width: 42%;
+}
+
+.data_container {
+  font-family: mono;
+  vertical-align: top;
+  padding: 4px;
+}
+
+td.data {
+    max-width: 800px;
+}
+
+td.center_notice {
+    text-align: center;
+    font-weight: bolder;
+}
+
+span.data_empty {
+    font-style: italic;
+}
+
+td.invokation_cell_RUNNING {
+    background-color: #DDFF62;
+}
+
+td.invokation_cell_CHECKING {
+    background-color: #CDFF1A;
+}
+
+td.invokation_cell_COMPILING span.iverdict {
+    color: #7AA6FF;
+}
+
+td.invokation_cell_INCOMPLETE span.iverdict {
+    color: #8BDDEC;
+}
+
+
+span.iverdict_OK {
+    color: green;
+}
+
+span.iverdict_TL, span.iverdict_TL_OK {
+    color: #910046;
+}
+
+span.iverdict_RE, span.iverdict_TL_RE, span.iverdict_ML, span.iverdict_ML {
+    color: #9E1500;
+}
+
+span.iverdict_WA, span.iverdict_TL_WA {
+    color: #FF2807;
+}
+
+span.iverdict_PE, span.iverdict.TL_PE {
+    color: #FF2807;
+}
+
+span.invokation_stat {
+    font-size: 77%;
+}
+
+span.iverdict {
+    font-family: Courier;
+}
+
+span.iverdict_long {
+    font-family: serif;
+}
+
+a.black_link {
+    color: black;
+    text-decoration: underline;
+}
+
+span.hard_tl {
+    color: #330019;
+}
+
+span.tl_wa {
+    color: #330019;
+    font-weight: bolder;
+}
