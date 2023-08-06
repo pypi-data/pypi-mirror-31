@@ -1,0 +1,8 @@
+six
+cython
+jinja2
+numpy
+PyYAML
+requests
+primer3-py
+click
