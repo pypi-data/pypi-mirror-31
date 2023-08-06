@@ -1,0 +1,15 @@
+bamnostic/__init__.py,sha256=IZWVerOVmm-0g9dmL4favlTggUDCqfLWkTeEhPmtgd0,162
+bamnostic/bai.py,sha256=BOV0-dK37Vtk-WVIdmGFPSOsuYqZH7782toOqAu7WJw,18844
+bamnostic/bgzf.py,sha256=_mnbPoD1Rkoapp6F73RuWS61OeRxOlDM13Xm6BgPpgU,33047
+bamnostic/core.py,sha256=vAGVPbas5W746lhbNp6MqRT9VCZRQ3aFrT5fGNIc5Jg,12418
+bamnostic/utils.py,sha256=E70eSprnYTj_8Yd7mTQqD7x1qYn0CHYKEFhH_iz67Zk,11197
+bamnostic/data/example.bam,sha256=WzI3ZzoEoYzQnHm6Z_dCp8-FkI8B2Vg3LbVmljV5_B4,124630
+bamnostic/data/example.bam.bai,sha256=kyaMnjDJ43RE7ozh2kUI9SVkd6hzBAv2XezKpFLOqQE,176
+bamnostic-0.4.2b7.dist-info/DESCRIPTION.rst,sha256=0XieffssXFIOa1iKIjJ-btaJbCMzqlQy4eNBewingwY,10864
+bamnostic-0.4.2b7.dist-info/METADATA,sha256=YI3alqe8IR_yM2hTPXx8YpoS9RKx5obz_GD_NRdJq-g,12468
+bamnostic-0.4.2b7.dist-info/RECORD,,
+bamnostic-0.4.2b7.dist-info/WHEEL,sha256=kdsN-5OJAZIiHN-iO4Rhl82KyS0bDWf4uBwMbkNafr8,110
+bamnostic-0.4.2b7.dist-info/metadata.json,sha256=qr29JQ-d8fjHyUBhxswJ4nWbvpnnSQMi41L5V_dIBNg,1634
+bamnostic-0.4.2b7.dist-info/top_level.txt,sha256=qb3GSTf207jUmWjRyWbkUbXRYc7PgHOIqkQgwuYllvk,16
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_placeholder.py,sha256=zlFBrttBTQ4RhzrGMeAO-IR7tE-AK09trZfA2p0AqZo,99
