@@ -1,0 +1,8 @@
+include README.md
+include docs/*
+include edam/resources/*
+include edam/resources/configurations
+include edam/resources/flask_related
+include edam/resources/inputs
+include edam/resources/templates
+prune tests*
