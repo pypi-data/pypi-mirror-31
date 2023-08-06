@@ -1,0 +1,3 @@
+[console_scripts]
+thx = saythanks_cli:cli
+

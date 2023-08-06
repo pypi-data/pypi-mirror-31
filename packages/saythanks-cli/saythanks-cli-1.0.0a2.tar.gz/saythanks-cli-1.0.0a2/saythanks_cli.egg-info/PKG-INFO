@@ -1,0 +1,46 @@
+Metadata-Version: 1.1
+Name: saythanks-cli
+Version: 1.0.0a2
+Summary: Say Thanks via Command Line Interface.
+Home-page: https://github.com/timofurrer/saythanks-cli
+Author: Timo Furrer
+Author-email: tuxtimo@gmail.com
+License: MIT
+Description: 
+        # saythanks-cli
+        
+        Say Thanks via CLI!
+        
+        Do you know about @kennethreitz's [saythanks.io](https://saythanks.io) project?
+        It's awesome and you should use it more often!
+        
+        ... And that's exactly why this little CLI tool exists:
+        
+        Use it to conviniently *say thanks* to other people without leaving the terminal! :tada:
+        
+        ```bash
+        python3 -m pip install saythanks-cli
+        ```
+        
+        Say thanks:
+        
+        ```bash
+        echo 'Request is soo great! Thanks.' | thx kennethreitz
+        ```
+        
+        If you don't pipe anything into `thx` it'll pull up your favorite text editor
+        and you can enter your message there. Just save and the message will be sent!
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
