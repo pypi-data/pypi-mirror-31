@@ -1,0 +1,20 @@
+Metadata-Version: 2.0
+Name: rumor-tools
+Version: 0.0.1.dev3
+Summary: A simple rumor detection lib for python
+Home-page: https://github.com/ChenghaoMou/rumor_tools
+Author: MOU Chenghao
+Author-email: mouchenghao@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Education
+Classifier: License :: Free for non-commercial use
+Classifier: Natural Language :: Chinese (Simplified)
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Text Processing :: Filters
+
+UNKNOWN
+
+
