@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: powerline-exitstatus
+Version: 1.0.0
+Summary: A Powerline segment for showing the status of Exit status
+Home-page: https://github.com/shimtom/powerline-exitstatus
+Author: shimtom
+Author-email: shimtom1230@gmail.com
+License: MIT
+Keywords: powerline exit status prompt
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Terminals
+Requires-Dist: powerline-status
+
+UNKNOWN
+
+
