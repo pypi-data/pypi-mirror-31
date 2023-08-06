@@ -1,0 +1,48 @@
+---
+title: Arduinozore - Journal de Travail
+subtitle: Conception OS
+lang: fr
+language: french
+author:
+- lastname: Pedretti
+  firstname: Maël
+- lastname: Neto Da Silva
+  firstname: André
+- lastname: Gander
+  firstname: Laurent
+
+responsable:
+- lastname: Cortinovis
+  firstname: Claudio
+
+date: \today
+pagesize: a4
+
+institut:
+  name: HE-Arc
+  logo: img/logo.jpg
+  logo_scale: 0.6
+
+project_logo: img/arduinozore.png
+project_logo_scale: 0.3
+
+# styles
+#alignment: <alignment>
+fontsize: 12pt
+colorlinks: darkblue
+
+documentclass: scrreprt
+documentoptions: twoside
+
+numbersections: true
+
+abstractontitlepage: true
+
+toc: false
+toc-depth: 2
+lof: false
+
+abstract: |
+    Le projet Arduinozore a été réalisé dans le cadre du cours de Conception OS, un module de 3ème année de Bachelor au sein de la Haute-École Arc — Ingénierie, section Développement Logiciel et Multimédia. Le présent document présente le journal de travail.
+
+---
