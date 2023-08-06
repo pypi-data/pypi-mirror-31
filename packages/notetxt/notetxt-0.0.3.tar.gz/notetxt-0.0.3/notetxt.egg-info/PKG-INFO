@@ -1,0 +1,14 @@
+Metadata-Version: 1.0
+Name: notetxt
+Version: 0.0.3
+Summary: A Python 3+ implementation of note.txt
+Home-page: http://github.com/mrshu/py-notetxt
+Author: Marek Suppa (mr.Shu)
+Author-email: mr@shu.io
+License: MIT
+Description: py-notetxt
+        ==========
+        
+        A Python 3+ implementation of ``note.txt``.
+        
+Platform: UNKNOWN
