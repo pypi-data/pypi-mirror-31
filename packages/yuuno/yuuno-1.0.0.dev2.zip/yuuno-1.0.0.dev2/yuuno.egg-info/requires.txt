@@ -1,0 +1,6 @@
+jupyter
+traitlets
+jinja2
+ipywidgets<7
+pillow
+yuuno-core
