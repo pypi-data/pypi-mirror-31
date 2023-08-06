@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+djangorestframework_date_archive.egg-info/PKG-INFO
+djangorestframework_date_archive.egg-info/SOURCES.txt
+djangorestframework_date_archive.egg-info/dependency_links.txt
+djangorestframework_date_archive.egg-info/requires.txt
+djangorestframework_date_archive.egg-info/top_level.txt
+rest_framework_date_archive/__init__.py
+rest_framework_date_archive/querysets.py
+rest_framework_date_archive/routers.py
+rest_framework_date_archive/views.py
