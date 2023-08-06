@@ -1,0 +1,15 @@
+flask
+numpy
+pandas
+
+[docs]
+pypandoc
+sphinx
+nbsphinx
+sphinxcontrib-napoleon
+
+[examples]
+nltk
+
+[mongo]
+pymongo
