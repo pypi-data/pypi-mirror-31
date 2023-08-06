@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+segmentation/__init__.py
+segmentation/segmentation.pyx
+segmentation.egg-info/PKG-INFO
+segmentation.egg-info/SOURCES.txt
+segmentation.egg-info/dependency_links.txt
+segmentation.egg-info/requires.txt
+segmentation.egg-info/top_level.txt
