@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: nionswift-usim
+Version: 0.1.0
+Summary: A Nion Swift package to simulate a STEM microscope, scanner, and cameras
+Home-page: https://github.com/nion-software/nionswift-usim
+Author: Nion Software
+Author-email: swift@nion.com
+License: GPLv3
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python :: 3.5
+Requires-Python: ~=3.5
+Requires-Dist: nionswift-instrumentation
+
+UNKNOWN
+
+
