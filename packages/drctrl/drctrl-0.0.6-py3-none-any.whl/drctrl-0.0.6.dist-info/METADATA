@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: drctrl
+Version: 0.0.6
+Summary: Automatically configuration tool for DataRobot.
+Home-page: https://github.com/recruit-tech/drctrl
+Author: e-mon
+Author-email: emon18@icloud.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: boto (==2.48.0)
+Requires-Dist: boto3 (==1.6.11)
+Requires-Dist: botocore (==1.9.11)
+Requires-Dist: bz2file (==0.98)
+Requires-Dist: certifi (==2018.1.18)
+Requires-Dist: chardet (==3.0.4)
+Requires-Dist: click (==6.7)
+Requires-Dist: datarobot (==2.6.2)
+Requires-Dist: docopt (==0.6.2)
+Requires-Dist: docutils (==0.14)
+Requires-Dist: idna (==2.6)
+Requires-Dist: jinja2 (==2.10)
+Requires-Dist: jmespath (==0.9.3)
+Requires-Dist: markupsafe (==1.0)
+Requires-Dist: numpy (==1.14.2)
+Requires-Dist: pandas (==0.22.0)
+Requires-Dist: pyaml (==17.12.1)
+Requires-Dist: pykwalify (==1.6.1)
+Requires-Dist: python-dateutil (==2.6.1)
+Requires-Dist: pytz (==2018.3)
+Requires-Dist: pyyaml (==3.12)
+Requires-Dist: requests (==2.18.4)
+Requires-Dist: requests-toolbelt (==0.8.0)
+Requires-Dist: s3transfer (==0.1.13)
+Requires-Dist: scikit-learn (==0.19.1)
+Requires-Dist: scipy (==1.0.0)
+Requires-Dist: six (==1.11.0)
+Requires-Dist: sklearn (==0.0)
+Requires-Dist: smart-open (==1.5.7)
+Requires-Dist: sqlalchemy (==1.2.5)
+Requires-Dist: style (==1.1.0)
+Requires-Dist: trafaret (==1.0.2)
+Requires-Dist: update (==0.0.1)
+Requires-Dist: urllib3 (==1.22)
+
+UNKNOWN
+
+
