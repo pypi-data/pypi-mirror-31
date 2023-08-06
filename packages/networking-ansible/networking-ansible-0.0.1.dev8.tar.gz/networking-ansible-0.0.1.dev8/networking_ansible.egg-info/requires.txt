@@ -1,0 +1,4 @@
+ansible
+ansible_runner
+ncclient
+pbr>=2.0
