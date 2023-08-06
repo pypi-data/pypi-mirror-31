@@ -1,0 +1,27 @@
+Metadata-Version: 2.0
+Name: amr-crypto
+Version: 0.0.1
+Summary: Cryptography for Automatic Meter Reading Systems.
+Home-page: https://github.com/pwitab/amr-crypto
+Author: Henrik Palmlund Wahlgren @ Palmlund Wahlgren Innovative Technology AB
+Author-email: henrik@pwit.se
+License: BSD 3-Clause License
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: cryptography
+
+##########
+amr-crypto
+Cryptography for Automatic Meter Reading Systems.
+
+
+=========
+Changelog
+=========
+
+0.0.1
+=====
+
+First implementation handling SecuritySuite0.
+
+
