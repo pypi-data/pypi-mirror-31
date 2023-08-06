@@ -1,0 +1,63 @@
+#!/usr/bin/env python
+import json
+import sys
+import os
+import requests
+import argparse
+
+from git import Repo
+
+bb_api_host='https://api.bitbucket.org'
+
+jenkins_url=os.environ.get('BUILD_URL')
+jenkins_job=os.environ.get('JOB_NAME')
+jenkins_number=os.environ.get('BUILD_NUMBER')
+
+
+def parse_arguments():
+    PARSER = argparse.ArgumentParser(description="Bitbucket Cloud Build Status Notifier")
+    PARSER.add_argument('-o', '--org', help="Bitbucket org", required=True)
+    PARSER.add_argument('-r', '--repo', help="Repository name", required=True)
+    PARSER.add_argument('-s', '--state', help="State of the build", required=True, choices=['INPROGRESS', 'SUCCESSFUL', 'FAILED'])
+    PARSER.add_argument('-u', '--username', help="Username for bitbucket", required=True)
+    PARSER.add_argument('-p', '--password', help="Password for bitbucket", required=True)
+    return PARSER.parse_args()
+
+
+def get_git_sha():
+    cwd = os.getcwd()
+    try:
+        Repo(cwd)
+        sha = Repo(cwd).head.object.hexsha
+        sha = sha[:7]
+    except Exception as e:
+        print('Couldnt detect git commit - {}'.format(e))
+        sys.exit(1)
+    return sha
+
+
+def main():
+    ARGS = parse_arguments()
+    bb_repo= ARGS.repo
+    bb_org = ARGS.org
+    bb_state = ARGS.state
+    bb_username = ARGS.username
+    bb_password = ARGS.password
+    status_object = {
+                      "state": bb_state,
+                      "key": 'JENKINS-{}'.format(jenkins_number),
+                      "url": jenkins_url,
+                      "description": jenkins_job
+                    }
+    sha = get_git_sha()
+    bb_status_path='{}/2.0/repositories/{}/{}/commit/{}/statuses/build'.format(bb_api_host, bb_org, bb_repo, sha)
+    response = requests.post(bb_status_path, auth=(bb_username, bb_password), json=status_object)
+
+    if response.ok == True:
+        print('Build status successfully updated for {} of {}'.format(sha, bb_repo))
+    else:
+        print('Couldnt update build status!')
+
+
+if __name__ == "__main__":
+    main()
