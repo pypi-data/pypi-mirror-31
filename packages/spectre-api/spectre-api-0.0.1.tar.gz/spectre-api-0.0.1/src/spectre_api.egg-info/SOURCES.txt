@@ -1,0 +1,9 @@
+README.md
+setup.py
+src/spectre-api/__init__.py
+src/spectre-api/spectre.py
+src/spectre_api.egg-info/PKG-INFO
+src/spectre_api.egg-info/SOURCES.txt
+src/spectre_api.egg-info/dependency_links.txt
+src/spectre_api.egg-info/requires.txt
+src/spectre_api.egg-info/top_level.txt
