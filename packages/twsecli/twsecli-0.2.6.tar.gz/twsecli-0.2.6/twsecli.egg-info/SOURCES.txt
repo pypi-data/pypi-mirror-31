@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+test/test_twsecli.py
+twsecli/__init__.py
+twsecli/twsecli.py
+twsecli.egg-info/PKG-INFO
+twsecli.egg-info/SOURCES.txt
+twsecli.egg-info/dependency_links.txt
+twsecli.egg-info/entry_points.txt
+twsecli.egg-info/top_level.txt
