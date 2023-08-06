@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.py
+wagtailbookmarklet/__init__.py
+wagtailbookmarklet/apps.py
+wagtailbookmarklet/tests.py
+wagtailbookmarklet/urls.py
+wagtailbookmarklet/views.py
+wagtailbookmarklet/wagtail_hooks.py
+wagtailbookmarklet.egg-info/PKG-INFO
+wagtailbookmarklet.egg-info/SOURCES.txt
+wagtailbookmarklet.egg-info/dependency_links.txt
+wagtailbookmarklet.egg-info/not-zip-safe
+wagtailbookmarklet.egg-info/top_level.txt
+wagtailbookmarklet/templates/wagtailbookmarklet/bookmarklet.html
