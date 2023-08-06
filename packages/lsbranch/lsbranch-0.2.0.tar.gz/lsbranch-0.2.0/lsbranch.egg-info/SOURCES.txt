@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+lsbranch/__init__.py
+lsbranch/cli.py
+lsbranch.egg-info/PKG-INFO
+lsbranch.egg-info/SOURCES.txt
+lsbranch.egg-info/dependency_links.txt
+lsbranch.egg-info/entry_points.txt
+lsbranch.egg-info/requires.txt
+lsbranch.egg-info/top_level.txt
