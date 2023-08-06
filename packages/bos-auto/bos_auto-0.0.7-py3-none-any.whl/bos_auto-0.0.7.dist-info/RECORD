@@ -1,0 +1,17 @@
+bookied/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bookied/config.py,sha256=kFL9iMlw-U08CLYoEH3u-czt24n1ufbyA26tdsT9JAY,1016
+bookied/endpointschema.py,sha256=5Rhl2wAGXt2BTy-Z75bAATMxny0XytFo9XgDGa9SSDo,2639
+bookied/exceptions.py,sha256=bq6E8exTSCtX-qkh_0wTbQzeMmOI0XF72Y53epG4rz0,840
+bookied/log.py,sha256=AGrc8fIGjgPf_DG2mQ30ROH_TnuswaP1KcQWwOD3Z0g,2907
+bookied/redis_con.py,sha256=esMldmlrUVwwIa3-72eGOtigIW_fnRJJG76yvD2LMps,642
+bookied/web.py,sha256=OHpgzCBHge35zMhrhJnM3R2Iv0W1_b-deJ6_w0scptU,3113
+bookied/cli.py,sha256=NEZ034SlKzrmpun1TalMtmIhW7Kph9GWOolzcj1W8Iw,8327
+bookied/schedule.py,sha256=TuxoCXrBZeuoJU95SR4zJ9Jzu9m7DTt8DMYtSFhFxrc,1728
+bookied/work.py,sha256=47uclBhCI5U3m8x9kWOgKUY2X9euABKiMmQUoYHhXqE,6037
+bos_auto-0.0.7.dist-info/entry_points.txt,sha256=Em3qx7h82fIr6_IOggOgmhAph4f7bOHTX5vB982DGEs,47
+bos_auto-0.0.7.dist-info/top_level.txt,sha256=aLHUv2KV9icHgCID0LgMlYbnyUNNK6-PoBjsSrEoTdM,8
+bos_auto-0.0.7.dist-info/METADATA,sha256=-DsJycIY7nUurvjpHZIr64Tm4T8kl8GXuwWIenBJRJE,2666
+bos_auto-0.0.7.dist-info/DESCRIPTION.rst,sha256=yIVeDc8SwlZs8Rx7DGhDKhgZfPxx8KrQs_5Y5kPJcU8,1601
+bos_auto-0.0.7.dist-info/metadata.json,sha256=EUDMWb63kek7qB_ieNKsWmJAZFBLoXFaEk0gC96k2hg,1278
+bos_auto-0.0.7.dist-info/WHEEL,sha256=-aSo8rHuuPDEFzkcqqQ55pDyCjy25bYMLxSiHWKAOTc,92
+bos_auto-0.0.7.dist-info/RECORD,,
