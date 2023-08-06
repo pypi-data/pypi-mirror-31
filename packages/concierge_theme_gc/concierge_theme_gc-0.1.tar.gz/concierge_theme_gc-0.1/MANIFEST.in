@@ -1,0 +1,5 @@
+include LICENSE
+include README.rst
+recursive-include concierge_theme_gc/static *
+recursive-include concierge_theme_gc/templates *
+include concierge_theme_gc/webpack-stats.json

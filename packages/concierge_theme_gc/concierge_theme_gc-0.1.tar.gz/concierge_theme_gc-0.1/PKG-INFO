@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: concierge_theme_gc
+Version: 0.1
+Summary: The Government of Canada theme for Concierge
+Home-page: https://github.com/Pleio/concierge-theme-gc
+Author: GCTools Team
+Author-email: mark.wooff@tbs-sct.gc.ca
+License: OSI Approved :: European Union Public Licence 1.1 (EUPL 1.1)
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
