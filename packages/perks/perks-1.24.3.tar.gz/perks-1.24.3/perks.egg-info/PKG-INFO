@@ -1,0 +1,22 @@
+Metadata-Version: 1.2
+Name: perks
+Version: 1.24.3
+Summary: A powerful package that provide some interesting function
+Home-page: https://grigoprg.webnode.it
+Author: Marco Della Putta
+Author-email: marcodp183@gmail.com
+Maintainer: Marco Della Putta
+Maintainer-email: marcodp183@gmail.com
+License: GNU License
+Description: 
+        This Library provide several methods for the control of the flow of your program.
+        You can make Recursive a function , change the font color and the background color of your program,
+        improve yourself with the Simple MultiThreading that this library offer.
+        There are also an 'old_perks' library,
+        with the overload of some standard built-in types,
+        like Int, String, List and Float.
+        You can also send an e-mail in a very simple way during your program.
+        There are more and more method to learn so,
+        Good Luck!
+        
+Platform: UNKNOWN
