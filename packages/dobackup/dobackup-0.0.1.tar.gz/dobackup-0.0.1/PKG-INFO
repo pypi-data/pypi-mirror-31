@@ -1,0 +1,30 @@
+Metadata-Version: 1.1
+Name: dobackup
+Version: 0.0.1
+Summary: Automated offline snapshots of digitalocean droplets
+Home-page: https://github.com/jotyGill/digitalocean-backup/
+Author: JGill
+Author-email: joty@mygnu.org
+License: GNU General Public License v3 or later (GPLv3+)
+Description-Content-Type: UNKNOWN
+Description: do-backup
+        
+Keywords: backup,automated-backup,digitalocean,digital-ocean,backups,automation
+Platform: GNU/Linux
+Platform: Ubuntu
+Platform: Debian
+Platform: Kali
+Platform: CentOS
+Platform: Arch
+Platform: Fedora
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: System Administrators
+Classifier: Topic :: Utilities
+Classifier: Topic :: System :: Archiving
+Classifier: Topic :: System :: Archiving :: Backup
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
