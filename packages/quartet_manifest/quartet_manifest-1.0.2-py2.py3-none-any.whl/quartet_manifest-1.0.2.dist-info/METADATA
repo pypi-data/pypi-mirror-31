@@ -1,0 +1,95 @@
+Metadata-Version: 2.0
+Name: quartet-manifest
+Version: 1.0.2
+Summary: Reports back configuration and capabilities to quartet-ui.
+Home-page: https://gitlab.com/serial-lab/quartet_manifest
+Author: SerialLab Corp
+Author-email: slab@serial-lab.com
+License: GPLv3
+Description-Content-Type: UNKNOWN
+Keywords: quartet_manifest
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 1.8
+Classifier: Framework :: Django :: 1.9
+Classifier: Framework :: Django :: 1.10
+Classifier: Framework :: Django :: 2.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+
+=============================
+quartet_manifest
+=============================
+
+.. image:: https://gitlab.com/serial-lab/quartet_manifest/badges/master/pipeline.svg
+    :target: https://gitlab.com/serial-lab/quartet_manifest/commits/master
+
+.. image:: https://gitlab.com/serial-lab/quartet_manifest/badges/master/coverage.svg
+    :target: https://gitlab.com/serial-lab/quartet_manifest/commits/master
+
+Reports back QU4RTET configuration and capabilities to quartet-ui.
+
+Documentation
+-------------
+
+Dependencies
+____________
+First, make sure you have Django_ and the `Django Rest Framework`_ installed and
+you have an active project started.  See the Django and Django Rest Framework
+documentation below if you are unfamiliar with this process.
+
+.. _Django: https://docs.djangoproject.com
+.. _Django Rest Framework: http://www.django-rest-framework.org/
+
+
+Modfiy settings.py
+__________________
+
+To use quartet_manifest in a project, first, add it to your `INSTALLED_APPS`:
+
+.. code-block::text
+
+    INSTALLED_APPS = (
+        ...
+        'rest_framework',
+        'quartet_manifest',
+        ...
+    )
+
+Add the URL patterns
+____________________
+
+In your project's `urls.py`, add quartet_manifest's URL patterns:
+
+.. code-block::python
+
+    from quartet_manifest import urls as quartet_manifest_urls
+
+
+    urlpatterns = [
+        ...
+        path('manifest/', include('quartet_manifest.urls')),
+        ...
+    ]
+
+Test the URL
+____________
+Navigate to the configured host/port and url using the structure below:
+
+http://[your host name]:[your port]/manifest/quartet-manifest/?format=json
+
+You should get a return value as below
+
+.. code-block::javascript
+
+    [..."rest_framework","quartet_manifest","quartet_epcis"...]
+
+
+

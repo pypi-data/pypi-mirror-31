@@ -1,0 +1,17 @@
+quartet_manifest/__init__.py,sha256=ZTipNH6wyC6qsq1H_lZsvJyVruUa1nu3y4EysMdkpuU,22
+quartet_manifest/apps.py,sha256=-1ilrXV_jPkR_GoaiGkCsTwtMACSe9JpWZP2Mwxs1zI,126
+quartet_manifest/models.py,sha256=O9CT1B2F-cVB8elT0EoCJbgkcffjvlmqteqavs4giDg,25
+quartet_manifest/urls.py,sha256=RCnMVxp5tNbhS_D50JQYghqaTPsWU48VTOAqlfvBqy4,202
+quartet_manifest/views.py,sha256=RCztM6FWpCw2hl7RUQk8hdsG4_jpQt2UB42mAxOjqcs,522
+quartet_manifest/inspection/__init__.py,sha256=DBEvErGFXiCKLxBSHQFe3qM4EVBKqtZfYMpOfoFAUW0,691
+quartet_manifest/inspection/inspectors.py,sha256=MuKDIizbrj7xEXuZM9ag7x-NSWKuTo6-cjykBeZP7nE,1040
+quartet_manifest-1.0.2.dist-info/DESCRIPTION.rst,sha256=ShamP12O0A8h7PCgD27CX2UpNmvLwCIKOWtDvFWkyh4,1720
+quartet_manifest-1.0.2.dist-info/METADATA,sha256=ZNEfQIDIisOkFp-hKxmRtfEfsF5hdTez0Vuj44aK4Uk,2700
+quartet_manifest-1.0.2.dist-info/RECORD,,
+quartet_manifest-1.0.2.dist-info/WHEEL,sha256=kdsN-5OJAZIiHN-iO4Rhl82KyS0bDWf4uBwMbkNafr8,110
+quartet_manifest-1.0.2.dist-info/metadata.json,sha256=g64otS3lAW0kFmaoY5Aabmqe1IgLfvTJooYMTTQnte0,1069
+quartet_manifest-1.0.2.dist-info/top_level.txt,sha256=rF9nMK-00CetUbPMHEPOTECUJX3ilF0l1tD9GN2I8nA,23
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/settings.py,sha256=MXlhJZ5ZekD7XuIbYWjAR0VO_N0VIJ67aGh55MUatGM,655
+tests/test_views.py,sha256=r3XYxIW5oV-W0sJspYXSfSCx5IHrvuUXHD6_iXqHUys,489
+tests/urls.py,sha256=4MvnPSfP17I4Z_y-VDqSICe_JIUwnOUblJAIzyiVZ0w,317
