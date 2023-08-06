@@ -1,0 +1,3 @@
+[console_scripts]
+wsc-server = woocommerce_subscription_check.app:main
+
