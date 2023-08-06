@@ -1,0 +1,9 @@
+
+include *.md
+include GPL3.txt
+include doc/*
+include pcbasic/data/USAGE.txt
+include pcbasic/data/*/*
+include pcbasic/lib/README.md
+include pcbasic/compat/*.c
+prune test

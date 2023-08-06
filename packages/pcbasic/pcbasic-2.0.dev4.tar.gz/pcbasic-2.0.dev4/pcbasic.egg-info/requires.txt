@@ -1,0 +1,14 @@
+numpy
+pyserial
+pyparallel
+
+[dev]
+lxml
+markdown
+pylint
+coverage
+cx_Freeze
+
+[full]
+pygame
+pyaudio
