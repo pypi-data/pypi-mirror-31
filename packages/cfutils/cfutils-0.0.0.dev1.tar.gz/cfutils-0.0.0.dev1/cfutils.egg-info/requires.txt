@@ -1,0 +1,7 @@
+matplotlib
+
+[dev]
+pipenv
+
+[test]
+coverage
