@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+pandoc_extract_code.py
+setup.cfg
+setup.py
+pandoc_extract_code.egg-info/PKG-INFO
+pandoc_extract_code.egg-info/SOURCES.txt
+pandoc_extract_code.egg-info/dependency_links.txt
+pandoc_extract_code.egg-info/entry_points.txt
+pandoc_extract_code.egg-info/requires.txt
+pandoc_extract_code.egg-info/top_level.txt
