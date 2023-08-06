@@ -1,0 +1,8 @@
+python-dispatch>=0.0.8
+json-object-factory
+zeroconf
+python-osc
+pid
+
+[kivy]
+kivy>=1.10.0

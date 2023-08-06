@@ -1,0 +1,7 @@
+[console_scripts]
+vidhubcontrol-server = vidhubcontrol.runserver:main
+vidhubcontrol-web = vidhubcontrol.sofi_ui.main:run_app
+
+[gui_scripts]
+vidhubcontrol-ui = vidhubcontrol.kivyui.main:main [kivy]
+
