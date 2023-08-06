@@ -1,0 +1,4 @@
+boto3
+click>=6.7
+pip>=10.0
+packaging>=17.0
