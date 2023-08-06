@@ -1,0 +1,3 @@
+[console_scripts]
+docker-auto-labels = docker_auto_labels.cli:main
+
