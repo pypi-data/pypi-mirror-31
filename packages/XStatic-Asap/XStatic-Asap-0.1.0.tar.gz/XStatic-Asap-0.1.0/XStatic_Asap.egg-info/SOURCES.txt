@@ -1,0 +1,20 @@
+MANIFEST.in
+README.txt
+setup.py
+XStatic_Asap.egg-info/PKG-INFO
+XStatic_Asap.egg-info/SOURCES.txt
+XStatic_Asap.egg-info/dependency_links.txt
+XStatic_Asap.egg-info/namespace_packages.txt
+XStatic_Asap.egg-info/not-zip-safe
+XStatic_Asap.egg-info/top_level.txt
+xstatic/__init__.py
+xstatic/pkg/__init__.py
+xstatic/pkg/asap/__init__.py
+xstatic/pkg/asap/data/fonts/Asap-Bold.otf
+xstatic/pkg/asap/data/fonts/Asap-BoldItalic.otf
+xstatic/pkg/asap/data/fonts/Asap-Italic.otf
+xstatic/pkg/asap/data/fonts/Asap-Medium.otf
+xstatic/pkg/asap/data/fonts/Asap-MediumItalic.otf
+xstatic/pkg/asap/data/fonts/Asap-Regular.otf
+xstatic/pkg/asap/data/fonts/Asap-Symbol.otf
+xstatic/pkg/asap/data/fonts/SIL Open Font License.txt
