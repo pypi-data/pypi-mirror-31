@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+BHClustering/__init__.py
+BHClustering/__version__.py
+BHClustering/functions.py
+BHClustering.egg-info/PKG-INFO
+BHClustering.egg-info/SOURCES.txt
+BHClustering.egg-info/dependency_links.txt
+BHClustering.egg-info/top_level.txt
+test/test.py
