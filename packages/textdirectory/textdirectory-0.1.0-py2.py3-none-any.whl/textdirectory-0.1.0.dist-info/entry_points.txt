@@ -1,0 +1,3 @@
+[console_scripts]
+textdirectory = textdirectory.cli:main
+
