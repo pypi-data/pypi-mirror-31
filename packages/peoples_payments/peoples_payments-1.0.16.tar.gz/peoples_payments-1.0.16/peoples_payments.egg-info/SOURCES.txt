@@ -1,0 +1,10 @@
+README.rst
+setup.cfg
+setup.py
+peoples_payments/__init__.py
+peoples_payments.egg-info/PKG-INFO
+peoples_payments.egg-info/SOURCES.txt
+peoples_payments.egg-info/dependency_links.txt
+peoples_payments.egg-info/not-zip-safe
+peoples_payments.egg-info/requires.txt
+peoples_payments.egg-info/top_level.txt

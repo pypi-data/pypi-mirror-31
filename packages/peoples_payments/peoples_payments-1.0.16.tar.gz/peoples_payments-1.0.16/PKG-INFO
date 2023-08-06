@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: peoples_payments
+Version: 1.0.16
+Summary: Peoples Payments API Python client
+Home-page: https://www.peoplestrust.com/en/peoples-payment-solutions/team/
+Author: Peoples Payments
+Author-email: support@finixpayments.com
+License: MIT License
+Description: Peoples Payments Technologies Python Client
+        
+        [![CircleCI](https://circleci.com/gh/finix-payments/peoples-payments-python.svg?style=svg&circle-token=d363138a4fb6cf28dee4374ff697eec723bc7449)](https://circleci.com/gh/finix-payments/peoples-payments-python)
+        
+        Getting Started
+        `pip install peoples_payments`
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Provides-Extra: tests
