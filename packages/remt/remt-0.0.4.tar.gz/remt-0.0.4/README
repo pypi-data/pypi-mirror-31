@@ -1,0 +1,48 @@
+`remt` - reMarkable tablet tools.
+
+Features
+========
+`remt` project features are
+
+- list files on a reMarkable tablet
+- creating directories on a reMarkable tablet
+- export a notebook or an annotated PDF document from a reMarkable tablet
+- significantly smaller PDF files comparing to the ones exported by the
+  reMarkable tablet
+- support for
+
+  - ballpoint
+  - fineliner
+  - sharp pencil with pencil brush
+  - highlighter
+  - eraser
+
+What does not work yet
+
+- marker
+- tilt pencil
+- brush
+- make pencil brush more like the one on reMarkable tablet
+- make ballpoint brush more like the one on reMarkable tablet
+
+Installation
+============
+
+Create configuration file `~/.config/remt.ini` with contents::
+
+    [connection]
+    host=10.11.99.1
+    user=root
+    password=<your reMarkable tablet password>
+
+Install `remt` project with `pip`, i.e.:
+
+    $ pip install --user remt
+
+Acknowledgements
+================
+Kudos to
+
+- https://github.com/phil777/maxio
+- https://github.com/reHackable/maxio
+- https://github.com/reHackable/scripts
