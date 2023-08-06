@@ -1,0 +1,3 @@
+[console_scripts]
+sentient = sentient_typer.terminal_typer:main
+

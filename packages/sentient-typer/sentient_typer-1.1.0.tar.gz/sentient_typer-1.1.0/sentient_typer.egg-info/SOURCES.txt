@@ -1,0 +1,9 @@
+setup.py
+sentient_typer/__init__.py
+sentient_typer/terminal_typer.py
+sentient_typer.egg-info/PKG-INFO
+sentient_typer.egg-info/SOURCES.txt
+sentient_typer.egg-info/dependency_links.txt
+sentient_typer.egg-info/entry_points.txt
+sentient_typer.egg-info/not-zip-safe
+sentient_typer.egg-info/top_level.txt
