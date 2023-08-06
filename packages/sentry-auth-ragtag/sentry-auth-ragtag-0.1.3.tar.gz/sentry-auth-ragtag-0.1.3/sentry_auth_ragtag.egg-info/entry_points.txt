@@ -1,0 +1,3 @@
+[sentry.apps]
+auth_ragtag = sentry_auth_ragtag
+
