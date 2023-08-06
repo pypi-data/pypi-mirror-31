@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: ahabclient
+Version: 0.0.12
+Summary: AHAB Docker Client Wrapper
+Home-page: UNKNOWN
+Author: Marco Montanari
+Author-email: marco.montanari@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Topic :: Terminals
+Classifier: Topic :: Utilities
