@@ -1,0 +1,16 @@
+HISTORY.txt
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+src/requirementslib/__init__.py
+src/requirementslib/_compat.py
+src/requirementslib/requirements.py
+src/requirementslib/utils.py
+src/requirementslib.egg-info/PKG-INFO
+src/requirementslib.egg-info/SOURCES.txt
+src/requirementslib.egg-info/dependency_links.txt
+src/requirementslib.egg-info/not-zip-safe
+src/requirementslib.egg-info/requires.txt
+src/requirementslib.egg-info/top_level.txt
