@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: rasahub-debug-client
+Version: 0.0.1
+Summary: Debugging for Rasahub
+Home-page: UNKNOWN
+Author: Christian Frommert
+Author-email: christian.frommert@gmail.com
+License: MIT
+Keywords: humhub rasa rasa_core
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Software Development
+Provides-Extra: test
+Requires-Dist: rasahub
+Requires-Dist: rasahub-debug
+Provides-Extra: test
+
+UNKNOWN
+
+
