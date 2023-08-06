@@ -1,0 +1,5 @@
+numpy
+scipy
+cython
+madmom>=0.15.1,<0.15.2
+librosa>=0.5.1,<0.5.2
