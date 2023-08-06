@@ -1,0 +1,3 @@
+[console_scripts]
+data_science_utilities = data_science_utilities.cli:main
+
