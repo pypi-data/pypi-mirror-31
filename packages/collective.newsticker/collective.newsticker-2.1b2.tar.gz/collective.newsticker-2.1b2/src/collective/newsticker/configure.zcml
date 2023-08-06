@@ -1,0 +1,23 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="collective.newsticker">
+
+  <five:registerPackage package="." />
+
+  <i18n:registerTranslations directory="locales" />
+
+  <permission id="collective.newsticker.Setup" title="collective.newsticker: Setup" />
+
+  <include package=".browser" />
+
+  <utility
+      provides="zope.schema.interfaces.IVocabularyFactory"
+      component="collective.newsticker.vocabulary.NewsSourcesVocabulary"
+      name="collective.newsticker.NewsSources"
+      />
+
+  <include file="profiles.zcml" />
+
+</configure>

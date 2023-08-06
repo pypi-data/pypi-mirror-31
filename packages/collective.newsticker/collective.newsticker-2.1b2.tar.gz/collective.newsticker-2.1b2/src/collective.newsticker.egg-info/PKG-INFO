@@ -1,0 +1,204 @@
+Metadata-Version: 2.1
+Name: collective.newsticker
+Version: 2.1b2
+Summary: A horizontal, text-based display dedicated to presenting headlines on a site.
+Home-page: https://github.com/collective/collective.newsticker
+Author: Hector Velarde
+Author-email: hector.velarde@gmail.com
+License: UNKNOWN
+Description: .. image:: https://raw.githubusercontent.com/collective/collective.newsticker/master/docs/newsticker.png
+            :align: left
+            :alt: News Ticker
+            :height: 128px
+            :width: 128px
+        
+        ***********
+        News Ticker
+        ***********
+        
+        .. contents:: Table of Contents
+        
+        Life, the Universe, and Everything
+        ==================================
+        
+        A horizontal, text-based display dedicated to presenting headlines on a site.
+        
+        Features
+        --------
+        
+        - jQuery-based, lightweight and easy to use
+        
+        - Configurable via configlet
+        
+        - Users have full control on what items to display by using collections
+        
+        Mostly Harmless
+        ===============
+        
+        .. image:: http://img.shields.io/pypi/v/collective.newsticker.svg
+           :target: https://pypi.python.org/pypi/collective.newsticker
+        
+        .. image:: https://img.shields.io/travis/collective/collective.newsticker/master.svg
+            :target: http://travis-ci.org/collective/collective.newsticker
+        
+        .. image:: https://img.shields.io/coveralls/collective/collective.newsticker/master.svg
+            :target: https://coveralls.io/r/collective/collective.newsticker
+        
+        Got an idea? Found a bug? Let us know by `opening a support ticket`_.
+        
+        .. _`opening a support ticket`: https://github.com/collective/collective.newsticker/issues
+        
+        Don't Panic
+        ===========
+        
+        Installation
+        ------------
+        
+        To enable this product in a buildout-based installation:
+        
+        1. Edit your buildout.cfg and add ``collective.newsticker`` to the list of eggs to install:
+        
+        .. code-block:: ini
+        
+            [buildout]
+            ...
+            eggs =
+                collective.newsticker
+        
+        After updating the configuration you need to run ''bin/buildout'', which will take care of updating your system.
+        
+        Go to the 'Site Setup' page in a Plone site and click on the 'Add-ons' link.
+        
+        Check the box next to ''News Ticker'' and click the 'Activate' button.
+        
+        Usage
+        -----
+        
+        - Open 'News Ticker' configlet on Plone's 'Site Setup'.
+        
+        - Select the collection containing the items you want to display.
+        
+        That's it! You will see the items included in the collection on a site-wide news ticker.
+        
+        You can click on any item to open it.
+        
+        Screenshots
+        -----------
+        
+        .. figure:: https://github.com/collective/collective.newsticker/raw/master/configlet.png
+            :align: center
+            :height: 870px
+            :width: 730px
+        
+            The configlet.
+        
+        .. figure:: https://github.com/collective/collective.newsticker/raw/master/newsticker.png
+            :align: center
+            :height: 500px
+            :width: 768px
+        
+            The News Ticker in action.
+        
+        .. _`BBC News`: http://www.bbc.co.uk/news/
+        
+        Contributors
+        ============
+        
+        - Héctor Velarde
+        - Danilo G. Botelho
+        - Thiago Tamosauskas
+        - Joaquín Rosales
+        - Gustavo Lepri
+        - Rhodri George (`jQuery News Ticker <http://www.jquerynewsticker.com/>`_)
+        - INCORS (`icon <https://www.iconexperience.com/o_collection/icons/?icon=stock_ticker>`_)
+        
+        Development sponsored by Open Multimedia.
+        
+        Changelog
+        =========
+        
+        2.1b2 (2018-04-23)
+        ------------------
+        
+        - Fix issue with upgrade step rising ``ConfigurationConflictError`` (fixes `#29`_).
+          [hvelarde]
+        
+        - Update screenshots.
+          [tkimnguyen]
+        
+        - Viewlet rendering performance was enhanced.
+          [hvelarde]
+        
+        
+        2.1b1 (2017-03-21)
+        ------------------
+        
+        - Remove needless default factory for ``titleText`` field.
+          [hvelarde]
+        
+        - Add new field to configlet to control whether or not the ticker will be shown.
+          [hvelarde]
+        
+        
+        2.0b1 (2017-03-06)
+        ------------------
+        
+        .. Warning::
+            This version is not compatible with previous ones.
+            If you want to upgrade, uninstall the previous version before installing this one.
+        
+        - Make package compatible with Plone 5.
+          [rodfersou, agnogueira]
+        
+        - Add support to control animation type.
+          [hvelarde]
+        
+        - Register CSS on resource registry.
+          [hvelarde]
+        
+        - Update Brazilian Portuguese and Spanish translations.
+          [hvelarde]
+        
+        - Make control panel configlet accesible to Site Administrator role.
+          [hvelarde]
+        
+        - Allow limiting collection results (closes `#6`_).
+          [hvelarde]
+        
+        - Remove dependency on five.grok.
+          [hvelarde]
+        
+        - Drop support for Python 2.6 and Plone 4.1;
+          Remove dependency on unittest2.
+          [hvelarde]
+        
+        - Miscelaneous fixes.
+          [lepri]
+        
+        
+        1.0rc1 (2012-04-24)
+        -------------------
+        
+        - Initial release.
+        
+        .. _`#6`: https://github.com/collective/collective.newsticker/issues/6
+        .. _`#29`: https://github.com/collective/collective.newsticker/issues/29
+        
+Keywords: plone jquery news ticker
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Plone
+Classifier: Framework :: Plone :: 4.2
+Classifier: Framework :: Plone :: 4.3
+Classifier: Framework :: Plone :: 5.0
+Classifier: Framework :: Plone :: 5.1
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: JavaScript
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Office/Business :: News/Diary
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Provides-Extra: test
