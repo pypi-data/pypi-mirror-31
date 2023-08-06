@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: fakespotipy
+Version: 0.4.0
+Summary: A fake spotipy client. For unit tests and stuff.
+Home-page: https://github.com/rcrdclub/fakespotipy
+Author: @LoisaidaSam
+Author-email: sam.sandberg@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: spotify,spotipy,wrapper,testing,unit testing
+Platform: UNKNOWN
