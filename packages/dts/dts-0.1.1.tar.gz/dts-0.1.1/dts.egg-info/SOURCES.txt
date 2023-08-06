@@ -1,0 +1,12 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+dts
+setup.cfg
+setup.py
+dts/cli.py
+dts.egg-info/PKG-INFO
+dts.egg-info/SOURCES.txt
+dts.egg-info/dependency_links.txt
+dts.egg-info/entry_points.txt
+dts.egg-info/top_level.txt
