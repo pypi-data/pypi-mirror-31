@@ -1,0 +1,12 @@
+checkpointer/__init__.py,sha256=PRnr_UVTPcLng8WIcPKPSWVoeCPzElPotvp-ul5YJ-4,228
+checkpointer/checkpoint.py,sha256=cJJ4jfbKoalMzdwIHv__zemOSb_VyQr2Dgfx76dU8D4,1915
+checkpointer/env.py,sha256=f0ozlvynTUpjDn7UbL64FaouxvwwsYDJg66q-TwX8Jc,281
+checkpointer/function_body.py,sha256=o4n_L4zQPp0pHioIfwMXpmrlaUpbxh9wQbfwJekEFDA,2319
+checkpointer/storage.py,sha256=dIdObiVUCqeJO-EcQpF4xu48lEzTFW4gTYrqVeKXcsA,1695
+checkpointer/tf.py,sha256=B_Uey9hhii5iOZZaM3HXzk877ZSKHjdBV3fc_K_OdRA,2351
+checkpointer-0.1.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+checkpointer-0.1.dist-info/METADATA,sha256=qFN7PbxrJz_d6bpFPyJ19zg_mX6xO-m4iuK_5LCcHCs,332
+checkpointer-0.1.dist-info/RECORD,,
+checkpointer-0.1.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+checkpointer-0.1.dist-info/metadata.json,sha256=KULcBqAf3xopGnyivajF7Fb2ApYVm2H2CL6qh3vDkwo,513
+checkpointer-0.1.dist-info/top_level.txt,sha256=uF0eyHpShnsHI3sobErnhQ8LWCT8DPViqAznKeTaZlw,13
