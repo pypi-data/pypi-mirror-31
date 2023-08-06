@@ -1,0 +1,11 @@
+[console_scripts]
+psec = python_secrets.main:main
+python_secrets = python_secrets.main:main
+
+[python_secrets]
+groups list = python_secrets.groups:GroupsList
+groups show = python_secrets.groups:GroupsShow
+secrets generate = python_secrets.secrets:SecretsGenerate
+secrets set = python_secrets.secrets:SecretsSet
+secrets show = python_secrets.secrets:SecretsShow
+
