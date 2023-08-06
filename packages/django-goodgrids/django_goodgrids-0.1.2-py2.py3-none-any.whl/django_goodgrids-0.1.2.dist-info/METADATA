@@ -1,0 +1,96 @@
+Metadata-Version: 2.1
+Name: django-goodgrids
+Version: 0.1.2
+Summary: Create Excel files from CSVs using the GoodGrids API, based on an example Excel file template.
+Home-page: https://github.com/goodgrids/django-goodgrids
+Author: Evertabs LLC
+Author-email: support@goodgrids.com
+License: MIT License
+Project-URL: GoodGrids, https://goodgrids.com
+Project-URL: Source, https://github.com/goodgrids/django-goodgrids
+Project-URL: PyPi, https://pypi.org/project/django-goodgrids
+Project-URL: Tracker, https://github.com/goodgrids/django-goodgrids/issues
+Keywords: csv excel spreadsheet conversion
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 1.11
+Classifier: Framework :: Django :: 2.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Office/Business
+Classifier: Topic :: Utilities
+Classifier: Topic :: Office/Business :: Office Suites
+Classifier: Topic :: Office/Business :: Financial :: Spreadsheet
+Requires-Python: >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*
+Description-Content-Type: text/markdown
+Requires-Dist: Django (>=1.11)
+Requires-Dist: requests (>=2)
+
+# django-goodgrids
+Django API for creating Excel files from CSV using the [web-based GoodGrids API](https://goodgrids.com).
+
+# About GoodGrids
+
+[GoodGrids](https://goodgrids.com) is a service for creating Excel files from CSV files programmatically. You upload an example Excel file to serve as a template. You can then use the GoodGrids API to create Excel files from CSV files based on this template. You can style cells, include formulas, and avoid all the issues that plague CSV files.
+
+# Using GoodGrids with class-based views
+
+Let's assume your Django application already has a class-based view `DownloadDataCSVView` that returns a CSV file for your users to download. To create a view that let's your users download Excel files, use the following snippet:
+
+```python
+from django_goodgrids.views import DownloadDataAsExcelView
+
+class DownloadDataAsExcelView(GoodGridsExcelExportViewMixin, DownloadDataCSVView):
+    goodgrids_api_url = 'https://goodgrids.com/create-excel-file/3a6c0d9ac7c74d'
+    excel_file_name = 'data.xlsx'
+```
+
+Make sure to set `goodgrids_api_url` to your actual API URL.
+
+You can then include this in your `urls.py`:
+
+```python
+url(r'^download-data-as-excel-file/?$',
+    views.DownloadDataAsExcelView.as_view(),
+    name='download_data_as_excel_file'),
+```
+
+# Using Goodgrids with function-based views
+
+Let's assume your Django application already has a function-based view named `download_data_as_csv_view` that returns a CSV file for your users to download. To create a view that let's your users download Excel files, use the following snippet:
+
+```python
+from django_goodgrids.views import create_goodgrids_excel_export_view
+
+download_data_as_excel_view = create_goodgrids_excel_export_view(
+    csv_export_view=download_data_as_csv_view,
+    goodgrids_api_url='https://goodgrids.com/create-excel-file/3a6c0d9ac7c74d',
+    excel_file_name='data.xlsx',
+)
+```
+
+Make sure to set `goodgrids_api_url` to your actual API URL.
+
+You can then include this in your `urls.py`:
+
+```python
+url(r'^download-data-as-excel-file/?$',
+    views.download_data_as_excel_view,
+    name='download_data_as_excel_file'),
+```
+
+
+
+
