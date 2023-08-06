@@ -1,0 +1,12 @@
+setup.py
+conan_clang_update/__init__.py
+conan_clang_update/conan_clang_update.py
+conan_clang_update/main.py
+conan_clang_update/requirements.txt
+conan_clang_update/requirements_test.txt
+conan_clang_update.egg-info/PKG-INFO
+conan_clang_update.egg-info/SOURCES.txt
+conan_clang_update.egg-info/dependency_links.txt
+conan_clang_update.egg-info/entry_points.txt
+conan_clang_update.egg-info/requires.txt
+conan_clang_update.egg-info/top_level.txt
