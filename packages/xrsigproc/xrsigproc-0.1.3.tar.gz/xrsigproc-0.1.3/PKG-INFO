@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: xrsigproc
+Version: 0.1.3
+Summary: Tools for signal processing of Xarray datasets using Python scientific libraries.
+Home-page: https://github.com/kaipak/xrsigproc.git
+Author: Kai Pak
+Author-email: kai@kaipak.org
+License: MIT
+Download-URL: https://github.com/kaipak/xrsigproc.git/tarball/0.1.3/
+Description: Apply convolution to signals using various kernels to filter                        signals into large and small scale components.
+Keywords: FFT,fourier transform,tangent plane,plotting
+Platform: UNKNOWN
