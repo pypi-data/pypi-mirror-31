@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pycoinone
+Version: 2018.4.24
+Summary: Python Coinone API wrapper
+Home-page: http://github.com/gwangyi/pycoinone
+Author: Sungkwang Lee
+Author-email: gwangyi.kr@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: requests
+
+UNKNOWN
+
+
