@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <form method="post">
+                {% csrf_token %}
+                {{ form }}
+                {{ formset.management_form }}
+                <table class="table table-condensed">
+                    {% for form in formset %}
+                        <tr>
+                            <td>    
+                                {% for hidden in form.hidden_fields %}
+                                    {{ hidden }}
+                                {% endfor %}
+                                {{ form.instance.category.description }} 
+                            </td>
+                            <td>{{ form.option }}</td>
+                        </tr>
+                    {% endfor %}
+                    <tr style="text-align: center">
+                        <td colspan="2"><button type="submit" class="btn btn-primary">Update Preferences</button></td>
+                    </tr>
+                </table>
+            </form>                    
+        </div>
+    </div>
+</div>
+{% endblock %}
