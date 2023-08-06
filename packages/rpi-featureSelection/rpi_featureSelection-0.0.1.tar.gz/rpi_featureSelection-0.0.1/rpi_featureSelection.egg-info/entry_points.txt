@@ -1,0 +1,5 @@
+[d3m.primitives]
+rpi_featureSelection.IPCMBplus_Selector = rpi_featureSelection.IPCMBplus_selector:IPCMBplus_Selector
+rpi_featureSelection.JMI_Selector = rpi_featureSelection.JMI_selector:JMI_Selector
+rpi_featureSelection.STMBplus_Selector = rpi_featureSelection.STMBplus_selector:STMBplus_Selector
+
