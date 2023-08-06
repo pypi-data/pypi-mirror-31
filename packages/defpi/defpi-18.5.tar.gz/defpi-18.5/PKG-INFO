@@ -1,0 +1,15 @@
+Metadata-Version: 1.2
+Name: defpi
+Version: 18.5
+Summary: Python module for dEF-Pi
+Home-page: UNKNOWN
+Author: Maarten Kollenstart
+Author-email: maarten.kollenstart@tno.nl
+License: UNKNOWN
+Description: # dEF-Pi Python library
+        
+        Python library for the dEF-Pi platform, to be used to create python services that are able to communicate with other 
+        services in the environment.
+        
+Platform: UNKNOWN
+Requires-Python: ~=3.5
