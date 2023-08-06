@@ -1,0 +1,6 @@
+pyyaml
+six
+database-sanitizer
+
+[mysql]
+PyMySQL
