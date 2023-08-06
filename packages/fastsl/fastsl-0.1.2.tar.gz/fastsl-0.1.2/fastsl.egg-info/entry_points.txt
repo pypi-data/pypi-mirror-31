@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        fast-sl=fastsl.fastsl_cli:main
+    
