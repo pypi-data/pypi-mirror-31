@@ -1,0 +1,16 @@
+Metadata-Version: 1.0
+Name: numbafy
+Version: 0.5
+Summary: UNKNOWN
+Home-page: https://github.com/jankoslavic/numbafy
+Author: Janko Slavič
+Author-email: janko.slavic@fs.uni-lj.si
+License: UNKNOWN
+Description-Content-Type: UNKNOWN
+Description: This a alpha package to lambdify SymPy expressions with Numba
+        
+        For a showcase see: https://github.com/jankoslavic/numbafy/blob/master/Showcase.ipynb
+        =============
+        
+        
+Platform: UNKNOWN
