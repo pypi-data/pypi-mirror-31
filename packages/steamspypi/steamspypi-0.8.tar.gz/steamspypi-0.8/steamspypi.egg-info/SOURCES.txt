@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+steamspypi/__init__.py
+steamspypi/api.py
+steamspypi.egg-info/PKG-INFO
+steamspypi.egg-info/SOURCES.txt
+steamspypi.egg-info/dependency_links.txt
+steamspypi.egg-info/requires.txt
+steamspypi.egg-info/top_level.txt
