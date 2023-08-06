@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: CleanFlow
+Version: 1.0.3a1
+Summary: A framework for cleaning, pre-processing and exploring data in a scalable and distributed manner.
+Home-page: https://github.com/vutsalsinghal/CleanFlow
+Author: Vutsal Singhal
+Author-email: vutsalsinghal@nyu.edu
+License: MIT
+Download-URL: https://github.com/vutsalsinghal/CleanFlow/archive/master.zip
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
