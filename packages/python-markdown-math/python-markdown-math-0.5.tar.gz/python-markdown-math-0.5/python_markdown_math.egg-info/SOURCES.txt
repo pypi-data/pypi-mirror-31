@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+changelog
+mdx_math.py
+setup.cfg
+setup.py
+python_markdown_math.egg-info/PKG-INFO
+python_markdown_math.egg-info/SOURCES.txt
+python_markdown_math.egg-info/dependency_links.txt
+python_markdown_math.egg-info/entry_points.txt
+python_markdown_math.egg-info/top_level.txt
