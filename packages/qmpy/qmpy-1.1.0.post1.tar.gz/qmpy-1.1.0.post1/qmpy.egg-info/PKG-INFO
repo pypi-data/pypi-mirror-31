@@ -1,0 +1,27 @@
+Metadata-Version: 1.1
+Name: qmpy
+Version: 1.1.0.post1
+Summary: Suite of computational materials science tools
+Home-page: http://pypi.python.org/pypi/qmpy
+Author: S. Kirklin
+Author-email: scott.kirklin@gmail.com
+License: LICENSE.txt
+Description-Content-Type: UNKNOWN
+Description: qmpy
+        ====
+        [![Build Status](https://travis-ci.org/wolverton-research-group/qmpy.svg?branch=master)](https://travis-ci.org/wolverton-research-group/qmpy)
+        
+        A toolkit for storing crystal structure data, automating calculations, handing computational resources and performing thermodynamic analysis.
+        
+        Install qmpy with pip or easy install:
+        
+            pip install qmpy
+        
+        or:
+        
+            easy_install -U qmpy
+        
+        For more complete documentation, see: http://oqmd.org/static/docs/index.html
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7

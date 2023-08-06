@@ -1,0 +1,24 @@
+language: python
+sudo: false
+python:
+  - '2.7'
+branches:
+  only:
+    - master
+virtualenv:
+  system_site_packages: true
+before_install:
+  - wget http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh -O miniconda.sh
+  - chmod +x miniconda.sh
+  - ./miniconda.sh -b
+  - export PATH=/home/travis/miniconda2/bin:$PATH
+  - conda update --yes conda
+install: 
+  - conda install --yes python=$TRAVIS_PYTHON_VERSION atlas numpy scipy matplotlib scikit-learn lxml
+  - "python setup.py install"
+before_script:
+  - mysql -e 'create database qmdb_dev;'
+script:
+  - cd qmpy/db
+  - python manage.py syncdb --noinput
+  - python manage.py test qmpy
