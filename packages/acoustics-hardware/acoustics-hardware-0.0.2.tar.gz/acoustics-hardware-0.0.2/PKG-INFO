@@ -1,0 +1,20 @@
+Metadata-Version: 1.0
+Name: acoustics-hardware
+Version: 0.0.2
+Summary: Controlling hardware used in acoustic measurement systems
+Home-page: https://github.com/AppliedAcousticsChalmers/acoustics-hardware
+Author: Carl Andersson
+Author-email: carl.andersson@chalmers.se
+License: MIT
+Description-Content-Type: UNKNOWN
+Description: Acoustics Hardware
+        ==================
+        
+        This Python package provides a unified interface to serveral hardware platforms used in acoustic measurements, e.g. audio interfaces.
+        The purpose of this package is twofold, both to enable cross-hardware interactions with a consistent interface, and to simplify scripting of advanced measurement setups.
+        
+        Documentation:
+            http://acoustics-hardware.readthedocs.io/
+        Source code and issue tracker:
+            https://github.com/AppliedAcousticsChalmers/acoustics-hardware
+Platform: UNKNOWN
