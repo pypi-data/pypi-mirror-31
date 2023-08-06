@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pymbtiles
+Version: 0.2.0
+Summary: MapBox Mbtiles Utilities
+Home-page: https://github.com/consbio/pymbtiles
+Author: Brendan Ward
+Author-email: bcward@consbio.org
+License: ISC
+Platform: UNKNOWN
+Provides-Extra: test
+Requires-Dist: pytest; extra == 'test'
+Requires-Dist: pytest-cov; extra == 'test'
+
+Utility to read and write Mapbox mbtiles
+
+
