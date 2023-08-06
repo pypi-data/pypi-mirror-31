@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: nbopen
+Version: 0.6
+Summary: Open a notebook from the command line in the best available server
+Home-page: https://github.com/takluyver/nbopen
+License: UNKNOWN
+Author: Thomas Kluyver
+Author-email: thomas@kluyver.me.uk
+Requires-Python: >=3.5
+Description-Content-Type: text/x-rst
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Framework :: Jupyter
+Requires-Dist: notebook
+Requires-Dist: nbformat
+
+Open notebooks from the command line
+
+nbopen looks for the nearest running notebook server - if it finds one, it
+opens a web browser to that notebook. If not, it starts a new notebook server
+in that directory.
+
+Installation::
+
+    python3 -m pip install nbopen
+
+Usage::
+
+    nbopen AwesomeNotebook.ipynb
+
+To integrate with your file manager, so you can double click on notebooks
+to open them, run:
+
+* Linux/BSD: ``python3 -m nbopen.install_xdg``
+* Windows: ``python3 -m nbopen.install_win``
+* Mac: Clone the repository and run ``./osx-install.sh``
+
+
