@@ -1,0 +1,12 @@
+varlink/__init__.py,sha256=TVN0rLFYFW8QU1nBvtVhKJ0zhLkRwLvesArRwwhQXsM,1683
+varlink/client.py,sha256=8SyrgF6_ZX5fQIPCISZc5ErrXY96JI0BpH6OX0OXFK0,15965
+varlink/error.py,sha256=Yg_95BmVXK_7pAqj9kH76BsqKiin_AugTeS2rkqI6lk,4183
+varlink/org.varlink.service.varlink,sha256=ImpCk2u7W3oaonrAIIZOPPcJlheAY_Tv9GHIkOCIWDc,910
+varlink/scanner.py,sha256=gHSTf4IMDuq1sAbGqXTk3H4fo-V5kVeU5vXZ46bZL9U,12998
+varlink/server.py,sha256=G9Gk5eKP8LJy03zVwaEz1vyhSmbpYcttzwiZx-ywepE,16681
+varlink-23.dist-info/DESCRIPTION.rst,sha256=daPh-4LLbjKm1PBfyTIFiID6GzbhI-C5IaGLvl-vsOo,67
+varlink-23.dist-info/METADATA,sha256=gqBk1BH0C6Sd_dv1F5G5vMAOHqa6C0rQbanDnvbKJIc,660
+varlink-23.dist-info/RECORD,,
+varlink-23.dist-info/WHEEL,sha256=kdsN-5OJAZIiHN-iO4Rhl82KyS0bDWf4uBwMbkNafr8,110
+varlink-23.dist-info/metadata.json,sha256=zu11JIgMiqtNRUCpnLwBZV1EbM_-tIoJF7nlwikSmpE,760
+varlink-23.dist-info/top_level.txt,sha256=F0cApc8KPLk7JSOl4AoRcELnVcJSyIS5dc6chXzulJ0,8
