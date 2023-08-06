@@ -1,0 +1,9 @@
+README.rst
+setup.py
+django_pycdi/__init__.py
+django_pycdi/middlewares.py
+django_pycdi.egg-info/PKG-INFO
+django_pycdi.egg-info/SOURCES.txt
+django_pycdi.egg-info/dependency_links.txt
+django_pycdi.egg-info/requires.txt
+django_pycdi.egg-info/top_level.txt
