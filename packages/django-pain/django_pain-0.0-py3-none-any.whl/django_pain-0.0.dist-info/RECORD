@@ -1,0 +1,15 @@
+django_pain/__init__.py,sha256=DUv9pptrBL324kD07YmaECXQ7WJPJu7StwiYDjTyUeU,87
+django_pain/apps.py,sha256=_82YgVGM_fVfoCpPhsjX0C3RN-qXgANrTMg4gS4IeP4,223
+django_pain/constants.py,sha256=A4jXf9cNYB5qXXfDm3jGtLRu9uhO04Znk4TP3RBUQN4,287
+django_pain/migrations/0001_initial.py,sha256=Tk56yJNuPE1SHgf8qy4di1DQcSBuqZWBeP6vsfGrFD8,8012
+django_pain/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_pain/models/__init__.py,sha256=mcWfTXAv6ZCn7tTXgJTehtxK_0E0Msjlk7jTa96i7kc,160
+django_pain/models/bank.py,sha256=siLVnJxDsLnr4LZqB9YSztv3kyK9fdcRUdVg4yhrJAo,2236
+django_pain/models/symbols.py,sha256=_9iHe3g6WJOlaYsOQAcVxNdFEzWi7feIwvZxyjX87fQ,656
+django_pain/tests/__init__.py,sha256=guydM15p_AKfKpC3KbEVN2bksC9pkxpjOW8YDZhc07E,20
+django_pain/tests/settings.py,sha256=8tVf5bN0Wy9f7nuneK9XRRqi3OkIaRCjRyDj05VQuPc,169
+django_pain/tests/test_models.py,sha256=G9w24QYVFezHfQmXahPMufc9l3-g6TTZauP0-nzhqRQ,1051
+django_pain-0.0.dist-info/METADATA,sha256=yG_egjoKtyC2JIU6sTvIBjmY5PmnmUCQA3awerNgH1U,1126
+django_pain-0.0.dist-info/RECORD,,
+django_pain-0.0.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+django_pain-0.0.dist-info/top_level.txt,sha256=2Nn70AdvSrl7Bm9rWj6pBWbWmsY1q3VgNswmg6TjA58,12
