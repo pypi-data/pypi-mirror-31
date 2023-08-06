@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: true-case
+Version: 0.1.5
+Summary: Get Case Statistics for Words
+Home-page: https://github.com/blester125/true_case
+Author: blester125
+Author-email: blester125@gmail.com
+License: MIT
+Download-URL: https://github.com/blester125/true_case/archive/0.1.5.tar.gz
+Description: # True Case
+        
+Keywords: NLP
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Natural Language :: English
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
