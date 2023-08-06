@@ -1,0 +1,15 @@
+README.rst
+setup.py
+pysh/__init__.py
+pysh/__main__.py
+pysh/codegen.py
+pysh/il.py
+pysh/interactive.py
+pysh/interpreter.py
+pysh/lexer.py
+pysh/parser.py
+pysh/syntaxnodes.py
+pyshlang.egg-info/PKG-INFO
+pyshlang.egg-info/SOURCES.txt
+pyshlang.egg-info/dependency_links.txt
+pyshlang.egg-info/top_level.txt
