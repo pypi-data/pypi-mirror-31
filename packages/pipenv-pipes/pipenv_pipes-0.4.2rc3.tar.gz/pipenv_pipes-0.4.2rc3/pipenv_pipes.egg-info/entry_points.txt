@@ -1,0 +1,3 @@
+[console_scripts]
+pipes = pipenv_pipes.cli:pipes
+
