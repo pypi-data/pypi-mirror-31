@@ -1,0 +1,12 @@
+diceware_utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+diceware_utils/dir.py,sha256=xMleoTravuFJWUbgAyUIL3D-KbgETSgtX1MolxEQGPo,299
+diceware_utils/generate.py,sha256=uBrn0djVzEEjF89-3qcYQfHJ5b80_cpKE8YFBaLNdOc,631
+diceware_utils/modify.py,sha256=pqNtWYbn240RkEcd9b8c9NtVMlNmp2shK6iTSljlpFk,3137
+diceware_utils/policy.py,sha256=arS7hhFXh_wSdhxlwWcxAhz1J8Ltg3iibNERaoYmWCg,3661
+diceware_utils/wordlist.py,sha256=q-wLVdnbPAI1D6U-xNd8oTy0ZfXiyZsJE2xkOdYWR_o,961
+diceware_utils/database/leetspeak.yaml,sha256=8JN05wT9y0-FYDhA3lgIOOrKQM3GqvsmTo6ZBGcUK14,201
+diceware_utils/database/policy.yaml,sha256=JHz00Gv7JP8ELEWKRAdVkK8nCd4BJCr-7wGrZUa_K_I,111
+diceware_utils-0.5.0.dist-info/METADATA,sha256=asCDKi4FqzaU7wclBHsy605lJH7j1JyEYbQNxWWLrko,3668
+diceware_utils-0.5.0.dist-info/RECORD,,
+diceware_utils-0.5.0.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+diceware_utils-0.5.0.dist-info/top_level.txt,sha256=Nfq3S_WxZ63N7d5QOOhc3bdrswm0SRSxAOQImaGXW7Q,15
