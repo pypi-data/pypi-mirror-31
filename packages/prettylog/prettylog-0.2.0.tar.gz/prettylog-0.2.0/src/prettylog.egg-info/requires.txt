@@ -1,0 +1,13 @@
+colorlog
+fast-json
+
+[:python_version < "3.5"]
+typing>=3.5.3
+
+[develop]
+coverage!=4.3
+pylama
+pytest
+pytest-cov
+timeout-decorator
+tox>=2.4
