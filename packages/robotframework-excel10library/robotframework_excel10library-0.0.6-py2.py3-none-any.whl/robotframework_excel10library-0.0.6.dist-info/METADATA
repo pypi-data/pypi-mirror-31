@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: robotframework-excel10library
+Version: 0.0.6
+Summary: Robot Framework Excel10 library
+Home-page: UNKNOWN
+Author: A.C. Hasper
+Author-email: <achasper@gmail.com>
+License: Apache License 2.0
+Download-URL: https://github.com/InviteAndy/robotframework-excel10library/archive/master.zip
+Keywords: robotframework testing testautomation excel
+Platform: any
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: Robot Framework :: Library
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: Software Development :: Quality Assurance
+Requires-Dist: robotframework (>=3.0.4)
+Requires-Dist: xlwings (>=0.11.7)
+Requires-Dist: natsort (>=3.3.0)
+Requires-Dist: comtypes (>=1.1.4)
+
+This library provides keywords to allow basic control
+over Excel10 (xlsx) files from Robot Framework.
+
+
