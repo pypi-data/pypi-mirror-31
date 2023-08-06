@@ -1,0 +1,11 @@
+Django<2,>=1.11.3
+psycopg2==2.7.1
+pybomojo==0.1.1
+python-slugify<2,>=1.2.4
+
+[test]
+dj-database-url==0.4.2
+freezegun==0.3.10
+mock==2.0.0
+pytest==3.2.0
+pytest-django==3.1.2
