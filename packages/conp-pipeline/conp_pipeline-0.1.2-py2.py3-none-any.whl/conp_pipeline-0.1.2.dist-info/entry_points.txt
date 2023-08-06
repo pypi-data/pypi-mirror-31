@@ -1,0 +1,3 @@
+[console_scripts]
+conp-pipeline = conp_pipeline:conpDriver
+
