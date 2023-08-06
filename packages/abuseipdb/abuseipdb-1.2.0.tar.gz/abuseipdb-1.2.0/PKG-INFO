@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: abuseipdb
+Version: 1.2.0
+Summary: AbuseIPDb wrapper for IP checking and trouble reporting
+Home-page: https://github.com/vsecades/AbuseIpDb
+Author: Valentin Secades M.
+Author-email: vsecades@qxdev.com
+License: UNKNOWN
+Project-URL: Funding, https://www.paypal.me/VSecades/5
+Project-URL: Bug Reports, https://github.com/vsecades/AbuseIpDb/issues
+Project-URL: Source, https://github.com/vsecades/AbuseIpDb/
+Description: # AbuseIpDb
+        ## Wrapper around the AbuseIPDb service API
+        
+        This was a project born of having to do this in an automated fashion for our internal systems, and not finding a decent
+        Python 2.7 package worth installing.
+        
+        Source code can be found here:
+        
+        [https://github.com/vsecades/AbuseIpDb][src].
+        
+        ----
+        
+        
+Keywords: abuseipdb,blacklisting,ip reporting
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Description-Content-Type: text/markdown
+Provides-Extra: test
+Provides-Extra: dev
