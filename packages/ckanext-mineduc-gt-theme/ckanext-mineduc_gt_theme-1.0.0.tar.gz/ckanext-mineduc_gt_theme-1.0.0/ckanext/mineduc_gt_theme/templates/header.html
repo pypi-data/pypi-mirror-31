@@ -1,0 +1,41 @@
+{% block header_wrapper %}
+{% block header_account %}
+{% endblock %}
+  <div class="mainbar">
+    <div class="logos-container">
+      <a class="logo" href="{{ h.url_for('home') }}"><img src="/img/logo_mineduc.png" alt="minfin-logo" /></a>
+      <a class="logo" href="{{ h.url_for('home') }}"><img src="/img/red.png" alt="redciudadana-logo" /></a>  
+    </div>
+    <div class="tabs">
+      {% if not c.userobj %}
+        {% link_for _('Log in'), controller='user', action='login' %}
+      {% endif %}
+      <a href="#" >Encuesta</a>
+      <a href="#" >¿Qué son los datos abiertos?</a>
+      
+    </div>
+  </div>
+  
+  {% if h.current_url() == '/' %}
+  <div class="header-banner">
+    <h1 class="title">Portal de Datos Abiertos</h1>
+    <h2 class="title">del Ministerio de Educación de Guatemala</h2>
+    {% block header_site_search %}
+    
+      <form class="search-bar" action="{% url_for controller='package', action='search' %}" method="get">
+        <input id="field-sitewide-search"
+        type="text" name="q" placeholder="Buscar datos" />
+        <button type="submit">
+          <span>
+            <img src="/img/search.png" />
+          </span></button>
+      </form>
+    
+    {% endblock %}
+  </div>
+  {% endif %}
+      
+</div>
+
+
+{% endblock %}
