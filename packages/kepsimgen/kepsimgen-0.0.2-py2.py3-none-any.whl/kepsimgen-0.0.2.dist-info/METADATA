@@ -1,0 +1,36 @@
+Metadata-Version: 2.0
+Name: kepsimgen
+Version: 0.0.2
+Summary: CLI tool that converts Kepware projects into simulation projects
+Home-page: https://github.com/jmbeach/kep-simgen
+Author: jmbeach
+Author-email: jaredbeachdesign@gmail.com
+License: UNKNOWN
+Keywords: kepware simulation opc
+Platform: UNKNOWN
+Requires-Dist: keppy
+
+kep-simgen
+========
+
+CLI tool for converting Kepware project files so that they use simulation
+devices instead of real device types.
+
+# Overview
+
+kep-simgen uses the library [KEP.py](https://github.com/jmbeach/KEP.py) to
+parse Kepware JSON files. Then it changes the devices in the project to be
+simulated devices and uses appropriate addresses so that you can easily
+simulate a real project with the same tag names.
+
+# Install
+
+`pip install kep-simgen`
+
+# Usage
+
+`$> kep-simgen my-kepware-project.json`
+
+Use `kep-simgen -?` for more detailed instructions
+
+
