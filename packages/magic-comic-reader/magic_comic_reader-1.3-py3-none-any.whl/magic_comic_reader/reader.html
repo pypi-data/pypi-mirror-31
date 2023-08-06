@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css">
+body {
+	margin: 0px;
+	padding: 0px;
+	background-color: #000;
+	touch-action: none;
+	color: #fff;
+	font-family: Arial, Helvetica, sans-serif;
+}
+div#container {
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	overflow: hidden;
+	cursor: default;
+}
+div#subject {
+	width: 50em;
+}
+h1 {
+	margin-top: 0px;
+	font-size: 50px;
+}
+h2 {
+	font-size: 40px;
+}
+p {
+	font-size: 25px;
+	color: #ccc;
+}
+b {
+	color: #fff;
+}
+</style>
+<script type="text/javascript">
+"use strict";
+(function() {
+
+class Transform {
+	constructor() {
+		this.matrix = [ 1, 0, 0, 1, 0, 0 ];
+	}
+	get x() {
+		return this.matrix[4];
+	}
+	get y() {
+		return this.matrix[5];
+	}
+	get zoom() {
+		return this.matrix[0];
+	}
+	set(x, y, zoom) {
+		let newWidth = subject.offsetWidth * zoom;
+		if (newWidth > container.clientWidth) {
+			// Subject cannot be panned past the container's edge.
+			if (x > 0) {
+				x = 0;
+			} else if (x < container.clientWidth - newWidth) {
+				x = container.clientWidth - newWidth;
+			}
+		} else {
+			// Center the subject.
+			x = (container.clientWidth - newWidth) / 2
+		}
+
+		let newHeight = subject.offsetHeight * zoom;
+		if (newHeight > container.clientHeight) {
+			// Subject cannot be panned past the container's edge.
+			if (y > 0) {
+				y = 0;
+			} else if (y < container.clientHeight - newHeight) {
+				y = container.clientHeight - newHeight;
+			}
+		} else {
+			// Center the subject.
+			y = (container.clientHeight - newHeight) / 2
+		}
+		this.matrix[0] = zoom;
+		this.matrix[3] = zoom;
+		this.matrix[4] = x;
+		this.matrix[5] = y;
+		subject.style.transform = 'matrix(' + this.matrix.join(',') + ')';
+	}
+	checkBounds() {
+		this.set(this.matrix[4], this.matrix[5], this.matrix[0]);
+	}
+}
+
+let pageNum = null;
+let mouseDown = {
+	mouseX: 0,
+	mouseY: 0,
+	subjectX: 0,
+	subjectY: 0
+};
+let isLeftDown = false;
+let isRightDown = false;
+let rightWasUsedForScroll = false;
+let container = document.createElement('div');
+let subject = null;
+let transform = new Transform();
+let zoomMode = 0;
+let hideCursorTimeout = null;
+let isCursorHidden = false;
+window.addEventListener("load", handleWindowLoad);
+function handleWindowLoad() {
+	container.id = 'container';
+	document.body.appendChild(container);
+	window.addEventListener("resize", handleWindowResize);
+	window.addEventListener("pointerdown", handlePointerDown);
+	window.addEventListener("pointerup", handlePointerUp);
+	window.addEventListener("pointermove", handlePointerMove);
+	window.addEventListener("keyup", handleKeyUp);
+	window.addEventListener("wheel", handleWheel);
+	window.addEventListener("contextmenu", handleContextMenu);
+	window.addEventListener("hashchange", handleHashChange);
+	handleHashChange();
+}
+function handleWindowResize(event) {
+	transform.checkBounds();
+}
+function handlePointerDown(event) {
+	event.preventDefault();
+	if (event.button === 0) {
+		isLeftDown = true;
+		mouseDown.mouseX = event.pageX;
+		mouseDown.mouseY = event.pageY;
+		mouseDown.subjectX = transform.x;
+		mouseDown.subjectY = transform.y;
+	} else if (event.button === 2) {
+		isRightDown = true;
+		rightWasUsedForScroll = false;
+	}
+}
+function handlePointerUp(event) {
+	event.preventDefault();
+	if (event.button === 0) {
+		isLeftDown = false;
+		if (Math.abs(event.pageX - mouseDown.mouseX) <= 5 &&
+			Math.abs(event.pageY - mouseDown.mouseY) <= 5) {
+			advancePage();
+		}
+	} else if (event.button === 1) {
+		let zoom = null;
+		zoomMode = (zoomMode + 1) % 3;
+		if (zoomMode === 0) { // Native
+			zoom = 1;
+		} else if (zoomMode === 1) { // Fit
+			zoom = Math.min(container.clientWidth / subject.offsetWidth,
+							container.clientHeight / subject.offsetHeight);
+		} else if (zoomMode === 2) { // Fill
+			zoom = Math.max(container.clientWidth / subject.offsetWidth,
+							container.clientHeight / subject.offsetHeight);
+		}
+		transform.set(0, 0, zoom);
+	} else if (event.button === 2) {
+		isRightDown = false;
+		if (!rightWasUsedForScroll) {
+			retreatPage();
+		}
+	}
+}
+function handlePointerMove(event) {
+	window.clearTimeout(hideCursorTimeout);
+	if (isCursorHidden) {
+		showCursor();
+	}
+	hideCursorTimeout = window.setTimeout(hideCursor, 500);
+	if (isLeftDown) {
+		event.preventDefault();
+		let x = mouseDown.subjectX + (event.pageX - mouseDown.mouseX);
+		let y = mouseDown.subjectY + (event.pageY - mouseDown.mouseY);
+		transform.set(x, y, transform.zoom);
+	}
+}
+function handleKeyUp(event) {
+	if (event.key === "ArrowRight" || event.key === " ") {
+		event.preventDefault();
+		advancePage();
+	}
+	else if (event.key === "ArrowLeft") {
+		event.preventDefault();
+		retreatPage();
+	}
+}
+function handleWheel(event) {
+	event.preventDefault();
+	if (event.ctrlKey || isRightDown) {
+		// Zoom on cursor.
+		rightWasUsedForScroll = true;
+		let scaleValue = 1.1;
+		let scaleFactor = event.deltaY > 0 ? 1 / scaleValue : scaleValue;
+		let x = event.pageX + scaleFactor * (transform.x - event.pageX);
+		let y = event.pageY + scaleFactor * (transform.y - event.pageY);
+		let zoom = transform.zoom * scaleFactor;
+		transform.set(x, y, zoom);
+	} else {
+		// Scroll.
+		transform.set(transform.x - event.deltaX, transform.y - event.deltaY, transform.zoom);
+	}
+}
+function handleContextMenu(event) {
+	event.preventDefault();
+}
+function handleHashChange() {
+	if (location.hash.length > 0) {
+		pageNum = parseInt(location.hash.replace('#',''), 10);
+	} else {
+		pageNum = 0;
+	}
+	showPage(pageNum);
+	preloadPage(pageNum + 1);
+}
+function advancePage() {
+	pageNum++;
+	location.hash = pageNum;
+}
+function retreatPage() {
+	pageNum--;
+	location.hash = pageNum;
+}
+function showPage(i) {
+	if (subject != null) {
+		subject.remove();
+	}
+	if (i < 1) {
+		subject = htmlToElement(tutorial);
+		subject.style.transformOrigin = 'left top';
+		container.appendChild(subject);
+		transform.set(0, 0, transform.zoom);
+	} else if (i <= imageUrls.length) {
+		subject = new Image();
+		subject.style.transformOrigin = 'left top';
+		subject.addEventListener("load", function(event) {
+			transform.set(0, 0, transform.zoom);
+		});
+		container.appendChild(subject);
+		subject.src = imageUrls[i - 1]; // Pages count from 1.
+	} else {
+		subject = htmlToElement(theEnd);
+		subject.style.transformOrigin = 'left top';
+		container.appendChild(subject);
+		transform.set(0, 0, transform.zoom);
+	}
+}
+function preloadPage(i) {
+	if (0 < i <= imageUrls.length) {
+		new Image().src = imageUrls[i - 1]; // Pages count from 1.
+	}
+}
+function hideCursor() {
+	container.style.cursor = 'none';
+	isCursorHidden = true;
+}
+function showCursor() {
+	container.style.cursor = 'default';
+	isCursorHidden = false;
+}
+function htmlToElement(html) {
+	var template = document.createElement('template');
+	template.innerHTML = html.trim();
+	return template.content.firstChild;
+}
+
+let tutorial = `
+	<div id="subject">
+	<h1>The Magic Comic Reader</h1>
+	<h2>Mouse Controls:</h2>
+	<p>
+	<b>Next Page:</b> Click<br />
+	<b>Previous Page:</b> Right-Click<br />
+	<b>Scroll:</b> Wheel<br />
+	<b>Zoom:</b> Wheel while Holding Right-Click, or Wheel while Holding Ctrl<br />
+	<b>Cycle Zoom Between Native, Fit, and Fill:</b> Middle-Click<br />
+	<b>Pan:</b> Click and Drag
+	</p>
+	<h2>Keyboard Controls:</h2>
+	<p>
+	<b>Next Page:</b> Right Arrow or Space<br />
+	<b>Previous Page:</b> Left Arrow
+	</p>
+	<h2>Other:</h2>
+	<p>You may use your browser's back and forward buttons and bookmark any page.</p>
+	</div>
+`;
+
+let theEnd = `
+	<div id="subject">
+	<h1>The End</h1>
+	<p>I hope you enjoyed using <b>The Magic Comic Reader</b></p>
+	</div>
+`;
+
+let imageUrls = {{imageUrls}};
+
+})();
+</script>
+</head>
+<body>
+</body>
+</html>
