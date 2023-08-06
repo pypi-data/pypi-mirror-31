@@ -1,0 +1,20 @@
+Metadata-Version: 2.0
+Name: geojsonvt
+Version: 0.1.0
+Summary: A Python port of JS GeoJSON-VT for generating vector map tiles.
+Home-page: https://github.com/CUUATS/geojson-vt-py
+Author: Matt Yoder
+Author-email: myoder@ccrpc.org
+License: ISC
+Download-URL: https://github.com/CUUATS/geojson-vt-py/archive/0.1.0.tar.gz
+Description-Content-Type: UNKNOWN
+Keywords: geojson vector map tile
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: ISC License (ISCL)
+Classifier: Topic :: Scientific/Engineering :: GIS
+
+A Python port of JS GeoJSON-VT for generating vector map tiles.
+
+
