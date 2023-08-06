@@ -1,0 +1,10 @@
+avro_communication_layer/Producer.py,sha256=ybtCVZ08-qUV-0KZ5UcDW8ttCL9DYRMM-3c_QV1Zn9A,3387
+avro_communication_layer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kafka_communication_layer/Producer.py,sha256=DOoP86kR0wZLGQb4uk1bBBUa44NWTDGNGbWgpqXGvSA,1653
+kafka_communication_layer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+microservices_messaging_layer-1.0.1.dist-info/METADATA,sha256=Vcz_e_mKYVpHySz0F3A7P-RL3pg1aiiTEnL0t1-lFBc,404
+microservices_messaging_layer-1.0.1.dist-info/RECORD,,
+microservices_messaging_layer-1.0.1.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+microservices_messaging_layer-1.0.1.dist-info/top_level.txt,sha256=cfuqAXDT4DW-fi8wPKXp6MDmlcoLjwXW5oCnG1cZf0g,57
+utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+utils/logger.py,sha256=iXT7y7ZiYefDKQYJH3El8W2SGx1I_HhYzr8C25jJDW0,1364
