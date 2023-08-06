@@ -1,0 +1,24 @@
+Metadata-Version: 1.2
+Name: SuZo
+Version: 1.0.6
+Summary: Um comparador automático para labs do sistema SuSy
+Home-page: https://github.com/muztake/suzo
+Author: Henrique Cunha
+Author-email: henrycunh@gmail.com
+License: UNKNOWN
+Description: o susy é chato
+        --------------
+        Comparar as saídas dos testes abertos é tão laborioso que ninguém deveria fazer.
+        Então não faça.
+        
+        instalação
+        ----------
+        Os passos abaixo só funcionarão se você tiver o python configurado nas suas váriaveis de ambiente (algo que você definitivamente deveria fazer).
+        
+        Se não tiver, use esse `tutorial <https://python.org.br/instalacao-windows/>`_.
+        
+        Abre teu terminal/prompt de cmd, e digita ``pip install suzo``, e é isso ai.
+        
+Keywords: comparador parser susy unicamp
+Platform: UNKNOWN
+Requires-Python: >=3
