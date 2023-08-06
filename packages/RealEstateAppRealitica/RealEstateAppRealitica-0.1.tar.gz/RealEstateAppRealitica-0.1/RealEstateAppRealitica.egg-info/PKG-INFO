@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: RealEstateAppRealitica
+Version: 0.1
+Summary: Script that runs a web scraper in a background and gets all available real estates in Balkan area, and filters them by given parameters(country, city, municipality).
+Home-page: https://github.com/urosjevremovic/Real-estate-app
+Author: Uros Jevremovic
+Author-email: jevremovic.uros91@gmail.com
+License: MIT
+Description: 
+        RealEstateAppRealitica
+        -------------
+        
+        Script that runs a web scraper in a background and gets
+        all available real estates in Balkan area, and filters them
+        by given parameters(country, city, municipality).
+        
+        
+        You can get it by downloading it directly or by typing:
+        
+            $ pip install RealEstateAppRealitica
+        
+        After it is installed you can start it by simply typing in your terminal:
+        
+            $ realitica_real_estate
+        
+        Results will be printed in terminal window, and saved into CSV
+        file for easier browsing.
+        
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown

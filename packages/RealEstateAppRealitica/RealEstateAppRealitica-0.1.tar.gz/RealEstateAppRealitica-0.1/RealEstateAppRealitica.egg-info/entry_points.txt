@@ -1,0 +1,3 @@
+[console_scripts]
+realitica_real_estate = RealEstateApp.real_estate_app_2:main
+
