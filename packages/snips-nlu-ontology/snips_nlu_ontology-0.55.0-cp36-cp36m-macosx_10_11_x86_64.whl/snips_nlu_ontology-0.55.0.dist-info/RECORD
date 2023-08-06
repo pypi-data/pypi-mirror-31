@@ -1,0 +1,10 @@
+snips_nlu_ontology/__init__.py,sha256=qShv-POKz-4kUWv41aJ9KEszWcXyeUnvb8jitAzeoqA,239
+snips_nlu_ontology/__version__,sha256=rGxxaPSYlyDcRQXIXqidfP29V_FPkDu4aJzSPJku0Z4,7
+snips_nlu_ontology/builtin_entities.py,sha256=Jt33HJA0yvP-W230JN8uOhf-SMhNeRgOJgyEQdHXsxU,6468
+snips_nlu_ontology/utils.py,sha256=7gav1eXJ4OPRTxXP471Fikvb3Y8DjNNRSFJgJSPSy80,723
+snips_nlu_ontology/dylib/.gitignore,sha256=x3RG5yaqf1zISNEpGwZUEQExJiMnrZn7bTAQJcg97og,18
+snips_nlu_ontology/dylib/libsnips_nlu_ontology_rs.cpython-36m-darwin.so,sha256=8-ZXCP_nBLI6e1HZPIcUxsIs0btLcwVC-UIoBE2XDro,21003628
+snips_nlu_ontology-0.55.0.dist-info/METADATA,sha256=dbWvTMJbg_Z2baAK__aVTIH_l5S_5ZDeGjs5VCxA1qg,1375
+snips_nlu_ontology-0.55.0.dist-info/RECORD,,
+snips_nlu_ontology-0.55.0.dist-info/WHEEL,sha256=sVUHtJ1JZFw3DdtvxyZ2y15YaeBB-c4n05yjzhAOdbo,111
+snips_nlu_ontology-0.55.0.dist-info/top_level.txt,sha256=vT89tlUoS0LmUtvdSMdxHFjofNhXoGVGPBs0izTR2Xw,19
