@@ -1,0 +1,15 @@
+zeitig/__init__.py,sha256=IMjkMO3twhQzluVTo8Z6rE7Eg-9U79_LGKMcsWLKBkY,22
+zeitig/aggregates.py,sha256=lHdw5noaso5RNBLNzdcJZhMXah4T0N92irU2vj5TJac,4330
+zeitig/debug.py,sha256=bIwSheWsVMYlBYQJCl4gCIqNN9-i5gHQrlJf1zfEkcI,546
+zeitig/events.py,sha256=ViuOYXmbMRmRU5BfbvdkTG30JMuVz6tXD52rPtLdpBk,10630
+zeitig/reporting.py,sha256=yXDh_dRwVm1qT9P4YgP5m6uZPDZ8EgFrbniQzK5ei_g,7189
+zeitig/scripts.py,sha256=8Xr2C5Q5TFQxfZzujInEr6iSYZKNPhrJtbnoyari6Aw,6025
+zeitig/sourcing.py,sha256=jzD_AEcKv3Nx_B3m4caMJ1CoFxFbct2QttVqafFMROQ,3712
+zeitig/store.py,sha256=2YhhuQUkzPxFXFh_-Gf4-PVdWl9BkU8FAaWpdCtZ_k0,6712
+zeitig/utils.py,sha256=jWSyWtfSk4s2N8hSkgeTjeKxDF3JA_R6r0tbonrkw6k,737
+zeitig/templates/console,sha256=NlU7gaEtn1Zj0B88FJzptQfztZIGymU7KgvhdL5-OZQ,1226
+zeitig-0.1.0.dist-info/METADATA,sha256=FtjFh1Pqjsmo83mUs28PKeWVrEBts7aJN2pP8nFxKx8,7407
+zeitig-0.1.0.dist-info/RECORD,,
+zeitig-0.1.0.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+zeitig-0.1.0.dist-info/entry_points.txt,sha256=SBNxs_9mW63RJC-kUGdeeVJZ3amkFK11KrtRATDp8lY,42
+zeitig-0.1.0.dist-info/top_level.txt,sha256=BWLAaO-KOmMouAVnR6zlGC98ZPjPhjIG2HVlCSitCxM,7
