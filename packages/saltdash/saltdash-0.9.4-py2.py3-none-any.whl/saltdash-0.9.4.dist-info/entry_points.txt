@@ -1,0 +1,5 @@
+[console_scripts]
+manage.py = saltdash:config.django_manage
+saltdash = saltdash:config.django_manage
+saltdash-generate-config = saltdash:generate_config
+

@@ -1,0 +1,18 @@
+{% extends "dash/base.html" %}
+{% block title %}Jobs : {{ job.jid }}{% endblock %}
+{% block nav-jobs-active %}active{% endblock %}
+{% block breadcrumbs %}
+  <a class="breadcrumb-item" href="{% url "dash:job_list" %}">Jobs</a>
+  <span class="breadcrumb-item active">{{ job.jid }}</span>
+{% endblock %}
+
+{% block container %}
+  <div class="alert alert-secondary" role="alert">
+    {% include "dash/_job_summary.html" %}
+  </div>
+
+  {% for result in object_list %}
+    {% include "dash/_result_card.html" with collapsed="true" %}
+  {% endfor %}
+  {% include "dash/_pagination.html" %}
+{% endblock %}
