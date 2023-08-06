@@ -1,0 +1,15 @@
+bandersnatch/__init__.py,sha256=QatzT9GvAlv73Fb0l7QW10QJnGRf6eWwt7Ov_82tVDM,555
+bandersnatch/buildout.py,sha256=az7owMQU3_qxr1Wonn7qz2-Am5DMMyz2P0O5ukMgBG0,1006
+bandersnatch/default.conf,sha256=g4I9DhxWxXGSGuqdgjo_ijUwBnxzSfOp3wBKsODie50,2706
+bandersnatch/log.py,sha256=ep_Wy6SIprs-_4yuEzH2DRY-pHTdGyyEem0LzYjRpLI,514
+bandersnatch/main.py,sha256=Za8iYVEzgOdJvZoQQk4M5d6fSSkPbTsGECt67bTn7rs,3937
+bandersnatch/master.py,sha256=oaPraNntc9lLXjS5eefnesYOVDzWkq59LDOyGG67T2A,3412
+bandersnatch/mirror.py,sha256=okvrs0LEkwpTtOnuRAbW3RgmIqveTxlZDmcScgf_NlM,14931
+bandersnatch/package.py,sha256=psKucDbAlWVwRKyepllamH9bINlsjttR53OlZXZwSA4,12964
+bandersnatch/release.py,sha256=inCdfOqxz6W-lV9F6O4DNIJfL6Qh7PvTWlGPGAAvUV0,558
+bandersnatch/utils.py,sha256=1QwVvTqMlNWSaIXvCllU1W3z-1B8PfXJWQKyl23m1jI,3022
+bandersnatch-2.2.1.dist-info/METADATA,sha256=K7TqbtJ0yPUkAhpeZVHGCzr_KIQvaMGQc8ukmcjh7rQ,12597
+bandersnatch-2.2.1.dist-info/RECORD,,
+bandersnatch-2.2.1.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+bandersnatch-2.2.1.dist-info/entry_points.txt,sha256=D8eBix4JesywdT7OyQe0Cms5J9EXsz247H5jK559jzc,553
+bandersnatch-2.2.1.dist-info/top_level.txt,sha256=hh24D6iGzlcKpAWYIPMo-MvjWCtRC6VSdLHqdA-cxTs,13
