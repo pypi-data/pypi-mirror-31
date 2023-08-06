@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: RetryMe
+Version: 0.0.2
+Summary: An easy way to retry your code.
+Home-page: https://github.com/xulei890817/retryme
+Author: leixu
+Author-email: lei.xu@grandhonor.net
+License: UNKNOWN
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.5
