@@ -1,0 +1,12 @@
+SimpleSQLite-0.20.3.dist-info/METADATA,sha256=L54eJNFp3gniV7htIhMGlg82C3_Cwc1D4GZtYVVUg2M,11849
+SimpleSQLite-0.20.3.dist-info/RECORD,,
+SimpleSQLite-0.20.3.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+SimpleSQLite-0.20.3.dist-info/top_level.txt,sha256=wMJgqn2bkpiM9DQVy_tvScQlelHzc_ofdV55ZMW8aP4,13
+simplesqlite/__init__.py,sha256=5gkjgBKUV7ir30_ZkJiD5h2u4t9TiD9ZvJOLT4NE9rY,637
+simplesqlite/__version__.py,sha256=aEdFQQoMqHoCNN9vVOIglPKolpkBEe_dsE9PCB2BKnk,280
+simplesqlite/_func.py,sha256=6UBHweosYigIBnxeD9gZVrZC5N_BrBDvcnx9fr3qDN4,4252
+simplesqlite/_logger.py,sha256=XepAnviyCOBo0hXM6KGaLwX4W5MdN_HuKaSu6gMrgW0,1422
+simplesqlite/converter.py,sha256=F9biBPUKwSOJYe_5aLMPTdhqYt3cJoVZKXLPqMa3K5o,2057
+simplesqlite/core.py,sha256=RsopfBAReBNZYtvDMImaZPlvzzFc3QAhar5B9d_Xa9c,52733
+simplesqlite/error.py,sha256=rHxZLi1VXbdVX4h1rPemfBivbBdN0trcT51H8Jhb0iE,1483
+simplesqlite/sqlquery.py,sha256=tvXQokCKGoDv79ldpH2rjxg5y6IY6KBdm-d_w3KaL7M,13121
