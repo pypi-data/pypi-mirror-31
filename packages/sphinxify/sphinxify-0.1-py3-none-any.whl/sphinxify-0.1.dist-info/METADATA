@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: sphinxify
+Version: 0.1
+Summary: Convert Javadoc to Sphinx docstrings.
+Home-page: https://github.com/auscompgeek/sphinxify
+License: UNKNOWN
+Keywords: javadoc sphinx
+Author: David Vo
+Author-email: david@vovo.id.au
+Requires-Python: >=3.6
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
