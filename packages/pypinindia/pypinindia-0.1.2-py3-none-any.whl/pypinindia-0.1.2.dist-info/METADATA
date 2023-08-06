@@ -1,0 +1,14 @@
+Metadata-Version: 2.0
+Name: pypinindia
+Version: 0.1.2
+Summary: Indian Pincodes and related Information
+Home-page: https://github.com/rajacsp/pypinindia
+Author: Raja CSP Raman
+Author-email: raja.csp@gmail.com
+License: Apache2
+Description-Content-Type: UNKNOWN
+Requires-Dist: pypandoc (>=1.4)
+
+pypinindia
+
+
