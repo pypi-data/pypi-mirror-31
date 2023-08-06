@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: rasahub
+Version: 0.2.0
+Summary: Rasahub connects Rasa_core to Humhub Mail
+Home-page: UNKNOWN
+Author: Christian Frommert
+Author-email: christian.frommert@gmail.com
+License: MIT
+Keywords: humhub rasa rasa_core
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Software Development
+Provides-Extra: test
+Requires-Dist: PyYaml
+Provides-Extra: test
+Requires-Dist: rasahub-humhub; extra == 'test'
+Requires-Dist: rasahub-rasa; extra == 'test'
+Requires-Dist: testing.common.database; extra == 'test'
+Requires-Dist: testing.mysqld; extra == 'test'
+
+UNKNOWN
+
+
