@@ -1,0 +1,15 @@
+quasardb/__init__.py,sha256=vcUUfOg6I-SGsMtoIm32q-zXP7CJaKSsgIuBALDtT3o,60453
+quasardb/_qdb.cpython-36m-darwin.so,sha256=kBstxy_hxHZZLzuoBJWR71lS6ds-QJPcNsUCLuJB1PI,1672688
+quasardb/impl.py,sha256=LOi7Qt000nt3YewLUtDD69y8pJcxqFq68Ean1TSj-w0,100803
+quasardb/libc++.1.dylib,sha256=zk-6q9-hTe-7EWs0bAKUcTXrp5RSotei2Sn2WmR-aXA,872332
+quasardb/libc++abi.1.dylib,sha256=O0KB0vF2BHCViIe6IJWrGu9bPZV9CSW-Ku2FLoKQe5Q,301904
+quasardb/libqdb_api.dylib,sha256=ul_Ie5hOe7dDyGHYntyD6J7JWPgOd6GOa_tcDfgUfZE,10740820
+quasardb/qdb_convert.py,sha256=qHehxll2xoqoEg2sb4KwWgLw5JWQRET1q9hjQbEaj20,6114
+quasardb/qdb_enum.py,sha256=cnzBixeDQHB6pkQqyZ_6I_sFH8xWqD1CcjXef86g4V0,2510
+quasardb-2.5.0.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+quasardb-2.5.0.dist-info/METADATA,sha256=2r5DowkDfT8srt4UTcC3p28ggJbrfiavpW2M7v99sQM,910
+quasardb-2.5.0.dist-info/RECORD,,
+quasardb-2.5.0.dist-info/WHEEL,sha256=a4vHxM-7oI6SzeF3Jl7hxy4Zr_DYRiRevs4TRPzDHog,253
+quasardb-2.5.0.dist-info/metadata.json,sha256=0dCqucYmITW5IX_CU4yfcoTYAg1y5CLXgverC1DOWUc,1010
+quasardb-2.5.0.dist-info/top_level.txt,sha256=wlprix4hCywuF1PkgKWYdZeJKq_kgJOqkAvukm_sZQ8,9
+quasardb-2.5.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
