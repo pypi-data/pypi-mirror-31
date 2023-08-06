@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: torchtools
+Version: 0.1.4
+Summary: A High-Level training API on top of PyTorch
+Home-page: https://github.com/Time1ess/torchtools
+Author: Youchen Du
+Author-email: youchen.du@gmail.com
+License: MIT
+Description: A High-Level training API on top of PyTorch with many useful features
+Platform: UNKNOWN
