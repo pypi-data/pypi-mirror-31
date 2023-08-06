@@ -1,0 +1,27 @@
+Metadata-Version: 1.1
+Name: trident-resin-proxy
+Version: 1.0.2
+Summary: Python REST API that acts as a proxy to the Resin Supervisor API and Resin Data API
+Home-page: https://gitlab.com/openrov/trident-resin-proxy
+Author: OpenROV
+Author-email: charles@openrov.com
+License: UNKNOWN
+Description-Content-Type: text/markdown
+Description: # OpenROV Trident Resin Proxy
+        
+        Rest API which serves as a proxy to the Resin Supervisor and Data APIs that the device has access to.
+        
+        ## Install
+        
+        
+        ## Run
+        
+        
+        ## API Documentation
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
