@@ -1,0 +1,5 @@
+rasahub
+rasa-core
+rasa_nlu==0.11.0
+
+[test]
