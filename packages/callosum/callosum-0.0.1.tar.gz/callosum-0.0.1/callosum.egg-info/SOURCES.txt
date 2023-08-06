@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+callosum/__init__.py
+callosum.egg-info/PKG-INFO
+callosum.egg-info/SOURCES.txt
+callosum.egg-info/dependency_links.txt
+callosum.egg-info/requires.txt
+callosum.egg-info/top_level.txt

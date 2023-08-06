@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: callosum
+Version: 0.0.1
+Summary: Callosum RPC Library
+Home-page: https://github.com/lablup/callosum
+Author: Lablup Inc.
+Author-email: joongi@lablup.com
+License: MIT
+Description: Callosum
+        ========
+        
+        Asynchronous multi-channel order-preserving RPC and data streaming library
+        
+        *Corpus callosum* is a bundle of neuron fibers that connects two hemispheres of a human brain.
+        
+        Features
+        --------
+        
+        * Designed for Python asyncio and bases on ZeroMQ
+        * Client authentication and encrypted communication
+        * Persistent multiple messaging channels where each channel is order-preserved
+        * Intrinsic support for error propagation
+        * Supports large-size data streaming via automatic chunking
+        
+        Installation
+        ------------
+        
+        TODO
+        
+        
+        Changes
+        =======
+        
+        2018-05-02
+        ----------
+        
+        * Started the project.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Framework :: AsyncIO
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Communications
+Classifier: Topic :: Internet
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: ci
+Provides-Extra: dev
+Provides-Extra: docs
+Provides-Extra: test
+Provides-Extra: build
