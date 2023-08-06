@@ -1,0 +1,32 @@
+Metadata-Version: 2.0
+Name: honeycomb-framework
+Version: 0.0.10
+Summary: Honeycomb is a honeypot framework
+Home-page: https://github.com/Cymmetria/honeycomb
+Author: Honeycomb - Honeypot Framework
+Author-email: omer.cohen@cymmetria.com
+License: MIT
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Unix
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: six (==1.11.0)
+Requires-Dist: click (==6.7)
+Requires-Dist: attrs (==17.4.0)
+Requires-Dist: PyYAML (==3.12)
+Requires-Dist: requests (==2.18.4)
+Requires-Dist: python-daemon (==2.1.2)
+Requires-Dist: python-json-logger (==0.1.8)
+
+Honeycomb is a honeypot framework
+
+
