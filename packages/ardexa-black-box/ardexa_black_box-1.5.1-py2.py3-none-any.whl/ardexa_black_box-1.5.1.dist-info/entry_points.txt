@@ -1,0 +1,3 @@
+[console_scripts]
+ardexa_black_box = ardexa_black_box:cli
+

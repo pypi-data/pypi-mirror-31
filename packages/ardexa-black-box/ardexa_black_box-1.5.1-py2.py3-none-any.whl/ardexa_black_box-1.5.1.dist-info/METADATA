@@ -1,0 +1,45 @@
+Metadata-Version: 2.0
+Name: ardexa-black-box
+Version: 1.5.1
+Summary: Regularly check key Linux health items and report to a log file
+Home-page: UNKNOWN
+Author: Ardexa Pty Limited
+Author-email: support@ardexa.com
+License: UNKNOWN
+Keywords: ardexa
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown
+Requires-Dist: dnspython
+Requires-Dist: future
+Requires-Dist: psutil
+Requires-Dist: requests
+
+# A Health Checker for Linux
+This python script will regularly check key Linux health items and report to a log file
+
+## Installation
+```
+pip install ardexa-black-box
+```
+
+## Operation and Log Files
+- The cron entry will run the script every 5 minutes.
+- Results will be logged in the file `/var/log/ardexa-black-box.log`
+- If high CPU, or SWAP usage is detected, further details will be logged in the file: `var/log/ardexa-black-box-dumps.log`
+- Log files will be kep for 180 days, and rotated daily
+
+## Changes on Feb 2018. Vers 1.5.0
+1. Collect and log variables from Agent V2.0.0
+2. Allow NS Lookup ardexa.broker.com using 8.8.8.8, if the DNS is bad
+3. Take a copy of resolv.conf at the start of the day. Also take a copy when the DNS is bad
+4. Will now try to ping broker.ardexa.com instead of google.com
+
+
