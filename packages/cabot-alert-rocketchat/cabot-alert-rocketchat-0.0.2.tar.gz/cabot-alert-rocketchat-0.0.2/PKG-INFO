@@ -1,0 +1,35 @@
+Metadata-Version: 1.0
+Name: cabot-alert-rocketchat
+Version: 0.0.2
+Summary: A RocketChat alert plugin for Cabot
+Home-page: https://objectif-libre.com
+Author: Objectif Libre
+Author-email: flavien.hardy@objectif-libre.com
+License: MIT
+Description: Cabot RocketChat Plugin
+        #######################
+        
+        .. image:: https://travis-ci.org/ObjectifLibre/cabot-alert-rocketchat.svg?branch=master
+            :target: https://travis-ci.org/ObjectifLibre/cabot-alert-rocketchat
+        
+        Based on Cabot Hipechat Plugin (https://github.com/cabotapp/cabot-alert-hipchat).
+        
+        This is an alert plugin for the cabot service monitoring tool. It allows you to alert users in a RocketChat channel.
+        
+        Installation
+        ------------
+        
+        * pip
+        
+          .. code-block:: console
+        
+              pip install cabot-alert-rocketchat
+        
+        
+        Dev environment
+        ---------------
+        
+        TODO
+        
+        
+Platform: UNKNOWN
