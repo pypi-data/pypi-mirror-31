@@ -1,0 +1,77 @@
+Metadata-Version: 2.1
+Name: aichat
+Version: 0.0.5
+Summary: A AI virtual assistant chatbot
+Home-page: http://aichat.aira.io
+Author: Aira
+Author-email: github@totalgood.com
+License: mit
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Communications :: Chat
+Classifier: Natural Language :: English
+Provides-Extra: generate
+Provides-Extra: audio
+Provides-Extra: django
+Provides-Extra: all
+Provides-Extra: voice
+Requires-Dist: django
+Requires-Dist: spacy
+Requires-Dist: nltk
+Requires-Dist: scipy
+Requires-Dist: numpy
+Requires-Dist: exrex
+Requires-Dist: regex
+Requires-Dist: pugnlp
+Provides-Extra: all
+Requires-Dist: aichat[generate]; extra == 'all'
+Requires-Dist: aichat[voice]; extra == 'all'
+Requires-Dist: aichat[django]; extra == 'all'
+Provides-Extra: audio
+Requires-Dist: scipy; extra == 'audio'
+Requires-Dist: numpy; extra == 'audio'
+Requires-Dist: pyaudio; extra == 'audio'
+Provides-Extra: django
+Requires-Dist: django; extra == 'django'
+Provides-Extra: generate
+Requires-Dist: exrex; extra == 'generate'
+Provides-Extra: voice
+Requires-Dist: aichat[audio]; extra == 'voice'
+Requires-Dist: deepspeech; extra == 'voice'
+Requires-Dist: SpeechRecognition; extra == 'voice'
+Requires-Dist: pyttsx3; extra == 'voice'
+
+.. image:: https://travis-ci.org/aira/aichat.svg?branch=master
+    :target: https://travis-ci.org/aira/aichat
+======
+aichat
+======
+
+
+A chatbot framework for configuring and testing chatbot dialog specifications. 
+
+
+Description
+===========
+
+`aichat` combines 2 approaches (more to come):
+
+1. pattern matching (grammar-based appraoch)
+2. search (retrieval-based approach)
+
+Like AIML `aichat` allows you to control context and build a graph of behaviors (edges are chatbot actions/utterances). 
+You can hand-craft your behaviors or "machine learn" them from example dialog corpora.
+
+In the future `aichat` will incorporate a knowledge base (a grounding chatbot approach)
+
+Usage
+===========
+
+``` shell
+$ hey Bot, "What's up?"
+I heard you, but I'm not sure what you mean.
+```
+
+
