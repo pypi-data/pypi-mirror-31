@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: vigilance
+Version: 0.1.1
+Summary: A utility for enforcing minimum code coverage
+Home-page: http://pypi:28080/simple/Vigilance/
+Author: Belvedere Trading
+Author-email: jkaye@belvederetrading.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: click (>=6.0)
+Requires-Dist: PyYAML (>=3.0)
+Requires-Dist: voluptuous (>=0.10.0)
+
+UNKNOWN
+
+
