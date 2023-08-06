@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: azure-helper
+Version: 0.1.31
+Summary: Library to allow easier use of Microsoft Azure APIM through python scripts
+Home-page: http://github.com/charlesfindlay/azure_helper
+Author: Charles Findlay
+Author-email: charlesfindlay1984+coding@gmail.com
+License: MIT
+Description: azure_helper
+        ------------
+        
+        This package will allow easier use of common functions used in the Azure API manager without needing powershell.
+        
+Keywords: azure utility
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Environment :: Console
+Classifier: Environment :: MacOS X
