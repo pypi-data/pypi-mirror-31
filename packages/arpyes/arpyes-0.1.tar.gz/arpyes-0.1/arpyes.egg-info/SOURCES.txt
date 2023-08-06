@@ -1,0 +1,8 @@
+setup.cfg
+setup.py
+arpyes/__init__.py
+arpyes.egg-info/PKG-INFO
+arpyes.egg-info/SOURCES.txt
+arpyes.egg-info/dependency_links.txt
+arpyes.egg-info/not-zip-safe
+arpyes.egg-info/top_level.txt
