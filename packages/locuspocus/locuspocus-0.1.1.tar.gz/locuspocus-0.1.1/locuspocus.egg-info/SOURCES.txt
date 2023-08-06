@@ -1,0 +1,17 @@
+README.md
+setup.py
+locuspocus/Chromosome.py
+locuspocus/Exceptions.py
+locuspocus/Fasta.py
+locuspocus/Locus.py
+locuspocus/LocusDist.pyx
+locuspocus/Ontology.py
+locuspocus/Plot.py
+locuspocus/RefLoci.py
+locuspocus/Term.py
+locuspocus/__init__.py
+locuspocus.egg-info/PKG-INFO
+locuspocus.egg-info/SOURCES.txt
+locuspocus.egg-info/dependency_links.txt
+locuspocus.egg-info/requires.txt
+locuspocus.egg-info/top_level.txt
