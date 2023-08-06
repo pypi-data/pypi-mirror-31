@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: channelsmultiplexer
+Version: 0.0.2
+Summary: Multiplexing Consumer for django Channels.
+Home-page: https://github.com/hishnash/channelsmultiplexer
+Author: Matthaus Woolard
+Author-email: matthaus.woolard@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: channels (>=2.1.1)
+Provides-Extra: tests
+Requires-Dist: pytest (~=3.3); extra == 'tests'
+Requires-Dist: pytest-django (~=3.1); extra == 'tests'
+Requires-Dist: pytest-asyncio (~=0.8); extra == 'tests'
+Requires-Dist: coverage (~=4.4); extra == 'tests'
+
+====================
+Channels Multiplexer
+====================
+
+Django Channels v2 does not yet include a Multiplexing Consumer. This project aims to add such an multiplexer.
+
+
+.. image:: https://travis-ci.org/hishnash/djangochannelsrestframework.svg?branch=master
+    :target: https://travis-ci.org/hishnash/djangochannelsrestframework
+
+Install
+-------
+
+.. code-block:: bash
+
+  pip install channelsmultiplexer
+
+
