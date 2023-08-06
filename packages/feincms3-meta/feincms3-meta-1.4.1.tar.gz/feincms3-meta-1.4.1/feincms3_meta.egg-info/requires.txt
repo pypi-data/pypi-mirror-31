@@ -1,0 +1,6 @@
+Django>=1.11
+
+[tests]
+coverage~=4.4
+pytest-django~=3.1
+pytest~=3.3
