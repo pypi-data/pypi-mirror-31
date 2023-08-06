@@ -1,0 +1,123 @@
+{
+  "toil": {
+    "datasources": {
+      "default": {
+        "log_level": "info",
+        "provider": "toil.provider.datasource.AlchemyMySQLDatasourceProvider",
+        "proxy": "",
+        "adapter": "mysql+pymysql",
+        "database": "db_name",
+        "env": "db_env",
+        "host": "host_name",
+        "port": "3306",
+        "user": "user",
+        "password": "password"
+      }
+    },
+    "services": {
+      "oci": {
+        "alias": "oci",
+        "log_level": "debug",
+        "provider": "toil.provider.oci_sdk.OciSdkLib",
+        "proxy": "",
+        "default": {
+          "user": "ocid1.user.oc1...",
+          "fingerprint": "...",
+          "key_file": "~/.oci/oci_api_key.pem",
+          "tenancy": "ocid1.tenancy.oc1...",
+          "region": "us-ashburn-1"
+        },
+        "oci_profile_1": {
+          "user": "ocid1.user.oc1...",
+          "fingerprint": "...",
+          "key_file": "~/.oci/oci_api_key.pem",
+          "tenancy": "ocid1.tenancy.oc1...",
+          "region": "us-ashburn-1"
+        },
+        "oci_profile_2": {
+          "user": "ocid1.user.oc1...",
+          "fingerprint": "...",
+          "key_file": "~/.oci/oci_api_key.pem",
+          "tenancy": "ocid1.tenancy.oc1...",
+          "region": "us-ashburn-1"
+        }
+      },
+      "aws": {
+        "alias": "aws",
+        "log_level": "info",
+        "provider": "toil.provider.aws.AwsLib",
+        "proxy": "proxy-host-name:proxy-port",
+        "default": {
+          "access_key_id": "access_key_id",
+          "account_number": "account_number",
+          "region": "us-east-1",
+          "role_arn": "arn:aws:iam::#########:role/role-name",
+          "role_session_name": "role_session_name",
+          "secret_access_key": "secret_access_key"
+        },
+        "aws_profile_1": {
+          "access_key_id": "access_key_id",
+          "account_number": "account_number",
+          "region": "us-east-1",
+          "role_arn": "arn:aws:iam::#########:role/role-name",
+          "role_session_name": "role_session_name",
+          "secret_access_key": "secret_access_key"
+        }
+      },
+      "chef": {
+        "alias": "chef",
+        "log_level": "debug",
+        "provider": "toil.provider.chefapi.ChefLib",
+        "proxy": "",
+        "default": {
+          "chef_server_url": "chef_server_url",
+          "client_key": "client_key/path/some.pem",
+          "ssl_verify": false,
+          "user": "user"
+        }
+      },
+      "openstack": {
+        "alias": "openstack",
+        "log_level": "info",
+        "provider": "toil.provider.openstack.OpenStackLib",
+        "proxy": "",
+        "default": {
+          "auth_url": "auth_url",
+          "domain": "domain",
+          "password": "password",
+          "project": "project",
+          "region": "region",
+          "user": "user",
+          "user_domain": "user_domain"
+        }
+
+      },
+      "openstack_sdk": {
+        "alias": "openstack_sdk",
+        "log_level": "info",
+        "provider": "toil.provider.openstack_sdk.OpenStackLib",
+        "proxy": "",
+        "default": {
+          "auth_url": "auth_url",
+          "domain": "domain",
+          "password": "password",
+          "project": "project",
+          "region": "region",
+          "user": "user"
+        }
+      },
+      "scalr": {
+        "alias": "scalr",
+        "log_level": "info",
+        "provider": "toil.provider.scalr.ScalrLib",
+        "proxy": "",
+        "default": {
+          "api_key_id": "api_key_id",
+          "api_key_secret": "api_key_secret",
+          "api_url": "api_url",
+          "project_id": "project_id"
+        }
+      }
+    }
+  }
+}
