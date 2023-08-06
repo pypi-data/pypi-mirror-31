@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{{ name }}</h1>
+    <p>Dies ist der Webhook <em>{{name}}</em>.</p>
+    
+    <form method="POST">
+      <input type="hidden" value="Hello, world!" >
+      <button type="submit">Trigger</button>
+    </form>
+{% endblock %}

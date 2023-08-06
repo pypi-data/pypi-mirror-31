@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Login</h1>
+    
+    <form method="POST" action=".">
+      <input
+          type="password"
+          name="api_token"
+          placeholder="Api Token" >
+      <button type="submit">Login</button>
+    </form>
+{% endblock %}

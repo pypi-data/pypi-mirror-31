@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Probe</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="buildversion" content="{{ version }}">
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link href="/static/fa/css/font-awesome.css" rel="stylesheet">
+        <link href="/static/main.css" rel="stylesheet">
+    </head>
+    <body>
+        {% block content %}
+        {% endblock %}
+        <script src="/static/bundle.js?{{ version }}"></script>
+    </body>
+</html>
