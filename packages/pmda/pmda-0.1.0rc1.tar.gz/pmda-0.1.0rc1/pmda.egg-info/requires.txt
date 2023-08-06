@@ -1,0 +1,4 @@
+MDAnalysis>=0.18
+dask
+six
+joblib
