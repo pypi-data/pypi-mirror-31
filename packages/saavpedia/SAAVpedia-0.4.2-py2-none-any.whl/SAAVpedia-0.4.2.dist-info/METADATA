@@ -1,0 +1,26 @@
+Metadata-Version: 2.0
+Name: SAAVpedia
+Version: 0.4.2
+Summary: SAAVpedia python library
+Home-page: https://github.com/SAAVpedia/python
+Author: Young-Mook Kang
+Author-email: ymkang@thylove.org
+License: APACHE 2.0
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+
+# Welcome to SAAVpedia 
+
+
+## What's SAAVpedia
+Python modules for SAAVpedia
+
+## SAAVpedia URL
+https://www.SAAVpedia.org
+
+## Getting Started
+1.Install SAAVpedia Python at the command prompt if you have not yet:   
+
+    $ sudo pip install SAAVpedia
+
+
