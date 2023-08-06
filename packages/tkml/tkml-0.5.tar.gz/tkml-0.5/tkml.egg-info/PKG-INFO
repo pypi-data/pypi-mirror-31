@@ -1,0 +1,143 @@
+Metadata-Version: 1.1
+Name: tkml
+Version: 0.5
+Summary: Tkinter gui representation
+Home-page: https://bitbucket.org/cacilhas/tkml/
+Author: ℜodrigo ℭacilhας
+Author-email: batalema@cacilhas.info
+License: UNKNOWN
+Description: # TkML
+        
+        Library to build [Tkinter](https://docs.python.org/3/library/tkinter.html)
+        structures from [YAML](http://yaml.org/) descriptions.
+        
+        It requires [PyYAML 3.12](http://pyyaml.org/wiki/PyYAML).
+        
+        ## Use
+        
+        ```python
+        import tkml
+        
+        ...
+        
+        with open(filename) as fp:
+            toplevel = tkml.load_fp(fp)
+        ```
+        
+        There is a fixtures factory too:
+        
+        ```python
+        import tkml
+        
+        # With no arguments, it assumes fixtures/ subdirectory neighbor to current script
+        loader = tkml.fixtures()
+        toplevel = loader('my-app.yaml')
+        ```
+        
+        ### API
+        
+        `tkml.load_fp()`:
+        
+        - `fp: io.TextBase`: file pointer to YAML file
+        - `master: tkinter.Misc`: parent widget
+        - `use_tix: bool`: use or not `tix` – defaults to false
+        - `context`: context to `ctx[]`, `argparse.Namespace`,
+          `collections.namedtuple`, or `dict`
+        - returns the toplevel widget
+        
+        `tkml.fixtures()`:
+        
+        - `origin: str`: the directory containing the YAML files, defaults to
+          subdirectory `fixtures/` neighbor to the script calling the factory
+        - returns the loader function
+        
+        Loader function returned by `tkml.fixtures()`:
+        
+        - `fixture: str`: YAML file name under fixtures directory
+        - `master: tkinter.Misc`: parent widget
+        - `use_tix: bool`: use or not `tix` – defaults to false
+        - `context`: context to `ctx[]`, `argparse.Namespace`,
+          `collections.namedtuple`, or `dict`
+        - returns the toplevel widget
+        
+        ## Resource example
+        
+        ```yaml
+        tk:
+          children:
+            - frame:
+                children:
+                  - frame:
+                      children:
+                        - label:
+                            text: _(word-to-search)
+                            pack:
+                              anchor: nw
+                              side: left
+                              expand: false
+                        - entry:
+                            pack:
+                              anchor: ne
+                              side: right
+                              fill: x
+                              expand: true
+                            bind:
+                              <Return>: ctx[search]
+                            focus: null
+                      pack:
+                        anchor: n
+                        fill: x
+                        expand: true
+                  - button:
+                      text: _(search)
+                      command: ctx[search]
+                      pack:
+                        anchor: s
+                        expand: false
+                  - scrolled-text:
+                      call/set_text:
+                        - ctx[set_text]
+                        - "!self"
+                      wrap: word
+                      pack:
+                        anchor: s
+                        fill: both
+                        expand: true
+                pack:
+                  fill: both
+                  expand: true
+        
+          #
+          # Calls after tree is built:
+          #
+        
+          option-add:
+            - "*tearOff"
+            - false
+        
+          # call/* call the CAR (a callable) with CDR as parameters
+          call/set_entry:
+            - ctx[set_entry]
+            - "!frame.!frame.!entry"
+        ```
+        
+        - `ctx[*]` gets a key from the context.
+        - `_(*)` is the [`gettext` function](https://docs.python.org/3/library/gettext.html#gettext.gettext).
+        - `!self` is the current widget.
+        - `!frame.frame2` is the second frame from inside de first frame at top.
+        
+        ## Copyright
+        
+        This library is under
+        [3-Clause BSD License](https://opensource.org/licenses/BSD-3-Clause).
+        
+        You can read the copying text
+        [here](https://bitbucket.org/cacilhas/tkml/src/master/LICENSE.txt).
+        
+Platform: UNKNOWN
+Classifier: Environment :: X11 Applications
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Provides: tkml
