@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: flask-clova
+Version: 0.0.1
+Summary: A Python Library For CEK
+Home-page: https://github.com/HwangWonYo/flask-clova.git
+Author: wonyoHwang
+Author-email: hollal0726@gmail.com
+License: MIT License
+Description: UNKNOWN
+Keywords: CEK,clova,extension,clova-extension-kit
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
