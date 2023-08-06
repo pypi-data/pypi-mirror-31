@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: gpseqc
+Version: 0.0.1
+Summary: GPSeq-based centrality estimation.
+Home-page: https://github.com/ggirelli/gpseq-img-py
+Author: Gabriele Girelli
+Author-email: gabriele.girelli@scilifelab.se
+License: MIT
+Description: gpseq_ce v0.0.1
+        ===
+        
+        A Python3 package that provides tools to estimate the 3D spatial nuclear centrality of genomic regions and compare different centrality rankings.
+        
+Keywords: DNA biology cell centrality nucleus genome region bed
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
+Description-Content-Type: text/markdown
