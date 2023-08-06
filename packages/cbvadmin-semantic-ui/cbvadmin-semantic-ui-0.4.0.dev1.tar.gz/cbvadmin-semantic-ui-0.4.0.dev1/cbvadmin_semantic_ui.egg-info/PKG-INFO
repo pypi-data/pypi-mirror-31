@@ -1,0 +1,61 @@
+Metadata-Version: 1.2
+Name: cbvadmin-semantic-ui
+Version: 0.4.0.dev1
+Summary: Semantic UI template for CBVadmin
+Home-page: https://github.com/roldaojr/cbvadmin
+Author: roldaojr
+Author-email: roldaogjr@gmail.com
+License: GPL
+Description-Content-Type: UNKNOWN
+Description: ====================
+        CBVadmin Semantic UI
+        ====================
+        
+        Template pack for CBVadmin using Semantic UI css framework
+        
+        Require following existing django packages.
+        
+        - crispy-semantic-ui
+        - django-filter
+        
+        Installing and configuring
+        ==========================
+        
+        ``pip install cbvadmin-semantic-ui``
+        
+        Add the following to django settings.py for automatic configuration
+        
+        .. code-block:: python
+        
+            from cbvadmin_semantic_ui.settings import cbvadmin_semantic_ui_settings
+            ...
+            cbvadmin_semantic_ui_settings(vars())
+        
+        Or do manual config
+        
+        .. code-block:: python
+        
+            INSTALLED_APPS = [
+                ...
+                'cbvadmin_semantic_ui',
+                'semantic_ui'
+            ]
+            ...
+            CBVADMIN_TEMPLATE_PACK': 'semantic-ui',
+            CRISPY_TEMPLATE_PACK': 'semantic-ui',
+            CRISPY_ALLOWED_TEMPLATE_PACKS': ('semantic-ui',)
+        
+Keywords: admin,django
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: JavaScript
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3
