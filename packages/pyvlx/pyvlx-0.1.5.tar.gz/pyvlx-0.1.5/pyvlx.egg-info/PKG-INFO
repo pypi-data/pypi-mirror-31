@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: pyvlx
+Version: 0.1.5
+Summary: PyVLX - controling VELUX windows with Python via KLF 200
+Home-page: https://github.com/Julius2342/pyvlx
+Author: Julius Mittenzwei
+Author-email: julius@mittenzwei.com
+License: LGPL
+Download-URL: https://github.com/Julius2342/pyvlx/archive/0.1.5.zip
+Description: UNKNOWN
+Keywords: velux KLF 200 home automation
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: System :: Hardware :: Hardware Drivers
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
