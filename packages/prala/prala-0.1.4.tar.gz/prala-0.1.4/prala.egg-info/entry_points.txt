@@ -1,0 +1,4 @@
+[console_scripts]
+pracon = prala.console:main
+pragui = prala.gui:main
+

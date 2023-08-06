@@ -1,0 +1,5 @@
+pyqt5
+numpy
+pyttsx3
+configparser
+iso639==0.1.4
