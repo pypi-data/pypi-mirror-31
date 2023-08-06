@@ -1,0 +1,203 @@
+
+
+.. _sphx_glr_gallery_plot_ctapipe_dataset.py:
+
+
+===================
+Get ctapipe dataset
+===================
+
+This example show how to get images from ctapipe embedded datasets using
+pywicta image generator and how to print them with pywicta plot functions.
+
+
+
+.. code-block:: python
+
+
+    import pywicta
+    from pywicta.io import geometry_converter
+    from pywicta.io.images import image_generator
+    from pywicta.io.images import plot_ctapipe_image
+
+    import ctapipe
+    from ctapipe.utils.datasets import get_dataset
+
+    import matplotlib.pyplot as plt
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out::
+
+    Warning: Can't read registry to find the necessary compiler setting
+    Make sure that Python modules winreg, win32api or win32con are installed.
+
+
+Ignore warnings.
+
+
+
+.. code-block:: python
+
+
+    import warnings
+    warnings.filterwarnings('ignore')
+
+
+
+
+
+
+
+Print the list of available ctapipe extra resources.
+
+
+
+.. code-block:: python
+
+
+    print(ctapipe.utils.datasets.find_all_matching_datasets(''))
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out::
+
+    ['VERSION.py', '__pycache__', 'gamma_test.simtel.gz', 'HESS-I.camgeom.fits.gz', 'atmprof26.ecsv.txt', 'CTA-ULTRA6-SCT.cfg', 'PDE_SiPM_SC-MST_Prod3x.dat', 'Reflectance_SC-MST_Prod3.dat', 'atmprof_paranal.dat', 'NectarCam.camgeom.fits.gz', 'SCTCam.camgeom.fits.gz', 'ASTRICam.camgeom.fits.gz', 'optics.ecsv.txt', 'Whipple151.camgeom.fits.gz', 'FACT.camgeom.fits.gz', 'televentlist_img_small.fits.gz', 'paranal.atmprof.fits.gz', 'VERSION~', 'Whipple109.camgeom.fits.gz', 'PROD2_telconfig.fits.gz', 'gamma_test_large.simtel.gz', 'Whipple331.camgeom.fits.gz', '__init__.py', 'VERITAS.camgeom.fits.gz', 'chercam.fits.gz', 'hess_ct001_energylut.fits.gz', 'DigiCam.camgeom.fits.gz', 'LSTCam.camgeom.fits.gz', 'HESS-II.camgeom.fits.gz', 'config.json', 'hess_arraylayout.fits', 'Whipple490.camgeom.fits.gz', 'PulseShape_MPPC_S10943_Shaped_CutOff350MHz_Prod3.dat', 'CHEC.camgeom.fits.gz', 'FlashCam.camgeom.fits.gz', 'hess_camgeom.fits.gz', 'Pulse_Height_Hybrid2_Xtalk5per_norm_Prod3.dat']
+
+
+Get images from ctapipe embedded datasets.
+
+
+
+.. code-block:: python
+
+
+    #SIMTEL_FILE = get_dataset('gamma_test.simtel.gz')
+    SIMTEL_FILE = get_dataset('gamma_test_large.simtel.gz')
+
+
+
+
+
+
+
+Get dataset images using pywicta image generator.
+
+
+
+.. code-block:: python
+
+
+    PATHS = [SIMTEL_FILE]
+    NUM_IMAGES = 3
+
+    CAM_FILTER_LIST = None
+    #CAM_FILTER_LIST = ["LSTCam"]
+
+    it = image_generator(PATHS,
+                         max_num_images=NUM_IMAGES,
+                         ctapipe_format=True,
+                         time_samples=False,
+                         cam_filter_list=CAM_FILTER_LIST)
+
+
+
+
+
+
+
+Plot some images in the gamma test dataset using pywicta plot functions.
+
+
+
+.. code-block:: python
+
+
+    for image in it:
+        title_str = "{} (run {}, event {}, tel {}, {:0.2f} {})".format(image.meta['cam_id'],
+                                                                       image.meta['run_id'],
+                                                                       image.meta['event_id'],
+                                                                       image.meta['tel_id'],
+                                                                       image.meta['mc_energy'][0],
+                                                                       image.meta['mc_energy'][1])
+        geom1d = geometry_converter.get_geom1d(image.meta['cam_id'])
+    
+        # Plot the image with NSB
+        plot_ctapipe_image(image.input_image, geom=geom1d, plot_axis=False, title=title_str)
+        plt.show()
+    
+        # Plot the image without NSB
+        plot_ctapipe_image(image.reference_image, geom=geom1d, plot_axis=False, title=title_str)
+        plt.show()
+
+
+
+.. rst-class:: sphx-glr-horizontal
+
+
+    *
+
+      .. image:: /gallery/images/sphx_glr_plot_ctapipe_dataset_001.png
+            :scale: 47
+
+    *
+
+      .. image:: /gallery/images/sphx_glr_plot_ctapipe_dataset_002.png
+            :scale: 47
+
+    *
+
+      .. image:: /gallery/images/sphx_glr_plot_ctapipe_dataset_003.png
+            :scale: 47
+
+    *
+
+      .. image:: /gallery/images/sphx_glr_plot_ctapipe_dataset_004.png
+            :scale: 47
+
+    *
+
+      .. image:: /gallery/images/sphx_glr_plot_ctapipe_dataset_005.png
+            :scale: 47
+
+    *
+
+      .. image:: /gallery/images/sphx_glr_plot_ctapipe_dataset_006.png
+            :scale: 47
+
+
+
+
+**Total running time of the script:** ( 0 minutes  8.931 seconds)
+
+
+
+.. only :: html
+
+ .. container:: sphx-glr-footer
+
+
+  .. container:: sphx-glr-download
+
+     :download:`Download Python source code: plot_ctapipe_dataset.py <plot_ctapipe_dataset.py>`
+
+
+
+  .. container:: sphx-glr-download
+
+     :download:`Download Jupyter notebook: plot_ctapipe_dataset.ipynb <plot_ctapipe_dataset.ipynb>`
+
+
+.. only:: html
+
+ .. rst-class:: sphx-glr-signature
+
+    `Gallery generated by Sphinx-Gallery <https://sphinx-gallery.readthedocs.io>`_
