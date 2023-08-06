@@ -1,0 +1,20 @@
+digraph {
+	fake [style=invisible]
+	"frozenset({1})" [root=true]
+	"frozenset()"
+	"frozenset({0})" [shape=doublecircle]
+	"frozenset({0, 1})" [shape=doublecircle]
+	fake -> "frozenset({1})" [style=bold]
+	"frozenset({0, 1})" -> "frozenset({0, 1})" [label=c]
+	"frozenset({0, 1})" -> "frozenset({1})" [label=a]
+	"frozenset({0, 1})" -> "frozenset({0})" [label=b]
+	"frozenset()" -> "frozenset()" [label=c]
+	"frozenset()" -> "frozenset()" [label=a]
+	"frozenset()" -> "frozenset()" [label=b]
+	"frozenset({0})" -> "frozenset({0, 1})" [label=c]
+	"frozenset({0})" -> "frozenset({1})" [label=a]
+	"frozenset({0})" -> "frozenset({0})" [label=b]
+	"frozenset({1})" -> "frozenset({0, 1})" [label=c]
+	"frozenset({1})" -> "frozenset({1})" [label=a]
+	"frozenset({1})" -> "frozenset({0})" [label=b]
+}
