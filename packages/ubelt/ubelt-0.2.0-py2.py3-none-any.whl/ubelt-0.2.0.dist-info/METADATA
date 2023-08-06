@@ -1,0 +1,31 @@
+Metadata-Version: 2.0
+Name: ubelt
+Version: 0.2.0
+Summary: A "utility belt" of commonly needed utility and helper functions
+Home-page: https://github.com/Erotemic/ubelt
+Author: Jon Crall
+Author-email: erotemic@gmail.com
+License: Apache 2
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: Pygments
+Requires-Dist: jaraco.windows
+Requires-Dist: six
+Provides-Extra: all
+Requires-Dist: coverage; extra == 'all'
+Requires-Dist: numpy; extra == 'all'
+Requires-Dist: pytest; extra == 'all'
+Requires-Dist: pytest-cov; extra == 'all'
+Requires-Dist: tqdm; extra == 'all'
+Requires-Dist: xdoctest; extra == 'all'
+
+UNKNOWN
+
+
