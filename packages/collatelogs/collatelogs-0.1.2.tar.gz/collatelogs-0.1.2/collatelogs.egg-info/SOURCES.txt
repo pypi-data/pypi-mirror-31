@@ -1,0 +1,14 @@
+README.md
+setup.py
+bin/collatelogs
+collatelogs/__init__.py
+collatelogs/__main__.py
+collatelogs/cli.py
+collatelogs/collatelogs.py
+collatelogs/test_cli.py
+collatelogs/util.py
+collatelogs.egg-info/PKG-INFO
+collatelogs.egg-info/SOURCES.txt
+collatelogs.egg-info/dependency_links.txt
+collatelogs.egg-info/top_level.txt
+collatelogs.egg-info/zip-safe
