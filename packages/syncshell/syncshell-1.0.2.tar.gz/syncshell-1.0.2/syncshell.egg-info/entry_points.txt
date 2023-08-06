@@ -1,0 +1,3 @@
+[console_scripts]
+syncshell = syncshell.__main__:main
+

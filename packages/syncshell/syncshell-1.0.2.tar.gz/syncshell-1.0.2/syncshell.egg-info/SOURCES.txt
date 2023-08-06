@@ -1,0 +1,17 @@
+.syncshell.ini
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+version.py
+syncshell/__init__.py
+syncshell/__main__.py
+syncshell/config.py
+syncshell/constants.py
+syncshell/syncshell.py
+syncshell.egg-info/PKG-INFO
+syncshell.egg-info/SOURCES.txt
+syncshell.egg-info/dependency_links.txt
+syncshell.egg-info/entry_points.txt
+syncshell.egg-info/requires.txt
+syncshell.egg-info/top_level.txt
