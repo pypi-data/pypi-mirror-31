@@ -1,0 +1,27 @@
+Metadata-Version: 1.1
+Name: hitchbuildpg
+Version: 0.1.0
+Summary: Tool to build postgres databases for development and testing.
+Home-page: https://github.com/hitchdev/hitchbuildpg
+Author: Colm O'Connor
+Author-email: colm.oconnor.github@gmail.com
+License: LGPL
+Description: HitchBuildPy
+        ============
+        
+        Tool to build different versions of python and virtualenvs.
+        
+Keywords: virtualenv build python pyenv
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Text Processing :: Markup
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.1
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
