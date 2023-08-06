@@ -1,0 +1,13 @@
+README.rst
+setup.py
+xd/__init__.py
+xd/__main__.py
+xd/batch.py
+xd/proc.py
+xd/watch.py
+xd.egg-info/PKG-INFO
+xd.egg-info/SOURCES.txt
+xd.egg-info/dependency_links.txt
+xd.egg-info/entry_points.txt
+xd.egg-info/requires.txt
+xd.egg-info/top_level.txt
