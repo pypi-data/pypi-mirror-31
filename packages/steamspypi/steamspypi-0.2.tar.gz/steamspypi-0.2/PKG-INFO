@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: steamspypi
+Version: 0.2
+Summary: SteamSpy API on PyPI
+Home-page: https://github.com/woctezuma/steamspypi
+Author: Wok
+Author-email: wok@tuta.io
+License: UNKNOWN
+Download-URL: https://github.com/woctezuma/steamspypi/archive/0.2.tar.gz
+Description: UNKNOWN
+Keywords: steam,steamspy,api
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Topic :: Games/Entertainment
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
