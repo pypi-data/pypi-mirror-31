@@ -1,0 +1,5 @@
+six
+cobra>=0.10.1
+requests
+pandas
+cachetools>=2.0
