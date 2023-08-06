@@ -1,0 +1,11 @@
+README.md
+setup.py
+ukpocopy/__init__.py
+ukpocopy/exceptions.py
+ukpocopy/postcodes.py
+ukpocopy/validators.py
+ukpocopy.egg-info/PKG-INFO
+ukpocopy.egg-info/SOURCES.txt
+ukpocopy.egg-info/dependency_links.txt
+ukpocopy.egg-info/not-zip-safe
+ukpocopy.egg-info/top_level.txt
