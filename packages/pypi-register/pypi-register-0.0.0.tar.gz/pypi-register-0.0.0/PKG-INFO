@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: pypi-register
+Version: 0.0.0
+Summary: register pypi project
+Home-page: https://github.com/looking-for-a-job/pypi-register
+License: UNKNOWN
+Description: ### Install
+        
+        ```bash
+        $ [sudo] pip install pypi-register
+        ```
+Keywords: pypi
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Unix Shell
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
