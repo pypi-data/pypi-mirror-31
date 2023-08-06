@@ -1,0 +1,14 @@
+django_robokassa3-1.4.dist-info/METADATA,sha256=FePNwO7Ky47ROccdW3ZbJkNT2RSwKaBGRS3t7QO2hpI,17734
+django_robokassa3-1.4.dist-info/RECORD,,
+django_robokassa3-1.4.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+django_robokassa3-1.4.dist-info/top_level.txt,sha256=SFZbfFIbarj_7yR7xyTA0LqnY3GQ4pfiHUob3o15nqE,10
+robokassa/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+robokassa/conf.py,sha256=99C1zhkfo5i-k5cQ0ZKu7TJl-H2_-PsJ_rRlgepx0Ys,1202
+robokassa/forms.py,sha256=UBDHwz75EOWF8MSJrkdj-ZqcD-CItYNx8qKpHusBXoM,6787
+robokassa/models.py,sha256=SmLB_2LH-CTG4iw9ReiARdynqIHPS5nG62Xl16kQpr8,785
+robokassa/signals.py,sha256=ZY45Omuf6rk3vQ2YeChD07-QMaiqgK0zFMRn_Uhnl00,284
+robokassa/tests.py,sha256=W7VmZ5hL4PlYSdUB9Gmlu0p6SYro79HWGDqpzrjyzC8,3212
+robokassa/urls.py,sha256=evnNPG-9_Dt4AWd2qUqBiwEC9vRmdjrKqLQCGTNXm5c,315
+robokassa/views.py,sha256=JKNE4AlPuzftnWFTmD4joV8BFfxipqDHZwrVoBGvy7I,3811
+robokassa/migrations/0001_initial.py,sha256=6bbc3M9efRxVUvEdeXpuZ5AGitEt5J9ndThzeyJA2WM,1507
+robokassa/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
