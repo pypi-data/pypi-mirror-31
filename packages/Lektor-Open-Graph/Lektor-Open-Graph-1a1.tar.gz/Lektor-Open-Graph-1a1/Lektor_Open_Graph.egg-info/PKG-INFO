@@ -1,0 +1,37 @@
+Metadata-Version: 1.1
+Name: Lektor-Open-Graph
+Version: 1a1
+Summary: Add Open Graph tags to Lektor pages.
+Home-page: https://www.palletsprojects.com/
+Author: David Lord
+Author-email: davidism@gmail.com
+License: BSD
+Project-URL: Website, https://www.palletsprojects.com/p/flask/
+Project-URL: Documentation, http://flask.pocoo.org/docs/
+Project-URL: Code, https://github.com/pallets/pallets-sphinx-themes
+Project-URL: Issue tracker, https://github.com/pallets/pallets-sphinx-themes/issues
+Project-URL: Test status, https://travis-ci.org/pallets/flask
+Project-URL: Test coverage, https://codecov.io/gh/pallets/flask
+Description: Open Graph Plugin for Lektor
+        ----------------------------
+        
+        Adds `Open Graph`_ tags to pages. Sites that are aware of them will
+        display a nice widget instead of the plain link to a page.
+        
+        .. _Open Graph: http://ogp.me/
+        
+        
+        Install
+        -------
+        
+        Add the plugin to your ``.lektorproject`` file in the ``[packages]``
+        section::
+        
+            [packages]
+            lektor-open-graph =
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
