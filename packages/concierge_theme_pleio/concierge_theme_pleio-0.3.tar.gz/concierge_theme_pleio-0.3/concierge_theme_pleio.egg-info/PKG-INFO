@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: concierge-theme-pleio
+Version: 0.3
+Summary: Pleio theme for Concierge
+Home-page: https://github.com/Pleio/concierge-theme-pleio
+Author: Pleio
+Author-email: support@pleio.nl
+License: OSI Approved :: European Union Public Licence 1.1 (EUPL 1.1)
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
