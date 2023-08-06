@@ -1,0 +1,77 @@
+Metadata-Version: 2.1
+Name: badges
+Version: 0.0.1
+Summary: badge image class
+Home-page: https://github.com/looking-for-a-job/badges.py
+License: UNKNOWN
+Description: ### Install
+        
+        ```bash
+        $ [sudo] pip install badges
+        ```
+        
+        ### Features
+        
+        +   **md**, **rst** support
+        +   autoformat strings with instance and class variables
+        +   **minimalistic design, easy subclassing**
+        +   CircleCI, Travis, ... badge classes
+        
+        ### Examples
+        
+        ```python
+        # format attributes - {attrname}
+        >>> class CustomBadge(badges.Badge):
+            branch = "master"
+            link = "https://site.com/{fullname}"
+            image = "https://site.com/{fullname}?branch={branch}.svg"
+        
+        >>> CustomBadge(fullname="owner/repo")
+        '[![](https://site.com/owner/repo?branch=master.svg)](https://site.com/owner/repo)'
+        
+        # format @property - {0.propname}
+        >>> class CustomBadge(badges.Badge):
+            branch = "master"
+            link = "https://site.com/{0.fullname}"
+            image = "https://site.com/{0.fullname}?branch={branch}.svg"
+        
+            @property
+            def fullname(self):
+                return "/".join(os.getcwd().split("/")[-2:])
+        
+        >>> CustomBadge()
+        '[![](https://site.com/owner/repo?branch=master.svg)](https://site.com/owner/repo)'
+        
+        ```
+        
+        ### Sources
+        
+        +   [`badges/badge.Badge`](https://github.com/looking-for-a-job/badges.py/blob/master/badges/badge.py)
+        +   [`badges/bettercodehub.Bettercodehub(GitBadge)`](https://github.com/looking-for-a-job/badges.py/blob/master/badges/bettercodehub.py)
+        +   [`badges/circleci.Circleci(GitBadge)`](https://github.com/looking-for-a-job/badges.py/blob/master/badges/circleci.py)
+        +   [`badges/codeclimate.Codeclimate(GitBadge)`](https://github.com/looking-for-a-job/badges.py/blob/master/badges/codeclimate.py)
+        +   [`badges/codecov.Codecov(GitBadge)`](https://github.com/looking-for-a-job/badges.py/blob/master/badges/codecov.py)
+        +   [`badges/codefactor.Codefactor(GitBadge)`](https://github.com/looking-for-a-job/badges.py/blob/master/badges/codefactor.py)
+        +   [`badges/gitbadge.GitBadge(Badge)`](https://github.com/looking-for-a-job/badges.py/blob/master/badges/gitbadge.py)
+        +   [`badges/scrutinizer.Scrutinizer(GitBadge)`](https://github.com/looking-for-a-job/badges.py/blob/master/badges/scrutinizer.py)
+        +   [`badges/semaphoreci.Semaphoreci(GitBadge)`](https://github.com/looking-for-a-job/badges.py/blob/master/badges/semaphoreci.py)
+        +   [`badges/sonarcloud.Sonarcloud(Badge)`](https://github.com/looking-for-a-job/badges.py/blob/master/badges/sonarcloud.py)
+        +   [`badges/travis.Travis(GitBadge)`](https://github.com/looking-for-a-job/badges.py/blob/master/badges/travis.py)
+Keywords: badge
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development
+Description-Content-Type: text/markdown
