@@ -1,0 +1,11 @@
+aiohttp==3.0.0b0
+async-timeout==2.0.1
+connectrum==0.5.3a4
+coverage==4.5.1
+daemonize==2.4.7
+jsonrpcserver==3.5.3
+plyvel==0.9.0
+pybitcointools==1.0.0a1
+pycoin==0.90a4
+pycoinnet==0.19a3
+sqlalchemy==1.2.6
