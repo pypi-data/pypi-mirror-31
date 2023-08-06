@@ -1,0 +1,6 @@
+requests
+
+[dev]
+django>=2.0
+dj-static
+crudlfap
