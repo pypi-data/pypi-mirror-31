@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: x10-any
+Version: 0.0.7
+Summary: Issue x10 commands via CM17A Firecracker or Mochad (CM15A RF/PL and CM19A RF)
+Home-page: https://github.com/clach04/x10_any
+Author: clach04
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: UNKNOWN
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Topic :: Home Automation
