@@ -1,0 +1,19 @@
+peerplays
+secp256k1    # needed for fast signing of transactions!
+bookiesports
+bos-sync
+bos-incidents
+
+prettytable
+click
+jsonschema
+pyyaml
+flask
+flask-rq
+redis
+dateutils
+colorlog
+tqdm
+
+# Notifications
+python-telegram-handler
