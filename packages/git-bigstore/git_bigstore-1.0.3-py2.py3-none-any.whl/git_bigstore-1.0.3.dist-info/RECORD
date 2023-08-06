@@ -1,0 +1,14 @@
+bigstore/__init__.py,sha256=gGSAL27ldNz2TI-O2eVK0603IsDahzJCLByc--uE8n4,1102
+bigstore/bigstore.py,sha256=G5NwBMfOVBi0n7yD9LWW08KXe0fo-no20ufQwWMJpjw,22202
+bigstore/metadata.py,sha256=3McUyPiKDyPB6P50_bs67Srgo_wb6PmFG-SvRDNtdmA,798
+bigstore/backends/__init__.py,sha256=igrbcxQw5D4nnR2U-XrfVkTgPubaC5INYZRDtK6HPM8,780
+bigstore/backends/google.py,sha256=8bbqCJB35Xwe_u2uYMiI3k8heE-qaiwJ9c2YNvnE3eg,1362
+bigstore/backends/rackspace.py,sha256=ODUf6RWnkUP0KyPjyZMasP9lKaDybyEc0lWOL2LSHeQ,1441
+bigstore/backends/s3.py,sha256=jtzf08RsyfoxR1rMwa6F81yU6ZBckTM0gifJJZAHlms,1818
+git_bigstore-1.0.3.data/scripts/git-bigstore,sha256=G2oymntUr7bwNq-ni_K1-3tW6DkgtUsyayRdM0Na-Cs,4276
+git_bigstore-1.0.3.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+git_bigstore-1.0.3.dist-info/METADATA,sha256=1fopJiUHRov9axO54gT-SjMns1FzXMpM_NlRJyrTPPc,913
+git_bigstore-1.0.3.dist-info/RECORD,,
+git_bigstore-1.0.3.dist-info/WHEEL,sha256=kdsN-5OJAZIiHN-iO4Rhl82KyS0bDWf4uBwMbkNafr8,110
+git_bigstore-1.0.3.dist-info/metadata.json,sha256=el2E-HNlHA-at-ovMzKpTkny4iY6uojd_jcY4xwLsiU,983
+git_bigstore-1.0.3.dist-info/top_level.txt,sha256=gSxVeXqNUAuIVKBuBR92Dto02520UcSQ4BAApeG20hI,9
