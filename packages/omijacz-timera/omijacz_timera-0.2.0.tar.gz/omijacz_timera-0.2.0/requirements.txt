@@ -1,0 +1,8 @@
+# Required packages for development environment
+# If you just want just to use the script, then the setup.py install will do everything for you
+requests==2.18.4
+splinter
+selenium
+docopt
+ipython
+twine
