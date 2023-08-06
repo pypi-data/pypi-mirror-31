@@ -1,0 +1,12 @@
+MANIFEST.in
+README
+setup.py
+bin/ppftps
+ppftps/__init__.py
+ppftps.egg-info/PKG-INFO
+ppftps.egg-info/SOURCES.txt
+ppftps.egg-info/dependency_links.txt
+ppftps.egg-info/entry_points.txt
+ppftps.egg-info/not-zip-safe
+ppftps.egg-info/requires.txt
+ppftps.egg-info/top_level.txt
