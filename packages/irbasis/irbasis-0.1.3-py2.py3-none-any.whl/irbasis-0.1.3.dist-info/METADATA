@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: irbasis
+Version: 0.1.3
+Summary: Python libraries for irbasis
+Home-page: https://github.com/SpM-lab/irbasis
+Author: Kazuyoshi Yoshimi, Hiroshi Shinaoka, Chikano Naoya, Junya Otsuki
+Author-email: h.shinaoka@gmail.com
+License: UNKNOWN
+Keywords: quantum many-body theory
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: h5py
+Requires-Dist: future
+
+#irbasis
+
+A Python library for the intermediate representation (IR) basis functions proposed in <br>
+H. Shinaoka, J. Otsuki, M. Ohzeki, K. Yoshimi, Phys. Rev. B 96, 035147 (2017).
+
+The library implements the algorithm described in<br>
+N. Chikano, J. Otsuki, H. Shinaoka, arXiv:1803.07257.
+
+## Requirements
+
+- h5py
+- numpy
+- scipy
+- future
+
