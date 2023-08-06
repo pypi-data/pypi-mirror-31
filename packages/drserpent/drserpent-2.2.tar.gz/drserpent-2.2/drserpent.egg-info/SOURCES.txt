@@ -1,0 +1,11 @@
+README.md
+setup.py
+cli/__init__.py
+cli/main.py
+drserpent.egg-info/PKG-INFO
+drserpent.egg-info/SOURCES.txt
+drserpent.egg-info/dependency_links.txt
+drserpent.egg-info/entry_points.txt
+drserpent.egg-info/not-zip-safe
+drserpent.egg-info/requires.txt
+drserpent.egg-info/top_level.txt
