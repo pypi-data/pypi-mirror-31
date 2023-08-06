@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: charlockholmes
+Version: 0.0.3
+Summary: Character encoding detecting library for Python using ICU and libmagic.
+Home-page: https://github.com/douban/PyCharlockHolmes
+Author: xtao
+Author-email: xutao881001@gmail.com
+License: Modified BSD License
+Description: UNKNOWN
+Keywords: icu,magic,charlockholmes,egg
+Platform: UNKNOWN
