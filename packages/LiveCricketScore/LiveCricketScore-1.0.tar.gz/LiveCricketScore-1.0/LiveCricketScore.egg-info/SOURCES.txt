@@ -1,0 +1,8 @@
+setup.py
+LiveCricketScore.egg-info/PKG-INFO
+LiveCricketScore.egg-info/SOURCES.txt
+LiveCricketScore.egg-info/dependency_links.txt
+LiveCricketScore.egg-info/requires.txt
+LiveCricketScore.egg-info/top_level.txt
+liveCricketScore/LiveScore.py
+liveCricketScore/__init__.py
