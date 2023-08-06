@@ -1,0 +1,89 @@
+numpy >=1.4.1
+pillow
+pyresample >=1.9.2
+trollsift
+trollimage >=1.5.1
+pykdtree
+six
+pyyaml
+xarray >=0.10.1
+dask[array] >=0.17.1
+
+[scmi]
+netCDF4 >= 1.1.8
+
+[viirs_compact]
+h5py >= 2.7.0
+
+[geocat]
+python-hdf4
+
+[viirs_sdr]
+h5py >= 2.7.0
+
+[xRIT]
+mipp >= 0.6.0
+
+[abi_l1b]
+h5netcdf
+
+[amsr2_l1b]
+h5py >= 2.7.0
+
+[omps_edr]
+h5py >= 2.7.0
+
+[clavrx]
+netCDF4 >= 1.1.8
+
+[all]
+pytroll-schedule
+pyspectral >= 0.7.0
+python-hdf4
+netCDF4 >= 1.1.8
+h5py >= 2.7.0
+pyorbital >= 1.3.1
+mipp >= 0.6.0
+trollimage[geotiff]
+python-geotiepoints
+h5netcdf
+pygac
+pyresample
+gdal
+
+[acspo]
+netCDF4 >= 1.1.8
+
+[hdfeos_l1b]
+python-hdf4
+
+[proj]
+pyresample
+
+[hrit_msg]
+pytroll-schedule
+
+[pyorbital]
+pyorbital >= 1.3.1
+
+[hrpt]
+pyorbital >= 1.3.1
+pygac
+python-geotiepoints
+
+[pyspectral]
+pyspectral >= 0.7.0
+
+[viirs_l1b]
+netCDF4 >= 1.1.8
+
+[sar_c]
+python-geotiepoints
+gdal
+
+[geotiff]
+gdal
+trollimage[geotiff]
+
+[nc_nwcsaf_msg]
+netCDF4 >= 1.1.8
