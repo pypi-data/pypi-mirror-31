@@ -1,0 +1,16 @@
+Metadata-Version: 2.0
+Name: phish
+Version: 0.1
+Summary: A library to easily access the phish.net api
+Home-page: UNKNOWN
+Author: Remington Stone
+Author-email: remstone7@gmail.com
+License: MIT
+Description-Content-Type: UNKNOWN
+Keywords: testing,logging,phish
+Platform: UNKNOWN
+Requires-Dist: requests
+
+UNKNOWN
+
+
