@@ -1,0 +1,119 @@
+AUTHORS
+COPYING
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+docs/Makefile
+docs/source/about.rst
+docs/source/api.rst
+docs/source/changelog.rst
+docs/source/conf.py
+docs/source/dastcom5 parameters.rst
+docs/source/form.rst
+docs/source/getting_started.rst
+docs/source/index.rst
+docs/source/jupyter.rst
+docs/source/references.rst
+docs/source/success.rst
+docs/source/user_guide.rst
+docs/source/_static/curtis.png
+docs/source/_static/hohmann.png
+docs/source/_static/logo_text.png
+docs/source/_static/molniya.png
+docs/source/_static/msl.png
+docs/source/_static/neos.png
+docs/source/_static/css/custom.css
+docs/source/examples/3DPlot.png
+docs/source/examples/Catch that asteroid!.ipynb
+docs/source/examples/Comparing Hohmann and bielliptic transfers.ipynb
+docs/source/examples/Exploring the New Horizons launch.ipynb
+docs/source/examples/Florence.png
+docs/source/examples/Going to Jupiter with Python using Jupyter and poliastro.ipynb
+docs/source/examples/Going to Mars with Python using poliastro.ipynb
+docs/source/examples/NEOS.png
+docs/source/examples/Plotting in 3D.ipynb
+docs/source/examples/Propagation using Cowell's formulation.ipynb
+docs/source/examples/Revisiting Lambert's problem in Python.ipynb
+docs/source/examples/Studying Hohmann transfers.ipynb
+docs/source/examples/Tesla.png
+docs/source/examples/Using NEOS package.ipynb
+docs/source/examples/Visualizing the SpaceX Tesla Roadster trip to Mars.ipynb
+docs/source/examples/benchmark.png
+docs/source/examples/cowell.png
+docs/source/examples/hohmann-bielliptic-transfers.png
+docs/source/examples/hohmann.png
+docs/source/examples/hohmann_bielliptic.png
+docs/source/examples/jupiter.png
+docs/source/examples/lambert.png
+docs/source/examples/logo_text.png
+docs/source/examples/molniya.png
+docs/source/examples/new_horizons.png
+docs/source/examples/trans_30_260.png
+docs/source/logo/logo.png
+docs/source/logo/logo.svg
+docs/source/logo/logo_text.svg
+src/poliastro/__init__.py
+src/poliastro/bodies.py
+src/poliastro/cli.py
+src/poliastro/constants.py
+src/poliastro/coordinates.py
+src/poliastro/examples.py
+src/poliastro/frames.py
+src/poliastro/hyper.py
+src/poliastro/jit.py
+src/poliastro/maneuver.py
+src/poliastro/patched_conics.py
+src/poliastro/plotting.py
+src/poliastro/stumpff.py
+src/poliastro/testing.py
+src/poliastro/util.py
+src/poliastro.egg-info/PKG-INFO
+src/poliastro.egg-info/SOURCES.txt
+src/poliastro.egg-info/dependency_links.txt
+src/poliastro.egg-info/entry_points.txt
+src/poliastro.egg-info/not-zip-safe
+src/poliastro.egg-info/requires.txt
+src/poliastro.egg-info/top_level.txt
+src/poliastro/iod/__init__.py
+src/poliastro/iod/izzo.py
+src/poliastro/iod/vallado.py
+src/poliastro/neos/__init__.py
+src/poliastro/neos/dastcom5.py
+src/poliastro/neos/neows.py
+src/poliastro/tests/test_bodies.py
+src/poliastro/tests/test_coordinates.py
+src/poliastro/tests/test_examples.py
+src/poliastro/tests/test_hyper.py
+src/poliastro/tests/test_iod.py
+src/poliastro/tests/test_jit.py
+src/poliastro/tests/test_maneuver.py
+src/poliastro/tests/test_patched_conics.py
+src/poliastro/tests/test_plotting.py
+src/poliastro/tests/test_plotting2d.py
+src/poliastro/tests/test_plotting3d.py
+src/poliastro/tests/test_stumpff.py
+src/poliastro/tests/test_twobody.py
+src/poliastro/tests/test_util.py
+src/poliastro/tests/tests_neos/center.html
+src/poliastro/tests/tests_neos/none.html
+src/poliastro/tests/tests_neos/table.html
+src/poliastro/tests/tests_neos/test_dastcom5.py
+src/poliastro/tests/tests_neos/test_neos_neows.py
+src/poliastro/tests/tests_twobody/test_angles.py
+src/poliastro/tests/tests_twobody/test_decorators.py
+src/poliastro/tests/tests_twobody/test_orbit.py
+src/poliastro/tests/tests_twobody/test_perturbations.py
+src/poliastro/tests/tests_twobody/test_propagation.py
+src/poliastro/tests/tests_twobody/test_sample.py
+src/poliastro/tests/tests_twobody/test_states.py
+src/poliastro/twobody/__init__.py
+src/poliastro/twobody/_base.py
+src/poliastro/twobody/angles.py
+src/poliastro/twobody/classical.py
+src/poliastro/twobody/decorators.py
+src/poliastro/twobody/equinoctial.py
+src/poliastro/twobody/orbit.py
+src/poliastro/twobody/perturbations.py
+src/poliastro/twobody/propagation.py
+src/poliastro/twobody/rv.py
