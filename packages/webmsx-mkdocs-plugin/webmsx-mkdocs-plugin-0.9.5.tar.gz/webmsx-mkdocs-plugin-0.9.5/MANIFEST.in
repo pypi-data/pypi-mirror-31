@@ -1,0 +1,2 @@
+include webmsx/partials/*.html
+recursive-include webmsx/*.html *.py
