@@ -1,0 +1,10 @@
+README.md
+setup.py
+cachejar/__init__.py
+cachejar/jar.py
+cachejar/signature.py
+cachejar.egg-info/PKG-INFO
+cachejar.egg-info/SOURCES.txt
+cachejar.egg-info/dependency_links.txt
+cachejar.egg-info/requires.txt
+cachejar.egg-info/top_level.txt

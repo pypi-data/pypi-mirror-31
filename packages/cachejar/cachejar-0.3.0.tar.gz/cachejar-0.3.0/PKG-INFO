@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: cachejar
+Version: 0.3.0
+Summary: File based cache for objects derived from files or urls
+Home-page: http://github.com/hsolbrig/cachejar
+Author: Harold Solbrig
+Author-email: solbrig.harold@mayo.edu
+License: Apache License 2.0
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
