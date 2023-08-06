@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: CJKrelate
+Version: 0.1.2
+Summary: Generate related Hanzi/Kanji by various means. Visually. Also, a summary table is humanly made.
+Home-page: https://github.com/patarapolw/CJKrelate
+Author: Pacharapol Withayasakpunt
+Author-email: patarapolw@gmail.com
+License: MIT
+Keywords: CJK chinese japanese hanzi kanji
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: Cantonese
+Classifier: Natural Language :: Chinese (Simplified)
+Classifier: Natural Language :: Chinese (Traditional)
+Classifier: Natural Language :: Japanese
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Utilities
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Provides-Extra: tests
+Requires-Dist: pillow
+Requires-Dist: PyYAML
+Provides-Extra: tests
+Requires-Dist: pytest; extra == 'tests'
+
+# Related CJK character generator
+
+[![Build Status](https://travis-ci.org/patarapolw/CJKrelate.svg?branch=master)](https://travis-ci.org/patarapolw/CJKrelate)
+[![PyPI version shields.io](https://img.shields.io/pypi/v/CJKrelate.svg)](https://pypi.python.org/pypi/CJKrelate/)
+[![PyPI license](https://img.shields.io/pypi/l/CJKrelate.svg)](https://pypi.python.org/pypi/CJKrelate/)
+[![PyPI pyversions](https://img.shields.io/pypi/pyversions/CJKrelate.svg)](https://pypi.python.org/pypi/CJKrelate/)
+[![PyPI status](https://img.shields.io/pypi/status/CJKrelate.svg)](https://pypi.python.org/pypi/CJKrelate/)
+
+Generate related Hanzi/Kanji by various means. Visually. Also, a summary table is humanly made. (https://github.com/patarapolw/CJKrelate/blob/master/CJKrelate/database/chinese/human.yaml)
+
+## Future development
+
+Correlation by sounds / meanings.
+
+
