@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: baytune
+Version: 0.1.0
+Summary: A framework for Bayesian hyperparameter selection and tuning
+Home-page: https://github.com/HDI-project/BTB
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: MIT
+Keywords: machine learning hyperparameters tuning classification
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: future
+
+UNKNOWN
+
+
