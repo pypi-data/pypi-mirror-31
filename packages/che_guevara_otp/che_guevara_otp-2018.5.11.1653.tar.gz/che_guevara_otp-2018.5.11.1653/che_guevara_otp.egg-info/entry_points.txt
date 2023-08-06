@@ -1,0 +1,3 @@
+[console_scripts]
+che_guevara_otp=che_guevara_otp.__init__:loop_display_TOTP_passcodes
+

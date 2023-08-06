@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+che_guevara_otp/__init__.py
+che_guevara_otp.egg-info/PKG-INFO
+che_guevara_otp.egg-info/SOURCES.txt
+che_guevara_otp.egg-info/dependency_links.txt
+che_guevara_otp.egg-info/entry_points.txt
+che_guevara_otp.egg-info/not-zip-safe
+che_guevara_otp.egg-info/top_level.txt
+che_guevara_otp/data/Che.svg
+che_guevara_otp/data/che_guevara_otp.desktop
