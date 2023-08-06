@@ -1,0 +1,12 @@
+pronounceable/__init__.py,sha256=squSS7GejlNsTYhpxA0wlEXZxuxGEx4nPFWH_bSl2JU,72
+pronounceable/complexity.py,sha256=VV6TO8tCjMNrNqnZxq77TpeEAhtS-gpS2EOwgXVbFCE,9436
+pronounceable/components.py,sha256=lA8nwduuyvtUQMwwcTdfkHLRs48-5_nm0vUlovq8Zqo,1631
+pronounceable/digraph.py,sha256=Qm4oolMV2yvlXNUmVHi50CNP90tcOXzVaP1-HjcYtCM,3048
+pronounceable/dir.py,sha256=VQ4enoLrNq0_zTM3FM4Z_CEd-6Lmu6LsRFs2muN5eHY,300
+pronounceable/main.py,sha256=NJY77Km6gTh_Sa6dDj6J7r9cizIzPy-qqACkEACPj_E,3671
+pronounceable/database/google-10000-english.txt,sha256=nJZdOEUm-sxZJg6U-Mz_FYJjP6OFAEq-FFXtRXBirLw,75888
+pronounceable/database/leetspeak.yaml,sha256=eWAeeKHfpAcT52AfG_E-lLkMPRp9FOS96Wzu2lSoxT0,244
+pronounceable-0.1.2.dist-info/METADATA,sha256=89tlKOdJ-qorPtHpZV42UCFq0NTjFkm2CF-bkV3mM5k,2626
+pronounceable-0.1.2.dist-info/RECORD,,
+pronounceable-0.1.2.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+pronounceable-0.1.2.dist-info/top_level.txt,sha256=9MDBl2CUtE6iFNOGY09hKitiJaexFzwCKVCAw1zGmfs,14
