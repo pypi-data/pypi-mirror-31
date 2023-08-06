@@ -1,0 +1,12 @@
+Metadata-Version: 1.0
+Name: kpn_senml
+Version: 1.0.0rc1
+Summary: generate and parse senml json and cbor data
+Home-page: https://github.com/jan-bogaerts/slate
+Author: Jan Bogaerts
+Author-email: jb@elastetic.com
+License: APACHE
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Keywords: senml kpn cbor json
+Platform: UNKNOWN
