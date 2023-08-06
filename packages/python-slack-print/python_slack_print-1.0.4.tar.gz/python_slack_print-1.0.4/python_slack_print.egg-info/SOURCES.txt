@@ -1,0 +1,9 @@
+README.md
+setup.py
+python_slack_print.egg-info/PKG-INFO
+python_slack_print.egg-info/SOURCES.txt
+python_slack_print.egg-info/dependency_links.txt
+python_slack_print.egg-info/requires.txt
+python_slack_print.egg-info/top_level.txt
+slack_print/__init__.py
+slack_print/slack_print.py
