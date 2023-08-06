@@ -1,0 +1,9 @@
+README.md
+setup.py
+src/snore/__init__.py
+src/snore/version.py
+src/snore.egg-info/PKG-INFO
+src/snore.egg-info/SOURCES.txt
+src/snore.egg-info/dependency_links.txt
+src/snore.egg-info/requires.txt
+src/snore.egg-info/top_level.txt

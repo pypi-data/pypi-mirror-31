@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: snore
+Version: 0.0.1
+Summary: A small library for building better RESTful APIs.
+Home-page: https://github.com/ChrisTimperley/snore
+Author: Chris Timperley
+Author-email: christimperley@googlemail.com
+License: mit
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.5
