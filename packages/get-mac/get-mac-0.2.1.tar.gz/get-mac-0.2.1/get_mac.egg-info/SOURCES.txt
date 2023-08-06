@@ -1,0 +1,13 @@
+README.md
+setup.py
+get_mac.egg-info/PKG-INFO
+get_mac.egg-info/SOURCES.txt
+get_mac.egg-info/dependency_links.txt
+get_mac.egg-info/entry_points.txt
+get_mac.egg-info/top_level.txt
+get_mac.egg-info/zip-safe
+getmac/__init__.py
+getmac/__main__.py
+getmac/getmac.py
+test/__init__.py
+test/tests.py
