@@ -1,0 +1,47 @@
+Metadata-Version: 1.1
+Name: efm8boot
+Version: 0.0.3
+Summary: A python package for working with efm8 bootloaders.
+Home-page: https://github.com/ahtn/efm8boot
+Author: jem
+Author-email: jem@seethis.link
+License: BSD
+Download-URL: https://github.com/ahtn/efm8boot/tarball/0.0.3
+Description: efm8 boot
+        ===============================
+        
+        version number: 0.0.1
+        author: jem
+        
+        Overview
+        --------
+        
+        A python package for working with efm8 bootloaders.
+        
+        Installation / Usage
+        --------------------
+        
+        To install use pip:
+        
+            $ pip install efm8boot
+        
+        
+        Or clone the repo:
+        
+            $ git clone https://github.com/ahtn/efm8boot.git
+            $ python setup.py install
+            
+        Contributing
+        ------------
+        
+        TBD
+        
+        Example
+        -------
+        
+        TBD
+Keywords: efm8 bootloader 8051
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
