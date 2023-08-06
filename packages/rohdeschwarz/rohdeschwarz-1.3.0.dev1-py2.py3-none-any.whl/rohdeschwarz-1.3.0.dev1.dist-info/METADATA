@@ -1,0 +1,20 @@
+Metadata-Version: 2.0
+Name: rohdeschwarz
+Version: 1.3.0.dev1
+Summary: Rohde & Schwarz general purpose instrument control toolbox
+Home-page: https://github.com/Terrabits/rohdeschwarz
+Author: Nick Lalic
+Author-email: nick.lalic@rsa.rohde-schwarz.com
+License: R&S Terms and Conditions for Royalty-Free Products
+Requires-Dist: pathlib
+Requires-Dist: pyvisa
+Requires-Dist: numpy
+Requires-Dist: ruamel.yaml
+Provides-Extra: dev
+Requires-Dist: ddt; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: ddt; extra == 'test'
+
+Rohde & Schwarz python instrument control toolkit
+
+
