@@ -1,0 +1,3 @@
+[console_scripts]
+felsim = felsim.__main__:main
+
