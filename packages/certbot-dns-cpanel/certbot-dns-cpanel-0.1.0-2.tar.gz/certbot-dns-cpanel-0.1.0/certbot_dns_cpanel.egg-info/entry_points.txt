@@ -1,0 +1,3 @@
+[certbot.plugins]
+authenticator = certbot_dns_cpanel.dns_cpanel:Authenticator
+
