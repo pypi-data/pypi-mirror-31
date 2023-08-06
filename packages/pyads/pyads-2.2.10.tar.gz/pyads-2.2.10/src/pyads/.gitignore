@@ -1,0 +1,36 @@
+#pyCharm config files
+.idea/
+
+#pyc files
+*.pyc
+
+#other
+dist/
+MANIFEST
+
+build/
+*.egg-info/
+.eggs/
+venv/
+
+*.tox
+deploy.py
+
+*.sublime-workspace
+README.rst
+*.sublime-project
+
+#Source for local copy of Linux ADS lib
+*so
+
+.cache/
+ADS/
+doc_old/
+doc/_build/
+
+# coverage files
+.coverage
+htmlcov/
+deploy
+
+coverage
