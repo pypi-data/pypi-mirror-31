@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.py
+pymojihash/__init__.py
+pymojihash/emojis.json
+pymojihash/pymojihash.py
+pymojihash.egg-info/PKG-INFO
+pymojihash.egg-info/SOURCES.txt
+pymojihash.egg-info/dependency_links.txt
+pymojihash.egg-info/top_level.txt
