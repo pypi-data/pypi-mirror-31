@@ -1,0 +1,5 @@
+dill==0.2.7.1
+pandas==0.22.0
+pyodbc==4.0.23
+setuptools-scm==2.0.0
+SQLAlchemy==1.2.7
