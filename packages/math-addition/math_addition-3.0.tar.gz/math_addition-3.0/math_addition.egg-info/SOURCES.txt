@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+addition/__init__.py
+addition/add.py
+math_addition.egg-info/PKG-INFO
+math_addition.egg-info/SOURCES.txt
+math_addition.egg-info/dependency_links.txt
+math_addition.egg-info/not-zip-safe
+math_addition.egg-info/top_level.txt
