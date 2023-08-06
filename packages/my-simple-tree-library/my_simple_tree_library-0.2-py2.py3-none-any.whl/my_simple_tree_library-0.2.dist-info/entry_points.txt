@@ -1,0 +1,3 @@
+[console_scripts]
+waysintree = streelib:main
+

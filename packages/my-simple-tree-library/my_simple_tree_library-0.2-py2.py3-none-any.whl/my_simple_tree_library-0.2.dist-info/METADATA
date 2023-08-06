@@ -1,0 +1,15 @@
+Metadata-Version: 2.0
+Name: my-simple-tree-library
+Version: 0.2
+Summary: test work for job assigment. Tree alg.
+Home-page: https://github.com/stivsh/ddtest_assigment
+Author: Sorokin Stepan
+Author-email: stivsh@gmail.com
+License: NO
+Platform: UNKNOWN
+Requires-Dist: networkx
+Requires-Dist: docopt
+
+UNKNOWN
+
+
