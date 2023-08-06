@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: dharmSentiment
+Version: 3.0.1
+Summary: Basic usage script for dictionary-based sentiment analysis.    Intended use with labMT data. Modified for Dharmesh's personal use in CS 591 L1.
+Home-page: https://github.com/weirdindiankid/dharmSentiment
+Author: Dharmesh Tarapore
+Author-email: dharmesh@cs.bu.edu
+License: UNKNOWN
+Description: dharmSentiment
+        ============
+        
+        TL;DR
+        a simple labMT usage script co-opted to run for historical Twitter data.
+        
+        This script uses the language assessment by Mechanical Turk (labMT) word list to score the happiness of a corpus. The labMT word list was created by combining the 5000 words most frequently appearing in four sources: Twitter, the New York Times, Google Books, and music lyrics, and then scoring the words for sentiment on Amazon's Mechanical Turk. The list is described in detail in the publication Dodds' et al. 2011, PLOS ONE, "Temporal Patterns of Happiness and Information in a Global-Scale Social Network: Hedonometrics and Twitter." 
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
