@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: django-basic-auth-ip-whitelist
+Version: 0.1a3
+Summary: Hide your Django site behind basic authentication mechanism with IP whitelisting support.
+Home-page: https://github.com/tm-kn/django-basic-auth-ip-whitelist
+Author: Tomasz Knapik
+Author-email: tmkn@tmkn.uk
+License: BSD-2
+Description: UNKNOWN
+Platform: UNKNOWN
