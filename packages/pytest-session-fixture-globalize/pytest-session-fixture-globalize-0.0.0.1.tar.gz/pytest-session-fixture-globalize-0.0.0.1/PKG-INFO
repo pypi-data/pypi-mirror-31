@@ -1,0 +1,35 @@
+Metadata-Version: 1.1
+Name: pytest-session-fixture-globalize
+Version: 0.0.0.1
+Summary: py.test plugin to make session fixtures behave as if written in conftest, even if it is written in some modules
+Home-page: https://github.com/cielavenir/pytest-session-fixture-globalize
+Author: cielavenir
+Author-email: cielartisan@gmail.com
+License: BSD
+Description: # pytest-session-fixture-globalize
+        
+        pytest-forcefail is a plugin to make scope='session' fixtures behave as if written in conftest.py.
+        
+        See test\_session\_fixture\_globalize.py for example.
+        
+        Unlike usual plugin, this touches the deep area of \_pytest.fixtures.FixtureManager. **You have to enable this plugin explicitly by --session-fixture-globalize option or PYTEST\_SESSION\_FIXTURE\_GLOBALIZE env.**
+        
+        Binary distribution: https://pypi.org/project/pytest-session-fixture-globalize/
+        
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Utilities
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: PyPy
