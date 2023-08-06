@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: cloudauthz
+Version: 0.0.2
+Summary: Implements means of authorization delegation on cloud-based resource providers.
+Home-page: https://github.com/galaxyproject/cloudauthz
+Author: Vahid Jalili
+Author-email: jalili.vahid@gmail.com
+License: MIT
+Keywords: Cloud Authorization Access
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Requires-Dist: requests (==2.18.4)
+
+# CloudAuthz
+
+## Installation
+Install the latest release from PyPi:
+
+    pip install cloudauthz
+
+
