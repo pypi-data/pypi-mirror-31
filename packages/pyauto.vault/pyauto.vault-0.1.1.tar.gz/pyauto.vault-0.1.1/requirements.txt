@@ -1,0 +1,6 @@
+six
+hvac
+colorama
+pyauto.core>=0.0.6a2
+pyauto.util>=0.1.1
+pyauto.local>=0.1.0a6
