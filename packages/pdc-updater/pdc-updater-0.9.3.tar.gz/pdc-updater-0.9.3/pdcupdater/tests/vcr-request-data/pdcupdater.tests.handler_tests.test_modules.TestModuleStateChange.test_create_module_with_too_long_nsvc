@@ -1,0 +1,70 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: https://mbs.fedoraproject.org/module-build-service/2/module-builds//1503?verbose=True
+  response:
+    body: {string: !!python/unicode "{\n  \"build_context\": null, \n  \"component_builds\":
+        [\n    91387, \n    91388\n  ], \n  \"context\": \"00000000\", \n  \"id\":
+        1503, \n  \"koji_tag\": \"module-ce2adf69caf0e1b5\", \n  \"modulemd\": \"document:
+        modulemd\\nversion: 1\\ndata:\\n  name: testmodule\\n  stream: master\\n  version:
+        20180123171544\\n  context: c2c572ec\\n  summary: A test module in all its
+        beautiful beauty\\n  description: This module demonstrates how to write simple
+        modulemd files And can\\n    be used for testing the build and release pipeline.\\n
+        \ license:\\n    module:\\n    - MIT\\n  dependencies:\\n    buildrequires:\\n
+        \     platform: f28\\n    requires:\\n      platform: f28\\n  references:\\n
+        \   community: https://docs.pagure.org/modularity/\\n    documentation: https://fedoraproject.org/wiki/Fedora_Packaging_Guidelines_for_Modules\\n
+        \ xmd:\\n    mbs:\\n      buildrequires:\\n        platform:\\n          filtered_rpms:
+        []\\n          ref: virtual\\n          stream: f28\\n          version: '3'\\n
+        \     commit: 1d28a6e2e4fd604d98be0322ef0c0c4a931f091d\\n      requires:\\n
+        \       platform:\\n          filtered_rpms: []\\n          ref: virtual\\n
+        \         stream: f28\\n          version: '3'\\n      rpms:\\n        ed:\\n
+        \         ref: 51f529a5cde2b843ed9c7870689d707eaab3a9d1\\n      scmurl: https://src.fedoraproject.org/modules/testmodule.git?#1d28a6e2e4fd604d98be0322ef0c0c4a931f091d\\n
+        \ components:\\n    rpms:\\n      ed:\\n        rationale: A build dependency
+        of mksh, to test buildorder.\\n        repository: git://pkgs.fedoraproject.org/rpms/ed\\n
+        \       ref: master\\n        cache: http://pkgs.fedoraproject.org/repo/pkgs/ed\\n\",
+        \n  \"name\": \"testmodule\", \n  \"owner\": \"mprahl\", \n  \"rebuild_strategy\":
+        \"all\", \n  \"ref_build_context\": \"3044bea5ac56e79502c45b08536a51d5a9e0a88e\",
+        \n  \"runtime_context\": \"3044bea5ac56e79502c45b08536a51d5a9e0a88e\", \n
+        \ \"scmurl\": \"https://src.fedoraproject.org/modules/testmodule.git?#1d28a6e2e4fd604d98be0322ef0c0c4a931f091d\",
+        \n  \"siblings\": [], \n  \"state\": 5, \n  \"state_name\": \"ready\", \n
+        \ \"state_reason\": null, \n  \"state_trace\": [\n    {\n      \"reason\":
+        null, \n      \"state\": 0, \n      \"state_name\": \"init\", \n      \"time\":
+        \"2018-01-23T17:15:57Z\"\n    }, \n    {\n      \"reason\": null, \n      \"state\":
+        1, \n      \"state_name\": \"wait\", \n      \"time\": \"2018-01-23T17:16:02Z\"\n
+        \   }, \n    {\n      \"reason\": null, \n      \"state\": 2, \n      \"state_name\":
+        \"build\", \n      \"time\": \"2018-01-23T17:16:07Z\"\n    }, \n    {\n      \"reason\":
+        null, \n      \"state\": 3, \n      \"state_name\": \"done\", \n      \"time\":
+        \"2018-01-23T17:34:06Z\"\n    }, \n    {\n      \"reason\": null, \n      \"state\":
+        5, \n      \"state_name\": \"ready\", \n      \"time\": \"2018-01-23T17:34:11Z\"\n
+        \   }\n  ], \n  \"state_url\": \"/module-build-service/2/module-builds/1503\",
+        \n  \"stream\": \"master\", \n  \"tasks\": {\n    \"rpms\": {\n      \"ed\":
+        {\n        \"nvr\": \"ed-1.14.2-1.module_1503+67eff7c7\", \n        \"state\":
+        1, \n        \"state_reason\": \"\", \n        \"task_id\": 24401846\n      },
+        \n      \"module-build-macros\": {\n        \"nvr\": \"module-build-macros-0.1-1.module_1503+67eff7c7\",
+        \n        \"state\": 1, \n        \"state_reason\": \"\", \n        \"task_id\":
+        24401602\n      }\n    }\n  }, \n  \"time_completed\": \"2018-01-23T17:34:06Z\",
+        \n  \"time_modified\": \"2018-01-23T17:34:11Z\", \n  \"time_submitted\": \"2018-01-23T17:15:57Z\",
+        \n  \"version\": \"20180123171544\"\n}\n"}
+    headers:
+      access-control-allow-origin: ['*']
+      appserver: [proxy14.fedoraproject.org]
+      apptime: [D=185309]
+      connection: [Keep-Alive]
+      content-length: ['3246']
+      content-type: [application/json]
+      date: ['Fri, 11 May 2018 15:46:19 GMT']
+      keep-alive: ['timeout=15, max=500']
+      referrer-policy: [same-origin]
+      server: [Apache/2.4.6 (Red Hat Enterprise Linux) mod_wsgi/3.4 Python/2.7.5]
+      strict-transport-security: [max-age=31536000; includeSubDomains; preload]
+      x-content-type-options: [nosniff]
+      x-frame-options: [SAMEORIGIN]
+      x-xss-protection: [1; mode=block]
+    status: {code: 200, message: OK}
+version: 1
