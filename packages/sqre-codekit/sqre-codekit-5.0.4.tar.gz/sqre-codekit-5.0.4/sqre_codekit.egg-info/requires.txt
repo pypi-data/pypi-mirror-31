@@ -1,0 +1,9 @@
+GitPython==1.0.1
+MapGitConfig==1.1
+progressbar2==3.11.0
+public==1.0
+pygithub
+requests<3.0.0,>=2.8.1
+sqre-codekit-github3.py==1.0.0a4
+uritemplate.py==2.0.0
+urllib3[secure]==1.22
