@@ -1,0 +1,63 @@
+---
+inventory_layout:
+  vars:
+    hostname: __IP__
+  hosts:
+    "master":
+      count: 1
+      host_groups:
+        - masters
+        - etcd
+        - nodes
+        - nfs
+    "node":
+      count: 2
+      host_groups:
+        - nodes
+  host_groups:
+    OSEv3:
+      children:
+        - masters
+        - nodes
+        - etcd
+        - nfs
+      vars:
+        ansible_ssh_user: root
+        openshift_schedulable: true
+        openshift_node_labels: "{'region': 'infra','zone': 'default', 'node-role.kubernetes.io/compute': 'true'}"
+        openshift_deployment_type: openshift-enterprise
+        openshift_clock_enabled: true
+        openshift_master_identity_providers: "[{'name': 'allow_all_auth', 'login': 'true', 'challenge': 'true', 'kind': 'AllowAllPasswordIdentityProvider'}]"
+        openshift_disable_check: "memory_availability,disk_availability"
+        openshift_enable_excluders: false
+        template_service_broker_install: false
+        openshift_use_manageiq: false
+        openshift_install_examples: false
+
+        openshift_hosted_etcd_storage_kind: nfs
+        openshift_hosted_etcd_storage_nfs_options: "*(rw,root_squash,sync,no_wdelay)"
+        openshift_hosted_etcd_storage_nfs_directory: "/opt/osev3-etcd"
+        openshift_hosted_etcd_storage_volume_name: "etcd-vol2"
+        openshift_hosted_etcd_storage_access_modes: "['ReadWriteOnce']"
+        openshift_hosted_etcd_storage_volume_size: "1100M"
+        openshift_hosted_etcd_storage_labels: "{'storage': 'etcd'}"
+
+        ansible_service_broker_refresh_interval: "20s"
+        ansible_service_broker_local_registry_whitelist: "[\".*-apb$\"]"
+        ansible_service_broker_image_prefix: "registry.access.stage.redhat.com/openshift3/ose-"
+        ansible_service_broker_image_tag: "latest"
+        ansible_service_broker_registry_url: "registry.access.stage.redhat.com"
+
+        ansible_service_broker_etcd_image_prefix: "quay.io/coreos/"
+        ansible_service_broker_etcd_image_tag: "latest"
+
+        docker_dev: "/dev/vdb"
+
+        oreg_url: "registry.access.stage.redhat.com/openshift3/ose-${component}:${version}"
+        openshift_docker_additional_registries: "registry.access.stage.redhat.com"
+        openshift_docker_insecure_registries: "registry.access.stage.redhat.com"
+        openshift_service_catalog_image_prefix: "registry.access.stage.redhat.com/openshift3/ose-"
+        template_service_broker_prefix: "registry.access.stage.redhat.com/openshift3/ose-"
+        openshift_web_console_prefix: "registry.access.stage.redhat.com/openshift3/ose-"
+
+        osm_default_node_selector: ""

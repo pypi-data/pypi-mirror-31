@@ -1,0 +1,60 @@
+[OSEv3:children]
+masters
+nodes
+etcd
+nfs
+
+[OSEv3:vars]
+openshift_install_examples = False
+template_service_broker_install = False
+openshift_hosted_etcd_storage_nfs_options = *(rw,root_squash,sync,no_wdelay)
+openshift_docker_additional_registries = registry.access.stage.redhat.com
+ansible_service_broker_registry_url = registry.access.stage.redhat.com
+oreg_url = registry.access.stage.redhat.com/openshift3/ose-${component}:${version}
+docker_dev = /dev/vdb
+ansible_service_broker_image_tag = latest
+ansible_service_broker_image_prefix = registry.access.stage.redhat.com/openshift3/ose-
+ansible_service_broker_refresh_interval = 20s
+openshift_hosted_etcd_storage_kind = nfs
+ansible_service_broker_etcd_image_prefix = quay.io/coreos/
+openshift_hosted_etcd_storage_labels = {'storage': 'etcd'}
+openshift_hosted_etcd_storage_volume_size = 1100M
+openshift_hosted_etcd_storage_volume_name = etcd-vol2
+template_service_broker_prefix = registry.access.stage.redhat.com/openshift3/ose-
+ansible_service_broker_local_registry_whitelist = [".*-apb$"]
+openshift_hosted_etcd_storage_nfs_directory = /opt/osev3-etcd
+openshift_clock_enabled = True
+osm_default_node_selector = 
+openshift_node_labels = {'region': 'infra','zone': 'default', 'node-role.kubernetes.io/compute': 'true'}
+openshift_disable_check = memory_availability,disk_availability
+openshift_deployment_type = openshift-enterprise
+openshift_enable_excluders = False
+openshift_docker_insecure_registries = registry.access.stage.redhat.com
+openshift_master_identity_providers = [{'name': 'allow_all_auth', 'login': 'true', 'challenge': 'true', 'kind': 'AllowAllPasswordIdentityProvider'}]
+openshift_schedulable = True
+ansible_service_broker_etcd_image_tag = latest
+openshift_use_manageiq = False
+ansible_ssh_user = root
+openshift_service_catalog_image_prefix = registry.access.stage.redhat.com/openshift3/ose-
+openshift_web_console_prefix = registry.access.stage.redhat.com/openshift3/ose-
+openshift_hosted_etcd_storage_access_modes = ['ReadWriteOnce']
+
+[nodes]
+192.168.122.206 hostname=192.168.122.206
+192.168.122.226 hostname=192.168.122.226
+192.168.122.98 hostname=192.168.122.98
+
+[nfs]
+192.168.122.98 hostname=192.168.122.98
+
+[masters]
+192.168.122.98 hostname=192.168.122.98
+
+[etcd]
+192.168.122.98 hostname=192.168.122.98
+
+[all]
+192.168.122.206 hostname=192.168.122.206
+192.168.122.226 hostname=192.168.122.226
+192.168.122.98 hostname=192.168.122.98
+

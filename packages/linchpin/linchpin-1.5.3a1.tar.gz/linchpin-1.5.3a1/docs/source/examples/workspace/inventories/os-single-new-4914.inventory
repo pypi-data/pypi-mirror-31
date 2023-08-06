@@ -1,0 +1,10 @@
+[frontend]
+ hostname=
+
+[database]
+10.8.243.102 hostname=10.8.243.102
+
+[all]
+ hostname=
+10.8.243.102 hostname=10.8.243.102
+
