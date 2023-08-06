@@ -1,0 +1,13 @@
+varlink/__init__.py,sha256=TVN0rLFYFW8QU1nBvtVhKJ0zhLkRwLvesArRwwhQXsM,1683
+varlink/cli.py,sha256=DwhIUkTL0O8_oKRZmqAj2nIiE6pCOQcpCEU3JesRIP0,3254
+varlink/client.py,sha256=ofqAgXxkFwP6CPNuNf8qWKCVeijMgHhUJx_4RWpasyg,16120
+varlink/error.py,sha256=Yg_95BmVXK_7pAqj9kH76BsqKiin_AugTeS2rkqI6lk,4183
+varlink/org.varlink.service.varlink,sha256=ImpCk2u7W3oaonrAIIZOPPcJlheAY_Tv9GHIkOCIWDc,910
+varlink/scanner.py,sha256=-JzoIzV-cikeJ3Kg8joUFowNnvm56NIPUpwQ0vv4kLA,14045
+varlink/server.py,sha256=G9Gk5eKP8LJy03zVwaEz1vyhSmbpYcttzwiZx-ywepE,16681
+varlink-26.dist-info/DESCRIPTION.rst,sha256=daPh-4LLbjKm1PBfyTIFiID6GzbhI-C5IaGLvl-vsOo,67
+varlink-26.dist-info/METADATA,sha256=RJMmSdoo3Hf7nO0t7H25fEHRERh0IGhMEtm0bC8YRAk,660
+varlink-26.dist-info/RECORD,,
+varlink-26.dist-info/WHEEL,sha256=kdsN-5OJAZIiHN-iO4Rhl82KyS0bDWf4uBwMbkNafr8,110
+varlink-26.dist-info/metadata.json,sha256=Xwej17Cml2t3dyeQhwuNKYsXewA2_KktKL3A_BG2Soo,760
+varlink-26.dist-info/top_level.txt,sha256=F0cApc8KPLk7JSOl4AoRcELnVcJSyIS5dc6chXzulJ0,8
