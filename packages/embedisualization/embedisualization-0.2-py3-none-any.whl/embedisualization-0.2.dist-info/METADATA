@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: embedisualization
+Version: 0.2
+Summary: Visualization of text embeddings/vectorization with clustering
+Home-page: https://github.com/laugustyniak/embedisualization
+Author: Łukasz Augustyniak
+Author-email: luk.augustyniak@gmail.com
+License: UNKNOWN
+Description-Content-Type: text/markdown
+Keywords: word_embeddings clustering word_vectorization visualisation
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: matplotlib (==2.1.0)
+Requires-Dist: more-itertools (==4.1.0)
+Requires-Dist: mpld3 (==0.3)
+Requires-Dist: pandas (==0.20.3)
+Requires-Dist: scikit-learn (==0.19.1)
+Requires-Dist: scipy (==1.0.1)
+Requires-Dist: spacy (==2.0.10)
+Provides-Extra: dev
+Requires-Dist: check-manifest; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: coverage; extra == 'test'
+
+# Visualize embed of documents
+
+
