@@ -1,0 +1,9 @@
+README.md
+setup.py
+rdict/__init__.py
+rdict/redis.py
+rdict.egg-info/PKG-INFO
+rdict.egg-info/SOURCES.txt
+rdict.egg-info/dependency_links.txt
+rdict.egg-info/requires.txt
+rdict.egg-info/top_level.txt

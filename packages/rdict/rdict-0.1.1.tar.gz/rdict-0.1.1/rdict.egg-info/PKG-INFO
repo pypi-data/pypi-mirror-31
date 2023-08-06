@@ -1,0 +1,19 @@
+Metadata-Version: 1.2
+Name: rdict
+Version: 0.1.1
+Summary: A Pythonic tool is used for operating redis commands.
+Home-page: https://github.com/xdusongwei/rdict
+Author: songwei
+Author-email: songwei@songwei.io
+License: UNKNOWN
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3
