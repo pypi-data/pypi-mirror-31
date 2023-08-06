@@ -1,0 +1,7 @@
+trytond_account_invoice<4.9,>=4.8
+trytond_account_invoice_line_standalone<4.9,>=4.8
+trytond_account_invoice_stock<4.9,>=4.8
+trytond_purchase<4.9,>=4.8
+trytond_sale<4.9,>=4.8
+trytond_stock<4.9,>=4.8
+trytond<4.9,>=4.8
