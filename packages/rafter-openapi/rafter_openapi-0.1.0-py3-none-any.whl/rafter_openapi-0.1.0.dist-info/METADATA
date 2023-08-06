@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: rafter-openapi
+Version: 0.1.0
+Summary: OpenAPI support for Rafter
+Home-page: http://github.com/sayoun/rafter-openapi/
+Author: sayoun
+Author-email: sayoun@pm.me
+License: MIT
+Platform: any
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Web Environment
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: rafter
+
+UNKNOWN
+
+
