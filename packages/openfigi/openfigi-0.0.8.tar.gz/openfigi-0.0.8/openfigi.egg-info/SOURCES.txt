@@ -1,0 +1,12 @@
+README.md
+setup.py
+openfigi/__init__.py
+openfigi/__main__.py
+openfigi/openfigi.py
+openfigi.egg-info/PKG-INFO
+openfigi.egg-info/SOURCES.txt
+openfigi.egg-info/dependency_links.txt
+openfigi.egg-info/entry_points.txt
+openfigi.egg-info/requires.txt
+openfigi.egg-info/top_level.txt
+test/test_basic.py
