@@ -1,0 +1,11 @@
+setup.py
+caspi/__init__.py
+caspi/cu.py
+caspi/gs25.py
+caspi/seven_eleven.py
+caspi/util.py
+cstore_api.egg-info/PKG-INFO
+cstore_api.egg-info/SOURCES.txt
+cstore_api.egg-info/dependency_links.txt
+cstore_api.egg-info/requires.txt
+cstore_api.egg-info/top_level.txt
