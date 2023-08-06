@@ -1,0 +1,18 @@
+Metadata-Version: 2.0
+Name: threat-intel
+Version: 0.1.27
+Summary: Collection of the API calls for various threat intel feeds.
+Home-page: https://github.com/Yelp/threat_intel
+Author: Yelp Security
+Author-email: opensource@yelp.com
+License: Copyright 2016 Yelp
+Platform: UNKNOWN
+Provides: threat_intel
+Requires-Dist: grequests
+Requires-Dist: requests[security]
+Requires-Dist: simplejson
+Requires-Dist: six
+
+UNKNOWN
+
+
