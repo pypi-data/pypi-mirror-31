@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: ngram_graphs
+Version: 0.1
+Summary: An igraph based ngram graph library for NLP
+Home-page: https://github.com/loginn/ngrams_graphs
+Author: loginn
+Author-email: vincent.kurta2@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: ngrams graph NLP
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Text Processing :: Linguistic
