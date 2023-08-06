@@ -1,0 +1,13 @@
+sqlitebiter/__init__.py,sha256=sZt68qkqRRAM4OrubxMtsVQj4s3tvaiXJsPqkVzaGOc,229
+sqlitebiter/__version__.py,sha256=FPWsW3o4Khxl2fUrBNIKgzOKBAqjS5Yth5rivkXHhpU,280
+sqlitebiter/_config.py,sha256=slwylQWg8CQEYjK-JaqbV_8Xp0BLFHRbl29NhTfz9zY,1051
+sqlitebiter/_const.py,sha256=l7Hdv_sCc0U1ycUtBX72NYXSEMfgGBa1oIYj7-S3ep0,213
+sqlitebiter/_counter.py,sha256=22B_EOjKKBcViQxR5K5wrgiRvptLXu5kpRUa9Uo_KPw,992
+sqlitebiter/_enum.py,sha256=sRG9pAGmKfCkcuCYVytsPZojTNXaSqtYjvlMiq4PVlk,451
+sqlitebiter/_table_creator.py,sha256=3kX3QCawcP0f5Cii5_Fic-yJFoFu05ByFvztcyzJKv0,2590
+sqlitebiter/sqlitebiter.py,sha256=5PjuZ2adw8NR4bXvjjtJeypZg8pguE5vJ7VxWdXc9Tk,14921
+sqlitebiter-0.13.0.dist-info/METADATA,sha256=ttZ9lrA1PhAX0Pfh-t4d8SIQO7a0V6zKqnoIENI8uJY,12800
+sqlitebiter-0.13.0.dist-info/RECORD,,
+sqlitebiter-0.13.0.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+sqlitebiter-0.13.0.dist-info/entry_points.txt,sha256=MLHYEdX2GhZSG9IhUnC9HFQXH9tP1sCODXtrxUWQGvc,61
+sqlitebiter-0.13.0.dist-info/top_level.txt,sha256=LL9PzpdmmIIIeI_Oblg6ntHy6o1b0i3XBPaLI17AWdo,12
