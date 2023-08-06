@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: dcos-monitor
+Version: 0.2
+Summary: a dcos introspection tool
+Home-page: https://github.com/elubow/dcos_monitor
+Author: Eric Lubow
+Author-email: eric@lubow.org
+License: UNKNOWN
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Keywords: dcos,mesos
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
