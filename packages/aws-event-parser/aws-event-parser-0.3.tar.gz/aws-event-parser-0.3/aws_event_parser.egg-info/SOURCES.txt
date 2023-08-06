@@ -1,0 +1,10 @@
+setup.py
+aws_event_parser.egg-info/PKG-INFO
+aws_event_parser.egg-info/SOURCES.txt
+aws_event_parser.egg-info/dependency_links.txt
+aws_event_parser.egg-info/requires.txt
+aws_event_parser.egg-info/top_level.txt
+awsevents/__init__.py
+awsevents/aws_event_parser.py
+awsevents/base.py
+awsevents/exceptions.py
