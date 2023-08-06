@@ -1,0 +1,92 @@
+Metadata-Version: 2.1
+Name: p2pnet
+Version: 0.0.1
+Summary: RLP-encoded p2p networking using BLS signatures
+Home-page: https://github.com/rosendin/p2pnet
+Author: Matthew Rosendin
+Author-email: matthew.rosendin@gmail.com
+License: BSD
+Download-URL: https://github.com/rosendin/pyeth/tarball/0.0.1
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: arrow (==0.10.0)
+Requires-Dist: binaryornot (==0.4.3)
+Requires-Dist: cffi (==1.10.0)
+Requires-Dist: chardet (==3.0.4)
+Requires-Dist: click (==6.7)
+Requires-Dist: cookiecutter (==1.5.1)
+Requires-Dist: future (==0.16.0)
+Requires-Dist: ipaddress (==1.0.18)
+Requires-Dist: Jinja2 (==2.9.6)
+Requires-Dist: jinja2-time (==0.2.0)
+Requires-Dist: MarkupSafe (==1.0)
+Requires-Dist: nose (==1.3.7)
+Requires-Dist: poyo (==0.4.1)
+Requires-Dist: pycparser (==2.18)
+Requires-Dist: pysha3 (==1.0.2)
+Requires-Dist: python-dateutil (==2.6.1)
+Requires-Dist: rlp (==0.5.1)
+Requires-Dist: secp256k1 (==0.13.2)
+Requires-Dist: six (==1.10.0)
+Requires-Dist: whichcraft (==0.4.1)
+
+# p2p-net
+
+RLP-encoded signatures used in networking demonstrating ping. This code can query to determine whether there is a connection to it.
+
+## Getting Started
+
+Clone the repository
+
+```
+$ git clone https://github.com/rosendin/p2p-net
+Cloning into `p2p-net`...
+remote: Counting objects: 10, done.
+remote: Compressing objects: 100% (8/8), done.
+remove: Total 10 (delta 1), reused 10 (delta 1)
+Unpacking objects: 100% (10/10), done.
+```
+
+Create and activate the virtual environment
+
+```
+$ virtualenv p2pnet
+New python executable in pyeth/bin/python2.7
+Also creating executable in pyeth/bin/python
+Installing setuptools, pip...done.
+
+$ source venv/bin/activate
+```
+
+Install cookiecutter with pip: `pip install cookiecutter` then download the [project skeleton](https://github.com/wdm0006/cookiecutter-pipproject) with `cookiecutter gh:wdm0006/cookiecutter-pipproject`.
+
+Run `pip install -r requirements.txt` or install individually (see below).
+
+Install nose: `pip install nose`
+RLP encoding: `pip install rlp`
+Elliptic curve encryption: `pip install secp256k1`
+For the `keccack256` algo: `pip install pysha3`
+IP addresses to binary format: `pip install ipaddress`
+
+Generating a private key:
+```
+(venv) $ python
+>>> from secp256k1 import PrivateKey
+>>> k = PrivateKey(None)
+>>> f = open("priv_key", 'w')
+>>> f.write(k.serialize())
+>>> f.close()
+```
+
+Command to run unit tests: `nosetests`
+
+## To-do
+
+- Use BLS signatures
+
+## References
+- [Ocalog Posts on Ethereum](https://ocalog.com/)
+- [Recursive Length Prefix Encoding (Ethereum)](https://github.com/ethereum/wiki/wiki/RLP)
+
+
