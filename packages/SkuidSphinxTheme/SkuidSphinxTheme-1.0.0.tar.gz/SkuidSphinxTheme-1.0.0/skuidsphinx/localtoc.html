@@ -1,0 +1,13 @@
+<div class="menu-btn" id="menu-btn">
+  <p>Local Table of Contents</p>
+  <i id="closedMenu" class="fa fa-angle-down" aria-hidden="true"></i>
+  <i id="openMenu" class="fa fa-angle-up" aria-hidden="true"></i>
+</div>
+<div id="menu">
+    <div id="page-buttons">
+      <button class="btn std-btn" type="button"  id="showAll" style="display:none;" onclick="expandAll()">Show all sections</button>
+      <button class="btn std-btn" type="button" id="hideAll" style="display:none;" onclick="collapseAll()">Collapse all sections</button>
+      <button class="btn std-btn" type="button" id="searchToggle" style="display:none;" onclick="toggleSearchHighlighting()">Search Term Highlighting: On</button>
+    </div>
+  {{ toc }}
+</div>
