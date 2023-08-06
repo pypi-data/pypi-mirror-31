@@ -1,0 +1,360 @@
+CHANGES
+=======
+
+1.7.6
+-----
+
+* Bump README version
+* Use last\_retry\_time from cache entry
+* Max proactive limit needs to be same as test
+* pytype check for is None for a nexthop cache entry
+* Reduce default limit on proactive ARP/ND further (more sane limit)
+* last\_retry time must be last
+* Simplify ICMPv6 handler
+* Delete host routes that are too old, as well has that have been retried too many times
+* Don't send delete flows for host routes where the host was never learned
+* Update RE for expiring host route log message
+* Incremental simplification of ICMPv6 handler
+* Prioritize route gateways in host resolution
+* refactor to route host/route ip\_gws separately
+* Update sphinx\_rtd\_theme from 0.3.0 to 0.3.1
+* Add error messages and remove try/catch
+* Replace use of assert statements in valve\_of.py
+* Replace use of assert statements in valve\_acl.py
+* Replace use of assert statements in router.py
+* Replace use of assert statements in vlan.py
+* Replace use of assert statements in port.py
+* Replace use of assert statements in acl.py
+* Replace use of assert statements in dp.py
+* Replace use of assert statements in conf.py & config\_parser.py
+* pylint
+* Increase min lint score to 9.2
+* Increase min lint score to 9.1
+* pylint
+* pylint
+* Increase test coverage to 83%
+* Gauge should use ryu\_event timestamp
+* More test coverage for ryu\_event handlers
+* Test coverage for ryu\_event handlers
+* Test coverage for faucet.py
+* Add test coverage directly, for experimental API
+* Increase test coverage minimum to 82%
+* Test notifier check\_path()
+* Move logging to gauge\_poller
+* pylint
+* More common RyuApp start()
+* reload\_config() is in common
+* Config file stating uses common functions between FAUCET and Gauge
+* Revert "Protect event handlers where DP is required to be running."
+* Simplify Gauge OF reply handler
+* Protect event handlers where DP is required to be running
+* Use common datapath config
+* Common datapath connect/disconnect/reconnect handlers
+* Use common \_CONTEXT
+* Use common handler to manage datapath objects for both FAUCET and Gauge
+* ofmsgs overridden on warm start
+* ofmsgs missing reference
+* Add events for config reloads
+* \_get\_valve() normalizes ryu\_event contents
+* Rearrange args for \_get\_valve()
+* Lock onto ubuntu 16.04 to allow builds on docker cloud
+* Preversion 1.7.6
+
+1.7.5
+-----
+
+* pylint
+* Exercise code path for repeat host learning
+* Enable max\_hosts: 1 on a port
+* Add clib unit test submodule
+* Enable LLDP receiving
+* Don't run any LLDP sender code if LLDP not enabled
+* Don't reference LLDP chassis ID/TTL where LLDP not enabled
+* Randomize ARP/ND/RA flood port order
+* Interface range with single port as an int doesn't parse
+* Randomize LLDP beacon port order
+* Pretty print cache entries
+* Add L2\_EXPIRE event
+* Bump version number
+* Update sphinx from 1.7.2 to 1.7.4
+* valve\_flowreoder preserves original order within each partition
+* Make unused flow\_timeout handler shorter
+* Increase minimum test coverage to 81%
+* Incremental test coverage for Prometheus flow table export
+* Test valid Gauge config
+* Move Gauge smoke test to test\_gauge
+* Minimum test coverage is now 80%
+* Smoke test config reload
+* Smoke test reload config
+* Test more initializers
+* Use test registry
+* Smoke test metrics initialization
+* Gauge missing call to override registry
+* Revert "Prometheus client can take a registry argument, so can be initialized in test."
+* Revert "Smoke test reload\_config()."
+* Revert "Restrict test registry scope."
+* Restrict test registry scope
+* Use REGISTRY not core.REGISTRY
+* Smoke test reload\_config()
+* Prometheus client can take a registry argument, so can be initialized in test
+* Allow Prometheus client to take registry argument
+* Test coverage for version
+* Test coverage for \_\_main\_\_.py
+* Run loop\_protect in unit test
+* instantiate FaucetExperimentalAPI
+* Implement of\_vlan\_packet\_ins
+* Move more services out of \_\_init\_\_ to start()
+* Revert "Revert "Avoid initializing Prometheus client in \_\_init\_\_().""
+* Revert "Avoid initializing Prometheus client in \_\_init\_\_()."
+* Increase minimum test coverage to 79%
+* Avoid initializing Prometheus client in \_\_init\_\_()
+* Smoke test for Gauge
+* Smoke test Faucet class
+* Start BGP in unit tests
+* placate pylint
+* Pre-version 1.7.5
+
+1.7.4
+-----
+
+* Bump version to 1.7.4
+* Don't upgrade pip (best practice as of pip 10)
+* Preversion 1.7.4
+
+1.7.3
+-----
+
+* Bump README version
+* with freeradius3 tls-sockets cannot be used when in 'single server' mode. otherwise this is the same as '-X'
+* Refactor tcpdump\_helper into separate class
+* mv hw\_switch\_config.yaml to higher level to make it available to multiple test modules
+* Adding -i test flag for integration tests only
+* Add utility script for local testing
+* freeradius 3.0 for gasket
+* Use test WSGI server
+* eventlet monkey\_patch needs to come first
+* BGP speaker apparently needs eventlet monkey patch
+* Missed another call to send\_flows() in BGP
+* pylint
+* Missed warm start reload call
+* Increase minimum test coverage
+* Remove redundant calls to \_get\_valve()
+* Configure controller meter in unit tests
+* Fix logger leak in test case, increase test coverage for flow reordering
+* hostapd now uses alpine
+* sorintg out dockerfile.hostapd first
+* Update sphinx\_rtd\_theme from 0.2.4 to 0.3.0
+* add myself to authors; alphabetize
+* Bump readme version
+* removed unneed packages
+* copied hostapd files from gasket repo
+* install library needed for pyyaml cloader
+* Use a yaml based syntax for describing config tree tables
+* Add documentation for LLDP configuration
+* Add test for configuring lldp with interface\_ranges
+* LLDP org\_tlv fields can be bytearray or int
+* Bad prometheus\_addr default
+* Clarify stacking flooding comments
+* Add sane proactive learning limit (4096, rather than unlimited)
+* Adding test-base dependeny for doing docker-in-docker hosts
+* update versions of prometheus and grafana
+* Update ryu from 4.23 to 4.24
+* Update ryu from 4.23 to 4.24
+* Restore faucet\_mininet\_test.py wrapper
+* Refactor tests module to make reusable test library component
+* Update gNMI target config
+* Avoid errors in  gNMI cert generation
+* Preversion 1.7.3
+* larger tables required for FaucetSingleL2LearnMACsOnPortTest
+
+1.7.2
+-----
+
+* Move sample grafana dashboards to avoid symlink
+* pip trips up on symlinks, delete docs earlier to avoid
+* preversion 1.7.2
+
+1.7.1
+-----
+
+* Bump readme version
+* move config/async to switch\_features()
+* Order TFM messages after deletes with a barrier
+* for TFM switches, delete all flows before sending TFM
+* Test that required events are present in event log
+* Fix compatibility with sphinx 1.7.1+
+* Implement PORTS\_STATUS message at startup
+* Update sphinx from 1.7.0 to 1.7.2
+* Tidy python3-faucet package
+* Make user/group creation more robust
+* Tidy debian/control
+* Fix some mistakes in documentation
+* Add a tutorial for first time faucet users
+* Apply config changes to down DPs, fix OFError correlation, pylint
+* pylint
+* Verify unicast not looped back
+* self.verify\_port1\_unicast() missed
+* FaucetTaggedAndUntaggedVlanTest verifies broadcast behavior on tagged and untagged hosts
+* verify\_port1\_unicast() doesn't make sense now that combinatorial\_port\_flood is False by default
+* Remove explict combinatorial\_port\_flood
+* Special case FaucetUntaggedVLanUnicastFloodTest
+* pylint
+* Need to exclude hairpin mode
+* SwapVid needs explicit combinatorial\_port\_flood: False
+* Still test failures combinatorial\_port\_flood: False
+* Allow builds to happen a second time
+* Push built packages to raspbian suites
+* Preversion 1.7.1
+
+1.7.0
+-----
+
+* Bump to 1.7.0
+* Add release notes for 1.7.0
+* Apply correct docker image to deploy-package job
+* FaucetUntaggedMultiConfVlansOutputTest still doesn't pass under Travis (base OVS too old?)
+* Enable OVS multiple tags and tests
+* Revert "Enable FaucetUntaggedMultiConfVlansOutputTest."
+* Enable FaucetUntaggedMultiConfVlansOutputTest
+* Update log and config directories in documentation
+* Update paths used by VM builder
+* Log which configuration file we used on startup
+* By default load our ryu.conf on faucet start if it exists
+* Document environment variable usage
+* Complete FaucetUntaggedOutputOverrideTest
+* Incremental test of output override
+* Incremental implementation of override\_output\_port
+* Check undefined override\_output\_port
+* Add config for Override output port
+* Tidy gitlab ci
+* Preversion 1.7.0
+* Enable use of YAML CLoader
+* comments for Cloader
+* bast -> bcast
+* Test that broadcasts to mirrored port are mirrored
+* Incremental fix for port mirroring - broadcasts to a mirrored port were not mirrored, and an extra copy of packets broadcast from a mirrored port were sent
+* Make YAML duplicate key checker more efficient
+* Optimize flooding rules for stacking, if combinatorial\_port\_flood is disabled
+* Add log message when host moves ports
+* Allow DP type decision for whether to use barriers
+* Use more consistent cache refresh time
+* Increase probability of L2 rule refresh
+* Test broadcast not flooded back to self
+* Use correct allow instructions for VLAN ACLs
+* gitlab-ci.yaml added
+* Use SwapVid feature to smash a packet into another VLAN
+* Adding debian packaging support to faucet
+* Add DP config option, combinatorial\_port\_flood (default True). If False, we use only one flood rule for all ports on a VLAN (using OpenFlow spec implied behavior, if a rule says in\_port=n,output:n,x,y, packet is sent to x and y only, because OFPP\_IN\_PORT was not specified)
+* Make in\_port filtering optional when building a flood rule
+* Incremental implementation of force\_port\_vlan in ACLs
+* Refactor to support force\_port\_vlan
+* pylint
+* Even uglier flow dedupe
+* Stack tests need OVS\_TYPE
+* Attempt flood ping after meter applied
+* Documentation cleanup for output dict
+* Remove couchdb from architecture diagram
+* Remove more CouchDB dependencies
+* remove more couchdb dependencies
+* Comments for flow\_timeout()
+* couple minor changes:
+* LACP intercept length should be longer
+* Use common signal\_handler/start
+* Common event should be in valve\_ryuapp
+* Use common base signal handler
+* Use same config\_stat method
+* Gauge can use ConfigWatcher()
+* Use common ConfigWatcher implementation
+* Pre-version
+
+1.6.22
+------
+
+* Fix ln -s for pre-commit
+* Update version
+* Revert "Upgrade DPDK to 18.02."
+* Upgrade DPDK to 18.02
+* Docs for ACL mirror action
+* TODOs
+* Put faucet pipeline config in own file
+* Use common start/stop watchers
+* Start watchers
+* Add start/stop watcher helpers
+* Switch from coveralls to codecov
+* Revert "Faucet and Gauge can use same signal handler."
+* Revert "RyuAppBase."
+* RyuAppBase
+* Still a list
+* Still incorrect watchers iterator
+* Watchers is a dict itself
+* Revert "enumerate order."
+* Increase min test coverage
+* Add coverage for add/del route
+* Test coverage for add/del route
+* Test coverage for datapath disconnect
+* Test coverage for learn FIB route from packet
+* Provide initial configuration for pyup
+* push up base and python3 images for docker-compose
+* Event server should reject multiple clients, and also keep only most recent N events when the queue is full
+* All hosts must have nonzero eth\_dst counters
+* Add retries for flow tables in Prometheus
+* Add test for Prometheus flow logging
+* Add unit tests for gauge config
+* dps shouldn't be a required key for gauge.yaml #1441
+* Reduce dimensions for Prometheus flow table logging
+* Prometheus/Influx now logs DP ID
+* Initial implementation of Prometheus flow table counters
+* Incremental implementation of flow table counters for Prometheus
+* map old OF match names to new
+* Update faucet\_mininet\_test\_base.py
+* Update faucet\_mininet\_test\_base.py
+* Update faucet\_mininet\_test\_base.py
+* Need to translate back to old matches for Ryu ofctl
+* Remove old style unsupported tp\_dst match
+* Add flow counters for Gauge Prometheus
+* Drop support for old style OF1.0 matches (nw\_src, nw\_dst et al)
+* Run more unit tests in pre-commit hook
+* Pre-version 1.6.15
+
+1.6.14
+------
+
+* Release faucet 1.6.14
+* pylint
+* Better check for bad include format and fix errors
+* Fix typo
+* Fix #1414
+* Fix #1412
+* Fix #1415
+* Update docker documentation
+* Add note that only one client is supported
+* Allocate new port if iperf client or server fail to start
+* typo
+* Explicitly set iperf client IP
+* Revert "Revert "Add routing IPv6 routing test address by loopback interface.""
+* Revert "Add routing IPv6 routing test address by loopback interface."
+* Add routing IPv6 routing test address by loopback interface
+* FaucetConfigReloadAclTest should verify port 4 can't be learned as well
+* adjust entrypoint permissions; add group
+* add /var/run/faucet
+* add in from @gizmoguy
+* lock pytype to a commit that works
+* docs should clarify usage is an env for docker run
+* fixing requested changes
+* rework dockerfiles using su-exec in a base image
+* put sudo back
+* extra dependencies, ovs lock requires root
+* set ipv6 conf
+* simplify build time for tests
+* build the base-tests along with the tests
+* switch Dockerfiles mostly to non-root; fixes #1391
+* Preversion 1.6.14
+
+1.6.13
+------
+
+* Release 1.6.13
+* Add link to Poseidon tutorial
+* Revert "Try https://blog.travis-ci.com/2017-12-01-new-update-schedule-for-linux-build-images."
+* Try https://blog.travis-ci.com/2017-12-01-new-update-schedule-for-linux-build-images
+* FAUCET\_EVENT\_SOCK can be a bool (default path) or an explicit path
