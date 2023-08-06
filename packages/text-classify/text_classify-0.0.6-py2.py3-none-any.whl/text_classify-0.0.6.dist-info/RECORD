@@ -1,0 +1,14 @@
+text_classify/__init__.py,sha256=agArs8jmKQ3iLATj6savSFhd0H-da3CxMg3NtqwaXaY,48
+text_classify/classify.py,sha256=Cz5iyfw5VI7Itj7nvYlGd4C8sLDhZcApUVrYEsgxWQg,6677
+text_classify/cnn.py,sha256=nkXm86uSw1tAze4447YPKhljNX9OkrzorooKqvw4Ah0,1754
+text_classify/config.py,sha256=1o2tMPq6I5sfmi6f79CudOFDgkLkhlhIjLQto7rRZKI,1297
+text_classify/mcnn.py,sha256=lx3e8yL2zZic_YgfQv5ruAcIMma52wdQKX37Raj5kCo,2432
+text_classify/mgcnn.py,sha256=1hS9Ogpy5AZhMyVemHwvl5RY101ZjGZV88yI5oZqb1M,3893
+text_classify/simple_cnn.py,sha256=hcPy_lEYqLFMau2hVO3Pk3LwSylVkKS0FCOWDDzqsHQ,2115
+text_classify/utils.py,sha256=OWPXXvBsJMaLu0louhNA1RPUhYi8s8jHlJb80tDmYHI,1968
+text_classify-0.0.6.dist-info/DESCRIPTION.rst,sha256=ZTfpRRMho5RIkwq40Ap9YGfrUmeqyddzdnT3f8tRLIY,1976
+text_classify-0.0.6.dist-info/METADATA,sha256=WByvYW4ekyt4Eu5IzeKg8Du-uKNQUiskcf2vFAai5OM,2317
+text_classify-0.0.6.dist-info/RECORD,,
+text_classify-0.0.6.dist-info/WHEEL,sha256=o2k-Qa-RMNIJmUdIc7KU6VWR_ErNRbWNlxDIpl7lm34,110
+text_classify-0.0.6.dist-info/metadata.json,sha256=mCnmY41vF5K7CoFfncOei-EoxRasz06y_Adxon6Oung,393
+text_classify-0.0.6.dist-info/top_level.txt,sha256=GiQDaY4U0qvy_tSKBXAsKNb5Bj2qeuTvkaf1-tOlXx8,14
