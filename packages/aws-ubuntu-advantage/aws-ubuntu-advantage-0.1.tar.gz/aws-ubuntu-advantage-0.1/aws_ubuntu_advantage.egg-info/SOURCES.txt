@@ -1,0 +1,10 @@
+README.md
+setup.py
+aws_ubuntu_advantage.egg-info/PKG-INFO
+aws_ubuntu_advantage.egg-info/SOURCES.txt
+aws_ubuntu_advantage.egg-info/dependency_links.txt
+aws_ubuntu_advantage.egg-info/entry_points.txt
+aws_ubuntu_advantage.egg-info/requires.txt
+aws_ubuntu_advantage.egg-info/top_level.txt
+canonical/__init__.py
+canonical/awsua.py

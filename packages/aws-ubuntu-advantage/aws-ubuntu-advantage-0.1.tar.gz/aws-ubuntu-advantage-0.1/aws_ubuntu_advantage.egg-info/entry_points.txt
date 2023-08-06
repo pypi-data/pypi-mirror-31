@@ -1,0 +1,3 @@
+[console_scripts]
+aws-ubuntu-advantage = canonical.awsua:main
+
