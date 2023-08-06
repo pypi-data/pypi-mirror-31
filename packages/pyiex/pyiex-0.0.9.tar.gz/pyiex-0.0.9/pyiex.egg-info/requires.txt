@@ -1,0 +1,7 @@
+muted_http_request_randomizer==0.0.3
+
+[dev]
+check-manifest
+
+[test]
+coverage
