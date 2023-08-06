@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: notes-to-keep
+Version: 0.0.1
+Summary: Export all your Apple iCloud Notes to Google Keep
+Home-page: https://github.com/adamyi/notes_to_keep
+Author: Adam Yi
+Author-email: i@adamyi.com
+License: MIT
+Keywords: apple icloud notes google keep
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Topic :: Utilities
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: gkeepapi (>=0.10.6)
+Requires-Dist: biplist (>=1.0.3)
+Requires-Dist: beautifulsoup4 (>=4.6.0)
+Requires-Dist: docopt (>=0.6.2)
+
+UNKNOWN
+
+
