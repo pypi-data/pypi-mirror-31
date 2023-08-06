@@ -1,0 +1,15 @@
+cached-property
+django<1.12,>=1.8
+requests
+six
+
+[:python_version < "3"]
+futures
+
+[:python_version < "3.4"]
+enum34
+
+[notice_comment]
+boto3
+celery
+requests-toolbelt
