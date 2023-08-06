@@ -1,0 +1,13 @@
+Metadata-Version: 1.0
+Name: gardena_smart
+Version: 0.11b2
+Summary: Library to access the gardena smart platform
+Home-page: http://github.com/rcastberg/gardena_smart
+Author: Rene Castberg
+Author-email: rene@castberg.org
+License: GPL
+Description: This is an attempt at creating a library for the
+              gardena smart system in python. At the moment it is a work in progress and not
+              all components are supported. At the moment we only have read only access
+              to the mower component. Please see github page for more information
+Platform: UNKNOWN
