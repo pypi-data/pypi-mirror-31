@@ -1,0 +1,6 @@
+MANIFEST.in
+setup.py
+dynamodbencryptionsdk.egg-info/PKG-INFO
+dynamodbencryptionsdk.egg-info/SOURCES.txt
+dynamodbencryptionsdk.egg-info/dependency_links.txt
+dynamodbencryptionsdk.egg-info/top_level.txt
