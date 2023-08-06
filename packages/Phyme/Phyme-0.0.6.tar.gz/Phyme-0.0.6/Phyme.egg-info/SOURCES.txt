@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+setup.py
+Phyme/IOUtil.py
+Phyme/Phyme.py
+Phyme/RhymeTrieNode.py
+Phyme/__init__.py
+Phyme/rhymeUtils.py
+Phyme/util.py
+Phyme.egg-info/PKG-INFO
+Phyme.egg-info/SOURCES.txt
+Phyme.egg-info/dependency_links.txt
+Phyme.egg-info/top_level.txt
+Phyme/data/phone_type.json
+Phyme/data/type_phone.json
+Phyme/data/type_voiced_phone.json
+Phyme/data/word_phone.json
