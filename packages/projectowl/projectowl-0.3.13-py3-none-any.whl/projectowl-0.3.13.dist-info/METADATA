@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: projectowl
+Version: 0.3.13
+Summary: Utility library for building python app
+Home-page: https://flyfj@bitbucket.org/flyfj/owl.git
+Author: Jie Feng
+Author-email: jiefengdev@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: boto3 (==1.7.14)
+Requires-Dist: botocore (==1.10.14)
+Requires-Dist: click (==6.7)
+Requires-Dist: deepimage (==0.0.4)
+Requires-Dist: docutils (==0.14)
+Requires-Dist: Flask (==1.0.2)
+Requires-Dist: Flask-Cors (==3.0.4)
+Requires-Dist: itsdangerous (==0.24)
+Requires-Dist: Jinja2 (==2.10)
+Requires-Dist: jmespath (==0.9.3)
+Requires-Dist: MarkupSafe (==1.0)
+Requires-Dist: numpy (==1.14.3)
+Requires-Dist: opencv-python (==3.4.0.12)
+Requires-Dist: Pillow (==5.1.0)
+Requires-Dist: pymongo (==3.6.1)
+Requires-Dist: python-dateutil (==2.7.2)
+Requires-Dist: s3transfer (==0.1.13)
+Requires-Dist: six (==1.11.0)
+Requires-Dist: tornado (==5.0.2)
+Requires-Dist: Werkzeug (==0.14.1)
+
+UNKNOWN
+
+
