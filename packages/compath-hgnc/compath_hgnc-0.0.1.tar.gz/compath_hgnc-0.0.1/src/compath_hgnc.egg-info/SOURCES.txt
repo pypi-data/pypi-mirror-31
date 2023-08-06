@@ -1,0 +1,12 @@
+README.rst
+setup.py
+src/compath_hgnc/__init__.py
+src/compath_hgnc/__main__.py
+src/compath_hgnc/cli.py
+src/compath_hgnc/manager.py
+src/compath_hgnc.egg-info/PKG-INFO
+src/compath_hgnc.egg-info/SOURCES.txt
+src/compath_hgnc.egg-info/dependency_links.txt
+src/compath_hgnc.egg-info/entry_points.txt
+src/compath_hgnc.egg-info/requires.txt
+src/compath_hgnc.egg-info/top_level.txt

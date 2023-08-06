@@ -1,0 +1,7 @@
+pybel>=0.10.1
+bio2bel>=0.0.9
+compath_utils
+bio2bel_hgnc
+sqlalchemy
+click
+pandas
