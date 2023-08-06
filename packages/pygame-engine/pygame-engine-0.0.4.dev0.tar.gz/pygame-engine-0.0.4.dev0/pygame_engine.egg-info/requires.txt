@@ -1,0 +1,7 @@
+pygame
+numpy
+
+[test]
+pylint
+pytest
+pytest-pylint
