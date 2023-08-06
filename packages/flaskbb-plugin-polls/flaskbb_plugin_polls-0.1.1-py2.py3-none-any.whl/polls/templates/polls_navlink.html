@@ -1,0 +1,5 @@
+<li {% if 'polls_bp.index' == request.endpoint %}class="active"{% endif %}>
+    <a href="{{ url_for('polls_bp.index') }}">
+        <i class="fa fa-home"></i> polls
+    </a>
+</li>
