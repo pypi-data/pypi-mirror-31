@@ -1,0 +1,100 @@
+Metadata-Version: 2.0
+Name: pytest-docker-fixtures
+Version: 1.2.1
+Summary: pytest docker fixtures
+Home-page: https://github.com/onna/pytest-docker-fixtures
+Author: Nathan Van Gheem
+Author-email: vangheem@gmail.com
+License: BSD
+Keywords: pytest,fixtures,docker
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: pytest
+Requires-Dist: docker
+Requires-Dist: requests
+Provides-Extra: pg
+Requires-Dist: psycopg2; extra == 'pg'
+
+Introduction
+============
+
+Provide various service pytest fixtures.
+
+
+Install
+-------
+
+`pip install pytest-docker-fixtures`
+
+Usages
+------
+
+In your conftest.py, add the following:
+
+    pytest_plugins = ['pytest_docker_fixtures']
+
+
+And to use the fixtures:
+
+    def test_foobar(redis):
+        pass
+
+
+Available fixtures
+------------------
+
+PRs welcome!
+
+- redis
+- etcd
+- pg(require to be installed with `pip install pytest-docker-fixtures[pg]`)
+- cockroach(require to be installed with `pip install pytest-docker-fixtures[pg]`)
+- es
+
+
+Configuring custom images
+-------------------------
+
+You can also configure custom images to use::
+
+    from pytest_docker_fixtures import images
+    images.configure(
+        'elasticsearch',
+        'docker.elastic.co/elasticsearch/elasticsearch-platinum', '6.2.4')
+
+1.2.1 (2018-05-05)
+------------------
+
+- Fix Elasticsearch image
+  [vangheem]
+
+
+1.2.0 (2018-05-05)
+------------------
+
+- Be able to configure custom docker images
+  [vangheem]
+
+1.1.0 (2018-04-03)
+------------------
+
+- Add Elasticsearch fixture
+  [vangheem]
+
+
+1.0.1 (2018-03-12)
+------------------
+
+- release
+
+
+1.0.0 (2018-03-12)
+------------------
+
+- initial release
+
+
