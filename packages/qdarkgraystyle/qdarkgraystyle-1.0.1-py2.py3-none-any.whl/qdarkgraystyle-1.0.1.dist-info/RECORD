@@ -1,0 +1,9 @@
+qdarkgraystyle/__init__.py,sha256=v6RqB1cggTf8Hmt0TmtAN1o_lay06klxC8K5RUW6unA,2428
+qdarkgraystyle/compile_qrc.py,sha256=maxgjpc2Ac11--74u-IMhF9jU-ao_iilphOd8I8-JsI,1788
+qdarkgraystyle/pyqt5_style_rc.py,sha256=oMXiOoOkskFLrTJdVb6vAac3bKCiE4vQZV7FRk9Xl_M,94915
+qdarkgraystyle-1.0.1.dist-info/METADATA,sha256=sJV6tk6iRKN17SNgmi69EZTpCbOV22X1lu4vUcGu55Q,3534
+qdarkgraystyle-1.0.1.dist-info/RECORD,,
+qdarkgraystyle-1.0.1.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+qdarkgraystyle-1.0.1.dist-info/top_level.txt,sha256=ceSpFhipYGaS5z4hG6xG1f8aJ61KOiJVaUN_Fi1IrqY,21
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_example_pyqt5.py,sha256=bwGiqtcyycyZ4qRvlIbPrcHhTB9r4j_wk_hOIcA87oY,2311
