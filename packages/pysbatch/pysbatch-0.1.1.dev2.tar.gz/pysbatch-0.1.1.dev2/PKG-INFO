@@ -1,0 +1,18 @@
+Metadata-Version: 1.2
+Name: pysbatch
+Version: 0.1.1.dev2
+Summary: Submit slurm job in python
+Home-page: https://github.com/luptior/pysbatch
+Author: Gan Xu
+Author-email: luptior@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: slurm batch job submit
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3
