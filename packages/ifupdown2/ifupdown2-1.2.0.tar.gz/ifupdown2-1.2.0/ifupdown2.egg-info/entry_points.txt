@@ -1,0 +1,6 @@
+[console_scripts]
+ifdown = ifupdown2.__main__:main
+ifquery = ifupdown2.__main__:main
+ifreload = ifupdown2.__main__:main
+ifup = ifupdown2.__main__:main
+

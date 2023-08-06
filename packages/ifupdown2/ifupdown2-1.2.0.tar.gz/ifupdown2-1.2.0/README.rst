@@ -1,0 +1,350 @@
+=========
+ifupdown2
+=========
+
+
+.. image:: https://img.shields.io/pypi/v/ifupdown2.svg
+        :target: https://pypi.python.org/pypi/ifupdown2
+
+.. image:: https://img.shields.io/travis/julienfortin/ifupdown2.svg
+        :target: https://travis-ci.org/julienfortin/ifupdown2
+
+.. image:: https://readthedocs.org/projects/ifupdown2/badge/?version=latest
+        :target: https://ifupdown2.readthedocs.io/en/latest/?badge=latest
+        :alt: Documentation Status
+
+
+.. image:: https://pyup.io/repos/github/julienfortin/ifupdown2/shield.svg
+     :target: https://pyup.io/repos/github/julienfortin/ifupdown2/
+     :alt: Updates
+
+
+
+interface network manager
+
+
+* Free software: GNU General Public License v2
+* Documentation: https://ifupdown2.readthedocs.io.
+
+
+Features
+--------
+
+* TODO
+
+.. highlight:: shell
+
+
+============
+Installation
+============
+
+
+Stable release
+--------------
+
+To install ifupdown2, run this command in your terminal:
+
+.. code-block:: console
+
+    $ pip install ifupdown2
+
+This is the preferred method to install ifupdown2, as it will always install the most recent stable release.
+
+If you don't have `pip`_ installed, this `Python installation guide`_ can guide
+you through the process.
+
+.. _pip: https://pip.pypa.io
+.. _Python installation guide: http://docs.python-guide.org/en/latest/starting/installation/
+
+
+From sources
+------------
+
+The sources for ifupdown2 can be downloaded from the `Github repo`_.
+
+You can either clone the public repository:
+
+.. code-block:: console
+
+    $ git clone git://github.com/julienfortin/ifupdown2
+
+Or download the `tarball`_:
+
+.. code-block:: console
+
+    $ curl  -OL https://github.com/julienfortin/ifupdown2/tarball/master
+
+Once you have a copy of the source, you can install it with:
+
+.. code-block:: console
+
+    $ python setup.py install
+
+
+.. _Github repo: https://github.com/julienfortin/ifupdown2
+.. _tarball: https://github.com/julienfortin/ifupdown2/tarball/master
+
+
+=====
+Usage
+=====
+
+To use ifupdown2 in a project::
+
+    import ifupdown2
+
+
+.. highlight:: shell
+
+============
+Contributing
+============
+
+Contributions are welcome, and they are greatly appreciated! Every little bit
+helps, and credit will always be given.
+
+You can contribute in many ways:
+
+Types of Contributions
+----------------------
+
+Report Bugs
+~~~~~~~~~~~
+
+Report bugs at https://github.com/julienfortin/ifupdown2/issues.
+
+If you are reporting a bug, please include:
+
+* Your operating system name and version.
+* Any details about your local setup that might be helpful in troubleshooting.
+* Detailed steps to reproduce the bug.
+
+Fix Bugs
+~~~~~~~~
+
+Look through the GitHub issues for bugs. Anything tagged with "bug" and "help
+wanted" is open to whoever wants to implement it.
+
+Implement Features
+~~~~~~~~~~~~~~~~~~
+
+Look through the GitHub issues for features. Anything tagged with "enhancement"
+and "help wanted" is open to whoever wants to implement it.
+
+Write Documentation
+~~~~~~~~~~~~~~~~~~~
+
+ifupdown2 could always use more documentation, whether as part of the
+official ifupdown2 docs, in docstrings, or even on the web in blog posts,
+articles, and such.
+
+Submit Feedback
+~~~~~~~~~~~~~~~
+
+The best way to send feedback is to file an issue at https://github.com/julienfortin/ifupdown2/issues.
+
+If you are proposing a feature:
+
+* Explain in detail how it would work.
+* Keep the scope as narrow as possible, to make it easier to implement.
+* Remember that this is a volunteer-driven project, and that contributions
+  are welcome :)
+
+Get Started!
+------------
+
+Ready to contribute? Here's how to set up `ifupdown2` for local development.
+
+1. Fork the `ifupdown2` repo on GitHub.
+2. Clone your fork locally::
+
+    $ git clone git@github.com:your_name_here/ifupdown2.git
+
+3. Install your local copy into a virtualenv. Assuming you have virtualenvwrapper installed, this is how you set up your fork for local development::
+
+    $ mkvirtualenv ifupdown2
+    $ cd ifupdown2/
+    $ python setup.py develop
+
+4. Create a branch for local development::
+
+    $ git checkout -b name-of-your-bugfix-or-feature
+
+   Now you can make your changes locally.
+
+5. When you're done making changes, check that your changes pass flake8 and the
+   tests, including testing other Python versions with tox::
+
+    $ flake8 ifupdown2 tests
+    $ python setup.py test or py.test
+    $ tox
+
+   To get flake8 and tox, just pip install them into your virtualenv.
+
+6. Commit your changes and push your branch to GitHub::
+
+    $ git add .
+    $ git commit -m "Your detailed description of your changes."
+    $ git push origin name-of-your-bugfix-or-feature
+
+7. Submit a pull request through the GitHub website.
+
+Pull Request Guidelines
+-----------------------
+
+Before you submit a pull request, check that it meets these guidelines:
+
+1. The pull request should include tests.
+2. If the pull request adds functionality, the docs should be updated. Put
+   your new functionality into a function with a docstring, and add the
+   feature to the list in README.rst.
+3. The pull request should work for Python 2.7, 3.4, 3.5 and 3.6, and for PyPy. Check
+   https://travis-ci.org/julienfortin/ifupdown2/pull_requests
+   and make sure that the tests pass for all supported Python versions.
+
+Tips
+----
+
+To run a subset of tests::
+
+$ py.test tests.test_ifupdown2
+
+
+Deploying
+---------
+
+A reminder for the maintainers on how to deploy.
+Make sure all your changes are committed (including an entry in HISTORY.rst).
+Then run::
+
+$ bumpversion patch # possible: major / minor / patch
+$ git push
+$ git push --tags
+
+Travis will then deploy to PyPI if tests pass.
+
+============
+Known issues
+============
+
+This known issues list is not really up-to-date and will soon be verified and updated!
+
+- There is a state issue if multiple configuration blocks are present for the same interface in the interfaces file
+- `ifquery -r` can give wrong result if dhclient is running + static addresses are configured
+- `ifquery -r` status is success for success case and also for cases where there is no support for query yet
+- setup.py has ifupdown listed in data section instead of scripts: This is because default location for scripts is /usr/bin/. And ifupdown default location is /sbin. With newer versions we can specify --install-scripts directory. This needs to be fixed then.
+- and more :)
+
+====
+TODO
+====
+- support old ifupdown state file /run/network/ifstate. Because some app's seem to use it
+- support for debian ifupdown methods: tunnel, v4tunnel, 6to4, ppp, wvdial, ipv4ll
+- support for debian ifupdown ipv6 auto method
+- support for debian ifupdown CAN address family
+- Compat : support for LOGICAL interfaces
+- dry-run improvement: It skips the cache completely. Which means It tells you the commands it would execute if the system is clean. Its not smart enought to say what it will really execute given the state of the system
+- Ifquery does not report link status, mainly because it reports only in terms of /etc/network/interfaces attributes. Plan to fix that
+- more Documentation
+- Priorities for addon modules
+- have ability to also run uninstall on interfaces that dont have any config
+- ifup hotplug support (basically needs some testing and fixing broken things)
+- -q quiet option
+- support for /etc/networking.defaults
+- implement legacy ifupdown mapping feature
+- support for the following ifupdown options:
+
+    -o OPTION=VALUE     set OPTION to VALUE as though it were in /etc/network/interfaces
+
+    --no-mappings       don't run any mappings
+
+    --no-scripts        don't run any hook scripts
+
+- parallel implementation
+- Test all original ifupdown options for compatibility
+- Test with ifupdown-extra, ifmetric, ifupdown-scripts-zg2
+- export other environment variables to bash scripts (for backward compatibility):
+	IFACE  physical name of the interface being processed
+        LOGICAL logical name of the interface being processed
+        ADDRFAM address family of the interface
+        METHOD method of the interface (e.g., static)
+        MODE   start if run from ifup, stop if run from ifdown
+        PHASE  as per MODE, but with finer granularity, distinguishing the pre-up, post-up, pre-down and post-down phases.
+        VERBOSITY indicates  whether --verbose was used; set to 1 if so, 0 if not.
+        PATH   the  command   search   path:   /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+Addons
+------
+- run python code guideline checker
+- more code documentation
+- move all cache handling to decorators in ifupdownaddons package
+- input validation (present in some cases not all)
+- support the vlan0004 style vlans
+- ifquery coverage. currently it is at 80%.
+- vxlan module
+- fix and release ifaddon utility to manage module priorities
+- Deep compare in query for address module (does not compare address attributes like scope)
+- Maybe a pure netlink backend
+- improve caching
+
+
+=======
+Credits
+=======
+
+Development Lead
+----------------
+
+* Roopa Prabhu <roopa@cumulusnetworks.com>
+* Julien Fortin <julien@cumulusnetworks.com>
+
+Contributors
+------------
+
+* Nikhil Gajendrakumar <nikhil.gajendrakumar@gmail.com>
+* Maximilian Wilhelm <max@sdn.clinic>
+* Sven Auhagen <sven.auhagen@voleatech.de>
+* skorpy <magnus@skorpy.space>
+* Sam Tannous <stannous@cumulusnetworks.com>
+* Wilson Kok <wkok@cumulusnetworks.com>
+* John Berezovik <berezovik@gmail.com>
+* Daniel Walton <dwalton76@gmail.com>
+* Anuradha Karuppiah <anuradhak@cumulusnetworks.com>
+* Balakrishnan Raman <balkee@yahoo.com>
+* Scott Emery <scotte@cumulusnetworks.com>
+* Dave Olson <olson@cumulusnetworks.com>
+* David Ahern <dsa@cumulusnetworks.com>
+* Jonathan Toppins <>
+* Nolan Leake <nolan@cumulusnetworks.com>
+* Sergey Sudakovich <sergey@cumulusnetworks.com>
+* Andy Gospodarek <>
+* Satish Ashok <sashok@cumulusnetworks.com>
+* Scott Laffer <slaffer@cumulusnetworks.com>
+* Vidya Sagar Ravipati <vidya.ravipati@gmail.com>
+* Marek Grzybowski <marek.grzybowski@rtbhouse.com>
+* Gaudenz Steinlin <gaudenz@users.noreply.github.com>
+* Nigel Kukard <nkukard@lbsd.net>
+* Jeffrey <jeffrey.bosma@gmail.com>
+* kokel <kokel@users.noreply.github.com>
+
+Why not you too? :)
+
+
+=======
+History
+=======
+
+1.2.0 (2018-05-02)
+------------------
+
+* First release on PyPI.
+
+
+Credits
+-------
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
