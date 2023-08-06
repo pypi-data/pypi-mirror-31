@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: fiaclient
+Version: 1.1.9
+Summary: A simple client for FIA API (https://github.com/spacepatcher/FireHOL-IP-Aggregator)
+Home-page: https://github.com/spacepatcher/FireHOL-IP-Aggregator
+Author: spacepatcher
+Author-email: mycardinalmail@gmail.com
+License: MIT
+Project-URL: Documentation, https://github.com/spacepatcher/FireHOL-IP-Aggregator/blob/develop/fiaclient/README.md
+Project-URL: Source, https://github.com/spacepatcher/FireHOL-IP-Aggregator/tree/develop/fiaclient
+Project-URL: Tracker, https://github.com/spacepatcher/FireHOL-IP-Aggregator/issues
+Keywords: client threat_intelligence FireHOL-IP-Aggregator reputation
+Platform: UNKNOWN
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+# fiaclient
+
+This client is designed for easy integration with the FIA API service in various python scripts.
+
+### Usage
+
+Install fiaclient by command:
+```
+pip install fiaclient
+```
+
+Create client object from python3 console:
+```
+from fiaclient import fiaclient
+client = fiaclient.FIAClient(fiaurl="http://127.0.0.1:8000/")
+```
+
+All the information about the methods is located in docstrings.
+
+
