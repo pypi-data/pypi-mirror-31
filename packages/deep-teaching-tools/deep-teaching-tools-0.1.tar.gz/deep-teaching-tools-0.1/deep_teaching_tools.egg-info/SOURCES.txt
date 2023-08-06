@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+deep_teaching_tools/__init__.py
+deep_teaching_tools/__main__.py
+deep_teaching_tools/main.py
+deep_teaching_tools.egg-info/PKG-INFO
+deep_teaching_tools.egg-info/SOURCES.txt
+deep_teaching_tools.egg-info/dependency_links.txt
+deep_teaching_tools.egg-info/entry_points.txt
+deep_teaching_tools.egg-info/requires.txt
+deep_teaching_tools.egg-info/top_level.txt
+deep_teaching_tools/stripskip/__init__.py
+deep_teaching_tools/stripskip/main.py
