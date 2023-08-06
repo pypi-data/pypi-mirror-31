@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: kerasbestfit
+Version: 0.8
+Summary: For finding the best model using Keras.
+Home-page: https://github.com/russbeuker/kerasbestfit
+Author: Russ Beuker
+Author-email: russbeuker@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: keras,fit,best
+Platform: UNKNOWN
+Requires-Python: >=3.0

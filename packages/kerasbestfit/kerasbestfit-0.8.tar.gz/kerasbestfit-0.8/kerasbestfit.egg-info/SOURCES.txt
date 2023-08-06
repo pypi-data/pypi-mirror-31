@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+kerasbestfit/__init__.py
+kerasbestfit/kbf.py
+kerasbestfit.egg-info/PKG-INFO
+kerasbestfit.egg-info/SOURCES.txt
+kerasbestfit.egg-info/dependency_links.txt
+kerasbestfit.egg-info/requires.txt
+kerasbestfit.egg-info/top_level.txt
