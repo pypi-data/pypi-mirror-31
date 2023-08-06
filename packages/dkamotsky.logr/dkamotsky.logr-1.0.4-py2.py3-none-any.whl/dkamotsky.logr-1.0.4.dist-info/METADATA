@@ -1,0 +1,22 @@
+Metadata-Version: 2.0
+Name: dkamotsky.logr
+Version: 1.0.4
+Summary: Logging Utility
+Home-page: https://github.com/dkamotsky/wheels/logr/
+Author: Denis Kamotsky
+Author-email: denis.kamotsky@macys.com
+License: PROPRIETARY SOFTWARE, No License Granted
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+
+# Logger Utility
+
+
