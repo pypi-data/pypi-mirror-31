@@ -1,0 +1,18 @@
+Metadata-Version: 2.0
+Name: snfpy
+Version: 0.1
+Summary: A toolbox for Similarity Network Fusion (SNF)
+Home-page: http://github.com/rmarkello/snfpy
+Author: Ross Markello
+Author-email: rossmarkello@gmail.com
+License: GLPLv3
+Download-URL: https://github.com/rmarkello/snfpy/archive/0.1.tar.gz
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: scikit-learn
+Requires-Dist: scipy
+
+UNKNOWN
+
+
