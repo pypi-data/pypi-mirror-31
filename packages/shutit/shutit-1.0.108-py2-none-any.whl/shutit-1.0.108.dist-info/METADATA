@@ -1,0 +1,23 @@
+Metadata-Version: 2.0
+Name: shutit
+Version: 1.0.108
+Summary: A programmable automation tool designed for complex builds
+Home-page: http://ianmiell.github.io/shutit/
+Author: Ian Miell
+Author-email: ian.miell@gmail.com
+License: MIT
+Keywords: Docker pexpect expect automation build
+Platform: UNKNOWN
+Provides-Extra: test
+Provides-Extra: dev
+Requires-Dist: pexpect (>=4.0)
+Requires-Dist: jinja2 (>=0.1)
+Requires-Dist: texttable (>=0.1)
+Requires-Dist: six (>=1.10)
+Requires-Dist: future (>=0.15)
+Provides-Extra: dev
+Provides-Extra: test
+
+A programmable shell-based (pexpect) automation tool designed for complex builds. See: http://ianmiell.github.io/shutit
+
+
