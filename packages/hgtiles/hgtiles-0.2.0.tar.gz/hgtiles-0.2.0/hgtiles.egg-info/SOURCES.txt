@@ -1,0 +1,15 @@
+setup.py
+hgtiles/__init__.py
+hgtiles/bedfile.py
+hgtiles/bigwig.py
+hgtiles/cooler.py
+hgtiles/geo.py
+hgtiles/hitile.py
+hgtiles/imtiles.py
+hgtiles/multivec.py
+hgtiles/time_interval.py
+hgtiles/utils.py
+hgtiles.egg-info/PKG-INFO
+hgtiles.egg-info/SOURCES.txt
+hgtiles.egg-info/dependency_links.txt
+hgtiles.egg-info/top_level.txt
