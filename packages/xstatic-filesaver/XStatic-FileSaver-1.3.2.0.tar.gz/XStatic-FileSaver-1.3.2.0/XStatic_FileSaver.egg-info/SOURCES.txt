@@ -1,0 +1,14 @@
+MANIFEST.in
+README.txt
+setup.cfg
+setup.py
+XStatic_FileSaver.egg-info/PKG-INFO
+XStatic_FileSaver.egg-info/SOURCES.txt
+XStatic_FileSaver.egg-info/dependency_links.txt
+XStatic_FileSaver.egg-info/namespace_packages.txt
+XStatic_FileSaver.egg-info/not-zip-safe
+XStatic_FileSaver.egg-info/top_level.txt
+xstatic/__init__.py
+xstatic/pkg/__init__.py
+xstatic/pkg/filesaver/__init__.py
+xstatic/pkg/filesaver/data/FileSaver.js
