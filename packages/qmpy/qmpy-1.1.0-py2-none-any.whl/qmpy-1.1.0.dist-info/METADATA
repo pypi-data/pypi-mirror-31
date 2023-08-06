@@ -1,0 +1,48 @@
+Metadata-Version: 2.0
+Name: qmpy
+Version: 1.1.0
+Summary: Suite of computational materials science tools
+Home-page: http://pypi.python.org/pypi/qmpy
+Author: S. Kirklin
+Author-email: scott.kirklin@gmail.com
+License: LICENSE.txt
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Requires-Dist: Django (>=1.6.2,<1.7)
+Requires-Dist: MySQL-python
+Requires-Dist: PuLP
+Requires-Dist: PyCifRW (>=4.3)
+Requires-Dist: PyYAML
+Requires-Dist: ase
+Requires-Dist: bokeh (==0.12.11)
+Requires-Dist: django-extensions (<1.6.8)
+Requires-Dist: lxml
+Requires-Dist: matplotlib
+Requires-Dist: networkx
+Requires-Dist: numpy
+Requires-Dist: pexpect
+Requires-Dist: pyparsing
+Requires-Dist: pyspglib (==1.8.3.1)
+Requires-Dist: pytest
+Requires-Dist: python-memcached
+Requires-Dist: scikit-learn
+Requires-Dist: scipy
+
+qmpy
+====
+[![Build Status](https://travis-ci.org/wolverton-research-group/qmpy.svg?branch=master)](https://travis-ci.org/wolverton-research-group/qmpy)
+
+A toolkit for storing crystal structure data, automating calculations, handing computational resources and performing thermodynamic analysis.
+
+Install qmpy with pip or easy install:
+
+    pip install qmpy
+
+or:
+
+    easy_install -U qmpy
+
+For more complete documentation, see: http://oqmd.org/static/docs/index.html
+
+
