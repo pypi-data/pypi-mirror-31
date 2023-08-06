@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: rooibos
+Version: 0.2.0
+Summary: Lightweight language-independent syntax rewriting.
+Home-page: https://github.com/squaresLab/rooibos.py
+Author: Chris Timperley, Rijnard van Tonder
+Author-email: christimperley@googlemail.com
+License: mit
+Description: TBA
+Platform: UNKNOWN
+Requires-Python: >=3.5
