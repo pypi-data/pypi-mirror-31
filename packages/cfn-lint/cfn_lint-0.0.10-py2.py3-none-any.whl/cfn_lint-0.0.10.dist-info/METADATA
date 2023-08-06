@@ -1,0 +1,18 @@
+Metadata-Version: 2.0
+Name: cfn-lint
+Version: 0.0.10
+Summary: checks cloudformation for practices and behaviour         that could potentially be improved
+Home-page: https://github.com/awslabs/cfn-python-lint
+Author: kddejong
+Author-email: kddejong@amazon.com
+License: MIT no attribution
+Description-Content-Type: UNKNOWN
+Keywords: aws,lint
+Platform: UNKNOWN
+Requires-Dist: pyyaml
+Requires-Dist: six
+Requires-Dist: requests
+
+UNKNOWN
+
+
