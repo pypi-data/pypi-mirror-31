@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: musicsync
+Version: 0.4.2
+Summary: Sync songs between music streaming services
+Home-page: https://github.com/moxuz/musicsync
+Author: Chris Pouliot
+Author-email: me@chrispouliot.codes
+License: MIT
+Description: from musicsync import spotify_gpm_copy  spotify_gpm_copy(["Discover Weekly"])
+Platform: UNKNOWN
