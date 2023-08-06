@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+data/data_file
+oreaws/awscli.py
+oreaws.egg-info/PKG-INFO
+oreaws.egg-info/SOURCES.txt
+oreaws.egg-info/dependency_links.txt
+oreaws.egg-info/entry_points.txt
+oreaws.egg-info/namespace_packages.txt
+oreaws.egg-info/requires.txt
+oreaws.egg-info/top_level.txt

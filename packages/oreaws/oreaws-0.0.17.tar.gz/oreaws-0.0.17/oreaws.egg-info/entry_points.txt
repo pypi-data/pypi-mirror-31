@@ -1,0 +1,3 @@
+[console_scripts]
+oreaws = oreaws.awscli:main
+
