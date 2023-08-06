@@ -1,0 +1,10 @@
+README.rst
+setup.cfg
+setup.py
+stargaze.py
+stargaze.egg-info/PKG-INFO
+stargaze.egg-info/SOURCES.txt
+stargaze.egg-info/dependency_links.txt
+stargaze.egg-info/entry_points.txt
+stargaze.egg-info/requires.txt
+stargaze.egg-info/top_level.txt
