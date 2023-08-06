@@ -1,0 +1,20 @@
+{
+    "JUPYTER_URL": "/nbextensions/echarts-themes-js",
+    "GITHUB_URL": "https://echarts-themes-js.github.io/echarts-themes-js/echarts-themes-js",
+    "JUPYTER_ENTRY": "echarts-themes-js/index",
+    "JS_FOLDER": "echarts-themes-js",
+    "PINYIN_MAP": {
+        "shine": "shine",
+        "infographic": "infographic",
+        "roma": "roma",
+        "vintage": "vintage",
+        "macarons": "macarons"
+    },
+    "FILE_MAP": {
+        "shine": "shine",
+        "infographic": "infographic",
+        "roma": "roma",
+        "vintage": "vintage",
+        "macarons": "macarons"
+    }
+}
