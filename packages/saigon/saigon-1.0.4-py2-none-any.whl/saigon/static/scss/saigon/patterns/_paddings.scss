@@ -1,0 +1,28 @@
+// top & bottom & vetical
+
+@each $padding in $sg-paddings {
+  .p-t-#{$padding} {
+    padding-top: #{$padding}px !important;
+  }
+  .p-b-#{$padding} {
+    padding-bottom: #{$padding}px !important;
+  }
+  .p-v-#{$padding} {
+    padding-top: #{$padding}px !important;
+    padding-bottom: #{$padding}px !important;
+  }
+  .p-h-#{$padding} {
+    padding-left: #{$padding}px !important;
+    padding-right: #{$padding}px !important;
+  }
+}
+
+// left & right
+@each $padding in $sg-paddings {
+  .p-l-#{$padding} {
+    padding-left: #{$padding}px !important;
+  }
+  .p-r-#{$padding} {
+    padding-right: #{$padding}px !important;
+  }
+}

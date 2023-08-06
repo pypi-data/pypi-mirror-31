@@ -1,0 +1,24 @@
+// top & bottom & vetical
+
+@each $margin in $sg-margins {
+  .m-t-#{$margin} {
+    margin-top: #{$margin}px !important;
+  }
+  .m-b-#{$margin} {
+    margin-bottom: #{$margin}px !important;
+  }
+  .m-v-#{$margin} {
+    margin-top: #{$margin}px !important;
+    margin-bottom: #{$margin}px !important;
+  }
+}
+
+// left & right
+@each $margin in $sg-margins {
+  .m-l-#{$margin} {
+    margin-left: #{$margin}px !important;
+  }
+  .m-r-#{$margin} {
+    margin-right: #{$margin}px !important;
+  }
+}
