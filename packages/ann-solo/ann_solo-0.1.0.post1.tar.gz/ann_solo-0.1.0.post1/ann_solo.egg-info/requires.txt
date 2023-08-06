@@ -1,0 +1,12 @@
+annoy
+ConfigArgParse
+Cython
+joblib
+matplotlib
+numexpr
+numpy
+pandas
+pyteomics
+seaborn
+scipy
+tqdm
