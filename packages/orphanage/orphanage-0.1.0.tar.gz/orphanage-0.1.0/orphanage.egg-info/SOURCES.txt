@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+orphanage/__init__.py
+orphanage/poll.c
+orphanage/poll.h
+orphanage/poll.py
+orphanage/poll_build.py
+orphanage.egg-info/PKG-INFO
+orphanage.egg-info/SOURCES.txt
+orphanage.egg-info/dependency_links.txt
+orphanage.egg-info/not-zip-safe
+orphanage.egg-info/requires.txt
+orphanage.egg-info/top_level.txt
