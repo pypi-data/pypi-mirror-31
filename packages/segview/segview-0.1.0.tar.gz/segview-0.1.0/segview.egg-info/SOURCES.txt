@@ -1,0 +1,10 @@
+LICENSE.txt
+MANIFEST.in
+readme.md
+segview.py
+setup.py
+segview.egg-info/PKG-INFO
+segview.egg-info/SOURCES.txt
+segview.egg-info/dependency_links.txt
+segview.egg-info/requires.txt
+segview.egg-info/top_level.txt
