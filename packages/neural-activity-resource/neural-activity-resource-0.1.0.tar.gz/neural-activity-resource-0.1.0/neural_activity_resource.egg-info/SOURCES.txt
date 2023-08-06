@@ -1,0 +1,17 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+nar/__init__.py
+nar/base.py
+nar/client.py
+nar/commons.py
+nar/core.py
+nar/electrophysiology.py
+nar/errors.py
+nar/minds.py
+neural_activity_resource.egg-info/PKG-INFO
+neural_activity_resource.egg-info/SOURCES.txt
+neural_activity_resource.egg-info/dependency_links.txt
+neural_activity_resource.egg-info/top_level.txt

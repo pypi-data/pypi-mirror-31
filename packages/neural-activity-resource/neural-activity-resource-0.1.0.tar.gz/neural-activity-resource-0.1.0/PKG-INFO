@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: neural-activity-resource
+Version: 0.1.0
+Summary: Python API for the Human Brain Project Neural Activity Resource
+Home-page: https://github.com/apdavison/neural-activity-resource
+Author: Andrew P. Davison
+Author-email: andrew.davison@unic.cnrs-gif.fr
+License: UNKNOWN
+Description-Content-Type: UNKNOWN
+Description: Python API for the Human Brain Project Neural Activity Resource.
+        
+        Author: Andrew Davison, CNRS
+        
+Keywords: nar hbp metadata electrophysiology nexus shacl
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
