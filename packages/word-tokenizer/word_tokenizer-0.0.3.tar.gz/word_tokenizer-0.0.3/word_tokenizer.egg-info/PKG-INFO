@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: word-tokenizer
+Version: 0.0.3
+Summary: Word Tokenizer
+Home-page: https://github.com/blester125/word_tokenizer
+Author: blester125
+Author-email: blester125@gmail.com
+License: MIT
+Download-URL: https://github.com/blester125/word_tokenizer/archive/0.0.3.tar.gz
+Description: # Word Tokenizer
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: Environment :: Console
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 3 - Alpha
+Classifier: Natural Language :: English
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
