@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+pyfongo/__init__.py
+pyfongo.egg-info/PKG-INFO
+pyfongo.egg-info/SOURCES.txt
+pyfongo.egg-info/dependency_links.txt
+pyfongo.egg-info/requires.txt
+pyfongo.egg-info/top_level.txt
