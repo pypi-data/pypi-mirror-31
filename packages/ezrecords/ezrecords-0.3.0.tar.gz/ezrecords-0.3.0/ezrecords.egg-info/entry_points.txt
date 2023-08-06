@@ -1,0 +1,3 @@
+[console_scripts]
+ezrecords = ezrecords.cli:cli
+
