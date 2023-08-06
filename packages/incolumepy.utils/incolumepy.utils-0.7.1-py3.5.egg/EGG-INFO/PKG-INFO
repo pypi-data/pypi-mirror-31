@@ -1,0 +1,87 @@
+Metadata-Version: 1.1
+Name: incolumepy.utils
+Version: 0.7.1
+Summary: package incolumepy utils
+Home-page: http://www.incolume.com.br
+Author: @britodfbr
+Author-email: contato@incolume.com.br
+License: BSD
+Description: Projeto desenvolvido e administrado incolume.com.br
+        -
+        
+        Este pacote disponibiliza diversas funcionalidades para utilização em rotinas com Python.
+        
+        Dentre elas:
+        
+        * geração de números de CPF não verificados;
+        
+        * geração de lista para namespace para pacotes Python;
+        
+        * obtenção rápida para conteúdo de arquivos;
+        
+        * sequências de vários tipos;
+        
+        * Nome único para gravação de arquivos sem sobrescrita;
+        
+        
+        Instalar o pacote
+        --
+        
+        **$ pip install incolumepy.utils**
+        
+        Atualizar o pacote
+        --
+        **$ pip install -U incolumepy.utils**
+        
+        Gerar pacote a partir dos fontes para instalação
+        --
+        
+        python setup.py bdist_egg bdist_wheel
+        
+        History
+        =======
+        
+        This package came from personal needs and has evolved in a way that was surprising.
+        Faced with this incredible evolution I decided to share it via pypi.org.
+        
+        
+        Este pacote surgiu de necessidades pessoais e evoluiu de maneira a surpriendente.
+        Diante desta incrivel evolução resolvi compartilha-lo via pypi.org.
+        
+        Examples
+        =======
+        
+        
+        
+        Contributors
+        ============
+        
+        @britodfbr
+        
+        Changes
+        =======
+        
+        0.7.1 = atualizações no setup, e na apresentação da documentação
+        
+        0.7 = adicionado incolume.files.ll
+        
+        0.6 = testes automatizados
+        
+        0.5 = adicionado incolume.utils.files
+        
+        0.4 = adicionado incolume.utils.fake_cpf
+        
+        0.3 = adicionado incolume.utils.sequecias
+        
+        0.2 = Nova implementação para def namespace
+        
+        0.1 = :D
+        
+Keywords: python utils incolumepy
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: Portuguese (Brazilian)
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
