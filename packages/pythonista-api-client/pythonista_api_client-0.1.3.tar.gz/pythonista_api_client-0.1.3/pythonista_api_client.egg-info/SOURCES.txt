@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+api_client/__init__.py
+api_client/api.py
+api_client/client.py
+api_client/settings.py
+pythonista_api_client.egg-info/PKG-INFO
+pythonista_api_client.egg-info/SOURCES.txt
+pythonista_api_client.egg-info/dependency_links.txt
+pythonista_api_client.egg-info/requires.txt
+pythonista_api_client.egg-info/top_level.txt
