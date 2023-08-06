@@ -1,0 +1,9 @@
+README.md
+setup.py
+kiner/__init__.py
+kiner/producer.py
+kiner.egg-info/PKG-INFO
+kiner.egg-info/SOURCES.txt
+kiner.egg-info/dependency_links.txt
+kiner.egg-info/requires.txt
+kiner.egg-info/top_level.txt

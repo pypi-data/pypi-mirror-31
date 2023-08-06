@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: kiner
+Version: 0.6.1
+Summary: Python AWS Kinesis Producer
+Home-page: https://github.com/bufferapp/kiner
+Author: David Gasquez
+Author-email: davidgasquez@buffer.com
+License: MIT
+Description: UNKNOWN
+Keywords: kinesis,producer,aws
+Platform: UNKNOWN
