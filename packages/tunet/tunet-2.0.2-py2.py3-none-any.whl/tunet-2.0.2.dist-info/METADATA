@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: tunet
+Version: 2.0.2
+Summary: Tsinghua University Network (tunet) login and logout tools
+Home-page: https://github.com/Yibo-Li/pytunet
+Author: Yibo Li
+Author-email: gansuliyibo@126.com
+License: MIT
+Keywords: tunet login logout
+Platform: UNKNOWN
+Requires-Dist: requests
+
+# TUNET
+
+TUNET is a python tool to login and logout Tsinghua University Network (tunet).
+
+To use this do as below:
+
+```python
+# install from pip
+pip install tunet
+
+# import tunet package
+import tunet
+
+# set login/logout options
+options = {
+    'name': 'user_name',    # required, 'user_name' and 'user_name@tsinghua' are for access public internet and tunet, respectively
+    'pwd': 'user_password', # required, password for tunet account 'user_name'
+    'ip': '192.168.1.1'     # optional, the ip you want to authenticate, and default is the client ip
+}
+
+# do login
+tunet.login(options['name'], options['pwd'], options['ip'])
+# Login is successful.
+
+# do logout
+tunet.logout(options['name'], options['ip'])
+# Logout is successful.
+```
+
+
