@@ -1,0 +1,12 @@
+CHANGES
+=======
+
+0.0.1
+-----
+
+* fetch: add RemoteInfoFetcher to get info from URL
+* CI: add in-repo zuul(v3) testing jobs
+* distroinfo core
+* Initial setup
+* ManageSF commit
+* Initial empty repository
