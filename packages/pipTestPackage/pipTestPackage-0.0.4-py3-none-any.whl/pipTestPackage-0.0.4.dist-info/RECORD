@@ -1,0 +1,11 @@
+pipTestPackage/__init__.py,sha256=S6lNBytPAu-CIO88xd6S5nR5kcXCg8JEYWEkdYA8KpY,38
+pipTestPackage/pipTestPackage.py,sha256=ijDqTqzSQ_Nli6aniWfDC51WvPMr73a_2cpnjDWwAdI,38
+pipTestPackage-0.0.4.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+pipTestPackage-0.0.4.dist-info/LICENSE.txt,sha256=_-8lLITvIgjF6x3i7WiQmq9ug1WosnRDGi3gMad83fw,1078
+pipTestPackage-0.0.4.dist-info/METADATA,sha256=xfc7YZAz8tK-ia7OJ1LOOqMDIba4Pa8XmYygREaGcRI,355
+pipTestPackage-0.0.4.dist-info/RECORD,,
+pipTestPackage-0.0.4.dist-info/WHEEL,sha256=Vlaj2XNMTTJ893zWX-JvKeZUIs7q5E7d7Gise2Vouzc,97
+pipTestPackage-0.0.4.dist-info/metadata.json,sha256=6oHufVc1B79HF4KxdjNG6lt8FSyihNg0TbgMqtK-s1c,599
+pipTestPackage-0.0.4.dist-info/top_level.txt,sha256=3JNWl9FhNiATpsXeGmhDpf-CdgQMuHE1Gaa8LgqoXGg,15
+test/__init__.py,sha256=S6lNBytPAu-CIO88xd6S5nR5kcXCg8JEYWEkdYA8KpY,38
+test/pipTestPackage.py,sha256=ijDqTqzSQ_Nli6aniWfDC51WvPMr73a_2cpnjDWwAdI,38
