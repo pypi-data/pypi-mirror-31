@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: yhy
+Version: 0.0.3
+Summary: Personalized CLI
+Home-page: https://github.com/yeonghoey/yhy
+Author: Yeongho Kim
+Author-email: yeonghoey@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: automation cli anki
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3.6
