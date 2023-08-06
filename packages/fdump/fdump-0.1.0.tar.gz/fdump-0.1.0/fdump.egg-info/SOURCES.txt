@@ -1,0 +1,9 @@
+README.md
+setup.py
+fdump/__init__.py
+fdump/__main__.py
+fdump.egg-info/PKG-INFO
+fdump.egg-info/SOURCES.txt
+fdump.egg-info/dependency_links.txt
+fdump.egg-info/entry_points.txt
+fdump.egg-info/top_level.txt
