@@ -1,0 +1,14 @@
+Metadata-Version: 2.0
+Name: ecabc
+Version: 1.1.0.dev1
+Summary: Artificial bee colony for parameters tuning based on fitness scores
+Home-page: https://github.com/hgromer/Artificial-Bee-Colony
+Author: Hernan Gelaf-Romer
+Author-email: Hernan_Gelafromer@student.uml.edu
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: numpy
+
+Added support for maximizing a fitness function rather than minimizing it through the abc.specifyMinOrMax('max')function. Optimized merging two bees to only look at the bees that are performing well. Overall speed of the program has been increasedby around 60%. Added method to allow users to turn off print statements, which may help increase the speed of the code.
+
+
