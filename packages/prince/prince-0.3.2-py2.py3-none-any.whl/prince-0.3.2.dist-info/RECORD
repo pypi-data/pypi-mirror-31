@@ -1,0 +1,14 @@
+prince/__init__.py,sha256=R2xfpjI2vBK2fg8aYrajMRXPyOuuKyqiq2--u-kbnyE,64
+prince/__version__.py,sha256=viZrw8PF6a9zu5lZdgf7z9XzxnW21q84h_aBJvbvzUs,66
+prince/ca.py,sha256=yPsA9AuQvDiNhxbn00oU_6Uhr81V1BbgLxCfqU3-wDE,4871
+prince/famd.py,sha256=xUd8MeMhSoHGN4H-TFzw3-K-FSF0znJ2qKPHtMNWdtA,219
+prince/mca.py,sha256=rCSbEKodZOtNvVah_lxeh_Fd_x6s0c_Ew1Ss26oQnQM,4321
+prince/pca.py,sha256=c9oJnHPZJCqd8brUqauKBmJ0dxr65oojxzrA0o4sykA,8097
+prince/plot.py,sha256=bMNzu8w1VaAnFOzMMOnZN2dpGRbGGxXxJWrheJeDGRU,1575
+prince/svd.py,sha256=KfepmHM-EM0Iyeb1wB4ac0vwAdG-MA_AzHf5qG4rU6E,999
+prince-0.3.2.dist-info/DESCRIPTION.rst,sha256=jYm8MEnZz8R3oXDjA72Hi9Oi28mtaA6O2Q3TB9QuHCs,12046
+prince-0.3.2.dist-info/METADATA,sha256=i3CLIF2qcAtaUvkzu_0GAMj-mSiZqoROciJGpF4bg8o,12949
+prince-0.3.2.dist-info/RECORD,,
+prince-0.3.2.dist-info/WHEEL,sha256=BTHHj6QhsHpWhRUrxioIvCAgjx81u-a8gkPTO6bi_A0,116
+prince-0.3.2.dist-info/metadata.json,sha256=MvTSGlIFhBfd8_y2hea2nG9mk0k3SPtpb7bUE_GQF_Y,1032
+prince-0.3.2.dist-info/top_level.txt,sha256=dFmLnACCTKSBQ4IgtGqLk-m1hOGdfjCGhD9TYKeI1oE,7
