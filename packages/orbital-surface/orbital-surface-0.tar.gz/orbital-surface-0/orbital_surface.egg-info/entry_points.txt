@@ -1,0 +1,3 @@
+[console_scripts]
+run-lattice = orbital.__main__:main
+
