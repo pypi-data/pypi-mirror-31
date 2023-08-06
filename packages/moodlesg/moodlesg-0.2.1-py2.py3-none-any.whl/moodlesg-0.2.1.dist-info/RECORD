@@ -1,0 +1,14 @@
+moodlesg/__init__.py,sha256=qicCfN33QHndkFAW0uhtucA77fg-Dz3u9JDn_q9sfAU,183
+moodlesg/math/__init__.py,sha256=hC7BljfKIEfVkw7i3I0YzRxxmEyqTsIqOLkaNLPH8Aw,229
+moodlesg/math/base.py,sha256=90QqgmbtwynuEhuCm8MwgQmR2ZvMbi6BoadFk7IABaY,4819
+moodlesg/math/settings.py,sha256=ZcZeQYJ1-qHZiZ4dRt26v1Gqol9jj8brzFauFd7Rkgc,71
+moodlesg/math/constants/__init__.py,sha256=qkrDCP-M0Onbw9sQtMFL5rRNA5G8UV4n0rUXVbkCOEg,46
+moodlesg/math/constants/common.py,sha256=WlOjJNHd73gGoaF2RSKhI87xqi_q9eu0l1tI5QvHoRI,236
+moodlesg/math/functions/__init__.py,sha256=sIzQrY7FMD1Fggl7tlH0xe0dK1fpyFxIXQSvShOOims,319
+moodlesg/math/functions/common.py,sha256=IdM5GYPXCw8YUea9jgX5-AT1jQGENZu3u3aVHg8TAtQ,1641
+moodlesg/math/functions/compatibility.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+moodlesg/math/functions/extended.py,sha256=eErDzW__opYwvmgrnNJhOUt7LYACZQHOE7hfBzdxXjY,99
+moodlesg-0.2.1.dist-info/METADATA,sha256=FvVH5ciSxjKP3Jzu0E3iGndTS14uS-TcEWbYWdAG2n4,4408
+moodlesg-0.2.1.dist-info/RECORD,,
+moodlesg-0.2.1.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+moodlesg-0.2.1.dist-info/top_level.txt,sha256=Fg4tkGJK8jTT2CQl5heY-Jdm7MnD1bPzfkuqSsiSRy0,9
