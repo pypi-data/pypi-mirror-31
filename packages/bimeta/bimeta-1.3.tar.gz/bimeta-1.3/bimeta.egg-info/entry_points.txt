@@ -1,0 +1,3 @@
+[console_scripts]
+bimeta = bimeta.bimeta:bimetamain
+
