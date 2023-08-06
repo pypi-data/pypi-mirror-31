@@ -1,0 +1,6 @@
+flask-cache>=0.13
+libhxl==4.7.1
+ckanapi>=3.5
+flask==0.12.4
+requests_cache
+mysql-connector-python
