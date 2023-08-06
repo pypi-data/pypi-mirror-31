@@ -1,0 +1,36 @@
+``glom`` by Analogy
+===================
+
+``glom`` is pure Python, and you don't need to know anything but
+Python to use it effectively. But, chances are you do know other
+things, and the sections below can help get you up to speed.
+
+Similarity to list comprehensions, map, and remap
+-------------------------------------------------
+
+Similarity to templating (Jinja, Django, Mustache)
+--------------------------------------------------
+
+Similarity to SQL
+-----------------
+
+``glom``
+
+Similiarity to validation (jsonschema, schema, cerberus)
+--------------------------------------------------------
+
+Similarity to jq
+----------------
+
+
+To be more precise, glom helps pull together objects from other
+objects in a declarative, dynamic, and downright simple way.
+
+Built with services, APIs, and general serialization in mind, glom
+helps filter objects, as well as perform deep fetches which would be
+tedious to perform in a procedural manner.
+
+Where "schema" and other libraries focus on validation and parsing
+less-structured data into Python objects, glom goes the other
+direction, producing more-readily serializable data from valid
+higher-level objects.
