@@ -1,0 +1,91 @@
+Metadata-Version: 2.1
+Name: graphene-django-optimizer
+Version: 0.1.0
+Summary: Optimize database access inside graphene queries.
+Home-page: https://github.com/tfoxy/graphene-django-optimizer
+Author: Tomás Fox
+Author-email: tomas.c.fox@gmail.com
+License: MIT
+Keywords: graphene django optimizer optimize graphql query prefetch select related
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 1.8
+Classifier: Framework :: Django :: 1.9
+Classifier: Framework :: Django :: 1.10
+Classifier: Framework :: Django :: 1.11
+Classifier: Framework :: Django :: 2.0
+Description-Content-Type: text/markdown
+
+# graphene-django-optimizer
+
+
+## Install
+
+```py
+pip install graphene-django-optimizer
+```
+
+
+## Usage
+
+```py
+# cookbook/ingredients/schema.py
+import graphene
+
+from graphene_django.types import DjangoObjectType
+import graphene_django_optimizer as gql_optimizer
+
+from cookbook.ingredients.models import Category, Ingredient
+
+
+class CategoryType(DjangoObjectType):
+    class Meta:
+        model = Category
+
+
+class IngredientType(DjangoObjectType):
+    class Meta:
+        model = Ingredient
+
+
+class Query(object):
+    all_categories = graphene.List(CategoryType)
+    all_ingredients = graphene.List(IngredientType)
+
+    def resolve_all_categories(root, info):
+        return gql_optimizer.query(Category.objects.all(), info)
+
+    def resolve_all_ingredients(root, info):
+        return gql_optimizer.query(Ingredient.objects.all(), info)
+```
+
+
+## Contribute
+
+The system must have installed:
+
+* python 3
+* virtualenv
+
+```sh
+virtualenv -p python3 venv
+. venv/bin/activate
+pip install -r dev-requirements.txt
+# run tests:
+python setup.py test
+```
+
+
