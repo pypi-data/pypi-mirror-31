@@ -1,0 +1,2 @@
+include swivigen/Templates/*.swift
+include swivigen/Common/*.swift
