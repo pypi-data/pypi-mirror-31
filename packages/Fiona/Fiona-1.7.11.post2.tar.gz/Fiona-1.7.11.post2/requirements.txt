@@ -1,0 +1,5 @@
+argparse
+cligj>=0.4
+six>=1.7
+ordereddict
+munch
