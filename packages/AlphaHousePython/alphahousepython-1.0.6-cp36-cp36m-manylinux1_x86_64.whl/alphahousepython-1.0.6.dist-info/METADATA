@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: alphahousepython
+Version: 1.0.6
+Summary: AlphaGenes base library for important genetic data functions
+Home-page: UNKNOWN
+Author: david
+Author-email: david.wilson@roslin.ed.ac.uk
+License: GPL
+Platform: UNKNOWN
+Requires-Dist: bitstring
+Requires-Dist: numpy
+Requires-Dist: cython (>=0.26)
+
+UNKNOWN
+
+
