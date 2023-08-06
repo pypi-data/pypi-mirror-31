@@ -1,0 +1,55 @@
+Metadata-Version: 1.1
+Name: coinmarketcappy
+Version: 0.2.0
+Summary: Python API wrapper and scraper for coinmarketcappy data
+Home-page: https://github.com/saporitigianni/coinmarketcappy
+Author: Gianni Saporiti
+Author-email: saporitigianni@outlook.com
+License: MIT
+Download-URL: https://pypi.python.org/pypi/coinmarketcappy
+Description: .. -*-restructuredtext-*-
+        coinmarketcappy: Python wrapper and scraper for coinmarketcap data
+        =========================
+        
+        .. image:: https://img.shields.io/badge/Made%20with-Python-1f425f.svg
+            :target: https://www.python.org/
+        
+        .. image:: https://img.shields.io/pypi/v/coinmarketcappy.svg
+            :target: https://pypi.org/project/coinmarketcappy/
+        
+        .. image:: https://img.shields.io/pypi/l/coinmarketcappy.svg
+            :target: https://pypi.org/project/requcoinmarketcappyests/
+        
+        .. image:: https://img.shields.io/pypi/pyversions/coinmarketcappy.svg
+            :target: https://pypi.org/project/coinmarketcappy/
+        
+        Installation
+        ------------
+        
+        To install coinmarketcappy, simply use pip:
+        
+        .. code-block:: bash
+        
+            $ pip install coinmarketcappy
+        
+        Contributing
+        ------------
+        
+        Please read the `CONTRIBUTING <https://github.com/saporitigianni/coinmarketcappy/blob/master/CONTRIBUTING.md>`_ document before making changes that you would like adopted in the code.
+        
+        Code of Conduct
+        ---------------
+        
+        Everyone interacting in the ``coinmarketcappy`` project's codebases, issue
+        trackers, chat rooms, and mailing lists is expected to follow the
+        `PyPA Code of Conduct <https://www.pypa.io/en/latest/code-of-conduct/>`_.
+Keywords: forex,api,currencies,cryptocurrency,financial
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Office/Business :: Financial
+Classifier: Topic :: Software Development :: Build Tools
