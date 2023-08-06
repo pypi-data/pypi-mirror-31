@@ -1,0 +1,3 @@
+[console_scripts]
+socks5.server = socks5.cli:run_server
+

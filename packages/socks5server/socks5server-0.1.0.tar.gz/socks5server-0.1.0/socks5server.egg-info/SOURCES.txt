@@ -1,0 +1,16 @@
+README.md
+setup.cfg
+setup.py
+socks5/__init__.py
+socks5/auth.py
+socks5/cli.py
+socks5/exceptions.py
+socks5/log.py
+socks5/protocol.py
+socks5/server.py
+socks5server.egg-info/PKG-INFO
+socks5server.egg-info/SOURCES.txt
+socks5server.egg-info/dependency_links.txt
+socks5server.egg-info/entry_points.txt
+socks5server.egg-info/requires.txt
+socks5server.egg-info/top_level.txt
