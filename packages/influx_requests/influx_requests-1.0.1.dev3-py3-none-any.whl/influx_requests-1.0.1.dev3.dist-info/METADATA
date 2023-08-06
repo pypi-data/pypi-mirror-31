@@ -1,0 +1,18 @@
+Metadata-Version: 2.0
+Name: influx-requests
+Version: 1.0.1.dev3
+Summary: monkey patch for requests, that save requests by influxdb
+Home-page: UNKNOWN
+Author: ttm1234
+Author-email: UNKNOWN
+License: MIT
+Keywords: influx_requests
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+
+UNKNOWN
+
+
