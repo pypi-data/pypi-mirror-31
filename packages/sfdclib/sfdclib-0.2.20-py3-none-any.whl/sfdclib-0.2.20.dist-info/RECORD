@@ -1,0 +1,14 @@
+sfdclib/__init__.py,sha256=QqLxKIZhz0lYfoUvNJuWiyC6na7F9PyNA5Mv1HlCo_Q,316
+sfdclib/bulk.py,sha256=2BCUg1D03PagewbICFmcayPlAPAz2sygOKb2QqFj8tg,9584
+sfdclib/logger.py,sha256=YnEWhfPqbmhVFxLI-P3T_VY0hK1ZXFjX2tyKL_ZnBfs,974
+sfdclib/messages.py,sha256=XL7YzF1S_P6psE9eFZpyofmb5YinTlUnIn1TQUwQUjU,3176
+sfdclib/metadata.py,sha256=mKSX0WyZNauh_m6nRUKKDAwiHCJSk5BasVVpv9TfnvY,10823
+sfdclib/rest.py,sha256=wwNnUkLyQq2QXL-v-kcuuvoDIoE8lpjGPjUhLAawiI8,2465
+sfdclib/session.py,sha256=eOPghbD8bUFEXl7CzqTSiu1RLTchS-IQQz_2T7Td3tE,3165
+sfdclib/tooling.py,sha256=docczOKGtHI708D1yMYAMxDJl3uyaTEJZoGnNbdB1oA,2541
+sfdclib-0.2.20.dist-info/DESCRIPTION.rst,sha256=-xpuCC7YXQ0DBzPUySiSwXj3OsS6dlPMirkjK4BciHs,3296
+sfdclib-0.2.20.dist-info/METADATA,sha256=ZIYjqmaPVFd0rsP5AvZXFK6FN-XUqhcUMelqnxYYlkA,4162
+sfdclib-0.2.20.dist-info/RECORD,,
+sfdclib-0.2.20.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+sfdclib-0.2.20.dist-info/metadata.json,sha256=lIha9unXYQg3yCDkaxWTzlN2LSF3uqkjmbtZn9qfVt0,1051
+sfdclib-0.2.20.dist-info/top_level.txt,sha256=fmFeyM4PvgmO6kdjhMR1O41xPvNGzHrPVG3zs3ThGxg,8
