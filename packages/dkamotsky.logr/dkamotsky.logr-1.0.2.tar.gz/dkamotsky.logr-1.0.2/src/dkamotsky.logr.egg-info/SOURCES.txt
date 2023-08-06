@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+src/dkamotsky.logr.egg-info/PKG-INFO
+src/dkamotsky.logr.egg-info/SOURCES.txt
+src/dkamotsky.logr.egg-info/dependency_links.txt
+src/dkamotsky.logr.egg-info/not-zip-safe
+src/dkamotsky.logr.egg-info/top_level.txt
+src/logr/__init__.py
+src/logr/config.py
+src/logr/logr.py
