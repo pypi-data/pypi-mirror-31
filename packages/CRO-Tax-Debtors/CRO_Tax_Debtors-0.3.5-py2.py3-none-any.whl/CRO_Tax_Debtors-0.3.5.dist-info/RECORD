@@ -1,0 +1,12 @@
+CRO_Tax_Debtors-0.3.5.dist-info/LICENSE.txt,sha256=gFs-f7Ta2KbluTCG0S-Vi6oY6oLWiPzkeyK7oUBr4ZQ,1066
+CRO_Tax_Debtors-0.3.5.dist-info/METADATA,sha256=spinsKuF3Bw5zYB-b-uUXh1xMeTOSRZDFrVUlxjKVmY,1899
+CRO_Tax_Debtors-0.3.5.dist-info/RECORD,,
+CRO_Tax_Debtors-0.3.5.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+CRO_Tax_Debtors-0.3.5.dist-info/entry_points.txt,sha256=i48DVL-HS0lG5wjsV2GDdCj6bLTNxAt8DIgFubLs010,59
+CRO_Tax_Debtors-0.3.5.dist-info/top_level.txt,sha256=_2ZGiREw7V4yyEcGyK5HcpRxWwcrhY4LxX_u6GV1tiI,16
+cro_tax_debtors/__init__.py,sha256=RTTO4JccbMmaNO5xpXFxhNg082SaMsSJp8U1H78s6u4,148
+cro_tax_debtors/cli.py,sha256=Q762U9fDmsV7NxMxzrPm6mC4GooLeEn15cSETikkXa4,3672
+cro_tax_debtors/debtors.py,sha256=vAoTZb_2p2PJ44lCSLp10XhA_w5Hb2GfJnfg4z4NkIM,1558
+cro_tax_debtors/save_handlers.py,sha256=RLJWUr4SJcqbvd6mIJSkhmmYf_40U6G1kcMHEQqXvUc,1862
+cro_tax_debtors/screen.py,sha256=DWvXXY_4VpWMVQTA9Y4HTAkP1mB8CYJn_3MrjzmujpU,3028
+cro_tax_debtors/spiders.py,sha256=1SLL4M-ZF37L8IagNvNkwB-IAx-seVAH0m24AUbh2AQ,1788
