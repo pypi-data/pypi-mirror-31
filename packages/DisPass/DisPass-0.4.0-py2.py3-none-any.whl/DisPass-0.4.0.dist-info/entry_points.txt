@@ -1,0 +1,6 @@
+[console_scripts]
+dispass = dispass.main:console
+
+[gui_scripts]
+gdispass = dispass.main:gui
+
