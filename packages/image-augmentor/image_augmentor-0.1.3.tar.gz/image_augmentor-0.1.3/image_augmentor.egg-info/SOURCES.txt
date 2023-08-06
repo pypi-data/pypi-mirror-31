@@ -1,0 +1,15 @@
+README.rst
+setup.py
+image_augmentor/__init__.py
+image_augmentor/augmentor.py
+image_augmentor/loader.py
+image_augmentor/options.py
+image_augmentor/point.py
+image_augmentor/sample.py
+image_augmentor/test.py
+image_augmentor/transform.py
+image_augmentor.egg-info/PKG-INFO
+image_augmentor.egg-info/SOURCES.txt
+image_augmentor.egg-info/dependency_links.txt
+image_augmentor.egg-info/requires.txt
+image_augmentor.egg-info/top_level.txt
