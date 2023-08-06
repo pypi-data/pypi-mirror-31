@@ -1,0 +1,3 @@
+[console_scripts]
+pcapmq = pcapmq.cli:main
+
