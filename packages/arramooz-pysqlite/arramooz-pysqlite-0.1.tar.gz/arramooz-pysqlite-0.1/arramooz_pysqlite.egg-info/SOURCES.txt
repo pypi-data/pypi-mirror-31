@@ -1,0 +1,11 @@
+README.md
+setup.py
+arramooz/__init__.py
+arramooz/arabicdictionary.py
+arramooz/stopwordsdictionaryclass.py
+arramooz/wordfreqdictionaryclass.py
+arramooz_pysqlite.egg-info/PKG-INFO
+arramooz_pysqlite.egg-info/SOURCES.txt
+arramooz_pysqlite.egg-info/dependency_links.txt
+arramooz_pysqlite.egg-info/requires.txt
+arramooz_pysqlite.egg-info/top_level.txt
