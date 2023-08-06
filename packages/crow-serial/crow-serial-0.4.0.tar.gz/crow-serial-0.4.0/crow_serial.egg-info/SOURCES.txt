@@ -1,0 +1,15 @@
+README.md
+setup.py
+crow/__init__.py
+crow/admin.py
+crow/errors.py
+crow/host.py
+crow/host_serial.py
+crow/parser.py
+crow/transaction.py
+crow/utils.py
+crow_serial.egg-info/PKG-INFO
+crow_serial.egg-info/SOURCES.txt
+crow_serial.egg-info/dependency_links.txt
+crow_serial.egg-info/requires.txt
+crow_serial.egg-info/top_level.txt
