@@ -1,0 +1,15 @@
+README.md
+setup.py
+r_map/AddressedNode.py
+r_map/BitField.py
+r_map/BitFieldRef.py
+r_map/Enumeration.py
+r_map/Node.py
+r_map/RMapFactory.py
+r_map/RMapJSON.py
+r_map/Register.py
+r_map/RegisterMap.py
+r_map.egg-info/PKG-INFO
+r_map.egg-info/SOURCES.txt
+r_map.egg-info/dependency_links.txt
+r_map.egg-info/top_level.txt
