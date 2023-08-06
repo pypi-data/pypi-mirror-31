@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+figs/brooklyn.png
+figs/example.png
+legendgram/__init__.py
+legendgram/__version__.py
+legendgram/legendgram.py
+legendgram/test_legendgram.py
+legendgram/util.py
+legendgram.egg-info/PKG-INFO
+legendgram.egg-info/SOURCES.txt
+legendgram.egg-info/dependency_links.txt
+legendgram.egg-info/requires.txt
+legendgram.egg-info/top_level.txt
