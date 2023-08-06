@@ -1,0 +1,30 @@
+Metadata-Version: 2.0
+Name: predecessor
+Version: 0.0.1
+Summary: A set of useful python classes to inherit from
+Home-page: https://gitlab.com/gappleto97/heir
+Author: Gabe Appleton
+Author-email: gabe@gabeappleton.me
+License: LGPLv3
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Provides-Extra: crypto
+Requires-Dist: cryptography; extra == 'crypto'
+Provides-Extra: serialize
+Requires-Dist: u-msgpack-python; extra == 'serialize'
+
+UNKNOWN
+
+
