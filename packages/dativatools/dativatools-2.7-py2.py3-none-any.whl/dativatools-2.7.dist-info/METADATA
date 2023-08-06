@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: dativatools
+Version: 2.7
+Summary: Useful tools when building data pipelines
+Home-page: https://github.com/dativa4data/dativatools/tree/master
+Author: The Dativa Team
+Author-email: hello@dativa.com
+License: MIT
+Keywords: dativa
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: boto (>=2.48.0)
+Requires-Dist: boto3 (>=1.4.4)
+Requires-Dist: botocore (>=1.5.80)
+Requires-Dist: chardet (>=3.0.4)
+Requires-Dist: pandas (>=0.18.0)
+Requires-Dist: paramiko (>=2.2.1)
+Requires-Dist: patool (>=1.12)
+Requires-Dist: psycopg2 (>=2.7.3.1)
+Requires-Dist: pexpect (>=4.2.1)
+
+UNKNOWN
+
+
