@@ -1,0 +1,16 @@
+norfs/__init__.py,sha256=TNIKn-12aYyiaKQMfNa5UyTqHMKFcEgK-mhHFzgph2A,5119
+norfs/filesystem.py,sha256=9NATjESdRYHKS1mafdg7D2-aEI4i55NKzV5WLVn6R2Q,6079
+norfs/copy/__init__.py,sha256=LiFTvgVQzEN9BVPlNq9s6l6_SqCIZ1oyyK3aNOlW-JM,4012
+norfs/copy/local.py,sha256=riRMsYWAVN1ArGzjGWYhE-k5tlibKbv2_m3CiOzq4hY,894
+norfs/copy/s3.py,sha256=cIV9nLXxgYZVzFYrxapV184BgUcK04TdaNUBvlsHRsw,3145
+norfs/fs/__init__.py,sha256=HVjdtosB4ifGm9f-iiOzWW27vGcMjDu9KrsRmDibw1I,3529
+norfs/fs/local.py,sha256=5f3lX-mJ_ERnTj0ZvV6AYr2AZwmfVW-rjSQ-ADd4buE,2720
+norfs/fs/memory.py,sha256=fM6pBkhGt7D5TbYUs1B1LZjo4mqFDlwS15ahoIPVGp8,5050
+norfs/fs/s3.py,sha256=8rced4dS2j5vqUF4zIvdS02FCwC-4-YwrrJOD3H1j04,6756
+norfs-1.3.0.dist-info/DESCRIPTION.rst,sha256=-ZJfeDi1amkAfkY2IkbOQppKbJBnGjmyq2ZVszvL80g,1442
+norfs-1.3.0.dist-info/LICENSE.txt,sha256=wgILErmVDJojcki8iwanu2ixsBdB0rNDdChssw8xUSA,1072
+norfs-1.3.0.dist-info/METADATA,sha256=uAEskGtmzmIbc-qsBf8ejzOXPKwS1O1q5guNCqV7QVc,2231
+norfs-1.3.0.dist-info/RECORD,,
+norfs-1.3.0.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+norfs-1.3.0.dist-info/metadata.json,sha256=SyZlpQwT5sdncUFiMUOV7Asf1hGThQ9--kwPrVidimc,1001
+norfs-1.3.0.dist-info/top_level.txt,sha256=cL8uC9FGaHvDePduAJxI3X8kKNrSVyMa5FpGkN8Mn5A,6
