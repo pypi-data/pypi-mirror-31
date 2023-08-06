@@ -1,0 +1,10 @@
+Metadata-Version: 1.2
+Name: MusicUtils
+Version: 0.1.dev0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+License: Creative Commons Attribution-Noncommercial-Share Alike license
+Description: Helpful library to download music and metadata from youtube using youtube-dl and by scraping from genius.com.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.5
+Requires-Python: >=3.4
