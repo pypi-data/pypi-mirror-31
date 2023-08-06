@@ -1,0 +1,19 @@
+Metadata-Version: 2.0
+Name: csvs
+Version: 0.1.1
+Summary: Parse CSV data for humans.
+Home-page: https://github.com/dnxbjyj/csvs
+Author: m2fox
+Author-email: dnxbjyj@126.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Requires-Python: >=2.7
+
+# csvs
+Parse CSV data for humans.
+
+
