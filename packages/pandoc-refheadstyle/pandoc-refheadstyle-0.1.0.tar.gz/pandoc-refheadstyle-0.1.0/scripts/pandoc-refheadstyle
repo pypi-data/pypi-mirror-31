@@ -1,0 +1,53 @@
+#!/usr/bin/python
+# encoding=utf-8
+# pylint: disable=C0103
+"""Pandoc filter that sets a custom style for the reference section header.
+
+Copyright (c) 2018 Odin Kroeger
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
+OR OTHER DEALINGS IN THE SOFTWARE.
+"""
+
+from argparse import ArgumentParser
+from panflute import run_filter
+from pandoc_refheadstyle import RefHeadStyleSetter
+
+DESCRIPTION = ('Pandoc filter that sets a custom style for the reference '
+               'section header. See pandoc-refheadstyle(1) for details.')
+
+DEBUG = False
+
+def main(doc=None):
+    """Sets a custom style for the reference section header.
+
+    Arguments:
+        doc (``panflute.Doc``):
+            The document in which to set the style of
+            the reference section header.
+
+    See ``pandoc_refheadstyle`` for details.
+    """
+    parser = ArgumentParser(description=DESCRIPTION)
+    parser.parse_known_args()
+
+    return run_filter(RefHeadStyleSetter(), doc=doc)
+
+
+if __name__ == '__main__':
+    main()
