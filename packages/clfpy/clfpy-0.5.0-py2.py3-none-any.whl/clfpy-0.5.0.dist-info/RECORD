@@ -1,0 +1,11 @@
+clfpy/__init__.py,sha256=C1NYlSxrpZURYy0qcbQTPfpAG3dR-FXRi3VKes0WlHY,264
+clfpy/auth_client.py,sha256=xJcxWUjd1IWygvIPx7t6CfpyphLGVTtXbaX-jF4UbFQ,4454
+clfpy/gss_client.py,sha256=P9nIBNnrlaYS5oPpJwo3dxsydRte3O9hdBSJ_c9O7Qk,4877
+clfpy/hpc_client.py,sha256=hZm-26ouaW8Dj6V9PQqyi_Wj0SkCvcUiqGVNq_UYHtU,990
+clfpy/soap_client.py,sha256=LWj34jTg4Si6AYHnLG2WL-xPK5IgFulZmZbMomftytY,1122
+clfpy/wfm_client.py,sha256=jidtTravhz1eYF3_40BLoMgomHmqfg1a5GAJnrUrEDE,908
+clfpy-0.5.0.dist-info/LICENSE.txt,sha256=jBnNEcZrN12cEzy_pkcFA-52xCoQT7oLBHkq7wsYyiw,1063
+clfpy-0.5.0.dist-info/METADATA,sha256=vv-7VZeE1Z21nndyg2PEq9AJEaRzkx3Fr9txylkwo0A,516
+clfpy-0.5.0.dist-info/RECORD,,
+clfpy-0.5.0.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+clfpy-0.5.0.dist-info/top_level.txt,sha256=NkYykaXb3QdXX3FVT0Jdl0ps3ykO9jzmALATZne2GeQ,6
