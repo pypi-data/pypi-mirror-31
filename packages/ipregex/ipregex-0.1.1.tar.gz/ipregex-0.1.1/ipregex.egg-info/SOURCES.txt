@@ -1,0 +1,10 @@
+README.rst
+setup.cfg
+setup.py
+ipregex/__init__.py
+ipregex/conftest.py
+ipregex/test_ipregex.py
+ipregex.egg-info/PKG-INFO
+ipregex.egg-info/SOURCES.txt
+ipregex.egg-info/dependency_links.txt
+ipregex.egg-info/top_level.txt
