@@ -1,0 +1,5 @@
+[console_scripts]
+envimg = uboot.cli_envimg:main
+mkenv = uboot.cli_mkenv:main
+mkimg = uboot.cli_mkimg:main
+
