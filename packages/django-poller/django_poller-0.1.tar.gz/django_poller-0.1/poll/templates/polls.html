@@ -1,0 +1,55 @@
+{% extends 'general.html' %}
+{% load poll_tags %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row" style="height: 25px;"></div>
+    <div class="row">
+        <div class="col-md-2 offset-md-5" style="text-align: center; color:#8eb9dc;font-family: MyriadPro,serif;">
+            <h1>Poll</h1>
+        </div>
+    </div>
+    <div class="row" style="height: 25px;"></div>
+{% if not messages %}
+    <div class="row">
+        <div class="col-md-4 offset-md-4" style="background-color: white; -webkit-border-radius: 8px;-moz-border-radius: 8px;border-radius: 8px;box-shadow: 5px 10px #888888;-webkit-box-shadow: 0 0 33px 0 rgba(0,0,0,0.5);-moz-box-shadow: 0 0 33px 0 rgba(0,0,0,0.5);box-shadow: 0 0 33px 0 rgba(0,0,0,0.5);">
+            <form action="{{ next }}" method="post">
+                {% csrf_token %}
+                {% for field in form %}
+                    {% if questions %}
+                        {% with questions|elem:forloop.counter0 as question %}
+                    <div class="fieldWrapper">
+                        {% if not question.required or not invalid %}
+                        <label for="id_{{ field.html_name }}">{{ field.label }}</label>
+                        {% else %}
+                        <label for="id_{{ field.html_name }}">{{ field.label }}</label>
+                        {{ field.errors }}
+                        {% endif %}
+                        {{ field }}
+                        {% if question.type == 'Scala' %}
+                            <p>Momentaner Wert: <output style="display: initial;" id="{{ field.html_name }}Out">{{ question.number_range_end|divide:2 }}</output></p>
+                        {% endif %}
+                        {% if field.help_text != None %}
+                            <p class="help">{{ field.help_text|safe }}</p>
+                        {% endif %}
+                        {% endwith %}
+                    {% endif %}
+                </div>
+                {% endfor %}
+                <div style="text-align: center; margin:35px;">
+                 <input type="submit" class="btn-print" value="Send">
+                </div>
+            </form>
+        </div>
+    </div>
+{% else %}
+    <div class="row">
+        <div class="col-md-4 offset-md-4" style="text-align: center;padding:5%;background-color: white; -webkit-border-radius: 8px;-moz-border-radius: 8px;border-radius: 8px;box-shadow: 5px 10px #888888;-webkit-box-shadow: 0 0 33px 0 rgba(0,0,0,0.5);-moz-box-shadow: 0 0 33px 0 rgba(0,0,0,0.5);box-shadow: 0 0 33px 0 rgba(0,0,0,0.5);">
+            {% for message in messages %}
+                <h2 style="color: #0E3C59">{{ message }}</h2>
+            {% endfor %}
+        </div>
+    </div>
+{% endif %}
+    <div class="row" style="height: 25px;"></div>
+</div>
+{% endblock %}

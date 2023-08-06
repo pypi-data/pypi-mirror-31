@@ -1,0 +1,13 @@
+
+.fieldWrapper{
+margin-top: 15px;
+background-color: white;
+color: #0E3C59;
+}
+.fieldWrapper select,input{
+color: #0E3C59 !important;
+background-color: white;
+}
+.errorlist {
+color: #ca6579;
+}

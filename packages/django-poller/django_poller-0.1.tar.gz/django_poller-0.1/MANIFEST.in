@@ -1,0 +1,5 @@
+include LICENSE.md
+include README.md
+recursive-include poll/static *
+recursive-include poll/templates *
+recursive-include docs *
