@@ -1,0 +1,10 @@
+README.md
+setup.py
+trident-resin-proxy/__init__.py
+trident-resin-proxy/config.py
+trident-resin-proxy/main.py
+trident_resin_proxy.egg-info/PKG-INFO
+trident_resin_proxy.egg-info/SOURCES.txt
+trident_resin_proxy.egg-info/dependency_links.txt
+trident_resin_proxy.egg-info/requires.txt
+trident_resin_proxy.egg-info/top_level.txt
