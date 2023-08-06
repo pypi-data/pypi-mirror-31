@@ -1,0 +1,12 @@
+Metadata-Version: 1.0
+Name: raven-python-lambda
+Version: 0.1.8
+Summary: Decorator for lambda sentry instrumentation.
+Home-page: https://github.com/Netflix-Skunkworks/raven-python-lambda
+Author: The developers
+Author-email: oss@netflix.com
+License: UNKNOWN
+Description-Content-Type: UNKNOWN
+Description: See README.md
+Keywords: aws,sentry,raven,lambda
+Platform: UNKNOWN
