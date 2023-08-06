@@ -1,0 +1,19 @@
+Metadata-Version: 2.0
+Name: checkPy
+Version: 0.4.1
+Summary: A simple python testing framework for educational purposes
+Home-page: https://github.com/Jelleas/CheckPy
+Author: Jelleas
+Author-email: jelle.van.assema@gmail.com
+License: MIT
+Requires-Dist: requests
+Requires-Dist: tinydb
+Requires-Dist: dill
+Requires-Dist: colorama
+Requires-Dist: redbaron
+Provides-Extra: dev
+Provides-Extra: test
+
+CheckPy
+
+
