@@ -1,0 +1,13 @@
+README.md
+setup.py
+pycsvsql/__init__.py
+pycsvsql/core.py
+pycsvsql/helpers.py
+pycsvsql.egg-info/PKG-INFO
+pycsvsql.egg-info/SOURCES.txt
+pycsvsql.egg-info/dependency_links.txt
+pycsvsql.egg-info/requires.txt
+pycsvsql.egg-info/top_level.txt
+tests/__init__.py
+tests/conftest.py
+tests/test_basic.py

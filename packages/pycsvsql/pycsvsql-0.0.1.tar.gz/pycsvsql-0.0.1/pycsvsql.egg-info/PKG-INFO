@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: pycsvsql
+Version: 0.0.1
+Summary: Python csvsql convertor.
+Home-page: https://github.com/gzxultra/pycsvsql
+Author: Zhixiang Gu
+Author-email: mygladfinger@gmail.com
+License: MIT
+Description: # Overview
+        
+        pycsvsql is a csv sql convertor.
+        
+        # Setup
+        
+        ## Requirements
+        
+        * Python 3.6+
+        
+        ## Installation
+        
+        Install pycsvsql with pip:
+        
+        ```sh
+        $ pip install pycsvsql
+        ```
+        
+        or directly from the source code:
+        
+        ```sh
+        $ git clone https://github.com/gzxultra/pycsvsql.git
+        $ cd pycsvsql
+        $ python setup.py install
+        ```
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
