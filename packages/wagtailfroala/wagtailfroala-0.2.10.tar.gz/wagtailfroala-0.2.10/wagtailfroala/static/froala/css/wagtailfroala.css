@@ -1,0 +1,11 @@
+.fr-view ul, .fr-view ol {
+    padding-left: 15px;
+}
+
+.fr-view ul > li {
+    list-style: disc;
+}
+
+.fr-view ol > li {
+    list-style: decimal;
+}
