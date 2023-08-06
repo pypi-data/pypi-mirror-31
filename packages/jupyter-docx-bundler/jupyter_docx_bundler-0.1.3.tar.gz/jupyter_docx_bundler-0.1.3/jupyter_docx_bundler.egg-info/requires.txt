@@ -1,0 +1,10 @@
+nbconvert>=5.3.1
+pypandoc>=1.4
+notebook>=5.0
+
+[test]
+pytest
+pillow
+matplotlib
+nbformat
+numpyrequests

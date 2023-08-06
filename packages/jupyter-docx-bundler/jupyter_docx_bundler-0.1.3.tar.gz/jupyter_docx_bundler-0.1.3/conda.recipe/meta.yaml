@@ -1,0 +1,40 @@
+package:
+  name: jupyter_docx_bundler
+  version: {{ GIT_DESCRIBE_TAG }}
+
+source:
+  path: ..
+
+build:
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  build:
+    - python >=3.6
+    - setuptools >=38.6.0
+    - setuptools_scm
+  run:
+    - python >=3.6
+    - notebook >=5.0
+    - pypandoc >=1.4
+    - nbconvert >=5.3.1
+    - pandoc >=2.2
+
+test:
+  imports:
+    - jupyter_docx_bundler
+  requires:
+    - matplotlib
+    - nbformat
+    - numpy
+    - pillow
+    - pytest
+    - requests
+  commands:
+    - pytest --pyargs jupyter_docx_bundler
+
+about:
+  home: https://github.com/m-rossi/jupyter_docx_bundler
+  license: MIT
+  license_file: LICENSE
+  summary: Jupyter bundler extension to export notebook as a docx file
