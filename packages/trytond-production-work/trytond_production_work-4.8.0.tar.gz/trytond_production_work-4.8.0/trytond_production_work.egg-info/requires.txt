@@ -1,0 +1,6 @@
+python-sql>=0.4
+trytond_company<4.9,>=4.8
+trytond_production<4.9,>=4.8
+trytond_production_routing<4.9,>=4.8
+trytond_stock<4.9,>=4.8
+trytond<4.9,>=4.8
