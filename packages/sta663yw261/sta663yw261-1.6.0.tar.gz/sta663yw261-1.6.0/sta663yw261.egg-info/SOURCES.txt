@@ -1,0 +1,14 @@
+README.md
+run_sta663.py
+setup.py
+sta663yw261.py
+pkg/__init__.py
+pkg/dist.py
+pkg/k_means.py
+pkg/k_means_int.py
+pkg/k_means_pp.py
+pkg/scalable_k_means_pp.py
+sta663yw261.egg-info/PKG-INFO
+sta663yw261.egg-info/SOURCES.txt
+sta663yw261.egg-info/dependency_links.txt
+sta663yw261.egg-info/top_level.txt
