@@ -1,0 +1,12 @@
+# This map file was updated with smap
+
+DUPLICATED_1_0_0
+{
+    global:
+        duplicated;
+        duplicated;
+    local:
+        *;
+} ;
+
+

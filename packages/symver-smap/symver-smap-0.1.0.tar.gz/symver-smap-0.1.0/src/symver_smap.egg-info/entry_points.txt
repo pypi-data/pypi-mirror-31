@@ -1,0 +1,3 @@
+[console_scripts]
+smap = smap.main:main
+
