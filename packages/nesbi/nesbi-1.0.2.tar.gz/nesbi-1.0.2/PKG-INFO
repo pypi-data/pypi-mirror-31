@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: nesbi
+Version: 1.0.2
+Summary: Nesbi (Network Scan, Build and Import data)
+Home-page: https://github.com/dm-drogeriemarkt/nesbi
+Author: Simon Metzger
+Author-email: simon.metzger@dm.de
+License: MIT License
+Description: UNKNOWN
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
