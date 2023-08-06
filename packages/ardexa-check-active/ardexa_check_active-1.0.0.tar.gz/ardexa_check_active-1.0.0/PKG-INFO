@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: ardexa_check_active
+Version: 1.0.0
+Summary: Do all you can to keep Ardexa running
+Home-page: UNKNOWN
+Author: Ardexa Pty Limited
+Author-email: support@ardexa.com
+License: UNKNOWN
+Description: # Check Active
+        
+        For use with version 2.x of the agent as well as ardexa-black-box
+        
+Keywords: ardexa
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown
