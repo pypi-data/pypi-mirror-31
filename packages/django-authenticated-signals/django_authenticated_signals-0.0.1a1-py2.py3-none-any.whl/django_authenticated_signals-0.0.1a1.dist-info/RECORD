@@ -1,0 +1,12 @@
+authenticated_signals/__init__.py,sha256=V8kzQHQB6GZGjTB75XnDGdp_-01NWUDSAhKJ-dSfcks,136
+authenticated_signals/__version__.py,sha256=qEdg2MhZc4iFQOS_8-O-er6N8n5kRoiTg9Mrx_ssBJ8,24
+authenticated_signals/apps.py,sha256=oCkdVh3rSrm3lCIrgvEQDfSSj2vXIK8tS-ZiJE_LjWU,1682
+authenticated_signals/middleware.py,sha256=iXmS44IofAnClGy5C9U8GizMjiRsW7k9iDhl9Apitug,691
+authenticated_signals/models.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+authenticated_signals/signals.py,sha256=cEntt60iJlzvWoJUHG28mCNB6cChB0gXttJiT2M4Wj0,624
+django_authenticated_signals-0.0.1a1.dist-info/DESCRIPTION.rst,sha256=BJAFL9H-iFXnhqFOhrn5L_b8sQIc8S2DwfaA4at6J8s,278
+django_authenticated_signals-0.0.1a1.dist-info/METADATA,sha256=HzeaC2pBEZitukuYSEbmjwHU37KydRRlWJb6Gsb1DUc,1362
+django_authenticated_signals-0.0.1a1.dist-info/RECORD,,
+django_authenticated_signals-0.0.1a1.dist-info/WHEEL,sha256=kdsN-5OJAZIiHN-iO4Rhl82KyS0bDWf4uBwMbkNafr8,110
+django_authenticated_signals-0.0.1a1.dist-info/metadata.json,sha256=fzvw-BF7O0uNevT6BTWAq8vxTeysdIJNm5rTqk6cSEg,1253
+django_authenticated_signals-0.0.1a1.dist-info/top_level.txt,sha256=03ING9WiK1yFJ6QXw0yyGZ2S97avEUi_mJXqi3v4f8U,22
