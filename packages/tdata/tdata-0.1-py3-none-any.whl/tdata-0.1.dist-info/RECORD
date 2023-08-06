@@ -1,0 +1,17 @@
+tdata/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tdata/config_path.py,sha256=Ynh18F7kxaPhQFGWi0UIABmUYrhbZ0irhclyCl4Ie9c,479
+tdata/consts.py,sha256=nFD9NKd1oWVTrYiPRl-IWIudQJlUKlTe5yTnn4BpXbc,426
+tdata/data.py,sha256=-Jlieswd-Z_l-fnFhOM9571EfcUqfdj6N9K_koBnz7s,915
+tdata/graph_proxy.py,sha256=H5Cm7j68SvTJBnOC0_P68zgOFHKBLJvK7XBgyX_bRcg,749
+tdata/local.py,sha256=2scKne0bViFW1m5HTGURqIll0-SJwNRK2M6MAhRvW6I,3975
+tdata/quantos.py,sha256=E5veXiBkIjsYRhVEq6QiRIQ--JuXXZzOhZ5Tcc6uXn4,217
+tdata/relation.py,sha256=SQ5XyUDkj2bPDocvcuwF42OluPMq46MA4vK55a6Lv8Q,83
+tdata/remote.py,sha256=BzxQUPwj_AL4KouMPQAf0jUYKmm0-stWDh5aDxdzWXo,4185
+tdata/remote_service.py,sha256=b87y5EPbNyVBA5IY8thrnduBW2oQBigAMwnW2QWL1zg,217
+tdata/util.py,sha256=hCYtEDy3Khjm57UK0Pj53RJT7EJpCLwGCzMtDn4myPY,1045
+tdata-0.1.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+tdata-0.1.dist-info/METADATA,sha256=qwGf5TGBTMuSZUvS1s-g4h14njR-S2t6winY6BhDlWI,205
+tdata-0.1.dist-info/RECORD,,
+tdata-0.1.dist-info/WHEEL,sha256=rNo05PbNqwnXiIHFsYm0m22u4Zm6YJtugFG2THx4w3g,92
+tdata-0.1.dist-info/metadata.json,sha256=dpCgRDyMnmW-WPbebO1A_aJO_sseF6pfz5oqCcvbWQc,359
+tdata-0.1.dist-info/top_level.txt,sha256=An7QTqqSaMYnq7DxGy1G2f6ZHWZI_WWrqs-eN-BHYwA,6
