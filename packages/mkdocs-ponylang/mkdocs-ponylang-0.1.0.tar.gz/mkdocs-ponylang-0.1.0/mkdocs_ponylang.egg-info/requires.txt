@@ -1,0 +1,7 @@
+mkdocs>=0.17.1
+Pygments>=2.2
+pymdown-extensions>=3.4
+setuptools>=38.6.0
+twine>=1.11.0
+wheel>=0.31.0
+tornado<5
