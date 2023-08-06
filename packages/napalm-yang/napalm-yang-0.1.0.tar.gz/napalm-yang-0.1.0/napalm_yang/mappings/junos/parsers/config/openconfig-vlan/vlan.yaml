@@ -1,0 +1,12 @@
+---
+metadata:
+    processor: XMLParser
+
+vlan:
+    _process: unnecessary
+    config:
+        _process: unnecessary
+        vlan-id:
+            _process:
+                - path: "vlan-id"
+                  post: "{{ value|int or None }}"

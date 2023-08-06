@@ -1,0 +1,64 @@
+---
+metadata:
+    processor: XMLTranslator
+    xml_root: configuration
+
+interfaces:
+    _process:
+        - container: interfaces
+          replace: true
+    interface:
+        _process:
+            - container: interface
+              key_element: name
+              key_value: "{{ interface_key }}"
+        name:
+            _process: unnecessary
+        hold-time:
+            _process: unnecessary
+            config:
+                _process: unnecessary
+                down:
+                    _process: not_implemented
+                up:
+                    _process: not_implemented
+        config:
+            _process: unnecessary
+            name:
+                _process: unnecessary
+            type:
+                _process: unnecessary
+            enabled:
+                _process:
+                    - element: "disable"
+                      when: "{{ not model }}"
+                      value: null
+            description:
+                _process:
+                    - element: description
+            mtu:
+                _process:
+                    - element: mtu
+        subinterfaces:
+            _process: unnecessary
+            subinterface:
+                _process:
+                    - container: unit
+                      key_element: name
+                      key_value: "{{ subinterface_key }}"
+                index:
+                    _process: unnecessary
+                config:
+                    _process: unnecessary
+                    index:
+                        _process: unnecessary
+                    name:
+                        _process: unnecessary
+                    enabled:
+                        _process:
+                            - element: "disable"
+                              when: "{{ not model }}"
+                              value: null
+                    description:
+                            _process:
+                                - element: description

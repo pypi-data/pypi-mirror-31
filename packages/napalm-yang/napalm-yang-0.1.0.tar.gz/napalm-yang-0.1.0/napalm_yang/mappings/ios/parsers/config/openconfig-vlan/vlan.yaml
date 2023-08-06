@@ -1,0 +1,13 @@
+---
+metadata:
+    prefix: "oc-vlan"
+    processor: TextTree
+
+vlan:
+    _process: unnecessary
+    config:
+        _process: unnecessary
+        vlan-id:
+            _process:
+                - path: "encapsulation.dot1Q"
+                  regexp: "^(?P<value>\\d+)$"

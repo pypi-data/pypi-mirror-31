@@ -1,0 +1,9 @@
+---
+metadata:
+    prefix: "napalm-ip"
+    processor: TextTree
+
+secondary:
+    _process:
+        - path: "secondary"
+          present: yes
