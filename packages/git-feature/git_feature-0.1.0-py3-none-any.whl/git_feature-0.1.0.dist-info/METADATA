@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: git-feature
+Version: 0.1.0
+Summary: Handle feature branches for onnx and caffe2 repositories
+Home-page: https://github.com/smessmer/onnx-git-flow
+Author: Sebastian Messmer
+Author-email: messmer@fb.com
+License: GPLv3
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Console
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: Linux
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Utilities
+Requires-Dist: typing
+Requires-Dist: argparse
+Requires-Dist: typing
+Requires-Dist: typing-extensions
+
+UNKNOWN
+
+
