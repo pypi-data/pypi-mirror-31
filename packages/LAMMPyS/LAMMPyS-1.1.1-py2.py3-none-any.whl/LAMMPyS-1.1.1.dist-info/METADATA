@@ -1,0 +1,17 @@
+Metadata-Version: 2.0
+Name: LAMMPyS
+Version: 1.1.1
+Summary: My python tools for LAMMPS calculation
+Home-page: https://githun.com/PermissionX/LAMMPyS
+Author: permissionx
+Author-email: buaaxuke@gmail.com
+License: UNKNOWN
+Keywords: lammps molecular dynamics md
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scipy
+
+UNKNOWN
+
+
