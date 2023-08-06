@@ -1,0 +1,3 @@
+[console_scripts]
+mail2mongo=mail2mongo:entrypoint
+
