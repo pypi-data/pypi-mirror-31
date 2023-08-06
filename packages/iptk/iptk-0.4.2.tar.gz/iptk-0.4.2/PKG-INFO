@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: iptk
+Version: 0.4.2
+Summary: Python interface to the Imaging Pipeline Toolkit
+Home-page: https://github.com/iptk/iptk-py
+Author: Jan-Gerd Tenberge
+Author-email: jan-gerd.tenberge@uni-muenster.de
+License: UNKNOWN
+Download-URL: https://github.com/iptk/iptk-py/archive/0.4.2.tar.gz
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Keywords: neuroimaging,docker
+Platform: UNKNOWN
