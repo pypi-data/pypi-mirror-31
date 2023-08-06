@@ -1,0 +1,3 @@
+[console_scripts]
+update-prosper-schemas = prosper.test_utils.schema_utils:run_plumbum
+
