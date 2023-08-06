@@ -1,0 +1,13 @@
+hashidtools/__init__.py,sha256=-E8SCO3xDnBCb3piNBQprHS8b8J_TRt6NssHlGZqSTM,1895
+hashidtools/exceptions.py,sha256=H4bShDCMj5VtmpyHMVe-at_L4Se2PkJ8xrRwA6mfHtY,219
+hashidtools/fields.py,sha256=IPM6tOp9cNesY1B2e2KDVTZI-_fNitP8JAl1Eyy64F4,1849
+hashidtools/interfaces.py,sha256=EkFkkx3DmdCU390t3UBSGo206yA35juoqKy4DrJrJ1k,1972
+hashidtools/types.py,sha256=nZ8q-tSnfvII8BRHPdKd1RqJovTIsRu5ip9TdduhyVE,6726
+hashidtools-1.0.2.dist-info/LICENSE.txt,sha256=gB1aWYwCx_Fl7WYhCRXLugMGqEIeVOQ8z5qKe_3fwY4,1073
+hashidtools-1.0.2.dist-info/METADATA,sha256=JesCOcgZEsXHsh0A2-foLXPM35adz9lE_N2Jhaafguc,5821
+hashidtools-1.0.2.dist-info/RECORD,,
+hashidtools-1.0.2.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+hashidtools-1.0.2.dist-info/top_level.txt,sha256=9UZuBG02bzn_gUxzfLih__igzLAo5W1KXJzj_Zi4A6A,18
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_fields.py,sha256=vw0uQJGatvzlOLxa1rl94azRZIRlUfw5KWsgnauodSc,1431
+tests/test_types.py,sha256=txiZU-XDkPngUni6LG0U0WEFRTY688DgEMvmBHIrmro,5166

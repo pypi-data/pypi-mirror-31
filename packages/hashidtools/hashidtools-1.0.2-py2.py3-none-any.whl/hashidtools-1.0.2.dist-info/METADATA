@@ -1,0 +1,212 @@
+Metadata-Version: 2.1
+Name: hashidtools
+Version: 1.0.2
+Summary: HashID based ID Toolkit.
+Home-page: https://github.com/joeblackwaslike/hashidtools
+Author: Joe Black
+Author-email: me@joeblack.nyc
+Maintainer: Joe Black
+Maintainer-email: me@joeblack.nyc
+License: MIT
+Download-URL: https://github.com/joeblackwaslike/hashidtools/tarball/v1.0.2
+Keywords: hashid,id-generation,distributed,zodb,database,datamodels
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: zope.component (>=4.4.1)
+Requires-Dist: zope.configuration (>=4.1.0)
+Requires-Dist: zope.interface (>=4.5.0)
+Requires-Dist: zope.schema (>=4.5.0)
+Requires-Dist: zope.event (>=4.3.0)
+Requires-Dist: zope.security (>=4.2.2)
+Requires-Dist: zope.intid (>=4.3.0)
+Requires-Dist: zc.intid (>=2.0.0)
+Requires-Dist: BTrees (>=4.5.0)
+Requires-Dist: attrs (>=18.1.0)
+Requires-Dist: hashids (>=1.2.0)
+
+
+HashIDTools
+===========
+
+
+.. image:: https://travis-ci.org/joeblackwaslike/hashidtools.svg?branch=master
+   :target: https://travis-ci.org/joeblackwaslike/hashidtools
+   :alt: Build Status
+
+.. image:: https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat
+   :target: https://github.com/joeblackwaslike/hashidtools
+   :alt: Github Repo
+
+.. image:: https://img.shields.io/pypi/v/hashidtools.svg
+   :target: https://pypi.python.org/pypi/hashidtools
+   :alt: Pypi Version
+
+.. image:: https://img.shields.io/pypi/l/hashidtools.svg
+   :target: https://pypi.python.org/pypi/hashidtools
+   :alt: Pypi License
+
+.. image:: https://img.shields.io/pypi/wheel/hashidtools.svg
+   :target: https://pypi.python.org/pypi/hashidtools
+   :alt: Pypi Wheel
+
+.. image:: https://img.shields.io/pypi/pyversions/hashidtools.svg
+   :target: https://pypi.python.org/pypi/hashidtools
+   :alt: Pypi Versions
+
+
+Maintainer
+----------
+
+Joe Black | me@joeblack.nyc | `github <https://github.com/joeblackwaslike>`_
+
+Introduction
+------------
+
+HashID tools/components for async ID generation. Example: ``k62K3zOn4Y5Kkxmg7pWOAqPyd8NVjrmX`` Designed for async data model ID generation for persisting objects to a graph DB such as ZODB.  ZCA means it's simple to customize and override without editing any code.
+
+Comes with
+~~~~~~~~~~
+
+
+* Customizable Generator/encoder/decoder utility
+* Type class (experimental)
+* Persistent, 2x BTree-powered IntID/Ref Manager
+* Custom fields for ``zope.schema`` and ``attrs``\ , with default factory functions, validation, etc.
+
+Also
+~~~~
+
+
+* Random seed integer is just under 64bits.
+* Derive seed integer at any time by casting type as an int.
+
+Installation
+------------
+
+.. code-block:: shell
+
+   pip3 install hashidtools
+
+Usage
+-----
+
+HashIDGenerator
+^^^^^^^^^^^^^^^
+
+.. code-block:: python
+
+   >>> from hashidtools import HashIDGenerator
+   >>> gen = HashIDGenerator(salt='my random salt', min_length=32)
+
+   >>> gen.seed()
+   ...
+   >>> gen
+   HashIDGenerator(salt='my random salt', min_length=32)
+   >>> gen.new()
+   '...'
+   >>> gen.decode(gen.new())
+   ...
+
+HashID Type
+^^^^^^^^^^^
+
+.. code-block:: python
+
+   >>> from hashidtools import HashID
+   ... HashID()
+   '...'
+   >>> HashID('8nKqkABjlYB5A7430M917zAJao1Me4mN')
+   '8nKqkABjlYB5A7430M917zAJao1Me4mN'
+
+Hashid IntID Indexing & Event System
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: python
+
+   >>> intid = HashIDManager()
+   ... intid
+   HashIDManager(attribute='id')
+   ... intid.generateId()
+   '...'
+
+   >>> from zc.intid.interfaces import AddedEvent, RemovedEvent
+   ... import zope.event.classhandler
+   ...
+   >>> @zope.event.classhandler.handler(AddedEvent)
+   ... def handler(event):
+   ...     print(event.id, event.object, event.idmanager)
+   ...
+   ... @zope.event.classhandler.handler(RemovedEvent)
+   ... def handler(event):
+   ...     print(event.id, event.object, event.idmanager)
+
+   >>> import attr
+   ... Test = attr.make_class(
+   ...   'Test', {'id': fields.hashid(init=False),
+   ...            'name': attr.ib(default='default-name')})
+   ...
+
+   >>> t = Test()
+   ... intid.register(t)
+   '...'
+
+   ... id = intid.getId(t)
+   ... intid.getObject(id)
+   Test(id='...', name='default-name')
+
+   >>> intid.unregister(t)
+
+Retrieving the utilities through the ZCA Registry
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: python
+
+   >>> from zope.component import queryUtility
+   ... from hashidtools.interfaces import IHashIDGenerator, IIntIds
+   ...
+   ... queryUtility(IHashIDGenerator)
+   HashIDGenerator(salt='$2a$12$AAAAAAAAAAAAAACgpDEPGQ', min_length=32)
+
+   >>> queryUtility(IIntIds)
+   HashIDs(attribute='id')
+
+Extending this Package
+^^^^^^^^^^^^^^^^^^^^^^
+
+This package uses Zope Component Architecture for the ultimate in pluggable extendibility.
+
+Quick example of customizing the HashID Generator:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   # Note: you can also create your own Generator class that implements the
+   # IHashIDGenerator interface and register it.
+   from zope.component import provideUtility
+
+   from hashidtools import HashIDGenerator
+   from hashidtools.interfaces import IHashIDGenerator
+
+   generator = HashIDGenerator(**custom_options)
+   provideUtility(generator, IHashIDGenerator)
+
+Note: the following would preferrably be done using your project's ZCML directives.
+
+Changes
+-------
+
+
+* `CHANGELOG <CHANGELOG.md>`_
+
+
