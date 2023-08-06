@@ -1,0 +1,7 @@
+[console_scripts]
+importnb-install = importnb.utils.ipython:install
+importnb-uninstall = importnb.utils.ipython:uninstall
+
+[pytest11]
+pytest-importnb = importnb.utils.pytest_plugin
+
