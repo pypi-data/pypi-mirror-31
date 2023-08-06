@@ -1,0 +1,19 @@
+Metadata-Version: 2.0
+Name: eth-docgen
+Version: 0.1.2
+Summary: Generate html documentation from Ethereum smart contracts
+Home-page: https://github.com/sampullman/eth-docgen/
+Author: Sam Pullman
+Author-email: sampullman@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/sampullman/eth-docgen/archive/0.1.2.tar.gz
+Project-URL: Source, https://github.com/sampullman/eth-docgen/
+Project-URL: Bug Reports, https://github.com/sampullman/eth-docgen/issues
+Description-Content-Type: text/markdown
+Keywords: ethereum documentation
+Platform: UNKNOWN
+Requires-Dist: yattag (>=1.10.0)
+
+# Solidity Documentation Generator
+This program generates html documentation from Ethereum smart contracts written in Solidity.
+
