@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+Makefile
+README.rst
+setup.py
+charactertrigramfuzzyset/__init__.py
+charactertrigramfuzzyset.egg-info/PKG-INFO
+charactertrigramfuzzyset.egg-info/SOURCES.txt
+charactertrigramfuzzyset.egg-info/dependency_links.txt
+charactertrigramfuzzyset.egg-info/not-zip-safe
+charactertrigramfuzzyset.egg-info/top_level.txt
