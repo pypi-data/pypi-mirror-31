@@ -1,0 +1,10 @@
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_weather.py,sha256=oZc6-cz-B2u8MxBtjjQXBFr86ZlApfdkdQiN1U7W1uE,2942
+weather/__init__.py,sha256=OXKdaiZDtLLRvJfvtTEEfvuyqbLmkT7ZMwm5x2gA8Kk,182
+weather/cli.py,sha256=wuhLO4TTERCzs_-g9CgJaqBmU33XATxOMEIA6JgHTEY,1421
+weather/weather.py,sha256=92qUZMo5NAkEG-AXkb05ZNCSz2fBzz3bfpnmV3ZfLiA,1204
+weathersnake-0.0.2.dist-info/METADATA,sha256=ZaKzh9PYqykj2rLMep0gxUJ9gbhhm1s40m_LHwBAes8,266
+weathersnake-0.0.2.dist-info/RECORD,,
+weathersnake-0.0.2.dist-info/WHEEL,sha256=9xUnOISuCvrSyfu9GlFZT4i2TZ_2OLkwLNqcDvIo3zM,92
+weathersnake-0.0.2.dist-info/entry_points.txt,sha256=E6OlK8ofgOpLo6LfITZ-7q6jfC909NzT8uSAFlAR1UQ,51
+weathersnake-0.0.2.dist-info/top_level.txt,sha256=vvZxw6ZgN0Q4TiEq6dyk89dbJOPD3ZVIK3WfLY4TeXo,14
