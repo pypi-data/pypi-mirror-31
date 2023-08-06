@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+pytedjmi/__init__.py
+pytedjmi.egg-info/PKG-INFO
+pytedjmi.egg-info/SOURCES.txt
+pytedjmi.egg-info/dependency_links.txt
+pytedjmi.egg-info/requires.txt
+pytedjmi.egg-info/top_level.txt
