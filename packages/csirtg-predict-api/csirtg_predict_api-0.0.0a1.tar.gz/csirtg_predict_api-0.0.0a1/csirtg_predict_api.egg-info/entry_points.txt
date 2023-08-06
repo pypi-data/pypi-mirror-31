@@ -1,0 +1,3 @@
+[console_scripts]
+csirtg-predictd = csirtg_predict_api:main
+
