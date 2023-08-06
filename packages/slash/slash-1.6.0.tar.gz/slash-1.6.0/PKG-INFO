@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: slash
+Version: 1.6.0
+Summary: A Testing Framework
+Home-page: http://getslash.github.io/
+Author: Rotem Yaari
+Author-email: vmalloc@gmail.com
+License: BSD
+Description: A Testing Framework
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Provides-Extra: testing
+Provides-Extra: doc
