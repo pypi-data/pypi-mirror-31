@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+build_fnfqueue.py
+setup.py
+fnfqueue/__init__.py
+fnfqueue.egg-info/PKG-INFO
+fnfqueue.egg-info/SOURCES.txt
+fnfqueue.egg-info/dependency_links.txt
+fnfqueue.egg-info/requires.txt
+fnfqueue.egg-info/top_level.txt
+include/fnfqueue.h
+src/fnfqueue.c

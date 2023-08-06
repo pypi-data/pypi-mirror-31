@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: fnfqueue
+Version: 1.0
+Summary: Fast python library encapsulating the nfqueue netlink interface.
+Home-page: https://github.com/notti/fnfqueue
+Author: Gernot Vormayr
+Author-email: gvormayr@gmail.com
+License: MIT
+Project-URL: Source, https://github.com/notti/fnfqueue
+Project-URL: Tracker, https://github.com/notti/fnfqueue/issues
+Description: fnfqueue
+        ========
+        
+        Fast netfilter nfqueue python and C interface. Gets the speed from
+        - avoiding memory allocation
+        - batching reads (uses `recv_mmsg`)
+        
+        It also does not use the callback-like interface of libnetfilter-queue and provides a more python like iterator interface. Additionally, it doesn't assume anything and therefore doesn't automatically set verdicts on packets (unlike python-nfqueue in debian which accepts everything after you return from the callback...)
+        
+        It can handle `ping -f` (even `iperf` if the moon is in the right spot) to localhost from within python.
+        
+        Focus is on a python like interface.
+        
+        Short example for mangling packets:
+        ```bash
+        iptables -A OUTPUT <filter here> -j NFQUEUE --queue-num 1
+        ```
+        
+        ```python
+        import fnfqueue
+        
+        queue = 1
+        conn = nfqueue.Connection()
+        
+        try:
+            q = conn.bind(queue)
+            q.set_mode(0xffff, nfqueue.COPY_PACKET)
+        except PermissionError:
+            print("Access denied; Do I have root rights or the needed capabilities?")
+            sys.exit(-1)
+        
+        while True:
+            try:
+                for packet in conn:
+                    packet.payload = packet.payload # modify the packet here
+                    packet.mangle()
+            except nfqueue.BufferOverflowException:
+                print("buffer error")
+                pass
+        
+        conn.close()
+        ```
+        
+        Help is provided as python docs.
+        
+        No C libraries are needed. Needs cffi for building. Kernel and libc must be recent enough to support `nfqueue` and `recvmmsg` (linux 2.6.33, glibc 2.12 - more recent kernels provide better performance).
+Keywords: nfqueue netfilter netlink iptables firewall mangle
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Other Environment
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Telecommunications Industry
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: C
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Internet
+Classifier: Topic :: Security
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: System :: Operating System Kernels :: Linux
+Description-Content-Type: text/markdown
