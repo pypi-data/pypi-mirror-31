@@ -1,0 +1,5 @@
+bubbletools>=0.6.1
+clyngor>=0.3.2
+networkx==2.1
+phasme==0.0.11
+pytest==3.5.0
