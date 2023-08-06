@@ -1,0 +1,70 @@
+Metadata-Version: 1.1
+Name: collective.fixorderedfolder
+Version: 0.1a4
+Summary: Fix internal data structures of Plone ordered folders
+Home-page: http://pypi.python.org/pypi/collective.fixorderedfolder
+Author: Godefroid Chapelle
+Author-email: gotcha@bubblenet.be
+License: GPL
+Description-Content-Type: UNKNOWN
+Description: ===========================
+        collective.fixorderedfolder
+        ===========================
+        
+        ``plone.folder`` maintains a data structure to support ordering.
+        
+        In certain cases, that data structure can get into incoherent state.
+        
+        For instance, there is a possibility that an item sitting in a folder can still
+        be viewed or edited but not moved or renamed.
+        
+        ``collective.fixorderedfolder`` provides a view (``fixOrderedFolders``) on Plone sites that walk
+        through the site folders to fix the case described.
+        
+        Further, it logs discrepancies in the ordering data structure.
+        
+        Contributors
+        ============
+        
+        - Godefroid Chapelle, gotcha@bubblenet.be
+        
+        Changelog
+        =========
+        
+        
+        0.1a4 (2018-05-07)
+        ------------------
+        
+        - Defend against UnorderedOrdering.
+          [gotcha]
+        
+        
+        0.1a3 (2018-05-07)
+        ------------------
+        
+        - ``plone.api`` is required only by tests. 
+          [gotcha]
+        
+        
+        0.1a2 (2018-05-07)
+        ------------------
+        
+        - Fix broken classifier
+          [gotcha]
+        
+        
+        0.1a1 (2018-05-07)
+        ------------------
+        
+        - Initial release.
+          [gotcha]
+        
+        
+        
+Keywords: Python Plone
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Plone
+Classifier: Framework :: Plone :: 4.3
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
