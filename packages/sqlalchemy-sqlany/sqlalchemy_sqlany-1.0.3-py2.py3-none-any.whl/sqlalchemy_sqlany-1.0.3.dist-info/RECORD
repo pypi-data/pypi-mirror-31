@@ -1,0 +1,11 @@
+sqlalchemy_sqlany/__init__.py,sha256=JXyfGX1ewfd1ao7V8MlNF_rDVa_89VQbmZEVoEmyN8I,829
+sqlalchemy_sqlany/base.py,sha256=Jgmc2DUqoop7EBF73l1vTsMmPgD7Dhysuf9m90f4OE8,31113
+sqlalchemy_sqlany-1.0.3.dist-info/METADATA,sha256=HofsmoHfFGdrnEe16MQcJCgS4bzX6XACxJIOiPTetAQ,4097
+sqlalchemy_sqlany-1.0.3.dist-info/RECORD,,
+sqlalchemy_sqlany-1.0.3.dist-info/WHEEL,sha256=saUSQBLOUjf5ACZdNkhQ0lB6XrHU-l4vpzxq_W1n_AY,116
+sqlalchemy_sqlany-1.0.3.dist-info/entry_points.txt,sha256=1om0X51NX36K7Yoo9fg0Z5lwf2e3caqGVGD8RLS2KBU,74
+sqlalchemy_sqlany-1.0.3.dist-info/top_level.txt,sha256=ziGz1h0YWXjfniAu60ZgSJp0l9kYjB8pqrlCfvN13bM,23
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/conftest.py,sha256=66G2JX45IIZxERRnwQ2Kkcv44qsaRL0HDDAeLKy2cy4,177
+test/requirements.py,sha256=UCjf_AtFpBYvTolB8kevETk7dw8uGtoDe8_Cb5BRklM,2955
+test/test_suite.py,sha256=8_nZOs2LkU2puxO3Uwl8PokLwOikIMIFxgTcDB6tkaM,2860
