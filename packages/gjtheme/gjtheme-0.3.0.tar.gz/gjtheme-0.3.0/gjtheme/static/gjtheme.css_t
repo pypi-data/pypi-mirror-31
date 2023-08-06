@@ -1,0 +1,253 @@
+/* GJ Theme CSS */
+
+html {
+    color: #231F20;
+    font-family: Georgia, serif;
+    font-size: 22px;
+    line-height: 1.4;
+}
+@media all and (max-width: 659px) { html { font-size: 21px; } }
+@media all and (max-width: 619px) { html { font-size: 20px; } }
+@media all and (max-width: 579px) { html { font-size: 19px; } }
+@media all and (max-width: 539px) { html { font-size: 18px; } }
+@media all and (max-width: 499px) { html { font-size: 17px; } }
+@media all and (max-width: 459px) { html { font-size: 16px; } }
+h1, h2, h3, h4, h5, h6, header, footer {
+    font-family: "Trebuchet MS", sans-serif;
+}
+a {
+    color: #231F20;
+    text-decoration: none;
+}
+.link, article a {
+    border-bottom: 0.2em solid #AAD9EE;
+}
+.link:hover, article a:hover {
+    border-bottom: 0.2em solid #42A9D9;
+}
+a.headerlink {
+    opacity: 0;
+    margin-left: 0.25em;
+    border-bottom: 0.2em solid #AAD9EE;
+    text-decoration: none;
+    transition: opacity 200ms ease-in-out;
+}
+h1:hover > a.headerlink,
+h2:hover > a.headerlink,
+h3:hover > a.headerlink,
+h4:hover > a.headerlink,
+h5:hover > a.headerlink,
+h6:hover > a.headerlink,
+dt:hover > a.headerlink,
+caption:hover > a.headerlink,
+p.caption:hover > a.headerlink,
+div.code-block-caption:hover > a.headerlink {
+    opacity: 1;
+}
+a.headerlink:hover {
+    border-bottom: 0.2em solid #42A9D9;
+}
+code, kbd, pre, samp {
+    font-size: 0.9em;
+    font-family: "Lucida Console", Monaco, monospace;
+}
+li {
+    margin-top: 0.4em;
+}
+article ol {
+    list-style: none;
+    padding-left: 2em;
+    counter-reset: ordered-list;
+}
+article ol li {
+    margin: 0.5em;
+    position: relative;
+}
+article ol li:before {
+    counter-increment: ordered-list;
+    content: counter(ordered-list);
+    position: absolute;
+    left: -2.25em;
+    font-family: "Trebuchet MS", sans-serif;
+    font-weight: bold;
+    text-align: center;
+    width: 1.5em;
+    height: 1.5em;
+    border: 1px solid black;
+    border-radius: 999px
+}
+article ul {
+    list-style: none;
+    padding-left: 2em;
+}
+article ul li {
+    margin: 0.5em;
+    position: relative;
+}
+article ul li:before {
+    content: "\2192";
+    position: absolute;
+    left: -2.25em;
+    font-family: "Trebuchet MS", sans-serif;
+    font-weight: bold;
+    text-align: center;
+    width: 1.5em;
+    height: 1.5em;
+}
+blockquote {
+    border-left: 0.25em solid;
+    margin: 1em;
+    padding-left: 1em;
+}
+#article-date {
+    font-size: 0.8em;
+    font-style: italic;
+}
+/* begin pygments changes */
+pre {
+    background: white;
+}
+.syntax {
+    font-size: 0.8em;
+}
+.syntax pre {
+    background: white;
+    line-height: 1.4;
+}
+/* end pygments changes */
+.syntax-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+.footnote-reference, .fn-backref {
+    position: relative;
+    font-size: 50%;
+    top: -1em;
+}
+footer {
+    margin-bottom: 2em;
+}
+@media (max-width: 359px) {
+    header nav ul {
+        font-size: 12px;
+    }
+}
+@media (min-width: 360px) and (max-width: 419px) {
+    header nav ul {
+        font-size: 14px;
+    }
+}
+@media (max-width: 659px) {
+    header {
+        margin: 10px;
+    }
+    header > a {
+        float: right;
+    }
+    header img {
+        width: 40px;
+        height: 40px;
+    }
+    header nav, header ul, header li {
+        display: inline;
+        padding: 0;
+    }
+    header li {
+        margin-right: 0.5em;
+    }
+    article {
+        margin: 0 10px;
+    }
+    #article-date {
+        font-size: 1em;
+    }
+    .syntax {
+        font-size: 1em;
+    }
+}
+@media (min-width: 660px) and (max-width: 979px) {
+    body {
+        width: 640px;
+        margin: auto;
+    }
+    header {
+        margin: 10px 0;
+    }
+    header > a {
+        float: right;
+        margin-right: 20px;
+    }
+    header img {
+        width: 80px;
+        height: 80px;
+    }
+    header nav, header ul, header li {
+        display: inline;
+        padding: 0;
+    }
+    header li {
+        margin-right: 0.5em;
+    }
+    article {
+        margin: 0 20px 2em 0;
+    }
+    footer {
+        font-size: 0.73333em;
+    }
+    footer ul {
+        padding: 0;
+        margin: 1em 0;
+    }
+    footer li {
+        display: inline;
+    }
+    footer li:not(:first-child)::before {
+        content: "\2022";
+        padding-right: 0.25em;
+    }
+}
+@media (min-width: 980px) {
+    body {
+        width: 960px;
+        margin: auto;
+    }
+    header {
+        width: 140px;
+        margin: 10px 10px 100px;
+        float: right;
+        font-size: 1.1667em;
+    }
+    header img {
+        width: 140px;
+        height: 140px;
+        margin-top: 1em;
+    }
+    header nav {
+        margin: 1em 0;
+    }
+    header nav ul {
+        list-style-type: none;
+        padding: 0px;
+        margin: 0px;
+    }
+    article {
+        margin: 10px 20px 2em 160px;
+        width: 620px;
+        float: left;
+    }
+    footer {
+        clear: both;
+        font-size: 0.73333em;
+    }
+    footer ul {
+        padding: 0;
+        margin: 1em 160px;
+    }
+    footer li {
+        display: inline;
+    }
+    footer li:not(:first-child)::before {
+        content: "\2022";
+        padding-right: 0.25em;
+    }
+}
