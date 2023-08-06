@@ -1,0 +1,16 @@
+dtaidistance
+kshape
+numpy
+scikit-learn[alldeps]
+
+[dev]
+check-manifest
+sphinx_rtd_theme
+
+[gui]
+bokeh
+cloudpickle
+datashader
+
+[test]
+coverage
