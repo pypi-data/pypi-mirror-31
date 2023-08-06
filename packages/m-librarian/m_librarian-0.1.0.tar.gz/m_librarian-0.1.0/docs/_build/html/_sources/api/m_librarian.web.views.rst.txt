@@ -1,0 +1,21 @@
+m\_librarian.web.views package
+==============================
+
+.. automodule:: m_librarian.web.views
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+
+   m_librarian.web.views.books_by_author
+   m_librarian.web.views.download
+   m_librarian.web.views.index
+   m_librarian.web.views.layout
+   m_librarian.web.views.list_authors
+   m_librarian.web.views.search_authors
+   m_librarian.web.views.search_authors_form
+

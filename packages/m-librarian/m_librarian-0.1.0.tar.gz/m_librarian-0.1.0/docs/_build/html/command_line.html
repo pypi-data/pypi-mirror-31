@@ -1,0 +1,380 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Command-line scripts &#8212; m_Librarian 0.1.0 documentation</title>
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="News" href="news.html" />
+    <link rel="prev" title="Installation using pip" href="install.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="news.html" title="News"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="install.html" title="Installation using pip"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">m_Librarian 0.1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="command-line-scripts">
+<h1>Command-line scripts<a class="headerlink" href="#command-line-scripts" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#ml-initdb-py" id="id1">ml-initdb.py</a></li>
+<li><a class="reference internal" href="#ml-import-py" id="id2">ml-import.py</a></li>
+<li><a class="reference internal" href="#ml-search-py" id="id3">ml-search.py</a><ul>
+<li><a class="reference internal" href="#author-search" id="id4">Author search</a></li>
+<li><a class="reference internal" href="#book-searching-and-downloading" id="id5">Book searching and downloading</a></li>
+<li><a class="reference internal" href="#extension-search" id="id6">Extension search</a></li>
+<li><a class="reference internal" href="#genres-search" id="id7">Genres search</a></li>
+<li><a class="reference internal" href="#language-search" id="id8">Language search</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ml-web-py" id="id9">ml-web.py</a></li>
+</ul>
+</div>
+<div class="section" id="ml-initdb-py">
+<h2><a class="toc-backref" href="#id1">ml-initdb.py</a><a class="headerlink" href="#ml-initdb-py" title="Permalink to this headline">¶</a></h2>
+<p>Usage:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ml-initdb.py [-C] [-D]
+</pre></div>
+</div>
+<p>Options:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-C, --config config      Configuration file
+-D, --database database  Open this database by pathname/db uri
+</pre></div>
+</div>
+<p>Initialize database and import genres list. Isn’t really needed as
+the next script does all that too.</p>
+</div>
+<div class="section" id="ml-import-py">
+<h2><a class="toc-backref" href="#id2">ml-import.py</a><a class="headerlink" href="#ml-import-py" title="Permalink to this headline">¶</a></h2>
+<p>Usage:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ml-import.py [-C] [-D] [-P] [file.inpx ...]
+</pre></div>
+</div>
+<p>Options:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-C, --config config      Configuration file
+-D, --database database  Open this database by pathname/db uri
+-P, --no-pbar            Inhibit progress bar
+</pre></div>
+</div>
+<p>Initialize database, import genres list and import a list of INPX files
+listed in the command line. On subsequent runs doesn’t destroy DB or
+reimport genres; it also skips already import books but import new ones.</p>
+</div>
+<div class="section" id="ml-search-py">
+<h2><a class="toc-backref" href="#id3">ml-search.py</a><a class="headerlink" href="#ml-search-py" title="Permalink to this headline">¶</a></h2>
+<p>Usage:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ml-search.py [-C] [-D] [-i] [-I] [-t] [-s] [-f] [-v] [-c] ...
+</pre></div>
+</div>
+<p>Search through the database and display results. Currently can only
+search authors by name.</p>
+<p>Global options:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-C, --config config      Configuration file
+-D, --database database  Open this database by pathname/db uri
+-i, --ignore-case        ignore case (default is to guess)
+-I, --case-sensitive     don’t ignore case
+-t, --start              search type: substring at the start
+                         (this is the default)
+-s, --substring          search type: substring anywhere
+-f, --full               search type: match the full string
+-c, --count              Output count of found objects
+-v, --verbose            Output more details about found objects;
+                         repeat for even more details
+</pre></div>
+</div>
+<p>Options <code class="docutils literal notranslate"><span class="pre">-i/-I</span></code> cannot be used together as they are the opposite. In
+case none of them are used the program guesses case-sensitivity by
+looking at the arguments. If all arguments are lowercase the program
+performs case-insensitive search. If there are UPPERCASE or MixedCase
+arguments the program performs case-sensitive search.</p>
+<p>Options <code class="docutils literal notranslate"><span class="pre">-t/-s/-f</span></code> define the search type. Search types are:</p>
+<ul class="simple">
+<li>start - search for substring at the start of the search field; for
+example searching for “duck” returns results for “duck” and “duckling”
+but not for “McDuck”; this is the default search type.</li>
+<li>substring - search for any substring; “duck” =&gt; “duck”, “duckling”,
+“McDuck” (except for case-sensitive search, of course).</li>
+<li>full - search for exact match, compare the entire strings;
+i.e. searching for “duck” returns results for “duck” but not for
+“duckling”;</li>
+</ul>
+<div class="section" id="author-search">
+<h3><a class="toc-backref" href="#id4">Author search</a><a class="headerlink" href="#author-search" title="Permalink to this headline">¶</a></h3>
+<p>Usage:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ml-search.py author [-s surname] [-n name] [-m misc-name] [--id id] [fullname]
+</pre></div>
+</div>
+<p>Search and print a list of authors by surname/name/misc name/full name.</p>
+<p>Options:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-s, --surname surname       Search by surname
+-n, --name name             Search by name
+-m, --misc-name misc. name  Search by misc. name
+--id id                     Search by database id
+</pre></div>
+</div>
+<p>Example:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ml-search.py -i author -s duck
+</pre></div>
+</div>
+<p>Search and print a list of authors whose surname starts with “duck”,
+case insensitive.</p>
+<p>If a few options are given the search is limited with operator AND.
+Example:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ml-search.py -i author -s duck -n mack
+</pre></div>
+</div>
+<p>Search and print a list of authors whose surname starts with “duck” and
+name starts with “mack”, case insensitive.</p>
+<p>With one option <cite>-v</cite> it also prints database id.</p>
+</div>
+<div class="section" id="book-searching-and-downloading">
+<h3><a class="toc-backref" href="#id5">Book searching and downloading</a><a class="headerlink" href="#book-searching-and-downloading" title="Permalink to this headline">¶</a></h3>
+<p>Usage:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ml-search.py books [-t title] [-s series] [-a archive] [-f file] [--id id] [--surname name] [--name name] [--misc-name name] [--fullname name] [--aid aid] [-e ext] [--eid eid] [--gname name] [--gtitle title] [--gid gid] [-l lang] [--lid lid] [-P path] [-F format] [--get] [--get-many N]
+</pre></div>
+</div>
+<p>Search and print a list of books by title, series, archive or file name.</p>
+<p>Options:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-t, --title title      Search by title
+-s, --series series    Search by series
+-a, --archive archive  Search by archive (zip file)
+-f, --file file        Search by file name (without extension)
+--id id                Search by database id
+--surname surname      Search by author’s surname
+--name name            Search by author’s name
+--misc-name misc. name Search by author’s misc. name
+--fullname name        Search by author’s full name
+--aid aid              Search by author’s id
+-e, --ext ext          Search by file extension
+--eid eid              Search by extension’s id
+--gname name           Search by genre’s name
+--gtitle title         Search by genre’s title
+--gid gid              Search by genre’s id
+-l, --lang lang        Search by language
+--lid lid              Search by language’s id
+-P, --path path        Path to the directory with the library
+                       archives
+--download-to [path]   Download directory
+-F, --format format    Format of the downloaded file name
+--get                  Download exactly one book
+--get-many N           Download at most this many books
+</pre></div>
+</div>
+<p>By default the program prints only titles of the found book. With one
+option <cite>-v</cite> it also prints database id, the list of authors and genres,
+and also series the book belongs to (if any) and the serial number of
+the book in the series. With two options <cite>-v</cite> (<cite>-v -v</cite> or simply <cite>-vv</cite>)
+it also prints the file date and language. With three <cite>-v</cite> it prints
+archive name, file name, extension and size, and flag if the book is
+marked to be deleted.</p>
+<p>Option <cite>-P</cite> provides the path to the directory with the library
+archives. By default the path is extracted from configuration file,
+section <cite>[library]</cite>, key <cite>path</cite>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[library]
+path = /var/lib/archives
+</pre></div>
+</div>
+<p>The option is useful for multiple databases (global option <cite>-D</cite>).</p>
+<p>Option <cite>–download-to</cite> provides the path to the download directory.
+By default the script downloads books to the current directory.
+If the option is used without <cite>path</cite> argument the path is extracted from
+configuration file, section <cite>[download]</cite>, key <cite>path</cite>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[download]
+path = /tmp
+</pre></div>
+</div>
+<p>Option <cite>–get</cite> allows to download a book from the library to a local
+file. The option allows to download exactly one book. The simplest way
+to use it is via option <cite>–id</cite>. The file is downloaded into the current
+directory with the name from the library.</p>
+<p>Configuration key</p>
+<div class="line-block">
+<div class="line">[download]</div>
+<div class="line">format = %a/%s/%n %t</div>
+</div>
+<p>allows to set format for the download file pathname. Default format is
+<cite>%f</cite>, i.e. just filename. Other format specifiers are:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>%a - author (one of if many)
+%e - file extension
+%f - file name in archive
+%G - genre (one of if many), name
+%g - genre (one of if many), title
+%l - language
+%n - series number (or 0)
+%s - series
+%t - title
+</pre></div>
+</div>
+<p>Format must not end in directory separator (<cite>/</cite> or <cite>\</cite>). If specifier
+<cite>%e</cite> (extension) is not found in the format it is appended
+unconditionally with a dot. That is, format <cite>%f</cite> is equivalent to
+<cite>%f.%e</cite>.</p>
+<p>Option <cite>-F|–format format</cite> allows to overwrite this configuration value.</p>
+<p>Option <cite>–get-many N</cite> allows to download many books (at most N, where N
+is an integer). Options <cite>–get-many N</cite> and <cite>–get</cite> are, of course,
+mutually incompatible.</p>
+</div>
+<div class="section" id="extension-search">
+<h3><a class="toc-backref" href="#id6">Extension search</a><a class="headerlink" href="#extension-search" title="Permalink to this headline">¶</a></h3>
+<p>Usage:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ml-search.py ext [name] [--id id]
+</pre></div>
+</div>
+<p>Options:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>--id id                Search by database id
+</pre></div>
+</div>
+<p>Search and print a list of extensions by name.</p>
+<p>With one option <cite>-v</cite> it also prints database id.</p>
+</div>
+<div class="section" id="genres-search">
+<h3><a class="toc-backref" href="#id7">Genres search</a><a class="headerlink" href="#genres-search" title="Permalink to this headline">¶</a></h3>
+<p>Usage:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ml-search.py genres [-n name] [-t title] [--id id]
+</pre></div>
+</div>
+<p>Search and print a list of genres by name and title.</p>
+<p>Options:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-n, --name name    Search by name
+-t, --title title  Search by title
+--id id            Search by database id
+</pre></div>
+</div>
+<p>With one option <cite>-v</cite> it also prints database id.</p>
+</div>
+<div class="section" id="language-search">
+<h3><a class="toc-backref" href="#id8">Language search</a><a class="headerlink" href="#language-search" title="Permalink to this headline">¶</a></h3>
+<p>Usage:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ml-search.py lang [name] [--id id]
+</pre></div>
+</div>
+<p>Search and print a list of languages by name.</p>
+<p>Options:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>--id id                Search by database id
+</pre></div>
+</div>
+<p>With one option <cite>-v</cite> it also prints database id.</p>
+</div>
+</div>
+<div class="section" id="ml-web-py">
+<h2><a class="toc-backref" href="#id9">ml-web.py</a><a class="headerlink" href="#ml-web-py" title="Permalink to this headline">¶</a></h2>
+<p>Usage:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ml-web.py [-p port]
+</pre></div>
+</div>
+<p>Options:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-p, --port port      HTTP port to listen to
+</pre></div>
+</div>
+<p>Run a web server. If a port is given listen on the given port. Else
+choose a random port. Start a browser (or open a new window of a running
+browser) pointing it to the server.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Command-line scripts</a><ul>
+<li><a class="reference internal" href="#ml-initdb-py">ml-initdb.py</a></li>
+<li><a class="reference internal" href="#ml-import-py">ml-import.py</a></li>
+<li><a class="reference internal" href="#ml-search-py">ml-search.py</a><ul>
+<li><a class="reference internal" href="#author-search">Author search</a></li>
+<li><a class="reference internal" href="#book-searching-and-downloading">Book searching and downloading</a></li>
+<li><a class="reference internal" href="#extension-search">Extension search</a></li>
+<li><a class="reference internal" href="#genres-search">Genres search</a></li>
+<li><a class="reference internal" href="#language-search">Language search</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ml-web-py">ml-web.py</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="install.html"
+                        title="previous chapter">Installation using pip</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="news.html"
+                        title="next chapter">News</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/command_line.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="news.html" title="News"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="install.html" title="Installation using pip"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">m_Librarian 0.1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2015-2018, Oleg Broytman.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.3.
+    </div>
+  </body>
+</html>

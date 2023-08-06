@@ -1,0 +1,386 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Скрипты командной строки &#8212; Документация m_Librarian 0.1.0</title>
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="Новости" href="news.html" />
+    <link rel="prev" title="Прежде чем вы начнёте" href="before_begin.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Навигация</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Алфавитный указатель"
+             accesskey="I">указатель</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Содержание модулей Python"
+             >модули</a> |</li>
+        <li class="right" >
+          <a href="news.html" title="Новости"
+             accesskey="N">вперёд</a> |</li>
+        <li class="right" >
+          <a href="before_begin.html" title="Прежде чем вы начнёте"
+             accesskey="P">назад</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Документация m_Librarian 0.1.0</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="id1">
+<h1>Скрипты командной строки<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="contents local topic" id="id2">
+<ul class="simple">
+<li><a class="reference internal" href="#ml-initdb-py" id="id8">ml-initdb.py</a></li>
+<li><a class="reference internal" href="#ml-import-py" id="id9">ml-import.py</a></li>
+<li><a class="reference internal" href="#ml-search-py" id="id10">ml-search.py</a><ul>
+<li><a class="reference internal" href="#id3" id="id11">Поиск авторов</a></li>
+<li><a class="reference internal" href="#id4" id="id12">Поиск и загрузка книг</a></li>
+<li><a class="reference internal" href="#id5" id="id13">Поиск расширений</a></li>
+<li><a class="reference internal" href="#id6" id="id14">Поиск жанров</a></li>
+<li><a class="reference internal" href="#id7" id="id15">Поиск языков</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ml-web-py" id="id16">ml-web.py</a></li>
+</ul>
+</div>
+<div class="section" id="ml-initdb-py">
+<h2><a class="toc-backref" href="#id8">ml-initdb.py</a><a class="headerlink" href="#ml-initdb-py" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Использование:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ml-initdb.py [-C] [-D]
+</pre></div>
+</div>
+<p>Опции:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-C, --config config      Путь к файлу конфигурации
+-D, --database database  Использовать указанную БД
+</pre></div>
+</div>
+<p>Инициализирует базу данных и импортирует список жанров. Этот скрипт не
+очень-то нужен, так как следующий скрипт делает всё указанное.</p>
+</div>
+<div class="section" id="ml-import-py">
+<h2><a class="toc-backref" href="#id9">ml-import.py</a><a class="headerlink" href="#ml-import-py" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Использование:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ml-import.py [-C] [-D] [-P] [file.inpx ...]
+</pre></div>
+</div>
+<p>Опции:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-C, --config config      Путь к файлу конфигурации
+-D, --database database  Использовать указанную БД
+-P, --no-pbar            Не показывать индикатор процесса
+</pre></div>
+</div>
+<p>Инициализирует базу данных, импортирует список жанров и список файлов
+INPX, перечисленных в командной строке. При повторных запусках не
+переинициализирует БД и не переимпортирует жанры; так же не
+переимпортирует уже проимпортированные книги, но импортирует в БД новые.</p>
+</div>
+<div class="section" id="ml-search-py">
+<h2><a class="toc-backref" href="#id10">ml-search.py</a><a class="headerlink" href="#ml-search-py" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Использование:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ml-search.py [-C] [-D] [-i] [-I] [-t] [-s] [-f] [-v] [-c] ...
+</pre></div>
+</div>
+<p>Программа выполняет поиск по базе данных и показывает список
+результатов. В настоящее время может искать только в списке авторов.</p>
+<p>Глобальные опции:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-C, --config config      Путь к файлу конфигурации
+-D, --database database  Использовать указанную БД
+-i, --ignore-case        независимо от регистра (по умолчанию: угадать)
+-I, --case-sensitive     с учётом регистра
+-t, --start              тип поиска: подстрока в начале строки
+                         (это тип поиска по умолчанию)
+-s, --substring          тип поиска: подстрока в любом месте
+-f, --full               тип поиска: полное совпадение всей строки
+-c, --count              Выводить число найденных объектов, а не сами
+                         объекты
+-v, --verbose            Выводить больше информации о найденных
+                         объектах; повторите эту опцию несколько раз,
+                         чтобы получить ещё больше деталей
+</pre></div>
+</div>
+<p>Опции <code class="docutils literal notranslate"><span class="pre">-i/-I</span></code> не могут использованы одновременно, поскольку означают
+противоположные команды. В случае, если ни одна из них не использована,
+программа угадывает зависимость от регистра: если все параметры даны в
+нижнем регистре, программы выполнит поиск без учёта регистра. Если среди
+параметров есть параметры в ВЕРХНЕМ или Смешанном регистре - поиск будет
+с учётом регистра.</p>
+<p>Опции <code class="docutils literal notranslate"><span class="pre">-t/-s/-f</span></code> определяют тип поиска. Возможные значения:</p>
+<ul class="simple">
+<li>start - поиск подстроки в начале поля; поиск «друг» найдёт «друг» и
+«другой», но не «подруга»; это тип по умолчанию;</li>
+<li>substring - поиск подстроки в любом месте; поиск «друг» найдёт «друг»,
+«другой» и «подруга».</li>
+<li>full - поиск на точное совпадение всей строки; поиск «друг» найдёт
+только «друг», но не «другой»;</li>
+</ul>
+<div class="section" id="id3">
+<h3><a class="toc-backref" href="#id11">Поиск авторов</a><a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Использование:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ml-search.py author [-s surname] [-n name] [-m misc-name] [--id id] [fullname]
+</pre></div>
+</div>
+<p>Искать и печатать список авторов по фамилии, имени, доп. имени (обычно
+отчеству) или полному имени.</p>
+<p>Опции:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-s, --surname фамилия       Искать по фамилии
+-n, --name имя              Искать по имени
+-m, --misc-name доп. имени  Искать по доп. имени
+--id id                     Искать по id автора
+</pre></div>
+</div>
+<p>Пример:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ml-search.py -i author -s друг
+</pre></div>
+</div>
+<p>Искать и печатать список авторов, чья фамилия начинается на «друг», без
+учёта регистра.</p>
+<p>Если использовать несколько опций, поиск будет сужен оператором «И».
+Пример:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ml-search.py -i author -s друг -n в
+</pre></div>
+</div>
+<p>Искать и печатать список авторов, чья фамилия начинается на «друг» и имя
+начинается на «в», без учёта регистра.</p>
+<p>При использовании опции <cite>-v</cite> также выводится id из БД.</p>
+</div>
+<div class="section" id="id4">
+<h3><a class="toc-backref" href="#id12">Поиск и загрузка книг</a><a class="headerlink" href="#id4" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Использование:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ml-search.py books [-t title] [-s series] [-a archive] [-f file] [--id id] [--surname name] [--name name] [--misc-name name] [--fullname name] [--aid aid] [-e ext] [--eid eid] [--gname name] [--gtitle title] [--gid gid] [-l lang] [--lid lid] [-P path] [-F format] [--get] [--get-many N]
+</pre></div>
+</div>
+<p>Искать и печатать список книг по заголовку, серии, архиву, имени файла.</p>
+<p>Опции:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-t, --title заголовок  Искать по заголовку
+-s, --series серия     Искать по серии
+-a, --archive архив    Искать по имени архива (zip-файла)
+-f, --file файл        Искать по имени файла (без расширения)
+--id id                Искать по id книги
+--surname surname      Искать по фамилии автора
+--name name            Искать по имени автора
+--misc-name misc. name Искать по доп. имени автора
+--fullname name        Искать по полному имени автора
+--aid aid              Искать по id автора
+-e, --ext ext          Искать по расширению имени файла
+--eid eid              Искать по id расширения
+--gname name           Искать по названию жанра
+--gtitle title         Искать по заголовку жанра
+--gid gid              Искать по id жанра
+-l, --lang lang        Искать по языку
+--lid lid              Искать по id языка
+-P, --path path        Путь к директории с архивами библиотеки
+--download-to [path]   Путь к директории для сохранения книг
+-F, --format format    Формат имени сохраняемого файла
+--get                  Загрузить ровно один файл
+--get-many N           Загрузить не больше указанного числа файлов
+</pre></div>
+</div>
+<p>По умолчанию программы выводит список заголовков найденных книг. При
+использовании опции <cite>-v</cite> также выводится id из БД, список авторов и
+жанров, а также серия, к которой принадлежит книга (если принадлежит) и
+порядковый номер книги в этой серии. С двумя опциями <cite>-v</cite> (<cite>-v -v</cite> или
+просто <cite>-vv</cite>) программа выводит дату файла и язык. С тремя <cite>-v</cite>
+выводятся имя архива, имя файла, расширение и размер файла, и признак,
+была ли книга помечена как удалённая.</p>
+<p>Опция <cite>-P</cite> задаёт путь к директории с архивами библиотеки. По умолчанию
+этот путь берётся из файла конфигурации, секция <cite>[library]</cite>, ключ
+<cite>path</cite>, например:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[library]
+path = /var/lib/archives
+</pre></div>
+</div>
+<p>Опция полезна в ситуации работы с несколькими базами данных (глобальная
+опция <cite>-D</cite>).</p>
+<p>Опция <cite>–download-to</cite> задаёт путь к директории для сохранения книг.
+По умолчанию скрипт сохраняет книги в текущую директорию.
+Если опция используется без указания аргумента <cite>path</cite> скрипт использует
+значение из файла конфигурации, секция <cite>[download]</cite>, ключ <cite>path</cite>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[download]
+path = /tmp
+</pre></div>
+</div>
+<p>Опция <cite>–get</cite> позволяет загрузить книгу из библиотеки в файл. Опция
+позволяет загрузить ровно одну книгу, поэтому самый простой способ
+использовать эту команду — совместно с опцией <cite>–id</cite>. Файл сохраняется в
+текущую директорию с тем именем, под которым он храниться в библиотеке.</p>
+<p>Ключ <cite>format</cite> в секции <cite>[download]</cite> файла конфигурации</p>
+<div class="line-block">
+<div class="line">[download]</div>
+<div class="line">format = %a/%s/%n %t</div>
+</div>
+<p>позволяет управлять именами директорий и именем файла, куда m_Librarian
+будет сохранять файлы. Формат по умолчанию <cite>%f</cite>, т.е. просто имя файла.
+Другие доступные спецификаторы:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>%a - автор (один из, если их несколько)
+%e - расширение имени файла
+%f - имя файла
+%G - жанр (один из, если их несколько), имя из БД
+%g - жанр (один из, если их несколько), название
+%l - язык
+%n - номер в серии (или 0)
+%s - серия
+%t - название
+</pre></div>
+</div>
+<p>Формат не должен заканчиваться на разделитель директорий (<cite>/</cite> или <cite>\</cite>).
+Если спецификатор <cite>%e</cite> (расширение) не найден в формате, он добавляется
+в конец с точкой в качестве разделителя. Т.о. формат <cite>%f</cite> эквивалентен
+формату <cite>%f.%e</cite>.</p>
+<p>Опция <cite>-F|–format format</cite> позволяет указать формат в командной строке.</p>
+<p>Опция <cite>–get-many N</cite> позволяет загрузить указанное число книг (не больше
+чем N, где N — целое число.) Опции <cite>–get-many N</cite> и <cite>–get</cite> взаимно
+исключают друг друга и не должны использоваться одновременно.</p>
+</div>
+<div class="section" id="id5">
+<h3><a class="toc-backref" href="#id13">Поиск расширений</a><a class="headerlink" href="#id5" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Использование:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ml-search.py ext [name] [--id id]
+</pre></div>
+</div>
+<p>Опции:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>--id id                Искать по id расширения
+</pre></div>
+</div>
+<p>Искать и печатать список расширений имён файлов по имени.</p>
+<p>При использовании опции <cite>-v</cite> также выводится id из БД.</p>
+</div>
+<div class="section" id="id6">
+<h3><a class="toc-backref" href="#id14">Поиск жанров</a><a class="headerlink" href="#id6" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Использование:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ml-search.py genres [-n name] [-t title] [--id id]
+</pre></div>
+</div>
+<p>Искать и печатать список жанров по имени и заголовку.</p>
+<p>Опции:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-n, --name имя         Искать по названию
+-t, --title заголовок  Искать по заголовку
+--id id                Искать по id жанра
+</pre></div>
+</div>
+<p>При использовании опции <cite>-v</cite> также выводится id из БД.</p>
+</div>
+<div class="section" id="id7">
+<h3><a class="toc-backref" href="#id15">Поиск языков</a><a class="headerlink" href="#id7" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Использование:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ml-search.py lang [name] [--id id]
+</pre></div>
+</div>
+<p>Опции:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>--id id                Искать по id языка
+</pre></div>
+</div>
+<p>Искать и печатать список языков по имени.</p>
+<p>При использовании опции <cite>-v</cite> также выводится id из БД.</p>
+</div>
+</div>
+<div class="section" id="ml-web-py">
+<h2><a class="toc-backref" href="#id16">ml-web.py</a><a class="headerlink" href="#ml-web-py" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Использование:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ml-web.py [-p port]
+</pre></div>
+</div>
+<p>Опции:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-p, --port port      Порт протокола HTTP
+</pre></div>
+</div>
+<p>Запускает web-сервер. Если указан порт, то используется указанный порт.
+Иначе выбирается случайный порт из числа свободных. Программа запускает
+браузер (или открывает новое окно уже запущенного web-обозревателя) с
+адресом, указывающим на сервер.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Оглавление</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Скрипты командной строки</a><ul>
+<li><a class="reference internal" href="#ml-initdb-py">ml-initdb.py</a></li>
+<li><a class="reference internal" href="#ml-import-py">ml-import.py</a></li>
+<li><a class="reference internal" href="#ml-search-py">ml-search.py</a><ul>
+<li><a class="reference internal" href="#id3">Поиск авторов</a></li>
+<li><a class="reference internal" href="#id4">Поиск и загрузка книг</a></li>
+<li><a class="reference internal" href="#id5">Поиск расширений</a></li>
+<li><a class="reference internal" href="#id6">Поиск жанров</a></li>
+<li><a class="reference internal" href="#id7">Поиск языков</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ml-web-py">ml-web.py</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Предыдущий раздел</h4>
+  <p class="topless"><a href="before_begin.html"
+                        title="предыдущая глава">Прежде чем вы начнёте</a></p>
+  <h4>Следующий раздел</h4>
+  <p class="topless"><a href="news.html"
+                        title="следующая глава">Новости</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Эта страница</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/command_line.rst.txt"
+            rel="nofollow">Исходный текст</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Быстрый поиск</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Искать" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Навигация</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Алфавитный указатель"
+             >указатель</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Содержание модулей Python"
+             >модули</a> |</li>
+        <li class="right" >
+          <a href="news.html" title="Новости"
+             >вперёд</a> |</li>
+        <li class="right" >
+          <a href="before_begin.html" title="Прежде чем вы начнёте"
+             >назад</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Документация m_Librarian 0.1.0</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2015-2018, Oleg Broytman.
+      Создано с помощью <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.3.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,211 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Прежде чем вы начнёте &#8212; Документация m_Librarian 0.1.0</title>
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="Скрипты командной строки" href="command_line.html" />
+    <link rel="prev" title="Документация по m_Librarian" href="index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Навигация</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Алфавитный указатель"
+             accesskey="I">указатель</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Содержание модулей Python"
+             >модули</a> |</li>
+        <li class="right" >
+          <a href="command_line.html" title="Скрипты командной строки"
+             accesskey="N">вперёд</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Документация по m_Librarian"
+             accesskey="P">назад</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Документация m_Librarian 0.1.0</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="id1">
+<h1>Прежде чем вы начнёте<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Прежде чем вы начнёте, вам потребуются некоторые приготовления.</p>
+<div class="contents local topic" id="id2">
+<ul class="simple">
+<li><a class="reference internal" href="#id3" id="id7">Программное обеспечение</a></li>
+<li><a class="reference internal" href="#id4" id="id8">Архивы библиотек</a></li>
+<li><a class="reference internal" href="#id5" id="id9">Файл конфигурации</a></li>
+<li><a class="reference internal" href="#id6" id="id10">База данных</a><ul>
+<li><a class="reference internal" href="#database-uri" id="id11">Database URI</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h2><a class="toc-backref" href="#id7">Программное обеспечение</a><a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h2>
+<p>m_Librarian написан на языке Python, так что вам нужно скачать и
+установить Python (2.7 или 3.4+). Нужны также библиотеки SQLObject и
+m_lib.defenc.</p>
+</div>
+<div class="section" id="id4">
+<h2><a class="toc-backref" href="#id8">Архивы библиотек</a><a class="headerlink" href="#id4" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Данный программный комплекс работает с локальными файлами библиотек, так
+что предварительно скачайте некоторые библиотеки. Вот краткий и совсем
+не исчерпывающий список для скачивания:</p>
+<div class="line-block">
+<div class="line"><a class="reference external" href="http://torrent.rus.ec/index.php?c=3">http://torrent.rus.ec/index.php?c=3</a></div>
+<div class="line"><a class="reference external" href="http://booktracker.org/index.php?c=18">http://booktracker.org/index.php?c=18</a></div>
+<div class="line"><a class="reference external" href="https://nnm-club.me/forum/viewtopic.php?t=353958">https://nnm-club.me/forum/viewtopic.php?t=353958</a></div>
+<div class="line"><a class="reference external" href="https://nnm-club.me/forum/viewtopic.php?t=510054">https://nnm-club.me/forum/viewtopic.php?t=510054</a></div>
+<div class="line"><a class="reference external" href="https://nnm-club.me/forum/viewtopic.php?t=521962">https://nnm-club.me/forum/viewtopic.php?t=521962</a></div>
+<div class="line"><a class="reference external" href="https://nnm-club.me/forum/viewtopic.php?t=877707">https://nnm-club.me/forum/viewtopic.php?t=877707</a></div>
+</div>
+<p>Кроме самих библиотек вам понадобиться найти для них индексы INPX —
+m_Librarian пока не научился индексировать архивы библиотек.</p>
+<p>Индексы INPX обычно распространяются вместе с программами для работы с
+библиотеками, и такие программы есть в архивах по ссылкам выше.
+Некоторые индексы можно скачать с сайта одной из таких программ
+<a class="reference external" href="http://home-lib.net/">MyHomeLib</a>:</p>
+<div class="line-block">
+<div class="line"><a class="reference external" href="http://home-lib.net/download/inpx/librusec_local_fb2.inpx">http://home-lib.net/download/inpx/librusec_local_fb2.inpx</a></div>
+<div class="line"><a class="reference external" href="http://home-lib.net/download/inpx/librusec_local_usr.inpx">http://home-lib.net/download/inpx/librusec_local_usr.inpx</a></div>
+<div class="line"><a class="reference external" href="http://home-lib.net/download/inpx/librusec_local_all.inpx">http://home-lib.net/download/inpx/librusec_local_all.inpx</a></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2><a class="toc-backref" href="#id9">Файл конфигурации</a><a class="headerlink" href="#id5" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Файл конфигурации по умолчанию ищется в $HOME/.config/ (если у вас
+POSIX-совместимая ОС). Файл должен называться <code class="docutils literal notranslate"><span class="pre">m_librarian.conf</span></code>. Это
+должен быть файл в формате <code class="docutils literal notranslate"><span class="pre">ini</span></code>. В настоящий момент m_librarian
+понимает следующие секции и ключи в них:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[database]
+URI = &quot;DB URI&quot;
+
+[library]
+path = &quot;путь к архивам библиотеки&quot;
+
+[download]
+format = &quot;формат имён сохраняемых файлов&quot;
+</pre></div>
+</div>
+<p>Большинство программ имею опцию <cite>-C|–config config</cite>, которая позволяет
+использовать файл произвольный конфигурации.</p>
+</div>
+<div class="section" id="id6">
+<h2><a class="toc-backref" href="#id10">База данных</a><a class="headerlink" href="#id6" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Для работы m_Librarian требуется база данных. m_Librarian может работать
+с любой БД, поддерживаемой библиотекой SQLObject. Предпочтительные
+варианты: MySQL, PostgreSQL или SQLite. При использовании сервера SQL БД
+вам придётся создать самим. Для SQLite файл БД будет создан программой,
+так что это наиболее простой способ использования m_Librarian,</p>
+<div class="section" id="database-uri">
+<h3><a class="toc-backref" href="#id11">Database URI</a><a class="headerlink" href="#database-uri" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Чтобы m_Librarian использовал сервер SQL в файле конфигурации должна
+быть секция <code class="docutils literal notranslate"><span class="pre">[database]</span></code> с единственным ключом <code class="docutils literal notranslate"><span class="pre">URI</span></code>. Значением
+ключа должно быть Database URI в формате, который понимает SQLObject.
+Вот несколько примеров:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[database]
+URI = mysql://user:password@host/database
+
+[database]
+URI = postgres://user@host/database
+
+[database]
+URI = sqlite:///full/path/to/database
+</pre></div>
+</div>
+<p>Больше примеров есть в файле sample/m_librarian.conf. Детальное описание
+DB URI есть в <a class="reference external" href="http://sqlobject.org/SQLObject.html#declaring-a-connection">документации на SQLObject</a>.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Оглавление</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Прежде чем вы начнёте</a><ul>
+<li><a class="reference internal" href="#id3">Программное обеспечение</a></li>
+<li><a class="reference internal" href="#id4">Архивы библиотек</a></li>
+<li><a class="reference internal" href="#id5">Файл конфигурации</a></li>
+<li><a class="reference internal" href="#id6">База данных</a><ul>
+<li><a class="reference internal" href="#database-uri">Database URI</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Предыдущий раздел</h4>
+  <p class="topless"><a href="index.html"
+                        title="предыдущая глава">Документация по m_Librarian</a></p>
+  <h4>Следующий раздел</h4>
+  <p class="topless"><a href="command_line.html"
+                        title="следующая глава">Скрипты командной строки</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Эта страница</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/before_begin.rst.txt"
+            rel="nofollow">Исходный текст</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Быстрый поиск</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Искать" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Навигация</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Алфавитный указатель"
+             >указатель</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Содержание модулей Python"
+             >модули</a> |</li>
+        <li class="right" >
+          <a href="command_line.html" title="Скрипты командной строки"
+             >вперёд</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Документация по m_Librarian"
+             >назад</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Документация m_Librarian 0.1.0</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2015-2018, Oleg Broytman.
+      Создано с помощью <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.3.
+    </div>
+  </body>
+</html>

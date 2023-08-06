@@ -1,0 +1,178 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>m_librarian.web.app &#8212; Документация m_Librarian 0.1.0</title>
+    <link rel="stylesheet" href="../../../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Навигация</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="Алфавитный указатель"
+             accesskey="I">указатель</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Содержание модулей Python"
+             >модули</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Документация m_Librarian 0.1.0</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" accesskey="U">Код модуля</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Исходный код m_librarian.web.app</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="kn">from</span> <span class="nn">sqlobject.sqlbuilder</span> <span class="k">import</span> <span class="n">CONCAT</span>
+<span class="kn">from</span> <span class="nn">bottle</span> <span class="k">import</span> <span class="n">cheetah_view</span><span class="p">,</span> <span class="n">redirect</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">route</span><span class="p">,</span> <span class="n">static_file</span>
+
+<span class="kn">from</span> <span class="nn">m_librarian.config</span> <span class="k">import</span> <span class="n">get_config</span>
+<span class="kn">from</span> <span class="nn">m_librarian.db</span> <span class="k">import</span> <span class="n">Author</span><span class="p">,</span> <span class="n">Book</span>
+<span class="kn">from</span> <span class="nn">m_librarian.download</span> <span class="k">import</span> <span class="n">download</span>
+<span class="kn">from</span> <span class="nn">m_librarian.search</span> <span class="k">import</span> <span class="n">search_authors</span>
+
+
+<div class="viewcode-block" id="index"><a class="viewcode-back" href="../../../api/m_librarian.web.app.html#m_librarian.web.app.index">[документация]</a><span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="nd">@cheetah_view</span><span class="p">(</span><span class="s1">&#39;index.tmpl&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="k">return</span> <span class="p">{}</span></div>
+
+
+<span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/search_authors&#39;</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;GET&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">_search_authors</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">&#39;/search_authors/&#39;</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="search_authors_get"><a class="viewcode-back" href="../../../api/m_librarian.web.app.html#m_librarian.web.app.search_authors_get">[документация]</a><span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/search_authors/&#39;</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;GET&#39;</span><span class="p">)</span>
+<span class="nd">@cheetah_view</span><span class="p">(</span><span class="s1">&#39;search_authors.tmpl&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">search_authors_get</span><span class="p">():</span>
+    <span class="k">return</span> <span class="p">{}</span></div>
+
+
+<div class="viewcode-block" id="decode"><a class="viewcode-back" href="../../../api/m_librarian.web.app.html#m_librarian.web.app.decode">[документация]</a><span class="k">def</span> <span class="nf">decode</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">value</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">value</span></div>
+
+
+<span class="k">def</span> <span class="nf">_guess_case_sensitivity</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+    <span class="k">return</span> <span class="ow">not</span> <span class="n">value</span><span class="o">.</span><span class="n">islower</span><span class="p">()</span>
+
+
+<div class="viewcode-block" id="search_authors_post"><a class="viewcode-back" href="../../../api/m_librarian.web.app.html#m_librarian.web.app.search_authors_post">[документация]</a><span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/search_authors/&#39;</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;POST&#39;</span><span class="p">)</span>
+<span class="nd">@cheetah_view</span><span class="p">(</span><span class="s1">&#39;list_authors.tmpl&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">search_authors_post</span><span class="p">():</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">forms</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;search_authors&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">value</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">&#39;/search_authors/&#39;</span><span class="p">)</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="n">decode</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="n">search_type</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">forms</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;search_type&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">search_type</span><span class="p">:</span>
+        <span class="n">search_type</span> <span class="o">=</span> <span class="s1">&#39;start&#39;</span>
+    <span class="n">case_sensitive</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">forms</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;case_sensitive&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">case_sensitive</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">case_sensitive</span> <span class="o">=</span> <span class="n">_guess_case_sensitivity</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="n">expressions</span> <span class="o">=</span> <span class="p">[(</span>
+        <span class="n">CONCAT</span><span class="p">(</span><span class="n">Author</span><span class="o">.</span><span class="n">q</span><span class="o">.</span><span class="n">surname</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">Author</span><span class="o">.</span><span class="n">q</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">Author</span><span class="o">.</span><span class="n">q</span><span class="o">.</span><span class="n">misc_name</span><span class="p">),</span>
+        <span class="n">decode</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="p">)]</span>
+    <span class="n">authors</span> <span class="o">=</span> <span class="n">search_authors</span><span class="p">(</span><span class="n">search_type</span><span class="p">,</span> <span class="n">case_sensitive</span><span class="p">,</span> <span class="p">{},</span> <span class="n">expressions</span><span class="p">,</span>
+                             <span class="n">orderBy</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;surname&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;misc_name&#39;</span><span class="p">))</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s1">&#39;authors&#39;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="n">authors</span><span class="p">),</span>
+        <span class="s1">&#39;search_authors&#39;</span><span class="p">:</span> <span class="n">value</span><span class="p">,</span>
+        <span class="s1">&#39;search_type&#39;</span><span class="p">:</span> <span class="n">search_type</span><span class="p">,</span>
+        <span class="s1">&#39;case_sensitive&#39;</span><span class="p">:</span> <span class="n">case_sensitive</span><span class="p">,</span>
+    <span class="p">}</span></div>
+
+
+<div class="viewcode-block" id="books_by_author"><a class="viewcode-back" href="../../../api/m_librarian.web.app.html#m_librarian.web.app.books_by_author">[документация]</a><span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/books-by-author/&lt;id:int&gt;/&#39;</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;GET&#39;</span><span class="p">)</span>
+<span class="nd">@cheetah_view</span><span class="p">(</span><span class="s1">&#39;books_by_author.tmpl&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">books_by_author</span><span class="p">(</span><span class="nb">id</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s1">&#39;author&#39;</span><span class="p">:</span> <span class="n">Author</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span><span class="p">),</span>
+        <span class="s1">&#39;books&#39;</span><span class="p">:</span> <span class="n">Book</span><span class="o">.</span><span class="n">select</span><span class="p">(</span>
+            <span class="n">Book</span><span class="o">.</span><span class="n">j</span><span class="o">.</span><span class="n">authors</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">Author</span><span class="o">.</span><span class="n">q</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="nb">id</span><span class="p">),</span>
+            <span class="n">orderBy</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;series&#39;</span><span class="p">,</span> <span class="s1">&#39;ser_no&#39;</span><span class="p">,</span> <span class="s1">&#39;title&#39;</span><span class="p">],</span>
+        <span class="p">)</span>
+    <span class="p">}</span></div>
+
+
+<div class="viewcode-block" id="send_static"><a class="viewcode-back" href="../../../api/m_librarian.web.app.html#m_librarian.web.app.send_static">[документация]</a><span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/static/&lt;filename:path&gt;&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">send_static</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">static_file</span><span class="p">(</span>
+        <span class="n">filename</span><span class="p">,</span> <span class="n">root</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span>
+            <span class="s1">&#39;static&#39;</span>
+        <span class="p">)</span>
+    <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="download_book"><a class="viewcode-back" href="../../../api/m_librarian.web.app.html#m_librarian.web.app.download_book">[документация]</a><span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/download/&lt;id:int&gt;/&#39;</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;GET&#39;</span><span class="p">)</span>
+<span class="nd">@cheetah_view</span><span class="p">(</span><span class="s1">&#39;download.tmpl&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">download_book</span><span class="p">(</span><span class="nb">id</span><span class="p">):</span>
+    <span class="n">book</span> <span class="o">=</span> <span class="n">Book</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
+    <span class="n">download</span><span class="p">(</span><span class="n">book</span><span class="p">,</span> <span class="n">get_config</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;download&#39;</span><span class="p">,</span> <span class="s1">&#39;path&#39;</span><span class="p">))</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="sa">u</span><span class="s1">&#39;Книга сохранена&#39;</span><span class="p">,</span>
+    <span class="p">}</span></div>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Быстрый поиск</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Искать" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Навигация</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="Алфавитный указатель"
+             >указатель</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Содержание модулей Python"
+             >модули</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Документация m_Librarian 0.1.0</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >Код модуля</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2015-2018, Oleg Broytman.
+      Создано с помощью <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.3.
+    </div>
+  </body>
+</html>
