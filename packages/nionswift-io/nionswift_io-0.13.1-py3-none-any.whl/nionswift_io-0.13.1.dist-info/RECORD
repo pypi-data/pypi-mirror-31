@@ -1,0 +1,13 @@
+nionswift_io-0.13.1.dist-info/METADATA,sha256=OICHHDv18FetCthxVMXVKjagrhEnVDFFbsYkjcVAcrQ,371
+nionswift_io-0.13.1.dist-info/RECORD,,
+nionswift_io-0.13.1.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+nionswift_io-0.13.1.dist-info/top_level.txt,sha256=ftKsyiS_1ClrXSGFZwYj_TYdHRsN8YkbF772jLty2mQ,17
+nionswift_plugin/DM_IO/__init__.py,sha256=_O5D6nt7XdLX2cuWnyzmtNK8qtHqIAWNXlgMkXpQJlY,3349
+nionswift_plugin/DM_IO/dm3_image_utils.py,sha256=GMB3D-BClZaA5KnD7etoVFJpW3nk4jyLHid8_Q4aj88,12480
+nionswift_plugin/DM_IO/parse_dm3.py,sha256=CPvO91WioTUFU-4HEFkip99UPXhZAw1ZBr_ZUB1pYIk,23050
+nionswift_plugin/DM_IO/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nionswift_plugin/DM_IO/test/dm3parser_test.py,sha256=SwZn8PaGMkhgguzkPTWrrnLnMl3HqZUOJrwEoGclKT4,11290
+nionswift_plugin/TIFF_IO/__init__.py,sha256=zST3UJhAZkm0RiHbXLPz_S5oeXU70V4tXIHpY9VkQPo,26927
+nionswift_plugin/TIFF_IO/tifffile.py,sha256=vUfukNsfgvUlzRAzoAW35YkIbvOcyD70n1kPl9avs8k,345413
+nionswift_plugin/TIFF_IO/test/TIFF_test.py,sha256=UPPsyK1Oub71L-BAZ9b7E8z7OafCL29TG5k6Faf8KgM,4673
+nionswift_plugin/TIFF_IO/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
