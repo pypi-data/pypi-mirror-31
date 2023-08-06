@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: gita
+Version: 0.4
+Summary: Manage multiple git repos
+Home-page: https://github.com/nosarthur/gita
+Author: Dong Zhou
+Author-email: zhou.dong@gmail.com
+License: MIT
+Download-URL: https://github.com/nosarthur/gita/archive/v0.4.tar.gz
+Description: UNKNOWN
+Keywords: git,multiple
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: MIT License
