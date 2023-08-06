@@ -1,0 +1,20 @@
+Metadata-Version: 1.2
+Name: enron
+Version: 0.1.dev2
+Summary: Type foundation for building strict accounting systems
+Home-page: https://github.com/knappador/enron-py
+Author: Brian Knapp
+Author-email: knappador@gmail.com
+License: BSD 4-clause
+Description: UNKNOWN
+Keywords: bookkeeping accounting
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Topic :: Office/Business :: Financial :: Accounting
+Classifier: Topic :: Documentation :: Sphinx
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Natural Language :: English
+Requires-Python: >=3
