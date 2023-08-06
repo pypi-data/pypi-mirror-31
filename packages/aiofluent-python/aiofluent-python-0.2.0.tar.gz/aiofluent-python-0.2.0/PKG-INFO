@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: aiofluent-python
+Version: 0.2.0
+Summary: A fluentd client libary intended to work with asyncio.
+Home-page: https://github.com/guyingbo/aiofluent
+Author: Yingbo Gu
+Author-email: tensiongyb@gmail.com
+Maintainer: Yingbo Gu
+Maintainer-email: tensiongyb@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.5
