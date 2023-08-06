@@ -1,0 +1,30 @@
+{% extends "pretixcontrol/wholesales/base.html" %}
+{% load i18n %}
+{% load bootstrap3 %}
+{% block title %}{% trans "Wholesale" %}{% endblock %}
+{% block inside %}
+    <form method="post" class="form-horizontal" novalidate>
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-xs-12 col-lg-10">
+                <fieldset>
+                    <legend>{% trans "General information" %}</legend>
+                    {% bootstrap_field form.company_name layout="control" %}
+                    {% bootstrap_field form.contact_name layout="control" %}
+                    {% bootstrap_field form.email layout="control" %}
+                    {% bootstrap_field form.address layout="control" %}
+                    {% bootstrap_field form.city layout="control" %}
+                    {% bootstrap_field form.state layout="control" %}
+                    {% bootstrap_field form.zip_code layout="control" %}
+                    {% bootstrap_field form.phone layout="control" %}
+                    {% bootstrap_field form.tax layout='control' %}
+                </fieldset>
+            </div>
+        </div>
+        <div class="form-group submit-group">
+            <button type="submit" class="btn btn-primary btn-save">
+                {% trans "Save" %}
+            </button>
+        </div>
+    </form>
+{% endblock %}
