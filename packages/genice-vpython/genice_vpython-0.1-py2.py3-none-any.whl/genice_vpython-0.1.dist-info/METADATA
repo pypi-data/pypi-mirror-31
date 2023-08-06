@@ -1,0 +1,47 @@
+Metadata-Version: 2.0
+Name: genice-vpython
+Version: 0.1
+Summary: VPYTHON format plugin for GenIce.
+Home-page: https://github.com/vitroid/genice-vpython/
+Author: Masakazu Matsumoto
+Author-email: vitroid@gmail.com
+License: MIT
+Description-Content-Type: text/markdown
+Keywords: genice,VPYTHON
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Requires-Dist: genice (>=0.23)
+Requires-Dist: vpython
+
+# genice-vpython
+
+A [GenIce](https://github.com/vitroid/GenIce) plugin to visualize the structure with [VPython](http://vpython.org).
+
+## Requirements
+
+* [GenIce](https://github.com/vitroid/GenIce) >=0.23.
+* [vpython](https//vpython.org) 
+
+## Installation
+
+### System-wide installation
+
+    % ./setup.py install
+
+### Private installation
+
+Copy the files in genice_vpython/formats/ into your local formats folder of GenIce.
+
+## Usage
+
+	% genice 1c -r 3 3 3 -f vpython
+opens a window in the web browser to show the image.
+
+## Test in place
+
+    % make test
+
+
