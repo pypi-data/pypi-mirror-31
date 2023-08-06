@@ -1,0 +1,4 @@
+[console_scripts]
+dbp = kwrappers.dynamodb.cli_apps.dynamodb_batch_prepare:main
+dynamo-batch-prepare = kwrappers.dynamodb.cli_apps.dynamodb_batch_prepare:main
+

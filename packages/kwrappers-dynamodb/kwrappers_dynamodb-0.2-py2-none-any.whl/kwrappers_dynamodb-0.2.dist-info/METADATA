@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: kwrappers-dynamodb
+Version: 0.2
+Summary: Kwrappers helpers for dynamodb.
+Home-page: https://bitbucket.org/tim_kablamo/kwrappers
+Author: Tim Elson
+Author-email: tim.elson@kablamo.com.au
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: click (>=6.7)
+
+Support tools for AWS DynamoDB.
+
+
