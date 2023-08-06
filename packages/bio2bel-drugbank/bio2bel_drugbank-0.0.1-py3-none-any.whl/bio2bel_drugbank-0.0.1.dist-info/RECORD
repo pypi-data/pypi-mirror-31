@@ -1,0 +1,13 @@
+bio2bel_drugbank/__init__.py,sha256=tt8V3cKOxWtsOHZeZEm0Q0bgbAMJwJmCa9FlqQauEmY,1297
+bio2bel_drugbank/__main__.py,sha256=s2nly16fORnOVHNRiFRL5s3KxjBvN0V-TaHfgDltu_Y,391
+bio2bel_drugbank/cli.py,sha256=rDsHoO8dLw_uuZ8slxGcKe9viZHIMkXUtx2jQt7616k,1295
+bio2bel_drugbank/constants.py,sha256=Gb0tsjEjOcV1GNJX_c5fBb0Qb4CB1RR6dVuCWeWhEwM,355
+bio2bel_drugbank/manager.py,sha256=vmN0hZda2VgleswyZ0luB_w0p_Jra6Ssp_7JQu_RMz0,17908
+bio2bel_drugbank/models.py,sha256=XATmNzo0r130kMZlBkN8GILs3pOUzVH0yfTa07WQ3lU,8457
+bio2bel_drugbank/parser.py,sha256=NzCGbifKmLdoe9srZhu00hZ5LXWwQI4kIbP3rxVb7x4,4973
+bio2bel_drugbank/web.py,sha256=_k38JkXZR9fk6nPhTNoSiv2KSuvJZ_muyoBk3lDzdQk,416
+bio2bel_drugbank-0.0.1.dist-info/METADATA,sha256=VtDnHrlT8XlSsRp6PYsUM-8Kwj-_MFVx6G4bj6ADhCY,2944
+bio2bel_drugbank-0.0.1.dist-info/RECORD,,
+bio2bel_drugbank-0.0.1.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+bio2bel_drugbank-0.0.1.dist-info/entry_points.txt,sha256=M_8pIU9RzF817IFnVYXJ59NXsOBGeiBYjwSGkkfQHuc,103
+bio2bel_drugbank-0.0.1.dist-info/top_level.txt,sha256=rjn9vowjsHug71fIGy3mJVSyKOxsJeoJaYwcKtOBGec,17
