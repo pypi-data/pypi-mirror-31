@@ -1,0 +1,12 @@
+numpy
+astropy>=1.0
+scipy
+numina>=0.16
+scikit-image
+
+[:python_version < "3.4"]
+enum34
+
+[DB]
+sqlalchemy
+numinadb
