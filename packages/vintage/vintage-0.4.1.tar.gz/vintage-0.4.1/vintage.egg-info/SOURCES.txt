@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+tox.ini
+tests/__init__.py
+tests/test_vintage.py
+vintage/__init__.py
+vintage/__version__.py
+vintage.egg-info/PKG-INFO
+vintage.egg-info/SOURCES.txt
+vintage.egg-info/dependency_links.txt
+vintage.egg-info/namespace_packages.txt
+vintage.egg-info/requires.txt
+vintage.egg-info/top_level.txt
