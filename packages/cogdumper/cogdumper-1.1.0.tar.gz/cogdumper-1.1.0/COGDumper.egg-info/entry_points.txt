@@ -1,0 +1,3 @@
+[console_scripts]
+cogdumper = cogdumper.scripts.cli:cogdumper
+
