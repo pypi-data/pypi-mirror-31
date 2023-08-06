@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: django-redis-secure
+Version: 1.1.3
+Summary: Django caching plugin for django-redis that adds a Serializer class and configuration to support transparent, symmetrical encryption of cached values using the python cryptography library. This plugin also provides encryption for django-rq jobs by simply using the @secure_redis.secure_rq.job decorator to annotate the task method instead of using @django_rq.job.
+Home-page: http://github.com/foundertherapy/django-redis-secure/
+Author: FounderTherapy
+Author-email: oss@foundertherapy.com
+License: MIT
+Download-URL: https://github.com/foundertherapy/django-redis-secure/archive/1.1.3.tar.gz
+Description: UNKNOWN
+Keywords: encryption,django,redis,rq
+Platform: UNKNOWN
