@@ -1,0 +1,15 @@
+deepspeech/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+deepspeech/_model.cpython-36m-x86_64-linux-gnu.so,sha256=afAZdKVWF6I3Ort1NUNy9E4jEFLNt2lFHAgCdgQc_Qs,224047
+deepspeech/_utils.cpython-36m-x86_64-linux-gnu.so,sha256=Fmblw1jq-wz3zpISRtOwrbuCagfI6Bsi0KMQeZsi75I,135637
+deepspeech/client.py,sha256=E6Rb5ywluid129LosgXYXyhXn_jJfTDkQqiAwj3zTSg,3901
+deepspeech/model.i,sha256=QJMRgjlvQjf26NhV-MzdoEidm_oeeU8FI0c7Z17Y6gQ,452
+deepspeech/model.py,sha256=RWB6pfsv3pmLi-Xsl11Moe5RuEGE3bWtPL7jPOtAKPw,4311
+deepspeech/utils.i,sha256=U4AYFxvJYOZQ3iC3zc4RNWpZ4SdtfdKvz81mwY9QmAo,358
+deepspeech/utils.py,sha256=TfxdBu6Wv3EYZR-pNHCrOb9wlNh-KVtlERht1lwglt8,3118
+deepspeech/lib/libdeepspeech.so,sha256=Kejx3kE_nw50RZMRLN4Lh7te2O-rC3PYpjtvq8jRQL8,51655072
+deepspeech/lib/libdeepspeech_utils.so,sha256=IEuEh7-6G6gqIqbOBFwjibc0fVo2IgTERMdEOf6cOEs,21904
+deepspeech-0.2.0a1.dist-info/METADATA,sha256=t8bY4ssgredML1WJDV5OETa49xX_DqcCSLnsZqPGjrQ,947
+deepspeech-0.2.0a1.dist-info/RECORD,,
+deepspeech-0.2.0a1.dist-info/WHEEL,sha256=Kz_rd6-9jbCQIY6kEm4b-3TAbWc0cOS3EcixZp2_0Tk,109
+deepspeech-0.2.0a1.dist-info/entry_points.txt,sha256=2LA7LnK4cLU3QjZZzstFv-c9Uehkm1AN1-SgBs2Syf4,55
+deepspeech-0.2.0a1.dist-info/top_level.txt,sha256=B30ih_hZ1TGIRlPsXwDZMBh1XVkFt8cA0T5s3POEE9Q,11
