@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: gitconfig
+Version: 1.0.2
+Summary: Gitconfig class and gitconfig variable for ~/.gitconfig
+Home-page: https://github.com/looking-for-a-job/gitconfig.py
+License: UNKNOWN
+Description: ### Install
+        
+        ```bash
+        $ [sudo] pip install gitconfig
+        ```
+        
+        ### Usage
+        
+        ```python
+        from gitconfig import *
+        
+        gitconfig.sections
+        >>> [...]
+        
+        gitconfig.user.password
+        >>> 'secret'
+        
+        gitconfig.not_existing
+        >>> None
+        ```
+        
+        ### Sources
+        
+        +   [`gitconfig.GitConfig(Conf)`](https://github.com/looking-for-a-job/gitconfig.py/blob/master/gitconfig/__init__.py)
+Keywords: git config
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Version Control
+Description-Content-Type: text/markdown
