@@ -1,0 +1,11 @@
+typesentry>=0.2.4
+blessed
+llvmlite<0.21.0,>=0.20.0
+psutil
+
+[testing]
+pandas
+pytest>=3.1
+pytest-cov
+pytest-benchmark>=3.1
+pytest-ordering>=0.5
