@@ -1,0 +1,12 @@
+reahl-web>=4.0,<4.1
+reahl-component>=4.0,<4.1
+reahl-sqlalchemysupport>=4.0,<4.1
+reahl-web-declarative>=4.0,<4.1
+reahl-domain>=4.0,<4.1
+reahl-domainui>=4.0,<4.1
+reahl-commands>=4.0,<4.1
+pytest>=3.0,<3.9999
+setuptools>=32.3.1,<32.3.9999
+
+[pillow]
+pillow
