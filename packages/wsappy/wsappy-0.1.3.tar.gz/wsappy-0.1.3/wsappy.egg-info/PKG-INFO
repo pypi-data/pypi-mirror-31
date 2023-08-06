@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: wsappy
+Version: 0.1.3
+Summary: A bit more higher level of asyncio websocket server
+Home-page: https://github.com/insolite/wsappy
+Author: Oleg Krasnikov
+Author-email: a.insolite@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5

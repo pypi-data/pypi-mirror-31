@@ -1,0 +1,15 @@
+MANIFEST.in
+README.rst
+setup.py
+wsappy/__init__.py
+wsappy.egg-info/PKG-INFO
+wsappy.egg-info/SOURCES.txt
+wsappy.egg-info/dependency_links.txt
+wsappy.egg-info/requires.txt
+wsappy.egg-info/top_level.txt
+wsappy/core/__init__.py
+wsappy/core/client.py
+wsappy/core/handler.py
+wsappy/core/request.py
+wsappy/core/server.py
+wsappy/core/utils.py
