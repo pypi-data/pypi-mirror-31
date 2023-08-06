@@ -1,0 +1,44 @@
+Metadata-Version: 1.1
+Name: django-appwatch
+Version: 0.0.0
+Summary: Watch Django INSTALLED_APPS and copy files
+Home-page: https://git.yourlabs.org/oss/django-appwatch
+Author: James Pic
+Author-email: jamespic@gmail.com
+License: MIT
+Description-Content-Type: UNKNOWN
+Description: Monitor sub directories of INSTALLED_APPS: django-appwatch
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        
+        Suppose you want to build a js directory from the js directory in all
+        INSTALLED_APPS::
+        
+            manage.py appwatch js:./js
+        
+        Or, for NextJS support::
+        
+            manage.py appwatch pages:./pages
+        
+        Or, for NextJS support and also have a components sub dir::
+        
+            manage.py appwatch pages:./pages components:./pages/components
+        
+        Install with:
+        
+        - ``pip install django-appwatch``
+        - Add ``appwatch`` to ``INSTALLED_APPS``
+        
+        Have fun provisionning other frameworks with Django :)
+        
+Keywords: django
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
