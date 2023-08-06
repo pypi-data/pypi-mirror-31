@@ -1,0 +1,16 @@
+[paths]
+source =
+   src/pytrello
+   */site-packages/pytrello
+
+[run]
+branch = true
+source =
+    pytrello
+    tests
+parallel = true
+
+[report]
+show_missing = true
+precision = 2
+omit = *migrations*
