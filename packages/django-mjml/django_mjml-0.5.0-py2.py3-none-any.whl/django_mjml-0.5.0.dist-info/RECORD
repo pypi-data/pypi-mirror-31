@@ -1,0 +1,11 @@
+django_mjml-0.5.0.dist-info/METADATA,sha256=_Kxk0rchr2v5sAqLYWq_44BBuUiEEy1sHf94uOOh6Gc,4398
+django_mjml-0.5.0.dist-info/RECORD,,
+django_mjml-0.5.0.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+django_mjml-0.5.0.dist-info/top_level.txt,sha256=T-SkifZ-Awccu3LJWZsP6uhEE1yo9HGb3yhvMUpLkBs,5
+mjml/__init__.py,sha256=sP6R7bSIMfZFUzFxVi9ZW8ItPbzrW5R1ynqYro_zNBM,67
+mjml/apps.py,sha256=XJSt1i3gn6BZhLBmi_9IgPuYr1pDlE7Sq4DRY3WeByg,1063
+mjml/settings.py,sha256=q06r-b1olvl0BRPgOYnWBO4VJfQ8_KfaxWWi5HFRtzU,533
+mjml/tools.py,sha256=fK-zoZs1lGeFnbKhQpOYa9keunrpQyw39vpYj7DUZjA,3148
+mjml/node/tcpserver.js,sha256=qQZqnaLH2xWcgB9N8YKCwSyfgELdbVHZUA_C3khgXZw,4199
+mjml/templatetags/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mjml/templatetags/mjml.py,sha256=xfYUpsshOuBnIn0VAIq2VU5ALDgPvfKoh-dfBBNHQqA,780
