@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+eth_docgen/__init__.py
+eth_docgen/docgen.py
+eth_docgen.egg-info/PKG-INFO
+eth_docgen.egg-info/SOURCES.txt
+eth_docgen.egg-info/dependency_links.txt
+eth_docgen.egg-info/entry_points.txt
+eth_docgen.egg-info/requires.txt
+eth_docgen.egg-info/top_level.txt
+eth_docgen/data/doc.css
