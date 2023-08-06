@@ -1,0 +1,12 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+myaws/awscli.py
+myaws.egg-info/PKG-INFO
+myaws.egg-info/SOURCES.txt
+myaws.egg-info/dependency_links.txt
+myaws.egg-info/entry_points.txt
+myaws.egg-info/requires.txt
+myaws.egg-info/top_level.txt
