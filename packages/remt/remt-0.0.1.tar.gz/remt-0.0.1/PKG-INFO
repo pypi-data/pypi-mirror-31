@@ -1,0 +1,26 @@
+Metadata-Version: 1.1
+Name: remt
+Version: 0.0.1
+Summary: remt - reMarkable tablet tools
+Home-page: https://gitlab.com/wrobell/remt
+Author: Artur Wroblewski
+Author-email: wrobell@riseup.net
+License: GPL
+Description: reMarkable tablet tools.
+        
+        Features
+        
+        - list files on a reMarkable tablet
+        - export a notebook or an annotated PDF document from a reMarkable tablet
+        - fineliner
+        - sharp pencil with pencil brush
+        - highlighter
+        - eraser
+        
+Keywords: remarkable tools
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Multimedia :: Graphics
+Classifier: Topic :: Scientific/Engineering
