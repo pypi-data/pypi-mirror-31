@@ -1,0 +1,14 @@
+README.rst
+setup.cfg
+setup.py
+sphinx_doc.py
+magi/__init__.py
+magi/accuracy.py
+magi/core.py
+magi/plotting.py
+magi/utils.py
+magi.egg-info/PKG-INFO
+magi.egg-info/SOURCES.txt
+magi.egg-info/dependency_links.txt
+magi.egg-info/requires.txt
+magi.egg-info/top_level.txt
