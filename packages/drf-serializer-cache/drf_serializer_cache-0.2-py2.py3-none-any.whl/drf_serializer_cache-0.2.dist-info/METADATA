@@ -1,0 +1,30 @@
+Metadata-Version: 2.0
+Name: drf-serializer-cache
+Version: 0.2
+Summary: Django REST framework (DRF) serializer speedup
+Home-page: https://github.com/K0Te/drf-serializer-cache
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: BSD
+Project-URL: Source, https://github.com/K0Te/drf-serializer-cache
+Project-URL: Bug Reports, https://github.com/K0Te/drf-serializer-cache/issues
+Description-Content-Type: text/markdown
+Keywords: drf cache performance
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Framework :: Django
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: django
+Requires-Dist: djangorestframework
+
+# drf-serializer-cache
+django-rest-framework serializer speedup
+
+
