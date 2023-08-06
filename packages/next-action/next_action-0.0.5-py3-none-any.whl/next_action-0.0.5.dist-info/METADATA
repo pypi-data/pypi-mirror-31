@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: next-action
+Version: 0.0.5
+Summary: Command-line application to show the next action to work on from a todo.txt file
+Home-page: https://github.com/fniessink/next-action
+Author: Frank Niessink
+Author-email: frank@niessink.com
+License: Apache License, Version 2.0
+Keywords: todo.txt,task management,todolist
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Office/Business :: Scheduling
+Requires-Python: >=3.6
+
+Show the next action to work on from a todo.txt file, based on context, priority,
+and more.
+
