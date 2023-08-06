@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: aiomsgpack
+Version: 0.1.0
+Summary: Helper to write asyncio msgpack servers and clients.
+Home-page: https://github.com/garyvdm/aiomsgpack
+Author: Gary van der Merwe
+Author-email: garyvdm@gmail.com
+License: Apache-2
+Description: `aiomsgpack` is a helper to write asyncio msgpack servers and clients.
+        
+        
+Platform: UNKNOWN
+Classifier: Framework :: AsyncIO
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet

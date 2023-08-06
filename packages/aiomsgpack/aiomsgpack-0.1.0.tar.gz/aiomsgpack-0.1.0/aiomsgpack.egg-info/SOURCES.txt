@@ -1,0 +1,16 @@
+AUTHORS
+ChangeLog
+README.md
+aiomsgpack.py
+release.md
+requirements.txt
+setup.cfg
+setup.py
+test_aiomsgpack.py
+aiomsgpack.egg-info/PKG-INFO
+aiomsgpack.egg-info/SOURCES.txt
+aiomsgpack.egg-info/dependency_links.txt
+aiomsgpack.egg-info/not-zip-safe
+aiomsgpack.egg-info/pbr.json
+aiomsgpack.egg-info/requires.txt
+aiomsgpack.egg-info/top_level.txt
