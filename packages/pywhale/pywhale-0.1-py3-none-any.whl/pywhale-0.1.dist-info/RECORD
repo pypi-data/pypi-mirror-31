@@ -1,0 +1,13 @@
+pywhale/PyWhale.py,sha256=HHrVz6Gv3GQwTcjSyu4Wx4gLR2vQGdY-sH-UQn9xY5c,2885
+pywhale/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pywhale/plugins/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pywhale/plugins/connection/Api.py,sha256=Hw7o9u6AIeJOOq_b4IlpKHusPcEiaTo6ajT2JxF46Dk,2661
+pywhale/plugins/connection/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pywhale/plugins/trade/General.py,sha256=WGoZg3CC0f-PProbvC-xapmEQJ2zjnqMcsbdMxQpLZs,9372
+pywhale/plugins/trade/Live.py,sha256=BLS-DBME1MBxWYA04QE97dCFLEbW2rDXVYxQom79Nik,28765
+pywhale/plugins/trade/Turbo.py,sha256=pwXD3OA-ZlWEQGEC-DVTE9Nr58rEoNsaJDPm5Rmp7gM,9149
+pywhale/plugins/trade/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pywhale-0.1.dist-info/METADATA,sha256=kVR0fycFIoVH5XUD_FtJ_TBAIbBGIoFSxjzjj1MFKXQ,814
+pywhale-0.1.dist-info/RECORD,,
+pywhale-0.1.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+pywhale-0.1.dist-info/top_level.txt,sha256=CiXty1hQffxFRtqxnxCU6_J8cBVNSBXmlAQGkBMEY8s,8
