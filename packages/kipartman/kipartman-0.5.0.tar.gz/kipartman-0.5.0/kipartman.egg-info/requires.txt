@@ -1,0 +1,9 @@
+wxPython
+cfscrape
+docutils
+asyncio
+connexion<1.2,>1.1
+django<1.12
+django-mptt<0.9
+watchdog
+setuptools

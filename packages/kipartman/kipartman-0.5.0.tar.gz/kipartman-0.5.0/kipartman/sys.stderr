@@ -1,0 +1,732 @@
+2018-04-24 11:36:12,455 INFO  [configuration] Starting kipartman
+2018-04-24 11:36:12,455 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:36:12,455 INFO  [configuration] Starting kipartman
+2018-04-24 11:36:12,455 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:36:12,557 INFO  [configuration] Starting kipartman
+2018-04-24 11:36:12,557 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:36:13,156 INFO  [configuration] Starting kipartman
+2018-04-24 11:36:13,156 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:36:13,161 INFO  [configuration] Starting kipartman
+2018-04-24 11:36:13,162 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:36:13,426 WARNING [connectionpool] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f03f7931990>: Failed to establish a new connection: [Errno 111] Connection refused',)': /api/parts/categories
+2018-04-24 11:36:13,426 WARNING [connectionpool] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f03f7931b50>: Failed to establish a new connection: [Errno 111] Connection refused',)': /api/parts/categories
+2018-04-24 11:36:13,427 WARNING [connectionpool] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f03f7931c90>: Failed to establish a new connection: [Errno 111] Connection refused',)': /api/parts/categories
+2018-04-24 11:36:14,913 WARNING [connectionpool] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f03f7931f10>: Failed to establish a new connection: [Errno 111] Connection refused',)': /api/parts?with_parameters=True
+2018-04-24 11:36:14,915 WARNING [connectionpool] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f03f7854110>: Failed to establish a new connection: [Errno 111] Connection refused',)': /api/parts?with_parameters=True
+2018-04-24 11:36:14,917 WARNING [connectionpool] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f03f7854250>: Failed to establish a new connection: [Errno 111] Connection refused',)': /api/parts?with_parameters=True
+2018-04-24 11:36:27,092 INFO  [configuration] Starting kipartman
+2018-04-24 11:36:27,093 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:36:27,093 INFO  [configuration] Starting kipartman
+2018-04-24 11:36:27,093 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:36:27,196 INFO  [configuration] Starting kipartman
+2018-04-24 11:36:27,196 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:36:27,662 INFO  [configuration] Starting kipartman
+2018-04-24 11:36:27,662 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:36:27,667 INFO  [configuration] Starting kipartman
+2018-04-24 11:36:27,667 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:36:29,196 INFO  [configuration] Starting kipartman
+2018-04-24 11:36:29,196 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:36:29,221 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 11:36:29,222 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 11:36:29,253 INFO  [configuration] Starting kipartman
+2018-04-24 11:36:29,253 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:37:08,335 INFO  [configuration] Starting kipartman
+2018-04-24 11:37:08,335 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:37:08,335 INFO  [configuration] Starting kipartman
+2018-04-24 11:37:08,335 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:37:08,435 INFO  [configuration] Starting kipartman
+2018-04-24 11:37:08,435 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:37:08,950 INFO  [configuration] Starting kipartman
+2018-04-24 11:37:08,950 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:37:08,954 INFO  [configuration] Starting kipartman
+2018-04-24 11:37:08,955 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:37:10,453 INFO  [configuration] Starting kipartman
+2018-04-24 11:37:10,453 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:37:10,476 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 11:37:10,477 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 11:37:10,509 INFO  [configuration] Starting kipartman
+2018-04-24 11:37:10,509 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:38:55,223 INFO  [configuration] Starting kipartman
+2018-04-24 11:38:55,223 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:38:55,223 INFO  [configuration] Starting kipartman
+2018-04-24 11:38:55,223 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:38:55,323 INFO  [configuration] Starting kipartman
+2018-04-24 11:38:55,323 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:38:55,863 INFO  [configuration] Starting kipartman
+2018-04-24 11:38:55,863 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:38:55,868 INFO  [configuration] Starting kipartman
+2018-04-24 11:38:55,868 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:38:57,348 INFO  [configuration] Starting kipartman
+2018-04-24 11:38:57,348 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:38:57,367 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 11:38:57,368 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 11:38:57,418 INFO  [configuration] Starting kipartman
+2018-04-24 11:38:57,418 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:39:31,343 INFO  [configuration] Starting kipartman
+2018-04-24 11:39:31,343 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:39:31,343 INFO  [configuration] Starting kipartman
+2018-04-24 11:39:31,343 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:39:31,444 INFO  [configuration] Starting kipartman
+2018-04-24 11:39:31,444 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:39:31,988 INFO  [configuration] Starting kipartman
+2018-04-24 11:39:31,988 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:39:31,993 INFO  [configuration] Starting kipartman
+2018-04-24 11:39:31,993 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:39:33,572 INFO  [configuration] Starting kipartman
+2018-04-24 11:39:33,572 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:39:33,594 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 11:39:33,595 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 11:39:33,629 INFO  [configuration] Starting kipartman
+2018-04-24 11:39:33,629 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:39:59,986 INFO  [configuration] Starting kipartman
+2018-04-24 11:39:59,987 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:39:59,987 INFO  [configuration] Starting kipartman
+2018-04-24 11:39:59,987 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:40:00,091 INFO  [configuration] Starting kipartman
+2018-04-24 11:40:00,091 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:40:00,740 INFO  [configuration] Starting kipartman
+2018-04-24 11:40:00,740 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:40:00,745 INFO  [configuration] Starting kipartman
+2018-04-24 11:40:00,745 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:40:02,221 INFO  [configuration] Starting kipartman
+2018-04-24 11:40:02,221 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:40:02,241 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 11:40:02,242 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 11:40:02,290 INFO  [configuration] Starting kipartman
+2018-04-24 11:40:02,290 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:40:42,234 INFO  [configuration] Starting kipartman
+2018-04-24 11:40:42,234 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:40:42,234 INFO  [configuration] Starting kipartman
+2018-04-24 11:40:42,234 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:40:42,335 INFO  [configuration] Starting kipartman
+2018-04-24 11:40:42,335 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:40:43,368 INFO  [configuration] Starting kipartman
+2018-04-24 11:40:43,368 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:40:43,373 INFO  [configuration] Starting kipartman
+2018-04-24 11:40:43,373 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:40:44,854 INFO  [configuration] Starting kipartman
+2018-04-24 11:40:44,854 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:40:44,875 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 11:40:44,907 INFO  [configuration] Starting kipartman
+2018-04-24 11:40:44,907 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:42:14,139 INFO  [configuration] Starting kipartman
+2018-04-24 11:42:14,139 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:42:14,140 INFO  [configuration] Starting kipartman
+2018-04-24 11:42:14,140 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:42:14,246 INFO  [configuration] Starting kipartman
+2018-04-24 11:42:14,246 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:42:15,296 INFO  [configuration] Starting kipartman
+2018-04-24 11:42:15,296 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:42:15,301 INFO  [configuration] Starting kipartman
+2018-04-24 11:42:15,301 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:42:16,797 INFO  [configuration] Starting kipartman
+2018-04-24 11:42:16,797 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:42:16,818 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 11:42:16,819 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 11:42:16,853 INFO  [configuration] Starting kipartman
+2018-04-24 11:42:16,854 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:46:16,961 INFO  [configuration] Starting kipartman
+2018-04-24 11:46:16,961 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:46:16,961 INFO  [configuration] Starting kipartman
+2018-04-24 11:46:16,961 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:46:17,064 INFO  [configuration] Starting kipartman
+2018-04-24 11:46:17,064 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:46:17,609 INFO  [configuration] Starting kipartman
+2018-04-24 11:46:17,609 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:46:17,614 INFO  [configuration] Starting kipartman
+2018-04-24 11:46:17,614 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:46:17,899 WARNING [connectionpool] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f5be3451950>: Failed to establish a new connection: [Errno 111] Connection refused',)': /api/parts/categories
+2018-04-24 11:46:17,899 WARNING [connectionpool] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f5be3451b10>: Failed to establish a new connection: [Errno 111] Connection refused',)': /api/parts/categories
+2018-04-24 11:46:17,900 WARNING [connectionpool] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f5be3451c50>: Failed to establish a new connection: [Errno 111] Connection refused',)': /api/parts/categories
+2018-04-24 11:46:19,033 WARNING [connectionpool] Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f5be3451ed0>: Failed to establish a new connection: [Errno 111] Connection refused',)': /api/parts?with_parameters=True
+2018-04-24 11:46:19,035 WARNING [connectionpool] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f5be33360d0>: Failed to establish a new connection: [Errno 111] Connection refused',)': /api/parts?with_parameters=True
+2018-04-24 11:46:19,036 WARNING [connectionpool] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f5be3336210>: Failed to establish a new connection: [Errno 111] Connection refused',)': /api/parts?with_parameters=True
+2018-04-24 11:46:29,343 INFO  [configuration] Starting kipartman
+2018-04-24 11:46:29,343 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:46:29,343 INFO  [configuration] Starting kipartman
+2018-04-24 11:46:29,343 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:46:29,448 INFO  [configuration] Starting kipartman
+2018-04-24 11:46:29,448 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:46:29,928 INFO  [configuration] Starting kipartman
+2018-04-24 11:46:29,928 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:46:29,933 INFO  [configuration] Starting kipartman
+2018-04-24 11:46:29,933 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:46:31,376 INFO  [configuration] Starting kipartman
+2018-04-24 11:46:31,376 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:46:31,406 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 11:46:31,407 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 11:46:31,441 INFO  [configuration] Starting kipartman
+2018-04-24 11:46:31,441 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:48:54,177 INFO  [configuration] Starting kipartman
+2018-04-24 11:48:54,177 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:48:54,177 INFO  [configuration] Starting kipartman
+2018-04-24 11:48:54,177 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:48:54,278 INFO  [configuration] Starting kipartman
+2018-04-24 11:48:54,278 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:48:55,716 INFO  [configuration] Starting kipartman
+2018-04-24 11:48:55,716 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:48:55,721 INFO  [configuration] Starting kipartman
+2018-04-24 11:48:55,721 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:48:57,206 INFO  [configuration] Starting kipartman
+2018-04-24 11:48:57,206 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:48:57,231 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 11:48:57,232 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 11:48:57,265 INFO  [configuration] Starting kipartman
+2018-04-24 11:48:57,266 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:58:00,670 INFO  [configuration] Starting kipartman
+2018-04-24 11:58:00,670 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:58:00,670 INFO  [configuration] Starting kipartman
+2018-04-24 11:58:00,670 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:58:00,771 INFO  [configuration] Starting kipartman
+2018-04-24 11:58:00,771 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:58:01,346 INFO  [configuration] Starting kipartman
+2018-04-24 11:58:01,347 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:58:01,350 INFO  [configuration] Starting kipartman
+2018-04-24 11:58:01,350 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:58:02,798 INFO  [configuration] Starting kipartman
+2018-04-24 11:58:02,798 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:58:02,820 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 11:58:02,853 INFO  [configuration] Starting kipartman
+2018-04-24 11:58:02,853 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:58:08,860 INFO  [configuration] Starting kipartman
+2018-04-24 11:58:08,860 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:58:09,413 INFO  [configuration] Starting kipartman
+2018-04-24 11:58:09,414 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:58:10,052 INFO  [configuration] Starting kipartman
+2018-04-24 11:58:10,052 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:58:10,627 INFO  [configuration] Starting kipartman
+2018-04-24 11:58:10,627 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:58:11,085 INFO  [configuration] Starting kipartman
+2018-04-24 11:58:11,085 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:58:13,221 INFO  [configuration] Starting kipartman
+2018-04-24 11:58:13,222 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:58:13,635 INFO  [configuration] Starting kipartman
+2018-04-24 11:58:13,636 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:58:14,260 INFO  [configuration] Starting kipartman
+2018-04-24 11:58:14,261 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:58:15,140 INFO  [configuration] Starting kipartman
+2018-04-24 11:58:15,140 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:58:25,186 INFO  [configuration] Starting kipartman
+2018-04-24 11:58:25,187 INFO  [configuration] Log level is DEBUG
+2018-04-24 11:58:25,755 INFO  [configuration] Starting kipartman
+2018-04-24 11:58:25,755 INFO  [configuration] Log level is DEBUG
+2018-04-24 12:04:26,136 INFO  [configuration] Starting kipartman
+2018-04-24 12:04:26,136 INFO  [configuration] Log level is DEBUG
+2018-04-24 12:04:26,137 INFO  [configuration] Starting kipartman
+2018-04-24 12:04:26,137 INFO  [configuration] Log level is DEBUG
+2018-04-24 12:04:26,237 INFO  [configuration] Starting kipartman
+2018-04-24 12:04:26,237 INFO  [configuration] Log level is DEBUG
+2018-04-24 12:04:26,777 INFO  [configuration] Starting kipartman
+2018-04-24 12:04:26,777 INFO  [configuration] Log level is DEBUG
+2018-04-24 12:04:26,780 INFO  [configuration] Starting kipartman
+2018-04-24 12:04:26,780 INFO  [configuration] Log level is DEBUG
+2018-04-24 12:04:28,225 INFO  [configuration] Starting kipartman
+2018-04-24 12:04:28,225 INFO  [configuration] Log level is DEBUG
+2018-04-24 12:04:28,250 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 12:04:28,251 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 12:04:28,284 INFO  [configuration] Starting kipartman
+2018-04-24 12:04:28,285 INFO  [configuration] Log level is DEBUG
+2018-04-24 12:04:33,515 INFO  [configuration] Starting kipartman
+2018-04-24 12:04:33,515 INFO  [configuration] Log level is DEBUG
+2018-04-24 12:04:34,026 INFO  [configuration] Starting kipartman
+2018-04-24 12:04:34,027 INFO  [configuration] Log level is DEBUG
+2018-04-24 12:05:04,151 INFO  [configuration] Starting kipartman
+2018-04-24 12:05:04,151 INFO  [configuration] Log level is DEBUG
+2018-04-24 12:05:04,151 INFO  [configuration] Starting kipartman
+2018-04-24 12:05:04,151 INFO  [configuration] Log level is DEBUG
+2018-04-24 12:05:04,251 INFO  [configuration] Starting kipartman
+2018-04-24 12:05:04,252 INFO  [configuration] Log level is DEBUG
+2018-04-24 12:05:04,722 INFO  [configuration] Starting kipartman
+2018-04-24 12:05:04,723 INFO  [configuration] Log level is DEBUG
+2018-04-24 12:05:04,726 INFO  [configuration] Starting kipartman
+2018-04-24 12:05:04,726 INFO  [configuration] Log level is DEBUG
+2018-04-24 12:05:06,178 INFO  [configuration] Starting kipartman
+2018-04-24 12:05:06,178 INFO  [configuration] Log level is DEBUG
+2018-04-24 12:05:06,203 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 12:05:06,204 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 12:05:06,236 INFO  [configuration] Starting kipartman
+2018-04-24 12:05:06,236 INFO  [configuration] Log level is DEBUG
+2018-04-24 12:05:11,681 INFO  [configuration] Starting kipartman
+2018-04-24 12:05:11,681 INFO  [configuration] Log level is DEBUG
+2018-04-24 12:05:12,217 INFO  [configuration] Starting kipartman
+2018-04-24 12:05:12,218 INFO  [configuration] Log level is DEBUG
+2018-04-24 12:05:13,018 INFO  [configuration] Starting kipartman
+2018-04-24 12:05:13,018 INFO  [configuration] Log level is DEBUG
+2018-04-24 12:53:47,784 INFO  [configuration] Starting kipartman
+2018-04-24 12:53:47,784 INFO  [configuration] Log level is DEBUG
+2018-04-24 12:53:47,784 INFO  [configuration] Starting kipartman
+2018-04-24 12:53:47,785 INFO  [configuration] Log level is DEBUG
+2018-04-24 12:53:47,939 INFO  [configuration] Starting kipartman
+2018-04-24 12:53:47,939 INFO  [configuration] Log level is DEBUG
+2018-04-24 12:53:48,501 INFO  [configuration] Starting kipartman
+2018-04-24 12:53:48,501 INFO  [configuration] Log level is DEBUG
+2018-04-24 12:53:48,504 INFO  [configuration] Starting kipartman
+2018-04-24 12:53:48,504 INFO  [configuration] Log level is DEBUG
+2018-04-24 12:53:49,959 INFO  [configuration] Starting kipartman
+2018-04-24 12:53:49,959 INFO  [configuration] Log level is DEBUG
+2018-04-24 12:53:49,986 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 12:53:49,988 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 12:53:50,021 INFO  [configuration] Starting kipartman
+2018-04-24 12:53:50,021 INFO  [configuration] Log level is DEBUG
+2018-04-24 12:53:55,902 INFO  [configuration] Starting kipartman
+2018-04-24 12:53:55,903 INFO  [configuration] Log level is DEBUG
+2018-04-24 12:53:56,425 INFO  [configuration] Starting kipartman
+2018-04-24 12:53:56,425 INFO  [configuration] Log level is DEBUG
+2018-04-24 12:55:53,123 INFO  [configuration] Starting kipartman
+2018-04-24 12:55:53,123 INFO  [configuration] Log level is DEBUG
+2018-04-24 12:55:53,123 INFO  [configuration] Starting kipartman
+2018-04-24 12:55:53,123 INFO  [configuration] Log level is DEBUG
+2018-04-24 12:55:53,222 INFO  [configuration] Starting kipartman
+2018-04-24 12:55:53,222 INFO  [configuration] Log level is DEBUG
+2018-04-24 12:55:53,742 INFO  [configuration] Starting kipartman
+2018-04-24 12:55:53,742 INFO  [configuration] Log level is DEBUG
+2018-04-24 12:55:53,744 INFO  [configuration] Starting kipartman
+2018-04-24 12:55:53,744 INFO  [configuration] Log level is DEBUG
+2018-04-24 12:55:55,203 INFO  [configuration] Starting kipartman
+2018-04-24 12:55:55,204 INFO  [configuration] Log level is DEBUG
+2018-04-24 12:55:55,229 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 12:55:55,270 INFO  [configuration] Starting kipartman
+2018-04-24 12:55:55,270 INFO  [configuration] Log level is DEBUG
+2018-04-24 12:57:47,352 INFO  [configuration] Starting kipartman
+2018-04-24 12:57:47,352 INFO  [configuration] Log level is DEBUG
+2018-04-24 12:57:47,352 INFO  [configuration] Starting kipartman
+2018-04-24 12:57:47,353 INFO  [configuration] Log level is DEBUG
+2018-04-24 12:57:47,455 INFO  [configuration] Starting kipartman
+2018-04-24 12:57:47,455 INFO  [configuration] Log level is DEBUG
+2018-04-24 12:57:47,975 INFO  [configuration] Starting kipartman
+2018-04-24 12:57:47,975 INFO  [configuration] Log level is DEBUG
+2018-04-24 12:57:47,978 INFO  [configuration] Starting kipartman
+2018-04-24 12:57:47,978 INFO  [configuration] Log level is DEBUG
+2018-04-24 12:57:49,463 INFO  [configuration] Starting kipartman
+2018-04-24 12:57:49,463 INFO  [configuration] Log level is DEBUG
+2018-04-24 12:57:49,483 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 12:57:49,484 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 12:57:49,517 INFO  [configuration] Starting kipartman
+2018-04-24 12:57:49,517 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:24:34,988 INFO  [configuration] Starting kipartman
+2018-04-24 15:24:35,018 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:24:35,018 INFO  [configuration] Starting kipartman
+2018-04-24 15:24:35,018 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:24:35,114 INFO  [configuration] Starting kipartman
+2018-04-24 15:24:35,114 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:24:35,662 INFO  [configuration] Starting kipartman
+2018-04-24 15:24:35,662 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:24:35,664 INFO  [configuration] Starting kipartman
+2018-04-24 15:24:35,664 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:24:37,093 INFO  [configuration] Starting kipartman
+2018-04-24 15:24:37,093 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:24:37,118 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 15:24:37,119 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 15:24:37,179 INFO  [configuration] Starting kipartman
+2018-04-24 15:24:37,179 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:25:03,028 INFO  [configuration] Starting kipartman
+2018-04-24 15:25:03,028 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:25:03,028 INFO  [configuration] Starting kipartman
+2018-04-24 15:25:03,028 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:25:03,124 INFO  [configuration] Starting kipartman
+2018-04-24 15:25:03,124 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:25:03,641 INFO  [configuration] Starting kipartman
+2018-04-24 15:25:03,641 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:25:03,643 INFO  [configuration] Starting kipartman
+2018-04-24 15:25:03,644 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:25:05,068 INFO  [configuration] Starting kipartman
+2018-04-24 15:25:05,068 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:25:05,092 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 15:25:05,093 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 15:25:05,124 INFO  [configuration] Starting kipartman
+2018-04-24 15:25:05,124 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:25:35,382 INFO  [configuration] Starting kipartman
+2018-04-24 15:25:35,382 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:25:35,382 INFO  [configuration] Starting kipartman
+2018-04-24 15:25:35,382 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:25:35,479 INFO  [configuration] Starting kipartman
+2018-04-24 15:25:35,479 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:25:35,939 INFO  [configuration] Starting kipartman
+2018-04-24 15:25:35,939 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:25:35,941 INFO  [configuration] Starting kipartman
+2018-04-24 15:25:35,941 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:25:37,383 INFO  [configuration] Starting kipartman
+2018-04-24 15:25:37,384 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:25:37,404 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 15:25:37,405 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 15:25:37,437 INFO  [configuration] Starting kipartman
+2018-04-24 15:25:37,437 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:28:30,592 INFO  [configuration] Starting kipartman
+2018-04-24 15:28:30,593 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:28:30,593 INFO  [configuration] Starting kipartman
+2018-04-24 15:28:30,593 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:28:30,691 INFO  [configuration] Starting kipartman
+2018-04-24 15:28:30,691 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:28:31,124 INFO  [configuration] Starting kipartman
+2018-04-24 15:28:31,124 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:28:31,126 INFO  [configuration] Starting kipartman
+2018-04-24 15:28:31,126 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:28:32,607 INFO  [configuration] Starting kipartman
+2018-04-24 15:28:32,607 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:28:32,632 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 15:28:32,633 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 15:28:32,667 INFO  [configuration] Starting kipartman
+2018-04-24 15:28:32,667 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:29:19,975 INFO  [configuration] Starting kipartman
+2018-04-24 15:29:19,975 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:29:19,975 INFO  [configuration] Starting kipartman
+2018-04-24 15:29:19,975 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:29:20,072 INFO  [configuration] Starting kipartman
+2018-04-24 15:29:20,072 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:29:20,546 INFO  [configuration] Starting kipartman
+2018-04-24 15:29:20,546 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:29:20,548 INFO  [configuration] Starting kipartman
+2018-04-24 15:29:20,548 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:29:22,152 INFO  [configuration] Starting kipartman
+2018-04-24 15:29:22,152 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:29:22,173 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 15:29:22,174 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 15:29:22,207 INFO  [configuration] Starting kipartman
+2018-04-24 15:29:22,207 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:29:37,959 INFO  [configuration] Starting kipartman
+2018-04-24 15:29:37,959 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:29:38,399 INFO  [configuration] Starting kipartman
+2018-04-24 15:29:38,400 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:29:38,944 INFO  [configuration] Starting kipartman
+2018-04-24 15:29:38,944 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:29:49,094 INFO  [configuration] Starting kipartman
+2018-04-24 15:29:49,095 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:29:49,656 INFO  [configuration] Starting kipartman
+2018-04-24 15:29:49,656 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:30:18,108 INFO  [configuration] Starting kipartman
+2018-04-24 15:30:18,108 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:30:18,150 INFO  [configuration] Starting kipartman
+2018-04-24 15:30:18,150 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:30:18,724 INFO  [configuration] Starting kipartman
+2018-04-24 15:30:18,724 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:30:18,760 INFO  [configuration] Starting kipartman
+2018-04-24 15:30:18,760 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:30:19,938 INFO  [configuration] Starting kipartman
+2018-04-24 15:30:19,939 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:30:19,989 INFO  [configuration] Starting kipartman
+2018-04-24 15:30:19,989 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:30:20,452 INFO  [configuration] Starting kipartman
+2018-04-24 15:30:20,452 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:30:20,488 INFO  [configuration] Starting kipartman
+2018-04-24 15:30:20,489 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:30:20,844 INFO  [configuration] Starting kipartman
+2018-04-24 15:30:20,845 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:30:20,877 INFO  [configuration] Starting kipartman
+2018-04-24 15:30:20,877 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:30:21,384 INFO  [configuration] Starting kipartman
+2018-04-24 15:30:21,384 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:30:21,394 INFO  [configuration] Starting kipartman
+2018-04-24 15:30:21,394 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:30:21,771 INFO  [configuration] Starting kipartman
+2018-04-24 15:30:21,772 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:30:21,809 INFO  [configuration] Starting kipartman
+2018-04-24 15:30:21,809 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:30:22,236 INFO  [configuration] Starting kipartman
+2018-04-24 15:30:22,236 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:30:22,274 INFO  [configuration] Starting kipartman
+2018-04-24 15:30:22,274 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:30:22,604 INFO  [configuration] Starting kipartman
+2018-04-24 15:30:22,605 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:30:22,639 INFO  [configuration] Starting kipartman
+2018-04-24 15:30:22,639 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:32:37,138 INFO  [configuration] Starting kipartman
+2018-04-24 15:32:37,139 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:32:37,139 INFO  [configuration] Starting kipartman
+2018-04-24 15:32:37,139 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:32:37,236 INFO  [configuration] Starting kipartman
+2018-04-24 15:32:37,236 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:32:38,619 INFO  [configuration] Starting kipartman
+2018-04-24 15:32:38,619 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:32:38,621 INFO  [configuration] Starting kipartman
+2018-04-24 15:32:38,621 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:32:40,084 INFO  [configuration] Starting kipartman
+2018-04-24 15:32:40,084 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:32:40,106 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 15:32:40,106 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 15:32:40,139 INFO  [configuration] Starting kipartman
+2018-04-24 15:32:40,139 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:33:31,462 INFO  [configuration] Starting kipartman
+2018-04-24 15:33:31,462 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:33:31,463 INFO  [configuration] Starting kipartman
+2018-04-24 15:33:31,463 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:33:31,560 INFO  [configuration] Starting kipartman
+2018-04-24 15:33:31,560 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:33:32,023 INFO  [configuration] Starting kipartman
+2018-04-24 15:33:32,023 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:33:32,025 INFO  [configuration] Starting kipartman
+2018-04-24 15:33:32,025 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:33:33,531 INFO  [configuration] Starting kipartman
+2018-04-24 15:33:33,531 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:33:33,554 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 15:33:33,555 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 15:33:33,590 INFO  [configuration] Starting kipartman
+2018-04-24 15:33:33,590 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:37:54,315 INFO  [configuration] Starting kipartman
+2018-04-24 15:37:54,316 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:37:54,316 INFO  [configuration] Starting kipartman
+2018-04-24 15:37:54,316 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:37:54,412 INFO  [configuration] Starting kipartman
+2018-04-24 15:37:54,412 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:37:54,935 INFO  [configuration] Starting kipartman
+2018-04-24 15:37:54,935 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:37:54,937 INFO  [configuration] Starting kipartman
+2018-04-24 15:37:54,937 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:37:56,425 INFO  [configuration] Starting kipartman
+2018-04-24 15:37:56,426 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:37:56,445 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 15:37:56,446 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 15:37:56,478 INFO  [configuration] Starting kipartman
+2018-04-24 15:37:56,478 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:38:15,633 INFO  [configuration] Starting kipartman
+2018-04-24 15:38:15,633 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:38:15,634 INFO  [configuration] Starting kipartman
+2018-04-24 15:38:15,634 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:38:15,729 INFO  [configuration] Starting kipartman
+2018-04-24 15:38:15,729 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:38:16,212 INFO  [configuration] Starting kipartman
+2018-04-24 15:38:16,212 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:38:16,214 INFO  [configuration] Starting kipartman
+2018-04-24 15:38:16,214 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:38:17,691 INFO  [configuration] Starting kipartman
+2018-04-24 15:38:17,691 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:38:17,718 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 15:38:17,753 INFO  [configuration] Starting kipartman
+2018-04-24 15:38:17,753 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:48:25,951 INFO  [configuration] Starting kipartman
+2018-04-24 15:48:25,951 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:48:25,953 INFO  [configuration] Starting kipartman
+2018-04-24 15:48:25,953 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:48:26,077 INFO  [configuration] Starting kipartman
+2018-04-24 15:48:26,078 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:48:26,799 INFO  [configuration] Starting kipartman
+2018-04-24 15:48:26,799 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:48:26,803 INFO  [configuration] Starting kipartman
+2018-04-24 15:48:26,803 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:48:28,575 INFO  [configuration] Starting kipartman
+2018-04-24 15:48:28,575 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:48:28,607 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 15:48:28,611 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 15:48:28,657 INFO  [configuration] Starting kipartman
+2018-04-24 15:48:28,657 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:48:58,171 INFO  [configuration] Starting kipartman
+2018-04-24 15:48:58,172 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:48:58,172 INFO  [configuration] Starting kipartman
+2018-04-24 15:48:58,172 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:48:58,269 INFO  [configuration] Starting kipartman
+2018-04-24 15:48:58,269 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:48:58,721 INFO  [configuration] Starting kipartman
+2018-04-24 15:48:58,721 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:48:58,723 INFO  [configuration] Starting kipartman
+2018-04-24 15:48:58,723 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:49:00,148 INFO  [configuration] Starting kipartman
+2018-04-24 15:49:00,148 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:49:00,170 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 15:49:00,205 INFO  [configuration] Starting kipartman
+2018-04-24 15:49:00,205 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:50:45,978 INFO  [configuration] Starting kipartman
+2018-04-24 15:50:45,978 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:50:45,978 INFO  [configuration] Starting kipartman
+2018-04-24 15:50:45,978 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:50:46,075 INFO  [configuration] Starting kipartman
+2018-04-24 15:50:46,075 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:50:46,517 INFO  [configuration] Starting kipartman
+2018-04-24 15:50:46,517 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:50:46,519 INFO  [configuration] Starting kipartman
+2018-04-24 15:50:46,519 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:50:47,951 INFO  [configuration] Starting kipartman
+2018-04-24 15:50:47,951 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:50:47,975 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 15:50:47,976 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 15:50:48,013 INFO  [configuration] Starting kipartman
+2018-04-24 15:50:48,013 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:52:38,128 INFO  [configuration] Starting kipartman
+2018-04-24 15:52:38,128 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:52:38,128 INFO  [configuration] Starting kipartman
+2018-04-24 15:52:38,128 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:52:38,228 INFO  [configuration] Starting kipartman
+2018-04-24 15:52:38,228 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:52:38,845 INFO  [configuration] Starting kipartman
+2018-04-24 15:52:38,845 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:52:38,847 INFO  [configuration] Starting kipartman
+2018-04-24 15:52:38,847 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:52:40,261 INFO  [configuration] Starting kipartman
+2018-04-24 15:52:40,261 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:52:40,282 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 15:52:40,282 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 15:52:40,315 INFO  [configuration] Starting kipartman
+2018-04-24 15:52:40,315 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:55:21,143 INFO  [configuration] Starting kipartman
+2018-04-24 15:55:21,143 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:55:21,144 INFO  [configuration] Starting kipartman
+2018-04-24 15:55:21,144 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:55:21,244 INFO  [configuration] Starting kipartman
+2018-04-24 15:55:21,244 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:55:21,748 INFO  [configuration] Starting kipartman
+2018-04-24 15:55:21,748 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:55:21,750 INFO  [configuration] Starting kipartman
+2018-04-24 15:55:21,750 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:55:23,186 INFO  [configuration] Starting kipartman
+2018-04-24 15:55:23,186 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:55:23,211 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 15:55:23,212 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 15:55:23,245 INFO  [configuration] Starting kipartman
+2018-04-24 15:55:23,245 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:55:53,533 INFO  [configuration] Starting kipartman
+2018-04-24 15:55:53,533 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:55:53,534 INFO  [configuration] Starting kipartman
+2018-04-24 15:55:53,534 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:55:53,632 INFO  [configuration] Starting kipartman
+2018-04-24 15:55:53,632 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:55:54,079 INFO  [configuration] Starting kipartman
+2018-04-24 15:55:54,079 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:55:54,081 INFO  [configuration] Starting kipartman
+2018-04-24 15:55:54,081 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:55:55,516 INFO  [configuration] Starting kipartman
+2018-04-24 15:55:55,516 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:55:55,539 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 15:55:55,540 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 15:55:55,574 INFO  [configuration] Starting kipartman
+2018-04-24 15:55:55,574 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:56:05,529 INFO  [configuration] Starting kipartman
+2018-04-24 15:56:05,529 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:56:06,131 INFO  [configuration] Starting kipartman
+2018-04-24 15:56:06,132 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:56:59,428 INFO  [configuration] Starting kipartman
+2018-04-24 15:56:59,428 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:56:59,428 INFO  [configuration] Starting kipartman
+2018-04-24 15:56:59,428 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:56:59,525 INFO  [configuration] Starting kipartman
+2018-04-24 15:56:59,525 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:56:59,968 INFO  [configuration] Starting kipartman
+2018-04-24 15:56:59,968 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:56:59,971 INFO  [configuration] Starting kipartman
+2018-04-24 15:56:59,971 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:57:01,402 INFO  [configuration] Starting kipartman
+2018-04-24 15:57:01,402 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:57:01,423 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 15:57:01,424 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 15:57:01,456 INFO  [configuration] Starting kipartman
+2018-04-24 15:57:01,456 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:57:15,231 INFO  [configuration] Starting kipartman
+2018-04-24 15:57:15,231 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:57:15,752 INFO  [configuration] Starting kipartman
+2018-04-24 15:57:15,752 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:57:39,593 INFO  [configuration] Starting kipartman
+2018-04-24 15:57:39,593 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:57:39,594 INFO  [configuration] Starting kipartman
+2018-04-24 15:57:39,594 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:57:39,691 INFO  [configuration] Starting kipartman
+2018-04-24 15:57:39,691 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:57:40,758 INFO  [configuration] Starting kipartman
+2018-04-24 15:57:40,758 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:57:40,760 INFO  [configuration] Starting kipartman
+2018-04-24 15:57:40,760 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:57:42,189 INFO  [configuration] Starting kipartman
+2018-04-24 15:57:42,189 INFO  [configuration] Log level is DEBUG
+2018-04-24 15:57:42,215 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 15:57:42,216 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 15:57:42,249 INFO  [configuration] Starting kipartman
+2018-04-24 15:57:42,249 INFO  [configuration] Log level is DEBUG
+2018-04-24 16:00:57,536 INFO  [configuration] Starting kipartman
+2018-04-24 16:00:57,536 INFO  [configuration] Log level is DEBUG
+2018-04-24 16:00:57,537 INFO  [configuration] Starting kipartman
+2018-04-24 16:00:57,537 INFO  [configuration] Log level is DEBUG
+2018-04-24 16:00:57,634 INFO  [configuration] Starting kipartman
+2018-04-24 16:00:57,635 INFO  [configuration] Log level is DEBUG
+2018-04-24 16:00:58,144 INFO  [configuration] Starting kipartman
+2018-04-24 16:00:58,144 INFO  [configuration] Log level is DEBUG
+2018-04-24 16:00:58,146 INFO  [configuration] Starting kipartman
+2018-04-24 16:00:58,146 INFO  [configuration] Log level is DEBUG
+2018-04-24 16:00:59,561 INFO  [configuration] Starting kipartman
+2018-04-24 16:00:59,561 INFO  [configuration] Log level is DEBUG
+2018-04-24 16:00:59,586 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 16:00:59,586 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 16:00:59,621 INFO  [configuration] Starting kipartman
+2018-04-24 16:00:59,621 INFO  [configuration] Log level is DEBUG
+2018-04-24 16:28:57,272 INFO  [configuration] Starting kipartman
+2018-04-24 16:28:57,272 INFO  [configuration] Log level is DEBUG
+2018-04-24 16:28:57,272 INFO  [configuration] Starting kipartman
+2018-04-24 16:28:57,272 INFO  [configuration] Log level is DEBUG
+2018-04-24 16:28:57,370 INFO  [configuration] Starting kipartman
+2018-04-24 16:28:57,370 INFO  [configuration] Log level is DEBUG
+2018-04-24 16:28:57,891 INFO  [configuration] Starting kipartman
+2018-04-24 16:28:57,891 INFO  [configuration] Log level is DEBUG
+2018-04-24 16:28:57,894 INFO  [configuration] Starting kipartman
+2018-04-24 16:28:57,894 INFO  [configuration] Log level is DEBUG
+2018-04-24 16:28:59,368 INFO  [configuration] Starting kipartman
+2018-04-24 16:28:59,368 INFO  [configuration] Log level is DEBUG
+2018-04-24 16:28:59,393 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 16:28:59,394 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 16:28:59,394 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 16:28:59,395 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 16:28:59,428 INFO  [configuration] Starting kipartman
+2018-04-24 16:28:59,428 INFO  [configuration] Log level is DEBUG
+2018-04-24 16:30:59,020 INFO  [configuration] Starting kipartman
+2018-04-24 16:30:59,020 INFO  [configuration] Log level is DEBUG
+2018-04-24 16:30:59,020 INFO  [configuration] Starting kipartman
+2018-04-24 16:30:59,020 INFO  [configuration] Log level is DEBUG
+2018-04-24 16:30:59,117 INFO  [configuration] Starting kipartman
+2018-04-24 16:30:59,117 INFO  [configuration] Log level is DEBUG
+2018-04-24 16:30:59,560 INFO  [configuration] Starting kipartman
+2018-04-24 16:30:59,560 INFO  [configuration] Log level is DEBUG
+2018-04-24 16:30:59,563 INFO  [configuration] Starting kipartman
+2018-04-24 16:30:59,563 INFO  [configuration] Log level is DEBUG
+2018-04-24 16:31:01,077 INFO  [configuration] Starting kipartman
+2018-04-24 16:31:01,077 INFO  [configuration] Log level is DEBUG
+2018-04-24 16:31:01,101 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 16:31:01,102 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 16:31:01,103 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 16:31:01,137 INFO  [configuration] Starting kipartman
+2018-04-24 16:31:01,137 INFO  [configuration] Log level is DEBUG
+2018-04-24 16:31:43,937 INFO  [configuration] Starting kipartman
+2018-04-24 16:31:43,938 INFO  [configuration] Log level is DEBUG
+2018-04-24 16:31:43,938 INFO  [configuration] Starting kipartman
+2018-04-24 16:31:43,938 INFO  [configuration] Log level is DEBUG
+2018-04-24 16:31:44,038 INFO  [configuration] Starting kipartman
+2018-04-24 16:31:44,038 INFO  [configuration] Log level is DEBUG
+2018-04-24 16:31:44,511 INFO  [configuration] Starting kipartman
+2018-04-24 16:31:44,511 INFO  [configuration] Log level is DEBUG
+2018-04-24 16:31:44,513 INFO  [configuration] Starting kipartman
+2018-04-24 16:31:44,513 INFO  [configuration] Log level is DEBUG
+2018-04-24 16:31:46,109 INFO  [configuration] Starting kipartman
+2018-04-24 16:31:46,109 INFO  [configuration] Log level is DEBUG
+2018-04-24 16:31:46,130 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 16:31:46,132 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 16:31:46,133 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 16:31:46,133 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 16:31:46,166 INFO  [configuration] Starting kipartman
+2018-04-24 16:31:46,166 INFO  [configuration] Log level is DEBUG
+2018-04-24 16:33:21,683 INFO  [configuration] Starting kipartman
+2018-04-24 16:33:21,684 INFO  [configuration] Log level is DEBUG
+2018-04-24 16:33:21,684 INFO  [configuration] Starting kipartman
+2018-04-24 16:33:21,684 INFO  [configuration] Log level is DEBUG
+2018-04-24 16:33:21,782 INFO  [configuration] Starting kipartman
+2018-04-24 16:33:21,782 INFO  [configuration] Log level is DEBUG
+2018-04-24 16:33:22,257 INFO  [configuration] Starting kipartman
+2018-04-24 16:33:22,258 INFO  [configuration] Log level is DEBUG
+2018-04-24 16:33:22,260 INFO  [configuration] Starting kipartman
+2018-04-24 16:33:22,260 INFO  [configuration] Log level is DEBUG
+2018-04-24 16:33:23,726 INFO  [configuration] Starting kipartman
+2018-04-24 16:33:23,726 INFO  [configuration] Log level is DEBUG
+2018-04-24 16:33:23,746 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 16:33:23,747 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 16:33:23,781 INFO  [configuration] Starting kipartman
+2018-04-24 16:33:23,781 INFO  [configuration] Log level is DEBUG
+2018-04-24 16:33:33,133 INFO  [configuration] Starting kipartman
+2018-04-24 16:33:33,133 INFO  [configuration] Log level is DEBUG
+2018-04-24 16:33:33,133 INFO  [configuration] Starting kipartman
+2018-04-24 16:33:33,133 INFO  [configuration] Log level is DEBUG
+2018-04-24 16:33:33,230 INFO  [configuration] Starting kipartman
+2018-04-24 16:33:33,230 INFO  [configuration] Log level is DEBUG
+2018-04-24 16:33:34,399 INFO  [configuration] Starting kipartman
+2018-04-24 16:33:34,399 INFO  [configuration] Log level is DEBUG
+2018-04-24 16:33:34,401 INFO  [configuration] Starting kipartman
+2018-04-24 16:33:34,401 INFO  [configuration] Log level is DEBUG
+2018-04-24 16:33:35,866 INFO  [configuration] Starting kipartman
+2018-04-24 16:33:35,866 INFO  [configuration] Log level is DEBUG
+2018-04-24 16:33:35,888 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 16:33:35,889 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 16:33:35,889 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 16:33:35,889 DEBUG [inotify_buffer] in-event <InotifyEvent: src_path=/home/seb/.kipartman/symbols/.kiversion_lib, wd=1, mask=IN_MODIFY, cookie=0, name=.kiversion_lib>
+2018-04-24 16:33:35,921 INFO  [configuration] Starting kipartman
+2018-04-24 16:33:35,921 INFO  [configuration] Log level is DEBUG
