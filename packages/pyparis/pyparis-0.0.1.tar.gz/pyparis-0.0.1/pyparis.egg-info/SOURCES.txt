@@ -1,0 +1,15 @@
+MANIFEST.in
+README.rst
+setup.py
+pyparis/__init__.py
+pyparis/cluster_cut_slicer.py
+pyparis/distance_slicer.py
+pyparis/heterogeneous_cut_slicer.py
+pyparis/homogeneous_cut_slicer.py
+pyparis/paris.py
+pyparis.egg-info/PKG-INFO
+pyparis.egg-info/SOURCES.txt
+pyparis.egg-info/dependency_links.txt
+pyparis.egg-info/not-zip-safe
+pyparis.egg-info/requires.txt
+pyparis.egg-info/top_level.txt
