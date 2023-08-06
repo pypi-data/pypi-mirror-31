@@ -1,0 +1,13 @@
+DepyTG-3.6.2.post0.dist-info/METADATA,sha256=k3aeoZY3nXrujcbq3ircq5jAFokMBDkiwJ_Fh86a_XM,5215
+DepyTG-3.6.2.post0.dist-info/RECORD,,
+DepyTG-3.6.2.post0.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+DepyTG-3.6.2.post0.dist-info/top_level.txt,sha256=ddHCj7Twe5LINfDnCQZFnyyQY11d13PbJ0qMKSOYmeo,7
+depytg/__init__.py,sha256=McP_QxGn7rjRjhK0uD6w0RC7tn4EE4V2XOPhB9NVvJU,137
+depytg/depyfier.py,sha256=ygP3WmwEhZjXN6pwXD-EDOCqAfG9Va9-e2n8m_CGVXw,6433
+depytg/errors.py,sha256=w7NT62paD0Di3QTYdUph1MKdVmfog4uVPdnXLbQJKAA,275
+depytg/internals.py,sha256=cuvr9n5oALAw-UxMc-uDoE3BNtmUHkkleEIta5ddgNg,10158
+depytg/methods.py,sha256=g7ecgaAAFr2VLatBCgELtzvapmr086tRa3lNMemaU4s,77255
+depytg/types.py,sha256=KIXOf81BXvTbmcHzSFCkv44CV6nrtTyHBRx6L003f2A,97863
+depytg/utils.py,sha256=NEjCWqaRJVvmQWB8iNu1SH_fSpPAwvx8sjmW3gtjo2s,1222
+depytg/webhooks/__init__.py,sha256=-Yec8ERGjV08_mB0Qk8ts8CG3MYYB2M_KYX4L21OYF0,20
+depytg/webhooks/flask.py,sha256=qlVa-l7vZA9DOADWxNwuBG3jFsV9OamqG_moUxhLVfw,1565
