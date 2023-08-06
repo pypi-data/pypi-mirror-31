@@ -1,0 +1,11 @@
+steem
+
+[build]
+twine
+wheel
+setuptools
+
+[dev]
+twine
+wheel
+setuptools

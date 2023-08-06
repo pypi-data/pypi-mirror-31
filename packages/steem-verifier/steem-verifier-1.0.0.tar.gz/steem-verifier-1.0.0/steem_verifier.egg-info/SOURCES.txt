@@ -1,0 +1,11 @@
+README.md
+setup.py
+steem_verifier.egg-info/PKG-INFO
+steem_verifier.egg-info/SOURCES.txt
+steem_verifier.egg-info/dependency_links.txt
+steem_verifier.egg-info/entry_points.txt
+steem_verifier.egg-info/requires.txt
+steem_verifier.egg-info/top_level.txt
+verifier/__init__.py
+verifier/cli.py
+verifier/verifier.py
