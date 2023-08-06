@@ -1,0 +1,17 @@
+FTPflow/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+FTPflow/checkplatform.py,sha256=BnQXw2t3E-Gu7wVJYOO-nm2iPKj7OpjTVFkfj4n_AwU,659
+FTPflow/main_walker.py,sha256=O_VtOKmoh_oJJDbX8Jjfa-yp6IFgKXRMwS2pE_gAc-8,7206
+FTPflow/runwalker.py,sha256=5cKhv8gAC9N8iSzNM_z-4C5KNig1MbuPNTM_3a945jI,5075
+FTPflow/test.py,sha256=rqUu-CoeLLgRm3TvNVI7gYrJFnvzuyL3iLgjzWsU_rk,179
+FTPflow/traverse.py,sha256=qti6t81OhcVPnyssKRVKHwONN2GYH5X1yD1GpPWp9sc,5506
+FTPflow/walker.py,sha256=CY0TGh99xpJd7668oyMBEgE9MDe4omgvc-ydKqQgN3k,2940
+FTPflow/daemons/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+FTPflow/daemons/unixdaemon.py,sha256=fELh1AZwcMRYq8TX396APoN19o4vZolm38PZKUwJMJk,4652
+FTPflow/daemons/windaemon.py,sha256=GNKzMacQsHACplOAYm2-JPnyDOFXihGMLVac7TS7AEQ,520
+FTPflow/daemons/winservice.py,sha256=faDkIXRjaqngyVbp-IaHk8WKnsogxrXXEu4Ibm1RJUA,2935
+FTPflow-0.5.dist-info/DESCRIPTION.rst,sha256=uPWbXLZ5meogX9TIfPpGXP1NnYLSQiVPyPVXxP3NLiQ,1017
+FTPflow-0.5.dist-info/METADATA,sha256=yQKiPCUMSGhxjKBJNXoIVNN_BRbkaUuXI_t_7QzBjvU,1360
+FTPflow-0.5.dist-info/RECORD,,
+FTPflow-0.5.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+FTPflow-0.5.dist-info/metadata.json,sha256=mrRxcrgBFBlHdVgZO9_n3j5lfAgTFRLVLd7Jh0PWqbY,526
+FTPflow-0.5.dist-info/top_level.txt,sha256=ql_zbpKnxMKKzecim_hDKvqzBgq8X38HsAieaQhdCp0,24

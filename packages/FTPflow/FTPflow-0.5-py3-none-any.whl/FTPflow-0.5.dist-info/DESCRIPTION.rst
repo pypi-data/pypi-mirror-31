@@ -1,0 +1,30 @@
+FTPflow is a Python package for optimally traversing extremely large FTP directory trees.
+
+Here is an example of FTPflow traversing the Uniprot_ bioinformatics database:
+
+.. code-block:: python
+
+	from FTPflow.runwalker import FTPflow
+
+	walker = FTPflow("Uniprot", "ftp.uniprot.org")
+	walker.check_state()
+
+
+
+This will create a dictionary formatted as a JSON file in the user’s home directory containing all the full paths as keys and the respective filenames as values. FTPflow is designed with speed in mind by utilizing state-of-the-art high performance parallelism and concurrency algorithms to traverse FTP directory trees. The resultant hash table (i.e., dictionary) supports fast lookup for any file in any biological database.
+
+
+Installation:
+
+For running the FTPflow you need to have python3.x+ installed. Then you can use `pip` or `pip3` for installation. 
+
+.. code-block:: python
+
+    # Install
+	sudo pip3 install FTPflow
+
+	# Upgrade
+	sudo pip3 install FTPflow --upgrade
+
+.. _Uniprot: http://uniprot.org
+
