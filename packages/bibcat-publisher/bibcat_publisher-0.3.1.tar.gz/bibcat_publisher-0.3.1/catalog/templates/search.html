@@ -1,0 +1,14 @@
+<br>
+<form class="form mx-auto bg-primary" style="width: 40em"
+  action="{{ url_for('catalog.search_data') }}" method="POST">
+  <div class="form-group row">
+    <div class="col-11">
+        <div id="suggest-query">
+            <input type="text" class="typeahead form-control form-control-lg" 
+                id="query" name="query" placeholder="Typeahead Search"
+                {% if query_phrase %}value="{{ query_phrase }}"{% endif %}>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-success col-1">Go</button>
+  </div>
+</form>

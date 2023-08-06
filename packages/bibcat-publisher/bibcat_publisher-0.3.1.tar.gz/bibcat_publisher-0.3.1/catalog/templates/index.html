@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<div class="row">
+
+    <section class="col-8">
+        <section class="bg-success">
+            Main Card Deck
+        </section>
+        <section>
+            Saved Card Deck
+        </section>
+        <section>
+            Auxiliary Card Decks
+        </section>
+    </section>
+    <section class="col-4">
+       {% include 'facets.html' %} 
+    </section>
+</div>
+{% endblock %}

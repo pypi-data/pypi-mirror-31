@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: bibcat-publisher
+Version: 0.3.1
+Summary: RDF Linked Data Publisher and Asset Repository
+Home-page: http://bibcat.org/publisher
+Author: KnowledgeLinks
+Author-email: knowledgelinks.io@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: rdf linked-data publisher bibframe digital repository
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3

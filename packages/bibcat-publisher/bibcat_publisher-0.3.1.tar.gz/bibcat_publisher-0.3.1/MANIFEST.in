@@ -1,0 +1,5 @@
+include README.md
+include LICENSE
+include catalog/templates/*.html
+include catalog/static/css/*.css
+include catalog/static/js/*.js 
