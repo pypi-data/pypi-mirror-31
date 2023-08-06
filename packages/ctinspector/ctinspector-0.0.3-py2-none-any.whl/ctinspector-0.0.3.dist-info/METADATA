@@ -1,0 +1,26 @@
+Metadata-Version: 2.0
+Name: ctinspector
+Version: 0.0.3
+Summary: Show detailed information for docker images
+Home-page: https://github.com/joaompinto/ctinspector
+Author: João Pinto
+Author-email: lamego.pinto@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: License :: Freely Distributable
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Requires-Dist: backports.shutil-get-terminal-size
+Requires-Dist: colorama
+Requires-Dist: docker
+Requires-Dist: docopt
+Requires-Dist: six
+Requires-Dist: termcolor
+
+Shows detailed information for docker images
+
+
