@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+bestnewmusic/__init__.py
+bestnewmusic/__main__.py
+bestnewmusic/sources.py
+bestnewmusic/util.py
+bestnewmusic.egg-info/PKG-INFO
+bestnewmusic.egg-info/SOURCES.txt
+bestnewmusic.egg-info/dependency_links.txt
+bestnewmusic.egg-info/entry_points.txt
+bestnewmusic.egg-info/requires.txt
+bestnewmusic.egg-info/top_level.txt
