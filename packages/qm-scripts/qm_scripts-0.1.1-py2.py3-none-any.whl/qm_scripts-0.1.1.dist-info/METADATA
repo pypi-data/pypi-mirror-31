@@ -1,0 +1,23 @@
+Metadata-Version: 2.0
+Name: qm-scripts
+Version: 0.1.1
+Summary: A set of scripts useful for analyzing outputs and setup inputs in quantum chemistry
+Home-page: https://github.com/iinfant76/qm_scripts
+Author: ['Ivan Infante']
+Author-email: iinfant76@gmail.com
+License: GPL
+Keywords: MD cp2k
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: qmflows
+Requires-Dist: scipy
+
+UNKNOWN
+
+
