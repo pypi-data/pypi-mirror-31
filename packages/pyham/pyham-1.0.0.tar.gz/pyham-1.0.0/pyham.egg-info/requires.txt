@@ -1,0 +1,15 @@
+ete3
+six
+lxml
+future
+
+[dev]
+noise
+sphinx
+wheel
+twine
+fabric
+fabric3
+
+[test]
+noise
