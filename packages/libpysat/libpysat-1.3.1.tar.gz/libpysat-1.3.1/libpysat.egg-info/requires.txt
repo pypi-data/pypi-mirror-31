@@ -1,0 +1,10 @@
+numpy
+pandas
+scipy
+
+[dev]
+
+[test]
+coverage
+pytest-cov
+coveralls
