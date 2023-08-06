@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        pit=pit.tool:cli
+    
