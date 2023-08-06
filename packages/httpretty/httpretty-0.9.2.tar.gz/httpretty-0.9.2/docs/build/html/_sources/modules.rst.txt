@@ -1,0 +1,36 @@
+.. _api modules:
+
+Modules
+=======
+
+.. _api module core:
+
+Core
+----
+
+.. automodule:: httpretty.core
+   :members:
+
+.. _api module http:
+
+Http
+----
+
+.. automodule:: httpretty.http
+   :members:
+
+.. _api module utils:
+
+Utils
+-----
+
+.. automodule:: httpretty.utils
+   :members:
+
+.. _api module exceptions:
+
+Exceptions
+----------
+
+.. automodule:: httpretty.errors
+   :members:
