@@ -1,0 +1,15 @@
+ultan/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ultan/cli.py,sha256=TLjyUebrCCGl5Y4yrjA5WfI9gIYcBIJndh1Llypc314,710
+ultan/compat.py,sha256=U7qxoVhrPtq9f99XfPf61ZpBsNYWEujVfWikydPzpCo,1611
+ultan/get_doc.py,sha256=oaKWhmyKs87e8uF68rd2lEc5o7n7RXWQFzt-QevZTDs,972
+ultan/name_index.py,sha256=ie0hIdJrIRdJP_DnV25gO9OzkZR_AhR65Jy7EytMzL0,2979
+ultan/version.py,sha256=IVAxjpWjFMQKN-IUST6lM9GMEAbliyeEd1ImaMRXsjQ,64
+ultan/strategies/__init__.py,sha256=4oeJiCzzu7n3gHTkkjaJiSJTOy-Sr_8Cnxobp_2x4N0,19
+ultan/strategies/ast_walker.py,sha256=JrAcrW7F9XGH29l8gytUSyJV_oy7HUEHec_P4Gdmp0E,3048
+ultan/strategies/strategy.py,sha256=UthHXllOvQxVTbc5NiUHjyL1Wcc0dXOT7zn1BbwXo-Y,184
+ultan/strategies/sys_modules_scanner.py,sha256=Mz8zo1jmEXnQasDIl0iYd1np5JH-iY0y5msqNMz5oq4,309
+ultan-2.1.0.dist-info/METADATA,sha256=IAB2txSbqEkW8wMLxo33Midpspz6iUk-3tfShgI6RLc,2459
+ultan-2.1.0.dist-info/RECORD,,
+ultan-2.1.0.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+ultan-2.1.0.dist-info/entry_points.txt,sha256=5JKEWR3b5_oezk3NPzMP4xE0vcIwSyCJsHKRP_zqRD0,42
+ultan-2.1.0.dist-info/top_level.txt,sha256=fZX_EbfIQgC_NA34I8qlIByPiGI33T16OPOEB4DOXA4,6
