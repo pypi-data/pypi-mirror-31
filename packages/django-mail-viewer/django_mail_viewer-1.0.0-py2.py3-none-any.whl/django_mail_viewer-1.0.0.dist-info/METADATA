@@ -1,0 +1,154 @@
+Metadata-Version: 2.1
+Name: django-mail-viewer
+Version: 1.0.0
+Summary: View emails in development without actually sending them.
+Home-page: https://github.com/jmichalicek/django-mail-viewer
+Author: Justin Michalicek
+Author-email: jmichalicek@gmail.com
+License: MIT
+Keywords: django-mail-viewer,django,email
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 1.11
+Classifier: Framework :: Django :: 2.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+
+=============================
+Django Mail Viewer
+=============================
+
+.. image:: https://badge.fury.io/py/django-mail-viewer.png
+    :target: https://badge.fury.io/py/django-mail-viewer
+
+.. image:: https://travis-ci.org/jmichalicek/django-mail-viewer.png?branch=master
+    :target: https://travis-ci.org/jmichalicek/django-mail-viewer
+
+View emails in development without actually sending them.
+
+Documentation
+-------------
+
+The full documentation is at https://django-mail-viewer.readthedocs.io.
+
+Quickstart
+----------
+
+Install Django Mail Viewer::
+
+    pip install django-mail-viewer
+
+Add it to your `INSTALLED_APPS`:
+
+.. code-block:: python
+
+    INSTALLED_APPS = (
+        ...
+        'django_mail_viewer',
+        ...
+    )
+
+Add Django Mail Viewer's URL patterns:
+
+.. code-block:: python
+
+    # You may want to only include this in development environments
+
+    # Django 2
+    urlpatterns = [
+        ...
+        path('', include('django_mail_viewer.urls')),
+        ...
+    ]
+
+    # Django 1.11
+    urlpatterns = [
+        ...
+        url(r'^', include('django_mail_viewer.urls')),
+        ...
+    ]
+
+Set your `EMAIL_BACKEND` in settings.py:
+
+.. code-block:: python
+
+    EMAIL_BACKEND = 'django_mail_viewer.backends.locmem.EmailBackend'
+
+Features
+--------
+
+* TODO
+
+Running Tests
+-------------
+
+Does the code actually work?
+
+::
+
+    source <YOURVIRTUALENV>/bin/activate
+    (myenv) $ pip install tox
+    (myenv) $ tox
+
+
+TODO
+-----
+
+* Passthrough backend - store the email for display in the views but also pass to another backend which may actually send
+* Redis backend using Redis specific functionality for cleaner code and less risk of bugs vs the django cache backend
+* Memcached backend
+* File based backend - store each email as its own file
+* Database backend - model to store emails and attachments
+* Other backends?  ElasticSearch?  MongoDB?
+* Separate views for each of html, plaintext, attachements, etc. to allow for more customization of display?
+
+Credits
+-------
+
+Tools used in rendering this package:
+
+*  Cookiecutter_
+*  `cookiecutter-djangopackage`_
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`cookiecutter-djangopackage`: https://github.com/pydanny/cookiecutter-djangopackage
+
+
+
+
+History
+-------
+
+Current
++++++++
+
+1.0.0 (2018-04-23)
+++++++++++++++++++
+* Dropped testing of Django 1.8, 1.9 and 1.10
+* Stopped using assignment_tag in favor of Django 1.9+ simple_tag functionality, definitely breaking Django 1.8
+* Added testing of Django 2.0
+* Updated .editorconfig, added flake8 check, isort, and yapf checks and configs
+
+0.2.0 (2017-08-20)
+++++++++++++++++++
+* Added stats toxenv to show coverage stats
+* Corrected v0.1.0 release date in history
+* Added setting the Django `EMAIL_BACKEND` setting to quickstart and usage
+* Added django cache backend
+* Fixed handling of quoted-printable email encoding
+* Dropped testing of Django 1.8, added testing of Django 1.11 and Python 3.6
+
+0.1.0 (2016-12-23)
+++++++++++++++++++
+
+* First release on PyPI.
+
+
