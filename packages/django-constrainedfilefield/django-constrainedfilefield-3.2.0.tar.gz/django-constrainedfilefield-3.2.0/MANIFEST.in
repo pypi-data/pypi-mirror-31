@@ -1,0 +1,7 @@
+include LICENSE
+include README.rst
+include README.md
+include CHANGELOG.md
+recursive-include constrainedfilefield/static *
+recursive-include constrainedfilefield/locale/*/LC_MESSAGES *
+recursive-include docs *

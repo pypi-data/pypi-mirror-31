@@ -1,0 +1,26 @@
+
+[:python_version <= "3.0"]
+django<2.0,>=1.8
+
+[:python_version >= "3.4"]
+django>=1.8
+
+[coverage]
+Pillow>=4.0.0
+
+[coverage:platform_system != "Windows"]
+python-magic>=0.4.2
+
+[coverage:platform_system == "Windows"]
+python-magic-bin
+
+[filetype]
+
+[filetype:platform_system != "Windows"]
+python-magic>=0.4.2
+
+[filetype:platform_system == "Windows"]
+python-magic-bin
+
+[image]
+Pillow>=4.0.0
