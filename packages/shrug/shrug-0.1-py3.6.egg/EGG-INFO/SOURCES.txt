@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+shrug/__init__.py
+shrug/cli.py
+shrug.egg-info/PKG-INFO
+shrug.egg-info/SOURCES.txt
+shrug.egg-info/dependency_links.txt
+shrug.egg-info/entry_points.txt
+shrug.egg-info/top_level.txt
