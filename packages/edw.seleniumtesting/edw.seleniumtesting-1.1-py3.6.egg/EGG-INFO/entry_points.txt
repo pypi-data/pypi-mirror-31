@@ -1,0 +1,6 @@
+[console_scripts]
+seleniumtesting = edw.seleniumtesting.main:run_cli
+
+[edw.seleniumtesting]
+edw.seleniumtesting.sample = edw.seleniumtesting.sample:suite
+
