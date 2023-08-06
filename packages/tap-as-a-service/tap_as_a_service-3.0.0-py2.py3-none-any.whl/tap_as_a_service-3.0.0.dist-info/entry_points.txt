@@ -1,0 +1,19 @@
+[neutron.agent.l2.extensions]
+taas = neutron_taas.services.taas.agents.extensions.taas:TaasAgentExtension
+
+[neutron.db.alembic_migrations]
+tap-as-a-service = neutron_taas.db.migration:alembic_migration
+
+[neutron.service_plugins]
+taas = neutron_taas.services.taas.taas_plugin:TaasPlugin
+
+[neutron_taas.taas.agent_drivers]
+ovs = neutron_taas.services.taas.drivers.linux.ovs_taas:OvsTaasDriver
+
+[neutronclient.extension]
+tap_flow = neutron_taas.taas_client.tapflow
+tap_service = neutron_taas.taas_client.tapservice
+
+[tempest.test_plugins]
+tap-as-a-service = neutron_taas.tests.tempest_plugin.plugin:NeutronTaaSPlugin
+
