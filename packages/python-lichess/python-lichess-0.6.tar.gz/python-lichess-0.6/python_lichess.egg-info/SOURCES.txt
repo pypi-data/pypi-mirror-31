@@ -1,0 +1,12 @@
+README.rst
+setup.py
+lichess/__init__.py
+lichess/api.py
+lichess/auth.py
+lichess/format.py
+lichess/pgn.py
+python_lichess.egg-info/PKG-INFO
+python_lichess.egg-info/SOURCES.txt
+python_lichess.egg-info/dependency_links.txt
+python_lichess.egg-info/requires.txt
+python_lichess.egg-info/top_level.txt
