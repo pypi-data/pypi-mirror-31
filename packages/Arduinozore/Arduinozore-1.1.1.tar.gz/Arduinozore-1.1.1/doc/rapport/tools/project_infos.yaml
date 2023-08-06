@@ -1,0 +1,54 @@
+---
+title: Arduinozore
+subtitle: Conception OS
+lang: fr
+language: french
+author:
+- lastname: Pedretti
+  firstname: Maël
+- lastname: Neto Da Silva
+  firstname: André
+- lastname: Gander
+  firstname: Laurent
+
+responsable:
+- lastname: Cortinovis
+  firstname: Claudio
+
+date: \today
+pagesize: a4
+
+institut:
+  name: HE-Arc
+  logo: img/logo.jpg
+  logo_scale: 0.6
+
+# project_logo:
+# project_logo_scale: 0.4
+
+# styles
+#alignment: <alignment>
+fontsize: 12pt
+colorlinks: darkblue
+
+documentclass: scrreprt
+documentoptions: twoside
+
+numbersections: true
+
+abstractontitlepage: false
+
+toc: true
+toc-depth: 2
+lof: true
+
+abstract: |
+    \section*{Résumé}
+    Le projet Arduinozore a été réalisé dans le cadre du cours de Conception OS, un module de 3ème année de Bachelor au sein de la Haute-École Arc — Ingénierie, section Développement Logiciel et Multimédia. Le présent document décrit le déroulement du projet et présente les fonctionnalités implémentées.
+    Arduinozore est un programme en Python qui permet de visualiser les valeurs de capteurs branchés sur un Arduino et connectés à un ordinateur ou un RaspberryPi. Au travers d'un interface web, il facilite la configuration et la récupération des données.
+
+    \section*{Abstract}
+    The Arduinozore project was realized within the context of the OS conception course, a 3rd year Bachelor module within the Arc-Engineering High School, section Software and Multimedia Development. This document describes the progress of the project and presents the implemented features.
+    Arduinozore is a program in Python that allows you to vizualise datas from sensors wired to an Arduino and connected to a computer or a RaspberryPi. Through a web interface it facilitates the configuration and fetch of datas.
+
+---
