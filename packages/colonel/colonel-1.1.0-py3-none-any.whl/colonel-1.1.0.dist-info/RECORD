@@ -1,0 +1,16 @@
+colonel/__init__.py,sha256=EdDTgm3c3a_tDBb5o84UYZqePCJpFSlEH6RAJ-cu7_c,712
+colonel/base_rich_sentence_element.py,sha256=T0KT-IjoGkxtKJCqBrvz4qLpVgvU6gHORqcdE7ZElfs,5855
+colonel/base_sentence_element.py,sha256=c7gHHhcbwq_f2sjZEZ58-pEtYNXIvvgMmhvDoY_8sAo,2512
+colonel/emptynode.py,sha256=SZ51oUaQx4iUPf8NgXQ8uJr354TETY6RURA6YO9Id6Y,3484
+colonel/multiword.py,sha256=6AU2RaRNf-ZF-VLJQIsjfng6vd3MV5zi-zjNt0XhtFw,3692
+colonel/sentence.py,sha256=I7HRYmaZxf2FHxl8m75z_hnmzzPTO71Nky2fW0oRAWM,12542
+colonel/upostag.py,sha256=iPhFS2jbD9ESvlKKjSD-UN-6ZBzEMlvOORjBGd4yCSk,1113
+colonel/word.py,sha256=Ml6kW6ItJEALYvCORXhLJB1jeO_vexrW2j2DRHtkCOU,3341
+colonel/conllu/__init__.py,sha256=DpjegAJxygG7PdmqCO6k5-I5aAhk_XDT6-OF032nWh0,2594
+colonel/conllu/lexer.py,sha256=D5xGyODm2D67hrIRbJ89CIlXzbHeTDrY5wVN7_nbuJw,8435
+colonel/conllu/parser.py,sha256=73OdkCYvaHWP35tGXMNMhL8R5GpDb2gbxXCcGHwF-0A,8840
+colonel/conllu/parsetab.py,sha256=EAnNmO_SM_R5dEr8QZaWAj3zuJrB5pimgLQDnuvs8po,3802
+colonel-1.1.0.dist-info/METADATA,sha256=qVaieNeBo53xYMeTo5lffog8SCsgVoGIIOl_jL3Oqm8,2048
+colonel-1.1.0.dist-info/RECORD,,
+colonel-1.1.0.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+colonel-1.1.0.dist-info/top_level.txt,sha256=bBP83D82rUMqUPEPxCq11AF0t8SoK-9fMysuCDyG0RQ,8
