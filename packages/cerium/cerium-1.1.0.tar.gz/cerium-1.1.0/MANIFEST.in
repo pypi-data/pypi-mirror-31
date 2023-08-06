@@ -1,0 +1,7 @@
+prune test
+prune demo
+include LICENSE
+include NOTICE
+include cerium/*.py
+include cerium/executable/*.exe
+include cerium/executable/*.dll
