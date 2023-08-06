@@ -1,0 +1,3 @@
+[console_scripts]
+big_g_tracking = object_tracking.object_tracking:tracking
+
