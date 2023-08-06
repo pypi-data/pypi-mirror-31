@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: ngrp
+Version: 0.1.1
+Summary: A handy tool that configures nginx reverse proxy for you
+Home-page: https://github.com/klausweiss/ngrp
+Author: Mikołaj Biel
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+Requires-Dist: click (==6.7)
+
+# NGRP
+
+![PyPI](https://img.shields.io/pypi/v/ngrp.svg)
+
+A handy tool that configures nginx reverse proxy for you
+
+
