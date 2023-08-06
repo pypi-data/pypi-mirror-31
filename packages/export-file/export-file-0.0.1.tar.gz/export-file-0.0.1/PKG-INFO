@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: export-file
+Version: 0.0.1
+Summary: create environment variables from text files
+Home-page: https://github.com/looking-for-a-job/export-file
+License: UNKNOWN
+Description: ### Install
+        
+        ```bash
+        $ [sudo] pip install export-file
+        ```
+        
+        ### Features
+        
+        +   create environment variables from text files - filename as variable name, content as value
+        +   ignore not existing and empty files
+        
+        ### Usage
+        
+        ```bash
+        usage: export-file path ...
+        ```
+        
+        ### Examples
+        
+        ```bash
+        $ export-file description.txt keywords.txt
+        export DESCRIPTION="@accepts decorator to check arguments types"
+        export KEYWORDS="type decorator"
+        
+        $ eval <<< export-file description.txt keywords.txt
+        $ echo $DESCRIPTION
+        repo description
+        ```
+        
+        `find` files:
+        ```
+        $ IFS=;find="$(find -H . -type f -name "*.txt")"
+        $ [[ -n "$find ]] && { IFS=$'\n';set $find; eval "$(export-file "$@")"; }
+        ```
+Keywords: environment
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Unix Shell
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
