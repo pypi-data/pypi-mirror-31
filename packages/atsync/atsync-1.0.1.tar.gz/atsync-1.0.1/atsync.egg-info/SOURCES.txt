@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+atsync/__init__.py
+atsync/core.py
+atsync.egg-info/PKG-INFO
+atsync.egg-info/SOURCES.txt
+atsync.egg-info/dependency_links.txt
+atsync.egg-info/requires.txt
+atsync.egg-info/top_level.txt

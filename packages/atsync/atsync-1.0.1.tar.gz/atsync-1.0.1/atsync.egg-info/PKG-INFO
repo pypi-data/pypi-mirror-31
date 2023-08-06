@@ -1,0 +1,64 @@
+Metadata-Version: 1.1
+Name: atsync
+Version: 1.0.1
+Summary: One way sync python dicts to airtable.
+Home-page: https://bitbucket.org/mckinnonsc-ericv/atsync/
+Author: Eric van de Paverd | McKinnon Secondary College
+Author-email: ericv@mckinnonsc.vic.edu.au
+License: UNKNOWN
+Description: # README #
+        
+        This tool provides one-way idempotent sync from python dicts.  Uses airtable-python-wrapper for access to airtable REST API.
+        
+        ## Installing ##
+        ```
+        pip install atsync
+        ```
+        
+        ## Documentation ##
+        
+        Just this README so far
+        
+        ### Usage example ###
+        
+        This library is small and simple and only does one thing: upsert dicts into airtable.
+        
+        ```python
+        # Define each related table in a list of dicts
+        related_tables = [
+            {
+                'table_name': 'Contact Details',
+                'primary_key': 'Email Address',  # primary key of this related table
+                'related_on': 'Email',  # key in our target table that is related to this table
+            },
+        ]
+        
+        # Define your target table with an atsync Table instance
+        sync_table = atsync.Table(table_name='User Table',
+                                  primary_key='User ID',  # primary key as seen in the airtable user interface
+                                  'base_key': 'appZZZZZZZZZZZZZZ',  # Can be found in the url of your api doco (see below)*
+                                  'api_key': 'keyABCDEFG',  # Can be found in the api doco (see below)*
+                                  related_tables=related_tables)
+        
+        # Assumes all the fields in users.csv are also in airtable
+        with open('users.csv', 'r') as user_file:
+            import csv
+            users = csv.DictReader(user_file)
+            for user in users:
+                sync_table.update_record(user)  # updates existing reocrd with same primary key, otherwise inserts a new record
+        ```
+        
+        \* To find your `base_key` and `api_key`, open Airtable, click the help link on the top right, choose "API Documentation".
+        * Your `base_key` will be the first section of url after the domain: airtable.com/__**>>this bit<<**__/api/docs#...
+        * Your `api_key` can be found by clicking the "show API key" checkbox at the top right of the page
+        
+        ## License ##
+        
+        [MIT](https://opensource.org/licenses/MIT)
+Keywords: airtable etl database sync
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Database
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
