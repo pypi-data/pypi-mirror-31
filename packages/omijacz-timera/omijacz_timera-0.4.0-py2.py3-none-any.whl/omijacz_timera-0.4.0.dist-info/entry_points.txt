@@ -1,0 +1,3 @@
+[console_scripts]
+omijacz_timera = omijacz_timera.omijacz_timera:main
+
