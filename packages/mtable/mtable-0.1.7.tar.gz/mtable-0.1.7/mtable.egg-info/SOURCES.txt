@@ -1,0 +1,13 @@
+MANIFEST.in
+README.rst
+mtable.py
+requirements.txt
+setup.py
+test.md
+test.py
+test.rst
+mtable.egg-info/PKG-INFO
+mtable.egg-info/SOURCES.txt
+mtable.egg-info/dependency_links.txt
+mtable.egg-info/requires.txt
+mtable.egg-info/top_level.txt
