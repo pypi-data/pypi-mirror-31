@@ -1,0 +1,9 @@
+setuptools
+sqlalchemy
+apscheduler
+python-bittrex
+requests
+pytz
+sphinxcontrib-napoleon
+pandas
+numpy
