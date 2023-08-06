@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: audio-toolbox
+Version: 0.1
+Summary: Handy wrapper around sox and ffmpeg
+Home-page: https://github.com/tomasz-oponowicz/audio_toolbox
+Author: Tomasz Oponowicz
+Author-email: tomasz@zaxo.biz
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3
+
+UNKNOWN
+
+
