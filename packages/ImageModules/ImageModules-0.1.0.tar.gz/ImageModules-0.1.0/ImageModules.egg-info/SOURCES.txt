@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+ImageModules.egg-info/PKG-INFO
+ImageModules.egg-info/SOURCES.txt
+ImageModules.egg-info/dependency_links.txt
+ImageModules.egg-info/requires.txt
+ImageModules.egg-info/top_level.txt
+Segmentation/__init__.py
+Segmentation/waterShed.py
+miscellaneous/__init__.py
+miscellaneous/edgeUtils.py
