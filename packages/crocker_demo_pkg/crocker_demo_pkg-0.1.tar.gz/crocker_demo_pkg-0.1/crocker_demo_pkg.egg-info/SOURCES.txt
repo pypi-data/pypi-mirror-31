@@ -1,0 +1,12 @@
+README.rst
+setup.cfg
+setup.py
+crocker_demo_pkg.egg-info/PKG-INFO
+crocker_demo_pkg.egg-info/SOURCES.txt
+crocker_demo_pkg.egg-info/dependency_links.txt
+crocker_demo_pkg.egg-info/requires.txt
+crocker_demo_pkg.egg-info/top_level.txt
+sub_pkg_demo/__init__.py
+sub_pkg_demo/demo.py
+test/__init__.py
+test/test_one.py
