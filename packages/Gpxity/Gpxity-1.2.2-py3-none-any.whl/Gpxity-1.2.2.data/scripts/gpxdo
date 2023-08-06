@@ -1,0 +1,377 @@
+#!python
+# -*- coding: utf-8 -*-
+
+# Copyright (c) Wolfgang Rohdewald <wolfgang@rohdewald.de>
+# See LICENSE for details.
+
+"""
+gpxdo is a command line tool making use of the Gpxity library
+"""
+
+
+import argparse
+import os
+import sys
+import datetime
+
+# This uses not the installed copy but the development files
+sys.path.insert(0, '..')
+from gpxity import Directory, MMT, GPSIES # pylint: disable=wrong-import-position
+
+
+def valid_date_argument(arg_date_str):
+    """custom argparse type for date as YYYY-MM-DD"""
+    try:
+        return datetime.datetime.strptime(arg_date_str, "%Y-%m-%d")
+    except ValueError as exc:
+        print(exc)
+        msg = "Given Date ({0}) not valid! Expected format, YYYY-MM-DD!".format(arg_date_str)
+        raise argparse.ArgumentTypeError(msg)
+
+
+class Utility:
+    """this is where the work is done"""
+
+    def __init__(self):
+        self.options = None
+        self.parse_commandline()
+        self.sources = None
+        if self.options.source:
+            self.sources = [self.instantiate_object(x) for x in self.options.source]
+        self.destination = None
+        if hasattr(self.options, 'destination'):
+            self.options.destination = self.options.destination[0]
+            self.destination = self.instantiate_object(self.options.destination)
+            if self.destination.activity_only is not None:
+                raise Exception('No activity id allowed in destination:{}'.format(self.options.destination))
+        self.options.func()
+
+    def _source_activities(self):
+        """A copied list with activities combined from all sources, to be used in 'for'-loops"""
+        result = list()
+        for source in self.sources:
+            if self.options.verbose:
+                print('collecting activities from source', source)
+            result.extend(source)
+        return result
+
+    def move(self):
+        """move gpx files.
+        We cannot just do merge() followed by remove() because
+        the source might have gotten new activities meanwhile, and
+        they would disappear for good."""
+        for _ in self._source_activities():
+            self.destination.add(_, ident=_.id_in_backend)
+            _.remove()
+            if self.options.verbose:
+                print('moved {} to {}'.format(_, self.destination))
+
+    def remove(self):
+        """remove activities"""
+        for _ in self._source_activities():
+            if self.options.dry_run:
+                print('would remove {}'.format(_))
+            else:
+                _.remove()
+                if self.options.verbose:
+                    print('removed {}'.format(_))
+
+    def list_them(self):
+        """list activities"""
+        header_line = list()
+        sort_headers = list()
+        all_activities = self._source_activities()
+        output_lines = list()
+        def add_field(condition, header, value):
+            """Conditionally add value for the column named 'header'"""
+            if condition:
+                header_line.append(header)
+                sort_headers.append(header.lower().strip())
+                for idx, _ in enumerate(all_activities):
+                    if idx == len(output_lines):
+                        output_lines.append([])
+                    output_lines[idx].append(value(_))
+
+        add_field(True, 'Identifier', lambda x: x.identifier())
+        add_field(self.options.title, 'Title', lambda x: x.title[:40]  if x.title else '')
+        add_field(self.options.time, 'Time', lambda x: str(x.time))
+        add_field(self.options.what, 'What', lambda x: x.what)
+        add_field(self.options.keywords, 'Keywords', lambda x: ','.join(y for y in x.keywords))
+        add_field(self.options.length, '    Length', lambda x: '{:>8.3f}km'.format(x.length()))
+        add_field(self.options.points, 'Points', lambda x: '{:>6}'.format(x.gpx.get_track_points_no()))
+        add_field(self.options.status, 'Status', lambda x: 'public' if x.public else 'private')
+        add_field(self.options.description, 'Description', lambda x: x.description)
+
+        if output_lines:
+            sort_cols = self.options.sort.split(',')
+            output_lines.sort(
+                key=lambda x: ','.join('{:100}'.format(x[sort_headers.index(y)]) for y in sort_cols))
+            output_lines.insert(0, header_line)
+            field_lengths = list()
+            for column in range(len(output_lines[0])):
+                field_lengths.append(max(len(x[column]) for x in output_lines))
+            for _ in output_lines:
+                for idx, field in enumerate(_):
+                    print('{field:{width}}'.format(width=field_lengths[idx], field=field), end='  ')
+                print()
+
+    @staticmethod
+    def fix_activity(activity):
+        """fix some bugs in the GPX file"""
+        if isinstance(activity.backend, Directory):
+            # make Directory build a new file name from the title
+            activity._set_id_in_backend(None)  # pylint: disable=protected-access
+        activity.rewrite()
+
+    def fix(self):
+        """fix activities"""
+        for _ in self._source_activities():
+            self.fix_activity(_)
+            if self.options.verbose:
+                print('fixed {}'.format(_))
+
+    def keyword(self):
+        """add/remove a single keyword"""
+        kword = self.options.keyword
+        for _ in self._source_activities():
+            if self.options.remove:
+                _.remove_keyword(kword)
+                if self.options.verbose:
+                    print('removed {} from {}'.format(kword, _))
+            else:
+                _.add_keyword(kword)
+                if self.options.verbose:
+                    print('added {} to {}'.format(kword, _))
+
+    def merge(self):
+        """Merge"""
+        if self.sources is None:
+            self.sources = [self.destination]
+        for source in self.sources:
+            msg = self.destination.merge(source, remove=self.options.remove)
+            if self.options.verbose:
+                for _ in msg:
+                    print(_)
+
+    def instantiate_object(self, name):
+        """returns a backend for name.
+        If name is a single activity, the returned backend has a match filtering
+        only this one wanted activity."""
+        account = activity_id = None
+        if ':' in name and name.split(':')[0].upper() in ('MMT', 'GPSIES'):
+            clsname = name.split(':')[0].upper()
+            rest = name[len(clsname) + 1:]
+            if '/' in rest:
+                if rest.count('/') > 1:
+                    raise Exception('wrong syntax in {}'.format(name))
+                account, activity_id = rest.split('/')
+            else:
+                account = rest
+                activity_id = None
+            if clsname == 'MMT':
+                result = MMT(auth=account, timeout=self.options.timeout)
+            elif clsname == 'GPSIES':
+                result = GPSIES(auth=account, timeout=self.options.timeout)
+        else:
+            if os.path.isdir(name):
+                account = name
+                activity_id = None
+            else:
+                if os.path.isfile(name + '.gpx'):
+                    activity_id = os.path.basename(name)
+                    account = os.path.dirname(os.path.abspath(name + '.gpx'))
+                else:
+                    if not name.endswith('.gpx'):
+                        raise Exception('{} not found')
+                    name = name[:-4]
+                    activity_id = os.path.basename(name)
+                    account = os.path.dirname(os.path.abspath(name))
+            result = Directory(url=account)
+        if account is None:
+            raise Exception('{} does not exist'.format(name))
+
+        result.match = self.match
+        result.activity_only = activity_id
+        result.debug = self.options.debug
+        return result
+
+    def match(self, activity):
+        """Check against the selecting options. Does cheap check first."""
+        # pylint: disable=too-many-return-statements
+        activity_only = activity.backend.activity_only
+        if activity_only is not None and activity.id_in_backend != activity_only:
+            return 'id {} is not {}'.format(activity.id_in_backend, activity_only)
+        if activity.time:
+            if self.options.first_date and activity.time < self.options.first_date:
+                return 'time {} is before {}'.format(activity.time, self.options.first_date)
+            if self.options.last_date and activity.time > self.options.last_date:
+                return 'time {} is after {}'.format(activity.time, self.options.last_date)
+        length = activity.header_data.get('distance', None)
+        if length:
+            if self.options.min_length and length < self.options.min_length:
+                return 'length {} is below {}'.format(length, self.options.min_length)
+            if self.options.max_length and length > self.options.max_length:
+                return 'length {} is above {}'.format(length, self.options.max_length)
+        if self.options.min_points and activity.gpx.get_track_points_no() < self.options.min_points:
+            return 'point count {} is below {}'.format(activity.gpx.get_track_points_no(), self.options.min_points)
+        if self.options.max_points and activity.gpx.get_track_points_no() > self.options.max_points:
+            return 'point count {} is above {}'.format(activity.gpx.get_track_points_no(), self.options.max_points)
+
+    @staticmethod
+    def add_range_args(parser):
+        """Add common range arguments"""
+        parser.add_argument('--first-date', help='Limit activities by date', type=valid_date_argument, default=None)
+        parser.add_argument('--last-date', help='Limit activities by date', type=valid_date_argument, default=None)
+        parser.add_argument('--min-points', help='Limit activities by minimum number of points', type=int, default=None)
+        parser.add_argument('--max-points', help='Limit activities by maximum number of points', type=int, default=None)
+        parser.add_argument('--min-length', help='Limit activities by track length', type=int, default=None)
+        parser.add_argument('--max-length', help='Limit activities by track length', type=int, default=None)
+
+    @staticmethod
+    def add_common_args(parser):
+        """Add the verbose argument"""
+        parser.add_argument('--verbose', action='store_true', help='verbose output', default=False)
+        parser.add_argument('--debug', action='store_true', help='debug backend traffic', default=False)
+        parser.add_argument('--timeout', help="""
+            Timeout: Either one value in seconds or two comma separated values: The first one is the connection timeout,
+            the second one is the read timeout. Default is to wait forever.""", type=str, default=None)
+
+    help_epilog = """
+
+source and destination arguments may be single
+activities or entire backend instances.
+Local files and directories are given as usual.
+For all other backends, the syntax is:
+
+backend:username  for all activities in a backend
+
+or
+
+backend:username/activity_id for one specific activity in a backend
+
+Available backends are:
+
+  - MMT     MapMytracks
+  - GPSIES gpsies
+
+The file $HOME/.config/Gpxity/auth.cfg
+defines the type of the backend, username and password. Example:
+
+[MMT:username]
+Password = whatever
+
+Dates are expected as YYYY-MM-DD.
+
+"""
+
+    def parse_commandline(self):
+        """into self.options"""
+        # pylint: disable=too-many-statements
+        parser = argparse.ArgumentParser(
+            'gpxity', formatter_class=argparse.RawDescriptionHelpFormatter,
+            epilog=self.help_epilog)
+        subparsers = parser.add_subparsers()
+
+        mv_parser = subparsers.add_parser(
+            'mv', help='move one or more sources to a destination backend',
+            epilog=self.help_epilog, formatter_class=argparse.RawDescriptionHelpFormatter)
+        mv_parser.set_defaults(func=self.move)
+        self.add_common_args(mv_parser)
+        self.add_range_args(mv_parser)
+        mv_parser.add_argument('source', help='one or more activities or backends', nargs='*')
+        mv_parser.add_argument('destination', help='the destination backend', nargs=1)
+
+        rm_parser = subparsers.add_parser(
+            'rm', help='remove activities from one or more sources',
+            epilog=self.help_epilog, formatter_class=argparse.RawDescriptionHelpFormatter)
+        rm_parser.set_defaults(func=self.remove)
+        self.add_common_args(rm_parser)
+        self.add_range_args(rm_parser)
+        rm_parser.add_argument('--dry-run', help='only show what would be removed',
+                               action='store_true', default=False)
+        rm_parser.add_argument('source', help='one or more activities or backends', nargs='*')
+
+        if False: # pylint: disable=using-constant-test
+            fix_parser = subparsers.add_parser(
+                'fix', help='fix some GPX format bugs in activities from one or more sources',
+                epilog=self.help_epilog, formatter_class=argparse.RawDescriptionHelpFormatter)
+            fix_parser.set_defaults(func=self.fix)
+            self.add_common_args(fix_parser)
+            self.add_range_args(fix_parser)
+            fix_parser.add_argument('source', help='one or more activities or backends', nargs='*')
+
+        ls_parser = subparsers.add_parser(
+            'ls', help='list activities from one or more sources',
+            epilog=self.help_epilog, formatter_class=argparse.RawDescriptionHelpFormatter)
+        ls_parser.set_defaults(func=self.list_them)
+        ls_parser.add_argument('--sort',
+                               help="""one or more out of identifier,title,what,time,length,
+                               points,keywords,status,
+                               separated by commas (no spaces allowed)""",
+                               default='identifier')
+        ls_parser.add_argument('--long', help='show most useful info',
+                               action='store_true', default=False)
+        ls_parser.add_argument('--title', help='show the title',
+                               action='store_true', default=False)
+        ls_parser.add_argument('--what', help='show the activity type',
+                               action='store_true', default=False)
+        ls_parser.add_argument('--time', help='show the time',
+                               action='store_true', default=False)
+        ls_parser.add_argument('--length', help='show the length',
+                               action='store_true', default=False)
+        ls_parser.add_argument('--points', help='show the number of points',
+                               action='store_true', default=False)
+        ls_parser.add_argument('--status', help='show the status public/private',
+                               action='store_true', default=False)
+        ls_parser.add_argument('--keywords', help='show the keywords',
+                               action='store_true', default=False)
+        ls_parser.add_argument('--description', help='show the description',
+                               action='store_true', default=False)
+        self.add_range_args(ls_parser)
+        self.add_common_args(ls_parser)
+        ls_parser.add_argument('source', help='one or more activities or backends', nargs='*')
+
+        keyword_parser = subparsers.add_parser('kw', help='add or remove keywords')
+        keyword_parser.set_defaults(func=self.keyword)
+        self.add_common_args(keyword_parser)
+        self.add_range_args(keyword_parser)
+        keyword_parser.add_argument('--remove', help='remove keywords. Default is to add them.',
+                                    action='store_true', default=False)
+        keyword_parser.add_argument('keyword', help='a keyword')
+        keyword_parser.add_argument('source', help='one ore more activities or backends', nargs='*')
+
+        merge_parser = subparsers.add_parser(
+            'merge', help="""
+            merge activities: If their trackpoints are identical, add metadata like name,
+            description or keywords from source to destination""",
+            epilog=self.help_epilog, formatter_class=argparse.RawDescriptionHelpFormatter)
+        merge_parser.set_defaults(func=self.merge)
+        self.add_common_args(merge_parser)
+        self.add_range_args(merge_parser)
+        merge_parser.add_argument('--remove', help='remove merged activities',
+                                  action='store_true', default=False)
+        merge_parser.add_argument('source', help='the source activity or backend', nargs='*')
+        merge_parser.add_argument('destination', help='the destination activity or backend', nargs=1)
+
+
+        if len(sys.argv) < 2:
+            parser.print_usage()
+            sys.exit(2)
+
+        self.options = parser.parse_args()
+
+        if self.options.timeout is not None:
+            if ',' in self.options.timeout:
+                self.options.timeout = tuple(float(x) for x in self.options.timeout.split(','))
+            else:
+                self.options.timeout = float(self.options.timeout)
+
+        if hasattr(self.options, 'long') and self.options.long:
+            self.options.title = True
+            self.options.time = True
+            self.options.what = True
+            self.options.keywords = True
+            self.options.length = True
+            self.options.status = True
+
+Utility()
