@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: aquitania
+Version: 0.0.4.3
+Summary: Algorithmic Trading with Artificial Intelligence
+Home-page: https://github.com/hroark-architect/aquitania
+Author: Howard Roark
+Author-email: hroark.aquitania@gmail.com
+License: MIT
+Description: # aquitania
+        :dollar: A framework for building trading bots
+        
+        # work in progress
+        Documentation will be released in July 2018.
+Keywords: finance algorithmic trading ai artificial intelligence
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
