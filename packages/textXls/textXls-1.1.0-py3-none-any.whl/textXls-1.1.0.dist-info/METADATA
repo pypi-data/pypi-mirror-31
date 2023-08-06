@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: textXls
+Version: 1.1.0
+Summary: Language server for DSLs created with textX
+Home-page: https://github.com/textX-tools/textX-languageserver
+Author: Daniel Elero
+Author-email: danixeee@gmail.com
+License: MIT
+Requires-Dist: funcsigs (==1.0.2)
+Requires-Dist: Jinja2 (==2.9.6)
+Requires-Dist: json-rpc (==1.10.3)
+Requires-Dist: jsonrpcserver (==3.5.1)
+Requires-Dist: jsonschema (==2.6.0)
+Requires-Dist: MarkupSafe (==1.0)
+Requires-Dist: six (==1.11.0)
+Requires-Dist: websockets (==3.4)
+Requires-Dist: Arpeggio (==1.7)
+Requires-Dist: textX
+
+# textX language server
+
+
