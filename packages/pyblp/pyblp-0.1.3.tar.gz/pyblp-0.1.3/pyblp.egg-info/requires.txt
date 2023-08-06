@@ -1,0 +1,13 @@
+numpy
+scipy
+
+[docs]
+sphinx
+pandas
+ipython
+matplotlib
+sphinx_rtd_theme
+
+[tests]
+pytest
+pytest-xdist
