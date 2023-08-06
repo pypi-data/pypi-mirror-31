@@ -1,0 +1,12 @@
+cmonitor/__init__.py,sha256=YLugyK0oSR8CnH3pF3IS3-l3dzZpRK_TVJvuoB6sppQ,24
+cmonitor/cli.py,sha256=d0iaTS4nF7dyQNts5wouvgbTh3x-yc47Mm5z99rMK24,6624
+cmonitor/manager.py,sha256=fcXNAP3vbdDxIwlER58iaaVT8oJ1igeLySaaRTt-dwE,7341
+cmonitor/scraper.py,sha256=-wTsRH8CFa45AyKCeCGrh_PL9cuDYF9FtJtCYKSmVus,5527
+cmonitor/socket_tools.py,sha256=-ppksOl0LjcgZvx0wYGWCkjYh8rU5UsqRGV06kIsyy8,1506
+craigslist_monitor-0.1.4.dist-info/DESCRIPTION.rst,sha256=w3-xKpu2GITIaQR_uyUkwQNmkl6FN52PV3Z102qdUEY,3937
+craigslist_monitor-0.1.4.dist-info/METADATA,sha256=7RyyII9qDqPXJyEXhwiabkEEUvQoZzJiwnwmj6qhN5M,4415
+craigslist_monitor-0.1.4.dist-info/RECORD,,
+craigslist_monitor-0.1.4.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+craigslist_monitor-0.1.4.dist-info/entry_points.txt,sha256=vvFW2E-0BxOl0w_X5_rtu0eIjwxtRVlos_w4v0Y7reU,47
+craigslist_monitor-0.1.4.dist-info/metadata.json,sha256=09PbTLtMV74kU-t19InVhZ0QODO7UjyX7PrgDaxg1-M,824
+craigslist_monitor-0.1.4.dist-info/top_level.txt,sha256=Ivz0a3r2HZ0_7FqtmG1MPlXtsAqdZ_txfjB3yNnYvmU,9
