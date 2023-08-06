@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: gistmaker
+Version: 1.0.0
+Summary: An extremely simple python module used to programatically create Gists
+Home-page: https://github.com/brandonsturgeon/gistmaker
+Author: Brandon Sturgeon
+Author-email: brandon@brandonsturgeon.com
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/brandonsturgeon/gistmaker/issues
+Project-URL: Source, https://github.com/brandonsturgeon/gistmaker/
+Description: UNKNOWN
+Keywords: gist maker automatic http requests
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Code Generators
+Description-Content-Type: text/markdown

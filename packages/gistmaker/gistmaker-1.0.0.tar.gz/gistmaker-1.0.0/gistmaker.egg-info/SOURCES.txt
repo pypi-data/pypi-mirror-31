@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+gistmaker/gistmaker.py
+gistmaker.egg-info/PKG-INFO
+gistmaker.egg-info/SOURCES.txt
+gistmaker.egg-info/dependency_links.txt
+gistmaker.egg-info/requires.txt
+gistmaker.egg-info/top_level.txt
