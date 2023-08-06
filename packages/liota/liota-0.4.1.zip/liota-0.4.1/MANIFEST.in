@@ -1,0 +1,7 @@
+include *.md
+include *.txt
+include post-install-setup.sh
+
+recursive-include config *
+recursive-include examples *
+recursive-include packages *
