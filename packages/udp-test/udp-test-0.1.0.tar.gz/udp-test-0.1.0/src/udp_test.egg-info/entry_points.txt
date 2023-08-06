@@ -1,0 +1,4 @@
+[console_scripts]
+udp-test = udp_test:test
+udp-test.py = udp_test:test
+
