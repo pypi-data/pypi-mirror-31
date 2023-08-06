@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+mnnpy/__init__.py
+mnnpy/irlb.py
+mnnpy/mnn.py
+mnnpy/utils.py
+mnnpy.egg-info/PKG-INFO
+mnnpy.egg-info/SOURCES.txt
+mnnpy.egg-info/dependency_links.txt
+mnnpy.egg-info/not-zip-safe
+mnnpy.egg-info/requires.txt
+mnnpy.egg-info/top_level.txt
