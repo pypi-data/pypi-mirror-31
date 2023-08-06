@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+coinmarketcap/__init__.py
+coinmarketcap/retrieve.py
+coinmarketcap/scrape.py
+coinmarketcappy.egg-info/PKG-INFO
+coinmarketcappy.egg-info/SOURCES.txt
+coinmarketcappy.egg-info/dependency_links.txt
+coinmarketcappy.egg-info/not-zip-safe
+coinmarketcappy.egg-info/requires.txt
+coinmarketcappy.egg-info/top_level.txt
