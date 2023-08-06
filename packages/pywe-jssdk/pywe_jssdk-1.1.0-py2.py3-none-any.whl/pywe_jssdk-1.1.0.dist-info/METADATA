@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: pywe-jssdk
+Version: 1.1.0
+Summary: Wechat JSSDK Module for Python.
+Home-page: https://github.com/sdkwe/pywe-jssdk
+Author: Hackathon
+Author-email: kimi.huang@brightcells.com
+License: UNKNOWN
+Keywords: Wechat Weixin JSSDK
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: pywe-sign
+Requires-Dist: pywe-ticket (>=1.1.0)
+Requires-Dist: shortuuid
+
+==========
+pywe-jssdk
+==========
+
+Wechat JSSDK Module for Python.
+
+Installation
+============
+
+::
+
+    pip install pywe-jssdk
+
+
+Usage
+=====
+
+::
+
+    from pywe_jssdk import jsapi_signature_params
+
+
+Method
+======
+
+::
+
+    def jsapi_signature_params(appid=None, secret=None, url=None, token=None, storage=None, token_fetched_func=None, full=False):
+
+
+
