@@ -1,0 +1,10 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+opedia/__init__.py
+opedia.egg-info/PKG-INFO
+opedia.egg-info/SOURCES.txt
+opedia.egg-info/dependency_links.txt
+opedia.egg-info/top_level.txt
