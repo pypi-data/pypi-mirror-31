@@ -1,0 +1,7 @@
+tqdm
+colorama
+python-whois
+requests
+
+[dev]
+flake8
