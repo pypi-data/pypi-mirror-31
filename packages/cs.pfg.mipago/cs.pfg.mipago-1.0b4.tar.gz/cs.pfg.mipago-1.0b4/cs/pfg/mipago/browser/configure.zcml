@@ -1,0 +1,63 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="cs.pfg.mipago">
+
+  <include package="plone.app.contentmenu" />
+
+  <!-- -*- extra stuff goes here -*- -->
+  <browser:page
+    for="..interfaces.IMiPagoAdapter"
+    name="redirect"
+    class=".redirect.RedirectView"
+    permission="zope2.View"
+    layer="..interfaces.ICS_PFG_MIPAGOLayer"
+  />
+
+
+  <browser:page
+    for="..interfaces.IMiPagoAdapter"
+    name="payment_end"
+    class=".payment.PaymentEnd"
+    template="payment.pt"
+    permission="zope2.View"
+    layer="..interfaces.ICS_PFG_MIPAGOLayer"
+  />
+
+
+  <browser:page
+    for="..interfaces.IMiPagoAdapter"
+    name="payment_confirmation"
+    class=".confirmation.PaymentConfirmation"
+    permission="zope2.View"
+    layer="..interfaces.ICS_PFG_MIPAGOLayer"
+  />
+
+  <browser:page
+    for="..interfaces.IMiPagoAdapter"
+    name="manage_payments"
+    template="manage.pt"
+    class=".manage.ManagePayments"
+    permission="cmf.ModifyPortalContent"
+    layer="..interfaces.ICS_PFG_MIPAGOLayer"
+  />
+
+  <browser:page
+    for="..interfaces.IMiPagoAdapter"
+    name="delete_payments"
+    class=".manage.DeletePayments"
+    permission="cmf.ModifyPortalContent"
+    layer="..interfaces.ICS_PFG_MIPAGOLayer"
+  />
+
+  <browser:page
+    for="..interfaces.IMiPagoAdapter"
+    name="export"
+    class=".export.ExportData"
+    permission="cmf.ModifyPortalContent"
+    layer="..interfaces.ICS_PFG_MIPAGOLayer"
+  />
+
+
+
+</configure>

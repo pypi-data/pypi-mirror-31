@@ -1,0 +1,12 @@
+setuptools
+Products.PloneFormGen
+pymipago
+pytz
+Plone
+zope.configuration
+tablib
+
+[test]
+plone.app.testing[robot]
+plone.api
+plone.app.robotframework
