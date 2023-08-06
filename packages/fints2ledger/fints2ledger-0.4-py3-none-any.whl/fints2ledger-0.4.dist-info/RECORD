@@ -1,0 +1,16 @@
+fints2ledger/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fints2ledger/autocomplete.py,sha256=7KXemkpF5ofaUgnRQGzxhAoVgzi2_yBetg7ldX6QQeQ,1302
+fints2ledger/config.py,sha256=A6NmL1bmCLLddxjAERoRU80igAyiIZ_PevdFIBnyP7E,3596
+fints2ledger/csv2ledger.py,sha256=69peSmNiOooF0pwmEkkrfnERoFIaBK9ps4yLPTidyc0,1707
+fints2ledger/csv_converter.py,sha256=M2A9BDecD-v2MdyaSv9jGWuiVOYQ0Cq6uVT_KNbdq-Y,857
+fints2ledger/fints2csv.py,sha256=YhbWzIISrZfzYYSDvNP06qzMP8Hh80jViZMkbkAL_LU,1109
+fints2ledger/ledger_converter.py,sha256=drTrnOcoejAvL92VU2bYVHdmttWRzh_mfbOcWx_aZVE,3413
+fints2ledger/main.py,sha256=cASeyW7SdgDDU1LOyQXmI0oqUT5apvoqWlV3-BAVHbw,636
+fints2ledger/transaction_retriever.py,sha256=wbpVUaPuYFFZ9s6yIyG7xTv3FyPAuWAPe1Af5sqDd1A,773
+fints2ledger/utils.py,sha256=-joS4FwObzuDCIwSz4FypRnYmMUf4Fz9nA7eUpaSc84,384
+fints2ledger-0.4.dist-info/METADATA,sha256=VnVrDnwSESnvxzBkTo1Ae0PospY5IQWcpeP5eHXlJdQ,4347
+fints2ledger-0.4.dist-info/RECORD,,
+fints2ledger-0.4.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+fints2ledger-0.4.dist-info/dependency_links.txt,sha256=NfikrGLhdyvT3wC8cWgpXUeWL9zAH8W8nb5gZQwUkAY,73
+fints2ledger-0.4.dist-info/entry_points.txt,sha256=ROFdFI_Ni8K0ii-yrUL8AN0CXDlF2Dp-W3bnl2wPFiM,57
+fints2ledger-0.4.dist-info/top_level.txt,sha256=7D-mjbdXLEkXpY6CnvhKdmCmdH7TlB9Qcpy6g_pWUu4,13
