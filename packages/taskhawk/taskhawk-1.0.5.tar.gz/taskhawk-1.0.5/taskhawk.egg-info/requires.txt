@@ -1,0 +1,17 @@
+funcy
+retrying
+boto3
+
+[dev]
+flake8
+Sphinx>=1.7.2
+
+[publish]
+bumpversion
+twine
+
+[test]
+pytest
+flake8
+pytest-env
+ipdb
