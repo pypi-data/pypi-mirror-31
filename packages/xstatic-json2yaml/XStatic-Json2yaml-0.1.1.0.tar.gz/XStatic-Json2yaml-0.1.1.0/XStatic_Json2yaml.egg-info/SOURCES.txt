@@ -1,0 +1,14 @@
+MANIFEST.in
+README.txt
+setup.cfg
+setup.py
+XStatic_Json2yaml.egg-info/PKG-INFO
+XStatic_Json2yaml.egg-info/SOURCES.txt
+XStatic_Json2yaml.egg-info/dependency_links.txt
+XStatic_Json2yaml.egg-info/namespace_packages.txt
+XStatic_Json2yaml.egg-info/not-zip-safe
+XStatic_Json2yaml.egg-info/top_level.txt
+xstatic/__init__.py
+xstatic/pkg/__init__.py
+xstatic/pkg/json2yaml/__init__.py
+xstatic/pkg/json2yaml/data/json2yaml.js
