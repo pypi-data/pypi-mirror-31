@@ -1,0 +1,14 @@
+README.rst
+setup.cfg
+setup.py
+dops/__init__.py
+dops/core.py
+dops/main.py
+dops.egg-info/PKG-INFO
+dops.egg-info/SOURCES.txt
+dops.egg-info/dependency_links.txt
+dops.egg-info/entry_points.txt
+dops.egg-info/not-zip-safe
+dops.egg-info/requires.txt
+dops.egg-info/top_level.txt
+dops/data/cli.json

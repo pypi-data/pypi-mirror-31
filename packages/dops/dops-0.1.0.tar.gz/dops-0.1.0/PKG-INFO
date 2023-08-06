@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: dops
+Version: 0.1.0
+Summary: DOPS CLI
+Home-page: https://github.com/ysicing/dops
+Author: Cloudnative Labs
+Author-email: UNKNOWN
+License: Apache License 2.0
+Description: UNKNOWN
+Keywords: kubernetes,dops,spanda
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
