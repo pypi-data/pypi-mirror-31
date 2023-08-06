@@ -1,0 +1,3 @@
+[console_scripts]
+eazytv = eazytv:cli
+

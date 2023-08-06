@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+eazytv/__init__.py
+eazytv/__version__.py
+eazytv/cli.py
+eazytv.egg-info/PKG-INFO
+eazytv.egg-info/SOURCES.txt
+eazytv.egg-info/dependency_links.txt
+eazytv.egg-info/entry_points.txt
+eazytv.egg-info/top_level.txt
