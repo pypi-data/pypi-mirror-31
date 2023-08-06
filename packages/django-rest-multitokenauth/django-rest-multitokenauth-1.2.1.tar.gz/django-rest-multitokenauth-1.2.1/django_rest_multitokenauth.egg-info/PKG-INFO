@@ -1,0 +1,106 @@
+Metadata-Version: 1.1
+Name: django-rest-multitokenauth
+Version: 1.2.1
+Summary: An extension of django rest frameworks token auth, providing multiple tokens per user
+Home-page: https://github.com/anx-ckreuzberger/django-rest-multiauthtoken
+Author: Christian Kreuzberger
+Author-email: ckreuzberger@anexia-it.com
+License: BSD License
+Description: # Django Rest Multi Token Auth
+        This django app is an extension for the Django Rest Framework (Version 3.4+).
+        It tries to overcome the limitation of Token Authentication, which only uses a single
+        token per user. 
+        
+        ## How to use
+        
+        Django settings file:
+        ```python
+        INSTALLED_APPS = (
+            ...
+            'django.contrib.auth',
+            ...
+            'rest_framework',
+            ...
+            'django_rest_multitokenauth',
+            ...
+        )
+        
+        ```
+        
+        Django REST Framework Settings:
+        ```python
+        REST_FRAMEWORK = {
+            ...
+            'DEFAULT_AUTHENTICATION_CLASSES': [
+                ...
+                'django_rest_multitokenauth.coreauthentication.MultiTokenAuthentication',
+                ...
+            ],
+            ...
+        }
+        ```
+        
+        
+        Django url settings:
+        ```python
+        from django.conf.urls import url, include
+        
+        
+        urlpatterns = [
+            ...
+            url(r'^api/auth/', include('django_rest_multitokenauth.urls', namespace='multi_token_auth')),
+            ...
+        ]    
+        ```
+        
+        
+        The following endpoints are provided:
+        
+         * `login` - takes username and password; on success an auth token is returned
+         * `logout`
+        
+        ## Signals
+        
+        * ``pre_auth(username, password)`` - Fired when an authentication (login) is starting
+        * ``post_auth(user)`` - Fired on successful auth
+        
+        ## Tests
+        
+        See folder [tests/](tests/). Basically, all endpoints are covered with multiple
+        unit tests.
+        
+        Use this code snippet to run tests:
+        ```bash
+        pip install tox
+        tox
+        ```
+        
+        ## Cache Backend
+        If you want to use a cache for the session store, you can install [django-memoize](https://pythonhosted.org/django-memoize/) and add `'memoize'` to `INSTALLED_APPS`.
+        
+        Then you need to use ``CachedMultiTokenAuthentication`` instead of ``MultiTokenAuthentication``.
+        
+        ```bash
+        pip install django-memoize
+        ```
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 1.8
+Classifier: Framework :: Django :: 1.11
+Classifier: Framework :: Django :: 2.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
