@@ -1,0 +1,3 @@
+[console_scripts]
+await-ccb = await_ccb.cli:main
+
