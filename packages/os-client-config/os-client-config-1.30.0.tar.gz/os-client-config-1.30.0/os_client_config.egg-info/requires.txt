@@ -1,0 +1,4 @@
+PyYAML>=3.12
+appdirs>=1.3.0
+keystoneauth1>=3.4.0
+requestsexceptions>=1.2.0
