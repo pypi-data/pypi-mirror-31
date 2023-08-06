@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: slicedict
+Version: 1.0.1
+Summary: slice dict by keys
+Home-page: https://github.com/looking-for-a-job/slicedict.py
+License: UNKNOWN
+Description: ### Install
+        
+        ```bash
+        $ [sudo] pip install slicedict
+        ```
+        
+        ### Examples
+        
+        ```python
+        >>> from slicedict import slicedict
+        
+        >>> medatata = dict(name="pkgname", version="1.0.0", somekey="value")
+        >>> slicedict(medatata, ["name", "version"])
+        {'version': '1.0.0', 'name': 'pkgname'}
+        ```
+        
+        ### Sources
+        
+        +   [`slicedict.slicedict(d, keys)`](https://github.com/looking-for-a-job/slicedict.py/blob/master/slicedict/__init__.py)
+Keywords: slice dict
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development
+Description-Content-Type: text/markdown
