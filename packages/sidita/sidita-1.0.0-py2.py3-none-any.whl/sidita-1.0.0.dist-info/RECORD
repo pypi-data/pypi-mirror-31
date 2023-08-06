@@ -1,0 +1,15 @@
+sidita/Message.py,sha256=fHffB042CVP_bSII0_XGHlEKCh4_Dyt39KbNDWMlzDc,5453
+sidita/Statistics.py,sha256=ry6FBnlBFMI-Yk_eXJcRgsGmKP5dqRr25HgL2tgO3_s,5490
+sidita/TaskMetaData.py,sha256=7JCp9PfmtThFHfauic0b5rKRBNDMOIuMdt50mdSpRjg,3799
+sidita/TaskQueue.py,sha256=IOY_fsczDQANfiWXNu4WpFotemTdxKJ1roHzQcbLb5A,10696
+sidita/Units.py,sha256=HyVbRYSAsCtM-NV-uwkTbg6tE-AvH0dRfGFLnF2UGqI,3648
+sidita/Worker.py,sha256=cEc7Yhkvrcy6xQ3kSxJy6G26xlEjbizIJ8PL5oqUqjM,2253
+sidita/WorkerMetrics.py,sha256=ydTVpmjMOBlNNcNxgiZ9ApE4rI4umEkowwS4rrgBcgM,2816
+sidita/__init__.py,sha256=g6ET34yAdU6vd8wYZ-m7HqZTvPPzeIFY9hT3MRc1Hhg,1042
+sidita/worker.py,sha256=RfS0NyL6P8deCxxsoqZx4QWfcBUwpJTUiyNc9L33QjM,1984
+sidita/Logging/__init__.py,sha256=kkA7oKYRT9z8eQb3MnVSPBJ6lcwKBsxQAFAfHIBWjVM,1776
+sidita/Logging/logging.yml,sha256=gyutbxRU8mIFoINp3HW2wtoPjiSlucFf1UiYqrlAg6I,1598
+sidita-1.0.0.dist-info/METADATA,sha256=tYRQvRyIH9b95GORhsGdG7-ujm2HtCUTthaf_81bgoY,6098
+sidita-1.0.0.dist-info/RECORD,,
+sidita-1.0.0.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+sidita-1.0.0.dist-info/top_level.txt,sha256=ns34vE_Kav8-SgJNah94hw8ugGy3DYQTPoFI3Cd4O8U,7
