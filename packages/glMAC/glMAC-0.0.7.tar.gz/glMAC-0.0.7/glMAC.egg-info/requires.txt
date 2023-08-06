@@ -1,0 +1,8 @@
+requests
+
+[dev]
+pyqt-distutils
+pypandoc
+
+[test]
+coverage
