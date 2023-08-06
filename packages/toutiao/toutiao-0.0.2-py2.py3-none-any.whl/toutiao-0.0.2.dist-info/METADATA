@@ -1,0 +1,96 @@
+Metadata-Version: 2.1
+Name: toutiao
+Version: 0.0.2
+Summary: CLI tool for toutiao.io
+Home-page: https://github.com/doukeshi/toutiao-cli
+Author: Doukeshi
+Author-email: doukeshi@users.noreply.github.com
+License: MIT License
+Requires-Dist: click
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+
+Copyright (c) 2018 Doukeshi
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+Project-URL: Bug Reports, https://github.com/doukeshi/toutiao-cli/issues
+Project-URL: Source, https://github.com/doukeshi/toutiao-cli
+Description: # toutiao-cli
+        
+        CLI for [toutiao.io](https://toutiao.io/)
+        
+        ## Installation
+        
+        ```sh
+        $ pip install toutiao
+        ```
+        
+        ## Usage
+        
+        ```sh
+        $ toutiao [OPTIONS] [DATE]
+        ```
+        
+        **Examples:**
+        
+        ```sh
+        $ toutiao    # Show today's posts
+        $ toutiao --top    # Show yesterday's top3 posts
+        $ toutiao 2018-05-09    # Show posts on 2018-05-09
+        $ toutiao --top 2018-05-09    # Show top3 posts on 2018-05-09
+        $ toutiao --verbose    # Show today's posts with more information
+        $ toutiao --verbose 2018-05-09    # Show posts on 2018-05-09 with more information
+        ```
+        
+        **Get Help:**
+        
+        ```sh
+        $ toutiao --help
+        ```
+        
+        ## Credits
+        
+        * [Click](https://github.com/pallets/click)
+        * [Requests](https://github.com/requests/requests)
+        * [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/)
+        
+        ## Contributing
+        
+        Feedback, suggestions and bug reports are welcome on GitHub at https://github.com/doukeshi/toutiao-cli/issues.
+        
+        ## License
+        
+        [MIT License](https://opensource.org/licenses/MIT)
+        
+Keywords: toutiao cli tool
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Terminals
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
