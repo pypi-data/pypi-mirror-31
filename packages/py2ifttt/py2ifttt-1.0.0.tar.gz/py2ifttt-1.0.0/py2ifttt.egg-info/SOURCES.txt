@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+py2ifttt/__init__.py
+py2ifttt/py2ifttt.py
+py2ifttt.egg-info/PKG-INFO
+py2ifttt.egg-info/SOURCES.txt
+py2ifttt.egg-info/dependency_links.txt
+py2ifttt.egg-info/not-zip-safe
+py2ifttt.egg-info/requires.txt
+py2ifttt.egg-info/top_level.txt
