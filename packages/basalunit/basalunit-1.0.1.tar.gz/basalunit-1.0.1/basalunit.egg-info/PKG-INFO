@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: basalunit
+Version: 1.0.1
+Summary: A SciUnit library for data-driven testing of basal ganglia models.
+Home-page: https://github.com/appukuttan-shailesh/basalunit
+Author: Shailesh Appukuttan
+Author-email: shailesh.appukuttan@unic.cnrs-gif.fr
+License: MIT
+Description: UNKNOWN
+Keywords: basal ganglia,electrical,efel,bluepyopt,validation framework
+Platform: UNKNOWN
