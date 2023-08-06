@@ -1,0 +1,15 @@
+odoo/addons/l10n_us_gaap_mis_report/README.rst,sha256=EOR1TdqCVoATZD6fJctH5lvWQ8geY_ZwaaxqoPGrsEg,2225
+odoo/addons/l10n_us_gaap_mis_report/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+odoo/addons/l10n_us_gaap_mis_report/__manifest__.py,sha256=ldX_qxGQhWzWQPJ9L3aA8aqOk6mubPlObDfL_vK_i8Y,729
+odoo/addons/l10n_us_gaap_mis_report/data/mis_report_balance_sheet.xml,sha256=BfykthJG69q0kghtRQ2tkUNgO9eatC8frr0qsJaiwmc,68951
+odoo/addons/l10n_us_gaap_mis_report/data/mis_report_income_statement.xml,sha256=XvaDEFRD4OSLrE1kDtaCxkaJmjGBgSdRzl4Ari8Jd54,23284
+odoo/addons/l10n_us_gaap_mis_report/data/mis_report_styles.xml,sha256=umINYrq0VKObvUqjv7Gq5HcXqHded-qRaPDohKjZ5zw,4984
+odoo/addons/l10n_us_gaap_mis_report/docs/l10n_us_gaap_balance_sheet.ods,sha256=HqW9ubG8MaAuSMa-sPHiWWEBJzzh_khsygQPlWRMPrQ,19350
+odoo/addons/l10n_us_gaap_mis_report/docs/l10n_us_gaap_income_statement.ods,sha256=Dp8SD8SPCuOaVsCMiHnVp8VUwPD8MIWb8R0ObvBrkVA,22531
+odoo/addons/l10n_us_gaap_mis_report/static/description/icon.png,sha256=FxrpGIevCOSn6a1Ybt3Y0u14KUmGBUNEXhe0VF2yUI8,1619
+odoo11_addon_l10n_us_gaap_mis_report-11.0.1.0.0.dist-info/DESCRIPTION.rst,sha256=NdWYZ1NBufn-XQIsWJd2NJRj7i_DkW9WwmCvm3PESzQ,2227
+odoo11_addon_l10n_us_gaap_mis_report-11.0.1.0.0.dist-info/METADATA,sha256=llv5U0Uz2_H_Ue1qF2SVerCRZSrmwiRdqTQ5vaat32Y,2873
+odoo11_addon_l10n_us_gaap_mis_report-11.0.1.0.0.dist-info/RECORD,,
+odoo11_addon_l10n_us_gaap_mis_report-11.0.1.0.0.dist-info/WHEEL,sha256=o2k-Qa-RMNIJmUdIc7KU6VWR_ErNRbWNlxDIpl7lm34,110
+odoo11_addon_l10n_us_gaap_mis_report-11.0.1.0.0.dist-info/metadata.json,sha256=nAVH4EnvO8OLGDVfkCdCulPlSQHxcj0D91vyojTIwGQ,839
+odoo11_addon_l10n_us_gaap_mis_report-11.0.1.0.0.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
