@@ -1,0 +1,3 @@
+[console_scripts]
+zxs = zxs.__main__:main
+
