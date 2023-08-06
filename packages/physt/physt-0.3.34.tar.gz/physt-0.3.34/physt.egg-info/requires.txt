@@ -1,0 +1,13 @@
+numpy
+
+[all]
+dask
+matplotlib
+folium
+vega3
+
+[full]
+dask
+matplotlib
+vega3
+folium
