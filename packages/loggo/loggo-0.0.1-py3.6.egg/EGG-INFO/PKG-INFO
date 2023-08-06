@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: loggo
+Version: 0.0.1
+Summary: Python logging tools
+Home-page: UNKNOWN
+Author: Danny McDonald
+Author-email: daniel.mcdonald@bitpanda.com
+License: UNKNOWN
+Description-Content-Type: UNKNOWN
+Description: # Logging utilities for Python projects
+Keywords: bitpanda utilities
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Utilities
