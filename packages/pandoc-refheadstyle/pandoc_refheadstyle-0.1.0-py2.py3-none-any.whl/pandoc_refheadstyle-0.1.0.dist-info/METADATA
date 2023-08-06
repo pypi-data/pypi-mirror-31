@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: pandoc-refheadstyle
+Version: 0.1.0
+Summary: Pandoc filter that sets a a custom style for the reference section header.
+Home-page: https://github.com/odkr/pandoc-refheadstyle/
+Author: Odin Kroeger
+Author-email: tqxwcv@maskr.me
+License: MIT
+Project-URL: Source, https://github.com/odkr/pandoc-refheadstyle/
+Project-URL: Tracker, https://github.com/odkr/pandoc-refheadstyle/issues
+Keywords: pandoc reference section header
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Environment :: Console
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Text Processing :: Filters
+Requires-Python: >=2.7,<4
+Requires-Dist: panflute
+
+Pandoc filter that sets a custom style for the reference section header.
+
+
