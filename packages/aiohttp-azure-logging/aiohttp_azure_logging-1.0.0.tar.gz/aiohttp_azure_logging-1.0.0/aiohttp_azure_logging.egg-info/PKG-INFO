@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: aiohttp-azure-logging
+Version: 1.0.0
+Summary: Azure Logging integration for aiohttp applications
+Home-page: UNKNOWN
+Author: Bo Arnold
+Author-email: deryl.arnold@walmart.com
+License: MIT
+Description: UNKNOWN
+Keywords: aiohttp,OMS,logging,Data Collector,Azure,Log Analytics
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7

@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+aiohttp_azure_logging/__init__.py
+aiohttp_azure_logging/client.py
+aiohttp_azure_logging/handler.py
+aiohttp_azure_logging/middleware.py
+aiohttp_azure_logging/setup.py
+aiohttp_azure_logging.egg-info/PKG-INFO
+aiohttp_azure_logging.egg-info/SOURCES.txt
+aiohttp_azure_logging.egg-info/dependency_links.txt
+aiohttp_azure_logging.egg-info/requires.txt
+aiohttp_azure_logging.egg-info/top_level.txt
