@@ -1,0 +1,8 @@
+setup.py
+SongRecognition.egg-info/PKG-INFO
+SongRecognition.egg-info/SOURCES.txt
+SongRecognition.egg-info/dependency_links.txt
+SongRecognition.egg-info/requires.txt
+SongRecognition.egg-info/top_level.txt
+SongRecognization/__init__.py
+SongRecognization/songRecognization.py
