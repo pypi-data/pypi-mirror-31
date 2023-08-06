@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: pyct
+Version: 0.3.3
+Summary: pyviz common tasks
+Home-page: http://github.com/pyviz/pyct
+License: BSD-3
+Platform: UNKNOWN
+Requires-Python: >=2.7
+Provides-Extra: tests
+Provides-Extra: ecosystem_conda
+Provides-Extra: ecosystem_pip
+Requires-Dist: doit (<0.30)
+Requires-Dist: pluggy
+Requires-Dist: py
+Provides-Extra: ecosystem_conda
+Requires-Dist: conda (>=4.4); extra == 'ecosystem_conda'
+Requires-Dist: conda-build (>=3.8); extra == 'ecosystem_conda'
+Provides-Extra: ecosystem_pip
+Requires-Dist: tox; extra == 'ecosystem_pip'
+Requires-Dist: twine; extra == 'ecosystem_pip'
+Requires-Dist: wheel; extra == 'ecosystem_pip'
+Requires-Dist: pip; extra == 'ecosystem_pip'
+Provides-Extra: tests
+Requires-Dist: flake8; extra == 'tests'
+
+UNKNOWN
+
+
