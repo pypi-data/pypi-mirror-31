@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: stamps
+Version: 0.1.0
+Summary: Spatial Temporal Analysis and Mapping Python Suite
+Home-page: https://github.com/stemlab689/stamps
+Author: stemlab
+Author-email: stemlab689@gmail.com
+License: MIT
+Download-URL: https://github.com/stemlab689/stamps/archive/0.1.0.tar.gz
+Description: UNKNOWN
+Keywords: analysis,mapping,stamps
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
