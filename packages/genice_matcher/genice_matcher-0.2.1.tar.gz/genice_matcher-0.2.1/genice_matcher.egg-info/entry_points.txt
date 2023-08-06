@@ -1,0 +1,12 @@
+[console_scripts]
+matcher-visualize = matcher.matcher2yap:main
+smatcher-visualize = matcher.smatcher2yap:main
+
+[genice_format_hook0]
+matcher2 = matcher.matcher2:hook0
+smatcher = matcher.smatcher:hook0
+
+[genice_format_hook1]
+matcher2 = matcher.matcher2:hook1
+smatcher = matcher.smatcher:hook1
+
