@@ -1,0 +1,14 @@
+MANIFEST.in
+README.txt
+setup.cfg
+setup.py
+XStatic_JS_Yaml.egg-info/PKG-INFO
+XStatic_JS_Yaml.egg-info/SOURCES.txt
+XStatic_JS_Yaml.egg-info/dependency_links.txt
+XStatic_JS_Yaml.egg-info/namespace_packages.txt
+XStatic_JS_Yaml.egg-info/not-zip-safe
+XStatic_JS_Yaml.egg-info/top_level.txt
+xstatic/__init__.py
+xstatic/pkg/__init__.py
+xstatic/pkg/js_yaml/__init__.py
+xstatic/pkg/js_yaml/data/js-yaml.js
