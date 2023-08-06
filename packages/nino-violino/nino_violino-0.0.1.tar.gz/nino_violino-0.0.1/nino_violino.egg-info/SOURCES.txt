@@ -1,0 +1,11 @@
+README.rst
+setup.py
+block_generator/block_generator.py
+block_generator/block_organizer.py
+block_generator/soundont_tester.py
+block_generator/violino_conf.py
+nino_violino.egg-info/PKG-INFO
+nino_violino.egg-info/SOURCES.txt
+nino_violino.egg-info/dependency_links.txt
+nino_violino.egg-info/requires.txt
+nino_violino.egg-info/top_level.txt
