@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: kafka-connect-python
+Version: 0.0.2
+Summary: Kafka Connect Module
+Home-page: http://github.com/sxnxl/kafka-connect-python
+Author: Senol Korkmaz
+Author-email: senol.korkmaz@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+
+UNKNOWN
+
+
