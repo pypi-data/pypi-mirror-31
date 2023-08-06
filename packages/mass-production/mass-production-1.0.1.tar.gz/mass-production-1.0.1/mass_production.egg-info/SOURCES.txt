@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.py
+mass_production/__init__.py
+mass_production/conveyor.py
+mass_production.egg-info/PKG-INFO
+mass_production.egg-info/SOURCES.txt
+mass_production.egg-info/dependency_links.txt
+mass_production.egg-info/not-zip-safe
+mass_production.egg-info/top_level.txt
