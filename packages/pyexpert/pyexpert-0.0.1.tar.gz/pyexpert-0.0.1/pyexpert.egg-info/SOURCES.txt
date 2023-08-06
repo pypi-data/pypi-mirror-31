@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+pyexpert/__init__.py
+pyexpert/narrate.py
+pyexpert/prolog.py
+pyexpert/prolog_ast.py
+pyexpert/prolog_parser.py
+pyexpert.egg-info/PKG-INFO
+pyexpert.egg-info/SOURCES.txt
+pyexpert.egg-info/dependency_links.txt
+pyexpert.egg-info/requires.txt
+pyexpert.egg-info/top_level.txt
