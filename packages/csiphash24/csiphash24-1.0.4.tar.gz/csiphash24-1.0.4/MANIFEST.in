@@ -1,0 +1,2 @@
+include SipHash.cpp
+include build_csiphash24.py
