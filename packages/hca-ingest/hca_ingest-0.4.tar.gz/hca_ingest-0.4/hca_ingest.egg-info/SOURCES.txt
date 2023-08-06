@@ -1,0 +1,86 @@
+.gitignore
+.travis.yml
+LICENSE
+MANIFEST.in
+README.md
+__init__.py
+requirements-dev.txt
+requirements.txt
+setup.py
+hca_ingest.egg-info/PKG-INFO
+hca_ingest.egg-info/SOURCES.txt
+hca_ingest.egg-info/dependency_links.txt
+hca_ingest.egg-info/requires.txt
+hca_ingest.egg-info/top_level.txt
+ingest/__init__.py
+ingest/api/__init__.py
+ingest/api/dssapi.py
+ingest/api/ingestapi.py
+ingest/api/stagingapi.py
+ingest/exporter/__init__.py
+ingest/exporter/ingestexportservice.py
+ingest/importer/__init__.py
+ingest/importer/hcaxlsbroker.py
+ingest/importer/spreadsheetUploadError.py
+ingest/utils/__init__.py
+ingest/utils/bundlevalidator.py
+ingest/utils/errorreport.py
+ingest/utils/token_util.py
+ingest/utils/validationreport.py
+tests/__init__.py
+tests/exporter/__init__.py
+tests/exporter/test_exporter.py
+tests/exporter/bundles/analysis/expected/Mouse Melanoma_biomaterial_bundle.json
+tests/exporter/bundles/analysis/expected/Mouse Melanoma_bundleManifest.json
+tests/exporter/bundles/analysis/expected/Mouse Melanoma_file_bundle.json
+tests/exporter/bundles/analysis/expected/Mouse Melanoma_links_bundle.json
+tests/exporter/bundles/analysis/expected/Mouse Melanoma_process_bundle.json
+tests/exporter/bundles/analysis/expected/Mouse Melanoma_project_bundle.json
+tests/exporter/bundles/analysis/expected/Mouse Melanoma_protocol_bundle.json
+tests/exporter/bundles/assay/expected/Mouse Melanoma_biomaterial_bundle.json
+tests/exporter/bundles/assay/expected/Mouse Melanoma_bundleManifest.json
+tests/exporter/bundles/assay/expected/Mouse Melanoma_file_bundle.json
+tests/exporter/bundles/assay/expected/Mouse Melanoma_links_bundle.json
+tests/exporter/bundles/assay/expected/Mouse Melanoma_process_bundle.json
+tests/exporter/bundles/assay/expected/Mouse Melanoma_project_bundle.json
+tests/exporter/bundles/assay/expected/Mouse Melanoma_protocol_bundle.json
+tests/exporter/bundles/ingest-data/biomaterials/mock_cell_suspension.json
+tests/exporter/bundles/ingest-data/biomaterials/mock_cell_suspension_derived_by_processes.json
+tests/exporter/bundles/ingest-data/biomaterials/mock_donor.json
+tests/exporter/bundles/ingest-data/biomaterials/mock_specimen.json
+tests/exporter/bundles/ingest-data/biomaterials/mock_specimen_derived_by_processes.json
+tests/exporter/bundles/ingest-data/bundleManifests/mock_bundle_manifest.json
+tests/exporter/bundles/ingest-data/files/mock_fastq_read1.json
+tests/exporter/bundles/ingest-data/files/mock_fastq_read1_derived_by_processes.json
+tests/exporter/bundles/ingest-data/files/mock_fastq_read2.json
+tests/exporter/bundles/ingest-data/files/mock_fastq_read2_derived_by_processes.json
+tests/exporter/bundles/ingest-data/processes/mock_analysis_process.json
+tests/exporter/bundles/ingest-data/processes/mock_analysis_process_derived_files.json
+tests/exporter/bundles/ingest-data/processes/mock_analysis_process_input_bundle_manifests.json
+tests/exporter/bundles/ingest-data/processes/mock_analysis_process_input_files.json
+tests/exporter/bundles/ingest-data/processes/mock_dissociation_process.json
+tests/exporter/bundles/ingest-data/processes/mock_dissociation_process_protocols.json
+tests/exporter/bundles/ingest-data/processes/mock_encrichment_process.json
+tests/exporter/bundles/ingest-data/processes/mock_enrichment_process_protocols.json
+tests/exporter/bundles/ingest-data/processes/mock_lib_prep_process.json
+tests/exporter/bundles/ingest-data/processes/mock_lib_prep_process_protocols.json
+tests/exporter/bundles/ingest-data/processes/mock_sampling_process.json
+tests/exporter/bundles/ingest-data/processes/mock_sampling_process_derived_biomaterials.json
+tests/exporter/bundles/ingest-data/processes/mock_sampling_process_input_biomaterial.json
+tests/exporter/bundles/ingest-data/processes/mock_sequencing_process.json
+tests/exporter/bundles/ingest-data/processes/mock_sequencing_process_protocols.json
+tests/exporter/bundles/ingest-data/processes/wrapper_process_dissociation_and_enrichment.json
+tests/exporter/bundles/ingest-data/processes/wrapper_process_dissociation_and_enrichment_chained_processes.json
+tests/exporter/bundles/ingest-data/processes/wrapper_process_dissociation_and_enrichment_derived_biomaterial.json
+tests/exporter/bundles/ingest-data/processes/wrapper_process_dissociation_and_enrichment_input_biomaterial.json
+tests/exporter/bundles/ingest-data/processes/wrapper_process_lib_prep_and_sequencing.json
+tests/exporter/bundles/ingest-data/processes/wrapper_process_lib_prep_and_sequencing_chained_processes.json
+tests/exporter/bundles/ingest-data/processes/wrapper_process_lib_prep_and_sequencing_derived_files.json
+tests/exporter/bundles/ingest-data/processes/wrapper_process_lib_prep_and_sequencing_input_biomaterial.json
+tests/exporter/bundles/ingest-data/projects/mock_project.json
+tests/exporter/bundles/ingest-data/protocols/mock_facs_sorting_protocol.json
+tests/exporter/bundles/ingest-data/protocols/mock_smart_seq_2_protocol_lib_prep.json
+tests/exporter/bundles/ingest-data/protocols/mock_smart_seq_2_protocol_sequencing.json
+tests/exporter/bundles/ingest-data/protocols/mock_tissue_dissociation_protocol.json
+tests/utils/__init__.py
+tests/utils/test_token_retreival.py
