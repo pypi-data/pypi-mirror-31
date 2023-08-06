@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: ScreenAmbience
+Version: 1.0.5
+Summary: Matches zones on a LIFX-Z strip to the colors on your screen.
+Home-page: https://github.com/EdwinP7/ScreenAmbience
+Author: Edwin Perea
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3
+Requires-Dist: pillow
+Requires-Dist: bitstruct
+
+UNKNOWN
+
+
