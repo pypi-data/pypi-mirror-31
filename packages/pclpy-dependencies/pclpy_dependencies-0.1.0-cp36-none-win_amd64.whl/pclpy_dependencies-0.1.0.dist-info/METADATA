@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: pclpy-dependencies
+Version: 0.1.0
+Summary: Windows dependencies for pclpy: Python bindings for the Point Cloud Library
+Home-page: https://github.com/davidcaron/pclpy_dependencies
+Author: David Caron
+Author-email: dcaron05@gmail.com
+License: MIT license
+Keywords: pclpy_dependencies
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: ==3.6.*
+Description-Content-Type: text/markdown
+
+# pclpy dependencies
+
+This project contains the necessary dlls for pclpy.
+
+[pclpy](https://www.github.com/davidcaron/pclpy) provides Python bindings for the Point Cloud Library
+
+
+
+# History
+
+
+## 0.1.0 (2018-04-23)
+
+* First release
+    - Only Python 3.6 is supported
+    - PCL 1.8.1 compiled with msvc 2017
+
+
