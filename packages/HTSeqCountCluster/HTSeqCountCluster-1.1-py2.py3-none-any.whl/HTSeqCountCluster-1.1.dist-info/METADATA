@@ -1,0 +1,13 @@
+Metadata-Version: 2.0
+Name: HTSeqCountCluster
+Version: 1.1
+Summary: A cli for running multiple pbs/qsub jobs with HTSeq's htseq-count script on a cluster.
+Home-page: https://github.com/datasnakes/htseq-count-cluster
+Author: Shaurita Hutchins & Robert Gilmore
+Author-email: datasnakes@gmail.com
+License: MIT
+Description-Content-Type: UNKNOWN
+
+.. image:: https://travis-ci.org/datasnakes/htseq-count-cluster.svg?branch=master
+
+
