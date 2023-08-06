@@ -1,0 +1,120 @@
+button i.fa {
+  padding-right: 6px;
+}
+
+.field-bold {
+  font-weight: bold;
+}
+
+.breadcrumb {
+  margin-bottom: 15px;
+}
+
+.main .container-fluid {
+  padding: 0 15px;
+}
+
+.app-header.navbar .navbar-brand {
+  background-size: 130px auto;
+}
+
+.sidebar .nav-link .badge {
+  margin-right: 2px;
+}
+
+.VueTables__search {
+  .btn, .dropdown {
+    margin-left: 1em;
+  }
+  .bulk-action-dropdown {
+    margin-left: 0;
+    margin-right: 1em;
+  }
+}
+
+.VuePagination__count {
+  margin-bottom: 0;
+}
+
+.VueTables__sortable {
+  cursor: pointer;
+}
+
+.VueTables__sortable .VueTables__sort-icon {
+  display: inline-block;
+  float: none !important;
+  margin-left: 10px;
+}
+
+.tree-view-wrapper {
+  line-height: initial;
+  overflow: hidden !important;
+
+  .tree-view-item {
+    font-size: 1em;
+  }
+
+  .tree-view-item-key {
+    color: $indigo;
+  }
+
+  .tree-view-item-value-string {
+    color: $red;
+  }
+
+  .tree-view-item-value-number {
+    color: $red;
+  }
+
+  .tree-view-item-value-boolean {
+    color: $green;
+  }
+
+  .tree-view-item-value-null {
+    color: $orange;
+  }
+}
+
+.row-status-indicators {
+  thead tr {
+    border-left: $status-width solid transparent;
+  }
+  @each $status, $color in $client-status-colors {
+    tr.status-#{$status}  {
+      border-left: $status-width solid $color;
+    }
+  }
+}
+
+.card-header {
+  h2 {
+    font-size: 1.6em;
+    margin: 0;
+    display: inline;
+  }
+  .dropdown {
+    float: right;
+  }
+}
+
+.keyvals {
+  display: table;
+
+  .keyval {
+    display: table-row;
+  }
+
+  .keyval-key {
+    display: table-cell;
+    font-weight: bold;
+    &:after {
+      content: ':';
+      font-weight: bold;
+    }
+  }
+
+  .keyval-val {
+    display: table-cell;
+    padding-left: 1em;
+  }
+}

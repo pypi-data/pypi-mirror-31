@@ -1,0 +1,8 @@
+[sagax_authentication]
+ldap = sagax.ldap:LDAPAuthentication
+none = sagax.authentication:NoAuth
+static = sagax.authentication:StaticAuth
+
+[sagax_sensu]
+Sensu1API = sagax.sensu:Sensu1API
+
