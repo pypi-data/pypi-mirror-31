@@ -1,0 +1,27 @@
+Metadata-Version: 2.0
+Name: zohoreader
+Version: 0.1.1
+Summary: A simple reader for zoho projects API to get all projects, users and timereports
+Home-page: https://github.com/marcus-luck/zohoreader
+Author: Marcus Luck
+Author-email: marcus.luck@outlook.com
+License: MIT
+Description-Content-Type: UNKNOWN
+Keywords: zoho,API,zoho project
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Requires-Dist: requests (>=2.12.4)
+Requires-Dist: python-dateutil (>=2.7.2)
+
+zohoreader
+--------
+
+To use (with caution), simply do::
+
+    >>> from zohoreader import ZohoReader
+    >>> zr = ZohoReader(authkey, portalid)
+    >>> all_projects = zr.get_all_projects()
+
+
