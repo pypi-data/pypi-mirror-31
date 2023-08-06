@@ -1,0 +1,18 @@
+Metadata-Version: 2.0
+Name: machinelearnlib
+Version: 0.1
+Summary: Implementation of common machine learning algorithms
+Home-page: https://github.com/Kai-Bailey/machinelearnlib
+Author: Kai Bailey
+Author-email: kbailey1@ualberta.ca
+License: MIT
+Description-Content-Type: text/markdown
+Keywords: machine learning data science
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+
+# machinelearnlib
+A Python Package of Common Machine Learning Algorithms
+
+
