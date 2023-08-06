@@ -1,0 +1,29 @@
+Metadata-Version: 2.0
+Name: xtt
+Version: 0.7.0.post0
+Summary: Python wrapper for the XTT Trust Transit protocol securing IoT network traffic.
+Home-page: https://github.com/xaptum/xtt-python
+Author: Xaptum, Inc.
+Author-email: tech@xaptum.com
+License: Apache 2.0
+Download-URL: https://github.com/xaptum/xtt-python/0.7.0-0.tar.gz
+Description-Content-Type: UNKNOWN
+Keywords: xtt,security,cryptography,IoT,Xaptum
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Security
+Classifier: Topic :: Security :: Cryptography
+Classifier: Topic :: Software Development
+Requires-Dist: cffi (>=1.0.0)
+Requires-Dist: six
+Requires-Dist: enum34 (>=1.0.0); python_version < "3.4"
+
+UNKNOWN
+
+
