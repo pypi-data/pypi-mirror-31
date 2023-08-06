@@ -1,0 +1,3 @@
+[gui_scripts]
+glyxtoolms = glyxtoolms.gui.__main__:main
+
