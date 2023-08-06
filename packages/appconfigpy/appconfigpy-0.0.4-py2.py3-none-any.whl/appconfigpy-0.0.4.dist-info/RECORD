@@ -1,0 +1,14 @@
+appconfigpy/__init__.py,sha256=YveVn7Ryphpg9_CZTfQE4h7i0ctHUPUGUBfqKAVqFOM,384
+appconfigpy/__version__.py,sha256=PmqVhVxYWtXpq-VoAmChCDaIIowDqJB_jrD87KcHfg8,279
+appconfigpy/_config.py,sha256=8nd9N7fZJUpj-pT2PN1YlQFqqArlRGqzO_lCBD2PZbQ,5437
+appconfigpy/_const.py,sha256=0FzawXqR0PHlofFGqQs1Yd1AvkOSqmBBPldjia2crHM,177
+appconfigpy/_error.py,sha256=21AhD3LuYp2HdGZEFiVKwGMb7xZtbgOokmFjOh_ymnw,149
+appconfigpy/_logger.py,sha256=EFFkS1aVtU2H_MrrfRiQonL9m1N87Hf__t5WcA0Hj1k,849
+appconfigpy-0.0.4.dist-info/METADATA,sha256=EVBJ097xOp3wxgIyXVsl7eX8TyaFbvYIDnv1NqMT7js,3914
+appconfigpy-0.0.4.dist-info/RECORD,,
+appconfigpy-0.0.4.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+appconfigpy-0.0.4.dist-info/top_level.txt,sha256=UPKR1HXk7pFoSh8yrlF3fvjmLIF_KMmlgTf8ySpVAtY,21
+examples/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+examples/common.py,sha256=-iRn7vz1bmonmUqm46UHBnEDhk1jLbvfabgYY7hfEvk,816
+examples/configure.py,sha256=xmBU0VZfnT2HdUu9hbDFkv7kMc-bpXb-VxQmC8yraNM,324
+examples/load.py,sha256=1OmupcpKW-Du-jlErSQPSKWlNgKF9i3Jmv3BceUGdwk,405
