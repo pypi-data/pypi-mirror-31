@@ -1,0 +1,28 @@
+Metadata-Version: 2.0
+Name: redfin-houses
+Version: 0.0.3
+Summary: Python library to retrieve house information from Redfin
+Home-page: https://github.com/huangyunict/redfin_houses
+Author: Yun Huang
+Author-email: huangyunict@gmail.com
+License: GNU LGPLv3
+Keywords: redfin house real estate
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+Requires-Dist: pyquery (>=1.4.0)
+
+# redfin_houses
+
+Python library to retrieve house information from Redfin.
+
+
+
