@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: TracAccountManager
+Version: 0.5.0
+Summary: User account management plugin for Trac
+Home-page: https://trac-hacks.org/wiki/AccountManagerPlugin
+Author: Matthew Good
+Author-email: trac@matt-good.net
+Maintainer: Steffen Hoffmann
+Maintainer-email: hoff.st@web.de
+License: 3-Clause BSD
+Description: UNKNOWN
+Platform: UNKNOWN
+Provides-Extra: Trac
+Provides-Extra: announcer
+Provides-Extra: Babel
+Provides-Extra: pyrad
+Provides-Extra: forms
+Provides-Extra: vote
+Provides-Extra: screenshots
