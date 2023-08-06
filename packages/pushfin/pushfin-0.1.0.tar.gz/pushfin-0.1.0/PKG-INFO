@@ -1,0 +1,80 @@
+Metadata-Version: 1.1
+Name: pushfin
+Version: 0.1.0
+Summary: Publishes bank account statements via MQTT and Pushover.
+Home-page: https://github.com/stv0g/pushfin
+Author: Steffen Vogel
+Author-email: post@steffenvogel.de
+License: GPL-3.0
+Description-Content-Type: UNKNOWN
+Description: # PushFin
+        
+        ## Transaction fields for formatting
+        
+        ### MT940
+        
+        Standard transaction data is parsed by the [`mt940` Python Module](https://github.com/WoLpH/mt940).
+        
+        Common fields are listed below:
+        
+        | Formatting field			| Example value | Description |
+        | :--					| :-- | :-- |
+        | `status`				| 'D' | 'D' = Debit, 'C' = Credit |
+        | `funds_code`				| None |
+        | `amount`				| <-46.5 EUR> |
+        | `id`					| 'NMSC' |
+        | `customer_reference`			| None |
+        | `bank_reference`			| None |
+        | `extra_details`			| '' |
+        | `currency`				| 'EUR' |
+        | `date`				| Date(2018, 1, 2) |
+        | `entry_date`				| Date(2018, 1, 2) |
+        | `transaction_code`			| '020' |
+        | `posting_text`			| 'Überweisung' |
+        | `prima_nota`				| '006200' |
+        | `purpose`				| 'Kino Tickets' |
+        | `applicant_bin`			| 'PBNABSEEFXXX' |
+        | `applicant_iban`			| 'DE71235623523523523' |
+        | `applicant_name`			| 'Max Mustermann' |
+        | `return_debit_notes`			| None |
+        | `recipient_name`			| None |
+        | `additional_purpose`			| None |
+        | `gvc_applicant_iban`			| None |
+        | `gvc_applicant_bin`			| None |
+        | `end_to_end_reference`		| None |
+        | `additional_position_reference`	| None |
+        | `applicant_creditor_id`		| None |
+        | `purpose_code`			| None |
+        | `additional_position_date`		| None |
+        | `deviate_applicant`			| None |
+        | `deviate_recipient`			| None |
+        | `FRST_ONE_OFF_RECC`			| None |
+        | `old_SEPA_CI`				| None |
+        | `old_SEPA_additional_position_reference` | None |
+        | `settlement_tag`			| None |
+        | `debitor_identifier`			| None |
+        | `compensation_amount`			| None |
+        | `original_amount`			| None |
+        
+        ### Extra fields
+        
+        For ease formatting, we extended the standard MT940 fields with the following helpers:
+        
+        | Formatting field			| Example value | Description |
+        | :--					| :-- | :-- |
+        | `date_ts`				| 1525007188	| A Unix timestamp of the `date` field |
+        | `date_fmt`				| '2018-04-28'	| A formatted date of the `date` field |
+        | `entry_date_ts`			| 1525007188	| A Unix timestamp of the `entry_date` field |
+        | `entry_date_fmt`			| '2018-04-28'	| A formatted date of the `entry_date` field |
+        | `value`				| -20.42	| Just the amount of the transaction (see `amount`) |
+        | `dir`
+        | `color`				|
+        
+Keywords: HBCI FinTS Pushover MQTT
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Office/Business :: Financial
+Classifier: Topic :: Home Automation
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
