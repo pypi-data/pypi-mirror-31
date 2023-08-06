@@ -1,0 +1,26 @@
+Metadata-Version: 2.0
+Name: mpu
+Version: 0.1.0
+Summary: Martins Python Utilities
+Home-page: https://github.com/MartinThoma/mpu
+Author: Martin Thoma
+Author-email: info@martin-thoma.de
+License: MIT
+Download-URL: https://github.com/MartinThoma/mpu
+Description-Content-Type: UNKNOWN
+Keywords: utility
+Platform: Linux
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities
+
+In case the batteries are not enough anymore.
+
+
