@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: harmonize
+Version: 0.1.0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Andrew Rabert
+Author-email: ar@nullsum.net
+License: Apache 2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Dist: consumers
+
+UNKNOWN
+
+
