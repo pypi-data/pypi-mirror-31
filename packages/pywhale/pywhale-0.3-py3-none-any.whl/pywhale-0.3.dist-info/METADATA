@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: pywhale
+Version: 0.3
+Summary: python wrapper for Whaleclub.co exchange platform API
+Home-page: https://github.com/logan169/PyWhale
+Author: Logan Schwartz, 
+Author-email: logan1691987@gmail.com
+License: GPLv3
+Keywords: python python3 whaleclub crypto pywhale trade trading api bitcoin wrapper
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Topic :: Office/Business
+Classifier: Topic :: Office/Business :: Financial
+Requires-Python: >=3
+Requires-Dist: requests
+Requires-Dist: statistics
+
+UNKNOWN
+
+
