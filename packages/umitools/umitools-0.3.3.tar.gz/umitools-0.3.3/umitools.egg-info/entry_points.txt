@@ -1,0 +1,7 @@
+[console_scripts]
+umi_mark_duplicates = umitools.umi_mark_duplicates:main
+umi_reformat_fastq = umitools.reformat_umi_fastq:main
+umi_reformat_sra_fastq = umitools.reformat_umi_sra_fastq:main
+umi_simulator = umitools.umi_simulator:main
+umitools = umitools.umitools:main
+
