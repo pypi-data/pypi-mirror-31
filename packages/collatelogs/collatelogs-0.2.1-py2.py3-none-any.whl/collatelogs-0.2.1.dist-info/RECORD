@@ -1,0 +1,15 @@
+collatelogs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+collatelogs/__main__.py,sha256=Fy1QE3H8oZltEBh5epyeXfYhMv9ASL7eK3-SzwFkQ8s,67
+collatelogs/cli.py,sha256=ws_SyEQSkKXQifa-vCBHlDLiMnv8ptprcZDdafDNwhI,10192
+collatelogs/collatelogs.py,sha256=0cM_50DbNqEsYkuZpkqkIpyHKj8NAEKbAAhUfKbcbFw,6351
+collatelogs/config.yaml,sha256=n12MbgPlqi9x-ycTVsDWzGNSBtzj1XG_pm8gMRwqiuQ,704
+collatelogs/example_config.yaml,sha256=KIRgaMhAV81yXthYL3ZpdsaemQhJIpGb_43EffIiX2E,1069
+collatelogs/logcollator.py,sha256=RJs8pQPnvbVh4JHelg5e33-2q__lAtIgH1MqcVe9Iu0,9059
+collatelogs/metahandlers.py,sha256=oV908GuvJWCqHixWca8iuCWPo80scTc0wOhAoazPUWI,832
+collatelogs/util.py,sha256=7-KwWpDLSG1WKIvAkBJFbmsq_XNe4dwPSTQuImuxZ8I,2438
+collatelogs-0.2.1.data/scripts/collatelogs,sha256=kLqiUTx-XmbvuBHUH2xqIPulvKUqPXZL6GV3RELlcNQ,43
+collatelogs-0.2.1.dist-info/METADATA,sha256=hvxc0brrcxdw4Yeak35mOOqB7Lpgyjjza15QMfjSzuc,6330
+collatelogs-0.2.1.dist-info/RECORD,,
+collatelogs-0.2.1.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+collatelogs-0.2.1.dist-info/top_level.txt,sha256=_w6YMJ-yboP51tph5tGXOHWOn2bamNe1oX9KsyMW570,12
+collatelogs-0.2.1.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
