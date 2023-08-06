@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load cms_tags %}
+
+{% block content %}
+    <div class="hubspotBlog-postDetail">
+        {% render_model_block post %}
+            {{ post.content_html|safe|default_if_none:'' }}
+        {% endrender_model_block %}
+    </div>
+{% endblock %}

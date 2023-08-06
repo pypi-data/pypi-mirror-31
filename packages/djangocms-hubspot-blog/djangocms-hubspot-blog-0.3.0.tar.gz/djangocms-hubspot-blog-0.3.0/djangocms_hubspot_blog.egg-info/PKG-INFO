@@ -1,0 +1,119 @@
+Metadata-Version: 1.1
+Name: djangocms-hubspot-blog
+Version: 0.3.0
+Summary: A djangoCMS App which imports blog posts from the Hubspot Content API
+Home-page: https://github.com/Blueshoe/djangocms-hubspot-blog
+Author: Maximilian Muth
+Author-email: max@blueshoe.de
+License: MIT License
+
+Copyright (c) 2018 Blueshoe
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+Description: .. image:: https://badge.fury.io/py/djangocms-hubspot-blog.svg
+            :target: https://badge.fury.io/py/djangocms-hubspot-blog
+            
+        ==================================
+        djangoCMS Hubspot Blog Integration
+        ==================================
+        
+        - Management command to fetch Authors, Topics and Posts and store them in the database    
+        - djangoCMS App to hook list and detail view into a page
+        
+        Installation
+        ==================================
+        
+        - ``pip install djangocms-hubspot-blog``     
+        - Add the app ``djangocms_hubspot_blog`` to your ``INSTALLED_APPS``
+        - Add the settings listed below to your settings file
+        - Override the templates listed below
+        
+        Settings
+        ==================================
+        
+        +-------------------------+----------+---------------+
+        | Setting Name            | Required | Default Value |
+        +=========================+==========+===============+
+        | HUBSPOT_API_KEY         | yes      | /             |
+        +-------------------------+----------+---------------+
+        | HUBSPOT_BLOG_ID         | yes      | /             |
+        +-------------------------+----------+---------------+
+        | PORTAL_ID               | yes      | /             |
+        +-------------------------+----------+---------------+
+        | HUBSPOT_BLOG_PAGE_LIMIT | no       | 10            |
+        +-------------------------+----------+---------------+
+        
+        Views & Templates
+        ==================================
+        It's recommended to override the given templates. Take a look at the templates on how to do it.
+        
+        +------------------------+---------------------------------------------+--------------------------------------------+
+        | View                   | View Name                                   | Template                                   |
+        +========================+=============================================+============================================+
+        | HubspotPostsList       | ``djangocms_hubspot_blog:posts-list``       | ``djangocms_hubspot_blog/post_list.html``  |
+        +------------------------+---------------------------------------------+--------------------------------------------+
+        | HubspotTopicList       | ``djangocms_hubspot_blog:topic-list``       | ``djangocms_hubspot_blog/post_list.html``  |
+        +------------------------+---------------------------------------------+--------------------------------------------+
+        | HubspotAuthorPostsList |``djangocms_hubspot_blog:author-posts-list`` | ``djangocms_hubspot_blog/post_list.html``  |
+        +------------------------+---------------------------------------------+--------------------------------------------+
+        | HubspotPostDetail      | ``djangocms_hubspot_blog:post-detail``      | ``djangocms_hubspot_blog/post_detail.html``|
+        +------------------------+---------------------------------------------+--------------------------------------------+
+        
+        The pagination has an additional partial template at ``djangocms_hubspot_blog/partials/pagination.html``
+        
+        How to fetch blog posts
+        -----------------------
+        **Automatically**
+        
+        The best aproach is to **automatically** fetch posts, authors and topics by
+        periodically running the management command ``import_blog_posts`` via CRON
+        or calling ``djangocms_hubspot_api.update_blog_posts()`` from a task queue.
+        
+        **Manually**
+        
+        However, it's also possible for site editors to **manually** trigger an update via a button in the admin.
+        
+        Missing Functionality
+        ------------------------- 
+        - Localization (Currently it's German only)
+        
+        Contributing
+        ----------------
+        You're welcome to submit Pull Requests! :rocket:
+        Just take a look at the open issues.
+        
+Keywords: django,Django CMS,hubspot,hubspot blog,blog,CMS,Blueshoe
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: Django
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
