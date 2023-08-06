@@ -1,0 +1,44 @@
+Metadata-Version: 1.1
+Name: fonty
+Version: 0.2.6
+Summary: fonty is a command line tool for installing, managing and converting fonts.
+Home-page: https://github.com/jamesssooi/fonty
+Author: James Ooi
+Author-email: wengteikooi@gmail.com
+License: Apache License 2.0
+Description: 
+        .. image:: https://github.com/jamesssooi/fonty/raw/master/artwork/logo.png
+              :alt: Logo of fonty
+              :width: 300px
+              :align: center
+        
+        .. image:: https://raw.githubusercontent.com/jamesssooi/fonty/master/artwork/hero.png
+              :alt: Screenshot of fonty commands
+              :width: 760px
+              :align: center
+        
+        A command-line tool to download, manage and convert fonts
+        =========================================================
+        
+        fonty is a command line interface that helps you simplify your font management
+        workflow by allowing you to install and uninstall fonts like a package manager
+        (think npm, apt-get, chocolatey). It can also help you create webfonts and
+        generate @font-face declarations so that you can focus on building great
+        websites.
+        
+        For full documentation, visit the `GitHub page <https://github.com/jamesssooi/fonty/>`_.
+        
+Keywords: font fonts typeface cli tool install uninstall convert manage
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: System Administrators
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Multimedia :: Graphics
+Classifier: Topic :: Terminals
+Classifier: Topic :: Utilities
