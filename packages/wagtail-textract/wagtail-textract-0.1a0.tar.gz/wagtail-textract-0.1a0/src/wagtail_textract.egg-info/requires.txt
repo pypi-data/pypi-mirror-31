@@ -1,0 +1,6 @@
+wagtail>=2,<2.1
+textract
+
+[test]
+pytest
+pytest-django
