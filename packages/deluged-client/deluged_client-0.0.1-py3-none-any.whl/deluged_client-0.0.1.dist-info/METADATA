@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: deluged-client
+Version: 0.0.1
+Summary: An asynchronous client for Deluge
+Home-page: https://github.com/blajda/deluged_client
+Author: David Blajda
+Author-email: blajda@hotmail.com
+License: LGPL
+Keywords: deluge client async
+Platform: UNKNOWN
+Requires-Python: >=3.5
+Requires-Dist: blinker
+
+UNKNOWN
+
+
