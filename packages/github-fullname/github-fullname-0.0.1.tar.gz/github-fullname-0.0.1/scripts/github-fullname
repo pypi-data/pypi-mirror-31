@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+{ set +x; } 2>/dev/null
+
+# https://github.com/owner/repo.git (HTTPS)
+# git@github.com:owner/repo.git (SSH)
+
+# .git/config
+# [remote "name"]
+#    url = git@github.com:owner/repo.py.git
+
+IFS=
+! [ -e .git ] && echo "ERROR: .git NOT EXISTS" 1>&2 && exit 1
+! [ -e .git/config ] && exit
+
+grep="$(grep "git@github.com:\|https://github.com/" .git/config)" || exit
+[[ -z "$grep" ]] && exit
+url="$( IFS=' ';set $grep; echo ${!#})"
+[[ -z "$url" ]] && echo "ERROR: $grep" && exit 1 # unknown format
+
+# git@github.com:owner/repo.git (SSH)
+[[ "$url" == "git@"* ]] && ( IFS=':';set $url; echo "${2::${#2}-4}" )
+
+# https://github.com/owner/repo.git (HTTPS)
+[[ "$url" == "https"* ]] && ( IFS='/';set $url; echo "$3"/"${2::${#2}-4}" )
+:

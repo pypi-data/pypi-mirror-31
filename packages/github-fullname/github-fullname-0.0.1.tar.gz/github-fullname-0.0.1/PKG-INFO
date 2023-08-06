@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: github-fullname
+Version: 0.0.1
+Summary: get github fullname
+Home-page: https://github.com/looking-for-a-job/github-fullname
+License: UNKNOWN
+Description: ### Install
+        
+        ```bash
+        $ [sudo] pip install github-fullname
+        ```
+        
+        ### Features
+        
+        +   get github fullname `owner/repo` from `.git/config`
+        
+        ### Usage
+        
+        ```bash
+        usage: github-fullname
+        ```
+        
+        ### Examples
+        
+        ```bash
+        $ cd path/to/repo
+        $ github-fullname
+        
+        $ git remote add git@github.com:owner/repo.git github
+        $ github-fullname
+        owner/repo
+        ```
+Keywords: github
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Unix Shell
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
