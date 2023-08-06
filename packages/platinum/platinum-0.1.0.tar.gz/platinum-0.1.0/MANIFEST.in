@@ -1,0 +1,4 @@
+include LICENSE
+include platinum
+prune utils
+prune html
