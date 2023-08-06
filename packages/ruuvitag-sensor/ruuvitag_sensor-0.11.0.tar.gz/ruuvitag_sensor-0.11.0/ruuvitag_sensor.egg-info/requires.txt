@@ -1,0 +1,8 @@
+rx
+
+[:platform_system == "Linux"]
+psutil
+ptyprocess
+
+[:python_version < "3.3"]
+futures
