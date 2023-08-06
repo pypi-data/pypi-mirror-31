@@ -1,0 +1,6 @@
+[run]
+source = ./roadies
+omit = */tests.py
+
+[report]
+omit = */tests.py

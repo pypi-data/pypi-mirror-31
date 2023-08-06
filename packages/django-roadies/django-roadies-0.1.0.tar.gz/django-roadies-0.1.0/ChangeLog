@@ -1,0 +1,19 @@
+CHANGES
+=======
+
+0.1.0
+-----
+
+* name refactor and adds handlers interface
+
+0.0.2
+-----
+
+* adds start and stop interface
+
+0.0.1
+-----
+
+* ensure TestCase backwards compatibility
+* initial version
+* Initial commit

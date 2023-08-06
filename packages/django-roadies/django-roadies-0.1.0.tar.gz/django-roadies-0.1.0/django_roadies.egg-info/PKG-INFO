@@ -1,0 +1,38 @@
+Metadata-Version: 1.1
+Name: django-roadies
+Version: 0.1.0
+Summary: Suite of django specific utilities/helpers.
+Home-page: https://github.com/anthonyalmarza/django-roadies
+Author: Anthony Almarza
+Author-email: anthony.almarza@gmail.com
+License: MIT
+Description: # Django Roadies
+        
+        [![CircleCI](https://circleci.com/gh/anthonyalmarza/django-roadies.svg?style=svg)](https://circleci.com/gh/anthonyalmarza/django-roadies)
+        [![codecov](https://codecov.io/gh/anthonyalmarza/django-roadies/branch/master/graph/badge.svg)](https://codecov.io/gh/anthonyalmarza/django-roadies)
+        
+        Suite of django specific utilities/helpers.
+        
+        ## Overview
+        
+        Yet another django toolset to help with a range of django stuff... e.g. tests for abstract models, on_commit hooks, etc.
+        The genesis of this project is aimed towards supporting django by making available common project-agnostic tools.
+        
+        ## Installation
+        
+        `pip install django-roadies`
+        
+        ## Usage
+        
+        TDB
+        
+        
+Keywords: django-roadies,django,roadies,utils,tests,handlers
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
