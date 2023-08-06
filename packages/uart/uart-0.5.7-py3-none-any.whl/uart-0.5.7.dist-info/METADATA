@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: uart
+Version: 0.5.7
+Summary: Utility for simply creating and modifying VHDL bus slave modules
+Home-page: http://github.com/olagrottvik/art
+Author: Ola Groettvik
+Author-email: olagrottvik@gmail.com
+License: MIT
+Keywords: vhdl,bus,axi
+Platform: UNKNOWN
+Requires-Dist: curses-menu (==0.5.0)
+Requires-Dist: docopt (==0.6.2)
+Requires-Dist: prettytable (==0.7.2)
+Requires-Dist: pylatexenc (==1.2)
+Requires-Dist: pypandoc (==1.4)
+
+Utility for simply creating and modifying VHDL bus slave modules
+
+
