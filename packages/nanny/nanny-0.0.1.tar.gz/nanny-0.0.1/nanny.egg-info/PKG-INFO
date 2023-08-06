@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: nanny
+Version: 0.0.1
+Summary: Simple utility to babysit your files and folders
+Home-page: https://github.com/njncalub/nanny
+Author: Nap Joseph Calub
+Author-email: njncalub+nanny@gmail.com
+License: MIT
+Description: # nanny
+        
+        Simple utility to babysit your files and folders
+        
+Keywords: automated files organizer
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Utilities
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown

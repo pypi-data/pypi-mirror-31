@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+nanny/__init__.py
+nanny/clean.py
+nanny/nanny.py
+nanny.egg-info/PKG-INFO
+nanny.egg-info/SOURCES.txt
+nanny.egg-info/dependency_links.txt
+nanny.egg-info/top_level.txt
