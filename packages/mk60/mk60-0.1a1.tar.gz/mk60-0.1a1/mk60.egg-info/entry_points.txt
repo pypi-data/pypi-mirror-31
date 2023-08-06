@@ -1,0 +1,3 @@
+[console_scripts]
+mk60 = mk60.app:main
+
