@@ -1,0 +1,9 @@
+magwitch.py
+setup.cfg
+setup.py
+magwitch.egg-info/PKG-INFO
+magwitch.egg-info/SOURCES.txt
+magwitch.egg-info/dependency_links.txt
+magwitch.egg-info/top_level.txt
+test/test_api.py
+test/test_bool_extraction.py

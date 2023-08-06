@@ -1,0 +1,55 @@
+Metadata-Version: 1.1
+Name: magwitch
+Version: 0.1.0
+Summary: Decorator for your functions, for easy tune of boolean arguments
+Home-page: https://github.com/aluriak/magwitch
+Author: Lucas Bourneuf
+Author-email: lucas.bourneuf@laposte.net
+License: MIT
+Description-Content-Type: UNKNOWN
+Description: # Magwitch
+        The magical switch switcher !
+        
+        ```python
+        import magwitch
+        
+        @magwitch.on
+        def save_figure(in_png:bool=False, legend:bool=True):
+            ...  # an implementation we do not care about for the example
+            return in_png
+        
+        
+        # Now, you can set the value of the boolean arguments by giving their name:
+        assert save_figure.in_png() is True
+        
+        # Or not:
+        assert save_figure.not_in_png() is False
+        
+        # Also, you can do it multiple times:
+        save_figure.not_in_png.no_legend()
+        
+        # The last set is autoritative
+        assert f.not_in_png.in_png() is True
+        
+        # And there is many other options if you want to !
+        @magwitch.on_with(use_defaults=True, enable='do_', disable=('nope_', 'never_'):
+        def f(a:bool=False): return a
+        
+        # effect of use_defaults
+        assert f.do_a() is False
+        ```
+        
+        See the [tests](test/) for complete API, and the docstring of `Magwitch.build`
+        for a description of all available parameters.
+        
+        
+        Install with
+        
+            pip install magwitch
+        
+Keywords: decorator,bool,arguments,helper
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
