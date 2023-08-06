@@ -1,0 +1,3 @@
+git+https://github.com/patarapolw/randomsentence.git#egg=randomsentence
+git+https://github.com/patarapolw/passwordstrength.git#egg=passwordstrength
+git+https://github.com/patarapolw/pronounceable.git#egg=pronounceable
