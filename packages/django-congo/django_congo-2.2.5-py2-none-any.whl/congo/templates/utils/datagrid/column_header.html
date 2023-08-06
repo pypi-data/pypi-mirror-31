@@ -1,0 +1,16 @@
+{% load i18n %}
+
+{% if column.sortable %}
+  <a href="{{ column.get_sort_url }}">
+    {% if column.icon_name %}<i class="mdi mdi-{{ column.icon_name }}"></i>{% endif %}
+    {% if column.label %}{{ column.label }}{% endif %}
+    
+    {% if column.sort_priority %}
+      {% if column.sort_dir %}&#9653;{% else %}&#9663;{% endif %} {{ column.sort_priority }}
+      </a> <a class="datagrid-unsort" href="{{ column.get_unsort_url }}">x
+    {% endif %}
+  </a>
+{% else %}
+  {% if column.icon_name %}<i class="mdi mdi-{{ column.icon_name }}"></i>{% endif %}
+  {% if column.label %}{{ column.label }}{% endif %}
+{% endif %}

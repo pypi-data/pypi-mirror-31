@@ -1,0 +1,35 @@
+{% extends "admin/base_site.html" %}
+{% load i18n common custom %}
+
+{% block extrahead %}
+{{ block.super }}
+
+  <style>
+    .email-form label {
+      display: inline-block;
+      width: 200px;
+    }
+    
+    input[type="text"], input[type="email"], textarea {
+      width: 450px;
+    }
+  </style>
+
+{% endblock %} 
+
+{% block content %}
+{{ block.super }}
+
+<div class="module">
+  <h2>{% trans "E-mail test form" %}</h2>
+  
+  <form action="" method="post" enctype="multipart/form-data" class="email-form">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <p>
+      <input type="submit" value="Submit">
+    </p>
+  </form>
+</div>
+
+{% endblock %} 

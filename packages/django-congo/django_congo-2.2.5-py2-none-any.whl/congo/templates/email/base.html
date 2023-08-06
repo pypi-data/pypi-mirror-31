@@ -1,0 +1,94 @@
+{% load i18n %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    {% block meta_title %}{% if meta_title %}<title>{{ meta_title }}</title>{% endif %}{% endblock %}
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="{% block stylesheet %}static/css/email.css{% endblock %}" />
+    {% block extra_head %}{% endblock %}
+  </head>
+  <body>
+    
+    <!-- Wrapper -->
+    <table class="wrapper">
+                    
+      <!-- X -->
+              
+      <!-- Preheader -->
+      <tr>
+        <td class="preheader">
+          <div>{% block preheader %}{% endblock %}</div>
+        </td>
+      </tr>
+      <!-- /Preheader -->
+            
+      <!-- Container -->
+      <tr>
+        <td class="container">
+          
+          <!-- Content -->
+          <div class="content">
+            <table>
+              
+              <!-- Header -->
+              {% block header_wrapper %}
+                          
+                <tr>
+                  <td class="header">
+                    {% block header %}
+                      <table>
+                        <tr>
+                          <td class="text-muted text-left">
+                            Logo here
+                          </td>
+                          <td class="text-muted text-right">
+                            Extra description here
+                          </td>
+                        </tr>
+                      </table>
+                    {% endblock %}
+                  </td>
+                </tr>
+              
+              {% endblock %}
+              <!-- /Header -->
+                    
+              <!-- Main Content -->
+              <tr>
+                <td>
+                  {% block content %}{{ html_content }}{% endblock %}
+                </td>
+              </tr>
+              <!-- /Main Content -->
+                    
+              <!-- Signature -->
+              {% block signature_wrapper %}
+                <tr>
+                  <td class="signature">
+                    {% block signature %}
+                      <p>Best regards,<br />Tango Team</p>
+                    {% endblock %}
+                  </td>
+                </tr>
+              {% endblock %}
+              <!-- /Signature -->
+                    
+              <!-- Footer -->
+              {% block footer_wrapper %}{% endblock %}
+              <!-- /Footer -->
+              
+            </table>
+          </div>
+          <!-- /Content -->
+          
+        </td>
+      </tr>
+      <!-- /Container -->
+            
+    </table>
+    <!-- /Wrapper -->
+          
+  </body>
+</html>
