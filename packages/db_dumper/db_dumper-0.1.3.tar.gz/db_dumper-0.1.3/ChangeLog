@@ -1,0 +1,25 @@
+CHANGES
+=======
+
+0.1.3
+-----
+
+* Don't try and load objects that aren't there
+
+0.1.2
+-----
+
+* Give load an optional save argument
+
+0.1.1
+-----
+
+* Provide a convert\_name function
+
+0.1.0
+-----
+
+* Remove all dependencies
+* Change name to db\_dumper not db-dumper
+* Working commit
+* Initial commit
