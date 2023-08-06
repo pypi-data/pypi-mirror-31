@@ -1,0 +1,3 @@
+[console_scripts]
+blackdaemon = blackdaemon:main
+
