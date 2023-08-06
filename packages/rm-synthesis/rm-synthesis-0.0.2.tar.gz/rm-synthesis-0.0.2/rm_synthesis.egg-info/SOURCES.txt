@@ -1,0 +1,10 @@
+MANIFEST.in
+README.rst
+setup.py
+rm_synthesis.egg-info/PKG-INFO
+rm_synthesis.egg-info/SOURCES.txt
+rm_synthesis.egg-info/dependency_links.txt
+rm_synthesis.egg-info/top_level.txt
+rmsynthesis/__init__.py
+rmsynthesis/rmsynthesis.py
+rmsynthesis/bin/rmsynthesis
