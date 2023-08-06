@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+oauth/__init__.py
+oauth/oauth.py
+oauth1_py3.egg-info/PKG-INFO
+oauth1_py3.egg-info/SOURCES.txt
+oauth1_py3.egg-info/dependency_links.txt
+oauth1_py3.egg-info/top_level.txt
+oauth1_py3.egg-info/zip-safe
