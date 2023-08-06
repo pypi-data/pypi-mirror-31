@@ -1,0 +1,17 @@
+mod	trans_guid	split_guid	time_now	date_entered	date_posted	acc_guid	acc_name	num	description	notes	memo	action	reconciled	amount	value	date_reconciled
+-----------------
+===== START
+===== END
+===== START
+===== END
+===== START
+===== END
+===== START
+D	925d066b489a0a1d82c28eac63a184c4	0dbdaa384d5db0ac03479934a8a2061b	2018-03-03 08:44:49.000000 Romance˜é(	2018-03-03 08:44:49.000000 Romance`xé(	2018-03-03 12:59:00.000000 Romance								n	0/1	0/100	1970-01-01 01:00:00.000000 Romance
+===== END
+===== START
+D	7afee81b8169ba13662e47e454a94752	67ae4af219839d69d8e5967415cb6ed7	2018-03-03 08:44:49.000000 Romance˜é(	2018-03-03 08:44:49.000000 RomanceÈÐxé(	2018-03-03 12:59:00.000000 Romance								n	0/1	0/100	1970-01-01 01:00:00.000000 Romance
+===== END
+===== START
+D	284ac787bc4de22c01a8e562f2c0ebe4	85accb3c7a8415d5e9854e3c580e82e1	2018-03-03 08:44:49.000000 Romance˜é(	2018-03-03 08:44:49.000000 Romanceðxé(	2018-03-03 12:59:00.000000 Romance								n	0/1	0/100	1970-01-01 01:00:00.000000 Romance
+===== END

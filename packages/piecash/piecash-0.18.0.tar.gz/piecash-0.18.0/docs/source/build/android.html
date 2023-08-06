@@ -1,0 +1,373 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>piecash on android &mdash; Python interface to GnuCash documents 0.15.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Python interface to GnuCash documents 0.15.0 documentation" href="index.html"/>
+        <link rel="next" title="piecash package" href="api/piecash.html"/>
+        <link rel="prev" title="piecash and the official python bindings" href="doc/comparison.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Python interface to GnuCash documents
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.15.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="news.html">What’s new</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="doc/doc.html">Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/index_existing.html">Tutorial : using existing objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/index_new.html">Tutorial : creating new objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/examples.html">Examples of programs written with piecash</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/comparison.html">piecash and the official python bindings</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">piecash on android</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installing-termux">Installing termux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installing-python-and-piecash">Installing python and piecash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#use-ssh-with-your-android">Use SSH with your android</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#use-the-usb-debugging-with-your-android">Use the USB Debugging with your android</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/piecash.html">piecash package</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="object_model.html">GnuCash SQL Object model and schema</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="doc/resources.html">Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Python interface to GnuCash documents</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>piecash on android</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/android.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="piecash-on-android">
+<h1>piecash on android<a class="headerlink" href="#piecash-on-android" title="Permalink to this headline">¶</a></h1>
+<p>piecash can successfully run on android which opens interesting opportunities!</p>
+<div class="section" id="installing-termux">
+<h2>Installing termux<a class="headerlink" href="#installing-termux" title="Permalink to this headline">¶</a></h2>
+<p>First, you have to install Termux from the Play Store.</p>
+<p>You start Termux and:</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">edit your .bash_profile with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>export TZ=$(getprop persist.sys.timezone)
+export SHELL=$(which bash)
+</pre></div>
+</div>
+</li>
+<li><p class="first">add the folder ~/storage with access to your android folders (also accessible via USB sync):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">termux</span><span class="o">-</span><span class="n">setup</span><span class="o">-</span><span class="n">storage</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="installing-python-and-piecash">
+<h2>Installing python and piecash<a class="headerlink" href="#installing-python-and-piecash" title="Permalink to this headline">¶</a></h2>
+<p>You start Termux on your android and then:</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Install python and pipenv:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pkg</span> <span class="n">install</span> <span class="n">python</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">pipenv</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Install piecash for your project:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">my</span><span class="o">-</span><span class="n">project</span>
+<span class="n">cd</span> <span class="n">my</span><span class="o">-</span><span class="n">project</span>
+<span class="n">pipenv</span> <span class="n">install</span> <span class="n">piecash</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Test piecash:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pipenv</span> <span class="n">shell</span>
+<span class="n">python</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">piecash</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="use-ssh-with-your-android">
+<h2>Use SSH with your android<a class="headerlink" href="#use-ssh-with-your-android" title="Permalink to this headline">¶</a></h2>
+<p>You can ssh easily in your android thanks to Termux.
+For this, on Termux on your android:</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">install openssh:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pkg</span> <span class="n">install</span> <span class="n">openssh</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">add your public key (id_rsa.pub) in the file <cite>.ssh/authorized_keys</cite> on Termux</p>
+</li>
+<li><p class="first">run the sshd server:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sshd</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+<p>On your machine (laptop, …):</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">configure your machine to access your android device:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Host</span> <span class="n">android</span>
+   <span class="n">HostName</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">1.4</span>  <span class="c1"># &lt;== put the IP address of your android</span>
+   <span class="n">User</span> <span class="n">termux</span>
+   <span class="n">Port</span> <span class="mi">8022</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">log in your android from your machine:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="n">android</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="use-the-usb-debugging-with-your-android">
+<h2>Use the USB Debugging with your android<a class="headerlink" href="#use-the-usb-debugging-with-your-android" title="Permalink to this headline">¶</a></h2>
+<p>To be investigated…:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># on laptop</span>
+<span class="n">adb</span> <span class="n">forward</span> <span class="n">tcp</span><span class="p">:</span><span class="mi">8022</span> <span class="n">tcp</span><span class="p">:</span><span class="mi">8022</span> <span class="o">&amp;&amp;</span> <span class="n">ssh</span> <span class="n">localhost</span> <span class="o">-</span><span class="n">p</span> <span class="mi">8022</span>
+
+<span class="c1"># on android</span>
+<span class="c1"># On Android 4.2 and higher, the Developer options screen is hidden by default. To make it visible, go to Settings &gt; About phone and tap Build number seven times. Return to the previous screen to find Developer options at the bottom.</span>
+<span class="n">change</span> <span class="n">USB</span> <span class="n">Configuration</span> <span class="n">to</span> <span class="s2">&quot;charge only&quot;</span> <span class="ow">or</span> <span class="s2">&quot;PTP&quot;</span>
+
+<span class="c1"># downloading https://developer.android.com/studio/run/win-usb.html</span>
+<span class="c1"># Click here to download the Google USB Driver ZIP file (Z</span>
+<span class="c1"># install legacy hardware (in device manager)</span>
+<span class="c1"># choose the folder of the zip drive and choose ADB interface</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://glow.li/technology/2015/11/06/run-an-ssh-server-on-your-android-with-termux/">https://glow.li/technology/2015/11/06/run-an-ssh-server-on-your-android-with-termux/</a></li>
+<li><a class="reference external" href="https://termux.com/storage.html">https://termux.com/storage.html</a></li>
+<li><a class="reference external" href="https://developer.android.com/studio/releases/platform-tools.html">https://developer.android.com/studio/releases/platform-tools.html</a></li>
+<li><a class="reference external" href="https://glow.li/technology/2016/9/20/access-termux-via-usb/">https://glow.li/technology/2016/9/20/access-termux-via-usb/</a></li>
+<li><a class="reference external" href="https://github.com/termux/termux-packages/issues/352">https://github.com/termux/termux-packages/issues/352</a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="api/piecash.html" class="btn btn-neutral float-right" title="piecash package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="doc/comparison.html" class="btn btn-neutral" title="piecash and the official python bindings" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014 sdementen.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.15.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
