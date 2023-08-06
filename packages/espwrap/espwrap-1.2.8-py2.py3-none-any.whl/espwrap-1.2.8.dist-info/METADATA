@@ -1,0 +1,22 @@
+Metadata-Version: 2.0
+Name: espwrap
+Version: 1.2.8
+Summary: A light wrapper around email service providers
+Home-page: https://github.com/SpotOnInc/espwrap
+Author: SpotOn
+Author-email: josh@spoton.com
+License: MIT
+Download-URL: https://github.com/SpotOnInc/espwrap/1.2.8
+Description-Content-Type: UNKNOWN
+Platform: a
+Platform: n
+Platform: y
+Provides-Extra: mandrill
+Requires-Dist: mandrill (>=1.0.57); extra == 'mandrill'
+Provides-Extra: sendgrid
+Requires-Dist: smtpapi (>=0.3.1); extra == 'sendgrid'
+Requires-Dist: sendgrid (==2.2.1); extra == 'sendgrid'
+
+UNKNOWN
+
+
