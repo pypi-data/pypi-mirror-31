@@ -1,0 +1,15 @@
+Metadata-Version: 2.0
+Name: aws-get-vpn-connection-info
+Version: 0.43
+Summary: Get connection informa tion from AWS
+Home-page: UNKNOWN
+Author: Tomakh Konstantin
+Author-email: tomahkvt@gmail.com
+License: Mirantis Inc. All rights reserved
+Platform: UNKNOWN
+Requires-Dist: boto3
+Requires-Dist: cloudify-plugins-common (>=3.4.2)
+
+UNKNOWN
+
+
