@@ -1,0 +1,16 @@
+[console_scripts]
+cross_corr_p = poropyck.cross_corr_p:cross_corr_p
+cross_corr_s = poropyck.cross_corr_s:cross_corr_s
+densities_porosity = poropyck.densities_porosity:densities_porosity
+densities_porosity2 = poropyck.densities_porosity2:densities_porosity2
+elastic_constants = poropyck.elastic_constants:elastic_constants
+elastic_constants_pyc = poropyck.elastic_constants_pyc:elastic_constants
+install_poropyck_samples = poropyck.install_samples:install_samples
+pick_vp_dtw = poropyck.pick_vp_dtw:pick_vp_dtw
+pick_vs_dtw = poropyck.pick_vs_dtw:pick_vs_dtw
+pycnometer_densities = poropyck.pycnometer_densities:pycnometer_densities
+simple_harmonics_1 = poropyck.simple_harmonics:simple_harmonics_1
+simple_harmonics_2 = poropyck.simple_harmonics:simple_harmonics_2
+vp_dtw_saturated_loop = poropyck.vp_dtw_saturated_loop:vp_dtw_saturated_loop
+vs_dtw_saturated_loop = poropyck.vs_dtw_saturated_loop:vs_dtw_saturated_loop
+
