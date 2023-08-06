@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+bjoda/__init__.py
+bjoda/globals.py
+bjoda/strings.py
+bjoda.egg-info/PKG-INFO
+bjoda.egg-info/SOURCES.txt
+bjoda.egg-info/dependency_links.txt
+bjoda.egg-info/requires.txt
+bjoda.egg-info/top_level.txt
