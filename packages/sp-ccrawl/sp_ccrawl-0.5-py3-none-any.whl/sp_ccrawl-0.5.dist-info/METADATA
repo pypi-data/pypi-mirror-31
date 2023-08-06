@@ -1,0 +1,22 @@
+Metadata-Version: 2.0
+Name: sp-ccrawl
+Version: 0.5
+Summary: The base for commoncrawl analysis based on sparkcc
+Home-page: http://github.com/rtaubes/spcc
+Author: Roman Taubes
+Author-email: roman.taubes@gmail.com
+License: MIT
+Description-Content-Type: UNKNOWN
+Keywords: spark commoncrawl
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries
+Requires-Dist: boto3
+Requires-Dist: botocore
+Requires-Dist: warcio
+
+The base for commoncrawl analysis based on sparkcc with added file selection base on time range
+
+
