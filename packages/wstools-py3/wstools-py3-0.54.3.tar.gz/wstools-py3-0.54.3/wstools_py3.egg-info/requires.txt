@@ -1,0 +1,7 @@
+six
+
+[testing]
+py>=1.4
+hacking
+pytest
+pytest-cov

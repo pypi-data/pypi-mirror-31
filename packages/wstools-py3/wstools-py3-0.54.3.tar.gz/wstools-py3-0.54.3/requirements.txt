@@ -1,0 +1,6 @@
+# Package dependencies
+
+setuptools
+
+# Include package dependencies from setup.py
+.
