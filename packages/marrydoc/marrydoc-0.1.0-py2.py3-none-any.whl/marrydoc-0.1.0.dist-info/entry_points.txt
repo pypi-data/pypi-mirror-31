@@ -1,0 +1,3 @@
+[console_scripts]
+marrydoc = marrydoc.__main__:main
+
