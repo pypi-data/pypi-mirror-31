@@ -1,0 +1,19 @@
+setuptools
+wheel
+
+# Python 3.7 requires at least Cython 0.27.3.
+# 0.28 is faster, and (important!) lets us specify the target module
+# name to be created so that we can have both foo.py and _foo.so
+# at the same time.
+Cython >= 0.28.1
+
+# Python 3.7b1 requires this.
+greenlet>=0.4.13 ; platform_python_implementation == "CPython"
+pylint>=1.8.0
+# pyyaml is included here and doesn't install on travis with 3.7a3
+prospector[with_pyroma] ; python_version < '3.7'
+# See version requirements in setup.py
+cffi >= 1.11.5 ; platform_python_implementation == "CPython"
+
+# benchmarks use this
+perf
