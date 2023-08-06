@@ -1,0 +1,14 @@
+algoliasearch_django/__init__.py,sha256=A8a1U4XmHhsx-qJrANNZJsgTtgKFO3TVGFgSvu51ulM,1071
+algoliasearch_django/models.py,sha256=PZf5kcLiRqcW-4IVvx7EWSKzHYK5IMeNMCBfjPdUy6E,20041
+algoliasearch_django/registration.py,sha256=yrw9Bq3--lodEIsH8o-m2CGU5SLmZ06kzhttaouFlag,6938
+algoliasearch_django/settings.py,sha256=v87tsy3cZoh5zH7PoYxFUsRf8qERfKumH6N3p9zNRyg,119
+algoliasearch_django/version.py,sha256=Rme4WuXKSzaCVJCjBOYa4YxV0RYA9cBpzbu9ZZ4D59A,18
+algoliasearch_django/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+algoliasearch_django/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+algoliasearch_django/management/commands/algolia_applysettings.py,sha256=ZpTfKbejO_HtD6NHKMxHd2yFaJ4zdW0Yvzhir94fEU0,771
+algoliasearch_django/management/commands/algolia_clearindex.py,sha256=pw6D5v9fAE81YYrQIVjWfsc17_nzAMsvJjO_NvzUGJ0,735
+algoliasearch_django/management/commands/algolia_reindex.py,sha256=KKzconb3UraQ58E_0MZczT-dZN1ZTINO5SnPaPoTjJo,1150
+algoliasearch_django-1.5.6.dist-info/METADATA,sha256=A1L1hzGqzXsy0d8FoRDY3AkVW8kIjcJ6Tt4OO9i843E,12827
+algoliasearch_django-1.5.6.dist-info/RECORD,,
+algoliasearch_django-1.5.6.dist-info/WHEEL,sha256=gduuPyBvFJQSQ0zdyxF7k0zynDXbIbvg5ZBHoXum5uk,110
+algoliasearch_django-1.5.6.dist-info/top_level.txt,sha256=awuLliE5VnxrfxxQbNz4WZ1DkHFQKkJsxHHlpXQ54Cg,21
