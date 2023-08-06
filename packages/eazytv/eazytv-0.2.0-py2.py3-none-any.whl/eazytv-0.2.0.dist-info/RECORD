@@ -1,0 +1,12 @@
+eazytv/__init__.py,sha256=8hDtWlaFZK24KhfNq_ZKgtXqYHsDQDetukOCMlsbW0Q,59
+eazytv/__version__.py,sha256=71KsahAwQ58dscY_97S6C-qsbmU7UZOF6ivugHmZhCQ,238
+eazytv/cli.py,sha256=c5GkHM62s7u925RaRgkH1vUNDS-EI1BFVvxJsUxZens,1677
+eazytv/utils.py,sha256=qHM2_6MPgavr-JAj8M9MLEZQIDZlCpw7wuWTgjrmqjc,1511
+eazytv/eztv/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+eazytv/eztv/database.py,sha256=_2RQFdbkBxmFEkj957sUrqU9U-W8bkNAQFl2Xj6SXwc,687
+eazytv/eztv/parser.py,sha256=sn4ZmrZ3KBcR_7iN6OYukpqgbBYBi0dP5HUtVsYrHSo,522
+eazytv-0.2.0.dist-info/METADATA,sha256=rhUbwhDZ5vWVc8G4z4uHiPenCN7gJmBn_AeaEyaPjHQ,811
+eazytv-0.2.0.dist-info/RECORD,,
+eazytv-0.2.0.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+eazytv-0.2.0.dist-info/entry_points.txt,sha256=F7NjB8xCbzNbw5Z9YOMa8Gw5nYuax7FYxZDZj91MDVU,39
+eazytv-0.2.0.dist-info/top_level.txt,sha256=dY2od7kV2_IT_7nsK6KNs-3e3ZpOJbdpbpi1bJMEY5U,7
