@@ -1,0 +1,17 @@
+setup.cfg
+setup.py
+sofa/__init__.py
+sofa/__main__.py
+sofa/sofa_analyze.py
+sofa/sofa_config.py
+sofa/sofa_preprocess.py
+sofa/sofa_print.py
+sofa/sofa_record.py
+sofa/sofa_viz.py
+sofa/sofarun.py
+sofalite.egg-info/PKG-INFO
+sofalite.egg-info/SOURCES.txt
+sofalite.egg-info/dependency_links.txt
+sofalite.egg-info/entry_points.txt
+sofalite.egg-info/requires.txt
+sofalite.egg-info/top_level.txt
