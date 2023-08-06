@@ -1,0 +1,11 @@
+README.rst
+setup.cfg
+setup.py
+hostmydocs/__init__.py
+hostmydocs/client.py
+hostmydocs/documentation.py
+hostmydocs/serverConfig.py
+hostmydocs_client.egg-info/PKG-INFO
+hostmydocs_client.egg-info/SOURCES.txt
+hostmydocs_client.egg-info/dependency_links.txt
+hostmydocs_client.egg-info/top_level.txt
