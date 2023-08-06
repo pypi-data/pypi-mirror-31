@@ -1,0 +1,4 @@
+[console_scripts]
+anti_forgetful = anti_forgetful.launch:main
+awsterminate = anti_forgetful.terminate:main
+

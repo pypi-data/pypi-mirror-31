@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+VERSION
+setup.py
+anti_forgetful/instance.py
+anti_forgetful/launch.py
+anti_forgetful/terminate.py
+anti_forgetful/util.py
+anti_forgetful.egg-info/PKG-INFO
+anti_forgetful.egg-info/SOURCES.txt
+anti_forgetful.egg-info/dependency_links.txt
+anti_forgetful.egg-info/entry_points.txt
+anti_forgetful.egg-info/not-zip-safe
+anti_forgetful.egg-info/requires.txt
+anti_forgetful.egg-info/top_level.txt
