@@ -1,0 +1,14 @@
+glom/__init__.py,sha256=BqvP2SzRVEPVunMP1W0wZnok7sklkpBnNH8p3OxCT2g,460
+glom/__main__.py,sha256=d4dtYGN6XWjKTVEfAO6Xq66WMaEAuBzAij214aKZOHM,321
+glom/cli.py,sha256=S3_b4sdVq1LGhIg-okWIWeQbcOBHLUibXRcMcuftL8I,1289
+glom/core.py,sha256=egXfL2i5WAjIQ_6gXcMmq8FWo8gilY4bISQHB8RUeNU,40385
+glom/tutorial.py,sha256=gi9l5E4Y9FxJg9jlyts0lb2Xmk0qcYlWf4ycnOcex3Q,9388
+glom/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+glom/test/test_basic.py,sha256=Hy-aenT-k1kq38ujWHvVjJzL8vrQiD4mE1dolCZ68UE,6130
+glom/test/test_main.py,sha256=y5V1nSeufadf1FDBhpJKPx7a5mcHxv8l9FTZG1PoqUY,210
+glom/test/test_target_types.py,sha256=A5CjqQGvZ5um7xFQ81-CgJcH-BGYqFeOb1hI_Nfht-M,4388
+glom/test/test_tutorial.py,sha256=M1_YDaAryT52YgtM_2J6ZWxUC0JUw1VO0Wr2fKNTGao,380
+glom-18.1.0.dist-info/METADATA,sha256=TDyDOGRM_lLubFEMeQP2ViDQl7M3JqHKNdXK6lAt2Us,1276
+glom-18.1.0.dist-info/RECORD,,
+glom-18.1.0.dist-info/WHEEL,sha256=9xUnOISuCvrSyfu9GlFZT4i2TZ_2OLkwLNqcDvIo3zM,92
+glom-18.1.0.dist-info/top_level.txt,sha256=WiJ0SLd_2KNrSeVc-ZCI2sEHPYkAUInt1gJjm3VXBrE,5
