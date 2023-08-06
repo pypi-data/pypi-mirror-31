@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: mg-toolkit
+Version: 0.1.2
+Summary: Metagenomics toolkit
+Home-page: https://github.com/EBI-metagenomics/emg-toolkit
+Author: Ola Tarkowska
+Author-email: olat@ebi.ac.uk
+License: Apache Software License
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
