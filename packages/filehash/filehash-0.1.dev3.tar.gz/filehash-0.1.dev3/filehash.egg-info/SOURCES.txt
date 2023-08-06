@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+filehash/__init__.py
+filehash/filehash.py
+filehash/filehash_cli.py
+filehash.egg-info/PKG-INFO
+filehash.egg-info/SOURCES.txt
+filehash.egg-info/dependency_links.txt
+filehash.egg-info/entry_points.txt
+filehash.egg-info/not-zip-safe
+filehash.egg-info/top_level.txt
