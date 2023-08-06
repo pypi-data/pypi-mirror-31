@@ -1,0 +1,5 @@
+include rzl_dash_material_design/bundle.js
+include rzl_dash_material_design/bundle.js.map
+include rzl_dash_material_design/metadata.json
+include README.md
+include LICENSE.md

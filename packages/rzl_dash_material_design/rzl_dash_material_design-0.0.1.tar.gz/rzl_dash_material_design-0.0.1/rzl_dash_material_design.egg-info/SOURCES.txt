@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+rzl_dash_material_design/__init__.py
+rzl_dash_material_design/bundle.js
+rzl_dash_material_design/metadata.json
+rzl_dash_material_design/version.py
+rzl_dash_material_design.egg-info/PKG-INFO
+rzl_dash_material_design.egg-info/SOURCES.txt
+rzl_dash_material_design.egg-info/dependency_links.txt
+rzl_dash_material_design.egg-info/top_level.txt
