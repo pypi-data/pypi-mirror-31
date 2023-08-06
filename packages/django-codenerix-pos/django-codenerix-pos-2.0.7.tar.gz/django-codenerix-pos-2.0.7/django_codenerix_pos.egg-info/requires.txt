@@ -1,0 +1,9 @@
+Twisted[tls,http2]
+asgi_redis
+celery
+channels<2
+django-codenerix
+django-codenerix-corporate
+django-codenerix-invoicing
+django-codenerix-payments
+service_identity
