@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: illumon-iris
+Version: 1.0.7
+Summary: Python integrations for Illumon Iris
+Home-page: https://www.illumon.com/
+Author: Illumon LLC
+Author-email: python@illumon.com
+License: Apache 2.0
+Keywords: Illumon Iris Development
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2.7
+Requires-Dist: illumon-jpy
+
+Illumon Python Package
+======================
+
+This project is for the illumon-iris python package on PyPI.
+
+----
+
+Iris is a time-series database product from Illumon.
+This package provides provide Python integrations for Iris.
+
+Usage
+-----
+
+    >>> import illumon-iris
+    >>> ...
+
+
