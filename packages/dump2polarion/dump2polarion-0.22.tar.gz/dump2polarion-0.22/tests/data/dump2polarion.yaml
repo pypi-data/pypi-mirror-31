@@ -1,0 +1,8 @@
+xunit_import_properties:
+    polarion-dry-run            : false
+    polarion-project-id         : RHCF3
+    polarion-testrun-status-id  : inprogress
+    polarion-response-test      : test
+polarion_url: https://polarion.example.com/
+username:  user1
+password:  password1
