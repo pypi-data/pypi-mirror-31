@@ -1,0 +1,30 @@
+Metadata-Version: 1.1
+Name: metquest
+Version: 0.1.31
+Summary: MetQuest: Enumerating all possible biosynthetic pathways in metabolic networks 
+Home-page: UNKNOWN
+Author: Aarthi Ravikrishnan
+Author-email: aarthiravikrishnan@gmail.com
+License: LGPL/GPL v2+
+Project-URL: Source, https://github.com/RamanLab/metquest
+Description: MetQuest is a dynamic programming based algorithm for identifying all possible
+        pathways from metabolic networks between the source and the target metabolites. 
+        MetQuest requires the genome-scale metabolic reconstructions,
+        set of seed, source and target metabolites and the pathway length cut-off. 
+        MetQuest is compatible with Python 3 and is OS-independent.  
+        
+        For detailed documentation, visit http://metquestdoc.readthedocs.io/
+Keywords: metabolism biology graph-theory pathways
+Platform: GNU/Linux
+Platform: Mac OS X >= 10.7
+Platform: Microsoft Windows >= 7
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v2 or later (LGPLv2+)
+Classifier: License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
