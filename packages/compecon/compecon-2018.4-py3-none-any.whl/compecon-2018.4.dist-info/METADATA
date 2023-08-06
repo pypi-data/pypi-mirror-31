@@ -1,0 +1,21 @@
+Metadata-Version: 2.0
+Name: compecon
+Version: 2018.4
+Summary: A Computational Economics Toolbox
+Home-page: http://randall-romero.com/code/compecon
+Author: Randall Romero-Aguilar
+Author-email: randall.romero@outlook.com
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/randall-romero/CompEcon-python/issues
+Project-URL: Source, https://github.com/randall-romero/CompEcon-python/
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Requires-Dist: numba
+Requires-Dist: nose
+
+# CompEcon
+
+
