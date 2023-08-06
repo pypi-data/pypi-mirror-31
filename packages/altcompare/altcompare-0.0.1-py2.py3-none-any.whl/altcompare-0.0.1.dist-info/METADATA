@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: altcompare
+Version: 0.0.1
+Summary: Data Compare Utility in Python
+Home-page: https://github.com/pvparuchuri/altcompare
+Author: Venkata Paruchuri
+Author-email: UNKNOWN
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/pvparuchuri/altcompare/issues
+Project-URL: Source, https://github.com/pvparuchuri/altcompare/
+Description-Content-Type: UNKNOWN
+Keywords: Data Comparison odbc compare
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Requires-Python: >=3
+
+UNKNOWN
+
+
