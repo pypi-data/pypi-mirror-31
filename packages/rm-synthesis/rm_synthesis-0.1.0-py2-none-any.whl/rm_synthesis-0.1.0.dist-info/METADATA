@@ -1,0 +1,17 @@
+Metadata-Version: 2.0
+Name: rm-synthesis
+Version: 0.1.0
+Summary: Performs Rotation Measurement(RM) Synthesis and RM Cleaning on FITS Cube Images
+Home-page: https://github.com/Sebokolodi/RMSYNTHESIS/
+Author: Lerato Sebokolodi
+Author-email: mll.sebokolodi@gmail.com
+License: GPL2
+Platform: UNKNOWN
+Requires: numpy
+Requires: astropy
+Requires: multiprocessing
+Requires: cleanmask
+
+UNKNOWN
+
+
