@@ -1,0 +1,4 @@
+sanic
+aiohttp
+asyncio_redis
+sanic_session
