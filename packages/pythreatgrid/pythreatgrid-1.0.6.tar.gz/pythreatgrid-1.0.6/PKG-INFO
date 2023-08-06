@@ -1,0 +1,87 @@
+Metadata-Version: 1.1
+Name: pythreatgrid
+Version: 1.0.6
+Summary: Python ThreatGrid API wrapper
+Home-page: https://github.com/RustyBower/pythreatgrid
+Author: Stephen Hosom, Rusty Bower
+Author-email: 0xhosom@gmail.com, rusty@rustybower.com
+License: UNKNOWN
+Download-URL: https://github.com/RustyBower/pythreatgrid/archive/v1.0.6.tar.gz
+Description: [![Build Status](https://travis-ci.org/RustyBower/pythreatgrid.svg?branch=master)](https://travis-ci.org/RustyBower/pythreatgrid)
+        
+        pythreatgrid
+        ============
+        A Python wrapper for the ThreatGrid API
+        
+        Installation
+        ------------
+        Install via PIP
+        ```
+        pip install pythreatgrid
+        ```
+        
+        Install from source
+        ```
+        git clone https://github.com/RustyBower/pythreatgrid.git
+        cd pythreatgrid
+        python setup.py install
+        ```
+        
+        Usage
+        -----
+        ```
+        import pythreatgrid
+        t = pythreatgrid.ThreatGrid(api_key='API_KEY', api_host='API_HOST')
+        result = t.submit_sample(open('/path/to/executable', 'rb'))
+        ```
+        
+        
+        .. :changelog:
+        
+        History
+        -------
+        
+        1.0.6 (2018-05-09)
+        ------------------
+        
+        * Updating documentation and renaming files
+        
+        1.0.5 (2018-05-09)
+        ------------------
+        
+        * Fixing setup.py to properly include README and HISTORY files
+        
+        1.0.4 (2018-05-08)
+        ------------------
+        
+        * Final travis configuration fixes
+        
+        1.0.3 (2018-05-08)
+        ------------------
+        
+        * Fixing travis-ci + PyPI integration
+        
+        1.0.2 (2018-05-08)
+        ------------------
+        
+        * Adding supported Python versions
+        
+        1.0.1 (2018-05-08)
+        ------------------
+        
+        * Bumping version to sync PyPI with correct download link
+        
+        1.0.0 (2018-05-08)
+        ------------------
+        
+        * First release on PyPI.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
