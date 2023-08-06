@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+setup.py
+src/xthematic/__init__.py
+src/xthematic/__version__.py
+src/xthematic/cli.py
+src/xthematic/colors.py
+src/xthematic/config.py
+src/xthematic/display.py
+src/xthematic/term.py
+src/xthematic/themes.py
+src/xthematic.egg-info/PKG-INFO
+src/xthematic.egg-info/SOURCES.txt
+src/xthematic.egg-info/dependency_links.txt
+src/xthematic.egg-info/entry_points.txt
+src/xthematic.egg-info/requires.txt
+src/xthematic.egg-info/top_level.txt
