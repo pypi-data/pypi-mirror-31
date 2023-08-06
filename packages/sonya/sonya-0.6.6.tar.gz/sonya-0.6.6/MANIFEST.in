@@ -1,0 +1,8 @@
+include README.rst
+include LICENSE
+recursive-include docs *
+recursive-include sonya *.pyx *.pyi *.c *.h
+
+global-exclude *.pyc
+global-exclude *.o
+global-exclude *.so.0.1

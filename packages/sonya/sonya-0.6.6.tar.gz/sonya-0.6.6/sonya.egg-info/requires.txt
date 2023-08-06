@@ -1,0 +1,14 @@
+six
+
+[:python_version < "3"]
+py2-ipaddress
+enum34
+
+[develop]
+Cython
+pytest
+backports.tempfile
+msgpack-python
+
+[msgpack]
+msgpack-python
