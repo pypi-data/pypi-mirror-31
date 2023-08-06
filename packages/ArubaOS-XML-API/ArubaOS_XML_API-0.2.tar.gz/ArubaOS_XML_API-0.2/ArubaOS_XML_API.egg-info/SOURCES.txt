@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+ArubaOS_XML_API/__init__.py
+ArubaOS_XML_API/aruba_cmd.py
+ArubaOS_XML_API.egg-info/PKG-INFO
+ArubaOS_XML_API.egg-info/SOURCES.txt
+ArubaOS_XML_API.egg-info/dependency_links.txt
+ArubaOS_XML_API.egg-info/top_level.txt
