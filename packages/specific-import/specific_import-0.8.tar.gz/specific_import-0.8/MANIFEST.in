@@ -1,0 +1,6 @@
+setup.py
+setup.cfg
+include LICENSE.txt
+include README.rst
+recursive-include specific_import/sub_package1 *
+

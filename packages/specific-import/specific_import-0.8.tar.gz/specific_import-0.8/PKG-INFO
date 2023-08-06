@@ -1,0 +1,13 @@
+Metadata-Version: 1.2
+Name: specific_import
+Version: 0.8
+Summary: This library allows users to import resources by their relative or absolute file paths
+Home-page: https://github.com/sudouser2010/specific_import
+Author: Herbert Dawkins
+Author-email: DrDawkins@ClearScienceInc.com
+License: UNKNOWN
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Keywords: specific,import,file
+Platform: UNKNOWN
+Requires-Python: ~=3.6
