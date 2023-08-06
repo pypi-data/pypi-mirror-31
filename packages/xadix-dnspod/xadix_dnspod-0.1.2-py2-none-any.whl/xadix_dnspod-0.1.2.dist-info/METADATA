@@ -1,0 +1,18 @@
+Metadata-Version: 2.0
+Name: xadix-dnspod
+Version: 0.1.2
+Summary: Bindings and CLI for dnspod international api (dnspod.com)
+Home-page: https://github.com/xadix/dnspod-py
+License: UNKNOWN
+Keywords: dnspod
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Requires-Python: >=2.7, <3
+Requires-Dist: dnspython (>=1.15.0)
+Requires-Dist: requests (>=2.18.4)
+Requires-Dist: tabulate (>=0.8.2)
+
+UNKNOWN
+
+
