@@ -1,0 +1,75 @@
+---
+file-contents:
+  releasenotes/notes/Add-called_once-property-a69546448cbd5542.yaml:
+    features: [A called_once property was added to the adapter and the mocker. This
+        gives us an easy way to emulate mock's assert_called_once.]
+    prelude: 'Add a called_once property to the mockers.
+
+      '
+  releasenotes/notes/additional-matcher-5c5cd466a6d70080.yaml:
+    features: [Allow specifying an `additional_matcher` to the mocker that will call
+        a function to allow a user to add their own custom request matching logic.]
+  releasenotes/notes/case-insensitive-matching-a3143221359bbf2d.yaml:
+    features: [You can pass case_sensitive=True to an adapter or set `requests_mock.mock.case_sensitive
+        = True` globally to enable case sensitive matching.]
+    fixes: ['Reported in bug \#1584008 all request matching is done in a case insensitive
+        way, as a byproduct of this request history is handled in a case insensitive
+        way. This can now be controlled by setting case_sensitive to True when creating
+        an adapter or globally.']
+    prelude: 'It is now possible to make URL matching and request history not lowercase
+      the provided URLs.
+
+      '
+    upgrade: [It is recommended you add `requests_mock.mock.case_sensitive = True`
+        to your base test file to globally turn on case sensitive matching as this
+        will become the default in a 2.X release.]
+  releasenotes/notes/fixture-extras-699a5b5fb5bd6aab.yaml: {features: 'Added ''fixture''
+      to pip extras so you can install the fixture requirements with `pip install
+      requests-mock[fixture]`', prelude: 'Installing the requirements for the ''fixture''
+      contrib package can now be done via pip with `pip install requests-mock[fixture]`
+
+      '}
+  releasenotes/notes/pytest-7e35da8c5f2cd428.yaml:
+    features: [Added pytest fixture for native integration into pytest projects.]
+  releasenotes/notes/repo-move-15e956e1d54c048b.yaml:
+    other: ['In this release the main repository was moved off of OpenStack provided
+
+        infrastructure and onto github at
+
+        https://github.com/jamielennox/requests-mock. OpenStack has been a great
+
+        home for the project however requests-mock is a general python project with
+
+        no specific relationship to OpenStack and the unfamiliar infrastructure was
+
+        limiting contributes from the wider community.
+
+        ']
+    prelude: 'The primary repository is now at https://github.com/jamielennox/requests-mock
+
+      '
+notes:
+- files:
+  - - releasenotes/notes/pytest-7e35da8c5f2cd428.yaml
+    - !!binary |
+      YTQ1NWE3MzVkN2VkYmE1ZDA2NDM4MGViMDU0MDIxYTExZDA3NmY1Nw==
+  - - releasenotes/notes/repo-move-15e956e1d54c048b.yaml
+    - !!binary |
+      MzNkOWNjODQ2OGY4OTA2MzkzNGE1OGMwOGViOWQwNGUwOWFhZTg5NQ==
+  version: 1.5.0
+- files:
+  - - releasenotes/notes/additional-matcher-5c5cd466a6d70080.yaml
+    - !!binary |
+      YWEzZTg3YzRlZThkYTU3YjBiNzFmMGE5NTExYWY4OTAwMmE3YWExZQ==
+  version: 1.3.0
+- files:
+  - - releasenotes/notes/Add-called_once-property-a69546448cbd5542.yaml
+    - !!binary |
+      MGM2ZTU2N2VjNzc2ODExNzhlNDYxYzI5OTRkYjE2ZmE4MWFlYTRhOA==
+  - - releasenotes/notes/case-insensitive-matching-a3143221359bbf2d.yaml
+    - !!binary |
+      MWIwOGRjYzcwNTU3YjJkNThjNTZhOTIzZTZkMzE3NmMyYjY0YTE0Zg==
+  - - releasenotes/notes/fixture-extras-699a5b5fb5bd6aab.yaml
+    - !!binary |
+      NmRmMDNlZDNkMDNkMDVmNjA2YmZmMjg3NjRlNzJiYzA1NzQzMzNiNw==
+  version: 1.1.0
