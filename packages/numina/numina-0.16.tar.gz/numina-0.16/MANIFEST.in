@@ -1,0 +1,8 @@
+include LICENSE.txt
+include README.rst
+include AUTHORS.rst
+include src/*.h
+include src/*.pyx
+include src/nirproc.cpp
+recursive-include doc *
+recursive-include numina *.h
