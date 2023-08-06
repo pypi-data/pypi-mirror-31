@@ -1,0 +1,36 @@
+Metadata-Version: 1.1
+Name: miros-rabbitmq
+Version: 0.0.1
+Summary: A rabbitmq network support library for miros
+Home-page: https://github.com/aleph2c/miros_rabbitmq
+Author: Scott Volk
+Author-email: scottvolk@gmail.com
+License: Python 3.5 license
+Description: # miros-rabbitmq
+        This package is not ready yet..
+        
+        Rabbitmq extension to miros
+        
+        To install:
+        
+            pip3 install miros_rabbitmq
+        
+        To import:
+        
+            import miros_rabbitmq
+        
+        To access the NetworkedFactory, or NetworkedActiveObject:
+        
+            from miros_rabbitmq.network import NetworkedFactory
+            from miros_rabbitmq.network import NetworkedActiveObject
+        
+        
+Keywords: hsm HSM statechart hierarchical state machine statemachine miros pika rabbitmq netifaces cryptography botnet
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: Python Software Foundation License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
