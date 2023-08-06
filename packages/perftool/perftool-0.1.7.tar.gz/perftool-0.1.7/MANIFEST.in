@@ -1,0 +1,11 @@
+# Include the README
+include *.md
+
+# Include the license file
+include LICENSE
+
+# Include HTML file
+include perftool/reporter/index.html
+
+# Include the data files
+#recursive-include reporter/ * *.py *.html
