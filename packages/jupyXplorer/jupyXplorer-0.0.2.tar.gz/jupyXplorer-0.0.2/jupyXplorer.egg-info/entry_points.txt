@@ -1,0 +1,3 @@
+[console_scripts]
+jupyxplorer = jupyxplorer.main:main
+
