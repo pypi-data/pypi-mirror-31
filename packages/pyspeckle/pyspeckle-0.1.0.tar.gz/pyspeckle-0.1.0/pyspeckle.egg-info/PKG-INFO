@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: pyspeckle
+Version: 0.1.0
+Summary: Routines for analysis of laser speckle
+Home-page: https://github.com/scottprahl/pyspeckle.git
+Author: Scott Prahl
+Author-email: scott.prahl@oit.edu
+License: MIT
+Description: 
+        	Adaptation of SimSpeckle routines by Duncan and Kirkpatrick to python.
+        	
+Keywords: objective speckle,subjective speckle,speckle contrast,speckle size
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering :: Physics

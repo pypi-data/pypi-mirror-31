@@ -1,0 +1,15 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.md
+release.txt
+setup.cfg
+setup.py
+doc/01-basics.ipynb
+pyspeckle/__init__.py
+pyspeckle/pyspeckle.py
+pyspeckle.egg-info/PKG-INFO
+pyspeckle.egg-info/SOURCES.txt
+pyspeckle.egg-info/dependency_links.txt
+pyspeckle.egg-info/requires.txt
+pyspeckle.egg-info/top_level.txt
