@@ -1,0 +1,3 @@
+git+https://github.com/patarapolw/randomsentence.git#egg=randomsentence
+git+https://github.com/patarapolw/pronounceable.git#egg=pronounceable
+git+https://github.com/patarapolw/memorable-password.git#egg=memorable-password

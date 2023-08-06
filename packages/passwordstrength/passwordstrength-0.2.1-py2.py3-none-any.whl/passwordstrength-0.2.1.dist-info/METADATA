@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: passwordstrength
+Version: 0.2.1
+Summary: Editable password strength calculator for Python
+Home-page: UNKNOWN
+Author: Pacharapol Withayasakpunt
+Author-email: patarapolw@gmail.com
+License: MIT
+Keywords: password password_strength password_meter
+Platform: UNKNOWN
+Requires-Python: >=3.5
+Requires-Dist: PyYAML
+
+UNKNOWN
+
+
