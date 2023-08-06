@@ -1,0 +1,17 @@
+NUAAiCal/AddToGCal.py,sha256=uA7d-tjWOGjq0RuRef4Pp8I18ROdSRJZPF9p-wuYLQc,2709
+NUAAiCal/FindFirstDayofSemester.py,sha256=VkD_N7ESIGX6jb-_0QYIFjbAU_UY5jP4wb8BSdzK9og,2088
+NUAAiCal/GenerateICS.py,sha256=qRFyBO2oQnrlAEKI2HMwIbGPg9yjQRKVA1VNjciigis,5548
+NUAAiCal/Lesson.py,sha256=MhjARrG2I5gppT8KF-XKTeJwSxJAEU3TN4nEk2FSI6Y,1771
+NUAAiCal/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+NUAAiCal/entry.py,sha256=QPIuFteI4KQD_z8blEl-xYDuj--DfSdgcfZgsEzeViY,74
+NUAAiCal/main.py,sha256=m32m_NPcCeYQnlsqGlHmb_SDPC0_qbcZdmGs8M5I8SQ,5696
+NUAAiCal/settings.py,sha256=CQ6n0MrQ7tBaXEgpp6D1KOIaqdcqS2kRgIe09LTh19w,63
+NUAAiCal/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+NUAAiCal/tests/test_FFDoS.py,sha256=cm2fN1OI90axmn92zMHuHeq0YNybQftGfNvMP9ru5sU,554
+NUAAiCal/tests/test_GenerateICS.py,sha256=WhE5vnkp3Mot6of7GzPnjJlu459-q1EJjnCjm6UdM9s,2340
+NUAAiCal/tests/test_main.py,sha256=dP0fZ6ZFl_QTbJjICE-Owjey3bfJa75ms-6IIRBI2UM,147
+NUAAiCal-0.5.3.dist-info/METADATA,sha256=yQBZ0phPdT4ROnGXK8rOqf2LLJXPZpiLKdzTbkpaGWg,674
+NUAAiCal-0.5.3.dist-info/RECORD,,
+NUAAiCal-0.5.3.dist-info/WHEEL,sha256=saUSQBLOUjf5ACZdNkhQ0lB6XrHU-l4vpzxq_W1n_AY,116
+NUAAiCal-0.5.3.dist-info/entry_points.txt,sha256=jfjFDSgyItP-xX2bGBae8QY3Z2zaA2hmMBIQZKTfTGg,49
+NUAAiCal-0.5.3.dist-info/top_level.txt,sha256=TNqYdlqd8kWomZRCaLALmREp9bQdEwRuct2sioraPKU,9
