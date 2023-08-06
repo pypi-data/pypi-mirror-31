@@ -1,0 +1,15 @@
+niscope/__init__.py,sha256=WTThtacKh2xXYcE1hEP1x0QHzNaqVT068UiEScFDUMc,409
+niscope/_attributes.py,sha256=IwqIGmtNlb_OvixcnmGXx-UTru0YZgLVL7bMV8cLnVs,3830
+niscope/_converters.py,sha256=IMPz4jrO3wX7VpJcjZE4xN652KX6Fcp6U2lKmWYl-KQ,22582
+niscope/_library.py,sha256=XJ-pFhJ0jGQBdJ997iQQUcNexK-ORzwJtAMCu7Wma5M,38236
+niscope/_library_singleton.py,sha256=PKzjHZKBrG54wH5zZvnqJ28ZcTN01gYAAI5Sz1GttGg,1565
+niscope/_visatype.py,sha256=glbyIBEBPpXK9QJ_JSUTzpZitHf1Vl9mbS_zJ1pL4Eo,624
+niscope/enums.py,sha256=nP5ZPG1PauzQjl01P1A_zA_paAGIPDEbJABC6KhdAZI,18284
+niscope/errors.py,sha256=Wmc6wJmpcpq2Uaae1bXxjmtsH1sgVjRIN7ZnocIvzz0,3347
+niscope/session.py,sha256=KFUW-NJcioFXJntMY9nxgJX0r1Wz0YRGw9-litme1_c,280742
+niscope/waveform_info.py,sha256=-_6SlYvWZcb87bRCq3CcGsaDRVWoMB0PhT_PpiSAM5o,4373
+niscope-0.8.0.dist-info/METADATA,sha256=-CcNTIRdIFMo-BkLuecqMlqukhOJMbu9wXvxTCfS0-g,14413
+niscope-0.8.0.dist-info/RECORD,,
+niscope-0.8.0.dist-info/WHEEL,sha256=saUSQBLOUjf5ACZdNkhQ0lB6XrHU-l4vpzxq_W1n_AY,116
+niscope-0.8.0.dist-info/top_level.txt,sha256=qIxU5N6UcKmyxBGgntFbG0pMJAjiGfFtz8MsxwevDH0,8
+niscope-0.8.0.dist-info/zip-safe,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
