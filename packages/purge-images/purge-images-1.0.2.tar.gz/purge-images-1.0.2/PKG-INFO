@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: purge-images
+Version: 1.0.2
+Summary: purge images
+Home-page: https://github.com/looking-for-a-job/purge-images
+License: UNKNOWN
+Description: ### Install
+        
+        ```bash
+        $ [sudo] pip install purge-images
+        ```
+        
+        ### Features
+        
+        +   purge html page images (badges)
+        
+        ### Usage
+        
+        ```bash
+        usage: purge-images url ...
+        ```
+        
+        ### Examples
+        
+        ```bash
+        url="https://github.com/owner/repo"
+        purge-images "$url"
+        ```
+Keywords: images
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Unix Shell
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
