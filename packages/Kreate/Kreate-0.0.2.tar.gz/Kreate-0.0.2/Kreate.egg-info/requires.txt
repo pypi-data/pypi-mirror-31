@@ -1,0 +1,11 @@
+gitpython
+knack
+numpy
+scipy
+nltk
+sklearn
+jellyfish
+pyyaml
+
+[test]
+pytest
