@@ -1,0 +1,3 @@
+[console_scripts]
+belgrade_real_estates_adventis = RealEstateApp.real_estate_app:main
+
