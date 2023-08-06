@@ -1,0 +1,4 @@
+include README.md
+include docs/*.txt
+recursive-include edam/resources
+prune tests*
