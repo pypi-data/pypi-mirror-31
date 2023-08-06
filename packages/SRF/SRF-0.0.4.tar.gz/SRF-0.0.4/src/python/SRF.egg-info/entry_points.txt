@@ -1,0 +1,4 @@
+
+            [console_scripts]
+            srf=srf.cli.main:srf
+      
