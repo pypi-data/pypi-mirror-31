@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+versioneer.py
+earthchem/__init__.py
+earthchem/_version.py
+earthchem/documentation.py
+earthchem/query.py
+earthchem.egg-info/PKG-INFO
+earthchem.egg-info/SOURCES.txt
+earthchem.egg-info/dependency_links.txt
+earthchem.egg-info/entry_points.txt
+earthchem.egg-info/requires.txt
+earthchem.egg-info/top_level.txt
