@@ -1,0 +1,21 @@
+Metadata-Version: 2.0
+Name: barril
+Version: 0.1
+Summary: Python package to manage units for physical quantities
+Home-page: http://github.com/ESSS/barril
+Author: ESSS
+Author-email: foss@esss.co
+License: MIT
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+
+UNKNOWN
+
+
