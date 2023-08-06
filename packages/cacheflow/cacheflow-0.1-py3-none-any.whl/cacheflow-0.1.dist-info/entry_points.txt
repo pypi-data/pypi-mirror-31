@@ -1,0 +1,4 @@
+[console_scripts]
+cacheflow = cacheflow.main:main
+noteflow = cacheflow.noteflow:main
+
