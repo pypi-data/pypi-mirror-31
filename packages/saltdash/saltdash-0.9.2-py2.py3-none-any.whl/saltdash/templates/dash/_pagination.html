@@ -1,0 +1,30 @@
+{% load dash_tags %}
+{% if is_paginated %}
+<nav aria-label="Page navigation">
+  <ul class="pagination justify-content-center">
+    {% if page_obj.has_previous %}
+      <li class="page-item">
+        <a class="page-link" href="?{% url_replace page=page_obj.previous_page_number %}">&larr; Previous</a>
+      </li>
+    {% else %}
+      <li class="page-item">
+        <a class="page-link" href="#">&larr; Previous</a>
+      </li>
+    {% endif %}
+    {% for pagenum in paginator.page_range|clipped_page_range:page_obj.number %}
+      <li class="page-item{% if not pagenum %} disabled{% endif %}{% if page_obj.number == pagenum %} active{% endif %}">
+        <a class="page-link" href="{% if pagenum %}?{% url_replace page=pagenum %}{% endif %}">{{ pagenum|default_if_none:"&hellip;" }}</a>
+      </li>
+    {% endfor %}
+    {% if page_obj.has_next %}
+      <li class="page-item">
+        <a class="page-link" href="?{% url_replace page=page_obj.next_page_number %}">Next &rarr;</a>
+      </li>
+    {% else %}
+      <li class="page-item disabled">
+        <a class="page-link" href="#">Next &rarr;</a>
+      </li>
+    {% endif %}
+  </ul>
+</nav>
+{% endif %}
