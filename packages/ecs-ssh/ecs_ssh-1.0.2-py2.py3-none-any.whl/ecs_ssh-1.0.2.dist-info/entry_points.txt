@@ -1,0 +1,3 @@
+[console_scripts]
+ecs-ssh = ecs_ssh:main
+
