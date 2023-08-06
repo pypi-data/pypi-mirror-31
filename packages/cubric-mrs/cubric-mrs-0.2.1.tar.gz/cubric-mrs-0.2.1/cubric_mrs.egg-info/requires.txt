@@ -1,0 +1,6 @@
+suspect>=0.3.5
+numpy
+Pillow
+pyx
+nibabel
+nipype
