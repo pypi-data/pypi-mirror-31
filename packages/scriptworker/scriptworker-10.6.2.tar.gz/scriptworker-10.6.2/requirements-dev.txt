@@ -1,0 +1,14 @@
+aiohttp>=2.0.0,<3
+arrow
+defusedxml
+dephash
+dictdiffer
+frozendict
+jsonschema
+json-e>=2.5.0
+pexpect
+python-gnupg
+PyYAML
+taskcluster
+virtualenv
+wheel
