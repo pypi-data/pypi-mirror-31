@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: pynvvl-cuda90
+Version: 0.0.2a2
+Summary: PyNVVL: A Python wrapper for NVIDIA Video Loader (NVVL) with CuPy
+Home-page: https://github.com/mitmul/pynvvl
+Author: Shunta Saito
+Author-email: shunta.saito@gmail.com
+License: MIT License
+Platform: UNKNOWN
+Requires-Dist: cupy-cuda90 (>=4.0.0)
+
+UNKNOWN
+
+
