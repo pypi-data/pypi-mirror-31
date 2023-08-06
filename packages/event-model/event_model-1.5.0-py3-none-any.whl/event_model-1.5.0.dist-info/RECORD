@@ -1,0 +1,15 @@
+event_model/__init__.py,sha256=76WSN8rCetrNbnIZtCRhPTV8UqGkeypXjlUL_-K3ysk,1045
+event_model/_version.py,sha256=dVxCkFM6gdHQEXu7f9F2RAlEAG_S4nNl-OGXB9t7k8A,15766
+event_model/schemas/bulk_events.json,sha256=fr8LXOtaSsbpmSZrrWENpkPH5WROlojEnLgF7lb4SD8,1975
+event_model/schemas/datum.json,sha256=zUKekLAsb2sCwzaH7_LLR1gUrV45J_ugqooGSvGr_88,801
+event_model/schemas/event.json,sha256=spvtRN-LEgvHpWx_ih3-v2VxEnmTKTrQXm81dHUQA3g,1379
+event_model/schemas/event_descriptor.json,sha256=F_q4WtiX6TwJyawKKSQvWEDjVfln9LNenPoY5Gsio2A,3870
+event_model/schemas/resource.json,sha256=6NitUaBzlY4Hq-HH4-KwGosdrCXngJCy9usw829mqIc,1445
+event_model/schemas/run_start.json,sha256=ejfWj270-J1vLGFSIyUbuyjmAr-1P1zZra-XnuaPfEU,2974
+event_model/schemas/run_stop.json,sha256=AZjMK9Lrmsal5F3YS571DEbhdljWSZyZpRniNnilZ3M,1548
+event_model-1.5.0.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+event_model-1.5.0.dist-info/METADATA,sha256=_XSr7Dsf8QNwReP23S95NmdUj2NorMbmUUK1nFZfdag,198
+event_model-1.5.0.dist-info/RECORD,,
+event_model-1.5.0.dist-info/WHEEL,sha256=rNo05PbNqwnXiIHFsYm0m22u4Zm6YJtugFG2THx4w3g,92
+event_model-1.5.0.dist-info/metadata.json,sha256=hlcyYvzkINbmAlLnRyOTSdZ0DnYBRHVzDee2FaidHNI,295
+event_model-1.5.0.dist-info/top_level.txt,sha256=_1QwZwGPifBXzitBV0qnXoJC_tDxkVU6BDEe8NF0H9E,12
