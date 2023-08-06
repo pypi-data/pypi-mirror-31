@@ -1,0 +1,18 @@
+Metadata-Version: 2.0
+Name: diesel-ai
+Version: 0.1
+Summary: a basic python based deep learning library
+Home-page: https://github.com/laxmanvijay/diesel
+Author: Laxman Vijay
+Author-email: laxmanvijay24@gmail.com
+License: Apache2
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: NumPy (>=1.14.2)
+
+this library implements some of the most basic functions.It is written for education purposes and it is not intended for production usage.
+
+
