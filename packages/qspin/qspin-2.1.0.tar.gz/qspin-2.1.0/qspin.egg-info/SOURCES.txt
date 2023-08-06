@@ -1,0 +1,11 @@
+README.rst
+setup.cfg
+setup.py
+qspin/__init__.py
+qspin/jones.py
+qspin/qspin.py
+qspin.egg-info/PKG-INFO
+qspin.egg-info/SOURCES.txt
+qspin.egg-info/dependency_links.txt
+qspin.egg-info/requires.txt
+qspin.egg-info/top_level.txt
