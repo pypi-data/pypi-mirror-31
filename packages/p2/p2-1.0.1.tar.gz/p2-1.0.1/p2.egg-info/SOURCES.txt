@@ -1,0 +1,9 @@
+README.rst
+setup.py
+p2/__init__.py
+p2/cmd.py
+p2.egg-info/PKG-INFO
+p2.egg-info/SOURCES.txt
+p2.egg-info/dependency_links.txt
+p2.egg-info/entry_points.txt
+p2.egg-info/top_level.txt
