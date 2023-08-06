@@ -1,0 +1,14 @@
+[build-system]
+requires = ["flit"]
+build-backend = "flit.buildapi"
+
+[tool.flit.metadata]
+module = "flityard"
+author = "Gasper Vozel"
+author-email = "karantan@gmail.com"
+home-page = "https://github.com/karantan/flityard"
+classifiers = ["License :: OSI Approved :: MIT License"]
+requires=[
+    "requests",
+]
+description-file = "README.md"
