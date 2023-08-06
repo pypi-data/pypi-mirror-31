@@ -1,0 +1,38 @@
+[
+    {
+        "_is_template": true,
+        "aggregation": "graphite",
+        "check_command": "check_tcp",
+        "check_command_args": "",
+        "customs": {
+            "_CHECK_HTTP_PORT": "2003",
+            "_CHECK_HTTP_URI": "/"
+        },
+        "host": "graphite",
+        "name": "Check Carbon text"
+    },
+    {
+        "_is_template": true,
+        "aggregation": "graphite",
+        "check_command": "check_tcp",
+        "check_command_args": "",
+        "customs": {
+            "_CHECK_HTTP_PORT": "2004",
+            "_CHECK_HTTP_URI": "/"
+        },
+        "host": "graphite",
+        "name": "Check Carbon pickle"
+    },
+    {
+        "_is_template": true,
+        "aggregation": "graphite",
+        "check_command": "check_tcp",
+        "check_command_args": "",
+        "customs": {
+            "_CHECK_HTTP_PORT": "8080",
+            "_CHECK_HTTP_URI": "/"
+        },
+        "host": "graphite",
+        "name": "Check Graphite"
+    }
+]
