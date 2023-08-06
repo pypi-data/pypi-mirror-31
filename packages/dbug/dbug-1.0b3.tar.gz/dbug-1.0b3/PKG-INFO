@@ -1,0 +1,54 @@
+Metadata-Version: 1.1
+Name: dbug
+Version: 1.0b3
+Summary: Print tools for debuging
+Home-page: http://leo-flaventin.com
+Author: Léo Flaventin Hauchecorne
+Author-email: hl037.prog@gmail.com
+License: Public Domain
+Project-URL: Documentation, https://github.com/hl037/dbug.py/blob/master/dbug/__init__.py
+Project-URL: Source, https://github.com/hl037/dbug.py
+Project-URL: Tracker, https://github.com/hl037/dbug.py/issues
+Description: Introduction
+        ============
+        
+        Quick Debug functions to print informations on the context.
+        
+        Each function has 3 optional keyword-only argumuments :
+        
+        - ``i`` : indent level (defaults to 0)
+        - ``indent_str`` : indent string for one level (defaults to 2 spaces)
+        - ``stream`` : file-like object to output (defaults to stderr)
+        
+        These two last parameter are actually defaulted to the modules variables `dbug._Dindent_str` and `dbug._Dstream`.
+        
+        Each functions ``F`` exist in 2 flavours :
+        
+        - ``F`` : normal
+        - ``nF`` : print a new line before
+        
+        Functions available
+        ===================
+        
+        - ``[n]D(*args, **kw)`` : Simply prints ``*args``
+        - ``[n]Dvar(*expr, **kw)`` : Print for each expression ``expr`` : ``f'{expr} = {eval(expr)}\n'``
+        - ``[n]DWAI(**kw)`` : Print *W*-here *A*-m *I* with this format : ``module.function(param=val_param, param2=val_param2...) # /path/to/function/definition:line_of_DWAI_call``
+        - ``[n]DNL(**kw)`` : Print a *N*-ew *L*-ine (``i`` and ``indeit_str`` have no effect on this one
+        
+        Installation
+        ============
+        
+        ``pip install dbug``
+        
+        
+        
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: Public Domain
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Debuggers

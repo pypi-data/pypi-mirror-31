@@ -1,0 +1,11 @@
+HISTORY.rst
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+dbug/__init__.py
+dbug.egg-info/PKG-INFO
+dbug.egg-info/SOURCES.txt
+dbug.egg-info/dependency_links.txt
+dbug.egg-info/not-zip-safe
+dbug.egg-info/top_level.txt
