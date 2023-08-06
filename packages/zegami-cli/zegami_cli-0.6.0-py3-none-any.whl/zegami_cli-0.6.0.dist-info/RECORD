@@ -1,0 +1,17 @@
+zeg/__init__.py,sha256=PUU9LokWyzlNoC72bwcYx_2-g4Nx91Z5XcsuJMObDd0,42
+zeg/__main__.py,sha256=ASF453C8mkSukKM6K-GrfjU45X6xR1lE-dcvNPQhuo8,4526
+zeg/auth.py,sha256=TdRYiIsZWjMgvbKJCbvCJJ31TeqJqKDMrfN85Yqkaic,1775
+zeg/collections.py,sha256=2p7ip6v-lE3n5fPvl_dMxwXdYJW3K2Hn_vGMvMkJFnI,2289
+zeg/config.py,sha256=DyowhDAUna-yZf_HW5mM8rUaX8ZYF6LK31P3t26WyVo,237
+zeg/datasets.py,sha256=tCWrSJu-SBIKdPF0vKbtStczyJffXhO6ZXnhaWlttjE,4787
+zeg/http.py,sha256=F-Ii_9DgzMMKLfpbdVmGbDVjPeAw00i8DP-6yz8PpK8,2427
+zeg/imagesets.py,sha256=DsroK5nS8I--j_XWc1bGGI-rJpNQz9vyQgHIvvAWP0s,5601
+zeg/log.py,sha256=qaS3uexpYztfrUgV4hnjwpE9l-OCnJvZQ4Y1hB_N7ug,2203
+zeg/sql.py,sha256=xgWmYUN5IfAts1g9zG7Dav_aOUdQTK1MQrJF5Sdziyc,444
+zegami_cli-0.6.0.dist-info/DESCRIPTION.rst,sha256=Waiy_qOrqSfiAgDzhUtaawO_h2agNzhJOjwpftSWrqk,4603
+zegami_cli-0.6.0.dist-info/METADATA,sha256=6X1j-n0GRUHFzGolMncLRcVPCHPMbTCLSsKfNPtdfK0,5658
+zegami_cli-0.6.0.dist-info/RECORD,,
+zegami_cli-0.6.0.dist-info/WHEEL,sha256=Vlaj2XNMTTJ893zWX-JvKeZUIs7q5E7d7Gise2Vouzc,97
+zegami_cli-0.6.0.dist-info/entry_points.txt,sha256=8N8iYENx9EfUFampzjSiI-gUdp7fIoOfDhEJYerBg1w,43
+zegami_cli-0.6.0.dist-info/metadata.json,sha256=ljvY_PZGaZAgLX71riPAI3KapG2qR5NDGwfsSLvUXxE,1164
+zegami_cli-0.6.0.dist-info/top_level.txt,sha256=Y3uRrSPbHN2p9aPpuG1qnQbOTHqMyR0uLHHw_pw1s2s,4
