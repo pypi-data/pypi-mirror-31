@@ -1,0 +1,15 @@
+CHANGES.rst
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+motion_pipeline/__init__.py
+motion_pipeline/version.py
+motion_pipeline.egg-info/PKG-INFO
+motion_pipeline.egg-info/SOURCES.txt
+motion_pipeline.egg-info/dependency_links.txt
+motion_pipeline.egg-info/requires.txt
+motion_pipeline.egg-info/top_level.txt
+motion_pipeline/tests/__init__.py
+motion_pipeline/tests/test_version.py
