@@ -1,0 +1,11 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+mlinstrumentation/__init__.py
+mlinstrumentation.egg-info/PKG-INFO
+mlinstrumentation.egg-info/SOURCES.txt
+mlinstrumentation.egg-info/dependency_links.txt
+mlinstrumentation.egg-info/requires.txt
+mlinstrumentation.egg-info/top_level.txt

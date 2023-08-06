@@ -1,0 +1,7 @@
+influxdb
+
+[dev]
+check-manifest
+
+[test]
+coverage
