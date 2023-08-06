@@ -1,0 +1,6 @@
+[console_scripts]
+biopipe = biopipe.cli:main
+enrichr-go-bp = biopipe.gene:enrichr_go_bp
+ensg2symbol = biopipe.gene:ensg2symbol
+symbol2ensg = biopipe.gene:symbol2ensg
+
