@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: BingImages
+Version: 0.62
+Summary: Use the bing image search engine to get image-links for your topics
+Home-page: https://github.com/joelbarmettlerUZH/BingImages
+Author: Joel Barmettler
+Author-email: joel.barmettler@uzh.ch
+License: MIT
+Download-URL: https://github.com/joelbarmettlerUZH/BingImages/archive/v_062.tar.gz
+Description: UNKNOWN
+Keywords: Bing,Images,Search,engine,download,scraping
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
