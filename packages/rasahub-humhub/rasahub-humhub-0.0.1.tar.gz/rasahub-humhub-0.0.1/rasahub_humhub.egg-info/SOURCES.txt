@@ -1,0 +1,9 @@
+MANIFEST.in
+README.rst
+setup.py
+rasahub_humhub/__init__.py
+rasahub_humhub.egg-info/PKG-INFO
+rasahub_humhub.egg-info/SOURCES.txt
+rasahub_humhub.egg-info/dependency_links.txt
+rasahub_humhub.egg-info/requires.txt
+rasahub_humhub.egg-info/top_level.txt

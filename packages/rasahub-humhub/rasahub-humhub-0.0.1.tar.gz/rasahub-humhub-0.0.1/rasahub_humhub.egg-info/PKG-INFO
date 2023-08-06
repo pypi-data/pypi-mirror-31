@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: rasahub-humhub
+Version: 0.0.1
+Summary: Humhub connector for Rasahub
+Home-page: http://github.com/frommie/rasahub-humhub
+Author: Christian Frommert
+Author-email: christian.frommert@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: rasahub humhub
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Software Development
+Provides-Extra: test

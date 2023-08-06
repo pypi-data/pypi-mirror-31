@@ -1,0 +1,6 @@
+rasahub
+mysql-connector
+
+[test]
+testing.common.database
+testing.mysqld
