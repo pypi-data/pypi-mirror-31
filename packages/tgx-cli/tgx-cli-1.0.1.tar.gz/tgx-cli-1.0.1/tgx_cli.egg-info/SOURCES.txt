@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+data/data_file
+tgx/__init__.py
+tgx/configuration.py
+tgx/graphql_class.py
+tgx/main.py
+tgx/tgx.py
+tgx_cli.egg-info/PKG-INFO
+tgx_cli.egg-info/SOURCES.txt
+tgx_cli.egg-info/dependency_links.txt
+tgx_cli.egg-info/entry_points.txt
+tgx_cli.egg-info/requires.txt
+tgx_cli.egg-info/top_level.txt
