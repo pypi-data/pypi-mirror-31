@@ -1,0 +1,16 @@
+Flask_RRBAC-0.1.1.dist-info/DESCRIPTION.rst,sha256=v_le_t-PAK8fHOhS55BoIYImFdOGdnW5RdUto7g2AnA,10205
+Flask_RRBAC-0.1.1.dist-info/LICENSE.txt,sha256=QBksRRMCIymRDA5jOyu6gfdTiKDWnnyJY4qbEiiTyJ4,1071
+Flask_RRBAC-0.1.1.dist-info/METADATA,sha256=PQlr15rkgKh3Gnfa2JY7SyWLN5q8rlvkVZrEeuzNHzk,11005
+Flask_RRBAC-0.1.1.dist-info/RECORD,,
+Flask_RRBAC-0.1.1.dist-info/WHEEL,sha256=o2k-Qa-RMNIJmUdIc7KU6VWR_ErNRbWNlxDIpl7lm34,110
+Flask_RRBAC-0.1.1.dist-info/metadata.json,sha256=25tXNimx4JfXMKT7vhzpmt3syc5tgj5jUF0-r5R6F68,1017
+Flask_RRBAC-0.1.1.dist-info/top_level.txt,sha256=5T4T0PLnqifL-pVjPlcRoKpv0DQ5mc-vLvLenMxzSvM,12
+flask_rrbac/__init__.py,sha256=Dq1FFNdkqpQZY01t6pe6a-yQ9VrbdbRN6ScmjDeXrOc,13773
+flask_rrbac/defaults.py,sha256=L-r8j5r2dUyut3a9c3F2tYnMrDT5OepkPH0YbJ7FVpg,1359
+flask_rrbac/messages.py,sha256=FxRRZImsvtk9tbCWefjEBbQotHwQLvRFMp5ypdAXAs8,488
+flask_rrbac/models/__init__.py,sha256=yWnh_v-rR60FEAc9YpBqjTaGLVd8t-4og7gdV7FOg-E,367
+flask_rrbac/models/acl_role_mixin.py,sha256=1v_Erg2_cSII9zna0zqT692YRh2fR3f47_Z27gv5EDU,1280
+flask_rrbac/models/acl_role_route_map_mixin.py,sha256=PzGwCICjaPeVlrK3OzFPDDU1oj4Q72nXYjwv_qhd4SA,2116
+flask_rrbac/models/acl_route_mixin.py,sha256=5Li0Cnkf6q0zC3aoFHB3SFEhPPdI-eOCEf59gOEP3Z4,1943
+flask_rrbac/models/acl_user_mixin.py,sha256=sCC1RDJyYdIo0GJ_S7IvNawE2Tb5h1-mK3naZssrFsU,853
+flask_rrbac/models/acl_user_role_map_mixin.py,sha256=GAE70WkCzrBVmChrQvKmjBR43Gs3PRGa-2_br6LcvC0,1975
