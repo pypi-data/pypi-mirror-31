@@ -1,0 +1,8 @@
+docker>=3.1.4
+dockerpty
+GitPython
+pyyaml
+tabulate
+flask
+numpy
+mypy-extensions>=0.3.0
