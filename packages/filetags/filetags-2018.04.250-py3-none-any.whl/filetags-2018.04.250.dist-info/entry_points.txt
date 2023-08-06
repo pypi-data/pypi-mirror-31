@@ -1,0 +1,4 @@
+[console_scripts]
+filetags = filetags:main
+register_filetags_for_send_to_folder = register_filetags_for_send_to_folder:main
+
