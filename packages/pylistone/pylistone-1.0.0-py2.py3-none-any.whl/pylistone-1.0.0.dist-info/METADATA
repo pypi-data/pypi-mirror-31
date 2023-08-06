@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: pylistone
+Version: 1.0.0
+Summary: Makes lists start at one
+Home-page: https://github.com/KuanHulio/pylistone
+Author: Sami Altamimi
+Author-email: nkjjsami@gmail.com
+License: LICENSE
+Keywords: list manipulation,lua arrays
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+
+# pylistone
+Makes a list start at one, the only real way to use a list
+
+# Example
+
+```py
+from listone import luaify
+
+arr = [1,2,3]
+print(luaify(arr))
+# [None, 1, 2, 3]
+k = luaify(arr)
+k[0]
+# None
+k[1]
+# 1
+
+
