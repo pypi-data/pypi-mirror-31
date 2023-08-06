@@ -1,0 +1,11 @@
+klearn/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+klearn/bayes.py,sha256=mLVwI7HFuhIUZTptevHSIAwg-xvMUCKIULI_QmZKf3c,4783
+klearn/kdtree.py,sha256=owmO42NUZQpg5NOCQkDDw4mpNNWrXBy8WmhTv7IYNnc,2727
+klearn/knn.py,sha256=7Fzd3Dm2adj3NxCaTuUln7rLW1E55uxgqEmlZOVzXKg,11947
+klearn/sensor.py,sha256=rNB9JcERokvQa4qeAbyJS3JIgJ5pHNucETfl2YJtwwA,3727
+klearn-0.0.3.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+klearn-0.0.3.dist-info/METADATA,sha256=3oI2FSOtCsU5egM5tnL5qb0gfsyxEdlvE79VUOACRUc,601
+klearn-0.0.3.dist-info/RECORD,,
+klearn-0.0.3.dist-info/WHEEL,sha256=bee59qcPjkyXfMaxNWjl2CGotqfumWx9pC1hlVLr2mM,92
+klearn-0.0.3.dist-info/metadata.json,sha256=xodgMdvrjJYjKmL7q883c_9DHvfL2oMwZ1FEDPM9kNM,772
+klearn-0.0.3.dist-info/top_level.txt,sha256=exHSFv-4I83WZblSX47dcw3TCBqn1BE-HoRsuhk1Twc,7
