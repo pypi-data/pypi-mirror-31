@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: readme-md
+Version: 0.0.0
+Summary: generate markdown elements
+Home-page: https://github.com/looking-for-a-job/readme-md.py
+License: UNKNOWN
+Description: ### Install
+        
+        ```bash
+        $ [sudo] pip install readme-md
+        ```
+        
+        ### Features
+        
+        +   generate markdown elements
+        +   clean output
+        
+        ### Examples
+        
+        **headers**
+        ```python
+        >>> import readme_md
+        >>> readme_md.header("title", 6)
+        '###### Title'
+        ```
+        **code**
+        ```python
+        >>> import readme_md
+        >>> readme_md.code("$ [sudo] pip install readme_md", "bash")
+        '`` ```bash
+        $ [sudo] pip install readme_md
+        ``` ``
+        ```
+        
+        **images**
+        ```python
+        >>> import readme_md
+        >>> readme_md.image("https://domain.com/image.png", "title", "alt")
+        '![alt](https://domain.com/image.png "https://domain.com/image.png")'
+        ```
+        
+        ### Sources
+        
+        +   [`readme_md.blockquote(text)`](https://github.com/looking-for-a-job/readme-md.py/blob/master/readme_md/__init__.py)
+        +   [`readme_md.code(code, language="")`](https://github.com/looking-for-a-job/readme-md.py/blob/master/readme_md/__init__.py)
+        +   [`readme_md.header(title, lvl=3)`](https://github.com/looking-for-a-job/readme-md.py/blob/master/readme_md/__init__.py)
+        +   [`readme_md.image(url, title="", alt="")`](https://github.com/looking-for-a-job/readme-md.py/blob/master/readme_md/__init__.py)
+        +   [`readme_md.link()`](https://github.com/looking-for-a-job/readme-md.py/blob/master/readme_md/__init__.py)
+        +   [`readme_md.lists(items, ordered=False)`](https://github.com/looking-for-a-job/readme-md.py/blob/master/readme_md/__init__.py)
+Keywords: markdown readme
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Natural Language :: Russian
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.0
+Classifier: Programming Language :: Python :: 3.1
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Documentation
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Documentation
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
