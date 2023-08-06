@@ -1,0 +1,14 @@
+quasardb/__init__.py,sha256=vcUUfOg6I-SGsMtoIm32q-zXP7CJaKSsgIuBALDtT3o,60453
+quasardb/_qdb.pyd,sha256=OqAQZ5O1WZUS9_OiyBwFe0HGOzTvQHRTL4dz_hCC0M0,1497600
+quasardb/impl.py,sha256=wsk9VcVYoyrCHQxY0gpcmFDeEcOsxCpHdLmWjHnDWN0,102503
+quasardb/qdb_api.dll,sha256=cwh8__g1DL9a4RWpnTVoBG_biod0nsPFucH-nLbMgbo,4980176
+quasardb/qdb_api.lib,sha256=ieDB2PgbhI2wp9uJomICdkWBXgGyCF9DInVOz1ZM_t4,29128
+quasardb/qdb_convert.py,sha256=qHehxll2xoqoEg2sb4KwWgLw5JWQRET1q9hjQbEaj20,6114
+quasardb/qdb_enum.py,sha256=cnzBixeDQHB6pkQqyZ_6I_sFH8xWqD1CcjXef86g4V0,2510
+quasardb-2.5.0.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+quasardb-2.5.0.dist-info/METADATA,sha256=dXNxWtIsjx4_fJqVDy0qex8ahy1n7pRpIQk-I52Argk,938
+quasardb-2.5.0.dist-info/RECORD,,
+quasardb-2.5.0.dist-info/WHEEL,sha256=oT-jJdPOIfRdvpqTJO9X6OjCsyUImH2THoT54KREdwI,106
+quasardb-2.5.0.dist-info/metadata.json,sha256=wGVmIQm1n019MpgW7RfrIjR0nOlB8ZETHmX-oOX141w,1010
+quasardb-2.5.0.dist-info/top_level.txt,sha256=wlprix4hCywuF1PkgKWYdZeJKq_kgJOqkAvukm_sZQ8,9
+quasardb-2.5.0.dist-info/zip-safe,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
