@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: bossphorus
+Version: 0.1.0
+Summary: Baby bossDB
+Home-page: https://github.com/aplbran/bossphorus/tarball/0.1.0
+Author: Jordan Matelsky
+Author-email: jordan.matelsky@jhuapl.edu
+License: Apache 2.0
+Description: UNKNOWN
+Keywords: bossDB neuroscience volumetric datastore database
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
