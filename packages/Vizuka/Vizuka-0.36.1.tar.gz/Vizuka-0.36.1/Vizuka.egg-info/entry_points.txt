@@ -1,0 +1,4 @@
+[console_scripts]
+vizuka = vizuka.launch_viz:main
+vizuka-reduce = vizuka.launch_reduce:main
+
