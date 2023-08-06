@@ -1,0 +1,31 @@
+Metadata-Version: 2.0
+Name: eventflit
+Version: 0.1.0
+Summary: A Python library to interract with the Eventflit API
+Home-page: https://github.com/eventflit/eventflit-http-python
+Author: Eventflit
+Author-email: support@eventflit.com
+License: MIT
+Keywords: eventflit rest realtime websockets service
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: ndg-httpsclient
+Requires-Dist: pyasn1
+Requires-Dist: pyopenssl
+Requires-Dist: requests (>=2.3.0)
+Requires-Dist: six
+Requires-Dist: urllib3
+Provides-Extra: aiohttp
+Requires-Dist: aiohttp (>=0.20.0); extra == 'aiohttp'
+Provides-Extra: tornado
+Requires-Dist: tornado (>=4.0.0); extra == 'tornado'
+
+UNKNOWN
+
+
