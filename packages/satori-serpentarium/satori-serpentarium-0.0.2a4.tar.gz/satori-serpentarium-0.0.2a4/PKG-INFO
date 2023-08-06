@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: satori-serpentarium
+Version: 0.0.2a4
+Summary: Satori composer for Python
+Home-page: https://bitbucket.addsrv.com/users/yzhuk/repos/serpentarium/browse
+License: UNKNOWN
+Description: # Satori Python composition framework (alpha release)
+        
+        ## Requirements
+        Python 3.6+
+        
+        ## Run locally
+        ```
+        pip install serpentarium
+        python -m serpentariun $CONFIG_PATH
+        ```
+        Sample config: `serpentarium/serpentarium/config.yml`
+        
+        ## Writing your own bot
+        See a real [example](https://bitbucket.addsrv.com/projects/SATSOL/repos/gtfs-rt-prediction-bot/browse)
+        
+        ## Draw a mod hierarchy graph
+        
+            0. Install graphviz (brew insatll graphviz)
+            1. Run module with -d True
+            2. Check __main__.py for more info
+        
+Platform: UNKNOWN
+Requires-Python: >=3.6.5
+Description-Content-Type: text/markdown
