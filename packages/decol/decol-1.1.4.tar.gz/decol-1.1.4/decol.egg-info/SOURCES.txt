@@ -1,0 +1,16 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+README.rst
+setup.py
+decol/__init__.py
+decol/_version.py
+decol/cli.py
+decol/csv.py
+decol/util.py
+decol.egg-info/PKG-INFO
+decol.egg-info/SOURCES.txt
+decol.egg-info/dependency_links.txt
+decol.egg-info/entry_points.txt
+decol.egg-info/requires.txt
+decol.egg-info/top_level.txt
