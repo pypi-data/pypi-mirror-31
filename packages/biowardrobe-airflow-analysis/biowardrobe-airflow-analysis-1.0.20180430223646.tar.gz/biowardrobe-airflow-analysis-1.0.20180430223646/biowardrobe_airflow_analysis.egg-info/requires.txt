@@ -1,0 +1,7 @@
+cwltool==1.0.20180220121300
+sqlparse
+jsonmerge
+ruamel.yaml<0.15
+biowardrobe-cwl-workflows==1.0.20180423012817
+cwl-airflow-parser==1.0.20180220071453
+apache-airflow<2,>=1.9.0
