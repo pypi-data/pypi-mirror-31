@@ -1,0 +1,9 @@
+setup.py
+ridi/test/__init__.py
+ridi/test/config.py
+ridi_test.egg-info/PKG-INFO
+ridi_test.egg-info/SOURCES.txt
+ridi_test.egg-info/dependency_links.txt
+ridi_test.egg-info/requires.txt
+ridi_test.egg-info/top_level.txt
+test/test_admin_auth.py
