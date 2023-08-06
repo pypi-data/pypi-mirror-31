@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: cython_fortran_file
+Version: 0.0.1
+Summary: An efficient way of reading fortran-record files.
+Home-page: https://github.com/cphyc/cython-fortran-file
+Author: Corentin Cadiou
+Author-email: contact@cphyc.me
+License: See http://www.python.org/3.6/license.html
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Cython
+Classifier: Programming Language :: Python
+Classifier: Topic :: Utilities
