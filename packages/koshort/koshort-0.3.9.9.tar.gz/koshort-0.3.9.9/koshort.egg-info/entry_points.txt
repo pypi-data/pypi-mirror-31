@@ -1,0 +1,4 @@
+[console_scripts]
+stream_naver = koshort.stream.naver:main
+stream_twitter = koshort.stream.twitter:main
+
