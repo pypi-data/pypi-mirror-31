@@ -1,0 +1,14 @@
+ml_logger/__init__.py,sha256=G73W506rLViiwefi4Ybz9_rZHcIdtQe1Uh8RljORzvk,104
+ml_logger/log_client.py,sha256=88f-vZpvGLJq5WuXSqPG1SW4w6ryQk4hHrvujPDC7Vg,1577
+ml_logger/ml_logger.py,sha256=H8gHq2OgPSic5WKZGqy5yQHG4dylXoF07uSZlY4jv10,8721
+ml_logger/serdes.py,sha256=llu3M2wrifUdIVhr9dwRdIGRxfJ8rz-w0Dzf_GXVdD8,252
+ml_logger/server.py,sha256=l76SPq6acuX10BmwqABAuKiF53LCGXppvErIvSp-afA,2968
+ml_logger/server.test.py,sha256=-H0D29ZjCrUkYTu445nHzU6SasH8N5zSzX053M0A3_g,799
+ml_logger/test_ml_logger.py,sha256=jNUEOscw6FaV89GlfMYlS8tOHzVJtXCAKVRX2XlReqs,1447
+ml_logger/test_server.py,sha256=WYqBb1LoVb6wMtpyvatvO9J1Gd0Md4eXGFM4Yo7l68Y,948
+ml_logger-0.0.20.dist-info/METADATA,sha256=YQ71q74il9t_9dlgEwaeOcY1PPuClQI-ILyLW2a11ko,10262
+ml_logger-0.0.20.dist-info/RECORD,,
+ml_logger-0.0.20.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+ml_logger-0.0.20.dist-info/top_level.txt,sha256=WuQ6Sdn-cgRR6tcDudKUzVE_9G9DEB_TkzGDgWontSI,10
+ml_vis/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ml_vis/dashboard.py,sha256=bcxZcgrUG8ixhcOFRIejp_LbsCo4URB7knfUCjGAGEg,1763
