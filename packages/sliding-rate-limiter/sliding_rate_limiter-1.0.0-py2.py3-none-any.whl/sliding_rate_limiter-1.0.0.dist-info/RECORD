@@ -1,0 +1,14 @@
+sliding_rate_limiter/__init__.py,sha256=nKd2hLWIoWHOdge6UwQMxb7RBxFaWZfpqvaPPebiUaI,252
+sliding_rate_limiter/rate_limited_function.py,sha256=ZFIYmqKsX0KritLztGPPMzkXZnNWPAtdyClytZMBGIM,1610
+sliding_rate_limiter/region.py,sha256=-11FO3I-XKlC6d6EkgoB4OtHcggxyzVKXBbXruQTDDA,1902
+sliding_rate_limiter/utils.py,sha256=ym_K1YMNVjdEpb9a3UdGDW33pv9N0PUDjLCgeV9v_vY,1959
+sliding_rate_limiter/backends/__init__.py,sha256=9KsP_8A9uIYBfdcEjdFFRh5j_OROo3bC45WKygIqsUs,173
+sliding_rate_limiter/backends/base.py,sha256=Yw1XQbX_ZdnM1RUq4WQtS066RgN7V956fvKp0KYS5go,977
+sliding_rate_limiter/backends/memory.py,sha256=BDVqVY7Zawl7dYFLJgHVqP7QM8A7_chVjvJAnJNuTus,1734
+sliding_rate_limiter/backends/redis.py,sha256=bjXvPTKi6FPCv5iWXQN26Iqt_KIuJw7jHXwbUbScX4A,1269
+sliding_rate_limiter-1.0.0.dist-info/DESCRIPTION.rst,sha256=UFf9F13Tamh28TT7V-pqWvPUvVgoNldhdid-iqg6qHE,1779
+sliding_rate_limiter-1.0.0.dist-info/METADATA,sha256=-OYB033Nd8s9QwwTQ9r-gduowAV62-sUyoJ2FcYaIh4,2650
+sliding_rate_limiter-1.0.0.dist-info/RECORD,,
+sliding_rate_limiter-1.0.0.dist-info/WHEEL,sha256=kdsN-5OJAZIiHN-iO4Rhl82KyS0bDWf4uBwMbkNafr8,110
+sliding_rate_limiter-1.0.0.dist-info/metadata.json,sha256=R-PtxuLgG1-bZRBP6aXMOLkucYO4ADkl647viGTVAlg,1072
+sliding_rate_limiter-1.0.0.dist-info/top_level.txt,sha256=7S44xMo53YKl0RSWbg4K6X1ffnonZBuNXOTZ61D2kfI,21
