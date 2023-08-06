@@ -1,0 +1,13 @@
+trytond/modules/sale_credit_limit/__init__.py,sha256=-XaJIs0MbY4JkO9u7iSBv8UHlyPY4qbTe-z9UHSbni0,333
+trytond/modules/sale_credit_limit/party.py,sha256=XpQ34y_P-j_YRhXY8dRDcnS1aeW6bRDq9s25PPnJ8n0,1933
+trytond/modules/sale_credit_limit/sale.py,sha256=mxdRjL8IRt2zDZxbhHTgL8b0rMWJ7eFHodZ1KMnjkwY,563
+trytond/modules/sale_credit_limit/tryton.cfg,sha256=t2k4Lkc-drY7UeNj8UPNqQEC12vLBeGXoDg7mSQMwpI,118
+trytond/modules/sale_credit_limit/tests/__init__.py,sha256=_hShFUN_y7npiaXMfJdG4AvsApDCAb2-kIA1Df-b7ws,322
+trytond/modules/sale_credit_limit/tests/test_sale_credit_limit.py,sha256=_ruFHm9VbqTH2zCypVyBzKaEC8lI5QyGJzaQJ3SoMV0,5382
+trytond_sale_credit_limit-4.8.0.dist-info/DESCRIPTION.rst,sha256=763YSYVUsdy0D3X9anherwbOXr299FkmlmTz0e4equw,580
+trytond_sale_credit_limit-4.8.0.dist-info/METADATA,sha256=cwvlub137PztduvuaPVG9v3bpZhIBA4624FBo9AAePM,2731
+trytond_sale_credit_limit-4.8.0.dist-info/RECORD,,
+trytond_sale_credit_limit-4.8.0.dist-info/WHEEL,sha256=rNo05PbNqwnXiIHFsYm0m22u4Zm6YJtugFG2THx4w3g,92
+trytond_sale_credit_limit-4.8.0.dist-info/entry_points.txt,sha256=ybdZCboK7-yKK6U9tKk8skhUI4r17RAfzZzds6OmgKE,85
+trytond_sale_credit_limit-4.8.0.dist-info/metadata.json,sha256=ctgpkPAJP8aWRa6Xsn-0IStkM_hR6UmgVVHcC2tqyOw,2167
+trytond_sale_credit_limit-4.8.0.dist-info/top_level.txt,sha256=1UNriCfRfjRjutJbJ_B8i13huVUoV_Otp9RlW3mCfw4,8
