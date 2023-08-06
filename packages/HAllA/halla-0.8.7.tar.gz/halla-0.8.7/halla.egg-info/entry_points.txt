@@ -1,0 +1,6 @@
+[console_scripts]
+hallascatter = halla.hallascatter:main
+hallagram = halla.hallagram:main
+halladata = halla.synthetic_data:main
+halla = halla.halla:main
+
