@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: goji
+Version: 0.2.1
+Summary: UNKNOWN
+Home-page: https://github.com/kylef/goji
+Author: Kyle Fuller
+Author-email: kyle@fuller.li
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: requests
+Requires-Dist: requests-html
+Requires-Dist: Click
+Requires-Dist: click-datetime
+
+UNKNOWN
+
+
