@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: xaled_scrapers
+Version: 0.1.0a
+Summary: A collection of helper functions for scraping web sites.
+Home-page: https://github.com/xaled/xaled_scrapers/
+Author: Khalid Grandi
+Author-email: kh.grandi@gmail.com
+License: UNKNOWN
+Description: A collection of helper functions for scraping web sites.
+Keywords: scraper selenium proxy
+Platform: UNKNOWN
