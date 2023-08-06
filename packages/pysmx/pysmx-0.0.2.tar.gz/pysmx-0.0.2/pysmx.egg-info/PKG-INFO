@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: pysmx
+Version: 0.0.2
+Summary: Interact with SourceMod plug-ins
+Home-page: https://github.com/theY4Kman/pysmx
+Author: they4kman
+Author-email: they4kman@gmail.com
+License: MIT
+Description: # pysmx
+        
+        **pysmx** is a Python package for parsing, executing, and simulating the environment of SourceMod plug-ins.
+        
+        
+        ## Quickstart
+        
+        ```python
+        from smx.compile import compile
+        plugin = compile('''
+            public TwoPlusTwo() {
+                return 2 + 2;
+            }
+        ''')
+        print plugin.runtime.call_function_by_name('TwoPlusTwo')
+        ```
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
