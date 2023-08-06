@@ -1,0 +1,12 @@
+
+depends_on:
+  - DEBUG_ENDPOINTS
+
+file: endpoints
+class: Admin
+# baseuri: "/api"
+mapping:
+  adm: "/admin"
+labels:
+  - base
+  - helpers
