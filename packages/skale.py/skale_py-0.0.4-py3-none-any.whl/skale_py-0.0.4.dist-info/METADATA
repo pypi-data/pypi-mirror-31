@@ -1,0 +1,23 @@
+Metadata-Version: 2.0
+Name: skale-py
+Version: 0.0.4
+Summary: Skale client tools
+Home-page: https://github.com/GalacticExchange/blockchain-node
+Author: Skale Labs
+Author-email: support@skalelabs.com
+License: UNKNOWN
+Description-Content-Type: text/markdown
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: peppercorn
+Requires-Dist: web3
+Requires-Dist: asyncio
+Requires-Dist: populus
+
+## skale-py
+
+Client tools to develop Python applications that use Skale
+
