@@ -1,0 +1,169 @@
+#!/bin/env python
+import argparse
+import json
+import os
+import re
+import subprocess
+
+'''
+Things to test:
+- no version.json, with tag (expect: fail)
+- no version.json, without tag (expect: assume 0.0)
+- version.json version is BEFORE tagged version (expect: fail)
+- no tag, on task branch (expect: patch ver is number of commits)
+- on tag 
+- past tag
+- prev 3 with dirty
+- test stuff on master and on task branches
+'''
+
+TAG_PATTERN = re.compile('^v([0-9]+)\.([0-9]+)\.([0-9])$')
+TAG_GIT_MATCH = "v*.*.*"
+
+def extract_tag(output_parts):
+    for i in range(len(output_parts)):
+        possible_tag = '-'.join(output_parts[:i+1])
+        m = TAG_PATTERN.match(possible_tag)
+        if m:
+            return (map(int, m.groups()), output_parts[i+1:])
+
+    return (None, output_parts)
+
+
+def parse_git_desc_success(output):
+    result = {
+        'tagVer': None,
+        'onTag': False,
+        'n': None,
+        'sha': None,
+        'dirty': False
+    }
+
+    output_parts = output.split('-')
+    (tagVer, rest) = extract_tag(output_parts)
+
+    if len(rest) > 0 and rest[-1] == 'dirty':
+        result['dirty'] = True
+        rest.pop()
+
+    if tagVer:
+        result['tagVer'] = tagVer
+        if len(rest) == 0:
+            result['onTag'] = True
+        else:
+            result['n'] = rest.pop(0)
+
+    # prev tag or not, should end with sha and dirty status, eg either 'a1b2c3' or 'a1b2c3-dirty'
+    if len(rest) > 0:
+        result['sha'] = rest.pop(0)
+
+    return result
+
+
+def parse_git_state():
+    result = None
+
+    # read the git-describe output (last tagged version, current hash, etc)
+    p = subprocess.Popen(['git', 'describe', '--tags', '--dirty', '--always', '--match', TAG_GIT_MATCH],
+                         stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    out, err = p.communicate()
+    if p.returncode != 0:
+        raise Exception("A git repository with commits is required.")
+
+    out = out.decode('utf-8').strip()
+    git_state = parse_git_desc_success(out)
+
+    # get branch name
+    p = subprocess.Popen(['git', 'rev-parse', '--abbrev-ref', 'HEAD'],
+                         stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    out, err = p.communicate()
+    if p.returncode != 0:
+        raise Exception("Something went wrong getting branch name.")
+    git_state['branch'] = out.decode('utf-8').strip()
+
+    # if we have no prev tags, we need N to be populated with num of commits
+    if not git_state['tagVer']:
+        p = subprocess.Popen(['git', 'rev-list', '--count', 'HEAD'],
+                             stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        out, err = p.communicate()
+        git_state['n'] = out.decode('utf-8').strip()
+
+    return git_state
+
+
+def read_file_ver(version_file_path):
+    if not os.path.exists(version_file_path):
+        raise Exception("Version json file '{}' not found.".format(version_file_path))
+
+    with open(version_file_path) as f:
+        d = json.load(f)
+
+    ver = d[u'version']
+    return (ver[u'major'], ver[u'minor'])
+
+
+def reconcile(decl_ver, git_state):
+    dmaj, dmin = decl_ver
+
+    # if we don't have any tags, use decl ver at patch 0
+    if not git_state['tagVer']:
+        return {
+            'major': dmaj,
+            'minor': dmin,
+            'patch': 0
+        }
+
+    gmaj, gmin, gpatch = git_state['tagVer']
+
+    # default output to git-tagged verision
+    result = {
+        'major': gmaj,
+        'minor': gmin,
+        'patch': gpatch
+    }
+
+    # if we are not ON a tag, we are prerelease for NEXT patch
+    if not git_state['onTag']:
+        result['patch'] += 1
+
+        # if git-tags show version that is greater than declared, then error
+        if dmaj < gmaj or (dmaj == gmaj and dmin < gmin):
+            msgTmpl = "Declared major.minor version '{}.{}' is less than tag-derived '{}.{}'"
+            raise Exception(msgTmpl.format(dmaj, dmin, gmaj, gmin))
+
+        # if we declare a higher major version, take the declared major and minor, zero patch
+        if dmaj > gmaj:
+            result['major'] = dmaj
+            result['minor'] = dmin
+            result['patch'] = 0
+        elif dmin > gmin:
+            result['minor'] = dmin
+            result['patch'] = 0
+
+    return result
+
+def format_version(version, git_state, format_tag_string):
+    ver_str = "{}.{}.{}".format(version['major'], version['minor'], version['patch'])
+    if format_tag_string:
+        return "v{}".format(ver_str)
+
+    if not git_state['onTag']:
+        ver_str += "-{}.{}.{}".format(git_state['branch'], git_state['n'], git_state['sha'])
+    if git_state['dirty']:
+        ver_str += "-dirty"
+    return ver_str
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-t', '--tag-string', action='store_true', help="Print the string that should be used for new a new tag.")
+    parser.set_defaults(tag_string=False)
+    args = parser.parse_args()
+
+    decl_ver = read_file_ver('version.json')
+    git_state = parse_git_state()
+
+    version = reconcile(decl_ver, git_state)
+    print(format_version(version, git_state, args.tag_string))
+
+if __name__ == "__main__":
+    main()

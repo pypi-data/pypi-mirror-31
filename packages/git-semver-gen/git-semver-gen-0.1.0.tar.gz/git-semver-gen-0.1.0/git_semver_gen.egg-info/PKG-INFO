@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: git-semver-gen
+Version: 0.1.0
+Summary: And easy way to manage semantic versions for git repos with tags and a version.json file.
+Home-page: https://github.com/DiggidyDave/git-semver-gen
+Author: Dave Smith
+Author-email: dave.a.smith@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: git semver
+Platform: UNKNOWN
