@@ -1,0 +1,47 @@
+Metadata-Version: 1.0
+Name: python-lala
+Version: 0.1.2
+Summary: Library of web access log analysis
+Home-page: UNKNOWN
+Author: Zulko
+Author-email: UNKNOWN
+License: see LICENSE.txt
+Description: PDF Reports
+        ===========
+        
+        .. image:: https://travis-ci.org/Edinburgh-Genome-Foundry/pdf_reports.svg?branch=master
+           :target: https://travis-ci.org/Edinburgh-Genome-Foundry/lala
+           :alt: Travis CI build status
+        
+        .. image:: https://coveralls.io/repos/github/Edinburgh-Genome-Foundry/lala/badge.svg?branch=master
+           :target: https://coveralls.io/github/Edinburgh-Genome-Foundry/lala?branch=master
+        
+        
+        
+         Lala is a Python library for access log analysis. It provides a set of methods to retrieve, parse and analyze access logs (only from NGINX for now), and makes it easy to plot geo-localization or time-series data. Think of it as a simpler, Python-automatable version of Google Analytics, to make reports like this:
+        
+         .. image:: https://raw.githubusercontent.com/Edinburgh-Genome-Foundry/lala/master/docs/_static/images/report.jpeg
+         :align: center
+         :width: 550px
+        
+        Infos
+        -----
+        
+        **PIP installation:**
+        
+        .. code:: bash
+        
+          pip install lala
+        
+        **Web documentation:**
+        
+        `<https://edinburgh-genome-foundry.github.io/lala/>`_
+        
+        **Github Page**
+        
+        `<https://github.com/Edinburgh-Genome-Foundry/lala>`_
+        
+        **License:** MIT, Copyright Edinburgh Genome Foundry
+        
+Keywords: access log analysis website webservice stats
+Platform: UNKNOWN
