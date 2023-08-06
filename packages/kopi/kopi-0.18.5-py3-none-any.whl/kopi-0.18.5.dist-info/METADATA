@@ -1,0 +1,25 @@
+Metadata-Version: 2.0
+Name: kopi
+Version: 0.18.5
+Summary: Create publication quality graph in pdf format using CSON(CoffeeScript-Object-Notation)
+Home-page: UNKNOWN
+Author: CHEN, Lee Chuin
+Author-email: leechuin@gmail.com
+License: MIT
+Keywords: plot graph pdf cson
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Requires-Python: >=3
+Requires-Dist: numpy
+Requires-Dist: pillow
+
+UNKNOWN
+
+
