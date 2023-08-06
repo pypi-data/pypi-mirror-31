@@ -1,0 +1,14 @@
+setup.cfg
+setup.py
+gwr/__init__.py
+gwr/diagnostics.py
+gwr/gwr.py
+gwr/kernels.py
+gwr/search.py
+gwr/sel_bw.py
+gwr.egg-info/PKG-INFO
+gwr.egg-info/SOURCES.txt
+gwr.egg-info/dependency_links.txt
+gwr.egg-info/not-zip-safe
+gwr.egg-info/requires.txt
+gwr.egg-info/top_level.txt
