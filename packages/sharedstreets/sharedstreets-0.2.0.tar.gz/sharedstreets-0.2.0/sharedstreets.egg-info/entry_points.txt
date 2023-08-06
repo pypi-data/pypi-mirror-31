@@ -1,0 +1,5 @@
+[console_scripts]
+sharedstreets-debug-webapp = sharedstreets.webapp:main
+sharedstreets-get-tile = sharedstreets.tile:main
+sharedstreets-read-file = sharedstreets.read:main
+
