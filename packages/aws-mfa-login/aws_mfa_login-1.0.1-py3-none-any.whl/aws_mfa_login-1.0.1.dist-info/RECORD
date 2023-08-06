@@ -1,0 +1,9 @@
+aws_mfa_login-1.0.1.dist-info/DESCRIPTION.rst,sha256=zXAt04BkdxWxrXydmjVIdNMvO-juuLDPj3NFfnYDim4,1487
+aws_mfa_login-1.0.1.dist-info/METADATA,sha256=MRU-OSHtom2f7dngjKV4HrJCYVJLSR1g94JM50NG3Oc,2210
+aws_mfa_login-1.0.1.dist-info/RECORD,,
+aws_mfa_login-1.0.1.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+aws_mfa_login-1.0.1.dist-info/entry_points.txt,sha256=YY_rinvFhDZ9lGvAPLAbCinskOGYk7y4aDxpBEaPFMA,79
+aws_mfa_login-1.0.1.dist-info/metadata.json,sha256=IouS_HbgnnI4ngoSbMr4REDuAkkM3biMfSt7BBMwtZw,1105
+aws_mfa_login-1.0.1.dist-info/top_level.txt,sha256=HxllANqnWmV06nXpK1aqIqMyZbPTrZiwRI-CqUwwL6Q,6
+wrapp/aws/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wrapp/aws/mfa.py,sha256=B-wa5YRML_bZ32oOH9kOEdngEwFafEyG25JD_b0qMYQ,3954
