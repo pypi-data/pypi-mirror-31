@@ -1,0 +1,10 @@
+MANIFEST.in
+README.rst
+setup.py
+sshJUNOS/__init__.py
+sshJUNOS.egg-info/PKG-INFO
+sshJUNOS.egg-info/SOURCES.txt
+sshJUNOS.egg-info/dependency_links.txt
+sshJUNOS.egg-info/not-zip-safe
+sshJUNOS.egg-info/requires.txt
+sshJUNOS.egg-info/top_level.txt
