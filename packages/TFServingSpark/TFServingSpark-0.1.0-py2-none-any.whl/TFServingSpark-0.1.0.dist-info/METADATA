@@ -1,0 +1,18 @@
+Metadata-Version: 2.0
+Name: TFServingSpark
+Version: 0.1.0
+Summary: Tensorflow serving on spark dataframe
+Home-page: https://github.com/yupbank/tf-spark-serving
+Author: Peng Yu
+Author-email: yupbank@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/yupbank/tf-spark-serving/archive/0.1.0.tar.gz
+Description-Content-Type: UNKNOWN
+Keywords: tensorflow,machine learning,dataframe,spark,model-serving
+Platform: UNKNOWN
+Requires-Dist: tensorflow (==1.4.1)
+
+tss is a machine learning toolkit designed to
+apply tensorflow saved model to spark dataframe.
+
+
