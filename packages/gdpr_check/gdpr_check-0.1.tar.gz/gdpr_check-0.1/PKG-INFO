@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: gdpr_check
+Version: 0.1
+Summary: Check if a user is covered by GDPR. Compare IP address to list of EEA/EU countries.
+Home-page: http://github.com/revmischa/gdpr_check
+Author: Mischa Spiegelmock
+Author-email: revmischa@cpan.org
+License: ABRMS
+Description: UNKNOWN
+Platform: UNKNOWN
