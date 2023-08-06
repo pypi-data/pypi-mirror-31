@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: diay
+Version: 0.1
+Summary: diay - a dependency injection library
+Home-page: https://github.com/anlutro/diay.py
+Author: Andreas Lutro
+Author-email: anlutro@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: dependency injection,inversion of control
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
