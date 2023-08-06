@@ -1,0 +1,24 @@
+Metadata-Version: 2.0
+Name: gapiupdated
+Version: 1.0.0
+Summary: Simple utilties to explore the Gnip search API
+Home-page: https://github.com/DrSkippy/Gnip-Python-Search-API-Utilities
+Author: Scott Hendrickson, Josh Montague, Jeff Kolb, Nikhil Sulegaon
+Author-email: nikhilsulegaon@gmail.com
+License: LICENSE.txt
+Download-URL: https://github.com/DrSkippy/Gnip-Python-Search-API-Utilities/tags/
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: gnacsupdated
+Requires-Dist: sngrams (>=0.2.0)
+Requires-Dist: requests (>2.4.0)
+Provides-Extra: timeseries
+Requires-Dist: numpy (>=1.10.1); extra == 'timeseries'
+Requires-Dist: scipy (>=0.16.1); extra == 'timeseries'
+Requires-Dist: statsmodels (>=0.6.1); extra == 'timeseries'
+Requires-Dist: matplotlib (>=1.5.0); extra == 'timeseries'
+Requires-Dist: pandas (>=0.17.0); extra == 'timeseries'
+
+UNKNOWN
+
+
