@@ -1,0 +1,93 @@
+CHANGES
+=======
+
+0.4.3
+-----
+
+* Bumped minimum odinweb version to 0.4.7
+
+0.4.2
+-----
+
+* Disable check proxy check for now (is a problematic test case)
+* Removed some un-required docs/comments
+* Simplify options call to prevent OPTIONS being setup and trampling CORS
+* Added CORS example
+* Changed how provide\_automatic\_options works
+* Added support to force options into method (for use with CORS support)
+* Updated example
+
+0.4.1
+-----
+
+* Added a streaming sample, of returning a generator to stream data results
+* Change make\_response to Response
+
+0.4
+---
+
+* Bumped all versions to 0.4
+
+0.3.3
+-----
+
+* migrated to pkgutil for namespaces
+
+0.3
+---
+
+* Blame the bubbles, spelling mistake! :/ ..
+* Added oodinweb >=0.3 requirement
+* Bumped dev status to Beta
+* Added correct development requirements
+* Marked type imports as noqa
+* Added travis and landscape, simplify code
+* Updates for to handle updates in odinweb and huge simplification of API interface
+* Updated to support more swagger types
+* Added test case for proxy
+* Update flask to check request proxy
+* Map request proxy to MultiValueDict
+* Migrated to PBR
+* Bumped version
+
+0.2
+---
+
+* Updated PathNode to PathParam
+* Updated location of ApiInterfaceBase
+* Updated example to create a mocked API that works
+* Disabled items disabled in odinweb itself
+* Re-enabled all functions
+* Include a UserApi
+* Deprecated route decorator
+* Modify test route to test
+* Introduce most sample APIs
+* Re-enabled more of the example API now that it's been re-built
+* Fixed bug wit ordering of name and type when generating Flask URLs
+* Parse method into enum value
+* Updated API to match odinweb changes
+* Updated to match odinweb api
+* Updated all to match odinweb
+* Removed resource references
+* Include mapping of types
+* Updated example to align with simplified documentation
+* Workaround for 204 response and started adding session support
+* Updated docs
+* Normalised example apps between bottle and flask
+* Simplified blueprint and expanded the Request Proxy
+* Fixed a couple of bugs integrating into flask and updated example
+* Updated examples with doc changes
+* Refactored docs
+* Expanded example to support swagger generation
+* Small updates to handle changes in odinweb api
+* Changes from odinweb api interface changes
+* Handle HttpResponses and map Request objects
+* Updated samples to work with the fully mapped routign system
+* Updated samples to work with the fully mapped routign system
+* Quick update to handle layout changes in odinweb
+* Basic integration with flask and bottle web micro-frameworks
+* Updated to use blueprints
+* Built out blueprint interface
+* Built out more sample code
+* Initial setup
+* Initial commit
