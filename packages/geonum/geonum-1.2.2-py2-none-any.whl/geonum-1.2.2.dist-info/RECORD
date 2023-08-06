@@ -1,0 +1,16 @@
+geonum/__init__.py,sha256=OH5YR2Rt362pchIKZEkiHT7_jnvpuV7Z1BCuIUexn-E,1282
+geonum/atmosphere.py,sha256=4muUpZveNYuc927pK8Sg_qDjduN0DVJrqoncANmm9F0,12859
+geonum/base.py,sha256=V-xgKzXPnn3jLSLTTvwWbATva_IIXyHrI-x72p74oBw,31021
+geonum/geosetup.py,sha256=TVHNCXmHf6IY62j7eRoS64FpqK9kQotlqRO9gVqXe8Y,25488
+geonum/helpers.py,sha256=GnPSK8TRhpkKePnfRDqkRB6mtpuDMN5GJSWC3Y4iqmc,4990
+geonum/mapping.py,sha256=Ieo_5C3WD-S-56w-QtLeKEOhPCLSd0ysn8BY-rKuva4,40705
+geonum/processing.py,sha256=1dFZbIo8i6SrvY_DiVBJdDlKo8mSXAQG8uyNa0xEneM,22770
+geonum/topodata.py,sha256=gwf4i8VV7H-WSYKF0549Ay7NvUXpj3K-xmee2bY05gM,32681
+geonum/local_topo_data/LOCAL_TOPO_PATHS.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+geonum/local_topo_data/README.rst,sha256=UFxnBRsBJuYGASwvrU5RSibzpLI-qXTv7eO50_f6Y3k,1027
+geonum-1.2.2.dist-info/DESCRIPTION.rst,sha256=U6THMMIi1gQ8LJP9TH_l7uJLKwwI-kZKZy8l1EKi704,4713
+geonum-1.2.2.dist-info/METADATA,sha256=HxzrxVL4hXER_mnpndxNnkKPpPwo3m8Q7CenADe1CbE,5541
+geonum-1.2.2.dist-info/RECORD,,
+geonum-1.2.2.dist-info/WHEEL,sha256=90z-L1FjHEv_g8pMPaPbaXuhBIvSlvYObRaa122x8ag,97
+geonum-1.2.2.dist-info/metadata.json,sha256=fHABYfwl5dK3Z-12QQs6zOCbaUs-Te9TcoaF3A9sFMA,895
+geonum-1.2.2.dist-info/top_level.txt,sha256=rlkQm9Bx48ZvgxMHiXbnTEntz3kIBfQhk-URlf0Rm8k,7
