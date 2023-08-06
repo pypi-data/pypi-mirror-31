@@ -1,0 +1,11 @@
+include README.md
+include LICENSE
+include CHANGELOG.md
+
+# exclude compiled bytecode
+global-exclude *.pyc
+# exclude git backup files
+global-exclude *.orig
+
+# do not include eventually present eggs (installed during setup runtime)
+prune .eggs
