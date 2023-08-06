@@ -1,0 +1,4 @@
+django<2.0,>=1.8
+django-cms>=3.2
+djangocms-text-ckeditor
+requests
