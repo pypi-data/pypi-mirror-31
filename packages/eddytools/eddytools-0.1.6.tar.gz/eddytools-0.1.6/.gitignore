@@ -1,0 +1,15 @@
+.ipynb_checkpoints
+.idea/
+.pytest_cache/
+__pycache__
+.eggs
+.coverage
+*.swp
+data/sample.slexmm
+build/
+dist/
+*.egg-info/
+/data/dump*
+/test/mimic.py
+/htmlcov/
+/data/postgresql/
