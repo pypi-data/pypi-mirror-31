@@ -1,0 +1,6 @@
+MANIFEST.in
+setup.py
+dynamodb_encyrption.egg-info/PKG-INFO
+dynamodb_encyrption.egg-info/SOURCES.txt
+dynamodb_encyrption.egg-info/dependency_links.txt
+dynamodb_encyrption.egg-info/top_level.txt
