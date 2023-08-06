@@ -1,0 +1,15 @@
+Metadata-Version: 2.0
+Name: pdflib
+Version: 0.1.3
+Summary: python bindings for poppler
+Home-page: http://github.com/alephdata/pdflib
+Author: Journalism Development Network
+Author-email: data@occrp.org
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: cython
+Requires-Dist: lxml
+
+UNKNOWN
+
+
