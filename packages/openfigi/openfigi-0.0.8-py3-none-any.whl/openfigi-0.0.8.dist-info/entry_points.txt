@@ -1,0 +1,3 @@
+[console_scripts]
+ofg = openfigi.__main__:call_figi
+
