@@ -1,0 +1,57 @@
+Metadata-Version: 1.1
+Name: sauth
+Version: 1.0.1
+Summary: A simple server app for serving directories via http or https and BASIC authorization
+Home-page: https://github.com/granitosaurus/sauth/
+Author: Bernardas Ališauskas
+Author-email: tinarg@protonmail.com
+License: GNU General Public License v3
+Description: =====
+        sauth
+        =====
+        
+        
+        .. image:: https://img.shields.io/pypi/v/sauth.svg
+                :target: https://pypi.python.org/pypi/sauth
+        
+        **S** erver **auth**
+        A simple server for serving directories via http or https and BASIC authorization::
+        
+            $ sauth --help
+            Usage: sauth [OPTIONS] USERNAME PASSWORD [IP] [PORT]
+        
+              Start http server with basic authentication current directory.
+        
+            Options:
+              --https     use https
+              --dir TEXT  use different directory
+              --help      Show this message and exit.
+        
+        * Free software: GNU General Public License v3
+        
+        Installation
+        ------------
+        
+            pip install sauth
+        
+        Usage
+        -----
+        
+        To serve your current directory simply run::
+        
+            $ sauth someuser somepass
+            Serving "/home/user/somedir" directory on http://0.0.0.0:8333
+        
+        You can specify port and ip to serve on with 3rd and 4th arguments::
+        
+            $ sauth someuser somepass 127.0.0.1 1234
+            Serving "/home/user/somedir" directory on http://127.0.0.1:1234
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.3
