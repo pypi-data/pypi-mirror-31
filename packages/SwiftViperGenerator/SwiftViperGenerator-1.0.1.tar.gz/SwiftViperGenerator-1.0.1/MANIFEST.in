@@ -1,0 +1,4 @@
+include swivigen/Templates/*.swift
+include swivigen/Common/*.swift
+include README.md
+include LICENSE
