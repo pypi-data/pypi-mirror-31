@@ -1,0 +1,17 @@
+README.md
+setup.py
+gym_super_mario_bros/__init__.py
+gym_super_mario_bros/nes_env.py
+gym_super_mario_bros/palette.py
+gym_super_mario_bros/smb_env.py
+gym_super_mario_bros.egg-info/PKG-INFO
+gym_super_mario_bros.egg-info/SOURCES.txt
+gym_super_mario_bros.egg-info/dependency_links.txt
+gym_super_mario_bros.egg-info/not-zip-safe
+gym_super_mario_bros.egg-info/requires.txt
+gym_super_mario_bros.egg-info/top_level.txt
+gym_super_mario_bros/lua/super-mario-bros.lua
+gym_super_mario_bros/roms/super-mario-bros-downsampled.nes
+gym_super_mario_bros/roms/super-mario-bros.nes
+gym_super_mario_bros/wrappers/__init__.py
+gym_super_mario_bros/wrappers/monitor.py
