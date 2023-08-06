@@ -1,0 +1,6 @@
+senaite.core
+archetypes.schemaextender
+
+[test]
+unittest2
+plone.app.testing
