@@ -1,0 +1,7 @@
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+thermos/__init__.py
+thermos/__main__.py
+thermos/cli.py
