@@ -1,0 +1,9 @@
+LICENSE
+MANIFEST.in
+setup.py
+glom/__init__.py
+glom.egg-info/PKG-INFO
+glom.egg-info/SOURCES.txt
+glom.egg-info/dependency_links.txt
+glom.egg-info/not-zip-safe
+glom.egg-info/top_level.txt
