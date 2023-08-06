@@ -1,0 +1,12 @@
+checkpointer/__init__.py,sha256=PRnr_UVTPcLng8WIcPKPSWVoeCPzElPotvp-ul5YJ-4,228
+checkpointer/checkpoint.py,sha256=cJJ4jfbKoalMzdwIHv__zemOSb_VyQr2Dgfx76dU8D4,1915
+checkpointer/env.py,sha256=f0ozlvynTUpjDn7UbL64FaouxvwwsYDJg66q-TwX8Jc,281
+checkpointer/function_body.py,sha256=o4n_L4zQPp0pHioIfwMXpmrlaUpbxh9wQbfwJekEFDA,2319
+checkpointer/storage.py,sha256=dIdObiVUCqeJO-EcQpF4xu48lEzTFW4gTYrqVeKXcsA,1695
+checkpointer/tf.py,sha256=BsmnTBYPE0X_1DYzYpT9n7WcIdt3ExQ_0Oui9lwmfiM,2187
+checkpointer-0.1.1.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+checkpointer-0.1.1.dist-info/METADATA,sha256=ksBVVTRQeCEs-SlUAHuWxTugRr01bxtZdrnO5SdDVM4,334
+checkpointer-0.1.1.dist-info/RECORD,,
+checkpointer-0.1.1.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+checkpointer-0.1.1.dist-info/metadata.json,sha256=lsAyIdRBqjY-nysDsBmI_V_l2grMHEP-mAsgheUUhZ4,515
+checkpointer-0.1.1.dist-info/top_level.txt,sha256=uF0eyHpShnsHI3sobErnhQ8LWCT8DPViqAznKeTaZlw,13
