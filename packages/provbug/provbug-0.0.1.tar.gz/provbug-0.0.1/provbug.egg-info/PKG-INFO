@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: provbug
+Version: 0.0.1
+Summary: Supporting infrastructure to debug scientific experiments with prolog facts.
+Home-page: https://github.com/
+Author: Henrique Linhares, and Rômulo Ponciano
+Author-email: hlinhares@id.uff.br
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: scientific,experiments,provenance,debug
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.5
