@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: npg-init
+Version: 0.3.0
+Summary: Creates a directory that sets up basic Python projects
+Home-page: https://github.com/KuanHulio/new-package-generator
+Author: Sami Altamimi
+Author-email: nkjjsami@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+
+========
+npg-init
+========
+
+Generates a project directory for a base Python project
+
+Download and Install
+====================
+
+1. Use pip
+:: 
+    pip install npg_init
+
+2. Download source code and install
+::
+    git clone https://github.com/KuanHulio/new-package-generator.git
+    cd new-package-generator
+    python setup.py install
+
+Usage
+=====
+
+Simply go anyway where you want your project and run npg-init
+
+
+
