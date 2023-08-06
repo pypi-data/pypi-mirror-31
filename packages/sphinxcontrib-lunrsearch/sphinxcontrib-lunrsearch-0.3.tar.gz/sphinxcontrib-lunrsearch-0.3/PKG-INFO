@@ -1,0 +1,48 @@
+Metadata-Version: 1.1
+Name: sphinxcontrib-lunrsearch
+Version: 0.3
+Summary: Instant search for Sphinx
+Home-page: https://github.com/rmcgibbo/sphinxcontrib-lunrsearch
+Author: Robert T. McGibbon
+Author-email: rmcgibbo@gmail.com
+License: MIT
+Download-URL: https://pypi.python.org/pypi/sphinxcontrib-lunrsearch
+Description: This extension modifies the search box in Sphinx documentation
+        to show instant results as you type. It's particularly suited for
+        searching through APIs.
+        
+        To get started, ``$ pip install sphinxcontrib-lunrsearch`` and then add ``'sphinxcontrib.lunrsearch'`` to the list
+        of extensions in your Sphinx ``conf.py`` file.
+        
+        Options
+        -------
+        
+        The following options can be set in conf.py:
+        
+        - lunrsearch_highlight: bool
+        
+          Whether to highlight the seach term after navigating to a results.
+          The default is ``False``.
+        
+        Example
+        -------
+        
+        .. image:: http://i.giphy.com/3o85xmqkbt14LuRcZO.gif
+          
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Documentation
+Classifier: Topic :: Utilities
