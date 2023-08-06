@@ -1,0 +1,15 @@
+[console_scripts]
+valence = valence.cmd.api:main
+valence-db-manager = valence.cmd.db_manager:main
+
+[oslo.config.opts]
+valence = valence.opts:list_opts
+valence.conf = valence.conf.opts:list_opts
+
+[valence.podmanager.driver]
+expether = valence.podmanagers.expether_manager:ExpEtherManager
+redfishv1 = valence.podmanagers.podm_base:PodManagerBase
+
+[valence.provision.driver]
+ironic = valence.provision.ironic.driver:IronicDriver
+
