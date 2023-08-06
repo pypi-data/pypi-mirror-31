@@ -1,0 +1,2 @@
+cimport hap
+cimport PyIntersectCompare
