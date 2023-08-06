@@ -1,0 +1,8 @@
+numpy>=1.9
+scipy>=0.17
+
+[FiniteElement]
+nutils>=3.0
+
+[Images]
+opencv-python>=3.3
