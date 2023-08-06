@@ -1,0 +1,3 @@
+[console_scripts]
+viewtable = viewtable.cli:main
+
