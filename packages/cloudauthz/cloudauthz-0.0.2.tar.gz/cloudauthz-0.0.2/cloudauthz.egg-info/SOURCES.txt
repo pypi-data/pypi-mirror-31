@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+cloudauthz/__init__.py
+cloudauthz/exceptions.py
+cloudauthz.egg-info/PKG-INFO
+cloudauthz.egg-info/SOURCES.txt
+cloudauthz.egg-info/dependency_links.txt
+cloudauthz.egg-info/requires.txt
+cloudauthz.egg-info/top_level.txt
+cloudauthz/interfaces/__init__.py
+cloudauthz/interfaces/providers.py
+cloudauthz/providers/__init__.py
+cloudauthz/providers/aws.py
+cloudauthz_tests/__init__.py
