@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: toucan_connectors
+Version: 0.0.13
+Summary: Toucan Toco Connectors
+Home-page: https://github.com/ToucanToco/toucan-connectors
+Author: Toucan Toco
+Author-email: dev@toucantoco.com
+License: BSD
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3.6
+Provides-Extra: azure_mssql
+Provides-Extra: mssql
+Provides-Extra: oracle_sql
+Provides-Extra: google_cloud_mysql
+Provides-Extra: sap_hana
+Provides-Extra: dataiku
+Provides-Extra: all
+Provides-Extra: mysql
+Provides-Extra: microstrategy
+Provides-Extra: mongo
+Provides-Extra: postgres
+Provides-Extra: snowflake
