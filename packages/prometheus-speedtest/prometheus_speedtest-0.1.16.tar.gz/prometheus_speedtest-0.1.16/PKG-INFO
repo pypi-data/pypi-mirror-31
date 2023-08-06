@@ -1,0 +1,157 @@
+Metadata-Version: 2.1
+Name: prometheus_speedtest
+Version: 0.1.16
+Summary: Performs speedtest-cli tests and pushes metrics to Prometheus Pushgateway
+Home-page: https://github.com/jeanralphaviles/prometheus_speedtest
+Author: Jean-Ralph Aviles
+Author-email: jeanralph.aviles+pypi@gmail.com
+License: Apache License, Version 2.0
+Description: # Prometheus Speedtest
+        
+        Performs [Speedtest.net](http://speedtest.net) tests and pushes their results
+        to Prometheus Pushgateway.
+        
+        [![PyPI status](https://img.shields.io/pypi/status/prometheus_speedtest.svg)](https://pypi.python.org/pypi/prometheus_speedtest/) [![PyPI version shields.io](https://img.shields.io/pypi/v/prometheus_speedtest.svg)](https://pypi.python.org/pypi/prometheus_speedtest/) [![PyPI license](https://img.shields.io/pypi/l/prometheus_speedtest.svg)](https://pypi.python.org/pypi/prometheus_speedtest/) [![PyPI pyversions](https://img.shields.io/pypi/pyversions/prometheus_speedtest.svg)](https://pypi.python.org/pypi/prometheus_speedtest/)
+        
+        ## Getting Started
+        
+        These instructions will install `prometheus_speedtest` on your system.
+        
+        ### Prerequisites
+        
+        * [Python 2.7 - 3.6](https://www.python.org)
+        * [python-pip](https://packaging.python.org/tutorials/installing-packages)
+        
+        ### Installing
+        
+        ```
+        pip install prometheus_speedtest
+        ```
+        
+        ### Running
+        
+        ```
+        prometheus_speedtest
+        ```
+        
+        ### Usage
+        
+        ```
+        usage: prometheus_speedtest [-h] [-s addr] [-t sec] [-p host:port] [-n name]
+        
+        Export speedtest metrics to Prometheus Pushgateway.
+        
+        optional arguments:
+          -h, --help            show this help message and exit
+          -s addr, --source_address addr
+                                IP address for speedtest to bind to.
+          -t sec, --timeout sec
+                                Speedtest timeout, seconds.
+          -p host:port, --pushgateway host:port
+                                Address of Prometheus Pushgateway.
+          -n name, --name name  Job name to report Prometheus metrics as.
+        ```
+        
+        ## Getting Started (Development)
+        
+        These instructions will get you a copy of the project up and running on your
+        local machine for development and testing purposes. See deployment for notes on
+        how to deploy the project on a live system.
+        
+        ### Prerequisites
+        
+        * [Python 2.7 - 3.6](https://www.python.org)
+        * [Bazel](https://bazel.build)
+        * [Twine](https://github.com/pypa/twine)
+        
+        ### Compiling
+        
+        ```
+        bazel build //:prometheus_speedtest
+        ```
+        
+        ### Running
+        ```
+        bazel run //:prometheus_speedtest
+        ```
+        
+        ### Testing
+        ```
+        bazel test //:prometheus_speedtest_test
+        ```
+        
+        ### Contributing
+        
+        Pull requests welcome. Please adhere to the
+        [Google Python style guide.](https://google.github.io/styleguide/pyguide.html)
+        
+        ### Deploying
+        
+        #### pypi
+        
+        ```
+        python3 setup.py sdist
+        twine upload dist/*
+        ```
+        
+        #### par\_binary
+        
+        ```
+        bazel build //:prometheus_speedtest.par
+        cp "$(bazel info bazel-bin)/prometheus_speedtest.par" ...
+        ```
+        
+        See <https://github.com/google/subpar> or <https://google.github.io/subpar> for
+        documentation on Python `.par` files.
+        
+        #### Debian package
+        
+        ```
+        bazel build //:prometheus_speedtest-debian
+        sudo apt install "$(bazel info bazel-bin)/prometheus_speedtest-debian.deb"
+        /usr/bin/prometheus_speedtest.par
+        ```
+        
+        If reinstalling package, remember to increment the number in `version.txt`.
+        Otherwise apt will believe the package hasn't changed and will refuse to
+        install a new version.
+        
+        ## Authors
+        
+        * Jean-Ralph Aviles
+        
+        ## License
+        
+        This product is licensed under the Apache 2.0 license. See [LICENSE](LICENSE)
+        file for details.
+        
+        ## Acknowledgments
+        
+        * Matt Martz [speedtest-cli](https://github.com/sivel/speedtest-cli)
+        * The Prometheus team <https://prometheus.io>
+        * Testing in Python team <http://lists.idyll.org/listinfo/testing-in-python>
+        
+Keywords: prometheus,monitoring,speedtest,speedtest.net
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: System :: Monitoring
+Classifier: Topic :: System :: Networking :: Monitoring
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.4
+Classifier: Programming Language :: Python :: 2.5
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.1
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python
+Description-Content-Type: text/markdown
