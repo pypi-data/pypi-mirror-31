@@ -1,0 +1,75 @@
+Metadata-Version: 1.1
+Name: dj-currencies
+Version: 0.0.1
+Summary: A reusable django app that provides locally updated exchange rates to your app
+Home-page: https://github.com/lihan/dj-currencies
+Author: Lihan
+Author-email: llihan673@gmail.com
+License: MIT
+Description-Content-Type: UNKNOWN
+Description: 
+        [![Build Status](https://travis-ci.org/lihan/dj-currencies.svg?branch=master)](https://travis-ci.org/lihan/dj-currencies)
+        Documentation
+        -------------
+        
+        The full documentation is at https://dj-currencies.readthedocs.io.
+        
+        Quickstart
+        ----------
+        
+        Install djcurrencies::
+        
+            pip install dj-currencies
+        
+        Add it to your `INSTALLED_APPS`:
+        
+        .. code-block:: python
+        
+            INSTALLED_APPS = (
+                ...
+                'dj_currencies.apps.DjCurrenciesConfig',
+                ...
+            )
+        
+        
+        Features
+        --------
+        
+        * TODO
+        
+        Running Tests
+        -------------
+        
+        Does the code actually work?
+        
+        ::
+        
+            source <YOURVIRTUALENV>/bin/activate
+            (myenv) $ pip install tox
+            (myenv) $ tox
+        
+        
+        
+        
+        
+        History
+        -------
+        
+        0.0.1 (2018-04-23)
+        ++++++++++++++++++
+        
+        * First release on PyPI.
+        
+Keywords: dj-currencies
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Django :: 2.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
