@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: django-keoh-userprofile
+Version: 0.0.5
+Summary: A simple Django app to manage user profiles
+Home-page: https://github.com/KeoH/django-keoh-userprofile
+Author: Francisco Manzano Magaña
+Author-email: keoh77@gmail.com
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/KeoH/django-keoh-userprofile/issues
+Project-URL: Source, https://github.com/KeoH/django-keoh-userprofile/
+Description: # Keoh User Profile
+        [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/KeoH/django-keoh-userprofile/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/KeoH/django-keoh-userprofile/?branch=master)
+        
+        Keoh User Profile is a very simple app to use extended version of Django User model.
+        
+        ## Quick start
+        
+        
+        1. Add ```"user_profile"``` to your ```INSTALLED_APPS``` setting like this:
+        ```
+        INSTALLED_APPS = (
+            ...
+            'user_profile',
+        )
+        ```
+        2. Run migrate:
+        ```
+        python manage.py migrate
+        ```
+        
+        ## Details
+        
+        
+        This application creates a user_profile table in your database, this model is linked to django user model,
+        you can access to avatar image through the userprofile object in the user instance object:
+        
+        ```
+        user.userprofile.get_avatar()
+        ```
+        
+        It returns the complete url to the avatar file, or if it does not exist, it returns a default image.
+        
+        ## Forms and user sign in and sign up
+        
+        
+        Documentation in progress.. :(
+        
+Keywords: profile,django,user
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.4
+Provides-Extra: test
+Provides-Extra: dev
