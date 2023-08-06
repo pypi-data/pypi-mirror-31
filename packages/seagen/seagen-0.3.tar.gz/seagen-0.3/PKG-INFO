@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: seagen
+Version: 0.3
+Summary: Stretched Equal Area Generator
+Home-page: https://github.com/jkeger/seagen
+Author: Jacob Kegerreis
+Author-email: jacob.kegerreis@durham.ac.uk
+License: GNU GPL
+Download-URL: https://github.com/jkeger/seagen/archive/0.1.tar.gz
+Description: A python implementation of the stretched equal area (SEA) algorithm for generating spherically symmetric arrangements of particles with accurate particle densities, e.g. for SPH initial conditions that precisely match an arbitrary density profile, as presented in Kegerreis et al. (2018), in prep.
+Keywords: particle,arrangement,density,SPH,sphere,shell
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
