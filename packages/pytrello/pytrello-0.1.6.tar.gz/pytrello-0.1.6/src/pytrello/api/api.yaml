@@ -1,0 +1,348 @@
+# Define trello apis.
+# Definition should include
+# 1. request_type (GET, POST, PUT, DELETE)
+# 2. uri (/boards/{board_id})
+get_board:
+    request_type: GET
+    uri: /boards/{board_id}
+
+get_board_field:
+  request_type: GET
+  uri: /boards/{board_id}/{field_name}
+
+get_board_actions:
+  request_type: GET
+  uri: /boards/{board_id}/actions
+
+get_board_enabled_plugins:
+  request_type: GET
+  uri: /boards/{board_id}/boardPlugins
+
+get_board_stars:
+  request_type: GET
+  uri: /boards/{board_id}/boardStars/
+
+get_board_cards:
+  request_type: GET
+  uri: /boards/{board_id}/cards/
+
+get_board_filtered_cards:
+  request_type: GET
+  uri: /boards/{board_id}/cards/{filter}
+
+get_board_card:
+  request_type: GET
+  uri: /boards/{board_id}/cards/{card_id}
+
+get_board_checklists:
+  request_type: GET
+  uri: /boards/{board_id}/checklists
+
+get_board_custom_fields:
+  request_type: GET
+  uri: /boards/{board_id}/customFields
+
+get_board_tags:
+  request_type: GET
+  uri: /boards/{board_id}/tags
+
+get_board_labels:
+  request_type: GET
+  uri: /boards/{board_id}/labels
+
+get_board_lists:
+  request_type: GET
+  uri: /boards/{board_id}/lists
+
+get_board_filtered_lists:
+  request_type: GET
+  uri: /boards/{board_id}/lists/{filter}
+
+get_board_members:
+  request_type: GET
+  uri: /boards/{board_id}/members
+
+get_board_memberships:
+  request_type: GET
+  uri: /boards/{board_id}/memberships
+
+get_board_plugins:
+  request_type: GET
+  uri: /boards/{board_id}/plugins
+
+update_board:
+  request_type: PUT
+  uri: /boards/{board_id}
+
+update_board_members:
+  request_type: PUT
+  uri: /boards/{board_id}/members
+
+add_board_member:
+  request_type: PUT
+  uri: /boards/{board_id}/members/{member_id}
+
+update_board_membership:
+  request_type: PUT
+  uri: /boards/{board_id}/memberships/{membership_id}
+
+create_board:
+  request_type: POST
+  uri: /boards/
+
+enable_plugin:
+  request_type: POST
+  uri: /boards/{board_id}/boardPlugins
+
+generate_calender_key:
+  request_type: POST
+  uri: /boards/{board_id}/calenderKey/generate
+
+create_board_checklist:
+  request_type: POST
+  uri: /boards/{board_id}/checklists
+
+generate_email_key:
+  request_type: POST
+  uri: /boards/{board_id}/emailKey/generate
+
+create_board_label:
+  request_type: POST
+  uri: /boards/{board_id}/labels
+
+create_board_list:
+  request_type: POST
+  uri: /boards/{board_id}/lists
+
+delete_board:
+  request_type: DELETE
+  uri: /boards/{board_id}
+
+disable_plugin:
+  request_type: DELETE
+  uri: /boards/{board_id}/boardPlugins/{plugin_id}
+
+delete_member:
+  request_type: DELETE
+  uri: /boards/{board_id}/members/{member_id}
+
+delete_powerup:
+  request_type: DELETE
+  uri: /boards/{board_id}/powerUps/{powerup_name}
+
+get_my_boards:
+  request_type: GET
+  uri: /members/me/boards
+
+get_card:
+  request_type: GET
+  uri: /cards/{card_id}
+
+get_card_field:
+  request_type: GET
+  uri: /cards/{card_id}/{field}
+
+get_card_actions:
+  request_type: GET
+  uri: /cards/{card_id}/actions
+
+get_card_attachments:
+  request_type: GET
+  uri: /cards/{card_id}/attachments
+
+get_card_attachment:
+  request_type: GET
+  uri: /cards/{card_id}/attachments/{attachment_id}
+
+get_card_board:
+  request_type: GET
+  uri: /cards/{card_id}/board
+
+get_card_checklist_item_states:
+  request_type: GET
+  uri: /cards/{card_id}/checkItemStates
+
+get_card_checklists:
+  request_type: GET
+  uri: /cards/{card_id}/checklists
+
+get_card_checklist_item:
+  request_type: GET
+  uri: /cards/{card_id}/checkItem/{checklist_item_id}
+
+get_card_custom_fields:
+  request_type: GET
+  uri: /cards/{card_id}/customFieldItems
+
+get_card_list:
+  request_type: GET
+  uri: /cards/{card_id}/list
+
+get_card_members:
+  request_type: GET
+  uri: /cards/{card_id}/members
+
+get_card_voted_members:
+  request_type: GET
+  uri: /cards/{card_id}/membersVoted
+
+get_card_plugin_data:
+  request_type: GET
+  uri: /cards/{card_id}/pluginData
+
+get_card_stickers:
+  request_type: GET
+  uri: /cards/{card_id}/stickers
+
+get_card_sticker:
+  request_type: GET
+  uri: /cards/{card_id}/stickers/{sticker_id}
+
+update_card:
+  request_type: PUT
+  uri: /cards/{card_id}
+
+update_card_as_done:
+  request_type: PUT
+  uri: /cards/{card_id}/dueComplete?value=true
+
+update_card_as_not_done:
+  request_type: PUT
+  uri: /cards/{card_id}/dueComplete?value=false
+
+update_card_due:
+  request_type: PUT
+  uri: /cards/{card_id}/due?value={due}
+
+update_card_comment:
+  request_type: PUT
+  uri: /cards/{card_id}/actions/{action_id}/comments
+
+update_card_checklist_item:
+  request_type: PUT
+  uri: /cards/{card_id}/checkItem/{checklist_item_id}
+
+update_card_sticker:
+  request_type: PUT
+  uri: /cards/{card_id}/stickers/{sticker_id}
+
+create_card:
+  request_type: POST
+  uri: /cards
+  parameters:
+    - name
+    - desc
+    - pos
+    - due
+    - dueComplete
+    - idList
+    - idMembers
+    - idLabels
+    - urlSource
+    - fileSource
+    - idCardSource
+    - keepFromSource
+
+add_card_comment:
+  request_type: POST
+  uri: /cards/{card_id}/actions/comments
+  parameters:
+    - text
+
+add_card_attachment:
+  request_type: POST
+  uri: /cards/{card_id}/attachments
+
+create_card_checklist:
+  request_type: POST
+  uri: /cards/{card_id}/checklists
+
+add_card_label:
+  request_type: POST
+  uri: /cards/{card_id}/idLabels
+  parameters:
+    - value
+
+add_card_member:
+  request_type: POST
+  uri: /cards/{card_id}/idMembers
+
+add_card_new_label:
+  request_type: POST
+  uri: /cards/{card_id}/labels
+
+mark_card_notifications_read:
+  request_type: POST
+  uri: /cards/{card_id}/markAssociatedNotificationsRead
+
+add_card_vote:
+  request_type: POST
+  uri: /cards/{card_id}/membersVoted
+
+delete_card:
+  request_type: DELETE
+  uri: /cards/{card_id}
+
+delete_card_comment:
+  request_type: DELETE
+  uri: /cards/{card_id}/actions/{action_id}/comments
+
+delete_card_attachment:
+  request_type: DELETE
+  uri: /cards/{card_id}/attachments/{attachment_id}
+
+delete_card_checklist_item:
+  request_type: DELETE
+  uri: /cards/{card_id}/checkItem/{checklist_item_id}
+
+delete_card_checklist:
+  request_type: DELETE
+  uri: /cards/{card_id}/checklists/{checklist_id}
+
+remove_card_label:
+  request_type: DELETE
+  uri: /cards/{card_id}/idLabels/{label_id}
+
+remove_card_member:
+  request_type: DELETE
+  uri: /cards/{card_id}/idMembers/{member_id}
+
+remove_card_vote:
+  request_type: DELETE
+  uri: /cards/{card_id}/membersVoted/{member_id}
+
+remove_card_sticker:
+  request_type: DELETE
+  uri: /cards/{card_id}/stickers/{sticker_id}
+
+get_label:
+  request_type: GET
+  uri: /labels/{label_id}
+
+update_label:
+  request_type: PUT
+  uri: /labels/{label_id}
+
+update_label_color:
+  request_type: PUT
+  uri: /labels/{label_id}/color
+  parameters:
+    - value
+
+update_label_name:
+  request_type: PUT
+  uri: /labels/{label_id}/name
+  parameters:
+    - value
+
+create_label:
+  request_type: POST
+  uri: /labels
+  parameters:
+    - name
+    - color
+    - idBoard
+
+delete_label:
+  request_type: DELETE
+  uri: /labels/{label_id}
