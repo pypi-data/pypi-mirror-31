@@ -1,0 +1,13 @@
+django_staticinline-1.0.2.dist-info/METADATA,sha256=TBpSOAnPH9x6ZSfbLD6XKJwb_NoEK8ooRx_p-3Zwcc8,2710
+django_staticinline-1.0.2.dist-info/RECORD,,
+django_staticinline-1.0.2.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+django_staticinline-1.0.2.dist-info/top_level.txt,sha256=DGuvBp8wzjzO1_-OdxGrQcK_bSBIbwTdMKkYmvTa1TI,13
+staticinline/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+staticinline/templatetags/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+staticinline/templatetags/staticinline.py,sha256=4PWEMvotP1MRvx9RXulDld6z09nlHNlRc0E4E4CyFoo,2161
+staticinline/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+staticinline/tests/test_templatetag.py,sha256=yp8bFmBsEsxwmZIHoBVmFFfVIHC8OL9McfzbDn--15c,4503
+staticinline/tests/testapp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+staticinline/tests/testapp/settings.py,sha256=CvUQOkmtWVyBblms0uUjZ_9O-oxQ9R6kVZqt3JATn3M,1162
+staticinline/tests/testapp/urls.py,sha256=Bjdewssljt0LIefjixBem9JN0kkghPvmrIETj3GdXbY,17
+staticinline/tests/testapp/static/testapp/myfile.js,sha256=9Xq4n-ngdr81uGOnp86fA4vsvXg4mDGG5Vsm5iHU01I,14
