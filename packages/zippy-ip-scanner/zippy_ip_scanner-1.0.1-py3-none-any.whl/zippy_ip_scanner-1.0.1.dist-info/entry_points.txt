@@ -1,0 +1,3 @@
+[gui_scripts]
+zippyscan = zippyipscanner.zippyipscanner:main
+

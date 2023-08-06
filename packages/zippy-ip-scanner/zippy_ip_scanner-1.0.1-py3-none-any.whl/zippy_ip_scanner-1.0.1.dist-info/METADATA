@@ -1,0 +1,14 @@
+Metadata-Version: 2.0
+Name: zippy-ip-scanner
+Version: 1.0.1
+Summary: IP Scanner
+Home-page: https://github.com/swprojects/zippy-ip-scanner
+Author: Simon Wu
+Author-email: swprojects@runbox.com
+License: GPLv3
+Description-Content-Type: UNKNOWN
+Requires-Dist: pyqt5
+
+===============================
+
+
