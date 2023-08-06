@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+client_of_redundant_servers/__init__.py
+client_of_redundant_servers/client_of_redundant_ad_ldap_servers.py
+client_of_redundant_servers/client_of_redundant_radius_servers.py
+client_of_redundant_servers/client_of_redundant_servers.py
+client_of_redundant_servers/dictionary.minimal
+client_of_redundant_servers.egg-info/PKG-INFO
+client_of_redundant_servers.egg-info/SOURCES.txt
+client_of_redundant_servers.egg-info/dependency_links.txt
+client_of_redundant_servers.egg-info/top_level.txt
