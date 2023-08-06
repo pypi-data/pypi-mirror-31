@@ -1,0 +1,16 @@
+MANIFEST.in
+README.rst
+TITLE.txt
+lh-agpl3-LICENSE.txt
+setup.py
+./bin/bx-bases-bsif.py
+bsif/__init__.py
+bsif.bashDist.egg-info/PKG-INFO
+bsif.bashDist.egg-info/SOURCES.txt
+bsif.bashDist.egg-info/dependency_links.txt
+bsif.bashDist.egg-info/namespace_packages.txt
+bsif.bashDist.egg-info/not-zip-safe
+bsif.bashDist.egg-info/requires.txt
+bsif.bashDist.egg-info/top_level.txt
+bsif/bsifDist/__init__.py
+bsif/bsifDist/thisPkg.py
