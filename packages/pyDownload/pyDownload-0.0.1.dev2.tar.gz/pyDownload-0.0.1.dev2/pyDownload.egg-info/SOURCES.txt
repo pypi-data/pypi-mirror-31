@@ -1,0 +1,10 @@
+README.md
+setup.py
+pyDownload/__init__.py
+pyDownload/downloader.py
+pyDownload/utils.py
+pyDownload.egg-info/PKG-INFO
+pyDownload.egg-info/SOURCES.txt
+pyDownload.egg-info/dependency_links.txt
+pyDownload.egg-info/requires.txt
+pyDownload.egg-info/top_level.txt
