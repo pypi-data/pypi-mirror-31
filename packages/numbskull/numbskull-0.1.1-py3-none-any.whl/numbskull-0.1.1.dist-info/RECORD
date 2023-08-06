@@ -1,0 +1,16 @@
+numbskull/__init__.py,sha256=9Plai6ynsg-U7sEJzAtrZeyseXjjv4HqKFJLFLgSw0Q,191
+numbskull/__main__.py,sha256=3ck9dpxvCtYz7DG9EYeJDJWDBZP5dl3h_90kKD2dyzQ,48
+numbskull/dataloading.py,sha256=vhoFJ7P6SHSjSWDBMShD3a-yqU0ZXj61H09JQIwmvMk,7545
+numbskull/distributed.py,sha256=RrMBtKuIfbrhxMiSHTU02rKMq-JPfi-_xS83Ux66-gI,13187
+numbskull/factorgraph.py,sha256=afZkZ_FL6elFO7OldL1x1SOe1tZULqayUkmF-_T7H0o,9019
+numbskull/inference.py,sha256=7z3rv8wsPGjc2DKTnwPAf7k3reFuxZJg49B_kVyJkpE,16389
+numbskull/learning.py,sha256=aCX0DuKUmgPz4eS00wFMGKV6QXoVG3Ph3_xSnEqshwc,5096
+numbskull/numbskull.py,sha256=vECS2gDaLiYoQigX0EteAvCjwgDtobcidK8-kTZBSNw,15422
+numbskull/numbskulltypes.py,sha256=uJuPS-GrYhYVA6fDfphEQXDkeCs8aN9bbsRT9IXEmJE,1312
+numbskull/timer.py,sha256=BlPKpyn73PUghoctbwhYZNHgVlwtFKKnPrJaBB3woxA,339
+numbskull/version.py,sha256=rnObPjuBcEStqSO0S6gsdS_ot8ITOQjVj_-P1LUUYpg,22
+numbskull-0.1.1.dist-info/METADATA,sha256=LVO0wClcOQdbc6uIkJkekzJvHSUhmmGIDUpz0AF-41g,247
+numbskull-0.1.1.dist-info/RECORD,,
+numbskull-0.1.1.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+numbskull-0.1.1.dist-info/entry_points.txt,sha256=4xfUH4AflqFKyG-55jK0qcjuo9kH2TO9V3wbBR3SZ0U,56
+numbskull-0.1.1.dist-info/top_level.txt,sha256=VespVDetoPzvaB7fxDNVtMIOoN95St66Ks4v1CqM9S8,10
