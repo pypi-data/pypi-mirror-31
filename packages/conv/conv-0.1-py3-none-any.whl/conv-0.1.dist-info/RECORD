@@ -1,0 +1,9 @@
+conv/__init__.py,sha256=mgwSnUl-zjrbz30uKlqgkB7spfuR5acA95iyZW3yBVc,120
+conv/conv.py,sha256=WunJXFDGAbATK6H48Nfw_j7im_QG5A_vdMFiORoE1B8,5370
+conv/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+conv/tests/test_convolved_1d.py,sha256=wfiWA2w6trHH8HPTEw6Us_A8GCxuqamfTv4Uj8kUYM0,3780
+conv/tests/test_convolved_2d.py,sha256=xKujGfUi-jkRi3YUVYGnCH9X6_-jKr_5skzEwGxDfKk,1155
+conv-0.1.dist-info/METADATA,sha256=tB8zL_uxlSsVrw1dCjFdOR-HSbaFF-Jjflwo9Vf3iUA,1969
+conv-0.1.dist-info/RECORD,,
+conv-0.1.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+conv-0.1.dist-info/top_level.txt,sha256=yi5wCq6LtKLGzev2DE2_aSO9WQxuxJHsh9f-RfAUugU,5

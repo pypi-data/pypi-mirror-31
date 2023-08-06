@@ -1,0 +1,85 @@
+Metadata-Version: 2.1
+Name: conv
+Version: 0.1
+Summary: A lightweight library to do for-loop-styled convolution passes on your iterable objects (e.g.: on a list).
+Home-page: https://github.com/guillaume-chevalier/python-conv-lib
+Author: Guillaume Chevalier
+Author-email: guillaume-chevalier@outlook.com
+License: MIT
+Download-URL: https://github.com/guillaume-chevalier/python-conv-lib/tarball/0.1
+Keywords: convolution conv conv1d conv2d convolve convolved
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+
+================
+conv
+================
+
+
+Description
+=============
+
+
+Conv is a simple Python >= 3 package, lightweight library to do for-loop-styled convolution passes on your iterable objects (e.g.: on a list).
+
+
+Installation
+=============
+::
+
+    pip install conv
+
+
+Example Usage
+=============
+::
+
+    from conv import convolved
+
+
+    some_list = [1, 2, 3]
+    for kernel_hover in convolved(some_list, kernel_size=2, stride=1, padding=2, default_value=42):
+        print(kernel_hover)
+
+Result:
+----------
+::
+
+    [42, 42]
+    [42, 1]
+    [1, 2]
+    [2, 3]
+    [3, 42]
+    [42, 42]
+
+Unit Tests:
+----------
+::
+
+    python setup.py test
+
+A ``convolved_2d`` function also exists. See tests for more examples.
+
+
+Notes
+=============
+
+
+License: MIT
+
+Author: Guillaume Chevalier
+
+
