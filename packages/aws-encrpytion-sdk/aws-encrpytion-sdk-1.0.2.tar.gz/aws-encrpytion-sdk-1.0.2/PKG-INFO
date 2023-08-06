@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: aws-encrpytion-sdk
+Version: 1.0.2
+Summary: Did you mean to install aws-encryption-sdk?
+Home-page: http://aws-encryption-sdk-python.readthedocs.io/en/latest/
+Author: Amazon Web Services
+Author-email: aws-cryptools@amazon.com
+License: UNKNOWN
+Description: 
+        This package has been parked by Amazon Web Services to protect you against packages
+        adopting names that might be common mistakes when looking for ours. You probably
+        wanted to install aws-encryption-sdk. For more information, see http://aws-encryption-sdk-python.readthedocs.io/en/latest/.
+Platform: UNKNOWN
+Classifier: Development Status :: 7 - Inactive
