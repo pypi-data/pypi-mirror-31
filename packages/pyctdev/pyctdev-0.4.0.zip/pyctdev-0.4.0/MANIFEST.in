@@ -1,0 +1,4 @@
+include versioneer.py
+include pyctdev/_version.py
+include pyctdev/_vendor/*.zip
+include tox.ini

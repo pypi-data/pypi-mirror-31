@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: pyctdev
+Version: 0.4.0
+Summary: pyviz common tasks for developers
+Home-page: http://github.com/pyviz/pyctdev
+License: BSD-3
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=2.7
+Provides-Extra: ecosystem_conda
+Provides-Extra: ecosystem_pip
+Provides-Extra: tests
