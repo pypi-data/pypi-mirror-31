@@ -1,0 +1,15 @@
+Metadata-Version: 1.2
+Name: gree
+Version: 0.3
+Summary: Python API for controlling Gree ACs
+Home-page: http://github.com/xTCx/gree-python-api
+Author: Asaf Biton
+Author-email: bit.asaf@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Requires-Python: >=3
