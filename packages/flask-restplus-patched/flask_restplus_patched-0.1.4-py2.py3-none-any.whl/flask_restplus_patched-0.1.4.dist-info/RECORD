@@ -1,0 +1,12 @@
+flask_restplus_patched/__init__.py,sha256=WlgeOl1dI0D4yhO2QynFQmoS-AFd41uVhEBlcYjikYA,362
+flask_restplus_patched/_http.py,sha256=PIemGmS8Z33IaZxfuu-7p-g5uUwwNPjYmB6TVusnzNg,6072
+flask_restplus_patched/api.py,sha256=jvbWYOGvg4k0sWJ5R3AwfK3UW4ydC09Yv06hggYaC6U,1054
+flask_restplus_patched/model.py,sha256=GYiNmIpSsTyIQ02tjO1_teR9GMHLvnDDVORKDqyiDvQ,1462
+flask_restplus_patched/namespace.py,sha256=pxsrzhkpWOYrAt8inlYu4Ht2UEK2O2L4CM3F2zh5wwY,8256
+flask_restplus_patched/parameters.py,sha256=eVF5602vCDHSKaX4dVX4kLtYQ33WRFcph3HxgIy0Rvs,7232
+flask_restplus_patched/resource.py,sha256=OiZz87TJL0kZ3jlfaXOhBCWRygMdcktDGBhlhOkdvKg,3353
+flask_restplus_patched/swagger.py,sha256=2dWNsRX4YGLVGzhipis-s59d9omYpa1fatpxRp6WLN4,721
+flask_restplus_patched-0.1.4.dist-info/METADATA,sha256=zu-GV6iuFwcAAnrYIDWq7kmkXBI4MWAZg1Pey5fvJxo,1495
+flask_restplus_patched-0.1.4.dist-info/RECORD,,
+flask_restplus_patched-0.1.4.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+flask_restplus_patched-0.1.4.dist-info/top_level.txt,sha256=Rbuec16NmMVfLDQOJqq4jY4omfhJDB195FVKdNJDKOs,23
