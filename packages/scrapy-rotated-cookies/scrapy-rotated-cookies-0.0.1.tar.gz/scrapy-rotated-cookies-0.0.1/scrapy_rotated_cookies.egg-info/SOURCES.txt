@@ -1,0 +1,15 @@
+README.md
+setup.py
+scrapy_rotated_cookies/__init__.py
+scrapy_rotated_cookies/signals.py
+scrapy_rotated_cookies.egg-info/PKG-INFO
+scrapy_rotated_cookies.egg-info/SOURCES.txt
+scrapy_rotated_cookies.egg-info/dependency_links.txt
+scrapy_rotated_cookies.egg-info/top_level.txt
+scrapy_rotated_cookies/downloadmiddlewares/__init__.py
+scrapy_rotated_cookies/downloadmiddlewares/rotated_cookies.py
+scrapy_rotated_cookies/extensions/__init__.py
+scrapy_rotated_cookies/extensions/default_settings.py
+scrapy_rotated_cookies/extensions/file_storage.py
+scrapy_rotated_cookies/extensions/logstats.py
+scrapy_rotated_cookies/extensions/mongodb_storage.py
