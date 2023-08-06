@@ -1,0 +1,15 @@
+setup.cfg
+setup.py
+limacharlie/Firehose.py
+limacharlie/Sensor.py
+limacharlie/__init__.py
+limacharlie/demo.py
+limacharlie/demo_firehose.py
+limacharlie/manager.py
+limacharlie/utils.py
+limacharlie.egg-info/PKG-INFO
+limacharlie.egg-info/SOURCES.txt
+limacharlie.egg-info/dependency_links.txt
+limacharlie.egg-info/requires.txt
+limacharlie.egg-info/top_level.txt
+limacharlie.egg-info/zip-safe
