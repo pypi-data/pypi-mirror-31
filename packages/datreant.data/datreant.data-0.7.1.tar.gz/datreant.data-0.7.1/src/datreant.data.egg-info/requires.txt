@@ -1,0 +1,6 @@
+datreant.core==0.7.1
+six
+numpy
+pandas
+tables
+h5py
