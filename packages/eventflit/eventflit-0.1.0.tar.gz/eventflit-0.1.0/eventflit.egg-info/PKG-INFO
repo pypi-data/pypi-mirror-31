@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: eventflit
+Version: 0.1.0
+Summary: A Python library to interract with the Eventflit API
+Home-page: https://github.com/eventflit/eventflit-http-python
+Author: Eventflit
+Author-email: support@eventflit.com
+License: MIT
+Description: UNKNOWN
+Keywords: eventflit rest realtime websockets service
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
