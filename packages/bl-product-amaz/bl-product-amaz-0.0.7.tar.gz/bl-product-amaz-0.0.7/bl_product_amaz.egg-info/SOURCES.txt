@@ -1,0 +1,12 @@
+README.md
+setup.py
+bl_product_amaz/__init__.py
+bl_product_amaz/amz_attrs.py
+bl_product_amaz/amz_sub_attrs.py
+bl_product_amaz/database.py
+bl_product_amaz/us_btgs.py
+bl_product_amaz.egg-info/PKG-INFO
+bl_product_amaz.egg-info/SOURCES.txt
+bl_product_amaz.egg-info/dependency_links.txt
+bl_product_amaz.egg-info/requires.txt
+bl_product_amaz.egg-info/top_level.txt
