@@ -1,0 +1,7 @@
+PyYaml
+
+[test]
+rasahub-humhub
+rasahub-rasa
+testing.common.database
+testing.mysqld
