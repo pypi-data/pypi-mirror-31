@@ -1,0 +1,4 @@
+[console_scripts]
+skitai-cron = skitai.bin.cron:main
+skitai-smtpda = skitai.bin.smtpda:main
+
