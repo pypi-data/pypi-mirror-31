@@ -1,0 +1,3 @@
+#!python
+
+from collatelogs import __main__

@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: collatelogs
+Version: 0.2.0
+Summary: A simple log collator
+Home-page: http://github.com/tchamberlin/collatelogs
+Author: Thomas Chamberlin
+Author-email: tchamberlin@users.noreply.github.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Requires-Dist: python-dateutil
+Requires-Dist: pyyaml
+Requires-Dist: tqdm
+Requires-Dist: tzlocal
+Requires-Dist: pytz
+
+UNKNOWN
+
+
