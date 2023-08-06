@@ -1,0 +1,15 @@
+Metadata-Version: 1.2
+Name: fandogh_cli
+Version: 0.2.3
+Summary: Official CLI for Fandogh PaaS
+Home-page: https://github.com/psycho-ir/fandogh-cli
+Author: Soroosh Sarabadani
+Author-email: soroosh.sarabadani@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: PaaS,Fandogh
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: BSD License
+Requires-Python: >=3.5
