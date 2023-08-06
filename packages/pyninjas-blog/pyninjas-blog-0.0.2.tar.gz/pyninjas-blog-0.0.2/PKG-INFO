@@ -1,0 +1,75 @@
+Metadata-Version: 1.2
+Name: pyninjas-blog
+Version: 0.0.2
+Summary: Simple Blog Application for Django
+Home-page: https://github.com/pyninjas/pyninjas-blog
+Author: Emin Mastizada
+Author-email: emin@linux.com
+License: MIT
+Project-URL: Bug Reports, https://github.com/pyninjas/pyninjas-blog/issues
+Project-URL: Source, https://github.com/pyninjas/pyninjas-blog
+Project-URL: Say Thanks!, https://saythanks.io/to/mastizada
+Description-Content-Type: UNKNOWN
+Description: pyninjas-blog: Simple Blog Application for Django - WIP
+        =======================================================
+        
+        INSTALL
+        -------
+        
+        * Using pip: `pip install pyninjas-blog`
+        * Using source code: `python setup.py install`
+        
+        Add `pyninjas.blog` to `INSTALLED_APPS`:
+        
+        .. code-block:: python
+        
+            INSTALLED_APPS = [
+              # other apps
+              'pyninjas.blog',
+            ]
+        
+        Add `pyninjas.blog.urls` to your project's urls:
+        
+        .. code-block:: python
+        
+            urlpatterns = [
+              # other urls
+              path('blog/', include('pyninjas.blog.urls', namespace='blog')),
+            ]
+        
+        By default pyninjas-blog has all templates needed for the blog.
+        However it uses simple template for demo. You can enhance it with your current template by rewriting them:
+        
+        
+        
+        FEATURES
+        --------
+        
+        [x] Use of HTML as article format
+        [] Atom and RSS feeds
+        [] Preview for blog posts before publishing
+        [x] slug only tag and article urls
+        [] OpenGraph meta data
+        [] Multilevel comments (replies)
+        [] Loding contents using ajax
+        
+        
+        License
+        -------
+        Copyright (c) 2018 Emin Mastizada and contributors.
+        MIT License.
+        
+Keywords: blog,django,pyninjas,simple
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 1.11
+Classifier: Framework :: Django :: 2.0
