@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: apistar-ponyorm
+Version: 0.2.12
+Summary: Third-party for apistar using pony orm
+Home-page: https://github.com/jgirardet/apistar_ponyorm
+Author: Jimmy Girardet
+Author-email: ijkl@netc.fr
+Keywords: apistar,pony
+Requires-Python: >= 3.5.0.0, < 4.0.0.0
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: apistar (>=0.5.0.0)
+Requires-Dist: pony (>=0.7.0.0)
