@@ -1,0 +1,64 @@
+#!/usr/bin/env python
+from __future__ import print_function
+
+from docopt import docopt
+import os
+
+import hydraspa as hrsp
+from hydraspa.util import conv_to_number
+
+
+if __name__ == '__main__':
+    args = docopt(hrsp.cli.__doc__, version=hrsp.__version__)
+
+    if args['list']:
+        # must be one of structures, gases or forcefields
+        if args['structures']:
+            for k in sorted(hrsp.files.structures):
+                print(k)
+        elif args['gases']:
+            for k in sorted(hrsp.files.gases):
+                print(k)
+        elif args['forcefields']:
+            for k in sorted(hrsp.files.forcefields):
+                print(k)
+    elif args['poreblazer']:
+        hrsp.poreblazer.create_input(
+            args['-s'],
+        )
+    elif args['create']:
+        if args['-l']:
+            struc = os.path.abspath(args['-l'])
+        else:
+            struc = args['-s']
+
+        hrsp.cli_create(
+            structure=struc,
+            gas=args['-g'],
+            forcefield=args['-f'],
+            outdir=args['-o'],
+        )
+    elif args['split']:
+        pressures = [conv_to_number(v, float)
+                     for v in args['-P'].split(',')]
+        temperatures = [conv_to_number(v, float)
+                        for v in args['-T'].split(',')]
+
+        ncycles = conv_to_number(args['-c'], int)
+
+        hrsp.split(
+            src=args['<dirname>'],
+            ntasks=int(args['-n']),
+            ncycles=ncycles,
+            pressures=pressures,
+            temperatures=temperatures,
+        )
+    elif args['check']:
+        hrsp.check(args['<dirname>'])
+    elif args['gather']:
+        results = hrsp.gather.gather(args['<dirname>'])
+
+        for res, value in sorted(results.items()):
+            print("{r.temperature} {r.pressure}: {v}".format(r=res, v=value))
+    elif args['grab']:
+        hrsp.grab_structure(args['<struc>'], args['-o'])
