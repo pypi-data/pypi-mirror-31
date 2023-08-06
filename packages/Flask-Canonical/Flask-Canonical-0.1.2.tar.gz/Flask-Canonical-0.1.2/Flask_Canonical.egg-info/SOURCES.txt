@@ -1,0 +1,7 @@
+setup.py
+Flask_Canonical.egg-info/PKG-INFO
+Flask_Canonical.egg-info/SOURCES.txt
+Flask_Canonical.egg-info/dependency_links.txt
+Flask_Canonical.egg-info/top_level.txt
+flask_canonical/__init__.py
+flask_canonical/canonical_logger.py
