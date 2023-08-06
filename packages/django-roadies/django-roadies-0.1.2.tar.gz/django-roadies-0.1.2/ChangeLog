@@ -1,0 +1,19 @@
+CHANGES
+=======
+
+0.1.2
+-----
+
+* Version bump 0.1.2: twine
+* upgrade twine
+
+0.1.1
+-----
+
+* Version bump 0.1.1: devops
+* devops cleanup
+* name refactor and adds handlers interface
+* adds start and stop interface
+* ensure TestCase backwards compatibility
+* initial version
+* Initial commit

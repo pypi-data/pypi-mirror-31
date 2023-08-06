@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo -e "\x1b[1;32mRunning Tests\x1b[0m"
+mkdir -p reports
+source venv/bin/activate && \
+tox $@
