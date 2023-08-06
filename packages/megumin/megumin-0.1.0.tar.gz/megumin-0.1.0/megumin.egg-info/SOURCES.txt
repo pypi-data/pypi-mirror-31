@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+megumin.egg-info/PKG-INFO
+megumin.egg-info/SOURCES.txt
+megumin.egg-info/dependency_links.txt
+megumin.egg-info/requires.txt
+megumin.egg-info/top_level.txt

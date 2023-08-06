@@ -1,0 +1,25 @@
+Metadata-Version: 1.1
+Name: megumin
+Version: 0.1.0
+Summary: An API wrapper for megumin.torque.ink
+Home-page: https://github.com/kot83/megumin.py
+Author: Kot83
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: An unofficial wrapper for [megumin.torque.ink](https://megumin.torque.ink/)
+        
+        Example:
+        ```py
+        import megumin
+        result = megumin.get_megumin(useragent='Megumin.py/v0.1.0/Development')
+        print('Chant: '+result['chant'])
+        print('Image URL: '+result['img'])
+        ```
+        
+Keywords: megumin api wrapper api-wrapper
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
