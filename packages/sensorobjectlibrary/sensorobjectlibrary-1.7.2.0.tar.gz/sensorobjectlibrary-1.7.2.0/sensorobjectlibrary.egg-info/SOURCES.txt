@@ -1,0 +1,13 @@
+README.md
+setup.py
+sensorobjectlibrary/Sol.py
+sensorobjectlibrary/SolDefines.py
+sensorobjectlibrary/SolExceptions.py
+sensorobjectlibrary/SolUtils.py
+sensorobjectlibrary/__init__.py
+sensorobjectlibrary/hr_parser.py
+sensorobjectlibrary/openhdlc.py
+sensorobjectlibrary.egg-info/PKG-INFO
+sensorobjectlibrary.egg-info/SOURCES.txt
+sensorobjectlibrary.egg-info/dependency_links.txt
+sensorobjectlibrary.egg-info/top_level.txt
