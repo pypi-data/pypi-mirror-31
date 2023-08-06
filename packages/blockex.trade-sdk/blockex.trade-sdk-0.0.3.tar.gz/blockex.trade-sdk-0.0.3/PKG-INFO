@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: blockex.trade-sdk
+Version: 0.0.3
+Summary: BlockEx trade API client SDK
+Home-page: https://blockexmarkets.com
+Author: BlockEx dev team
+Author-email: developers@blockex.com
+License: MIT
+Project-URL: Source, https://bitbucket.org/blockex/python-sdk
+Project-URL: Bug Reports, https://bitbucket.org/blockex/python-sdk/issues
+Description: UNKNOWN
+Keywords: api client blockex trade sdk
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Provides-Extra: test
