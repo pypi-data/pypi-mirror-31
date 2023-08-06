@@ -1,0 +1,6 @@
+MANIFEST.in
+setup.py
+dynamodb_encryption.egg-info/PKG-INFO
+dynamodb_encryption.egg-info/SOURCES.txt
+dynamodb_encryption.egg-info/dependency_links.txt
+dynamodb_encryption.egg-info/top_level.txt
