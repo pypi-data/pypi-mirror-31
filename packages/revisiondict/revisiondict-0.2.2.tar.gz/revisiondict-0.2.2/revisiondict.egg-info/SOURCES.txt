@@ -1,0 +1,17 @@
+CONTRIBUTING.rst
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+revisiondict/__init__.py
+revisiondict/revisiondict.py
+revisiondict.egg-info/PKG-INFO
+revisiondict.egg-info/SOURCES.txt
+revisiondict.egg-info/dependency_links.txt
+revisiondict.egg-info/not-zip-safe
+revisiondict.egg-info/top_level.txt
+tests/__init__.py
+tests/test_revisiondict.py
+tests/util_mapping_py2.py
+tests/util_mapping_py3.py
