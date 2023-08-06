@@ -1,0 +1,45 @@
+{% extends "bee_django_user/base.html" %}
+{% load bee_django_user_filter %}
+
+{% block content %}
+    {% include 'bee_django_user/logo.html' %}
+    {% include 'bee_django_user/nav.html' %}
+    <div class="text-center"><h3>
+        用户组权限
+    </h3>
+    </div>
+    <div style="margin: 5px auto"><a href="/admin/" class="btn btn-default">设置</a></div>
+    <table class="table table-bordered table-hover">
+        <thead>
+        <tr>
+            <th></th>
+            <th colspan="2" class="text-center">用户</th>
+            <th colspan="2" class="text-center">班级</th>
+        </tr>
+        <tr>
+            <th>用户组</th>
+            <th>管理页</th>
+            <th>创建用户</th>
+            <th>修改用户信息</th>
+            <th>修改用户组</th>
+            <th>删除用户</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {% for group in group_list %}
+            <tr>
+                <td>{{ group.name }}</td>
+                <td>{% if group|has_permission:"can manage" %}√{% endif %}</td>
+                <td>{% if group|has_permission:"can create user" %}√{% endif %}</td>
+                <td>{% if group|has_permission:"can change user info" %}√{% endif %}</td>
+                <td>{% if group|has_permission:"can change user group" %}√{% endif %}</td>
+                <td>{% if group|has_permission:"can delete user" %}√{% endif %}</td>
+
+            </tr>
+
+        {% endfor %}
+        </tbody>
+    </table>
+    {% include 'bee_django_user/paginator.html' %}
+{% endblock %}
