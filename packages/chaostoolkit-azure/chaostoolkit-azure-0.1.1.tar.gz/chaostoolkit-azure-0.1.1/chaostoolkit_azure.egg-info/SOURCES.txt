@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+chaosazure/__init__.py
+chaosazure/types.py
+chaostoolkit_azure.egg-info/PKG-INFO
+chaostoolkit_azure.egg-info/SOURCES.txt
+chaostoolkit_azure.egg-info/dependency_links.txt
+chaostoolkit_azure.egg-info/requires.txt
+chaostoolkit_azure.egg-info/top_level.txt
