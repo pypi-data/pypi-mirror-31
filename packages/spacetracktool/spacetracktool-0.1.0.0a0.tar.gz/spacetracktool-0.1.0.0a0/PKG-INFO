@@ -1,0 +1,27 @@
+Metadata-Version: 1.1
+Name: spacetracktool
+Version: 0.1.0.0a0
+Summary: A Python API for querying space-track.org
+Home-page: UNKNOWN
+Author: Nathan L. Toner
+Author-email: engineerolabs@gmail.com
+License: MIT
+Description: A Python API for querying space-track.org
+Keywords: space
+spacetrack
+elset
+tle
+satellite
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Classifier: Topic :: Utilities
