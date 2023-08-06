@@ -1,0 +1,11 @@
+nltk
+PyYAML
+metaphone
+
+[analysis]
+memorable_password
+randomsentence
+
+[tests]
+pytest
+pytest-doctestplus
