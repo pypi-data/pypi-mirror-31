@@ -1,0 +1,15 @@
+Metadata-Version: 2.0
+Name: py2ifttt
+Version: 1.0.0
+Summary: an interface for triggering ifttt webhooks
+Home-page: http://github.com/moevis/py2ifttt
+Author: moevis
+Author-email: moevery@gmail.com
+License: MIT
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: requests
+
+an interface for triggering ifttt webhooks, http://github.com/moevis/py2ifttt
+
+
