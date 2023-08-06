@@ -1,0 +1,12 @@
+jinja2>=2.7
+pyyaml
+pygithub
+
+[dev]
+check-manifest
+sphinx
+sphinx-autobuild
+mock
+
+[test]
+coverage

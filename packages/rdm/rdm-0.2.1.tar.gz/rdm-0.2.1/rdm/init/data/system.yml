@@ -1,0 +1,41 @@
+# The name of the project
+project_name: Project
+
+# Standard Version
+standard: IEC62304:2006
+
+# Is the software project part of a medical device with a hardware component,
+# or is the software a medical device by-itself?
+is_software_only_device: false
+
+# The location where the system requirements are stored; only used if
+# `is_software_only_device == false`
+system_requirements_location: Greenlight Guru
+
+# The project management tool used to track software requirements and problem reports
+software_requirements_location: GitHub
+
+# The repository location within the project management tool
+repository: user/repository
+
+# What is the safety classification of the entire system? ("A", "B", or "C")
+# "A" - No injury or damage to health is possible
+# "B" - Non-serious injury is possible
+# "C" - Death or serious injury is possible
+safety_class: C
+
+# A string that identifies a release of the software (e.g. v0.1.0)
+release_id: v0.1.0
+
+# The company name of the medical device manufacturer
+manufacturer_name: Manufacturer
+
+# The company name of the software consulting firm, if there is one (set to
+# `null` if there isn't)
+software_consultants_name: Consultants
+
+# Include notes which, while distracting to normal users, are helpful for auditors
+auditor_notes: false
+
+# The location where user feedback is stored.
+feedback_location: User Feedback Software
