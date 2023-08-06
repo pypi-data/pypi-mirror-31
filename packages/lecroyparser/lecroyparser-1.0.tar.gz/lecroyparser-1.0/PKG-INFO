@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: lecroyparser
+Version: 1.0
+Summary: Parse LeCroy Binary Files.
+Home-page: http://github.com/bennomeier/lecroyparser
+Author: Benno Meier
+Author-email: meier.benno@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: LeCroy Binary Scope
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering :: Physics
