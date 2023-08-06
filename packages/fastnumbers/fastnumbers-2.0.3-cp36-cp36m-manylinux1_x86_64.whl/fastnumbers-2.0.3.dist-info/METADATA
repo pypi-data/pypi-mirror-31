@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: fastnumbers
+Version: 2.0.3
+Summary: Super-fast and clean conversions to numbers.
+Home-page: https://github.com/SethMMorton/fastnumbers
+Author: Seth M. Morton
+Author-email: drtuba78@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Utilities
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Text Processing :: Filters
+
+UNKNOWN
+
+
