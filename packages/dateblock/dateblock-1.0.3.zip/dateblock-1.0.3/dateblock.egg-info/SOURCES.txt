@@ -1,0 +1,16 @@
+AUTHORS
+COPYING
+ChangeLog
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+dateblock.egg-info/PKG-INFO
+dateblock.egg-info/SOURCES.txt
+dateblock.egg-info/dependency_links.txt
+dateblock.egg-info/top_level.txt
+src/Date.cpp
+src/Date.h
+src/dateblock.cpp
+src/dateblock.h
