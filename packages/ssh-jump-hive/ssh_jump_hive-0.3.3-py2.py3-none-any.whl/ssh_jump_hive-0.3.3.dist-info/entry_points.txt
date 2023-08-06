@@ -1,0 +1,3 @@
+[console_scripts]
+jumps = jumps.jump_terminal:main
+
