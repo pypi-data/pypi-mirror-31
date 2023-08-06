@@ -1,0 +1,452 @@
+ERROR: Cannot use the same alias for multiple pins.
+WARNING: Attaching non-part Pin  to a Net A.
+WARNING: Attaching non-part Pin  to a Net A.
+WARNING: Attaching non-part Pin  to a Net N9.
+WARNING: Attaching non-part Pin  to a Net N1.
+WARNING: Attaching non-part Pin  to a Net N1.
+WARNING: Attaching non-part Pin  to a Net N2.
+WARNING: Attaching non-part Pin  to a Net N3.
+WARNING: Attaching non-part Pin  to a Net N4.
+WARNING: Attaching non-part Pin  to a Net N5.
+WARNING: Attaching non-part Pin  to a Net N6.
+WARNING: Attaching non-part Pin  to a Net N7.
+WARNING: Attaching non-part Pin  to a Net N8.
+WARNING: Attaching non-part Pin  to a Net B0.
+WARNING: Attaching non-part Pin  to a Net B1.
+WARNING: Attaching non-part Pin  to a Net B2.
+WARNING: Attaching non-part Pin  to a Net B3.
+WARNING: Attaching non-part Pin  to a Net B4.
+WARNING: Attaching non-part Pin  to a Net B5.
+WARNING: Attaching non-part Pin  to a Net B6.
+WARNING: Attaching non-part Pin  to a Net B7.
+ERROR: Connection mismatch 8 != 9!
+ERROR: Connection mismatch 9 != 8!
+ERROR: Can't assign to a bus! Use the += operator.
+WARNING: Attaching non-part Pin  to a Net A0.
+WARNING: Attaching non-part Pin  to a Net A1.
+WARNING: Attaching non-part Pin  to a Net A2.
+WARNING: Attaching non-part Pin  to a Net A3.
+WARNING: Attaching non-part Pin  to a Net A4.
+WARNING: Attaching non-part Pin  to a Net A5.
+WARNING: Attaching non-part Pin  to a Net A6.
+WARNING: Attaching non-part Pin  to a Net A7.
+ERROR: Can't assign to a bus! Use the += operator.
+WARNING: Attaching non-part Pin  to a Net A5.
+WARNING: Attaching non-part Pin  to a Net A5.
+WARNING: Attaching non-part Pin  to a Net A5.
+WARNING: Attaching non-part Pin  to a Net N1_1.
+WARNING: Attaching non-part Pin  to a Net N1_2.
+WARNING: Attaching non-part Pin  to a Net N1_2.
+WARNING: Attaching non-part Pin  to a Net N1_1.
+WARNING: Attaching non-part Pin  to a Net N1_1.
+WARNING: Attaching non-part Pin  to a Net N1.
+WARNING: Attaching non-part Pin  to a Net N1.
+WARNING: Attaching non-part Pin  to a Net N1.
+WARNING: Attaching non-part Pin  to a Net N1.
+WARNING: Attaching non-part Pin  to a Net N1.
+WARNING: Attaching non-part Pin  to a Net N1.
+ERROR: Can't use a non-zero index for a net.
+WARNING: Attaching non-part Pin  to a Net N1.
+WARNING: Attaching non-part Pin  to a Net N1.
+WARNING: Attaching non-part Pin  to a Net N1.
+ERROR: Can't open file: crap.
+
+WARNING: Could not load KiCad schematic library "crap", falling back to backup library.
+ERROR: Can't open file: crap.
+
+WARNING: Could not load KiCad schematic library "crap", falling back to backup library.
+ERROR: Can't open file: crap.
+
+WARNING: Could not load KiCad schematic library "crap", falling back to backup library.
+ERROR: Can't open file: crap.
+
+WARNING: Could not load KiCad schematic library "crap", falling back to backup library.
+ERROR: Can't open file: non-existing.
+
+ERROR: Can't open file: non-existing.
+
+ERROR: Can't open file: non-existing.
+
+ERROR: Can't open file: non-existing.
+
+WARNING: Could not load KiCad schematic library "non-existing", falling back to backup library.
+ERROR: Unable to find part P in library UNKNOWN.
+ERROR: Can't open file: non-existing.
+
+WARNING: Could not load KiCad schematic library "non-existing", falling back to backup library.
+ERROR: Unable to find part P in library UNKNOWN.
+ERROR: Can't open file: non-existing.
+
+WARNING: Could not load KiCad schematic library "non-existing", falling back to backup library.
+ERROR: Unable to find part P in library UNKNOWN.
+ERROR: No footprint for cap/C1.
+ERROR: No footprint for cap/C2.
+ERROR: No footprint for res/R1.
+ERROR: No footprint for res/R2.
+ERROR: No footprint for res/R1.
+ERROR: No footprint for res/R2.
+ERROR: No footprint for cap/C1.
+ERROR: No footprint for cap/C2.
+ERROR: No footprint for cap/C1.
+ERROR: No footprint for cap/C2.
+ERROR: No footprint for cap/C3.
+ERROR: No footprint for cap/C4.
+ERROR: No footprint for res/R1.
+ERROR: No footprint for res/R2.
+ERROR: No footprint for res/R3.
+ERROR: No footprint for res/R4.
+ERROR: No footprint for res/R1.
+ERROR: No footprint for res/R2.
+ERROR: No footprint for cap/C1.
+ERROR: No footprint for cap/C2.
+ERROR: No footprint for res/R3.
+ERROR: No footprint for res/R4.
+ERROR: No footprint for cap/C3.
+ERROR: No footprint for cap/C4.
+ERROR: No footprint for cap/C1.
+ERROR: No footprint for cap/C2.
+ERROR: No footprint for cap/C3.
+ERROR: No footprint for cap/C4.
+ERROR: No footprint for cap/C5.
+ERROR: No footprint for cap/C6.
+ERROR: No footprint for res/R1.
+ERROR: No footprint for res/R2.
+ERROR: No footprint for res/R3.
+ERROR: No footprint for res/R4.
+ERROR: No footprint for res/R5.
+ERROR: No footprint for res/R6.
+ERROR: No footprint for res/R1.
+ERROR: No footprint for res/R2.
+ERROR: No footprint for cap/C1.
+ERROR: No footprint for cap/C2.
+ERROR: No footprint for res/R3.
+ERROR: No footprint for res/R4.
+ERROR: No footprint for cap/C3.
+ERROR: No footprint for cap/C4.
+ERROR: No footprint for res/R5.
+ERROR: No footprint for res/R6.
+ERROR: No footprint for cap/C5.
+ERROR: No footprint for cap/C6.
+ERROR: No footprint for cap/C1.
+ERROR: No footprint for cap/C2.
+ERROR: No footprint for cap/C3.
+ERROR: No footprint for cap/C4.
+ERROR: No footprint for cap/C5.
+ERROR: No footprint for cap/C6.
+ERROR: No footprint for res/R1.
+ERROR: No footprint for res/R2.
+ERROR: No footprint for res/R3.
+ERROR: No footprint for res/R4.
+ERROR: No footprint for res/R5.
+ERROR: No footprint for res/R6.
+ERROR: No footprint for res/R1.
+ERROR: No footprint for res/R2.
+ERROR: No footprint for cap/C1.
+ERROR: No footprint for cap/C2.
+ERROR: No footprint for res/R3.
+ERROR: No footprint for res/R4.
+ERROR: No footprint for cap/C3.
+ERROR: No footprint for cap/C4.
+ERROR: No footprint for res/R5.
+ERROR: No footprint for res/R6.
+ERROR: No footprint for cap/C5.
+ERROR: No footprint for cap/C6.
+ERROR: No footprint for cap/C1.
+ERROR: No footprint for cap/C10.
+ERROR: No footprint for cap/C11.
+ERROR: No footprint for cap/C12.
+ERROR: No footprint for cap/C2.
+ERROR: No footprint for cap/C3.
+ERROR: No footprint for cap/C4.
+ERROR: No footprint for cap/C5.
+ERROR: No footprint for cap/C6.
+ERROR: No footprint for cap/C7.
+ERROR: No footprint for cap/C8.
+ERROR: No footprint for cap/C9.
+ERROR: No footprint for res/R1.
+ERROR: No footprint for res/R10.
+ERROR: No footprint for res/R11.
+ERROR: No footprint for res/R12.
+ERROR: No footprint for res/R2.
+ERROR: No footprint for res/R3.
+ERROR: No footprint for res/R4.
+ERROR: No footprint for res/R5.
+ERROR: No footprint for res/R6.
+ERROR: No footprint for res/R7.
+ERROR: No footprint for res/R8.
+ERROR: No footprint for res/R9.
+ERROR: No footprint for res/R1.
+ERROR: No footprint for res/R2.
+ERROR: No footprint for cap/C1.
+ERROR: No footprint for cap/C2.
+ERROR: No footprint for res/R3.
+ERROR: No footprint for res/R4.
+ERROR: No footprint for cap/C3.
+ERROR: No footprint for cap/C4.
+ERROR: No footprint for res/R5.
+ERROR: No footprint for res/R6.
+ERROR: No footprint for cap/C5.
+ERROR: No footprint for cap/C6.
+ERROR: No footprint for res/R7.
+ERROR: No footprint for res/R8.
+ERROR: No footprint for cap/C7.
+ERROR: No footprint for cap/C8.
+ERROR: No footprint for res/R9.
+ERROR: No footprint for res/R10.
+ERROR: No footprint for cap/C9.
+ERROR: No footprint for cap/C10.
+ERROR: No footprint for res/R11.
+ERROR: No footprint for res/R12.
+ERROR: No footprint for cap/C11.
+ERROR: No footprint for cap/C12.
+ERROR: No footprint for cap/C1.
+ERROR: No footprint for cap/C10.
+ERROR: No footprint for cap/C11.
+ERROR: No footprint for cap/C12.
+ERROR: No footprint for cap/C13.
+ERROR: No footprint for cap/C14.
+ERROR: No footprint for cap/C15.
+ERROR: No footprint for cap/C16.
+ERROR: No footprint for cap/C17.
+ERROR: No footprint for cap/C18.
+ERROR: No footprint for cap/C2.
+ERROR: No footprint for cap/C3.
+ERROR: No footprint for cap/C4.
+ERROR: No footprint for cap/C5.
+ERROR: No footprint for cap/C6.
+ERROR: No footprint for cap/C7.
+ERROR: No footprint for cap/C8.
+ERROR: No footprint for cap/C9.
+ERROR: No footprint for res/R1.
+ERROR: No footprint for res/R10.
+ERROR: No footprint for res/R11.
+ERROR: No footprint for res/R12.
+ERROR: No footprint for res/R13.
+ERROR: No footprint for res/R14.
+ERROR: No footprint for res/R15.
+ERROR: No footprint for res/R16.
+ERROR: No footprint for res/R17.
+ERROR: No footprint for res/R18.
+ERROR: No footprint for res/R2.
+ERROR: No footprint for res/R3.
+ERROR: No footprint for res/R4.
+ERROR: No footprint for res/R5.
+ERROR: No footprint for res/R6.
+ERROR: No footprint for res/R7.
+ERROR: No footprint for res/R8.
+ERROR: No footprint for res/R9.
+ERROR: No footprint for res/R1.
+ERROR: No footprint for res/R2.
+ERROR: No footprint for cap/C1.
+ERROR: No footprint for cap/C2.
+ERROR: No footprint for res/R3.
+ERROR: No footprint for res/R4.
+ERROR: No footprint for cap/C3.
+ERROR: No footprint for cap/C4.
+ERROR: No footprint for res/R5.
+ERROR: No footprint for res/R6.
+ERROR: No footprint for cap/C5.
+ERROR: No footprint for cap/C6.
+ERROR: No footprint for res/R7.
+ERROR: No footprint for res/R8.
+ERROR: No footprint for cap/C7.
+ERROR: No footprint for cap/C8.
+ERROR: No footprint for res/R9.
+ERROR: No footprint for res/R10.
+ERROR: No footprint for cap/C9.
+ERROR: No footprint for cap/C10.
+ERROR: No footprint for res/R11.
+ERROR: No footprint for res/R12.
+ERROR: No footprint for cap/C11.
+ERROR: No footprint for cap/C12.
+ERROR: No footprint for res/R13.
+ERROR: No footprint for res/R14.
+ERROR: No footprint for cap/C13.
+ERROR: No footprint for cap/C14.
+ERROR: No footprint for res/R15.
+ERROR: No footprint for res/R16.
+ERROR: No footprint for cap/C15.
+ERROR: No footprint for cap/C16.
+ERROR: No footprint for res/R17.
+ERROR: No footprint for res/R18.
+ERROR: No footprint for cap/C17.
+ERROR: No footprint for cap/C18.
+WARNING: Attaching non-part Pin  to a Net N1.
+ERROR: Can't add unmovable part 1 to this circuit.
+WARNING: Removing non-existent net B0 from this circuit.
+WARNING: Removing non-existent net B1 from this circuit.
+WARNING: Removing non-existent net B2 from this circuit.
+WARNING: Removing non-existent net B3 from this circuit.
+WARNING: Removing non-existent net B4 from this circuit.
+WARNING: Removing non-existent net B5 from this circuit.
+WARNING: Removing non-existent net B6 from this circuit.
+WARNING: Removing non-existent net B7 from this circuit.
+WARNING: Removing non-existent net B0 from this circuit.
+WARNING: Removing non-existent net B1 from this circuit.
+WARNING: Removing non-existent net B2 from this circuit.
+WARNING: Removing non-existent net B3 from this circuit.
+WARNING: Removing non-existent net B4 from this circuit.
+WARNING: Removing non-existent net B5 from this circuit.
+WARNING: Removing non-existent net B6 from this circuit.
+WARNING: Removing non-existent net B7 from this circuit.
+ERROR: Can't attach a part to a net in different circuits (, )!
+WARNING: Attaching non-part Pin  to a Net A.
+WARNING: Attaching non-part Pin  to a Net A.
+WARNING: Attaching non-part Pin  to a Net A.
+WARNING: Attaching non-part Pin  to a Net A.
+WARNING: Attaching non-part Pin  to a Net A.
+WARNING: Attaching non-part Pin  to a Net B.
+WARNING: Attaching non-part Pin  to a Net B.
+WARNING: Attaching non-part Pin  to a Net B.
+ERROR: No footprint for C/C1.
+ERROR: No footprint for C/C2.
+ERROR: No footprint for C/C1.
+ERROR: No footprint for C/C2.
+ERROR: No footprint for C/C1.
+ERROR: No footprint for C/C2.
+ERROR: No footprint for C/C3.
+ERROR: No footprint for C/C4.
+ERROR: No footprint for C/C1.
+ERROR: No footprint for C/C2.
+ERROR: No footprint for C/C3.
+ERROR: No footprint for C/C4.
+ERROR: No footprint for C/C1.
+ERROR: No footprint for C/C2.
+ERROR: No footprint for C/C3.
+ERROR: No footprint for C/C4.
+ERROR: No footprint for C/C5.
+ERROR: No footprint for C/C6.
+ERROR: No footprint for C/C1.
+ERROR: No footprint for C/C2.
+ERROR: No footprint for C/C3.
+ERROR: No footprint for C/C4.
+ERROR: No footprint for C/C5.
+ERROR: No footprint for C/C6.
+ERROR: No footprint for C/C1.
+ERROR: No footprint for C/C2.
+ERROR: No footprint for C/C3.
+ERROR: No footprint for C/C4.
+ERROR: No footprint for C/C5.
+ERROR: No footprint for C/C6.
+ERROR: No footprint for C/C1.
+ERROR: No footprint for C/C2.
+ERROR: No footprint for C/C3.
+ERROR: No footprint for C/C4.
+ERROR: No footprint for C/C5.
+ERROR: No footprint for C/C6.
+ERROR: No footprint for C/C1.
+ERROR: No footprint for C/C10.
+ERROR: No footprint for C/C11.
+ERROR: No footprint for C/C12.
+ERROR: No footprint for C/C2.
+ERROR: No footprint for C/C3.
+ERROR: No footprint for C/C4.
+ERROR: No footprint for C/C5.
+ERROR: No footprint for C/C6.
+ERROR: No footprint for C/C7.
+ERROR: No footprint for C/C8.
+ERROR: No footprint for C/C9.
+ERROR: No footprint for C/C1.
+ERROR: No footprint for C/C2.
+ERROR: No footprint for C/C3.
+ERROR: No footprint for C/C4.
+ERROR: No footprint for C/C5.
+ERROR: No footprint for C/C6.
+ERROR: No footprint for C/C7.
+ERROR: No footprint for C/C8.
+ERROR: No footprint for C/C9.
+ERROR: No footprint for C/C10.
+ERROR: No footprint for C/C11.
+ERROR: No footprint for C/C12.
+ERROR: No footprint for C/C1.
+ERROR: No footprint for C/C10.
+ERROR: No footprint for C/C11.
+ERROR: No footprint for C/C12.
+ERROR: No footprint for C/C13.
+ERROR: No footprint for C/C14.
+ERROR: No footprint for C/C15.
+ERROR: No footprint for C/C16.
+ERROR: No footprint for C/C17.
+ERROR: No footprint for C/C18.
+ERROR: No footprint for C/C2.
+ERROR: No footprint for C/C3.
+ERROR: No footprint for C/C4.
+ERROR: No footprint for C/C5.
+ERROR: No footprint for C/C6.
+ERROR: No footprint for C/C7.
+ERROR: No footprint for C/C8.
+ERROR: No footprint for C/C9.
+ERROR: No footprint for C/C1.
+ERROR: No footprint for C/C2.
+ERROR: No footprint for C/C3.
+ERROR: No footprint for C/C4.
+ERROR: No footprint for C/C5.
+ERROR: No footprint for C/C6.
+ERROR: No footprint for C/C7.
+ERROR: No footprint for C/C8.
+ERROR: No footprint for C/C9.
+ERROR: No footprint for C/C10.
+ERROR: No footprint for C/C11.
+ERROR: No footprint for C/C12.
+ERROR: No footprint for C/C13.
+ERROR: No footprint for C/C14.
+ERROR: No footprint for C/C15.
+ERROR: No footprint for C/C16.
+ERROR: No footprint for C/C17.
+ERROR: No footprint for C/C18.
+ERROR: Can't add unmovable part R1 to this circuit.
+WARNING: Removing non-existent net B0 from this circuit.
+WARNING: Removing non-existent net B1 from this circuit.
+WARNING: Removing non-existent net B2 from this circuit.
+WARNING: Removing non-existent net B3 from this circuit.
+WARNING: Removing non-existent net B4 from this circuit.
+WARNING: Removing non-existent net B5 from this circuit.
+WARNING: Removing non-existent net B6 from this circuit.
+WARNING: Removing non-existent net B7 from this circuit.
+WARNING: Removing non-existent net B0 from this circuit.
+WARNING: Removing non-existent net B1 from this circuit.
+WARNING: Removing non-existent net B2 from this circuit.
+WARNING: Removing non-existent net B3 from this circuit.
+WARNING: Removing non-existent net B4 from this circuit.
+WARNING: Removing non-existent net B5 from this circuit.
+WARNING: Removing non-existent net B6 from this circuit.
+WARNING: Removing non-existent net B7 from this circuit.
+WARNING: Removing non-existent net B0 from this circuit.
+WARNING: Removing non-existent net B1 from this circuit.
+WARNING: Removing non-existent net B2 from this circuit.
+WARNING: Removing non-existent net B3 from this circuit.
+WARNING: Removing non-existent net B4 from this circuit.
+WARNING: Removing non-existent net B5 from this circuit.
+WARNING: Removing non-existent net B6 from this circuit.
+WARNING: Removing non-existent net B7 from this circuit.
+ERROR: Can't attach a part to a net in different circuits (, )!
+WARNING: Attaching non-part Pin  to a Net A0.
+WARNING: Attaching non-part Pin  to a Net A1.
+WARNING: Attaching non-part Pin  to a Net A0_1.
+WARNING: Attaching non-part Pin  to a Net A0.
+WARNING: Attaching non-part Pin  to a Net A0_1.
+WARNING: Attaching non-part Pin  to a Net A1.
+WARNING: Attaching non-part Pin  to a Net A.
+WARNING: Using a label (1) for a unit of 1117/U1 that matches one or more of it's pin names (Pin U1/1/GND/POWER-IN)!
+ERROR: Can't open file: lt1074.
+
+ERROR: No footprint for C/C1.
+ERROR: No footprint for C/C2.
+ERROR: No footprint for C/C3.
+ERROR: No footprint for C/C4.
+ERROR: No footprint for C/C1.
+ERROR: No footprint for C/C2.
+ERROR: No footprint for C/C3.
+ERROR: No footprint for C/C4.
+ERROR: No footprint for C/C1.
+ERROR: No footprint for C/C2.
+ERROR: No footprint for C/C3.
+ERROR: No footprint for C/C4.
+ERROR: No footprint for C/C5.
+ERROR: No footprint for C/C6.
+ERROR: No footprint for C/C1.
+ERROR: No footprint for C/C2.
+ERROR: No footprint for C/C3.
+ERROR: No footprint for C/C4.
+ERROR: No footprint for C/C5.
+ERROR: No footprint for C/C6.
