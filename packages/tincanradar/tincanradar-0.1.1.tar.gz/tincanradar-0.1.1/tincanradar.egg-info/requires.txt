@@ -1,0 +1,11 @@
+numpy
+scipy
+
+[plot]
+matplotlib
+seaborn
+
+[tests]
+pytest
+nose
+coveralls
