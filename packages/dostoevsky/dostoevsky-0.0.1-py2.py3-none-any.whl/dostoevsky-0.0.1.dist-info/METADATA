@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: dostoevsky
+Version: 0.0.1
+Summary: Library for sentiment analysis of russian language
+Home-page: https://github.com/bureaucratic-labs/dostoevsky
+Author: Bureaucratic Labs
+Author-email: hello@b-labs.pro
+License: MIT
+Description-Content-Type: UNKNOWN
+Keywords: natural language processing
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: pymorphy2 (==0.8)
+
+UNKNOWN
+
+
