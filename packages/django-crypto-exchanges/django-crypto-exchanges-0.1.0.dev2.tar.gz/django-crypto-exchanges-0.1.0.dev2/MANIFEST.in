@@ -1,0 +1,3 @@
+include README.md
+recursive-include cryptoexchanges *.txt *.md
+recursive-include docs *.md

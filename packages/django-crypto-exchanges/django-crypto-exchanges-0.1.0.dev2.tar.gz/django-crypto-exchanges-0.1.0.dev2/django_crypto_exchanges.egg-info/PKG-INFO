@@ -1,0 +1,30 @@
+Metadata-Version: 1.1
+Name: django-crypto-exchanges
+Version: 0.1.0.dev2
+Summary: A Python client for cryptocurrency exchange APIs
+Home-page: https://github.com/haldunanil/django-crypto-exchanges
+Author: Haldun Anil
+Author-email: haldunanil@gmail.com
+License: MIT
+Download-URL: https://github.com/haldunanil/django-crypto-exchanges/archive/master.zip
+Description-Content-Type: UNKNOWN
+Description: # Overview
+        
+        The ultimate objective of this package is to create a single repository for Django use cases of cryptocurrency exchange APIs. To do so, the package will standardize API responses across existing official and unofficial Python API libraries for specific exchanges.
+Keywords: orderbook,trade,bitcoin,ethereum,BTC,ETH,client,api,wrapper,exchange,crypto,currency,cryptocurrency,trading,trading-api,coinbase,binance,gdax,gdax-api
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Intended Audience :: Information Technology
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Internet
+Classifier: Environment :: Web Environment
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 1.11
+Classifier: Framework :: Django :: 2.0
