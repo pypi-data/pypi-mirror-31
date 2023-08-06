@@ -1,0 +1,19 @@
+[
+    {
+        "_is_template": true,
+        "aggregation": "graphite",
+        "check_command": "check_graphite_status",
+        "check_command_args": "",
+        "host": "graphite",
+        "name": "Check status"
+    },
+    {
+        "_is_template": true,
+        "aggregation": "graphite",
+        "alias": "Check status (authenticated)",
+        "check_command": "check_graphite_status_auth",
+        "check_command_args": "",
+        "host": "graphite-auth",
+        "name": "Check-status-auth"
+    }
+]

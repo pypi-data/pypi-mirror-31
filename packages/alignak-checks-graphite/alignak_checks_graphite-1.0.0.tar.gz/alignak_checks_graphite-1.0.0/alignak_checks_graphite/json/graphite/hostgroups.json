@@ -1,0 +1,14 @@
+[
+    {
+        "_realm": "All",
+        "_sub_realm": true,
+        "action_url": "",
+        "alias": "Graphite hosts",
+        "hostgroups": [],
+        "hosts": [],
+        "imported_from": "alignak-checks-graphite",
+        "name": "graphite",
+        "notes": "This group contains all the Graphite hosts.",
+        "notes_url": ""
+    }
+]
