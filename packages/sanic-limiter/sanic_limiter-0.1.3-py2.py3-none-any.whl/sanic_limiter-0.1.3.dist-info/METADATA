@@ -1,0 +1,21 @@
+Metadata-Version: 2.0
+Name: sanic-limiter
+Version: 0.1.3
+Summary: Provides rate limiting features for Sanic. Supports in-memory, redis and memcache as storage.
+Home-page: https://github.com/bohea/sanic-limiter
+Author: bohea
+Author-email: libin375@163.com
+License: MIT
+Keywords: rate,limit,sanic,redis,memcache
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: limits (>=1.2.1)
+Requires-Dist: sanic (>=0.4.0)
+Requires-Dist: six (>=1.4.1)
+
+UNKNOWN
+
+
