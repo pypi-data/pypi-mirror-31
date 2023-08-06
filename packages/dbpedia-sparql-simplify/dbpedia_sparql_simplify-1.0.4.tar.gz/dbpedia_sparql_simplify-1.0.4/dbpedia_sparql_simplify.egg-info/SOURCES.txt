@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+dbpedia_sparql_simplify/__init__.py
+dbpedia_sparql_simplify/sparql_query.py
+dbpedia_sparql_simplify/sparql_util.py
+dbpedia_sparql_simplify.egg-info/PKG-INFO
+dbpedia_sparql_simplify.egg-info/SOURCES.txt
+dbpedia_sparql_simplify.egg-info/dependency_links.txt
+dbpedia_sparql_simplify.egg-info/entry_points.txt
+dbpedia_sparql_simplify.egg-info/requires.txt
+dbpedia_sparql_simplify.egg-info/top_level.txt
