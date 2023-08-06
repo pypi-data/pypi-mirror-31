@@ -1,0 +1,31 @@
+Metadata-Version: 1.1
+Name: static-frame
+Version: 0.1.1
+Summary: Immutable structures for one- and two-dimensional calculations with labelled axis
+Home-page: https://github.com/InvestmentSystems/static-frame
+Author: Christopher Ariza
+Author-email: UNKNOWN
+License: MIT
+Description-Content-Type: UNKNOWN
+Description: static-frame
+        =============
+        
+        
+        The StaticFrame library consists of the Series and Frame, immutable data structures for one- and two-dimensional calculations with self-aligning, labelled axis. StaticFrame extends NumPy, relying on NumPy entirely for all vector processing and retaining the full range of NumPy data types. While borrowing core approches to data extraction and manipulation from Pandas, StaticFrame offers a light-weight implementation, consistent interfaces, and flexible approaches to function application with easy parallelization, all without the undesirable complexity of in-place mutation.
+        
+        Code: https://github.com/InvestmentSystems/static-frame
+        
+        Docs: http://static-frame.readthedocs.io
+        
+        Packages: https://pypi.org/project/static-frame
+        
+        
+        
+Keywords: staticframe pandas numpy immutable array
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
