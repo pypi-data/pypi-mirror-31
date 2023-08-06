@@ -1,0 +1,49 @@
+Metadata-Version: 1.1
+Name: calour
+Version: 1.0rc0
+Summary: CALOUR: exploratory and interactive microbiome analyses based on heatmap
+Home-page: http://biocore.github.io/calour
+Author: calour development team
+Author-email: zhenjiang.xu@gmail.com
+License: BSD
+Description-Content-Type: UNKNOWN
+Description: CALOUR
+        ======
+        [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/biocore/calour/master?filepath=doc%2Fsource%2Fnotebooks)
+        [![Build Status](https://travis-ci.org/biocore/calour.png?branch=master)](https://travis-ci.org/biocore/calour)
+        [![Build status](https://ci.appveyor.com/api/projects/status/yd5sxx9afxaoedvk/branch/master?svg=true)](https://ci.appveyor.com/project/biocore/calour/branch/master)
+        [![Coverage Status](https://coveralls.io/repos/github/biocore/calour/badge.svg?branch=master)](https://coveralls.io/github/biocore/calour?branch=master)
+        
+        exploratory and interactive microbiome analysis based on heatmaps
+        
+        
+        [Installation](https://github.com/biocore/calour/blob/master/INSTALL.md)
+        ========================================================================
+        
+        
+        [Documentation](http://biocore.github.io/calour)
+        ================================================
+        
+        
+        [Mouse & Keyboard Operation](http://biocore.github.io/calour/generated/calour.heatmap.plot.html#calour.heatmap.plot)
+        ====================================================================================================================
+        
+        [Change History](https://github.com/biocore/calour/blob/master/CHANGELOG.md)
+        ============================================================================
+        
+Keywords: microbiome heatmap analysis bioinformatics
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Environment :: Console
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
