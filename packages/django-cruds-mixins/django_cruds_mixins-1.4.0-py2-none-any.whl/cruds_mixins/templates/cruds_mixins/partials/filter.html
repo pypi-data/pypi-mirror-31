@@ -1,0 +1,14 @@
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% if filter.form %}
+<div class="cruds-filter">
+<form action="" method="get" class="inline-form">
+  <fieldset>
+    {{ filter.form|crispy }}
+    <div class="control-group">
+      <button type="submit" class="btn btn-primary">{% trans "Filter" %}</button>
+    </div>
+  </fieldset>
+</div>
+{% endif %}
