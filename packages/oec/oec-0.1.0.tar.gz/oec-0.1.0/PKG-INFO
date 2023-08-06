@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: oec
+Version: 0.1.0
+Summary: API Wrapper for The Observatory for Economic Complexity
+Home-page: https://github.com/yahiaali/oec
+Author: Yahia Ali
+Author-email: UNKNOWN
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
