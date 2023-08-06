@@ -1,0 +1,11 @@
+README.md
+setup.py
+abjad_ext_ipython.egg-info/PKG-INFO
+abjad_ext_ipython.egg-info/SOURCES.txt
+abjad_ext_ipython.egg-info/dependency_links.txt
+abjad_ext_ipython.egg-info/requires.txt
+abjad_ext_ipython.egg-info/top_level.txt
+abjadext/__init__.py
+test/test_Graph.py
+test/test_Play.py
+test/test_Show.py
