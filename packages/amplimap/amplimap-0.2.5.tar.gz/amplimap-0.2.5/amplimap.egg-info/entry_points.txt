@@ -1,0 +1,4 @@
+[console_scripts]
+amplimap = amplimap.run:main
+amplimap_merge = amplimap.merge_folders:main
+
