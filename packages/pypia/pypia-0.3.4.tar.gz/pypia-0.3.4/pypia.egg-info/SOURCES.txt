@@ -1,0 +1,12 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+pypia/__init__.py
+pypia/package_info.json
+pypia/pypia.py
+pypia.egg-info/PKG-INFO
+pypia.egg-info/SOURCES.txt
+pypia.egg-info/dependency_links.txt
+pypia.egg-info/entry_points.txt
+pypia.egg-info/top_level.txt

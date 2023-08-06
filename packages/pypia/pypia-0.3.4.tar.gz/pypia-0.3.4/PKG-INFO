@@ -1,0 +1,39 @@
+Metadata-Version: 1.1
+Name: pypia
+Version: 0.3.4
+Summary: Configuration and connection tools for PIA VPN routes on Linux
+Home-page: https://github.com/dagrha/pypia
+Author: Dan Hallau
+Author-email: pia@hallau.us
+License: UNKNOWN
+Description-Content-Type: UNKNOWN
+Description: Private Internet Access configuration package for various Linux distributions
+        -----------------------------------------------------------------------------
+        
+        Configures NetworkManager keyfiles for OpenVPN routes to Private Internet Access servers.
+        
+        pypia automatically detects your operating system. Currently the supported distros are Fedora, Manjaro, Ubuntu, Elementary OS, Antergos, Linuxmint, openSUSE, Kali, Arch, CentOS.
+        
+        In addition to configuring NetworkManager keyfiles, this module also can be invoked to ping all PIA endpoints, connect to the fastest, connect to a random server, etc. Use `pypia --help` for further descriptions and usage.
+        
+            usage: pypia.py [-h] [-i] [-p] [-s] [-r {us,all,int}] [-f] [-d]
+        
+            optional arguments:
+              -h, --help            show this help message and exit
+              -i, --initialize      configure pia vpn routes as networkmanager keyfiles. use this flag on first run and anytime you want to refresh pia vpn routes
+              -p, --ping            ping each vpn server and list latencies
+              -s, --shuffle         connect to or shuffle a random vpn
+              -r, --region          "us" for US only, "int" for non-US, "all" for worldwide
+              -f, --fastest         connect to network with lowest ping latency
+              -d, --disconnect      disconnect current PIA vpn connection
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Topic :: Internet
+Classifier: Topic :: Internet :: Proxy Servers
