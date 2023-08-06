@@ -1,0 +1,9 @@
+distlib
+setuptools
+packaging
+argparse
+backports.functools_lru_cache
+requests
+
+[:python_version == "2.7"]
+futures
