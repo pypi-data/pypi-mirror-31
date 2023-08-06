@@ -1,0 +1,7 @@
+pybel[deployment]>=0.11.1
+bio2bel>=0.0.9
+sqlalchemy
+click
+six
+pandas
+pyhgnc
