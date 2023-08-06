@@ -1,0 +1,22 @@
+Metadata-Version: 1.2
+Name: jupyterlab_thredds
+Version: 0.1.0
+Summary: A Jupyter Notebook server extension which crawls a thredds catalog
+Home-page: https://github.com/eWaterCycle/jupyterlab_thredds
+Author: S. Verhoeven
+Author-email: s.verhoeven@esciencecenter.nl
+License: Apache-2.0
+Description: UNKNOWN
+Keywords: Jupyter,JupyterLab,Thredds
+Platform: Linux
+Platform: Mac OS X
+Platform: Windows
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Python: >=3.5
