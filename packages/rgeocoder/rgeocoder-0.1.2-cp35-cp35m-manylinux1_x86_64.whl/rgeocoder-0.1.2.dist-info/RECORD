@@ -1,0 +1,13 @@
+rgeocoder/__init__.py,sha256=FoIk253v6SozBWZAR0DiQsan7JbQVHOdtrn3YIy4lKY,2877
+rgeocoder/_rgeocoder.cpython-35m-x86_64-linux-gnu.so,sha256=w-QiFtyCFnSDTvQhpVNUe0eP5qgSKj0J9MbuqVqR89A,3256265
+rgeocoder/cities.csv,sha256=HeVtwysDCMYJTV2DNEHIyiWCfyTppqTMFEIjq1-bZb8,7851524
+rgeocoder/exceptions.py,sha256=xGUFTi2gljnMi6yZ6Cjzk5gEp9_6AVW9itNFQ4A3HWM,441
+rgeocoder/rust/Cargo.toml,sha256=yy6UfMk_bju45_5p1oANf9Ora8_v791ACas2R1dSxls,363
+rgeocoder/rust/src/geocoder.rs,sha256=3Xq5rBfbwyI9lLX_vugjHyDntCj0ydFoIrJoOwKWrLk,4381
+rgeocoder/rust/src/lib.rs,sha256=wNlApbj5FkUXyB7wzvNJuFur12-yJUQBR_XUkMouQyg,1909
+rgeocoder-0.1.2.dist-info/DESCRIPTION.rst,sha256=LJ5NKtSxaw5OF3Kca5j8Tr6Xo33KvgnlhAMYQBr_yNQ,1729
+rgeocoder-0.1.2.dist-info/METADATA,sha256=_zcZ-ev6bWoQEwumV96afgTPk4VYO87BR3AGZl7o_8c,2475
+rgeocoder-0.1.2.dist-info/RECORD,,
+rgeocoder-0.1.2.dist-info/WHEEL,sha256=FO-U_qE3v9UVkqkcibgzGqYSuGIvACgOboyXHbsAhvw,109
+rgeocoder-0.1.2.dist-info/metadata.json,sha256=_XO3GuIZTlXKLo1zsBAifgeqnsQn86UB-2SkRa_xUt4,946
+rgeocoder-0.1.2.dist-info/top_level.txt,sha256=wASflrxDfZ0BatwVb4_QJo01J3WjLtJ3EHYygcFAMDY,10
