@@ -1,0 +1,7 @@
+<div id="quickfind-container">
+  <input id="quickfind" placeholder="Quick Find ..." />
+</div>
+<div class="g-menu-btn" id="g-menu-btn">  <p> Global Table of Contents</p><i id="g-closedMenu" class="fa fa-angle-up" aria-hidden="true"></i><i id="g-openMenu" class="fa fa-angle-down" aria-hidden="true" style="display: none;"></i></div>
+  <div id="globaltoc" class="toc expand">
+    {{ toctree(includehidden=True, titles_only=True, collapse=False, maxdepth=-1) }}
+  </div>
