@@ -1,0 +1,13 @@
+CHANGELOG.md
+LICENSE.txt
+MANIFEST.in
+README.md
+pytest_teamcity_logblock.py
+setup.py
+pytest_teamcity_logblock.egg-info/PKG-INFO
+pytest_teamcity_logblock.egg-info/SOURCES.txt
+pytest_teamcity_logblock.egg-info/dependency_links.txt
+pytest_teamcity_logblock.egg-info/entry_points.txt
+pytest_teamcity_logblock.egg-info/not-zip-safe
+pytest_teamcity_logblock.egg-info/requires.txt
+pytest_teamcity_logblock.egg-info/top_level.txt

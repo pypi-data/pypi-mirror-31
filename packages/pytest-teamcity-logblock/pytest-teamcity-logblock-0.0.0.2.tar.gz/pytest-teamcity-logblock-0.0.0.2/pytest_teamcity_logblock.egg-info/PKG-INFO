@@ -1,0 +1,31 @@
+Metadata-Version: 1.1
+Name: pytest-teamcity-logblock
+Version: 0.0.0.2
+Summary: py.test plugin to introduce block structure in teamcity build log, if output is not captured
+Home-page: https://github.com/cielavenir/pytest-teamcity-logblock
+Author: cielavenir
+Author-email: cielartisan@gmail.com
+License: BSD
+Description: # pytest-teamcity-logblock
+        
+        This plugin introduces a block structure in teamcity build log if the output is not captured.
+        
+        Binary distribution: https://pypi.org/project/pytest-teamcity-logblock/
+        
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Utilities
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: PyPy
