@@ -1,0 +1,3 @@
+[console_scripts]
+bnm = bestnewmusic.__main__:main
+
