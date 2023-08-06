@@ -1,0 +1,4 @@
+pycrypto>=2.0.0
+requests>=2.0.0
+setuptools>=3.0
+setuptools_scm

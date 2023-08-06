@@ -1,0 +1,18 @@
+language: python
+python:
+  - 3.3
+  - 3.4
+  - 3.5
+  - 3.6
+  - nightly
+# command to install dependencies
+install:
+  - pip install .
+  - pip install flake8
+# command to run tests
+script: python setup.py test
+
+# Static analysis
+before_script:
+  # E501: long lines
+  - flake8 --ignore E501
