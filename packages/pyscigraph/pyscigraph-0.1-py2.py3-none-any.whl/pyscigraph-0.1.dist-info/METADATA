@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pyscigraph
+Version: 0.1
+Summary: Python API for accessing Springer Nature SciGraph Linked Open Data.
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: Click (==6.6)
+Requires-Dist: Requests (==2.18.3)
+Requires-Dist: rdflib (==4.2.2)
+Requires-Dist: rdflib-jsonld (==0.4.0)
+Requires-Dist: ontospy (>=1.9)
+
+UNKNOWN
+
+

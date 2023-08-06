@@ -1,0 +1,5 @@
+
+        [console_scripts]
+        scigraphcli = pyscigraph.main:main_cli
+        quicktest_scigraphcli = pyscigraph.tests.quicktest:quicktest_cli
+    
