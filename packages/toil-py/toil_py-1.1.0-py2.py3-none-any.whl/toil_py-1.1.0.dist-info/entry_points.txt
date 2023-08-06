@@ -1,0 +1,3 @@
+[console_scripts]
+toil-config = toil.script.toil_config:main
+
