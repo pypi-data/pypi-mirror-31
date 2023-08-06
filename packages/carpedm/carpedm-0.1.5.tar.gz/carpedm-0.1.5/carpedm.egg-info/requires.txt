@@ -1,0 +1,16 @@
+numpy>=1.14
+tensorflow>=1.5
+Pillow>=5.1
+
+[docs]
+sphinx>=1.7
+sphinx_rtd_theme
+
+[plot]
+matplotlib>=2.1.2
+
+[tf]
+tensorflow>=1.5
+
+[tfgpu]
+tensorflow-gpu>1.5
