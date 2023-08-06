@@ -1,0 +1,4 @@
+[console_script]
+dar = padar.ar_cli:main
+pad = padar.mhealth_cli:main
+
