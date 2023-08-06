@@ -1,0 +1,23 @@
+Metadata-Version: 1.2
+Name: norilog
+Version: 0.9.0
+Summary: The NoriLog web application.
+Home-page: https://github.com/beproud/norilog/
+Author: BeProud
+Author-email: project@beproud.jp
+License: BSD License
+Description: =======
+        Norilog
+        =======
+        
+        The NoriLog web application as a sample code of Python Professional Programming 3rd Edition.
+        
+        
+Keywords: web,norilog
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: Flask
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6

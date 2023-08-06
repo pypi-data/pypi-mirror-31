@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.py
+norilog/__init__.py
+norilog.egg-info/PKG-INFO
+norilog.egg-info/SOURCES.txt
+norilog.egg-info/dependency_links.txt
+norilog.egg-info/entry_points.txt
+norilog.egg-info/requires.txt
+norilog.egg-info/top_level.txt
+norilog/static/style.css
+norilog/templates/index.html
