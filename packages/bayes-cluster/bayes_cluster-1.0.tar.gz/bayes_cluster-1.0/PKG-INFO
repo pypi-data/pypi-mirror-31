@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: bayes_cluster
+Version: 1.0
+Summary: A clustering package which uses bayesian methods and returns classifications and a tree structure
+Home-page: https://github.com/yamacisik/bayesian_clustering
+Author: Matthew Welch, Yamac Isik
+Author-email: matt.welch@duke.edu ,yamac.isik@duke.edu
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3
