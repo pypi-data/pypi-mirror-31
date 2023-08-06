@@ -1,0 +1,10 @@
+sanic_oauth/__init__.py,sha256=R1niVIYUChXwzh1hKltAGUpJ4g_hTk1q9cpi5S-ejkw,260
+sanic_oauth/blueprint.py,sha256=IkblTOEARo9xqcb9jrnudGJ9mA11A6lSeSrzqlwlMZI,5221
+sanic_oauth/core.py,sha256=7_mOFaClGltmauOTF4DCrbeXXJaUDNSd_cjzrnOJnr0,12739
+sanic_oauth/providers.py,sha256=yJqLGnbqEs-01adgc3mxZcmObwZGPbXAEewerT-uUrk,25591
+sanic_oauth-0.2.2.dist-info/METADATA,sha256=xInxasNG7Odmv-TMRVXWMcxxZDK6mRJJeVlJHsl2yfo,2645
+sanic_oauth-0.2.2.dist-info/RECORD,,
+sanic_oauth-0.2.2.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+sanic_oauth-0.2.2.dist-info/top_level.txt,sha256=YwLMK-KXavJwFqRF4mC03FYrAmyzmHqN6di2iUOJuPc,18
+tests/__init__.py,sha256=5aZBX6Ph-NdHi_2PeoQXPxF0PNJ6wwpoU-SQx_0U5zo,24
+tests/base_test.py,sha256=VEVOxil4sTC7tyQxAykFSibx3hSMo-tTbpbqrKDspJE,1377
