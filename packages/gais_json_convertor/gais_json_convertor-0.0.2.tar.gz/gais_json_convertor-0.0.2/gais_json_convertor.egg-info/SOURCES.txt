@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+docs/LICENSE.txt
+docs/README.txt
+gais_json_convertor/__init__.py
+gais_json_convertor/convertor.py
+gais_json_convertor.egg-info/PKG-INFO
+gais_json_convertor.egg-info/SOURCES.txt
+gais_json_convertor.egg-info/dependency_links.txt
+gais_json_convertor.egg-info/top_level.txt
