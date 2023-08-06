@@ -1,0 +1,8 @@
+numpy>=1.10.0
+scipy>=0.18.0
+pandas>=0.18.1
+pytest>=3.5.0
+multipledispatch>=0.4.9
+
+[Tensorflow with GPU]
+tensorflow-gpu>=1.5.0
