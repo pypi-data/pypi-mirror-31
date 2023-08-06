@@ -1,0 +1,16 @@
+kinto_redis/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kinto_redis/cache.py,sha256=-QEWCeZOm7gHL1XdX6wecgpclpaU5hM5EeNFBlvK1wI,2169
+kinto_redis/listeners.py,sha256=uWC7NZcN1P5ZnG-xGBTRStgRPhdHjbDojFFFfbpYPiE,1389
+kinto_redis/permission.py,sha256=nt62TMaWXk2yOvGV9hhixpDfV3qDdPwdfZjYykbYj_w,6833
+kinto_redis/storage.py,sha256=AyzzV-q6Ri5OGpXcR4AVlDVkcQWA7xE6FVf2eZoLmnc,16337
+kinto_redis/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kinto_redis/tests/test_cache.py,sha256=AWh8G6xcjRh_QLwz_yCThv24po0DtVMW7GnNZF2KNoY,1274
+kinto_redis/tests/test_listeners.py,sha256=2w1Ekgc9l0R12DHx6W3ZLaL0woZlC-6RfoRqjaMdFLs,3601
+kinto_redis/tests/test_permission.py,sha256=sNbVBdGLkuPQQ4E9OGDNp5eKiPKjtM50fTH-R7896V4,1444
+kinto_redis/tests/test_storage.py,sha256=MEDR8JEhkU4QsAP__Fy0liTOCz_yTaz4bpAWxmODJcA,2422
+kinto_redis-1.3.0.dist-info/DESCRIPTION.rst,sha256=rQYc8Wid9S_1bERGEpgnUyAcDoy53f2H2ggIfggDT1U,2191
+kinto_redis-1.3.0.dist-info/METADATA,sha256=H2W1vcT7KkTbuc2SkpQboyOaW-135fvTZDWAs2Z6TNM,2898
+kinto_redis-1.3.0.dist-info/RECORD,,
+kinto_redis-1.3.0.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+kinto_redis-1.3.0.dist-info/metadata.json,sha256=iZTai8NVv_GfDw58hCIhSJYesJe5mDcVrLxKbAr_Jzs,886
+kinto_redis-1.3.0.dist-info/top_level.txt,sha256=G1J_XCA75CfUNi5YxoUAoU69K9EAJQuucdDGg14nNME,12
