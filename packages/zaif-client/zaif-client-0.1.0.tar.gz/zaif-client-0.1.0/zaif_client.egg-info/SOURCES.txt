@@ -1,0 +1,17 @@
+README.txt
+setup.py
+zaif_client/__init__.py
+zaif_client/futures.py
+zaif_client/futuresasync.py
+zaif_client/leverage.py
+zaif_client/leverageasync.py
+zaif_client/public.py
+zaif_client/publicasync.py
+zaif_client/sync.py
+zaif_client/trade.py
+zaif_client/tradeasync.py
+zaif_client.egg-info/PKG-INFO
+zaif_client.egg-info/SOURCES.txt
+zaif_client.egg-info/dependency_links.txt
+zaif_client.egg-info/requires.txt
+zaif_client.egg-info/top_level.txt
