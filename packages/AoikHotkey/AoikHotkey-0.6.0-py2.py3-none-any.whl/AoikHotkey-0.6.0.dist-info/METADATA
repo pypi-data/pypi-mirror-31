@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: AoikHotkey
+Version: 0.6.0
+Summary: Python hotkey manager that works on Linux, MacOS, and Windows.
+Home-page: https://github.com/AoiKuiyuyou/AoikHotkey
+Author: Aoi.Kuiyuyou
+Author-email: aoi.kuiyuyou@google.com
+License: MIT
+Keywords: hotkey
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+
+`Documentation on Github
+<https://github.com/AoiKuiyuyou/AoikHotkey>`_
+

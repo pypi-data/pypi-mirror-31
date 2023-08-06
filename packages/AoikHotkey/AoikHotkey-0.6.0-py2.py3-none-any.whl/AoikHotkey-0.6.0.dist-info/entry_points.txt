@@ -1,0 +1,3 @@
+[console_scripts]
+aoikhotkey = aoikhotkey.__main__:main
+
