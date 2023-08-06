@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: pybgg
+Version: 1.0.1
+Summary: Python boardgamegeek xmlapi2 wrapper
+Home-page: https://github.com/wimccall/pybgg/tree/master
+Author: Wade McCall
+Author-email: wimccall42@students.tntech.edu
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/wimccall/pybgg/issues
+Project-URL: Source, https://github.com/wimccall/pybgg/
+Description: UNKNOWN
+Keywords: boardgamegeek,bgg
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
