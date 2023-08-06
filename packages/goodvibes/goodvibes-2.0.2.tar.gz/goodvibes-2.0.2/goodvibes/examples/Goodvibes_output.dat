@@ -1,0 +1,16 @@
+   GoodVibes v 1.0.1: 2017/07/07 17:25:29
+   REF: Funes-Ardoiz, I.; Paton, R. S. (2016). GoodVibes: GoodVibes v1.0.1. http://doi.org/10.5281/zenodo.60811
+
+   Temperature (default) = 298.15K   Concn (default) = 1 atmosphere
+
+   Found vibrational scaling factor 0.977 for RB3LYP/6-31G(d) level of theory
+   REF: I. M. Alecu, J. Zheng, Y. Zhao, and D. G. Truhlar, J. Chem. Theory Comput. 6, 2872-2887 (2010).
+
+   Quasi-harmonic treatment: frequency cut-off value of 100.0 wavenumbers will be applied
+   QH = Grimme: Using a mixture of RRHO and Free-rotor vibrational entropies
+   REF: Grimme, S. Chem. Eur. J. 2012, 18, 9955-9964
+
+   Structure                                       E/au     ZPE/au          H/au     T.S/au  T.qh-S/au       G(T)/au    qh-G(T)/au
+   ********************************************************************************************************************************
+o ethane_spc                                -79.830417  0.073505    -79.752466   0.025883   0.025885    -79.778348    -79.778350
+   ********************************************************************************************************************************
