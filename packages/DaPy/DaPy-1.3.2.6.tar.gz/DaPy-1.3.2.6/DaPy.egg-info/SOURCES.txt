@@ -1,0 +1,17 @@
+README.md
+setup.py
+DaPy/__init__.py
+DaPy/datasets.py
+DaPy/formulas.py
+DaPy/multilayer_perceptron.py
+DaPy/structure.py
+DaPy.egg-info/PKG-INFO
+DaPy.egg-info/SOURCES.txt
+DaPy.egg-info/dependency_links.txt
+DaPy.egg-info/top_level.txt
+DaPy/data/sample.csv
+DaPy/data/adult/adult.csv
+DaPy/data/iris/data.csv
+DaPy/data/iris/info.txt
+DaPy/data/wine/data.csv
+DaPy/data/wine/info.txt
