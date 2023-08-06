@@ -1,0 +1,17 @@
+qudotpy-1.0.0-nspkg.pth,sha256=Z2ANFPjygZtxDG01l2QRutRFgbkiX44l1dCLWO_tqLw,544
+qudotpy/algorithms.py,sha256=keuYSDoWUUg9P-1wJl70_OUoJYMbBG9tzVY5YMCwXUc,2155
+qudotpy/errors.py,sha256=ricK7mqZrLhm1v-xFlCKpc2juMIIO3mj20zDCoypHnA,959
+qudotpy/hamiltonians.py,sha256=KXmA-KZL6SEGsJ8F6xzxx3PYOPREPjemUJi_BskaM1M,2918
+qudotpy/qudot.py,sha256=_Mvm2c8MohGUkgOoPzHOCKqrk5Iqew2kxp8l0mSLXVQ,27530
+qudotpy/qulib.py,sha256=yYDXTU9Xdw6QpniyRjz3eTMZ0IvxUf1zmnTN5wojytg,4097
+qudotpy/test_qudotpy.py,sha256=_USa-OKlAWZSi6zjZp2-KMjtyYjU-qFbnqVhhjLQYVY,18144
+qudotpy/utils.py,sha256=mZ77sfZRZlQJGMPxS3-JFtrso15iahSzFZelCkDNXRA,2711
+qudotpy-1.0.0.data/data/LICENSE.txt,sha256=k63lK2TpN2R8rrFRA9bLoDewXEsDQpMIky357vPaXA4,672
+qudotpy-1.0.0.data/data/README.md,sha256=9wkAiHAD2z2KkbH5HloubxuAOdxVJYquCo17IgASLVg,1142
+qudotpy-1.0.0.dist-info/DESCRIPTION.rst,sha256=mNpGnPLAq00_Z_qMsmDm9ln16zHhIvRiFCTR0I9N0NM,1144
+qudotpy-1.0.0.dist-info/METADATA,sha256=yOtp02wbWcrSiuabEgXsk8jtRbsjacYSP62ZgICP-80,1975
+qudotpy-1.0.0.dist-info/RECORD,,
+qudotpy-1.0.0.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+qudotpy-1.0.0.dist-info/metadata.json,sha256=i7zQybs5xrqfxyf1v6lZqtHJoRWd4D7l1kFhuA2ZZz8,1056
+qudotpy-1.0.0.dist-info/namespace_packages.txt,sha256=kFNLMZAST_omzwVJkNZDLtJ3sH8MNKIkSFHajkdANhM,8
+qudotpy-1.0.0.dist-info/top_level.txt,sha256=kFNLMZAST_omzwVJkNZDLtJ3sH8MNKIkSFHajkdANhM,8
