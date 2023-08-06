@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: cobrapy-bigg-client
+Version: 1.0.9
+Summary: BiGG API - programmatic access to the BiGG Models database
+Home-page: https://opencobra.github.io/cobrapy_bigg_client
+Author: Joao Cardoso
+Author-email: joaca@biosustain.dtu.dk
+License: Apache License V2
+Download-URL: https://pypi.python.org/pypi/cobrapy_bigg_client
+Keywords: BiGG Models,API
+Platform: GNU/Linux
+Platform: Mac OS X >= 10.7
+Platform: Microsoft Windows >= 7
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Dist: six
+Requires-Dist: cobra (>=0.10.1)
+Requires-Dist: requests
+Requires-Dist: pandas
+Requires-Dist: cachetools (>=2.0)
+
+Cobrapy BiGG Client
+===================
+
+A python API that enables programmatic access to BiGG Models database.
+
+## Install
+
+To install `cobrapy_bigg_client` just type:
+
+```
+pip install cobrapy_bigg_client
+```
+
+## TODO
+
+* Implement search
+
+
