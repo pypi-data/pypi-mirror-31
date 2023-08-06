@@ -1,0 +1,17 @@
+configparser
+arrow
+click
+atlassian-python-api
+arrow
+influxdb
+schedule
+jinja2
+psycopg2
+sshtunnel
+six
+
+[dev]
+pytest
+pytest-pep8
+coverage
+tox
