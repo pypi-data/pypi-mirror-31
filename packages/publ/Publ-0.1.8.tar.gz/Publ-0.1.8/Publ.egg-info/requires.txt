@@ -1,0 +1,12 @@
+Flask
+flask_caching
+arrow
+peewee
+misaka
+Pillow
+pygments
+watchdog
+
+[dev]
+pylint
+twine
