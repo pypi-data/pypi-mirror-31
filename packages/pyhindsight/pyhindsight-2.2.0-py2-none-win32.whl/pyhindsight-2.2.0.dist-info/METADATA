@@ -1,0 +1,21 @@
+Metadata-Version: 2.0
+Name: pyhindsight
+Version: 2.2.0
+Summary: Internet history forensics for Google Chrome/Chromium
+Home-page: https://github.com/obsidianforensics/hindsight
+Author: Ryan Benson
+Author-email: ryan@obsidianforensics.com
+License: Apache
+Description-Content-Type: UNKNOWN
+Keywords: chrome,forensics
+Platform: UNKNOWN
+Requires-Dist: bottle (>=0.12.9)
+Requires-Dist: keyring (>=9.0)
+Requires-Dist: pycryptodomex (>=3.4.3)
+Requires-Dist: pypiwin32 (>=219)
+Requires-Dist: pytz (>=2016.4)
+Requires-Dist: xlsxwriter (>=0.8.4)
+
+UNKNOWN
+
+
