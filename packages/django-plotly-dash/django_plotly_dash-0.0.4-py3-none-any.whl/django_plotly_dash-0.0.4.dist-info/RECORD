@@ -1,0 +1,13 @@
+django_plotly_dash/__init__.py,sha256=D-gM6R4awwDEzncr1wZOhCmep9OxJD3fPgK-TxpZ0N0,65
+django_plotly_dash/admin.py,sha256=CFUMxIOb9eR7pE49lXaW4hQx7J__FKiDG3zOUo5smaM,121
+django_plotly_dash/app_name.py,sha256=UwqZfZzY_B3AuXIPYZAsmecUsKg4rbUjMfxa-dXp9pg,61
+django_plotly_dash/apps.py,sha256=FP0uyiYDA82QGEK3IemZtBClVlLGUi1nt5VKWsAMVog,149
+django_plotly_dash/dash_wrapper.py,sha256=YI0Z7CvFdxQOEvy7NPkHS7yAyE4JGjNMZOaT-jGwEpc,9915
+django_plotly_dash/models.py,sha256=_iOS5EqqVc_KRqXe4BKL_do2qW8-3NLTL-v3k7jUdNE,3567
+django_plotly_dash/tests.py,sha256=mrbGGRNg5jwbTJtWWa7zSKdDyeB4vmgZCRc2nk6VY-g,60
+django_plotly_dash/urls.py,sha256=SSAB7fw7LxA8nk3hI-k2dL5koHWSrkCFMuMeHpJ3_UI,563
+django_plotly_dash/views.py,sha256=gQSmC82fe_mZWMWsQAY2_m9yskeUhEqkGVgl4bcy9Go,1563
+django_plotly_dash-0.0.4.dist-info/METADATA,sha256=6bwB29jryJEPCsVR35BxV-MniTQ_1fiiUF587T3Yu58,4771
+django_plotly_dash-0.0.4.dist-info/RECORD,,
+django_plotly_dash-0.0.4.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+django_plotly_dash-0.0.4.dist-info/top_level.txt,sha256=pkxPCzJlXoHtdLJssRc1j1lhNBC8C1Dop_eypehVHQA,19
