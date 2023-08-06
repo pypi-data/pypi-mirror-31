@@ -1,0 +1,5 @@
+trytond_account<4.1,>=4.0
+trytond_account_invoice<4.1,>=4.0
+trytond_product<4.1,>=4.0
+trytond_stock<4.1,>=4.0
+trytond<4.1,>=4.0
