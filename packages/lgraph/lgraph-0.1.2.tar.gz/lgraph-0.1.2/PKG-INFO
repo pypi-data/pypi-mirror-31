@@ -1,0 +1,13 @@
+Metadata-Version: 1.2
+Name: lgraph
+Version: 0.1.2
+Summary: LiveGraph for synthesis and Simulation
+Home-page: https://github.com/masc-ucsc/lgraph
+Author: MASC Group
+Author-email: lgraph-group@ucsc.edu
+License: BSD-3-Clause
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3
