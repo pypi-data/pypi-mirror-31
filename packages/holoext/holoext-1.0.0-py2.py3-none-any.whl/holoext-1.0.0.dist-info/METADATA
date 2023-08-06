@@ -1,0 +1,20 @@
+Metadata-Version: 2.0
+Name: holoext
+Version: 1.0.0
+Summary: Holoviews Extension
+Home-page: http://github.com/ahuang11/holoext
+Author: Andrew Huang
+Author-email: huang.andrew12@gmail.com
+License: MIT
+Keywords: data,visualization,holoviews,bokeh,mod,extension,andrew,huang
+Platform: UNKNOWN
+Requires-Dist: bokeh
+Requires-Dist: dask
+Requires-Dist: holoviews
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: pandas
+
+UNKNOWN
+
+
