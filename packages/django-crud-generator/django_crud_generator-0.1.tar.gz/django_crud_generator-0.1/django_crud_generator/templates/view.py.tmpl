@@ -1,0 +1,84 @@
+from django.core.urlresolvers import reverse_lazy
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
+
+from base import views as base_views
+
+from .. import (
+    models,
+    forms,
+    conf
+)
+
+
+class List(LoginRequiredMixin, base_views.BaseListView):
+    """
+    List all ${model_name}s
+    """
+    queryset = models.${model_name}.objects.all()
+
+    def __init__(self):
+        super(List, self).__init__()
+
+
+class Create(LoginRequiredMixin, PermissionRequiredMixin, base_views.BaseCreateView):
+    """
+    Create a ${model_name}
+    """
+    model = models.${model_name}
+    permission_required = (
+        '${application_name}.add_${model_name_lower}'
+    )
+    fields = '__all__'
+
+    def __init__(self):
+        super(Create, self).__init__()
+
+    def get_success_url(self):
+        return reverse_lazy(conf.${model_prefix}_DETAIL_URL_NAME, kwargs={
+            'pk': self.object.id
+        })
+
+
+class Detail(LoginRequiredMixin, base_views.BaseDetailView):
+    """
+    Detail of a ${model_name}
+    """
+    model = models.${model_name}
+
+    def __init__(self):
+        super(Detail, self).__init__()
+
+
+class Update(LoginRequiredMixin, PermissionRequiredMixin, base_views.BaseUpdateView):
+    """
+    Update a ${model_name}
+    """
+    model = models.${model_name}
+    fields = '__all__'
+    permission_required = (
+        '${application_name}.change_${model_name_lower}'
+    )
+
+    def __init__(self):
+        super(Update, self).__init__()
+
+    def get_success_url(self):
+        return reverse_lazy(conf.${model_prefix}_DETAIL_URL_NAME, kwargs={
+            'pk': self.object.id
+        })
+
+
+class Delete(LoginRequiredMixin, PermissionRequiredMixin, base_views.BaseDeleteView):
+    """
+    Delete a ${model_name}
+    """
+    model = models.${model_name}
+    permission_required = (
+        '${application_name}.delete_${model_name_lower}'
+    )
+
+    def __init__(self):
+        super(Delete, self).__init__()
+
+    def get_success_url(self):
+        return reverse_lazy(conf.${model_prefix}_LIST_URL_NAME)
