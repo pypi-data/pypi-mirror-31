@@ -1,0 +1,9 @@
+PyYAML
+future
+
+[devel]
+pbr
+
+[test]
+fixtures
+tox
