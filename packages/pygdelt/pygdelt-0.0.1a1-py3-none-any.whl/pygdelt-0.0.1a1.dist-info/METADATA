@@ -1,0 +1,27 @@
+Metadata-Version: 2.0
+Name: pygdelt
+Version: 0.0.1a1
+Summary: An easy interface to GDELT datasets
+Home-page: https://github.com/yesemsanthoshkumar/pygdelt
+Author: yesemsanthoshkumar
+Author-email: yesemsanthoshkumar@gmail.com
+License: Apache2
+Project-URL: Bug Reports, https://github.com/yesemsanthoshkumar/pygdelt/issues
+Project-URL: Source, https://github.com/yesemsanthoshkumar/pygdelt
+Description-Content-Type: text/markdown
+Keywords: gdelt
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: requests (>=2.18.4)
+Requires-Dist: tqdm (>=4.23.2)
+
+# pygdelt
+
+

@@ -1,0 +1,15 @@
+pygdelt/__init__.py,sha256=v55i7QjPXIPpx7hOlf-aEx6iiMp_PLcPbLJBaCsslK4,109
+pygdelt/gdelt_base.py,sha256=z6jIEU-IxanSf-gyBT0k_4Bgm4lxJEdSwUYTLgpt0r8,258
+pygdelt/gdeltv1.py,sha256=JfX4tfJJqRL4mqlJnNXaqKEtRO2nNFU_bT3O-x5Djq4,2577
+pygdelt/gdeltv2.py,sha256=Nr9AJ0X9F0MekqZhEzh4e0LLiqYtrFvqMtZpW-MwMw8,4431
+pygdelt/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pygdelt/tests/test_gdelt_base.py,sha256=Lj657XkG9lvzevN6WFQmiNhbRXoNQPCfayqBU6jReJs,488
+pygdelt/tests/test_gdeltv1.py,sha256=D5c83fPXISwyKxAmZ885ZpFYX47XDBUGiRQ5tT90Lsw,562
+pygdelt/tests/test_gdeltv2.py,sha256=cu4ugg_82K1Ueb4xNtGVVNmhcUYyYF5mcieKX2SUM2g,1393
+pygdelt-0.0.1a1.dist-info/DESCRIPTION.rst,sha256=4wOJWl_EJ2JpU6i-xPV65SvOLSctsokWuNuhKOOQ6Ws,12
+pygdelt-0.0.1a1.dist-info/LICENSE.txt,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+pygdelt-0.0.1a1.dist-info/METADATA,sha256=EHpxkyWX4xm63WiAPIUDcs_4HwAtOGYgUIjX1XrHrhI,947
+pygdelt-0.0.1a1.dist-info/RECORD,,
+pygdelt-0.0.1a1.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+pygdelt-0.0.1a1.dist-info/metadata.json,sha256=KtliQunrCyo0KqpGDR0JMP0SspDMFKLqpo24rkysMOI,1066
+pygdelt-0.0.1a1.dist-info/top_level.txt,sha256=wT_ZX6uW9Hu8m5ePPEaRa5fTZbzjl25YaWZ3XMhotYI,8
