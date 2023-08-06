@@ -1,0 +1,11 @@
+README.md
+setup.py
+irekia/__init__.py
+irekia/client.py
+irekia.egg-info/PKG-INFO
+irekia.egg-info/SOURCES.txt
+irekia.egg-info/dependency_links.txt
+irekia.egg-info/not-zip-safe
+irekia.egg-info/requires.txt
+irekia.egg-info/top_level.txt
+irekia/data/metadata.json
