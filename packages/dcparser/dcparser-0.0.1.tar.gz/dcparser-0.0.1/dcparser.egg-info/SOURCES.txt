@@ -1,0 +1,13 @@
+CONTRIBUTING.md
+LICENSE.txt
+MANIFEST.in
+PULL_REQUEST_TEMPLATE.md
+README.md
+setup.cfg
+setup.py
+dcparser.egg-info/PKG-INFO
+dcparser.egg-info/SOURCES.txt
+dcparser.egg-info/dependency_links.txt
+dcparser.egg-info/entry_points.txt
+dcparser.egg-info/requires.txt
+dcparser.egg-info/top_level.txt

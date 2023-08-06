@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: dcparser
+Version: 0.0.1
+Summary: A PDF-to-CSV parser by @datacivica
+Home-page: https://github.com/datacivica/dcparser/
+Author: Data CÃvica
+Author-email: info@datacivica.org
+License: UNKNOWN
+Project-URL: Funding, https://donate.pypi.org
+Project-URL: Bug Reports, https://github.com/datacivica/dcparser/issues
+Project-URL: Say Thanks!, http://saythanks.io/to/example
+Project-URL: Source, https://github.com/datacivica/dcparser/
+Description: # dcparser
+        
+Keywords: parser pdf csv
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Description-Content-Type: text/markdown
+Provides-Extra: test
+Provides-Extra: dev
