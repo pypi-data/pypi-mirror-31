@@ -1,0 +1,6 @@
+blinker>=1.4.0
+six>=1.7
+flask>=0.9
+fluent-logger>=0.9.0
+qualname>=0.1.0
+uwsgidecorators>=1.1.0

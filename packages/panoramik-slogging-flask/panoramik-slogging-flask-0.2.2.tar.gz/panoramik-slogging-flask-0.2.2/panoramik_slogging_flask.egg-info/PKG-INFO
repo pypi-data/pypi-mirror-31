@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: panoramik-slogging-flask
+Version: 0.2.2
+Summary: Panoramik logging library (for Flask-based web apps)
+Home-page: https://gitlab.panoramik.ru/leenr/logging-python
+Author: leenr
+Author-email: i@leenr.ru
+License: Proprietary
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=2.7, !=3.0.*, !=3.1.*, <4
