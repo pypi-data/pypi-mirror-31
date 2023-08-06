@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+mmds/__init__.py
+mmds/mmds.py
+pymmds.egg-info/PKG-INFO
+pymmds.egg-info/SOURCES.txt
+pymmds.egg-info/dependency_links.txt
+pymmds.egg-info/requires.txt
+pymmds.egg-info/top_level.txt

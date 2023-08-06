@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: pymmds
+Version: 1.0
+Summary: A Python package for active metric MDS.
+Home-page: https://github.com/grayfall/pymmds
+Author: Ilia Korvigo
+Author-email: ilia.korvigo@gmail.com
+License: MIT
+Download-URL: https://github.com/grayfall/pymmds/archive/1.0.tar.gz
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Keywords: multidimensional scaling,principal coordinate analysis,mds,landmark mds
+Platform: UNKNOWN
