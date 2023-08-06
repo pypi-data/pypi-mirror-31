@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: triflow
+Version: 0.5.0
+Summary: Automatic finite difference discretization for 1D PDE with fast temporal solvers.
+Home-page: http://github.com/locie/triflow
+Author: Nicolas Cellier
+Author-email: contact@nicolas-cellier.net
+Keywords: PDE,finite-difference,physic,modelling,interactive
+Requires-Python: >= 3.5.0.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: bokeh (>=0.12.0.0,<0.13.0.0)
+Requires-Dist: coolname (>=1.0.0.0,<2.0.0.0)
+Requires-Dist: dask (>=0.17.2.0,<0.18.0.0)
+Requires-Dist: holoviews (>=1.1.0.0,<2.0.0.0)
+Requires-Dist: numpy (>=1.0.0.0,<2.0.0.0)
+Requires-Dist: path.py (>=11.0.0.0,<12.0.0.0)
+Requires-Dist: pendulum (>=1.5.0.0,<2.0.0.0)
+Requires-Dist: scipy (>=1.0.0.0,<2.0.0.0)
+Requires-Dist: streamz (>=0.3.0.0,<0.4.0.0)
+Requires-Dist: sympy (>=1.0.0.0,<2.0.0.0)
+Requires-Dist: theano (>=1.0.0.0,<2.0.0.0)
+Requires-Dist: tqdm (>=4.23.0.0,<5.0.0.0)
+Requires-Dist: xarray (>=0.10.0.0,<0.11.0.0)
