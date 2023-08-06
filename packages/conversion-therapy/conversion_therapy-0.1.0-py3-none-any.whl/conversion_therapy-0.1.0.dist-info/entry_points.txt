@@ -1,0 +1,3 @@
+[console_scripts]
+conversion_therapy = conversion_therapy.cli:main
+
