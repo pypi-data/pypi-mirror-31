@@ -1,0 +1,3 @@
+[console_scripts]
+repofs = repofs.__main__:main
+
