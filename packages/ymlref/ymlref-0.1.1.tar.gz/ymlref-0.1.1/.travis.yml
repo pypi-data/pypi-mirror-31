@@ -1,0 +1,15 @@
+language: python
+python:
+- '3.6'
+install:
+- pip install .
+script:
+  - pip install tox
+  - tox
+deploy:
+  provider: pypi
+  username: dexter2206
+  password:
+    secure: UGejKHSNNk6QCrQTp5R60+GYUq3v3/HzeN0p0toZuo4AfvULT9Tku9U5uAmy/qlFEf3JjZBo7pUlsk8Fm5neUuoT6sL89RIetXdHQLGjVkrhOXffg5aYI8K0vnVTVKLEloBGDI0ha2bFKcMKpG21+Fdniw93hmvmyETX3pzRXvQg01zrE+pS02kFFz8DHsIxqSE+OGCg4j1bRKdcM+3iXVhDvZlriBj83B5Dciz8jArHycyfoQB+0agC5hTJZo/R+MSuEXOpY31RCNRafEa0EwYCWmzYA38a/CmPvXVh8uU3n7zmw+IpSmDe7RqUSyScMp231G280R+1XzLiJXVEm0+02HUz4Z7CFlJydJo6zFej+pvtSHO5HWtMNcx7K50GpscPBvWv4jlCvZTkTmehHyxZXW5Xubl+DLAM+U0w6FJY3FB/P9CUFDRKXq+dPFL25lTtJRAUNp19otZGYLcjrnQQ3LDHY0U7v+L5SXSY+dzveFTPpPmpnq5XXVlbzfZHLtyQREdlGOhGB8SyVAeedgjiheWWR0IdO+VfiRvgsNfKtrv1JMMpPZGf3mZv3xH3BUymiLm58Sd1EcJZ+jBay7p8qHN1OLkKJkUGEEgiJMBVCbLKWVbJAs4M+VflhnCrXuUV2fZV93rmfmt6v08MA2St2jCewevP1kuzG+It9FA=
+  on:
+    tags: true
