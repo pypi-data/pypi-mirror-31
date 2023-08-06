@@ -1,0 +1,11 @@
+MANIFEST.in
+README.rst
+setup.py
+canonicalwebteam/__init__.py
+canonicalwebteam.gsa.egg-info/PKG-INFO
+canonicalwebteam.gsa.egg-info/SOURCES.txt
+canonicalwebteam.gsa.egg-info/dependency_links.txt
+canonicalwebteam.gsa.egg-info/requires.txt
+canonicalwebteam.gsa.egg-info/top_level.txt
+canonicalwebteam/gsa/__init__.py
+canonicalwebteam/gsa/views.py
