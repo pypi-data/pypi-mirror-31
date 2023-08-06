@@ -1,0 +1,8 @@
+tqdm
+colorama
+python-whois
+requests
+virustotal-api
+
+[dev]
+flake8
