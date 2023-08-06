@@ -1,0 +1,3 @@
+[console_scripts]
+oversee = oversee.main:main
+
