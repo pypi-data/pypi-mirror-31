@@ -1,0 +1,12 @@
+Metadata-Version: 2.0
+Name: django-abc
+Version: 1.0.0
+Summary: extension to django inheritance for automatically casting base to appropriate subclass
+Home-page: https://github.com/ebrush/django_abc
+Author: Samuel Brush
+Author-email: s.e.brush1@gmail.com
+License: UNKNOWN
+
+# django_abc
+
+
