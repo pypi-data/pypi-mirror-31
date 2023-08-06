@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: nrask
+Version: 0.0.115
+Summary: Viking Makt Framework
+Home-page: https://bitbucket.org/habboi/nrask
+Maintainer: Guilherme Nemeth
+Maintainer-email: guilherme.nemeth@gmail.com
+License: https://bitbucket.org/habboi/nrask/raw/master/LICENSE
+Platform: UNKNOWN
+Requires-Dist: pika
+Requires-Dist: tornado
+Requires-Dist: simplejson
+Requires-Dist: colorlog
+Requires-Dist: bencode
+
+UNKNOWN
+
+
