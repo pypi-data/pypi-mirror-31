@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: dbpedia-sparql-simplify
+Version: 1.0.4
+Summary: A python library that lets you make and run sparql queries on dbpedia easily.
+Home-page: https://github.com/mfdemir/dbpedia-sparql-simplify
+Author: Muhammed Fatih Demir
+Author-email: muhammedfatihdemir@gmail.com
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/mfdemir/dbpedia-sparql-simplify/issues
+Project-URL: Say Thanks!, https://saythanks.io/to/mfdemir
+Project-URL: Source, https://github.com/mfdemir/dbpedia-sparql-simplify/
+Requires-Dist: requests
+
+=======================
+
+
