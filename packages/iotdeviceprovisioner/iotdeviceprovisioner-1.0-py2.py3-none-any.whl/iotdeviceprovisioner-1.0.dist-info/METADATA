@@ -1,0 +1,17 @@
+Metadata-Version: 2.0
+Name: iotdeviceprovisioner
+Version: 1.0
+Summary: Configure AWS Account for provisioning AWS IoT devices to use iotbotocredentialprovider
+Home-page: https://github.com/craighagan/iotdeviceprovisioner
+Author: Craig I. Hagan
+Author-email: hagan@cih.com
+License: MIT
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: iotdeviceprovisioner
+Requires-Dist: iotbotocredentialprovider
+Requires-Dist: boto3
+
+UNKNOWN
+
+
