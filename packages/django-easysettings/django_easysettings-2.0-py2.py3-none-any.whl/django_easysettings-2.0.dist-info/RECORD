@@ -1,0 +1,11 @@
+django_easysettings-2.0.dist-info/METADATA,sha256=NcdYqVBAGyYA5sdyh4ofsR4-qmjgrhqrP4gNdnGqYE8,4958
+django_easysettings-2.0.dist-info/RECORD,,
+django_easysettings-2.0.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+django_easysettings-2.0.dist-info/top_level.txt,sha256=5eXnLycx210rQohfxzj-euBOUdE4ngMARz5g8hGGvGA,13
+easysettings/__init__.py,sha256=GB9kYNVPCxsgYWpp_yHW_8ka6lFc9rLVy5TMR6N_SCs,107
+easysettings/app.py,sha256=j4QlGCNZKrEWOTqEZOqZrMmddFPmUwbusL5WmQiccrI,1574
+easysettings/legacy.py,sha256=Zq-i3wliY8zX03Wi28dt-Lb8uhtTv1hwy7hp-zcWVA4,2388
+easysettings/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+easysettings/tests/examples.py,sha256=P3fhZSlwWkt6I1VWYaWBHXXdwPbvZ1XJAM8pi2mhtas,579
+easysettings/tests/test_app.py,sha256=uhdGC_1qrk24nr9AuRabYAn6aqHvT7ISmopC0itLYJM,1465
+easysettings/tests/test_legacy.py,sha256=6dTGAst3H3NWsIMXL_V6arz8e8YnmPFXIkmnye0BudU,2370
