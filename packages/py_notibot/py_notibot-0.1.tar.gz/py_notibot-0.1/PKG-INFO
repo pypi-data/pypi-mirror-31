@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: py_notibot
+Version: 0.1
+Summary: The library to manage Notibot (Telegram bot).
+Home-page: https://github.com/Nilera/PyNotibot
+Author: Ivan Samborskii
+Author-email: samborskiy.ivan@gmail.com
+License: MIT
+Download-URL: https://github.com/Nilera/PyNotibot/archive/v0.1.tar.gz
+Description: UNKNOWN
+Keywords: bot,telegram,logger
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
