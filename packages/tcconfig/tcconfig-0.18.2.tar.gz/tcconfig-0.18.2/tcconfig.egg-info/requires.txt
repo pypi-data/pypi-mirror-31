@@ -1,0 +1,37 @@
+setuptools>=38.3.0
+DataProperty>=0.30.3
+logbook
+msgfy>=0.0.2
+path.py
+pyparsing>=2.2.0
+simplejson>=3.13.2
+SimpleSQLite>=0.20.3
+six
+subprocrunner>=0.13.0
+typepy>=0.1.0
+voluptuous
+
+[:python_version < "3.3"]
+ipaddress
+
+[:python_version < "3.4"]
+enum34
+
+[build]
+pyinstaller>=3.3.1
+wheel
+
+[docs]
+path.py
+readmemaker>=0.6.0
+sphinx_rtd_theme
+Sphinx
+
+[release]
+releasecmd>=0.0.10
+
+[test]
+allpairspy>=2.4.0
+pingparsing>=0.13.1
+pytest
+tox
