@@ -1,0 +1,3 @@
+[console_scripts]
+yxspkg_wget = yxspkg_wget:main
+
