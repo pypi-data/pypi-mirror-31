@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: query_string
+Version: 1.0.2
+Summary: query_string(string) function - get url query string dict
+Home-page: https://github.com/looking-for-a-job/query_string.py
+License: UNKNOWN
+Description: ### Install
+        
+        ```bash
+        $ [sudo] pip install query_string
+        ```
+        
+        ### Usage
+        
+        ```python
+        >>> from query_string import query_string
+        
+        >>> query_string(url)
+        ```
+        
+        ### Examples
+        
+        ```python
+        >>> query_string('https://site.org/index.php?k=v&k2=v2&k3=v3#anchor')
+        {'k': 'v','k2': 'v2', 'k3': 'v3'}
+        
+        >>> query_string('k=v&k2=v2&k3=v3')
+        {'k': 'v','k2': 'v2', 'k3': 'v3'}
+        ```
+        
+        ### Sources
+        
+        +   [`query_string.query_string(string)`](https://github.com/looking-for-a-job/query_string.py/blob/master/query_string/__init__.py)
+        
+        ### Links
+        
+        + [Query string - Wikipedia](https://en.wikipedia.org/wiki/Query_string)
+Keywords: query,url
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development
+Description-Content-Type: text/markdown
