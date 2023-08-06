@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+openformat/__init__.py
+openformat/mims.py
+openformat/sp.py
+openformat/util.py
+openformat.egg-info/PKG-INFO
+openformat.egg-info/SOURCES.txt
+openformat.egg-info/dependency_links.txt
+openformat.egg-info/requires.txt
+openformat.egg-info/top_level.txt
