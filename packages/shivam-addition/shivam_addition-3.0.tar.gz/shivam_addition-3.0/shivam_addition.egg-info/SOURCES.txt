@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+addition/__init__.py
+addition/add.py
+shivam_addition.egg-info/PKG-INFO
+shivam_addition.egg-info/SOURCES.txt
+shivam_addition.egg-info/dependency_links.txt
+shivam_addition.egg-info/not-zip-safe
+shivam_addition.egg-info/top_level.txt
