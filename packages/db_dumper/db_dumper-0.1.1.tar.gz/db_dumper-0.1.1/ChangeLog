@@ -1,0 +1,15 @@
+CHANGES
+=======
+
+0.1.1
+-----
+
+* Provide a convert\_name function
+
+0.1.0
+-----
+
+* Remove all dependencies
+* Change name to db\_dumper not db-dumper
+* Working commit
+* Initial commit

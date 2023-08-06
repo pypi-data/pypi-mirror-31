@@ -1,0 +1,4 @@
+[
+  "tests/main_test.py::test_dump",
+  "tests/main_test.py::test_load"
+]
