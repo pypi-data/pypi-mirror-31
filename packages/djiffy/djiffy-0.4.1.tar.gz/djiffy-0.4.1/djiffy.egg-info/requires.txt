@@ -1,0 +1,15 @@
+django<2.0,>=1.10
+requests
+piffle
+attrdict
+jsonfield
+django-autocomplete-light
+
+[docs]
+sphinx
+
+[test]
+pytest
+pytest-django
+pytest-cov
+mysqlclient
