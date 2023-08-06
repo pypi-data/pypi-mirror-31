@@ -1,0 +1,9 @@
+setup.py
+apkverify/__init__.py
+apkverify/apkverify.py
+apkverify/sigverify.py
+apkverify.egg-info/PKG-INFO
+apkverify.egg-info/SOURCES.txt
+apkverify.egg-info/dependency_links.txt
+apkverify.egg-info/requires.txt
+apkverify.egg-info/top_level.txt
