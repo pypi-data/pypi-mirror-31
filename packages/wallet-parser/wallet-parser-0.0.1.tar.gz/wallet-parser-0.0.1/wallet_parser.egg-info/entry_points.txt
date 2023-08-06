@@ -1,0 +1,3 @@
+[console_scripts]
+wallet-parser = wallet_parser.cli:main
+
