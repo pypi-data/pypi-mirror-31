@@ -1,0 +1,24 @@
+{
+        "work_dir": "some/work/dir/",
+        "schema_file": "path/to/schema/file",
+        "verbose": true,
+        "bouncer_config": {
+            "project:releng:bouncer:server:staging": {
+                "api_root": "some-root",
+                "timeout_in_seconds": 60,
+                "username": "some-username",
+                "password": "some-password"
+            },
+            "project:releng:bouncer:server:production": {
+                "api_root": "some-production-root",
+                "timeout_in_seconds": 60,
+                "username": "some-production-username",
+                "password": "some-production-password"
+            }
+      },
+
+      "schema_files": {
+            "submission": "bouncerscript/data/bouncer_submission_task_schema.json",
+            "aliases": "bouncerscript/data/bouncer_aliases_task_schema.json"
+      }
+}
