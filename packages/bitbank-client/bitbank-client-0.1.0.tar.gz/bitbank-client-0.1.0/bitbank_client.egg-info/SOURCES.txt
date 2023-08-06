@@ -1,0 +1,10 @@
+README.txt
+setup.py
+bitbank_client/__init__.py
+bitbank_client/async.py
+bitbank_client/sync.py
+bitbank_client.egg-info/PKG-INFO
+bitbank_client.egg-info/SOURCES.txt
+bitbank_client.egg-info/dependency_links.txt
+bitbank_client.egg-info/requires.txt
+bitbank_client.egg-info/top_level.txt
