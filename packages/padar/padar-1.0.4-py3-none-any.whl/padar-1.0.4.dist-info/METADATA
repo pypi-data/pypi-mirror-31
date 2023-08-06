@@ -1,0 +1,31 @@
+Metadata-Version: 2.0
+Name: padar
+Version: 1.0.4
+Summary: Processing Accelerometer Data and Do Activity Recognition
+Home-page: https://github.com/qutang/padar
+Author: Qu Tang
+Author-email: tqshelly@gmail.com
+License: MIT
+Description-Content-Type: text/markdown
+Keywords: data mhealth accelerometer machine learning
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Software Development
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3
+Requires-Dist: Click
+Requires-Dist: jinja2
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: pathos
+Requires-Dist: pweave
+Requires-Dist: scipy
+Requires-Dist: transforms3d
+
+UNKNOWN
+
+
