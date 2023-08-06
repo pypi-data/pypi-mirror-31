@@ -1,0 +1,3 @@
+[pytest11]
+libfaketime = pytest_libfaketime
+
