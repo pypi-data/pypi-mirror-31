@@ -1,0 +1,49 @@
+Metadata-Version: 1.1
+Name: pythreatgrid
+Version: 1.0.1
+Summary: Python ThreatGrid API wrapper
+Home-page: https://github.com/RustyBower/pythreatgrid
+Author: Stephen Hosom, Rusty Bower
+Author-email: 0xhosom@gmail.com, rusty@rustybower.com
+License: UNKNOWN
+Download-URL: https://github.com/RustyBower/pythreatgrid/archive/1.0.1.tar.gz
+Description: # pythreatgrid
+        A Python wrapper for the ThreatGrid API
+        
+        ### Installation
+        Install via PIP
+        ```
+        pip install pythreatgrid
+        ```
+        
+        Install from source
+        ```
+        git clone https://github.com/RustyBower/pythreatgrid.git
+        cd pythreatgrid
+        python setup.py install
+        ```
+        
+        ### Usage
+        ```
+        import pythreatgrid
+        t = pythreatgrid.ThreatGrid(api_key='API_KEY')
+        result = t.submit_sample(open('/path/to/executable', 'rb'))
+        ```
+        
+        
+        
+        
+        History
+        -------
+        
+        1.0.1 (2018-05-08)
+        ------------------
+        
+        * Bumping version to sync PyPI with correct download link
+        
+        1.0.0 (2018-05-08)
+        ------------------
+        
+        * First release on PyPI.
+        
+Platform: UNKNOWN
