@@ -1,0 +1,26 @@
+Metadata-Version: 1.1
+Name: chuda
+Version: 0.0.7
+Summary: A simple framework to create CLI tools
+Home-page: https://github.com/Varkal/chuda
+Author: Romain Moreau
+Author-email: moreau.romain83@gmail.com
+License: MIT
+Download-URL: https://github.com/Varkal/chuda/archive/0.0.7.tar.gz
+Description: # Chuda #
+        
+        **Chuda** is a very simple Python3 framework to create CLI (Command-Line-Interface) tools.
+        
+        It will handle for you some basic stuff: parse configuration file, logging, argument parsing, signal handling etc...
+        
+        Chuda uses Python classes to represent an Application and each Command
+        
+        If you want to see a very simple example of a Chuda application, see the example folder
+        
+        More informations to come later
+        
+Keywords: cli,chuda
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Console
+Classifier: Programming Language :: Python :: 3
