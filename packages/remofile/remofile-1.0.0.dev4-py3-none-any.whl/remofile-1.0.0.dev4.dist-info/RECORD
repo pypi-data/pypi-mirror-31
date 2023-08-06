@@ -1,0 +1,16 @@
+remofile/__init__.py,sha256=d1JxCk8n_FY_3PUaK3xPJNaQbm71bNW_QZMzWfriNwU,327
+remofile/algorithm.py,sha256=C7QcotGHR44mQgiJVb8ZTC_Y-CScju1Mq8ZlrCnAHyM,6997
+remofile/cli.py,sha256=TFItY6E7poyiVDWemIxtXmUVCddgRIL5TvrZQxP3tg0,26522
+remofile/client.py,sha256=o8U0Yl8zbdVJBd7-2FoqFWIgBTrJCToC7e9cX2_OOIk,48142
+remofile/daemon.py,sha256=mFWlIwEeHo4lw1bU38IKrF8nwjcls1LA7Cqg5jsSZdM,3425
+remofile/exceptions.py,sha256=5CFl5yiEtFwuy57GLGtwgT7DU6NW9ZDJrcIlWw1k3fk,2969
+remofile/protocol.py,sha256=yU33OJlBgkaFKco0H89lym-tKRgfs7ctVAW8GssGZWk,3668
+remofile/server.py,sha256=fYHj2B2538V_Os_IDglSYwDykn6ebP1T517hnVNoQjo,31214
+remofile/token.py,sha256=_lfNhV1utIB-Jvjoobv612RpYyEbdRpSkbK3ktgRY7w,385
+remofile/utils.py,sha256=CvRC1dex0d-IwrOvDeDdm5CcXKUX0gVkGR9bvecTiYY,585
+remofile-1.0.0.dev4.dist-info/LICENSE.txt,sha256=VBIrvakd-LvaJWe90vbelm4tTO-CCE6k2CkL0i9Wz3Y,1076
+remofile-1.0.0.dev4.dist-info/METADATA,sha256=Wk8JvVS3ftzSXtxZvkdZ6G3iGGel2t3cy5OGasmwsfo,2654
+remofile-1.0.0.dev4.dist-info/RECORD,,
+remofile-1.0.0.dev4.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+remofile-1.0.0.dev4.dist-info/entry_points.txt,sha256=o7mBvxbJ9JRu30-g10ofQO01Nc8gMhkUAb13jmyfS4U,94
+remofile-1.0.0.dev4.dist-info/top_level.txt,sha256=m7CHTY0p3qI7eQRsJ53pVBfPWTy1vA_3cnUrOy45cCk,9
