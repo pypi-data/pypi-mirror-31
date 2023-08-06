@@ -1,0 +1,72 @@
+Metadata-Version: 2.1
+Name: profiled
+Version: 0.1.0
+Summary: Simple profiling decorator
+Home-page: https://github.com/bogdan-kulynych/profiled
+Author: Bogdan Kulynych
+Author-email: hello@bogdankulynych.me
+License: MIT
+Keywords: utils
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: statistics
+Requires-Dist: defaultcontext
+
+********
+profiled
+********
+
+.. image:: https://img.shields.io/pypi/v/profiled.svg
+   :target: https://pypi.org/project/profiled
+   :alt: PyPI version
+
+.. image:: https://travis-ci.org/bogdan-kulynych/profiled.svg?branch=master
+   :target: https://travis-ci.org/bogdan-kulynych/profiled
+   :alt: There's even a Travis badge!
+
+|
+
+A simple profiling decorator:
+
+.. code-block:: python
+
+    In [1]: from profiled import profiled, Profiler
+
+    In [2]: @profiled
+       ...: def get_answer():
+       ...:     return 42
+       ...: 
+
+    In [3]: profiler = Profiler()
+
+    In [4]: with profiler.as_default():
+       ...:     for i in range(100000): get_answer()
+       ...:     
+
+    In [5]: profiler.compute_stats()
+    Out[5]: 
+    {'get_answer': {'avg': 2.2763967514038087e-07,
+      'max': 0.00016736984252929688,
+      'min': 0.0,
+      'num': 100000,
+      'std': 6.953436521202228e-07,
+      'tot': 0.022763967514038086}}
+
+That's about it.
+
+Install with ``pip install profiled``.
+
+
