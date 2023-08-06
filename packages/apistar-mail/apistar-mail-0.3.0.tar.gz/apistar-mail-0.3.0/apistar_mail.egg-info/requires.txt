@@ -1,0 +1,6 @@
+apistar>=0.4
+
+[testing]
+pytest
+pytest-cov
+tox
