@@ -1,0 +1,30 @@
+Metadata-Version: 2.0
+Name: check-certs
+Version: 0.1.1
+Summary: Check TLS certificates of sites for their expiration
+                   dates. Send notifications if configured to do so.
+Home-page: https://github.com/bqbn/check_certs
+Author: bqbn
+Author-email: bqbn@openken.com
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/bqbn/check_certs/issues
+Project-URL: Source, https://github.com/bqbn/check_certs
+Description-Content-Type: text/markdown
+Keywords: ssl tls tools development devops
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Dist: boto3
+Requires-Dist: botocore
+Requires-Dist: cryptography
+Requires-Dist: PyYAML
+Provides-Extra: dev
+Provides-Extra: test
+
+# check_certs
+Check TLS certificates of sites for their expiration dates. Send notifications if configured to do so.
+
+
