@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: dddoc
+Version: 0.0.1
+Summary: very simple python app documentation generator
+Home-page: UNKNOWN
+Author: Jacobi Petrucciani
+Author-email: jacobi@mimirhq.com
+License: UNKNOWN
+Description: very simple python app documentation generator
+Platform: Any
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Intended Audience :: Developers
+Classifier: Environment :: Console

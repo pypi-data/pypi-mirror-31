@@ -1,0 +1,3 @@
+[console_scripts]
+dddoc = dddoc:list_files
+

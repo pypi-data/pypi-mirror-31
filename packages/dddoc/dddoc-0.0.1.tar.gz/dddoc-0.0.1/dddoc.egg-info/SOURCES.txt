@@ -1,0 +1,10 @@
+setup.cfg
+setup.py
+dddoc/__init__.py
+dddoc/globals.py
+dddoc.egg-info/PKG-INFO
+dddoc.egg-info/SOURCES.txt
+dddoc.egg-info/dependency_links.txt
+dddoc.egg-info/entry_points.txt
+dddoc.egg-info/namespace_packages.txt
+dddoc.egg-info/top_level.txt
