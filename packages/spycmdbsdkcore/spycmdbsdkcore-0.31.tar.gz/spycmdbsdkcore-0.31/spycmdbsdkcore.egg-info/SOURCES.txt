@@ -1,0 +1,13 @@
+setup.py
+spycmdbsdkcore/ClusterRequest.py
+spycmdbsdkcore/__init__.py
+spycmdbsdkcore/client.py
+spycmdbsdkcore.egg-info/PKG-INFO
+spycmdbsdkcore.egg-info/SOURCES.txt
+spycmdbsdkcore.egg-info/dependency_links.txt
+spycmdbsdkcore.egg-info/entry_points.txt
+spycmdbsdkcore.egg-info/not-zip-safe
+spycmdbsdkcore.egg-info/requires.txt
+spycmdbsdkcore.egg-info/top_level.txt
+spycmdbsdkcore/exception/__init__.py
+spycmdbsdkcore/exception/exceptions.py
