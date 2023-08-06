@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: Cryptolite
+Version: 0.0.1
+Summary: Simple, "right" cryptography.
+Home-page: https://github.com/davidcarboni/cryptolite/tree/python
+Author: David Carboni
+Author-email: david@carboni.io
+License: MIT
+Description: UNKNOWN
+Keywords: cryptography,encryption,digital signature,key generation,key management
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Topic :: Security :: Cryptography
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
