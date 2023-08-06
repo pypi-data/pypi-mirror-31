@@ -1,0 +1,3 @@
+[console_scripts]
+lcc = lcc.cli.lcc:main
+

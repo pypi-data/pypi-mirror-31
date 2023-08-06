@@ -1,0 +1,15 @@
+numpy
+scipy
+matplotlib
+pandas
+scikit-learn
+kplr
+astroML
+astropy
+requests
+bs4
+pathos
+tqdm
+keras
+redis
+rq
