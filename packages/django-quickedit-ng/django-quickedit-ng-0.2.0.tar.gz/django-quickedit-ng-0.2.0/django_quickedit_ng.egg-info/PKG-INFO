@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: django-quickedit-ng
+Version: 0.2.0
+Summary: Quick editing of fields in the django admin
+Home-page: http://github.com/giorgos/django-quickedit-ng
+Author: Giorgos Logiotatidis
+Author-email: giorgos@sealabs.net
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: License :: OSI Approved :: Apache Software License
