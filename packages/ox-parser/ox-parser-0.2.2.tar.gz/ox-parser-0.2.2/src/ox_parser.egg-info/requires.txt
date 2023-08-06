@@ -1,0 +1,9 @@
+ply
+sidekick>=0.0.2
+lazyutils
+
+[dev]
+pytest
+pytest-cov
+manuel
+invoke
