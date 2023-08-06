@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.rst
+requirements.txt
+setup.py
+pyfortified_dateutil/__init__.py
+pyfortified_dateutil.egg-info/PKG-INFO
+pyfortified_dateutil.egg-info/SOURCES.txt
+pyfortified_dateutil.egg-info/dependency_links.txt
+pyfortified_dateutil.egg-info/not-zip-safe
+pyfortified_dateutil.egg-info/requires.txt
+pyfortified_dateutil.egg-info/top_level.txt
