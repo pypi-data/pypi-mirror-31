@@ -3,36 +3,10 @@
 This repo contains 40000 packages uploaded to PyPI between 
 2018-04-16 17:17 and 2018-05-16 06:16.
 
-The repo is 34% (13984/40000) complete.
+The repo is 39% (15983/40000) complete.
 
-## Packages:
+Package contents can be found [in the code branch](https://github.com/pypi-data/pypi-mirror-31/tree/code/packages).
 
-| Name  | Count |
-| ----- | ----- |
-| nanowire-plugin | 140 |
-| lalsuite | 130 |
-| blurr-dev | 112 |
-| grpcio-tools | 108 |
-| grpcio | 108 |
-| frida | 98 |
-| parallel_ga_processing | 88 |
-| zebe-data-service | 84 |
-| sickrage | 78 |
-| numpy-quaternion | 78 |
-| gamegridp | 77 |
-| udata | 75 |
-| rovcontrol | 74 |
-| deepspeech | 72 |
-| pytrip98 | 64 |
-| pch2csd | 64 |
-| odoo10-addons-oca-server-tools | 63 |
-| InfluenceManager | 61 |
-| tfp-nightly | 58 |
-| c2cgeoform | 58 |
-| digital-rf | 56 |
-| bohrium | 56 |
-| politico-civic-election-night | 55 |
-| citellus | 55 |
-| toil-vg | 52 |
+A browsable package list for all repositories [all packages here](https://pypi-data.github.io/website/repositories/pypi-mirror-31).
 
 
