@@ -1,0 +1,3 @@
+[console_scripts]
+vuray = vuray.cli:run
+

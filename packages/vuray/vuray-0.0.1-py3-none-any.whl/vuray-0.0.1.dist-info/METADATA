@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: vuray
+Version: 0.0.1
+Summary: VuRay checks your dependencies for known security vulnerabilities.
+Home-page: https://github.com/vuray/vuray
+Author: VuRay Team
+Author-email: dev@vuray.io
+License: UNLICENSED
+Platform: UNKNOWN
+Provides-Extra: tests
+Requires-Dist: requests
+Provides-Extra: tests
+Requires-Dist: pytest; extra == 'tests'
+Requires-Dist: pytest-cov; extra == 'tests'
+
+# vuray
+Vuray Console Client
+
+
