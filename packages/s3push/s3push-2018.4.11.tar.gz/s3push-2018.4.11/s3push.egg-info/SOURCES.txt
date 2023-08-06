@@ -1,0 +1,13 @@
+README.md
+setup.py
+s3push/__init__.py
+s3push/connector.py
+s3push/eraser.py
+s3push/progress.py
+s3push/uploader.py
+s3push.egg-info/PKG-INFO
+s3push.egg-info/SOURCES.txt
+s3push.egg-info/dependency_links.txt
+s3push.egg-info/entry_points.txt
+s3push.egg-info/requires.txt
+s3push.egg-info/top_level.txt
