@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: spotify
+Version: 0.0.2
+Summary: spotify.py is an asynchronous API wrapper for Spotify written in Python.
+Home-page: https://github.com/mental32/spotify.py
+Author: mental
+Author-email: UNKNOWN
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
