@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: ArubaOS-XML-API
+Version: 0.1
+Summary: Client of the ArubaOS XML API
+Home-page: https://github.com/rbricheno/ArubaOS_XML_API
+Author: Robert Bricheno
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/rbricheno/ArubaOS_XML_API/issues
+Project-URL: Source, https://github.com/rbricheno/ArubaOS_XML_API
+Keywords: aruba arubaos xml api
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.1
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+
+# ArubaOS XML API client
+ Simple client for the ArubaOS XML API
+
+## Installation
+```
+pip install ArubaOS-XML-API
+```
+
