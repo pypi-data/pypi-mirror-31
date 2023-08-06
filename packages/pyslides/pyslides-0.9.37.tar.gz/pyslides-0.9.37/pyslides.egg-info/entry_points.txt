@@ -1,0 +1,3 @@
+[console_scripts]
+download_pyslides_example = pyslides.download_pyslides_example:main
+
