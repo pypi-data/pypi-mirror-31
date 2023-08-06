@@ -1,0 +1,14 @@
+Metadata-Version: 1.0
+Name: reahl-workstation
+Version: 4.0.0
+Summary: Useful commands to ease development.
+Home-page: http://www.reahl.org
+Author: Iwan Vosloo
+Author-email: iwan@reahl.org
+License: UNKNOWN
+Description: Reahl is a web application framework that allows a Python programmer to work in terms of useful abstractions - using a single programming language.
+        
+        Reahl-workstation contains a few utilities that helps to have available on a developer workstation.
+        
+        See http://www.reahl.org/docs/3.2/tutorial/gettingstarted.d.html for installation instructions. 
+Platform: UNKNOWN
