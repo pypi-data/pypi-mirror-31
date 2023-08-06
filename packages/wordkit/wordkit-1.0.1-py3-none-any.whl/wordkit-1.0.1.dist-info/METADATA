@@ -1,0 +1,21 @@
+Metadata-Version: 2.0
+Name: wordkit
+Version: 1.0.1
+Summary: Word featurization
+Home-page: https://github.com/clips/wordkit
+Author: Stéphan Tulkens
+Author-email: stephan.tulkens@uantwerpen.be
+License: GPLv3
+Keywords: machine learning
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3
+Requires-Dist: ipapy
+Requires-Dist: numpy (>=1.11.0)
+Requires-Dist: pandas
+Requires-Dist: scikit-learn
+
+UNKNOWN
+
+
