@@ -1,0 +1,9 @@
+nionswift_io-0.13.0.dist-info/METADATA,sha256=k_igYeZLHtZVhSiRtkB8Plx2kgOfiZKgAENTbs848ww,371
+nionswift_io-0.13.0.dist-info/RECORD,,
+nionswift_io-0.13.0.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+nionswift_io-0.13.0.dist-info/top_level.txt,sha256=ftKsyiS_1ClrXSGFZwYj_TYdHRsN8YkbF772jLty2mQ,17
+nionswift_plugin/DM_IO/__init__.py,sha256=_O5D6nt7XdLX2cuWnyzmtNK8qtHqIAWNXlgMkXpQJlY,3349
+nionswift_plugin/DM_IO/dm3_image_utils.py,sha256=GMB3D-BClZaA5KnD7etoVFJpW3nk4jyLHid8_Q4aj88,12480
+nionswift_plugin/DM_IO/parse_dm3.py,sha256=CPvO91WioTUFU-4HEFkip99UPXhZAw1ZBr_ZUB1pYIk,23050
+nionswift_plugin/TIFF_IO/__init__.py,sha256=zST3UJhAZkm0RiHbXLPz_S5oeXU70V4tXIHpY9VkQPo,26927
+nionswift_plugin/TIFF_IO/tifffile.py,sha256=vUfukNsfgvUlzRAzoAW35YkIbvOcyD70n1kPl9avs8k,345413
