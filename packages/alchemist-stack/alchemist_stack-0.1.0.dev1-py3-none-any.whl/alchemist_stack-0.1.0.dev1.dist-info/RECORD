@@ -1,0 +1,14 @@
+alchemist_stack/__init__.py,sha256=XsAWuAFScEYd5qxYSZkDU5LmCux3PILELmnwC-W1UT8,40
+alchemist_stack/context/__init__.py,sha256=hFygWx6_Hk_zpuffAHSvodRJrZEmiqrrWF3yi4S1Tlc,4151
+alchemist_stack/context/context.py,sha256=_zo-5mRG6U7sRb709wZHMikTnp6xkApBmxseEW_DhSc,2715
+alchemist_stack/repository/__init__.py,sha256=UCY5N8fb3fayTBOuzQgSPV7jYtDv-ggjl1awvsj9WII,19895
+alchemist_stack/repository/models/__init__.py,sha256=qX6ByD_oKvv49K0vZLOzAIF-mJu49b0DA1LlT2NOjPA,334
+alchemist_stack/repository/models/autotable/__init__.py,sha256=N8qQg_YA8jV6gJL7GACy1dy9vcqKUR4NZtahD5n530k,606
+alchemist_stack/utils/__init__.py,sha256=5LkbUjQCw20GrETBKYNPzFTF4LKu4NTnftUd1R3Vq_8,344
+alchemist_stack-0.1.0.dev1.dist-info/LICENSE.txt,sha256=-Q-GYMANoEEEiGHV7gGwuRZkKUCtcffuuK8ZTlwOkAA,1112
+alchemist_stack-0.1.0.dev1.dist-info/METADATA,sha256=JoVl4OFdLBfNSVwsoaArbUa3-PFUBGBPZVkwh9bSObA,5453
+alchemist_stack-0.1.0.dev1.dist-info/RECORD,,
+alchemist_stack-0.1.0.dev1.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+alchemist_stack-0.1.0.dev1.dist-info/top_level.txt,sha256=1q574uVYbh8i_d-q5DKPQKAs4h_9GeZgT1VImnViY0I,22
+tests/context/__init__.py,sha256=lvo63wpGgquHoTj7e-7b4oh2OuTlNQZaKn5iF-2Gxow,4901
+tests/utils/__init__.py,sha256=XZvbe8vHclw0F0VCzc3E0tSSaNK-wVMq93RBjz9K4zs,1510
