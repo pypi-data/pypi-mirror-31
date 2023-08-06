@@ -1,0 +1,14 @@
+CHANGES.txt
+LICENSE.md
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+falcon_auth0/__init__.py
+falcon_auth0.egg-info/PKG-INFO
+falcon_auth0.egg-info/SOURCES.txt
+falcon_auth0.egg-info/dependency_links.txt
+falcon_auth0.egg-info/requires.txt
+falcon_auth0.egg-info/top_level.txt
+falcon_auth0/__http_factory/__init__.py
+falcon_auth0/logger/__init__.py
