@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: sqlite-framework
+Version: 1.0.4
+Summary: A very simple sqlite framework
+Home-page: https://github.com/alvarogzp/python-sqlite-framework
+Author: Alvaro Gutierrez Perez
+Author-email: alvarogzp@gmail.com
+License: Apache License 2.0
+Description: A very simple sqlite framework
+Keywords: sqlite framework sqlite3 sql database
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Database
+Classifier: Programming Language :: SQL
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
