@@ -1,0 +1,15 @@
+CONTRIBUTORS.txt
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+fuzzypicker/__init__.py
+fuzzypicker/picker.py
+fuzzypicker/version.py
+fuzzypicker.egg-info/PKG-INFO
+fuzzypicker.egg-info/SOURCES.txt
+fuzzypicker.egg-info/dependency_links.txt
+fuzzypicker.egg-info/not-zip-safe
+fuzzypicker.egg-info/requires.txt
+fuzzypicker.egg-info/top_level.txt
