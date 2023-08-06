@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+example.py
+setup.py
+mindstrong/__init__.py
+mindstrong/mindstrong_modelfit.py
+mindstrong.egg-info/PKG-INFO
+mindstrong.egg-info/SOURCES.txt
+mindstrong.egg-info/dependency_links.txt
+mindstrong.egg-info/requires.txt
+mindstrong.egg-info/top_level.txt
+mindstrong/data/example_features.csv
+mindstrong/data/example_targets.csv

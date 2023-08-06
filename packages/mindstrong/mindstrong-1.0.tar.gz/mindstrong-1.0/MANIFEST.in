@@ -1,0 +1,6 @@
+include mindstrong/data/example_features.csv
+include mindstrong/data/example_targets.csv
+include example.py
+include README.rst
+include LICENSE.txt
+
