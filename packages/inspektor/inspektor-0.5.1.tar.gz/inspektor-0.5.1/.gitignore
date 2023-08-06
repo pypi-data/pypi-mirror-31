@@ -1,0 +1,10 @@
+*~
+*.pyc
+build/
+tags
+cscope.*
+.project
+.pydevproject
+.venv
+.idea
+MANIFEST
