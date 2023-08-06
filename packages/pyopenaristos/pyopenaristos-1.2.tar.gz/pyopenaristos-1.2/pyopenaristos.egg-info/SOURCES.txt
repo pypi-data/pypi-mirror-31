@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+pyopenaristos/__init__.py
+pyopenaristos/client.py
+pyopenaristos/serder.py
+pyopenaristos/streaming.py
+pyopenaristos.egg-info/PKG-INFO
+pyopenaristos.egg-info/SOURCES.txt
+pyopenaristos.egg-info/dependency_links.txt
+pyopenaristos.egg-info/requires.txt
+pyopenaristos.egg-info/top_level.txt
+pyopenaristos/bin/oa
