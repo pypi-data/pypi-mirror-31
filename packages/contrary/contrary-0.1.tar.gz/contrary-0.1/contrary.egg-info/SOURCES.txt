@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+contrary/__init__.py
+contrary/contrary.py
+contrary.egg-info/PKG-INFO
+contrary.egg-info/SOURCES.txt
+contrary.egg-info/dependency_links.txt
+contrary.egg-info/top_level.txt

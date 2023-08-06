@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: contrary
+Version: 0.1
+Summary: Ordered data structures from multiple YAML sources
+Home-page: https://github.com/rbricheno/contrary
+Author: Robert Bricheno
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/rbricheno/contrary/issues
+Project-URL: Source, https://github.com/rbricheno/contrary
+Description: # contrary
+        Ordered data structures from multiple YAML sources
+        
+Keywords: yaml ordered OrderedDict merge
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
