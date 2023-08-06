@@ -1,0 +1,24 @@
+Metadata-Version: 1.1
+Name: lotus_eaters
+Version: 1.0.0
+Summary: A simple Python throttling library relying on the token bucket algorithm with Redis Backend.
+Home-page: http://github.com/mpetyx/lotus_eaters
+Author: Michael Petychakis
+Author-email: hello@apilama.com
+License: MIT
+Download-URL: http://pypi.python.org/pypi/lotus_eaters/
+Description: UNKNOWN
+Keywords: throttle,rate limit,token bucket,leaky bucket
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
