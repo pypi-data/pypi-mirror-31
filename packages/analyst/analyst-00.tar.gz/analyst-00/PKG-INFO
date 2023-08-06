@@ -1,0 +1,26 @@
+Metadata-Version: 1.1
+Name: analyst
+Version: 00
+Summary: Data analysis toolkit
+Home-page: https://github.com/shen-h
+Author: Shen Han
+Author-email: hs@uchicago.edu
+License: UNKNOWN
+Description:         Analytical toolkit for data science and machine learning
+                --------------------------------------------------------
+        
+                Utilities:
+                 - `ml`: machine learning
+                 - `nd`: NumPy and Pandas
+                 - `viz`: data visualization
+            
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Utilities
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Visualization
