@@ -1,0 +1,10 @@
+v0.0.2, 2018-04-25
+    1062bd9 type check
+    e517d98 gc
+    e49973f cleanup
+    56ae772 reorg
+    81d289b more efficient cloning...only when necessary
+    e5bf1a7 facilitate Pluackable list/dict/set
+    2cc3070 cleanup
+v0.0.1, 2018-04-25
+    
