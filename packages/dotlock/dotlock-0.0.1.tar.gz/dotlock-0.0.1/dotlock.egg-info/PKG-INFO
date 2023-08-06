@@ -1,0 +1,29 @@
+Metadata-Version: 1.2
+Name: dotlock
+Version: 0.0.1
+Summary: Fast and accurate Python dependency management
+Home-page: https://github.com/alexbecker/dotlock
+Author: Alex Becker
+Author-email: myself@alexcbecker.net
+License: MIT
+Description: dotlock
+        =======
+        
+        Bringing sanity to Python package management.
+        
+        Usage
+        -----
+        
+        .. code-block:: shell
+            dotlock init  # Creates a virtualenv in the current working directory.
+            dotlock lock  # Generates a package.lock.json file from package.json.
+        
+Keywords: packaging requirements dependencies
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6
