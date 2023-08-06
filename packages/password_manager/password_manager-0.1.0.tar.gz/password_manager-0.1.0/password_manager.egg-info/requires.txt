@@ -1,0 +1,5 @@
+pycryptodome
+
+[tests]
+pytest
+pytest-readme
