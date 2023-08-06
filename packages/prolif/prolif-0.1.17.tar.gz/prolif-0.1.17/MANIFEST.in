@@ -1,0 +1,2 @@
+include README.md LICENSE prolif/parameters.json
+recursive-include prolif *.mol2
