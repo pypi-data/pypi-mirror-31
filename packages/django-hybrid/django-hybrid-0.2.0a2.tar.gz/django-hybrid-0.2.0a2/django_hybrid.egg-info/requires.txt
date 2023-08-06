@@ -1,0 +1,10 @@
+Django>=1.11
+typing
+typing_extensions
+
+[test]
+pytest
+pytest-cov
+pytest-django
+pytest-factoryboy
+pytest-mock
