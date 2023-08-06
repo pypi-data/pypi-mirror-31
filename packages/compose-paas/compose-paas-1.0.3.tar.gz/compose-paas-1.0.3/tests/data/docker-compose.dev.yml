@@ -1,0 +1,36 @@
+version: '3.4'
+
+x-compose-paas:
+  singularity:
+    endpoint: 'http://localhost:7099/singularity/api'
+
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    deploy:
+      placement:
+        constraints:
+          - role == dev
+    command: 'buildno=1'
+    ports:
+      - 8765:8765
+    volumes:
+      - .:/code
+    environment:
+      APP_ENV: 'dev'
+      EXTRA_ENV: 'extra'
+    privileged: false
+
+  db:
+    image: postgres:latest
+    command: '-d'
+    ports:
+      - 5432:5432
+
+  cache:
+    image: redis:latest
+    ports:
+      - 6379:6379
