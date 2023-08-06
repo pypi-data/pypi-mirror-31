@@ -1,0 +1,12 @@
+collatelogs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+collatelogs/__main__.py,sha256=EwgrZujcMN1I6axkdOyOETWL-l1wZ1KyfhUc9hT9_gw,30
+collatelogs/cli.py,sha256=XV8s3s9v79Suz0vQGzYf8dznOManQoEFCLwgydlcxE0,5357
+collatelogs/collatelogs.py,sha256=RVbK4zNENFLTOkTfvb4os0oG6trMpN9S13CNTiu3D3k,6340
+collatelogs/test_cli.py,sha256=h_4aYDtYXo_4SEJK6KHzl8JfT6mSLYhzFUeH7_oKqo8,93
+collatelogs/util.py,sha256=x8bvg80fOro4RY5Ma-Zs2DD4Ce7_VI-Qw8I6PEWbdJM,684
+collatelogs-0.1.2.data/scripts/collatelogs,sha256=El2jVXlmYE1knYrUikiGeBlqs9byQ_myjX-ort0L3bU,55
+collatelogs-0.1.2.dist-info/METADATA,sha256=28BitALNgX7lyMQddWMYmxxyaypxvmk_Fv4BD880dcM,763
+collatelogs-0.1.2.dist-info/RECORD,,
+collatelogs-0.1.2.dist-info/WHEEL,sha256=J3CsTk7Mf2JNUyhImI-mjX-fmI4oDjyiXgWT4qgZiCE,110
+collatelogs-0.1.2.dist-info/top_level.txt,sha256=_w6YMJ-yboP51tph5tGXOHWOn2bamNe1oX9KsyMW570,12
+collatelogs-0.1.2.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
