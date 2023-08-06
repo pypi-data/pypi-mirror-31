@@ -1,0 +1,12 @@
+language: python
+cache: pip
+python:
+  - '2.7'
+  - '3.5'
+  - '3.6'
+install:
+- pip install -U pip
+- pip install -U setuptools setuptools_scm pytest
+- pip install -e .
+
+script: pytest
