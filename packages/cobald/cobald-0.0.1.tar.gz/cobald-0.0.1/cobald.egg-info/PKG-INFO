@@ -1,0 +1,27 @@
+Metadata-Version: 1.1
+Name: cobald
+Version: 0.0.1
+Summary: COBalD - the Opportunistic Balancing Deamon
+Home-page: https://github.com/MaineKuehn/cobald
+Author: Eileen Kuehn, Max Fischer
+Author-email: maxfischer2781@gmail.com
+License: MIT
+Description: ===========================================
+        COBalD - the Opportunistic Balancing Deamon
+        ===========================================
+        
+        This is a **draft** for a feedback based balancing system for providing opportunistic resources.
+Keywords: opportunistic scheduling scheduler demand feedback loop asyncio
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: System Administrators
+Classifier: Topic :: Adaptive Technologies
+Classifier: Topic :: Office/Business :: Scheduling
+Classifier: Topic :: System :: Distributed Computing
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
