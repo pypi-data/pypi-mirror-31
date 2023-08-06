@@ -1,0 +1,23 @@
+Metadata-Version: 2.0
+Name: dlms-cosem
+Version: 0.0.1.dev1
+Summary: A Python library for DLMS/COSEM
+Home-page: https://github.com/pwitab/dlms-cosem
+Author: Henrik Palmlund Wahlgren , @ Palmlund Wahlgren Innovative Technology AB
+Author-email: henrik@pwit.se
+License: BSD 3-Clause License
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+
+##########
+dlms-cosem
+##########
+
+A Python library for DLMS/COSEM
+
+
+=========
+Changelog
+=========
+
+
