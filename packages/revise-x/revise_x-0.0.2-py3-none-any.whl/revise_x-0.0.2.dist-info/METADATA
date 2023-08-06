@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: revise-x
+Version: 0.0.2
+Summary: An exporter for machine learning models built with keras to work with revise projects
+Home-page: https://github.com/noheltcj/revise-x
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/noheltcj/revise-x/issues
+Project-URL: Source, https://github.com/noheltcj/revise-x
+Keywords: revise machine_learning exporter keras
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+
+# revise-x
+Use this python package to export models trained with [keras](https://github.com/keras-team/keras "keras") into a format that can be consumed by [revise](https://github.com/noheltcj/revise "revise")
+
+## Documentation
+Currently revise does not support all neural architectures, optimizers, or activation functions.
+
+For a list of supported functions, see the [revise documentation](https://github.com/noheltcj/revise "revise documentation").
+
+## Contributing
+We still haven't setup ground rules for contribution. For now, email noheltycolton@gmail.com if you would like to contribute, and we will go from there.
+
+## Setup
+Install dependencies for distribution by running: `pipenv install`
+
+### Creating distribution packages
+To generate a source distribution, simply run
+`pipenv run python setup.py sdist`
+
+To generate a pre-built package with wheel use
+`pipenv run python setup.py bdist_wheel`
+
+### Uploading Package to testPyPI
+To upload the packages in [dist](./dist) to the test python distribution site, you'll need to create an account at [test.pypi.org](https://test.pypi.org/account/register/).
+
+Then you can run
+`pipenv run twine upload --repository-url https://test.pypi.org/legacy/ dist/*`
+
+Enter credentials, and done.
+
+
