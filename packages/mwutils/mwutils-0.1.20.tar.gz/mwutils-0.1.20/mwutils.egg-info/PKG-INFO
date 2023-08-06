@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: mwutils
+Version: 0.1.20
+Summary: cxh 
+Home-page: https://bitbucket.org/maxwin-inc/mwutils/src
+Author: cxhjet
+Author-email: 13064576@qq.com
+License: UNKNOWN
+Description: ###产生分发包
+        ``
+        python setup.py sdist
+        twine upload dist/*
+        ``
+        ###产生分发包
+        ``
+        python setup.py build
+        ``
+        
+        ###安装方式
+        1. pip install dist\\mwutils-0.1.1.zip
+        2. python setup.py install
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.5
+Description-Content-Type: text/markdown
