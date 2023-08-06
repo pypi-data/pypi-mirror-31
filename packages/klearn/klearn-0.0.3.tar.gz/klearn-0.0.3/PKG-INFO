@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: klearn
+Version: 0.0.3
+Summary: toolbox for machine learning
+Home-page: https://github.com/kanyuanzhi/klearn
+Author: Kan Yuanzhi
+Author-email: kanyuanzhi@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: machine-learning
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7

@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+klearn/__init__.py
+klearn/bayes.py
+klearn/kdtree.py
+klearn/knn.py
+klearn/sensor.py
+klearn.egg-info/PKG-INFO
+klearn.egg-info/SOURCES.txt
+klearn.egg-info/dependency_links.txt
+klearn.egg-info/requires.txt
+klearn.egg-info/top_level.txt
