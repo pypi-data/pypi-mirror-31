@@ -1,0 +1,18 @@
+Metadata-Version: 1.2
+Name: py_pursuit_pathing
+Version: 0.0.2
+Summary: Path following using pure pursuit
+Home-page: https://github.com/nickschatz/purepursuit
+Author: Nick Schatz
+Author-email: nick@nickschatz.com
+License: MIT
+Description: py-pursuit-pathing
+        ===
+        A library for path following using the pure pursuit algorithm.
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6
