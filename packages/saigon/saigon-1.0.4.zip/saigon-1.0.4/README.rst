@@ -1,0 +1,46 @@
+Saigon
+============
+
+Saigon is an **experimental** package for use with Angular and SCSS. It contains many useful tools for faster and more efficient developing. The code is hosted on `Github <https://github.com/integree/saigon>`_. 
+
+Requirements
+------------
+
+Saigon requires AngularJS 1.5.11 or newer and SCSS.
+
+Installation
+------------
+
+To install saigon, run the following command inside this directory::
+
+    python setup.py install
+    
+You can also install the package with a symlink, so that changes to the source files will be immediately available to other users of the package on your system::
+
+    python setup.py develop
+
+If you have the Python **easy_install** utility available, you can also type 
+the following to download and install in one step::
+
+    easy_install saigon
+
+Or if you're using **pip**::
+
+    pip install bir-api
+
+To install saigon from SVN directly::
+
+    pip install -e svn+http://example.com/svn/saigon/trunk#egg=saigon
+    
+or, if you need install from branch::
+    
+    pip install -e svn+http://example.com/svn/saigon/branches/dev_0_2#egg=saigon
+
+Or if you'd prefer you can simply place the included "saigon" directory 
+somewhere on your python path, or symlink to it from somewhere on your Python 
+path.
+
+Credits
+-------
+
+The project implemented by `Integree Bussines Solutions <http://www.integree.eu>`_ from Warsaw, Poland
