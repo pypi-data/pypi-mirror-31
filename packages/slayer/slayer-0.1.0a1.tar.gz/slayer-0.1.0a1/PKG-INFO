@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: slayer
+Version: 0.1.0a1
+Summary: Slayer Framework... it came to SLAY!
+Home-page: https://github.com/FrancoLM/slayer
+Author: Franco Martinez
+Author-email: martinez.franco.leonardo@gmail.com
+License: BSD
+Description: Slayer Framework... It came to SLAY!
+        ====================================
+        
+        Requirements:
+        ^^^^^^^^^^^^^
+        
+        - Python 3.x (Python >= 3.6 recommended)
+        
+        For web automation, make sure you have a webdriver downloaded in your system, and it's added to your PATH.
+        
+        
+        Running the Framework
+        =====================
+        .. code-block:: bash
+        
+            pip install slayer
+        
+        Once installed:
+        
+        .. code-block:: python
+        
+           from slayer import run_framework
+           run_framework()
+Keywords: slayer automation framework
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Quality Assurance
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/x-rst
