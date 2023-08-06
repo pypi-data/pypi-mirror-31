@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+drf_serializer_cache/__init__.py
+drf_serializer_cache/cache.py
+drf_serializer_cache.egg-info/PKG-INFO
+drf_serializer_cache.egg-info/SOURCES.txt
+drf_serializer_cache.egg-info/dependency_links.txt
+drf_serializer_cache.egg-info/requires.txt
+drf_serializer_cache.egg-info/top_level.txt
