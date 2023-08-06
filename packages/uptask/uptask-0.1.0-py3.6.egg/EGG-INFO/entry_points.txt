@@ -1,0 +1,3 @@
+[console_scripts]
+uptask = uptask.uptask:main
+
