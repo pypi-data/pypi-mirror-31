@@ -1,0 +1,5 @@
+sentry>=7.0.0
+
+[tests]
+mock
+flake8<2.1,>=2.0
