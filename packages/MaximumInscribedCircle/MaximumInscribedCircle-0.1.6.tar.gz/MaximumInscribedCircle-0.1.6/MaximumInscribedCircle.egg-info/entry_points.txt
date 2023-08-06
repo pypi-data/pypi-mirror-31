@@ -1,0 +1,4 @@
+[console_scripts]
+maximumInscribedCircle = MaximumInscribedCircle.MaximumInscribedCircle:main
+vectorUtil = MaximumInscribedCircle.VectorUtil:main
+
