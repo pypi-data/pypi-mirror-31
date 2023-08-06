@@ -1,0 +1,11 @@
+MANIFEST.in
+README.rst
+TITLE.txt
+lh-agpl3-LICENSE.txt
+setup.py
+bsif/__init__.py
+bsif.egg-info/PKG-INFO
+bsif.egg-info/SOURCES.txt
+bsif.egg-info/dependency_links.txt
+bsif.egg-info/not-zip-safe
+bsif.egg-info/top_level.txt
