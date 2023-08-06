@@ -1,0 +1,13 @@
+Metadata-Version: 1.2
+Name: zsearch-definitions
+Version: 0.1.27
+Summary: Egg version of files that can be used for interacting with zdb through python
+Home-page: UNKNOWN
+Author: Censys Team
+Author-email: team@censys.io
+Maintainer: Censys Team
+Maintainer-email: team@censys.io
+License: Apache License, Version 2.0
+Description: UNKNOWN
+Keywords: python json zsearch
+Platform: UNKNOWN
