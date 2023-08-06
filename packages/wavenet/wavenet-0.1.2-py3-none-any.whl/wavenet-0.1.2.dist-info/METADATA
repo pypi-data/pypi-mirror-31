@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: wavenet
+Version: 0.1.2
+Summary: An implementation of WaveNet for TensorFlow.
+Home-page: https://github.com/unixpickle/wavenet
+Author: Alex Nichol
+Author-email: unixpickle@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Provides-Extra: tf
+Provides-Extra: tf_gpu
+Requires-Dist: numpy (<2.0.0,>=1.0.0)
+Provides-Extra: tf
+Requires-Dist: tensorflow (>=1.4.0); extra == 'tf'
+Provides-Extra: tf_gpu
+Requires-Dist: tensorflow-gpu (>=1.4.0); extra == 'tf_gpu'
+
+UNKNOWN
+
+
