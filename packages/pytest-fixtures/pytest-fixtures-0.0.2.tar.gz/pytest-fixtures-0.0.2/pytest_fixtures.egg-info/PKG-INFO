@@ -1,0 +1,22 @@
+Metadata-Version: 1.2
+Name: pytest-fixtures
+Version: 0.0.2
+Summary: Common fixtures for pytest
+Home-page: https://github.com/maxzheng/pytest-fixtures
+Author: Max Zheng
+Author-email: maxzheng.os@gmail.com
+License: MIT
+Description: pytest-fixtures
+        ===============
+        
+        Common fixtures for pytest
+        
+Keywords: common pytest fixtures
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Testing :: Unit
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6
