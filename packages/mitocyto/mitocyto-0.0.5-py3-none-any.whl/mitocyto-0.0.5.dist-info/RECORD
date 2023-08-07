@@ -1,0 +1,14 @@
+mitocyto/__init__.py,sha256=aCmQfEGVs_-9h4TEDuVXjgmyOmixtXIMHKczjHMB3Yk,80
+mitocyto/detectfibres.py,sha256=rmUakk0tyv6Jq3kbpnbcskWfjdsIGaW20OsAWweJTOU,14469
+mitocyto/gui.py,sha256=Jfjkhdng7OyhbY-Tx5MOOKoDyu4eT3g4xWXHkUY3tZs,6994
+mitocyto/gui2.py,sha256=b5bd_RsnAvSqljKw0u11oBvddJb3G7rnkdkw6kR9SZU,9417
+mitocyto/version.py,sha256=OLrZC7ZCn3Aj62X2Z9b8AcBIkT2ggdm7W7clZYbvlR4,19
+mitocyto-0.0.5.dist-info/METADATA,sha256=SqZ1OnJ9mli5RPKwv1mnLQ7AMddIBlyzxcyoxjFJ-NU,985
+mitocyto-0.0.5.dist-info/RECORD,,
+mitocyto-0.0.5.dist-info/WHEEL,sha256=pZyAqgNAylOf0KG_hPHMtuuY08rV3WzWwZu2OTsNnnw,97
+mitocyto-0.0.5.dist-info/entry_points.txt,sha256=pvoOrwlMJ-uFnxyiIdxrxXZUMq5mEDwiJ1iYGjQy_Ug,71
+mitocyto-0.0.5.dist-info/top_level.txt,sha256=iCvDicc2evXKhuLVqGYefgFecGS20ztt17--7ReeSMQ,17
+scripts/__init__.py,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+scripts/auto.py,sha256=8bqiYlWdvL81VOLq2nCfxLRpaUd5-OjV2h6rV0CSTQQ,4693
+scripts/gui.py,sha256=jMrM2m4yjCmxGH9HkuYmLB42OrLgPxZTIUjMpzRwRLU,11250
+scripts/gui2.py,sha256=duKDDD9Cfzx_I7w7bhJeY4x4JM1OnQnYKmpza9je0so,9702
