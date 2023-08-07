@@ -1,0 +1,3 @@
+[console_scripts]
+helper = autocnn_helper.config:write_parameter
+
