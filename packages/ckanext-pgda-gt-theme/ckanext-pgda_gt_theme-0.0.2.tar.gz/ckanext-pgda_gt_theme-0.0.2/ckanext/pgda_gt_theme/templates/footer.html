@@ -1,0 +1,49 @@
+<div class="footer-container">
+  {% block footer_content %}
+  <div class="column">
+    <h1>Contactanos</h1>
+    <div class="icon-row">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>3av 13-28 Zona 1</span>
+    </div>
+    <div class="icon-row">
+        <i class="fas fa-phone"></i>
+        <span>PBX: 2317-2600</span>
+    </div>
+    <div class="icon-row">
+        <i class="fas fa-envelope"></i>
+        <span>infosenacyt@concyt.gob.gt</span>
+    </div>
+  </div>
+  <div class="column column-center">
+    <h1>Síguenos</h1>
+    <a class="icon-row" href="#">
+      <i class="fab fa-facebook-f"></i>
+      <span>Facebook</span>
+    </a>
+    <a class="icon-row" href="#">
+      <i class="fab fa-twitter"></i>
+      <span>Twitter</span>
+    </a>
+  </div>
+  <div class="column">
+    <h1>Portal nacional de datos abiertos</h1>
+    <span>En este portal encontrarás el conjunto de datos abiertos del gobierno de Guatemala</span>
+  </div>
+  {% endblock %}
+</div>
+<div class="org-container">
+  <div class="left-info">
+    <img src="/img/red.png" alt="" class="logo">
+    <span>En colaboración de Asociación Civil Red Ciudadana</span>
+  </div>
+  <div class="right-info">
+    <a class="text-link" href="http://redciudadana.org">www.redciudadana.org</a>
+    <a href="#" class="icon-link"><i class="fab fa-facebook-square"></i></a>
+    <a href="#" class="icon-link"><i class="fab fa-twitter-square"></i></a>
+    
+  </div>
+
+</div>
+
+{%- block footer_debug %} {% if g.debug %} {% include 'snippets/debug.html' %} {% endif %} {% endblock -%}

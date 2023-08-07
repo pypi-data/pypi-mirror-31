@@ -1,0 +1,59 @@
+{% block header_wrapper %} {% block header_account %} {% endblock %}
+
+<div class="header">
+  <div class="header-image">
+    <img src="/img/logo.png" />
+  </div>
+
+  <div class="header-menu">
+    <a href="#" class="header-menu-items">
+      Conjunto de datos
+    </a>
+    <a href="#" class="header-menu-items">
+      Categorías
+    </a>
+    <a href="#" class="header-menu-items">
+      Organizaciones
+    </a>
+    <a href="#" class="header-menu-items">
+      Recursos
+    </a>
+    <div class="dropdown">
+      <a id="dropdownMenu1" class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span>Acerca de </span><i class="far fa-arrow-alt-circle-down"></i>
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" role="menu">
+        <li><a href="#">El portal</a></li>
+        <li role="separator" class="divider"></li>
+        <li><a href="#">¿Qué son datos abiertos?</a></li>
+        <li role="separator" class="divider"></li>
+        <li><a href="#">Glosario</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+{% if h.current_url() == '/' %}
+<div class="header-banner">
+  <h1 class="title">Datos Abiertos de Guatemala</h1>
+  <p class="title">En este sitio podrás encontrar conjuntos de información pública de Guatemala.</p>
+  <p class="title">Con ellos puedes crear visualizaciones, aplicaciones e investigar.</p>
+  
+  {% block header_site_search %}
+
+  <div class="search-box">
+      <form class="search-bar" action="{% url_for controller='package', action='search' %}" method="get">
+        <div class="search-input">
+            <input id="field-sitewide-search" type="text" name="q" placeholder="Buscar datos" />
+            <span>
+              <img src="/img/search-trans.png" />
+            </span>
+        </div>  
+        <button class="search-button">Buscar</button>
+        </form>
+  </div>
+  {% endblock %}
+</div>
+{% endif %}
+
+{% endblock %}
