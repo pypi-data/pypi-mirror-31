@@ -1,0 +1,14 @@
+README.txt
+setup.py
+mitocyto/__init__.py
+mitocyto/detectfibres.py
+mitocyto/version.py
+mitocyto.egg-info/PKG-INFO
+mitocyto.egg-info/SOURCES.txt
+mitocyto.egg-info/dependency_links.txt
+mitocyto.egg-info/entry_points.txt
+mitocyto.egg-info/requires.txt
+mitocyto.egg-info/top_level.txt
+scripts/__init__.py
+scripts/auto.py
+scripts/gui.py
